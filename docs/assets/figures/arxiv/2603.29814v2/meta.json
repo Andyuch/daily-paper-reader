@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29814v2/fig-001.webp",
+      "caption": "FIG. 1: Schematic representation of 2D spectroscopy with the spectrum divided across t2 into regions according to the spectral GME. Our primary discovery is that 2D spectroscopy exhibits short-lived memory, that one can extract this memory from experiment directly to construct the dynamical propagator, and that this propagator can be used to predict the full evolution of the 2D spectrum using only its early-time data.",
+      "page": 2,
+      "index": 1,
+      "width": 1062,
+      "height": 316
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29814v2/fig-002.webp",
+      "caption": "FIG. 5: Applicability of the spectral GME to capture the evolution of the central line slope (CLS) of 2DIR data of the N3 dye undergoing spectral diffusion. We interrogate the evolution of the CLS for two spectral features at ω1 = 2100 cm−1 and 2125 cm−1, with ω3 = 2133 cm−1 for both features, corresponding to the symmetric and antisymmetric C ≡ N stretches in N3. Insets show both the reference experimental (left) and the spectral GMEpredicted (right) CLSs for the selected spectral features. We apply modest linear interpolation to double the number of pixels along each frequency axis, mirroring experimental processing steps for the center line slope. For the result without interpolation, see Fig. S7.",
+      "page": 8,
+      "index": 2,
+      "width": 481,
+      "height": 346
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-04-08T08:22:51.948184+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 28,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2603.29234v1",
+      "source": "arxiv",
+      "title": "Spatiotemporal imaging of gate-controlled multipath dynamics of fractional quantum Hall edge excitations",
+      "abstract": "Quantum Hall edge excitations, whose low-energy behavior admits a chiral conformal-field-theory description, are a promising platform for engineered dynamical experiments, including analog-spacetime proposals. However, establishing their edge dynamics in realistic electrostatic landscapes is essential for controlled dynamical experiments and has remained experimentally challenging. Here we report spatiotemporal imaging of gate-controlled multipath dynamics of edge excitations in a $ν= 1/3$ fractional quantum Hall device using stroboscopic time-resolved photoluminescence microscopy and spectroscopy with $\\sim$100-ps resolution. By tuning a control-gate-defined potential landscape, we observe switching between mesa-defined and gate-defined trajectories and identify an intermediate regime in which a single launched excitation accesses multiple pathways. Time-resolved measurements at downstream locations reveal gate-dependent arrival times and pronounced temporal broadening, showing that the propagation dynamics are strongly modified by the local confinement and become increasingly dispersive in a multipath landscape. We further observe a long-range transverse optical response extending tens of micrometers into the bulk and persisting over distances exceeding 200 $μ$m downstream, consistent with the near-field component of an edge magnetoplasmon. These results establish direct experimental access to controllable multipath edge dynamics in the fractional quantum Hall regime and suggest a platform for engineered nonequilibrium and interference-based experiments, as well as future analog-spacetime studies in quantum Hall edge systems.",
+      "authors": [
+        "Yunhyeon Jeong",
+        "Akinori Kamiyama",
+        "John N. Moore",
+        "Takaaki Mano",
+        "Ken-ichi Sasaki",
+        "Yuuki Sugiyama",
+        "Tokiro Numasawa",
+        "Masahiro Hotta",
+        "Go Yusa"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-03-31T04:05:34+00:00",
+      "link": "https://arxiv.org/pdf/2603.29234v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "stroboscopic time-resolved microscopy for dynamics in materials",
+      "llm_evidence_cn": "用于材料动力学的频闪时间分辨显微镜",
+      "llm_evidence": "用于材料动力学的频闪时间分辨显微镜",
+      "canonical_evidence": "用于材料动力学的频闪时间分辨显微镜",
+      "llm_tldr_en": "Uses stroboscopic time-resolved microscopy to image multipath dynamics of quantum Hall edge excitations.",
+      "llm_tldr_cn": "利用频闪时间分辨显微成像技术研究量子霍尔边缘激发的多路径动力学。",
+      "llm_tldr": "利用频闪时间分辨显微成像技术研究量子霍尔边缘激发的多路径动力学。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.02974v1",
+      "source": "arxiv",
+      "title": "Spatially inhomogeneous delithiation in LiNiO2 positive electrode: the effect of X-rays dose",
+      "abstract": "Operando synchrotron X-ray techniques have become essential tools for investigating rechargeable batteries as they provide real-time insights into electrochemical processes. However, the high brilliance of synchrotron radiation can alter the electrochemical mechanisms within the battery, thereby compromising the reliability and reproducibility of operando measurements. In this study, we introduce a novel methodology that directly correlates the local X-ray dose with the Ni4+/Ni3+ redox activity in a LiNiO2 positive electrode. Full-field transmission X-ray absorption spectroscopy imaging (FFI-XAS) is employed to probe the charge-compensation mechanism during lithium extraction at the micrometre scale, using two beam configurations with different focal distances (far-focus and near-focus). While the spatially averaged XAS spectra exhibit sluggish reaction, regions exposed to lower dose rates exhibit the expected electrochemical evolution. This contrast enables the identification of a dose threshold for reliable operando measurements. This approach establishes a practical dose limit and provides spatially resolved insight into beam-induced effects, offering both a diagnostic framework and a pathway toward more reliable operando experiments.",
+      "authors": [
+        "Francesco La Porta",
+        "Laurent Barthe",
+        "Anthony Beauvois",
+        "Gilles Wittmann",
+        "Valérie Briois",
+        "Antonella Iadecola",
+        "Stéphanie Belin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-03T11:24:55+00:00",
+      "link": "https://arxiv.org/pdf/2604.02974v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "operando synchrotron X-ray techniques for investigating batteries",
+      "llm_evidence_cn": "用于电池研究的 operando 同步辐射 X 射线技术",
+      "llm_evidence": "用于电池研究的 operando 同步辐射 X 射线技术",
+      "canonical_evidence": "用于电池研究的 operando 同步辐射 X 射线技术",
+      "llm_tldr_en": "Investigates X-ray dose effects on operando measurements of delithiation in battery electrodes.",
+      "llm_tldr_cn": "研究了 X 射线剂量对电池电极脱锂过程原位测量结果的影响。",
+      "llm_tldr": "研究了 X 射线剂量对电池电极脱锂过程原位测量结果的影响。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.00217v1",
+      "source": "arxiv",
+      "title": "Dielectric control of ultrafast carrier dynamics and transport in graphene",
+      "abstract": "Understanding the ultrafast dynamics of photoexcited charges in graphene is essential, as the microscopic mechanisms underlying these dynamics determine many of graphene's optical, optothermal, and optoelectronic properties. These are crucial properties for many functionalities and devices enabled by graphene, such as high-speed photodectors. Therefore, beyond scientific understanding, it is highly desirable to control ultrafast carrier dynamics for practical applications. Here, we establish this control by engineering the dielectric environment of graphene, thereby regulating both heating and cooling dynamics without altering the Fermi energy, optical power, or ambient temperature. By combining optical pump-terahertz probe experiments with theoretical calculations, we show that dielectric screening suppresses carrier-carrier interactions and slows the dynamics. In particular, reduced carrier-carrier scattering delays the formation of a quasi-equilibrium hot electron distribution, thus slowing carrier heating. It also slows carrier cooling because re-thermalization after optical-phonon emission depends on the same interactions. The enhanced screening further reduces the energy of electron-hole puddles, thereby increasing charge mobility and the Seebeck coefficient. This ability to externally control internal graphene dynamics and transport properties enables the optimization of device performance, such as the sensitivity of photodetectors for data communication and wireless communication applications.",
+      "authors": [
+        "Hai I. Wang",
+        "Xiaoyu Jia",
+        "Anand Nivedan",
+        "Mischa Bonn",
+        "Aron W. Cummings",
+        "Alessandro Principi",
+        "Klaas-Jan Tielrooij"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-03-31T20:32:40+00:00",
+      "link": "https://arxiv.org/pdf/2604.00217v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "ultrafast carrier dynamics and transport in graphene",
+      "llm_evidence_cn": "石墨烯中的超快载流子动力学与输运",
+      "llm_evidence": "石墨烯中的超快载流子动力学与输运",
+      "canonical_evidence": "石墨烯中的超快载流子动力学与输运",
+      "llm_tldr_en": "Controls ultrafast carrier dynamics in graphene by engineering the dielectric environment.",
+      "llm_tldr_cn": "通过工程化电介质环境来控制石墨烯中的超快载流子动力学。",
+      "llm_tldr": "通过工程化电介质环境来控制石墨烯中的超快载流子动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.28354v1",
+      "source": "arxiv",
+      "title": "Work-Function-Resolved Imaging of Relaxation Oscillations and Chemical Spillover in CO Oxidation over Platinum Surfaces",
+      "abstract": "Chemical waves of CO oxidation on platinum surfaces exhibit complex spatio-temporal self-oscillations, yet the local electronic mechanisms driving their propagation remain poorly understood under operando conditions. In this work, we combine operando scanning electron microscopy with frequency-modulated Kelvin probe force microscopy (FM-KPFM) to simultaneously map secondary electron contrast and local work-function variations during CO oxidation on Pt. By utilizing the KPFM tip as a localized sensor, we provide the first work-function-resolved imaging of reaction fronts, enabling an unambiguous physical assignment of CO- and oxygen-covered states. Our results demonstrate that the spillover process of chemical wave-the transition and expansion of adsorbate phases-is characterized by a pronounced temporal asymmetry and spatial heterogeneity transition thresholds. KPFM identifies a rapid onset of oxygen coverage followed by a gradual, diffuse relaxation back to the CO-covered state, indicative of relaxation-type oscillations even at low pressures (10^-2 Pa). Correlative reaction-diffusion simulations reproduce this wave morphology, confirming that the high-resolution work-function signal provides unique insights into the internal structure and kinetic heterogeneity of the working catalyst surface.",
+      "authors": [
+        "Karel Vařeka",
+        "Michal Potoček",
+        "Adam Očkovič",
+        "Tomáš Šikola",
+        "Zhu-Jun Wang",
+        "Petr Bábor",
+        "Miroslav Kolíbal"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-03-30T12:22:48+00:00",
+      "link": "https://arxiv.org/pdf/2603.28354v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "operando scanning electron microscopy of chemical waves",
+      "llm_evidence_cn": "化学波的原位扫描电子显微镜研究",
+      "llm_evidence": "化学波的原位扫描电子显微镜研究",
+      "canonical_evidence": "化学波的原位扫描电子显微镜研究",
+      "llm_tldr_en": "Combines operando SEM and KPFM to image work-function variations during CO oxidation on platinum.",
+      "llm_tldr_cn": "结合原位扫描电镜和开尔文探针力显微镜，成像铂上CO氧化过程中的功函数变化。",
+      "llm_tldr": "结合原位扫描电镜和开尔文探针力显微镜，成像铂上CO氧化过程中的功函数变化。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.28071v1",
+      "source": "arxiv",
+      "title": "Dynamical diffraction formalism for imaging time-dependent diffuse scattering from coherent phonons with Dark-Field X-ray Microscopy",
+      "abstract": "Coherent acoustic phonons, whose damping sets the upper bound of quality factors in acoustic resonators, play a critical role in advanced telecommunication and quantum information technologies. Yet, probing their decay in the GHz regime remains challenging using conventional surface-based techniques. Dark-field X-ray microscopy (DFXM) offers a solution by enabling through-depth, non-destructive and full-field imaging of strain fields and dislocations inside bulk materials with high spatial and angular resolution. We previously used kinematic diffraction theory to describe DFXM signals based on how the Bragg peak shifts due to the strain wave, allowing us to reconstruct the frequency spectrum of coherent phonons as a function of depth through the sample. The approach of tracking the Bragg peak shifts to study phonon dynamics, however, places an upper-bound to the highest phonon frequency that can be studied, determined by the spatial resolution of the measurement. In this work, we discuss how coherent phonon dynamics can be studied with DFXM from time-dependent intensity oscillation sidebands. This approach simultaneously allows studying coherent phonon dynamics in real and reciprocal space, overcoming frequency resolution limits imposed by the real-space resolution of Bragg-peak tracking. Using Takagi-Taupin dynamical diffraction formalism, we establish the spatial and reciprocal space resolution achievable for studying the coherent phonon dynamics and evaluate conditions for observing long-lived intensity oscillations. We close by proposing experimental strategies to optimize excitation bandwidths and reciprocal-space selectivity. The formalism in the paper enables the design of DFXM experiments for quantitative, frequency-resolved measurements of acoustic phonon decay and phonon-defect interactions in bulk crystalline materials.",
+      "authors": [
+        "Darshan Chalise",
+        "Brinthan Kanesalingam",
+        "Dorian P. Luccioni",
+        "Daniel Schick",
+        "Aaron M. Lindenberg",
+        "Leora Dresselhaus-Marais"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-03-30T06:15:44+00:00",
+      "link": "https://arxiv.org/pdf/2603.28071v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "imaging time-dependent diffuse scattering from phonons",
+      "llm_evidence_cn": "成像声子的随时间变化的漫散射",
+      "llm_evidence": "成像声子的随时间变化的漫散射",
+      "canonical_evidence": "成像声子的随时间变化的漫散射",
+      "llm_tldr_en": "Develops a diffraction formalism for imaging time-dependent diffuse scattering from coherent phonons in bulk materials.",
+      "llm_tldr_cn": "开发了一种用于成像大块材料中相干声子随时间变化的漫散射的衍射形式。",
+      "llm_tldr": "开发了一种用于成像大块材料中相干声子随时间变化的漫散射的衍射形式。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.29462v1",
+      "source": "arxiv",
+      "title": "Continuous three-dimensional imaging of nanoscale dynamics by in situ electron tomography",
+      "abstract": "Direct observation of nanoscale transformations in three dimensions (3D) is essential for understanding materials evolution under operating conditions, yet dynamic electron tomography remains limited by slow tilt series acquisition and by reconstruction methods that assume static specimens. These constraints prevent continuous 3D imaging of evolving structures and require electron doses that can alter the specimens and their dynamics. Here, we introduce a framework for dynamic electron tomography that combines continuous tilting with a self-supervised deep-learning reconstruction strategy. Our approach incorporates the temporal aspect into the electron tomography reconstruction process to recover 3D volumes at arbitrary time points from a single tilt series. We validate the method using simulations and demonstrate its merit in experimental studies of heat-induced transformations, including morphological evolution of Au nanostars and alloying in Au@Ag nanocubes. Our results establish a practical framework for dynamic, dose-efficient electron tomography, enabling in situ 3D investigation of nanomaterial transformations as well as the characterization of beam-sensitive structures.",
+      "authors": [
+        "Timothy M. Craig",
+        "Adrien Moncomble",
+        "Ajinkya A. Kadu",
+        "Gail A. Vinnacombe-Willson",
+        "Luis M. Liz-Marzán",
+        "Robin Girod",
+        "Sara Bals"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-03-31T09:08:50+00:00",
+      "link": "https://arxiv.org/pdf/2603.29462v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "in situ imaging of nanoscale dynamics and materials evolution",
+      "llm_evidence_cn": "纳米尺度动力学和材料演化的原位成像",
+      "llm_evidence": "纳米尺度动力学和材料演化的原位成像",
+      "canonical_evidence": "纳米尺度动力学和材料演化的原位成像",
+      "llm_tldr_en": "A deep-learning framework for continuous 3D imaging of evolving structures under operating conditions.",
+      "llm_tldr_cn": "一种用于在运行条件下对演化结构进行连续三维成像的深度学习框架。",
+      "llm_tldr": "一种用于在运行条件下对演化结构进行连续三维成像的深度学习框架。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.28950v1",
+      "source": "arxiv",
+      "title": "Probing Azimuthal Anatomy of Hyperbolic Whispering Gallery Modes in hBN",
+      "abstract": "Scattering-type scanning near-field optical microscopy (s-SNOM) is a powerful tool for investigating polaritonic modes. However, an inherent limitation of this technique is that excitation and detection occur at the same location. This constraint makes it challenging to resolve excitations with complex spatial structures, which can exhibit delicate dependence on the in-coupling conditions. Here, we present a strategy to overcome this limitation by introducing an auxiliary cavity, which serves as a stationary near-field excitation source. This configuration allows the s-SNOM tip to act solely as a detector, and decouples excitation from detection. We apply this approach to whispering gallery modes (WGMs) of hyperbolic phonon-polaritons in hexagonal boron nitride resonators. Through spatially resolved near-field maps we directly observe subwavelength polaritonic WGMs with large and discrete azimuthal momentum ($k_φ/ k_0$ up to 15). This allows us to map the frequency and angular behavior of the modes. Notably, we observe dynamic tuning of the effective refractive index by the WGMs to preserve consistent azimuthal momentum \\(k_φ\\) under varying excitation conditions. Numerical simulations support the experimental observations and confirm the observation of hyperbolic WGMs. This approach enables direct visualization of previously hidden mode structures in hyperbolic cavities and opens new pathways for momentum-controlled polaritonic device engineering.",
+      "authors": [
+        "Bogdan Borodin",
+        "Samyobrata Mukherjee",
+        "Shivaksh Rawat",
+        "Seojoo Lee",
+        "Thomas Poirier",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "James H. Edgar",
+        "Hanan Herzig Sheinfux",
+        "Gennady Shvets",
+        "Petr Stepanov"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-03-30T19:46:28+00:00",
+      "link": "https://arxiv.org/pdf/2603.28950v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scattering-type scanning near-field optical microscopy for polaritonic modes",
+      "llm_evidence_cn": "用于极化激元模式的散射型扫描近场光学显微镜",
+      "llm_evidence": "用于极化激元模式的散射型扫描近场光学显微镜",
+      "canonical_evidence": "用于极化激元模式的散射型扫描近场光学显微镜",
+      "llm_tldr_en": "Introduces an auxiliary cavity to decouple excitation and detection in s-SNOM for hBN polariton imaging.",
+      "llm_tldr_cn": "引入辅助腔体解耦 s-SNOM 的激发与探测，用于研究 hBN 中的极化激元。",
+      "llm_tldr": "引入辅助腔体解耦 s-SNOM 的激发与探测，用于研究 hBN 中的极化激元。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.29713v1",
+      "source": "arxiv",
+      "title": "Ultrafast Two-Dimensional Spectroscopy Uncovers Ubiquitous Electron-Paramagnon Coupling in Cuprate Superconductors",
+      "abstract": "The coupling between electronic excitations and collective bosonic modes is fundamental to the emergence of high-temperature superconductivity in cuprates. Despite extensive effort, conventional equilibrium and pump-probe optical spectroscopies still struggle to disentangle couplings to different bosonic modes when their energy scales overlap. Here we overcome this limitation using ultrafast two-dimensional electronic spectroscopy (2DES), which correlates coherent excitation and detection photon energies with femtosecond time resolution. Applied to optimally doped Bi$_2$Sr$_2$Ca$_{0.92}$Y$_{0.08}$Cu$_2$O$_{8+δ}$, 2DES reveals a pronounced off-diagonal resonance arising from the ultrafast generation of non-thermal bosons with energy $\\hbarΩ_\\mathbf{q}\\simeq200$ meV. By comparing the measured spectra with a theoretical framework that explicitly includes the interaction between charge-transfer and magnetic excitations, we identify these bosons as paramagnons with momenta centered near $(π/2,π/2)$ and extending toward $(0,π)$ and $(π,0)$. The resonance persists across a large range of temperatures and doping concentrations, demonstrating that high-energy paramagnons are ubiquitously and strongly coupled to electronic excitations throughout the cuprate phase diagram. Time-domain analysis constrains the build-up of the paramagnon population to $\\lesssim 10$ fs, placing a lower bound $λ\\gtrsim 0.7$ on the coupling strength. More broadly, our results establish 2DES as a powerful approach for disentangling mode-selective electron-boson interactions and addressing decoherence dynamics, thereby establishing a new avenue for investigating strongly correlated quantum materials. These findings also provide a direct framework for future time-resolved resonant inelastic X-ray scattering experiments aimed at tracking the ultrafast dynamics of magnetic excitations.",
+      "authors": [
+        "Francesco Proietto",
+        "Alessandra Milloch",
+        "Paolo Franceschini",
+        "Mohammadjavad Azarm",
+        "Niccolò Sellati",
+        "Rishabh Mishra",
+        "Peter C. Moen",
+        "Steef Smit",
+        "Martin Bluschke",
+        "Martin Greven",
+        "Hiroshi Eisaki",
+        "Marta Zonno",
+        "Sergey A. Gorovikov",
+        "Pinder Dosanjh",
+        "Stefania Pagliara",
+        "Gabriele Ferrini",
+        "Fabio Boschini",
+        "Lara Benfatto",
+        "Giacomo Ghiringhelli",
+        "Fulvio Parmigiani",
+        "Jeffrey A. Davis",
+        "Andrea Damascelli",
+        "Claudio Giannetti"
+      ],
+      "primary_category": "cond-mat.supr-con",
+      "categories": [
+        "cond-mat.supr-con"
+      ],
+      "published": "2026-03-31T13:14:32+00:00",
+      "link": "https://arxiv.org/pdf/2603.29713v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast two-dimensional electronic spectroscopy with femtosecond time resolution",
+      "llm_evidence_cn": "具有飞秒时间分辨率的超快二维电子光谱",
+      "llm_evidence": "具有飞秒时间分辨率的超快二维电子光谱",
+      "canonical_evidence": "具有飞秒时间分辨率的超快二维电子光谱",
+      "llm_tldr_en": "Uses 2DES to resolve electron-paramagnon coupling in superconductors with femtosecond precision.",
+      "llm_tldr_cn": "利用二维电子光谱以飞秒级分辨率解析超导体中的电子-顺磁子耦合。",
+      "llm_tldr": "利用二维电子光谱以飞秒级分辨率解析超导体中的电子-顺磁子耦合。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.29408v1",
+      "source": "arxiv",
+      "title": "Using Fast Reading Current Integrator for Advanced Ion Beam Diagnostics Across Continuous and Pulsed Modes",
+      "abstract": "A fast-reading current integrator is developed for high time-resolution and low-noise ion beam diagnostics under both continuous-wave and pulsed operating conditions. The system combines a low-leakage transimpedance front-end with a hybrid digitization architecture based on charge-balancing and voltage-to-frequency conversion. The input current is converted into a pulse stream corresponding to discrete charge quanta, enabling event-driven measurement with temporal resolution down to 0.5 ms while preserving a wide dynamic range and high linearity. The system further enables real-time pulse selection for instantaneous dose-rate estimation and reconstruction of time-dependent beam structures. A deterministic beam-interrupt signal is generated within <1 us upon reaching a predefined charge threshold, enabling fast feedback control. Additional functionalities, including threshold- and slope-based gating as well as phase-sensitive detection, enhance performance under noisy or modulated beam conditions. Calibration with precision current sources and beamline detectors demonstrates stable operation with excellent linearity and timing fidelity. The proposed system provides a compact and flexible platform for next-generation ion beam diagnostics requiring fast response, large dynamic range, and time-resolved measurement.",
+      "authors": [
+        "I-Chun Cho",
+        "Chien-Hsu Chen",
+        "Huan Niu",
+        "Cheng-Ya Pan",
+        "Chun-Hui Hsing",
+        "Tung-Yuan Hsiao"
+      ],
+      "primary_category": "physics.ins-det",
+      "categories": [
+        "physics.ins-det",
+        "physics.med-ph"
+      ],
+      "published": "2026-03-31T08:12:55+00:00",
+      "link": "https://arxiv.org/pdf/2603.29408v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "high time-resolution diagnostics for pulsed and continuous modes",
+      "llm_evidence_cn": "脉冲和连续模式的高时间分辨率诊断",
+      "llm_evidence": "脉冲和连续模式的高时间分辨率诊断",
+      "canonical_evidence": "脉冲和连续模式的高时间分辨率诊断",
+      "llm_tldr_en": "Develops a fast-reading current integrator for high-resolution, time-dependent beam structure reconstruction.",
+      "llm_tldr_cn": "开发了一种快速读取电流积分器，用于高分辨率、随时间变化的束流结构重建。",
+      "llm_tldr": "开发了一种快速读取电流积分器，用于高分辨率、随时间变化的束流结构重建。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.29814v1",
+      "source": "arxiv",
+      "title": "Short-lived memory in multidimensional spectra encodes full signal evolution",
+      "abstract": "Ultrafast multidimensional spectroscopies are powerful tools that can access charge and energy flow in complex materials, shifting chemical kinetics, and even many-body interactions in correlated matter. However, current implementations typically involve complex apparatuses and long averaging times. As a result, these methods have been limited to detailed mechanistic investigations of a few samples, precluding the broad characterization of molecular systems and/or the optimization of material ones. For example, converging the statistical noise in 2D spectra becomes exponentially expensive with increasing waiting times, and extended laser exposure heightens the probability of sample degradation. We address this fundamental challenge by developing a new technique, the spectral generalized master equation (GME), that enables one to employ short-waiting time 2D spectra to determine the full evolution of 2D spectra over arbitrary waiting times with high temporal resolution. In addition to reducing the cost of experiments by multiple orders of magnitude, our approach accurately removes statistical noise, reducing the need for time averaging, while circumventing the increasing convergence costs with longer waiting times. We provide a rigorous theoretical footing for the spectral GME and demonstrate its applicability on theoretically generated and experimentally measured 2D electronic and 2D infrared spectra. We anticipate that this advance has the potential to enable the investigation of systems that are too delicate for study with current multidimensional spectroscopies and accelerate the progress of 2D spectroscopy-based microscopies that can offer highly resolved excitation dynamics with spatial resolution over heterogeneous environments.",
+      "authors": [
+        "Thomas Sayer",
+        "Ethan H. Fink",
+        "Zachary R. Wiethorn",
+        "Devin R. Williams",
+        "Anthony J. Dominic",
+        "Luke Guerrieri",
+        "Yi Ji",
+        "Veronica Policht",
+        "Jennifer Ogilvie",
+        "Gabriela Schlau-Cohen",
+        "Amber Krummel",
+        "Andrés Montoya-Castillo"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.mtrl-sci",
+        "physics.bio-ph"
+      ],
+      "published": "2026-03-31T14:42:22+00:00",
+      "link": "https://arxiv.org/pdf/2603.29814v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast multidimensional spectroscopy for charge and energy flow in materials",
+      "llm_evidence_cn": "用于材料中电荷和能量流的超快多维光谱",
+      "llm_evidence": "用于材料中电荷和能量流的超快多维光谱",
+      "canonical_evidence": "用于材料中电荷和能量流的超快多维光谱",
+      "llm_tldr_en": "Develops a method to accelerate multidimensional spectroscopy for studying material kinetics.",
+      "llm_tldr_cn": "开发了一种加速多维光谱的方法，用于研究材料动力学。",
+      "llm_tldr": "开发了一种加速多维光谱的方法，用于研究材料动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.29641v1",
+      "source": "arxiv",
+      "title": "Femtosecond all-optical coherent control of spin polarization in altermagnets",
+      "abstract": "Altermagnets constitute an emerging materials platform for spintronic technologies by combining compensated magnetic order with ferromagnet-like spin-split electronic bands. Here, we investigate the proposed d-wave altermagnetic material RuO2 using circularly polarized ultrashort laser pulses. Time-resolved magneto-optical Kerr effect measurements, which are intrinsically sensitive to surface and interface states, reveal the ultrafast spin response of RuO2. In contrast to the demagnetization dynamics characteristic of conventional ferromagnets, we observe a distinct coherent contribution to the complex Kerr rotation that appears during the light-matter interaction and lasts for about 200 fs. Similar signatures have been associated with spin-momentum locking and directional band splitting in spin-split surface states of topological insulators as well as spin-orbit-coupled semiconductors. They are governed by a finite Raman coherence time. We interpret this coherent response as evidence for transient spin-polarized surface states in RuO2, consistent with the emergence of altermagnetic surface states that are directly relevant to spin-polarized transport at surfaces and interfaces.",
+      "authors": [
+        "Kevin Jäckel",
+        "Holger Grisk",
+        "Niklas Dornquast",
+        "Maik Gaerner",
+        "Günter Reiss",
+        "Timo Kuschel",
+        "Jakob Walowski",
+        "Markus Münzenberg"
+      ],
+      "primary_category": "cond-mat.other",
+      "categories": [
+        "cond-mat.other"
+      ],
+      "published": "2026-03-31T12:04:50+00:00",
+      "link": "https://arxiv.org/pdf/2603.29641v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved magneto-optical measurements of ultrafast spin response",
+      "llm_evidence_cn": "超快自旋响应的时间分辨磁光测量",
+      "llm_evidence": "超快自旋响应的时间分辨磁光测量",
+      "canonical_evidence": "超快自旋响应的时间分辨磁光测量",
+      "llm_tldr_en": "Uses time-resolved Kerr effect to study ultrafast spin dynamics in altermagnetic RuO2 during light-matter interaction.",
+      "llm_tldr_cn": "利用时间分辨克尔效应研究交错磁体 RuO2 在光与物质相互作用期间的超快自旋动力学。",
+      "llm_tldr": "利用时间分辨克尔效应研究交错磁体 RuO2 在光与物质相互作用期间的超快自旋动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.29814v2",
+      "source": "arxiv",
+      "title": "Short-lived memory in multidimensional spectra encodes full signal evolution",
+      "abstract": "Ultrafast multidimensional spectroscopies are powerful tools that can access charge and energy flow in complex materials, shifting chemical kinetics, and even many-body interactions in correlated matter. However, current implementations typically involve complex apparatuses and long averaging times. As a result, these methods have been limited to detailed mechanistic investigations of a few samples, precluding the broad characterization of molecular systems and/or the optimization of material ones. For example, converging the statistical noise in 2D spectra becomes exponentially expensive with increasing waiting times, and extended laser exposure heightens the probability of sample degradation. We address this fundamental challenge by developing a new technique, the spectral generalized master equation (GME), that enables one to employ short-waiting time 2D spectra to determine the full evolution of 2D spectra over arbitrary waiting times with high temporal resolution. In addition to reducing the cost of experiments by multiple orders of magnitude, our approach accurately removes statistical noise, reducing the need for time averaging, while circumventing the increasing convergence costs with longer waiting times. We provide a rigorous theoretical footing for the spectral GME and demonstrate its applicability on theoretically generated and experimentally measured 2D electronic and 2D infrared spectra. We anticipate that this advance has the potential to enable the investigation of systems that are too delicate for study with current multidimensional spectroscopies and accelerate the progress of 2D spectroscopy-based microscopies that can offer highly resolved excitation dynamics with spatial resolution over heterogeneous environments.",
+      "authors": [
+        "Thomas Sayer",
+        "Ethan H. Fink",
+        "Zachary R. Wiethorn",
+        "Devin R. Williams",
+        "Anthony J. Dominic",
+        "Luke Guerrieri",
+        "Yi Ji",
+        "Veronica Policht",
+        "Jennifer Ogilvie",
+        "Gabriela Schlau-Cohen",
+        "Amber Krummel",
+        "Andrés Montoya-Castillo"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph",
+        "cond-mat.mtrl-sci",
+        "physics.bio-ph"
+      ],
+      "published": "2026-03-31T14:42:22+00:00",
+      "link": "https://arxiv.org/pdf/2603.29814v2",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast multidimensional spectroscopies for charge and energy flow in materials",
+      "llm_evidence_cn": "用于材料中电荷和能量流动的超快多维光谱学",
+      "llm_evidence": "用于材料中电荷和能量流动的超快多维光谱学",
+      "canonical_evidence": "用于材料中电荷和能量流动的超快多维光谱学",
+      "llm_tldr_en": "Develops a method to encode full signal evolution in multidimensional spectra for material characterization.",
+      "llm_tldr_cn": "开发了一种在多维光谱中编码完整信号演化的方法，用于材料表征。",
+      "llm_tldr": "开发了一种在多维光谱中编码完整信号演化的方法，用于材料表征。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.00463v1",
+      "source": "arxiv",
+      "title": "Radio-Frequency-Driven Reshaping of the Mesoscale Charge-Density-Wave Landscape in 1T-TaS2 Thin-Film Devices",
+      "abstract": "Radio-frequency excitation directly reshapes the mesoscale charge-density-wave landscape in quasi-two-dimensional 1T-TaS2 thin films. Under combined RF and DC bias, the hysteretic current-voltage characteristics associated with the nearly commensurate-incommensurate transition are strongly altered, displaying RF-driven collapse, branching, and multiple step-like features that depend on frequency and drive amplitude. In-situ Raman measurements show enhanced intensity and linewidth narrowing of low-frequency CDW phonon modes, consistent with reduced dephasing and increased coherence of the periodic lattice distortion under RF drive. This behavior is captured by combining an overdamped time-dependent Ginzburg-Landau description of the commensurate CDW with a morphology-informed percolative resistor-capacitor transport model. The simulations indicate that oscillatory driving anneals frustrated domain configurations, reduces domain-wall density, and reorganizes the discommensuration network, while the transport model reproduces the resulting hysteresis, avalanche-like pathways, and RF-induced conductance steps. RF driving therefore provides an effective route for controlling collective electron-phonon order and accessing metastable transport states in 1T-TaS2, with implications for reconfigurable RF electronics, memory, and unconventional computing based on correlated materials.",
+      "authors": [
+        "Maedeh Taheri",
+        "Zahra Ebrahim Nataj",
+        "Nick Sesing",
+        "Topojit Debnath",
+        "Tina T. Salguero",
+        "Roger K. Lake",
+        "Alexander A. Balandin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-04-01T04:26:08+00:00",
+      "link": "https://arxiv.org/pdf/2604.00463v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in-situ measurements of mesoscale landscapes in thin-film devices",
+      "llm_evidence_cn": "薄膜器件中介观形貌的原位测量",
+      "llm_evidence": "薄膜器件中介观形貌的原位测量",
+      "canonical_evidence": "薄膜器件中介观形貌的原位测量",
+      "llm_tldr_en": "Studies RF-driven reshaping of charge-density-waves in thin films using in-situ Raman spectroscopy.",
+      "llm_tldr_cn": "利用原位拉曼光谱研究薄膜中射频驱动的电荷密度波重塑。",
+      "llm_tldr": "利用原位拉曼光谱研究薄膜中射频驱动的电荷密度波重塑。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.01566v1",
+      "source": "arxiv",
+      "title": "Abrupt crystallization from shock-compressed CaSiO3 glass",
+      "abstract": "We have performed in situ time-resolved X-ray diffraction at ~100 GPa on laser-shocked CaSiO3 glass to investigate the glass-to-crystal transition. At this extreme pressure, we observe the ultrafast crystallization of the CaSiO3 perovskite structure from the compressed amorphous phase, with a typical nucleation time of 1.69 +/- 0.10 ns and a final grainsize of ~20 nm. The grain size temporal evolution suggest a diffusion controlled transformation. Moreover, the observed concomitant explosive grain growth together with the release wave arrival into shocked CaSiO3 also suggests a role of the release in the nucleation process.",
+      "authors": [
+        "A. Amouretti",
+        "K. Nonaka",
+        "X. Liu",
+        "Y. Hironaka",
+        "H. Huang",
+        "R. Kodama",
+        "K. Lawler",
+        "K. Miyanishi",
+        "H. Nakamura",
+        "C. Schwartz",
+        "Y. Seto",
+        "K. Sueda",
+        "Y. Wu",
+        "M. Yabashi",
+        "T. Yabuuchi",
+        "N. Ozaki"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-02T03:27:17+00:00",
+      "link": "https://arxiv.org/pdf/2604.01566v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "in situ time-resolved X-ray diffraction for ultrafast crystallization",
+      "llm_evidence_cn": "原位时间分辨 X 射线衍射研究超快结晶",
+      "llm_evidence": "原位时间分辨 X 射线衍射研究超快结晶",
+      "canonical_evidence": "原位时间分辨 X 射线衍射研究超快结晶",
+      "llm_tldr_en": "Uses time-resolved XRD to observe ultrafast glass-to-crystal transitions under extreme pressure.",
+      "llm_tldr_cn": "利用时间分辨 X 射线衍射观察极端压力下的超快玻璃-晶体转变过程。",
+      "llm_tldr": "利用时间分辨 X 射线衍射观察极端压力下的超快玻璃-晶体转变过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

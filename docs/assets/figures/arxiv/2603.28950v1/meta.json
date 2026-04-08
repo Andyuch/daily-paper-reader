@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28950v1/fig-001.webp",
+      "caption": "Figure 1: Principle scheme of the s-SNOM experiment. a) Standard s-SNOM for a standalone hBN disk. Tiplaunched modes produce radial intensity modulation due to round-trip resonance. Insets show experimental SNOM amplitude map and the azimuthal profile near the rim. b) Decoupled-excitation s-SNOM for an hBN disk with an auxiliary cavity. Along with the round-trip mode, a cavity-launched WGM independent of tip position produces azimuthal modulation. Insets show experimental SNOM amplitude map and the azimuthal profile near the rim.",
+      "page": 2,
+      "index": 1,
+      "width": 1035,
+      "height": 398
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28950v1/fig-002.webp",
+      "caption": "Figure 2: Detection and analysis of HPhP WGM. a) AFM topography of a 1-µm-radius, 32-nm-thick hBN disk positioned on top of a 50-nm-thick gold stripe, which is connected to a rectangular hBN cavity resting on the SiO2 substrate. b) s-SNOM optical amplitude at 1388 cm−1 demodulated at the third harmonic of the tip oscillation (S3), which is proportional to the out-of-plane near-field intensity, |Ez|2, in the structure. The dotted colored lines show several circumferences used to extract the profiles for Fig. 2c. The inset shows a 3D representation of panel b. c) Profiles extracted along circumferences shown in Fig. 2b after the baseline subtraction. A relative modulation independent of the base intensity of the chosen circumference. d) Fourier spectra of the baseline-subtracted profiles. The inset shows the FFT maxima distribution versus the circumference radius.",
+      "page": 3,
+      "index": 2,
+      "width": 1067,
+      "height": 585
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28950v1/fig-003.webp",
+      "caption": "Figure 3: The dispersion of HPhP WGMs. a) s-SNOM optical amplitude maps demodulated at the 4th harmonic (S4) for excitation wavelengths corresponding to modes with distinct m. b) Contour plot constructed from raw FFT spectra (magnitude on a logarithmic scale) of profiles taken along the disk circumference, recorded over excitation wavenumbers from 1370 to 1430 cm−1 with a step size of 2 cm−1. c) Spectral positions of FFT maxima. The raspberrycolored curve represents a Lorentzian fit. Q-factors were estimated as the ratio of peak position to full width at half maximum (f0/δf). d) Normalized FFT spectra. Raspberry-colored diamonds indicate the exact positions of FFT peaks. The mode numbers (extracted directly from maps) are shown in brackets. e) Refractive indices for azimuthal (WGM) and radial (Round-Trip) resonances. The inset shows dynamic refractive index tuning for the mode (9, 2).",
+      "page": 5,
+      "index": 3,
+      "width": 1046,
+      "height": 754
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28950v1/fig-004.webp",
+      "caption": "Figure 4: Numerical eigenmodes of an hBN disk and comparison with experiment. a) Azimuthal mode number m as a function of wavenumber. Colored circles and solid lines denote mode positions calculated using the effective index approximation (EIA), and black open diamonds indicate experimental data. b) Experimental s-SNOM image acquired at 1408 cm−1 (top) and the corresponding field distribution, (Re Ez)2, obtained from a 2D EIAbased eigenmode solver (bottom). c) Experimental azimuthal profile extracted along the raspberry dashed line in b (raspberry diamonds) compared with the simulated profile extracted along the red dashed line in b (solid red line).",
+      "page": 7,
+      "index": 4,
+      "width": 1046,
+      "height": 410
+    }
+  ]
+}

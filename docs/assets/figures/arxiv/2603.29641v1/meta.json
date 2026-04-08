@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29641v1/fig-001.webp",
+      "caption": "Figure 1: a) Illustrates the most basic crystal structures with either up- or downoriented, or zero magnetic moment, in orange, green, and gray, respectively, for ferromagnets, antiferromagnets, topological insulators, and altermagnets (from left to right). b) A cross-section through the Fermi surfaces for all four material systems. c) We apply selective pumping processes by utilizing circularly polarized photons to enhance specific electron transitions. d) This leads to materialdistinct magnetization dynamics, measured by time-resolved magneto-optical Kerr-effect, apparent in the relation between the real ∆θK and the imaginary ∆ϵK parts of the complex Kerr rotation. Transient spin polarized states (e.g. topological insulators and altermagnets) produce characteristic ”butterfly” structures in materials with k⃗ dependent electron spin within the first 200 fs after the excitation with ultrashort laser pulses ∼ 45 fs. In (anti-) ferromagnets, the electron spin is, in first order, independent of k⃗, revealing a linear relation.",
+      "page": 2,
+      "index": 1,
+      "width": 779,
+      "height": 778
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29641v1/fig-002.webp",
+      "caption": "Figure 2: The setup a) employs a double modulation time-resolved pump-probe MOKE scheme to extract dynamics on the femtosecond timescale. A photo-elastic modulator modulates the probe, and a mechanical chopper modulates the pump beam. The sample is rotated by the angle α indicated by the blue arrow. Crystal structure overview, cross-section b), and front view c). The grey arrows mark the crystal directions. The Néel vector points in the [001] direction. Oxygen atoms are colored red, Ru atoms in either sublattice are colored orange/green with their corresponding magnetic moment hinted by arrows. The oval and circular structures in orange and green indicate a cut through the Fermi surface.",
+      "page": 7,
+      "index": 2,
+      "width": 653,
+      "height": 428
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29641v1/fig-003.webp",
+      "caption": "Figure 5: a) and b) X-ray diffraction spectra for both samples grown on MgO and TiO2, respectively. c) and d) X-ray reflectivity spectra for both samples grown on MgO and TiO2, respectively.",
+      "page": 23,
+      "index": 3,
+      "width": 785,
+      "height": 534
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29641v1/fig-004.webp",
+      "caption": "Figure 3: Time-resolved complex Kerr angle components data for a) RuO2 on MgO, and b) RuO2 on TiO2 during the first 300 fs after excitation for all three excitation polarizations. The σ± spectra are shifted for clarity; the gray dashed lines represent the original zero line. The circular signal is on average 100 fs faster and 10 times stronger than the linear response. Additionally, a second peak arises. Dynamics data transferred to the complex plane (c) and d)), depicting a butterfly structure, which develops during the femtosecond scattering process between the transient spin polarized states e). Also observed in topological insulators f).",
+      "page": 8,
+      "index": 4,
+      "width": 831,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29641v1/fig-005.webp",
+      "caption": "Figure 4: RuO2 on MgO: ∆θK spectra for an a) left circular, b) linear, and c) right circular polarized excitation during the first 1 ps after excitation for selected sample rotation angles. d) and e), the first peak extracted from the corresponding dynamic curves for RuO2 on MgO (twinned) and TiO2 (single crystal), respectively, plotted as a function of sample rotation angle α. The data show a clear twofold symmetry for a full sample rotation. The single-crystal data are shifted for clarity, with dashed lines denoting the zero-crossing. In the complex plane, f) twinned and g), h) single crystal, the butterfly structure is shown for both samples. In g) and h), the ”switching” behavior shows in the sign change between the wings from α = 60◦ and α = 135◦.",
+      "page": 12,
+      "index": 5,
+      "width": 1043,
+      "height": 869
+    }
+  ]
+}

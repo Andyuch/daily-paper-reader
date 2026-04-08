@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.28354v1/fig-001.webp",
+      "caption": "Fig. 1: Correlative SEM and FM-KPFM imaging of spatio-temporal reaction patterns during CO oxidation on Pt surfaces. (a) In situ SEM image showing spiral and planar reaction waves on Pt(110) during catalytic CO oxidation in Tescan UHV-SEM. Experimental conditions: p(CO) = 4×10-4 Pa, p(O2) = 1.5×10-3 Pa, T = 170 °C . The patterns consist of two distinct greyscale levels corresponding to different surface chemical states (see Movie M1). (b) Sequence of SE images showing the evolution of a reaction front within a single grain on a polycrystalline Pt sample in the vicinity of the AFM tip (blue, see further) in FEI Versa 3D SEM. Experimental conditions: p(CO) = 3×10-3 Pa and p(O2) = 1.6×10-2 Pa, T = 216 °C. The yellow line marks the position and the direction of the reaction front; yellow arrows show the propagation direction. See full Movie M2. (c) Spatial line scan across propagating reaction waves in Tescan UHV-SEM, total distance is 41 m. (d) Time-resolved SEM signal acquired with a stationary electron beam (position of the beam marked by a dashed square in (b)). (e) Histogram of SEM greyscale values from a representative snapshot in (b), fitted with two Gaussian components, confirming the bimodal intensity distribution. (f) Schematic of the experimental configuration combining SEM and frequency-modulated Kelvin probe force microscopy (FM-KPFM). (g) Time trace of the contact potential difference (VCPD) measured with a stationary AFM tip during the ongoing reaction in (b). (h) Simultaneously recorded SEM greyscale (grey squares) and VCPD (blue curve) signals, demonstrating direct correlation between secondary electron contrast and surface potential variations associated with CO- and O-covered regions.",
+      "page": 4,
+      "index": 1,
+      "width": 943,
+      "height": 600
+    },
+    {
+      "url": "assets/figures/arxiv/2603.28354v1/fig-002.webp",
+      "caption": "Fig. 2: Reaction-diffusion model outcomes compared with SEM experiments. (a) SEM and (b) simulation snapshots of CO (SEM: dark, simulation: green) and oxygen (SEM: bright, simulation: red) waves on platinum (simulation: black) taken for different sample temperatures. Experimental conditions: p(CO) = 7.0×10-4 Pa and p(O2) = 4.1×10-3 Pa. (c) SEM and (d) simulation snapshots taken for different CO partial pressures. Experimental conditions: p(O2) = 3.4 ×10-3 Pa, T ~ 180 °C. (e) Snapshots from a continuous movie (see Supporting Information, Movie M4) showing the spiraling pattern formation. (f) Time-resolved simulation signal (x axis showing simulation steps, i.e., time), with separate red (O) and green (CO) intensities, as read-out from a dashed square in (e)).",
+      "page": 6,
+      "index": 2,
+      "width": 943,
+      "height": 793
+    }
+  ]
+}

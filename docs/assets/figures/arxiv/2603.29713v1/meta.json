@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29713v1/fig-001.webp",
+      "caption": "FIG. 1. (a) Schematic of the partially collinear 2DES setup. Two phase-locked broadband pump pulses, separated by a delay tpu, excite the sample; after a waiting time τ a probe pulse measures the response. The reflected probe is spectrally dispersed by a spectrometer to define the detection axis ℏωpr. Pump replicas are produced by a common-path wedge interferometer to ensure phase stability and precise control of time delay tpu (see Supplementary Sec. S1). (b) Sketch of a 2D spectrum S(ℏωpr, ℏωpu; τ) at fixed τ . The dashed diagonal marks ℏωpu = ℏωpr; an off-diagonal cross-peak (ℏωc, ℏωa) is indicated. (c) Illustration of a boson-mediated three-level scheme. First, pump photons drive a vertical transition to a virtual level at ℏωa = ℏωb + ℏΩq, which relaxes to the real state ℏωb by emitting a boson (energy ℏΩq, momentum q). This results in the creation of a transient non-thermal boson population peaked at ℏΩq. Second, the probe promotes the system to a virtual intermediate state at ℏωc = ℏωb − ℏΩq, and the transition is completed to the real state by absorbing a non-thermal boson of energy ℏΩq. The corresponding crosspeak is observed at (ℏωc, ℏωa) in S(ℏωpr, ℏωpu; τ) in panel (b).",
+      "page": 2,
+      "index": 1,
+      "width": 513,
+      "height": 379
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29713v1/fig-002.webp",
+      "caption": "FIG. 6. (a) Time-resolved trace of the off-diagonal 2DES signal S(ℏωpr = 1.3 eV, ℏωpu = 1.7 eV; τ) measured on optimally doped Y-Bi2212 at T = 300 K. The dashed line indicates the pump-probe pulse envelope. (b) Correlation energy ∆E = ℏωpu − ℏωpr (left axis, circles) and corresponding lower bound of the electron-boson coupling strength λ (right axis, squares) extracted from the off-diagonal 2DES signal as a function of hole doping at T = 300 K. The top axis shows the corresponding critical temperatures Tc(K). Error bars of 22 meV are estimated from peak position distribution in different measurements.",
+      "page": 7,
+      "index": 2,
+      "width": 408,
+      "height": 669
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29713v1/fig-003.webp",
+      "caption": "FIG. 2. (a) 2DES map of optimally doped Y-Bi2212 measured at 300 K with a pump fluence of 400 µJ/cm2, recorded at a fixed delay time τ = 40 fs. The color map shows the differential reflectivity ∆R/R as a function of pump photon energy ℏωpu (vertical axis) and probe photon energy ℏωpr (horizontal axis). The white dashed line marks the diagonal direction ℏωpu = ℏωpr. Black dashed lines indicate the position of the off-diagonal peak (see Supplementary Sec. S3). The inset shows the position of the measurement in the temperature-doping phase diagram. (b) 2DES map measured under the same experimental conditions as in panel (a) but at a longer delay time, τ = 340 fs. The same color scale as in panel (a) is used; for clarity, the signal amplitude is multiplied by a factor of two. The off-diagonal resonance observed at τ = 40 fs is preserved at long delay.",
+      "page": 4,
+      "index": 3,
+      "width": 944,
+      "height": 418
+    }
+  ]
+}

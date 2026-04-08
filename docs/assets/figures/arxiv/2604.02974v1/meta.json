@@ -1,0 +1,118 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-001.webp",
+      "caption": "Figure 7: Concentration maps of the three reconstructed components Cps in farther focus configuration. At OCV (a), at 4.3 V in a fresh position #B (b) and at 4.3 V in continuously irradiated spot #C (c), the latter with higher x-rays dose accumulated during the charge process. The scale bar is 1 mm.",
+      "page": 11,
+      "index": 1,
+      "width": 950,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-002.webp",
+      "caption": "Figure 14 : Dose map for the farther (top) and closer focus (bottom) configuration. The white scale bar is 1 mm.",
+      "page": 15,
+      "index": 2,
+      "width": 454,
+      "height": 335
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-003.webp",
+      "caption": "Figure 13: Relative concentration of the reconstructed components Cps in closer focus configuration obtained in spot #C at 4.3V as a function of cumulated dose. The dose corresponds to the dose rate multiplied by the cumulative exposure time.",
+      "page": 15,
+      "index": 3,
+      "width": 498,
+      "height": 366
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-004.webp",
+      "caption": "Figure 4: Description of the procedure for the dose estimation, the definition of the dose rate maps and its application to the Cps concentration maps. The flat-field HC (I0) was converted first into a flux map following the Eq.1, and then into a dose rate map (Eq.2). The dose rate map is then used to create a mask of dose rate, that can be applied on the QXAS-HC or directly on the Cp concentration maps.",
+      "page": 7,
+      "index": 4,
+      "width": 950,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-005.webp",
+      "caption": "Figure 6. a) MCR-ALS reconstructed spectra for the dataset collected during delithiation at position #C using the mask 0.7-1.0 kGy/s. The Cp1 is depicted in blue, the Cp2 in orange and the Cp3 in green. All the QXAS-HC spectra were reconstructed as linear combination of these Cps. b) Evolution of relative concentration of the three Cps considering the dose rate between b) 0.7-1.0 kGy/s and c) 6.7-7.0 kGy/s, along with the galvanostatic charge (dashed line).",
+      "page": 10,
+      "index": 5,
+      "width": 477,
+      "height": 1248
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-006.webp",
+      "caption": "Figure 12: Concentration maps of the three reconstructed components Cps in the case of closer focus beam configuration at OCV (a), at 4.3 V in #B (b), and at 4.3 V in #C (c). The white scale bar is 1 mm.",
+      "page": 14,
+      "index": 6,
+      "width": 950,
+      "height": 392
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-007.webp",
+      "caption": "Figure 11: Evolution of relative concentration of the three Cps considering the dose rate between b) 0.7-1.0 kGy/s in closer focus configuration along the galvanostatic curve (dashed line). For sake of comparison, we have used the same Cps as in the farther focused configuration at 0.7-1.0 kGy/s (Figure 6a).",
+      "page": 14,
+      "index": 7,
+      "width": 571,
+      "height": 485
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-008.webp",
+      "caption": "Figure 1: Schematic view of the ROCK cell. a) Diamond windows, b) LiNiO2 on aluminium foil, c) Celgard separator, d) Lithium foil, e) external flanges, f) Molybdenum frame on the positive electrode side, g) o-rings, h) PPS body, i) Molybdenum frame on the negative electrode side, j) spring system",
+      "page": 3,
+      "index": 8,
+      "width": 909,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-009.webp",
+      "caption": "Figure 10: Operando XAS experiment in closer focus configuration. a) Histogram of number of pixels as a function of the dose (step of 0.3 kGy/s), the dose rate map is shown in the inset. b) Evolution of averaged QXAS-HC corresponding to 0.7 – 1.0 kGy/s dose rate during the charge, the corresponding dose rate mask is shown in the inset (yellow).",
+      "page": 13,
+      "index": 9,
+      "width": 950,
+      "height": 395
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-010.webp",
+      "caption": "Figure 5: Operando XAS experiment in farther focus configuration. a) QXAS-IC spectra collected at OCV and at 4.3 V at the end of the holding at the continuously irradiated position #C, and in two fresh points #A and #B. b) Histogram of number of pixels as a function of the dose (step of 0.3 kGy/s), the dose rate map is shown in the inset. c) Evolution of the averaged QXAS-HC corresponding to 0.7 - 1 kGy/s dose rate during the charge, the corresponding dose rate mask is shown in the inset (yellow). d) Evolution of averaged the QXAS-HC corresponding to 6.7 - 7 kGy/s dose rate during the charge, the corresponding dose rate mask is shown in the inset (yellow).",
+      "page": 8,
+      "index": 10,
+      "width": 950,
+      "height": 798
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-011.webp",
+      "caption": "Figure 2: First delithiation of LiNiO2 against Li metal performed at C/4 (1 Li+ deintercalated in 4 hours). The galvanostatic charge in the coin cell (dashed blue line) is compared to those obtained in the ROCK cell (red and green lines).",
+      "page": 4,
+      "index": 11,
+      "width": 950,
+      "height": 477
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-012.webp",
+      "caption": "Figure 8: Relative concentration of the reconstructed components Cps obtained in spot #C at 4.3V in farther focus configuration as a function of the total exposure time. The dose corresponds to the dose rate multiplied by the cumulative exposure time.",
+      "page": 12,
+      "index": 12,
+      "width": 492,
+      "height": 367
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-013.webp",
+      "caption": "Figure 9: QXAS-IC spectra in the closer focus configuration at OCV, at 4.3 V at the end of the holding at the continuously irradiated position #C, and in two fresh points #A and #B.",
+      "page": 12,
+      "index": 13,
+      "width": 490,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2604.02974v1/fig-014.webp",
+      "caption": "Figure 3: a) Picture of the experimental setup. The ROCK cell is mounted on a sample holder (the direction of the beam is indicated by the green arrow). The Ni foil was placed on the same focal point of the LiNiO2 electrode, and I0 was measured by vertically translating the sample stage. The camera setup (on the right side) could be translated perpendicularly in and out of the beam direction. b) Graphical representation of the front view of the ROCK cell (piece f in Figure 1) with the spots used for collecting the FFI-XAS data (in yellow).",
+      "page": 5,
+      "index": 14,
+      "width": 950,
+      "height": 473
+    }
+  ]
+}

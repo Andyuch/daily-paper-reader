@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.00463v1/fig-001.webp",
+      "caption": "Figure 5: The TDGL simulation of commensurate CDW domains. Two-dimensional phase maps obtained from TDGL simulations are shown for different driving condition: (a) cooled state with 𝐸𝐸𝑎𝑎𝑎𝑎 𝐸𝐸𝑑𝑑𝑎𝑎⁄ = 0, (b) 𝐸𝐸𝑎𝑎𝑎𝑎 𝐸𝐸𝑑𝑑𝑎𝑎⁄ = 1.5 and (c) and 𝐸𝐸𝑎𝑎𝑎𝑎 𝐸𝐸𝑑𝑑𝑎𝑎⁄ = 2.5. Panel (d) to (f) show the corresponding domain wall intensity under the same driving conditions. As the AC amplitude increases, the domain wall intensity decreases, and the phase maps exhibit enhanced coherence.",
+      "page": 14,
+      "index": 1,
+      "width": 954,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00463v1/fig-002.webp",
+      "caption": "Figure 6: AC-DC response in 1T-TaS2 switching circuit and percolation-like network model.",
+      "page": 17,
+      "index": 2,
+      "width": 759,
+      "height": 945
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00463v1/fig-003.webp",
+      "caption": "Figure 4: In-situ bias-dependent Raman measurement. a) The DC bias-dependent Raman spectra of 1T-TaS2 channel is measured in the commensurate state at T = 100 K, with a 488-nm laser. At zero bias, the low-frequency modes can be seen in the spectral range < 100 cm-1. As the DC bias, Vdc, is increased, the peaks broadens and the intensity decreases, where it enters the incommensurate state at around Vdc = 1.9 V. The light blue curves represent the Gaussian fits to the vibrational modes at 60, 70, 77 cm-1. Panel (b) shows the intensity of 77 cm-1 peak, which is normalized to the silicon peak, as a function of DC bias voltage, where the channel makes the transition from C to IC-CDW. c) The Raman spectra of the channel under the AC-DC drive is measured in the commensurate state for range of frequencies from f = 10 to 25 MHz, where Vdc = 50 mV and Vac = 128 mV and compared against the spectrum in the absence of RF. Panel (d) and (e) shows the normalized intensity and FWHM of the 77 cm-1 mode as a function of frequency, respectively.",
+      "page": 12,
+      "index": 3,
+      "width": 798,
+      "height": 802
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00463v1/fig-004.webp",
+      "caption": "Figure 3: High frequency AC-DC response in NC-IC CDW regime. Panel (a) shows the I-V under 70 MHz radiation in forward sweep at T = 270 K. The “No RF” trace shows the NC-IC transition. Upon increasing the AC amplitude, the onset of transition reduces, and extra steps are separated as it is shown with blue arrows. b) The color map shows the measured differential conductance as a function of RF power, in the vicinity of NC-IC transition hysteresis at T = 270 K. As the RF power increases, the NC-IC step moves to the lower biases and more conductance steps emerge. c) Measured I-V curves at T = 250 K under f = 70 MHz excitation show the emergence of hysteretic steps at lower bias within NC state, preceding the onset of NC-IC regime (the pink shaded region). Panel (d) shows frequency dependent I-Vs measured under RF excitation from 100 to 300 MHz.",
+      "page": 9,
+      "index": 4,
+      "width": 956,
+      "height": 756
+    },
+    {
+      "url": "assets/figures/arxiv/2604.00463v1/fig-005.webp",
+      "caption": "Figure 1: DC characterizations and AC-DC circuit setup. The circuit diagram of AC-DC coupled measurment can be seen in panel (a), where two Bias Tees isolate the RF and DC pathway. b) The SEM image of 1T-TaS2 channel. The pseudo-coloring is used for clarity. The scale bar shows 1 𝜇𝜇m. c) The temperature-dependent resistance measurement of 1T-TaS2 device shows the IC-NC and NC to C-CDW transition, with two hysteresis window at T ≈ 334 – 356 K and T ≈ 130 – 220 K, respectively. The resistance is measured at low DC bias, 15 mV. The arrows show the illustration of crystal and formation of star-of-David domains, upon sweeping across the temperatures.",
+      "page": 5,
+      "index": 5,
+      "width": 884,
+      "height": 943
+    }
+  ]
+}

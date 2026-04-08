@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2603.29462v1/fig-001.webp",
+      "caption": "Fig. 1: DIP-STER reconstruction of Au nanostar heat-induced evolution. a, Illustration of the GRS tilt scheme which allows continuous tilting and projection acquisition during dynamic experiments such as heating. b, DIP-STER is trained in a self-supervised manner on the acquired tilt series and learns to produce time-dependent reconstructions.",
+      "page": 3,
+      "index": 1,
+      "width": 952,
+      "height": 237
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29462v1/fig-002.webp",
+      "caption": "Fig. 3. Evaluation of DIP-STER reconstructions on synthetic Au nanoshell and Au-Ag coreshell nanorod. a, Isosurface renderings and orthoslices of the synthetic ground truth nanoshell degrading over time and, b, of the corresponding DIP-STER reconstruction. The orthoslices are in the xz plane, i.e., the plane in which the missing wedge would be visible in conventional reconstructions. c, RMSE and, d, SSIM measurements of DIP-STER and SIRT reconstructions against the ground truth reference as a function of time. e, comparison of the surface area to volume ratio over time. f, Isosurface renderings and orthoslices of the synthetic Au@Ag nanorod with alloying dynamics and, g, of the corresponding DIP-STER reconstruction. The orthoslices are in the yz plane of the reconstruction frame. h, RMSE and, i, SSIM measurements of DIP-STER and SIRT reconstructions against the ground truth reference as a function of time. j, Comparison of the alloying percentage over time.",
+      "page": 6,
+      "index": 2,
+      "width": 950,
+      "height": 512
+    },
+    {
+      "url": "assets/figures/arxiv/2603.29462v1/fig-003.webp",
+      "caption": "Fig. 4. DIP-STER reconstructions of experimental, heat-induced, nanoscale dynamics. a, Isosurface renderings at selected time steps of the DIP-STER reconstructions of a nanostar heated to 220°C for 39 minutes. Colours indicates area of material loss (red) and gain (blue), between each pairs of displayed time steps, clearly showing loss of branches and redistribution to the core. Scale bar is 20 nm. b, Volume rendering and c, orthoslice of the DIP-STER reconstructions of a silica-coated Au@Ag core-shell nanocube heated to 350°C then 400°C. The Au core gradually diffuses as Au and Ag alloy. The colour scale is set to map the bimodal intensity distribution to pure Ag and pure Au domains (Supplementary Fig. 11).33 Sale bar is 20 nm. d, Experimental projection angles in the nanostar tilt series as a function of time and volume redistribution during the experiment. f, Experimental projection angles in the Au@Ag tilt series as a function of time, and alloying progress over time, as estimated from the spread of intensities in the reconstructions. The longer time between the two first tilt angles is due the need to readjust the specimen z-height that was changed by the high temperature step.",
+      "page": 8,
+      "index": 3,
+      "width": 950,
+      "height": 733
+    }
+  ]
+}

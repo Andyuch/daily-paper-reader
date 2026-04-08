@@ -1,0 +1,1638 @@
+Title: Ultrafast Two-Dimensional Spectroscopy Uncovers Ubiquitous Electron-Paramagnon Coupling in Cuprate Superconductors
+
+URL Source: https://arxiv.org/pdf/2603.29713v1
+
+Published Time: Wed, 01 Apr 2026 01:13:20 GMT
+
+Number of Pages: 27
+
+Markdown Content:
+## Ultrafast Two-Dimensional Spectroscopy Uncovers Ubiquitous Electron-Paramagnon Coupling in Cuprate Superconductors 
+
+Francesco Proietto, 1, 2, 3, ∗ Alessandra Milloch, 1, 2, ∗ Paolo Franceschini, 4, 5 Mohammadjavad Azarm, 1, 2, 3 
+
+Niccol` o Sellati, 6 Rishabh Mishra, 7, 8, 9 Peter C. Moen, 10, 11 Steef Smit, 10, 11 Martin Bluschke, 10, 11 
+
+Martin Greven, 12 Hiroshi Eisaki, 13 Marta Zonno, 14 Sergey A. Gorovikov, 14 Pinder Dosanjh, 10, 11 
+
+Stefania Pagliara, 1, 2 Gabriele Ferrini, 1, 2 Fabio Boschini, 15 Lara Benfatto, 6 Giacomo Ghiringhelli, 16, 17 
+
+Fulvio Parmigiani, 18, 19 Jeffrey A. Davis, 7, 8 Andrea Damascelli, 10, 11 and Claudio Giannetti 1, 2, 4, †
+
+> 1
+
+Department of Mathematics and Physics, Universit` a Cattolica del Sacro Cuore, Brescia I-25133, Italy 
+
+> 2
+
+ILAMP (Interdisciplinary Laboratories for Advanced Materials Physics), Universit` a Cattolica del Sacro Cuore, Brescia I-25133, Italy 
+
+> 3
+
+Department of Physics and Astronomy, KU Leuven, B-3001 Leuven, Belgium 
+
+> 4
+
+CNR-INO (National Institute of Optics), via Branze 45, 25123 Brescia, Italy 
+
+> 5
+
+Department of Information Engineering, University of Brescia, Brescia I-25123, Italy 
+
+> 6
+
+Department of Physics, “Sapienza” University of Rome, P.le A. Moro 5, 00185 Rome, Italy 
+
+> 7
+
+Optical Sciences Centre, Swinburne University of Technology, Melbourne, Australia 
+
+> 8
+
+ARC Centre of Excellence in Future Low-Energy Electronics Technologies, Swinburne University of Technology, Hawthorn, 3122, Victoria, Australia 
+
+> 9
+
+University of New South Wales, Sydney, Australia 
+
+> 10
+
+Quantum Matter Institute, University of British Columbia, Vancouver, British Columbia, V6T 1Z4, Canada 
+
+> 11
+
+Department of Physics & Astronomy, University of British Columbia, Vancouver, British Columbia, V6T 1Z1, Canada 
+
+> 12
+
+School of Physics and Astronomy, University of Minnesota, Minneapolis, MN 55455, USA 
+
+> 13
+
+Core Electronics Technology Research Institute, National Institute of Advanced Industrial Science and Technology (AIST), 1-1-1 Umezono, Tsukuba, Ibaraki 305-8568, Japan 
+
+> 14
+
+Canadian Light Source, Inc., 44 Innovation Boulevard, Saskatoon, SK, Canada S7N 2V3 
+
+> 15
+
+Advanced Laser Light Source, Institut National de la Recherche Scientifique, Varennes, QC J3X 1P7, Canada 
+
+> 16
+
+Dipartimento di Fisica, Politecnico di Milano, piazza Leonardo da Vinci 32, I-20133 Milano, Italy 
+
+> 17
+
+CNR-SPIN, Dipartimento di Fisica, Politecnico di Milano, I-20133 Milano, Italy 
+
+> 18
+
+Elettra - Sincrotrone Trieste S.C.p.A., Trieste, Italy 
+
+> 19
+
+Dipartimento di Fisica, Universit` a degli Studi di Trieste, Trieste, Italy 
+
+The coupling between electronic excitations and collective bosonic modes is fundamental to the emergence of high-temperature superconductivity in cuprates. Despite extensive effort, conven-tional equilibrium and pump-probe optical spectroscopies still struggle to disentangle couplings to different bosonic modes when their energy scales overlap. Here we overcome this limitation using ultrafast two-dimensional electronic spectroscopy (2DES), which correlates coherent excita-tion and detection photon energies with femtosecond time resolution. Applied to optimally doped Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δ , 2DES reveals a pronounced off-diagonal resonance arising from the ul-trafast generation of non-thermal bosons with energy ℏΩq ≃ 200 meV. By comparing the measured spectra with a theoretical framework that explicitly includes the interaction between charge-transfer and magnetic excitations, we identify these bosons as paramagnons with momenta centered near (π/ 2, π/ 2) and extending toward (0 , π ) and ( π, 0). The resonance persists across a large range of tem-peratures and doping concentrations, demonstrating that high-energy paramagnons are ubiquitously and strongly coupled to electronic excitations throughout the cuprate phase diagram. Time-domain analysis constrains the build-up of the paramagnon population to ≲ 10 fs, placing a lower bound 
+
+λ ≳ 0.7 on the coupling strength. More broadly, our results establish 2DES as a powerful approach for disentangling mode-selective electron-boson interactions and addressing decoherence dynamics, thereby establishing a new avenue for investigating strongly correlated quantum materials. These findings also provide a direct framework for future time-resolved resonant inelastic X-ray scattering experiments aimed at tracking the ultrafast dynamics of magnetic excitations. 
+
+The coupling of electronic quasiparticles to bosonic fluctuations is a key ingredient for explaining and ul-timately controlling high-temperature superconductivity  
+
+> ∗
+
+These authors contributed equally to this work.  
+
+> †
+
+claudio.giannetti@unicatt.it 
+
+[1–3]. Unlike conventional superconductors, where the Bardeen-Cooper-Schrieffer (BCS) framework attributes Cooper pairing to phonon exchange, unconventional superconductors cannot be explained within a purely phonon-mediated picture [1, 4, 5]. In hole-doped cop-per oxides, the unconventional superconductors with the highest critical temperatures, the elusive pairing “glue” 
+
+> arXiv:2603.29713v1 [cond-mat.supr-con] 31 Mar 2026
+
+2has been variously ascribed to lattice vibrations, spin fluctuations, or more exotic collective modes emerg-ing from strong electronic correlations [1, 5]. Evidence for these interactions comes from a broad range of ex-perimental probes. Angle-resolved photoemission spec-troscopy (ARPES) has revealed dispersion anomalies (“kinks”) associated with bosonic modes [6–8]; optical and Raman spectroscopies have identified collective ex-citations in the charge and lattice channels [9]; resonant inelastic X-ray scattering (RIXS) has probed high-energy spin and orbital excitations [10]; and neutron scattering has mapped magnetic resonance modes in the supercon-ducting state [11]. Yet a fundamental limitation of equi-librium spectroscopies is the inability to disentangle elec-tronic couplings to different bosonic channels when these occur on similar energy scales. The emergence of nonequilibrium spectroscopies of-fered a new route to address this problem. By driving the system out of equilibrium and tracking its subsequent relaxation, it became possible to dynamically disentan-gle the electronic, lattice, and spin channels [12, 13]. In particular, pump-probe optical measurements have re-vealed ultrafast energy exchange between photoexcited electrons and bosons, likely of magnetic origin [14, 15]. However, the strength of this coupling has so far been inferred only indirectly from the dynamics of an effective bosonic temperature, which affects the Drude scattering rate over a broad frequency range. Moreover, the lack of a controlled correlation between pump and probe frequen-cies has so far prevented an unambiguous identification of the bosons involved in the ultrafast dynamics. Two-dimensional electronic spectroscopy (2DES) over-comes these limitations by simultaneously resolving the coherent electronic response as a function of both exci-tation and detection photon energies, while retaining the ultrafast temporal resolution of pump-probe techniques. The resulting two-dimensional spectra encode coherent and incoherent correlations between the initial and fi-nal states, establishing a direct link between the injected energy and the energy at which the optical response is detected. This capability grants access to time- and energy-resolved interaction pathways that remain hidden in single-color or broadband pump-probe spectroscopies [16]. Here, we exploit 2DES to investigate electron-boson interactions in the prototypical cuprate Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δ (Y-Bi2212). Upon exci-tation with ultrashort pulses, we observe a distinct off-diagonal resonance arising from the ultrafast creation and annihilation of nonthermal bosons at energies of the order of 200 meV, with momenta centered near (π/ 2, π/ 2), extending towards (0 , π ) and ( π, 0). These characteristics are consistent with strong coupling to paramagnons and appear ubiquitously across the cuprate phase diagram over a broad hole-doping concentration and temperature range. 2DES employs multiple light pulses to access the third-order electronic polarization P (3) (t) of a material [12, 16– ℏωc ℏωb 
+
+> ℏωa
+> Probe
+> energy
+> Pump
+> energy
+> :fi xed τ
+> Probe
+> Spectrometer
+> Bi2212
+
+tpu
+
+τ   
+
+> Pumps
+> Gemini 2D
+> Pulse Generator
+> ℏωa
+> ℏωb
+> S(ℏωpr,ℏωpu;τ)−ℏΩq
+> +ℏΩq
+> ℏΩq
+> ℏωc
+> ℏωb
+> ℏΩq
+
+a) 
+
+b)  c)                                            
+
+> FIG. 1. (a) Schematic of the partially collinear 2DES setup. Two phase-locked broadband pump pulses, separated by a delay tpu , excite the sample; after a waiting time τa probe pulse measures the response. The reflected probe is spectrally dispersed by a spectrometer to define the detection axis ℏωpr .Pump replicas are produced by a common-path wedge in-terferometer to ensure phase stability and precise control of time delay tpu (see Supplementary Sec. S1). (b) Sketch of a 2D spectrum S(ℏωpr ,ℏωpu ;τ) at fixed τ. The dashed diago-nal marks ℏωpu =ℏωpr ; an off-diagonal cross-peak ( ℏωc,ℏωa)is indicated. (c) Illustration of a boson-mediated three-level scheme. First, pump photons drive a vertical transition to a virtual level at ℏωa=ℏωb+ℏΩq, which relaxes to the real state ℏωbby emitting a boson (energy ℏΩq, momentum q). This results in the creation of a transient non-thermal boson population peaked at ℏΩq.Second, the probe promotes the system to a virtual intermediate state at ℏωc=ℏωb−ℏΩq,and the transition is completed to the real state by absorbing a non-thermal boson of energy ℏΩq. The corresponding cross-peak is observed at ( ℏωc,ℏωa) in S(ℏωpr ,ℏωpu ;τ) in panel (b).
+
+20]. In the simplest configuration, two phase-coherent pump pulses, separated by a delay tpu , excite the sample (Fig. 1a) and a third probe pulse measures the optical response after a waiting time τ . Fourier-transforming the signal with respect to tpu provides the excitation energy axis ℏωpu , while a spectrometer defines the de-tection axis ℏωpr . This yields a two-dimensional spec-trum S(ℏωpr , ℏωpu ; τ ), schematically shown in Fig. 1b, which directly correlates excitation and detection elec-tronic channels. The dashed diagonal, defined by ℏωpu =
+
+ℏωpr , corresponds to direct optical transitions that are excited and probed at the same photon energy. In con-trast, off-diagonal peaks, for which ℏωpu ̸ = ℏωpr , indi-cate indirect pathways arising from coherent coupling or energy transfer between distinct electronic transitions. Compared to transient pump-probe spectroscopy, whose 3broadband spectrum is the 2DES spectrum integrated over the ℏωpu axis (Projection slice theorem [21]), 2DES can resolve cross-peaks pathways from the diagonal peaks [18]. More specifically, 2DES can reveal electronic exci-tations dressed by inelastic interaction with high-energy bosons, such as phonons or magnetic excitations [19, 22]. Consider a high-energy state at ℏωb that cannot be di-rectly excited because of energy-momentum conserva-tion. Figure 1c shows a schematic boson-mediated pro-cess that can lead to off-diagonal signals in 2DES spec-tra. In a first step, the pump photon excites a vertical transition to a virtual state at energy ℏωa = ℏωb + ℏΩq,which coherently couples to the real state ℏωb by ex-changing momentum q and emitting a boson of energy 
+
+ℏΩq. This process creates a transient coherent excita-tion of bosonic modes, which rapidly dephase, thus cre-ating a non-thermal boson population with a distribution peaked at ℏΩq. In the second step, the probe photon at energy ℏωc = ℏωb − ℏΩq is absorbed via annihilation of non-thermal bosons at energy ℏΩq. This nonlinear pro-cess gives rise to an off-diagonal signal at ( ℏωc, ℏωa) in the S(ℏωpr , ℏωpu ; τ ) spectrum (see Fig. 1b), where the energy difference ℏωa − ℏωc is approximately twice the boson energy ℏΩq.Bi-based cuprate superconductors are the ideal plat-form to investigate electron-boson coupling with 2DES. Y-Bi2212 presents a rich optical response in the near-infrared and visible range (see Supplementary Fig. S3a) [23], and its connection to superconductivity has been extensively studied by both equilibrium [24, 25] and ul-trafast techniques [12, 26]. As a general feature, the op-tical conductivity of undoped (and not superconducting) cuprates is characterized by a direct and intense charge-transfer peak at 2 eV [24]. Upon doping, the strong ab-sorption peak reminiscent of the direct charge-transfer (CT) transition moves to higher energies ( ≳ 2.5 − 3 eV), while the gap is filled with states corresponding to weak optical transitions, whose origin is still unclear [26–28]. These transitions involve both the O-2 pπ and O-2 pσ
+
+bands [29], which arise from the hybridization of the O-2px,y orbitals perpendicular and parallel to the O-2 p lig-and orbitals, respectively. Particular attention has been devoted to the study of a weak transition at ℏω ≃ 1.5 eV, which is strongly affected by the onset of superconductiv-ity [26]. Considering that at this energy no direct vertical transition from the O-2 pσ,π to the Cu-3 dx2−y2 is possible, as will be discussed in more detail in the following, the most plausible explanation is that this process involves an indirect and boson-assisted charge transfer transition between O-2 pσ,π states at 1 .5 eV binding energy and Cu-3dx2−y2 states close to the Fermi level. We also note that indirect optical processes involving a rearrangement of the electronic distribution within the O-2 pσ,π and Cu-3dx2−y2 orbitals are inherently coupled to a perturba-tion of the local spin configuration [30] and are therefore associated with the emission or absorption of magnetic excitations. To investigate the nature of these ultrafast electron-boson interactions, we performed 2DES experi-ments in the normal state of optimally doped Y-Bi2212 (hole doping concentration p = 0 .16, corresponding to 
+
+Tc = 95 K). As sketched in Fig. 1a, and detailed in Sup-plementary Sec. S1, we employed a partially collinear layout in reflection geometry, which directly measures the absorptive spectrum, corresponding to the sum of the real parts of the rephasing and non-rephasing signals [22]. Two phase-locked pump replicas are generated from a single broadband pulse by a common-path wedge in-terferometer (GEMINI-2D, NIREOS) [31], based on the Translating-Wedge-Based Identical Pulses eNcoding Sys-tem (TWINS), which ensures ultra-high phase stability [31] and provides a precisely tunable pump-pump delay 
+
+tpu . The two pump replicas propagate collinearly, while the probe arrives at a different angle. The reflected sig-nal is then analyzed by a second common-path Fourier transform spectrometer (GEMINI, NIREOS) which de-fines the detection axis ℏωpr . In this configuration, the 2DES signal is the relative reflectivity variation resolved along the ℏωpr and ℏωpu axes, i.e. S(ℏωpr , ℏωpu ; τ ) = ∆R/R (ℏωpr , ℏωpu ; τ ). The experiment covers 1 .3 − 1.8eV spectral range, with a temporal resolution of ≃ 40 fs set by the pulse time duration (see Supplementary Sec. S1). Figure 2a shows the 2DES map acquired at T =300 K, 
+
+τ = 40 fs and pump fluence 400 μJ/cm 2, i.e., 
+
+S(ℏωpr , ℏωpu ; τ = 40 fs). Whereas the diagonal sig-nal appears weak and extremely broad, thus suggesting the indirect nature of these optical transitions, a clear and pronounced off-diagonal resonance is observed at (ℏωpr , ℏωpu ) ≃ (1 .32 , 1.73) eV. This off-diagonal signal, corresponding to a positive reflectivity variation, remains essentially unchanged when varying fluence (see Supple-mentary Sec. S4) and is compatible with a pump-induced absorption increase. In the Supplementary Information (Sec. S2) we model the transient optical properties start-ing from a parametrization of the equilibrium dielectric function. From the analysis of the vertical and horizon-tal line cuts of the 2DES map (see Supplementary Sec. S3), we extract the energy difference between the pump and probe excitations ∆ E = ℏωpu − ℏωpr ≃ 410 meV, hereafter referred to as the correlation energy. Such a large correlation energy points to an indirect process me-diated by emission and absorption of bosons with energy 
+
+ℏΩq = ∆ E/ 2 ≃ 200 meV. This energy lies well above the phonon spectrum of cuprates, which extends only up to ≃ 90 meV [14, 24, 32], while it is, instead, con-sistent with the energy scale of paramagnon excitations, i.e., dispersive spin fluctuations in the CuO 2 planes ob-served throughout the phase diagram of doped cuprates by RIXS and neutron scattering [10, 33–35]. This en-ergy scale is also consistent with the magnetic correla-tions emerging from inhomogeneous Mott-localization, as identified across several cuprate families via ARPES, tun-neling, and optical spectroscopy [36, 37]. The off-diagonal structure persists at longer waiting times, as shown in Fig. 2b for the case τ = 340 fs. This excludes any possible coherent artifact, which 4Probe energy (eV)      
+
+> 1.3 1.4 1.5 1.6 1.7 1.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+
+= = 40 fs      
+
+> Probe energy (eV)
+> 1.3 1.4 1.5 1.6 1.7 1.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+
+= = 340 fs 
+
+#2 0
+
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> Doping
+> 0.16
+> T(K)
+> 100
+> 300
+
+a) b) 
+
+FIG. 2. (a) 2DES map of optimally doped Y-Bi2212 measured at 300 K with a pump fluence of 400 μJ/cm 2, recorded at a fixed delay time τ = 40 fs. The color map shows the differential reflectivity ∆ R/R as a function of pump photon energy ℏωpu (vertical axis) and probe photon energy ℏωpr (horizontal axis). The white dashed line marks the diagonal direction ℏωpu = ℏωpr . Black dashed lines indicate the position of the off-diagonal peak (see Supplementary Sec. S3). The inset shows the position of the measurement in the temperature-doping phase diagram. (b) 2DES map measured under the same experimental conditions as in panel (a) but at a longer delay time, τ = 340 fs. The same color scale as in panel (a) is used; for clarity, the signal amplitude is multiplied by a factor of two. The off-diagonal resonance observed at τ = 40 fs is preserved at long delay. 
+
+should be confined to the pulse temporal overlap [38] (see Supplementary Sec. S5), and demonstrates that the generation of non-thermal bosons of magnetic origin with energy ℏΩq ≃ 200 meV is inherent to the excitation process at all timescales. To corroborate the interpretation of the 2DES data in terms of ultrafast coupling to paramagnons, we con-sider a minimal model based on the realistic electronic and magnetic dispersions and energy-momentum conser-vation. In Fig. 3a we report the spectral functions of the O-2 pσ and O-2 pπ bands (red and blue curves, respec-tively, extracted from Refs. 39, 40) and of the Cu-3 dx2−y2
+
+(colormap) bands. The latter is obtained from the ana-lytical model in Ref. 41, which provides an exactly solv-able extension of the Hatsugai-Kohmoto model (HKM) [42]. In contrast to the original HKM, where the interac-tion is purely diagonal in momentum space, this formu-lation introduces a coupling between k and k + Π with 
+
+Π = ( π, π ), thus capturing the impact of short-range antiferromagnetic correlations and reproducing the band dispersion near the Fermi surface as well as the antinodal gap. Considering the O-2 pπ band, its maximum lies at 
+
+E2pπ ≃ − 1.3 eV for ki = ( π, π ). Therefore, at the same momentum there are no available electronic states at the final energy ℏω − | E2pπ | ≲ 0.1 eV (see Fig. 3a). The O-2 pπ → Cu-3 dx2−y2 charge-transfer excitation thus re-quires a process involving the transfer of both large mo-mentum and energy to reach available states near the Fermi energy. We describe the indirect optical transition within second-order perturbation theory. In the pump channel, absorption of a photon of energy ℏωpu is accom-panied by the emission of a paramagnon carrying energy 
+
+ℏΩq and momentum q, so that the electron reaches an available final state at energy ℏωpu − ℏΩq (purple path in Fig. 3a). In the probe channel, the optical transition is instead assisted by the absorption of a paramagnon previously generated by the pump, allowing access to a final state at energy ℏωpr +ℏΩq (orange path in Fig. 3a). The difference between these two processes corresponds to the correlation energy ∆ E = 2 ℏΩq (green line in Fig. 3a). For simplicity, in the following we label the initial O-2 pπ state as |i⟩ and the final Cu-3 dx2−y2 state as |f ⟩.The probability of an indirect transition from |i⟩ to |f ⟩,driven by the absorption of a photon at energy ℏω and assisted by the exchange of energy ℏΩq and momentum 
+
+q with magnetic excitations, is [43, 44]: 
+
+Pif (ℏω, kf ) ∝
+
+Z Z 
+
+dE dE ′ f (Ei)[1 − f (Ef )] ·· Ai(E − Ei(ki)) Af (E′ − Ef (kf ) + ℏω)·· χ′′ (E′ − E + ℏΩq), (1) where the energy-conservation delta function has been decomposed into three terms and replaced by the spectral functions of the initial ( Ai(E, ki)) and final ( Af (E, kf )) states, which account for lifetime broadening and band dispersion, together with the magnetic susceptibility 
+
+χ′′ 
+
+> q
+
+(ℏΩ) which describes the bosons assisting the transi-tion (see Supplementary Sec. S6A for more details). The Fermi-Dirac factors f (Ei) and [1 − f (Ef )] account for the occupation of the initial and final electronic states at 
+
+T = 300 K. Momentum conservation is enforced by im-posing kf = ki+q, where ki and kf denote the initial and final electron momenta. The initial-state spectral func-tion Ai = η/ [( E − Ei)2 + η2] is modeled as a Lorentzian 5Electronic momentum (kx, ky)         
+
+> (:,0)(0,0)(:,:)(:,0)
+> E - EFermi(eV)
+> -1.5
+> -1
+> -0.5
+> 0
+> 0.5
+> 1
+> 1.5
+> 2
+> Cu-3d
+> band
+> O-2p::
+> band
+> O-2p<<
+> band
+> 0
+> max
+> Paramagnonmomentum(qx,qy)
+> (:/2,:/2)(:,0)(0,0)(:/2,:/2)
+> Energy (meV)
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> 600
+> 700
+> 0
+> max
+> ℏωpu
+> ℏ−(q)
+> ℏωpr
+> ℏ−(q)
+
+τ(q, ℏΩ)
+
+# a) 
+
+# b)   
+
+> (0,0 )
+> (χ,χ)
+> (0,0 )
+> (χ,χ)
+> ΩE
+
+# Figura 3 
+
+FIG. 3. Model of paramagnon-assisted charge-transfer path-ways. (a) Schematic band structure illustrating the indirect optical transitions mediated by paramagnons. The O-2 pσ
+
+(red) and O-2 pπ (blue) valence bands are shown together with the Cu-3 dx2−y2 conduction band (color scale), with energies referenced to the Fermi level EF ermi = μ. In the pump chan-nel (purple arrows), a photon of energy ℏωpu excites a ver-tical charge-transfer transition from the O-2 p band, followed by emission of a paramagnon with energy ℏΩq. In the probe channel (orange arrows), a photon of energy ℏωpr drives the transition via absorption of a previously generated param-agnon. The green bar indicates the resulting correlation en-ergy ∆ E = ℏωpu − ℏωpr . The inset shows the high-symmetry path in the Brillouin zone along which the band dispersions are plotted. (b) Imaginary part of the spin susceptibility 
+
+χ′′ (q, ℏΩ) used in the calculations, shown as a color map along a high-symmetry momentum path with J = 105 meV and Γ = 300 meV. The inset highlights the corresponding mo-mentum direction in the Brillouin zone. 
+
+with thermal broadening η = kB T = 24 meV, describ-ing the O-2 pπ and O-2 pσ bands [40]. For simplicity, we first consider the initial energy and momentum fixed at 
+
+Ei = −1.3 eV and ki = ( π, π ), corresponding to the max-ima of the O-2 pπ states [39, 40]. The final-state spectral function is obtained from the single-particle Green’s func-tion reported in Ref. 41: 
+
+Gk(E) = 1 − nk+Π
+
+E + μ − ϵ(k) + iη + nk+Π
+
+E + μ − ϵ(k) − V + iη ,
+
+(2) using the relation Af (E) = − 1 
+
+> π
+
+Im Gk(E). Here, nk+Π is the electronic occupation which determines the relative weight of the two poles in the Green’s function, while the chemical potential μ = EF ermi and the interaction parameter V are chosen to reproduce the Fermi surface measured via ARPES on the same sample (see Supple-mentary Sec. S6A and Fig. S7). The final-state dis-persion Ef (k) corresponds to ϵ(k) − μ, where ϵ(k) is the bare tight-binding dispersion with parameters t = 0 .4 eV, 
+
+t′ = −0.08 eV and t′′ = 0 .04 eV [8, 32, 45] (see Supple-mentary Eq. S15). The magnetic part is described by the imaginary part of the spin susceptibility χ(q, ℏΩ), shown in Fig. 3b. We adopt the parametrization of Ref. 33, using the damping Γ = 300 meV as measured by RIXS [35] (see Supplementary Eq. S16-S17). The correspond-ing dispersion Ω q follows the standard spin-wave form for an antiferromagnetic square lattice. The superex-change coupling J ≃ 105 meV is fixed by requiring con-sistency with the experimentally observed peak separa-tion in the 2DES correlation map, and is in line with literature values for cuprates [33, 34, 46, 47]. Further analytical and computational details are provided in the Supplementary Sec. S6C. We note that the probabil-ity Pif (ℏω, kf ) in Eq. 1 accounts only for energy and momentum conservation but does not consider the ma-trix elements of the optical transitions. A quantitative modeling of the absolute signal amplitude would, there-fore, require a multiband evaluation of dipole matrix el-ements, which lies beyond the scope of the present mini-mal model. For a given photon energy ℏω, the probabil-ity Pif (ℏω, kf ) is peaked along two curves in momentum space, corresponding to available final states at energy 
+
+ℏω − ℏΩq for the paramagnon-emission channel and at energy ℏω + ℏΩq for the paramagnon-absorption chan-nel. For clarity, in the following, we present the two pro-cesses in separate panels (see Supplementary Sec. S6B for further details). Figure 4 reports the results for the O-2pπ channel, obtained by fixing the initial momentum at 
+
+ki = ( π, π ). The corresponding calculation for the O-2 pσ
+
+channel, with ki = (0 , 0), is reported in Supplementary Fig. S8. Figure 4a displays the calculated momentum-resolved probability Pif (k) for ℏω = 1 .73 eV, i.e., the photon energy at which the probability of a paramagnon-emission transition from O-2 pπ states to the Fermi level is maximized (see purple paths in Fig. 3a). Figure 4b displays the probability map for the probe channel, in which the optical transition is assisted by the absorp-tion of a paramagnon previously generated during the pump process (see orange paths in Fig. 3a). By in-tegrating the momentum-resolved transition probability 
+
+Pif (ℏω, kf ) over the final momenta in the Brillouin zone, we obtain two distinct curves as a function of photon en-ergy ℏω, corresponding to the total probability of para-magnon emission (pump) and absorption (probe) pro-6kf                   
+
+> x
+> 0:/2:
+> kf
+> y
+> 0
+> :/2
+> :
+> 0
+> max
+> kf
+> x
+> 0:/2:
+> kf
+> y
+> 0
+> :/2
+> :
+> 0
+> max
+> qx
+> -:0
+> qy
+> -:
+> 0
+> :
+> 1.31.41.51.61.71.8
+> ProbeEnergy(eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> Pump Energy (eV)
+> 0
+> max
+> PhotonEnergy(eV)
+> 11.21.41.61.82
+> Integrated Probability (a.u.)
+> 0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1
+> Pump
+> Probe
+
+eℏ
+
+> k
+
+eℏ
+
+> k+q
+
+−ω = 1.32 eV 
+
++−Ω( Δq)
+
+eℏ
+
+> k
+
+eℏ
+
+> k+q
+
+−ω = 1.73 eV 
+
+ℏ−Ω( Δq)
+
+Pif Pif
+
+# Figura 4 da π
+
+# a)  b) 
+
+# d) c) 
+
+FIG. 4. (a) Momentum-resolved probability Pif (kf ) for the pump process at fixed photon energy ℏω = 1 .73 eV, corresponding to excitation of an O-2 pπ electron followed by emission of a paramagnon with energy ℏΩq, as sketched in the inset Feynman diagrams. (b) Momentum-resolved probability for the probe process at ℏω = 1 .32 eV, involving absorption of a paramagnon previously generated by the pump, as sketched in the inset. (c) Momentum-integrated transition probabilities for pump (purple) and probe (orange) processes as functions of photon energy, obtained by integrating, for each photon energy, the maps in panels (a) and (b) over the Brillouin zone. (d) Calculated two-dimensional correlation map constructed as the product of the pump and probe energy dependences in panel (c), reproducing the off-diagonal resonance observed experimentally in 2DES. 
+
+cesses, shown in Fig. 4c. The resulting Pif (ℏω) exhibits maxima at ≃ 1.73 eV and 1 .32 eV for the pump and probe channels, respectively, in agreement with the en-ergy of the off-diagonal resonance observed in 2DES data. To enable a more direct comparison with the experiment, in Fig. 4d we report the product of the two Pif (ℏω)curves corresponding to the paramagnon emission and absorption. The resulting correlation map quantitatively reproduces the position of the off-diagonal peak in the 2DES map in the ( ℏωpr , ℏωpu ) plane, thereby supporting the interpretation in terms of strong coupling between in-direct charge-transfer excitations at energy scales as high as 1 .3−1.8 eV and paramagnons with energy of the order of ≃ 200 meV. To visualize the energy-momentum transfer underlying the paramagnon-assisted charge-transfer pathway, Fig. 5 shows the antiferromagnetic dispersion ℏΩq used in the calculations together with the set of momenta q con-tributing to the pump channel in the photon-energy win-dow of Fig. 4c. The blue [red] shaded region corresponds to momentum transfer from an initial O-2 p state at ( π, π )[(0 , 0)]. For clarity, the ( π, π )-centered contribution is translated by a reciprocal-lattice vector and displayed around ( −π, −π). For the O-2 pπ initial state at ( π, π ), the dominant contribution spans the portion of momen-tum space connecting the nodal region around ( π/ 2, π/ 2) to the antinodal regions near ( π, 0) and (0 , π ), while re-maining concentrated near the upper part of the param-agnon band. The momentum map for the probe channel is reported in Supplementary Fig. S9. The correspond-ing calculation for the O-2 pσ initial state at (0 , 0), re-ported in Supplementary Fig. S8, does not reproduce the experimental correlation map with the same level of agreement. An important question is whether the ultrafast cou-pling with ≃ 200 meV paramagnons observed by 2DES at T = 300 K is a specific characteristic of the high-temperature normal state or it affects the ultrafast dy-namics also at lower temperatures and down to the su-perconducting state. To address this point, we per-7Figura 4 FINALE 
+
+O ℏ 2pω
+
+O ℏ 2pτ
+
+FIG. 5. Antiferromagnetic (paramagnon) dispersion and momentum-transfer phase space. The semi-transparent sur-face shows the model paramagnon dispersion ℏΩq over the full Brillouin zone. Overlaid is the probability Pif for transi-tions mediated by paramagnon emission for incident photon energies between 1 and 2 eV. The darker blue (red) shaded areas highlight the set of momenta q contributing to this in-direct process for the initial O-2 pπ [O-2 pσ ] state. For visu-alization, the ( π, π )-centered contribution is translated by a reciprocal-lattice vector and displayed around ( −π, −π) (BZ periodicity). Vertical lines mark the reference initial momen-tum points at ( −π, −π) (blue) and (0 , 0) (red). 
+
+formed similar 2DES measurements on optimally doped Y-Bi2212 ( Tc = 95 K) at T = 60 K, i.e., deep in the superconducting phase, using a pump fluence of 400 μJ/cm 2, which is large enough to non-thermally de-stroy the superconducting condensate [12, 48]. The 2DES signal taken at τ = 340 fs (see Supplementary Sec. S7), i.e., before the recovery of the condensate within a few picoseconds, shows the same off-diagonal response as the 
+
+T = 300 K data, thus demonstrating that the coupling to paramagnons is a property of the normal state even at temperatures as low as those necessary for the on-set of macroscopic superconductivity. By contrast, low-fluence measurements display a different behavior, whose detailed investigation is beyond the scope of the present work. The simultaneous temporal and spectral resolution of 2DES allows us to probe the dynamics of the off-diagonal signal in the 2DES spectrum of Fig. 2, providing in-formation on the timescale and strength of electron-paramagnon interactions. To reduce the total data acqui-sition time while still capturing the dynamics over a rele-vant temporal window, the probe spectrum has been fil-tered after the pump interaction with a 10 nm band-pass filter centered at 950 nm wavelength. The acquired data thus correspond to a vertical slice, centered at ℏωpr =1.3 eV, of the 2DES signal in Fig. 2. In Fig. 6a we re-port the time trace at ℏωpr = 1 .3 eV, which corresponds to the signal S(ℏωpr = 1 .3 eV , ℏωpu ; τ ), integrated along the pump axis. We note that the off-diagonal feature = (ps) 
+
+0 0.5 1
+
+0
+
+5
+
+10 
+
+15 
+
+20 
+
+> "R/R
+
+#10 -3  
+
+> ℏ!pr = 1.3 eV
+> Pulse envelope
+
+Doping 
+
+0.12 0.14 0.16 0.18 
+
+> Correlation energy (eV)
+
+0.4 
+
+0.5 
+
+0.6 
+
+Tc (K) 
+
+88 91 95 91 
+
+> Coupling strength  6
+
+0
+
+0.2 
+
+0.4 
+
+0.6 
+
+0.8 
+
+1
+
+FIG. 6. (a) Time-resolved trace of the off-diagonal 2DES signal S(ℏωpr = 1 .3 eV , ℏωpu = 1 .7 eV; τ ) measured on op-timally doped Y-Bi2212 at T = 300 K. The dashed line in-dicates the pump-probe pulse envelope. (b) Correlation en-ergy ∆ E = ℏωpu − ℏωpr (left axis, circles) and corresponding lower bound of the electron-boson coupling strength λ (right axis, squares) extracted from the off-diagonal 2DES signal as a function of hole doping at T = 300 K. The top axis shows the corresponding critical temperatures Tc(K). Error bars of 22 meV are estimated from peak position distribution in dif-ferent measurements. 
+
+appears essentially instantaneously, within the pump du-ration, and undergoes a multiexponential decay. This decay reflects the coupling to out-of-plane buckling and in-plane breathing Cu-O optical modes on a sub-200 fs timescale [14, 15], followed by energy transfer to the remaining lattice modes on the picosecond timescale. Given the temporal resolution of the 2DES experiment, we can place an upper bound of ≃ 10 fs for the build-up time of the hot boson population (see Supplementary Sec. S8 for details). Such a short timescale is consis-tent with the relaxation of photoexcited charges interact-ing with short-range antiferromagnetic excitations [15] and sets a lower bound on the electron-boson coupling strength. We estimate this bound using a conventional three-temperature model describing the energy exchange among the electronic excitations, the hot-boson popula-tion at ℏΩq ≃ 200 meV, and the lattice (see Supplemen-8tary Sec. S8). In this model, the coupling to param-agnons is encoded in a bosonic spectral function α2F (ω)peaked at 200 meV. The minimum coupling strength, which is compatible with a hot boson heating time of 10 fs is estimated to be λ = 2 R ∞  
+
+> 0
+> α2F(ω)
+> ω
+
+dω ≃ 0.7, thereby set-ting a lower bound for the electron-paramagnon coupling strength. This value is quite remarkable since it can, in principle, account for a very large critical temperature. Within a strong-coupling formalism, the critical tempera-ture for d-wave pairing in a Fermi liquid is approximately given by kB Tc = 0 .83 × ℏΩ × exp [−1.04(1 + λ)/λ ], assum-ing a vanishing pseudopotential [49, 50]. The combina-tion of a strong selective coupling and a boson energy of ℏΩq ≃ 200 meV yields Tc ≃ 150 K, exceeding the actual Tc of the material. Finally, Fig. 6b extends the analysis beyond the optimally doped compound to sam-ples spanning the underdoped ( p = 0 .13) and overdoped (p = 0 .18) regions of the phase diagram (see Supplemen-tary Sec. S9). Remarkably, both the correlation energy ∆E and the corresponding lower bound on the coupling strength λ remain essentially unchanged across the in-vestigated doping range. This indicates that the ultra-fast interaction with ≃ 200 meV paramagnons persists broadly across the hole-doped cuprates phase-diagram. In conclusion, we have introduced 2DES as a novel tool for investigating electron-boson coupling in the nor-mal state of superconducting copper oxides. By com-bining temporal resolution with independent control of the excitation and detection energies, 2DES reveals a selective coupling between indirect charge-transfer O-2pπ orbitals and Cu-3 dx2−y2 states at the Fermi level and paramagnons with energy ℏΩq ≃ 200 meV. Al-though these charge excitations lie far above the energy scale of the superconducting gap, charge-transfer pro-cesses are intimately connected to superconductivity, as demonstrated by the well-established superconductivity-induced spectral-weight changes at energy scales as high as 1-2 eV [12, 24–26, 51, 52]. The ultrastrong coupling be-tween high-energy charge excitations and paramagnons therefore emerges as a key ingredient for understanding the microscopic origin of high-temperature superconduc-tivity in cuprates. Our results constitute a benchmark for the next-generation of time-resolved RIXS experiments that should directly probe magnetic excitations and shed further light on the nature of the coupling between charge and magnetic excitations [53–57]. More generally, this work shows that 2DES adds a crucial new dimension to time-resolved spectroscopies for disentangling charge and magnetic excitations in any family of correlated quantum materials, in which the spin, lattice, orbital, and elec-tronic degrees of freedom are intrinsically intertwined. 
+
+> ACKNOWLEDGMENTS
+
+The authors thank G. Perosa for helpful discus-sion. Fr.P., A.M., M.A., and C.G. acknowledge fi-nancial support from MIUR through the PRIN 2020 (Prot. 2020JLZ52N-003) program and from the Euro-pean Union - Next Generation EU through the MUR-PRIN2022 (Prot. 20228YCYY7) program. The work at the University of Minnesota was funded by the De-partment of Energy through the University of Minnesota Center for Quantum Materials under Award No. DE-SC0016371. This research was undertaken thanks in part to funding from the Max Planck–UBC–UTokyo Cen-tre for Quantum Materials and the Canada First Re-search Excellence Fund (CFREF), Quantum Materials and Future Technologies. This project is also funded by the Natural Sciences and Engineering Research Coun-cil of Canada (NSERC), the Canada Foundation for Innovation (CFI); the Department of National Defence (DND); the British Columbia Knowledge Development Fund (BCKDF); the Canada Research Chairs (CRC) Program (A.D.); and the CIFAR Quantum Materials Program (A.D.). Use of the Canadian Light Source (Quantum Materials Spectroscopy Centre), a national re-search facility of the University of Saskatchewan, is sup-ported by CFI, NSERC, the National Research Coun-cil (NRC), the Canadian Institutes of Health Research (CIHR), the Government of Saskatchewan and the Uni-versity of Saskatchewan. S.S. acknowledges the support of the Netherlands Organization for Scientific Research (NWO 019.223EN.014, Rubicon 2022-3).                         
+
+> [1] B. Keimer, S. A. Kivelson, M. R. Norman, S. Uchida, and J. Zaanen, From quantum matter to high-temperature superconductivity in copper oxides, Nature 518 ,179 (2015). [2] C. Giannetti, New perspectives in the ultrafast spec-troscopy of many-body excitations in correlated mate-rials, Il Nuovo Cimento C 2(2016). [3] J. A. Sobota, Y. He, and Z.-X. Shen, Angle-resolved photoemission studies of quantum materials, Rev. Mod. Phys. 93 , 025006 (2021). [4] J. Bardeen, L. N. Cooper, and J. R. Schrieffer, Theory of superconductivity, Phys. Rev. 108 , 1175 (1957). [5] D. J. Scalapino, A common thread: The pairing inter-action for unconventional superconductors, Rev. Mod. Phys. 84 , 1383 (2012). [6] A. Lanzara, P. V. Bogdanov, X. J. Zhou, S. A. Kellar, D. L. Feng, E. D. Lu, T. Yoshida, H. Eisaki, A. Fujimori, K. Kishio, J.-I. Shimoyama, T. Noda, S. Uchida, Z. Hus-sain, and Z.-X. Shen, Evidence for ubiquitous strong elec-tron–phonon coupling in high-temperature superconduc-tors, Nature 412 , 510 (2001). [7] X. J. Zhou, T. Yoshida, A. Lanzara, P. A. Bogdanov, S. A. Kellar, K. M. Shen, W. L. Yang, F. Ron-ning, T. Sasagawa, T. Kakeshita, T. Noda, H. Eisaki,
+
+9
+
+S. Uchida, A. Fujimori, Z. Hussain, and Z.-X. Shen, Uni-versal nodal fermi velocity, Nature 423 , 398 (2003). [8] A. Damascelli, Z. Hussain, and Z.-X. Shen, Angle-resolved photoemission studies of the cuprate supercon-ductors, Rev. Mod. Phys. 75 , 473 (2003). [9] T. P. Devereaux and R. Hackl, Inelastic light scatter-ing from correlated electrons, Rev. Mod. Phys. 79 , 175 (2007). [10] M. Minola, G. Dellea, H. Gretarsson, Y. Y. Peng, Y. Lu, J. Porras, T. Loew, F. Yakhou, N. B. Brookes, Y. B. Huang, J. Pelliciari, T. Schmitt, G. Ghiringhelli, B. Keimer, L. Braicovich, and M. Le Tacon, Collective nature of spin excitations in superconducting cuprates probed by resonant inelastic x-ray scattering, Phys. Rev. Lett. 114 , 217003 (2015). [11] M. Eschrig, The effect of collective spin-1 excitations on electronic spectra in high-Tc superconductors, Advances in Physics 55 , 47 (2006). [12] C. Giannetti, M. Capone, D. Fausti, M. Fab-rizio, F. Parmigiani, and D. Mihailovic, Ultrafast optical spectroscopy of strongly correlated materi-als and high-temperature superconductors: a non-equilibrium approach, Advances in Physics 65 , 58 (2016), https://doi.org/10.1080/00018732.2016.1194044. [13] F. Boschini, M. Zonno, and A. Damascelli, Time-resolved ARPES studies of quantum materials, Rev. Mod. Phys. 
+
+96 , 015003 (2024). [14] S. Dal Conte, C. Giannetti, G. Coslovich, F. Cilento, D. Bossini, T. Abebaw, F. Banfi, G. Ferrini, H. Eisaki, M. Greven, A. Damascelli, D. Van Der Marel, and F. Parmigiani, Disentangling the electronic and phononic glue in a high-Tc superconductor, Science 335 , 1600 (2012). [15] S. D. Conte, L. Vidmar, D. Goleˇ z, et al. , Snapshots of the retarded interaction of charge carriers with ultrafast fluctuations in cuprates, Nature Physics 11 , 421 (2015). [16] S. Mukamel, Principles of nonlinear optical spectroscopy ,Oxford series in optical and imaging sciences (Oxford University Press, 1995). [17] S. Mukamel, Multidimensional femtosecond correlation spectroscopies of electronic and vibrational excitations, Annual Review of Physical Chemistry 51 , 691 (2000). [18] P. Hamm and M. Zanni, Concepts and Methods of 2D In-frared Spectroscopy (Cambridge University Press, 2011). [19] S. T. Cundiff and S. Mukamel, Optical multidimensional coherent spectroscopy, Physics Today 66 , 44 (2013). [20] J. O. Tollerud and J. A. Davis, Coherent multi-dimensional spectroscopy: Experimental considerations, direct comparisons and new capabilities, Progress in Quantum Electronics 55 , 1 (2017). [21] S. M. Gallagher Faeder and D. M. Jonas, Two-dimensional electronic correlation and relaxation spectra: Theory and model calculations, The Journal of Physical Chemistry A 103 , 10489 (1999). [22] F. D. Fuller and J. P. Ogilvie, Experimental implemen-tations of two-dimensional fourier transform electronic spectroscopy, Annual Review of Physical Chemistry 66 ,667 (2015). [23] S. Uchida, T. Ido, H. Takagi, T. Arima, Y. Tokura, and S. Tajima, Optical spectra of La 2−x Sr x CuO 4: Effect of carrier doping on the electronic structure of the CuO 2
+
+plane, Phys. Rev. B 43 , 7942 (1991). [24] D. N. Basov and T. Timusk, Electrodynamics of high-Tc
+
+superconductors, Rev. Mod. Phys. 77 , 721 (2005). [25] D. N. Basov, R. D. Averitt, D. van der Marel, M. Dres-sel, and K. Haule, Electrodynamics of correlated electron materials, Rev. Mod. Phys. 83 , 471 (2011). [26] C. Giannetti, F. Cilento, S. D. Conte, G. Coslovich, G. Ferrini, H. Molegraaf, M. Raichle, R. Liang, H. Eisaki, M. Greven, A. Damascelli, D. van der Marel, and F. Parmigiani, Revealing the high-energy electronic exci-tations underlying the onset of high-temperature super-conductivity in cuprates, Nature Communications 2, 353 (2011). [27] A. Montanaro, E. M. Rigoni, F. Giusti, L. Barba, G. Chita, F. Glerean, G. Jarc, S. Y. Mathengattil, F. Bos-chini, H. Eisaki, et al. , Dynamics of nonthermal states in optimally doped Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δ revealed by midinfrared three-pulse spectroscopy, Physical Review B 
+
+110 , 125102 (2024). [28] L. de’ Medici, X. Wang, M. Capone, and A. J. Millis, Correlation strength, gaps, and particle-hole asymmetry in high-Tc cuprates: A dynamical mean field study of the three-band copper-oxide model, Phys. Rev. B 80 , 054501 (2009). [29] A. Comanac, L. de’Medici, M. Capone, and A. J. Mil-lis, Optical conductivity and the correlation strength of high-temperature copper-oxide superconductors, Nature Physics 4, 287 (2008). [30] F. Barantani, M. K. Tran, I. Madan, I. Kapon, N. Bachar, T. C. Asmara, E. Paris, Y. Tseng, W. Zhang, Y. Hu, E. Giannini, G. Gu, T. P. Devereaux, C. Berthod, F. Carbone, T. Schmitt, and D. van der Marel, Reso-nant inelastic x-ray scattering study of electron-exciton coupling in high-Tc cuprates, Phys. Rev. X 12 , 021068 (2022). [31] D. Brida, C. Manzoni, and G. Cerullo, Phase-locked pulses for two-dimensional spectroscopy by a birefringent delay line, Optics letters 37 , 3027 (2012). [32] M. R. Norman and A. V. Chubukov, High-frequency be-havior of the infrared conductivity of cuprates, Phys. Rev. B 73 , 140501 (2006). [33] M. L. Tacon, G. Ghiringhelli, J. Chaloupka, M. M. Sala, V. Hinkov, M. W. Haverkort, M. Minola, M. Bakr, K. J. Zhou, S. Blanco-Canosa, C. Monney, Y. T. Song, G. L. Sun, C. T. Lin, G. M. D. Luca, M. Salluzzo, G. Khal-iullin, T. Schmitt, L. Braicovich, and B. Keimer, In-tense paramagnon excitations in a large family of high-temperature superconductors, Nature Physics 7, 725 (2011). [34] M. P. M. Dean, G. Dellea, R. S. Springell, F. Yakhou-Harris, K. Kummer, N. B. Brookes, X. Liu, Y.-J. Sun, J. Strle, T. Schmitt, L. Braicovich, G. Ghiringhelli, I. Boˇ zovi´ c, and J. P. Hill, Persistence of magnetic ex-citations in La 2−xSr xCuO 4 from the undoped insulator to the heavily overdoped non-superconducting metal, Na-ture Materials 12 , 1019 (2013). [35] Y. Y. Peng, E. W. Huang, R. Fumagalli, M. Mi-nola, Y. Wang, X. Sun, Y. Ding, K. Kummer, X. J. Zhou, N. B. Brookes, B. Moritz, L. Braicovich, T. P. Devereaux, and G. Ghiringhelli, Dispersion, damping, and intensity of spin excitations in the monolayer (Bi,Pb) 2(Sr,La) 2CuO 6+ δ cuprate superconductor family, Phys. Rev. B 98 , 144507 (2018). [36] D. Pelc, P. Popˇ cevi´ c, M. Poˇ zek, M. Greven, and N. Bariˇ si´ c, Unusual behavior of cuprates explained by heterogeneous charge localization, Science Advances 5,eaau4538 (2019). 10 
+
+[37] D. Pelc, M. J. Veit, C. J. Dorow, Y. Ge, N. Bariˇ si´ c, and M. Greven, Resistivity phase diagram of cuprates revisited, Phys. Rev. B 102 , 075114 (2020). [38] J. Fiore, N. Sellati, M. Udina, and L. Benfatto, Two-dimensional thz spectroscopy in electronic sys-tems: a many-body diagrammatic approach (2025), arXiv:2509.25060 [cond-mat.supr-con]. [39] H. Ebrahimnejad, G. A. Sawatzky, and M. Berciu, The dynamics of a doped hole in a cuprate is not controlled by spin fluctuations, Nature Physics 10 , 951 (2014). [40] F. Cilento, G. Manzoni, A. Sterzi, S. Peli, A. Ronchi, A. Crepaldi, F. Boschini, C. Cacho, R. Chapman, E. Springate, H. Eisaki, M. Greven, M. Berciu, A. F. Kemper, A. Damascelli, M. Capone, C. Giannetti, and F. Parmigiani, Dynamics of correlation-frozen antinodal quasiparticles in superconducting cuprates, Science Ad-vances 4, eaar1998 (2018). [41] P. Worm, M. Reitner, K. Held, and A. Toschi, Fermi and luttinger arcs: Two concepts, realized on one surface, Phys. Rev. Lett. 133 , 166501 (2024). [42] Y. Hatsugai and M. Kohmoto, Exactly solvable model of correlated lattice electrons in any dimension, Journal of the Physical Society of Japan 61 , 2056 (1992). [43] G. Grosso and G. Pastori Parravicini, Solid State Physics ,2nd ed. (Academic Press, New York, 2013). [44] A. L. Fetter and J. D. Walecka, Quantum Theory of Many-Particle Systems (Dover, New York, 2003). [45] R. Comin, A. Frano, M. M. Yee, Y. Yoshida, H. Eisaki, E. Schierle, E. Weschke, R. Sutarto, F. He, A. Soumya-narayanan, Y. He, M. Le Tacon, I. S. Elfimov, J. E. Hoffman, G. A. Sawatzky, B. Keimer, and A. Dama-scelli, Charge order driven by fermi-arc instability in Bi 2Sr 2−xLa xCuO 6+ δ , Science 343 , 390 (2014). [46] M. P. M. Dean, A. J. A. James, R. S. Springell, X. Liu, C. Monney, K. J. Zhou, R. M. Konik, J. S. Wen, Z. J. Xu, G. D. Gu, V. N. Strocov, T. Schmitt, and J. P. Hill, High-energy magnetic excitations in the cuprate super-conductor bi 2sr 2cacu 2o8+ δ : Towards a unified descrip-tion of its electronic and magnetic degrees of freedom, Phys. Rev. Lett. 110 , 147001 (2013). [47] T. Dahm, V. Hinkov, S. V. Borisenko, A. A. Kordyuk, V. B. Zabolotnyy, J. Fink, B. B¨ uchner, and D. J. Scalapino, Strength of the spin-fluctuation-mediated pairing interaction in a high-temperature superconduc-tor, Nature Physics 5, 217 (2009). [48] M. Zonno, F. Boschini, and A. Damascelli, Time-resolved arpes on cuprates: Tracking the low-energy electrody-namics in the time domain, Journal of Electron Spec-troscopy and Related Phenomena 251 , 147091 (2021). [49] P. B. Allen and R. C. Dynes, Transition temperature of strong-coupled superconductors reanalyzed, Phys. Rev. B 12 , 905 (1975). [50] A. J. Millis, S. Sachdev, and C. M. Varma, Inelastic scat-tering and pair breaking in anisotropic and isotropic su-perconductors, Phys. Rev. B 37 , 4975 (1988). [51] H. J. A. Molegraaf, C. Presura, D. van der Marel, P. H. Kes, and M. Li, Superconductivity-Induced Transfer of In-Plane Spectral Weight in Bi 2Sr 2CaCu 2O8+ δ , Science 
+
+295 , 2239 (2002). [52] A. V. Boris, N. N. Kovaleva, O. V. Dolgov, T. Holden, C. T. Lin, B. Keimer, and C. Bernhard, In-Plane Spectral Weight Shift of Charge Carriers in YBa 2Cu 3O6.9, Science 
+
+304 , 708 (2004). [53] Y. Chen, Y. Wang, C. Jia, B. Moritz, A. M. Shvaika, J. K. Freericks, and T. P. Devereaux, Theory for time-resolved resonant inelastic x-ray scattering, Phys. Rev. B 
+
+99 , 104306 (2019). [54] M. Mitrano and Y. Wang, Probing light-driven quantum materials with ultrafast resonant inelastic x-ray scatter-ing, Communications Physics 3, 184 (2020). [55] J. Hales, U. Bajpai, T. Liu, D. R. Baykusheva, M. Li, M. Mitrano, and Y. Wang, Witnessing light-driven en-tanglement using time-resolved resonant inelastic x-ray scattering, Nature Communications 14 , 3512 (2023). [56] M. Mitrano, S. Johnston, Y.-J. Kim, and M. P. M. Dean, Exploring quantum materials with resonant inelastic x-ray scattering, Phys. Rev. X 14 , 040501 (2024). [57] D. Jost, E. G. Lomeli, T. Tang, J. J. Kas, J. J. Rehr, W.-S. Lee, H.-C. Jiang, B. Moritz, and T. P. Devereaux, Time-resolved x-ray spectroscopy from the atomic orbital ground state up, Phys. Rev. X 15 , 011012 (2025). Supplementary Information for Ultrafast Two-Dimensional Spectroscopy Uncovers Ubiquitous Electron-Paramagnon Coupling in Cuprate Superconductors 
+
+Francesco Proietto, 1, 2, 3, ∗ Alessandra Milloch, 1, 4, ∗ Paolo Franceschini, 5, 6 Mohammadjavad Azarm, 1, 2, 3 
+
+Niccol` o Sellati, 7 Rishabh Mishra, 8, 9, 10 Peter C. Moen, 11, 12 Steef Smit, 11, 12 Martin Bluschke, 11, 12 
+
+Martin Greven, 13 Hiroshi Eisaki, 14 Marta Zonno, 15 Sergey A. Gorovikov, 15 Pinder Dosanjh, 11, 12 
+
+Stefania Pagliara, 1, 2 Gabriele Ferrini, 1, 2 Fabio Boschini, 16 Lara Benfatto, 7 Giacomo Ghiringhelli, 17, 18 
+
+Fulvio Parmigiani, 19, 20 Jeffrey A. Davis, 8, 9 Andrea Damascelli, 11, 12 and Claudio Giannetti 1, 2, 5, †
+
+> 1
+
+Department of Mathematics and Physics, Universit` a Cattolica del Sacro Cuore, Brescia I-25133, Italy 
+
+> 2
+
+ILAMP (Interdisciplinary Laboratories for Advanced Materials Physics), Universit` a Cattolica del Sacro Cuore, Brescia I-25133, Italy 
+
+> 3
+
+Department of Physics and Astronomy, KU Leuven, B-3001 Leuven, Belgium 
+
+> 4
+
+ILAMP (Interdisciplinary Laboratories for Advanced Materials Physics) 
+
+> 5
+
+CNR-INO (National Institute of Optics), via Branze 45, 25123 Brescia, Italy 
+
+> 6
+
+Department of Information Engineering, University of Brescia, Brescia I-25123, Italy 
+
+> 7
+
+Department of Physics, “Sapienza” University of Rome, P.le A. Moro 5, 00185 Rome, Italy 
+
+> 8
+
+Optical Sciences Centre, Swinburne University of Technology, Melbourne, Australia 
+
+> 9
+
+ARC Centre of Excellence in Future Low-Energy Electronics Technologies, Swinburne University of Technology, Hawthorn, 3122, Victoria, Australia 
+
+> 10
+
+University of New South Wales, Sydney, Australia 
+
+> 11
+
+Quantum Matter Institute, University of British Columbia, Vancouver, British Columbia, V6T 1Z4, Canada 
+
+> 12
+
+Department of Physics & Astronomy, University of British Columbia, Vancouver, British Columbia, V6T 1Z1, Canada 
+
+> 13
+
+School of Physics and Astronomy, University of Minnesota, Minneapolis, MN 55455, USA 
+
+> 14
+
+Core Electronics Technology Research Institute, National Institute of Advanced Industrial Science and Technology (AIST), 1-1-1 Umezono, Tsukuba, Ibaraki 305-8568, Japan 
+
+> 15
+
+Canadian Light Source, Inc., 44 Innovation Boulevard, Saskatoon, SK, Canada S7N 2V3 
+
+> 16
+
+Advanced Laser Light Source, Institut National de la Recherche Scientifique, Varennes, QC J3X 1P7, Canada 
+
+> 17
+
+Dipartimento di Fisica, Politecnico di Milano, piazza Leonardo da Vinci 32, I-20133 Milano, Italy 
+
+> 18
+
+CNR-SPIN, Dipartimento di Fisica, Politecnico di Milano, I-20133 Milano, Italy 
+
+> 19
+
+Elettra - Sincrotrone Trieste S.C.p.A., Trieste, Italy 
+
+> 20
+
+Dipartimento di Fisica, Universit` a degli Studi di Trieste, Trieste, Italy 
+
+S1 EXPERIMENTAL SETUP 
+
+The optical setup (Fig. S1a) is designed to implement broadband two-dimensional electronic spectroscopy (2DES) in a partially collinear geometry. Both pump and probe pulses are generated by a home-built noncollinear optical parametric amplifier (NOPA) pumped by an Yb:KGW laser system (Pharos, Light Conversion), delivering pulses at 1030 nm with a maximum repetition rate of 200 kHz. The repetition rate is adjustable via a pulse picker; in the measurements presented here, 40 kHz was used for high-fluence conditions (400 μJ/cm 2), while higher repetition rates were employed for lower fluences (up to 200 kHz for fluence of 40 μJ/cm 2). Pump and probe beams are obtained by splitting the NOPA output with a 10:90 beam splitter. Figure S1b shows the measured spectra of the pump and probe beams, with the violet shaded region indicating the spectral window used in the data analysis. In the pump arm, the beam is modulated by a mechanical chopper to enable lock-in detection of the pump-induced reflectivity variation. The modulated pump is then directed into a common-path birefringent interferometer (GEMINI-2D, NIREOS), based on the Translating-Wedge-Based Identical Pulses eNcoding System (TWINS) scheme [1], which generates a pair of phase-locked excitation pulses separated by a variable delay tpu (coherence time). A mechanical delay stage in the pump path introduces an additional delay τ (waiting time) by varying the optical path length of the pump relative to the probe. Pump and probe pulses, orthogonally polarized to minimize pump scattering into the detection channel, are   
+
+> ∗These authors contributed equally to this work.
+> †claudio.giannetti@unicatt.it
+
+2Photodiode  
+
+> GEMINI
+> interferometer
+> 𝜆 /2
+> τ
+> BS Pump
+> Probe
+> GEMINI 2D
+> Pulse Generator
+> Cryostat
+> Yb:KGW
+> laser
+> PHAROS
+> 1030 nm
+> 𝜆 /2
+> Chopper
+> tpu
+
+NOPA  Chirped 
+
+> mirrors
+> Chirped
+> mirrors
+
+# a)  b)                   
+
+> Delay
+> Stage Photonenergy(eV)
+> 1.31.41.51.61.71.81.9
+> Intensity (arb. units)
+> 0
+> 0.05
+> 0.1
+> Pump
+> Photonenergy(eV)
+> 1.31.41.51.61.71.81.9
+> Intensity (arb. units)
+> 0
+> 0.005
+> 0.01
+> 0.015Probe
+
+# c)                  
+
+> Photonenergy(eV)
+> 1.31.41.51.61.71.81.9
+> Intensity (arb. units)
+> 0
+> 0.05
+> 0.1
+> Pump
+> Photonenergy(eV)
+> 1.31.41.51.61.71.81.9
+> Intensity (arb. units)
+> 0
+> 0.005
+> 0.01
+> 0.015Probe
+> Polarizer
+
+FIG. S1. (a) Layout of the 2DES experimental setup. A broadband pulse generated by a NOPA is split into pump and probe beams; the pump is chopped and sent through the GEMINI-2D Pulse Generator to generate two phase-locked pump pulses with tunable coherence delay tpu , while a motorized delay line sets the waiting time τ with respect to the probe. After interaction with the sample in the cryostat, the probe is analyzed with a Fourier-transform interferometer (GEMINI interferometer) and detected on a photodiode. (b) Measured spectra of the pump (top panel) and probe (bottom panel) beams. The shaded violet area indicates the spectral window considered for the analysis of the 2D spectra. 
+
+then focused onto the sample by reflective optics to 160 ×160 μm2 and 80 ×80 μm2 spot sizes, respectively. The pump beam impinges on the sample at normal incidence, while the probe beam is incident at an angle of approximately 10 ◦.The samples are mounted in a closed-cycle helium cryostat. Dispersion introduced by transmissive optical elements (including the GEMINI-2D interferometer, beam splitter, wave plates, and cryostat window) is compensated by two independent chirped-mirror compressors in the pump and probe paths, ensuring minimal residual chirp at the sample position. The 2DES signal at each ( tpu , τ ) is collected in the reflected probe direction and sent to a Fourier-transform interferometer (GEMINI, NIREOS), which provides the transient reflectivity signal ∆ R/R spectrally resolved along the probe photon-energy axis. A Fourier transform with respect to tpu yields the spectral resolution along the pump photon-energy axis. Finally, the measured two-dimensional signal is normalized with respect to both the pump and probe spectra. The temporal resolution of the experimental setup was characterized using a pump–probe measurement on Highly Oriented Pyrolytic Graphite (HOPG), which exhibits an essentially instantaneous response. The broadband probe measurement (Fig. S2a) shows no significant wavelength-dependent delays, indicating minimal residual chirp and proper optimization of the pulse compressors. Since all transient dynamics discussed in the manuscript are analyzed at a probe photon energy of 1.3 eV (see Section S8), we determine the effective temporal resolution by fitting the graphite pump-probe trace at this photon energy. The data are well described by a double-exponential decay convoluted with a Gaussian function accounting for the finite pulse duration. The Gaussian width is left as a free parameter, and the fit (see Fig. S2b) yields a full width at half maximum of 65 ± 6 fs, which represents the pump–probe cross-correlation. Assuming similar pulse durations for the pump and probe, this corresponds to an individual pulse duration of approximately 40 fs. The extracted pulse duration is consistent with previous FROG (Frequency Resolved Optical Gating) measurements performed on the same apparatus under similar operating conditions [2, 3]. 3a)  b) 
+
+FIG. S2. (a) Transient reflectivity pump–probe measurement of a graphite sample. (b) Line profile at 1.3 eV and corresponding fit of the dynamics, yielding a pump–probe cross-correlation of 65 fs (black dotted line). 4
+
+S2 OPTICAL CONDUCTIVITY AND SIGN OF THE 2DES SIGNAL 
+
+Figure S3a reports the equilibrium optical conductivity of Y-Bi2212, adapted from Ref. 4, highlighting the charac-teristic spectral features of the cuprates. In particular, the onset of the charge-transfer excitations occurs at energies above ∼ 2.5 eV, while the visible/near-infrared region probed in the present experiment (1.3–1.8 eV) lies below this threshold. In this spectral range, the optical response is dominated by weak transitions, whose microscopic origin is still under debate. To assess whether the positive sign of the transient reflectivity signal (∆ R/R > 0) observed in the 2DES experiment is compatible with a pump-induced increase in absorption, we model the equilibrium optical properties using a parametrization of the dielectric function based on a sum Drude–Lorentz, following Ref. 5. Within this framework, we simulate a photoinduced modification of the optical response by increasing the spectral weight of the oscillators closest to the probed energy window. Specifically, we consider a 6% increase in the spectral weight of the oscillators highlighted in Fig. S3a, which predominantly contribute to the 1.3–1.8 eV range. From the modified dielectric function, we compute both the change in the real part of the optical conductivity, ∆ σ1 (Fig. S3b top panel), and the corresponding variation in reflectivity, ∆ R/R (Fig. S3b bottom panel). Notably, an increase in absorption (∆ σ1 > 0) leads to a positive reflectivity variation (∆ R/R > 0) within the spectral range probed in the experiment (highlighted by the gray area). This demonstrates that the experimentally observed positive transient reflectivity signal is fully consistent with a pump-induced enhancement of absorption due to the excitation of paramagnons. Energy (eV)              
+
+> 01234
+> <1 (+-1cm-1)
+> 200
+> 400
+> 600
+> 800
+> 1000
+> 1200
+> 1400
+> Energy(eV)
+> 1234
+> -2
+> -1
+> 0
+> 1
+> <2 (+-1cm-1) #103
+> "<1/<1
+> 0
+> 0.005
+> 0.01
+> 0.015
+> 0.02
+> Energy(eV)
+> 01234
+> 0.00
+> 0.01
+> "R/R
+> a) b)
+
+FIG. S3. (a) Optical conductivity of Y-Bi2212, parametrized using a sum of Drude-Lorentz oscillators, plotted as filled areas, following Ref. 4 and 5. Main panel: real part σ1. Inset: imaginary part σ2. (b) Simulated variation of the optical response upon a 6% increase in the spectral weight of the oscillators highlighted in panel (a) (red and orange areas). Top: relative change in absorption, ∆ σ1/σ 1. Bottom: corresponding reflectivity variation, ∆ R/R . The gray shaded area marks the experimental spectral range, where an increase in absorption (∆ σ1 > 0) results in a positive transient reflectivity signal (∆ R/R > 0). 5
+
+S3 LINE PROFILES OF THE 2D SPECTRA 
+
+To determine the position of the off-diagonal feature in the ( ℏωpr , ℏωpu ) plane, we extract horizontal and vertical line profiles from the 2DES map. Specifically, the horizontal line profile is obtained by integrating the signal over the pump-energy range ℏωpu = 1 .67–1 .77 eV, while the vertical line profile is obtained by integrating over the probe-energy range ℏωpr = 1 .3–1 .4 eV. The resulting line profiles for the 2DES map shown in Fig. 2a are reported in Fig. S4. To extract the peak position, the horizontal line profile is fitted with the sum of two Gaussian functions: one accounting for the off-diagonal feature and a second describing the weak and broad residual signal extending along the diagonal in the 1 .4–1 .8 eV energy range. From this fit, we find that the off-diagonal peak is centered at probe-energy 
+
+ℏωpr = 1 .32 eV, and has a full width at half maximum of 100 meV. The vertical line profile is instead fitted with a single Gaussian function, yielding the pump-energy position of the off-diagonal feature at ℏωpu = 1 .73 eV and a corresponding width of 240 meV. Pump energy (eV)
+
+1.4 1.5 1.6 1.7
+
+> Vertical profi le (a. u.)
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1 
+
+> 2DESdata
+> Fit
+
+Probe energy (eV)
+
+1.4 1.5 1.6 1.7
+
+> Horizontal profi le (a. u.)
+
+0
+
+0.2
+
+0.4
+
+0.6
+
+0.8
+
+1 
+
+> 2DESdata
+> Fit
+
+a)  b) 
+
+FIG. S4. Fitting of vertical (a) and horizontal (b) profiles of the 2DES map shown in Fig. 2a. The profiles are obtained by integrating the signal along ℏωpr between 1.3 and 1.4 eV, and along ℏωpu between 1.67 and 1.77 eV, respectively. The fits are performed using one or two Gaussian peaks to estimate the position of the off-diagonal peak (( ℏωpr , ℏωpu ) = (1 .32 , 1.73) eV). 
+
+S4 2DES FLUENCE DEPENDENCE 
+
+Figure S5 shows the fluence dependence of the 2DES maps measured on the optimally doped sample ( Tc = 95 K) at room temperature and τ = 40 fs. The excitation fluence is varied from 40 μJ/cm 2 to 400 μJ/cm 2. The off-diagonal feature is visible at all fluences, with its spectral position remaining unchanged. The signal amplitude scales with fluence, consistent with a linear increase of the photoexcited carrier density in this regime. 200 μJ/cm 2 400 μJ/cm 240 μJ/cm 2a)  b)  c) 
+
+𝜏  = 40 fs  𝜏  = 40 fs  𝜏  = 40 fs                                                                         
+
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+> Probeenergy(eV)
+> 1.31.41.51.61.71.8
+> Pump energy (eV)
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> 0
+> 0.5
+> 1
+> "R/R
+> (a.u.)
+> 0.25
+> 0.5
+> 0.75
+> 12DESdata
+> Profi lefi t
+> 0.51
+
+FIG. S5. 2DES maps measured at room temperature on the optimally doped sample using excitation fluences of (a) 40 μJ/cm 2,(b) 200 μJ/cm 2, and (c) 400 μJ/cm 2.6
+
+S5 COHERENT ARTIFACT 
+
+To rule out the possibility that the observed 2DES signal originates from a coherent artifact due to the temporal overlap of pump and probe, we simulate the nonlinear response expected from pulse overlap alone. The third-order nonlinear response mediated by a susceptibility χ(3) (ω1, ω 2, ω 3) can be generically written as the convolution of three electric fields E( ω), 
+
+S(ℏωpr ) ∝
+
+Z
+
+dω 1dω 2dω 3 χ(3) (ω1, ω 2, ω 3)E( ω1)E( ω2)E( ω3) δ(ωpr − ω1 − ω2 − ω3). (S1) The dependence on the delay tpu between the two pump fields, E pu 1 and E pu 2, and on the delay τ between the second pump and the probe field E pr can be introduced by writing the total electric field as E( ω) → E( ω, t pu , τ ) = E pu 1(ω)e−iω (tpu +τ ) + E pu 2(ω)e−iωτ + E pr (ω). (S2) With this substitution, the signal becomes S(ℏωpr , t pu ; τ ), which reads 
+
+S(ℏωpr , t pu ; τ ) ∝ 6
+
+Z
+
+dω 1dω 2dω 3 χ(3) (ω1, ω 2, ω 3)E pu 1(ω1)E pu 2(ω2)E pr (ω3)e−i(ω1+ω2)τ e−iω 1tpu δ(ωpr − ω1 − ω2 − ω3).
+
+(S3) The 2DES signal is obtained by taking the Fourier Transform with respect to tpu [6], 
+
+S(ℏωpr , ℏωpu ; τ ) ∝ 6
+
+Z
+
+dt pu eiω pu tpu S(ℏωpr , t pu ; τ )= 6 
+
+Z
+
+dω ′ χ(3) (ωpu , ω ′, ω pr − ωpu − ω′)E pu 1(ωpu )E pu 2(ω′)E pr (ωpr − ωpu − ω′)e−i(ωpu +ω′)τ . (S4) To model the coherent artifact, we consider only off-resonant electronic transitions, such that the third-order sus-ceptibility is real and essentially frequency-independent, χ(3) (ωpu , ω ′, ω pr − ωpu − ω′) ∼ 1. In this case, Eq. (S4) reads 
+
+S(ℏωpr , ℏωpu ; τ ) ∝ 6 E pu 1(ωpu )e−iω pu τ
+
+Z
+
+dω ′ Epu 2(ω′)E pr (ωpr − ωpu − ω′)e−iω ′τ . (S5) Fig. S6 shows the resulting 2DES signal for τ = 0, computed using the experimental pulse spectrum shown in Fig. S1. The dominant feature is a broad peak along the diagonal ℏωpu = ℏωpr , with no narrow response peaked at (1 .3, 1.7) eV. This demonstrates that the off-diagonal resonance observed experimentally cannot be attributed to a trivial coherent artifact originating from pump and probe overlap. We note that the amplitude of this artifact is governed by the temporal overlap between the pump and probe pulses and therefore vanishes on a timescale comparable to the pulse duration, whereas the off-diagonal feature in the experimental data persists well beyond this window, as shown in Fig. 2b of the main text. 0
+
+> 0.5
+> 1
+
+𝜏 = 0
+
+FIG. S6. Calculated two-dimensional correlation map given by the pulse overlap at τ = 0. 7  
+
+> S6 MODEL OF PARAMAGNON-ASSISTED INDIRECT OPTICAL TRANSITIONS AGeneral framework
+
+To interpret the off-diagonal resonance observed in the 2DES spectra, we develop a model for indirect optical transitions in which an electron is promoted from an oxygen-derived valence state to the Cu-3 dx2−y2 conduction band with the assistance of a paramagnon that carries the momentum and energy required by conservation laws. The calculation is formulated in terms of three ingredients: (i) an initial-state spectral function Ai(E, ki) for the O-2 pπ,σ bands involved in the charge-transfer excitation, where ki is the initial momentum; (ii) a final-state spectral function Af (E, kf ) for the Cu-3 dx2−y2 band, where kf is the final momentum; (iii) the imaginary part of the spin susceptibility χ′′ 
+
+> q
+
+(ℏΩ), which encodes the energy-momentum phase space available to the paramagnon mediating the transition, where q is the paramagnon momentum. For each photon energy value ℏω, we compute a momentum-resolved transition probability Pif (ℏω, kf ) and obtain the total probabilities for the paramagnon-emission (pump) and paramagnon-absorption (probe) channels by integration over the Brillouin zone. The resulting energy dependences are then combined to construct a simulated 2DES correlation map, which is directly compared to the experimental data. We consider an indirect optical transition from an initial electronic state |i⟩ to a final electronic state |f ⟩ driven by a photon of energy ℏω and assisted by the emission of a paramagnon carrying energy ℏΩq and momentum q.Momentum conservation enforces 
+
+kf = ki + q. (S6) Within the Fermi’s Golden rule formalism, the transition probability (up to an overall prefactor) contains the energy-conservation constraint 
+
+Pif ∝ δ(Ef (kf ) − Ei(ki) − ℏω + ℏΩq) , (S7) To separate the electronic and bosonic contributions, we introduce two auxiliary energy variables E and E′ and use the identity 
+
+δ(Ef (kf ) − Ei(ki) − ℏω + ℏΩq) = 
+
+Z
+
+dE 
+
+Z
+
+dE ′ δ(E − Ei(ki)) δ(E′ − Ef (kf ) + ℏω) δ(E′ − E + ℏΩq) . (S8) Equation (S8) corresponds to the limit of vanishing lifetime broadening, in which both electronic states and bosonic excitations are assumed to be localized in energy. However, finite lifetimes and band dispersion broaden these con-straints [7]. This is accounted for by replacing the electronic δ-functions with the corresponding spectral functions, defined as the imaginary part of the retarded single-particle Green’s functions, 
+
+Ai,f (E, k) = − 1
+
+π Im GRi,f (E, k). (S9) Analogously, the bosonic δ-function enforcing the energy transfer ℏΩq is replaced by the bosonic spectral density, which for magnetic excitations is proportional to the imaginary part of the spin susceptibility, χ′′ 
+
+> q
+
+(ℏΩ). This proce-dure provides a generalization of Eq. (S8) that incorporates lifetime effects while preserving energy and momentum conservation on average. Within this spectral representation, the transition probability for an indirect, boson-assisted optical excitation driven by a photon of energy ℏω can be written as 
+
+Pif (ℏω, kf ) ∝
+
+Z Z 
+
+dE dE ′ f (Ei) 1 − f (Ef ) Ai(E − Ei(ki)) Af (E′ − Ef (kf ) + ℏω) χ′′ (E′ − E + ℏΩq) . (S10) The Fermi–Dirac distribution functions account for the electronic occupation of the initial and final states, respectively. The factor f (Ei) enforces that the initial electronic state is occupied prior to photoexcitation, while the factor [1 − f (Ef )] ensures the availability of the final electronic state after the combined absorption of the photon and exchange of energy with the bosonic excitation. Here Ef is already shifted by the Fermi energy. i) Initial electronic state 
+
+The initial electronic state |i⟩ represents an oxygen-derived valence state involved in the charge-transfer excitation. O-2 pπ and O-2 pσ bands are described by a Lorentzian spectral function, 
+
+Ai(E, k) = η
+
+(E − Ei(k)) 2 + η2 , (S11) 8where the broadening is set to η = kB T = 24 meV corresponding to thermal broadening at room temperature (T = 300 K), with kB the Boltzmann constant. The dispersions of the two oxygen bands are parametrized as 
+
+E2pπ (k) = −0.30 (kx − π)2 + ( ky − π)2 − 1.3 eV , E2pσ (k) = −0.30  k2 
+
+> x
+
++ k2
+
+> y
+
+ − 1.3 eV . (S12) The curvature parameter ( −0.30) and the energy offset ( −1.3 eV) are obtained by fitting the oxygen-derived valence bands reported in Ref. 8. In the calculations, the initial momentum is fixed at ki = ( π, π ) for the O-2 pπ band and at 
+
+ki = (0 , 0) for the O-2 pσ band, corresponding to the maxima of their spectral weight. ii) Final electronic state 
+
+The final electronic state |f ⟩ corresponds to the Cu-3 dx2−y2 conduction band. Its spectral function is obtained from the single-particle Green’s function of an extended Hatsugai–Kohmoto model, which incorporates short-range antiferromagnetic correlations through a momentum-space coupling between k and k + Π, with Π = ( π, π ) [9]. In this framework, the electronic occupation factor nk+Π encodes the redistribution of spectral weight induced by the 
+
+Π-coupling and is computed self-consistently following the procedure described in Ref. [9]. The retarded Green’s function reads 
+
+Gk(E) = 1 − nk+Π
+
+E + μ − ϵ(k) + iη + nk+Π
+
+E + μ − ϵ(k) − V + iη , (S13) where V is the interaction parameter controlling the splitting between the two branches, μ is the chemical potential, and η is the same as for the initial state. The final energy entering Eq. S10 is Ef = ϵ(k) − μ. The corresponding spectral function is obtained as 
+
+Af (E, k) = − 1
+
+π Im Gk(E). (S14) The bare dispersion ϵ(k) entering Eq. (S13) is taken as a tight-binding form, 
+
+ϵ(k) = −2t(cos kx + cos ky ) − 4t′ cos kx cos ky − 2t′′ (cos 2 kx + cos 2 ky ), (S15) with parameters t = 0 .4 eV, t′ = −0.08 eV, and t′′ = 0 .04 eV [10–12]. In order to anchor the theoretical Fermi surface entering the final-state Green’s function in Eq. (S13), we need to fix the chemical potential μ and the interaction parameter V. To estimate these quantities, we performed ARPES measurements of the Fermi surface of optimally doped Y-Bi2212. These experiments were performed at the Quantum Materials Spectroscopy Centre (QMSC) beam-line of the Canadian Light Source (CLS), using a Scienta R4000 hemispherical analyzer with angular and energy resolutions better than 0.1 ◦ and 15 meV respectively. The ARPES data were acquired using linear vertical polarized light at a photon energy of 88 eV, at a base pressure lower than 5 × 10 −11 Torr and a temperature of 14 K. This is well below the Tc of these samples and therefore we probe the electronic structure in the superconducting state. As a consequence, spectral weight at the antinodes is strongly suppressed by the superconducting gap, and only the ungapped nodal arcs are directly visible at EF ermi . The selected samples were aligned along the nodal Γ-Y direction where a structural supermodulation in the Bi–O planes gives rise to multiple diffraction replicas of the main bands in momentum space. These replicas are clearly visible in the experimental data but do not modify the underlying Fermi-surface topology. For the purpose of the present work, the ARPES measurement is used exclusively to fix the parameters entering the final-state electronic structure. In particular, the chemical potential μ and the interaction parameter V are determined by matching the nodal Fermi momenta of the model dispersion to those extracted from ARPES. This procedure yields μ = −0.448 eV and V = 0 .076 eV. iii) Magnetic susceptibility 
+
+The bosonic excitation assisting the indirect optical transition is modeled as a paramagnon, described by the imaginary part of the spin susceptibility χ′′ 
+
+> q
+
+(ℏΩ). We adopt a phenomenological form commonly used to describe damped antiferromagnetic spin fluctuations in cuprates, consistent with resonant inelastic x-ray scattering (RIXS) measurements [13, 14]. The paramagnon dispersion is taken as Ωq = J
+
+ℏ
+
+s
+
+(2 − cos qx − cos qy )
+
+
+
+2 + cos qx + cos qy + ω2AF 
+
+4J2
+
+
+
+, (S16) 9Fermi surfaces 
+
+## Main 
+
+## bands 
+
+> 7
+
+# ky 0
+
+# ω
+
+# ℏω 0 ω
+
+# a)  b) 
+
+# ky 0
+
+# ω
+
+# ℏω 0 ω 0        
+
+> max
+> FIG. S7. (a) Fermi-surface map of optimally doped Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δmeasured by ARPES at T≃14 K. The main Fermi-surface bands are indicated, while additional features arise from diffraction replicas due to the Bi–O superstructure. (b) Calculated Fermi surface obtained from the final-state electronic structure used in the model with μ=−0.448 eV and
+> V= 0 .076 eV . Green dashed lines indicate the magnetic Brillouin zone.
+
+where J is the antiferromagnetic exchange interaction and ωAF sets a possible spin-gap at the antiferromagnetic wave vector. In the present calculations we set ωAF = 0, appropriate for short-range antiferromagnetic correlations in the doped compound. The corresponding susceptibility is modeled as 
+
+χ′′ 
+
+> q
+
+(ℏΩ) = 2Γ ℏΩ 1 − 12 (cos qx + cos qy )
+
+[( ℏΩ) 2 − (ℏΩq)2]2 + 4Γ 2ℏ2Ω2 , (S17) where Γ is a phenomenological damping parameter accounting for the finite lifetime of the magnetic excitations. The parameters used in the calculations are J = 105 meV [13, 15–17] and Γ = 300 meV, in agreement with values reported by RIXS experiments on Bi-based cuprates [14]. This form of χ′′ 
+
+> q
+
+(ℏΩ) captures both the dispersion and the strong damping characteristic of high-energy paramagnons in the normal state and provides the bosonic spectral density entering the transition probability in Eq. S10.  
+
+> BSeparation of paramagnon emission and absorption channels
+
+In the present framework, emission and absorption processes correspond to distinct regions of the bosonic spectral function. The energy transferred to the magnetic subsystem is given by Ω = E′ −E, where E and E′ are the electronic energies appearing in the convolution of spectral functions. Processes with Ω < 0 correspond to the emission of a paramagnon during the optical transition, while Ω > 0 describes paramagnon absorption. In the numerical evaluation of the transition probability, these two contributions are treated separately by restricting the support of the susceptibility χ′′ 
+
+> q
+
+(ℏΩ) to negative or positive Ω, depending on whether the pump (emission) or probe (absorption) process is considered. This procedure allows us to explicitly resolve the two branches of the indirect transition and to separately identify the momentum and energy phase space associated with paramagnon creation and annihilation.  
+
+> CNumerical implementation
+
+The transition probability in Eq. (S10) was evaluated numerically by explicit integration over electronic energies and final-state momenta. The final electronic momentum kf was sampled on a uniform 100 × 100 grid in the reduced Brillouin zone [0 , π ] × [0 , π ]. For each kf , the transferred bosonic momentum is uniquely fixed by momentum conservation, q = kf − ki.10 Energy integrals were performed over a finite window [ −5, 5] eV, well exceeding all electronic and bosonic energy scales relevant to the problem. Numerical integrations were carried out using adaptive routines with relative and absolute tolerances set to 10 −8. The finite lifetime of electronic and bosonic excitations ensures convergence of the integrals through the broadening parameters entering the spectral functions. 
+
+D Results for the O-2pσ channel (k i = (0 , 0) )
+
+In Fig. 4 in the main text we present the momentum-resolved probability maps for the indirect paramagnon-assisted transition evaluated for initial states at ki = ( π, π ). For completeness, here we report the corresponding results obtained by fixing the initial momentum at ki = (0 , 0), which selects the O-2 pσ initial state (see Eq. (S12)). The probability Pif (ℏω, kf ) is computed from Eq. (S10) under the same assumptions and parameters used in the main text. kf  
+
+> x
+> 0:/2:
+> kf
+> y
+> 0
+> :/2
+> :
+> 0
+> max
+
+kf  
+
+> x
+> 0:/2:
+> kf
+> y
+> 0
+> :/2
+> :
+> 0
+> max
+
+qx      
+
+> -:0
+> qy
+> -:
+> 0
+> :
+> 1.31.41.51.61.71.8
+
+Probe Energy (eV)
+
+> 1.3
+> 1.4
+> 1.5
+> 1.6
+> 1.7
+> 1.8
+> Pump Energy (eV)
+> 0
+> max
+
+Photon Energy (eV)     
+
+> 11.21.41.61.82
+> Integrated Probability (a.u.)
+> 0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1
+> Pump
+> Probe
+
+eℏ
+
+> k
+
+eℏ
+
+> k+q
+
+−ω = 1.39 eV 
+
++−Ω( Δq)
+
+eℏ
+
+> k
+
+eℏ
+
+> k+q
+
+−ω = 1.98 eV 
+
+ℏ−Ω( Δq)
+
+Pif Pif
+
+# Figura 4 da gamma 
+
+FIG. S8. Momentum- and energy-conservation results for an initial state at ki = (0 , 0) (O-2 pσ channel). (a) Momentum-resolved probability Pif (kf ) for the pump process at fixed photon energy ℏω = 1 .98 eV, corresponding to excitation followed by paramagnon emission, as sketched in the inset diagram. (b) Momentum-resolved probability Pif (kf ) for the probe process at fixed photon energy ℏω = 1 .39 eV, involving absorption of a paramagnon previously generated by the pump (inset). (c) Momentum-integrated transition probabilities for pump (purple) and probe (orange) processes as functions of photon energy, obtained by integrating the maps in panels (a) and (b) over the Brillouin zone for each ℏω. (d) Simulated two-dimensional correlation map constructed as the product of the pump and probe energy dependences shown in panel (c). 
+
+E Paramagnon phase space for the probe (absorption) channel 
+
+In the main text we show all the set of momenta involved in the paramagnon emission, here we report the analogous for the absorption process. In Fig. S9 we plot the antiferromagnetic dispersion Ω q used in the calculations and 11 Figura 4 FINALE 
+
+## O ℏ 2pω
+
+## O ℏ 2pτ
+
+FIG. S9. Antiferromagnetic (paramagnon) dispersion and momentum-transfer phase space for the absorption (probe) channel. The semi-transparent surface shows the model paramagnon dispersion Ω q over the full Brillouin zone. The blue [red] shaded areas highlight the set of momenta q contributing to the paramagnon absorption process for the initial O-2 pπ [O-2 pσ ] state. For visualization, the ( π, π )-centered contribution is translated by a reciprocal-lattice vector and displayed around ( −π, −π). 
+
+highlight the set of momenta q that contribute to the absorption (probe) process. The transferred momentum is fixed by momentum conservation, q = kf − ki, and the corresponding energy transfer is selected by the absorption channel. The blue [red] shaded region corresponds to the momenta exchanged when the initial O-2 p state is taken at (π, π ) [(0 , 0)]. For clarity, the ( π, π )-centered contribution is translated by a reciprocal-lattice vector and displayed in the same zone as the (0 , 0)-centered one. We find that the absorption channel samples a different portion of the paramagnon phase space with respect to emission, while remaining concentrated near the upper part of the paramagnon band, consistent with the boson energy scale extracted from the off-diagonal 2DES correlation. 12 
+
+S7 2DES DATA FOR SUPERCONDUCTING PHASE 
+
+Figure S10 reports measurements performed on the optimally doped sample below Tc. Panel (a) displays the temporal dynamics of ∆ R/R at ℏωpr = 1 .65 eV, where a fast component peaking at τ = 40 fs, and a slower component with a fluence-dependent relaxation dynamics can be identified. These two components display distinct fluence dependences, as shown in panel (b), which reports ∆ R/R extracted at fixed delays τ = 40 fs and 340 fs. The fast component exhibits a linear fluence dependence, while the slower component reaches saturation at a threshold 
+
+Fth ≃ 80 μJ/cm 2, signaling the onset of photoinduced melting of the superconducting condensate, consistent with previous studies on the same compound [18]. The 2DES response measured in the superconducting phase at fluence below Fth , reported in Fig. S10c at τ = 340 fs, exhibits markedly different spectral features compared to the normal-state 2DES spectrum (see Fig. 2b in the main text). Conversely, at high excitation fluence (400 μJ/cm 2), the normal-state response is recovered even at T < T c (Fig. S10d). A detailed analysis of the low-temperature regime is beyond the scope of the present work and will be addressed in a future study. Delay (ps) 
+
+0 1 2 3
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10 
+
+12 
+
+> "R/R ( ℏ!pr =1.65 eV)
+
+#10 -3     
+
+> #5
+> F = 400 7J/cm 2
+> F = 40 7J/cm 2
+> == 40 fs
+> == 340 fs
+
+Fluence ( 7J/cm 2)
+
+0 100 200 300 400 
+
+> "R/R
+
+0
+
+0.005 
+
+0.01 
+
+0.015 
+
+0.02     
+
+> Fth :80 7J/cm 2
+> Linear fit
+> == 40 fs
+> == 340 fs
+
+Probe energy (eV) 
+
+1.3 1.4 1.5 1.6 1.7 1.8 
+
+> Pump energy (eV)
+
+1.3 
+
+1.4 
+
+1.5 
+
+1.6 
+
+1.7 
+
+1.8 
+
+F = 40 7J/cm 2
+
+> -0.1
+> -0.05
+> 0
+> 0.05
+> "R/R
+
+Probe energy (eV) 
+
+1.3 1.4 1.5 1.6 1.7 1.8 
+
+> Pump energy (eV)
+
+1.3 
+
+1.4 
+
+1.5 
+
+1.6 
+
+1.7 
+
+1.8 
+
+F = 400 7J/cm 2
+
+> -0.2
+> 0
+> 0.2
+> 0.4
+> "R/R
+
+# a) b) 
+
+# c) d) 
+
+FIG. S10. (a) Temporal dynamics of the differential reflectivity ∆ R/R measured at ℏωpr = 1 .65 eV for two excitation fluences, 
+
+F = 40 μJ/cm 2 (×5 magnification) and F = 400 μJ/cm 2. The dashed red and blue lines mark the delays τ = 40 fs and 
+
+τ = 340 fs at which the fluence dependence in panel (b) is evaluated. (b) Fluence dependence of ∆ R/R at ℏωpr = 1 .65 eV extracted at τ = 40 fs (red circles) and τ = 340 fs (blue squares). The dashed black line is a linear fit to the fast-component data. The threshold fluence Fth = 80 μJ/cm 2 is indicated. (c, d) Two-dimensional ∆ R/R maps at τ = 340 fs as a function of pump and probe photon energy at low fluence ( F = 40 μJ/cm 2) and high fluence ( F = 400 μJ/cm 2), respectively. The white dashed line marks the diagonal ( ℏωpu = ℏωpr ). 13  
+
+> S8 COUPLING STRENGTH ESTIMATE
+
+The onset time of the off-diagonal resonance in 2DES spectra provides information about the coupling strength between the charge-transfer and spin excitations, with faster build-up times corresponding to stronger coupling. In our measurements, the off-diagonal feature appears essentially instantaneous within the duration of the pulses. Never-theless, it is possible to estimate an upper bound on the build-up time of the off-diagonal resonance at ℏωpr = 1 .3 eV. This, in turn, allows us to place a lower bound on the corresponding coupling strength. The dynamics of the transient reflectivity response at ℏωpr = 1 .3 eV are well described by a double-exponential decay function convoluted with the Gaussian of FWHM = 65 fs accounting for the pulses time duration. Fig. S11 shows the corresponding fits for measurements performed on four samples with different doping levels. Introducing a third exponential to account for rise time does not result in a statistically significant improvement of the fit quality. Moreover, when the additional component is included, the extracted rise time and decay constants become unstable and poorly constrained, indicating that the data do not support the presence of a resolvable build-up within the temporal resolution of the experiment. To quantify the shortest resolvable build-up time, we performed numerical simulations in which synthetic datasets were generated including an exponential rise component with varying time constant τrise , followed by two exponential decay components. The resulting signals were convoluted with the experimental pulse duration (Gaussian FWHM = 65 fs). These synthetic datasets were then fitted using the same double-exponential decay model (without a rise component) employed for the analysis of the experimental data. As shown in Fig. S12a, for τrise ≲ 10 fs the fits accurately reproduce the simulated dynamics, and no systematic deviations are observed at early time delays. Only for longer rise times does the omission of a rise term lead to detectable discrepancies (see Fig. S12b). We therefore conclude that any ∆ R/R build-up occurs on a timescale faster than approximately 10 fs, which represents an upper bound set by the experimental time resolution. We now turn to estimating a lower bound for the coupling strength between charge excitations and paramagnons. To this end, we employ a three-temperature model describing the relaxation of the electronic (charge-transfer excitations) subsystem through its coupling to spin excitations at 200 meV, and—on longer timescales—to the lattice. The coupling is encoded in a bosonic spectral function, α2F (ω), composed of a spin component peaked at 200 meV and a lattice (phononic) component spanning 10–100 meV (see inset of Fig. S13a). Following photoexcitation, the rapid increase in electronic temperature drives a subsequent rise of the spin temperature and, at later times, of the lattice temperature - as modeled through coupled differential equations describing the energy transfer among the three population subsets [19, 20] - as illustrated in Fig. S13a. The dynamics depend on the specific heats of the three subsystems: the electronic specific heat is taken as Cel = γT with γ = 1 × 10 −4 J cm −3 K−2 and T = 290 K[19]; the lattice specific heat is Clat = 2 .27 J cm −3 K−1 [19, 21]; and the spin specific heat is set to Cspin = 0 .029 J cm −3 K−1, consistent with the expectation that for bosonic modes of electronic-origin one has Cspin ≲ 0.1Cel [19]. The pump excitation intensity is chosen to yield an electronic temperature increase of approximately 80–100 K, consistent with the expected electronic heating considering the fluence used experimentally [22]. Within this framework, we determine the spin coupling strength ( α2F (ω = 200 meV)) that produces a delay of no more than 10 fs between the maxima of the electronic and spin temperatures, in accordance with the experimental up-per limit. Figure S13b reports the dependence of this delay on the coupling strength, together with the corresponding electron-spin coupling strength parameter λ = 2 R ∞  
+
+> 0
+> α2F(ω)
+> ω
+
+dω as a function of α2F (200 meV). The experimentally constrained maximum delay of 10 fs (dashed line) sets a lower bound λ ≳ 0.7. 14 Under doped (T c = 88 K) 
+
+## a)  b) 
+
+## c)  d) 
+
+Under doped (T c = 91 K) 
+
+Optimally doped (T c = 95 K)  Over doped (T c = 91 K) 
+
+FIG. S11. Transient reflectivity dynamics measured at ℏωpr = 1 .3 eV, representing the dynamics of the off-diagonal component in the 2D maps, along with corresponding double-exponential decay fits. The black dashed line shows the Gaussian accounting for the experimental pulse duration. Data were acquired at room temperature using a 400 μJ/cm 2 excitation fluence on different samples: (a) underdoped ( Tc = 88 K, p = 0 .13), (b) underdoped ( Tc = 91 K, p = 0 .14), (c) optimally doped ( Tc = 95 K, 
+
+p = 0 .16), and (d) overdoped ( Tc = 91 K, p = 0 .18). 15 a) 
+
+b) 
+
+FIG. S12. (a) Synthetic dataset simulating transient reflectivity dynamics with a build-up time, τrise , followed by a double-exponential decay. Solid lines show fits using a double-exponential decay function, demonstrating that, given the experimental pulse duration, only build-up times longer than 10 fs would be detectable. (b) Coefficient of determination ( R2) of the fits shown in panel (a), illustrating that the double-exponential fit accurately describes the dynamics for τrise ≲ 10 fs. a)  b) 
+
+FIG. S13. (a) Time evolution of the electronic, spin, and lattice temperatures computed with the three-temperature model. Inset: spin and lattice contributions to the bosonic spectral function α2F (ω), represented as a sum of histograms. (b) Value of the delay time at which the spin temperature reaches its maximum (left axis) as a function of the amplitude of α2F (ω) at 200 meV. The corresponding electron-spin coupling strength, λ, is shown on the right axis. The shaded gray area highlights the region where the spin response occurs faster than 10 fs (dashed line), which identifies the lower bound on the coupling (λ ≳ 0.7). 16 
+
+S9 2DES DOPING DEPENDENCE 
+
+Figure S14 presents 2DES maps acquired at room temperature on Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δ samples spanning different doping levels: underdoped ( Tc = 88 K and Tc = 91 K) and overdoped ( Tc = 91 K). All maps were measured at an excitation fluence of 400 μJ/cm 2. These data support the doping-dependent analysis presented in Fig. 6 of the main text. Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+a)  b) 
+
+c)  d) 
+
+𝜏  = 40 fs 𝜏  = 40 fs 
+
+𝜏  = 340 fs 𝜏  = 40 fs 
+
+Under doped (T c = 88 K)  Under doped (T c = 91 K) 
+
+Over doped (T c = 91 K) Over doped (T c = 91 K) 
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+Probe energy (eV)
+
+1.3 1.4 1.5 1.6 1.7 1.8
+
+> Pump energy (eV)
+
+1.3
+
+1.4
+
+1.5
+
+1.6
+
+1.7
+
+1.8
+
+0
+
+0.5
+
+1 
+
+> "R/R
+> (a.u.)
+
+0.25
+
+0.5
+
+0.75
+
+1 2DES data 
+
+> Profi lefi t
+
+0.5 1
+
+FIG. S14. 2DES maps measured on different samples: (a) underdoped ( Tc = 88 K, p = 0 .13), (b) underdoped ( Tc = 91 K, 
+
+p = 0 .14), and (c–d) overdoped ( Tc = 91 K, p = 0 .18). Data were acquired at room temperature using a 400 μJ/cm 2 excitation fluence, with pump–probe time delays of τ = 40 fs (a–c) and 340 fs (d). 17 
+
+SUPPLEMENTARY REFERENCES 
+
+[1] D. Brida, C. Manzoni, and G. Cerullo, Phase-locked pulses for two-dimensional spectroscopy by a birefringent delay line, Optics letters 37 , 3027 (2012). [2] A. Milloch, P. Franceschini, P. Villar-Arribi, S. K. Chaluvadi, P. Orgiani, G. Panaccione, G. Rossi, Y. Liu, D. G. Schlom, K. M. Shen, M. Capone, and C. Giannetti, Tracking the local order parameter through the hubbard exciton decoherence time in the mott-hubbard insulator lavo3 (2026), arXiv:2603.20693 [cond-mat.str-el]. [3] M. Azarm, R. Asif, A. Milloch, D. Datta, A. Lanseur, F. Fabbri, F. Bianco, F. Preda, A. Perri, G. Cerullo, S. Pagliara, G. Ferrini, and C. Giannetti, Coherent multi-dimensional widefield microscopy (2026), arXiv:2603.23759 [physics.optics]. [4] C. Giannetti, F. Cilento, S. D. Conte, G. Coslovich, G. Ferrini, H. Molegraaf, M. Raichle, R. Liang, H. Eisaki, M. Greven, A. Damascelli, D. van der Marel, and F. Parmigiani, Revealing the high-energy electronic excitations underlying the onset of high-temperature superconductivity in cuprates, Nature Communications 2, 353 (2011). [5] A. Montanaro, E. M. Rigoni, F. Giusti, L. Barba, G. Chita, F. Glerean, G. Jarc, S. Y. Mathengattil, F. Boschini, H. Eisaki, 
+
+et al. , Dynamics of nonthermal states in optimally doped Bi 2Sr 2Ca 0.92 Y0.08 Cu 2O8+ δ revealed by midinfrared three-pulse spectroscopy, Physical Review B 110 , 125102 (2024). [6] J. Fiore, N. Sellati, M. Udina, and L. Benfatto, Two-dimensional thz spectroscopy in electronic systems: a many-body diagrammatic approach (2025), arXiv:2509.25060 [cond-mat.supr-con]. [7] G. Grosso and G. Pastori Parravicini, Solid State Physics , 2nd ed. (Academic Press, New York, 2013). [8] F. Cilento, G. Manzoni, A. Sterzi, S. Peli, A. Ronchi, A. Crepaldi, F. Boschini, C. Cacho, R. Chapman, E. Springate, H. Eisaki, M. Greven, M. Berciu, A. F. Kemper, A. Damascelli, M. Capone, C. Giannetti, and F. Parmigiani, Dynamics of correlation-frozen antinodal quasiparticles in superconducting cuprates, Science Advances 4, eaar1998 (2018). [9] P. Worm, M. Reitner, K. Held, and A. Toschi, Fermi and luttinger arcs: Two concepts, realized on one surface, Phys. Rev. Lett. 133 , 166501 (2024). [10] M. R. Norman and A. V. Chubukov, High-frequency behavior of the infrared conductivity of cuprates, Phys. Rev. B 73 ,140501 (2006). [11] A. Damascelli, Z. Hussain, and Z.-X. Shen, Angle-resolved photoemission studies of the cuprate superconductors, Rev. Mod. Phys. 75 , 473 (2003). [12] R. Comin, A. Frano, M. M. Yee, Y. Yoshida, H. Eisaki, E. Schierle, E. Weschke, R. Sutarto, F. He, A. Soumyanarayanan, Y. He, M. Le Tacon, I. S. Elfimov, J. E. Hoffman, G. A. Sawatzky, B. Keimer, and A. Damascelli, Charge order driven by fermi-arc instability in Bi 2Sr 2−xLa xCuO 6+ δ , Science 343 , 390 (2014). [13] M. L. Tacon, G. Ghiringhelli, J. Chaloupka, M. M. Sala, V. Hinkov, M. W. Haverkort, M. Minola, M. Bakr, K. J. Zhou, S. Blanco-Canosa, C. Monney, Y. T. Song, G. L. Sun, C. T. Lin, G. M. D. Luca, M. Salluzzo, G. Khaliullin, T. Schmitt, L. Braicovich, and B. Keimer, Intense paramagnon excitations in a large family of high-temperature superconductors, Nature Physics 7, 725 (2011). [14] Y. Y. Peng, E. W. Huang, R. Fumagalli, M. Minola, Y. Wang, X. Sun, Y. Ding, K. Kummer, X. J. Zhou, N. B. Brookes, B. Moritz, L. Braicovich, T. P. Devereaux, and G. Ghiringhelli, Dispersion, damping, and intensity of spin excitations in the monolayer (Bi,Pb) 2(Sr,La) 2CuO 6+ δ cuprate superconductor family, Phys. Rev. B 98 , 144507 (2018). [15] M. P. M. Dean, G. Dellea, R. S. Springell, F. Yakhou-Harris, K. Kummer, N. B. Brookes, X. Liu, Y.-J. Sun, J. Strle, T. Schmitt, L. Braicovich, G. Ghiringhelli, I. Boˇ zovi´ c, and J. P. Hill, Persistence of magnetic excitations in La 2−xSr xCuO 4
+
+from the undoped insulator to the heavily overdoped non-superconducting metal, Nature Materials 12 , 1019 (2013). [16] M. P. M. Dean, A. J. A. James, R. S. Springell, X. Liu, C. Monney, K. J. Zhou, R. M. Konik, J. S. Wen, Z. J. Xu, G. D. Gu, V. N. Strocov, T. Schmitt, and J. P. Hill, High-energy magnetic excitations in the cuprate superconductor bi 2sr 2cacu 2o8+ δ :Towards a unified description of its electronic and magnetic degrees of freedom, Phys. Rev. Lett. 110 , 147001 (2013). [17] T. Dahm, V. Hinkov, S. V. Borisenko, A. A. Kordyuk, V. B. Zabolotnyy, J. Fink, B. B¨ uchner, and D. J. Scalapino, Strength of the spin-fluctuation-mediated pairing interaction in a high-temperature superconductor, Nature Physics 5, 217 (2009). [18] C. Giannetti, G. Coslovich, F. Cilento, G. Ferrini, H. Eisaki, N. Kaneko, M. Greven, and F. Parmigiani, Discontinuity of the ultrafast electronic response of underdoped superconducting Bi 2Sr 2CaCu 2O8+ δ strongly excited by ultrashort light pulses, Phys. Rev. B 79 , 224502 (2009). [19] S. Dal Conte, C. Giannetti, G. Coslovich, F. Cilento, D. Bossini, T. Abebaw, F. Banfi, G. Ferrini, H. Eisaki, M. Greven, A. Damascelli, D. Van Der Marel, and F. Parmigiani, Disentangling the electronic and phononic glue in a high-Tc super-conductor, Science 335 , 1600 (2012). [20] S. Mor, F. Boschini, E. Razzoli, M. Zonno, M. Michiardi, G. Levy, N. D. Zhigadlo, P. C. Canfield, G. Cerullo, A. Damascelli, C. Giannetti, and S. D. Conte, Selective electron-phonon coupling strength from nonequilibrium optical spectroscopy: The case of mgb 2, Phys. Rev. B 113 , 064514 (2026). [21] A. Junod, K.-Q. Wang, T. Tsukamoto, G. Triscone, B. Revaz, E. Walker, and J. Muller, Specific heat up to 14 tesla and magnetization of a Bi 2Sr 2CaCu 2O8 single crystal thermodynamics of a 2d superconductor, Physica C: Superconductivity 
+
+229 , 209 (1994). [22] F. Boschini, E. H. da Silva Neto, E. Razzoli, M. Zonno, S. Peli, R. P. Day, M. Michiardi, M. Schneider, B. Zwartsenberg, P. Nigge, R. D. Zhong, J. Schneeloch, G. D. Gu, S. Zhdanovich, A. K. Mills, G. Levy, D. J. Jones, C. Giannetti, and A. Damascelli, Collapse of superconductivity in cuprates via ultrafast quenching of phase coherence, Nature Materials 17 ,416 (2018).
