@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.01141v1/fig-001.webp",
+      "caption": "Figure 2. ASE in thin-film sample. (a) Log-linear plot of spectra from fluence-dependent optical emission experiments, showing emission above (yellow, orange) and below (blue) ASE threshold fluence. At higher fluences, an additional ASE mode is observed, indicated by an additional peak at ~575 nm. (b) Integrated emission intensity versus fluence for all recorded fluences. Data was fit to determine an ASE threshold of approximately 0.056 mJ/cm2 at the selected spot in the film, well below the fluence used in TRXRD experiments (0.7 mJ/cm2), shown as a red vertical line.",
+      "page": 6,
+      "index": 1,
+      "width": 982,
+      "height": 504
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01141v1/fig-002.webp",
+      "caption": "Figure 4. Temporal recovery of diffraction intensity. (a) Liquid-jet measurements of ΔI/I0(t) or the averaged response from the <110> and <103> diffraction peaks of CdSe:CdS nanocrystals suspended in liquid dodecane. An x-axis break compresses the pre-time-zero baseline. A single exponential fit (𝑎𝑒-t/ ) in black dashed line yields a lifetime of 𝜏 = 180 ps. (b) Thin-film measurements of of ΔI/I0(t) for the averaged response from the <110> and <103> diffraction peaks of CdSe:CdS nanocrystals on fused silica substrate. A single-exponential fit (𝑎𝑒-t/ ) in black dashed line yields a lifetime of 𝜏 = 2.3 µs.",
+      "page": 10,
+      "index": 2,
+      "width": 982,
+      "height": 385
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01141v1/fig-003.webp",
+      "caption": "Figure 5. Thermal recovery dynamics. (a) Simulated film normalized temperature, 𝜃, as a function of film depth and time. The x-axis is in log scale. (b) Normalized experimentally measured averaged thin-film temperature (blue circles) fit to FEM (green) and analytical (purple) model, yielding fitted thermal conductivity values of 0.55 W m-1 K-1 and 0.31 W m-1 K-1, respectively.",
+      "page": 13,
+      "index": 3,
+      "width": 982,
+      "height": 463
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01141v1/fig-004.webp",
+      "caption": "Figure 3. Debye–Waller analysis of transient diffraction intensity changes. (a) Representative diffraction image of the CdSe/CdS thin-film sample. (b) Radially integrated, background-subtracted diffraction intensity of a CdSe/CdS thin-film sample prior to excitation, I0(Q), scaled to 2% (black), and the transient change in diffraction intensity 50 ns after excitation, I(Q, t = 50 ns) (orange). (c, d) Debye-Waller Factor (DWF) plots of liquid jet and solid state samples at t = 50 ps and t = 50 ns, respectively. Error bars represent standard error of the mean. The linear relationships observed in both plots are indicative of transient lattice heating (DWF). The higher signal-to-noise ratio in the solid-state data enables more diffraction peaks to be resolved in the TR-XRD spectra, resulting in a more robust DWF analysis.",
+      "page": 8,
+      "index": 4,
+      "width": 768,
+      "height": 644
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01141v1/fig-005.webp",
+      "caption": "Figure 1. Time-resolved x-ray diffraction of CdSe/CdS QDs. Schematic of the time-resolved X-ray diffraction experiment, where a sample is excited with a 400 nm optical pump and then probed with X-rays at multiple pump-probe delays to measure photoinduced structural changes in (a) thin-film or (b) liquid jet samples. (c) Schematic of the thin-film thermal dynamics. The laser pulse is absorbed at 𝜏 0 heating the film through hot-carrier cooling and fast nonradiative relaxation. Following the initial thermalization, the film is probed at pump–probe delay 𝜏 to determine the nanocrystal temperature, averaged across the film thickness and beam footprint, thereby tracking the film cooling timescales.",
+      "page": 4,
+      "index": 5,
+      "width": 982,
+      "height": 607
+    }
+  ]
+}

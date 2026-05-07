@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-001.webp",
+      "caption": "Figure 3: Maximal absorption at ℏω = ℏωge = 1.9 eV for varying molecular layer thickness and electric susceptibility of scenario (a) No mirror, (b) one perfect mirror at distance (D = 163 nm) and (c) one 70 nm silver mirror at distance (D = 135 nm). In fig (a), because the transmission channel is also finite in scenario (a) and thus by symmetry, the boundary is defined as A = 0.5 (white band) and is at LM/λM = 1/πχM . In contrast, as shown in fig (b) and (c), the maximal absorption (A = 1, dark red band) is reached at LM/λM = 1/2πχM (cyan lines). In all figures, the lines are most accurate in the limit of LM/λM < 0.05.",
+      "page": 11,
+      "index": 1,
+      "width": 976,
+      "height": 325
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-002.webp",
+      "caption": "Figure 5: Absorption at resonance, ℏω = ℏωge = 1.9 eV plotted against (a) the mirrormolecular layer distance D and (b) the molecular susceptibility χM for a silver mirror. The silver mirror possesses a finite complex-valued dielectric constant and thus the dependence of maximal/minimal absorption on effective distance deviates from (a). The thickness of molecular layer is 10 nm.",
+      "page": 22,
+      "index": 2,
+      "width": 979,
+      "height": 446
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-003.webp",
+      "caption": "Table 1: Parameters for Maxwell-Bloch simulation.",
+      "page": 23,
+      "index": 3,
+      "width": 868,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-004.webp",
+      "caption": "Figure 4: Non-monotonic absorption spectra as a function of the number density.",
+      "page": 12,
+      "index": 4,
+      "width": 832,
+      "height": 338
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-005.webp",
+      "caption": "Figure 2: (a) Absorption intensity at ℏω = 1.9 eV for varying mirror-molecular layer distance. The thickness of the molecular layer is LM = 10 nm, the number density is 1 mol/L, the transition dipole moment is 5 Debye and these parameter correspond to molecular susceptibility χM = 5.16. The results are probed by a very weak short pulse and excite minimal population onto the excited state throughout simulation. (b) Absorption intensity plotted against the mirror-molecular layer distance D and the molecular susceptibility χM for a perfect reflector. The perfect mirror gives a clear pattern: the maximal absorption values appear at D = (2N + 1)λM/4, N ∈ N and minimal absorption appears at D = NλM/2, N ∈ N. This pattern arises due to the constructive/destructive interference of the standing wave.",
+      "page": 9,
+      "index": 5,
+      "width": 890,
+      "height": 409
+    },
+    {
+      "url": "assets/figures/arxiv/2604.09851v1/fig-006.webp",
+      "caption": "Figure 1: Sketches of the three model scenarios that are studied in this work. (a) A single layer of 2-level molecules with resonant frequency ℏωge = 1.9 eV and thickness LM ; (b) a single layer of 2-level molecules with near a perfect reflection boundary condition (c) a single layer of 2-level molecules near a thick silver mirror. Both scenarios are probed by white light source (1 fs long) from the right-hand side of the system.",
+      "page": 5,
+      "index": 6,
+      "width": 797,
+      "height": 286
+    }
+  ]
+}

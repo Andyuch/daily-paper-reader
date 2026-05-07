@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-001.webp",
+      "caption": "Figure 4: Time-resolved SNOM signal on multilayer WS2 for demodulation order n = 0 – 5. (a) and (b) show the signal amplitude vs delay time t, while (c) and (d) show the optical phase. σ0 is the pure far-field contribution. σ1−3 show varying contributions with distinct optical phase and varying amplitude. σ4,5 show a dynamic signal decaying below the noise floor after ∼ 10 ps, where it is phase-blanked. Location marked in inset in Figure 3(a).",
+      "page": 6,
+      "index": 1,
+      "width": 1039,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-002.webp",
+      "caption": "Figure 3: SNOM signal-distance curves taken at location marked in AFM inset. (a): Comparison of SNOM signal amplitude |σ5| vs tip-sample distance dz, taken before (pump-off ) and 0.5 ps after (pump-on) optical excitation. The dashed line marks the snap-off distance where the AFM tip looses contact to the sample, defined by the maximum AFM tapping amplitude during retraction. (b): Optical phase of σ5 with and without optical excitation. At distances where the |σ5| drops below the noise floor, the phase becomes ill-defined and is not plotted (phase-blanking[41]). The inset shows an AFM image of the acquisition site with a height profile taken along the dashed line.",
+      "page": 6,
+      "index": 2,
+      "width": 489,
+      "height": 514
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-003.webp",
+      "caption": "Figure 5: tr-SNOM signal at different locations on WS2 close to a monolayer-multilayer boundary, marked in AFM inset. (a) and (c) show amplitude and phase of the pure far field contribution σ0. (b) and (d) show amplitude and phase of σ4. While ∆σ0/σ0 varies gradually moving across the boundary, ∆σ4/σ4 shows distinct kinetics on monolayer and multilayer WS2. The inset shows an AFM image of the acquisition site with a height profile taken along the dashed line.",
+      "page": 7,
+      "index": 3,
+      "width": 1039,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-004.webp",
+      "caption": "Figure 8: Modeled transient dielectric function of AFM tip (black), WS2 monolayer (blue), and WS2 multilayer (orange) after photo-excitation at t = 0. Real part ε1 in (a), and imaginary part ε2 in (b). See text for details of the models.",
+      "page": 10,
+      "index": 4,
+      "width": 522,
+      "height": 473
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-005.webp",
+      "caption": "Figure 1: Visualization of the complex SNOM signal in a pump-probe measurement. (a): σon is the signal after pump excitation (pump-on), σoff is the SNOM signal without pump excitation (pump-off ), ∆σ is the pump-induced difference of the two. (b): All signals normalized by the probe-only signal σoff . Example experimental time-resolved SNOM signal shown in black. Arrows indicate the direction of time.",
+      "page": 3,
+      "index": 5,
+      "width": 489,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-006.webp",
+      "caption": "Figure 6: Time-resolved SNOM signal on SiO2, acquired with an uncoated Si tip. The fit, shown as a solid line, considers a time-dependent dielectric function of the tip, according to Equation (11). The AFM inset marks the acquisition site with a dot, in an SiO2 area on an AFM test grating(TGQ1, Tips-Nano). The scan direction is alternating on the fast axis.",
+      "page": 8,
+      "index": 6,
+      "width": 489,
+      "height": 515
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-007.webp",
+      "caption": "Figure 2: (a): Schematic of time-resolved SNOM optical setup. The pump beam path is delayed with respect to the probe beam path, and chopped using an optical chopper wheel. The state of the pump is detected using the ”chop” photodiode. The probe beam path enters a Michelson interferometer for pseudo-heterodyne modulation. Graphic by Peter Schwendke. Reproduced with permission. (b): Photodiode voltage determining the state of the chopper wheel. Red: pump-on, blue: pump-off, black: pump pulses clipped by the chopper wheel are disregarded during analysis. (c): Comparison of the voltage of the photodiode after optical excitation (pump-on) and without (pump-off ). The intensity of individual laser pulses shows tapping modulation with multiple harmonics, and a pump-induced change in signal level.",
+      "page": 4,
+      "index": 7,
+      "width": 997,
+      "height": 500
+    },
+    {
+      "url": "assets/figures/arxiv/2604.13892v1/fig-008.webp",
+      "caption": "Figure 7: tr-SNOM signal at different locations on WS2 close to a monolayer-multilayer boundary, marked in AFM inset. (a) and (c) show amplitude and phase of near-field kinetics on monolayer WS2. (b) and (d) show different kinetic contributions on the multilayer side of the boundary. The near-field was fitted, considering a time-dependent dielectric function of the Si AFM tip, and the WS2 sample (Equation (11)).",
+      "page": 9,
+      "index": 8,
+      "width": 1070,
+      "height": 473
+    }
+  ]
+}

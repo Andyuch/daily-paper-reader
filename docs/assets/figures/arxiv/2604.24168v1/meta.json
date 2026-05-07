@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.24168v1/fig-001.webp",
+      "caption": "Figure 3 – Sub-acoustic diffraction limited photoacoustic imaging through a scattering layer using speckle correlations. (a) Experimental configuration during acoustic-resolution imaging via transducer scanning. A image of the photomask design used for hidden digit is shown inset, with 50µm scale bar. (b) Acoustic resolution image of the hidden digit, with no structure visible. (c) Example time-resolved photoacoustic signal. (d) Experimental configuration during speckle correlation measurement process, with a fixed transducer location and an angle-scanned excitation beam. (e) Variation in the amplitude of photoacoustic signals as a function of excitation beam angle. (f) Autocorrelation of (e), after windowing and thresholding. (g) Reconstructed image of the hidden digit, with (h) profiles through the ground truth, reconstructed, and acoustic resolution images.",
+      "page": 4,
+      "index": 1,
+      "width": 994,
+      "height": 464
+    },
+    {
+      "url": "assets/figures/arxiv/2604.24168v1/fig-002.webp",
+      "caption": "Figure 2 – A simplified schematic of the experimental setup used to perform photoacoustic speckle correlation imaging. Light from a coherent pulsed laser is used to illuminate a diffuser, with the angle of incidence of the beam controlled by a Micro-Electro-Mechanical System (MEMS) mirror. A focused ultrasound transducer is used to detect the resulting photoacoustic emissions from objects hidden behind the diffuser.",
+      "page": 3,
+      "index": 2,
+      "width": 479,
+      "height": 258
+    },
+    {
+      "url": "assets/figures/arxiv/2604.24168v1/fig-003.webp",
+      "caption": "Figure 4 – Optical resolution imaging of multiple hidden objects over an area beyond the effective memory via photoacoustic speckle correlation imaging. (a) Simplified schematic of the imaging configuration. The focused transducer was scanned in the first step of the imaging process to form an acoustic resolution image, followed by speckle correlation measurements in which the ultrasound transducer was fixed at a single position and the excitation beam angle was scanned. The photomask design used for the digit array is shown inset (500µm scale bar). (b) Acoustic resolution image of the hidden digit array. (c) Mosaicked image of the digit array at optical resolution via photoacoustic speckle correlation imaging. (d) Individual images of each reconstructed digit (100µm scale bar).",
+      "page": 5,
+      "index": 3,
+      "width": 998,
+      "height": 471
+    }
+  ]
+}

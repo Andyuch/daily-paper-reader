@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.06897v1/fig-001.webp",
+      "caption": "Fig. 1 Pump-probe measurements of the EMT in 1L-WSe2. (a) Sketch of the hBNencapsulated 1L-WSe2 measured in the pump-probe microscope (not to scale). (b–c) Sample characterization at room temperature (RT): (b) PL spectrum and (c) Raman spectrum. (d) Pseudocolor energy-time conductivity map for high pump fluence (330 µJ cm−2). The map displays the disappearance of the excitonic peak shortly after the photoexcitation. (e) Fluence dependence. Left: Transient conductivity spectra at 400 fs time delay for selected pump fluences. In the energy region around 1.55 eV, the probe is eliminated by a filter. The vertical line at 1.63 eV indicates the energy for which the σs 1 fluence dependence is shown in the inset. Right: corresponding fit with Lorentzian profile. Sheet conductivity is reported in 2e2 h units.",
+      "page": 5,
+      "index": 1,
+      "width": 762,
+      "height": 496
+    },
+    {
+      "url": "assets/figures/arxiv/2604.06897v1/fig-002.webp",
+      "caption": "Fig. 2 Sub-picosecond dynamics. Experimental (a) and simulated (c) transient conductivity maps. Transient spectra at select time delays corresponding to experimental (b) and simulated (d) maps. The spectra show a disappearance of the excitonic peak upon photoexcitation and an increase of absorption at lower energies. Simulated spin-averaged density profiles right after photoexcitation (0 fs) (e) and at the the Mott transition (30 fs) (f), showing migration of photocarriers towards the conduction band minimum. Momenta are measured relative to the K point, which defines the origin. Comparison between spectra (g) and spin-averaged populations (h) in different approaches, namely the NEGF method with self-energy in the GW+FM and the BSE with thermal carriers at temperature 100 K. In h the energy of carrier occupations are referred to the top of the valence band.",
+      "page": 8,
+      "index": 2,
+      "width": 744,
+      "height": 569
+    },
+    {
+      "url": "assets/figures/arxiv/2604.06897v1/fig-003.webp",
+      "caption": "Fig. 3 Plasma screening of electron-hole attraction. Low (a) and high (b) excitation regimes. In (a) the bandgap Eg is weakly renormalized and the Coulomb attraction is effectively instantaneous. Electron-hole pairs form bound excitons, with binding energy Eb. In (b) the exciton formation is suppressed by the reduced bandgap E′ g , nonthermal carrier populations, and nonequilibrium dynamical screening. The retarded screened interaction δn(t′, t)W entering the GW self-energy is depicted as a double-wiggly line. Schematic nonequilibrium absorption spectra in the low- (c) and high-density (d) excitation regimes are shown. In (c) sharp excitonic resonances dominate the spectrum below Eg , marking the onset of the e-h continuum. In (d) excitons are ionized and the e-h continuum onset is shifted to the renormalized gap E′ g .",
+      "page": 11,
+      "index": 3,
+      "width": 722,
+      "height": 498
+    }
+  ]
+}

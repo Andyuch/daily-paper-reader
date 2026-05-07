@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.21283v1/fig-001.webp",
+      "caption": "Fig. 3 Threshold corroboration and depth profiles. a, Four-point resistivity versus current during a 0–53 A ramp. Measured resistivity (blue) is compared with two CRC thermal predictions bracketing the plausible surface emissivity of the foil (ε = 0.05 and 0.10). The thermal model predicts melting at 48–50 A; the foil remains intact up to 52 A. b, S-parameter versus positron beam energy for three specimens: the as-received electrolytic Cu foil (blue), the same foil after the complete CuTest4/5 current-cycling run (red; referred to in the text as the post-flash foil), and the Cu(100) single-crystal reference (grey). In the bulk (E > 25 keV), the post-flash foil and the single crystal agree within <1%, so the current-induced vacancy population is transient and leaves no detectable residual defect signal on the scale resolved by DBS.",
+      "page": 7,
+      "index": 1,
+      "width": 775,
+      "height": 375
+    },
+    {
+      "url": "assets/figures/arxiv/2604.21283v1/fig-002.webp",
+      "caption": "Fig. 4 Nucleation and recombination kinetics. a, Boltzmann step fit to the final 13→38 A nucleation transient (CuTest4) of the form S(t) = Slow+∆S/(1+exp(−(t−t0)/w)). Rise ∆S/Slow = 6.64± 0.52%; Boltzmann width w = 2.42± 0.79 min. Note: w is the Boltzmann-sigmoidal width and is distinct from the exponential nucleation time constant τnuc reported in the main text; the two are different functional-form parameters for the same rising transient. b, Constrained exponential decay fit to CuTest5 (38→0 A) with recombination time constant τrec = 1.49± 0.37 min. The 1σ envelope (shaded) reflects the uncertainty on τrec. Defect recovery is faster than the measurement cadence. Error bars: ±1σ.",
+      "page": 8,
+      "index": 2,
+      "width": 777,
+      "height": 332
+    },
+    {
+      "url": "assets/figures/arxiv/2604.21283v1/fig-003.webp",
+      "caption": "Fig. 1 Positron DBS/PALS technique and experimental setup. a, Positron trapping concept. In a defect-free copper lattice the thermalised positron (orange cloud) is delocalised over a Bloch state with a thermal de Broglie wavelength of several nanometres (thousands of atomic sites; the schematic shows only a few unit cells) and annihilates predominantly with valence electrons, yielding a low-S, high-W signature. At an open-volume defect (right; dashed circle marks the missing atom) the positron is localised in the vacancy and samples a different electron-momentum distribution, yielding a high-S, low-W signature. b, The S and W windows on the 511 keV annihilation photopeak. The electron–positron pair momentum Doppler-broadens the line; the fraction of counts in the central low-momentum window is S (orange shading, valence electrons) and the fraction in the high-momentum wings is W (blue shading, core electrons). Solid blue curve: defect-free bulk; dashed orange curve: positron trapped in a vacancy (both curves normalised to equal total area). Trapping narrows the line because the localised positron sees fewer core electrons, driving S ↑ and W ↓. c, Mean positron implantation depth z̄ in copper as a function of beam energy, z̄ = (A/ρ)E1.6 with A = 4.0 µg/cm2/keV1.6 and ρ = 8.96 g/cm3. At 50 keV, z̄ = 2.33 µm (orange dot), well within the 50 µm foil (shaded bulk region); the WSU DBS experiments operate in this bulk-sensitive regime. d, Four-point-probe sample holder: a 50 µm-thick electrolytic Cu foil is clamped between spring-loaded alligator-clip terminations on 3 mm Cu bus bars; this fixture is the same at both facilities. e, WSU 70 keV variable-energy positron beamline, showing the solenoid transport magnets that deliver the implanted beam to the sample at the end of the line (HpGe detector not in view). f, Assembled NC State bulk positron system used for in-situ measurement: a vacuum chamber with two re-entrant flanges and power/signal feedthroughs; two Hamamatsu PMTs for PALS and an ORTEC HPGe detector for DBS; the copper foil specimen sits ∼2 mm from a 22Na source deposited on a singlecrystal silicon wafer.",
+      "page": 4,
+      "index": 3,
+      "width": 764,
+      "height": 474
+    },
+    {
+      "url": "assets/figures/arxiv/2604.21283v1/fig-004.webp",
+      "caption": "Fig. 5 DBS and PALS confirmation. a, WSU CuTest4 S-parameter versus physical state: “Pre (0 A)” is the initial cold-worked baseline, “8 A”–“38 A” are the mean S values at each step of the CuTest4 ramp, and “Post (0 A)” is the post-flash foil after the full CuTest4+CuTest5 cycle (singlecrystal quality). NC State DBS results for the four analogous states (RT, 13 A, 38 A, post-flash) are plotted as orange diamonds against a facility-matched right-hand S axis. The left and right scales differ by a facility-specific additive constant because roughly half of the NC State annihilation signal comes from the silicon substrate carrying the 22Na source, which raises the apparent absolute S. Both facilities show the same pattern: S rises above the annealed baseline at 38 A, sits at or below baseline at 13 A and after the full cycle (“Post”), and the WSU cold-worked “Pre” bar lines up with the NC State RT baseline. b, R-parameter (3γ/2γ ratio) on the same dual-axis scheme, showing an elevated positronium signal at high current in both datasets, consistent with the formation of large open-volume features at 38 A. c, WSU S–W correlation from CuTest4 (blue = below Jc, orange = above Jc) with the NC State S–W data overlaid as vermillion diamonds. The top and right secondary axes show the NC State W and S scales respectively; the two axis systems are calibrated by a linear (affine) transformation anchored on the flash and annealed states, so each NC State diamond visually lies on top of the corresponding WSU cluster. The NC State RT baseline sits at the WSU cold-worked position (between the annealed and flash clusters); 38 A is in the above-Jc flash cluster; 13 A is intermediate; and the post-flash point falls in the below-Jc annealed cluster, confirming the recovery. d, NC State PALS lifetime decomposition: I3 (long-lifetime intensity, orange bars) peaks at 38 A, consistent with enhanced positronium formation at the internal surfaces of large open-volume features; I2 (intermediate-lifetime intensity, blue bars) rises at 13 A and post-flash, consistent with a defect relaxation hierarchy. τ3 (line) tracks the long-lifetime component.",
+      "page": 12,
+      "index": 4,
+      "width": 766,
+      "height": 544
+    },
+    {
+      "url": "assets/figures/arxiv/2604.21283v1/fig-005.webp",
+      "caption": "Fig. 2 Reversible vacancy switching under current cycling. S-parameter (blue, left axis) and applied current (amber bars, right axis) versus time for the CuTest4 experiment (67 DBS measurements, 50 keV, WSU). Three regimes are evident: initial cold-work baseline (S ∼ 0.409), thermal annealing under moderate current (S → 0.396), and reversible current-induced defect creation above ∼30 A (S → 0.42) with recovery below ∼20 A, repeated four times. Dashed line: annealed baseline. Error bars: ±1σ from counting statistics.",
+      "page": 5,
+      "index": 5,
+      "width": 775,
+      "height": 379
+    }
+  ]
+}

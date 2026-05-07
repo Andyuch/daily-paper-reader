@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.19329v1/fig-001.webp",
+      "caption": "Fig. 2. Spatiotemporal SPT dynamics and electro-thermal simulations under varying voltage pulses. a, Time-resolved DF images capturing the SPT evolution in VO2 under a microsecond electrical pulse (1 V, 3000 ns). b, Simulated spatial temperature profile at t = 1050 ns for the 1 V pulse. The black curve denotes the 339 K isotherm. c, Ultrafast DF images of the transient domain dynamics under a nanosecond electrical pulse (3 V, 100 ns). Note the distinct transition from the thermal “funnel” to a field-driven boundary-nucleation pattern. d, Simulated spatial temperature profile at t = 60 ns for the 3 V pulse. The black curve denotes the 339 K isotherm, highlighting the deviation from the experimental observation in c. e, Evolution of normalized resistance parallel (R///R0) and perpendicular (R⊥/R0) to the current direction, alongside the M1 phase volume fraction, driven by different pulses amplitudes (Top to bottom: increasing voltages). Solid lines represent Boltzmann function fits (fitting parameters detailed in Extended Data Table 1). The shaded area represents the duration time of the pulse.",
+      "page": 8,
+      "index": 1,
+      "width": 855,
+      "height": 482
+    },
+    {
+      "url": "assets/figures/arxiv/2604.19329v1/fig-002.webp",
+      "caption": "Fig. 3. EELS characterization of oxygen vacancy-assisted IMT and deterministic control of conduction pathways. a, EELS analysis at the top device boundary. Left: STEM-HAADF image of the EELS mapping region. Middle: Core-loss spectra (V L3,2 and the O K-edges) extracted from positions indicated by color-coded arrows. Right: Horizontally projected EELS mapping showing the spectral evolution as a function of distance from the boundary. b, Schematic of the synergistic electro-thermal pathway: the PF effect facilitates carrier injection from oxygen-vacancy trap levels into the upper Hubbard band, boosting local conductivity and accelerating Joule heating. c, Schematic of the direct electronic pathway: PF-induced carrier multiplication triggers a non-thermal Mott transition via reduced electron correlation and band-gap collapse. d, Simulated spatial electric field profile at t = 48 ns under a 3 V pulse. The bottom panel shows the electric field line profile near the top boundary. e, Deterministic “writing” of conduction paths via electron-beam irradiation. Left: STEM-HAADF image of Specimen 2 after line-scan irradiation (white arrow). Right: Projected core-loss EELS mapping across the irradiated region, revealing the localized generation of oxygen vacancies. f, SPT dynamics of Specimen 2 under microsecond pulses (0.7 V, 1000 ns). g, SPT dynamics of Specimen 2 under nanosecond pulses (2.5 V, 50 ns), where the nucleation and propagation are strictly confined to the pre-programmed electron-beam-irradiated line (white dashed line).",
+      "page": 12,
+      "index": 2,
+      "width": 869,
+      "height": 423
+    },
+    {
+      "url": "assets/figures/arxiv/2604.19329v1/fig-003.webp",
+      "caption": "Fig. 1. Experimental configuration and phase transition dynamics. a, Schematic of experimental setup, integrating electrical pulse excitation with selected area electron diffraction (SAED) and dark-field (DF) imaging. The VO2 specimen is suspended across the slit of an in-situ electrical chip. Incident (Vi) and transmitted (Vt) voltages are monitored via an oscilloscope with a terminal impedance (Rs) of 50 Ω. b, Synchronization scheme between the pulsed electron probe and 10-kHz excitation pulses, featuring a tunable temporal delay. c, Bright-field TEM image of the VO2 device. d, SAED pattern obtained from the region indicated by the red circle in c at equilibrium (unexcited). The red and blue shading highlight the superlattice spots from two distinct monoclinic domain variants, which exhibit mirror symmetry with respect to the (011̅)M1 plane. e, DF image formed using the (100)M1 spot (blue arrow in d). f, SAED pattern from the same region under 750 μA continuous-current excitation. g, DF image formed using the (100)M1 spot (red arrow in d). h, Superimposed DF images (from e and g) illustrating the spatial distribution of phase evolution driven by a continuous current swept to 750 μA at a rate of 10 μA s-1.",
+      "page": 5,
+      "index": 3,
+      "width": 863,
+      "height": 504
+    },
+    {
+      "url": "assets/figures/arxiv/2604.19329v1/fig-004.webp",
+      "caption": "Fig. 4. Dynamics of strain-mediated triangular domains and phase-field simulations. a,",
+      "page": 16,
+      "index": 4,
+      "width": 758,
+      "height": 512
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+Title: Time-resolved SNOM via phase-domain sampling
+
+URL Source: https://arxiv.org/pdf/2604.13892v1
+
+Published Time: Thu, 16 Apr 2026 01:13:28 GMT
+
+Number of Pages: 12
+
+Markdown Content:
+# TIME -RESOLVED SNOM VIA PHASE -DOMAIN SAMPLING 
+
+A P REPRINT 
+
+Philipp Schwendke 1, Julia St¨ ahler 1,2 , and Samuel Palato *1 1Institut f¨ ur Chemie, Humboldt-Universit¨ at zu Berlin, Berlin, Germany 
+
+> 2
+
+Abteilung Physikalische Chemie, Fritz-Haber-Institut der Max-Planck-Gesellschaft, Berlin, Germany April 2, 2026 
+
+# ABSTRACT 
+
+Time-resolved scanning near-field optical microscopy (tr-SNOM) enables the measurement of the dynamic optical response of functional surfaces beyond the diffraction limit. Experimental chal-lenges are imposed both by the use of a pulsed light source, and by the need for interferometric signal modulation to isolate the near-field contribution. We present a novel experimental approach to retrieve the tr-SNOM signal using a 200 kHz laser system and pseudo-heterodyne modulation. We circumvent the Nyquist limit for spectral demodulation by sampling modulation phases, pump intensity and SNOM signal for every laser shot. A general time-resolved SNOM signal is derived, independent of detection scheme or physical assumptions about the near-field enhancement, and is successfully measured and isolated on WS 2 monolayer and multilayer regions. We confirm localiza-tion by signal-distance curves, spatial confinement at material boundaries, and by identifying signal contributions at individual modulation harmonics. Disentangling the dynamic contributions enables us to extract the dynamic dielectric function of the sample. Showing the capability of phase-domain sampling paves the way to integration of more diverse and specialized light sources, growing the potential of optical ultrafast near-field measurements. 
+
+Keywords SNOM, time-resolved, pseudo-heterodyne, phase-domain sampling, WS 2
+
+# 1 Introduction 
+
+The unique potentials of functional materials, such as 2D materials and their heterostructures, emerge from their electronic structure on the nanoscale. Scanning probe microscopy is uniquely suited to investigate a large range of material properties, offering simultaneous topographic, optical, mechanic, and electric information[1, 2], in a lab on a tip approach[3]. Light-matter coupling is especially interesting on length scales comparable to or below the wavelength of the light, with direct technological applications[4, 5], but also unique physics, e.g. nano-resonators[6] and polaritons[7]. While scanning near-field optical microscopy[8] (SNOM) pushes the spatial resolution beyond the diffraction limit, ultrafast measurements offer insights into functional processes via signal kinetics. In a combination, time-resolved SNOM (tr-SNOM) has been used to characterize carrier dynamics in semiconductors[9, 10], follow the insulator-to-metal transition in VO 2[11, 12, 13], and describe exciton dynamics in WS 2[14, 15, 16]. However, ultrafast measurements require a pulsed light source, limiting the sampling frequency by its repetition rate. In order to resolve higher orders in tapping modulation[17], tr-SNOM was either limited to MHz repetition rate laser systems[9, 14, 10], or to using AFM tips with a lower resonance frequency[18]. Introducing phase-domain sampling, Wang et al.[19] were able to circumvent the Nyquist limit in sampling frequency for a self-homodyne (shd) detec-tion scheme. This extends the possible implementation of SNOM to kHz laser systems, providing stable high peak powers useful e.g. for parametric amplification, white light generation, photo-switching, or nonlinear spectroscopy. Phase-domain sampling was extended to pseudo-heterodyne modulation (pshet)[20], by sampling modulation phases independently for every laser shot using quadrature-assisted discrete (QUAD) demodulation[21]. However, tr-SNOM using phase-domain sampling has yet to be demonstrated. 
+
+> ∗
+
+samuel.palato@hu-berlin.de 
+
+> arXiv:2604.13892v1 [physics.optics] 15 Apr 2026
+
+Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+In this paper we extend QUAD sampling to ultrafast pump-probe measurements. Using a 200 kHz laser system, we present the first realization tr-SNOM acquired in the phase-domain, completely independent of the sampling frequency. First, we derive a tr-SNOM signal from basic principles that is independent of any physical model of the near-field interaction. Our new experimental approach retrieves the static and excited SNOM signal simultaneously and inde-pendently after a cascaded demodulation scheme. We are able to distinguish background and near-field contributions in the harmonic orders of the tr-SNOM signal, and confirm the spatial confinement in a WS 2 monolayer/multilayer boundary region. By isolating and quantifying the dynamic tip response, we model the near-field response of WS 2 and obtain a dynamic dielectric function. 
+
+# 2 A general time-resolved SNOM signal 
+
+The essence of optical pump-probe, or any ultrafast measurement, is to compare a static signal ( pump-off ) to a dynamic signal a certain time after excitation ( pump-on ). We now define a time-resolved SNOM signal, based on these two measurements. In static SNOM, we measure the electric field scattered by the tip-sample junction Esca ,off = σoff E0,described by the scattering coefficient σ and the incident light E0. The scattered light consists of optical near-field (NF) and a background signal (BG): σoff = σNF + σBG . The experimental challenge in SNOM is to isolate σNF .Detecting visible wavelengths, this is efficiently achieved demodulating high harmonics of tapping modulation, and introducing a local oscillator Eref for interferometric detection. The photodiode measures the combined intensity of NF, BG, and reference signal (ref). 
+
+|Esig ,off |2 = |ENF + EBG + Eref |2 (1) 
+
+= |ENF |2 + |EBG |2 + |Eref |2 + ENF E∗ 
+
+> BG
+
++ Eref (E∗ 
+
+> NF
+
++ E∗
+
+> BG
+
+) + c.c. (2) where ENF and EBG are the near-field and background contributions to the detected signal. Pshet modulation employs a periodic modulation of the reference phase, thereby allowing the isolation of σoff ∝ ENF + EBG in the signal spectrum[20]. Demodulation at harmonics of AFM tapping modulation then suppresses EBG [22, 23]. Without a local oscillator, the SNOM signal is dominated by the term ENF E∗
+
+> BG
+
+, containing a multiplicative background contribution in all harmonics[20]. Optical pump-probe measurements are a third-order nonlinear process[24], and as such an addition to the static signal. The modified material response after photo-excitation by the pump pulse leads to additional time-dependent contri-butions in both NF and BG signals: ∆E(t) = ∆ ENF (t) + ∆ EBG (t). The reference field does not interact with the sample, and therefore is not modified by the pump. The total signal at the detector is thus: 
+
+Esig ,on = Esig ,off + ∆ E (3) 
+
+|Esig ,on |2 = |Esig ,off |2 + |∆ENF |2 + |∆EBG |2 + ∆ ENF (E∗ 
+
+> NF
+
++ E∗ 
+
+> BG
+
++ ∆ E∗
+
+> BG
+
+) (4) 
+
++ ∆ EBG (E∗ 
+
+> NF
+
++ E∗
+
+> BG
+
+) + Eref (∆ E∗ 
+
+> NF
+
++ ∆ E∗
+
+> BG
+
+) + c.c. 
+
+As in the static case, pshet modulation isolates the contribution σoff + ∆ σ(t). Subtracting the static signal yields the pump-induced change in scattered light intensity. 
+
+∆σ(t) = σon (t) − σoff (5) Using self-homodyne modulation (shd), Eref = 0 , and the dynamics of ∆ENF (t) are overshadowed by ∆EBG (t)
+
+in terms such as ∆EBG (t)E∗
+
+> NF
+
+, which is the interference between the spatially resolved static near-field and the time-dependent background. The effect has initially been demonstrated by imaging on VO 2 films[18], and is fur-ther demonstrated theoretically and experimentally by time-resolved measurements provided in the supplement. The dominance of multiplicative background is completely analogous to the static case, where it was shown that even the higher order NF is modulated by the far-field background signal[20]. To isolate the time-resolved near-field signal, it is therefore necessary to employ a triple modulation scheme: tapping modulation, interferometric detection and pump modulation. This enables the measurement of ∆σ(t) in amplitude and phase. To illustrate pump-probe modulation in tr-SNOM and to help define signal normalization, we will be using a phasor analysis approach. Figure 1 (a) visualizes Equation (5). σoff is the pshet signal acquired before photo-excitation. It is demodulated at tapping harmonic n = 4 , suggesting dominance of ENF . σon (t) is the pshet signal acquired after photo-excitation, and according to Equation (4) is the isolation of ∆ENF in addition to the static signal. The difference 
+
+∆σ(t) is then proportional to ∆ENF .Although isolating ∆σNF (t) already yields the time-resolved near-field signal, its magnitude and phase are dependent on those of σoff , which are determined by experimental factors that are in general not known and might drift during the measurement. In order to avoid these effects, and to recover the sample material response, we normalize the signal 2Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 1: Visualization of the complex SNOM signal in a pump-probe measurement. (a): σon is the signal after pump excitation ( pump-on ), σoff is the SNOM signal without pump excitation ( pump-off ), ∆σ is the pump-induced difference of the two. (b): All signals normalized by the probe-only signal σoff . Example experimental time-resolved SNOM signal shown in black. Arrows indicate the direction of time. by σoff , as illustrated in Figure 1(b). This has the effect to rotate and scale all the phasors. σoff /σ off becomes unity by definition. σon (t)/σ off describes the relative amplitude and the difference in phase of pump-on and pump-off signals. The time-resolved SNOM signal is then: 
+
+∆σ(t)
+
+σoff 
+
+= σon (t) − σoff 
+
+σoff 
+
+= σon (t)
+
+σoff 
+
+− 1 (6) as shown by the green arrow. This normalization has a few advantages. It does not depend on physical assumptions about the tip-sample interaction. The ratio ∆σ(t)/σ off cancels arbitrary signal scaling and phase shifting due to experimental geometry. This signal is therefore not distorted by experimental factors such as the intensity of the probe pulse, quality of the interferometric contrast, alignment to the AFM tip, magnitude of NF signal, or arbitrary optical phase offset, nor by their drifts. The magnitude and phase of ∆σ(t)/σ can be interpreted directly. For example, a phase of π indicates a pump-induced reduction in signal amplitude, while a phase of 0 corresponds to an increase. ∆σ(t)/σ off also provides ways to assess the validity of the data: causality imposes ∆σ(t)/σ off = 0 for t < 0. The signal must also go to 0 when the pump is blocked, and the magnitude of ∆σ(t)/σ off allows optimization of the pump-probe overlap. The signal should also vanish scattering off of media that do not interact with the pump, such as fused silica in the visible. Furthermore, the ratio σon /σ off allows compensation of probe beam intensity fluctuations, thereby improving signal to noise ratio. The black dots in Figure 1 show experimental measurements of ∆σ(t)/σ off , with the direction of time indicated by black arrows. At negative times, the signal is initially around the origin. At t = 0 , it suddenly increases in amplitude and moves to the lower left quadrant. Then, the pump-probe signal decays to a longer lived component with a phase 
+
+∼ π/ 2, decaying to 0 as σon (t) approaches σoff for large t. This is the expected behavior for a pump-probe signal that obeys causality. The tr-SNOM signal will be referred to as ∆σ/σ in the text below. 
+
+# 3 Methods 
+
+Our tr-SNOM setup consists of a commercial SNOM (neaSNOM, neaSpec) and a 200 kHz femtosecond laser (PHAROS, Lightconversion) driving two independent optical parametric amplifiers (ORPHEUS, Lightconversion) for pump and probe pulses. Figure 2(a) shows a scheme of the optical setup. The pump pulse enters a delay stage and 3Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 2: (a): Schematic of time-resolved SNOM optical setup. The pump beam path is delayed with respect to the probe beam path, and chopped using an optical chopper wheel. The state of the pump is detected using the ”chop” photodiode. The probe beam path enters a Michelson interferometer for pseudo-heterodyne modulation. Graphic by Peter Schwendke. Reproduced with permission. (b): Photodiode voltage determining the state of the chopper wheel. Red: pump-on , blue: pump-off , black: pump pulses clipped by the chopper wheel are disregarded during analysis. (c): Comparison of the voltage of the photodiode after optical excitation ( pump-on ) and without ( pump-off ). The intensity of individual laser pulses shows tapping modulation with multiple harmonics, and a pump-induced change in signal level. is chopped using a chopping wheel, the status of which is detected with a photodiode for every laser shot. This assign-ment enables the simultaneous acquisition of σon and σoff during the integration time, reducing low frequency noise contributions. The probe pulse is spatially filtered (not shown) and enters a Michelson interferometer with the sample in the signal arm and a vibrating mirror in the reference arm, for established pshet modulation. Pump beam and signal arm are combined in a parabolic mirror and focused on an AFM tip operating in tapping mode. The parabolic mirror reflects the light scattered at the tip-sample junction back into the interferometer. Following the pshet modulation scheme described by Ocelic et al.[20], the interference of signal and reference arm is detected at the photodiode. In order to measure the tr-SNOM signal, we extend the QUAD stroboscopic scheme as follows.[21]. The continuous modulation signals, i.e. deflection laser and piezo voltage of the reference arm, are filtered and used to generate two copies: one in-phase ( x) and one with a π/ 2 phase shift ( y). x and y are effectively cosine and sine of the modulation phase, which can then be recovered as θ = arctan2( y/x ). This calculation is performed for both the tapping and reference arm modulation, yielding θtap and θref . As in the static case, the two ( x, y ) signal pairs are detected using a data acquisition card, alongside the voltage at the signal photodiode. For time-resolved SNOM, we add one detection channel: the status of the chopping photodiode. The acquisition of all channels is synchronized using a 200 kHz sampling clock obtained from the laser amplifier. Experimental control, signal acquisition and analysis are accomplished using dedicated python scripts, which are fast enough for live usage[25]. To acquire σon and σoff simultaneously, detected tuples of the photodiode signal ∝ | Esig |2, tapping modulation phase 
+
+θtap and reference modulation phase θref are first separated based on the chopping state. Figure 2(b) shows the voltage of the chopping photodiode for consecutive laser shots. The chop signal has two mean values marked by grey lines: near 0 when the pump pulse is blocked by the chopper, and ∼ 4.5 mV when the pump pulse passes and reaches the AFM tip. The two cases are selected as quantiles over a set of samples, acquired during the integration time. The first analysis step in demodulating the time-resolved signal is separating pump-on and pump-off tuples and neglecting shots where the pump is clipped by the chopper wheel. Figure 2(c) shows the photodiode signal in the tapping phase domain, measured for individual laser shots. The pump-off signal shows only the detected probe pulses where the pump was blocked. The pump-on signal shows only the 4Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+detected probe pulses where the pump was not blocked. Demodulation of the separated data points gives access to σoff 
+
+and σon (t), respectively. To recover the pshet modulated time-resolved signal, both subsets of the data undergo identical demodulation steps. The demodulation algorithm is slightly improved with respect to our previous work[21]. First, all samples of photo-diode signal are averaged in a binned 2D phase domain spanned by θtap and θref . This creates an array of real values with tapping modulation along θtap and pshet modulation along θref . Performing a fast Fourier transform along θtap 
+
+gives us access to the harmonics of tapping modulation. 
+
+|Esig |2 = X
+
+> n
+
+τn(θref )ein (θtap −θC ) (7) where τn(θref ) now depends on the tapping demodulation order n and the phase of the reference modulation θref .Describing the motion of the tip as a harmonic oscillation, all harmonics of the tapping modulation are symmetric around the phase of contact θC . Correcting that phase offset, the harmonic spectrum becomes real and the signal hermitian, i.e. τn becomes purely real. The imaginary part of τn(θref ), as returned by the fast Fourier transform, can therefore be disregarded as noise. 
+
+τn(θref ) describes the pshet modulation, i.e. the interference of signal arm and reference arm at the photodiode, as contained in individual tapping harmonics n. The reference arm undergoes an oscillating phase modulation with modulation phase offset θ0 and optical phase offset ψR.
+
+Eref = ρ e iψ E0 (8) 
+
+ψ = γ sin( θref − θ0) + ψR (9) 
+
+ρ is a scaling factor and γ the phase modulation depth in radians. Comparing to Equations (2) and (4), we can separate the contributions of the SNOM signal according to their dependence on θref .
+
+τn(θref ) = cn + Eref (θref )σnE∗ 
+
+> 0
+
++ c.c. (10) We assume stability of the reference arm parameters ρ, γ, θ0, and ψR during the acquisition time. This enables us to fit cn + Re( ρe iψ ) to τn(θref ) and attribute the fitting parameters ρ and ψR to amplitude and phase of σn respectively. 
+
+γ and θ0 do not depend on the harmonic order and can be fixed fitting τ0, to stabilize the fit for higher harmonics. This procedure is performed on both pump-on and pump-off data points, generating σn, on and σn, off . The complex time-dependent SNOM signal ∆σn/σ n is formed using Equation (6). This demodulation algorithm provides an im-proved signal to noise ratio and experimental stability compared to our previous algorithm[21]. The next section will experimentally demonstrate this approach. 
+
+# 4 Time-resolved near-field 
+
+We now assess the spatial dependence and kinetics of the tr-SNOM signal ∆σ/σ to confirm our method is able to isolate the time-resolved NF contribution. A common method to prove NF character are signal-distance curves, also called retraction or approach curves[26, 27, 28, 29], which we discuss first. In our setup the AFM tip, as the main scatterer, stays roughly in the same position, while the sample is moved downward by the piezo stage. The NF signal 
+
+σNF , acquired during this retraction, can be distinguished from the background σBG by its stronger dependence on the tip-sample distance. As the tip-sample distance d z is increased, amplitude and phase of σNF stay constant while the tip is still in contact. The signal amplitude then decays within the first ∼ 10 nm after loosing tip-sample contact. A longer decay, oscillations, shifting phase, or residual signal indicate a background character that is not necessarily localized at the tip-sample junction. These background signals can be due either to scattering from the sample, or from the tip. 
+
+Figure 3 shows retraction curves taken on multilayer WS 2 using an uncoated Si tip. Figure 3(a) shows the amplitude of NF signal σ5 for both pump-on and pump-off , while (b) shows the phase. The acquisition site is marked by a white dot in the AFM topography image of the multilayer region, shown in the inset in (a). Signal amplitude and phase are mostly constant in contact. After the AFM tip snaps off-contact (dotted line), the pump-off signal (blue) shows a fast amplitude decay with a constant phase, suggesting NF character. The pump-on signal (red) shows a reduced amplitude in contact, also a rapid amplitude decay, but then a residual signal with a phase that shifts from π/ 2 to 
+
+−π with increasing tip-sample distance. The residual signal is likely a dynamic response by the uncoated Si tip, and will be discussed in Section 5.1. The retraction curves are corrected for a constant complex offset at large dz, which we attribute to scattering off of the AFM tip without sample interaction. Retraction curves using PtIr coated tips, as commonly used in SNOM measurements, show similar results, but in general less pump-probe contrast and are presented in the supplement. The decay of the SNOM signal within ∼ 10 nm implies its localization at the AFM tip, and the dominance of the NF contribution to σon while in contact. 5Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 3: SNOM signal-distance curves taken at location marked in AFM inset. (a): Comparison of SNOM signal amplitude |σ5| vs tip-sample distance d z, taken before ( pump-off ) and 0.5 ps after ( pump-on ) optical excitation. The dashed line marks the snap-off distance where the AFM tip looses contact to the sample, defined by the maximum AFM tapping amplitude during retraction. (b): Optical phase of σ5 with and without optical excitation. At distances where the |σ5| drops below the noise floor, the phase becomes ill-defined and is not plotted (phase-blanking[41]). The inset shows an AFM image of the acquisition site with a height profile taken along the dashed line. 
+
+Figure 4: Time-resolved SNOM signal on multilayer WS 2 for demodulation order n = 0 – 5. (a) and (b) show the signal amplitude vs delay time t, while (c) and (d) show the optical phase. σ0 is the pure far-field contribution. σ1−3
+
+show varying contributions with distinct optical phase and varying amplitude. σ4,5 show a dynamic signal decaying below the noise floor after ∼ 10 ps, where it is phase-blanked. Location marked in inset in Figure 3(a). 6Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 5: tr-SNOM signal at different locations on WS 2 close to a monolayer-multilayer boundary, marked in AFM inset. (a) and (c) show amplitude and phase of the pure far field contribution σ0. (b) and (d) show amplitude and phase of σ4. While ∆σ0/σ 0 varies gradually moving across the boundary, ∆σ4/σ 4 shows distinct kinetics on monolayer and multilayer WS 2. The inset shows an AFM image of the acquisition site with a height profile taken along the dashed line. To further confirm the identification as pump-modulated NF, Figure 4 compares the time-resolved SNOM signal 
+
+∆σ/σ as a function of pump-probe delay time at various orders. Figure 4(a) and (c) show amplitude and phase of the lower harmonics, whereas (b) and (d) show the amplitude and phase of the higher harmonics. σ0 is pure far-field kinetics, not modulated by AFM tapping, and shows an abrupt rise at t = 0 , followed by a reduction in SNOM signal amplitude with phase ∼ π. The same contribution is visible in σ1−3 at long times, but a new contribution with a phase close to 2 π and a faster time constant is visible in σ1 and dominates the very early response in σ2 and σ3. The kinetics of amplitude and phase appear non-trivial due to interference of the two complex-valued contributions, while being a simple addition in the complex plane, similar to the data points plotted in Figure 1(b). Finally, σ4,5 in Figure 4(b) and (d) show a contribution with a phase close to π. The decay is faster than the far-field kinetics and drops beneath the noise floor after ∼ 15 ps. All harmonics ∆σn/σ n show no signal at t < 0 and rise abruptly at t = 0 , confirming the isolation of pump-induced changes. The progressive change of signal contributions is in agreement with the suppression of diffraction-limited background by higher-harmonic demodulation. ∆σ0/σ 0 is dominated by σ0,BG and ∆σ0,BG , and shows pure BG kinetics evolving on long timescales. ∆σ4,5/σ 4,5, on the other hand, is dominated by the NF contribution σ4,5,NF and ∆σ4,5,NF showing distinct kinetics. ∆σ1−3/σ 1−3 show a superposition, as expected. In further analysis, σ4 will be discussed instead of 
+
+σ5 as it is dominated by the same dynamic NF signal, but has an improved signal to noise ratio. In contrast, tr-SNOM acquired without interferometric detection using self-homodyne (shd) modulation produces the same signal kinetics in all harmonic orders, as shown in Figure S1 in the supplement. Without the use of a reference field Eref , the existence of any BG kinetics ∆EBG dominates all kinetic terms in Equation (4). This way, it is not possible to distinguish any tapping harmonic from the far-field signal. Even in the supposed case that all signal kinetics can be attributed to the NF, e.g. by experimental geometry, and setting the question of usefulness of tr-SNOM in this case aside, the lack of phase information provided by shd modulation makes an unambiguous identification of different contributions impossible. The projection of a superposition of dynamic contributions, which are naturally complex valued, on a real value is not unique, prohibiting direct interpretation. To confirm the lateral localization of the dynamics observed in σ4, we compare kinetics at closely spaced locations. 
+
+Figure 5 shows kinetic measurements taken at different positions across a boundary between WS 2 monolayer and multilayer regions of the same sample (pos. A, B and C, D respectively). Figure 5(a) and (c) show the gradual change of the background signal σ0, as the AFM tip moves across the boundary. A contribution with phase ∼ π/ 2 and faster 7Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 6: Time-resolved SNOM signal on SiO 2, acquired with an uncoated Si tip. The fit, shown as a solid line, considers a time-dependent dielectric function of the tip, according to Equation (11). The AFM inset marks the acquisition site with a dot, in an SiO 2 area on an AFM test grating(TGQ1, Tips-Nano). The scan direction is alternating on the fast axis. time constant is more dominant on the monolayer, while a slower contribution with phase ∼ π can be observed on the multilayer. 
+
+σ4, displayed in Figure 5(b) and (d), features discrete kinetics on monolayer and multilayer regions, each showing similar and reproducible signal amplitude and phase. Interestingly, pump-probe contrast of σ4 is enhanced in the monolayer region, suggesting a complete bleach of the NF signal in the first few ps on the monolayer only. In particular, the signals from pos. B and C, located very close to the junction, show a clear contrast. The distinction, even close to the boundary, confirms the localization of the pump-probe signal at the AFM tip. In summary, the isolation of the time-resolved NF contribution has been demonstrated in three ways. Pump-on and 
+
+pump-off signals in Figure 3 show a clear pump modulation together with a strong tip-sample distance dependence, confirming vertical confinement. The kinetics of different harmonic orders in Figure 4 reflect the description in Equa-tion (4): the background dynamics are observed for n = 0 , mixed contributions can be identified for n = 1 to 3, while 
+
+4th and 5th tapping harmonic can be attributed to NF kinetics. The contributions each obey causality for t < 0, and show distinct kinetics and optical phase. We were also able to demonstrate high lateral resolution, by comparing the tr-SNOM signal on both sides of a material boundary in Figure 5, showing confinement to the AFM tip. 
+
+# 5 Discussion 
+
+In the previous sections, we have shown that ∆σn/σ n for sufficiently high n is the time-resolved NF signal. To present a physical interpretation, we will relate this tr-SNOM signal to the local dynamic dielectric function of the sample. We model the tr-SNOM signal using the point dipole model, accounting for the time-dependent response of both the sample and tip. We first measure the tip response using a reference measurement on SiO 2, a transparent dielectric. Accounting for the tip response, we then analyze the response of monolayer and multilayer WS 2.
+
+5.1 Active tip dynamics 
+
+As mentioned above, uncoated Si AFM tips show an increased pump-probe modulation compared to tips with a PtIr coating. To assess this enhancement, we measure the tr-SNOM signal on a SiO 2 region of an AFM test grating using the same photon energies. Figure 6 shows amplitude and phase of the tr-SNOM signal acquired in the location marked in the AFM inset. Since SiO 2 is not excitable at the pump energy of 3.0 eV, no contribution to a pump-probe signal is 8Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Material A τ (ps) εoffset 
+
+Si tip −10 .6 ± 1.8 4.5 ± 3.2 (0 .9 + i2.0) ± (2 .1 + i0.7) 
+
+WS 2 monolayer (5 .5 + i4.0) ± (0 .8 + i0.8) 2.1 ± 0.5 (−0.1 − i0.2) ± (0 .1 + i0.1) 
+
+WS 2 multilayer (0 .08 + i0.01) ± (0 .03 + i0.03) 3.4 ± 0.6 (0 .08 + i0.01) ± (0 .03 + i0.03) 
+
+Table 1: Table of fit parameters determining the dynamic dielectric functions of Si tip and WS 2 sample, according to Equation (11). The fits are shown in Figures 6 and 7. The dynamic dielectric functions are plotted in Figure 8. 
+
+Figure 7: tr-SNOM signal at different locations on WS 2 close to a monolayer-multilayer boundary, marked in AFM inset. (a) and (c) show amplitude and phase of near-field kinetics on monolayer WS 2. (b) and (d) show different kinetic contributions on the multilayer side of the boundary. The near-field was fitted, considering a time-dependent dielectric function of the Si AFM tip, and the WS 2 sample (Equation (11)). expected, and signal dynamics are instead attributed to the AFM tip. The pump energy coincides with band nesting in the Si band structure, exciting electrons efficiently into the conduction band. The extra charge carriers lead to a dynamic contribution to the dielectric function of Si[30, 31]. We model the SNOM signal in Figure 6 with a single exponential in the dielectric function of the tip with a complex offset to account for longer lived dynamics. 
+
+ε(t) = εstatic + θ(t)
+
+
+
+A e −t/τ + εoffset 
+
+
+
+, (11) where θ(t) is the Heaviside step function, εstatic ,tip = 14 .91 + i0.12 is the dielectric function of Si at 643 nm, and the parameters Atip , τtip and εoffset ,tip describe the dynamic response of the tip. The modified dielectric function of the tip is used in a point dipole model[17], to avoid additional assumptions on spatial distribution and homogeneity of the excited charge carriers inside the tip. However, using the finite dipole model[32] produces a similar result. The static dielectric function of SiO 2 is taken to be εSiO 2 = 2 .12 [33]. Fitting the time-resolved data, shown as a solid line, determines the dynamic dielectric function of the tip, with the fit parameters collected in Table 1 . The time constant was determined as τtip = (4 .5 ± 3.2) ps, which is compatible with transient photoconductivity measured in Si nanostructures. Bergren et al. determined an initial decay of photoconductivity of ∼ 2 ps after pumping at 3 eV, attributed to cooling of hot carriers. A subsequent decay on ns timescales is ascribed to long-lived excitons, both dynamics being dependent on the size of the nanostructures[34]. Tr-SNOM measurement on Si showed similar kinetics with a slightly increased modulation in |∆σ/σ |. Parametrizing the dynamic dielectric function of the Si tip as an initial pump-induced excitation, we are now able to disentangle tip and sample contribution to the tr-SNOM signal. 
+
+5.2 Monolayer and multilayer dynamics 
+
+Using a similar model for the dielectric function of WS 2, the tr-SNOM signal provides a quantitative description of the ultrafast evolution of material properties at the nanoscale. Figure 7 shows NF kinetics ( σ4), taken on a WS 2
+
+9Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+Figure 8: Modeled transient dielectric function of AFM tip (black), WS 2 monolayer (blue), and WS 2 multilayer (orange) after photo-excitation at t = 0 . Real part ε1 in (a), and imaginary part ε2 in (b). See text for details of the models. monolayer region ((a) and (c)) and a multilayer region ((b) and (d)). The kinetic traces are similar to the ones depicted in Figure 5(b) and (d). The data set plotted in Figure 7(a) and (c) is also plotted in the complex plane as black dots in Figure 1(b). When modeling the tr-SNOM signal, we use the transient dielectric function of WS 2 as described by Equation (11). εstatic at the probe energy of 1.9 eV, just below the A-exciton resonance of 1.973 eV, is taken from literature[35]. The transient dielectric function of the AFM tip, as determined in the previous section, was fixed while calculating the SNOM signal with the point dipole model. The resulting fits are shown as solid lines in Figure 7, describing both monolayer and multilayer dynamics. The model provides a complex amplitude and offset, and a decay rate of a dynamic contribution. Figure 8 shows the evolution of the local dielectric functions, together with the previously determined dielectric function of the tip. Both WS 2 monolayer and multilayer show a pronounced photoinduced increase in ε2. While the monolayer also exhibits a distinct increase in ε1, it is reduced on the multilayer. Both measurements show time constants on the order of few ps, with τmonolayer = (2 .1 ± 0.5) ps and 
+
+τmultilayer = (3 .4 ± 0.6) ps. All fit parameters are collected in Table 1. The dynamics are in agreement with femtosecond spectroscopy results on these materials[37, 38, 39, 36], which have found the dynamics can arise from a combination of peak shifts and amplitude reduction. These two phenomena cannot be disentangled from the current single-color measurements. To avoid over-determination of the model, we chose the phenomenological but general approach to directly model a dynamic dielectric function. Our results there-fore demonstrate the isolation of different time-resolved and localized contributions to the tr-SNOM signal. By first isolating the tip response, we were able to determine the time-resolved dielectric function of the sample. 
+
+# 6 Conclusion 
+
+We have defined a general tr-SNOM signal ∆σ/σ describing the time-resolved NF response of the sample, and pre-sented an acquisition scheme using stroboscopic phase-domain sampling. We demonstrated this method on WS 2
+
+monolayer and multilayer, using a 200 kHz repetition rate laser to pump above bandgap at 3.0 eV and probe the A-exciton response at 1.9 eV. The NF character was confirmed via signal-distance curves, by identifying BG and NF contributions in signal kinetics, and by resolving the localization of the dynamic NF at different positions in the monolayer-multilayer boundary region. We quantified the dynamic response of the AFM tip by measuring the tr-SNOM signal on the transparent dielectric SiO 2. Including the tip response in modeling the dynamic NF on WS 2, we were able to describe the local time-dependent dielectric function after photo-excitation of monolayer and multilayer. We observed greatly enhanced pump-modulation of the monolayer signal compared to the multilayer, with a faster decay. This marks the first realization of tr-SNOM using sparse sampling in the time-domain. The tr-SNOM signal 
+
+∆σ/σ is material specific, localized on the nanoscale, and able to resolve ultrafast processes. 10 Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+# 7 Experimental Section 
+
+In the experiments, the pump photon energy is tuned to 3.0 eV (409 nm) at ∼ 1 nJ per pulse at the AFM tip, while the probe energy is 1.9 eV (643 nm) with ∼ 0.125 nJ per pulse. The optical chopper wheel operates at ∼ 5 kHz. The instrument response function has a width of σ = (77 ±1) fs, determined by fitting the onset of the far-field pump-probe signal with an error function. The vibrating mirror modulates the optical path length of the reference arm at ∼ 300 Hz. The AFM tips are commercially available Si tips (Arrow NC, Nanoworld) or coated Si tips (Arrow NCPt, Nanoworld), with nominal resonance frequency of ∼ 275 kHz with an amplitude of 58 nm in contact. For alignment and characterization of the AFM tip, we use a calibration grating (TGQ1, Tips-Nano), featuring SiO 2
+
+squares on a Si substrate. Measurements on WS 2 were performed on monolayer and multilayer regions on a Si substrate terminated by ∼ 300 nm of SiO 2, prepared by exfoliation[40]. 
+
+Supporting Information 
+
+Supporting Information is available from the Wiley Online Library. 
+
+Acknowledgements 
+
+This work was funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation), Project-ID 182087777, SFB 951. S.P. acknowledges funding from the Alexander von Humboldt foundation. P.S. acknowledges support by the International Max Planck Research School for Elementary Processes in Physical Chemistry. 
+
+Conflicts of Interest 
+
+J.S., and S.P. are named inventors on EP 4 206 688 B1 and related patents (WO 2023/126233 A1; US 2025/0067770 A1), assigned to Humboldt-Universit¨ at zu Berlin and Max-Planck-Gesellschaft zur F¨ orderung der Wissenschaften e.V., on which the present work builds. This patent family is licensed to attocube systems GmbH. 
+
+# References 
+
+[1] G. Bar, R. Brandsch, M. Bruch, L. Delineau, M.-H. Whangbo, Surface Science 2000 , 444 , 1-3 L11. [2] M. Munz, J. Poon, W. Frandsen, B. R. Cuenya, C. S. Kley, Journal of the American Chemical Society 2023 , 145 ,9 5242. [3] A. Shiotari, J. Nishida, A. Hammud, F. Schulz, M. Wolf, T. Kumagai, M. M¨ uller, Science Advances 2025 , 11 ,24. [4] N. Ansari, E. Mohebbi, F. Gholami, Journal of Applied Physics 2020 , 127 , 6 063101. [5] M. Rothe, Y. Zhao, J. M¨ uller, G. Kewes, C. T. Koch, Y. Lu, O. Benson, ACS Nano 2020 , 15 , 1 351. [6] R. Verre, D. G. Baranov, B. Munkhbat, J. Cuadra, M. K¨ all, T. Shegai, Nature Nanotechnology 2019 , 14 , 7 679. [7] M. M. Wiecha, S. Al-Daffaie, A. Bogdanov, M. D. Thomson, O. Yilmazoglu, F. K¨ uppers, A. Soltani, H. G. Roskos, ACS Omega 2019 , 4, 26 21962. [8] R. Hillenbrand, Y. Abate, M. Liu, X. Chen, D. N. Basov, Nature Reviews Materials 2025 , 10 , 4 285. [9] M. Eisele, T. L. Cocker, M. A. Huber, M. Plankl, L. Viti, D. Ercolani, L. Sorba, M. S. Vitiello, R. Huber, Nature Photonics 2014 , 8, 11 841. [10] A. Pizzuto, E. Castro-Camus, W. Wilson, W. Choi, X. Li, D. M. Mittleman, ACS Photonics 2021 , 8, 10 2904. [11] S. A. D¨ onges, O. Khatib, B. T. O’Callahan, J. M. Atkin, J. H. Park, D. Cobden, M. B. Raschke, Nano Letters 
+
+2016 , 16 , 5 3029. [12] A. J. Sternbach, F. L. Ruta, Y. Shi, T. Slusar, J. Schalch, G. Duan, A. S. McLeod, X. Zhang, M. Liu, A. J. Millis, H.-T. Kim, L.-Q. Chen, R. D. Averitt, D. N. Basov, Nano Letters 2021 , 21 , 21 9052. [13] K. Nishikawa, J. Nishida, M. Yoshimura, K. Nakamoto, T. Kumagai, Y. Watanabe, The Journal of Physical Chemistry C 2023 , 127 , 33 16485. [14] M. Mrejen, L. Yadgarov, A. Levanon, H. Suchowski, Science Advances 2019 , 5, 2 eaat9618. [15] M. Plankl, P. E. Faria Junior, F. Mooshammer, T. Siday, M. Zizlsperger, F. Sandner, F. Schiegl, S. Maier, M. A. Huber, M. Gmitra, J. Fabian, J. L. Boland, T. L. Cocker, R. Huber, Nature Photonics 2021 , 15 , 8 594. 11 Time-resolved SNOM via phase-domain sampling A P REPRINT 
+
+[16] Y. Wang, J. Nishida, K. Nakamoto, X. Yang, Y. Sakuma, W. Zhang, T. Endo, Y. Miyata, T. Kumagai, ACS Photonics 2024 , 12 , 1 207. [17] B. Knoll, F. Keilmann, Optics Communications 2000 , 182 , 4–6 321. [18] A. J. Sternbach, J. Hinton, T. Slusar, A. S. McLeod, M. K. Liu, A. Frenzel, M. Wagner, R. Iraheta, F. Keilmann, A. Leitenstorfer, M. Fogler, H.-T. Kim, R. D. Averitt, D. N. Basov, Optics Express 2017 , 25 , 23 28589. [19] H. Wang, L. Wang, X. G. Xu, Nature Communications 2016 , 7, 1. [20] N. Ocelic, A. Huber, R. Hillenbrand, Applied Physics Letters 2006 , 89 , 10 101124. [21] S. Palato, P. Schwendke, N. B. Grosse, J. St¨ ahler, Applied Physics Letters 2022 , 120 , 13 131601. [22] G. Wurtz, R. Bachelot, P. Royer, The European Physical Journal Applied Physics 1999 , 5, 3 269. [23] M. Labardi, S. Patan` e, M. Allegrini, Applied Physics Letters 2000 , 77 , 5 621. [24] S. Mukamel, Principles of Nonlinear Optical Spectroscopy (Oxford Series on Optical and Imaging Sciences) ,Oxford University Press, USA, 1999 .[25] P. Schwendke, Codeberg - phips/SNOMpad, https://codeberg.org/phips/SNOMpad/src/branch/trSNOM-publication ,
+
+2025 .[26] M. Specht, J. D. Pedarnig, W. M. Heckl, T. W. H¨ ansch, Physical Review Letters 1992 , 68 , 4 476. [27] Y. Inouye, S. Kawata, Optics Letters 1994 , 19 , 3 159. [28] R. Hillenbrand, F. Keilmann, Physical Review Letters 2000 , 85 , 14 3029. [29] M. B. Raschke, C. Lienau, Applied Physics Letters 2003 , 83 , 24 5089. [30] M. A. Green, Solar Energy Materials and Solar Cells 2008 , 92 , 11 1305. [31] M. Combescot, J. Bok, Journal of Luminescence 1985 , 30 , 1–4 1. [32] A. Cvitkovic, N. Ocelic, R. Hillenbrand, Optics Express 2007 , 15 , 14 8550. [33] I. H. Malitson, Journal of the Optical Society of America 1965 , 55 , 10 1205. [34] M. R. Bergren, C. E. Kendrick, N. R. Neale, J. M. Redwing, R. T. Collins, T. E. Furtak, M. C. Beard, The Journal of Physical Chemistry Letters 2014 , 5, 12 2050. [35] S. Calati, Q. Li, X. Zhu, J. St¨ ahler, Physical Chemistry Chemical Physics 2021 .[36] S. Calati, Q. Li, X. Zhu, J. St¨ ahler, Physical Review B 2023 , 107 , 11 115404. [37] B. Tanda Bonkano, S. Palato, J. Krumland, S. Kovalenko, P. Schwendke, M. Guerrini, Q. Li, X. Zhu, C. Cocchi, J. St¨ ahler, physica status solidi (a) 2023 , 221 , 1. [38] C. E. P. Villegas, E. Marinho, P. Venezuela, A. R. Rocha, Physical Chemistry Chemical Physics 2024 , 26 , 17 13251–13260. [39] M. Palummo, M. Bernardi, J. C. Grossman, Nano Letters 2015 , 15 , 5 2794–2800. [40] S. B. Desai, S. R. Madhvapathy, M. Amani, D. Kiriya, M. Hettick, M. Tosun, Y. Zhou, M. Dubey, J. W. Ager, D. Chrzan, A. Javey, Advanced Materials 2016 , 28 , 21 4053. [41] R. Trebino, Frequency-Resolved Optical Gating: The Measurement of Ultrashort Laser Pulses , Springer US, 
+
+2000 .12

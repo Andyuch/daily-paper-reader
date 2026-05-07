@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.11361v1/fig-001.webp",
+      "caption": "Figure 3: Symmetry origin of ghost Hall effect. (a) The Cr atoms in the structure of Cr2SO illustrating the reflection and spin flip symmetry operation. (b) An ultrafast pulse whose polarization vector is aligned along the 45◦ direction may, according to this symmetry, excite only charge current parallel to the 45◦ direction is invariant, and only spin current perpendicular to the 45◦ direction.",
+      "page": 6,
+      "index": 1,
+      "width": 686,
+      "height": 222
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11361v1/fig-002.webp",
+      "caption": "Figure 5: Increase of laser pulse full width half maxima (FWHM) acts to reduce the magnitude of light-induced spin and charge currents. While increasing pulse duration increases energy deposited into the altermagnet, the current magnitude shows a dramatic decrease from µA to nA scale, panel (a). This is driven by the reduced anisotropy in ±Ax with increased pulse duration, with concomitant reduction in the anisotropy in occupation of ±k valley states, compare panels (b,c) and (d,e). As ± anisotropy in valley occupation underpins the creation of a current carrying state (as ± states contribute oppositely to the overall current), increase in pulse duration reduces the magnitude of the light-induced currents.",
+      "page": 10,
+      "index": 2,
+      "width": 968,
+      "height": 272
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11361v1/fig-003.webp",
+      "caption": "Figure 4: Global selection rule underpinning light control of valley excitation in Cr2SO. (a) The linearly versus circularly polarized character of the light-form generating maximal excitation, expressed as a difference between the major and minor axis of the generally elliptical polarization. This parameter takes of values of 1 for linearly polarized light and 0 for circularly polarized light. Evidently a large domain of linearly polarized coupling exists near the X and Y valleys. (b) The polarization angle of the linearly polarized that maximizes transition, revealing that with large domains centred on the X and Y valleys, excitation is by x/y-polarized light. (c) Deviations within these regions from this global selection rule are associated with very low dipole matrix elements.",
+      "page": 8,
+      "index": 3,
+      "width": 968,
+      "height": 218
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11361v1/fig-004.webp",
+      "caption": "Figure 1: Light control over valley excitation. (a) The lattice structure and (b) band structure of Cr2SO, with arrows indicating possible laser induced transitions at the valleys. Gap tuned (0.88 eV) x-polarized light, vector potential shown in panel (c), generates excitation exclusively at the X valley of Cr2SO, as revealed in the momentum resolved charge excitation, panel (d). Similarly, y-polarized light generates excitation exclusively at the Y valley, panels (e,f). This holds both for multi-cycle pulses but also in the single cycle limit, panels (g-j), in which the valley charge excitation can be seen to be displaced off the valley centre.",
+      "page": 4,
+      "index": 4,
+      "width": 968,
+      "height": 541
+    },
+    {
+      "url": "assets/figures/arxiv/2604.11361v1/fig-005.webp",
+      "caption": "Figure 2: Light induced spin polarized currents and ultrafast “ghost” Hall states. Linearly polarized laser light induces spin and charge currents both parallel and perpendicular to the polarization vector angle θL. (a) In a polar plot over θL the charge current is seen to possess nodes in the perpendicular component (⊥), but none in the parallel component (∥) which is finite for all θL. (b) In dramatic contrast the spin current presents nodes in both parallel and perpendicular components. Comparison of (a) and (b) reveals that for θL = nπ/2 (n integer), i.e. 0◦, 90◦, 180◦, and 270◦, spin and charge currents are nearly equal and parallel to the polarization vector of the laser pulse, while for θL = π/4 + nπ/2, i.e. 45◦, 135◦, 225◦, 315◦, charge and spin currents are respectively parallel and perpendicular to the polarization vector of the laser pulse. The former represents the case of a light induced near fully spin polarized current, with the latter an ultrafast “ghost” Hall state.",
+      "page": 5,
+      "index": 5,
+      "width": 968,
+      "height": 302
+    }
+  ]
+}

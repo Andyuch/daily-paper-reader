@@ -1,0 +1,334 @@
+Title: Excitonic Mott transition without population inversion
+
+URL Source: https://arxiv.org/pdf/2604.06897v1
+
+Published Time: Thu, 09 Apr 2026 01:00:52 GMT
+
+Number of Pages: 26
+
+Markdown Content:
+# Excitonic Mott transition without population inversion 
+
+## Oleg Dogadov 1,2 , Armando Genco 1, Allison R. Cadore 3,James A. Kerfoot 3, Evgeny M. Alexeev 3, Osman Balci 3,Chiara Trovatello 1, Kenji Watanabe 4, Takashi Taniguchi 4,Seth Ariel Tongay 5, Andrea C. Ferrari 3, Giulio Cerullo 1,6 ,Stefano Dal Conte 1* , Gianluca Stefanucci 7,8* , Enrico Perfetto 7,8* 1Department of Physics, Politecnico di Milano, Piazza Leonardo da Vinci 32, 20133 Milan, Italy. 
+
+> 2
+
+Department of Physical Chemistry, Fritz Haber Institute of the Max Planck Society, 14195 Berlin, Germany. 
+
+> 3
+
+Cambridge Graphene Centre, University of Cambridge, Cambridge CB3 0FA, U.K.. 
+
+> 4
+
+Research Center for Materials Nanoarchitectonics, National Institute for Materials Science, 1-1 Namiki, Tsukuba 305-0044, Japan. 
+
+> 5
+
+School for Engineering of Matter, Transport and Energy, Arizona State University, Tempe, Arizona 85287, United States. 
+
+> 6
+
+IFN-CNR, Department of Physics, Politecnico di Milano, Piazza Leonardo da Vinci 32, 20133 Milan, Italy. 
+
+> 7
+
+Dipartimento di Fisica, Universit` a di Roma Tor Vergata, Via della Ricerca Scientifica 1, 00133 Rome, Italy. 
+
+> 8
+
+INFN, Sezione di Roma Tor Vergata, Via della Ricerca Scientifica 1, 00133 Rome, Italy. *Corresponding author(s). E-mail(s): stefano.dalconte@polimi.it; stefanuc@roma2.infn.it; eperfett@roma2.infn.it;          
+
+> Abstract
+> Exciton dissociation via the excitonic Mott transition (EMT) governs the high-density optical response of semiconductors and sets fundamental limits for
+
+1
+
+> arXiv:2604.06897v1 [cond-mat.mes-hall] 8 Apr 2026
+
+optoelectronic devices. The EMT is conventionally linked to the onset of popula-tion inversion and the emergence of optical gain. Here, we demonstrate that this paradigm can break down under ultrafast non-equilibrium excitation. Using fem-tosecond pump–probe optical spectroscopy, we drive a monolayer transition metal dichalcogenide into a dense photoexcited state in which the excitonic resonance is completely quenched within ∼ 100 fs, while the optical gain is entirely absent across the explored fluence range. State-of-the-art real-time ab initio simulations reveal that the EMT is governed by an interplay of strongly nonthermal carrier populations and nonequilibrium dynamical screening of the Coulomb interaction. The quantitative agreement between theory and experiment identifies a distinct, ultrafast pathway to exciton ionization beyond quasi-equilibrium descriptions and demonstrates that population inversion is not a universal prerequisite for the EMT.  
+
+> Keywords: Excitonic Mott transition, excitons, transition metal dichalcogenides, non-equilibrium Green’s function, optical pump-probe spectroscopy
+
+# Main 
+
+Excitons, Coulomb-bound states of electrons and holes, govern the optical response of semiconductors and insulators across a wide range of energies and length scales. Understanding how these composite quasiparticles form, propagate, and ultimately dissociate is a central problem in many-body physics and optoelectronics. This chal-lenge becomes especially critical at high photoexcited carrier densities, where strong correlations and phase-space filling drive a fundamental reorganization of the excitonic system. Under such conditions, a semiconductor may undergo an excitonic Mott tran-sition (EMT) [1], in which a gas of bound excitons destabilizes in favour of a metallic electron–hole plasma, in close analogy with the Mott transition in correlated elec-tronic systems [2]. The EMT has been investigated for decades in bulk semiconductors and quantum wells, and more recently in two-dimensional transition metal dichalco-genides (TMDs), where reduced dielectric screening and quantum confinement yield exceptionally large exciton binding energies [3]. Experimentally, the signature of EMT includes the progressive quenching of excitonic photoluminescence [4] or absorption [5], the emergence of plasma-like optical responses [6], and characteristic mid-infrared 2or THz signatures distinguishing bound excitons from free carriers [7–9]. From a theo-retical perspective, the EMT has traditionally been understood within a quasi-thermal framework as the cooperative interplay between phase-space filling (Pauli blocking), bandgap renormalization (BGR), and static screening of the electron–hole ( e-h ) attrac-tion by thermally distributed carriers. Within this picture, the excitonic resonance is pushed toward the e-h continuum, eventually merging with it and leading to exci-ton dissociation [1, 10–13]. Once the population inversion, which naturally gives rise to optical gain, is established, the EMT occurs [10, 11, 14–16]. Consistent with this quasi-thermal picture, time-resolved optical studies performed on strongly photoex-cited WS 2 revealed pronounced exciton bleaching accompanied by negative absorption, or optical gain, below the optical gap [5]. While the optical gain has been observed in bilayer WS 2, it appears to be less pronounced or completely absent in monolayer (1L) TMDs [17]. This difference likely arises from the direct bandgap nature of 1L-TMDs, which limits photocarrier accumulation in the material. Despite these observations, the nature of the EMT remains poorly understood, especially away from quasi-thermal conditions. A strong ultrafast photoexcitation drives a system into a highly non-equilibrium state, in which multiple many-body pro-cesses, such as non-equilibrium screening, BGR, or electron–phonon scattering, arise on comparable timescales, i.e. , well below hundreds of femtoseconds. In this regime, carrier distributions are highly nonthermal, leading to a retarded and weakened e-h 
+
+attraction. The well-established quasi-thermal framework fails to capture the essential aspects of such nonequilibrium dynamics, raising the possibility that EMT may occur beyond the conditions under which it is currently understood. In this study, we study this highly non-equilibrium regime in a high quality 1L-TMD and demonstrate that EMT can occur in absence of population inversion. 3We investigate the transient optical response of 1L-WSe 2 encapsulated in hexago-nal boron nitride (hBN) following intense above-gap excitation, using broadband fem-tosecond transient reflectivity spectroscopy. The experiments are directly compared with real-time ab-initio simulations based on the non-equilibrium Green’s function (NEGF) formalism [18], which explicitly incorporates electron–phonon coupling and retardation effects in the screened Coulomb interaction (dynamical screening) [19–21]. A complete disappearance of the A exciton resonance for pump fluences above the EMT threshold, together with strong BGR and the absence of optical gain, observed in the experiment and predicted by our simulations, establish that the transient EMT in 1L-WSe 2 is governed by the interplay of dynamical screening and strongly non-thermal carrier populations. We further show that standard quasi-thermal treatments invariably predict pronounced optical gain during the transition, in stark contrast to our observations. Our results demonstrate that population inversion is not a universal prerequisite for exciton dissociation, but rather a limiting paradigm applicable only under quasi-equilibrium conditions. The experiments in this work are performed on a high-quality hBN-encapsulated 1L-WSe 2, fabricated by the exfoliation method. The sample is placed on a highly reflec-tive silicon substrate terminated with a 90-nm SiO 2 layer, as illustrated in Figure 1a (see Methods and Supplementary Note 1 for details). Steady-state photoluminescence (PL) and Raman spectra of the sample acquired at room temperature are reported in Figure 1b–c. The PL spectrum shows a single peak corresponding to the A exci-ton 1 s state. The frequencies of the observed Raman modes correspond well to the expected values for 1L-WSe 2 and multilayer hBN [22, 23]. We further characterize low-temperature optical properties of the sample by reflectance contrast (RC) mea-surements. We define RC spectrum as RC = ( Rsub −R0)/R sub , where R0 is reflectance spectrum of the sample and Rsub is measured on a spot with only the hBN flakes on 4the substrate. In the RC measurements (see Supplementary Figure 3) a single nar-row and intense peak associated with the absorption of the 1 s state of A exciton is observed at 1.73 eV. 1.4 1.5 1.6 1.7 Photon energy (eV) PL intensity (arb. units)                      
+
+> a. b. e.
+> Strong T=7Kpump
+> Probe
+> t
+> SiO 2/ Si hBN WSe 2
+> Static PL at RT
+> c. d.
+> Time delay (ps) Photon energy (eV)
+> 00.5 1.50 1.55 1.60 1.65 1.70 1.75
+> 1.0 10.0
+> ×10
+> Transient conductivity, 7 K Raman scattering at RT 100 200 300 400 500 600 Raman shift (cm 1)
+> Intensity (arb. units)  E' A1g 2LA(M) Si 1300 1400 1500
+> E2g (hBN) ×7 Data
+> Photon energy (eV)
+> Fit
+> μ
+> Pump fluence
+> μ
+
+Fig. 1 Pump-probe measurements of the EMT in 1L-WSe 2. (a) Sketch of the hBN-encapsulated 1L-WSe 2 measured in the pump-probe microscope (not to scale). (b–c) Sample characterization at room temperature (RT): ( b) PL spectrum and ( c) Raman spectrum. ( d) Pseudo-color energy-time conductivity map for high pump fluence (330 μJ cm −2). The map displays the disappearance of the excitonic peak shortly after the photoexcitation. ( e) Fluence dependence. Left: Transient conductivity spectra at 400 fs time delay for selected pump fluences. In the energy region around 1.55 eV, the probe is eliminated by a filter. The vertical line at 1.63 eV indicates the energy for which the σs 
+
+> 1
+
+fluence dependence is shown in the inset. Right: corresponding fit with Lorentzian profile. Sheet conductivity is reported in 2e2 
+
+> h
+
+units. 
+
+The transient reflectivity measurements are performed at 7 K in a home-built pump-probe confocal microscope, equipped with a closed cycle helium cryostat [24], as illustrated in Figure 1a (see details in Methods and Supplementary Note 2). The sample is excited above the bandgap with narrow-band linearly polarized (10 nm) 
+
+∼ 150 fs pulses at 2.53 eV, generated in a noncollinear optical parametric amplifier (NOPA). The transient dynamics is monitored with a supercontinuum (SC) probe 5covering the A exciton peak and the lower energy region, where both the BGR and the possible onset of optical gain are expected. The pump and the probe beams are focused to ca. 20 μm and 5 μm spots, respectively, to ensure homogeneous excitation of the probed area. The measured static RC and differential reflectivity ∆ R(E, t )/R 0, where 
+
+E is the probe photon energy and t is the pump-probe delay, is used to extract the temporal evolution of the sheet optical conductivity σs(E, t ) by performing Kramers-Kronig constrained analysis, as explained in the Methods (see also Supplementary Note 3). Figure 1d reports a pseudo-color map of the nonequilibrium conductivity as a function of probe photon energy and pump-probe delay. The energy range between 1.51 eV and 1.59 eV is blocked by a notch filter, since in this region the probe spectrum is significantly perturbed by the laser fundamental used to generate the SC. The data are acquired at a pump fluence of 330 μJ cm −2. Here and throughout the text, the real part of sheet conductivity is reported in 2e2 
+
+> h
+
+units. Before time zero, i.e. ,before the sample is perturbed by the pump, the spectrum is dominated by a single positive peak at around 1.73 eV, corresponding to the A exciton 1 s transition. Upon intense photoexcitation, the exciton peak initially displays a red-shift and broadens, and eventually disappears completely within ca. 100 fs, indicating that the system undergoes an EMT. At the same time, an increase of optical conductivity is observed in the whole probe range above and below the excitonic resonance, with no signature of optical gain, which would result in a negative optical conductivity. The low energy part of the map in Figure 1d is multiplied by a factor of ten for clarity. On a picosecond timescale (ca. 10 ps), the excitonic transient signal recovers as the photoexcited carrier density falls below the Mott threshold through recombination and diffusion, allowing excitons to reform. The fluence dependence of the optical conductivity recorded at ∼ 400 fs time delay along with the corresponding fit with a single Lorentzian profile is presented in 6Figure 1e. As the fluence increases, the exciton peak becomes broader and its mag-nitude decreases, until it gets almost completely quenched above ca. 150 μJ cm −2.For higher pump fluences, a broad featureless band is observed, and the signal below 1.70 eV is markedly increased, indicating an increment of low energy absorption due to a significant BGR. This behavior is clearly illustrated by the inset in Figure 1e, show-ing the evolution of σs 
+
+> 1
+
+100 meV below the A exciton 1 s peak. Above ∼ 250 μJ cm −2 the transient signal saturates and remains unchanged upon further increasing the pump fluence, until sample damage is observed. The photoinduced changes in the optical properties of the system indicate that the EMT in the studied material is due to high photocarrier density, yet its microscopic mechanism is not related to population inversion. To shed light onto the mechanism, we perform real-time simulations based on the ab-initio NEGF method of Ref. [21] (see also Methods and Supplementary Note 4 for details). Nonequilibrium dynamical screening is treated at the level of the GW self-energy, where the retarded screened interaction W (t, t ′) plays a central role, as the EMT develops during the build-up of the screening, as discussed below. To accurately describe carrier and phonon relax-ation, electron-phonon scattering is included through the Fan-Migdal (FM) self-energy. Importantly, the NEGF framework ensures a consistent exchange of energy between electrons and phonons, guaranteeing total energy conservation throughout the simula-tions. Our approach unifies, within a single framework, population dynamics, typically described by Boltzmann or semiconductor Bloch equations, with the Bethe–Salpeter equation formalism, used to compute the nonequilibrium spectra. It further sur-passes these methods by avoiding the Markov approximation describing memoryless systems[25], which breaks down during the early transient, and by incorporating fully dynamical rather than strictly static screening [10, 26–31]. The simulations are performed by driving the 1L-WSe 2 out of equilibrium with a 100 fs pump pulse centered at 2 .53 eV with 300 μJ cm −2 fluence, corresponding to a 7Photon energy (eV)                         
+
+> a. c. b. d. e. f.
+> Photon energy (eV) Time delay (ps)
+> -0.4 0.0 0.4 0.8 1.68 1.70 1.72 1.74 1.76 1.78 1.80 Time delay (ps) 1.0 0.8 0.6 0.4 0.2 0.0 (Norm.)
+> -0.4 0.0 0.4 0.8 1.68 1.70 1.72 1.74 1.76 1.78 1.80 Photon energy (eV)
+> (Norm.) 0.2 0.2 0.01 0.03 0.05 0.0 0.0 -0.2 -0.2 ky(Å -1 )kx(Å -1 )fk
+> g. h.
+> Photon energy (eV) 0.2 0.2
+> 0.10 0.15 0.0 0.0 -0.2 -0.2 ky(Å -1 )kx(Å -1 )fkPhoton energy (eV)
+
+Fig. 2 Sub-picosecond dynamics. Experimental ( a) and simulated ( c) transient conductivity maps. Transient spectra at select time delays corresponding to experimental ( b) and simulated ( d)maps. The spectra show a disappearance of the excitonic peak upon photoexcitation and an increase of absorption at lower energies. Simulated spin-averaged density profiles right after photoexcitation (0 fs) ( e) and at the the Mott transition (30 fs) ( f ), showing migration of photocarriers towards the conduction band minimum. Momenta are measured relative to the K point, which defines the origin. Comparison between spectra ( g) and spin-averaged populations ( h) in different approaches, namely the NEGF method with self-energy in the GW +FM and the BSE with thermal carriers at temperature 100 K. In h the energy of carrier occupations are referred to the top of the valence band. 
+
+photoexcited carrier density of approximately 1 .6 × 10 13 cm −2 in each of the K/K ′
+
+valleys. Figure 2a-d compares the experimental and simulated transient conductiv-ity maps, displaying an excellent agreement. The numerical results provide important insights into the microscopic ultrafast dynamics. At maximum pump–probe tempo-ral overlap (near zero delay), electrons and holes are distributed by the pump pulse away from the band edges, as shown in Figure 2e, while the build-up of the screen-ing is not yet fully established (see Supplementary Figure 9). The transient red-shift of the A-exciton can therefore be primarily attributed to the BGR. At longer time 8delays, carriers rapidly relax toward the band edges. The exciton peak is progressively bleached, vanishing after several tens of femtoseconds, while the carrier population remains highly non-thermal (see Figure 2f) and the screening has not yet reached its steady-state value. Both theory and experiment show here an increase of absorption down to ∼ 1.5 eV, with no evidence of optical gain. As the estimated direct bandgap of 1L-WSe 2 is around 2 .0 eV [32], we infer a renormalization of ∼ 0.5 eV, consistent with previous reports for 1L-WS 2 [5]. Nonequilibrium dynamical screening plays a dual and inseparable role [20, 21], with each component essential for reproducing the experimental observations. On the one hand, it weakens the electron–hole attraction; on the other hand, retardation effects open additional electron–electron scattering channels that, under strong photoexci-tation, dominate over phonon-mediated scattering processes (see also Supplementary Note 10) and govern the ultrafast intravalley carrier dynamics. This rapid relaxation reshapes the initially photoexcited carrier population into a strongly non-thermal yet non-inverted distribution, thereby suppressing the population inversion and the emergence of the optical gain. Figure 2g compares the conventional quasi-thermal description of the EMT, rep-resented by the BSE spectrum at T = 100 K, with the fully nonequilibrium GW +FM spectrum at a 30 fs pump–probe delay, where the Mott transition occurs. The reference temperature of T = 100 K approximates the heating expected after thermalization for an excitation density of ∼ 10 13 cm −2 [21]. Although the total excitation density is the same in both cases, the carrier populations are distributed very differently in energy, reflecting fundamentally distinct nonequilibrium states (see Figure 2h). In the GW +FM calculation in particular, the peak occupation (per spin) is only 
+
+∼ 0.13, see also Figure 2f, well below the threshold for population inversion. While the BSE correctly models the disappearance of the excitonic peak, consistent with 9the EMT, it simultaneously predicts a pronounced optical gain below the equilibrium gap. This qualitative difference persists over a broad temperature range (0–1000 K) demonstrating the limitations of a quasi-thermal description. The underlying microscopic mechanism for the EMT is schematically illustrated in Figure 3. Following excitation of a semiconductor by a femtosecond pulse above the quasi-particle gap, photogenerated free e-h pairs scatter towards lower-energy states. At low fluences (Figure 3a), BGR remains weak and the effective e-h interac-tion is well described by a statically screened Coulomb attraction. In this regime, the screened Coulomb potential supports well-defined excitonic eigenstates and the opti-cal response is dominated by stable bound excitons [33–37] (Figure 3c; for clarity, a single exciton 1 s peak is shown). At higher pump fluences (Figure 3b), the situation is qualitatively different. Strong BGR shifts the quasiparticle energies, while the carrier distributions remain highly non-thermal on the ultrafast timescale. The dense photo-generated plasma induces a time-dependent polarization that screens the Coulomb e-h 
+
+attraction dynamically rather than instantaneously. Under these transient conditions, a hot electron at time t′ induces a density change δn (t, t ′) for all times t > t ′, which in the static approximation reduces to δn (t, t ′) = −e∗δ(t − t′), where e∗ is the stati-cally screened electron charge. Thus, the interaction is governed by the dynamically screened potential W (t, t ′) = δn (t, t ′)v, with v the bare Coulomb interaction [18, 20] and δn (t, t ′) the retarded density response function. The combined action of dynam-ical screening and nonthermal carrier populations drives exciton ionization without establishing population inversion (Figure 3d). In conclusion, we demonstrate that the EMT in semiconductors can proceed through a fundamentally nonequilibrium pathway that does not require population inversion. By combining femtosecond pump–probe spectroscopy with real-time ab ini-tio simulations, we demonstrate that intense above-gap excitation of 1L-WSe 2 induces complete exciton ionization within ∼ 100 fs, in the absence of optical gain and well 10 t' tGW self-energy                
+
+> tt' EgEb
+> electron at t
+> electron at t'
+> hole at t' E' g
+> Weak excitation Strong excitation
+> Exciton
+> e–he–hEgE' g
+> Absorbance Absorbance Energy Energy
+> a. b. c. d.
+
+Fig. 3 Plasma screening of electron-hole attraction. Low ( a) and high ( b) excitation regimes. In ( a) the bandgap Eg is weakly renormalized and the Coulomb attraction is effectively instantaneous. Electron-hole pairs form bound excitons, with binding energy Eb. In ( b) the exciton formation is sup-pressed by the reduced bandgap E′ 
+
+> g
+
+, nonthermal carrier populations, and nonequilibrium dynamical screening. The retarded screened interaction δn (t′, t )W entering the GW self-energy is depicted as a double-wiggly line. Schematic nonequilibrium absorption spectra in the low- ( c) and high-density ( d)excitation regimes are shown. In ( c) sharp excitonic resonances dominate the spectrum below Eg ,marking the onset of the e-h continuum. In ( d) excitons are ionized and the e-h continuum onset is shifted to the renormalized gap E′ 
+
+> g
+
+.
+
+before carrier thermalization. This behavior is strikingly different from the conven-tional EMT paradigm, in which exciton dissociation is expected to coincide with maximal Pauli blocking and the onset of the optical gain. Our results establish that, under ultrafast high-density excitation, the EMT is governed by the interplay of strongly nonthermal carrier populations and dynamical screening. Screening develops on the same timescale as carrier injection and relax-ation, destabilizing excitonic correlations prior to the formation of a quasi-thermal electron–hole plasma. More broadly, these findings highlight the importance of under-standing the quantum many-body dynamics of semiconductors driven far from the 11 equilibrium, where non-thermal pathways to exciton dissociation reshape the optical response. The resulting transformation of excitonic complexes into other quasiparticles directly impacts the absorption and emission processes that govern photonic function-alities in lasers, solar cells, and light-emitting diodes. By clarifying the microscopic limits of operation under strong photoexcitation, this work identifies new opportunities for the light-driven control of collective excitations in quantum materials. 
+
+# Methods 
+
+Sample preparation. High-quality hBN-encapsulated 1L-WSe 2 is fabricated at the Cambridge Graphene Centre. Bulk hBN crystals are grown in a barium boron nitride solvent at high pressure and temperature, as explained in [38]. Prepared by microme-chanical cleavage of bulk crystals hBN flakes are transferred on a silicon substrate with a 90-nm SiO 2 coverage. Single layers of WSe 2 are obtained by cleavage of flux-zone grown bulk WSe 2 crystals onto spin-coated poly-methylmetacrylate (PMMA) on glass at 80 ◦C [39]. Encapsulated samples are fabricated using polycarbonate (PC) stamps [40] after identifying suitable hBN flakes and WSe 2 layers via optical microscopy meth-ods [41]. After PC on polydimethylsiloxane is pressed onto the top hBN flake at 40 ◦C, a 1L-WSe 2 flake on PMMA is aligned to the hBN flake on the PC stamp and picked up at 80 ◦C. The bottom hBN flake is picked up at 40 ◦C. The encapsulated 1L-WSe 2 is then held at 180 ◦C. The PC residue is removed by immersing the sample in chloroform and then ethanol for 30 minutes. 
+
+Experimental set-up. Transient reflectivity measurements are performed in a con-focal microscope equipped with a closed-cycle cryostat (see Supplementary Figure 2). A regeneratively amplified Ti-sapphire laser (Coherent, Libra) emitting 100-fs pulses at 1.55 eV at a 2 kHz repetition rate is used as a light source in the setup. Pump pulses are generated in a home-built NOPA pumped by the second harmonic of the laser. 12 The NOPA signal is tuned to 2.53 eV (well above the bandgap). The pump is mod-ulated by a mechanical chopper at 0.5 kHz, blocking and letting pass pairs of pulses. The SC probe is generated by focusing the laser fundamental in a 1 mm-thick Al 2O3
+
+plate. The probe energy range is further selected by a set of short- and long-pass fil-ters and attenuated by a neutral-density filter. The pump and probe beams are then collinearly combined by a thin beam splitter and focused on a sample inside the cryo-stat with an achromatic 8 mm-focal length objective lens with NA = 0 .3, mounted on a three-axis translation stage. The measurements are performed at 7 K. The reflected probe beam is then detected by a spectrometer with a high sensitivity silicon CCD. Differential reflectivity maps are acquired by scanning the temporal delay between pump and probe pulses with a mechanical delay stage. The experimental set-up is fur-ther equipped with an imaging system consisting of a white light source (LED) and a CMOS camera, used to precisely align the pump and probe beams on the sample. 
+
+Transient conductivity. The optical properties of the 1L-WSe 2 are extracted form a measured reflectivity signal by applying the Transfer Matrix Method (TMM) [42, 43]. In this method, the total field in the multilayer system of hBN-encapsulated 1L-WSe 2 is calculated considering the field propagation in individual layers and applying Maxwell’s boundary conditions to establish the link between the field components in adjacent layers. The relation between the electric and magnetic field components on the first and the last boundaries is expressed as a product of characteristic matrices of individual layers. The transfer matrix of the system studied in this work is expressed as M = MhBN ′ MWSe 2 MhBN ′′ MSiO 2 . The layer parameters used in the TMM calcu-lations are reported in Supplementary Note 3. The dielectric function (DF) of the 1L-WSe 2 is modeled with Kramers-Kronig constrained functions by fitting a measured reflectance contrast spectrum [44, 45]. Similarly to [44], the DF is first parameterized with a single Lorentzian function to correctly approximate the energy dependence outside the probed spectral range. Next, the modeled DF is “corrected” by a large 13 number of evenly distributed model independent oscillators of fixed width in order to take into account the fine spectral details (approximately one oscillator per five experimentally measured photon energy points). The static reflectivity of the sample 
+
+R0(E) is calculated from the modeled ground state DF by employing the TMM. The time-dependent reflectivity is then calculated from measured differential reflectivity as R(E, t ) = R0 · [∆ R(E, t )/R 0 + 1]. The time-dependent DF ˆ ϵ(E, t ) is calculated by repeating the explained procedure for all time delays. The transient response of the 1L-WSe 2 is expressed in terms of the sheet optical conductivity σs
+
+> 1
+
+(E, t ) = Re[ˆ σ(E, t ) d], where ˆ σ(E, t ) = iϵ 0E
+
+ℏ [1 − ˆϵ(E, t )] is complex conductivity and d is the 1L-WSe 2
+
+thickness. 
+
+NEGF framework. The photoinduced dynamics of electrons and phonons is sim-ulated in real-time using the NEGF method of Refs. [20, 21]. This method is based on the simultaneous propagation of the nonequilibrium electronic and phononic den-sity matrices ( ρ and γ respectively), together with the nuclear displacements uν along the normal modes ν of the material. A key feature of the NEGF method is its linear scaling with the maximum propagation time [46–49], while capturing non-Markovian effects arising from the double-time dependence of the non-equilibrium self-energy. The equations of motion can be derived from the Kadanoff-Baym equations [18, 50] using the Generalized Kadanoff-Baym ansatz [49, 51, 52], and read 
+
+i ˙ρk(t) = [ hel  
+
+> k
+
+(t), ρ k(t)] − Iel  
+
+> k
+
+(t)
+
+i ˙γk(t) = [ hph  
+
+> k
+
+(t), γ k(t)] − Iph  
+
+> k
+
+(t)¨uν = −ω2 
+
+> ν
+
+uν − X
+
+> k
+
+Tr {gν (k, 0)[ ρk(t) − ρk(0)] } , (1) where k is the crystal momentum and ων are the phonon frequencies. The electron density matrix ρk, quasi-particle electronic Hamiltonian hel  
+
+> k
+
+, electronic collision inte-gral Iel  
+
+> k
+
+and electron-phonon couplings gν (k, q) are all matrices with electronic-band 14 indices. Similarly, the phonon density matrix γk, free-phonon Hamiltonian hph  
+
+> k
+
+and phononic collision integral Iph  
+
+> k
+
+are all matrices with normal-mode indices. The colli-sion integrals are computed using the full density matrices ρ and γ; hence they depend on both the diagonal (populations) and off-diagonal (polarizations) elements of the matrices. The resulting GW +FM self-energies are evaluated using the full electronic and phononic density matrices, making them functionals of both the populations and the polarizations. The electronic self-energy comprises five distinct contributions, i.e. ,Hartree, statically screened exchange (SEX), Ehrenfest, GW and FM, whereas the phononic self-energy in Iph  
+
+> k
+
+constitutes of the polarization bubble diagram (see Sup-plementary Note 4). The three coupled equations of motion in Eq. (1) are numerically integrated by using a 4th order Runge-Kutta solver with a time step ∆ t = 0 .1 fs as implemented in the CHEERS code [53]. From the knowledge of ρk, γk and uν we can evaluate all the observables needed to characterize the photoexcited carrier and nuclear dynamics. In particular, we have access to the instantaneous carrier occupations fki with momentum k in spin-band i,laser-induced polarizations dk, phonon populations nkν with momentum k in normal-mode ν, and effective temperature T of the lattice. The excitonic properties are monitored by calculating the transient absorption spectrum according to [54] 
+
+S(ω, τ ) = −2ω Im[ e(ω, τ ) · d(ω, τ )] , (2) where e(ω, τ ) is the Fourier transform of the probe field impinging the system at time 
+
+τ and d(ω, τ ) is the Fourier transform of the total probe-induced polarization d(t, τ ). The latter is defined as d(t, τ ) = P
+
+> k
+
+h
+
+dP +p 
+
+> k
+
+(t, τ ) − dP 
+
+> k
+
+(t)
+
+i
+
+, where dP 
+
+> k
+
+(t) is evaluated in the presence of the pump field only, whereas dP +p 
+
+> k
+
+(t, τ ) is evaluated in the presence of both pump and probe fields. The momentum-resolved dipole in the presence of an 15 external field is defined as dk(t) = Tr[ Dkρk(t)], where ρk(t) obeys Eq. (1) Dk is the dipole matrix element (see next Method Section). 
+
+First-principle modeling of 1L-WSe 2. We rely on the tight-binding parametriza-tion of the spin-dependent DFT band structure provided in Ref. [55]. The conduction bands are rigidly shifted upwards by 0.5 eV, to align with the observed quasiparti-cle bandgap [32]. The eigenvectors Uk of the Bloch Hamiltonian Hk are employed to construct the Coulomb integrals entering in the Hartree-SEX and GW self-energies. These integrals are given by [56] V qkk ′ 
+
+> imjn
+
+= vq (U† 
+
+> ki
+
+·Uk−qn)( U† 
+
+> k′m
+
+·Uk′+qj ) and describe the scattering amplitude of two electrons initially in bands j and n with momenta 
+
+k′ + q and k − q to end up in bands m and i with momenta k′ and k respectively. Here vq represents the Rytova-Keldysh potential [57, 58] in momentum space, i.e. ,
+
+vq = 2πq(1 + r0q) (3) where q = |q| and r0 = 45 ˚A [59]. The diverging behavior of vq at the Γ point is regularized as in Refs. [60, 61], i.e. , v(0) → 1Ω
+
+R 
+
+> Ω
+
+dq v(q), where Ω is a 2D domain around q = 0 of linear dimension given by the discretization step of the first Brillouin zone. From the Bloch Hamiltonian we also calculate the dipole matrix elements for transitions from band i to band j as [21] 
+
+Dkij = 1
+
+i
+
+1
+
+ϵki − ϵkj
+
+U† 
+
+> ki
+
+· ∂kHk · Ukj . (4) For the real-time simulations, we restrict our active space to the two highest valence and two lowest conduction bands. Concerning the phonon input, we parametrize the phonon frequencies as ωkν = ωQkν , where Qk is the high-symmetry point closest to k. For the acoustic branches with k around the Γ point we instead approxi-mate ω(k≈0) ν = vν |k|. The frequencies ωQkν and the sound velocities vν are taken 16 from the first-principles calculation reported in Ref. [62]. Similarly, we approxi-mate the electron-phonon couplings entering the Ehrenfest and FM self-energies as 
+
+gνij (k, q) = δij 
+
+s
+
+ℏ
+
+2M ω qν
+
+(DνQkQk−qi + CνQkQk−qi|q|), where the intraband zero-th and first order deformation potentials DνQkQk′ i and CνQkQk′ i evaluated at the high sym-metry points are tabulated in Ref. [62]. We consider only the four most coupled longitudinal/transverse acoustic/optical phonons. Accurate description of excitons in two-dimensional transition metal dichalco-genides necessitates a dense k-point discretization of the first Brillouin zone. However, the numerical solution of Eqs. (1) in grids having thousands of points is prohibitive. Given the experimentally observed ultrafast timescales (the EMT occurs within ca. 70 fs) we confine the dynamics inside a small plaquette P around the K-point. The area of the plaquette ( A = 0 .4 ˚A × 0.4 ˚A) and the number of k-points ( Nk = 169) are chosen to fulfill two criteria: (i) the solution of the Bethe-Salpeter equation with k ∈ P 
+
+yields the same low-energy spectrum as in the full Brillouin zone, and (ii) the plaque-tte P includes all states visited by the carriers upon pumping with the experimental central photon-energy ω = 2 .53 eV. 
+
+# Supplementary information 
+
+Supplementary Notes 1–10 and Figures 1–10. 
+
+# Data availability 
+
+The data supporting the findings of this study are available upon request. 
+
+# Acknowledgments 
+
+S.D.C. and G.C. acknowledge financial support by the European Union’s NextGen-erationEU Programme with the I-PHOQS Infrastructure [IR0000016, ID D2B8D520, 17 CUP B53C22001750006] “Integrated infrastructure initiative in Photonic and Quan-tum Sciences.” S.D.C. acknowledges support from the European Union’s NextGener-ationEU – Investment 1.1, M4C2 - Project n. 2022LA3TJ8 – CUP D53D23002280006. E.P and G.S acknowledge funding from Ministero Universita‘ e Ricerca PRIN under grant agreement No. 2022WZ8LME, from INFN through project TIME2QUEST, from European Research Council MSCA-ITN TIMES under grant agreement 101118915, and from Tor Vergata University through project TESLA. 
+
+# Author contribution 
+
+O.D. and S.D.C. conceived the experiment. O.D., A.G., and C.T. performed the tran-sient reflectivity measurements. O.D. and A.G. analyzed the data. A.R.C., J.A.K., E.M.A., and O.B. fabricated the WSe 2 sample and characterized its equilibrium opti-cal response. K.W. and T.T. grew the hBN crystals. G.S. and E.P. performed ab-initio 
+
+simulations and theoretical analyses of the experimental results. O.D., S.D.C., G.S., and E.P. wrote the manuscript with input from all the authors. 
+
+# Competing interests 
+
+The authors declare no competing interests. 
+
+# References 
+
+[1] Brinkman, W. F. & Rice, T. M. Electron-hole liquids in semiconductors. Phys. Rev. B 7, 1508–1523 (1973). URL https://link.aps.org/doi/10.1103/PhysRevB. 7.1508. [2] Mott, N. F. Metal-insulator transition. Rev. Mod. Phys. 40 , 677–683 (1968). [3] Wang, G. et al. Colloquium: Excitons in atomically thin transition metal dichalco-genides. Rev. Mod. Phys. 90 , 021001 (2018). URL https://link.aps.org/doi/10. 18 1103/RevModPhys.90.021001. [4] Kappei, L., Szczytko, J., Morier-Genoud, F. & Deveaud, B. Direct observa-tion of the mott transition in an optically excited semiconductor quantum well. 
+
+Phys. Rev. Lett. 94 , 147403 (2005). URL https://link.aps.org/doi/10.1103/ PhysRevLett.94.147403. [5] Chernikov, A., Ruppert, C., Hill, H. M., Rigosi, A. F. & Heinz, T. F. Popula-tion inversion and giant bandgap renormalization in atomically thin WS 2 layers. 
+
+Nature Photonics 9, 466–470 (2015). [6] Nagai, M. & Kuwata-Gonokami, M. Electron–hole liquid formation by exci-ton and biexciton resonant excitation in cucl. Journal of Luminescence 
+
+100 , 233–242 (2002). URL https://www.sciencedirect.com/science/article/pii/ S0022231302004428. [7] Koch, S., Kira, M., Khitrova, G. & Gibbs, H. Semiconductor exci-tons in new light. Nature Materials 5, 523 – 531 (2006). URL https://www.scopus.com/inward/record.uri?eid=2-s2.0-33745587349&doi=10. 1038%2fnmat1658&partnerID=40&md5=821aa952700693b603ff98e77a483ce6. [8] Kaindl, R., Carnahan, M., H¨ agele, D., L¨ ovenich, R. & Chemla, D. Ultra-fast terahertz probes of transient conducting and insulating phases in an electron-hole gas. Nature 423 , 734 – 738 (2003). URL https: //www.scopus.com/inward/record.uri?eid=2-s2.0-0038341624&doi=10.1038% 2fnature01676&partnerID=40&md5=2d923f545e5073c2dc36982ba7541b28. [9] Suzuki, T. & Shimano, R. Exciton mott transition in si revealed by terahertz spectroscopy. Physical Review Letters 109 (2012). 19 [10] Haug, H. & Koch, S. Quantum Theory Of The Optical And Electronic Properties Of Semiconductors (5th Edition) (World Scientific Publishing Company, 2009). [11] Asano, K. & Yoshioka, T. Exciton–mott physics in two-dimensional electron–hole systems: Phase diagram and single-particle spectra. Journal of the Physical Society of Japan 83 , 084702 (2014). URL https://doi.org/10.7566/JPSJ.83. 084702. [12] Semkat, D. et al. Ionization equilibrium in an excited semiconductor: Mott tran-sition versus bose-einstein condensation. Phys. Rev. B 80 , 155201 (2009). URL https://link.aps.org/doi/10.1103/PhysRevB.80.155201. [13] Steinhoff, A. et al. Exciton fission in monolayer transition metal dichalcogenide semiconductors. Nat. Commun. 8, 1166 (2017). URL https://doi.org/10.1038/ s41467-017-01298-6. [14] Das Sarma, S. & Wang, D. W. Many-body renormalization of semiconductor quantum wire excitons: Absorption, gain, binding, and unbinding. Phys. Rev. Lett. 84 , 2010–2013 (2000). URL https://link.aps.org/doi/10.1103/PhysRevLett. 84.2010. [15] Meckbach, L., Stroucken, T. & Koch, S. W. Giant excitation induced bandgap renormalization in tmdc monolayers. Applied Physics Letters 112 , 061104 (2018). URL https://doi.org/10.1063/1.5017069. [16] Meckbach, L. et al. Ultrafast band-gap renormalization and build-up of optical gain in monolayer MoTe 2. Phys. Rev. B 101 , 075401 (2020). URL https://link. aps.org/doi/10.1103/PhysRevB.101.075401. [17] Xu, Y. et al. Room-Temperature Amplified Spontaneous Emission in Two-Dimensional WS 2 beyond Exciton Mott Transition. Phys. Rev. Lett. 134 , 066904 20 (2025). URL https://link.aps.org/doi/10.1103/PhysRevLett.134.066904. [18] Stefanucci, G. & van Leeuwen, R. Nonequilibrium Many-Body Theory of Quantum Systems: A Modern Introduction (Cambridge University Press, 2013). [19] Pavlyukh, Y., Perfetto, E., Karlsson, D., van Leeuwen, R. & Stefanucci, G. Time-linear scaling nonequilibrium Green’s function methods for real-time simulations of interacting electrons and bosons. I. Formalism. Phys. Rev. B 105 , 125134 (2022). URL https://link.aps.org/doi/10.1103/PhysRevB.105.125134. [20] Perfetto, E., Pavlyukh, Y. & Stefanucci, G. Real-time GW: Toward an ab ini-tio description of the ultrafast carrier and exciton dynamics in two-dimensional materials. Phys. Rev. Lett. 128 , 016801 (2022). URL https://link.aps.org/doi/ 10.1103/PhysRevLett.128.016801. [21] Perfetto, E. & Stefanucci, G. Real-Time GW-Ehrenfest-Fan-Migdal Method for Nonequilibrium 2D Materials. Nano Letters 23 , 7029–7036 (2023). URL https: //doi.org/10.1021/acs.nanolett.3c01772. [22] Reich, S. et al. Resonant raman scattering in cubic and hexagonal boron nitride. Phys. Rev. B 71 , 205201 (2005). URL https://link.aps.org/doi/10.1103/ PhysRevB.71.205201. [23] Barbone, M. et al. Charge-tuneable biexciton complexes in monolayer WSe 2. Nature Communications 9, 3721 (2018). URL https://doi.org/10.1038/ s41467-018-05632-4. [24] Genco, A. et al. Ultrafast Exciton and Trion Dynamics in High-Quality Encapsulated MoS 2 Monolayers. physica status solidi (b) 260 , 2200376 (2023). 21 [25] Stefanucci, G. & Perfetto, E. Semiconductor electron-phonon equations: A rung above Boltzmann in the many-body ladder. SciPost Phys. 16 , 073 (2024). URL https://scipost.org/10.21468/SciPostPhys.16.3.073. [26] Hannewald, K., Glutsch, S. & Bechstedt, F. Spontaneous Emission from Semi-conductors After Ultrafast Pulse Excitation: Theory and Simulation , 139–192 (Springer Berlin Heidelberg, Berlin, Heidelberg, 2004). URL https://doi.org/10. 1007/978-3-540-44879-2 4. [27] Kira, M. & Koch, S. Many-body correlations and excitonic effects in semicon-ductor spectroscopy. Progress in Quantum Electronics 30 , 155–296 (2006). URL https://www.sciencedirect.com/science/article/pii/S0079672706000280. [28] Perfetto, E., Sangalli, D., Marini, A. & Stefanucci, G. Nonequilibrium bethe-salpeter equation for transient photoabsorption spectroscopy. Phys. Rev. B 92 ,205304 (2015). URL https://link.aps.org/doi/10.1103/PhysRevB.92.205304. [29] Perfetto, E., Sangalli, D., Marini, A. & Stefanucci, G. First-principles approach to excitons in time-resolved and angle-resolved photoemission spectra. Phys. Rev. B 
+
+94 , 245303 (2016). URL https://link.aps.org/doi/10.1103/PhysRevB.94.245303. [30] Perea-Caus´ ın, R., Brem, S. & Malic, E. Microscopic modeling of pump–probe spectroscopy and population inversion in transition metal dichalcogenides. phys-ica status solidi (b) 257 , 2000223 (2020). [31] Lohof, F. et al. Prospects and limitations of transition metal dichalcogenide laser gain materials. Nano Letters 19 , 210–217 (2019). [32] Mad´ eo, J. et al. Directly visualizing the momentum forbidden dark exci-tons and their dynamics in atomically thin semiconductors. arXiv preprint arXiv:2005.00241 (2020). 22 [33] Pogna, E. A. A. et al. Photo-Induced Bandgap Renormalization Governs the Ultrafast Response of Single-Layer MoS2. ACS Nano 10 , 1182–1188 (2016). [34] Sie, E. J. et al. Observation of Exciton Redshift–Blueshift Crossover in Monolayer WS 2. Nano Letters 17 , 4210–4216 (2017). [35] Cunningham, P. D., Hanbicki, A. T., Reinecke, T. L., McCreary, K. M. & Jonker, B. T. Resonant optical Stark effect in monolayer WS 2. Nature Communications 
+
+10 , 5539 (2019). [36] Trovatello, C. et al. Disentangling Many-Body Effects in the Coherent Optical Response of 2D Semiconductors. Nano Letters 22 , 5322–5329 (2022). [37] Calati, Stefano and Li, Qiuyang and Zhu, Xiaoyang and St¨ ahler, Julia. Dynamic screening of quasiparticles in WS 2 monolayers. Phys. Rev. B 107 , 115404 (2023). [38] Casiraghi, C. et al. Rayleigh imaging of graphene and graphene layers. Nano Letters 7, 2711–2717 (2007). URL https://doi.org/10.1021/nl071168m. PMID: 17713959. [39] Zhang, Xixia and Lou, Fei and Li, Chunlong and Zhang, Xiang and Jia, Ning and Yu, Tongtong and He, Jingliang and Zhang, Baitao and Xia, Haibing and Wang, Shanpeng and Tao, Xutang. Flux method growth of bulk MoS 2 single crystals and their application as a saturable absorber. CrystEngComm 17 , 4026–4032 (2015). [40] Purdie, D. G. et al. Cleaning interfaces in layered materials heterostruc-tures. Nature Communications 9, 5387 (2018). URL https://doi.org/10.1038/ s41467-018-07558-3. [41] Taniguchi, T. & Watanabe, K. Synthesis of high-purity boron nitride single crystals under high pressure by using ba–bn solvent. Journal of Crystal Growth 
+
+23 303 , 525–529 (2007). URL https://www.sciencedirect.com/science/article/pii/ S0022024807000486. [42] Hecht, E. Optics (Pearson, 2017). [43] Ivchenko, E. Optical Spectroscopy of Semiconductor Nanostructures (Alpha Science, 2005). [44] Kuzmenko, A. B. Kramers–Kronig constrained variational analysis of optical spectra. Review of Scientific Instruments 76 , 083108 (2005). [45] Ashoka, A. et al. Extracting quantitative dielectric properties from pump-probe spectroscopy. Nature Communications 13 , 1437 (2022). [46] Joost, Jan-Philip and Schl¨ unzen, Niclas and Bonitz, Michael. G1-G2 scheme: Dramatic acceleration of nonequilibrium Green functions simulations within the Hartree-Fock generalized Kadanoff-Baym ansatz. Phys. Rev. B 101 , 245101 (2020). URL https://link.aps.org/doi/10.1103/PhysRevB.101.245101. [47] Schl¨ unzen, N., Joost, J.-P. & Bonitz, M. Achieving the scaling limit for nonequi-librium green functions simulations. Phys. Rev. Lett. 124 , 076601 (2020). URL https://link.aps.org/doi/10.1103/PhysRevLett.124.076601. [48] Pavlyukh, Y., Perfetto, E. & Stefanucci, G. Photoinduced dynamics of organic molecules using nonequilibrium Green’s functions with second-born, GW, T-matrix, and three-particle correlations. Phys. Rev. B 104 , 035124 (2021). URL https://link.aps.org/doi/10.1103/PhysRevB.104.035124. [49] Pavlyukh, Y., Perfetto, E., Karlsson, D., van Leeuwen, R. & Stefanucci, G. Time-linear scaling nonequilibrium Green’s function methods for real-time simulations of interacting electrons and bosons. I. Formalism. Phys. Rev. B 105 , 125134 24 (2022). URL https://link.aps.org/doi/10.1103/PhysRevB.105.125134. [50] Stefanucci, G., van Leeuwen, R. & Perfetto, E. In and out-of-equilibrium ab initio theory of electrons and phonons. Phys. Rev. X 13 , 031026 (2023). URL https://link.aps.org/doi/10.1103/PhysRevX.13.031026. [51] Lipavsk´ y, P. and ˇSpiˇ cka, V. and Velick´ y, B. Generalized Kadanoff-Baym ansatz for deriving quantum transport equations. Phys. Rev. B 34 , 6933–6942 (1986). URL https://link.aps.org/doi/10.1103/PhysRevB.34.6933. [52] Karlsson, Daniel and van Leeuwen, Robert and Pavlyukh, Yaroslav and Perfetto, Enrico and Stefanucci, Gianluca. Fast Green’s Function Method for Ultrafast Electron-Boson Dynamics. Phys. Rev. Lett. 127 , 036402 (2021). URL https: //link.aps.org/doi/10.1103/PhysRevLett.127.036402. [53] Perfetto, E. & Stefanucci, G. Cheers: a tool for correlated hole-electron evolution from real-time simulations. J. Phys. Condens. Matter 30 , 465901 (2018). URL http://stacks.iop.org/0953-8984/30/i=46/a=465901. [54] Perfetto, E., Sangalli, D., Marini, A. & Stefanucci, G. Nonequilibrium Bethe-Salpeter equation for transient photoabsorption spectroscopy. Phys. Rev. B 92 ,205304 (2015). URL https://link.aps.org/doi/10.1103/PhysRevB.92.205304. [55] Liu, G.-B., Shan, W.-Y., Yao, Y., Yao, W. & Xiao, D. Three-band tight-binding model for monolayers of group-vib transition metal dichalcogenides. Phys. Rev. B 
+
+88 , 085433 (2013). URL https://link.aps.org/doi/10.1103/PhysRevB.88.085433. [56] Wu, F., Qu, F. & MacDonald, A. H. Exciton band structure of monolayer MoS 2. Phys. Rev. B 91 , 075310 (2015). URL https://link.aps.org/doi/10.1103/ PhysRevB.91.075310. 25 [57] Keldysh, L. V. Coulomb interaction in thin semiconductor and semimetal films. 
+
+Soviet Journal of Experimental and Theoretical Physics Letters 29 , 658 (1979). [58] Cudazzo, P., Tokatly, I. V. & Rubio, A. Dielectric screening in two-dimensional insulators: Implications for excitonic and impurity states in graphane. Phys. Rev. B 84 , 085406 (2011). URL https://link.aps.org/doi/10.1103/PhysRevB.84. 085406. [59] Stier, A. V. and Wilson, N. P. and Velizhanin, K. A. and Kono, J. and Xu, X. and Crooker, S. A. Magnetooptics of Exciton Rydberg States in a Monolayer Semiconductor. Phys. Rev. Lett. 120 , 057405 (2018). URL https://link.aps.org/ doi/10.1103/PhysRevLett.120.057405. [60] H¨ user, Falco and Olsen, Thomas and Thygesen, Kristian S. How dielectric screening in two-dimensional crystals affects the convergence of excited-state calculations: Monolayer MoS 2. Phys. Rev. B 88 , 245309 (2013). URL https: //link.aps.org/doi/10.1103/PhysRevB.88.245309. [61] Ridolfi, E., Lewenkopf, C. H. & Pereira, V. M. Excitonic structure of the optical conductivity in MoS 2 monolayers. Phys. Rev. B 97 , 205409 (2018). URL https: //link.aps.org/doi/10.1103/PhysRevB.97.205409. [62] Li, X. et al. Intrinsic electrical transport properties of monolayer silicene and MoS 2 from first principles. Phys. Rev. B 87 , 115418 (2013). URL https://link. aps.org/doi/10.1103/PhysRevB.87.115418. 26

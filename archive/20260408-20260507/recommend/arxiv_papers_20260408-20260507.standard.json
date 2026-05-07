@@ -1,0 +1,757 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-07T03:58:49.929052+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 7,
+    "deep_cap": 6,
+    "deep_selected": 6,
+    "quick_candidates": 35,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2604.21283v1",
+      "source": "arxiv",
+      "title": "Electrically switchable vacancy state revealed by in-operando positron experiments",
+      "abstract": "Whether the flash state in electrically driven solids involves non-equilibrium defect production or is accounted for by Joule heating alone has been debated since 2010. Using positron annihilation spectroscopy on copper, we observe a fully reversible, electrically switchable vacancy population: the DBS S-parameter rises above baseline whenever applied current exceeds a critical density and returns on current removal. Positron lifetime spectroscopy independently confirms open-volume defect formation and reveals a void to cluster relaxation hierarchy. The current-induced vacancy concentration exceeds the thermal-equilibrium value at 352C by > 106x, is present only while current is applied, and vanishes within minutes. The nucleation rate scales steeply with the applied current, connecting the minute-scale kinetics resolved here to the sub-second flash events observed in ceramic sintering. These results demonstrate current-induced Frenkel-pair production in a metal and identify a defect-mediated, non-equilibrium contribution to the flash state.",
+      "authors": [
+        "Ric Fulop",
+        "Laurence Lyons",
+        "Robert Nick",
+        "Marc H. Weber",
+        "Ming Liu",
+        "Haig Atikian",
+        "Uwe Bauer",
+        "Alexander C. Barbati",
+        "Neil Gershenfeld"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-04-23T04:58:36+00:00",
+      "link": "https://arxiv.org/pdf/2604.21283v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.5,
+      "llm_evidence_en": "in-operando positron experiments on electrically driven solids",
+      "llm_evidence_cn": "电驱动固体的原位正电子实验",
+      "llm_evidence": "电驱动固体的原位正电子实验",
+      "canonical_evidence": "电驱动固体的原位正电子实验",
+      "llm_tldr_en": "Reveals electrically switchable vacancy states in copper using in-operando positron annihilation spectroscopy.",
+      "llm_tldr_cn": "利用原位正电子湮没谱揭示了铜中电可切换的空位状态。",
+      "llm_tldr": "利用原位正电子湮没谱揭示了铜中电可切换的空位状态。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.19519v1",
+      "source": "arxiv",
+      "title": "Operando Characterization of Volume Changes in Lithium-Ion Battery Electrodes during Cycling using Isotope Multilayers",
+      "abstract": "This study reports on advancements in operando characterization of volume changes in lithium-ion battery (LIB) electrode materials during electrochemical cycling. Volume changes are crucial for LIB operation because they are related to the amount of stored energy as well as LIB integrity, performance, and safety. The study introduces a method based on isotope multilayers as active material to track the intrinsic modification of electrode volume in real time under operating conditions with operando neutron reflectometry. A natGe-73Ge multilayer film is used as a model system to measure the volume change of amorphous germanium electrodes during charging and discharging. Isotope modulation produces a Bragg peak in the neutron reflectivity pattern, sensitive only to the modification of volume within the active material of the electrode. Battery side reactions, such as the growth and reduction of the solid-electrolyte interphase is excluded. Using this method, the volume modification as a function of Li content x in LixGe can easily be derived from the scattering vector position of the Bragg peak without fitting numerous complex reflectivity patterns. The experiments show a reversible volume change of amorphous germanium of up to 250 percent for x = 3, which appears to be largely independent of current density, cycle number, and the thickness of the individual Ge layers. Also, there are tentative indications that the crystallization and re-amorphization of LixGe are not influencing the volume change.",
+      "authors": [
+        "Erwin Hueger",
+        "Daniel Uxa",
+        "Lars Doerrer",
+        "Jochen Stahn",
+        "Harald Schmidt"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-21T14:40:40+00:00",
+      "link": "https://arxiv.org/pdf/2604.19519v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "operando characterization of volume changes in battery electrodes",
+      "llm_evidence_cn": "电池电极体积变化的原位表征",
+      "llm_evidence": "电池电极体积变化的原位表征",
+      "canonical_evidence": "电池电极体积变化的原位表征",
+      "llm_tldr_en": "Introduces operando neutron reflectometry to track real-time volume changes in lithium-ion battery electrodes.",
+      "llm_tldr_cn": "引入原位中子反射技术来实时追踪锂离子电池电极的体积变化。",
+      "llm_tldr": "引入原位中子反射技术来实时追踪锂离子电池电极的体积变化。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-04-09-717488-v1",
+      "source": "biorxiv",
+      "title": "Characterization of Nanoparticles in Suspension by Simultaneous iNTA and Fluorescence Detection with Single-Molecule Sensitivity",
+      "abstract": "Quantitative knowledge of nanoparticle properties is desirable in a large number of scientific and technological applications, but measurements with a high degree of precision usually prove to be challenging. Among a range of available methodologies, optical techniques with single particle sensitivity are especially interesting because they can reveal intrinsic hetero-geneities in a fast non-invasive manner. Recently, we presented interferometric nanoparticle tracking analysis (iNTA) as a highly sensitive label-free technique that is capable of determining the size, concentration and index of refraction of different subpopulations in a suspension mixture. Here, we enhance this method with biochemical specificity through multicolor fluorescence detection at the single-molecule sensitivity limit. We benchmark the performance of the combined technique, which we name iNTA-F, by distinguishing populations of fluorescent and non-fluorescent nanoparticles of different material, size, and fluorescence intensity, with an emphasis on the characterization of lipid vesicles and biological extracellular vesicles (EVs).",
+      "authors": [
+        "Jiang, S.",
+        "Kashkanova, A. D.",
+        "Lee, H.",
+        "Miller, M. E. C.",
+        "Utikal, T.",
+        "Shkarin, A.",
+        "Qazvini, H.",
+        "Sandoghdar, V."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-04-13T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.09.717488v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "interferometric nanoparticle tracking analysis (iNTA) for nanoparticle properties",
+      "llm_evidence_cn": "用于纳米颗粒性质的干涉纳米颗粒追踪分析 (iNTA)",
+      "llm_evidence": "用于纳米颗粒性质的干涉纳米颗粒追踪分析 (iNTA)",
+      "canonical_evidence": "用于纳米颗粒性质的干涉纳米颗粒追踪分析 (iNTA)",
+      "llm_tldr_en": "Enhances interferometric nanoparticle tracking with fluorescence for high-precision nanoparticle characterization.",
+      "llm_tldr_cn": "通过荧光增强干涉纳米颗粒追踪技术，实现高精度的纳米颗粒表征。",
+      "llm_tldr": "通过荧光增强干涉纳米颗粒追踪技术，实现高精度的纳米颗粒表征。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.13892v1",
+      "source": "arxiv",
+      "title": "Time-resolved SNOM via phase-domain sampling",
+      "abstract": "Time-resolved scanning near-field optical microscopy (tr-SNOM) enables the measurement of the dynamic optical response of functional surfaces beyond the diffraction limit. Experimental challenges are imposed both by the use of a pulsed light source, and by the need for interferometric signal modulation to isolate the near-field contribution. We present a novel experimental approach to retrieve the tr-SNOM signal using a 200 kHz laser system and pseudo-heterodyne modulation. We circumvent the Nyquist limit for spectral demodulation by sampling modulation phases, pump intensity and SNOM signal for every laser shot. A general time-resolved SNOM signal is derived, independent of detection scheme or physical assumptions about the near-field enhancement, and is successfully measured and isolated on WS$_2$ monolayer and multilayer regions. We confirm localization by signal-distance curves, spatial confinement at material boundaries, and by identifying signal contributions at individual modulation harmonics. Disentangling the dynamic contributions enables us to extract the dynamic dielectric function of the sample. Showing the capability of phase-domain sampling paves the way to integration of more diverse and specialized light sources, growing the potential of optical ultrafast near-field measurements.",
+      "authors": [
+        "Philipp Schwendke",
+        "Julia Stähler",
+        "Samuel Palato"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.other"
+      ],
+      "published": "2026-04-15T13:59:14+00:00",
+      "link": "https://arxiv.org/pdf/2604.13892v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "time-resolved near-field optical microscopy with interferometric modulation",
+      "llm_evidence_cn": "具有干涉调制的时空分辨近场光学显微镜",
+      "llm_evidence": "具有干涉调制的时空分辨近场光学显微镜",
+      "canonical_evidence": "具有干涉调制的时空分辨近场光学显微镜",
+      "llm_tldr_en": "A novel time-resolved SNOM approach using phase-domain sampling and interferometric signal modulation.",
+      "llm_tldr_cn": "一种利用相位域采样和干涉信号调制的时空分辨SNOM新方法。",
+      "llm_tldr": "一种利用相位域采样和干涉信号调制的时空分辨SNOM新方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.24240v1",
+      "source": "arxiv",
+      "title": "Nitrogen doping induced metal-insulator transition with iso-symmetric character in rutile VO2",
+      "abstract": "Metal-insulator transitions (MITs) in correlated oxides offer immense potential for next-generation Mottronic devices. However, their integration into practical applications is often hindered by the coupling of MITs with symmetry-lowering structural phase transitions, which limits switching speed and endurance. In this study, we engineered an iso-symmetric MIT on average in epitaxial rutile VO2 thin films via an in-situ nitrogen doping strategy. Nitrogen incorporation effectively suppresses V-V dimerization, enabling an iso-symmetric MIT, while preserving the original crystal symmetry. Furthermore, in-operando time-resolved optical reflectivity measurements revealed a shortened switching time in nitrogen-doped films, highlighting their enhanced performance. Our findings provide critical insights into the underlying mechanisms of MITs and introduce anion doping as a powerful tool for tailoring phase transitions in strongly correlated electron systems. This approach opens new avenues for the development of high-performance electronic and photonic devices.",
+      "authors": [
+        "Baichen Lin",
+        "Shanquan Chen",
+        "Yubo Zhang",
+        "Yangyang Si",
+        "Haoliang Huang",
+        "Chuanrui Huo",
+        "Frans Munnik",
+        "Yongqi Dong",
+        "Lu You",
+        "Jian Shao",
+        "Yu-Chieh Ku",
+        "Nguyen Nhat Quyen",
+        "Aryan Keshri",
+        "Zhenlin Luo",
+        "Weiwei Zhao",
+        "Chun-Fu Chang",
+        "Chih-Wei Luo",
+        "Sujit Das",
+        "Shiqing Deng",
+        "Chang-Yang Kuo",
+        "Zuhuang Chen"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-27T09:49:09+00:00",
+      "link": "https://arxiv.org/pdf/2604.24240v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "in-operando time-resolved optical reflectivity measurements of VO2",
+      "llm_evidence_cn": "VO2的原位时间分辨光学反射率测量",
+      "llm_evidence": "VO2的原位时间分辨光学反射率测量",
+      "canonical_evidence": "VO2的原位时间分辨光学反射率测量",
+      "llm_tldr_en": "Uses in-operando time-resolved optical reflectivity to study metal-insulator transitions in doped VO2.",
+      "llm_tldr_cn": "利用原位时间分辨光学反射率研究掺杂VO2中的金属-绝缘体转变。",
+      "llm_tldr": "利用原位时间分辨光学反射率研究掺杂VO2中的金属-绝缘体转变。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2604.19329v1",
+      "source": "arxiv",
+      "title": "Electrically steered conduction topologies and period-doubling phase dynamics in VO2",
+      "abstract": "The insulator-to-metal transition (IMT) in strongly correlated materials, such as vanadium dioxide (VO2), offers a transformative platform for next-generation adaptive electronics and neuromorphic computing. However, harnessing this non-equilibrium phase transition for deterministic device operation is fundamentally hindered by the inability to disentangle electric-field effects from Joule heating, owing to a lack of operando techniques capable of resolving phase dynamics at nanoscale spatial and sub-nanosecond temporal scales. Here, using a newly developed electrical-pulse-pump ultrafast transmission electron microscope (E-UTEM), we directly visualize the multi-scale electro-thermo-mechanical dynamics of the IMT in suspended VO2 devices. Our results reveal that electric-field-induced Poole-Frenkel (PF) emission, localized by patterned oxygen vacancies, plays a decisive role in redistributing the internal electric field to trigger a deterministic Mott transition. The extreme non-linearity of this PF effect enables the formation of dynamically reconfigurable connectivity topologies that bypass conventional thermal limits. Furthermore, we observe that the coupling of thermal and elastic energies governs a discrete domain evolution, characterized by step-wise and period-doubling configurational resets, which is a hallmark of non-equilibrium phase dynamics in constrained geometries. By integrating experimental imaging with phase-field simulations, we establish a comprehensive framework for the electrically-driven IMT and predict sub-100-ps switching kinetics. These findings provide a fundamental basis for the rational design of ultrafast, low-energy functional devices through nanoscale defect and strain engineering in correlated systems.",
+      "authors": [
+        "Siyuan Huang",
+        "Shuaishuai Sun",
+        "Yin Shi",
+        "Wentao Wang",
+        "Chunhui Zhu",
+        "Huanfang Tian",
+        "Huaixin Yang",
+        "Jun Li",
+        "Jianqi Li"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-21T10:57:07+00:00",
+      "link": "https://arxiv.org/pdf/2604.19329v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "operando techniques for resolving phase dynamics at nanoscale and sub-nanosecond scales",
+      "llm_evidence_cn": "用于在纳米和亚纳秒尺度上解析相位动力学的原位技术",
+      "llm_evidence": "用于在纳米和亚纳秒尺度上解析相位动力学的原位技术",
+      "canonical_evidence": "用于在纳米和亚纳秒尺度上解析相位动力学的原位技术",
+      "llm_tldr_en": "Visualizes electro-thermo-mechanical dynamics in VO2 using operando ultrafast transmission electron microscopy.",
+      "llm_tldr_cn": "利用原位超快透射电子显微镜可视化了二氧化钒器件中的电-热-力学动力学。",
+      "llm_tldr": "利用原位超快透射电子显微镜可视化了二氧化钒器件中的电-热-力学动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.01982v1",
+      "source": "arxiv",
+      "title": "Deep Speckle Holography Redefines Label-free Nanoparticle Phenotyping",
+      "abstract": "Nanoparticle metrology has long been constrained by the assumption that, in mixed and unprocessed fluids, particle size, morphology, composition, and species-specific abundance cannot be resolved simultaneously from a single label-free measurement. Here, we revisit this long-standing limitation by showing that complex forward speckle-holographic fields define an information-rich optical space for multidimensional particle signatures. We report deep speckle holography, a physics-informed generative framework that profiles particle identity, size, morphology, and species-resolved abundance from a single non-contact optical measurement. Across purified suspensions, mixed particle populations, environmental waters, human urine, and other unprocessed native fluids, the method enables direct nanoparticle inference without purification, labeling, or destructive preprocessing, delivering concurrent multidimensional readouts in 0.9 s over a dynamic range spanning 10 orders of magnitude. Deep speckle holography establishes a route toward direct label-free nanoparticle phenotyping in real-world fluids, moving nanoscale measurement beyond isolated-particle characterization toward multidimensional inference in complex mixtures, and expanding the scope of questions nanoscale measurement can address, from real-time tracking of nanoparticle transformations in living and environmental systems to non-invasive quality control of nanomedicine formulations, and beyond.",
+      "authors": [
+        "Yanmin Zhu",
+        "Yuxing Li",
+        "Jingyan Chen",
+        "Derek Yuen-Wa Ho",
+        "Chutian Wang",
+        "Yuzhe Zhang",
+        "Xue-Qi Wang",
+        "Bo Lu",
+        "James Kar-Hei Fang",
+        "Francis Chi Chung Ling",
+        "Loza F. Tadesse",
+        "Edmund Y. Lam"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV"
+      ],
+      "published": "2026-05-03T17:31:00+00:00",
+      "link": "https://arxiv.org/pdf/2605.01982v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "label-free nanoparticle phenotyping using speckle holography",
+      "llm_evidence_cn": "利用散斑全息术进行无标记纳米颗粒表型分析",
+      "llm_evidence": "利用散斑全息术进行无标记纳米颗粒表型分析",
+      "canonical_evidence": "利用散斑全息术进行无标记纳米颗粒表型分析",
+      "llm_tldr_en": "Uses deep speckle holography for label-free profiling of nanoparticle size, morphology, and identity.",
+      "llm_tldr_cn": "利用深度散斑全息术对纳米颗粒的大小、形态和身份进行无标记分析。",
+      "llm_tldr": "利用深度散斑全息术对纳米颗粒的大小、形态和身份进行无标记分析。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "8plus"
+    },
+    {
+      "id": "2604.06897v1",
+      "source": "arxiv",
+      "title": "Excitonic Mott transition without population inversion",
+      "abstract": "Exciton dissociation via the excitonic Mott transition (EMT) governs the high-density optical response of semiconductors and sets fundamental limits for optoelectronic devices. The EMT is conventionally linked to the onset of population inversion and the emergence of optical gain. Here, we demonstrate that this paradigm can break down under ultrafast non-equilibrium excitation. Using femtosecond pump-probe optical spectroscopy, we drive a monolayer transition metal dichalcogenide into a dense photoexcited state in which the excitonic resonance is completely quenched within ~100 fs, while the optical gain is entirely absent across the explored fluence range. State-of-the-art real-time ab initio simulations reveal that the EMT is governed by an interplay of strongly nonthermal carrier populations and nonequilibrium dynamical screening of the Coulomb interaction. The quantitative agreement between theory and experiment identifies a distinct, ultrafast pathway to exciton ionization beyond quasi-equilibrium descriptions and demonstrates that population inversion is not a universal prerequisite for the EMT.",
+      "authors": [
+        "Oleg Dogadov",
+        "Armando Genco",
+        "Allison R. Cadore",
+        "James A. Kerfoot",
+        "Evgeny M. Alexeev",
+        "Osman Balci",
+        "Chiara Trovatello",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Seth Ariel Tongay",
+        "Andrea C. Ferrari",
+        "Giulio Cerullo",
+        "Stefano Dal Conte",
+        "Gianluca Stefanucci",
+        "Enrico Perfetto"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-04-08T09:56:14+00:00",
+      "link": "https://arxiv.org/pdf/2604.06897v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "femtosecond pump-probe optical spectroscopy for ultrafast dynamics",
+      "llm_evidence_cn": "用于超快动力学的飞秒泵浦-探测光谱学",
+      "llm_evidence": "用于超快动力学的飞秒泵浦-探测光谱学",
+      "canonical_evidence": "用于超快动力学的飞秒泵浦-探测光谱学",
+      "llm_tldr_en": "Investigates ultrafast excitonic Mott transitions in TMDs using time-resolved pump-probe spectroscopy.",
+      "llm_tldr_cn": "利用时间分辨泵浦-探测光谱研究过渡金属硫化物中的超快激子莫特转变。",
+      "llm_tldr": "利用时间分辨泵浦-探测光谱研究过渡金属硫化物中的超快激子莫特转变。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.09851v1",
+      "source": "arxiv",
+      "title": "Interference Limited Absorption in Dense Molecular Nanolayers Near Reflecting Surfaces",
+      "abstract": "We investigate linear resonant absorption by a dense ensemble of molecules confined to a subwavelength layer in two geometries: (i) a free-standing film in homogeneous space and (ii) the same film placed at a controlled distance from a reflecting surface. In both cases, increasing the effective light-matter coupling (via molecular density/oscillator strength) produces a non-monotonic response: absorption rises to an optimum and then decreases as the film becomes increasingly radiatively bright and reflective. Finite-difference time-domain simulations and analytical transfer-matrix calculations agree quantitatively and yield compact ridge conditions for the optimum. We interpret the trends using a scattering/port picture: the isolated film is a symmetric two-port system (reflection and transmission), which bounds single-sided resonant absorption to 50% in the ultrathin limit (reflecting transition saturation), whereas adding a mirror suppresses transmission and converts the structure into an effectively one-port absorber. In the mirror-backed geometry, interference can cancel reflection and unity absorption is obtained at critical coupling, when radiative leakage is balanced by intrinsic molecular loss. These results clarify fundamental limits and design rules for collective absorption in dense molecular layers near dielectric or metallic boundaries.",
+      "authors": [
+        "Zeyu Zhou",
+        "Maxim Sukharev",
+        "Abraham Nitzan",
+        "Joseph E. Subotnik"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.chem-ph"
+      ],
+      "published": "2026-04-10T19:26:44+00:00",
+      "link": "https://arxiv.org/pdf/2604.09851v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "interference limited absorption and scattering in nanolayers",
+      "llm_evidence_cn": "纳米层中的干涉受限吸收与散射",
+      "llm_evidence": "纳米层中的干涉受限吸收与散射",
+      "canonical_evidence": "纳米层中的干涉受限吸收与散射",
+      "llm_tldr_en": "Analyzes resonant absorption and scattering in molecular nanolayers near reflecting surfaces using interference.",
+      "llm_tldr_cn": "利用干涉原理分析了反射表面附近分子纳米层的共振吸收与散射。",
+      "llm_tldr": "利用干涉原理分析了反射表面附近分子纳米层的共振吸收与散射。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.01141v1",
+      "source": "arxiv",
+      "title": "Tracking thermal transport in colloidal quantum dot films using in-situ time-resolved X-ray diffraction",
+      "abstract": "Colloidal quantum dots (QDs) and their thin-films are increasingly used in electronic and photonic devices replacing traditional bulk semiconductors. However, thermal properties of the QDs are comparatively underexplored relative to device development efforts. This study shows the use of time-resolved X-ray diffraction as a contact-free method to probe the thermal response of QDs in device-like environments, providing in-situ insights for future thermal management strategies. Through the extraction of Debye-Waller Factors on a sub-nanosecond timescale, we use time-resolved X-ray diffraction to directly capture the heating and cooling of core/shell CdSe/CdS QDs following pulsed optical excitation. In a QD thin-film that actively provides optical gain, the thermal conductivity is found to be as low as 0.55 $\\mathrm{W\\,m^{-1}\\,K^{-1}}$, because of the poor heat flow within close-packed QD solids. For QDs dispersed in liquids, interfacial thermal conductance is found to dominate the thermal relaxation with a conductance on the order of 15 $\\mathrm{MW\\,m^{-2}\\,K^{-1}}$.",
+      "authors": [
+        "Eliza Wieman",
+        "Nejc Nagelj",
+        "Ethan Curling",
+        "Larry Chen",
+        "Jin Yu",
+        "A. Paul Alivisatos",
+        "Aaron Lindenberg",
+        "Benjamin T. Diroll",
+        "Jacob H. Olshansky",
+        "Jihong Ma",
+        "Burak Guzelturk",
+        "Benjamin L. Cotts"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-01T22:33:57+00:00",
+      "link": "https://arxiv.org/pdf/2605.01141v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "in-situ time-resolved X-ray diffraction for thermal transport in quantum dots",
+      "llm_evidence_cn": "原位时间分辨X射线衍射用于量子点热传输研究",
+      "llm_evidence": "原位时间分辨X射线衍射用于量子点热传输研究",
+      "canonical_evidence": "原位时间分辨X射线衍射用于量子点热传输研究",
+      "llm_tldr_en": "Uses time-resolved X-ray diffraction to track thermal transport in colloidal quantum dot films in-situ.",
+      "llm_tldr_cn": "利用时间分辨X射线衍射原位追踪胶体量子点薄膜中的热传输过程。",
+      "llm_tldr": "利用时间分辨X射线衍射原位追踪胶体量子点薄膜中的热传输过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.24168v1",
+      "source": "arxiv",
+      "title": "Sub-acoustic resolution photoacoustic imaging through scattering layers using speckle correlations",
+      "abstract": "Optical scattering presents a major obstacle to high resolution imaging in biological tissue and other turbid media. Conventional photoacoustic imaging can partially overcome this obstacle, enabling imaging of optical absorption in the multiple-scattering regime, but its resolution remains limited by acoustic diffraction. In this work we explore a strategy to overcome this limit by exploiting correlations in the illumination patterns produced by coherent scattered light. Combining controlled speckle translations with photoacoustic signal detection, this method enables the recovery of optical resolution images within acoustically selected regions, while overcoming the strict decorrelation range limitations of other speckle correlation techniques. In proof-of-concept experiments, we demonstrate imaging of objects hidden behind an opaque diffuser at sub-acoustic diffraction limited (<11um) resolution, over a >5mm^2 field of view much larger than the effective speckle decorrelation range. These results suggest that speckle correlation based photoacoustic imaging may offer a route to high resolution imaging of optical absorption under scattering conditions where conventional optical or photoacoustic techniques are fundamentally limited.",
+      "authors": [
+        "Benjamin Keenlyside",
+        "Arnon A. B.",
+        "Dylan Marques",
+        "Ivo Vellekoop",
+        "James Guggenheim"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-04-27T08:23:57+00:00",
+      "link": "https://arxiv.org/pdf/2604.24168v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "imaging through scattering layers using speckle correlations",
+      "llm_evidence_cn": "利用散斑相关性穿过散射层成像",
+      "llm_evidence": "利用散斑相关性穿过散射层成像",
+      "canonical_evidence": "利用散斑相关性穿过散射层成像",
+      "llm_tldr_en": "Explores sub-acoustic resolution photoacoustic imaging through scattering layers using coherent light correlations.",
+      "llm_tldr_cn": "探索利用相干光相关性穿过散射层实现亚声学分辨率的光声成像。",
+      "llm_tldr": "探索利用相干光相关性穿过散射层实现亚声学分辨率的光声成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.01472v1",
+      "source": "arxiv",
+      "title": "Label-Free Microrefractometry of Interfacial Processes Using Fluorescent Smart Coverslips",
+      "abstract": "Molecular dipoles near interfaces emit highly directional radiation due to near-field interactions, making surface-bound fluorophores sensitive probes of local physicochemical changes. We introduce smart coverslips, stably coated with uniform, brightly fluorescent nanobead films, that exploit refractive-index-dependent emission shifts for sensitive micro-refractometry in small volumes. Supercritical-angle fluorescence refractometry uses single back-focal-plane images to allow us real-time RI sensing and nanometric thin-film height measurements without the need for multi-angle or multi-wavelength acquisition. Our fast, label-free, and non-invasive approach allows measurements of thin-film properties and monitoring of interfacial dynamics on a standard inverted microscope and is broadly applicable to nanobiophotonics, chemical sensing, and in-situ materials analysis.",
+      "authors": [
+        "Hodaya Klimovsky",
+        "Amitay Ginsberg",
+        "Dmytro Ohorodniichuk",
+        "Maria Shehadeh",
+        "Ilya Olevsko",
+        "Gerardo Byk",
+        "Martin Oheim",
+        "Adi Salomon"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "q-bio.QM"
+      ],
+      "published": "2026-05-02T14:40:38+00:00",
+      "link": "https://arxiv.org/pdf/2605.01472v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "label-free microrefractometry of interfacial processes and thin-film properties",
+      "llm_evidence_cn": "界面过程和薄膜特性的无标记微折射测量",
+      "llm_evidence": "界面过程和薄膜特性的无标记微折射测量",
+      "canonical_evidence": "界面过程和薄膜特性的无标记微折射测量",
+      "llm_tldr_en": "Introduces a label-free method for real-time sensing of interfacial dynamics and thin-film properties.",
+      "llm_tldr_cn": "介绍了一种用于实时感知界面动力学和薄膜特性的无标记方法。",
+      "llm_tldr": "介绍了一种用于实时感知界面动力学和薄膜特性的无标记方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.26718v2",
+      "source": "arxiv",
+      "title": "Tracking visible pulsed laser annealing of Hf$_{0.5}$Zr$_{0.5}$O$_2$ heterostructures with in situ transmission electron microscopy",
+      "abstract": "Laser annealing offers a promising route to back end of the line fabrication of ferroelectric thin film transistors based on hafnium-zirconium oxide (HZO). Due to the wide band gap of this material, previous reports have studied the crystallization of HZO using ultraviolet or infrared light. In contrast, we monitor its crystallization in a Si$_3$N$_4$/TiN/Hf$_{0.5}$Zr$_{0.5}$O$_2$ thin film heterostructure upon irradiation with visible nanosecond laser pulses. This geometry mimics the structure of CMOS devices and harnesses the absorption of TiN in the visible regime to generate the heat necessary for the transformation. Through a series of local in situ measurements using a modified transmission electron microscope, we quantify the relationship between the HZO film thickness, critical laser energy density and the ferroelectric HZO phase fraction, finding a sharp threshold behavior in the laser pulse energy necessary to crystallize HZO. The optimal condition of irradiating an 8-nm HZO film with a single laser pulse with an energy density of 177 mJ/cm$^2$ is found to produce 86% of the ferroelectric orthorhombic phase. Heat transfer dynamics within the heterostructure during laser annealing are revealed by finite element simulations, where the partial melting of the silicon nitride substrate is found to play an important role limiting the temperature to 1900 °C. This finding as well as the observed laser pulse energy threshold behavior support a kinetic crystallization pathway involving the tetragonal phase. More generally, these findings show how laser-driven phase engineering can lead to scalable design and enhanced performance of ferroelectric materials in advanced electronic applications.",
+      "authors": [
+        "Aida Amini",
+        "Shruti Verma",
+        "Katharina Kohlmann",
+        "Sebastian Obernberger",
+        "Jean-Christof Lamanque",
+        "Andreas Rüdiger",
+        "Kenneth R. Beyerlein"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-04-29T14:22:49+00:00",
+      "link": "https://arxiv.org/pdf/2604.26718v2",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "in situ monitoring of crystallization during laser annealing",
+      "llm_evidence_cn": "激光退火过程中结晶的原位监测",
+      "llm_evidence": "激光退火过程中结晶的原位监测",
+      "canonical_evidence": "激光退火过程中结晶的原位监测",
+      "llm_tldr_en": "Uses in situ TEM to track crystallization in HZO heterostructures during visible pulsed laser annealing.",
+      "llm_tldr_cn": "利用原位透射电镜跟踪可见脉冲激光退火过程中 HZO 异质结构的结晶过程。",
+      "llm_tldr": "利用原位透射电镜跟踪可见脉冲激光退火过程中 HZO 异质结构的结晶过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.11361v1",
+      "source": "arxiv",
+      "title": "Ultrafast ghost Hall states in a 2d altermagnet",
+      "abstract": "Two-dimensional materials that exhibit optically active spin and valley degrees of freedom represent one of the most fascinating -- and potentially most technologically useful -- platforms for the ultrafast interaction of light and matter. Here we show, via the example of Cr$_2$SO, that two dimensional altermagnets host valley states controllable by femtosecond laser light: linearly polarized light pulses excite charge at one of two inequivalent valleys, with which valley charge is excited at determined by the polarization vector direction. This underpins a rich spin and valley physics including: (i) valleytronics $-$ the generation of nearly 100$\\%$ spin polarized valley currents, as well as (ii) a \"ghost Hall\" effect $-$ the ultrafast creation of states in which spin and charge currents are orthogonal without invoking Hall physics. Our findings establish 2d altermagents as a platform providing a new route for the control of spin- and charge currents at ultrafast times.",
+      "authors": [
+        "Ruikai Wu",
+        "Deepika Gill",
+        "Sangeeta Sharma",
+        "Sam Shallcross"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci",
+        "cond-mat.other",
+        "physics.comp-ph",
+        "quant-ph"
+      ],
+      "published": "2026-04-13T12:01:57+00:00",
+      "link": "https://arxiv.org/pdf/2604.11361v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast interaction of light and matter in 2D materials",
+      "llm_evidence_cn": "二维材料中光与物质的超快相互作用",
+      "llm_evidence": "二维材料中光与物质的超快相互作用",
+      "canonical_evidence": "二维材料中光与物质的超快相互作用",
+      "llm_tldr_en": "Demonstrates ultrafast control of valley states in 2D altermagnets using femtosecond laser pulses.",
+      "llm_tldr_cn": "演示了利用飞秒激光脉冲对二维交错磁体中谷态的超快控制。",
+      "llm_tldr": "演示了利用飞秒激光脉冲对二维交错磁体中谷态的超快控制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.16611v1",
+      "source": "arxiv",
+      "title": "Ultrafast Magneto-Pressure Spectroscopy and Control of Correlated Phases in a Trilayer Nickelate",
+      "abstract": "Ultrafast spectroscopy under simultaneous high pressure and magnetic field provides a versatile approach for investigating pressure-driven electronic instabilities and correlated phases, and for probing potential bulk superconducting behavior under extreme conditions. However, such an experimental platform has yet to be implemented, standing as a roadblock to a fuller understanding of nonequilibrium superconductivity and vortex-controlled quasi-particle (QP) dynamics.   Here, we bridge this capability gap by developing high pressure (up to 40 GPa), high magnetic field (up to 7 T), cryogenic (down to 5 K) femtosecond spectroscopy, and using it to probe magneto-pressure evolution of quasiparticle dynamics in the trilayer nickelate $\\mathrm{Pr}_4\\mathrm{Ni}_3\\mathrm{O}_{10}$.   We observe pronounced critical slowing down of QP relaxation at the charge-density-wave transition, which collapses under applied pressure. At higher pressures, the relaxation instead lengthens at low temperature, consistent with incipient superconducting correlations.   However, the negligibel magnetic-field-dependence up to 7~T and absence of vortex-induced pre-bottleneck dynamics--robust signatures observed in our controlled bulk superconducting samples--indicates that any superconducting state under the present pressure conditions is likely non-bulk, filamentary, or strongly inhomogeneous.   The magneto-pressure ultrafast capability opens a new avenue for resolving outstanding questions surrounding pressure-induced superconductivity and intertwined orders in correlated quantum materials.",
+      "authors": [
+        "Zhi Xiang Chong",
+        "Joong-Mok Park",
+        "Shuyuan Huyan",
+        "Avinash Khatri",
+        "Martin Mootz",
+        "Xinglong Chen",
+        "Daniel P. Phelan",
+        "Liang Luo",
+        "Ilias E. Perakis",
+        "J. F. Mitchell",
+        "Sergey L. Bud'ko",
+        "Paul C. Canfield",
+        "Jigang Wang"
+      ],
+      "primary_category": "cond-mat.supr-con",
+      "categories": [
+        "cond-mat.supr-con",
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el"
+      ],
+      "published": "2026-04-17T18:07:01+00:00",
+      "link": "https://arxiv.org/pdf/2604.16611v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast femtosecond spectroscopy for quasiparticle dynamics",
+      "llm_evidence_cn": "用于准粒子动力学的超快飞秒光谱学",
+      "llm_evidence": "用于准粒子动力学的超快飞秒光谱学",
+      "canonical_evidence": "用于准粒子动力学的超快飞秒光谱学",
+      "llm_tldr_en": "Develops ultrafast magneto-pressure spectroscopy to probe quasiparticle dynamics in correlated nickelates.",
+      "llm_tldr_cn": "开发了超快磁压光谱技术，用于探测关联镍氧化物中的准粒子动力学。",
+      "llm_tldr": "开发了超快磁压光谱技术，用于探测关联镍氧化物中的准粒子动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.17916v1",
+      "source": "arxiv",
+      "title": "Type-II-like ultrafast demagnetization behavior in NiCo2O4 thin films",
+      "abstract": "Rare-earth-ferrimagnetic oxides are emerging as attractive platforms for investigating ultrafast spin dynamics. Here, we study the photoinduced magnetization dynamics of epitaxial NiCo2O4 (NCO) thin films by time-resolved magneto-optical Faraday effect using two independent pump-probe configurations: 1030/515 nm and 800/400 nm. In both measurements, photoexcitation induces an immediate reduction of the magneto-optical signal within the experimental time resolution, followed by a reproducible slower demagnetization component with a characteristic timescale of approximately 5-6 ps and a subsequent recovery on the ~100 ps timescale. Importantly, this picosecond demagnetization component is observed consistently across the two experimental configurations and excitation wavelengths, demonstrating that it is an intrinsic feature of the ultrafast magnetic response of NCO thin films. Because the earliest-time dip may contain a transient optical contribution, we describe the overall response as type-II-like, rather than assigning a definitive textbook type-II classification solely on the basis of the sub-resolution signal. These results establish a robust two-step ultrafast demagnetization behavior in NCO and highlight rare-earth-free oxide ferrimagnets as promising systems for exploring Mult sublattice spin dynamics on ultrafast timescales.",
+      "authors": [
+        "Ryunosuke Takahashi",
+        "Kaede Yamada",
+        "Harjinder Singh",
+        "Kanata Watanabe",
+        "Junta Igarashi",
+        "Julius Hohlfeld",
+        "Jon Gorchon",
+        "Gregory Malinowski",
+        "Daisuke Kan",
+        "Yuichi Shimakawa",
+        "Takayuki Ishibashi",
+        "Stephane Mangin",
+        "Hiroki Wadati"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-20T07:50:50+00:00",
+      "link": "https://arxiv.org/pdf/2604.17916v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved magneto-optical Faraday effect for spin dynamics",
+      "llm_evidence_cn": "用于自旋动力学的时间分辨磁光法拉第效应",
+      "llm_evidence": "用于自旋动力学的时间分辨磁光法拉第效应",
+      "canonical_evidence": "用于自旋动力学的时间分辨磁光法拉第效应",
+      "llm_tldr_en": "Studies ultrafast demagnetization in NiCo2O4 thin films using time-resolved magneto-optical techniques.",
+      "llm_tldr_cn": "利用时间分辨磁光技术研究了NiCo2O4薄膜中的超快退磁行为。",
+      "llm_tldr": "利用时间分辨磁光技术研究了NiCo2O4薄膜中的超快退磁行为。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.18817v1",
+      "source": "arxiv",
+      "title": "Nonuniform Iterative Phasing Framework and Sampling Requirements for 3D Dynamical Inversion from Coherent Surface Scattering Imaging",
+      "abstract": "Coherent surface scattering imaging (CSSI) is an emerging experimental technique uniquely suited to probing the structure of thin nanostructures. In these experiments, a specimen is placed on a substrate, and a series of X-ray diffraction patterns is collected at grazing incidence angles as the specimen is rotated. However, reconstructing the specimen's 3D structure from the data is challenging due to dynamical scattering effects induced by the experimental geometry and the lack of direct phase measurements. Specifically, the data involves nonuniformly sampled Fourier-transform values of the specimen density, and failure to effectively address this nonuniformity can lead to errors or degraded performance. Here we introduce a mathematical inversion framework that combines iterative-projection-based phasing techniques with new fast nonuniform Fourier inversion methods to efficiently reconstruct isolated 3D structures from their CSSI rotation-series data. We also analyze the theoretical properties of CSSI reconstruction to derive requirements on experimental parameters and characterize solution uniqueness. We validate our approach using CSSI data simulated from a conical Siemens star and a porous medium, demonstrating that high-resolution 3D structures can be reconstructed even in the presence of significant dynamical scattering, from data collected at as few as one or two incident angles. More broadly, the presented nonuniform reconstruction framework provides a foundation for solving challenging generalizations of the phase problem in which measurements involve nonlinear combinations of nonuniformly sampled Fourier values.",
+      "authors": [
+        "Jeffrey J. Donatelli",
+        "Miaoqi Chu",
+        "Zixi Hu",
+        "Zhang Jiang",
+        "Nicholas Schwarz",
+        "Jin Wang",
+        "James A. Sethian"
+      ],
+      "primary_category": "physics.comp-ph",
+      "categories": [
+        "physics.comp-ph",
+        "math.NA"
+      ],
+      "published": "2026-04-20T20:36:47+00:00",
+      "link": "https://arxiv.org/pdf/2604.18817v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "probing the structure of thin nanostructures using scattering imaging",
+      "llm_evidence_cn": "利用散射成像探测薄纳米结构的结构",
+      "llm_evidence": "利用散射成像探测薄纳米结构的结构",
+      "canonical_evidence": "利用散射成像探测薄纳米结构的结构",
+      "llm_tldr_en": "Develops a phasing framework for 3D reconstruction from coherent surface scattering imaging.",
+      "llm_tldr_cn": "开发了一种用于相干表面散射成像3D重建的相位恢复框架。",
+      "llm_tldr": "开发了一种用于相干表面散射成像3D重建的相位恢复框架。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
