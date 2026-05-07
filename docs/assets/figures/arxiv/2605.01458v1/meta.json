@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.01458v1/fig-001.webp",
+      "caption": "FIG. 1. Atomistic view of CTAB surface phases. (a–c) Schematic representations of CTAB surface phases on silica according to Kadirov et al. [20], shown in order of increasing concentration: bilayer (I), hemispherically capped bilayer (II), and cylindrical micelles (III). (d–f) Corresponding atomistic MD snapshots illustrating the molecular organization of each phase at the solid–liquid interface. (g–i) Spatial distribution of water for the same structures. Water is shown as individual atoms (left) and as a density isosurface (right), illustrating the pronounced differences in interfacial hydration and water accessibility between phases. These variations in local water content give rise to distinct effective dielectric environments within the optical near field. The blue isosurfaces were generated using OVITO [21]. The length scale is indicated by the scale bars in (f,g).",
+      "page": 2,
+      "index": 1,
+      "width": 1037,
+      "height": 490
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01458v1/fig-002.webp",
+      "caption": "FIG. 2. Continuum representations of the CTAB surface phases used in the FDTD simulations. (a) Bilayer phase (I), (b) hemispherically capped bilayer phase (II), and (c) cylindrical micelle phase (III). The interfacial region is represented as layers parallel to the surface. Pure CTAB layers (f = 0) and bulk water (f = 1) are assigned their respective permittivities, while mixed layers are described by an effective permittivity εeff obtained from the layer-resolved water volume fraction f according to Eq. (1). In phase I, the layer adjacent to silica consists of pure CTAB; in phase II, an additional mixed layer represents the caps; and in phase III, a mixed layer is present directly at the surface due to water-accessible channels.",
+      "page": 3,
+      "index": 2,
+      "width": 1053,
+      "height": 228
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01458v1/fig-003.webp",
+      "caption": "FIG. 3. Simulated plasmonic response and FDTD sensitivity analysis. (a) Schematic extinction spectrum (top) illustrating the sensing principle. The peak shift is defined as ∆λ = λpeak − λref, where λref is the extinction peak position of a water-only reference surface (bottom). (b) Predicted LSPR peak shifts ∆λ obtained from the FDTD simulations of the continuum geometries for the bilayer (I), hemispherically capped bilayer (II), and cylindrical micelle (III) phases. The colored violin plots indicate the probability distributions obtained from MD simulations of (I) bilayer height h, (II) water volume fraction f in the mixed cap layer, and (III) water volume fraction f in the cylindrical phase. The dashed lines indicate the 25% and 75% quantiles. The black dots mark the peak shifts for the respective most likely configurations, while the triangles indicate the range of values tested in the FDTD simulations. (c) Parameter sweeps performed in the FDTD simulations to assess the sensitivity of ∆λ to (I) bilayer height h, (II) water volume fraction f in the mixed cap layer, and (III) water volume fraction f in the cylindrical phase. The circles and triangles refer to the respective data points in (b) and the dashed lines correspond to the 25% and 75% quantiles of the probabiliy distributions in (b). Increasing the layer height increases ∆λ, whereas increasing water fraction decreases ∆λ. The opposing trends for thickness and hydration explain the sign change in peak shift between phases II and III.",
+      "page": 4,
+      "index": 3,
+      "width": 1054,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01458v1/fig-004.webp",
+      "caption": "FIG. 4. Operating principle and experimental plasmonic response to interfacial CTAB-on-silica phases, with extracted apparent rate constants. (a) Schematic view of the localized surface plasmon resonance (LSPR) sensor. (b) Representative extinction spectra, illustrating how changes in the interfacial dielectric environment shift the plasmonic peak. (c) Measured ∆λ(t) (solid black line) during stepwise changes of CTAB concentration (dashed green line), showing relaxation to a plateau after each step. These plateaus are in quantitative agreement with the simulated steady-state peak shifts (black dots) from Fig. 3. Notably, increasing the concentration from 0.7mM to 1.2mM decreases ∆λ, consistent with a transition from an impermeable phase (II) to a permeable, channel-containing phase (III). Apparent rate constants kapp = 1/τ for the CTAB surface-phase transitions are obtained from exponential relaxations of the LSPR response (dotted gray lines mark singleexponential fits). The transition from the water-only reference surface to the bilayer phase (I) is the slowest, whereas the I→II transition (bilayer to capped bilayer) is the fastest.",
+      "page": 5,
+      "index": 4,
+      "width": 1054,
+      "height": 397
+    }
+  ]
+}

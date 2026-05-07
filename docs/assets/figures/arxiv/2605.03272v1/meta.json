@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.03272v1/fig-001.webp",
+      "caption": "FIG. 1. Concept of acoustic modulation of second-harmonic generation and basic characterization in monolayer TMDCs. (a) Conceptual illustration of a monolayer TMDC integrated with a SAW device. (b) Schematic of a polarization-resolved SH measurement under SAW excitation. The inset indicates the definition of the crystal orientation. AC: armchair; ZZ: zigzag. (c) Optical micrographs of a fabricated device with a transferred monolayer WSe2. (d) Optical spectra of the fundamental pump and the generated SH signal. (e) Pump power dependence of the SH intensity, showing a quadratic behavior characteristic of SHG. (f) Polarization-resolved SH intensity (flower pattern) used to determine the crystal orientation of the monolayer TMDC.",
+      "page": 3,
+      "index": 1,
+      "width": 1004,
+      "height": 511
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03272v1/fig-002.webp",
+      "caption": "FIG. 2. Experimental setup and phase-synchronized SHG microscopy and acoustic modulation driven by surface acoustic waves. (a) Experimental setup. A 1560 nm femtosecond pulse laser is used as the excitation source, and polarization-resolved SH microscopy is performed under phase synchronization between the pulse repetition rate and the SAW frequency. A stabilized Michelson interferometer is implemented for surface displacement measurements. (B)PD, (balanced-)photodetector; PBS, polarizing beam splitter; BS, beam splitter; ND, neutral density filter; DM, dichroic mirror; OL, objective lens; BPF, band-pass filter; MMF, multimode fiber; SPAD, single-photon avalanche detector; Counter, time-tagger; DDS, direct digital synthesizer; SG, signal generator; LIA, lock-in amplifier; eLPF, electrical low-pass filter; HVA, high-voltage amplifier. (b) Polarizationresolved mapping of the normalized SH intensity as a function of the RF phase in a monolayer WSe2. (c) Acoustically modulated SH intensity for three representative AC directions. (d) Polarization-resolved SH flower patterns at three different RF phases, corresponding to the maximum, median, and minimum SH intensities. (e) Simulated flower patterns under different uniaxial strain amplitudes reproducing the experimental observations.",
+      "page": 4,
+      "index": 2,
+      "width": 1002,
+      "height": 533
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03272v1/fig-003.webp",
+      "caption": "FIG. 4. Phase-dependent SHG response and quantitative estimation of SAW-induced dynamic strain. (a,b) Extracted A/χ (2) 0 and B/χ (2) 0 , plotted as functions of the RF phase together with the measured SAW surface displacement, for monolayer WSe2 and MoSe2. The solid lines represent sinusoidal fits to the experimental data (circles). The valley and apex of the SAW displacement correspond to maximized compressive and tensile strain, respectively. (c) Estimated dynamic strain extracted independently from the A/χ (2) 0 and B/χ (2) 0 coefficients for four representative TMDC monolayers.",
+      "page": 5,
+      "index": 3,
+      "width": 920,
+      "height": 377
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03272v1/fig-004.webp",
+      "caption": "FIG. 3. Photoelastic coefficient estimation under static strain. (a) Polarization-resolved SHG intensity normalized to the value at δ = 66◦ in monolayer WSe2. Tensile strain is applied along the horizontal direction. (b) Normalized integrated SH intensity as a function of the applied tensile strain, showing distinct strain-dependent trends for monolayer WSe2 and MoSe2. (c) Spatial mapping of the SH intensity at different applied strain levels for monolayer WSe2. The scale bar is 2 µm. (d,e) Strain dependence of A/χ (2) 0 and B/χ (2) 0 for monolayer WSe2 and MoSe2, respectively, plotted using the effective (calibrated) strain.",
+      "page": 5,
+      "index": 4,
+      "width": 1004,
+      "height": 530
+    }
+  ]
+}

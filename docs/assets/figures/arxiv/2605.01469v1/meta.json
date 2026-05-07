@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.01469v1/fig-001.webp",
+      "caption": "Figure 2. Finite-element eigenmodes and corresponding slope distributions. (a)-(f) shows the displacement profile 𝜙(𝑢) and the corresponding spatial derivative 𝜙′(𝑢) of the first six bending modes. The modes separate into mirror-symmetric (1st, 3rd, 5th) and mirror-antisymmetric (2nd, 4th, 6th) classes with respect to the beam midpoint.",
+      "page": 6,
+      "index": 1,
+      "width": 1004,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01469v1/fig-002.webp",
+      "caption": "Figure 4. Off-resonant nonlinear mixing reveals symmetry-preferred coupling. (a,b) Harmonicresolved differential displacement maps (Δx-maps) measured at the first and third harmonic frequencies, respectively, with the MEMS beam driven at f = 340 kHz outside the internal resonance regime. (c,d) Line cuts of the Δx-maps in (a) and (b) taken along the beam axis, as indicated by the red arrows. (e) The blue and red bars show the relative modal contributions of each mode (𝜂𝑖) in the",
+      "page": 11,
+      "index": 2,
+      "width": 691,
+      "height": 866
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01469v1/fig-003.webp",
+      "caption": "Figure 3. Real-space visualization of 1:5 internal resonance. (a) Nonlinear response of the fundamental bending mode in the vicinity of the commensurability condition f1 ≈ f3/5, measured by phase-locked stroboscopic interferometry. The amplitudes of the first and fifth harmonic components, extracted from the DIC contrast within the region indicated in Fig. 1a, are plotted as the black and red curves, respectively. (b) Representative time-domain waveforms of the measured DIC contrast at an off-resonant frequency (340 kHz) and at the two suppression dips (358.9 kHz and 360.3 kHz), shown by the change in the light intensity ΔI normalized by the steady-state light intensity I0. (c) The first-harmonic differential displacement map (Δx-map) at 358.9 kHz, whose spatial profile is characteristic of the fundamental bending mode. (d) The fifth-harmonic Δx-map, which exhibits three",
+      "page": 8,
+      "index": 3,
+      "width": 686,
+      "height": 822
+    },
+    {
+      "url": "assets/figures/arxiv/2605.01469v1/fig-004.webp",
+      "caption": "Figure 1 Device architecture, measurement scheme, and broadband modal spectrum. (a) Optical micrograph of the doubly clamped SOI mechanical resonator used in this work. (b) Schematic structure of the resonator. (c) Schematic of the measurement setup. The beam is driven inertially by an external piezoelectric actuator with an AC voltage VAC, and its out-of-plane displacement is measured either by phase-locked multi-harmonic stroboscopic interferometry or by laser Doppler vibrometry (LDV). (d) Broadband frequency response measured under forward frequency sweep from 0.1 to 2 MHz with VAC = 10 V.",
+      "page": 5,
+      "index": 4,
+      "width": 686,
+      "height": 646
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-07T20:29:22.775548+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 24,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [
+    {
+      "id": "2605.01469v1",
+      "source": "arxiv",
+      "title": "Real-space imaging reveals symmetry-selected nonlinear energy routing in a mechanical resonator",
+      "abstract": "Nonlinear energy exchange between vibrational modes underlies phenomena ranging from internal resonance to wave mixing, yet modal interactions are typically inferred from frequency-domain signatures rather than directly observed in space. Here, we present real-space imaging of nonlinear modal energy routing in a near-mirror-symmetric microelectromechanical resonator using phase-locked multi-harmonic stroboscopic interferometry. By reconstructing the spatial eigenmode content of individual harmonic components, we directly resolve the energy transfer pathway between interacting modes. Our measurements reveal that nonlinear energy exchange is not governed by frequency proximity alone. Even when harmonic frequencies lie closer to an opposite-symmetry mode, energy transfer remains strongly suppressed unless the interacting modes share identical spatial symmetry. A reduced two-mode model incorporating geometric nonlinearity shows that the intermodal coupling terms factorize into a single symmetry-determined modal-overlap integral, establishing spatial parity as the fundamental admissibility condition for nonlinear coherent energy exchange. These results demonstrate that symmetry, rather than spectral detuning alone, governs nonlinear modal coupling and introduce real-space nonlinear modal imaging as a general framework for controlling energy flow in nonlinear wave systems.",
+      "authors": [
+        "Ya Zhang",
+        "Yuko Terasawa",
+        "Qian Liu",
+        "Shumpei Takenaka",
+        "Hua Li",
+        "Yutao Xu",
+        "Xueyong Wei",
+        "Kazuhiko Hirakawa"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-02T14:38:32+00:00",
+      "link": "https://arxiv.org/pdf/2605.01469v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "stroboscopic interferometry for real-space imaging",
+      "llm_evidence_cn": "用于实空间成像的频闪干涉测量",
+      "llm_evidence": "用于实空间成像的频闪干涉测量",
+      "canonical_evidence": "用于实空间成像的频闪干涉测量",
+      "llm_tldr_en": "Uses stroboscopic interferometry to image nonlinear energy routing in mechanical resonators.",
+      "llm_tldr_cn": "利用频闪干涉技术对机械谐振器中的非线性能量路由进行成像。",
+      "llm_tldr": "利用频闪干涉技术对机械谐振器中的非线性能量路由进行成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboscopic interferometric scattering microscopy",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.01125v1",
+      "source": "arxiv",
+      "title": "Fast reduction of electron-beam-activated graphene oxide by an infrared laser pulse",
+      "abstract": "Rapid and controllable reduction of graphene oxide (GO) remains a critical challenge for realizing its full technological potential. Here, we report efficient reduction of GO by a synergistic electron-beam-assisted single-pulse near-infrared (NIR) laser process. Time-resolved electron energy-loss spectroscopy measured with a dynamic transmission electron microscope (DTEM) is used to locally track the oxygen concentration evolution after NIR laser pulse irradiation. This finds an oxygen diffusivity of 1.6 +/- 0.4 x 10$^{-8}$ m$^2$/s, which corresponds to 90% reduction of a 46-nm thick film within 960 ns. Electron beam irradiation is found to change the optical absorptivity of GO in the NIR region and the thermal heating cycle resulting from the laser pulse is simulated. Structural characterization via selected-area electron diffraction (SAED) and high-resolution transmission electron microscopy (HRTEM) finds localized restoration of sp$^2$ bonding accompanied by turbostatic disorder in the reduced GO. Together, these results point to a mechanism involving the creation of defects and vacancies produced by electron beam irradiation, which increases the efficiency of NIR light absorption and oxygen diffusion normal to the layers. This study demonstrates the important role of such defects in controlling the photochemistry of GO and its response to NIR illumination.",
+      "authors": [
+        "Israt Ali",
+        "Hilaire Mba",
+        "Matthieu Picher",
+        "Shruti Verma",
+        "Florian Banhart",
+        "Kenneth R. Beyerlein"
+      ],
+      "primary_category": "physics.app-ph",
+      "categories": [
+        "physics.app-ph"
+      ],
+      "published": "2026-05-01T21:51:41+00:00",
+      "link": "https://arxiv.org/pdf/2605.01125v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "time-resolved electron energy-loss spectroscopy for tracking oxygen concentration",
+      "llm_evidence_cn": "用于追踪氧浓度演变的时间分辨电子能量损失谱",
+      "llm_evidence": "用于追踪氧浓度演变的时间分辨电子能量损失谱",
+      "canonical_evidence": "用于追踪氧浓度演变的时间分辨电子能量损失谱",
+      "llm_tldr_en": "Uses time-resolved spectroscopy to track the rapid reduction of graphene oxide by laser pulses.",
+      "llm_tldr_cn": "利用时间分辨光谱追踪激光脉冲引起的氧化石墨烯快速还原过程。",
+      "llm_tldr": "利用时间分辨光谱追踪激光脉冲引起的氧化石墨烯快速还原过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.26717v1",
+      "source": "arxiv",
+      "title": "Non-Equilibrium Orbital Transport in Terahertz Optorbitronics",
+      "abstract": "Modern information technologies rely on controlling the flow of electrons through their charge and spin. A rapidly emerging alternative is to use the orbital motion of electrons, the way they circulate around atomic sites as a new carrier of information. This orbital angular momentum (OAM) could enable more energy-efficient devices and reduce reliance on scarce heavy elements, but how orbital currents are generated and transported, especially on ultrafast timescales, remains largely unknown. In this review, we introduce terahertz optorbitronics, an approach that uses ultrafast femtosecond laser pulses and terahertz radiation to observe orbital transport in real time. On timescales of quadrillionth of a second, this technique allows us to track how orbital currents are launched, propagate, and convert into electrical signals in nanoscale thin-film materials. Surprisingly, recent experiments have revealed conflicting pictures such as orbital currents may travel over tens of nanometres like ballistic waves or instead decay within just a few atomic layers, highlighting a fundamental unresolved question in the field. We explain how these ultrafast measurements can disentangle orbital motion from conventional spin transport, and we highlight new materials from engineered graphene to altermagnets, that could act as tunable sources of orbital currents. We also discuss how light, electrical gating, strain, and interface design can be used to actively control orbital transport and improve its conversion into usable electronic signals. By revealing orbital transport as a dynamic, non-equilibrium process, terahertz optorbitronics opens a new direction for nanoscale science, the one that could lead to faster, more efficient technologies operating beyond the limits of conventional spin-based electronics.",
+      "authors": [
+        "Sobhan Subhra Mishra",
+        "Ranjan Singh"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-29T14:22:00+00:00",
+      "link": "https://arxiv.org/pdf/2604.26717v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "ultrafast laser pulses to observe transport in real time",
+      "llm_evidence_cn": "利用超快激光脉冲实时观察输运过程",
+      "llm_evidence": "利用超快激光脉冲实时观察输运过程",
+      "canonical_evidence": "利用超快激光脉冲实时观察输运过程",
+      "llm_tldr_en": "Reviews terahertz optorbitronics for tracking ultrafast orbital transport in real time.",
+      "llm_tldr_cn": "综述了利用太赫兹光轨道电子学实时追踪超快轨道输运的技术。",
+      "llm_tldr": "综述了利用太赫兹光轨道电子学实时追踪超快轨道输运的技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.27898v1",
+      "source": "arxiv",
+      "title": "Low-cost passive single-shot ultrafast imaging at 685 Gfps",
+      "abstract": "Capturing ultrafast transient phenomena conventionally requires streak cameras or computational imaging based on compressed sensing, which lead to complex and costly systems. In this Letter, we demonstrate, to the best of our knowledge, the first fully passive single-shot ultrafast imaging architecture assembled entirely from off-the-shelf, low-cost components. A commercial microlens array combined with a stack of standard microscope cover glasses maps temporal information into multiple spatial channels, and a consumer-grade CMOS image sensor records all delayed replicas within a single camera exposure. The proposed system has a total hardware cost below US\\$500 and captures the evolution of a picosecond laser pulse with a temporal sampling interval of 1.46~ps, an effective frame rate of 685~Gfps, and a sequence depth of ten frames. The temporal fidelity of the system is verified by recovering the expected Gaussian pulse profile, and the spatial resolution is characterized through a point-source measurement with a point spread function of 1.86 and 1.62 pixels full width at half maximum along the horizontal and vertical directions, respectively. The proposed architecture presents an alternative approach to single-shot ultrafast imaging with a simple, low-cost, computation-free, and fully passive design.",
+      "authors": [
+        "Dilem Eşlik",
+        "Bahadır Utku Kesgin",
+        "Uğur Teğin"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-04-30T14:09:38+00:00",
+      "link": "https://arxiv.org/pdf/2604.27898v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "single-shot ultrafast imaging of transient phenomena",
+      "llm_evidence_cn": "瞬态现象的单次超快成像",
+      "llm_evidence": "瞬态现象的单次超快成像",
+      "canonical_evidence": "瞬态现象的单次超快成像",
+      "llm_tldr_en": "A low-cost passive system enables single-shot ultrafast imaging at 685 Gfps.",
+      "llm_tldr_cn": "一种低成本无源系统实现了685 Gfps的单次超快成像。",
+      "llm_tldr": "一种低成本无源系统实现了685 Gfps的单次超快成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.27777v1",
+      "source": "arxiv",
+      "title": "YOSO: single-frame Gerchberg-Saxton phase retrieval with AI-based data augmentation for in-line holography",
+      "abstract": "We present YOSO (You Only Shot Once), a single-frame phase retrieval framework for digital in-line holographic microscopy (DIHM) in which supervised deep learning is used to numerically generate an additional hologram corresponding to different defocus distance, creating a so-called multi-height dataset, which is then conventionally processed with a well-established Gerchberg-Saxton (GS) algorithm. YOSO is trained on computer-generated data derived from natural images, enabling strong generalization. The selected multi-scale ResNet architecture enables rapid training in under two hours on a mid-range workstation, which is done only once, enabling efficient inference thereafter. We further show that YOSO network can process inputs of varying spatial dimensions, allowing training on small inputs and direct inference on full-sized holograms while bypassing patch-and-stitch procedure. A further advantage of YOSO is its physics-consistent hologram padding, which replaces conventional zero or edge-value padding with a physically grounded approach compatible with the GS framework. The YOSO framework is tested on various systems (lens-based and lensless DIHM) and diverse samples: a resolution test target, adherent and suspended biological cells, and a mouse brain slice. The results show that YOSO is compatible with 3D objects and correctly recovers defocused object wave features, enabling holographic postprocessing such as numerical refocusing. The results of this work are available publicly as software for end-to-end implementation.",
+      "authors": [
+        "Julianna Winnik",
+        "Adam Walocha",
+        "Wojciech Ogonowski",
+        "Wiktor Forjasz",
+        "Piotr Arcab",
+        "Mikołaj Rogalski",
+        "Aleksandra Rutkowska",
+        "Marzena Stefaniuk",
+        "José Ángel Picazo-Bueno",
+        "Vicente Micó",
+        "Maciej Trusiak",
+        "Maria Cywińska"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-04-30T12:16:16+00:00",
+      "link": "https://arxiv.org/pdf/2604.27777v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "single-frame phase retrieval for digital in-line holographic microscopy",
+      "llm_evidence_cn": "数字在线全息显微镜的单帧相位恢复",
+      "llm_evidence": "数字在线全息显微镜的单帧相位恢复",
+      "canonical_evidence": "数字在线全息显微镜的单帧相位恢复",
+      "llm_tldr_en": "Presents YOSO, a deep learning framework for rapid single-frame phase retrieval in holographic microscopy.",
+      "llm_tldr_cn": "提出YOSO深度学习框架，用于全息显微镜中快速单帧相位恢复。",
+      "llm_tldr": "提出YOSO深度学习框架，用于全息显微镜中快速单帧相位恢复。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.28054v1",
+      "source": "arxiv",
+      "title": "Dimensionality-Driven Electronic and Orbital Transitions Mediating Interfacial Magnetism in LaNiO3/CaMnO3 Observed In Situ",
+      "abstract": "Emergent magnetic states at oxide interfaces arise from the interplay of charge transfer, orbital reconstruction, and dimensional confinement, offering a route to engineered correlated-electron behavior in nanoscale spintronic materials. Here, we combine in situ synthesis, polarization-dependent angle-resolved photoelectron spectroscopy, X-ray magnetic circular dichroism, and first-principles electronic-structure calculations to investigate LaNiO3/CaMnO3 superlattices. We show that reducing the LaNiO3 thickness drives a metal-insulator transition accompanied by loss of electronic coherence and an orbital-polarization crossover in the ultrathin limit. These changes weaken charge transfer across the interface and suppress the interfacial Mn magnetic moment in CaMnO3, revealing that the emergent ferromagnetic state is directly governed by electronic confinement in LaNiO3. The insulating state and orbital reconstruction are reproduced by density functional theory combined with dynamical mean-field theory. Together, these results establish a direct and tunable coupling among electronic, orbital, and magnetic degrees of freedom in oxide heterostructures.",
+      "authors": [
+        "B-A. Courchene",
+        "A. Hampel",
+        "S. Beck",
+        "J. R. Paudel",
+        "J. D. Grassi",
+        "L. A. Lapinski",
+        "A. M. Derrico",
+        "M. Terilli",
+        "M. Kareev",
+        "C. Klewe",
+        "A. Gloskovskii",
+        "C. Schlueter",
+        "S. K. Chaluvadi",
+        "F. Mazzola",
+        "I. Vobornik",
+        "P. Orgiani",
+        "J. Chakhalian",
+        "A. J. Millis",
+        "A. X. Gray"
+      ],
+      "primary_category": "cond-mat.str-el",
+      "categories": [
+        "cond-mat.str-el",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-30T16:01:23+00:00",
+      "link": "https://arxiv.org/pdf/2604.28054v1",
+      "tags": [
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "in situ synthesis and spectroscopy of oxide interfaces",
+      "llm_evidence_cn": "氧化物界面的原位合成与光谱学研究",
+      "llm_evidence": "氧化物界面的原位合成与光谱学研究",
+      "canonical_evidence": "氧化物界面的原位合成与光谱学研究",
+      "llm_tldr_en": "Investigates interfacial magnetism in superlattices using in situ synthesis and photoelectron spectroscopy.",
+      "llm_tldr_cn": "利用原位合成和光电子能谱研究超晶格中的界面磁性。",
+      "llm_tldr": "利用原位合成和光电子能谱研究超晶格中的界面磁性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.01697v1",
+      "source": "arxiv",
+      "title": "Physics-Constrained Learning of Dose-Dependent Spectral Degradation in Metal--Organic Frameworks from In Situ Low-Loss EELS",
+      "abstract": "Electron-beam irradiation limits atomic-resolution characterization of beam-sensitive hybrid materials, yet quantitative models that connect \\textit{in situ} spectroscopy to dose-dependent degradation remain scarce. Here we use a physics-informed neural network (PINN) to model beam-induced spectral evolution in MIL-101(Fe) from an in situ low-loss electron energy-loss spectroscopy (EELS) dose series. Each spectrum is reduced to fixed-window low-loss descriptors, $\\tilde n_{\\mathrm{eff},j}(Φ)=\\int_{\\mathcal{W}_j}S(E,Φ)\\,dE$, evaluated over nominal $π$--$π^{*}$, C--C, C--O, and M--O windows. These descriptors are relative window-integrated low-loss spectral areas, not absolute f-sum-rule effective electron numbers. For each spectral channel, a latent integrity variable $C_i(Φ)$ obeys the same uncoupled power-law degradation equation in normalized dose space, $dC_i/dφ=-k_i C_i^{p_i}$, regularized by monotonicity, boundedness, and a single hierarchy prior $k_{\\mathrm{C\\text{-}O}}\\geq k_{\\mathrm{C\\text{-}C}}$. Applied to nine dose frames spanning 152--1368~e$^-$/Å$^2$, the ensemble PINN identifies C--O and C--C as the most strongly dose-sensitive linker-associated channels, with half-integrity thresholds of approximately $1.0\\times10^3$~e$^-$/Å$^2$. The 1--3~eV $π$--$π^{*}$-labelled window increases with dose and is therefore interpreted as a mixed low-energy response, likely involving oscillator-strength redistribution rather than direct monotonic loss of a single bond population. The framework provides a dose-dependent, spectroscopy constrained description of MOF degradation while also defining the limits of what fixed-window low-loss EELS can assign without independent chemical-state validation.",
+      "authors": [
+        "Gabriel T. dos Santos",
+        "Roberto dos Reis",
+        "Vinayak P. Dravid"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.soft"
+      ],
+      "published": "2026-05-03T03:31:03+00:00",
+      "link": "https://arxiv.org/pdf/2605.01697v1",
+      "tags": [
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "In situ spectroscopy for dose-dependent degradation in hybrid materials",
+      "llm_evidence_cn": "混合材料剂量依赖性降解的原位光谱研究",
+      "llm_evidence": "混合材料剂量依赖性降解的原位光谱研究",
+      "canonical_evidence": "混合材料剂量依赖性降解的原位光谱研究",
+      "llm_tldr_en": "Uses PINNs to model in situ EELS spectral evolution in MOFs under electron-beam irradiation.",
+      "llm_tldr_cn": "使用物理信息神经网络模拟电子束照射下金属有机框架的原位 EELS 光谱演变。",
+      "llm_tldr": "使用物理信息神经网络模拟电子束照射下金属有机框架的原位 EELS 光谱演变。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2604.28094v1",
+      "source": "arxiv",
+      "title": "Quantifying Thermal, Photovoltage, and Defect Contributions to Transient Absorption of Ta$_{3}$N$_{5}$ Photoanodes",
+      "abstract": "Ta$_{3}$N$_{5}$ is among the most intensively studied photoanode materials for solar-driven water oxidation, yet its performance often remains limited by short carrier lifetimes and defect mediated recombination. Although transient absorption spectroscopy is widely used to probe carrier dynamics in photoelectrodes, spectral assignments are frequently ambiguous due to overlapping contributions. Here, microsecond-to-second transient absorption of Ta$_{3}$N$_{5}$ thin films is combined with complementary optical spectroscopies to disentangle contributions from lattice heating, electrostatics, and defect states. Photoreflectance reveals three critical points in the Ta$_{3}$N$_{5}$ band structure, including two anisotropic near-edge transitions at 2.14 eV and 2.27 eV and a higher-lying transition near 2.80 eV, all closely aligned with dominant transient absorption features. A previously unreported photo-induced absorption at 2.80 eV is attributed to pump-induced lattice heating, while potential-dependent measurements reveal that near-edge bleach features arise from pump-induced band flattening and subsequent surface photovoltage relaxation. Fitting transient absorption spectra with independently measured thermal and electrostatic components enables quantification of both thermal and photovoltage dynamics, while the sub-bandgap response provides insight into the redistribution of defect charge states. Thus, this approach to quantifying thermal, electrostatic, and defect-mediated contributions to microsecond-to-second transient absorption provides broadly applicable insights into photoexcitation and relaxation mechanisms in functional semiconductor photoelectrodes.",
+      "authors": [
+        "Johannes Dittloff",
+        "Lukas M. Wolz",
+        "Matthias U. Quintern",
+        "Laura I. Wagner",
+        "Matthias Kuhl",
+        "Johanna Eichhorn",
+        "Ian D. Sharp"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-04-30T16:38:06+00:00",
+      "link": "https://arxiv.org/pdf/2604.28094v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "transient absorption spectroscopy for carrier dynamics",
+      "llm_evidence_cn": "用于载流子动力学的瞬态吸收光谱",
+      "llm_evidence": "用于载流子动力学的瞬态吸收光谱",
+      "canonical_evidence": "用于载流子动力学的瞬态吸收光谱",
+      "llm_tldr_en": "Disentangles thermal and defect contributions in Ta3N5 photoanodes using transient absorption.",
+      "llm_tldr_cn": "利用瞬态吸收光谱区分Ta3N5光阳极中的热效应和缺陷贡献。",
+      "llm_tldr": "利用瞬态吸收光谱区分Ta3N5光阳极中的热效应和缺陷贡献。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-04-30-721846-v1",
+      "source": "biorxiv",
+      "title": "Isolation and Purification-Free Digital Single-Small Extracellular Vesicle Biosensing with Scalable Plasmonic Arrays",
+      "abstract": "Recent advances in plasmonic biosensing and imaging have enabled label-free analysis of single biological nanoparticles. We previously developed PlAsmonic NanOapeRture lAbel-free iMAging (PANORAMA) for isolation and purification-free, digital counting and precise localization of small extracellular vesicles (sEVs), with complementary fluorescence interrogation of surface and intravesicular biomarkers for quantitative molecular profiling. The fact that no isolation and purification or isolation is needed represents a crucial advantage because various specificity, efficiency, and time-consumption issues hinder quantitatively reproducible extraction of sEVs from biological fluids. PANORAMA achieves ultrahigh refractive-index sensitivity through arrayed gold nanodisks on invisible substrates (AGNIS) fabricated by nanosphere lithography (NSL). However, despite its simplicity and low cost, NSL is frequently constrained by poor large-area uniformity, which hinders scalable fabrication. Here, we introduce nanosphere settling lithography (NSSL) as an alternative to the gold-standard Langmuir Blodgett trough (LBT) process, enabling highly uniform, large-area monolayers with reduced process stringency. AGNIS fabricated via NSSL exhibits high refractive-index sensitivity with low spatial variability across 60 mm 24 mm substrates, sufficient for 60-well in standard 384-well plate format. The platform demonstrates exquisite sensitivity through PANORAMA digital counting and sizing of 25, 50, and 100 nm polystyrene beads, as well as single-vesicle characterization of sEVs derived from H460 lung cancer cells. For the first time, combined PANORAMA and fluorescence imaging enables quantitative analysis of microRNA-21 (miR-21) expression in sEVs to identify cancer-suspicious sub-population from liver cancer patient plasma in an unbiased fashion allowing both highly sensitive detection of individual sEVs and simultaneous molecular profiling. Collectively, NSSL enables uniform, high-performance plasmonic biosensing over large areas, providing a scalable and economical pathway for high-throughput, digital single-sEV analysis and translational liquid biopsy applications.",
+      "authors": [
+        "Mallick, M. S.",
+        "Mohapatra, S.",
+        "Kotnala, A.",
+        "Hossain, A. B. M. A.",
+        "Shih, W.-C."
+      ],
+      "primary_category": "bioengineering",
+      "categories": [
+        "bioengineering"
+      ],
+      "published": "2026-05-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.30.721846v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "label-free analysis of single biological nanoparticles using plasmonic imaging",
+      "llm_evidence_cn": "使用等离子体成像对单个生物纳米颗粒进行无标记分析",
+      "llm_evidence": "使用等离子体成像对单个生物纳米颗粒进行无标记分析",
+      "canonical_evidence": "使用等离子体成像对单个生物纳米颗粒进行无标记分析",
+      "llm_tldr_en": "Presents a label-free plasmonic imaging method for single vesicle biosensing similar to iSCAT principles.",
+      "llm_tldr_cn": "提出了一种用于单个囊泡生物传感的无标记等离子体成像方法，类似于 iSCAT 原理。",
+      "llm_tldr": "提出了一种用于单个囊泡生物传感的无标记等离子体成像方法，类似于 iSCAT 原理。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.01458v1",
+      "source": "arxiv",
+      "title": "Revealing the kinetics of interfacial surfactant phase transitions through multiscale simulations and in-situ plasmonic sensing",
+      "abstract": "Surfactant self-assembly at solid-liquid interfaces governs interfacial stability, transport, and reactivity across many technologies, yet resolving interfacial surfactant phases and their transition kinetics in situ remains challenging. Here, we establish an atomistically grounded plasmonic framework that quantitatively maps interfacial surfactant phases and phase transitions onto optical signatures. Distinct morphologies differ in packing and hydration, modifying the effective permittivity within the optical near field and producing surfactant phase-specific plasmonic extinction peak shifts. Using cetyltrimethylammonium bromide on silica as a prototypical surfactant-surface system, we combine atomistic simulations, electronic-structure calculations, and continuum electrodynamics to translate molecular morphologies into predicted spectral shifts for literature-reported surface phases. We experimentally confirm the predicted ordering and magnitude of steady-state peak shifts during stepwise concentration changes, and extract transition kinetics from exponential relaxations of the time-resolved peak shift. A key mechanistic signature is reversal of the spectral shift direction upon transition from an impermeable bilayer to a water-accessible, channel-containing phase, consistent with hydration-driven reduction of the local effective permittivity. Because the approach relies on dielectric contrast in the plasmonic near field and works through a dielectric overlayer, it provides a broadly applicable route for real-time identification of interfacial surfactant phases and their kinetics in aqueous conditions.",
+      "authors": [
+        "Esmée Berger",
+        "Narjes Khosravian",
+        "Ferry Anggoro Ardy Nugroho",
+        "Joakim Löfgren",
+        "Christoph Langhammer",
+        "Paul Erhart"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-02T14:15:17+00:00",
+      "link": "https://arxiv.org/pdf/2605.01458v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "In-situ plasmonic sensing for interfacial phase transition kinetics",
+      "llm_evidence_cn": "界面相变动力学的原位等离激元传感",
+      "llm_evidence": "界面相变动力学的原位等离激元传感",
+      "canonical_evidence": "界面相变动力学的原位等离激元传感",
+      "llm_tldr_en": "Combines simulations and in-situ plasmonic sensing to reveal surfactant phase transition kinetics.",
+      "llm_tldr_cn": "结合模拟和原位等离激元传感，揭示表面活性剂界面相变的动力学过程。",
+      "llm_tldr": "结合模拟和原位等离激元传感，揭示表面活性剂界面相变的动力学过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.26751v1",
+      "source": "arxiv",
+      "title": "Sub-50 Picosecond exceptionally Bright Perovskite Scintillation by Unlocking Giant Oscillator Strength",
+      "abstract": "Ultrafast scintillators are indispensable for precise timing in high-energy physics and medical diagnostics. Fundamentally constrained by the trade-off between emission rate and light yield, conventional scintillators remain kinetically trapped in the sub-nanosecond regime, failing to break 50-picosecond limit. Here, we demonstrate a strategy to bypass this limitation by harnessing the coherent radiative acceleration in weakly confined CsPbCl3 perovskite nanocrystals to generate an ultrafast photon burst. This effect originates from the giant oscillator strength, which we unlock by suppressing exciton-phonon scattering at mild cryogenic temperatures. Consequently, our scintillator achieves an unprecedented dominant lifetime of 13.11 ps alongside a high light yield of 21,851 ph/MeV. The resulting prompt photon emission rate more than 100 times higher than that of state-of-the-art ultrafast scintillators. We validate this breakthrough in realistic detection scenarios, achieving a coincidence time resolution of 30.8 ps and accurately resolving 13.5 ps electron bunches and 16.6 ps single-shot gamma-ray pulses. Our findings establish a robust coherent framework for next-generation ultrafast scintillators, pushing extreme radiation diagnostics into the picosecond frontier.",
+      "authors": [
+        "Chuanwei Dai",
+        "Yunbiao Zhao",
+        "Xiao Ouyang",
+        "Huaqing Huang",
+        "Yulan Liang",
+        "Jiaqi Bai",
+        "Yingjie Song",
+        "Jianhan Sun",
+        "Yiqun Duan",
+        "Wenjun Ma",
+        "Senlin Huang",
+        "Shufeng Wang",
+        "Jianming Xue",
+        "Xiaoping Ouyang"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-04-29T14:48:59+00:00",
+      "link": "https://arxiv.org/pdf/2604.26751v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "ultrafast photon burst and timing in perovskites",
+      "llm_evidence_cn": "钙钛矿中的超快光子脉冲和计时",
+      "llm_evidence": "钙钛矿中的超快光子脉冲和计时",
+      "canonical_evidence": "钙钛矿中的超快光子脉冲和计时",
+      "llm_tldr_en": "Achieves sub-50 picosecond scintillation in perovskite nanocrystals by unlocking giant oscillator strength.",
+      "llm_tldr_cn": "通过解锁巨振子强度，在钙钛矿纳米晶体中实现亚50皮秒闪烁。",
+      "llm_tldr": "通过解锁巨振子强度，在钙钛矿纳米晶体中实现亚50皮秒闪烁。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.03272v1",
+      "source": "arxiv",
+      "title": "Ultrafast acoustic modulation of second-harmonic generation in monolayer transition metal dichalcogenides",
+      "abstract": "High-speed modulation and deterministic control of optical nonlinear processes in nanomaterials are essential for realizing future nanoscale optoelectronic devices. Applying strain is a ubiquitous and versatile approach to deform atomically thin materials, allowing direct modification of their electronic and optical properties. Yet, strain engineering of nonlinear processes has so far relied predominantly on static approaches, which inherently limit modulation speed, reproducibility, and device scalability. Here, we demonstrate ultrafast acoustic modulation of second-harmonic (SH) generation in monolayer transition metal dichalcogenides using surface acoustic waves (SAWs). By employing a fully phase-synchronized SH measurement combined with stroboscopic surface displacement detection, we directly visualize dynamic SH modulation at a frequency of 226 MHz. Moreover, theoretical modeling and determination of photoelastic coefficients enable quantitative extraction of the SAW-induced dynamic strain. Our results establish a direct link between acoustic fields and optical nonlinearities, providing a robust platform for dynamic strain engineering in two-dimensional nanophotonic devices.",
+      "authors": [
+        "Takumi Yamamoto",
+        "Hidetoshi Kanzawa",
+        "Yuta Takahashi",
+        "Hajime Kumazaki",
+        "Jiang Pu",
+        "Shinichi Watanabe",
+        "Shun Fujii"
+      ],
+      "primary_category": "physics.app-ph",
+      "categories": [
+        "physics.app-ph",
+        "physics.optics"
+      ],
+      "published": "2026-05-05T02:00:32+00:00",
+      "link": "https://arxiv.org/pdf/2605.03272v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast acoustic modulation and phase-synchronized measurement of nanomaterials",
+      "llm_evidence_cn": "纳米材料的超快声学调制和相位同步测量",
+      "llm_evidence": "纳米材料的超快声学调制和相位同步测量",
+      "canonical_evidence": "纳米材料的超快声学调制和相位同步测量",
+      "llm_tldr_en": "Demonstrates ultrafast acoustic modulation of second-harmonic generation in monolayer TMDs using surface acoustic waves.",
+      "llm_tldr_cn": "展示了利用表面声波对单层过渡金属硫化物二倍频产生的超快声学调制。",
+      "llm_tldr": "展示了利用表面声波对单层过渡金属硫化物二倍频产生的超快声学调制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

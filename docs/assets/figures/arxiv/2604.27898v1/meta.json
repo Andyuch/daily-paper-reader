@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.27898v1/fig-001.webp",
+      "caption": "Fig. 1. (a) Schematic of the proposed low-cost passive spatially multiplexed ultrafast imaging system. A microlens array generates replicated image channels, each of which experiences a different optical delay introduced by a stack of standard microscope cover glasses. Temporally delayed replicas are simultaneously recorded within a single camera exposure using a consumer-grade CMOS sensor. (b) Spatial distribution of the glass thickness used for delay encoding across the 6 × 6 microlens array. Each channel experiences a different cumulative optical delay determined by the total glass thickness along its path. The rightmost column contains no glass plates and corresponds to zero delay.",
+      "page": 2,
+      "index": 1,
+      "width": 496,
+      "height": 561
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27898v1/fig-002.webp",
+      "caption": "Fig. 4. Spatial resolution characterization of the imaging system using a point-source measurement. The red square indicates the selected region of interest. The inset shows the background-subtracted point spread function used for Gaussian fitting and estimation of the system full width at half maximum.",
+      "page": 3,
+      "index": 2,
+      "width": 525,
+      "height": 288
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27898v1/fig-003.webp",
+      "caption": "Fig. 3. Normalized total intensity extracted from reconstructed frames as a function of relative temporal delay. The measured temporal profile follows a Gaussian distribution (dashed curve), which confirms the accurate preservation of the pulse dynamics.",
+      "page": 3,
+      "index": 3,
+      "width": 525,
+      "height": 263
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27898v1/fig-004.webp",
+      "caption": "Fig. 2. Single-shot reconstruction of the temporal evolution of a picosecond laser pulse. Each sub-image corresponds to a different optical delay introduced by the proposed spatial multiplexing architecture. The sequence is recovered from a single camera exposure with a temporal spacing of 1.46 ps between the frames.",
+      "page": 3,
+      "index": 4,
+      "width": 525,
+      "height": 492
+    }
+  ]
+}

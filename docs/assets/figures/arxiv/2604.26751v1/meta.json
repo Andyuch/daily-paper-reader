@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.26751v1/fig-001.webp",
+      "caption": "Fig. 1. Ultrafast scintillation from CsPbCl3 NC scintillator. (A) Schematic illustration of the GOS-enhanced coherent scintillation mechanism. Upon ionizing radiation, the coherent coupling of transition dipoles triggers superradiation (an ultrafast photon burst, < 50 ps). The insets show the cubic perovskite crystal and a photograph of the scintillator exhibiting bright blue radioluminescence, and a representative transmission electron microscopy (TEM) image of the CsPbCl3 nanocrystals. The inset histogram reveals an average diameter of 21.87 ± 2.39 nm, securely placing the system within a weak quantum confinement regime to provide the necessary physical volume for macroscopic exciton delocalization. Scale bar, 50 nm. (B)",
+      "page": 4,
+      "index": 1,
+      "width": 864,
+      "height": 689
+    },
+    {
+      "url": "assets/figures/arxiv/2604.26751v1/fig-002.webp",
+      "caption": "Fig. 2. Comprehensive scintillation performance and extreme radiation hardness of the GOS-driven perovskite scintillator. (A) Normalized emission spectra under continuous X-ray (radioluminescence, RL), high-energy electron beam (cathodoluminescence, CL), and 375-nm pulsed laser (photoluminescence, PL) excitation. The highly consistent near-bandedge emission demonstrates lossless thermalization of hot carriers. The distinct redshift under ionizing radiations (CL and RL) serves as a hallmark of bandgap renormalization (BGR) induced by an exceptionally dense exciton population within the ionization track. (B) Temperaturedependent absolute light yield from 300 K to 80 K. The exponential leap in photon yield at cryogenic temperatures macroscopically validates the full unlocking of the GOS effect. (C) Scintillation performance benchmark charting light yield against decay time. Driven by GOS,",
+      "page": 6,
+      "index": 2,
+      "width": 865,
+      "height": 475
+    },
+    {
+      "url": "assets/figures/arxiv/2604.26751v1/fig-003.webp",
+      "caption": "Fig. 3. Temperature-driven exciton coherence and the physical origin of GOS-accelerated scintillation. (A) Schematic illustration of the temperature-driven GOS coherent radiation model. At room temperature (300 K), intense Fröhlich interactions (longitudinal optical phonon scattering) severely restrict the exciton coherence length. Upon deep freezing at 80 K, thermal perturbations are effectively cut off, driving a non-linear expansion of the exciton coherent volume to encompass the entire nanocrystal volume. This thermal reconfiguration transitions the system into a macroscopic coherent state, formally unlocking the GOS-accelerated ultrafast emission. (B) Temperature-dependent time-resolved photoluminescence (TRPL) spectra. In stark contrast to the conventional thermodynamic freeze-out behavior (lifetime prolongation) typical of standard semiconductors, the dominant radiative lifetime exhibits pronounced kinetic acceleration upon cooling, ultimately collapsing to the extreme 13.11 ps regime at 80 K. This serves as the direct dynamical evidence for the macroscopic GOS effect. (C) Temperature dependence of the radiative rate 𝑘rad for L = 20 nm CsPbCl3 nanocrystals deposited on a quartz substrate. Open circles are experimental values extracted from TRPL decay analysis. The dashed red curve is the prediction of the unified theoretical model. Upon cooling from 300 to 80 K, krad increases by more than one order of magnitude—reflecting the recovery of mesoscopic exciton coherence as phonon scattering channels are progressively frozen out. (D) Size-dependent total lifetime of CsPbCl3 nanocrystals at 80 K (log scale). Cyan circles denote experimental data; the dashed red curve is the theoretical prediction from the unified model. In the weak-confinement regime (𝐿 ≫ 𝑎B), the lifetime initially decreases as 𝐿−3 owing to the GOS effect, reaches a minimum of ∼10 ps near𝐿opt ≈ 20–30 nm, and then increases at larger sizes as electromagnetic retardation (Fret) and spatial decoherence truncation (Fcoh progressively suppress the coherent oscillator strength. The non-monotonic behavior reveals an optimal nanocrystal size window that maximizes the radiative rate, within which the 20 nm crystals used in this study reside.",
+      "page": 9,
+      "index": 3,
+      "width": 865,
+      "height": 495
+    },
+    {
+      "url": "assets/figures/arxiv/2604.26751v1/fig-004.webp",
+      "caption": "Fig. 4. Breaking the limit: Direct diagnostics of 10 ps ionizing radiation pulses.(A) Experimental setup for high-precision temporal diagnostics. A Schematic of the coincidence time resolution (CTR) measurement setup employing a 22Na positron source and dual silicon photomultiplier(SiPM) arrays. (B) Coincidence spectrum for CsPbCl3 nanocrystal scintillators with a Gaussian fit, demonstrating a system-level coincidence time resolution (CTR) of 30.8 ps. (C) Two-dimensional scatter plot of coincidence time versus signal amplitude (energy)",
+      "page": 11,
+      "index": 4,
+      "width": 865,
+      "height": 1094
+    }
+  ]
+}

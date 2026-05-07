@@ -1,0 +1,621 @@
+Title: Quantifying Thermal, Photovoltage, and Defect Contributions to Transient Absorption of Ta$_{3}$N$_{5}$ Photoanodes
+
+URL Source: https://arxiv.org/pdf/2604.28094v1
+
+Published Time: Fri, 01 May 2026 01:22:01 GMT
+
+Number of Pages: 38
+
+Markdown Content:
+Quantifying Thermal, Photovoltage, and Defect Contributions to Transient Absorption of Ta 3N5 Photoanodes 
+
+Johannes Dittloff, 1, 2 Lukas M. Wolz, 2 Matthias U. Quintern, 1, 2 Laura I. Wagner, 1, 2 
+
+Matthias Kuhl, 2 Johanna Eichhorn, 2 and Ian D. Sharp ∗1, 2, a) 1) Walter Schottky Institute, Technical University of Munich, 85748 Garching, Germany 
+
+> 2)
+
+Physics Department, TUM School of Natural Sciences, Technical University of Munich, 85748 Garching, Germany 
+
+1
+
+> arXiv:2604.28094v1 [cond-mat.mtrl-sci] 30 Apr 2026
+
+Ta 3N5 is among the most intensively studied photoanode materials for solar-driven water oxidation, yet its performance often remains limited by short carrier lifetimes and defect-mediated recombination. Although transient absorption spectroscopy is widely used to probe carrier dynamics in photoelectrodes, spectral assignments are frequently ambiguous due to overlapping contributions. Here, μs-s transient absorption of Ta 3N5 thin films is combined with complementary optical spectroscopies to disentangle contributions from lattice heating, electrostatics, and defect states. Photoreflectance reveals three critical points in the Ta 3N5 band structure, including two anisotropic near-edge transitions at 2.14 eV and 2.27 eV and a higher-lying transition near 2.80 eV, all closely aligned with dominant transient absorption features. A previously unreported photo-induced absorption at 2.80 eV is attributed to pump-induced lattice heating, while potential-dependent mea-surements reveal that near-edge bleach features arise from pump-induced band flattening and subsequent surface photovoltage relaxation. Fitting transient absorption spectra with independently measured thermal and electrostatic components enables quantification of both thermal and photovoltage dynamics, while the sub-bandgap response provides insight into the redistribution of defect charge states. Thus, this approach to quantifying ther-mal, electrostatic, and defect-mediated contributions to μs-s transient absorption provides broadly applicable insights into photoexcitation and relaxation mechanisms in functional semiconductor photoelectrodes. Keywords: Ta 3N5 photoanodes, nitride semiconductors, transient absorption spectroscopy, photoreflectance, electroabsorption, lattice heating effects, surface photovoltage, charge carrier dynamics 
+
+> a) sharp@wsi.tum.de
+
+21. INTRODUCTION 
+
+Solar-driven photoelectrochemical (PEC) water splitting offers a direct route toward sustainable hydrogen production. However, its practical efficiency is often limited by recombination losses and inefficient interfacial charge injection, particularly during the kinetically challenging four-hole oxygen evolution reaction (OER). Addressing these losses requires photoanodes that combine efficient visible light absorption with long-lived hole transport to the semiconductor/electrolyte interface. 1–4 In this regard, Ta 3N5 has emerged as one of the most-intensively studied photoanode materials due to its suitable bandgap of 2.1 – 2.2 eV and favorable band energetics. 5–8 However, Ta 3N5 photoanodes often fall short of their theoretical solar-to-chemical energy conversion limits due to a combination of inefficient charge transport, short carrier lifetimes, and strong sensitivity to defects and disorder that can introduce deep trap states and facilitate non-radiative recombination losses. 6,9–12 To overcome these limitations, a detailed understanding of the charge carrier dynamics is thus critical, particularly at the μs-s timescale where charge accumulation and recombination compete with interfacial charge transfer and photoelectrochemical reaction dynamics. 2,13 
+
+Transient absorption spectroscopy (TA) enables direct observation of photo-induced changes in absorption, offering important insights into carrier populations and defect-mediated recombina-tion dynamics. Conventional interpretations of semiconductor TA spectra invoke pump-induced changes in optical transition probabilities arising from non-equilibrium carrier populations, includ-ing band-edge bleach features from state filling and photo-induced absorption from excited-state transitions, as well as electronically active defect states. While such interpretations are physi-cally grounded and have provided important mechanistic insights, TA spectra typically comprise broad and overlapping features whose unambiguous assignment is not straightforward. Indeed, for Ta 3N5, previous TA studies have revealed several bleach and photo-induced absorption fea-tures in the visible to near-infrared regions, which are commonly assigned to valence band hole populations and transitions associated with nitrogen vacancies and substitutional oxygen states. However, energetic positions, relative amplitudes, and physical assignments of these spectral sig-natures vary between reports, and can depend strongly on excitation fluence and the probed time window. 14–17 As a result, there remains no clear consensus regarding the nature of the excited-state absorption spectrum of Ta 3N5, hindering attempts to rationally enhance carrier lifetimes, promote carrier separation, and increase the activity of functional photoelectrodes. To address these inconsistencies and establish a rigorous basis for interpreting photo-induced 3dynamic processes in functional photoelectrodes, we demonstrate that additional physical mecha-nisms beyond non-equilibrium carrier populations contribute significantly to TA spectra and must be independently characterized for reliable spectral quantification, especially at μs-s time scales. For example, pump-induced lattice heating can modify the optical spectrum through thermally driven redshifting and broadening of interband transitions, potentially generating spectral signa-tures that can be misassigned to electronic excited-state processes 18,19 . In addition, above-bandgap photoexcitation transiently screens the built-in electric field within the near-surface depletion re-gion, generating a surface photovoltage (SPV) that modulates critical point transition strengths and simultaneously alters near-surface defect charge states. Importantly, both of these effects are particularly significant in the μs-s regime, which represents the natural timescale of interfacial chemical dynamics in photoelectrochemical and photocatalytic systems. However, to date, no sys-tematic effort has been devoted to independently characterize and disentangle these contributions in Ta 3N5, resulting in ambiguous excited-state spectral assignments and poor understanding of the nature of its photo-induced dynamics. Here, we address this challenge by combining μs-s TA of sputtered Ta 3N5 thin films with three complementary steady-state modulation spectroscopies, each providing independent experimental access to one of the key physical contributions. Starting with photoreflectance (PR) spectroscopy, we first identify the critical point transitions in the electronic structure of Ta 3N5, thereby providing reference energies for transient spectral assignments. In addition, we apply potential-dependent UV-Vis (P-UV-Vis) spectroscopy in a photoelectrochemical cell to isolate the electroabsorption response arising from controlled modulation of the internal electric field within the near-surface depletion region. Finally, we perform temperature-dependent UV-Vis (T-UV-Vis) spectroscopy to independently quantify the thermal response as a function of lattice temperature. By fitting TA spectra with these independently measured electrostatic and thermal components, we show that the dominant near- and above-edge transient optical response can be quantitatively reconstructed, en-abling simultaneous extraction of the lattice temperature and surface photovoltage dynamics. The remaining sub-gap response is interpreted in terms of non-equilibrium defect charge state redistri-bution under photoexcitation, providing additional insights into the roles of nitrogen vacancies and substitutional oxygen impurities in the μs-s optical response. Beyond providing a comprehensive understanding of the μs-s TA spectrum of Ta 3N5, this systematic approach offers a generalizable strategy for quantifying competing thermal, electrostatic, and defect-mediated contributions to transient optical spectra of semiconductor photoelectrodes, opening new avenues for mechanistic 4interpretation of photo-induced processes in solar-to-chemical energy conversion systems. 
+
+2. RESULTS AND DISCUSSION 2.1. Structural, photoelectrochemical, and dynamic optical properties 
+
+Ta 3N5 thin films were prepared by reactive magnetron sputtering followed by high-temperature ammonolysis, as described in the Experimental Section. The 220 nm thick films were deposited on fused silica with a 7 nm TiN interlayer, which serves as a semi-transparent conductive back contact that enables electrical biasing during transmission measurements. Grazing incidence X-ray diffraction (GI-XRD) confirms the formation of phase-pure orthorhombic Ta 3N5 (ICDD PDF# 79-1533), with no detectable secondary phases (Figure S1 (a)), while atomic force microscopy (AFM) reveals a granular morphology with a root-mean-square (rms) roughness of approximately 2.4 nm (Figure S1 (b)), indicating laterally uniform and smooth films. Chopped-illumination linear sweep voltammetry measurements in 1 M KPi buffer (pH 12.3) with 0.1 M K 4[Fe(CN) 6] as sacrificial hole acceptor exhibit a photoanodic response over the investigated potential range, with a photocurrent density reaching approximately 1.19 mA cm −2 at 1.23 V RHE (Figure S1 (c)), consistent with prior reports for sputtered Ta 3N5 thin films. 6,9,10 Thus, combined structural and photoelectrochemical characterization verifies the successful fabrication of phase-pure, photo-active Ta 3N5, providing a well-defined platform for mechanistic investigation of its photoexcited optical response. The ground-state optical absorption spectrum of the orthorhombic Ta 3N5 thin film (Figure 1 (a), dashed curve) exhibits an absorption onset near 2.1 – 2.2 eV, consistent with reported values for its fundamental bandgap. 10–12 In the near-edge region, the absorbance increases and then transitions to a relatively broad, plateau-like behavior. At higher photon energies, near 2.5 – 2.6 eV, a second increase in absorption is observed, suggesting the onset of additional higher-energy interband transitions. For clarity, we thus refer to three spectral regimes in this work, corresponding to the sub-gap (< 2.0 eV), near-edge (2.0 – 2.5 eV), and above-edge (> 2.5 eV) regions, as indicated in Figure 1 (a). The corresponding TA spectrum recorded at a pump-probe delay of 1 μs is shown as the solid curve in Figure 1 (a). In the above-edge range, a dominant positive feature is observed at approx-imately 2.80 eV, with a shoulder extending towards lower energies. In the near-edge region, two bleach features appear at 2.35 eV and 2.10 eV, separated by a positive feature at 2.20 eV. Finally, 50.0 0.2 0.4 Absorbance (OD)  UV-Vis -0.5 0.0 0.5 1.0 1.5  TA   
+
+> Above-
+> edge
+> Near-edge
+> Sub-
+> gap
+> 3.0
+> 2.8
+> 2.6
+> 2.4
+> 2.2
+> 2.0
+> 1.8
+> -1.0
+> -0.5
+> 0.0
+> 0.5
+> 1.0
+> PR
+> TDFFfit         - 5 )
+
+Energy(eV)
+
+(a)
+
+(b)FIG. 1. (a) Ground-state absorption spectrum of the Ta 3N5/TiN thin film (right axis) and transient absorption (TA) spectrum recorded at a pump-probe delay of 1 μs following 355 nm pulsed excitation with a 1 mJ cm −2
+
+pump pulse at 355 nm (left axis). The transient response exhibits a pronounced photo-induced absorption near 2.80 eV, two bleach features in the 2.0 – 2.5 eV range, and a broad low-energy photo-induced absorption tail. Colored regions delineate the higher energy above-edge, intermediate energy near-edge, and low energy sub-gap spectral regimes discussed in the text. (b) Photoreflectance spectrum (PR, black) together with a three-component third-derivative functional form (TDFF) lineshape fit including a Gaussian sub-gap tail (red). The individual fitted components (orange, purple, green) are shown along with the extracted critical point energies (vertical lines) and the Gaussian component (blue). 
+
+in the sub-gap region (< 2.0 eV), a broad but weak photo-induced absorption (PIA) tail extends towards lower energies. Several of the near-edge and sub-gap features have been reported previously in TA studies of Ta 3N514–17 , though their energetic positions, relative amplitudes, and spectral assignments vary between reports. Most prior work has focused primarily on the near-edge region. In particular, the bleach at 2.35 eV is commonly attributed to the fundamental band-edge transition, 14–16 and is frequently interpreted as arising from depletion of the valence band maximum (VBM) due to occupation by photo-generated holes. 14,16 In contrast, there remain differing interpretations re-6garding the nature of the spectral response in the 2.1 – 2.2 eV range. In fs-ps TA measurements, Murthy et al. assigned a bleach near 2.1 eV to hole trapping into nitrogen vacancy states located just above the VBM, thereby reducing the strength of electronic transitions from these in-gap states to the conduction band minimum (CBM). 14 However, μs-scale TA studies have reported positive absorption features in a similar spectral range that were attributed to hole-related absorp-tion processes. 16,17 In the same spectral window, Yin et al. also observed a bleach feature that they interpreted as arising from the fundamental bandgap transition along the a-axis of the anisotropic Ta 3N5 structure. 16 These differing interpretations suggest that multiple overlapping contributions may exist in this spectral window, with relative strengths that depend on the measured timescale, excitation density, and sample preparation. Finally, the broad sub-gap PIA tail below 2.0 eV is typically associated with electronic transitions involving nitrogen vacancy (v N) and substitutional oxygen (O N) defect states located within the bandgap. 14,16,17 
+
+Beyond the previously discussed near-edge and sub-gap spectral responses, our measurements reveal a pronounced positive feature in the higher-energy region, centered near 2.80 eV and ex-tending asymmetrically to lower energies. Complementary photoluminescence spectroscopy (see Figure S2) shows no pronounced emission in this energy region, consistent with assignment of this feature to PIA. Despite its substantial spectral weight, this contribution has, to the best of our knowledge, not been resolved or analyzed in prior TA studies of Ta 3N5, which have largely fo-cused on the visible near-edge region. 14–17 Given its position well above the bandgap, this response cannot be straightforwardly explained by conventional band-edge state filling or localized defect-related transitions alone, suggesting that additional excited-state effects must be considered. Taken together, the emergence of this new above-edge response and the differing interpretations for near-edge features reported previously motivate a systematic investigation of the complete excited-state optical response through complementary spectroscopic approaches, as presented below. 
+
+2.2. Identification of critical point transitions 
+
+As a starting point for clarifying the origin of the near-edge and above-edge TA features, we performed PR spectroscopy, which is a well-established technique for identifying critical point transitions in semiconductor band structures. In brief, PR is a contactless modulation spectroscopy that measures optical excitation-induced changes in reflectivity arising from the modulation of in-ternal electric fields. In semiconductor thin films, band bending at surfaces and interfaces gives 7rise to built-in electric fields that can be transiently modified upon illumination through the estab-lishment of a SPV. The photo-induced modulation of the internal electric field alters the dielectric function in the vicinity of interband transitions and produces third-derivative-like spectral sig-natures near critical points. 20 Importantly, such electroreflectance-like contributions arising from transient electric-field modulation have also been reported in pump–probe transient reflectivity studies of semiconductors. 21–28 Because PR selectively probes field-induced modulations under steady-state conditions, it provides a powerful reference for identifying analogous contributions within TA spectra. Here, PR measurements were performed using a chopped 405 nm CW laser with an intensity of 1 mW cm −2 to periodically modulate the internal electric field, while the reflected light intensity of a monochromatic probe beam was recorded as a function of photon energy. The resulting PR spectrum, shown in Figure 1 (b), is given by the normalized change in reflectivity ( ∆R/R)and exhibits the characteristic third-derivative-like lineshapes associated with modulated interband transitions. The dominant features appear in the near-edge region, coinciding closely with the bleach features observed in TA. In addition, a weaker derivative-like feature is also observed in the above-edge region, near the spectral position of the strong PIA observed in TA. To quantify the critical point energies, the PR spectrum was analyzed by fitting the data with third-derivative functional form (TDFF) functions, given by: 20,29–31 
+
+∆R/R = ∑
+
+> j
+
+ℜ[Cjeiθ j (E − Eg, j + iΓ j)−n j ] ,
+
+which describes the third-derivative-like perturbation of critical-point transitions by an electric field (low-field limit). Here, Cj is the amplitude, θ j a phase factor, Eg, j the critical point energy, and Γ j the energetic broadening of the j-th critical point transition. The exponent n j describes the critical point type, and is given by n = 2.5 for three-dimensional M0-type interband critical points typical of bulk semiconductors, such as the Ta 3N5 thin films investigated here. In addition, to account for the broad sub-gap optical response, a Gaussian component was included in the fit, as discussed below. Analysis of the experimental PR spectrum reveals that three components are required to fit the near-edge and above-edge spectral response (see Figure 1 (b) and Table S1). In particular, the near-edge region cannot be described by a single critical point transition, but instead comprises two components. The lower energy feature is centered at 2.14 eV, which agrees well with the reported 8fundamental bandgap of Ta 3N5 and coincides with the lower energy bleach observed in TA. 9,11,32 
+
+Thus, we attribute this feature to the fundamental band-edge transition. A second near-edge critical point is resolved at 2.27 eV. This higher energy component exhibits a larger broadening parameter and a different phase relative to the 2.14 eV transition, confirming that it corresponds to a separate optical resonance. The presence of two closely spaced near-edge features is consistent with the known opti-cal anisotropy of Ta 3N5. Indeed, prior polarization-resolved measurements of epitaxial Ta 3N5
+
+films have revealed two absorption edges, one at 2.12 eV for E ∥ [100 ] and another at 2.27 eV for 
+
+E ∥ [001 ], which correspond to inequivalent near-edge interband transitions separated by approx-imately 0.15 eV. 33 Because our films are polycrystalline, the measured PR response represents a polarization-averaged superposition of contributions from differently oriented grains. Therefore, the simultaneous observation of two closely spaced near-edge critical points with a comparable en-ergy separation is consistent with the anisotropic band structure of Ta 3N5. Importantly, variations in thin film texture may modify the relative spectral weight of these transitions and thus influence the apparent shape of the absorption edge, potentially contributing to differences in previously reported ground state absorption and TA spectra of Ta 3N5.Both near-edge PR components lie within the spectral region of the two bleach features ob-served in TA, suggesting that these transient bleach signals arise from the same critical point transitions. However, subtle differences in spectral positions are observed between the two mea-surements, as exemplified by the apparent ∼ 100 meV blueshift of the higher-energy TA bleach relative to the corresponding PR critical point. These shifts can be understood by considering the fundamentally different relationships between the measured signal and the underlying dielectric function in the two measurement geometries. Measurements in reflection and transmission ge-ometries can exhibit different apparent spectral feature positions near the same transitions, even though both are proportional to the third derivative of the dielectric function, as reflection-based measurements such as PR are more strongly influenced by the real part of the dielectric function, whereas transmission-based measurements are more strongly influenced by its imaginary part 34 .This is confirmed by phototransmittance (PT) measurements performed under otherwise identi-cal conditions to PR, which yield ∆T /T spectra whose features are shifted relative to PR but are closely aligned with those observed in TA (Figure S3). A third critical point is observed at 2.77 eV, corresponding to an additional interband transition in the above-edge region. The energetic position of this feature is closely aligned with that of the 9dominant high-energy PIA observed in TA at 2.80 eV, indicating that this transient response arises from an intrinsic critical point transition in the electronic structure of Ta 3N5. Importantly, this TA signal occurs well above the bandgap and appears as a strong PIA. Therefore, it cannot be readily explained by conventional state filling, indicating that an alternative excited-state mechanism must govern the response in this spectral region, as discussed later. In addition to the critical points described above, the PR spectrum exhibits a broad sub-gap sig-nal extending toward the low-energy limit of the measurement window. Such sub-gap responses are typically associated with optical transitions involving defect states, such as O N and v N centers located inside the Ta 3N5 bandgap. 11,12 Because these localized states do not comprise critical point transitions, they are not expected to exhibit TDFF-like lineshapes and, therefore, the spectral re-sponse in this region was fitted using a Gaussian component (see Figure 1 (b) and Table S1). Here, the sub-gap PR signal likely arises from trapping- and SPV-induced changes in defect occupancies upon illumination, consistent with the known sensitivity of O N and v N to the Fermi level position, as discussed further below. Having established the critical point transitions and their energetic po-sitions, along with initial indications for the presence of optically active sub-gap defect states, we next investigate how modulation of the internal electric field manifests in the steady-state optical response of Ta 3N5 using potential-dependent UV-Vis spectroscopy. 
+
+2.3. Electric field-induced optical response 
+
+The PR measurements above establish that the near-edge TA features coincide with electro-reflectance-active critical points, suggesting that modulation of the internal electric field may gov-ern the transient near-edge response. In TA, the above bandgap pump pulse generates a large density of excess charge carriers that can screen the built-in electric field near the surface and tran-siently flatten the bands. To independently isolate the impact of such changing internal electric fields on the optical response of Ta 3N5, we performed P-UV-Vis measurements in transmission geometry using a three-electrode photoelectrochemical cell filled with 1 M KPi (pH 12.3). Spec-tra were recorded as a function of the applied potential on the Ta 3N5 working electrode, which was stepped from 0.0 to 1.2 V RHE . The measured potential-dependent absorption spectra were referenced to the spectrum recorded at 0.0 V RHE , which is near the flat band potential ( Vfb ) of Ta 3N5.35,36 As such, increasing the anodic bias leads to a systematic increase in the spatial extent of the depletion region at the semiconductor/electrolyte interface. 10 The resulting differential P-UV-Vis spectra (Figure 2) are characterized by a bleach and sev-eral field-induced absorption (FIA) features, all of which increase in absolute amplitude with in-creasing anodic bias. In general, the spectral response is characterized by an increasing FIA for transitions near and above the band edge and a bleach of transitions in the sub-gap range. In the above-edge region near 2.80 eV, a weak derivative-like feature is observed, consistent with the electroreflectance response of the higher-energy critical point identified in PR. However, its rela-tive amplitude is substantially smaller than the dominant PIA observed at this energy in TA. In the near-edge region, two FIA features are observed at approximately 2.10 eV and 2.35 eV, with spec-tral positions that are closely aligned with the critical point transitions identified by PT. Overall, the near-edge spectral response is characteristic of an electroabsorption process involving the two closely spaced interband transitions of the anisotropic band structure of Ta 3N5.To further characterize the near-edge spectral evolution under an applied potential, the P-UV-Vis spectra were decomposed using Gaussian functions. As shown in Figure S4 (a), the lower-energy feature near 2.10 eV is well described by a single component. In contrast, the higher-energy feature near 2.35 eV requires two components to capture its asymmetric broadening toward higher photon energies with increasing anodic bias. Analysis of the potential dependence of the fitted Gaussian V RHE 1.2 0.2 1.0 0.4 0.8 0.6 
+
+FIG. 2. Potential-dependent UV-Vis (P-UV-Vis) spectra of a Ta 3N5 working electrode, recorded in trans-mission geometry in a three-electrode electrochemical cell as a function of the applied electrochemical potential, which was swept from 0.0 to 1.2 V RHE with a 0.1 V step size in 1 M pH 12.3 KPi buffer. Data are referenced to the spectrum recorded at 0.0 V RHE . The near-edge region exhibits two field-induced absorption features near 2.10 eV and 2.35 eV that grow with increasing anodic bias, consistent with an electroabsorp-tion response arising from widening of the near-surface depletion region. A broad sub-gap bleach below 2.0 eV is assigned to bias-induced change of defect charge states within the depletion region. 
+
+11 components reveals that the amplitudes of the two primary features at 2.15 eV and 2.35 eV scale approximately with √V , consistent with electroabsorption effects in the depletion region of n-type Ta 3N5, whose width increases with increasing anodic polarization as W ∝ √V −Vfb .37 In contrast, the amplitude of the intermediate Gaussian component at 2.25 eV initially increases but saturates at moderate anodic bias, suggesting that it originates from a different spatial region that becomes fully depleted under a moderate anodic bias of 0.4 V RHE . This behavior is consistent with the presence of a finite near-surface layer, 35,36 such as amorphous layers or oxynitride phases that are known to form on the surface of Ta 3N54,5,38–40 .Notably, the near-edge P-UV-Vis and TA spectra exhibit closely aligned spectral features, but with opposite signs. This can be understood by recognizing that the two measurements apply op-posite perturbations to the internal electric field below the surface of the semiconductor. Increas-ing the anodic bias in P-UV-Vis enhances the electric field strength within the depletion region, whereas the pump-induced SPV in TA transiently screens it. Together, these observations suggest that the near-edge TA bleach features arise from modulation of the internal electric field rather than conventional state filling or excited-state absorption processes. While such responses have previously been reported in ultrafast pump-probe studies of single crystalline III-V semiconductors measured in reflection geometry, 21–28,41 the present results demonstrate that analogous contribu-tions can be resolved in transmission-mode μs-s TA of polycrystalline thin film photoelectrodes. Importantly, isolating such a response enables optical tracking of photovoltage generation, charge separation, and recombination dynamics at functional semiconductor interfaces. In contrast to the near-edge region, where the optical response is governed by electroabsorption at the critical point transitions, the sub-gap region below approximately 2.0 eV is characterized by a broad, spectrally flat bleach that increases in amplitude with increasing anodic bias. Prior studies have assigned sub-gap absorption in Ta 3N5 to optical transitions associated with shallow substitutional O N impurities, as well as deeper v N defects and associated reduced Ta 3+ states, with energetic positions located 0.1 – 0.6 eV below the CBM. 12 In the present P-UV-Vis measurements, increasing the anodic bias progressively depletes the near-surface region of electrons and shifts the surface Fermi level toward midgap, modifying the charge states of these defects. As the Fermi level moves toward midgap, DFT calculations predict a redistribution of defect charge states, increasing the density of O N and v N states at the cost of O × 
+
+> N
+
+and v ×
+
+> N
+
+/v N states. 42–44 The resulting reduction in the occupied defect state density decreases the availability of transitions from these in-gap states to higher lying states within the conduction band (CB), consistent with the observed sub-gap bleach. 12 However, at anodic bias potentials in excess of approximately 0.5 V RHE , a roll-over and decrease in the relative bleach strength is observed at low photon energies (near 1.8 eV), suggesting the emergence of an additional contribution in this spectral range. Inspection of the P-UV-Vis spectra collected over a broader spectral window (Figure S5) reveals the presence of a FIA feature near 1.6 eV that is overlaid on the broad sub-gap bleach. The energetic position of this feature is consistent with the known range of v N states within the Ta 3N5 bandgap. 12 As these deeper states become depopulated and unoccupied, transitions from the valence band and near-valence band levels into these empty in-gap states become optically allowed, giving rise to the observed FIA. Furthermore, the energetic position of this feature at approximately 1.6 eV is consistent with the sub-gap Gaussian component identified in the PR spectrum, providing additional support for the assignment of that response to defect-mediated optical transitions involving v N states. Taken together, the P-UV-Vis data reveal two bias-dependent optical responses in Ta 3N5. In the near-edge region, the response is governed by electroabsorption at the critical point transitions, arising from modulation of the internal electric field within the depletion region. In contrast, the sub-gap response reflects bias-induced changes of in-gap defect charge states. However, neither PR nor the P-UV-Vis can account for the dominant high-energy PIA centered at 2.80 eV observed in TA. In particular, both PR and P-UV-Vis yield relatively weak derivative-like features near this higher energy interband transition, pointing to an additional mechanism that must govern the above-edge transient response. 
+
+2.4. Temperature-dependent optical response 
+
+Unlike the near-edge transitions, the pronounced above-edge TA feature at 2.80 eV appears as a strong PIA. Conventional interband state filling would be expected to reduce absorption at such a transition, producing a bleach, whereas electroreflectance effects would yield a derivative-like lineshape analogous to that observed in PR and P-UV-Vis. Therefore, the presence of a strong PIA indicates that an additional mechanism must contribute to the transient response in this spectral region. Among the possible contributions, pump-induced lattice heating is often overlooked but can significantly modify the optical spectrum through thermally induced shifting and broadening of interband transitions. To quantify the impact of lattice heating on the optical transmission of Ta 3N5 thin films, we performed T-UV-Vis measurements. Transmission spectra were recorded from 30 ◦C to 70 ◦C, 13 °C 70 35 60 45 FIG. 3. (a) Temperature-dependent UV-Vis (T-UV-Vis) spectra of a Ta 3N5 thin film recorded in transmission geometry as a function of temperature, stepped from 30 ◦C to 70 ◦C. Data are referenced to the spectrum recorded at 30 ◦C. A pronounced positive feature near 2.80 eV grows with increasing temperature, closely resembling the dominant above-edge photo-induced absorption observed in TA. The inset shows the re-constructed thermally induced critical point shift for the above-edge and near-edge region. (b) Influence of pump-induced lattice heating on the TA spectrum of Ta 3N5. A TA spectrum recorded in air (black) is compared to one recorded with Ta 3N5 in DI water (blue), where the higher heat capacity of water attenu-ates thermal contributions, confirming the thermal origin of the above-edge photo-induced absorption. Also shown is the thermally corrected TA spectrum (red), obtained by subtracting the interpolated temperature-dependent UV-Vis data from the spectrum collected in air, thereby providing the underlying electronic and defect-related contributions to the TA spectrum. 
+
+and were referenced to the spectrum collected at 30 ◦C (Figure 3 (a)). The resulting differential spectra show a pronounced positive-going feature centered near 2.80 eV, with an asymmetric tail extending toward lower photon energies, closely resembling both the lineshape and asymmetry of the dominant above-edge PIA observed in TA. This agreement strongly suggests that the above-edge PIA arises predominantly from pump-induced thermal effects rather than electronic state filling or field modulation. In the near-edge region, the T-UV-Vis response differs markedly from the TA and PR spec-tra. Rather than the two closely spaced bleach features arising from the pair of interband critical points observed in those measurements, the T-UV-Vis spectra exhibit a comparatively weak, single derivative-like feature. The amplitude of this feature grows and its low-energy tail extends progres-sively into the bandgap with increasing temperature. Thus, although lattice heating may contribute to the near-edge TA response, thermal effects alone are insufficient to reproduce its dual-feature structure, consistent with the assignment of electronic contributions from the anisotropic band structure of Ta 3N5 described above. 14 To quantitatively determine the extent to which lattice heating can account for the TA response, we next reconstructed the T-UV-Vis spectra from the 30 ◦C ground state absorption spectrum by incorporating energy-dependent spectral shifting and broadening parameters, as described in the Supporting Information (Figure S6). While a single global shift and broadening parameter was not sufficient to reproduce the full spectral evolution across the measured range, this behavior is expected given the presence of multiple independent interband transitions. Using the energy-dependent parameters, the differential spectrum at each temperature could be accurately repro-duced for photon energies above 2.0 eV, as illustrated for the representative differential spectrum collected at 50 ◦C (see Figure S6 (a)). The reconstruction confirms that the pronounced positive feature in the above-edge region is dominated by a thermally induced redshift of the higher-energy interband transition, while the weaker derivative-like structure near the absorption onset arises primarily from thermal broadening at the fundamental edge of Ta 3N5.The critical point energies of the principal spectral features decrease linearly with temperature, albeit with different slopes (see Figure 3 (a) inset). Such a behavior is consistent with a Varshni-type band-gap variation over the thermal window studied here. 45,46 The above-edge feature near 2.80 eV exhibits the strongest temperature coefficient of -0.18 meV K −1, while the lower energy negative and positive near-edge feature varies more weakly, with a rate of -0.02 meV K −1 (see Figure S7). This much stronger temperature dependence of the 2.80 eV spectral feature leads to its dominant spectral weight and thermal sensitivity compared to the near-edge feature. Overall, the excellent agreement between the T-UV-Vis lineshape and the above-edge TA feature, supported by the quantitative spectral reconstruction and linear temperature scaling, indicates that pump-induced lattice heating is the primary origin of the above-edge PIA in Ta 3N5. In contrast, thermal effects alone cannot explain the dual bleach structure of the near-edge region, which is instead dominated by anisotropic electroabsorption effects, as revealed by the P-UV-Vis measurements described above. To confirm the thermal origin of the above-edge PIA, we next compared TA spectra recorded from Ta 3N5/air and Ta 3N5/DI water interfaces, exploiting the higher heat capacity of water to mit-igate pump-induced heating. As shown in Figure 3 (b), the introduction of a thin DI water layer leads to significant attenuation of the dominant above-edge PIA, further supporting the T-UV-Vis based assignment of this feature as arising from thermal effects. In contrast, much more subtle changes are observed at the lower photon energies of the near-edge and sub-gap regions. The dual-bleach structure of the near-edge region is retained upon immersion in water, but with mod-15 ified relative amplitudes, as well as a slight broadening and approximately 25 meV blueshift of the higher-energy feature. This can be understood as being a consequence of the convolution between the dominant electroabsorption response and the weaker, single derivative-like thermal contribution in this region. In particular, adding a water layer at the interface selectively reduces the thermal component while leaving the electroabsorption-derived signal mostly unchanged. To eliminate the thermal response and isolate the underlying electronic contributions to the TA spectrum, T-UV-Vis spectra were interpolated to match the above-edge PIA and subtracted from the TA spectrum collected in air. The resulting temperature-corrected TA spectrum is shown in Figure 3 (b) and represents the electronic TA response following photoexcitation. Through this thermal correction procedure, independently measured T-UV-Vis data can be used to isolate the electronic and defect-related contributions to the TA spectrum, suggesting that thermal and electronic dynamics can be simultaneously tracked during pump-probe measurements. 
+
+2.5. Thermal, electrostatic, and defect contributions to the transient optical response 
+
+Having independently characterized the thermal and electrostatic contributions to the optical response of Ta 3N5 using T-UV-Vis and P-UV-Vis measurements, we now employ these data as reference spectra to decompose the TA spectrum into its constituent physical contributions. In particular, we co-fit interpolated T-UV-Vis and P-UV-Vis spectra to the measured TA spectrum, initially fitting the thermal component to the above-edge region ( ≥2.5 eV) and the electrostatic component to the near-edge region (2.0 – 2.5 eV). Due to the partial spectral overlap of these two components across the different spectral ranges, an iterative procedure was then used to achieve a fit of the experimental TA data (see Supporting Information, Section S1). The resulting fit param-eters yield an effective film temperature and degree of band flattening, allowing these physically meaningful quantities to be extracted directly from the TA data. Figure 4 shows the results of the spectral fitting procedure, with the individual thermal and elec-trostatic components in the lower panel and their sum compared to the experimental TA spectrum in the upper panel. Good agreement between the fitted sum and the experimental data is observed across most of the near- and above-edge spectral range. In the above-edge region ( ≥ 2.5 eV), the thermal component dominates and gives rise to the strong PIA centered at 2.80 eV, consistent with pump-induced lattice heating. In the near-edge region (2.0 – 2.5 eV), both thermal and electrostatic responses contribute, but with different lineshapes. The dual bleach structure in the TA spectrum 16 -1 01     T A R e c o n s t r u c t i o n
+
+> Thermal
+> Defects
+> Electro-
+> static
+> Above-
+> edge
+> Near-edge
+> Sub-
+> gap
+> 3.0
+> 2.8
+> 2.6
+> 2.4
+> 2.2
+> 2.0
+> 1.8
+> -1
+> 0
+> 1
+> 2
+> Energy(eV)
+> Thermal
+> Electrostatic
+
+FIG. 4. TA spectrum of Ta 3N5 recorded at a pump-probe delay of 1 μs (black, upper panel) together with the reconstructed spectrum obtained by co-fitting independently measured T-UV-Vis and P-UV-Vis com-ponents (red, upper panel). The individual thermal (blue) and electrostatic (teal) components are shown in the lower panel. Good agreement between the measured and reconstructed spectra is observed across the near- and above-edge spectral range, indicating that pump-induced lattice heating and transient band flattening dominate the visible TA response of Ta 3N5. Deviations between the measured and reconstructed spectra below 2.15 eV are ascribed to contributions from non-equilibrium charge states of defects within the bandgap. 
+
+is dominated by the electrostatic component, which arises from pump-induced band flattening. Together, the thermal and electrostatic components capture the near- and above-edge TA response, indicating that a vast majority of the transient optical signal in Ta 3N5 across this spectral range originates from pump-induced heating and SPV modulation rather than from state filling or elec-tronic transitions of excited carriers. The absence of state-filling contributions can be understood by considering that, at μs-s pump-probe delay times, the majority of photogenerated carriers have already recombined and the remaining population primarily comprises charge-separated carriers near the semiconductor surface. At these carrier densities, band-filling effects are negligible, and the transient optical response is instead dominated by thermal and electrostatic perturbations. The most pronounced deviation between the fitted sum and the experimental TA spectrum oc-curs in the sub-gap region (< 2.0 eV). Here, the electrostatic component predicts a PIA, whereas the measured TA signal is significantly weaker than predicted. While the specific origin of this 17 discrepancy is not yet fully resolved, it likely arises from a superposition of competing PIA and bleach contributions in the sub-gap spectral range. This hypothesis is physically supported by the observation of overlapping bleach and FIA features in the P-UV-Vis measurements, which arise from bias-induced changes in defect charge state populations. In this regard, it is important to rec-ognize that P-UV-Vis and TA modulate defect populations in two fundamentally different ways. In P-UV-Vis, the Fermi level is shifted quasi-statically under near-equilibrium conditions, resulting in a progressive and controlled redistribution of defect charge states within the space charge region. While the SPV generated during TA leads to a similar perturbation of the built-in electric field, photoexcitation also induces a non-equilibrium splitting of quasi-Fermi levels, thereby altering both electron- and hole-active defect states. Therefore, during TA, pump-induced band flattening shifts the quasi-Fermi levels towards the band edges, giving rise to the PIA predicted from the electrostatic component, while simultaneous carrier trapping additionally modifies the occupan-cies and charge states of in-gap defect states, potentially giving rise to competing bleach and PIA contributions that are not captured by P-UV-Vis measurements alone. For example, hole trapping at originally occupied v N states would reduce the density of available v N to CB transitions, leading to a sub-gap bleach 14 , while simultaneously opening VB to v N transitions, inducing a PIA, with the net optical response depending on the relative oscillator strength of these different transitions. Furthermore, while the P-UV-Vis response is confined to the space charge region, photoexcitation generates carriers throughout the full film thickness, meaning bulk defect trapping processes will also contribute to the sub-gap TA response. Overall, the weak but measurable PIA in this spectral range is indicative of a defect-related photoresponse with direct implications for the functional performance of Ta 3N5 photoanodes. The complex interplay of competing contributions, as well as the deviation from simple electrostatic models revealed here, motivates future studies of these defect-mediated trapping and recombination processes. Having established the physical origins of the thermal, electrostatic, and defect-related contri-butions to the TA spectrum, we now apply the spectral decomposition approach to independently track their time evolution across the full pump-probe delay window. Figure 5 (a) shows the com-plete TA delay time series, spanning from 500 ns – 200 ms, revealing a smooth decay of all features during relaxation to the ground state. By applying the fit procedure to each spectrum in the time series, we link each TA spectrum to an effective temperature and to an effective surface band flattening potential. Figure 5 (b) shows the extracted pump-induced lattice heating and its subsequent transient de-18 1·10 -6 1·10 -5 1·10 -4 1·10 -3 1·10 -2 1·10 -1 sFIG. 5. (a) Full TA time delay series of a Ta 3N5 thin film recorded with a pump fluence of 0.83 mJ cm −2
+
+spanning pump-probe delays of 500 ns to 200 ms. (b) Transient thin film heating extracted from the co-fitting procedure as a function of pump-probe delay, together with a power-law fit (red, dashed) yielding an exponent of b = −0.5, consistent with one-dimensional heat diffusion into the substrate. (c) Pump-induced reduction in surface band bending extracted from the co-fitting procedure, together with a stretched-exponential fit (red, dashed) with time constant τ = 7.93 μs, consistent with defect-mediated recombination across an energetically distributed continuum of in-gap states. 
+
+19 cay back to thermal equilibrium. The transient is well described by a power-law fit of the form 
+
+∆T = a · tb, yielding an exponent of b = −0.50, in excellent agreement with the theoretically expected behavior for one-dimensional heat diffusion into the substrate. 47,48 The extracted film temperature at the earliest measured delay time of 500 ns corresponds to an increase of approxi-mately 5 K. This is quantitatively consistent with the upper estimate of 10.4 K for the initial pump-induced heating (see Supporting Information, Section S2), with the difference reflecting partial heat dissipation into the substrate prior to the first measured delay point. Thus, these results pro-vide strong validation for the thermal assignment and deconvolution procedure, confirming that the above-edge PIA tracks the thermal transient. Figure 5 (c) shows the extracted transient band flattening, expressed in terms of an effective applied P-UV-Vis potential. This approach provides a means of tracking the SPV relaxation dy-namics following photoexcitation and indicates that pump excitation induces a 250 mV decrease in the surface band bending at the earliest measured delay time of 500 ns. The subsequent recovery of the dark band bending follows a stretched exponential decay of the form ∆P = a · exp (−(t/τ)β )
+
+with a time constant of τ = 7.93 μs. Stretched exponential decay dynamics are characteristic of relaxation across an energetically distributed continuum of states rather than a single well-defined recombination pathway. 19 This result suggests that the SPV recovery is not only governed by bulk carrier recombination but also by the trapping and detrapping dynamics of defect states within the bandgap of Ta 3N5, such as O N and v N discussed above, as well as surface states. As carri-ers are captured and released by these energetically distributed in-gap states, recombination pro-ceeds across a range of time constants rather than through a single well-defined pathway, giving rise to the observed stretched exponential behavior. Through this analysis, we find that TA pro-vides a powerful means of probing the transient band bending, providing additional insight into both photovoltage and recombination dynamics in Ta 3N5. Taken together, the complementary PR, T-UV-Vis, and P-UV-Vis measurements indicate that the μs-s TA optical response of Ta 3N5
+
+comprises three contributions that can be independently quantified – lattice heating, surface pho-tovoltage, and defect populations – thereby providing key insights into the physical origins of the transient optical response of Ta 3N5.20 3. CONCLUSION 
+
+In conclusion, this work demonstrates that the μs-s TA spectrum of Ta 3N5 comprises three spectrally distinct contributions that can be independently disentangled through a combination of PR, T-UV-Vis, and P-UV-Vis spectroscopies. Using PR, we identified three optical critical points in the band structure of Ta 3N5, including two anisotropic near-edge transitions (2.14 eV and 2.27 eV) and a higher-lying transition (2.80 eV), thereby providing a basis for interpreting TA spectral features in terms of the underlying electronic structure. In the above-edge region, T-UV-Vis reveals that a dominant and previously unreported PIA centered at 2.80 eV arises from pump-induced lattice heating, manifesting as a thermally driven redshift of the higher-energy interband transition. In contrast, a much weaker coefficient for the change of the fundamental bandgap with temperature leads to a weaker thermal component in the near-edge region. Based on these T-UV-Vis data, we report a thermal correction procedure that provides a generalizable means of removing pump-induced heating contributions from μs-s TA data during post-processing, enabling access to electronic and defect-related dynamics. Complementary P-UV-Vis measurements indicate a strong near-edge electroabsorption re-sponse arising from modulation of the surface photovoltage. The resulting pair of P-UV-Vis features is closely aligned with the dual-bleach features observed in TA, indicating that this re-sponse is dominated by transient band flattening. Fitting of the thermal and electrostatic responses to TA spectra enables quantification of a 250 mV pump-induced reduction in surface band bending that recovers with stretched-exponential dynamics, consistent with defect-mediated recombina-tion across an energetically distributed continuum of in-gap states. Finally, in the sub-gap region, deviations between the fitted and measured spectra suggest a complex combination of compet-ing bleach and PIA contributions arising from both the induced surface photovoltage and the non-equilibrium redistribution of defect charge states under photoexcitation. Notably, the absence of band-edge state-filling contributions or optical transitions of these excited-state populations stands in contrast to common interpretations of TA spectra. However, in the μs-s time delay range probed in this work, the majority of photogenerated carriers have re-combined and the remaining population predominantly comprises charge-separated carriers near the semiconductor surface. Such a regime is particularly important for probing competitive re-combination and interfacial charge transfer associated with the chemical dynamics of functional photoelectrodes. In addition, the identification of specific spectral responses associated with lat-21 tice heating, transient photovoltages, and defect populations also provides prospects for improved interpretation of ultrafast TA spectra that include additional contributions from, for example, state-filling, bandgap renormalization, and excited-state transitions. Thus, direct comparison of the present μs-s results with ultrafast fs-ns TA measurements is expected to offer a powerful opportu-nity to isolate and independently quantify such overlapping contributions across the full temporal range. More broadly, the ability to independently track thermal, electrostatic, and defect-mediated contributions through rational deconvolution of TA opens new possibilities for operando charac-terization of photoelectrochemical and photocatalytic systems, where competitions between fast electronic relaxation and slow chemical dynamics govern energy conversion efficiencies. More-over, this approach may be of particular relevance to the emerging field of dynamic and resonant catalysis, in which photo-activated systems exploit transiently modulated electric fields, tempera-tures, and charge transfer processes to enhance catalytic activity and steer selectivity. 49 By quanti-fying each of these transient responses independently, the present approach represents a powerful operando tool for characterizing how external stimuli, including photoexcitation, impact physical and chemical dynamics at functional semiconductor interfaces. 
+
+4. EXPERIMENTAL SECTION 4.1. Synthesis of Ta 3N5 thin films 
+
+Ta 3N5 thin films were prepared via a two-step synthesis route consisting of reactive sputter deposition of an oxide precursor (TaO x) followed by high-temperature ammonolysis to form crys-talline Ta 3N5. TiN/TaO x bilayer films were deposited via reactive magnetron sputtering (PVD 75, Kurt J. Lesker) onto fused silica (Siegert Wafer) substrates. As previously reported, the thin TiN underlayer serves as an electrically conducting back contact with high optical transmission across the visible range 50 . The sputtering system was operated at a base pressure of 5 × 10 −8 Torr with a target-substrate distance of approximately 17 cm. Before deposition, the substrates were sequen-tially cleaned with deionized water, acetone, and isopropanol, then dried under flowing nitrogen. For target conditioning, both the Ti (99.995 %, Kurt J. Lesker) and Ta (99.95 %, Kurt J. Lesker) targets were sputter-cleaned in an 8.5 mTorr Ar plasma (60 W DC, 99.9999 %, Linde) for 10 min. TiN films were sputtered for 5 min at 60 W under 19 sccm Ar and 1 sccm N 2 flow at a substrate 22 temperature of 600 ◦C. Subsequently, TaO x precursor films were sputter-deposited for 40 min at the same power, temperature, and process pressure in a 10 % O 2/Ar gas mixture. During deposi-tion, the substrate was rotated at 10 rpm to ensure uniform film growth. Following deposition, the oxide precursor films were converted to Ta 3N5 by annealing in a quartz tube furnace (Nabertherm RS 80/300/1) under a continuous NH 3 flow (100 sccm, 1 bar). The temperature was ramped at 30 ◦C min −1 to 920 ◦C and held for 3 h to promote complete nitridation and crystallization. The samples were then cooled under NH 3 flow until 400 ◦C, after which the clam-shell of the furnace was opened to accelerate cooling. Once at room temperature, the gas flow was switched to N 2 for 10 min before the sample was removed. This procedure yielded a final film thickness of ≈ 7 nm for the TiN and ≈ 220 nm for the Ta 3N5 layer. 
+
+4.2. Structural and photoelectrochemical characterization 
+
+The phase purity and morphology of the nitrided films were evaluated by GI-XRD and AFM, as previously reported for similar synthetic processes. 6,9,10 GI-XRD measurements were performed using a Rigaku SmartLab diffractometer equipped with a Cu anode and a HyPix-3000 2D detector. Data were collected at a fixed incidence angle, ω, of 0.4 ◦ while scanning 2 θ from 15 ◦ to 70 ◦ at a scan rate of 2 ◦ min −1 with a step size of 0.04 ◦. AFM images were acquired using a Bruker MultiMode system operated in tapping mode with an NSG30 cantilever (nominal tip radius 6 nm). PEC performance was evaluated using a home-built one-compartment three-electrode cell, with the Ta 3N5 film serving as the working electrode, a coiled Pt wire as the counter electrode, and a low-leakage Ag/AgCl reference electrode (Driref-2SH, WorldPrecision Instruments). Poten-tials were controlled using a BioLogic (SP-300) potentiostat. The electrolyte consisted of 1 M phosphate buffer (KPi, ≥ 98 %, K 2HPO 4 and K 3PO 4, Sigma-Aldrich) at pH 12.3 with 0.1 M K4[Fe(CN) 6] ( ≥ 98.5 %, Sigma-Aldrich) added as a sacrificial hole acceptor. The ferrocyanide redox couple was employed to probe interfacial hole extraction while minimizing kinetic limita-tions associated with sluggish water oxidation. Prior to measurement, the electrolyte was degassed with Ar (99.9999 % Linde) for 10 min. Illumination was provided by a solar simulator (Asahi, AM 1.5G) adjusted to 100 mW cm −2 at the sample position. Linear sweep voltammetry under chopped illumination was used to assess the steady-state photocurrent response, with all potentials reported with respect to the reversible hydrogen electrode (RHE). 23 4.3. Transient absorption spectroscopy 
+
+For μs-s TA measurements, samples were excited using a pump laser (SpitLight Compact 200 OPO, InnoLas Laser) delivering 5 ns pulses with tunable wavelength and repetition rate under am-bient conditions. For the measurements presented here, the pump wavelength was fixed at 355 nm and the repetition rate at 1 Hz. The pump beam was expanded to a spot diameter of approximately 1 cm to ensure homogeneous excitation across the probed region. The pump fluence was con-trolled using neutral-density filters. The transient response was probed in transmission geometry using continuous wave light from a xenon lamp (ILD-Xe-QH xenon-QTH source, Bentham, 75 W xenon lamp) directed through a grating monochromator (TMc300, Bentham) placed before the sample. For the broadband measurements presented in this work, a mirror mounted on the grating turret of the monochromator was used to deliver the full xenon lamp spectrum. Both pump and probe beams were incident on the sample from the film side, and a notch filter was placed after the sample to suppress scattered pump light. The transmitted probe light was dispersed by a second grating spectrometer (Kymera 328i, Oxford Instruments) and detected using an amplified, Peltier-cooled, gated sCMOS camera (iStar, Oxford Instruments). Data acquisition was synchronized to the pump pulse with a trigger diode (PDA8A/M, Thorlabs) placed adjacent to the sample. Unless otherwise noted, spectra were collected with a pump-probe delay of 1 μs. The resulting TA spectra are presented on an optical density scale as a function of probe beam energy E and pump-probe delay time t:
+
+∆OD (λ ,t) = log 10 
+
+ T0(λ )
+
+T (λ ,t)
+
+
+
+,
+
+where T0(λ ) and T (λ ,t) denote the probe transmission in the absence and presence of pump excitation, respectively. Spectra were averaged over 300–1800 consecutive laser pulses to improve the signal-to-noise ratio. For visualization, spectra were smoothed with a Savitzky–Golay filter (10 nm window, fourth-order polynomial) after verification that smoothing does not alter peak positions or spectral trends. All fitting was performed prior to smoothing. 
+
+4.4. Photoreflectance and phototransmittance spectroscopy 
+
+For PR and PT measurements, samples were excited using a 405 nm continuous wave laser (Cobolt 06-MLD 405 nm, Cobolt AB) operated at an intensity of 1 mW cm −2 and modulated at 333 Hz under ambient conditions. The excitation beam was incident on the sample surface along 24 the surface normal. Reflection and transmission changes were probed over a 1 cm diameter active area using monochromatic light provided by the same xenon source and monochromator employed for TA measurements (see Section 4.3). The monochromatic probe light was incident on the sam-ple at an angle of 27 ◦ relative to the surface normal and was scanned through the spectral region of interest to construct the PR spectrum. Reflected/transmitted probe light was passed through a 405 nm long-pass filter to suppress scattered pump light and was detected using a battery-powered Si photodiode (DET36A2, Thorlabs). The photodiode signal was fed into a transimpedance am-plifier with variable gain (DLPCA-200, Femto) and was analyzed with a lock-in amplifier (Model SR830 DSP, Stanford Research Systems) referenced to the pump modulation frequency. The lock-in simultaneously recorded both the DC and AC components of the reflected/transmitted sig-nal, enabling calculation of the normalized photoreflectance/phototransmittance response, ∆I/I =
+
+IAC /IDC .
+
+4.5. UV-Vis spectroscopy 
+
+UV-Vis measurements were performed using a Cary 5000 UV-Vis-NIR spectrophotometer (Ag-ilent) in transmission geometry. Spectra were acquired with a step size of 1 nm, a spectral band-width of 2 nm, and an averaging time of 1 s per data point. Custom sample holders were used for both T-UV-Vis and P-UV-Vis measurements. The T-UV-Vis cell comprised a polyether ether ketone (PEEK) housing with two quartz windows aligned along the transmission path. The sample was clamped between two copper plates with aligned apertures, enabling transmission measure-ments. A Pt100 thermocouple (KS-PT100-2L-1.0-330, otom Group GmbH) embedded in the Cu holder in close proximity to the sample was used to monitor the temperature, which was controlled using two Peltier elements (QC-71-1.4-8.5MS, Quick-Ohm Küpper & Co. GmbH) mounted to the Cu structure regulated by a commercial Peltier controller (TEC-1161-10A-PT100-SCREW, Meer-stetter Engineering GmbH). A custom code was used to synchronize Peltier control and UV-Vis data acquisition. The temperature was stepped from 30 ◦C to 70 ◦C. Prior to data collection at each set-point temperature, a 25 min stabilization time was implemented to ensure thermal equilibrium. The transmission spectrum of the empty cell (without film or substrate) was used as a reference, and the absorbance A at temperature T was calculated as 
+
+A(λ , T ) = log 10 
+
+Tempty (λ )
+
+T (λ , T )
+
+
+
+25 where Tempty (λ ) is the transmission of the empty cell and T (λ , T ) is the transmission of the mounted sample at temperature T . Differential T-UV-Vis spectra were then obtained relative to a reference temperature T0 = 30 ◦C as 
+
+∆AT (λ , T ) = A(λ , T ) − A(λ , T0).
+
+For P-UV-Vis measurements, a custom one-compartment three-electrode photoelectrochemical cell with a PEEK body and fused silica window was used. The substrate served as the other optical window with a 7 mm diameter opening in the housing allowing for transmission measurements under applied bias. The electrode configuration was identical to that used for PEC characterization, except that the sacrificial hole scavenger was omitted from the electrolyte. Potentials were applied in chronoamperometric mode with a BioLogic (SP-300) potentiostat. A custom code was used to synchronize the application of potential steps and acquisition of UV-Vis spectra. To equilibrate the sample, it was held at 0 V RHE for 4 h in the dark before starting the UV-Vis measurements. In addition, prior to each acquisition, the sample was allowed to equilibrate at the set-point potential for 5 min. Transmission spectra were referenced to a bare quartz substrate and the absorption spectra at applied potential V were calculated as 
+
+A(λ ,V ) = log 10 
+
+ Tsub (λ )
+
+T (λ ,V )
+
+
+
+where Tsub (λ ) is the transmission of the bare substrate and T (λ ,V ) is the transmission of the mounted sample at applied potential V . Differential P-UV-Vis spectra were then obtained relative to a reference potential V0 = 0 V RHE as 
+
+∆AV (λ ,V ) = A(λ ,V ) − A(λ ,V0).
+
+5. DATA AVAILABILITY STATEMENT 
+
+The data that support the findings of this study are available from the corresponding author upon request. 26 ACKNOWLEDGMENT 
+
+This project has received funding from the European Research Council (ERC) under the Euro-pean Union’s Horizon 2020 research and innovation program (grant agreement no. 864234), from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany ´sExcellence Strategy – EXC 2089/2 – 390776260, and TUM.Solar in the context of the Bavar-ian Collaborative Research Project Solar Technologies Go Hybrid (SolTech). This work further acknowledges funding by the Deutsche Forschungsgemeinschaft (DFG, German Research Foun-dation) – Grant No. 428591260. 
+
+REFERENCES 
+
+> 1
+
+M. Grätzel, Nature , 2001, 414 , 338–344. 
+
+> 2
+
+S. Corby, R. R. Rao, L. Steier and J. R. Durrant, Nat. Rev. Mater. , 2021, 6, 1136–1155. 
+
+> 3
+
+C. Jiang, S. J. A. Moniz, A. Wang, T. Zhang and J. Tang, Chem. Soc. Rev. , 2017, 46 , 4645–4660. 
+
+> 4
+
+Y. He, R. Chen, W. Fa, B. Zhang and D. Wang, J. Chem. Phys. , 2019, 151 , 130902. 
+
+> 5
+
+Y. He, J. E. Thorne, C. H. Wu, P. Ma, C. Du, Q. Dong, J. Guo and D. Wang, Chem , 2016, 1,640–655. 
+
+> 6
+
+L. M. Wolz, G. Grötzner, T. Rieth, L. I. Wagner, M. Kuhl, J. Dittloff, G. Zhou, S. Santra, V. Streibel, F. Munnik, I. D. Sharp and J. Eichhorn, Adv. Funct. Mater. , 2024, 34 , 2405532. 
+
+> 7
+
+T. Higashi, H. Nishiyama, Y. Otsuka, Y. Kawase, Y. Sasaki, M. Nakabayashi, M. Katayama, T. Minegishi, N. Shibata, K. Takanabe, T. Yamada and K. Domen, ChemSusChem , 2020, 13 ,1974–1978. 
+
+> 8
+
+T. Higashi, H. Nishiyama, Y. Suzuki, Y. Sasaki, T. Hisatomi, M. Katayama, T. Minegishi, K. Seki, T. Yamada and K. Domen, Angew. Chem. Int. Ed. , 2019, 58 , 2300–2304. 
+
+> 9
+
+J. Eichhorn, S. P. Lechner, C.-M. Jiang, G. Folchi Heunecke, F. Munnik and I. D. Sharp, J. Mater. Chem. A , 2021, 9, 20653–20663. 
+
+> 10
+
+L. I. Wagner, E. Sirotti, O. Brune, G. Grötzner, J. Eichhorn, S. Santra, F. Munnik, L. Olivi, S. Pollastri, V. Streibel and I. D. Sharp, Adv. Funct. Mater. , 2024, 34 , 2306539. 
+
+> 11
+
+Y. Xiao, C. Feng, J. Fu, F. Wang, C. Li, V. F. Kunzelmann, C.-M. Jiang, M. Nakabayashi, N. Shibata, I. D. Sharp, K. Domen and Y. Li, Nat. Catal. , 2020, 3, 932–940. 27 12 J. Fu, F. Wang, Y. Xiao, Y. Yao, C. Feng, Le Chang, C.-M. Jiang, V. F. Kunzelmann, Z. M. Wang, A. O. Govorov, I. D. Sharp and Y. Li, ACS Catal. , 2020, 10 , 10316–10324. 
+
+> 13
+
+M. Forster, D. W. F. Cheung, A. M. Gardner and A. J. Cowan, J. Chem. Phys. , 2020, 153 ,150901. 
+
+> 14
+
+D. H. K. Murthy, H. Matsuzaki, Z. Wang, Y. Suzuki, T. Hisatomi, K. Seki, Y. Inoue, K. Domen and A. Furube, Chem. Sci. , 2019, 10 , 5353–5362. 
+
+> 15
+
+A. Ziani, E. Nurlaela, D. S. Dhawale, D. A. Silva, E. Alarousu, O. F. Mohammed and K. Takan-abe, Phys. Chem. Chem. Phys. , 2015, 17 , 2670–2677. 
+
+> 16
+
+H. Yin, C. Shao, H. Wang, H. Zhang, D. Li, X. Zong, X. Wang and C. Li, J. Phys. Chem. Lett. ,2021, 12 , 3698–3704. 
+
+> 17
+
+J. J. M. Vequizo, M. Hojamberdiev, K. Teshima and A. Yamakata, J. Photochem. Photobiol. A ,2018, 358 , 315–319. 
+
+> 18
+
+D. Hayes, R. G. Hadt, J. D. Emery, A. A. Cordones, A. B. F. Martinson, M. L. Shelby, K. A. Fransted, P. D. Dahlberg, J. Hong, X. Zhang, Q. Kong, R. W. Schoenlein and L. X. Chen, Energy Environ. Sci. , 2016, 9, 3754–3769. 
+
+> 19
+
+T. J. Miao and J. Tang, J. Chem. Phys. , 2020, 152 , 194201. 
+
+> 20
+
+D. E. Aspnes, Surf. Sci. , 1973, 37 , 418–442. 
+
+> 21
+
+Y. Yang, J. Gu, J. L. Young, E. M. Miller, J. A. Turner, N. R. Neale and M. C. Beard, Science ,2015, 350 , 1056–1061. 
+
+> 22
+
+X. Chen, K. Wang and M. C. Beard, Phys. Chem. Chem. Phys. , 2019, 21 , 16399–16407. 
+
+> 23
+
+H. Zhu, N. Song and T. Lian, J. Am. Chem. Soc. , 2011, 133 , 8762–8771. 
+
+> 24
+
+Z. Xu, B. Hou, F. Zhao, Z. Cai, H. Shi, Y. Liu, C. L. Hill, D. G. Musaev, M. Mecklenburg, S. B. Cronin and T. Lian, Nano Lett. , 2021, 21 , 8017–8024. 
+
+> 25
+
+L. Pan, L. Dai, O. J. Burton, L. Chen, V. Andrei, Y. Zhang, D. Ren, J. Cheng, L. Wu, K. Frohna, A. Abfalterer, T. C.-J. Yang, W. Niu, M. Xia, S. Hofmann, P. J. Dyson, E. Reisner, H. Sirring-haus, J. Luo, A. Hagfeldt, M. Grätzel and S. D. Stranks, Nature , 2024, 628 , 765–770. 
+
+> 26
+
+X. Chen, R. T. Pekarek, J. Gu, A. Zakutayev, K. E. Hurst, N. R. Neale, Y. Yang and M. C. Beard, 
+
+ACS Appl. Mater. Interfaces , 2020, 12 , 40339–40346. 
+
+> 27
+
+S. S. Prabhu and A. S. Vengurlekar, J. Appl. Phys. , 2004, 95 , 7803–7812. 
+
+> 28
+
+Y. D. Glinka, N. H. Tolk, X. Liu, Y. Sasaki and J. K. Furdyna, J. Appl. Phys. , 2008, 103 , 043708. 
+
+> 29
+
+D. E. Aspnes and J. E. Rowe, Phys. Rev. Lett. , 1971, 27 , 188–190. 
+
+> 30
+
+Festkörperprobleme 10 , ed. O. Madelung, Springer Berlin Heidelberg, Berlin, Heidelberg, 1970. 28 31 O. S. Komkov, Phys. Solid State , 2021, 63 , 1181–1204. 
+
+> 32
+
+E. Nurlaela, A. Ziani and K. Takanabe, Mater. Renew. Sustain. Energy , 2016, 5, 18. 
+
+> 33
+
+Y. Wang, Y. Hirose, T. Wakasugi, Y. Masubuchi, M. Tsuchii, Y. Sugisawa, D. Sekiba, A. Chika-matsu and T. Hasegawa, J. Phys. Chem. Lett. , 2021, 12 , 12323–12328. 
+
+> 34
+
+B. O. Seraphin and N. Bottka, Phys. Rev. , 1966, 145 , 628–636. 
+
+> 35
+
+J. Fu, Z. Fan, M. Nakabayashi, H. Ju, N. Pastukhova, Y. Xiao, C. Feng, N. Shibata, K. Domen and Y. Li, Nat. Commun. , 2022, 13 , 729. 
+
+> 36
+
+Y. Kawase, T. Higashi, K. Obata, Y. Sasaki, M. Katayama, K. Domen and K. Takanabe, ACS Sustainable Chem. Eng. , 2022, 10 , 14705–14714. 
+
+> 37
+
+W. Schmickler and E. Santos, Interfacial electrochemistry , Springer, Heidelberg, 2nd edn., 2010. 
+
+> 38
+
+G. Liu, S. Ye, P. Yan, F. Xiong, P. Fu, Z. Wang, Z. Chen, J. Shi and C. Li, Energy Environ. Sci. ,2016, 9, 1327–1334. 
+
+> 39
+
+M. Hara, E. Chiba, A. Ishikawa, T. Takata, J. N. Kondo and K. Domen, J. Phys. Chem. B , 2003, 
+
+107 , 13441–13445. 
+
+> 40
+
+M. Li, W. Luo, D. Cao, X. Zhao, Z. Li, T. Yu and Z. Zou, Angew. Chem. Int. Ed. , 2013, 52 ,11016–11020. 
+
+> 41
+
+Z. Xu, B. Hou, F. Zhao, S. Suo, Y. Liu, H. Shi, Z. Cai, C. L. Hill, D. G. Musaev, M. Mecklenburg, S. B. Cronin and T. Lian, J. Am. Chem. Soc. , 2023, 145 , 2860–2869. 
+
+> 42
+
+J. Wang, A. Ma, Z. Li, J. Jiang, J. Feng and Z. Zou, Phys. Chem. Chem. Phys. , 2015, 17 , 8166– 8171. 
+
+> 43
+
+T. Jing, Y. Dai, X. Ma, W. Wei and B. Huang, RSC Adv. , 2015, 5, 59390–59397. 
+
+> 44
+
+G. Fan, Z. Zhou, Y. Jing and T. Frauenheim, J. Mater. Chem. A , 2024, 12 , 15922–15929. 
+
+> 45
+
+Y. P. Varshni, Physica , 1967, 34 , 149–154. 
+
+> 46
+
+K. P. O’Donnell and X. Chen, Appl. Phys. Lett. , 1991, 58 , 2924–2926. 
+
+> 47
+
+L. Belliard, C. Frétigny, E. Charron, S. Vincent, B. Perrin and D. Fournier, J. Appl. Phys. , 2015, 
+
+117 , 065306. 
+
+> 48
+
+J. Crank, The mathematics of diffusion , Oxford University Press, 2nd edn., 1975. 
+
+> 49
+
+M. Monai, W. Albrecht, A. Alkemper, N. Artrith, A. Baldi, A. Beck, R. T. Berry, E. Bianco, F. A. Brzesowsky, Q. Dong, J. A. Faria Albanese, R. R. Frontiera, E. Galvin, E. C. Garnett, N. Ger-rits, M. Grzelczak, M. Herzog, F. Hess, A. A. Kolganov, W. Koopman, N. Kosinov, S. Lander, E. Lepre, D. N. Maaskant, G. Miao, A. M. Naik, T. M. Onn, A. A. Peterson, D. Piankova, E. A. Pidko, K. Trangwachirachai, F. van den Bosch, Di Xu, B. Yilmaz, J. Zeininger, E. Alarcón 29 Lladó, J. Meyer, P. J. Dauenhauer and S. H. C. Askes, ACS Catal. , 2026, 16 , 4077–4112. 
+
+> 50
+
+L. I. Wagner, D. Moser, D. Friedrich, F. Munnik, O. Henrotte, E. Cortés, R. van de Krol, V. Streibel and I. D. Sharp, Small , 2026, e11534. 30 Supporting Information: Quantifying Thermal, Photovoltage, and Defect Contributions to Transient Absorption of Ta 3N5 Photoanodes 
+
+Johannes Dittloff, 1, 2 Lukas M. Wolz, 2 Matthias U. Quintern, 1, 2 Laura I. Wagner, 1, 2 
+
+Matthias Kuhl, 2 Johanna Eichhorn, 2 and Ian D. Sharp ∗1, 2, a) 1) Walter Schottky Institute, Technical University of Munich, 85748 Garching, Germany 
+
+> 2)
+
+Physics Department, TUM School of Natural Sciences, Technical University of Munich, 85748 Garching, Germany 
+
+> a) sharp@wsi.tum.de
+
+10.4 0.6 0.8 1.0 1.2 1.4 0.0 0.5 1.0 1.5 Current density (mA/cm 2)Potential (V RHE )(a) (b) 20 30 40 50 60 70 Intensity (a.u.)       
+
+> Reference
+
+(c) 
+
+>      
+>         
+
+(b)FIG. S1. Structural and photoelectrochemical characterization of Ta 3N5 thin films. (a) Grazing incidence X-ray diffraction pattern confirming formation of phase-pure orthorhombic Ta 3N5. (b) Atomic force mi-croscopy image revealing a granular morphology with a root-mean-square roughness of approximately 2.4 nm. (c) Photoelectrochemical linear sweep voltammogram measured under chopped AM1.5G illumina-tion in 1 M KPi buffer (pH 12.3) with 0.1 M K 4[Fe(CN) 6] as sacrificial hole acceptor. 3.0 2.8 2.6 2.4 2.2 2.0 1.8 1.6 1.4 PL Intensity (arb. u.) Energy (eV) 
+
+FIG. S2. Room temperature photoluminescence emission spectrum recorded under 405 nm continuous wave laser excitation. 
+
+2TABLE S1. Summary of the fitted parameters for the three-component third-derivative functional form (TDFF) lineshape fit together with a Gaussian contribution for the sub-gap range of the PR data. The following fit function was used: 
+
+∆R/R = ∑3 
+
+> j=1
+
+ℜ[Cjeiθ j (E − Eg, j + iΓ j)−n j ] + A e −(E−E0)2/2σ 2
+
+.
+
+TDFF component ( j) C θ (◦) Eg (eV) Γ (eV) n
+
+1 6.70 ×10 −9 117.20 2.77 0.10 2.5 2 8.68 ×10 −8 0.67 2.27 0.15 2.5 3 2.52 ×10 −8 111.62 2.14 0.08 2.5 Gaussian A E0 (eV) σ (eV) -2.64 ×10 −6 1.72 0.16 3.0 2.8 2.6 2.4 2.2 2.0 1.8 -0.5 0.0 0.5 1.0           - 5 )
+
+Energy(eV)
+
+> PR
+> -PT
+> -1.0
+> -0.5
+> 0.0 0 . 5
+> 1.0
+> 1.5
+>  
+> TA
+
+FIG. S3. Comparison of photoreflectance (PR), phototransmittance (PT), and transient absorption (TA) spectra of Ta 3N5. PR and PT are plotted on the left axis and TA on the right axis. The sign of the ∆T /T
+
+PT signal is inverted to enable direct comparison with the TA data, which are presented on an absorption scale. The close alignment of PT and TA spectral features confirms that the near-edge bleach positions in TA correspond to the critical point transition energies identified by PR. Spectral shifts between PR and PT/TA arise from a different sampling of light-induced changes to the dielectric function in reflection and transmission geometries, respectively. 
+
+33.0 2.8 2.6 2.4 2.2 2.0 1.8 -4 -2 02468    
+
+Energy(eV)    
+
+>         
+> Three-componentGaussianfit
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> 0.6
+> 0.7
+> 0.8
+> 0.9
+> 1.0
+> 1.1
+> 1.2
+> Gaussianpeakarea(a.u.)
+
+Potential(V
+
+> RHE
+
+)             
+
+>         
+>          
+>         
+> Squarerootfit
+
+(b)
+
+(a)FIG. S4. Gaussian decomposition of near-edge potential-dependent absorption (P-UV-Vis) features. (a) Representative P-UV-Vis spectrum recorded at 1.0 V RHE , fitted with three Gaussian components at 2.15 eV, 2.25 eV, and 2.35 eV (grey dashed lines). (b) Potential dependence of the fitted Gaussian areas. The areas of the 2.15 eV and 2.35 eV components scale approximately with √V −Vfb (dashed black and blue lines, respectively), consistent with electroabsorption in the depletion region of an n-type semiconductor. In contrast, the 2.25 eV component saturates at moderate anodic bias (red dashed line), consistent with full depletion of a finite near-surface layer. VRHE 1.2 0.2 1.0 0.4 0.8 0.6 
+
+FIG. S5. P-UV-Vis data from the main text shown over the full recorded spectral range. The extended range reveals the emergence of an additional feature at 1.6 eV with increasingly large anodic bias potentials. 
+
+43.0 2.8 2.6 2.4 2.2 2.0 1.8 0510     
+
+Energy(eV)      
+
+>            
+>                    
+
+(b)
+
+> 3.0
+> 2.8
+> 2.6
+> 2.4
+> 2.2
+> 2.0
+> 1.8
+> 0
+> 10
+> 20
+> 30
+> 40
+> Sigma(meV)
+
+Energy(eV)
+
+> -3
+> -2
+> -1
+> 0
+> Shift(meV)
+
+(a)FIG. S6. Reconstruction of temperature-dependent UV-Vis (T-UV-Vis) spectra by applying energy-dependent spectral shift and broadening parameters to the 30 ◦C reference spectrum. (a) Comparison of the experimental (black) and simulated (dashed red) differential T-UV-Vis spectrum at 50 ◦C. Good agree-ment between the experimental and simulated spectra confirms that the T-UV-Vis response above 2.0 eV can be accurately described by thermally induced shifts and broadening of interband transitions. (b) Energy-dependent shift (top) and broadening (bottom) parameters used in the simulation. 3.0 2.8 2.6 2.4 2.2 2.0 1.8 0510     
+
+Energy(eV)      
+
+>           !   $ # 
+>            $ #      !  " 
+>            $ #      !  " 
+
+(b)
+
+> 0
+> 5
+> 10
+> 15
+> 20
+> 25
+> 30
+> 35
+> 40
+> 0
+> 10
+> 20
+> 30
+> Sigma(meV)
+
+           
+
+> -6
+> -4
+> -2
+> 0
+>           !          $      
+>           !          $      
+> Shift(meV)
+
+(a)
+
+FIG. S7. Reconstruction of the main features of T-UV-Vis spectra using a non-continuous approach com-pared to Figure S6. Two energy windows (2.50 – 3.00 eV and 2.00 – 2.35 eV) containing the main fea-tures are used for reconstruction. In each window only one set of shift and broadening parameters is uti-lized. (a) Exemplary comparison of the experimental (black) and piecewise simulated (dashed) differential T-UV-Vis spectra at 50 ◦C. (b) Extracted shift of the critical point energy for all recorded temperatures dur-ing T-UV-Vis together with linear fits (top). Corresponding broadening parameters (bottom). The broaden-ing scales approximately with √T − T0.
+
+53.0 2.8 2.6 2.4 2.2 2.0 1.8 -5 0510  TA (x7)                
+
+>             
+>    
+
+Energy(eV)FIG. S8. Spectral comparison of the TA spectrum recorded at a pump-probe delay of 1 μs (scaled by a factor of 7 for visibility), a T-UV-Vis spectrum at 50 ◦C referenced to 30 ◦C, and a P-UV-Vis spectrum at 1.0 V RHE with inverted amplitude. The close alignment of spectral features across all three measurements demonstrates the correspondence between the transient optical response and the independently measured thermal and electrostatic modulations. 
+
+6S1. Fitting of TA spectra 
+
+To extract quantitative information on pump-induced lattice heating and surface photovoltage from TA spectra, a Python-based iterative fitting procedure was developed. As inputs, the pro-cedure requires a TA spectrum or time series of spectra, together with T-UV-Vis and P-UV-Vis datasets. The fitting assumes that the 2.5 – 3.0 eV region of the TA spectrum is dominated by ther-mal effects, whereas the 2.0 – 2.5 eV region is dominated by band bending effects, consistent with the assignments reported in the main text. Linear interpolation of the UV-Vis datasets was applied to increase the effective temperature and potential resolution beyond the experimentally sampled values. As shown in Figure 4 of the main manuscript, the nominally thermally and electrostatically dominated regions contain partial contributions from the respective other effect. Therefore, an iterative fitting procedure was employed. In the first iteration, interpolated T-UV-Vis data were fitted to the TA spectrum in the above-edge region, and the best-matched thermal component was subtracted from the TA spectrum. An analogous P-UV-Vis fit was then performed on the thermally corrected TA spectrum in the near-edge region. The resulting electrostatic component was subtracted from the initial TA spectrum to yield a band-bending-corrected spectrum, on which a refined T-UV-Vis fit was performed. Finally, the improved thermal component was then again subtracted from the initial TA spectrum to achieve a refined P-UV-Vis fit. Several physical constraints were imposed on the fitting process. The thermal component was restricted to positive temperature changes, consistent with pump-induced lattice heating. The electrostatic component was restricted to represent a pump-induced reduction in near-surface band bending, consistent with surface photovoltage generation. Importantly, the T-UV-Vis reference temperature and P-UV-Vis reference potential were treated as free parameters rather than being fixed to 30 ◦C or 0 V RHE , allowing the fit to select the optimal dark and pumped reference spectra from the full UV-Vis dataset (see Experimental Section of the main manuscript). Finally, for fits of a complete TA delay time series, an additional global constraint was applied to the P-UV-Vis component, requiring that the band bending in the unpumped reference state remains constant across all pump-probe delays. The fitting procedure thus yields values for the pump-induced temperature rise and reduction in surface band bending at each delay time, enabling independent tracking of thermal and photovoltage dynamics across the complete temporal range. 7S2. Pump-induced temperature change 
+
+An upper bound for the pump-induced heating of the Ta 3N5 thin film during TA measurements was estimated by assuming complete absorption of a single 5 ns pulse with a fluence of ETA =
+
+1.0 mJ cm −2 at 355 nm within the 220 nm thick film. This assumption is justified by the large absorption coefficient of Ta 3N5 at this wavelength, α ≈ 5 × 10 5 cm −1,1 which gives complete absorption within the film thickness via the Beer-Lambert law. Since no experimental data for the specific heat capacity of Ta 3N5 are available, a value of c = 450 J kg −1 K−1 was assumed, together with a mass density of ρ = 9.85 g cm −3.2 The initial pump-induced temperature rise is then approximated as 
+
+∆TTA = ETA 
+
+ρ · d · A · c = 10 .4 K ,
+
+where d = 220 nm is the film thickness and A = πr2 is the pump beam area. This represents an upper bound, as heat dissipation into the substrate and ambient air, as well as pump reflection losses, are neglected. An analogous estimate was performed for the PR measurement, in which a 405 nm continuous wave pump at I = 1 mW cm −2 is modulated at f = 333 Hz with a 50 % duty cycle. The energy deposited per modulation period is 
+
+EPR = I
+
+2 f = 1.5 μJ cm −2 .
+
+Scaling by the ratio of deposited energies yields an upper bound for the PR-induced temperature rise of 
+
+∆TPR ≈ EPR 
+
+ETA 
+
+· ∆TTA = 0.015 K .
+
+This value is negligible compared to the pump-induced heating in TA, confirming that lattice heating does not contribute meaningfully to the PR response and that the PR measurements can be interpreted purely in terms of electronic modulation of the optical transitions. 
+
+References 
+
+> 1
+
+A. Ziani, E. Nurlaela, D. S. Dhawale, D. A. Silva, E. Alarousu, O. F. Mohammed and K. Takan-abe, Phys. Chem. Chem. Phys. , 2015, 17 , 2670–2677. 
+
+> 2
+
+G. Brauer, J. Weidlein and J. Strähle, Z. Anorg. Allg. Chem. , 1966, 348 , 298–308. 8

@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-001.webp",
+      "caption": "Figure 4. Experimental results for the human cheek cells sample. Scalability test: (a) full field of view (2048 × 2048) of the in-line hologram 𝐼1 with central 256 × 256 region marked with a red solid-line rectangle. Both the full-sized and cropped holograms were input to the DNN, yielding two results, which central 100 × 100 regions ((b1) and (b2), respectively) show perfect agreement. The results are compared with experimentally captured ground truth in (b3). Diffraction-aware padding test: padded in-line holograms (c) 𝐼1, and (d) 𝐼2, and its DNN-inferred estimate 𝐼2; the shipset presents improved physicsconsistent padding produced by YOSO. Amplitude and phase reconstructions obtained with: (f), (i) Gabor method, (g), (j) YOSO, (h), (k) GS with physically captured pair of holograms.",
+      "page": 6,
+      "index": 1,
+      "width": 1054,
+      "height": 814
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-002.webp",
+      "caption": "Figure 5. Measurement results of a coronal section of a mouse brain slice: (a) YOSO’s amplitude with clearly visible cerebral cortex (A), hippocampus (B), thalamus (C), lateral ventricle (D), caudate putamen (E), amygdala (F), hypothalamus (G), and corpus callosum (H); (b-j) zoomed views of the hippocampal region for: (b) the first hologram 𝐼1, (c) second hologram 𝐼2, and (d) its DNN-estimate 𝐼2 (d); amplitude (e-g) and phase (h-j) parts of hologram reconstruction obtained using Gabor (e, h), YOSO (f, i), and the standard GS method with physically acquired data (g ,j); crop of YOSO’s amplitude reconstruction in panel (f) shows the dentate gyrus (DG) and CA1 and CA3 regions.",
+      "page": 7,
+      "index": 2,
+      "width": 1023,
+      "height": 1012
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-003.webp",
+      "caption": "Figure 7. Network architecture: (a) scheme of the layers and (b) modified residual block.",
+      "page": 10,
+      "index": 3,
+      "width": 1054,
+      "height": 694
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-004.webp",
+      "caption": "Figure 1. Schematic illustration of the YOSO framework. Supervised training of multi-scale ResNet using computer-generated training data enables estimation of second defocused hologram 𝐼2, based on the physically captured hologram 𝐼1. The pair of holograms is used as input to conventional Gerchberg-Saxton (GS) algorithm, which, finally, retrieves the object wave ?̃?𝑜.",
+      "page": 3,
+      "index": 4,
+      "width": 844,
+      "height": 529
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-005.webp",
+      "caption": "Figure 6. Measurement results of the sperm sample: input hologram (a), phase reconstruction obtained using the Gabor (b) and YOSO (c) methods. Zoomed area A shows an in-focus sperm cell, while zoomed areas B and C show out-of-focus cells along with their focused versions (the focusing was performed with the AS propagation method using full view of the YOSO object wave reconstruction).",
+      "page": 8,
+      "index": 5,
+      "width": 1054,
+      "height": 471
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-006.webp",
+      "caption": "Figure 2. Simulation test of YOSO. In-line holograms: physically captured data (a) 𝐼1, and (b) 𝐼2, and (c) the DNN-estimate of the latter; the phase reconstructions obtained with (d) Gabor method, (e) YOSO, (f) GS using physically captured data, (g) ground truth object phase.",
+      "page": 4,
+      "index": 6,
+      "width": 956,
+      "height": 487
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27777v1/fig-007.webp",
+      "caption": "Figure 3. Experimental results for the phase resolution test target. The physically captured holograms: (a) 𝐼1, (b) 𝐼2, and (c) DNN-based estimate 𝐼2 of the latter. Phase reconstructions obtained using (d) Gabor method, (e) YOSO, (f) standard GS with physically captured holograms. Insert (e1) shows the YOSO reconstruction obtained with a DNN model trained on data corresponding to more absorptive sample (±30% amplitude modulation in contrast to ±15% in panel (e)). Panel (g) presents cross-sections through the central slice of the phase reconstructions marked in (d)-(f) with red dashed lines; the horizontal red dashed lines in (g) denote the excepted level of phase delay.",
+      "page": 5,
+      "index": 7,
+      "width": 987,
+      "height": 467
+    }
+  ]
+}
