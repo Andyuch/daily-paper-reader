@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.05062v1/fig-001.webp",
+      "caption": "Figure 1 Schematic view of the WLI technique operating principle (Reproduced from [5])",
+      "page": 2,
+      "index": 1,
+      "width": 415,
+      "height": 312
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05062v1/fig-002.webp",
+      "caption": "Figure 6 Training and test loss curves over epochs",
+      "page": 4,
+      "index": 2,
+      "width": 492,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05062v1/fig-003.webp",
+      "caption": "Figure 4 Example of two data augmentations(center & right) applied to the same data subframe (left).",
+      "page": 3,
+      "index": 3,
+      "width": 492,
+      "height": 338
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05062v1/fig-004.webp",
+      "caption": "Figure 5 Architecture of the Fully Convolutional neural Network reproduced from Yu Ji et al.[6]",
+      "page": 3,
+      "index": 4,
+      "width": 417,
+      "height": 648
+    }
+  ]
+}

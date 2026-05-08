@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.27214v1/fig-001.webp",
+      "caption": "Figure 3: A) S11-port measurements on the outer edge of the CCA in blue with fitting in orange as a function of phase difference between MZI arms, θ. B) Normalized fitted complex transmission with real and imaginary components plotted separately.",
+      "page": 4,
+      "index": 1,
+      "width": 663,
+      "height": 600
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27214v1/fig-002.webp",
+      "caption": "Figure 2: A) The complete architecture consisting of 2D CCA and the phase measurement structures, with input and output ports labeled as well as MZI reference arms labeled based off S-measurement. The critical parts of the architecture highlighted in: B) Photonic attenuator based off tunable MZI to allow for non-interference measurement. C) Optical micrograph of the 3 × 3 silicon photonic coupled cavity array (CCA) made of racetrack resonators. D) 1 by 3 multi-mode interference coupler (MMI) for splitting light to an edge cavity, the output of that edge cavity, and the output of the adjacent cavity. E) Thermo-optic phase tuner using platinum (Pt) heater for controlling phase difference between MZI arms.",
+      "page": 3,
+      "index": 2,
+      "width": 708,
+      "height": 463
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27214v1/fig-003.webp",
+      "caption": "Figure 1: Complex scattering matrix measurement along a single edge of a 2D CCA array. Dark purple circles represent cavities along the measurement edge, while light circles represent cavities in the bulk. Dotted lines represent cavity cavity to cavity coupling, in this case nearest neighbors are coupled. A) Homodyne measurements with same input and output cavity, i.e. S11. B) Homodyne measurements with input and output cavities being adjacent, i.e. S12. C) Schematic of on-chip interferometric measurement setup, with reference arm, Ae−iθ, and CCA arm, Sij(ω).",
+      "page": 2,
+      "index": 3,
+      "width": 756,
+      "height": 519
+    },
+    {
+      "url": "assets/figures/arxiv/2604.27214v1/fig-004.webp",
+      "caption": "Figure 4: A) Remaining S-port measurements along a single edge of the CCA as a function of phase difference between MZI arms. B) Normalized fitted complex transmission with real and imaginary components plotted separately.",
+      "page": 5,
+      "index": 4,
+      "width": 943,
+      "height": 786
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2604.28083v1/fig-001.webp",
+      "caption": "Figure 2: (a) Execution times of the single-level and two-level iterative solvers for the first set of simulations. (b) ECS computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the single-fluid HDE model for the second set of simulations versus ω/ωeff . (c) ECS computed using the proposed VIE-based solver for three temperatures versus ω/ωeff . (d) ECS computed using the proposed VIE-based solver for four sphere radii versus ω/ωeff .",
+      "page": 30,
+      "index": 1,
+      "width": 962,
+      "height": 641
+    },
+    {
+      "url": "assets/figures/arxiv/2604.28083v1/fig-002.webp",
+      "caption": "Figure 1: (a) ECS computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the Drude model versus ω/ωeff . Field distributions on the xz-plane of the nanosphere at (b) ω = 0.11ωeff (acoustic LSP resonance), (c) ω = 0.28ωeff (first acoustic bulk resonance), and (d) ω = 0.53ωeff (first optical bulk resonance associated with electrons).",
+      "page": 29,
+      "index": 2,
+      "width": 918,
+      "height": 656
+    },
+    {
+      "url": "assets/figures/arxiv/2604.28083v1/fig-003.webp",
+      "caption": "Figure 5: (a) Geometry of the scattering problem involving the semiconductor nanoprism. (b) ECS computed using the two-level iterative solver for the three prism heights versus ω/ωeff .",
+      "page": 33,
+      "index": 3,
+      "width": 568,
+      "height": 822
+    },
+    {
+      "url": "assets/figures/arxiv/2604.28083v1/fig-004.webp",
+      "caption": "Figure 4: (a) Geometry of the scattering problem involving the semiconductor nanocylinder. (b) ECS computed using the two-level iterative solver for three nanocylinder heights versus ω/ωeff . Field distributions on the xz-plane of the nanocylinder with height (c) H = 140 nm, (d) H = 170 nm, and (e) H = 200 nm for the first optical bulk resonance. Field distributions on the xz-plane of the nanocylinder with height (f) H = 140 nm, (g) H = 170 nm, and (h) H = 200 nm for the first optical LSP resonance associated with height.",
+      "page": 32,
+      "index": 4,
+      "width": 969,
+      "height": 867
+    },
+    {
+      "url": "assets/figures/arxiv/2604.28083v1/fig-005.webp",
+      "caption": "Figure 3: (a) Geometry of the scattering problem involving the semiconductor nanodimer. (b) ECS computed using the two-level iterative solver for two scattering scenarios (the nanodimer and the single nanosphere) versus ω/ωeff .",
+      "page": 31,
+      "index": 5,
+      "width": 557,
+      "height": 707
+    }
+  ]
+}

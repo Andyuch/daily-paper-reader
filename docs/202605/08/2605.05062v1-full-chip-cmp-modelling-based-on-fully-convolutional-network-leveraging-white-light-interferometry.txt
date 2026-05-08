@@ -1,0 +1,639 @@
+Title: Full Chip CMP modeling based on Fully Convolutional Network leveraging White Light Interferometry
+
+URL Source: https://arxiv.org/pdf/2605.05062v1
+
+Published Time: Thu, 07 May 2026 01:12:00 GMT
+
+Number of Pages: 5
+
+Markdown Content:
+FULL -CHIP CMP MODELING BASED ON FULLY CONV OLUTIONAL NET-
+
+# WORK LEVERAGING WHITE LIGHT INTERFEROMETRY 
+
+# Jules Exbrayat 1, Renan Bouis 1, Elie Sezestre 1, Viorel Balan 1, Arnaud Cornelis 1,
+
+# Damien Hebras 1 and Catherine Euvrard 1 
+
+> 1
+
+Univ. Grenoble Alpes, CEA, Leti, F -38000 Grenoble, France, renan.bouis@cea.fr 
+
+# Abstract 
+
+As time -to -market is crucial in the Integrated Circuit (IC) industry, speeding up layout manufacturability verifi-
+
+cation is essential. Chemical -Mechanical Polishing (CMP ) plays a vital role in IC fabrication but is significantly 
+
+influenced by Layout -Dependent Effects (LDE). An accurate and efficient CMP model enables design teams 
+
+to correct surface unevenness before fabrication, reducing costs and accelerating the design phase. However, 
+
+existing models often rely on Density Step Height (DSH) modeling, which is time -consuming for calibration and 
+
+requires substantial hardware resources for fine -grained predictions. 
+
+In this paper, we propose combining the advantages of two su rface analysis techniques, White Light Interfer-
+
+ometry (WLI) and Atomic Force Microscopy (AFM), to train a deep learning model. This model aims to predict 
+
+full -chip post -CMP nanotopography with nanometer -scale accuracy. Our deep learning model is based on a 
+
+Convolutional Neural Network (CNN) and follows a two -step pipeline. The model is trained on each technique 
+
+separately, resulting in a detailed full -chip CMP model. 
+
+# 1 Introduction 
+
+CMP is a crucial process in IC semiconductor manu-
+
+fac turing.  It supports traditional transistor processes, 
+
+multilevel interconnections, and advanced techni-
+
+ques such as 3D stacking, 3D packaging, and hete-
+
+rogeneous integration  [1]. 
+
+The primary goal of CMP is to planarize the chip 
+
+surface, preventing topological issues across layers 
+
+and avoiding problems like residues and short -cir-
+
+cuits. CMP combines chemical and mechanical 
+
+effects, but its complexity — involving numerous para-
+
+meters and effects at various scales —makes fine -
+
+grained modeling virtually imp ossible. 
+
+Chip design can significantly impact this process, es-
+
+pacially layout density, which may lead to post -CMP 
+
+topographical effects . Several EDA software provid-
+
+ers have developed tools that predict post -CMP sur-
+
+face topography by employing physics -based models 
+
+[2]. This physical verification of the layout through 
+
+CMP modeling before IC chip manufacturing is es-
+
+sential for ensuring manufacturability and improving 
+
+yield. 
+
+One of the main challenges of current physics -based 
+
+CMP modeling is its high computatio nal cost and long 
+
+inference time. Our solution aims to reduce the time 
+
+required for CMP modeling by introducing a deep 
+
+learning model. This model predicts new layout 
+
+nanotopography by training on layout and surface 
+
+characterization data obtained after the CMP pro-
+
+cess. 
+
+# 2 CMP Surface Characterization 
+
+Layout -based CMP modeling aims to predict topogra-
+
+phy deviations caused by chip design, such as ero-
+
+sion and dishing. While erosion affects large areas, 
+
+typically ranging from tens to hundreds of square mi-
+
+crometers, dishing impacts much smaller areas, on 
+
+the order of several square nanometers. However, 
+
+both effects result in deviations in the nanometer 
+
+range in the Z direction. This implies that data meas-
+
+urement accuracy should be at the nanometer scale 
+
+in the Z direc tion, while the accuracy in the X and Y 
+
+directions should match at least the size of the effect. 
+
+Specifically, the X and Y resolution should be in the 
+
+micrometer scale for erosion and in the nanometer 
+
+scale for dishing. To meet these specifications, care-
+
+fu l attention must be paid to the measurement tech-
+
+niques used. 
+
+# 2.1 White Light Interferometry 
+
+To meet the constraints discussed earlier for erosion 
+
+measurement, White Light Interferometry (WLI) ap-
+
+pears to be an excellent choice. WLI enables quick 
+
+surface topography measurement with a millimeter -
+
+scale field of view, micrometer X&Y resolution, and 
+
+su b-nanometer Z -axis resolution. WLI relies on meas-
+
+uring interference patterns, where a broadband inci-
+
+dent light source is split into two paths: one directed 
+
+to a reference mirror and the other to the sample. This 
+
+creates an interference pattern known as an interfer-
+
+ogram, as illustrated in Figure 1. By precisely moni-
+
+toring the position of this interferogram along the Z -
+
+axis for each measured pixel, it is possible to obtain 
+
+high -resolution 3D mappings of die surfaces with im-
+
+ages containing millions of pixels. This technique has 
+
+been utilized at LETI for over ten years [3,4]. 
+
+# 2.2 Atomic Force Microscopy 
+
+Similarly, dishing measurement can be effectively 
+
+performed using Atomic Force Microscopy (AFM), a 
+
+well -known technique that offers sub -nanometer Z -axis resolution a nd nanometer -scale X&Y resolution. 
+
+Its main limitation is the measurement scale, which is 
+
+limited to dozens of micrometers, making it a local 
+
+measurement technique. However, this limitation 
+
+aligns well with the constraints for dishing measure-
+
+ment. 
+
+Figure 1 Schematic view of the WLI technique oper-
+
+ating principle (Reproduced from [5] )
+
+# 3 CMP Modelling process 
+
+Main goal of our work was to experiment the possibil-
+
+ity of predicting post CMP process nanoto po graphy of 
+
+new layout with a nanometer -scale accuracy .
+
+# 3.1 Experimental setup 
+
+To achieve this goal, we developed a specific layout 
+
+(Fig. 2a), designed to represent a typical IC copper 
+
+level with complex copper patterns in an oxide matrix. 
+
+Wafers with a single copper level were fabricated at 
+
+LETI using o ur layout and processed with our copper 
+
+CMP process. The full die surface topography of 
+
+these wafers was characterized using local AFM 
+
+measurements as well as WLI for full die characteri-
+
+zation, resulting in a numerical image of size h×w 
+
+(Fig. 2b). To leverage the advantages of both meas-
+
+urement techniques, we constructed a two -stage 
+
+modeling pipeline. The first stage aims to predict ero-
+
+sion based on WLI data, and the second stage adds 
+
+dishing prediction based on AFM measurements. 
+
+The wor k presented in this paper is focus on predict-
+
+ing erosion as an initial step, while the integration of 
+
+dishing data will be considered in future work  
+
+> (a) Layout (b) WLI scan post -CMP, normalized
+
+Figure 2 Input (a) and output (b) of the model, shown 
+
+as a fraction of the actual data for visualization 
+
+puposes 
+
+# 3.2 Deep learning model 
+
+CMP modeling consists in training a neural network 
+
+with the layout as input data (Fig. 2a) and the corre-
+
+sponding WLI image as output (Fig . 2b). 
+
+3.2.1 Data preprocessing 
+
+3.2.1.1 Layout sampling 
+
+To be fed into the network, the vectorial layout file 
+
+must be sampled at the same resolution as the WLI 
+
+scan. Sampling data to the correct scale is a core 
+
+challenge in CMP modeling: while nanometer -scale 
+
+patterns must be preserved (to allow the model to in-
+
+fer local densities and sharp edges), erosion occurs 
+
+at the micrometer scale and thus requires a broader 
+
+context. These differing scales make it difficult to 
+
+downsample without losing critical details, although 
+
+do wnsampling is convenient for reducing computa-
+
+tional costs and achieving spatial correspondence be-
+
+tween input and output. In our case, we used nearest 
+
+neighbor interpolation, resulting in a binary layout im-
+
+age (1 for copper, 0 for oxide) of size h×w .
+
+3.2.1.2 Smooth ing 
+
+As mentioned earlier, we focused on erosion model-
+
+ing. The WLI scan resolution is not adapted to fully 
+
+capture dishing variations , resulting in noisy cross -
+
+sectional views of the chip topography, as illustrated 
+
+in Figure 3. The refore a pre -processing step is re-
+
+quired to clean the training set that features only the 
+
+large -scale erosion signal. 
+
+Additionally, since the dishing signal is under -re-
+
+solved, random spikes may appear in the data, lead-
+
+ing to a biased evaluation of the model’s loss duri ng 
+
+both the training and testing phases. To reduce 
+
+measurement noise caused by dishing artifacts in the 
+
+WLI scan while preserving the broader erosion pat-
+
+terns, we apply a simple linear smoothing kernel. This 
+
+kernel averages pixel values over an m×n neighbo r-
+
+hood. This operation effectively suppresses local 
+
+high -frequency fluctuations and ensures that the 
+
+model focuses on the relevant physical phenomena. 
+
+Figure 3 Cross -sectional view of the smoothed WLI 
+
+image 3.2.1.3 Normalization 
+
+To ensure numerical stability during training and to 
+
+align the output range with the network’s final activa-
+
+tion function, min -max normalization was applied to 
+
+the WLI scans. This normalization is particularly im-
+
+portant given the use of the hyperbolic tangent (tanh) 
+
+activation function at the network’s output, as tanh 
+
+maps values to the range [ -1, 1]. This transformation 
+
+ensures a bounded target range while preserving the 
+
+shape of the pixel value distribution. 
+
+3.2.1.4 Data augmentation 
+
+Data augmentation techniques commonly used in 
+
+computer vision, such as rotations and horizontal and 
+
+vertical flips (Figure 4), were employed to artificially 
+
+increase the data volume. This contribute to improve 
+
+the model's generalization capability. In this work, 
+
+data augmentation allowed us to increase the dataset 
+
+size by a factor of eight, thereby enhancing the diver-
+
+sity of training samples while respecting the physical 
+
+constraints of the problem .
+
+3.2.1.5 Test -train split 
+
+To evaluate the model’s generalization pe rformance, 
+
+the dataset was divided into training and testing sub-
+
+sets. Instead of splitting entire dies or scan se-
+
+quences, individual subframes were randomly se-
+
+lected to compose the test set. This approach en-
+
+sure d a representative sampling of spatial and pa ttern 
+
+diversity, preventing overfitting to specific regions . In 
+
+this work, the test set represented 20% of the total 
+
+subframes, while the remaining 80% were used for 
+
+training .
+
+Figure 4 Example of two data augmentations (center 
+
+& right) applied to the same data subframe (left). 
+
+3.2.2 Model architecture 
+
+The selected architecture is a Fully Convolutional 
+
+Network (FCN) based on U -Net, inspired by Yu Ji et 
+
+al. [ 6] and represented in Figure 5. It consists of sev-
+
+eral convolutional layers, with each convolutional ker-
+
+nel learning its own parameters from the data via gra-
+
+dient descent optimization. This contrasts with phys-
+
+ics -based models, which rely on explicit equations. 
+
+Between the convolutional layers, pooling layers per-
+
+form down -sampling of feature maps, enabling the 
+
+model to focus on larger scales as it progresses 
+
+deeper. Specifically, U -Net provides an encoder -de-
+
+coder structure with skip connections, allowing pre-
+
+cise localization by combining high -level features with 
+
+low -level ones [7].
+
+Similarly, CMP modeling depends on both low -level 
+
+design features such as copper line corners, edges, 
+
+and dummies, as well as high -level characteristics 
+
+like local density, line width, and shapes. 
+
+Figure 5 Architecture of the Fully Convolutional neu-
+
+ral Network repr oduced from Yu Ji et al. [6]
+
+3.2.3 Model convergence 
+
+Following data preprocessing treatments, we aim ed 
+
+to minimize the loss between the ground truth and the 
+
+model’s prediction: 
+
+where D is the dataset, f is the model function, x is the 
+
+input, y the target output, and w denotes the model 
+
+parameters. 
+
+This loss is minimized using gradient descent. At 
+
+each iteration t, the parameters w are updated by the 
+
+following rule: 
+
+where 
+
+∇wL(wt) is the loss gradient computed over a 
+
+minibatch Bt and η is the learning rate. 4 Results & discussions 
+
+# 4.1 Model training 
+
+The model was trained using PyTorch in Python, with 
+
+the Adam optimizer and a mean squared error loss 
+
+function. Training was conducted for up to 150 
+
+epochs, with early stopping triggered if there was no 
+
+improvement in the test loss. The training used a 
+
+batch size of 16, with 1647 samples of size 128×128 
+
+pixels. Evaluation was performed on a separate test 
+
+set consisting of 412 samples of the same resolution. 
+
+The best test loss was achieved at the 58th epoch, 
+
+and the corresponding model weights were saved for 
+
+final inference. 
+
+As shown in Figure 6, the model exhibited rapid initial 
+
+convergence followed by stable training loss. No 
+
+signs of overfitting were observed, and in any case, 
+
+the final model corresponds to the epoch with the low-
+
+est test loss. Training was performed on a general -
+
+purpose GPU, an Nvidia Tesla V100 with 16GB of 
+
+memory, with a total training time of approximately 2 
+
+hours for the full 150 epochs. 
+
+Figure 6 Training and test loss curves over epochs 
+
+# 4.2 Model evaluation 
+
+We evaluated various models quantitatively and qual-
+
+itatively. Qual itatively, the ground truth versus the 
+
+prediction can be visualized as a color -scaled image 
+
+for the full chip (not shown) or as a cross -sectional 
+
+topography curve (Fig. 7). In either case, careful at-
+
+tention must be paid to CMP hotspots, such as pat-
+
+tern bor ders, corners, and dense copper regions .
+
+Figure 7 Cross -sectional view of chip topography, 
+
+comparing the model’s prediction (blue dotted line) to 
+
+the measured ground truth (red line). 
+
+Quantitatively, the model’s accurary was evaluated 
+
+using the L1 loss (mean absolute error) and the root 
+
+mean squared error (RMSE) where h · w is the image 
+
+size and D is the test dataset size: 
+
+Table 1 shows that our optimized model achieve d
+
+strong accuracy compared to state -of -the -art fine -
+
+grained CMP modeling by Yu Ji et al. [ 6] for both L1 
+
+and RMSE values. Our model also deliver ed a fast 
+
+inference time of 8.1 seconds per sample, signifi-
+
+cantly outperforming physics -based models, which 
+
+typically re quire several hours for a full chip. How-
+
+ever, this speed comes at the cost of an initial training 
+
+effort (see Section 4.1), which takes a few hours on a 
+
+GPU. In contrast, traditional models do not require 
+
+training but are computationally intensive at infer ence 
+
+time.        
+
+> Metric L1
+> (nm)
+> RMSE
+> (nm)
+> Inference
+> time (s)
+> Yu Ji et al. (2023) 1.06 1.49 25.0
+> Ours 0.52 0.73 8.1
+
+Table 1 Model performance on test data, unseen 
+
+during training. 
+
+# 5 Conclusion 
+
+Within the context of CEA’s research, this work is 
+
+viewed as a first step toward predicting the post -CMP 
+
+process nanotopography of new layouts with na-
+
+nometer -scale accuracy. We have demonstrated the 
+
+feasibility of using deep learning techniques coupled 
+
+wit h advanced characterization techniques like WLI to 
+
+achieve fast and reliable full -chip CMP modeling and 
+
+erosion prediction. Future work will focus on incorpo-
+
+rating dishing values, measured by AFM, into the two -
+
+step modeling pipeline to obtain accurate full -chip na-
+
+nometer -scale topography predictions .6 Literature 
+
+[1] Renan Bouis et al. Backside Thinning Process 
+
+Development for High -Density TSV in a 3 -Layer 
+
+Integration.2024. 
+
+https://doi.org/10.1109/ECTC51529.2024.00067 
+
+[2] Ruben Ghulghazaryan et al. FEOL CMP mode-
+
+ling: Progress and challenges. 2015 
+
+[3] Viorel Balan et al. Die -Scale Nanotopography 
+
+Characterization: New Insight 
+
+[4] Florent Dettoni et al., Interferometry: a dire ct die 
+
+level characterization technique, ICPT 2012 
+
+[5] Joanna  Schmit, Anna Pakuła. White Light Inter-
+
+ferometry. In: Ida, N., Meyendorf, N. (eds) Hand-
+
+book of Advanced Non -Destructive Evaluation. 
+
+Springer, Cham. 2018 
+
+https://doi.org/10.1007/978 -3-319 -30050 -4_ 42 -1
+
+[6] Yu Ji et al. A Fine -Grained, End -to -End Feature -
+
+Scale CMP Modeling Paradigm Based on Fully 
+
+Convolutional Neural Networks. 2023. 
+
+DOI: 10 . 1109 / TSM . 2023 .3264255 
+
+[7 ] Olaf Ronneberger et al. U -Net: Convolutional 
+
+Networks for Biomedical Image Segmentation. 
+
+2015. arXiv: 1505.04597 [cs.CV]. 
+
+https://arxiv.org/abs/1505.04597.

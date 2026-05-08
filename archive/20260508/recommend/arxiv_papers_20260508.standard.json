@@ -1,0 +1,471 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-08T20:19:59.954574+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 15,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2604.28083v1",
+      "source": "arxiv",
+      "title": "Analysis of Electromagnetic Scattering from Semiconductor Nanostructures by Solving Coupled Volume Integral and Two-fluid Hydrodynamic Equations",
+      "abstract": "Semiconductor-based plasmonic nanostructures support localized surface plasmon modes in the infrared region. Unlike metallic nanostructures, they support both free electrons and holes, requiring a two-fluid hydrodynamic Drude equation (HDE) to accurately capture spatial dispersion effects and low-frequency acoustic plasmon modes that cannot be described by single-fluid models. In this work, a volume integral equation (VIE)-based solver is proposed for the analysis of electromagnetic scattering from semiconductor nanostructures. The proposed approach couples the VIE, formulated in terms of the electric flux density and the free-electron and hole polarization currents, with the two-fluid HDE. The coupled system is discretized using a tetrahedral mesh and solved efficiently using a two-level iterative solver. In contrast to finite-element-based methods, the proposed VIE-based approach does not require domain-wide meshing and inherently satisfies the radiation condition, thereby eliminating artificial absorbing boundaries. Numerical results for InSb-type semiconductor nanostructures demonstrate the accuracy and efficiency of the proposed VIE-based solver and its ability to capture unique optical phenomena, such as acoustic plasmon resonances and the blueshift of localized surface plasmon resonances, that cannot be described by the single-fluid HDE or classical Drude-based models.",
+      "authors": [
+        "Doolos Aibek Uulu",
+        "Meruyert Khamitova",
+        "Rui Chen",
+        "Liang Chen",
+        "Ping Li",
+        "Hakan Bagci"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-04-30T16:27:00+00:00",
+      "link": "https://arxiv.org/pdf/2604.28083v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "electromagnetic scattering from semiconductor nanostructures",
+      "llm_evidence_cn": "半导体纳米结构的电磁散射",
+      "llm_evidence": "半导体纳米结构的电磁散射",
+      "canonical_evidence": "半导体纳米结构的电磁散射",
+      "llm_tldr_en": "Proposes a VIE-based solver to analyze electromagnetic scattering in semiconductor-based plasmonic nanostructures.",
+      "llm_tldr_cn": "提出了一种基于 VIE 的求解器，用于分析半导体等离激元纳米结构的电磁散射。",
+      "llm_tldr": "提出了一种基于 VIE 的求解器，用于分析半导体等离激元纳米结构的电磁散射。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.05062v1",
+      "source": "arxiv",
+      "title": "Full-chip CMP modelling based on Fully Convolutional Network leveraging White Light Interferometry",
+      "abstract": "As time-to-market is crucial in the Integrated Circuit (IC) industry, speeding up layout manufacturability verifi-cation is essential. Chemical-Mechanical Polishing (CMP) plays a vital role in IC fabrication but is significantly influenced by Layout-Dependent Effects (LDE). An accurate and efficient CMP model enables design teams to correct surface unevenness before fabrication, reducing costs and accelerating the design phase. However, existing models often rely on Density Step Height (DSH) modeling, which is time-consuming for calibration and requires substantial hardware resources for fine-grained predictions. In this paper, we propose combining the advantages of two surface analysis techniques, White Light Interfer-ometry (WLI) and Atomic Force Microscopy (AFM), to train a deep learning model. This model aims to predict full-chip post-CMP nanotopography with nanometer-scale accuracy. Our deep learning model is based on a Convolutional Neural Network (CNN) and follows a two-step pipeline. The model is trained on each technique separately, resulting in a detailed full-chip CMP model.",
+      "authors": [
+        "Jules Exbrayat",
+        "Renan Bouis",
+        "Elie Sezestre",
+        "Viorel Balan",
+        "Arnaud Cornelis",
+        "Damien Hebras",
+        "Catherine Euvrard"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-05-06T15:55:59+00:00",
+      "link": "https://arxiv.org/pdf/2605.05062v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "leveraging White Light Interferometry for surface analysis",
+      "llm_evidence_cn": "利用白光干涉测量法进行表面分析",
+      "llm_evidence": "利用白光干涉测量法进行表面分析",
+      "canonical_evidence": "利用白光干涉测量法进行表面分析",
+      "llm_tldr_en": "Uses White Light Interferometry to improve CMP modeling for integrated circuit fabrication.",
+      "llm_tldr_cn": "利用白光干涉测量技术改进集成电路制造中的 CMP 建模。",
+      "llm_tldr": "利用白光干涉测量技术改进集成电路制造中的 CMP 建模。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.00286v1",
+      "source": "arxiv",
+      "title": "Unified approach to time-resolved x-ray and electron diffraction imaging",
+      "abstract": "Time-resolved x-ray diffraction (TR-XRD) and ultrafast electron diffraction (TR-UED) are emerging tools for probing ultrafast quantum dynamics. From a theoretical perspective, they are commonly described within different frameworks and modeled using distinct approximations. Here, we present a unified quantum-field-based description of ultrafast diffraction imaging that permits consistent consideration of TR-XRD and TR-UED within a common theoretical formalism. Our approach elucidates the correspondence between TR-XRD and TR-UED and allows their similarities and differences to be systematically disentangled. The developed formalism is sufficiently general to consistently and straightforwardly incorporate additional physical effects of interest, such as relativistic charge-current and current-current couplings. We apply our approach to simulate diffraction measurements of laser-driven electron dynamics in graphene, demonstrating the unique capabilities of diffraction imaging to unravel intricate quantum processes in matter.",
+      "authors": [
+        "Mingrui Yuan",
+        "Nikolay V. Golubev"
+      ],
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "physics.atom-ph",
+        "physics.chem-ph"
+      ],
+      "published": "2026-04-30T23:00:31+00:00",
+      "link": "https://arxiv.org/pdf/2605.00286v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "unified approach to time-resolved diffraction imaging",
+      "llm_evidence_cn": "时间分辨衍射成像的统一方法",
+      "llm_evidence": "时间分辨衍射成像的统一方法",
+      "canonical_evidence": "时间分辨衍射成像的统一方法",
+      "llm_tldr_en": "Presents a unified quantum-field description for time-resolved x-ray and electron diffraction imaging.",
+      "llm_tldr_cn": "提出了时间分辨X射线和电子衍射成像的统一量子场描述。",
+      "llm_tldr": "提出了时间分辨X射线和电子衍射成像的统一量子场描述。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.27214v1",
+      "source": "arxiv",
+      "title": "Measurement of complex scattering matrix in a nano-cavity array for boundary scattering tomography",
+      "abstract": "On-chip silicon photonic coupled cavity arrays (CCA) are a promising platform for quantum simulators, with access to high Quality (Q) factor resonators, tunability, and foundry compatibility. Furthermore, scalable two-dimensional (2D) silicon photonic CCAs allow for simulation of rich physical phenomena via Hamiltonian engineering. However, complete reconstruction of the Hamiltonian is limited by access to cavities in the bulk, with current approaches relying on imaging scattered light from bulk resonators. These approaches often require additional scatterers to be built in, limiting scalability, while also being hampered by imaging technology in the near-infrared range. Instead of these approaches, Hamiltonian tomography algorithms that require homodyne boundary measurements have been demonstrated in literature, however measurements of complex scattering measurements along a CCA boundary have not been shown. Here, we experimentally demonstrate an on-chip homodyne measurement setup along a single boundary of a $3\\times 3$ silicon photonic racetrack resonator array and reconstruct the system's edge scattering matrix.",
+      "authors": [
+        "Andrew Tang",
+        "Romil Audhkhasi",
+        "Virat Tara",
+        "Abhi Saxena",
+        "Gokul Nath",
+        "Arka Majumdar"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-04-29T21:36:43+00:00",
+      "link": "https://arxiv.org/pdf/2604.27214v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "imaging scattered light from bulk resonators for tomography",
+      "llm_evidence_cn": "对体谐振器的散射光进行成像以进行断层扫描",
+      "llm_evidence": "对体谐振器的散射光进行成像以进行断层扫描",
+      "canonical_evidence": "对体谐振器的散射光进行成像以进行断层扫描",
+      "llm_tldr_en": "Proposes boundary scattering tomography for Hamiltonian reconstruction in silicon photonic arrays.",
+      "llm_tldr_cn": "提出了用于硅光子阵列哈密顿量重构的边界散射断层扫描技术。",
+      "llm_tldr": "提出了用于硅光子阵列哈密顿量重构的边界散射断层扫描技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.03480v1",
+      "source": "arxiv",
+      "title": "Influence of twist angle on ultrafast charge separation in WS2-graphene heterostructures",
+      "abstract": "Van der Waals (vdW) heterostructures, formed by stacking two-dimensional materials, offer highly tunable electronic and optical properties, with the twist angle between layers acting as a critical tuning parameter. While its impact on moiré patterns, band structure, and correlated states is well-established, the influence of twist angle on ultrafast charge transfer remains controversial. Here, we employ time- and angle-resolved photoemission spectroscopy (trARPES) to directly probe ultrafast charge transfer in epitaxially grown WS\\textsubscript{2}-graphene heterostructures with twist angles of 0$^{\\circ}$ and 30$^{\\circ}$. Upon photoexcitation at $\\hbarω= 3.1\\,\\mathrm{eV}$, we observe efficient charge separation at 0$^{\\circ}$, while at 30$^{\\circ}$, electron and hole transfer occur at similar rates. Our results highlight the crucial role of the twist angle in controlling charge separation efficiency, offering valuable insights for designing vdW heterostructures for applications in photovoltaics and optoelectronics.",
+      "authors": [
+        "Niklas Hofmann",
+        "Leonard Weigl",
+        "Johannes Gradl",
+        "Stiven Forti",
+        "Domenica Convertino",
+        "Camilla Coletti",
+        "Isabella Gierz"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-05T08:13:58+00:00",
+      "link": "https://arxiv.org/pdf/2605.03480v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast charge separation in semiconductor heterostructures",
+      "llm_evidence_cn": "半导体异质结构中的超快电荷分离",
+      "llm_evidence": "半导体异质结构中的超快电荷分离",
+      "canonical_evidence": "半导体异质结构中的超快电荷分离",
+      "llm_tldr_en": "Uses trARPES to probe the influence of twist angle on ultrafast charge transfer in WS2-graphene.",
+      "llm_tldr_cn": "利用时间分辨角分辨光电子能谱探测扭曲角对WS2-石墨烯超快电荷转移的影响。",
+      "llm_tldr": "利用时间分辨角分辨光电子能谱探测扭曲角对WS2-石墨烯超快电荷转移的影响。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.27347v1",
+      "source": "arxiv",
+      "title": "Phase-Stable Self-Modulation for GHz Continuous-Wave Ultrafast X-Ray Free-Electron Lasers",
+      "abstract": "High-brightness femtosecond-to-attosecond pulses are indispensable for probing electron dynamics on their fundamental temporal scales. X-ray free-electron lasers (XFELs) at high repetition rates will facilitate high-statistics measurements and time-resolved studies that were previously inaccessible. Although energy recovery linacs (ERLs) are well suited for high-repetition-rate operation, their relatively low peak current poses a major challenge for generating intense ultrashort X-ray pulses. Here, we propose a completely laser-free scheme that fundamentally overcomes this bottleneck through a continuous, phase-stable self-modulation process. By interacting with its own coherently emitted terahertz radiation within a helical wiggler, the electron bunch naturally accumulates a robust, few-cycle energy modulation in its core, even when starting with the intrinsically low peak current typical of ERLs. A downstream dispersion chicane subsequently converts this energy modulation into an isolated, exceptionally sharp current spike. Start-to-end simulations based on a 1~GeV ERL light source demonstrate the feasibility of generating isolated soft X-ray pulses with an average peak power exceeding 4~GW and a pulse duration of about 1~fs at an unprecedented 1.3~GHz repetition rate. The proposed scheme offers a highly practical pathway for advancing ultrafast X-ray generation into the true continuous-wave regime, with transformative implications for the development of next-generation coherent light sources.",
+      "authors": [
+        "Junhao Liu",
+        "Zhen Wang",
+        "Lanpeng Ni",
+        "Yujie Lu",
+        "Chao Feng",
+        "Zhentang Zhao"
+      ],
+      "primary_category": "physics.acc-ph",
+      "categories": [
+        "physics.acc-ph"
+      ],
+      "published": "2026-04-30T02:58:32+00:00",
+      "link": "https://arxiv.org/pdf/2604.27347v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved studies of electron dynamics",
+      "llm_evidence_cn": "电子动力学的时间分辨研究",
+      "llm_evidence": "电子动力学的时间分辨研究",
+      "canonical_evidence": "电子动力学的时间分辨研究",
+      "llm_tldr_en": "Proposes a laser-free scheme for high-repetition-rate XFELs to enable ultrafast time-resolved studies.",
+      "llm_tldr_cn": "提出了一种用于高重复频率XFEL的无激光方案，以实现超快时间分辨研究。",
+      "llm_tldr": "提出了一种用于高重复频率XFEL的无激光方案，以实现超快时间分辨研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.04297v1",
+      "source": "arxiv",
+      "title": "High-Sensitivity, High-Throughput Double Sagnac Lateral Shearing Quantitative Phase Microscopy and Tomography with Pseudo-Thermal Illumination",
+      "abstract": "Quantitative phase microscopy (QPM) enables label-free measurement of local optical path length variations, providing critical insight into the structure and dynamics of transparent biological specimens. Here, a highly sensitive lateral shearing QPM (LS-QPM) system is presented, based on a novel double Sagnac common-path interferometric configuration combined with pseudo-thermal illumination. The pseudo-thermal light source plays a central role in enhancing spatial phase sensitivity by suppressing coherent noise and speckle artifacts, while maintaining sufficient temporal coherence to generate high-density interference fringes, thereby enabling robust single-shot phase retrieval. In addition, the double Sagnac architecture introduces an inherently stable common-path geometry, significantly enhancing temporal phase stability. Unlike conventional quadriwave lateral shearing interferometry (QWLSI)-based QPM systems, which typically suffer from a trade-off between spatial resolution and field of view (FOV), the proposed approach enables simultaneous achievement of diffraction-limited resolution and a large FOV. Experimental validation using calibrated polystyrene beads demonstrates accurate and spatially uniform phase reconstruction across the entire imaging area. Further, the system's capability for biological imaging is demonstrated through experiments on fixed and live HeLa cells, where subcellular features and dynamic processes are captured in a label-free manner. Furthermore, volumetric imaging of embedded bead samples highlights the potential of the approach for three-dimensional phase tomography. The lateral shearing mechanism, analogous to differential interference contrast (DIC), improves robustness to multiple scattering, indicating strong potential for future applications in imaging thick and heterogeneous samples.",
+      "authors": [
+        "Pawel Goclowski",
+        "Maciej Trusiak",
+        "Balpreet S. Ahluwalia",
+        "Azeem Ahmad"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-05T21:04:50+00:00",
+      "link": "https://arxiv.org/pdf/2605.04297v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "common-path interferometric configuration for label-free measurement",
+      "llm_evidence_cn": "用于无标记测量的共路径干涉配置",
+      "llm_evidence": "用于无标记测量的共路径干涉配置",
+      "canonical_evidence": "用于无标记测量的共路径干涉配置",
+      "llm_tldr_en": "Presents a high-sensitivity lateral shearing quantitative phase microscopy system using interferometry.",
+      "llm_tldr_cn": "提出了一种利用干涉测量技术的高灵敏度侧向剪切定量相位显微镜系统。",
+      "llm_tldr": "提出了一种利用干涉测量技术的高灵敏度侧向剪切定量相位显微镜系统。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2604.28183v1",
+      "source": "arxiv",
+      "title": "Uniaxial strain-driven ferroelastic domain control in LaAlO3",
+      "abstract": "Multiferroic domain walls in functional oxides exhibit properties distinct from the bulk and are increasingly exploited as active elements in nanoelectronic and photonic devices. Deterministic control of domain populations has typically remained limited to local control, or removal with temperature. Here we demonstrate continuous, reversible manipulation of the ferroelastic domain structure in single-crystal LaAlO$_3$ using in-situ uniaxial strain. Combining atomic force microscopy, X-ray diffraction, and Raman spectroscopy with first-principles calculations we map the complete microscopic evolution of the twin domain population through the strain-driven transition from the rhombohedral $R\\bar{3}c$ ground state toward the predicted orthorhombic $Fmmm$ phase. Applied strains below $0.5\\%$ produce pronounced surface flattening and large-scale domain reorganisation, establishing uniaxial strain as a technically accessible control parameter for ferroelastic domain engineering. These results open a route to active, real-time programming of domain architectures in LaAlO$_3$-based heterostructures, with implications for strain-tunable superconducting interfaces, nanoscale phonon-polariton optics, and ultrafast lattice control.",
+      "authors": [
+        "Matthias Roeper",
+        "Robin Buschbeck",
+        "Jakob Wetzel",
+        "Tobias Ritschel",
+        "Anna-Lena Hofmann",
+        "Vladyslav Kovtunovych",
+        "Mike N. Pionteck",
+        "Javier Taboada-Gutiérrez",
+        "Alexey B. Kuzmenko",
+        "Martina Basini",
+        "Vivek Unikandanunni",
+        "Iuliia Kiseleva",
+        "Jochen Geck",
+        "Susanne C. Kehr",
+        "Maximilian Lederer",
+        "Simone Sanna",
+        "Lukas M. Eng",
+        "Samuel D. Seddon"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.app-ph"
+      ],
+      "published": "2026-04-30T17:58:51+00:00",
+      "link": "https://arxiv.org/pdf/2604.28183v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in-situ manipulation and mapping of ferroelastic domains",
+      "llm_evidence_cn": "铁弹性畴的原位操纵和映射",
+      "llm_evidence": "铁弹性畴的原位操纵和映射",
+      "canonical_evidence": "铁弹性畴的原位操纵和映射",
+      "llm_tldr_en": "Demonstrates reversible control of ferroelastic domains in LaAlO3 using in-situ uniaxial strain.",
+      "llm_tldr_cn": "演示了利用原位单轴应变对 LaAlO3 铁弹性畴的进行可逆控制。",
+      "llm_tldr": "演示了利用原位单轴应变对 LaAlO3 铁弹性畴的进行可逆控制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.05747v1",
+      "source": "arxiv",
+      "title": "Programmable spatial coherence tomography: diffraction-limited three-dimensional reflection imaging under modulated monochromatic illumination",
+      "abstract": "Depth sectioning in reflection microscopy has predominantly relied on temporal coherence gating. Here we show that volumetric reflection tomography at diffraction-limited resolution can be achieved under monochromatic illumination by engineering spatial, rather than temporal, coherence. In programmable spatial coherence tomography (PSCT), a sequence of pupil-coded illumination patterns with angular-spectrum diversity generates measurement redundancy enabling the system to calibrate itself, jointly retrieving aberrations, illumination profiles, and sample motion without guide stars or modal priors. We demonstrate label-free volumetric imaging of thick human tissues, organoids, frequency-resolved dynamic contrast, and high-resolution in vivo brain imaging through a cranial window. These results position PSCT as an alternative to temporal coherence based reflection imaging in complex biological systems.",
+      "authors": [
+        "Herve Hugonnet",
+        "Jieun Choi",
+        "Gyoung Hwan Kim",
+        "Chulmin Oh",
+        "Jimin Cho",
+        "Chungha Lee",
+        "Su-Jin Shin",
+        "Sujin Park",
+        "Bon-Kyoung Koo",
+        "Wang-Yuhl Oh",
+        "Pilhan Kim",
+        "YongKeun Park"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-07T06:41:53+00:00",
+      "link": "https://arxiv.org/pdf/2605.05747v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "label-free volumetric reflection imaging and coherence engineering",
+      "llm_evidence_cn": "无标记体积反射成像与相干工程",
+      "llm_evidence": "无标记体积反射成像与相干工程",
+      "canonical_evidence": "无标记体积反射成像与相干工程",
+      "llm_tldr_en": "Introduces PSCT for diffraction-limited 3D reflection imaging using spatial coherence engineering.",
+      "llm_tldr_cn": "引入可编程空间相干层析成像技术，利用空间相干工程实现衍射极限的三维反射成像。",
+      "llm_tldr": "引入可编程空间相干层析成像技术，利用空间相干工程实现衍射极限的三维反射成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.00172v1",
+      "source": "arxiv",
+      "title": "FitED: A User-Centric, Extensible Software Environment for Robust Peak-Profile and General Functional Data Fitting",
+      "abstract": "Reliable parameter extraction from experimental data is central to quantitative analysis in spectroscopy, diffraction, photoluminescence, chromatography, microscopy, and time-resolved measurements. We present FitED, a Python-based desktop application for interactive and automated nonlinear fitting of one-dimensional scientific data. FitED combines an accessible graphical workflow with a numerical backend capable of fitting both conventional peak profiles and arbitrary user-defined analytical functions. The software supports Gaussian, Lorentzian, Pseudo-Voigt, and exact area-normalized Voigt profiles, together with custom functions such as exponential decays, stretched exponentials, saturation curves, and spectroscopy-specific response functions. It integrates robust text-file import, region-of-interest selection, background modeling, parameter bounds, weighting strategies, automated pre-fit search, iterative peak refinement, residual visualization, session persistence, and structured export of fitted curves, components, reports, and metadata. By combining mathematical transparency with practical usability, FitED aims to make nonlinear fitting more reproducible and accessible while preserving the parameter-level control required by experienced experimental researchers.",
+      "authors": [
+        "Mustafa Mahmoud Aboulsaad"
+      ],
+      "primary_category": "physics.data-an",
+      "categories": [
+        "physics.data-an",
+        "cond-mat.mtrl-sci",
+        "cs.MS"
+      ],
+      "published": "2026-04-30T19:44:02+00:00",
+      "link": "https://arxiv.org/pdf/2605.00172v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "software for time-resolved measurements and microscopy data fitting",
+      "llm_evidence_cn": "用于时间分辨测量和显微镜数据拟合的软件",
+      "llm_evidence": "用于时间分辨测量和显微镜数据拟合的软件",
+      "canonical_evidence": "用于时间分辨测量和显微镜数据拟合的软件",
+      "llm_tldr_en": "A user-centric software for robust peak-profile and functional data fitting in time-resolved measurements.",
+      "llm_tldr_cn": "一种用于时间分辨测量中峰形和功能数据拟合的用户中心化软件。",
+      "llm_tldr": "一种用于时间分辨测量中峰形和功能数据拟合的用户中心化软件。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.00703v1",
+      "source": "arxiv",
+      "title": "TrueEBSD in MTEX: automatic image matching for correlative microscopy applications",
+      "abstract": "TrueEBSD is an open-source MATLAB program for image alignment and spatial distortion correction of images and electron backscatter diffraction (EBSD) maps. We have re-implemented TrueEBSD as an add-on to MTEX, an established toolbox for EBSD data analysis. Spatial alignment enables correlative analysis methods, such as augmenting EBSD orientation maps with data from other imaging modes. The augmented EBSD maps can then be analysed further using MTEX. We demonstrate TrueEBSD on two example case studies: one for measuring Co phase fraction and WC contiguity in a WC-Co composite, and another for determining the relative susceptibility of grain boundaries to void formation in a copper polycrystal. In both examples, the EBSD map was augmented with scanning electron microscopy (SEM) image data. This enabled quantitative crystallographic measurements which would not be possible from analysing the EBSD maps and images separately.",
+      "authors": [
+        "Vivian Tong",
+        "Stefan Olovsjö",
+        "Rachid M'Saoubi",
+        "Mathias Grabner",
+        "Manuel Petersmann",
+        "Liam Wright"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-01T14:46:25+00:00",
+      "link": "https://arxiv.org/pdf/2605.00703v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "correlative microscopy and image matching for material composites",
+      "llm_evidence_cn": "材料复合材料的相关显微镜和图像匹配",
+      "llm_evidence": "材料复合材料的相关显微镜和图像匹配",
+      "canonical_evidence": "材料复合材料的相关显微镜和图像匹配",
+      "llm_tldr_en": "An open-source tool for image alignment and spatial distortion correction in correlative microscopy.",
+      "llm_tldr_cn": "一种用于相关显微镜中图像对齐和空间畸变校正的开源工具。",
+      "llm_tldr": "一种用于相关显微镜中图像对齐和空间畸变校正的开源工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

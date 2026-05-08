@@ -1,0 +1,1793 @@
+Title: Analysis of Electromagnetic Scattering from Semiconductor Nanostructures by Solving Coupled Volume Integral and Two-fluid Hydrodynamic Equations
+
+URL Source: https://arxiv.org/pdf/2604.28083v1
+
+Published Time: Fri, 01 May 2026 01:13:32 GMT
+
+Number of Pages: 33
+
+Markdown Content:
+# Analysis of Electromagnetic Scattering from Semiconductor Nanostructures by Solving Coupled Volume Integral and Two-fluid Hydrodynamic Equations 
+
+Doolos Aibek Uulu 1, Meruyert Khamitova 2, Rui Chen 3, Liang Chen 2, Ping Li 4, and Hakan Bagci 21Department of Cyber Security, Light Academy College of Engineering, Bishkek, Kyrgyzstan 
+
+> 2
+
+Electrical and Computer Engineering Program, Computer, Electrical, and Mathematical Sciences and Engineering Division, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia 
+
+> 3
+
+School of Microelectronics, Nanjing University of Science and Technology (NJUST), Nanjing, China 
+
+> 4
+
+School of Electronic Science and Engineering, University of Electronic Science and Technology of China (UESTC), Chengdu, China 1
+
+> arXiv:2604.28083v1 [physics.optics] 30 Apr 2026
+
+Abstract 
+
+Semiconductor-based plasmonic nanostructures support localized surface plasmon modes in the infrared region. Unlike metallic nanostructures, they support both free electrons and holes, requiring a two-fluid hydrodynamic Drude equation (HDE) to ac-curately capture spatial dispersion effects and low-frequency acoustic plasmon modes that cannot be described by single-fluid models. In this work, a volume integral equa-tion (VIE)-based solver is proposed for the analysis of electromagnetic scattering from semiconductor nanostructures. The proposed approach couples the VIE, formulated in terms of the electric flux density and the free-electron and hole polarization currents, with the two-fluid HDE. The coupled system is discretized using a tetrahedral mesh and solved efficiently using a two-level iterative solver. In contrast to finite-element-based methods, the proposed VIE-based approach does not require domain-wide meshing and inherently satisfies the radiation condition, thereby eliminating artificial absorb-ing boundaries. Numerical results for InSb-type semiconductor nanostructures demon-strate the accuracy and efficiency of the proposed VIE-based solver and its ability to capture unique optical phenomena, such as acoustic plasmon resonances and the blueshift of localized surface plasmon resonances, that cannot be described by the single-fluid HDE or classical Drude-based models. 
+
+21 Introduction 
+
+In recent decades, plasmonic nanostructures have attracted significant attention across vari-ous scientific and engineering disciplines due to their ability to confine electromagnetic fields to subwavelength regions and their strong, geometry-dependent optical response [1–3]. These characteristics have enabled numerous practical applications, including near-field nanoimag-ing systems [4], superlenses [5], nanoantennas [6, 7], resonators [8, 9], waveguides [10], cou-plers [11, 12], and sensors [13–15]. Plasmonic nanostructures are typically realized using metals because of their ability to support localized surface plasmon (LSP) modes at optical frequencies [16]. At these fre-quencies, the dielectric permittivity of a metal is commonly described by the classical Drude model [17]. However, as the structural dimensions approach the nanoscale, this model fails to predict the experimentally observed blueshift in plasmon resonance frequencies [18]. This shift is a direct consequence of the quantum behavior of free electrons, which gives rise to spatial dispersion, a nonlocal response in which the electric field at a given point depends not only on the local excitation but also on the fields in its vicinity. Although full quantum mechanical models, such as time-dependent density functional theory [19], can accurately capture these interactions, their high computational cost limits their applicability to struc-tures only a few nanometers in size. A more computationally tractable alternative is the hydrodynamic Drude equation (HDE), a quasi-classical approach that treats the electron plasma as an electron fluid and effectively captures the spatial dispersion effects responsible for the blueshift [20]. More recently, semiconductors [21–24] have emerged as alternative plasmonic materi-als. Unlike metals, which support LSP modes at optical frequencies, semiconductors exhibit these modes in the infrared region, thereby extending the range of accessible applications. Furthermore, their electrical properties can be tuned via doping [25] or external biasing [26], 3offering an additional degree of control over the plasmonic response. Since semiconductors operate in the infrared regime, spatial dispersion effects become significant at larger struc-tural dimensions than in metals, which relaxes the fabrication requirements for plasmonic nanostructures [27]. Unlike metals, in which free electrons are the only charge carriers, semiconductors support both free electrons and holes, leading to the coexistence of free electron and hole plasmas [28]. The conventional single-fluid HDE therefore cannot adequately describe the carrier dynamics in semiconductors. To address this, a two-fluid HDE has been proposed [29], in which the motions of free electrons and holes are modeled separately by two single-fluid HDEs with distinct parameters, coupled through the electric field. This model captures unique optical properties of semiconductor nanostructures, such as low-frequency acoustic plasmon resonances [30], which cannot be described by the single-fluid HDE. The polarization currents associated with free electrons and holes generate electromag-netic fields inside the semiconductor, and their interaction can be described by a coupled system of Maxwell equations and the two-fluid HDE. Due to the complexity of this coupled system and the need to handle arbitrarily shaped nanostructure geometries, numerical meth-ods are required for its solution. A finite element method (FEM) has been developed for the analysis of semiconductor nanowires and nanodimers [31]. However, like conventional FEM solvers for Maxwell equations, this approach requires discretization of the entire computation domain and the use of approximate absorbing boundary conditions [32], both of which limit the accuracy and efficiency of the solver. To overcome these shortcomings, a volume integral equation (VIE)-based solver is pro-posed in this work to analyze electromagnetic scattering from semiconductor nanostructures. Within the VIE framework, only the nanostructure is discretized, and the radiation condi-tion is inherently satisfied through the scalar Green function of the background medium. The proposed approach couples the VIE with the two-fluid HDE. The VIE expresses the 4electric field as a volumetric convolution of the scalar Green function with the electric flux density and the free-electron and hole polarization currents, while the two-fluid HDE relates the electric field to these polarization currents. To numerically solve the coupled system, the nanostructure is discretized using a tetrahedral mesh, and the unknown electric flux density and polarization currents are expanded using Schaubert-Wilton-Glisson (SWG) ba-sis functions [33] defined on the mesh. Substituting these expansions into the coupled VIE and two-fluid HDE and applying Galerkin testing yield a matrix system for the unknown expansion coefficients, which is solved efficiently using a two-level iterative solver [34]. Nu-merical results demonstrate the accuracy and efficiency of the proposed VIE-based solver and its ability to capture unique optical phenomena in semiconductor nanostructures, such as acoustic plasmon resonances, that cannot be described by the single-fluid HDE or classical Drude-based models. 
+
+2 Formulation 
+
+2.1 Coupled System of VIE and Two-fluid HDE 
+
+Let V denote the region occupied by a semiconductor nanostructure embedded in an un-bounded homogeneous background medium with permittivity ε0 and permeability μ0. The structure is excited by an incident electric field Einc (r), where a time-harmonic dependence of the form ejωt is assumed, and the formulation is developed in the frequency domain. Here, 
+
+ω is the angular frequency and t denotes time. The electromagnetic response within V con-sists of contributions from bound electrons, free electrons, and holes. The bound-electron response is characterized by the relative permittivity εb(r), while the free-electron and hole contributions are characterized by polarization currents induced within V . Accordingly, the 5total polarization current is expressed as 
+
+J(r) = Je(r) + Jh(r) + j ωε 0(εb(r) − 1) E(r) (1) where Je(r) and Jh(r) denote the polarization currents associated with free electrons and holes, respectively, while the last term represents the bound-electron contribution in terms of the total electric field E(r). This total field is decomposed into the incident field Einc (r)and the scattered field Esca (r) as 
+
+E(r) = Einc (r) + Esca (r). (2) The scattered electric field Esca (r) generated by the induced current J(r) is expressed using the volume integral operator as 
+
+Esca (r) = L[J]( r) (3) where the operator L[X]( r) is defined as 
+
+L[X]( r) = −jωμ 0
+
+Z
+
+> V
+
+X(r′)G(r, r′) dv ′ + 1jωε 0
+
+∇∇ · 
+
+Z
+
+> V
+
+X(r′)G(r, r′) dv ′. (4) Here, G(r, r′) = exp( −jk0 |r − r′|)/(4 π |r − r′|) is the scalar Green function of the homoge-neous background medium, k0 = ω√μ0ε0 is the background medium wavenumber, and the gradient operators in (4) act on the observation variable r.To eliminate E(r) as an explicit unknown, the electric flux density D(r) is defined as 
+
+D(r) = ε0E(r) + 1jω J(r). (5) This choice is motivated by the fact that the normal component of D(r) is continuous across 6material interfaces within V . Substituting Eq. (5) into Eq. (1) to eliminate E(r) yields 
+
+J(r) = j ωκ (r)D(r) + Je(r)
+
+εb(r) + Jh(r)
+
+εb(r) (6) where κ(r) = 1 − 1/ε b(r). Substituting Eq. (1) into Eq. (5) and solving for E(r) gives 
+
+E(r) = D(r)
+
+ε0εb(r) − Je(r)jωε 0εb(r) − Jh(r)jωε 0εb(r). (7) Substituting Eq. (6) into Eq. (3), and using the resulting expression together with Eq. (7) in Eq. (2) for r ∈ V yields the VIE in unknowns D(r), Je(r), and Jh(r) as 
+
+Einc (r) = D(r)
+
+ε0εb(r) − jωL[κD]( r)
+
+− Je(r)jωε 0εb(r) − L [Je
+
+εb
+
+]( r) − Jh(r)jωε 0εb(r) − L [Jh
+
+εb
+
+]( r), r ∈ V. 
+
+(8) The dynamics of free electrons and holes within V are governed by the two-fluid HDE [29]: 
+
+β2e ∇ [∇ · Je(r)] + ω(ω − jγe)Je(r) = −jωω 2e ε0E(r)
+
+β2h∇ [∇ · Jh(r)] + ω(ω − jγh)Jh(r) = −jωω 2hε0E(r), r ∈ V. 
+
+(9) Here, ωa, βa, and γa, a ∈ { e, h}, denote the plasma frequencies, the hydrodynamic pressure parameters, and the damping constants, respectively, for the free electrons (a = e) and the holes (a = h). The pressure terms β2e ∇[∇ · Je(r)] and β2h∇[∇ · Jh(r)] in Eq. (9) give rise to longitudinal electric-field components inside the semiconductor [31], in addition to the transverse components described by local Drude-based models, which necessitates two additional boundary conditions. Specifically, the normal components of Je(r) and Jh(r) are 7required to vanish on the boundary surface S of V :ˆn(r) · Je(r) = 0 ˆn(r) · Jh(r) = 0 (10) where ˆ n(r) is the outward-pointing unit normal vector at r ∈ S. Physically, these boundary conditions imply that neither free electrons nor holes can flow across the semiconductor boundary into the surrounding background medium. Substituting Eq. (7) into Eq. (9) to eliminate E(r) yields the two-fluid HDE in unknowns 
+
+D(r), Je(r), and Jh(r) as 
+
+β2e ∇[∇ · Je(r)] + 
+
+
+
+ω(ω − jγe) − ω2e
+
+εb(r)
+
+
+
+Je(r) − ω2e
+
+εb(r)Jh(r) = −jωω 2e
+
+D(r)
+
+εb(r)
+
+β2h∇[∇ · Jh(r)] + 
+
+
+
+ω(ω − jγh) − ω2h
+
+εb(r)
+
+
+
+Jh(r) − ω2h
+
+εb(r)Je(r) = −jωω 2h
+
+D(r)
+
+εb(r), r ∈ V. 
+
+(11) Equations (8) and (11) together constitute the coupled system of the VIE and the two-fluid HDE in the three unknowns D(r), Je(r), and Jh(r). 
+
+2.2 Discretization 
+
+To solve the coupled system of VIE and the two-fluid HDE, Eqs. (8) and (11), the region V
+
+is first discretized using a tetrahedral mesh. The unknowns D(r), Je(r), and Jh(r) are then expanded using the SWG basis functions [33] as 
+
+D(r) = 
+
+> ND
+
+X
+
+> n=1
+
+{ ¯ID}nf D 
+
+> n
+
+(r)
+
+Je(r) = 
+
+> Ne
+
+X
+
+> n=1
+
+{ ¯Ie}nf e
+
+> n
+
+(r)
+
+Jh(r) = 
+
+> Nh
+
+X
+
+> n=1
+
+{ ¯Ih}nf h 
+
+> n
+
+(r).
+
+(12) 8Here, f a 
+
+> n
+
+(r), with a ∈ { D, e, h}, denote the SWG basis functions used to expand D(r), Je(r), and Jh(r), respectively, Na is the corresponding number of basis functions, and { ¯Ia}n are the unknown expansion coefficients. An SWG basis function fn(r), r ∈ Vn, is defined on the triangular face Sn shared by a pair of adjacent tetrahedrons as [33] 
+
+fn(r) = 
+
+
+
+f + 
+
+> n
+
+(r) = An
+
+> 3Ω +
+> n
+
+(r − r+ 
+
+> n
+
+), r ∈ V +
+
+> n
+
+f − 
+
+> n
+
+(r) = − An
+
+> 3Ω −
+> n
+
+(r − r− 
+
+> n
+
+), r ∈ V −
+
+> n
+
+. (13) Here, An denotes the area of Sn, V + 
+
+> n
+
+and V − 
+
+> n
+
+are the adjacent tetrahedrons sharing Sn,
+
+r± 
+
+> n
+
+are the free vertices of V ± 
+
+> n
+
+that do not lie on Sn, Ω ± 
+
+> n
+
+denote the volumes of V ± 
+
+> n
+
+, and 
+
+Vn = V + 
+
+> n
+
+∪ V − 
+
+> n
+
+.Since the normal component of D(r) is continuous across S, the basis functions f D 
+
+> n
+
+(r)include “full” SWG basis functions fn(r) defined on every pair of tetrahedrons inside V and “half” SWG basis functions f + 
+
+> n
+
+(r) defined on one tetrahedron having a triangular face on 
+
+S. In contrast, because the normal components of Je(r) and Jh(r) vanish on S, as required by Eq. (10), the basis functions f e
+
+> n
+
+(r) and f h 
+
+> n
+
+(r) include only “full” SWG basis functions 
+
+fn(r) defined on every pair of tetrahedrons inside V . This choice of basis functions naturally enforces the boundary conditions in Eq. (10). Finally, substituting the expansions in Eq. (12) into Eqs. (8) and (11) and applying Galerkin testing with f a
+
+> m
+
+(r), m = 1 , 2, . . . , N a, and a ∈ { D, e, h}, yield a matrix system of size ( ND + Ne + Nh) × (ND + Ne + Nh): 
+
+
+
+¯¯ZDD ¯¯ZDe ¯¯ZDh 
+
+¯¯ZeD ¯¯Zee ¯¯Zeh 
+
+¯¯ZhD ¯¯Zhe ¯¯Zhh 
+
+| {z }
+
+> ¯¯Z
+
+
+
+¯ID
+
+¯Ie
+
+¯Ih
+
+| {z } 
+
+> ¯I
+
+=
+
+
+
+¯V inc 
+
+00
+
+| {z }
+
+> ¯V
+
+. (14) 9Here, ¯V inc is the excitation vector, whose entries contain the tested incident field values, and the zeros in the second and third rows of the right-hand side vector follow from the fact that the two-fluid HDE has no excitation source term. Since L[·]( ·) is a global operator due to the Green function kernel, only ¯¯ZDD , ¯¯ZDe , and ¯¯ZDh are dense, while the remaining blocks are sparse, each having at most seven nonzero entries per row. The expressions of the matrix entries are provided in the Appendix. 
+
+2.3 Solution of the Matrix System 
+
+To solve the matrix system in Eq. (14), a two-level iterative solver [34] is employed. For this purpose, Eq. (14) is first rewritten as 
+
+
+
+¯¯ZDD ¯¯ZDy 
+
+¯¯ZyD ¯¯Zyy 
+
+| {z }
+
+> ¯¯Z
+
+
+
+¯ID
+
+¯Iy
+
+| {z } 
+
+> ¯I
+
+=
+
+
+
+¯V inc 
+
+0
+
+| {z }
+
+> ¯V
+
+(15) where ¯Iy = [ ¯Ie ¯Ih]T, ¯¯ZDy = [ ¯¯ZDe ¯¯ZDh ] of size ND × (Ne + Nh), ¯¯ZyD = [ ¯¯ZeD ¯¯ZhD ]T of size (Ne + Nh) × ND, and ¯¯Zyy =
+
+
+
+¯¯Zee ¯¯Zeh 
+
+¯¯Zhe ¯¯Zhh 
+
+ (16) of size ( Ne + Nh) × (Ne + Nh). Note that ¯¯ZDy is dense while ¯¯ZyD and ¯¯Zyy are sparse. From the second row of Eq. (15), ¯Iy can be written in terms of ¯ID as ¯Iy = − ¯¯Z−1yy ¯¯ZyD ¯ID. (17) Substituting Eq. (17) into the first row of Eq. (15) yields the reduced matrix system of size 
+
+ND × ND as ( ¯¯ZDD − ¯¯ZDy ¯¯Z−1yy ¯¯ZyD ) ¯ID = ¯V inc . (18) 10 The reduced system is solved for ¯ID using the transpose-free quasi-minimal residual (TFQMR) method [35]. Specifically, at each outer TFQMR iteration ( k), the matrix-vector product ( ¯¯ZDD − ¯¯ZDy ¯¯Z−1yy ¯¯ZyD ) ¯I(k)D is never formed explicitly. Instead, ¯¯Z−1yy ¯¯ZyD ¯I(k)D is computed by solv-ing the sparse system ¯¯Zyy ˜¯I(k)y = ¯¯ZyD ¯I(k)D using TFQMR at the inner level, after which the result is used to complete the matrix-vector product at the outer iteration [34]. Compared with the conventional single-level iterative approach, which applies TFQMR directly to Eq. (14), the two-level solver achieves significantly faster convergence as demon-strated in Section 3. This conclusion remains unchanged even when fast algorithms, such as the multilevel fast multipole algorithm [36–39] or the adaptive integral method [40–42], are employed to accelerate matrix-vector products, since the main difference in computational cost arises from the number of iterations rather than the cost per iteration. 
+
+3 Numerical Results 
+
+In this section, several numerical examples are presented to demonstrate the accuracy, ef-ficiency, and applicability of the proposed VIE-based solver for analyzing electromagnetic scattering from semiconductor nanostructures embedded in free space. In all examples, the excitation is a plane wave propagating along ˆ z with an ˆ x-polarized electric field: 
+
+Einc (r) = ˆ xE0e−jk0z . (19) Here, E0 = 1 V /m is the amplitude of the incident electric field. All iterations of the two-level and single-level iterative solvers are terminated when the relative residual falls below the prescribed convergence threshold δ:
+
+¯b − ¯¯A ¯I(k)
+
+> 2
+
+¯b 2
+
+≤ δ (20) 11 where ¯b is the right-hand side vector, ¯¯A is the system matrix, and ¯I(k) is the kth iterate. For the two-level iterative solver, the convergence thresholds for the inner and outer iterations are set to δ = 10 −8 and δ = 10 −4, respectively. For the single-level iterative solver, the convergence threshold is set to δ = 10 −4.
+
+3.1 Artificial Sphere 
+
+In this example, electromagnetic scattering from a homogeneous nanosphere made of an artificial material is analyzed using the proposed VIE-based solver. The sphere has a radius of 10 nm. The two-fluid HDE parameters of the artificial material are ωe = 3 .6 × 10 14 rad /s, 
+
+ωh = 1 .8 × 10 14 rad /s, γe = γh = 1 .0 × 10 12 rad /s, βe = 4 .3 × 10 5 m/s, βh = 1 .6 × 10 5 m/s, and 
+
+εb(r) = 5 .0 [31]. A total of 60 simulations are performed using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 0.7 ωeff ], where ωeff = ( ω2e + ω2h)0.5.The nanostructure is discretized using a tetrahedral mesh, resulting in ND = 17 546 and 
+
+Ne = Nh = 16 694 basis functions. Fig. 1(a) presents the extinction cross section (ECS) as a function of ω/ω eff , computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the Drude model [29]. Excellent agreement is observed between the proposed VIE-based solver and the Mie-series solution for the two-fluid HDE model, confirming the accuracy of the proposed VIE-based solver. The largest peak in all three ECS curves corresponds to the optical LSP resonance. This resonance appears at 
+
+ω = 0 .33 ωeff in the Drude model result and shifts to a higher frequency ω = 0 .44 ωeff when the two-fluid HDE model is employed, indicating a blueshift of the resonance [34, 43]. Five additional peaks are observed at ω = 0 .11 ωeff , ω = 0 .28 ωeff , ω = 0 .41 ωeff , ω = 0 .53 ωeff , and 
+
+ω = 0 .65 ωeff in the ECS computed using the proposed VIE-based solver and the Mie series solution with the two-fluid HDE model. Among these, the first peak corresponds to the acoustic LSP resonance, the second and third peaks correspond to acoustic bulk resonances, 12 and the fourth and the fifth peaks correspond to optical bulk resonances associated with electrons and holes [31]. In general, the optical bulk resonance induced by electrons is stronger than that induced by holes. To further illustrate these resonances, Figs. 1(b), (c), and (d) show the field distributions on the xz -plane of the nanosphere at ω = 0 .11 ωeff 
+
+(acoustic LSP resonance), ω = 0 .28 ωeff (first acoustic bulk resonance), and ω = 0 .53 ωeff 
+
+(first optical bulk resonance associated with electrons), respectively. 
+
+3.2 Semiconductor Sphere 
+
+In this example, electromagnetic scattering from a nanosphere made of an indium antimonide (InSb)-type semiconductor is analyzed using the proposed VIE-based solver. Four sets of simulations are performed to evaluate solver efficiency, validate the proposed solver against the two-fluid HDE Mie series solution, and investigate the effects of temperature and sphere radius on the scattering response. In all simulations, εb(r) = 15 .68 [30]. In the first set of simulations, the sphere radius is 100 nm and the temperature is 300 K. The two-fluid HDE parameters for InSb at 300 K are ωe = 6 .34 × 10 13 rad /s, ωh = 1 .11 ×
+
+10 13 rad /s, γe = 1 .99 × 10 12 rad /s, γh = 6 .74 × 10 12 rad /s, βe = 10 .89 × 10 5 m/s, and βh =1.92 × 10 5 m/s [30]. A total of 30 simulations are carried out using both the single-level and two-level iterative solvers at equally spaced frequency points over the range ω ∈ [0 , 1.25 ωeff ]. The nanostructure is discretized using a tetrahedral mesh with ND = 9 216 and Ne = Nh =8 612 basis functions. Fig. 2(a) compares the execution times of the single-level and two-level iterative solvers for this set of simulations. The results show that the two-level iterative solver is significantly faster on average. In the second set of simulations, the sphere radius is 100 nm and the temperature is 300 K. A total of 60 simulations are carried out using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ]. The nanostructure is discretized using a tetrahedral mesh with ND = 17 546 and Ne = Nh = 16 694 basis functions. Fig. 2(b) shows 13 the ECS computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the single-fluid HDE model, confirming the accuracy of the proposed VIE-based solver for InSb-type semiconductors. Notably, the first resonance peak at ω = 0 .07 ωeff , corresponding to the acoustic LSP resonance [31], is not captured by the single-fluid HDE model. In the third set of simulations, the sphere radius is 100 nm and three temperatures, 
+
+T ∈ { 300 , 350 , 400 } K, are considered. The two-fluid HDE parameters for InSb at each temperature are taken from [30]. A total of 60 simulations are carried out using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ]. The nanostructure is discretized using a tetrahedral mesh with ND = 17 546 and Ne = Nh =16 694 basis functions. Fig. 2(c) shows the ECS computed using the proposed VIE-based solver for the three temperatures as a function of ω/ω eff . The resonance peak shifts toward higher frequencies and increases in amplitude as the temperature rises. This behavior can be explained by the increase in electron density in the conduction band and hole density in the valence band with increasing temperature. In the fourth set of simulations, the sphere radius is varied over R ∈ { 60 , 80 , 100 , 140 } nm and the temperature is 300 K. The two-fluid HDE parameters are the same as those in the first set of simulations. For each radius, a total of 60 simulations are carried out using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ], and the nanosphere is discretized using a tetrahedral mesh with ND = 17 546 and Ne = Nh = 16 694 basis functions. Fig. 2(d) shows the ECS computed using the proposed VIE-based solver for all four nanosphere radii as a function of ω/ω eff . The resonance peak shifts toward higher frequencies and decreases in amplitude as the sphere radius decreases. 14 3.3 Semiconductor Dimer 
+
+In this example, electromagnetic scattering from a nanodimer made of an InSb-type semi-conductor [see Fig. 3(a)] is analyzed using the proposed VIE-based solver. Each sphere has a radius of 100 nm and the shortest distance between the spheres is 20 nm. The temperature is 300 K and the two-fluid HDE parameters are those of InSb at 300 K used in the first set of simulations in Section 3.2. Two scattering scenarios are considered: (i) the nanodimer, in which both spheres are discretized using the same tetrahedral mesh, resulting in ND = 18 186 and Ne = Nh = 16 978 basis functions for the full structure, and (ii) a single nanosphere of radius 100 nm, discretized with ND = 17 546 and Ne = Nh = 16 694 basis functions. For both scenarios, 60 simulations are carried out using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ]. Fig. 3(b) shows the ECS computed for the two scattering scenarios described above as a function of ω/ω eff . The ECS of the nanodimer is larger than that of the single nanosphere over the entire frequency range due to the electromagnetic coupling between the two spheres, which leads to stronger field enhancement. As reported in [31], the ECS of the nanodimer increases as the separation between the two spheres decreases. The main resonance peaks at ω = 0 .07 ωeff , ω = 0 .44 ωeff , ω = 1 .04 ωeff , and ω = 1 .59 ωeff are observed in both ECS curves. In addition, several minor resonance peaks are present in the ECS of the nanodimer, which are attributed to higher-order modes excited by the near-field coupling between the two spheres [29]. 
+
+3.4 Semiconductor Cylinder 
+
+In this example, electromagnetic scattering from a nanocylinder made of an InSb-type semi-conductor is analyzed using the proposed VIE-based solver for different cylinder heights [see Fig. 4(a)]. The cylinder height is varied over H ∈ { 140 , 170 , 200 } nm and the radius is 15 100 nm. The temperature is 300 K and the two-fluid HDE parameters are those of InSb at 300 K used in the first set of simulations in Section 3.2. For each nanocylinder, 60 simulations are carried out using the two-level iterative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ]. Each nanocylinder is discretized using a tetrahedral mesh, resulting in ND ∈ { 18 476 , 22 482 , 26 138 } and Ne = Nh ∈ { 17 476 , 21 354 , 24 914 } basis functions for 
+
+H ∈ { 140 , 170 , 200 } nm, respectively. Fig. 4(b) shows the ECS computed using the two-level iterative solver for three nanocylin-der heights as a function of ω/ω eff . The main resonance peaks at ω = 0 .41 ωeff , ω = 0 .93 ωeff ,and ω = 1 .47 ωeff are observed in all three ECS curves, while the remaining resonance peaks shift toward higher frequencies as the cylinder height decreases. Notably, these height-dependent resonances are excited along the ˆ y-direction even though Einc (r) is polarized along ˆ x. By analogy with the sphere results in Section 3.1, the peak at ω = 0 .41 ωeff cor-responds to the first optical bulk resonance. Figs. 4(c)–(e) show the field distributions at this peak for all three nanocylinder heights. Similarly, the first height-dependent peak cor-responds to the first optical LSP resonance, and Figs. 4(f)–(h) show the corresponding field distributions. 
+
+3.5 Semiconductor Hexagonal Prism 
+
+In this example, electromagnetic scattering from an InSb-type semiconductor hexagonal nanoprism is analyzed using the proposed VIE-based solver for different prism heights [see Fig. 5(a)]. The prism height is varied over H ∈ { 140 , 170 , 200 } nm and the edge length of the hexagonal cross section is 100 nm. The temperature is 300 K and the two-fluid HDE parameters are those of InSb at 300 K used in the first set of simulations in Section 3.2. For each nanoprism, 60 simulations are carried out using the two-level it-erative solver at equally spaced frequency points over the range ω ∈ [0 , 1.8 ωeff ]. Each nanoprism is discretized using a tetrahedral mesh, resulting in ND ∈ { 14 846 , 18 132 , 21 422 }
+
+16 and Ne = Nh ∈ { 13 994 , 17 136 , 20 354 } basis functions for H ∈ { 140 , 170 , 200 } nm, respec-tively. Fig. 5(b) shows the ECS computed using the two-level iterative solver for the three nanoprism heights as a function of ω/ω eff . By analogy with the sphere results in Section 3.1, the peak at ω = 0 .41 ωeff , observed in all three ECS curves, corresponds to the first optical bulk resonance, while the remaining peaks shift toward higher frequencies as the prism height decreases, consistent with the height-dependent optical LSP resonances observed in Section 3.4. 
+
+4 Conclusion 
+
+Electromagnetic scattering from semiconductor nanostructures is analyzed using a coupled system of the VIE and the two-fluid HDE. The VIE expresses the electric field as a convo-lution of the scalar Green function of the background medium with the electric flux density and free-electron and hole polarization currents, while the two-fluid HDE relates the electric field to these polarization currents and accounts for nonlocal dispersion effects. For the numerical solution of this coupled system, the nanostructure is discretized using a tetrahedral mesh, and the unknown electric flux density and free-electron and hole polar-ization currents are expanded using SWG basis functions defined on the mesh. Substituting these expansions into the coupled VIE and two-fluid HDE and applying Galerkin testing yield a matrix system for the unknown expansion coefficients, which is solved efficiently using a two-level iterative solver. Numerical results for InSb-type semiconductor nanostructures demonstrate the accuracy and efficiency of the proposed VIE-based solver and its ability to capture unique optical phenomena, such as acoustic plasmon resonances and the blueshift of LSP resonances, that cannot be described by the single-fluid HDE or classical Drude-based models. Future work will focus on extending the solver to excitation-free simulations for 17 characteristic mode analysis of semiconductor nanostructures. 
+
+5 Appendix 
+
+The matrix entries of the coupled system in Eq. (14) are derived following the procedure presented in [34] for the coupled system of the VIE and the single-fluid HDE. Since the free-electron and hole polarization currents enter the coupled system symmetrically, the blocks ¯¯ZDq , ¯¯ZqD , ¯¯Zqq , and ¯¯Zqp can be derived simultaneously using unified indices q , p ∈ { e, h},q̸ = p. The entries of all blocks and the excitation vector ¯V inc are given by 
+
+{ ¯¯ZDD }mn = 1
+
+ε0
+
+D
+
+f D
+
+> m
+
+(r), f D 
+
+> n
+
+(r)
+
+εb(r)
+
+E
+
+− jω
+
+D
+
+f D
+
+> m
+
+(r), L[κf D 
+
+> n
+
+]( r)
+
+E
+
+(21) 
+
+{ ¯¯ZDq }mn = − 1jωε 0
+
+D
+
+f D
+
+> m
+
+(r), f q 
+
+> n
+
+(r)
+
+εb(r)
+
+E
+
+−
+
+D
+
+f D
+
+> m
+
+(r), L[ f q
+
+> n
+
+εb
+
+]( r)
+
+E
+
+(22) 
+
+{ ¯¯ZqD }mn = j ωω 2q
+
+D
+
+f q
+
+> m
+
+(r), f D 
+
+> n
+
+(r)
+
+εb(r)
+
+E
+
+(23) 
+
+{ ¯¯Zqq }mn = β2q
+
+D
+
+f q
+
+> m
+
+(r), ∇[∇ · f q 
+
+> n
+
+(r)] 
+
+E
+
++ ω(ω − jγq)
+
+D
+
+f q
+
+> m
+
+(r), f q 
+
+> n
+
+(r)
+
+E
+
+− ω2q
+
+D
+
+f q
+
+> m
+
+(r), f q 
+
+> n
+
+(r)
+
+εb(r)
+
+E
+
+(24) 
+
+{ ¯¯Zqp }mn = −ω2q
+
+D
+
+f q
+
+> m
+
+(r), f p 
+
+> n
+
+(r)
+
+εb(r)
+
+E
+
+(25) 
+
+{ ¯V inc }m =
+
+D
+
+f D
+
+> m
+
+(r), Einc (r)
+
+E
+
+. (26) Here, the inner product is defined as 
+
+D
+
+a(r), b(r)
+
+E
+
+=
+
+Z 
+
+> Va∩Vb
+
+a(r) · b(r) dv 
+
+where Va and Vb are the supports of a(r) and b(r), respectively. As seen from Eqs. (21) and (22), only ¯¯ZDD and ¯¯ZDq involve the operator L[·]( ·) and are 18 therefore dense. The remaining blocks ¯¯ZqD , ¯¯Zqq , and ¯¯Zqp are sparse, each having at most seven nonzero entries per row, as can be verified from the explicit expressions provided in Sections 5.3–5.5. In the derivation of the explicit expressions, εb(r) and κ(r) are assumed to be constant within each tetrahedron, with values obtained by sampling at the center of that tetrahedron. Accordingly, local functions are defined as 
+
+εb,n (r) = 
+
+
+
+ε+b,n = εb(r+c ), r ∈ V +
+
+> n
+
+ε− 
+
+> b,n
+
+= εb(r− 
+
+> c
+
+), r ∈ V −
+
+> n
+
+(27) 
+
+κn(r) = 
+
+
+
+κ+ 
+
+> n
+
+= κ(r+c ), r ∈ V +
+
+> n
+
+κ− 
+
+> n
+
+= κ(r− 
+
+> c
+
+), r ∈ V −
+
+> n
+
+(28) where r± 
+
+> c
+
+are the centers of V ± 
+
+> n
+
+. In the following sections, the explicit expressions for the entries of all blocks are provided for all combinations of full and half SWG functions used as testing and basis functions. 
+
+5.1 Entries of ¯¯ZDD 
+
+Four possible combinations of the testing function f D
+
+> m
+
+(r) and the basis function f D 
+
+> n
+
+(r) must be considered, each leading to a different expression for the matrix entries. 
+
+Case 1: Both fD
+
+> m
+
+(r) and f D 
+
+> n
+
+(r) are full SWG functions: 
+
+{ ¯¯ZDD }mn = 1
+
+ε0
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) · f D 
+
+> n
+
+(r)
+
+εb,n (r) dv 
+
+− ω2μ0
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) ·
+
+Z
+
+> Vn
+
+κn(r′)f D 
+
+> n
+
+(r′)G(r, r′) dv ′ dv 
+
++ 1
+
+ε0
+
+Z
+
+> Vm
+
+∇ · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+κn(r′)∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′
+
+−(κ+ 
+
+> n
+
+− κ− 
+
+> n
+
+)
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+dv. 
+
+(29) 19 Case 2: f D
+
+> m
+
+(r) is a half SWG function and f D 
+
+> n
+
+(r) is a full SWG function: 
+
+{ ¯¯ZDD }mn = 1
+
+ε0
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) · f D 
+
+> n
+
+(r)
+
+εb,n (r) dv 
+
+− ω2μ0
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) ·
+
+Z
+
+> Vn
+
+κn(r′)f D 
+
+> n
+
+(r′)G(r, r′) dv ′ dv 
+
++ 1
+
+ε0
+
+Z 
+
+> V+
+> m
+
+∇ · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+κn(r′)∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′
+
+−(κ+ 
+
+> n
+
+− κ− 
+
+> n
+
+)
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+dv 
+
+− 1
+
+ε0
+
+Z
+
+> Sm
+
+ˆnm(r) · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+κn(r′)∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′
+
+−(κ+ 
+
+> n
+
+− κ− 
+
+> n
+
+)
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+ds 
+
+(30) where ˆ nm(r) is the unit normal vector on Sm pointing from V − 
+
+> m
+
+to V + 
+
+> m
+
+and ˆ nm(r) · fD
+
+> m
+
+(r) = 1. 
+
+Case 3: f D
+
+> m
+
+(r) is a full SWG function and f D 
+
+> n
+
+(r) is a half SWG function: 
+
+{ ¯¯ZDD }mn = 1
+
+ε0ε+b,n 
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) · f D 
+
+> n
+
+(r) dv − ω2μ0κ+
+
+> n
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) ·
+
+Z 
+
+> V+
+> n
+
+f D 
+
+> n
+
+(r′)G(r, r′) dv ′ dv 
+
++ κ+
+
+> n
+
+ε0
+
+Z
+
+> Vm
+
+∇ · f D
+
+> m
+
+(r)
+
+Z  
+
+> V+
+> n
+
+∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′ −
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+dv. 
+
+(31) 
+
+Case 4: Both fD
+
+> m
+
+(r) and f D 
+
+> n
+
+(r) are half SWG functions: 
+
+{ ¯¯ZDD }mn = 1
+
+ε0ε+b,n 
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) · f D 
+
+> n
+
+(r) dv 
+
+− ω2μ0κ+
+
+> n
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) ·
+
+Z 
+
+> V+
+> n
+
+f D 
+
+> n
+
+(r′)G(r, r′) dv ′ dv 
+
++ κ+
+
+> n
+
+ε0
+
+Z 
+
+> V+
+> m
+
+∇ · f D
+
+> m
+
+(r)
+
+Z  
+
+> V+
+> n
+
+∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′ −
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+dv 
+
+− κ+
+
+> n
+
+ε0
+
+Z
+
+> Sm
+
+ˆnm(r) · f D
+
+> m
+
+(r)
+
+Z  
+
+> V+
+> n
+
+∇′ · f D 
+
+> n
+
+(r′)G(r, r′) dv ′ −
+
+Z
+
+> Sn
+
+G(r, r′) ds ′
+
+
+
+ds. 
+
+(32) 20 5.2 Entries of ¯¯ZDq 
+
+Two possible combinations of the testing function f D
+
+> m
+
+(r) and the basis function f q 
+
+> n
+
+(r) must be considered, each leading to a different expression for the matrix entries. Note that f q 
+
+> n
+
+(r)is always a full SWG function since the normal components of Je(r) and Jh(r) vanish on S.
+
+Case 1: f D
+
+> m
+
+(r) is a full SWG function: 
+
+{ ¯¯ZDq }mn = − 1jωε 0
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) · f q 
+
+> n
+
+(r)
+
+εb,n (r) dv 
+
++ j ωμ 0
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) ·
+
+Z
+
+> Vn
+
+f q 
+
+> n
+
+(r′)
+
+εb,n (r′)G(r, r′) dv ′ dv 
+
++ 1jωε 0
+
+Z
+
+> Vm
+
+∇ · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+∇′ · f q 
+
+> n
+
+(r′)
+
+εb,n (r′) G(r, r′) dv ′
+
+−
+
+"
+
+1
+
+ε+b,n 
+
+− 1
+
+ε−
+
+> b,n
+
+# Z
+
+> Sn
+
+G(r, r′) ds ′
+
+)
+
+dv. 
+
+(33) 
+
+Case 2: f D
+
+> m
+
+(r) is a half SWG function: 
+
+{ ¯¯ZDq }mn = − 1jωε 0
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) · f q 
+
+> n
+
+(r)
+
+εb,n (r) dv 
+
++ j ωμ 0
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) ·
+
+Z
+
+> Vn
+
+f q 
+
+> n
+
+(r′)
+
+εb,n (r′)G(r, r′) dv ′ dv 
+
++ 1jωε 0
+
+Z 
+
+> V+
+> m
+
+∇ · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+∇′ · f q 
+
+> n
+
+(r′)
+
+εb,n (r′) G(r, r′) dv ′
+
+−
+
+"
+
+1
+
+ε+b,n 
+
+− 1
+
+ε−
+
+> b,n
+
+# Z
+
+> Sn
+
+G(r, r′) ds ′
+
+)
+
+dv 
+
+− 1jωε 0
+
+Z
+
+> Sm
+
+ˆnm(r) · f D
+
+> m
+
+(r)
+
+Z 
+
+> Vn
+
+∇′ · f q 
+
+> n
+
+(r′)
+
+εb,n (r′) G(r, r′) dv ′
+
+−
+
+"
+
+1
+
+ε+b,n 
+
+− 1
+
+ε−
+
+> b,n
+
+# Z
+
+> Sn
+
+G(r, r′) ds ′
+
+)
+
+ds. 
+
+(34) 21 5.3 Entries of ¯¯ZqD 
+
+Two possible combinations of the testing function f q
+
+> m
+
+(r) and the basis function f D 
+
+> n
+
+(r) must be considered, each leading to a different expression for the matrix entries. Note that f q
+
+> m
+
+(r)is always a full SWG function since the normal components of Je(r) and Jh(r) vanish on S.
+
+Case 1: f D 
+
+> n
+
+(r) is a full SWG function: 
+
+{ ¯¯ZqD }mn = j ωω 2q
+
+Z
+
+> Vm
+
+f q
+
+> m
+
+(r) · f D 
+
+> n
+
+(r)
+
+εb,n (r) dv. (35) 
+
+Case 2: f D 
+
+> n
+
+(r) is a half SWG function: 
+
+{ ¯¯ZqD }mn = jωω 2q
+
+ε+b,n 
+
+Z
+
+> Vm
+
+f q
+
+> m
+
+(r) · f D 
+
+> n
+
+(r) dv. (36) 
+
+5.4 Entries of ¯¯Zqq 
+
+Since both fq
+
+> m
+
+(r) and f q 
+
+> n
+
+(r) are always full SWG functions, only one expression for the matrix entries is needed: 
+
+{ ¯¯Zqq }mn = − β2q
+
+Z
+
+> Vm
+
+[∇ · f q
+
+> m
+
+(r)][ ∇ · f q 
+
+> n
+
+(r)] dv + ω(ω − jγq)
+
+Z
+
+> Vm
+
+f q
+
+> m
+
+(r) · f q 
+
+> n
+
+(r) dv 
+
+− ω2q
+
+Z
+
+> Vm
+
+f q
+
+> m
+
+(r) · f q 
+
+> n
+
+(r)
+
+εb,n (r) dv. 
+
+(37) 
+
+5.5 Entries of ¯¯Zqp 
+
+Since both f q
+
+> m
+
+(r) and f p 
+
+> n
+
+(r) are always full SWG functions, only one expression for the matrix entries is needed: 
+
+{ ¯¯Zqp }mn = −ω2q
+
+Z
+
+> Vm
+
+f q
+
+> m
+
+(r) · f p 
+
+> n
+
+(r)
+
+εb,n (r) dv. (38) 22 5.6 Entries of ¯V inc 
+
+Two possible combinations of the testing function f D
+
+> m
+
+(r) must be considered, each leading to a different expression for the excitation vector entries. 
+
+Case 1: f D
+
+> m
+
+(r) is a full SWG function: 
+
+{ ¯V inc }m =
+
+Z
+
+> Vm
+
+f D
+
+> m
+
+(r) · Einc (r) dv. (39) 
+
+Case 2: f D
+
+> m
+
+(r) is a half SWG function: 
+
+{ ¯V inc }m =
+
+Z 
+
+> V+
+> m
+
+f D
+
+> m
+
+(r) · Einc (r) dv. (40) 
+
+References 
+
+[1] G. V. Naik, V. M. Shalaev, and A. Boltasseva, “Alternative plasmonic materials: Be-yond gold and silver,” Adv. Mater. , vol. 25, no. 24, pp. 3264–3294, 2013. [2] W. A. Murray and W. L. Barnes, “Plasmonic materials,” Advanced Materials , vol. 19, no. 22, pp. 3771–3782, 2007. [3] M. I. Stockman, “Nanoplasmonics: Past, present, and glimpse into future,” Opt. Ex-press , vol. 19, no. 22, pp. 22 029–22 106, Oct. 2011. [4] S. Kawata, Y. Inouye, and P. Verma, “Plasmonics for near-field nano-imaging and superlensing,” Nat. Photonics , vol. 3, no. 7, pp. 388–394, 2009. [5] H. Li, L. Fu, K. Frenner, and W. Osten, “Cascaded plasmonic superlens for far-field imaging with magnification at visible wavelength,” Opt. Express , vol. 26, no. 8, pp. 10 888–10 897, Apr. 2018. 23 [6] B. M. Ross, L. Y. Wu, and L. P. Lee, “Omnidirectional 3D nanoplasmonic optical antenna array via soft-matter transformation,” Nano Lett. , vol. 11, no. 7, pp. 2590– 2595, 2011. [7] H. Fischer and O. J. F. Martin, “Engineering the optical response of plasmonic nanoan-tennas,” Opt. Express , vol. 16, no. 12, pp. 9144–9154, Jun. 2008. [8] G. Kewes, F. Binkowski, S. Burger, L. Zschiedrich, and O. Benson, “Heuristic modeling of strong coupling in plasmonic resonators,” ACS Photonics , vol. 5, no. 10, pp. 4089– 4097, 2018. [9] T.-B. Wang, X.-W. Wen, C.-P. Yin, and H.-Z. Wang, “The transmission characteristics of surface plasmon polaritons in ring resonator,” Opt. Express , vol. 17, no. 26, pp. 24 096–24 101, Dec. 2009. [10] N. Kazanskiy, S. Khonina, and M. Butt, “Plasmonic sensors based on metal-insulator-metal waveguides for refractive index sensing applications: A brief review,” Physica E Low Dimens. Syst. Nanostruct. , vol. 117, p. 113798, 2020. [11] D. A. Uulu, T. Ashirov, N. Polat, O. Yakar, S. Balci, and C. Kocabas, “Fourier transform plasmon resonance spectrometer using nanoslit-nanowire pair,” Appl. Phys. Lett. , vol. 114, no. 25, p. 251101, 2019. [12] G. Veronis and S. Fan, “Theoretical investigation of compact couplers between dielec-tric slab waveguides and two-dimensional metal-dielectric-metal plasmonic waveguides,” 
+
+Opt. Express , vol. 15, no. 3, pp. 1211–1221, Feb 2007. [13] J. Homola, S. S. Yee, and G. Gauglitz, “Surface plasmon resonance sensors,” Sens. Actuators B Chem. , vol. 54, no. 1-2, pp. 3–15, 1999. 24 [14] K. Lin, Y. Lu, J. Chen, R. Zheng, P. Wang, and H. Ming, “Surface plasmon resonance hydrogen sensor based on metallic grating with high sensitivity,” Opt. Express , vol. 16, no. 23, pp. 18 599–18 604, Nov. 2008. [15] S. N. Khonina, N. L. Kazanskiy, M. A. Butt, A. Ka´ zmierczak, and R. Piramidowicz, “Plasmonic sensor based on metal-insulator-metal waveguide square ring cavity filled with functional material for the detection of CO 2 gas,” Opt. Express , vol. 29, no. 11, pp. 16 584–16 594, May 2021. [16] S.-H. Chang, S. K. Gray, and G. C. Schatz, “Surface plasmon generation and light transmission by isolated nanoholes and arrays of nanoholes in thin metal films,” Opt. Express , vol. 13, no. 8, pp. 3150–3165, 2005. [17] S. A. Maier, Plasmonics: Fundamentals and Applications . New York, United States: Springer New York, 2007. [18] J. Tiggesb¨ aumker, L. K¨ oller, K.-H. Meiwes-Broer, and A. Liebsch, “Blue shift of the Mie plasma frequency in Ag clusters and particles,” Phys. Rev. A , vol. 48, no. 3, p. R1749, 1993. [19] M. A. Marques, C. A. Ullrich, F. Nogueira, A. Rubio, K. Burke, and E. K. U. Gross, Eds., Time-Dependent Density Functional Theory . The Netherlands: Springer-Verlag Berlin Heidelberg, 2006. [20] F. Forstmann and R. R. Gerhardts, Metal Optics Near the Plasma Frequency . Heidel-berg, Germany: Springer Berlin, 2006. [21] P. Tang, G. Liu, X. Liu, G. Fu, Z. Liu, and J. Wang, “Plasmonic wavy surface for ultrathin semiconductor black absorbers,” Opt. Express , vol. 28, no. 19, pp. 27 764– 27 773, Sep. 2020. 25 [22] F. B. Barho, F. Gonzalez-Posada, M.-J. Milla-Rodrigo, M. Bomers, L. Cerutti, and T. Taliercio, “All-semiconductor plasmonic gratings for biosensing applications in the mid-infrared spectral range,” Opt. Express , vol. 24, no. 14, pp. 16 175–16 190, Jul. 2016. [23] D. Li and C. Z. Ning, “All-semiconductor active plasmonic system in mid-infrared wave-lengths,” Opt. Express , vol. 19, no. 15, pp. 14 594–14 603, Jul. 2011. [24] A. Berrier, R. Ulbricht, M. Bonn, and J. G. Rivas, “Ultrafast active control of localized surface plasmon resonances in silicon bowtie antennas,” Opt. Express , vol. 18, no. 22, pp. 23 226–23 235, Oct. 2010. [25] S. Zhou, X. Pi, Z. Ni, Y. Ding, Y. Jiang, C. Jin, C. Delerue, D. Yang, and T. Nozaki, “Comparative study on the localized surface plasmon resonance of boron-and phosphorus-doped silicon nanocrystals,” ACS Nano , vol. 9, no. 1, pp. 378–386, 2015. [26] X. Liu, J.-H. Kang, H. Yuan, J. Park, S. J. Kim, Y. Cui, H. Y. Hwang, and M. L. Brongersma, “Electrical tuning of a quantum plasmonic resonance,” Nat. Nanotechnol. ,vol. 12, no. 9, pp. 866–870, 2017. [27] D. De Ceglia, M. Scalora, M. A. Vincenti, S. Campione, K. Kelley, E. L. Runnerstrom, J.-P. Maria, G. A. Keeler, and T. S. Luk, “Viscoelastic optical nonlocality of low-loss epsilon-near-zero nanofilms,” Sci. Rep. , vol. 8, no. 1, pp. 1–11, 2018. [28] H. Munekata, E. Mendez, Y. Iye, and L. Esaki, “Densities and mobilities of coexisting electrons and holes in GaSb/InAs/GaSb quantum wells,” Surf. Sci. , vol. 174, no. 1-3, pp. 449–453, 1986. [29] J. R. Maack, N. A. Mortensen, and M. Wubs, “Two-fluid hydrodynamic model for semiconductors,” Phys. Rev. B , vol. 97, no. 11, p. 115415, 2018. 26 [30] T. Dong, X. Gao, K. Yin, C. Xu, and X. Ma, “Modified optical response of biased semiconductor nanowires within a nonlocal hydrodynamic framework,” J. Opt. Soc. Am. B , vol. 37, no. 11, pp. 3277–3287, 2020. [31] T. Golestanizadeh, A. Zarifi, T. Jalali, J. R. Maack, and M. Wubs, “Hydrodynamic acoustic plasmon resonances in semiconductor nanowires and their dimers,” J. Opt. Soc. Am. B , vol. 36, no. 10, pp. 2712–2720, 2019. [32] J.-M. Jin, Theory and Computation of Electromagnetic Fields . Hoboken, NJ, USA: John Wiley & Sons, 2015. [33] D. Schaubert, D. Wilton, and A. Glisson, “A tetrahedral modeling method for elec-tromagnetic scattering by arbitrarily shaped inhomogeneous dielectric bodies,” IEEE Trans. Antennas Propag. , vol. 32, no. 1, pp. 77–85, 1984. [34] D. A. Uulu, R. Chen, L. Chen, P. Li, and H. Bagci, “Coupled solution of volume inte-gral and hydrodynamic equations to analyze electromagnetic scattering from composite nanostructures,” IEEE Trans. Antennas Propag. , vol. 71, no. 4, pp. 3418–3429, 2023. [35] R. W. Freund, “A transpose-free quasi-minimal residual algorithm for non-Hermitian linear systems,” SIAM J. Sci. Comput. , vol. 14, no. 2, pp. 470–482, 1993. [36] C. C. Lu, “A fast algorithm based on volume integral equation for analysis of arbitrarily shaped dielectric radomes,” IEEE Trans. Antennas Propag. , vol. 51, no. 9, pp. 606–612, 2003. [37] X. C. Nie, N. Yuan, L. W. Li, Y. B. Gan, and T. S. Yeo, “A fast combined field volume integral equation solution to EM scattering by 3-D dielectric objects of arbitrary permittivity and permeability,” IEEE Trans. Antennas Propag. , vol. 54, no. 3, pp. 961– 969, 2006. 27 [38] K. Sertel and J. L. Volakis, “Multilevel fast multipole method solution of volume inte-gral equations using parametric geometry modeling,” IEEE Trans. Antennas Propag. ,vol. 52, no. 6, pp. 1686–1692, 2004. [39] M. Takrimi, O. Erg¨ ul, and V. B. Ert¨ urk, “Incomplete-leaf multilevel fast multipole algorithm for multiscale penetrable objects formulated with volume integral equations,” 
+
+IEEE Trans. Antennas Propag. , vol. 65, no. 9, pp. 4914–4918, 2017. [40] Z. Q. Zhang and Q. H. Liu, “A volume adaptive integral method (VAIM) for 3-D inhomogeneous objects,” IEEE Antennas Wirel. Propag. Lett. , vol. 1, no. 5, pp. 102– 105, 2002. [41] X. C. Nie, L. W. Li, N. Yuan, T. S. Yeo, and Y. B. Gan, “Precorrected-FFT solution of the volume integral equation for 3-D inhomogeneous dielectric objects,” IEEE Trans. Antennas Propag. , vol. 53, no. 1, pp. 313–320, 2005. [42] J. L. Guo, J. Y. Li, and Q. Z. Liu, “Analysis of arbitrarily shaped dielectric radomes using adaptive integral method based on volume integral equation,” IEEE Trans. An-tennas Propag. , vol. 54, no. 7, pp. 1910–1916, 2006. [43] X. Zheng, M. Kupresak, R. Mittra, and G. A. Vandenbosch, “A boundary integral equation scheme for simulating the nonlocal hydrodynamic response of metallic antennas at deep-nanometer scales,” IEEE Trans. Antennas Propag. , vol. 66, no. 9, pp. 4759– 4771, 2018. 28 Figures 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7         
+
+> 10 -6
+> 10 -5
+> 10 -4
+> 10 -3
+> 10 -2
+> 10 -1
+> 10 0
+> 10 1
+> Proposed method
+> Two-fluid HDE Mie solution
+> Drude model
+
+(a) (b) 
+
+(c) (d) 
+
+Figure 1: (a) ECS computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the Drude model versus 
+
+ω/ω eff . Field distributions on the xz -plane of the nanosphere at (b) ω = 0 .11 ωeff (acoustic LSP resonance), (c) ω = 0 .28 ωeff (first acoustic bulk resonance), and (d) ω = 0 .53 ωeff (first optical bulk resonance associated with electrons). 29 0 0.25 0.5 0.75 1 1.25                
+
+> 10 -4
+> 10 -3
+> 10 -2
+> 10 -1
+> 0246810
+> 10 13
+> 10 2
+> 10 3
+> 10 4
+> 10 5
+
+300MHz 
+
+> Two-level iterative solver
+> Single-level iterative solver
+
+(a) 0 0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8 
+
+!=! e,
+
+10 !6
+
+10 !4
+
+10 !2
+
+> ECS (a :u:)
+
+Coupled VIE and two-.uid HDE Two-.uid HDE Mie solution Single-.uid HDE Mie solution (b) 0 0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8                   
+
+> 10 -4
+> 10 -3
+> 10 -2
+> 10 -1
+> 10 0
+> R=140 nm
+> R=100 nm
+> R=80 nm
+> R=60 nm
+> 00.2 0.4 0.6 0.8 11.2 1.4 1.6 1.8
+> 10 -6
+> 10 -4
+> 10 -2
+> 10 0
+> InSb 300K
+> InSb 350K
+> InSb 400K
+
+(c) 0 0.3 0.6 0.9 1.2 1.5 1.8       
+
+> 10 -5
+> 10 -4
+> 10 -3
+> 10 -2
+> 10 -1
+
+(d) 
+
+Figure 2: (a) Execution times of the single-level and two-level iterative solvers for the first set of simulations. (b) ECS computed using the proposed VIE-based solver, the Mie series solution with the two-fluid HDE model, and the Mie series solution with the single-fluid HDE model for the second set of simulations versus ω/ω eff . (c) ECS computed using the proposed VIE-based solver for three temperatures versus ω/ω eff . (d) ECS computed using the proposed VIE-based solver for four sphere radii versus ω/ω eff .30 <latexit sha1_base64="k0qC51gnVYwJH6wZfPhuV/QAAiI=">AAAB/HicbVDLSsNAFJ3UV62vaJduBovgQkoiol0W3LisYB/QhDCZ3rZDJ5MwMymEUH/FjQtF3Poh7vwbp20W2nrgwplz7mXuPWHCmdKO822VNja3tnfKu5W9/YPDI/v4pKPiVFJo05jHshcSBZwJaGumOfQSCSQKOXTDyd3c705BKhaLR50l4EdkJNiQUaKNFNhVb0okJIpx83IuvSgNnMCuOXVnAbxO3ILUUIFWYH95g5imEQhNOVGq7zqJ9nMiNaMcZhUvVZAQOiEj6BsqSATKzxfLz/C5UQZ4GEtTQuOF+nsiJ5FSWRSazojosVr15uJ/Xj/Vw4afM5GkGgRdfjRMOdYxnieBB0wC1TwzhFDJzK6YjokkVJu8KiYEd/XkddK5qrs3dffhutZsFHGU0Sk6QxfIRbeoie5RC7URRRl6Rq/ozXqyXqx362PZWrKKmSr6A+vzB1z1lIw=</latexit> 
+
+"0, μ 0
+
+<latexit sha1_base64="vixGqJXKWJ7K5njnsfQiOuLd8YM=">AAACDnicbVDLSsNAFL2pr1pfUZduBkuhbkoiol0WRHBZwbZCG8tkOmmHTh7MTIQS8gVu/BU3LhRx69qdf+MkRtDWAwOHc+5l7jluxJlUlvVplJaWV1bXyuuVjc2t7R1zd68rw1gQ2iEhD8WNiyXlLKAdxRSnN5Gg2Hc57bnT88zv3VEhWRhcq1lEHR+PA+YxgpWWhmZt4GM1cb3kIr1Nci78hAUkTes/jkiPhmbValg50CKxC1KFAu2h+TEYhST2aaAIx1L2bStSToKFYoTTtDKIJY0wmeIx7WsaYJ9KJ8njpKimlRHyQqFfoFCu/t5IsC/lzHf1ZHainPcy8T+vHyuv6eh0Uayojph/5MUcqRBl3aARE5QoPtMEE8H0rYhMsMBE6QYrugR7PvIi6R437NOGfXVSbTWLOspwAIdQBxvOoAWX0IYOELiHR3iGF+PBeDJejbfv0ZJR7OzDHxjvX64HnRo=</latexit> 
+
+Einc (r)(a) 0 0.3 0.6 0.9 1.2 1.5 1.8 
+
+10 -3 
+
+10 -2 
+
+10 -1 
+
+10 0
+
+10 1 Sphere 
+
+Dimer 
+
+(b) 
+
+Figure 3: (a) Geometry of the scattering problem involving the semiconductor nanodimer. (b) ECS computed using the two-level iterative solver for two scattering scenarios (the nan-odimer and the single nanosphere) versus ω/ω eff .31 <latexit sha1_base64="k0qC51gnVYwJH6wZfPhuV/QAAiI=">AAAB/HicbVDLSsNAFJ3UV62vaJduBovgQkoiol0W3LisYB/QhDCZ3rZDJ5MwMymEUH/FjQtF3Poh7vwbp20W2nrgwplz7mXuPWHCmdKO822VNja3tnfKu5W9/YPDI/v4pKPiVFJo05jHshcSBZwJaGumOfQSCSQKOXTDyd3c705BKhaLR50l4EdkJNiQUaKNFNhVb0okJIpx83IuvSgNnMCuOXVnAbxO3ILUUIFWYH95g5imEQhNOVGq7zqJ9nMiNaMcZhUvVZAQOiEj6BsqSATKzxfLz/C5UQZ4GEtTQuOF+nsiJ5FSWRSazojosVr15uJ/Xj/Vw4afM5GkGgRdfjRMOdYxnieBB0wC1TwzhFDJzK6YjokkVJu8KiYEd/XkddK5qrs3dffhutZsFHGU0Sk6QxfIRbeoie5RC7URRRl6Rq/ozXqyXqx362PZWrKKmSr6A+vzB1z1lIw=</latexit> 
+
+"0, μ 0
+
+<latexit sha1_base64="vixGqJXKWJ7K5njnsfQiOuLd8YM=">AAACDnicbVDLSsNAFL2pr1pfUZduBkuhbkoiol0WRHBZwbZCG8tkOmmHTh7MTIQS8gVu/BU3LhRx69qdf+MkRtDWAwOHc+5l7jluxJlUlvVplJaWV1bXyuuVjc2t7R1zd68rw1gQ2iEhD8WNiyXlLKAdxRSnN5Gg2Hc57bnT88zv3VEhWRhcq1lEHR+PA+YxgpWWhmZt4GM1cb3kIr1Nci78hAUkTes/jkiPhmbValg50CKxC1KFAu2h+TEYhST2aaAIx1L2bStSToKFYoTTtDKIJY0wmeIx7WsaYJ9KJ8njpKimlRHyQqFfoFCu/t5IsC/lzHf1ZHainPcy8T+vHyuv6eh0Uayojph/5MUcqRBl3aARE5QoPtMEE8H0rYhMsMBE6QYrugR7PvIi6R437NOGfXVSbTWLOspwAIdQBxvOoAWX0IYOELiHR3iGF+PBeDJejbfv0ZJR7OzDHxjvX64HnRo=</latexit> 
+
+Einc (r)(a) 0 0.3 0.6 0.9 1.2 1.5 1.8 
+
+10 -4 
+
+10 -3 
+
+10 -2 
+
+10 -1 (b) 
+
+(c) (d) (e) 
+
+(f) (g) (h) 
+
+Figure 4: (a) Geometry of the scattering problem involving the semiconductor nanocylinder. (b) ECS computed using the two-level iterative solver for three nanocylinder heights versus 
+
+ω/ω eff . Field distributions on the xz -plane of the nanocylinder with height (c) H = 140 nm, (d) H = 170 nm, and (e) H = 200 nm for the first optical bulk resonance. Field distributions on the xz -plane of the nanocylinder with height (f) H = 140 nm, (g) H = 170 nm, and (h) 
+
+H = 200 nm for the first optical LSP resonance associated with height. 32 <latexit sha1_base64="k0qC51gnVYwJH6wZfPhuV/QAAiI=">AAAB/HicbVDLSsNAFJ3UV62vaJduBovgQkoiol0W3LisYB/QhDCZ3rZDJ5MwMymEUH/FjQtF3Poh7vwbp20W2nrgwplz7mXuPWHCmdKO822VNja3tnfKu5W9/YPDI/v4pKPiVFJo05jHshcSBZwJaGumOfQSCSQKOXTDyd3c705BKhaLR50l4EdkJNiQUaKNFNhVb0okJIpx83IuvSgNnMCuOXVnAbxO3ILUUIFWYH95g5imEQhNOVGq7zqJ9nMiNaMcZhUvVZAQOiEj6BsqSATKzxfLz/C5UQZ4GEtTQuOF+nsiJ5FSWRSazojosVr15uJ/Xj/Vw4afM5GkGgRdfjRMOdYxnieBB0wC1TwzhFDJzK6YjokkVJu8KiYEd/XkddK5qrs3dffhutZsFHGU0Sk6QxfIRbeoie5RC7URRRl6Rq/ozXqyXqx362PZWrKKmSr6A+vzB1z1lIw=</latexit> 
+
+"0, μ 0
+
+<latexit sha1_base64="vixGqJXKWJ7K5njnsfQiOuLd8YM=">AAACDnicbVDLSsNAFL2pr1pfUZduBkuhbkoiol0WRHBZwbZCG8tkOmmHTh7MTIQS8gVu/BU3LhRx69qdf+MkRtDWAwOHc+5l7jluxJlUlvVplJaWV1bXyuuVjc2t7R1zd68rw1gQ2iEhD8WNiyXlLKAdxRSnN5Gg2Hc57bnT88zv3VEhWRhcq1lEHR+PA+YxgpWWhmZt4GM1cb3kIr1Nci78hAUkTes/jkiPhmbValg50CKxC1KFAu2h+TEYhST2aaAIx1L2bStSToKFYoTTtDKIJY0wmeIx7WsaYJ9KJ8njpKimlRHyQqFfoFCu/t5IsC/lzHf1ZHainPcy8T+vHyuv6eh0Uayojph/5MUcqRBl3aARE5QoPtMEE8H0rYhMsMBE6QYrugR7PvIi6R437NOGfXVSbTWLOspwAIdQBxvOoAWX0IYOELiHR3iGF+PBeDJejbfv0ZJR7OzDHxjvX64HnRo=</latexit> 
+
+Einc (r)(a) 0 0.3 0.6 0.9 1.2 1.5 1.8 
+
+10 -4 
+
+10 -3 
+
+10 -2 
+
+10 -1 
+
+(b) 
+
+Figure 5: (a) Geometry of the scattering problem involving the semiconductor nanoprism. (b) ECS computed using the two-level iterative solver for the three prism heights versus 
+
+ω/ω eff .33

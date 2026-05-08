@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-001.webp",
+      "caption": "Figure 3 | Label-free volumetric imaging of thick biological specimens. a Large-area 3D tomogram of a human colon cancer tissue. Insets (i–iii) show representative regions with corresponding axial cross-sections (dashed lines). b Mouse hepatic organoids. c Live mouse oocytes; red, pink and blue arrows denote the zona pellucida, nuclear apparatus and polar body.",
+      "page": 6,
+      "index": 1,
+      "width": 715,
+      "height": 886
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-002.webp",
+      "caption": "Figure 4 | Long-term volumetric imaging of hepatic organoids. a A healthy organoids grows over a 48-hours period. b A sick organoid fails to form a proper lumen structure.",
+      "page": 7,
+      "index": 2,
+      "width": 812,
+      "height": 632
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-003.webp",
+      "caption": "Figure 1 | Programmable spatial coherence tomography. a Optical setup with (i) the illumination unit (ii) the reference wire grid polarizer and (iii) the camera. b Fourier filtering for off-axis holography, c Raw reflection data, d self-calibration of aberrations and illumination are used to e reconstruct the hologram with deconvolution. Yellow arrow is the cell nucleus while the blue arrow indicates the cell membrane. f Spatial spectrum coverage of different reflection microscopes, PSCT achieves increased spectrum coverage in all x-y-z directions.",
+      "page": 3,
+      "index": 3,
+      "width": 746,
+      "height": 915
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-004.webp",
+      "caption": "Figure 5 | Organoid volumetric dynamic contrast. a Static tomogram and b dynamic tomogram. Three crosssections of the tomogram are shown with region of interest (i-iii). (i) Tricellular junction, (ii) cell mitosis and (iii) lumen bubbles.",
+      "page": 8,
+      "index": 4,
+      "width": 671,
+      "height": 680
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-005.webp",
+      "caption": "Figure 6 | In vivo volumetric imaging of the mouse brain. a Reflection tomograms of a mouse brain acquired through a thinned-skull cranial window. b Raw reflection data suffers from aberrations and motion artifacts. c Joint motion correction, aberration retrieval and illumination self-calibration d restore structural contrast and axial resolution. Volumetric reconstructions resolve distinct anatomical layers including e the skull, f the dura and h the cortical tissue. Insets g and i show corresponding confocal fluorescence images.",
+      "page": 9,
+      "index": 5,
+      "width": 713,
+      "height": 682
+    },
+    {
+      "url": "assets/figures/arxiv/2605.05747v1/fig-006.webp",
+      "caption": "Figure 2 | Computational aberration retrieval and diffraction-limited restoration. a Raw tomograms acquired through stacked tape layers exhibit progressive axial and lateral blurring with imaging depth. b Retrieved aberrations increase in curvature with depth. Radial phase profiles (solid) agree with theoretical predictions (dashed). c Aberration-corrected reconstruction: self-calibration restores resolution and better resolves nanoscopic scatterers. d Overlap comparison of the signal from the different patterns before and after correction. e Point spread functions analysis shows near diffraction limited resolution after correction.",
+      "page": 5,
+      "index": 6,
+      "width": 669,
+      "height": 408
+    }
+  ]
+}

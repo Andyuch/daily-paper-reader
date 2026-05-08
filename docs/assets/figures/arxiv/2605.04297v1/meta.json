@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-001.webp",
+      "caption": "Figure 1 – Schematic of the common-path lateral shearing quantitative phase microscopy (LS-QPM) unit. The system comprises two orthogonal Sagnac interferometers integrated at the output port of a bright-field microscope. The system uses polarizers (P1 – P3), polarizing beam splitters (PBS1, PBS2), and mirrors (M3, M4, M5, M6), as well as lenses (L2-L4), which generate and recombine four laterally sheared wavefronts, thus producing a mesh-like interferogram that encodes phase gradients along both x and y directions. Flowchart shows phase retrieval process: input grid interferogram with zoomed view, Fourier spectrum, differential phase in X axis, differential phase in Y axis and integrated phase map of 200 nm high phase USAF test.",
+      "page": 6,
+      "index": 1,
+      "width": 976,
+      "height": 1079
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-002.webp",
+      "caption": "Figure 6 – Timelapse of live HeLa cells. Integrated phase map of the entire FoV (a). Panels (a1-a9) show zoomed view of singular HeLa cell at 9 consecutive timestamps: 0, 15, 30, 45, 60, 75, 90, 105 and 120 min. Scale bar is equal to 20 µm.",
+      "page": 11,
+      "index": 2,
+      "width": 876,
+      "height": 510
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-003.webp",
+      "caption": "Figure 4 – Phase imaging of polystyrene beads. Interferograms (a, c) and integrated phase maps (b, d) of 1 µm and 300 nm beads, respectively. Zoomed views of exemplary beads (b1-b4, d1-d4). Scale bar is equal to 20 µm.",
+      "page": 10,
+      "index": 3,
+      "width": 672,
+      "height": 389
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-004.webp",
+      "caption": "Figure 5 – Phase imaging of fixed HeLa cells using LS-QPM system. Raw grid interferogram (a), Fourier spectrum (c), gradient phase map in X-axis (b), gradient phase map in Y-axis (d), integrated phase map (e). Scale bar is equal to 20 µm.",
+      "page": 10,
+      "index": 4,
+      "width": 826,
+      "height": 425
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-005.webp",
+      "caption": "Figure 2 – Spatial and temporal phase sensitivity investigation, based on 60-second-long sample-free movie. Input interferogram (a). Fourier spectrum (e). Differential phase in X and Y axis for single pixel as a function of time (c, g). Exemplary differential phase map in X and Y axis for spatial phase sensitivity investigation (b, f). Temporal phase sensitivity map for differential phase in X and Y axis (d, h).",
+      "page": 8,
+      "index": 5,
+      "width": 976,
+      "height": 412
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-006.webp",
+      "caption": "Figure 7 – Z-scanning through 100 μm PDMS layer with embedded 1 μm polystyrene beads. Cross-sections X-Y (a), X-Z (b) and Y-Z (c). Isometric view of the entire volume (d). Scale bars are equal to 20 µm.",
+      "page": 12,
+      "index": 6,
+      "width": 894,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04297v1/fig-007.webp",
+      "caption": "Figure 3 – Shear investigation of bead clusters. Integrated phase map of 1 µm polystyrene beads is shown in (a). Panels (a1–a9) present zoomed views of two bead clusters at nine camera positions ranging from 3.0 to 7.0 mm in 0.5 mm increments. The scale bar corresponds to 20 µm.",
+      "page": 9,
+      "index": 7,
+      "width": 656,
+      "height": 284
+    }
+  ]
+}

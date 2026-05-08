@@ -1,0 +1,157 @@
+Title: Measurement of complex scattering matrix in a nano-cavity array for boundary scattering tomography
+
+URL Source: https://arxiv.org/pdf/2604.27214v1
+
+Published Time: Fri, 01 May 2026 00:14:57 GMT
+
+Number of Pages: 7
+
+Markdown Content:
+# Measurement of complex scattering matrix in a nano-cavity array for boundary scattering tomography 
+
+## Andrew Tang 1,* , Romil Audhkhasi 1, Virat Tara 1, Abhi Saxena 1, Gokul Nath 1, and Arka Majumdar 1,2 1Department of Electrical and Computer Engineering, University of Washington, Seattle, Washington 98195, United States 
+
+> 2
+
+## Department of Physics, University of Washington, Seattle, Washington 98195, United States 
+
+> *
+
+## adtang@uw.edu 
+
+# 1 Abstract 
+
+On-chip silicon photonic coupled cavity arrays (CCA) are a promising platform for quantum simulators, with access to high Quality (Q) factor resonators, tunability, and foundry compatibility. Furthermore, scalable two-dimensional (2D) silicon photonic CCAs allow for simulation of rich physical phenomena via Hamiltonian engineering. However, complete reconstruction of the Hamiltonian is limited by access to cavities in the bulk, with current approaches relying on imaging scattered light from bulk resonators. These approaches often require additional scatterers to be built in, limiting scalability, while also being hampered by imaging technology in the near-infrared range. Instead of these approaches, Hamiltonian tomography algorithms that require homodyne boundary measurements have been demonstrated in literature, however measurements of complex scattering measurements along a CCA boundary have not been shown. Here, we experimentally demonstrate an on-chip homodyne measurement setup along a single boundary of a 3 × 3 silicon photonic racetrack resonator array and reconstruct the system’s edge scattering matrix. 
+
+# 2 Introduction 
+
+Photonic coupled-cavity arrays (CCAs) have emerged as a promising platform for analog quantum simu-lation due to their intrinsic scalability, tunability, and long coherence time of photons [1–3]. In particular, silicon photonics enable tightly confined high-Q optical resonators with independently tunable elements, offering precise control over on-site energies and inter-cavity couplings, all while being compatible with existing high volume semiconductor manufacturing processes [4]. One dimensional (1D) CCAs have been extensively explored in coupled-resonator optical waveguides (CROW), and recent demonstrations in 1D CCAs have implemented programmable tight-binding Hamiltonians on-chip, with up to eight coupled silicon microrings whose full eigenmode spectra can be accessed and tuned in situ [5–7]. These demonstrations showcase the potential of this platform, and scaling from one- to two-dimensional arrays is the natural next step. To this end, 2D CCAs have been actively explored for topological phe-monena, including seminal works demonstrating fractional quantum hall effects and robust edge states [8–11]. Furthermore, different platforms for 2D CCAs have demonstrated the simulation of complex models such as the 2D Su–Schrieffer–Heeger model and graphene [12, 13]. However, in all these struc-tures, complete Hamiltonian tomography, i.e., estimating all parameters of the Hamiltonian, was not reported. As such, extending on-chip photonic lattice simulators from 1D to 2D poses new challenges in terms of measurement and scalability. In a 2D CCA, resonators in the bulk cannot be directly accessed by input/output ports, making it difficult to probe or address individual sites beyond the edges. Conven-tional approaches monitor every cavity by imaging scattered light from each resonator, often through the inclusion of scatterers, which incur substantial hardware overhead while increasing optical losses. Fur-thermore, for silicon cavities operating at telecommunication wavelengths (1310 nm or 1550 nm ), imaging technology for collecting scattered light lags behind, especially compared to those found in the visible 1
+
+> arXiv:2604.27214v1 [physics.optics] 29 Apr 2026
+
+or near-visible [14]. As a result, prior experiments in on-chip 2D photonic lattices have either been limited to observing only edge phenomena or requiring elaborate imaging techniques to infer internal light distributions. To overcome these limitations, we employ boundary-only, phase-resolved measurements of the com-plex scattering matrix using on-chip homodyne interferometry. Rather than probing cavities in the bulk, recent Hamiltonian tomography algorithms have shown reconstruction of the tight-binding Hamiltonian (all on-site frequencies and coupling rates) through boundary complex scattering matrices [15]. This algorithm requires measurements across a single cavity along the boundary (e.g., S11 ) as well as between adjacent cavities along the boundary (e.g., S12 ), as illustrated in Fig. 1A–B. Crucially, implementing these measurements on chip avoids phase noise and unwanted interference fringing arising from fiber jitter and path-length mismatch in off-chip interferometric setups. In this work, we demonstrate an integrated homodyne measurement architecture for a 3 × 3 silicon photonic CCA and reconstruct the complex scattering matrix across a single edge boundary. 
+
+Figure 1: Complex scattering matrix measurement along a single edge of a 2D CCA array. Dark purple circles represent cavities along the measurement edge, while light circles represent cavities in the bulk. Dotted lines represent cavity cavity to cavity coupling, in this case nearest neighbors are coupled. A) Homodyne measurements with same input and output cavity, i.e. S11 . B) Homodyne measurements with input and output cavities being adjacent, i.e. S12 . C) Schematic of on-chip interferometric measurement setup, with reference arm, Ae −iθ , and CCA arm, Sij (ω). 
+
+# 3 Theory 
+
+In this work, we consider a 2D CCA in a square lattice comprised of identical racetrack resonators with equal designed coupling rates between resonators. The effective Hamiltonian of the CCA is 
+
+Hef f =
+
+> N
+
+X
+
+> i=1
+> N
+
+X
+
+> j=1
+
+(μ − iκ c)a† 
+
+> i,j
+
+ai,j − J 
+
+> N−1
+
+X
+
+> i=1
+> N
+
+X
+
+> j=1
+
+(a† 
+
+> i+1 ,j
+
+ai,j + h.c.) − J
+
+> N
+
+X 
+
+> i=1
+> N−1
+
+X
+
+> j=1
+
+(a†
+
+> i,j +1
+
+ai,j + h.c.) − iγ cNX
+
+> i=1
+
+a†
+
+> i, 1
+
+ai, 1
+
+(1) where μ is the detuning between the cavity resonance frequency and the driving laser, J is the complex nearest neighbors field coupling rate between resonators, γc is the waveguide to cavity field coupling rate along the bottom row, and κc denotes the intrinsic field loss of the resonators. In the identical resonator and coupling regime, J is fully real, however our result generalizes to complex J values. This CCA can further be modeled through a complex scattering matrix, whereas the complex trans-mission with input resonator i and output resonator j can be modeled as a sum of Lorentzians, 2Sij (ω) = δij − i × γcN 2
+
+X
+
+> k=1
+
+Mij,k 
+
+ω − Ek
+
+(2) in which δij is the Kronecker delta, Ek represents the complex energies of Hef f , and Mij,k captures the overlap between the eigenstates of Hef f and boundary-localized excitations [15]. To recover Sij , we consider an interferometer setup as shown in Fig. 1C with measurable function 
+
+Tij (ω, θ ) = Areferece × e−iθ + ACCA × Sij (ω) 2 (3) where Areferece and ACCA are the E-field amplitudes in the reference and CCA arm of the interferom-eter, respectively, ω is the angular frequency of the light, and θ represents the phase difference between arms. 
+
+# 4 Results 
+
+The proposed system consists of a 3 × 3 array of racetrack resonators, shown in Fig. 2A and Fig. 2C, and multiple MZIs for homodyne measurements, shown in Fig. 2A. The array of resonators is composed of nine equal-length racetrack resonators, with straight side lengths of 8 μm and bending radii of 5 
+
+μm. Resonators are evanescently coupled along their straight edges with a 70 nm gap resulting in a theoretical coupling rate of approximately 131 .0 × 2π GHz (see supplemental materials). Each resonator is uniformly spaced along a square lattice such that there is no offset between adjacent resonators. These design choices lead to a degenerate effective Hamiltonian with five modes rather than nine. 
+
+Figure 2: A) The complete architecture consisting of 2D CCA and the phase measurement structures, with input and output ports labeled as well as MZI reference arms labeled based off S-measurement. The critical parts of the architecture highlighted in: B) Photonic attenuator based off tunable MZI to allow for non-interference measurement. C) Optical micrograph of the 3 × 3 silicon photonic coupled cavity array (CCA) made of racetrack resonators. D) 1 by 3 multi-mode interference coupler (MMI) for splitting light to an edge cavity, the output of that edge cavity, and the output of the adjacent cavity. E) Thermo-optic phase tuner using platinum (Pt) heater for controlling phase difference between MZI arms. The phase-coherent measurement architecture is based on a balanced Mach-Zehnder Interferometer (MZI) as shown in Fig. 1C, with a multi-mode interference coupler (MMI) acting in the role of the canonical two way mirror to split the light between two arms. One arm leads to the CCA with a fixed complex scattering matrix Sij (ω), whereas the other arm serves as a reference arm with a tunable response Aref erence e−iθ . Through varying θ and observing the measurable Tij (ω, θ ), we are able to use Equation 3 to reconstruct the complex scattering matrix S by measuring across a boundary. 3To achieve this, we need measurement across the same cavity, i.e. Fig. 1A, as well as different cavities, i.e. Fig. 1B, therefore we use a 1 by 3 MMI as shown in Fig. 2D. One MMI output is the CCA arm with designed coupling strength of 15 .92 × 2π GHz, which is much less than the cavity-cavity coupling strength of the CCA [see supplemental materials] to keep the CCA dynamics unaffected. The other two MMI outputs serve as reference arms, with one leading to the output port of the input cavity and the other leading to the output port of the adjacent cavity. In addition, the path lengths of all three arms are matched using switchbacks, as shown in Fig. 2A, to avoid interference fringing. The phase difference, 
+
+θ between the reference and CCA arm is controlled using a thermo-optic heater, as seen in Fig. 2E, while the amplitude of the reference signal, Aref erence is controlled using an MZI based attenuators as shown in Fig. 2B. The attenuator is necessary for cross resonator measurements, i.e. S12 , to ensure both arms in the MZI have comparable signal strength. The combination of these elements allows for the phase-coherent, boundary measurements necessary for complex scattering matrix measurements. The complex scattering matrix would then allow for Hamiltonian tomography, which however is precluded due to the mode degeneracy. 
+
+Figure 3: A) S11 -port measurements on the outer edge of the CCA in blue with fitting in orange as a function of phase difference between MZI arms, θ. B) Normalized fitted complex transmission with real and imaginary components plotted separately. Table 1: Fitted resonance parameters for S11. 
+
+Mreal [10 −2] Mimag [10 −3] Ereal Eimag 
+
+2.15 ± 0.06 −4.7 ± 0.7 1535 .483 ± 0.003 0.0681 ± 0.0025 8.00 ± 0.11 2.3 ± 1.2 1536 .819 ± 0.003 0.1674 ± 0.0025 8.90 ± 0.07 2.7 ± 0.8 1538 .269 ± 0.001 0.1031 ± 0.0007 6.77 ± 0.12 −6.4 ± 1.2 1539 .782 ± 0.003 0.1654 ± 0.0031 1.71 ± 0.08 −2.3 ± 0.8 1541 .251 ± 0.004 0.0747 ± 0.0042 To achieve the complex boundary scattering matrix along a single edge, we take five sets of spectrum measurements: T11 (ω, θ ), T12 (ω, θ ), T22 (ω, θ ), T23 (ω, θ ), and T33 (ω, θ ) with T11 shown in Fig. 3A and the others in Fig. 4A. All measurements are taken within the free spectral range (FSR) of a single racetrack resonator which we experimentally find to be 1030 GHz [8.2 nm], such that we function with a single mode approximation with no overlap between higher and lower order modes. Each port configuration 4has fixed complex transmission parameters E and M shown in Equation 2, which are globally fit for all transmission measurements of that port, such as those shown in Fig. 3A, with the only variation within being the phase difference between MZI arms, θ (see supplementary materials). The phase difference is changed through tuning the voltage across the thermo-optic heater on the CCA arm of the MZI from 0 to 3.4V. The fitted complex transmission for S11 is shown in Fig. 3B with the real and imaginary parts separated. Each peak in Fig. 3B corresponds to a complex Lorentzian with the fitted parameters of the corresponding peak and fitting error shown in Table 1 for the M11 ,i and Ei
+
+components respectively. Whereas the fitted M parameters are local to the specific measured resonator, the E parameters correspond to the complex energies of Hef f for the whole system. In the demonstrated system with identical resonators and identical couplings, the complex energies of Hef f can be found as the eigenvalues of the matrix representation of Hef f shown in Equation 1. Taking the eigenvalues of the theoretical system, there are five complex energies at μ − iκ c, ( μ − iκ c) ±√2J, and ( μ − iκ c) ± 2√2J [see supplemental materials], corresponding to the five resonances shown in Fig. 3B. Taking the real distance between adjacent resonances obtained through the fitting, we can estimate the experimental J = 128 .9 ± 6 GHz, which closely matches our designed theoretical value of 131 .0 GHz. Furthermore, because the imaginary component of E corresponds to the linewidth of the supermodes of the CCA, we estimate a lower bound on the intrinsic Q of individual racetrack resonators. Taking the minimal supermode linewidth from Fig. 3D, yields an intrinsic Q factor ≳ 1.3 × 10 4. This approximation is for the lowest loss resonator, however we expect comparable intrinsic losses across resonators and furthermore the inferred value is likely an underestimation due to the added loss from boundary resonators due to waveguide coupling. 
+
+Figure 4: A) Remaining S-port measurements along a single edge of the CCA as a function of phase difference between MZI arms. B) Normalized fitted complex transmission with real and imaginary components plotted separately. 5Fig. 4A shows the rest of the S-parameters along a single edge of the 3 x 3 2D CCA, with measurements between adjacent cavities, as a function of phase difference between MZI arms. The fitted complex transmission is shown in Fig. 4B. 
+
+# 5 Conclusion 
+
+In this work, we have demonstrated measurement of the complex transmission along the edge of a 2D coupled cavity array of 9 racetrack resonators through the usage of phase-coherent, boundary measure-ments. From these complex measurements, we are able to recover E, the complex energies of the effective Hamiltonian, and M , the eigenstate overlaps of the measured resonator with Hef f . Furthermore, our measurements and fittings show consistency throughout all the different port measurements and closely match the theoretical coupling rates. These lattice measurements serve as a proof of concept for an on chip measurement setup necessary for Hamiltonian tomography algorithms that could serve as a path towards creating large scale, photonic quantum simulations. 
+
+# 6 Methods 
+
+## 6.1 Device Fabrication 
+
+The device was patterned using electron beam lithography (JEOL JBX6300FS) on a silicon-on insulator (SOI) platform consisting of 220 nm of Si on 2 μm of SiO2. The resist used was hydrogen silsesquioxane (HSQ) resist and development was done using TMAH 25%. 220 nm of Si was etched with Cl2 gas and a BOE wet etch was used afterwards to remove leftover resist. Then, 1 μm of SiO2 was grown using PECVD to allow for metal heaters, which are patterned using the Heidelberg DWL66+ photolithography tool with AZ1512 resist. Then, electron beam evaporation was used to deposit 25 nm of Ti for adhesion and 325 nm of Pt for heating. Lastly, heaters are wirebonded to a chip carrier for DAQ control. 
+
+## 6.2 Device Characterization 
+
+The device spectrum was characterized via a fiber array setup using a tunable continuous-wave laser (Santec TSL-510) excitation to the input grating and a low-noise power meter (Keysight 81634B) mea-surement of the output grating. Thermo-optic tuning of the resonators and waveguides was achieved using a DAQ (MCC USB 3114). 
+
+## 6.3 Device Simulations 
+
+Commercial softwares Ansys Lumerical FDTD, MODE, HEAT, and INTERCONNECT were used to simulate and optimize the device parameters. Lumerical FDTD and MODE were used to find the necessary resonator and waveguide dimensions to achieve the desired coupled mode parameters. 
+
+# 7 Acknowledgments 
+
+We would like to thank Rahul Trivedi for the useful discussions on Hamiltonian tomography algorithms. This paper is based predominantly on work conducted at the University of Washington supported by National Science Foundation (NSF) Science and Technology Center (STC) for Integration of Modern Optoelectronic Materials on Demand (IMOD) under Cooperative Agreement No. DMR-2019444. Part of work on sample fabrication and characterization was conducted at the Washington Nanofabrication Facility / Molecular Analysis Facility, a National Nanotechnology Coordinated Infrastructure (NNCI) site at University of Washington with partial support from NSF via awards NNCI-1542101 and NNCI-2025489. 6References 
+
+[1] I. Georgescu, S. Ashhab, and F. Nori, “Quantum simulation,” Reviews of Modern Physics , vol. 86, pp. 153–185, Mar. 2014. Publisher: American Physical Society. [2] A. Aspuru-Guzik and P. Walther, “Photonic quantum simulators,” Nature Physics , vol. 8, pp. 285– 291, Apr. 2012. Publisher: Nature Publishing Group. [3] M. Hartmann, F. Brand˜ ao, and M. Plenio, “Quantum many-body phenomena in coupled cavity arrays,” Laser & Photonics Reviews , vol. 2, no. 6, pp. 527–556, 2008. eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.200810046. [4] J. C. Adcock, J. Bao, Y. Chi, X. Chen, D. Bacco, Q. Gong, L. K. Oxenløwe, J. Wang, and Y. Ding, “Advances in Silicon Quantum Photonics,” IEEE Journal of Selected Topics in Quantum Electronics ,vol. 27, pp. 1–24, Mar. 2021. [5] J. Poon, J. Scheuer, S. Mookherjea, G. T. Paloczi, Y. Huang, and A. Yariv, “Matrix analysis of microring coupled-resonator optical waveguides,” Optics Express , vol. 12, no. 1, p. 90, 2004. [6] A. Tang, R. Audhkhasi, A. Saxena, V. Tara, G. H. Ahn, J. Vuˇ ckovi´ c, and A. Majumdar, “Cav-ity–Waveguide Coupling Modulation via an Optical Analogue of Superradiance in Microring Ar-rays,” ACS Photonics , vol. 12, pp. 570–575, Feb. 2025. Publisher: American Chemical Society. [7] A. Saxena, A. Manna, R. Trivedi, and A. Majumdar, “Realizing tight-binding Hamiltonians using site-controlled coupled cavity arrays,” Nature Communications , vol. 14, p. 5260, Aug. 2023. [8] M. Hafezi, S. Mittal, J. Fan, A. Migdall, and J. M. Taylor, “Imaging topological edge states in silicon photonics,” Nature Photonics , vol. 7, pp. 1001–1005, Dec. 2013. Publisher: Nature Publishing Group. [9] C.-A. Li, “Topological States in Two-Dimensional Su-Schrieffer-Heeger Models,” Frontiers in Physics , vol. 10, Mar. 2022. Publisher: Frontiers. [10] Z. Gao, H. Zhao, T. Wu, X. Feng, Z. Zhang, X. Qiao, C.-K. Chiu, and L. Feng, “Topological quadratic-node semimetal in a photonic microring lattice,” Nature Communications , vol. 14, p. 3206, June 2023. Publisher: Nature Publishing Group. [11] T. Dai, A. Ma, J. Mao, Y. Ao, X. Jia, Y. Zheng, C. Zhai, Y. Yang, Z. Li, B. Tang, J. Luo, B. Zhang, X. Hu, Q. Gong, and J. Wang, “A programmable topological photonic chip,” Nature Materials ,vol. 23, pp. 928–936, July 2024. Publisher: Nature Publishing Group. [12] M. Kremer, T. Biesenthal, L. J. Maczewsky, M. Heinrich, R. Thomale, and A. Szameit, “Demon-stration of a two-dimensional $$ {\ cal P }{\ cal T }$$ -symmetric crystal,” Nature Communications ,vol. 10, p. 435, Jan. 2019. Publisher: Nature Publishing Group. [13] L.-Y. Zheng, V. Achilleos, O. Richoux, G. Theocharis, and V. Pagneux, “Observation of Edge Waves in a Two-Dimensional Su-Schrieffer-Heeger Acoustic Network,” Physical Review Applied ,vol. 12, p. 034014, Sept. 2019. Publisher: American Physical Society. [14] D. Sharp, C. Flower, M. J. Mehrabad, A. Manna, H. Rarick, R. Chen, M. Hafezi, and A. Majumdar, “Near-visible topological edge states in a silicon nitride platform,” Optical Materials Express , vol. 14, pp. 1596–1602, June 2024. Publisher: Optica Publishing Group. [15] A. Saxena, E. Abbasgholinejad, A. Majumdar, and R. Trivedi, “Boundary measurement tomography of the Bose Hubbard model on general graphs,” Physical Review Research , vol. 6, p. 033058, July 2024. 7

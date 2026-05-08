@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.00172v1/fig-001.webp",
+      "caption": "Figure 1: Software architecture and analysis workflow of FitED. Experimental data are imported, validated, cropped to a selected region of interest, and passed to the model-construction and optimization engine. The fitting engine combines built-in peak profiles, custom analytical expressions, background models, parameter constraints, and weighting strategies to produce reproducible fitted curves, residuals, component contributions, fit reports, and exportable session files.",
+      "page": 3,
+      "index": 1,
+      "width": 925,
+      "height": 694
+    }
+  ]
+}

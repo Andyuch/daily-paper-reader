@@ -6,58 +6,56 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-07
-- 运行时间：2026-05-07 20:31:48 UTC
+- 最新运行日期：2026-05-08
+- 运行时间：2026-05-08 20:21:58 UTC
 - 运行状态：成功
-- 本次总论文数：12
-- 精读区：1
+- 本次总论文数：11
+- 精读区：0
 - 速读区：11
 
 ### 今日简报（AI）
-今日深度解析机械谐振器中的非线性能量路由，并速览超快成像与石墨烯还原等 12 篇前沿进展。
-重点关注实空间成像揭示的对称性选择能量传输机制，以及每秒 6850 亿帧的低成本超快成像新技术。
-推荐对精密物理和先进成像感兴趣的读者深入了解微观能量调控如何赋能下一代传感技术。
-- 详情：[/202605/07/README](/202605/07/README)
+今日速览 11 篇前沿进展，聚焦半导体纳米结构散射、超快衍射成像及二维异质结电荷动力学。
+重点关注扭曲角对 WS2-石墨烯异质结电荷分离的影响，以及 X 射线与电子衍射成像的统一分析新方法。
+建议关注二维材料层间耦合与超快成像技术的交叉应用，以探索新型光电器件的物理极限。
+- 详情：[/202605/08/README](/202605/08/README)
 
 ### 精读区论文标签
-1. [Real-space imaging reveals symmetry-selected nonlinear energy routing in a mechanical resonator](/202605/07/2605.01469v1-real-space-imaging-reveals-symmetry-selected-nonlinear-energy-routing-in-a-mechanical-resonator)  
-   标签：评分：8.5/10、query:iscat
-   evidence：用于实空间成像的频闪干涉测量
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Fast reduction of electron-beam-activated graphene oxide by an infrared laser pulse](/202605/07/2605.01125v1-fast-reduction-of-electron-beam-activated-graphene-oxide-by-an-infrared-laser-pulse)  
-   标签：评分：7.5/10、query:iscat
-   evidence：用于追踪氧浓度演变的时间分辨电子能量损失谱
-2. [Low-cost passive single-shot ultrafast imaging at 685 Gfps](/202605/07/2604.27898v1-low-cost-passive-single-shot-ultrafast-imaging-at-685-gfps)  
+1. [Analysis of Electromagnetic Scattering from Semiconductor Nanostructures by Solving Coupled Volume Integral and Two-fluid Hydrodynamic Equations](/202605/08/2604.28083v1-analysis-of-electromagnetic-scattering-from-semiconductor-nanostructures-by-solving-coupled-volume-integral-and-two-fluid-hydrodynamic-equations)  
    标签：评分：7.0/10、query:iscat
-   evidence：瞬态现象的单次超快成像
-3. [Dimensionality-Driven Electronic and Orbital Transitions Mediating Interfacial Magnetism in LaNiO3/CaMnO3 Observed In Situ](/202605/07/2604.28054v1-dimensionality-driven-electronic-and-orbital-transitions-mediating-interfacial-magnetism-in-lanio3camno3-observed-in-situ)  
+   evidence：半导体纳米结构的电磁散射
+2. [Unified approach to time-resolved x-ray and electron diffraction imaging](/202605/08/2605.00286v1-unified-approach-to-time-resolved-x-ray-and-electron-diffraction-imaging)  
    标签：评分：7.0/10、query:iscat
-   evidence：氧化物界面的原位合成与光谱学研究
-4. [Quantifying Thermal, Photovoltage, and Defect Contributions to Transient Absorption of Ta$_{3}$N$_{5}$ Photoanodes](/202605/07/2604.28094v1-quantifying-thermal-photovoltage-and-defect-contributions-to-transient-absorption-of-ta3n5-photoanodes)  
+   evidence：时间分辨衍射成像的统一方法
+3. [Influence of twist angle on ultrafast charge separation in WS2-graphene heterostructures](/202605/08/2605.03480v1-influence-of-twist-angle-on-ultrafast-charge-separation-in-ws2-graphene-heterostructures)  
    标签：评分：7.0/10、query:iscat
-   evidence：用于载流子动力学的瞬态吸收光谱
-5. [Revealing the kinetics of interfacial surfactant phase transitions through multiscale simulations and in-situ plasmonic sensing](/202605/07/2605.01458v1-revealing-the-kinetics-of-interfacial-surfactant-phase-transitions-through-multiscale-simulations-and-in-situ-plasmonic-sensing)  
+   evidence：半导体异质结构中的超快电荷分离
+4. [High-Sensitivity, High-Throughput Double Sagnac Lateral Shearing Quantitative Phase Microscopy and Tomography with Pseudo-Thermal Illumination](/202605/08/2605.04297v1-high-sensitivity-high-throughput-double-sagnac-lateral-shearing-quantitative-phase-microscopy-and-tomography-with-pseudo-thermal-illumination)  
    标签：评分：7.0/10、query:iscat
-   evidence：界面相变动力学的原位等离激元传感
-6. [Ultrafast acoustic modulation of second-harmonic generation in monolayer transition metal dichalcogenides](/202605/07/2605.03272v1-ultrafast-acoustic-modulation-of-second-harmonic-generation-in-monolayer-transition-metal-dichalcogenides)  
+   evidence：用于无标记测量的共路径干涉配置
+5. [Programmable spatial coherence tomography: diffraction-limited three-dimensional reflection imaging under modulated monochromatic illumination](/202605/08/2605.05747v1-programmable-spatial-coherence-tomography-diffraction-limited-three-dimensional-reflection-imaging-under-modulated-monochromatic-illumination)  
    标签：评分：7.0/10、query:iscat
-   evidence：纳米材料的超快声学调制和相位同步测量
-7. [Non-Equilibrium Orbital Transport in Terahertz Optorbitronics](/202605/07/2604.26717v1-non-equilibrium-orbital-transport-in-terahertz-optorbitronics)  
+   evidence：无标记体积反射成像与相干工程
+6. [Full-chip CMP modelling based on Fully Convolutional Network leveraging White Light Interferometry](/202605/08/2605.05062v1-full-chip-cmp-modelling-based-on-fully-convolutional-network-leveraging-white-light-interferometry)  
    标签：评分：6.5/10、query:iscat
-   evidence：利用超快激光脉冲实时观察输运过程
-8. [YOSO: single-frame Gerchberg-Saxton phase retrieval with AI-based data augmentation for in-line holography](/202605/07/2604.27777v1-yoso-single-frame-gerchberg-saxton-phase-retrieval-with-ai-based-data-augmentation-for-in-line-holography)  
-   标签：评分：6.5/10、query:iscat
-   evidence：数字在线全息显微镜的单帧相位恢复
-9. [Physics-Constrained Learning of Dose-Dependent Spectral Degradation in Metal--Organic Frameworks from In Situ Low-Loss EELS](/202605/07/2605.01697v1-physics-constrained-learning-of-dose-dependent-spectral-degradation-in-metal--organic-frameworks-from-in-situ-low-loss-eels)  
-   标签：评分：6.5/10、query:iscat
-   evidence：混合材料剂量依赖性降解的原位光谱研究
-10. [Isolation and Purification-Free Digital Single-Small Extracellular Vesicle Biosensing with Scalable Plasmonic Arrays](/202605/07/biorxiv-10-64898-2026-04-30-721846-v1-isolation-and-purification-free-digital-single-small-extracellular-vesicle-biosensing-with-scalable-plasmonic-arrays)  
-   标签：评分：6.5/10、query:iscat
-   evidence：使用等离子体成像对单个生物纳米颗粒进行无标记分析
-11. [Sub-50 Picosecond exceptionally Bright Perovskite Scintillation by Unlocking Giant Oscillator Strength](/202605/07/2604.26751v1-sub-50-picosecond-exceptionally-bright-perovskite-scintillation-by-unlocking-giant-oscillator-strength)  
+   evidence：利用白光干涉测量法进行表面分析
+7. [Measurement of complex scattering matrix in a nano-cavity array for boundary scattering tomography](/202605/08/2604.27214v1-measurement-of-complex-scattering-matrix-in-a-nano-cavity-array-for-boundary-scattering-tomography)  
    标签：评分：6.0/10、query:iscat
-   evidence：钙钛矿中的超快光子脉冲和计时
+   evidence：对体谐振器的散射光进行成像以进行断层扫描
+8. [Phase-Stable Self-Modulation for GHz Continuous-Wave Ultrafast X-Ray Free-Electron Lasers](/202605/08/2604.27347v1-phase-stable-self-modulation-for-ghz-continuous-wave-ultrafast-x-ray-free-electron-lasers)  
+   标签：评分：6.0/10、query:iscat
+   evidence：电子动力学的时间分辨研究
+9. [Uniaxial strain-driven ferroelastic domain control in LaAlO3](/202605/08/2604.28183v1-uniaxial-strain-driven-ferroelastic-domain-control-in-laalo3)  
+   标签：评分：6.0/10、query:iscat
+   evidence：铁弹性畴的原位操纵和映射
+10. [FitED: A User-Centric, Extensible Software Environment for Robust Peak-Profile and General Functional Data Fitting](/202605/08/2605.00172v1-fited-a-user-centric-extensible-software-environment-for-robust-peak-profile-and-general-functional-data-fitting)  
+   标签：评分：6.0/10、query:iscat
+   evidence：用于时间分辨测量和显微镜数据拟合的软件
+11. [TrueEBSD in MTEX: automatic image matching for correlative microscopy applications](/202605/08/2605.00703v1-trueebsd-in-mtex-automatic-image-matching-for-correlative-microscopy-applications)  
+   标签：评分：6.0/10、query:iscat
+   evidence：材料复合材料的相关显微镜和图像匹配
 
 
 <div class="dpr-home-promo-card">
