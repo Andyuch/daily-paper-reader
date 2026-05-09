@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.02432v1/fig-001.webp",
+      "caption": "FIG. 1. Cross-section and AFM topography (4×4 µm2) of the α-Si-based memristor on a SOI wafer with a highly boron-doped p-Si. The PtIr-coated conductive cantilever is used for current mapping in contact mode. The SEM image in the top-left shows a smooth and continuous NiCr/Au thin film and a granular morphology of the α-Si/Ag/Cu stack. Figure at the bottom right shows an AFM topography image with a position of 9 × 9 grid of measured points (spacing ≈ 250 nm and cantilever-sample contact area = 29± 6 nm2)",
+      "page": 3,
+      "index": 1,
+      "width": 972,
+      "height": 677
+    },
+    {
+      "url": "assets/figures/arxiv/2605.02432v1/fig-002.webp",
+      "caption": "FIG. 2. (a) Cumulative I-V curve obtained by summing all I-V curves acquired at different points; (b) The typical I-V curve of a fully operational α-Si/Ag/Cu memristor with top Al cross electrode29",
+      "page": 4,
+      "index": 2,
+      "width": 935,
+      "height": 343
+    },
+    {
+      "url": "assets/figures/arxiv/2605.02432v1/fig-003.webp",
+      "caption": "FIG. 3. (a) Typical I-V curves of non-volatile (blue) and volatile (green) filaments; (b) Resistance maps at -7.0 V and -0.5 V show the distribution of conductive filaments. Measurements are taken on a 9×9 grid with 250 nm spacing between the points. The estimated contact area is 29±6 nm2",
+      "page": 6,
+      "index": 3,
+      "width": 966,
+      "height": 1165
+    },
+    {
+      "url": "assets/figures/arxiv/2605.02432v1/fig-004.webp",
+      "caption": "FIG. 4. The dependence of the filament resistance on the energy gap U0 − εF for non-volatile filaments with the length gap of lnonvol = 1.1nm and volatile filaments with lvol = 2.3nm. The dashed horizontal lines are guidelines for average filaments’ resistance for the bias voltage of V = 7V (accuracy is limited by 500 nA compliance current set by an experimental setup) and V = 0.5V. The shaded region, 2.00 − 2.75 eV, corresponds to the range of gap energies consistent with the experimental data",
+      "page": 10,
+      "index": 4,
+      "width": 459,
+      "height": 388
+    }
+  ]
+}

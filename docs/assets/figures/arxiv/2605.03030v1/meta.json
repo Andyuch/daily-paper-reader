@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.03030v1/fig-001.webp",
+      "caption": "FIG. 2. Current partition in the five-terminal fan geometry as a function of momentum-relaxing and momentum-conserving scattering. (a)–(c): current Ia for a = NE,E, SE, as a fraction of IN , the current through the north contact, IN . (d): smallest singular value σmin(J) of the Jacobian J = ∂(INE/IN , IE/IN , ISE/IN )/∂(log10 γmr, log10 γee), measuring the weakest local sensitivity of the observables to the scattering rates. (e): condition number κ(J), measuring the local degeneracy of the inverse map. The crossover regime is the most favourable for extracting both γmr and γee from multiterminal current measurements, while the strongly Ohmic regime becomes ill-conditioned.",
+      "page": 3,
+      "index": 1,
+      "width": 1036,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03030v1/fig-002.webp",
+      "caption": "FIG. 3. Emergence of tomographic physics. We set γmr = 0 and consider the fraction Ia/|IN | for a = SE,E,NE. (a): Sample trajectories in phase space assuming γee ∼ T 2 and γ3 ∼ T 4, so that γ3 = γ2 ee/ξ, with ξ controlling the strength of even-odd effects. At large ξ (tomographic regime), the trajectory in (INE/IN , ISE/IN )-space develops a sharp feature as T is swept. (b)–(d): Ia/IN as a function of γ3/γee, artificially treating them as independent parameters, expressing a rich tomographic enhancement or suppression of current branching ratios.",
+      "page": 4,
+      "index": 2,
+      "width": 1027,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03030v1/fig-003.webp",
+      "caption": "FIG. 4. Nonlocal resistance in the fan geometry as a function of momentum-relaxing and momentum-conserving scattering. In contrast to Fig. 1, here a fixed current IS = IE = I is driven around a sharp corner, and the nonlocal resistance at N,NE, SE reported. (a)–(c): Resistance Ra ≡ Va/IS , in units of µ0e −2n−1 0 v−1 F w−1 S , for a = N,NE, SE. (d): smallest singular value σmin(J) of the Jacobian J = ∂(RN , RNE , RSE)/∂(log10 γmr, log10 γee), measuring the weakest local sensitivity of the observables to the scattering rates. (e): condition number κ(J), measuring the local degeneracy of the inverse map. The crossover regime is the most favourable for extracting both γmr and γee from multiterminal resistance measurements, while the strongly Ohmic regime becomes ill-conditioned.",
+      "page": 7,
+      "index": 3,
+      "width": 1036,
+      "height": 415
+    }
+  ]
+}

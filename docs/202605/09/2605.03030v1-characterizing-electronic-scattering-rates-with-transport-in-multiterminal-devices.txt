@@ -1,0 +1,530 @@
+Title: Characterizing electronic scattering rates with transport in multiterminal devices
+
+URL Source: https://arxiv.org/pdf/2605.03030v1
+
+Published Time: Wed, 06 May 2026 00:08:47 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# Characterizing electronic scattering rates with transport in multiterminal devices 
+
+Jack H. Farrell 1, ∗ and Andrew Lucas 1
+
+> 1
+
+Department of Physics and Center for Theory of Quantum Matter, University of Colorado Boulder, Boulder, Colorado 80309, USA 
+
+(Dated: May 6, 2026) Strongly interacting electrons in clean two-dimensional devices are theorized to exhibit many distinct transport regimes, such as ballistic, hydrodynamic, or diffusive. Realistic samples often lie in crossover regimes between these idealized limits. We show how a single experiment on a multiterminal device can distinguish these regimes and constrain the relevant scattering rates without space-resolved imaging. Using a linearized Boltzmann model in a five-terminal geometry, we find that current partition among the drain contacts diagnoses the ballistic-hydrodynamic-Ohmic crossover and allows extraction of momentum-relaxing and momentum-conserving scattering rates in the crossover regime. The same geometry also exhibits clear signatures of the tomographic regime, potentially allowing for a quantitative discrimination between viscous and tomographic flow in experiments. Our results demonstrate that multiterminal devices are a simpler experimental route to characterize transport regimes in electron liquids, relative to space-resolved imaging experiments. 
+
+1. INTRODUCTION 
+
+Hydrodynamics is the effective long-wavelength theory describing how conserved quantities evolve once rapid colli-sions establish local equilibrium [ 1– 5]. In this regime, elec-tron transport is not organized by the full nonequilibrium distribution function, but by a small set of slowly varying fields and transport coefficients, making it possible to de-scribe experiments with relatively few phenomenological parameters. From a theoretical perspective, electronic hy-drodynamics offers a controlled setting in which to connect microscopic scattering to emergent many-body behaviour and to probe possible universal limits on transport in metals [ 6– 8]. From a technological perspective, the char-acteristic frequencies of micron-scale mesoscopic devices naturally fall in the high-gigahertz to low-terahertz win-dow, opening the possibility of compact circuit elements built from viscous, inertial, or compressible flow [9–13]. At the same time, experiments in two-dimensional conductors do not probe the hydrodynamic regime in isolation, but rather access a sequence of qualitatively distinct regimes including nearly collisionless ballistic flow [ 14 ], intermediate tomographic dynamics with a large number of nearly-conserved quantities [ 15 – 17 ], viscous hydrodynamics, and ordinary diffusive (Ohmic) trans-port [ 18 , 19 ]. While bulk observables such as nonlocal conductivity [ 20 –22 ], superballistic conductance [ 23 –25 ], and the Gurzhi effect [ 2, 26 , 27 ] can qualitatively delin-eate pairs of these regimes such as hydrodynamic–diffusive or ballistic–hydrodynamic, sharply distinguishing all of them—and in particular the intermediate tomographic regime—is challenging, though magnetoresistance in annu-lar devices and high order cyclotron resonance each appear promising [ 28 , 29 ]. Indeed, quantitatively determining mi-croscopic scattering parameters has historically required sophisticated spatial imaging to resolve phenomena in- 
+
+> ∗jack.farrell@colorado.edu
+
+cluding Poiseiulle channel flow profiles [ 30 , 31 ], viscous backflow [20, 21], or vorticity [31, 32]. In this work, we argue that full space-resolution is not required to quantitatively measure microscopic scattering parameters in an electron fluid; one only requires multi-terminal devices with enough contacts or voltage probes. Our proposed geometry in Fig. 1 operates on the simple principle that current partition between multiple drains is strongly regime-dependent. Ballistic carriers preferen-tially follow nearly straight trajectories into aligned drains, whereas hydrodynamic and diffusive currents readily re-distribute around bends and obstacles. Hydrodynamic and diffusive transport can in turn be distinguished by their different dependence on channel width and geomet-ric constrictions. By exploiting these distinct geometric responses, one can construct bulk observables that remain directly sensitive to the underlying scattering mechanisms. Although for convenience we have focused on a single ge-ometry in this paper, we stress that the general strategy is not sensitive to details of this geometry. To quantitatively relate multiterminal observables to microscopic transport parameters, we present an open-source numerical framework [ 33 ] for efficiently solving the linearized Boltzmann transport equation for isotropic Fermi liquids near T = 0 in arbitrary 2D domains with any number of contacts and a variety of realistic boundary conditions. These methods have recently been used to quantitatively model both space-resolved [ 31 ] and bulk observables [ 34 ] in DC settings. Our phenomenological scattering model features three parameters, namely γmr 
+
+(a momentum-relaxing scattering rate due to impurities and phonons), γee (the momentum-conserving electron-electron scattering rate), and γ3 (which parameterizes the even-odd structure inherited from the microscopic Fermi-golden-rule collision kernel), each defined in (4). We find that the three independent current fractions through the N E , E, and SE arms of Fig. 1 define a well-conditioned inverse problem for γee and γmr . We further show that multiterminal observables within the same framework are also sensitive to tomographic transport, 
+
+> arXiv:2605.03030v1 [cond-mat.mes-hall] 4 May 2026
+
+2L
+
+> `N E
+
+VN = 0 
+
+VN E = 0 
+
+VE = 0 
+
+VSE = 0 
+
+VS = V                               
+
+> FIG. 1. Schematic of the five-terminal ‘fan’ geometry stud-ied in this work. The colour map represents the calculated current magnitude |j(x)|obtained from the linearized Boltz-mann equation (2) with γmr = 0, γee =γ3= 100 vF/L in (4) . The drain arms are chosen to have different widths and lengths, while w/ℓ is held fixed for each arm so that they represent identical ohmic channels. The relative arm dimen-sions are ℓN/L =ℓS/L = 0 .35, ℓN E /L = 0 .37, ℓE/L = 0 .32,
+> ℓSE /L = 0 .28, with wa/ℓ a= 0 .30 for for all arms. The relative angles are 45 ◦.
+
+allowing one to identify the onset of the intermediate regime and to place quantitative constraints on γ3. To the best of our understanding, these results may be the most quantitative way to distinguish the tomographic regime from viscous or ballistic transport in present-day experiments (where scaling predictions [ 15 , 35 ] are not easy to detect using only a small range of sample sizes).  
+
+> 2. METHODS
+
+We study fermionic quasiparticles in a single isotropic band with dispersion ε(|p|). With θ ≡ arctan( py /p x),in the limit T → 0, dynamics are confined to the Fermi surface, and we may take the deviation from equilbrium to be independent of p ≡ | p| according to 
+
+δf (x, p) = ϕ(x, θ ) δ(μ0 − ε(p)) . (1) Integrating the Boltzmann transport equation for f over the radial momentum coordinate p leads to a linearized Boltzmann equation for ϕ(x, θ ), namely 
+
+∂tϕ + vF · ∇ ϕ = W [ϕ], (2) where vF = vF ˆp is the Fermi velocity, W [ϕ] is the lin-earized fermionic collision integral, and we have set exter-nal forcing F = 0, biasing flow instead through boundary conditions on a0. In an isotropic Fermi liquid, several recent studies [ 36 –38 ] have shown that the linearized col-lision integral W [ϕ] is well-approximated by 
+
+W [ϕ(θ)] = 
+
+Z 2π
+
+> 0
+
+dθ′
+
+2π
+
+> ∞
+
+X
+
+> m=−∞
+
+γm eim(θ−θ′)ϕ(θ′), (3) with relaxation rates γm of respective Fourier components of ϕ given by 
+
+γ0 = 0 , (4a) 
+
+γ1 = γmr , (4b) 
+
+γm =
+
+ γmr + γee |m| ≥ 2 even 
+
+γmr + min( γee , γ 3( |m| 
+
+> 3
+
+)4) |m| ≥ 2 odd . (4c) The meaning of (3) is that in, a multipolar expansion of the Fermi surface ϕ(θ) = P 
+
+> m
+
+ameimθ , different modes relax at different rates determined from the Fermi’s golden-rule expression for electron electron collisions at low tem-perature. The three control parameters for W [ϕ] are 
+
+γmr (momentum-relaxing scattering from short-range im-purities or phonons), γee (short-range electron-electron scattering), and γ3 which sets the scale of the relaxation of the odd modes in two-body electron-electron collisions (which itself is controlled by T /T F , or the thickness of the smeared Fermi surface at finite temperature). For boundary conditions, we model walls as partially specular partially diffuse boundaries—see Appendix B.3.1. In this paper, we have focused on the purely diffuse case, as, being conservative, we expect it to be the least favourable for our chosen observables. In general, the degree of specularity may be quantitatively estimated in an experiment from ballistic reflection amplitudes or magnetic focusing [34, 39–42] We consider 2D devices with multiple metallic contacts 
+
+a = 1, . . . N . In linear response, the relation between the currents Ia flowing into external contacts and the electrochemical potentials Vb imposed at those contacts is 
+
+Ia =
+
+> N
+
+X
+
+> b=1
+
+Gab Vb, (5) where Gab is a conductance matrix relating the potential imposed at contact b to the current measured at contact a.Importantly, Gab does not have N 2 independent entries. For example, current conservation and gauge invariance imply 
+
+> N
+
+X
+
+> a=1
+
+Ia = 0 ,
+
+> N
+
+X
+
+> a=1
+
+Gab = 0 ,
+
+> N
+
+X
+
+> b=1
+
+Gab = 0 , (6) 3-1 0 1 2
+
+log 10 γee 
+
+-1 01
+
+> log 10  γmr
+
+a) 
+
+-1 0 1 2
+
+log 10 γee 
+
+b) 
+
+-1 0 1 2
+
+log 10 γee 
+
+c) 
+
+-1 01
+
+> log 10  γmr
+
+d) 
+
+-1 0 1 2
+
+log 10 γee 
+
+-1 01
+
+> log 10  γmr
+
+e) 
+
+0.80 1.00 
+
+IN E /I N
+
+0.75 1.00 
+
+IE /I N
+
+0.50 1.00 1.50 
+
+ISE /I N
+
+-5.0 -2.5 
+
+> log 10  σmin (J)
+
+2.0 4.0 
+
+> log 10  κ(J)
+
+FIG. 2. Current partition in the five-terminal fan geometry as a function of momentum-relaxing and momentum-conserving scattering. (a)–(c): current Ia for a = N E, E, SE , as a fraction of IN , the current through the north contact, IN . (d): smallest singular value σmin (J) of the Jacobian J = ∂(IN E /I N , I E /I N , I SE /I N )/∂ (log 10 γmr , log 10 γee ), measuring the weakest local sensitivity of the observables to the scattering rates. (e): condition number κ(J), measuring the local degeneracy of the inverse map. The crossover regime is the most favourable for extracting both γmr and γee from multiterminal current measurements, while the strongly Ohmic regime becomes ill-conditioned. 
+
+so that the physically meaningful transport data furnish an ( N − 1)-dimensional subspace of voltages and currents. Additional permutation symmetries of the device may further reduce the independent components of Gab . In principle, one could fully characterize a given geometry by reconstructing the entire reduced conductance matrix, giving complete bulk linear-response description of the device. Measurements of Ia could be performed using separate preamplifiers [ 43 ], in-series small resistors [ 44 ], Hall effect measurements in the presence of a small mag-netic field [ 45 ], or scanning tunneling microscopy [ 46 ]. The advantage of multiterminal experiments compared to comparing different devices instead is that the latter is susceptible to fabrication discrepancies between samples while the former allows different regimes to be character-ized on a single device stack. 1
+
+Still, we are sensitive to the experimental challenges of quantitatively holding multiple contacts at known po-tentials relative to a virtual ground. Accordingly, in this paper, we focus on a particularly simple protocol in which one contact (the ‘source’, a = S) is held at a potential 
+
+VS = V while the remaining contacts (‘drains’) a̸ = S are grounded at Va = 0. Branching ratios—the fraction of current entering each contact—offer simple bulk observ-ables that are additionally independent of contact effects. We have performed additional numerical simulations for floating voltage probes rather than grounded contacts, which may be a more familiar experiment than current  
+
+> 1Spatially-localized impurities in the micron-scale device can com-plicate the quantitative comparison between theory and exper-iment whether or not one makes one multiterminal device or multiple scaled copies of the same device.
+
+branching—see Appendix A. In the main text, we focus on the grounded-contact experiment. 
+
+3. RESULTS 
+
+For concreteness, in this work, we consider the five-terminal ‘fan’ sketched in Fig. 1. Two design principles motivated our choice of geometry. Firstly, in the ballistic limit, current should preferentially flow into the branch labeled N . Secondly, the three branches labelled SE, E 
+
+and N E differ in length and width in such a way that they represent identical Ohmic channels: recall that if the device has homogeneous resistivity ρ, then the effective resistance of each channel is given by 
+
+Rohmic = ρ ℓa
+
+wa
+
+. (7) Since we keep ℓa/w a fixed for each channel, the Ohmic resistance would therefore be identical in the idealized limit where each ℓa → ∞ . On the other hand, in the hydrodynamic limit γee ≫ 1 (in units of L/v F ), Poiseiulle flow predicts a stronger scaling with wa [2–5], 
+
+Rhydro ∼ γ−1ee 
+
+3 pF vF
+
+ne 2
+
+ℓa
+
+w3
+
+> a
+
+, (8) so we expect the current fractions through branches la-beled N E , E, and SE to differentiate Ohmic and hydro-dynamic current flow. 40.5 0.6 0.7
+
+ISE /I N
+
+> 0.8
+> 0.9
+> 1.0
+> 1.1
+> INE /I N
+
+γee (T ) 
+
+> 10 −210 0
+
+γ3/γ ee 
+
+> 0.40
+> 0.60
+> 0.80
+> 1.00
+> Ia/I N
+
+ISE /I N 
+
+> 10 −210 0
+
+γ3/γ ee 
+
+IE/I N 
+
+> 10 −210 0
+
+γ3/γ ee 
+
+INE /I N
+
+> 10 −1
+> 10 0
+> 10 1
+> 10 2
+> γee
+> 10 0
+> 10 1
+> ξ
+
+a) b) c) d) 
+
+FIG. 3. Emergence of tomographic physics. We set γmr = 0 and consider the fraction Ia/|IN | for a = SE, E, N E . (a): Sample trajectories in phase space assuming γee ∼ T 2 and γ3 ∼ T 4, so that γ3 = γ2ee /ξ , with ξ controlling the strength of even-odd effects. At large ξ (tomographic regime), the trajectory in ( IN E /I N , I SE /I N )-space develops a sharp feature as T is swept. (b)–(d): Ia/I N as a function of γ3/γ ee , artificially treating them as independent parameters, expressing a rich tomographic enhancement or suppression of current branching ratios. 
+
+3.1. Ballistic-hydrodynamic crossover 
+
+To begin, we restrict our attention to γee and γmr (tak-ing γee = γ3; ignoring tomographic effects), which is enough to quantitatively resolve the ballistic, hydrody-namic, and diffusive regimes. Indeed we have already applied the numerical methods introduced in this work to determine γee and γmr in a recent space-resolved imaging experiment [ 31 ]. Here we show that a similar determi-nation could be performed via multiterminal transport experiments instead. We have solved the linear Boltzmann equation (2) in the geometry and biasing configuration of Fig. 1, assuming diffuse walls (Appendix B.3.1). After performing the space-resolved simulations, we measure the current Ia
+
+through each contact and plot the fractions Ia/I N . Fig. 2 (a)–(c) show heatmaps of these fractions as functions of 
+
+γee and γmr .The simulation results confirm our qualitative expecta-tions for the behaviour of the current fractions across the three regimes of interest. For the E and especially SE 
+
+branch, IN E /I N , ISE /I N and IE /I N show suppression in the ballistic limit (lower-left corner); ballistic carriers preferentially follow straight-line trajectories. On a quali-tative level, Ia/I N < 1 is an extremely clear signature of ballistic flow, and indeed we find ISE /I N ∼ 0.5 for the backward-facing branch in the ballistic limit. On the other hand, as γee increases at low γmr , the current through 
+
+N E noticeably exceeds that through SE , in agreement with (8) , given that the branch labeled SE is narrower than N E . As such, IN E /I SE > 1, with IN E /I N ≥ 1 rul-ing out ballistic flow, offers an unmistakable qualitative diagnostic of viscous-dominated flow. While the quan-titative predictions of Eqs. (7) (8) , do not hold in our proposed device due to strong finite-size effects ( ℓa/w a is not large), the device succeeds in differentiating Ohmic, hydrodynamic, and ballistic transport. Indeed, beyond qualitatively distinguishing transport regimes, the three current fractions in Fig. 2 (a)– (c) display nondegenerate dependence on γee , γmr in the crossover regime, so we expect these three pa-rameters may be used to quantitatively ‘triangulate’ the scattering rates. To characterize the sensitiv-ity to γee and γmr , we consider the Jacobian J =
+
+∂(IN E /I N , I E /I N , I SE /I N )/∂ ( log 10 γmr , log 10 γee ). Its minimum singular value σmin represents the weakest (lo-cal) sensitivity to the observables to γee and γmr ; similarly, its condition number defined as κ = |σmax /σ min | quantifies the local degeneracy of the inverse map; both diagnostics are reported in Fig. 2 (d), (e). The crossover regime 
+
+γee ∼ 1 vF /L is particularly promising for quantitative estimation of both phenomenological parameters. At high enough γmr , Ia/I N become insensitive to γee and indeed 
+
+γmr , agreeing with a visual assessment of Fig. 2 (a)–(c). We emphasize, though, that an ideal experiment would sweep γee , γ mr together as a function of some control pa-rameter such as temperature, so the local sensitivity of the map ( IN E /I N , I E /I N , I SE /I N ) 7 → (γee , γ mr ) is likely a conservative estimation of its utility. 
+
+3.2. Tomographic flow 
+
+Multiterminal observables are also sensitive to the de-tails of short-range fermion-fermion scattering in 2D mod-eled by γ3 < γ ee in (4) . In an experiment, the emergence of this so-called ‘tomographic’ flow will most naturally be accessed by varying temperature T , which we may model by assuming forms for γee (T ), γ3(T ). At low temperature, fermion-fermion scattering is dominated 5by interactions between particles with parallel or antipar-allel momenta, which leads to γee ∼ (T /T F )2 (up to log( T /T F ) corrections) [ 19 ]. By inversion symmetry, the nearly-collinear scattering cannot relax the inversion-odd component of the distribution function, and the relaxation-rates of odd harmonics are found to be suppressed as 
+
+γ3 ∼ (T /T F )4 [15 ]. We therefore parameterize γ3 = γ2ee /ξ ,where ξ is an inverse time-scale measuring the strength of odd-even effects. Fig. 2 (a) shows the phase-trajectory for IN E /I N and IE /I N as γee (T 2) varies. In the ballis-tic limit γee → 0 and the hydrodynamic limit γee → ∞ ,the trajectories coincide. When ξ is large, the trajec-tory develops a sharp corner at intermediate values of γee 
+
+and follows a distinct curve in ( IN E , ISE )-space. Cur-rent branching ratios thus offer sharp signatures of the tomographic regime accessible by experimental control parameters. Further, assuming that γee and γmr are independent, in Fig. 2 (b)–(d), we demonstrate the consequences of odd-even effects on transport through the fractions Ia/I N
+
+as functions of γ3 at fixed γee . For all three, γ3 < γ ee 
+
+suppresses the fraction of currents through the side chan-nels, in agreement with the expectation that tomographic flow allows increased directional memory relative to the hydrodynamic regime at higher temperatures. In particu-lar, ( IN E /I N − 1) shows a sign change as a function of 
+
+γ3 at intermediate γee , so IN E /I N may offer a qualitative experimental signature of the tomographic regime, which may be easier to interpret than subtle T - or w-dependence of conductances in a crossover regime. It would be inter-esting to study whether our kinetic results are captured in low-order closures of the Boltzmann equation that have been proposed to model the tomographic regime [ 35 , 47 ]. Similarly, our multiterminal approach may be useful for calibrating high-order cyclotron resonance measurements to directly probe the γm for higher multipolar deforma-tions [29].  
+
+> 4. CONCLUSION
+
+We have shown that multiterminal transport in a sin-gle mesoscopic device provides a route for quantitatively diagnosing electronic transport regimes without the need for space-resolved imaging. In the five-terminal fan geom-etry studied here, simple current branching fractions al-ready distinguish the ballistic, hydrodynamic, and Ohmic limits, and in the crossover regime they define a well-conditioned inverse problem for the momentum-relaxing and momentum-conserving scattering rates. The same framework is also sensitive to the even–odd structure of electron-electron collisions, allowing tomographic trans-port to be identified through realistic experimental sig-natures. Our results illustrate that carefully designed device geometry can convert subtle information about the collision integral into robust bulk observables that are directly accessible in standard transport experiments. One shortcoming of studying non-ohmic transport physics in nonstandard 2D geometries is that it is of-ten not obvious how to interpret data without detailed comparison to numerical models, which themselves of-ten make many simplifying assumptions. For example, as in this work, it is common to assume the Fermi sur-face is circular to simplify the numerical analysis, yet non-circular Fermi surfaces are known to have drastic effects on ballistic transport [ 41 , 48 ]. It is, in principle, straightforward to extend our methods to more micro-scopic kinetic theories of transport which account for both realistic Fermi surface shapes as well as ab initio collision integrals W [ϕ] [ 36 , 37 , 49 ], and we plan to do this in future work. It would be interesting to engineer optimal multitermi-nal geometries for measuring γee , γmr , and γ3, perhaps borrowing inverse-design techniques from the machine learning literature and minimizing an appropriate cost function. Further, beyond the case of circular Fermi sur-faces, we expect similar methods will permit the design of anisotropic viscometers motivated by the point-group symmetry of the underlying crystal lattice [50]. 
+
+> ACKNOWLEDGEMENTS
+
+We thank Johannes Geurs, Xiaoyang Huang, Canxun Zhang, and Evgeny Redekop for discussions. This work was supported by the National Science Foundation via CAREER Grant DMR-2145544. This work utilized the Alpine high performance computing resource at the Uni-versity of Colorado Boulder. Alpine is jointly funded by the University of Colorado Boulder, the University of Colorado Anschutz, Colorado State University, and the National Science Foundation (award 2201538). 
+
+> DATA AVAILABILITY STATEMENT
+
+The data, Julia scripts to generate the data, and Python scripts to produce the figures are avail-able at github.com/jackhfarrell/characterizing-electronic-scattering-rates. 
+
+> CODE AVAILABILITY STATEMENT
+
+The open source software used to simulate the Boltzmann equation can be found online at github.com/jackhfarrell/FermiSea.jl [33]. 
+
+> Appendix A: Current-driven experiments
+
+In the same geometry as Fig. 1, we have studied an alternate biasing protocol to access Gab for which a fixed current I is driven from the S to E contacts (around the corner), with the potential imposed at N E, E, SE 
+
+adjusting dynamically to enforce I = 0 through these 6branches. This configuration is more typical for experi-ments, as it is meant to model floating nonlocal voltage probes at N, N E, SE . We note that any permutation of current-controlled and voltage controlled branches, at arbitrary current and potential values, are accessible to our methods. Fig. 4 demontrates that the current-driven measure-ment, with nonlocal voltages (reported as resistances R)as opposed to current fractions as observables similarly offers a well-conditioned inverse problem for the determi-naiton of γee , γmr . 
+
+> Appendix B: Numerical methods B.1. Harmonic truncation and streaming
+
+Our goal is to numerically solve (2) , (3) and (4) . We truncate the Fourier expansion of ϕ(x, θ, t ) at harmonic order M , working in the real representation 
+
+ϕ(x, θ, t ) ≈ a0(x, t )2+
+
+> M
+
+X
+
+> m=1
+
+am(x, t ) cos mθ + bm(x, t ) sin mθ . (B1) This is equivalent to retaining |m| ≤ M in the complex expansion of the main text. The local state is the vector 
+
+u = ( a0, a 1, b 1, . . . , a M , b M )T ∈ R1+2 M . The monopole 
+
+a0 ∝ δn tracks the charge density deviation, the dipole (a1, b 1) carries the current, and higher harmonics encode the angular anisotropy responsible for crossover physics between ballistic and hydrodynamic limits. Substituting the truncated expansion into (2) and applying the product identities such as cos θ cos mθ = 
+
+> 12
+
+[cos( m−1) θ + cos( m+1) θ], the free-streaming term vF ·∇ϕ becomes the linear first-order system 
+
+∂tu + Ax∂xu + Ay ∂y u = C[u], (B2) where Ax and Ay are sparse (1 + 2M ) × (1 +2M ) matrices and C[u] collects the collision source terms. The only nonzero entries of Ax and Ay are (Ax)a0, a 1 = vF , (B3a) (Ax)am, a m±1 = vF 
+
+> 2
+
+, (B3b) (Ax)bm, b m±1 = vF 
+
+> 2
+
+, (B3c) (Ay )a0,b 1 = vF , (B3d) (Ay )am, b m±1 = ± vF 
+
+> 2
+
+, (B3e) (Ay )bm, a m±1 = ∓ vF 
+
+> 2
+
+. (B3f) The maximum characteristic speed is vF in every direction, which sets the Courant-Friedrichs-Levy (CFL) bound on the maximum stable timestep d t [51]. The collision term (4) acts diagonally on the harmonic coefficients with the rates γm defined in the main text in (4). For steady-state problems, one expects that the hydro-dynamic or diffusive limit requires relatively small M due to fast relaxation of higher harmonics. Still, the Fourier series coefficients for the kinetic boundary condition (B5) decay only as cm ∼ 1/m . In the strong scattering regime where max γm ∼ 800, we use M = 10 to ensure quantita-tive resolution of the boundary layer. In the ballistic limit max γm ∼ 0.08, we use M = 100. We interpolate loga-rithmically based on max γm in intermediate cases. The potential to use relatively low M is the main numerical advantage of our spectral method. On the other hand, for the tomographic regime where 
+
+γ3 < γ ee , we have used a constant M = 80 to ensure the long-lived odd harmonics are captured.  
+
+> B.2. Spatial discretization
+
+The system (B2) is discretized in space using the nodal discontinuous Galerkin (DG) framework provided by Trixi.jl [ 52 – 54 ]. The domain is meshed with quadri-lateral elements and within each element the solution is represented by a degree-p polynomial on Gauss–Legendre– Lobatto nodes. Interior fluxes use the local Lax–Friedrichs (Rusanov) scheme, namely, on a face with unit normal 
+
+ˆn pointing from a ‘left’ state uL to ‘right’ state uR, the numerical flux is 
+
+F∗ = 12 An(uL + uR) − vF 
+
+> 2
+
+(uR − uL), (B4) where An ≡ nxAx + ny Ay . The collision terms (4) are evaluated pointwise at each quadrature node. Time inte-gration uses an explicit strong-stability-preserving Runge– Kutta method; for the steady-state problems studied here, the simulation is advanced until the L∞ residual drops below a prescribed tolerance.  
+
+> B.3. Boundary conditions
+
+The Boltzmann equation is a first-order hyperbolic PDE, so a boundary condition must specify only the de-grees of freedom entering the computational domain [ 51 ]. In the continuum kinetic theory these degrees of freedom are the angular components of the distribution with 
+
+ˆn · ˆp(θ) < 0, (B5) where ˆn is the outward unit normal to the boundary. A harmonic truncation does not retain this continuum half-space exactly; still, the truncated system (B2) forms 
+
+discrete hyperbolic system, where incoming and outgoing ‘characteristics’ may be defined. The well-posed numer-ical boundary conditions—which, as M → ∞ converge to the continuum result (B5) —must reflect the discrete characteristic structure. At a face with outward normal ˆn = ( nx, n y ), the normal streaming matrix is 
+
+An = nxAx + ny Ay (B6) 7-1 0 1 2
+
+log 10 γee 
+
+-1 0
+
+> log 10  γmr
+
+a) 
+
+-1 0 1 2
+
+log 10 γee 
+
+b) 
+
+-1 0 1 2
+
+log 10 γee 
+
+c) 
+
+-1 0
+
+> log 10  γmr
+
+d) 
+
+-1 0 1 2
+
+log 10 γee 
+
+-1 0
+
+> log 10  γmr
+
+e) 
+
+0.00 5.00 
+
+RN
+
+-2.50 0.00 
+
+RN E 
+
+-2.00 0.00 
+
+RSE 
+
+-2.0 0.0 
+
+> log 10  σmin (J)
+
+1.0 2.0 
+
+> log 10  κ(J)
+
+FIG. 4. Nonlocal resistance in the fan geometry as a function of momentum-relaxing and momentum-conserving scattering. In contrast to Fig. 1, here a fixed current IS = IE = I is driven around a sharp corner, and the nonlocal resistance at N, N E, SE 
+
+reported. (a)–(c): Resistance Ra ≡ Va/I S , in units of μ0e−2n−10 v−1 
+
+> F
+
+w−1 
+
+> S
+
+, for a = N, N E, SE . (d): smallest singular value 
+
+σmin (J) of the Jacobian J = ∂(RN , R N E , R SE )/∂ (log 10 γmr , log 10 γee ), measuring the weakest local sensitivity of the observables to the scattering rates. (e): condition number κ(J), measuring the local degeneracy of the inverse map. The crossover regime is the most favourable for extracting both γmr and γee from multiterminal resistance measurements, while the strongly Ohmic regime becomes ill-conditioned. 
+
+where Ax and Ay are the harmonic-space streaming ma-trices appearing in the semidiscrete kinetic equation. We diagonalize 
+
+AnR = RΛ, (B7) where R is the orthogonal matrix of eigenvectors and Λ ≡ diag (λα) is diagonal, and we write the interior state near a given boundary in characteristic variables as 
+
+wint = R−1uint . (B8) The sign of each eigenvalue λα determines whether the corresponding discrete characteristic is outgoing or incom-ing relative to the domain. With the convention that ˆn
+
+points outward, modes with λα > 0 leave the domain and are copied from the interior, while modes with λα < 0enter the domain and must be supplied by the boundary condition. This gives the projectors 
+
+P+ = RΠ+R−1, P− = RΠ−R−1, (B9) where Π ± are diagonal masks onto the eigenspaces with 
+
+±λα > 0. The boundary state supplied to the numerical flux is then constructed as 
+
+u∗ = P+uint + P−ubc . (B10) Here ubc is a boundary-condition-specific target state, de-pending on the physics of the wall. We have implemented several types of target state ubc , described below. 
+
+B.3.1. Diffuse and specular walls 
+
+We model solid walls by a Maxwell boundary condition with accommodation coefficient p ∈ [0 , 1]. The parameter 
+
+p is the probability for diffuse reemission; 1 − p is the probability for specular reflection. In the discrete charac-teristic implementation, this physical rule enters through the target state ubc in Eq. (B10). The diffuse component is an isotropic reemission state, 
+
+udiff = cdiff e0, (B11) where e0 = (1 , 0, . . . , 0) T denotes the isotropic harmonic. The amplitude cdiff is chosen so that the wall carries no net normal particle flux. Since the normal current is represented in the truncated problem by the linear functional 
+
+Jn(u) = qTn u, (B12) with qn the harmonic-space normal-current vector, flux balance gives 
+
+Jn(P+uint + P−cdiff e0) = 0 . (B13) Equivalently, 
+
+cdiff = − qTn P+uint 
+
+qTn P−e0
+
+. (B14) This is the discrete-eigenspace version of balancing the incoming diffuse flux against the outgoing flux. It enforces impermeability in the same truncated space used by the solver. The specular component is represented by the harmonic-space reflection operator Rn. This operator maps a dis-tribution to its mirror image under reflection about the wall tangent. If θn is the angle of the outward normal, the continuum action is 
+
+θ 7 → θspec = (2 θn + π − θ) mod 2 π. (B15) 8In the harmonic basis this map is a finite-dimensional lin-ear operator acting on the retained modes. The specular target is therefore 
+
+uspec = Rnuint . (B16) The Maxwell wall target is 
+
+ubc = p udiff + (1 − p) uspec . (B17) The ghost state used in the numerical flux is obtained by inserting Eq. (B17) into Eq. (B10) . Thus diffuse and specular scattering only modify incoming characteristics; outgoing characteristics remain those of the interior solu-tion. 
+
+B.3.2. Ohmic contact 
+
+An ohmic contact injects carriers at a prescribed elec-trochemical potential V . It is implemented with the same incoming-eigenspace projection as a wall, but with a con-tact target rather than a zero-flux diffuse target. For a fully absorbing contact, 
+
+ubc = V e0, (B18) and the boundary state is 
+
+u∗ = P+uint + P−V e0. (B19) This corresponds to an ideal reservoir that absorbs all outgoing information and reemits an isotropic distribution fixed by the applied bias. A partially absorbing contact can be represented by an absorption parameter pabs ∈
+
+[0 , 1], 
+
+ubc = pabs V e0 + (1 − pabs )Rnuint . (B20) The limit pabs = 1 gives a perfectly absorbing ohmic contact, while pabs < 1 retains a specular component at the interface. 
+
+B.3.3. Floating voltage probe and fixed-current boundaries 
+
+A floating voltage probe is an isolated metallic contact whose potential adjusts so that the net current through the contact vanishes. We implement it as an ohmic contact with an unknown voltage Vprobe . After each time step, 
+
+Vprobe is updated by solving 
+
+Z
+
+> probe
+
+ds J(x) · ˆn = 0 , (B21) using bisection. The resulting value is the open-circuit voltage measured by a high-impedance voltmeter. As for the fixed-voltage contact, only the incoming discrete characteristics are overwritten by the probe target. Adesired target current may similarly imposed by simply adjusting the right-hand-side of (B21) to nonzero values. 
+
+[1] L. D. Landau and E. M. Lifshitz, Fluid mechanics , 2nd ed., Course of theoretical physics No. 6 (Elsevier, Butterworth-Heinemann, Amsterdam Heidelberg, 2012). [2] R. N. Gurzhi, Sov. Phys. Usp. 11 , 255 (1968). [3] A. Lucas and K. C. Fong, J. Phys.: Condens. Matter 30 ,053001 (2018). [4] L. Fritz and T. Scaffidi, Annual Review of Condensed Matter Physics 15 , 17 (2024). [5] A. Hui and B. Skinner, J. Phys.: Condens. Matter 37 ,363001 (2025). [6] S. A. Hartnoll, Nat Phys 11 , 54 (2015/01//print, 2015-01). [7] A. Lucas and S. A. Hartnoll, Proceedings of the National Academy of Sciences 114 , 11344 (2017). [8] M. Qi, A. Milekhin, and L. Delacr´ etaz, “Planckian bound on the local equilibration time,” (2026), arXiv:2602.17638 [cond-mat]. [9] M. Dyakonov and M. Shur, Phys. Rev. Lett. 71 , 2465 (1993). [10] C. B. Mendl and A. Lucas, Appl. Phys. Lett. 112 , 124101 (2018). [11] J. H. Farrell, N. Grisouard, and T. Scaffidi, Phys. Rev. B 106 , 195432 (2022). [12] J. Geurs, T. A. Webb, Y. Guo, I. Keren, J. H. Farrell, J. Xu, K. Watanabe, T. Taniguchi, D. N. Basov, J. Hone, A. Lucas, A. Pasupathy, and C. R. Dean, “Supersonic flow and hydraulic jump in an electronic de Laval nozzle,” (2025), arXiv:2509.16321 [cond-mat]. [13] P. Liong, A. Melnichenka, A. Bukhtatyi, A. Bilous, and L. Levitov, “Spontaneous Running Waves and Self-Oscillatory Transport in Dirac Fluids,” (2025), arXiv:2512.16571 [cond-mat]. [14] C. W. J. Beenakker and H. van Houten (1991) pp. 1–228, arXiv:cond-mat/0412664. [15] P. Ledwith, H. Guo, A. Shytov, and L. Levitov, Phys. Rev. Lett. 123 , 116601 (2019). [16] J. Hofmann and S. Das Sarma, Phys. Rev. B 106 , 205412 (2022). [17] E. Nilsson, U. Gran, and J. Hofmann, Phys. Rev. X 15 ,041007 (2025). [18] N. W. Ashcroft and N. D. Mermin, Solid state physics 
+
+(Holt, Rinehart and Winston, New York, 1976). [19] S. M. Girvin and K. Yang, Modern condensed matter physics (Cambridge university press, Cambridge New York, 2019). [20] L. Levitov and G. Falkovich, Nature Phys 12 , 672 (2016). 9
+
+[21] D. A. Bandurin, I. Torre, R. K. Kumar, M. Ben Shalom, A. Tomadin, A. Principi, G. H. Auton, E. Khestanova, K. S. Novoselov, I. V. Grigorieva, L. A. Ponomarenko, A. K. Geim, and M. Polini, Science 351 , 1055 (2016). [22] D. A. Bandurin, A. V. Shytov, L. S. Levitov, R. K. Kumar, A. I. Berdyugin, M. Ben Shalom, I. V. Grigorieva, A. K. Geim, and G. Falkovich, Nat Commun 9, 4533 (2018). [23] H. Guo, E. Ilseven, G. Falkovich, and L. S. Levitov, Proceedings of the National Academy of Sciences 114 ,3068 (2017). [24] A. Stern, T. Scaffidi, O. Reuven, C. Kumar, J. Birkbeck, and S. Ilani, Phys. Rev. Lett. 129 , 157701 (2022). [25] C. Kumar, J. Birkbeck, J. A. Sulpizio, D. Perello, T. Taniguchi, K. Watanabe, O. Reuven, T. Scaffidi, A. Stern, A. K. Geim, and S. Ilani, Nature 609 , 276 (2022). [26] M. J. M. de Jong and L. W. Molenkamp, Phys. Rev. B 
+
+51 , 13389 (1995). [27] P. J. W. Moll, P. Kushwaha, N. Nandi, B. Schmidt, and A. P. Mackenzie, Science 351 , 1061 (2016). [28] Y. Zeng, H. Guo, O. M. Ghosh, K. Watanabe, T. Taniguchi, L. S. Levitov, and C. R. Dean, “Quantita-tive measurement of viscosity in two-dimensional electron fluids,” (2024), arXiv:2407.05026 [cond-mat]. [29] I. Moiseenko, E. M¨ onch, K. Kapralov, D. Bandurin, S. Ganichev, and D. Svintsov, Phys. Rev. Lett. 134 ,226902 (2025). [30] J. A. Sulpizio, L. Ella, A. Rozen, J. Birkbeck, D. J. Perello, D. Dutta, M. Ben-Shalom, T. Taniguchi, K. Watanabe, T. Holder, R. Queiroz, A. Principi, A. Stern, T. Scaffidi, A. K. Geim, and S. Ilani, Nature 576 , 75 (2019). [31] C. Zhang, E. Redekop, H. Stoyanov, J. H. Farrell, S. Kim, L. Holleis, D. Gong, A. Keough, Y. Choi, T. Taniguchi, K. Watanabe, M. E. Huber, A. C. B. Jayich, A. Lu-cas, and A. F. Young, “Imaging flat band electron hydrodynamics in biased bilayer graphene,” (2026), arXiv:2603.11175 [cond-mat]. [32] A. Aharon-Steinberg, T. V¨ olkl, A. Kaplan, A. K. Pariari, I. Roy, T. Holder, Y. Wolf, A. Y. Meltzer, Y. Myasoe-dov, M. E. Huber, B. Yan, G. Falkovich, L. S. Levitov, M. H¨ ucker, and E. Zeldov, Nature 607 , 74 (2022). [33] J. H. Farrell, “FermiSea.jl,” (2026). [34] L. Holleis, Y. Choi, C. Zhang, J. H. Farrell, G. Bargas, A. Hsu, Z. Chen, I. Sackin, W. Zhou, Y. Guo, T. Char-pentier, Y. Jiang, B. A. Foutty, A. Keough, M. E. Hu-ber, T. Taniguchi, K. Watanabe, A. Lucas, and A. F. Young, “Cryogenic shock exfoliation for ultrahigh mo-bility rhombohedral graphite nanoelectronics,” (2026), arXiv:2604.21912 [cond-mat]. [35] N. Ben-Shachar and J. Hofmann, “Magnetotransport of tomographic electrons in a channel,” (2025), arXiv:2503.14431 [cond-mat]. [36] J. Hofmann and U. Gran, Phys. Rev. B 108 , L121401 (2023). [37] D. Thuillier, S. Ghosh, B. J. Ramshaw, and T. Scaffidi, Phys. Rev. Lett. 135 , 146302 (2025). [38] D. Thuillier and T. Scaffidi, “AC Fingerprints of 2D Elec-tron Hydrodynamics: Superdiffusion and Drude Weight Suppression,” (2026), arXiv:2603.15737 [cond-mat]. [39] M. Lee, J. R. Wallbank, P. Gallagher, K. Watanabe, T. Taniguchi, V. I. Fal’ko, and D. Goldhaber-Gordon, Science 353 , 1526 (2016). [40] M. D. Bachmann, A. L. Sharpe, A. W. Barnard, C. Putzke, M. K¨ onig, S. Khim, D. Goldhaber-Gordon, A. P. Macken-zie, and P. J. W. Moll, Nat Commun 10 , 5081 (2019). [41] P. H. McGuinness, E. Zhakina, M. K¨ onig, M. D. Bach-mann, C. Putzke, P. J. W. Moll, S. Khim, and A. P. Mackenzie, Proceedings of the National Academy of Sci-ences 118 , e2113185118 (2021). [42] M. Moravec, G. Baker, M. D. Bachmann, A. Sharpe, N. Nandi, A. W. Barnard, C. Putzke, S. Khim, M. K¨ onig, D. Goldhaber-Gordon, P. J. W. Moll, and A. P. Macken-zie, “Directional ballistic magnetotransport in the de-lafossite metals PdCoO $ 2$ and PtCoO $ 2$,” (2026), arXiv:2503.21858 [cond-mat]. [43] L. Saminadayar, D. C. Glattli, Y. Jin, and B. Etienne, Phys. Rev. Lett. 79 , 2526 (1997). [44] S. Datta, Electronic transport in mesoscopic systems , 1st ed., Cambridge studies in semiconductor physics and mi-croelectronic engineering No. 3 (Cambridge Univ. Press, Cambridge, 2009). [45] A. K. Geim and I. V. Grigorieva, Nature 499 , 419 (2013). [46] G. Binnig, H. Rohrer, Ch. Gerber, and E. Weibel, Phys. Rev. Lett. 49 , 57 (1982). [47] N. Ben-Shachar and J. Hofmann, “Tomographic electron flow in confined geometries: Beyond the dual-relaxation time approximation,” (2025), arXiv:2503.14461 [cond-mat]. [48] T. Oka, S. Tajima, R. Ebisuoka, T. Hirahara, K. Watan-abe, T. Taniguchi, and R. Yagi, Phys. Rev. B 99 , 035440 (2019). [49] J. Coulter, R. Sundararaman, and P. Narang, Phys. Rev. B 98 , 115130 (2018). [50] C. Q. Cook and A. Lucas, Phys. Rev. Lett. 127 , 176603 (2021). [51] R. J. LeVeque, Finite volume methods for hyperbolic prob-lems , Cambridge texts in applied mathematics (Cam-bridge University Press, Cambridge ; New York, 2002). [52] M. Schlottke-Lakemper, G. J. Gassner, H. Ranocha, A. R. Winters, J. Chan, and A. Rueda-Ram´ ırez, “Trixi.jl: Adap-tive high-order numerical simulations of hyperbolic PDEs in Julia,” (2025). [53] M. Schlottke-Lakemper, A. R. Winters, H. Ranocha, and G. J. Gassner, Journal of Computational Physics 442 ,110467 (2021). [54] H. Ranocha, M. Schlottke-Lakemper, A. R. Winters, E. Faulhaber, J. Chan, and G. J. Gassner, JCON 1,77 (2022), arXiv:2108.06476 [cs].

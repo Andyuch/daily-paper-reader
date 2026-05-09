@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.03316v1/fig-001.webp",
+      "caption": "FIG. 4. Observed PL energy shift as a function of the pump wavelength and the corresponding cavity temperature calculated from Eq. (1) (blue circles), together with the estimated bandgap energy change (red lines) based on Varshni’s empirical law (Eq. (2)). The two slopes show good agreement, indicating that the observed PL redshift originates from photothermal heating of the monolayer induced by cavity-enhanced light absorption. Results for WSe2 (a) and WS2 (b), respectively.",
+      "page": 6,
+      "index": 1,
+      "width": 1044,
+      "height": 432
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03316v1/fig-002.webp",
+      "caption": "FIG. 5. (a) PL spectroscopy setup combining free-space PL collection with cavity-coupled PL collection through a fiber waveguide. No 1550 nm continuous-wave (CW) excitation is applied in this configuration. The PL lifetime is evaluated using a time-correlated single-photon counting (TCSPC) system. SPAD, single-photon avalanche diode.(b) Overview of the PL spectra of monolayer WSe2 acquired directly in free space (blue) and via the fiber waveguide (red). A pronounced spectral redshift is observed in the fiber-coupled spectrum. (c) Corresponding PL spectra measured with higher wavelength resolution (∼ 0.1 nm). The free-space PL spectrum is fitted with two Gaussian components, attributed to the neutral exciton X0 and the charged exciton XT. (d) Time-resolved PL intensity of the cavity-coupled emission extracted through the tapered fiber (red) and the free-space radiative PL emission (blue). The black lines represent biexponential fits.",
+      "page": 7,
+      "index": 2,
+      "width": 1025,
+      "height": 744
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03316v1/fig-003.webp",
+      "caption": "FIG. 1. (a) Conceptual illustration of a TMDC-integrated ultrahigh-Q silica microsphere. (b) Optical micrograph of a silica microsphere decorated with a WSe2 monolayer. (c) Typical transmission spectrum of the microcavity after deposition of the WSe2 monolayer, yielding a Q factor of ∼ 6× 106. (d) Finite-element simulation of heat diffusion in a silica microsphere with a diameter of 50 µm. The inset shows the optical mode profile. An optical input power of 10 mW is assumed in the thermal simulation. (e) Simulated normalized electric field amplitude of the optical mode and the corresponding temperature profile. (f) Simulated temporal response of the cavity-mode temperature induced by a localized heat source. The inset shows the thermal relaxation time as a function of the cavity diameter.",
+      "page": 3,
+      "index": 3,
+      "width": 1054,
+      "height": 649
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03316v1/fig-004.webp",
+      "caption": "FIG. 2. (a) Photoluminescence (PL) measurement setup under microcavity excitation using a 1550 nm CW laser. FPC, fiber polarization controller; PD, photodetector; OSC, oscilloscope; MMF, multimode fiber; CCD, charge-coupled device. (b) Schematic illustration of the thermal self-stabilization regime during continuous laser wavelength scanning. The laser wavelength is swept from shorter to longer wavelengths to exploit the thermally induced redshift of the cavity resonance. As the laser wavelength approaches the resonance, enhanced coupling increases the intracavity heating and reduces the cavity transmission. When the system exits the thermally self-stabilized regime, the transmission and intracavity power rapidly return to their initial values.",
+      "page": 4,
+      "index": 4,
+      "width": 1042,
+      "height": 464
+    },
+    {
+      "url": "assets/figures/arxiv/2605.03316v1/fig-005.webp",
+      "caption": "FIG. 3. (a) Normalized PL spectra of microcavity-integrated monolayer WSe2 under thermal self-stabilization tuning. The pump wavelength is swept by ∼0.88 Å from the blue- to red-detuned side. (b) PL spectra of WSe2 at the initial (blue) and final (orange) stages of the self-stabilization process, respectively. The observed redshift is ∼3.0 meV. (c) Exciton peak energy extracted from the PL spectra. (d) Normalized cavity transmittance during the cavity pump wavelength sweep. (e) Normalized integrated intensity of the exciton emission. (f) Fitted linewidth of the exciton emission.",
+      "page": 5,
+      "index": 5,
+      "width": 1056,
+      "height": 980
+    }
+  ]
+}

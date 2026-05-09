@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.04883v1/fig-001.webp",
+      "caption": "Fig. 3 Near-field images acquired across a sharp domain boundary in ZrTe5 at 60 K under varying magnetic fields. a, AFM topography of the sample surface. b, Horizontal Sobel gradient of the AFM image highlighting two flat plateaus separated by sloped regions that converge at a sharp domain boundary. c, 3D representation of AFM topography. Red dashed lines indicate regions of interest and mark the height variations of key surface features. d–g, SNOM images acquired at 10.652 µm (∼ 116 meV) under magnetic fields of 0 T, 2 T, 3 T, and 4 T, respectively. h–k, Line profiles of AFM topography (black) and SNOM signal (red) corresponding to 0 T, 2 T, 3 T, and 4 T, respectively, taken along the black dashed line indicated in d.",
+      "page": 6,
+      "index": 1,
+      "width": 777,
+      "height": 389
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04883v1/fig-002.webp",
+      "caption": "Fig. 5 Theoretical understanding of the band structure of ZrTe5 in the context of a quantum spin Hall insulator for different edge terminations and layer numbers. a, Illustration of a single step edge for 1 layer. b, Band-structure calculations for monolayer ZrTe5 with different edge terminations: telluride-terminated T-Te2 zigzag (left) and zirconium-terminated T-ZrTe3 (right). c, Illustration of a single step edge for 2 layers. d, Band-structure calculations for bilayer ZrTe5 with different edge terminations: telluride-terminated T-Te2 zigzag (left) and zirconiumterminated T-ZrTe3 (right).",
+      "page": 10,
+      "index": 2,
+      "width": 777,
+      "height": 448
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04883v1/fig-003.webp",
+      "caption": "Fig. 4 Magnetic-field and layer-number dependence of near-field edge mode signals in ZrTe5 and reference gold films. a, Near-field signals on the right (red) and left (blue) sides of the boundary, plotted as the maximum deviation from the local mean, are consistent with previously reported STM spin splitting measurements [6]. b, AFM topography; c, s3 sSNOM measurements acquired at 0 T and 3 T on a 160 nm gold film deposited over ZrTe5 for comparison. d, s3 sSNOM line scans at 3 T and 4 T, shown alongside the AFM topography line scan (black dashed line) across two step edges. Inset, 3D rendering of the AFM topography illustrating the measured region.Note that red dashed lines indicate step heights of 11 and 5 layers and highlight the height variations of key surface features.",
+      "page": 8,
+      "index": 3,
+      "width": 762,
+      "height": 602
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04883v1/fig-004.webp",
+      "caption": "Fig. 1 Cryogenic magnetic infrared nano-imaging of spin-polarized edge states at crystal strip domains in ZrTe5. a, Representative schematic of an atomic force microscope (AFM) probe scattering infrared near-field signals above a ZrTe5 sample, operated at 1.8 K and up to 5 T. When a finite magnetic field is applied, the spin degeneracy of the edge Dirac bands is lifted, resulting in a small magnetic gap and a spin imbalance at the Fermi energy, EF, as illustrated in the right panel. b, A magnetic field (blue arrow) is applied perpendicular to the ZrTe5 sample surface along the crystallographic b-axis, shown here for a single step edge. c, Schematics of step edges formed by stacking a few single layers. d, Schematics of domain walls arising from stacking variations or bending of layers meeting at a sharp boundary. Under laser driving, QSHE spin-splitting characteristics manifest as the conducting channels carrying net current J that strongly depend on edge geometry. Step edges (c) exhibit a uniform net current direction, whereas domain walls (d) support opposite net currents on either side of the boundary. e-g, Illustration of the real-space distribution of spinpolarized, counter-propagating edge modes at magnetic fields B = 0 (e), an intermediate field (f), and a high field (g)–highlighting the evolution of edge-state configurations with increasing magnetic field strength. As the field increases, the spin-up helical edge state (orange solid line) becomes increasingly confined to the step-edge boundary, while the spin-down counterpart (red dashed line) progressively spreads toward the inner bulk region [6].",
+      "page": 4,
+      "index": 4,
+      "width": 777,
+      "height": 540
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04883v1/fig-005.webp",
+      "caption": "Fig. 2 Magnetic brightening revealed by near-field signals acquired at 1.8 K under varying magnetic fields in a representative layered region of ZrTe5 a, AFM topography featuring two step edges and b, horizontal Sobel gradient of the AFM image showing sharp sloped boundaries. c-e, cm-IR-sSNOM images taken at 10.652 µm (∼116 meV) for 0 T, 3 T, and 4 T respectively. f-h, cm-IR-sSNOM images taken at 11.262 µm (∼106 meV) for 0 T, 3 T and 4 T respectively. i-k, Line cuts of AFM topography (black) and SNOM images at 10.652 µm (red) and 11.262 µm (blue) across the two step edges with heights of 5 nm and 9 nm for 0 T, 3 T and 4 T, respectively, at the gray dashed line shown in c.",
+      "page": 5,
+      "index": 5,
+      "width": 775,
+      "height": 593
+    }
+  ]
+}

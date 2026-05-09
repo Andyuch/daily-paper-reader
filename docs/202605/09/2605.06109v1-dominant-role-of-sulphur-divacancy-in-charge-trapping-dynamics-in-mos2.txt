@@ -1,0 +1,265 @@
+Title: Dominant Role of Sulphur divacancy in Charge Trapping Dynamics in MoS_2
+
+URL Source: https://arxiv.org/pdf/2605.06109v1
+
+Published Time: Fri, 08 May 2026 01:23:28 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+# Dominant Role of Sulphur divacancy in Charge Trapping Dynamics in MoS 2
+
+Srest Somay, 1 Sitangshu Bhattacharya, 2 and Krishna Balasubramanian 1, ∗
+
+> 1
+
+Department of Material Science and Engineering, Indian Institute of Technology Delhi, New Delhi, 110016, India 
+
+> 2
+
+Electronic Structure Theory Group, Department of Electronics and Communication Engineering, Indian Institute of Information Technology Allahabad, Uttar Pradesh 211015, India 
+
+Intrinsic defects govern carrier trapping and recombination in two-dimensional semiconductors, yet the mi-croscopic origin of defect-dependent capture dynamics remains unclear. Here, we compute carrier capture coe ffi cients of vacancy defects, treating monolayer MoS 2 as a prototype, from first principles. We find that the single Sulphur vacancy forms a shallow defect with a small capture coe ffi cient of ∼ 10 −16 cm 3/s, whereas the Sulphur divacancy exhibits a capture coe ffi cient larger by seven orders of magnitude, ∼ 10 −9 cm 3/s, despite being only moderately deeper in energy. This enhancement originates from strong lattice relaxation enabling effi cient multiphonon capture. Consequently, single vacancies contribute weakly to trapping, while Sulphur di-vacancies dominate nonradiative recombination and reduce quantum yield. In contrast, molybdenum vacancies and Sulphur antisites, although deep, show much smaller capture coe ffi cients, indicating a limited role in carrier trapping in n-type devices. 
+
+I. INTRODUCTION 
+
+Two-dimensional transition metal dichalcogenides (TMDs) have emerged as promising channel materials for next-generation electronic devices owing to their atomically thin geometry and excellent electrostatic control. However, their practical deployment is often limited by intrinsic defects, which strongly influence carrier dynamics [1–5]. A key man-ifestation is the pronounced hysteresis observed in the trans-fer characteristics of TMD field-e ff ect transistors under cyclic gate-voltage sweeps [6–9]. This behavior is widely attributed to carrier trapping and de-trapping at localized defect states. Crucially, only defects with trapping timescales comparable to the gate sweep rate can contribute to this e ff ect. Identify-ing such defects, and thereby establishing the microscopic ori-gin of hysteresis, remains an open and actively debated prob-lem [7, 10, 11]. Several classes of traps can contribute to charge trapping in two-dimensional transistors, including intrinsic lattice defects (e.g., vacancies and grain boundaries), interface states at the dielectric /semiconductor boundary, and traps within the gate oxide. Recent theoretical studies based on the nonradiative multiphonon (NMP) framework suggest that oxide traps may dominate hysteresis, as their relaxation energies and defect level positions yield trapping timescales comparable to typ-ical experimental sweep rates [7, 8]. In contrast, intrinsic lattice defects are generally predicted to capture carriers on much shorter timescales, resulting in an essentially adiabatic response during gate-voltage sweeps[8, 10]. This discrepancy is particularly evident in molybdenum based TMD, such as MoS 2. Pronounced hysteresis has been observed even in suspended MoS 2 devices, where oxide traps are absent, pointing to an incomplete understanding of the role of intrinsic defects [7, 11]. Experimental stud-ies further highlight this complexity. Deep-level transient spectroscopy (DLTS) measurements have identified multiple Sulphur-related trap levels within the band gap, exhibiting  
+
+> ∗All correspondence should be addressed to Dr. Krishna Balasubramanian, bkrishna@mse.iitd.ac.in
+
+widely varying capture coe ffi cients [10, 12, 13]. However, establishing a direct correspondence between these measured trap signatures and specific atomic-scale defect configurations remains challenging [10, 12]. This lack of microscopic as-signment underscores the need for predictive, first-principles calculations of defect-specific capture coe ffi cients. First-principles implementations of the nonradiative multi-phonon (NMP) framework have achieved quantitative accu-racy in predicting carrier capture coe ffi cients in conventional three-dimensional semiconductors [14–16]. Recent exten-sions to two-dimensional systems indicate that the formal-ism remains robust even in reduced dimensionality. For in-stance, calculations for monolayer hexagonal boron nitride predict exceptionally long nonradiative lifetimes ( > 1 ms) for vacancy-related transitions, consistent with their high ra-diative e ffi ciency and experimentally observed single-photon emission [17–19]. However, a quantitative, defect-resolved understanding of carrier capture in TMDs is still lacking. We provide a comprehensive first-principles analysis of elec-tron capture by intrinsic vacancy defects in monolayer MoS 2
+
+within the NMP framework. Focusing on the dominant de-fects in chemical vapor deposition-grown samples—Sulphur monovacancy, Sulphur divacancy, molybdenum vacancy, and Sulphur antisite—we identify a striking hierarchy in capture behavior. While both the monovacancy and divacancy in-troduce shallow levels near the conduction band minimum, their capture coe ffi cients di ff er by seven orders of magnitude: 
+
+∼ 10 −16 and ∼ 10 −9 cm 3s−1, respectively. We demonstrate that this disparity cannot be explained by defect energetics alone. Instead, it originates from the magnitude of lattice re-laxation, which controls the phonon overlap and thus the e ffi -ciency of multiphonon capture. The divacancy, despite being only slightly deeper, undergoes substantially larger structural distortion, leading to enhanced electron–phonon coupling and effi cient carrier trapping. In contrast, the monovacancy ex-hibits weak lattice relaxation and correspondingly suppressed capture. Molybdenum vacancies and Sulphur antisites, al-though deep, are found to be ine ff ective traps due to large capture barriers. 
+
+> arXiv:2605.06109v1 [cond-mat.str-el] 7 May 2026
+
+2
+
+FIG. 1: Atomic structure of (a) Pristine MoS 2 (b) MoS 2 with neutral Sulphur monovacancy (c) Charged Sulphur monovacancy. (d) Neutral Sulphur divacancy (e) Charged Sulphur divacancy (f) Neutral Molybdenum vacancy (g) Charged Molybdenum vacancy. (h) lattice distortion associated with various intrinsic defects.  
+
+> II. COMPUTATIONAL METHODS
+
+All first-principles calculations were performed using the Vienna Ab initio Simulation Package [20]. A hexago-nal monolayer MoS 2 unit cell with lattice parameters a =
+
+b = 3.15 Å was constructed based on previous stud-ies [13, 21–23]. A vacuum spacing of 20 Å was intro-duced along the out-of-plane direction to eliminate interac-tions between periodic images. Vacancy defects were mod-eled using a 5 × 5 supercell. Structural relaxations were performed using the Perdew–Burke–Ernzerhof (PBE) ex-change–correlation functional, as they are noted accurately predict the defect structure [21, 22, 24]. Atomic positions were optimized until the total energy converged below 10 −9
+
+eV using a 2 × 2 × 1 Monkhorst–Pack k-point grid. Subse-quent electronic structure calculations were carried out using the Heyd–Scuseria–Ernzerhof (HSE) hybrid functional with the same k-point sampling. The fraction of exact exchange was set to 0.30, yielding a band gap of ∼ 2.2 eV for monolayer MoS 2. Charge transition levels of the defects were evaluated from total energies obtained within the HSE functional. Con-figuration coordinate diagrams were constructed by fitting de-fect formation energies along the structural distortion pathway within the harmonic approximation. Electron–phonon cou-pling relevant to carrier capture was computed at the K-valley by evaluating the derivative of the overlap between the con-duction band minimum and defect states along the configura-tion coordinate. Phonon wavefunction overlaps and capture coe ffi cients were calculated within the harmonic approxima-tion using the Nonrad framework [16].  
+
+> III. RESULTS AND DISCUSSIONS
+
+Figure 1(a) shows the optimized structure of pristine mono-layer MoS 2, which exhibits D3h symmetry. The equilibrium in-plane Mo–Mo distance is 3.15 Å, and the Mo–S bond length is 2.40 Å. The introduction of a neutral Sulphur va-cancy ( V0 
+
+> S
+
+) leads to a local inward relaxation of the neighbor-ing atoms, as shown in Fig. 1(b). This reconstruction reduces the in-plane Mo–Mo distance by 7.96% and the Mo–S bond length by 1.21%, while preserving the local C3 symmetry, consistent with previous reports [21, 22, 25]. Upon electron capture, the defect transitions to the negatively charged state (V−1 
+
+> S
+
+), shown in Fig. 1(c). The additional structural relaxation is minimal: both the Mo–Mo and Mo–S bond lengths change only weakly relative to the neutral configuration. This indi-cates a small lattice response to charge capture for the Sulphur monovacancy. To quantify the structural distortion associated with carrier capture, we map the atomic displacements onto a one-dimensional configuration coordinate defined in terms of the mass-weighted displacement [14] 
+
+∆Q2 =
+
+X
+
+> α, t
+
+mα
+
+Ri:αt − R f :αt
+
+2
+
+(1) Here, m α is the atomic mass, R i:αt and R f :αt are the atomic coordinates of initial and final position. The structural re-sponse to carrier capture is quantified by the mass-weighted 3
+
+FIG. 2: Formation energy of neutral and charged Sulphur monovacancy, Sulphur divacancy, Molybdenum vacancy and Sulphur antisite using (a) HSE functional (b) PBE functional, (c) Charge transition level of various point defects showing that the Vs is closest to the conduction band and VMo is farthest. displacement ∆Q, which measures the lattice distortion be-tween the neutral and charged defect configurations. For the Sulphur monovacancy, we obtain a small distortion of 
+
+∆Q = 0.48 amu 1/2Å, consistent with the weak structural re-laxation discussed above. Such small displacements are also observed in other 2D semiconductors [17, 26, 27]. In addi-tion to the monovacancy, other intrinsic defects commonly observed in large-area grown MoS 2 include the Sulphur diva-cancy, Sulphur antisite, and molybdenum vacancy [4, 5, 28]. A Sulphur divacancy ( VS 2 ) exhibits a substantially larger structural distortion compared to the monovacancy. In the neutral configuration, the defect undergoes significant bond contraction while preserving the local C3 symmetry, indicat-ing strong lattice strain. Upon electron capture, forming V−1 
+
+> S2
+
+(Fig. 1(e)), this symmetry is broken. The neighboring Mo atoms form an isosceles triangle, with two Mo–Mo distances of 2.89 Å and one shortened bond of 2.70 Å. This symmetry breaking arises from a Jahn–Teller distortion, driven by the lifting of degeneracy in the Mo d-orbitals [21, 22, 25]. The associated lattice distortion is ∆Q = 1.68 amu 1/2Å, nearly four times larger than that of the Sulphur monovacancy. For comparison, the molybdenum vacancy ( VMo ) leads to an out-ward relaxation of neighboring atoms due to the absence of the central atom. The charged configuration exhibits an asym-metric distortion, also consistent with a Jahn–Teller e ff ect, with ∆Q = 1.04 amu 1/2Å (Figs. 1(f and g)). Similarly, the Sulphur antisite ( S Mo ) shows a relatively small distortion, 
+
+∆Q = 0.58 amu 1/2Å (see Supplementary Information, SI [29] for more details). A comparison of all defects (Fig. 1(h)) re-veals that the divacancy exhibits the largest lattice distortion, whereas the monovacancy and antisite show comparatively weak structural responses. This hierarchy of ∆Q directly re-flects the strength of electron–phonon coupling and, as shown below, governs the corresponding carrier capture e ffi ciencies. To explore the charge trapping dynamics at the defect’s sites in the monolayer, the formation energy of charged defect is an important parameter. The general formation energy of a defect ( E0 
+
+> f
+
+) in the lattice is [21, 30] 
+
+E0 
+
+> f
+
+= E0 
+
+> tot
+
+− Epristine tot −
+
+X
+
+> i
+
+niμi (2) where, E0 
+
+> f
+
+is the formation energy of defect in neutral state, 
+
+E0 
+
+> tot
+
+is the total energy of structure with defect in neutral state. 
+
+Epristine tot is the total energy of pristine structure, μi is the chem-ical potential of the atom removed with ni being its quantity. This energy level is represented with a dashed line in Fig. 2(a). The charge state of a defect is governed by the position of the Fermi level, with electron capture occurring when the defect level becomes occupied. To analyze the stability of di ff erent charge states, we compute defect formation energies as a func-tion of the Fermi level and construct charge transition level diagrams. In particular, we evaluate the formation energies of the defects in their negative charge states 
+
+Eqf = Eqtot − Epristine tot −
+
+X
+
+> i
+
+niμi
+
+ − q EV + EF + ∆ V0/p
+
+ (3) to determine the thermodynamic charge transition levels be-tween di ff erent configurations [21, 22]. The last term in Eqn. (3) represents the electron chemical potential, where q is the defect charge state, EV denotes the valence band maximum, and EF is the Fermi level, treated here as a free parame-ter. The term ∆V0/p corresponds to the electrostatic poten-tial alignment correction, obtained from the di ff erence in the average electrostatic potential between the defective and pris-tine systems. The resulting formation energies are shown as solid lines in Fig. 2(a), with each charge state represented by the same color as its corresponding neutral defect. The defect formation energies are evaluated under Sulphur-poor condi-tions, with the Sulphur chemical potential obtained from the 4stability condition of MoS 2 [21, 22]. 
+
+μs = (μMos 2 − μMo (bcc ))/2 (4) Figure 2(a) shows the charge transition level (CTL) dia-gram for the considered defects, computed using the HSE functional. For the Sulphur monovacancy ( VS ), the neutral formation energy is 1.47 eV, in good agreement with pre-vious theoretical reports [21, 22]. As expected, the forma-tion energy of the neutral defect is independent of the Fermi level, whereas charged states exhibit a linear dependence with slope determined by the defect charge. The crossing point between di ff erent charge states defines the CTL. For VS , the 
+
+ε−1/0 transition level is located at 1.94 eV above the valence band maximum (0.26 eV below the conduction band mini-mum), indicating a shallow defect level. This is consistent with both experimental observations and earlier theoretical studies [10, 13, 21, 22, 31]. In contrast, the Sulphur diva-cancy ( VS 2 ) exhibits a significantly higher neutral formation energy of 2.90 eV, approximately twice that of the mono-vacancy. The charge transition level of the Sulphur diva-cancy ( VS 2 ) lies 0.40 eV below the conduction band mini-mum (CBM), slightly deeper than that of the monovacancy. In contrast, the molybdenum vacancy ( VMo ) and Sulphur anti-site ( S Mo ) exhibit much higher formation energies of 8.68 eV and 9.62 eV, respectively, indicating that these defects are less likely to form under Sulphur-poor growth conditions. Nev-ertheless, they are frequently observed experimentally, likely due to high-temperature growth processes. Their charge tran-sition levels are located deep within the band gap, at 1.38 eV and 1.11 eV below the CBM for VMo and S Mo , respectively. Notably, the calculated transition levels for VS and VS 2 are in close agreement with experimentally observed DLTS sig-nals [10, 12, 31], supporting the reliability of our approach. As summarized in Fig. 2(c), both VS and VS 2 introduce defect levels near the CBM, whereas VMo and S Mo lie closer to the valence band maximum (VBM). Accurate determination of charge transition levels requires a reliable description of the band gap, which can be well cap-tured by the HSE functional[21, 22]. However, due to its com-putational e ffi ciency, we also evaluate CTLs using the PBE functional, as shown in Fig. 2(b). For the Sulphur monova-cancy ( VS ) and divacancy ( VS 2 ), the CTLs are located 0.29 eV and 0.46 eV below the conduction band minimum (CBM), respectively, di ff ering by only ∼30–60 meV from the HSE re-sults. For the molybdenum vacancy ( VMo ) and Sulphur anti-site ( S Mo ), the CTLs are slightly deeper, with deviations of 
+
+∼100 meV compared to HSE, and are found at 1.24 eV and 1.05 eV below the CBM. Overall, the CTLs obtained from PBE and HSE are in close agreement for all defects, indicating that the relative defect level positions are robust with respect to the choice of exchange–correlation functional. While CTLs are independent of absolute formation energies, we addition-ally evaluate formation energies under Sulphur-rich condi-tions, with results provided in the SI [29]. To evaluate the carrier capture coe ffi cient, the process is de-scribed within the potential energy surface (PES) formal-ism. Figure 3(a) illustrates a schematic configuration co-ordinate diagram. The initial state corresponds to a neutral defect with an electron in the conduction band and equilib-rium atomic configuration Qi, represented by the blue curve. Upon electron capture, the system transitions to a charged de-fect state with equilibrium configuration Q f , shown by the red curve, which is lower in energy by ∆E (corresponding to the charge transition level). The transition from Qi to Q f in-volves a change in both electronic and atomic configurations and can be viewed as motion along the configuration coor-dinate connecting the two minima. The capture process is governed by the overlap between the initial and final states and is strongly influenced by the activation barrier Enb , with the transition probability decreasing exponentially with in-creasing barrier height [14]. To make the problem tractable, the multidimensional atomic displacement is projected onto a one-dimensional configuration coordinate Q. The total energy is then evaluated along this coordinate using first-principles calculations and fitted within the harmonic approximation, 
+
+E = 12 ω2 Q2, yielding the one-dimensional configuration co-ordinate (1DCC) diagram shown in Fig. 3(b) [14, 32], where 
+
+ω denotes the e ff ective phonon frequency. We first examine the one-dimensional configuration coordi-nate (1DCC) diagram for the Sulphur divacancy, shown in Fig. 3(b). The initial state corresponds to a neutral defect (VS 2 ) with an electron in the conduction band and a hole in the valence band, represented by the minimum of the blue curve at equilibrium coordinate Qi. Upon electron capture, the system transitions to the negatively charged state ( V−1  
+
+> S2
+
+)with equilibrium configuration Q f , shown by the red curve. This process is accompanied by a substantial lattice distortion of ∆Q = 1.68 amu 1/2Å. The reverse process, corresponding to hole capture and recombination, is represented by the black curve; however, in this work we focus on the electron capture transition from VS 2 + e− + h to V−1  
+
+> S2
+
++ h. The capture process is governed by the classical barrier, defined as the energy di ff er-ence between the minimum of the initial state and the cross-ing point of the two potential energy surfaces, as indicated in Fig. 3(b). This barrier depends sensitively on both the lattice distortion and the curvature of the potential energy surfaces. Within the harmonic approximation, the classical capture bar-rier can be estimated from the crossover point from [16, 32] 
+
+Enb = ω2
+
+2
+
+∆E
+
+ω2∆Q − ∆Q
+
+2
+
+!2
+
+(5) where, ∆E is the position of defect from the conduction band edge i.e. CTL, ∆Q is the lattice distortion post charge cap-ture and ω is e ff ective frequency of vibration. We note a small barrier Enb = 0.23 eV for the case of VS 2 . For comparison, the prominent C N defect in GaN has a barrier Enb = 0.73 eV for hole capture [14]. Figure 3(c) shows the configuration coordinate diagram for electron capture at the Sulphur monovacancy. The curva-tures of the neutral and charged states are similar, resulting in nearly non-intersecting parabolas. This indicates weak electron–phonon coupling and a tunneling-dominated capture process [32]. For the molybdenum vacancy ( VMo ), although the lattice distortion ( ∆Q = 1.04 amu 1/2Å) is comparable to that of the divacancy, the deeper defect level leads to a large separation between the potential energy surfaces, resulting in 5
+
+FIG. 3: (a) Schematic coordinate configuration diagram representing potential energy landscape for electron capture. Coordinate configuration diagram representing electron capture at (b) Sulphur divacancy (c) Sulphur monovacancy (c) Molybdenum vacancy (d) Sulphur antisite. a high capture barrier of Enb = 8.40 eV, as shown in Fig. 3(d). In contrast, the Sulphur antisite ( S Mo ), which combines a deep defect level with a relatively small lattice distortion (∆Q = 0.58 amu 1/2Å), exhibits non-intersecting parabolas (see the SI [29]), indicating tunneling dominated carrier cap-ture. Considering full quantum mechanical treatment, we calculate the electron capture coe ffi cient [14, 16] 
+
+C = 4π2
+
+h gVW i f 2 X
+
+> m
+
+(
+
+wm
+
+X
+
+> n
+
+
+
+Xim bQ − Qo X f n 
+
+ 2
+
+× δ ∆E + mℏωi − nℏω f
+
+ )
+
+(6) where Wi f is the electron–phonon coupling matrix element, DXim ˆQ − Q0 X f n 
+
+E denotes the phonon overlap matrix ele-ment [14], and ∆E is the charge transition level. The quan-tities ℏωi and ℏω f represent the phonon energies of the initial and final states within the harmonic approximation. Here, g
+
+is the degeneracy factor, V is the supercell volume, and wm
+
+denotes the thermal occupation of the vibrational state. The coupling matrix element is evaluated within the linear cou-pling approximation [14, 16]. 
+
+Wi f =
+
+*
+
+Ψi| ∂bh
+
+∂Q Ψ f
+
++
+
+= (ε f − εi)
+
+*
+
+Ψi(0) | ∂Ψ f (Q)
+
+∂Q
+
++
+
+(7) The electron–phonon coupling matrix element Wi f is found to be of the order of ∼ 10 −2 eV , amu −1/2Å−1 for the Sul-phur monovacancy ( VS ) and divacancy ( VS 2 ), whereas for the molybdenum vacancy ( VMo ) and Sulphur antisite ( S Mo )it is approximately one order of magnitude smaller, ∼
+
+10 −3 eV , amu −1/2Å−1. Using the harmonic approximation for 6TABLE I: Defect properties and capture coe ffi cients                                                                          
+
+> Defects ∆E∆QEnbℏωfWi f S⟨Xim |ˆQ−Q0|Xf n ⟩CC (eV) (amu 1/2Å) (eV) (meV) (eV amu −1/2Å−1)(cm 3/s) Sulphur monoacancy ( VS)0.26 0.48 1.68 20 1.1×10 −20.5 1.1×10 −14 7.9×10 −16
+> Sulphur divacancy ( VS2)0.40 1.68 0.23 19 3.3×10 −279.9×10 −63.5×10 −9
+> 3.6×10 −13 [12] 1.1×10 −11 [31] Sulphur antisite ( SMo )1.11 0.55 5.64 35 1.2×10 −31.3 –1.7×10 −32
+> Molybdenum vacancy ( VMo ) 1.38 1.04 8.40 21 7.1×10 −33–4.3×10 −41
+
+FIG. 4: Capture coe ffi cient of various intrinsic defects of monolayer MoS 2 showing sulphur vacancies as the electron trapper while molybdenum vacancy and sulphur antisite have small capture coe ffi cient. Among all sulphur divacancy has the highest capture coe ffi cient. phonon overlaps, the resulting electron capture coe ffi cients are shown in Fig. 4. The deep defects VMo and S Mo exhibit extremely small cap-ture coe ffi cients of 4 .3 × 10 −41 cm 3s−1 and 1 .7 × 10 −32 cm 3s−1,respectively, at 300 K, consistent with their large capture bar-riers. In contrast, the Sulphur vacancies show markedly dif-ferent behavior. The monovacancy ( VS ) exhibits a capture co-effi cient of 7 .87 × 10 −16 cm 3s−1 at 300 K. Remarkably, the divacancy ( VS 2 ), despite having a slightly deeper defect level, exhibits a capture coe ffi cient of 3 .46 × 10 −9 cm 3s−1, seven orders of magnitude larger. This striking di ff erence demon-strates that carrier capture is not determined solely by the de-fect level position relative to the band edges, but is strongly governed by the associated lattice relaxation. The calculated capture coe ffi cient for VS 2 is in close agreement with exper-imentally reported values, as summarized in Table I, which lists the key defect parameters and corresponding capture co-effi cients at 300 K. We infer that the molybdenum vacancy ( VMo ) and Sulphur an-tisite ( S Mo ) exhibit extremely small capture coe ffi cients. This behavior originates from their deep defect levels, which lead to large capture barriers that are inaccessible within the avail-able thermal phonon population. In contrast, both the Sul-phur monovacancy ( VS ) and divacancy ( VS 2 ) introduce shal-low defect levels. However, their capture coe ffi cients dif-fer dramatically, with values of 7 .87 × 10 −16 cm 3s−1 and 3.46 × 10 −9 cm 3s−1, respectively, at 300 K. Notably, the di-vacancy exhibits a capture coe ffi cient seven orders of magni-tude larger, despite having a defect level only slightly deeper than that of the monovacancy. To understand this contrast, we note that the capture coe ffi cient within the Born–Oppenheimer framework consists of two independent contributors: (i) the electronic coupling term ( Wi f ) and (ii) the phonon overlap term DXim ˆQ − Q0 X f n 
+
+E. The electronic coupling Wi f de-pends on the overlap between the conduction band and defect wavefunctions. For both VS and VS 2 , this quantity is com-parable, with values on the order of ∼ 10 −2 eV , amu −1/2Å−1.The dominant di ff erence arises from the phonon overlap term. While its exact evaluation requires summation over all phonon modes, it can be approximated analytically by a Poisson dis-tribution, characterized by the Huang–Rhys factor ( S ), which represents the strength of electron–phonon coupling, and κ,the number of phonons involved in the transition [17, 33, 34]. 
+
+
+
+Xim bQ − Qo X f n 
+
+
+
+∝ e−S S κ
+
+κ! (8) where, κ = ∆Ehω f and S is given by S = 12ℏ (∆Q)2ω f . Here, ∆Q
+
+denotes the lattice distortion defined in Eqn. 1, and ω f is the eff ective phonon frequency of the defect in the final charge state. Within the Poissonian description of phonon overlap, the transition probability is maximized when the number of phonons involved ( κ) is comparable to the Huang–Rhys factor (S ), while regimes with κ ≫ S or κ ≪ S yield exponentially suppressed overlap. For the Sulphur monovacancy ( VS ), the Huang–Rhys factor is small ( S < 1), leading to κ/ S ≈ 26 and consequently negligible phonon overlap. In contrast, the Sulphur divacancy ( VS 2 ) exhibits κ/ S ≈ 3, resulting in signif-icantly enhanced overlap and, therefore, a much larger cap-ture coe ffi cient. As seen from Table I, VS 2 exhibits both a larger Huang–Rhys factor and a substantially stronger phonon overlap compared to VS , consistent with its dominant role in carrier capture. For a typical Sulphur monovacancy concen-tration of ∼ 10 16 cm −3, the corresponding trapping rate is on the order of ∼ 1 s −1. This rate is comparable to typical gate-voltage sweep timescales, suggesting that monovacancies can contribute to charge trapping and hysteresis. In contrast, Sul-phur divacancies, which are experimentally reported to consti-tute ∼10% of the total vacancy population [10], exhibit much 7faster trapping rates of ∼ 10 6 s−1. Such rapid dynamics imply an adiabatic response to gate-voltage sweeps, but can signifi-cantly reduce the quantum yield due to e ffi cient nonradiative recombination. 
+
+IV. CONCLUSION 
+
+In this work, we have quantified electron capture by intrin-sic vacancy defects in monolayer MoS 2 using first-principles calculations within the nonradiative multiphonon framework. We show that both the Sulphur monovacancy ( VS ) and di-vacancy ( VS 2 ) introduce shallow defect levels near the con-duction band minimum, whereas the molybdenum vacancy (VMo ) and Sulphur antisite ( S Mo ) form deep states in the band gap. Despite their similar energetic positions, VS and VS 2 ex-hibit drastically di ff erent capture behavior: the divacancy dis-plays a capture coe ffi cient of ∼ 10 −9 cm 3s−1, approximately seven orders of magnitude larger than that of the monova-cancy ( ∼ 10 −16 cm 3s−1). We demonstrate that this disparity is not controlled by defect level position, but by lattice relax-ation, which governs the phonon overlap and hence the mul-tiphonon capture e ffi ciency. From a device perspective, this leads to a clear separation of roles: monovacancies act as slow traps with timescales comparable to gate-voltage sweeps, con-tributing to hysteresis, whereas divacancies enable fast, e ffi -cient nonradiative recombination and suppress quantum yield. In contrast, VMo and S Mo , owing to their deep levels and large capture barriers, play a negligible role in electron trapping un-der typical conditions. More generally, our results establish that carrier capture in two-dimensional semiconductors is governed by the interplay between defect energetics and lattice relaxation. Defects with comparable charge transition levels can exhibit vastly di ff er-ent trapping dynamics when their structural distortions dif-fer. This work provides a quantitative, atomistic framework linking defect structure, electron–phonon coupling, and car-rier capture kinetics, and o ff ers clear guidelines for identify-ing and controlling the defects that limit the performance of two-dimensional electronic and optoelectronic devices. 
+
+ACKNOWLEDGEMENTS 
+
+K.B acknowledge funding from SERB (grant no: SRG /2021 /001783), DRDO (grant No: JATC-P2QP-14 /1335 /D(R&D) /2022, National Quantum Mission (NQM) under grant no: DST /OTC /NOM /QMD /2024 /4 (G)) and In-dian Institute of Technology Delhi Seed grant. S.B acknowl-edge funding from Anusandhan National Research Foun-dation (ANRF), India under Grant No. CRG /2023 /000476. S.S acknowledge funding received from PMRF award by Government of India. We acknowledge Prof. Saswata Bhattacharya, Department of Physics, IIT Delhi and Mark Turiansky for useful discussions. 
+
+COMPETING INTERESTS 
+
+The authors declare no financial competing interests. AUTHOR CONTRIBUTION 
+
+S.S carried out all the calculations and formal analysis, K.B and S.B supervised the work. All authors have read and ap-proved the final manuscript. 
+
+DATA AVAILABILITY 
+
+The data supporting the findings of this study are available within the paper and its SI [29]. The computational input and output files are available from the corresponding author upon reasonable request. 
+
+[1] M. M. Islam, Y. Cho, A. Sen, P. Bisht, J. Shim, J.-O. Oh, G. Park, A. Rossi, H. Lee, L. Jiang, C. Coletti, B.-I. Park, H. Chae, S. Shin, H. Park, and S. Kim, Challenges and prospects of 2D electronics for future monolithic complemen-tary field-e ff ect transistors, Nat. Commun. 17 , 3586 (2026). [2] S. Das, A. Sebastian, E. Pop, C. J. McClellan, A. D. Franklin, T. Grasser, T. Knobloch, Y. Illarionov, A. V. Penumatcha, J. Ap-penzeller, et al. , Transistors based on two-dimensional materi-als for future integrated circuits, Nat Electron. 4, 786 (2021). [3] W. Ren, P. Boggild, J. M. Redwing, K. S. Novoselov, L. Sun, Y. Qi, K. Jia, Z. Liu, O. Burton, J. A. Alexander-Webber, S. Hofmann, Y. Cao, Y. Long, Q.-H. Yang, D. Li, S. H. Choi, K. K. Kim, Y. H. Lee, M. Li, Q. Huang, Y. Gogotsi, N. Clark, A. Carl, R. Gorbachev, T. Olsen, J. Rosen, K. S. Thygesen, P. D. D. K. Efetov, B. S. Jessen, M. Yankowitz, J. Barrier, R. K. Ku-mar, F. Koppens, H. Deng, X. Li, S. Dai, D. Basov, X. Wang, S. Das, X. Duan, Z. Yu, M. Borsch, A. C. Ferrari, R. Huber, M. Kira, F. Xia, X. Wang, Z.-S. Wu, X. Feng, P. Simon, H.-M. Cheng, B. Liu, Y. Xie, W. Jin, R. R. Nair, Y. Xu, H.-B. Zhang, V. Pellegrini, B. Qu, M. Lemme, A. Katiyar, J.-H. Ahn, I. Aharonovich, M. C. Hersam, S. Roche, Q. Hua, G. Shen, T.-L. Ren, C. M. Koo, N. A. Koratkar, R. J. Young, and A. Pollard, The 2D materials roadmap, 2D Mater. 13 , 021501 (2025). [4] W. Zhou, X. Zou, S. Najmaei, Z. Liu, Y. Shi, J. Kong, J. Lou, P. M. Ajayan, B. I. Yakobson, and J. C. Idrobo, Intrinsic Struc-tural Defects in Monolayer Molybdenum Disulfide, Nano Lett. 
+
+13 , 2615 (2013). [5] H. I. Rasool, C. Ophus, and A. Zettl, Atomic defects in Two Dimensional Materials, Adv. Mater. 27 , 5771 (2015). [6] A. Karl, A. Verdianu, D. Waldhoer, T. Knobloch, J. Kurzweil, M. Bahrami, M. R. Davoudi, P. Khakbaz, B. Stampfer, S. M. Sattari-Esfahlan, Y. Illarionov, A. Nazir, C. Liu, Y. Zheng, L. Pettorosso, D. Polyushkin, T. Müller, S. Das, X. R. Wang, J. Tang, Y. Zhang, C. Tan, Y. Li, H. Peng, M. Waltl, and T. Grasser, A standardized approach to characterize hystere-sis in 2D-materials-based transistors for stability benchmarking and performance projection, Nat. Commun. 17 , 171 (2025). [7] N. Kaushik, D. M. Mackenzie, K. Thakar, N. Goyal, B. Mukherjee, P. Boggild, D. H. Petersen, and S. Lodha, Re-versible hysteresis inversion in MoS 2 field e ff ect transistors, npj 2D Mater Appl . 1, 34 (2017). [8] R. Ghosh, A. Provias, A. Karl, C. Wilhelmer, T. Knobloch, M. R. Davoudi, S. M. Sattari-Esfahlan, D. Waldhör, and T. Grasser, Theoretical insights into the impact of border and interface traps on hysteresis in monolayer MoS 2 FETs, Micro-electronic Engineering 299 , 112333 (2025). 8
+
+[9] Y. Park, H. W. Baac, J. Heo, and G. Yoo, Thermally activated trap charges responsible for hysteresis in multilayer MoS 2 field-eff ect transistors, Appl. Phys. Lett. 108 , 083102 (2016). [10] Y. Zhao, M. Tripathi, K. ˇ Cern , eviˇ cs, A. Avsar, H. G. Ji, J. F. G. Marin, C. Y. Cheon, Z. Wang, O. V. Yazyev, and A. Kis, Elec-trical spectroscopy of defect states and their hybridization in monolayer MoS 2, Nature Communications 14 , 44 (2023). [11] J. Shu, G. Wu, Y. Guo, B. Liu, X. Wei, and Q. Chen, The intrinsic origin of hysteresis in MoS 2 field e ff ect transistors, Nanoscale 8, 3049 (2016). [12] P. Ci, X. Tian, J. Kang, A. Salazar, K. Eriguchi, S. Warkander, K. Tang, J. Liu, Y. Chen, S. Tongay, W. Walukiewicz, J. Miao, O. Dubon, and J. Wu, Chemical trends of deep levels in van der Waals semiconductors, Nat. Commun. 11 , 5373 (2020). [13] J. Y. Kim, Łukasz Gelczuk, M. P. Polak, D. Hlushchenko, D. Morgan, R. Kudrawiec, and I. Szlufarska, Experimental and theoretical studies of native deep-level defects in transition metal dichalcogenides, npj 2D Mater Appl . 6, 75 (2022). [14] A. Alkauskas, Q. Yan, and C. G. V. D. Walle, First-principles theory of nonradiative carrier capture via multiphonon emis-sion, Phys. Rev. B. 90 , 075202 (2014). [15] L. D. Whalley, P. V. Gerwen, J. M. Frost, S. Kim, S. N. Hood, and A. Walsh, Giant Huang-Rhys Factor for Electron Capture by the Iodine Intersitial in Perovskite Solar Cells, J. Am. Chem. Soc. 143 , 9123 (2021). [16] M. E. Turiansky, A. Alkauskas, M. Engel, G. Kresse, D. Wick-ramaratne, J. X. Shen, C. E. Dreyer, and C. G. V. de Walle, Nonrad: Computing nonradiative capture coe ffi cients from first principles, Computer Physics Communications 267 , 108056 (2021). [17] F. Wu, T. J. Smart, J. Xu, and Y. Ping, Carrier recombination mechanism at defects in wide band gap two-dimensional mate-rials from first principles, Phys. Rev. B. 100 , 079901 (2019). [18] A. Chatterjee, A. Biswas, A. S. Fuhr, T. Terlier, B. G. Sumpter, P. M. Ajayan, I. Aharonovich, and S. Huang, Room temperature high purity single photon emission from carbon doped boron nitride thin films, Sci.Adv. 11 , 2899 (2025). [19] G. Grosso, H. Moon, B. Lienhard, S. Ali, D. K. Efetov, M. M. Furchi, P. Jarillo-Herrero, M. J. Ford, I. Aharonovich, and D. Englund, Tunable and high-purity room temperature single-photon emission from atomic defects in hexagonal boron ni-tride, Nat. Commun. 8, 705 (2017). [20] G. Kresse and J. Furthmüller, E ffi cient iterative schemes for ab initio total-energy calculations using a plane-wave basis set, Phys. Rev. B 54 , 11169 (1996). [21] H. P. Komsa and A. V. Krasheninnikov, Native defects in bulk and monolayer MoS 2 from first principles, Phys. Rev. B. 91 ,125304 (2015). [22] J. Y. Noh, H. Kim, and Y. S. Kim, Stability and electronic struc-tures of native defects in single-layer MoS 2, Phys. Rev. B. 89 ,205417 (2014). [23] M. H. Naik and M. Jain, Substrate screening e ff ects on the quasiparticle band gap and defect charge transition levels in MoS 2, Phys. Rev. Mater. 2, 084002 (2018). [24] D. Han, W. Ming, H. Xu, S. Chen, D. Sun, and M.-H. Du, Chemical trend of transition-metal doping in WSe 2, Phys. Rev. Appl. 12 , 034038 (2019). [25] D. Jansen, T. Tounsi, J. Fischer, A. V. Krasheninnikov, T. Michely, H. P. Komsa, and W. Jolie, Tip-induced creation and Jahn-Teller distortions of sulfur vacancies in single-layer MoS 2, Phys. Rev. B. 109 , 195430 (2024). [26] X. Lang, M. Bergschneider, and K. Cho, Solid-state quantum defects in wide band-gap two-dimensional silica bilayer, Phys. Rev. Mater. 9, 026201 (2025). [27] Y. Lee, Y. Hu, X. Lang, D. Kim, K. Li, Y. Ping, K. M. C. Fu, and K. Cho, Spin-defect qubits in two-dimensional transition metal dichalcogenides operating at telecom wavelengths, Nat. Commun. 13 , 7501 (2022). [28] J. Hong, Z. Hu, M. Probert, K. Li, D. Lv, X. Yang, L. Gu, N. Mao, Q. Feng, L. Xie, J. Zhang, D. Wu, Z. Zhang, C. Jin, W. Ji, X. Zhang, J. Yuan, and Z. Zhang, Exploring atomic de-fects in molybdenum disulphide monolayers, Nature Commu-nications 6, 10.1038 /ncomms7293 (2015). [29] See Supplemental Information at XXX. [30] C. Freysoldt, B. Grabowski, T. Hickel, J. Neugebauer, G. Kresse, A. Janotti, and C. G. V. D. Walle, First-principles calculations for point defects in solids, Rev. Mod. Phys. 86 , 253 (2014). [31] B. Ahn, Y. Kim, M. Kim, H. M. Yu, J. Ahn, E. Sim, H. Ji, H. Z. Gul, K. S. Kim, K. Ihm, H. Lee, E. K. Kim, and S. C. Lim, One-step Passivation of Both Sulfur Vacancies and SiO 2
+
+Interface Traps of MoS 2 Device, Nano Lett. 23 , 7927 (2023). [32] A. Stoneham, Theory of Defects in Solids: Electronic Struc-ture of Defects in Insulators and Semiconductors , Oxford clas-sic texts in the physical sciences (Clarendon Press, 2001). [33] T. H. Keil, Shapes of Impurity Absorption Bands in Solids, Phys. Rev. 140 , A601 (1965). [34] M. de Jong, L. Seijo, A. Meijerink, and F. T. Rabouw, Re-solving the ambiguity in the relation between Stokes shift and Huang–Rhys parameter, Phys. Chem. Chem. Phys. 17 , 16959 (2015).

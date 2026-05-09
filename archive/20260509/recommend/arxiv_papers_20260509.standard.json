@@ -1,0 +1,403 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-09T20:34:23.924305+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2605.04883v1",
+      "source": "arxiv",
+      "title": "Magnetic Brightening and Nanoscale Imaging of Spin-Polarized Helical Edge Modes",
+      "abstract": "Efficient sub-10 nm electric transport remains a major challenge for nanoelectronics due to high losses and impedance mismatches in conventional Drude metals. Despite their promise of dissipationless, reflection-free conduction, topologically protected chiral edge modes remain little explored in their nanoscale spin polarized transport-particularly regarding real-space visualization, magnetic field tunability, and high-frequency edge conductivity. Here, we report magnetic brightening and nanoscale visualization of highly spin-polarizable infrared helical edge states using cryogenic magneto-infrared scattering-type scanning near-field optical microscopy (cm-IR-sSNOM). Our measurements reveal magnetic field-induced near-field conductivity at step edges, uncovering quantum spin Hall spin-splitting modes with enhanced infrared polarizability and slightly narrowed near-field profiles. In addition, the infrared edge electrodynamic response scales nearly linearly with atomic layer number, providing compelling evidence that magnetic-field-induced gaps do not disrupt individual-layer edge states at energies of around 100 meV. These results sharply contrast with microwave and DC transport, where even small magnetically induced gaps decrease edge conduction. Magnetically tunable, topologically robust high-frequency edge modes open a pathway toward ultralow-loss nanoscale interconnects and quantum logic architectures for next-generation microelectronics, spintronics and quantum information science.",
+      "authors": [
+        "Samuel Haeuser",
+        "Richard H. J. Kim",
+        "Lin-Lin Wang",
+        "Thomas Koschny",
+        "Pedro M. Lozano",
+        "Genda Gu",
+        "Randall K. Chan",
+        "Joong-Mok Park",
+        "Martin Mootz",
+        "Liang Luo",
+        "Qiang Li",
+        "Jigang Wang"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci",
+        "cond-mat.other",
+        "cond-mat.str-el"
+      ],
+      "published": "2026-05-06T13:18:43+00:00",
+      "link": "https://arxiv.org/pdf/2605.04883v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "nanoscale imaging of transport using scattering-type scanning near-field optical microscopy",
+      "llm_evidence_cn": "利用散射型扫描近场光学显微镜进行输运的纳米级成像",
+      "llm_evidence": "利用散射型扫描近场光学显微镜进行输运的纳米级成像",
+      "canonical_evidence": "利用散射型扫描近场光学显微镜进行输运的纳米级成像",
+      "llm_tldr_en": "Visualizes spin-polarized helical edge modes using magneto-infrared s-SNOM.",
+      "llm_tldr_cn": "利用磁红外散射型扫描近场光学显微镜可视化自旋极化螺旋边缘态。",
+      "llm_tldr": "利用磁红外散射型扫描近场光学显微镜可视化自旋极化螺旋边缘态。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.00575v1",
+      "source": "arxiv",
+      "title": "Plasmon Induced Delocalized Second-Harmonic Generation Towards Buried-Interface Spectroscopy",
+      "abstract": "Second-harmonic generation microscopy is a powerful technique capable of probing local crystal symmetries and electric fields at interfaces. However, it often suffers from weak signal strength and is difficult to understand in multilayer systems where many materials can give competing signal contributions. In this work we present direct observation of delocalized, surface plasmon polariton-mediated second-harmonic generation on gold monocrystalline surfaces and structures. We generate second-harmonic light up to 35 um from the excitation spot and, excitingly, we obtain signal from atomically flat surfaces without a fundamental excitation beam present in the same region. We reveal that this process arises from the interaction of two counter-propagating surface plasmon polaritons, which we believe to be the first observation of this process at the microscale. This signal has the same polarisation dependence as localised second-harmonic generation and is emitted in a collimated beam travelling perpendicular to the sample surface. In part due to local electric field enhancements, we were able to observe these signals on a CMOS camera with 1 s exposure and no gain using an industrial-grade pulsed laser. Our results enable wide area multilayer samples to be probed using a single excitation beam, with applications including in energy, catalysis and single particle surface sensing.",
+      "authors": [
+        "Alan R. Bowman",
+        "Sergejs Boroviks",
+        "Omer Can Karaman",
+        "Laura M. Herz",
+        "Olivier J. F. Martin",
+        "Giulia Tagliabue"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.other",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-01T11:18:15+00:00",
+      "link": "https://arxiv.org/pdf/2605.00575v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "probing crystal symmetries and interfaces with microscopy",
+      "llm_evidence_cn": "利用显微镜探测晶体对称性和界面",
+      "llm_evidence": "利用显微镜探测晶体对称性和界面",
+      "canonical_evidence": "利用显微镜探测晶体对称性和界面",
+      "llm_tldr_en": "Demonstrates plasmon-induced second-harmonic generation for interface spectroscopy.",
+      "llm_tldr_cn": "展示了等离激元诱导的二次谐波产生，用于界面光谱研究。",
+      "llm_tldr": "展示了等离激元诱导的二次谐波产生，用于界面光谱研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "recent advances in iSCAT for solid state materials research",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.02432v1",
+      "source": "arxiv",
+      "title": "Investigation of filamentation in a-Si/Ag/Cu memristors with atomic force microscope",
+      "abstract": "Cation-based Ag/Cu filaments formed in an insulating $α$-Si matrix are widely used as memristors in crossbar arrays for efficient in-memory computing. However, the stochastic nature of filament formation and rupture gives rise to device-to-device and cycle-to-cycle variation. Despite successful implementation of large-scale memristor arrays, systematic studies of filament parameters and their spatial distribution in the memristors are scarce. In this work, we use conductive atomic force microscopy (c-AFM) to probe the spatial distribution of conductive filaments in $α$-Si memristors. The charge transport is dominated by a limited number of discrete filaments rather than by uniform conduction across the device area. The systematic analysis of the experiment gives the mean surface density of the conductive filaments $\\sim$3200 per $μ\\text{m}^2$. Both volatile and non-volatile filaments can be found within one memristor. The experimental data and the nature of volatile and non-volatile filaments may be explained within the model of multiple trap assisted tunnelling. The model yields reasonable estimates for physical properties for both types of filaments.",
+      "authors": [
+        "Alena Samsonova",
+        "Viacheslav Dremov",
+        "Oleg Klimenko",
+        "Nikolai Brilliantov",
+        "Vladimir N. Antonov"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-04T10:31:10+00:00",
+      "link": "https://arxiv.org/pdf/2605.02432v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "microscopic investigation of filamentation and charge transport in memristors",
+      "llm_evidence_cn": "忆阻器中丝状化和电荷传输的显微研究",
+      "llm_evidence": "忆阻器中丝状化和电荷传输的显微研究",
+      "canonical_evidence": "忆阻器中丝状化和电荷传输的显微研究",
+      "llm_tldr_en": "Conductive AFM probes the spatial distribution of filaments in memristors for in-memory computing.",
+      "llm_tldr_cn": "利用导电原子力显微镜探测用于存内计算的忆阻器中导电丝的空间分布。",
+      "llm_tldr": "利用导电原子力显微镜探测用于存内计算的忆阻器中导电丝的空间分布。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.03030v1",
+      "source": "arxiv",
+      "title": "Characterizing electronic scattering rates with transport in multiterminal devices",
+      "abstract": "Strongly interacting electrons in clean two-dimensional devices are theorized to exhibit many distinct transport regimes, such as ballistic, hydrodynamic, or diffusive. Realistic samples often lie in crossover regimes between these idealized limits. We show how a single experiment on a multiterminal device can distinguish these regimes and constrain the relevant scattering rates without space-resolved imaging. Using a linearized Boltzmann model in a five-terminal geometry, we find that current partition among the drain contacts diagnoses the ballistic-hydrodynamic-Ohmic crossover and allows extraction of momentum-relaxing and momentum-conserving scattering rates in the crossover regime. The same geometry also exhibits clear signatures of the tomographic regime, potentially allowing for a quantitative discrimination between viscous and tomographic flow in experiments. Our results demonstrate that multiterminal devices are a simpler experimental route to characterize transport regimes in electron liquids, relative to space-resolved imaging experiments.",
+      "authors": [
+        "Jack H. Farrell",
+        "Andrew Lucas"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.str-el"
+      ],
+      "published": "2026-05-04T18:02:03+00:00",
+      "link": "https://arxiv.org/pdf/2605.03030v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "characterizing electronic scattering rates in semiconductor devices",
+      "llm_evidence_cn": "表征半导体器件中的电子散射率",
+      "llm_evidence": "表征半导体器件中的电子散射率",
+      "canonical_evidence": "表征半导体器件中的电子散射率",
+      "llm_tldr_en": "Method to extract electronic scattering rates in multiterminal devices without space-resolved imaging.",
+      "llm_tldr_cn": "一种在无需空间分辨成像的情况下提取多端器件电子散射率的方法。",
+      "llm_tldr": "一种在无需空间分辨成像的情况下提取多端器件电子散射率的方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.03316v1",
+      "source": "arxiv",
+      "title": "Quantitative cavity-enhanced photothermal dynamics in TMDC-integrated ultrahigh-Q microcavities",
+      "abstract": "We investigate photothermal effects in monolayer transition metal dichalcogenides (TMDCs) integrated with an ultrahigh-Q silica microcavity. Launching a continuous-wave laser into a cavity resonance enables controlled intracavity heating, allowing direct observation of excitonic photoluminescence (PL) modulation. A distinct redshift of the PL peak energy is observed as the pump wavelength is tuned across resonance. This behavior is quantitatively reproduced by a temperature-dependent bandgap model that combines the Varshni relation with the thermo-optic response of the microcavity, from which the local temperature rise can be estimated. We further find that PL collected through a fiber waveguide exhibits spectral and temporal characteristics markedly different from free-space emission, indicating selective coupling of the microcavity to specific excitonic channels. These results provide a quantitative framework for understanding photothermal effects in TMDC-microcavity hybrid systems and offer a versatile approach for all-optical control and probing of thermal states in integrated nanophotonic devices.",
+      "authors": [
+        "Hidetoshi Kanzawa",
+        "Ryo Sugano",
+        "Hajime Kumazaki",
+        "Yuta Takahashi",
+        "Shinichi Watanabe",
+        "Shun Fujii"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-05T03:05:30+00:00",
+      "link": "https://arxiv.org/pdf/2605.03316v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "photothermal dynamics and excitonic modulation in TMDCs",
+      "llm_evidence_cn": "TMDC中的光热动力学和激子调制",
+      "llm_evidence": "TMDC中的光热动力学和激子调制",
+      "canonical_evidence": "TMDC中的光热动力学和激子调制",
+      "llm_tldr_en": "Investigates photothermal effects and bandgap modulation in monolayer TMDCs using microcavities.",
+      "llm_tldr_cn": "研究了单层过渡金属硫族化合物在微腔中的光热效应和带隙调制。",
+      "llm_tldr": "研究了单层过渡金属硫族化合物在微腔中的光热效应和带隙调制。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.04402v1",
+      "source": "arxiv",
+      "title": "Imaging GHz surface acoustic wave modes in electrostricted LaAlO$_3$/SrTiO$_3$ heterostructures",
+      "abstract": "The LaAlO$_3$/SrTiO$_3$ (LAO/STO) interface hosts a gate-tunable superconducting two-dimensional electron gas (2DEG) which can be programmed to create quantum devices such as ballistic electron waveguides and quantum dots. To fully exploit this platform for quantum transport, a key requirement is the ability to shuttle single electrons, electron pairs, and other exotic states between spatially separated devices with precision. Surface acoustic waves (SAWs), which travel along the surface of a solid, offer a powerful route to achieve this through their moving electrical potential that captures and transfers electrons. %acoustoelectric coupling. In particular, SAWs in the GHz regime enable fast, controlled transport of individual quantum particles. Although this approach is well-explored in GaAs-based 2DEG, SAW generation in STO remains largely unexplored due to the lack of intrinsic piezoelectricity at room temperature. Here, we investigate room-temperature SAWs in LAO/STO and observe SAW modes up to 2.2 GHz with very low propagation loss of the order $10^{-3}$ dB per wavelength. To directly visualize these modes, we employ Atomic Acoustic Force Microscopy (AAFM), achieving sub-micron resolution imaging of the SAW wave forms, providing insight into the electrostriction-induced SAW generation mechanism. Our measurements indicate a shear horizontal-type mode, which provides the ability to couple to in-plane degrees of freedom for future acoustoelectric and quantum device applications. This work studies the fundamentals of SAW excitation and propagation on STO, a widely used and commercially available substrate, enabling straightforward coupling of SAWs to a broad range of materials that can be grown or transferred onto STO.",
+      "authors": [
+        "Ranjani Ramachandran",
+        "Sayanwita Biswas",
+        "Prithwijit Mandal",
+        "Kyoungjun Lee",
+        "Madeleine Msall",
+        "Chang-Beom Eom",
+        "Patrick Irvin",
+        "Jeremy Levy",
+        "Mingyun Yuan"
+      ],
+      "primary_category": "cond-mat.str-el",
+      "categories": [
+        "cond-mat.str-el",
+        "cond-mat.mes-hall",
+        "quant-ph"
+      ],
+      "published": "2026-05-06T01:51:48+00:00",
+      "link": "https://arxiv.org/pdf/2605.04402v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "imaging surface acoustic wave modes for carrier transport",
+      "llm_evidence_cn": "成像表面声波模式以研究载流子输运",
+      "llm_evidence": "成像表面声波模式以研究载流子输运",
+      "canonical_evidence": "成像表面声波模式以研究载流子输运",
+      "llm_tldr_en": "Images GHz surface acoustic waves in heterostructures for quantum transport.",
+      "llm_tldr_cn": "对异质结构中的GHz表面声波进行成像，用于量子输运研究。",
+      "llm_tldr": "对异质结构中的GHz表面声波进行成像，用于量子输运研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.06109v1",
+      "source": "arxiv",
+      "title": "Dominant Role of Sulphur divacancy in Charge Trapping Dynamics in MoS$_2$",
+      "abstract": "Intrinsic defects govern carrier trapping and recombination in two-dimensional semiconductors, yet the microscopic origin of defect-dependent capture dynamics remains unclear. Here, we compute carrier capture coefficients of vacancy defects, treating monolayer MoS$_2$ as a prototype, from first principles. We find that the single Sulphur vacancy forms a shallow defect with a small capture coefficient of $\\sim 10^{-16}\\ \\mathrm{cm}^3/\\mathrm{s}$, whereas the Sulphur divacancy exhibits a capture coefficient larger by seven orders of magnitude, $\\sim 10^{-9}\\ \\mathrm{cm}^3/\\mathrm{s}$, despite being only moderately deeper in energy. This enhancement originates from strong lattice relaxation enabling efficient multiphonon capture. Consequently, single vacancies contribute weakly to trapping, while Sulphur divacancies dominate nonradiative recombination and reduce quantum yield. In contrast, molybdenum vacancies and Sulphur antisites, although deep, show much smaller capture coefficients, indicating a limited role in carrier trapping in n-type devices.",
+      "authors": [
+        "Srest Somay",
+        "Sitangshu Bhattacharya",
+        "Krishna Balasubramanian"
+      ],
+      "primary_category": "cond-mat.str-el",
+      "categories": [
+        "cond-mat.str-el"
+      ],
+      "published": "2026-05-07T12:23:41+00:00",
+      "link": "https://arxiv.org/pdf/2605.06109v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "carrier trapping and recombination dynamics in two-dimensional semiconductors",
+      "llm_evidence_cn": "二维半导体中的载流子俘获和复合动力学",
+      "llm_evidence": "二维半导体中的载流子俘获和复合动力学",
+      "canonical_evidence": "二维半导体中的载流子俘获和复合动力学",
+      "llm_tldr_en": "First-principles study reveals the dominant role of sulphur divacancies in MoS2 charge trapping dynamics.",
+      "llm_tldr_cn": "第一性原理研究揭示了硫双空位在MoS2电荷俘获动力学中的主导作用。",
+      "llm_tldr": "第一性原理研究揭示了硫双空位在MoS2电荷俘获动力学中的主导作用。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-04-721587-v1",
+      "source": "biorxiv",
+      "title": "Nanoscale rheological heterogeneity revealed by Single Particle orientation Tracking (SPoT) of ultrashort carbon nanotubes in brain tissue",
+      "abstract": "Transport in complex biological tissues is governed by local rheological heterogeneity at the nanoscale, yet probing such environments deep inside living systems remains challenging. Here, we introduce an orientation- sensitive single-particle tracking (SPoT) approach that simultaneously resolves translational and rotational dynamics of individual carbon nanotubes deep within biological tissue. By exploiting the intrinsic dipole-like emission and short-wave infrared luminescence of carbon nanotubes enhanced through the incorporation of quantum color-centers our method enables long-duration tracking with high signal-to-noise ratio in optically dense environments. Crucially, the length of these nanotubes can be precisely shortened down to a few tens of nanometers to adapt to diffusion environmental dimensions, further optimizing the tracking applicability. SPoT of single carbon nanotubes provides access to relative changes in local viscosity, steric constraints, and environmental anisotropy. When applied to the brain extracellular space, SPoT demonstrates that local variations in the translational and rotational diffusion of tracers are heterogeneous and not systematically correlated. This allows to disentangle the local effects of viscosity and spatial tortuosity within the brain extracellular space, which are distinct features that would otherwise remain undetected through translational diffusion analysis alone. By enabling combined translational and rotational tracking of nano-emitters over unprecedented depths and timescales, this work establishes a new framework for probing nanoscale transport and rheological heterogeneity in intact biological tissues and more generally in complex diffusive environments.",
+      "authors": [
+        "Ruan, L.",
+        "Manko, H.",
+        "Gresil, Q.",
+        "Aleman-Castaneda, L. A.",
+        "Meras, M.",
+        "Sebastian, F.",
+        "Flavel, B.",
+        "Zaumseil, J.",
+        "Groc, L.",
+        "Brasselet, S.",
+        "Tondusson, M.",
+        "Cognet, L."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-05-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.04.721587v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "single-particle tracking of carbon nanotubes to reveal nanoscale rheological heterogeneity",
+      "llm_evidence_cn": "碳纳米管的单粒子追踪以揭示纳米级流变非均匀性",
+      "llm_evidence": "碳纳米管的单粒子追踪以揭示纳米级流变非均匀性",
+      "canonical_evidence": "碳纳米管的单粒子追踪以揭示纳米级流变非均匀性",
+      "llm_tldr_en": "Introduces SPoT to resolve translational and rotational dynamics of nanotubes in biological tissue.",
+      "llm_tldr_cn": "引入SPoT技术来解析生物组织中纳米管的平移和旋转动力学。",
+      "llm_tldr": "引入SPoT技术来解析生物组织中纳米管的平移和旋转动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-05-722138-v1",
+      "source": "biorxiv",
+      "title": "Mapping 3D tissue orientation with tensor-augmented light-sheet microscopy",
+      "abstract": "Mapping the three-dimensional directional organization of biological tissues is essential for understanding their structure and function. However, existing methods cannot resolve micrometer-scale orientation in volumetric samples. We introduce tensor light-sheet scattering microscopy (tLSSM), a label-free method that reconstructs 3D fiber orientations at micrometer resolution in optically cleared tissues, enabling whole-organ imaging. We discovered that even in transparent samples, organized structures such as neural fibers scatter light in directional patterns, consistent with models of light scattering by cylinders. We compared tLSSM against diffusion MRI in the mouse brain, demonstrating strong agreement and orders of magnitude superior spatial resolution. Furthermore, we showcase tLSSM's versatility across diverse contexts, including whole-brain label-free tracing, pathological demyelination lesions, heart tissue, peripheral nerves, and human white matter. By enabling whole-organ fiber orientation mapping compatible with standard light-sheet microscopes, tLSSM establishes a new standard for mesoscopic connectivity studies by mapping tissue architecture beyond the limits of traditional sectioning.",
+      "authors": [
+        "Corral-Bolanos, M.",
+        "Swami, P.",
+        "Vila-Merkle, H.",
+        "Lima, J.",
+        "Vange, S. P.",
+        "Destrieux, C.",
+        "Poupon, C.",
+        "Pingel, J.",
+        "Kaalund, S. S.",
+        "Bardia, L.",
+        "Kjer, H. M.",
+        "Pizzolato, M.",
+        "Frisvad, J. R.",
+        "Colombelli, J.",
+        "Dyrby, T. B."
+      ],
+      "primary_category": "neuroscience",
+      "categories": [
+        "neuroscience"
+      ],
+      "published": "2026-05-08T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.05.722138v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-free scattering microscopy for 3D orientation mapping",
+      "llm_evidence_cn": "用于 3D 取向映射的无标记散射显微镜",
+      "llm_evidence": "用于 3D 取向映射的无标记散射显微镜",
+      "canonical_evidence": "用于 3D 取向映射的无标记散射显微镜",
+      "llm_tldr_en": "Introduces tensor light-sheet scattering microscopy for label-free 3D fiber orientation mapping.",
+      "llm_tldr_cn": "引入了张量光片散射显微技术，用于无标记的 3D 纤维取向映射。",
+      "llm_tldr": "引入了张量光片散射显微技术，用于无标记的 3D 纤维取向映射。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

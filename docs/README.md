@@ -6,56 +6,50 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-08
-- 运行时间：2026-05-08 20:21:58 UTC
+- 最新运行日期：2026-05-09
+- 运行时间：2026-05-09 20:36:00 UTC
 - 运行状态：成功
-- 本次总论文数：11
+- 本次总论文数：9
 - 精读区：0
-- 速读区：11
+- 速读区：9
 
 ### 今日简报（AI）
-今日速览 11 篇前沿进展，聚焦半导体纳米结构散射、超快衍射成像及二维异质结电荷动力学。
-重点关注扭曲角对 WS2-石墨烯异质结电荷分离的影响，以及 X 射线与电子衍射成像的统一分析新方法。
-建议关注二维材料层间耦合与超快成像技术的交叉应用，以探索新型光电器件的物理极限。
-- 详情：[/202605/08/README](/202605/08/README)
+今日速览 9 篇前沿论文，聚焦纳米尺度下的自旋成像、等离激元光谱及忆阻器微观机制。
+重点关注利用磁致增强技术实现螺旋边缘态的纳米成像，以及等离激元诱导的埋底界面二倍频光谱探测。
+建议关注量子输运与新型存储器件的读者深入了解相关成像技术与丝状导电机制。
+- 详情：[/202605/09/README](/202605/09/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Analysis of Electromagnetic Scattering from Semiconductor Nanostructures by Solving Coupled Volume Integral and Two-fluid Hydrodynamic Equations](/202605/08/2604.28083v1-analysis-of-electromagnetic-scattering-from-semiconductor-nanostructures-by-solving-coupled-volume-integral-and-two-fluid-hydrodynamic-equations)  
+1. [Magnetic Brightening and Nanoscale Imaging of Spin-Polarized Helical Edge Modes](/202605/09/2605.04883v1-magnetic-brightening-and-nanoscale-imaging-of-spin-polarized-helical-edge-modes)  
    标签：评分：7.0/10、query:iscat
-   evidence：半导体纳米结构的电磁散射
-2. [Unified approach to time-resolved x-ray and electron diffraction imaging](/202605/08/2605.00286v1-unified-approach-to-time-resolved-x-ray-and-electron-diffraction-imaging)  
-   标签：评分：7.0/10、query:iscat
-   evidence：时间分辨衍射成像的统一方法
-3. [Influence of twist angle on ultrafast charge separation in WS2-graphene heterostructures](/202605/08/2605.03480v1-influence-of-twist-angle-on-ultrafast-charge-separation-in-ws2-graphene-heterostructures)  
-   标签：评分：7.0/10、query:iscat
-   evidence：半导体异质结构中的超快电荷分离
-4. [High-Sensitivity, High-Throughput Double Sagnac Lateral Shearing Quantitative Phase Microscopy and Tomography with Pseudo-Thermal Illumination](/202605/08/2605.04297v1-high-sensitivity-high-throughput-double-sagnac-lateral-shearing-quantitative-phase-microscopy-and-tomography-with-pseudo-thermal-illumination)  
-   标签：评分：7.0/10、query:iscat
-   evidence：用于无标记测量的共路径干涉配置
-5. [Programmable spatial coherence tomography: diffraction-limited three-dimensional reflection imaging under modulated monochromatic illumination](/202605/08/2605.05747v1-programmable-spatial-coherence-tomography-diffraction-limited-three-dimensional-reflection-imaging-under-modulated-monochromatic-illumination)  
-   标签：评分：7.0/10、query:iscat
-   evidence：无标记体积反射成像与相干工程
-6. [Full-chip CMP modelling based on Fully Convolutional Network leveraging White Light Interferometry](/202605/08/2605.05062v1-full-chip-cmp-modelling-based-on-fully-convolutional-network-leveraging-white-light-interferometry)  
-   标签：评分：6.5/10、query:iscat
-   evidence：利用白光干涉测量法进行表面分析
-7. [Measurement of complex scattering matrix in a nano-cavity array for boundary scattering tomography](/202605/08/2604.27214v1-measurement-of-complex-scattering-matrix-in-a-nano-cavity-array-for-boundary-scattering-tomography)  
+   evidence：利用散射型扫描近场光学显微镜进行输运的纳米级成像
+2. [Plasmon Induced Delocalized Second-Harmonic Generation Towards Buried-Interface Spectroscopy](/202605/09/2605.00575v1-plasmon-induced-delocalized-second-harmonic-generation-towards-buried-interface-spectroscopy)  
    标签：评分：6.0/10、query:iscat
-   evidence：对体谐振器的散射光进行成像以进行断层扫描
-8. [Phase-Stable Self-Modulation for GHz Continuous-Wave Ultrafast X-Ray Free-Electron Lasers](/202605/08/2604.27347v1-phase-stable-self-modulation-for-ghz-continuous-wave-ultrafast-x-ray-free-electron-lasers)  
+   evidence：利用显微镜探测晶体对称性和界面
+3. [Investigation of filamentation in a-Si/Ag/Cu memristors with atomic force microscope](/202605/09/2605.02432v1-investigation-of-filamentation-in-a-siagcu-memristors-with-atomic-force-microscope)  
    标签：评分：6.0/10、query:iscat
-   evidence：电子动力学的时间分辨研究
-9. [Uniaxial strain-driven ferroelastic domain control in LaAlO3](/202605/08/2604.28183v1-uniaxial-strain-driven-ferroelastic-domain-control-in-laalo3)  
+   evidence：忆阻器中丝状化和电荷传输的显微研究
+4. [Characterizing electronic scattering rates with transport in multiterminal devices](/202605/09/2605.03030v1-characterizing-electronic-scattering-rates-with-transport-in-multiterminal-devices)  
    标签：评分：6.0/10、query:iscat
-   evidence：铁弹性畴的原位操纵和映射
-10. [FitED: A User-Centric, Extensible Software Environment for Robust Peak-Profile and General Functional Data Fitting](/202605/08/2605.00172v1-fited-a-user-centric-extensible-software-environment-for-robust-peak-profile-and-general-functional-data-fitting)  
+   evidence：表征半导体器件中的电子散射率
+5. [Quantitative cavity-enhanced photothermal dynamics in TMDC-integrated ultrahigh-Q microcavities](/202605/09/2605.03316v1-quantitative-cavity-enhanced-photothermal-dynamics-in-tmdc-integrated-ultrahigh-q-microcavities)  
    标签：评分：6.0/10、query:iscat
-   evidence：用于时间分辨测量和显微镜数据拟合的软件
-11. [TrueEBSD in MTEX: automatic image matching for correlative microscopy applications](/202605/08/2605.00703v1-trueebsd-in-mtex-automatic-image-matching-for-correlative-microscopy-applications)  
+   evidence：TMDC中的光热动力学和激子调制
+6. [Imaging GHz surface acoustic wave modes in electrostricted LaAlO$_3$/SrTiO$_3$ heterostructures](/202605/09/2605.04402v1-imaging-ghz-surface-acoustic-wave-modes-in-electrostricted-laalo3srtio3-heterostructures)  
    标签：评分：6.0/10、query:iscat
-   evidence：材料复合材料的相关显微镜和图像匹配
+   evidence：成像表面声波模式以研究载流子输运
+7. [Dominant Role of Sulphur divacancy in Charge Trapping Dynamics in MoS$_2$](/202605/09/2605.06109v1-dominant-role-of-sulphur-divacancy-in-charge-trapping-dynamics-in-mos2)  
+   标签：评分：6.0/10、query:iscat
+   evidence：二维半导体中的载流子俘获和复合动力学
+8. [Nanoscale rheological heterogeneity revealed by Single Particle orientation Tracking (SPoT) of ultrashort carbon nanotubes in brain tissue](/202605/09/biorxiv-10-64898-2026-05-04-721587-v1-nanoscale-rheological-heterogeneity-revealed-by-single-particle-orientation-tracking-spot-of-ultrashort-carbon-nanotubes-in-brain-tissue)  
+   标签：评分：6.0/10、query:iscat
+   evidence：碳纳米管的单粒子追踪以揭示纳米级流变非均匀性
+9. [Mapping 3D tissue orientation with tensor-augmented light-sheet microscopy](/202605/09/biorxiv-10-64898-2026-05-05-722138-v1-mapping-3d-tissue-orientation-with-tensor-augmented-light-sheet-microscopy)  
+   标签：评分：6.0/10、query:iscat
+   evidence：用于 3D 取向映射的无标记散射显微镜
 
 
 <div class="dpr-home-promo-card">
