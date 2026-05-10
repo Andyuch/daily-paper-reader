@@ -1,0 +1,54 @@
+{
+  "label": "2026-05-10",
+  "date": "2026-05-10",
+  "generated_at": "2026-05-10T20:28:08",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202605/10/2605.04883v1-magnetic-brightening-and-nanoscale-imaging-of-spin-polarized-helical-edge-modes",
+      "section": "deep",
+      "title_en": "Magnetic Brightening and Nanoscale Imaging of Spin-Polarized Helical Edge Modes",
+      "authors": "Samuel Haeuser, Richard H. J. Kim, Lin-Lin Wang, Thomas Koschny, Pedro M. Lozano, Genda Gu, Randall K. Chan, Joong-Mok Park, Martin Mootz, Liang Luo, Qiang Li, Jigang Wang",
+      "date": "2026-05-06",
+      "pdf": "https://arxiv.org/pdf/2605.04883v1",
+      "score": "8.0",
+      "evidence": "利用散射型扫描近场光学显微镜进行输运的纳米级成像",
+      "tldr": "本研究针对亚10纳米尺度下传统金属导电损耗大的挑战，利用低温磁红外散射式扫描近场光学显微镜（cm-IR-sSNOM），首次在纳米尺度上实现了对自旋极化红外螺旋边缘态的磁增强成像。研究揭示了磁场诱导的近场电导增强现象，并证明了这些高频边缘模式在磁场诱导能隙下仍能保持鲁棒性，为开发超低损耗纳米互连和量子逻辑架构提供了新途径。",
+      "tags": "query:iscat",
+      "abstract_en": "Efficient sub-10 nm electric transport remains a major challenge for nanoelectronics due to high losses and impedance mismatches in conventional Drude metals. Despite their promise of dissipationless, reflection-free conduction, topologically protected chiral edge modes remain little explored in their nanoscale spin polarized transport-particularly regarding real-space visualization, magnetic field tunability, and high-frequency edge conductivity. Here, we report magnetic brightening and nanoscale visualization of highly spin-polarizable infrared helical edge states using cryogenic magneto-infrared scattering-type scanning near-field optical microscopy (cm-IR-sSNOM). Our measurements reveal magnetic field-induced near-field conductivity at step edges, uncovering quantum spin Hall spin-splitting modes with enhanced infrared polarizability and slightly narrowed near-field profiles. In addition, the infrared edge electrodynamic response scales nearly linearly with atomic layer number, providing compelling evidence that magnetic-field-induced gaps do not disrupt individual-layer edge states at energies of around 100 meV. These results sharply contrast with microwave and DC transport, where even small magnetically induced gaps decrease edge conduction. Magnetically tunable, topologically robust high-frequency edge modes open a pathway toward ultralow-loss nanoscale interconnects and quantum logic architectures for next-generation microelectronics, spintronics and quantum information science.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/10/biorxiv-10-64898-2026-05-04-722701-v1-multi-state-ensemble-refinement-for-occupancy-statistics-meros-in-time-resolved-x-ray-crystallography",
+      "section": "quick",
+      "title_en": "Multi-state Ensemble Refinement for Occupancy Statistics (MEROS) in Time-Resolved X-ray Crystallography",
+      "authors": "Prester, A., Spiliopoulou, M., Schulz, E. C.",
+      "date": "2026-05-07",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.04.722701v1.full.pdf",
+      "score": "6.5",
+      "evidence": "时间分辨晶体学中占有率统计的系综精修",
+      "tldr": "在时间分辨X射线晶体学中，准确确定状态占据率受限于占据率与原子位移参数（ADP）之间的强相关性。本文提出MEROS流程，通过蒙特卡洛采样和独立精修评估重叠状态的占据率-ADP统计分布。该方法能有效量化实验数据的确定性，并在溶菌酶和β-内酰胺酶案例中验证了其可靠性，为结构异质性分析提供了新工具。",
+      "tags": "query:iscat",
+      "abstract_en": "Accurate determination of state occupancies is essential for interpreting the structural heterogeneity inherent in time-resolved crystallography. However, in cases of high spatial overlap between states, as commonly observed in time-resolved crystallography data, the strong correlation between occupancy and atomic displacement parameters (ADPs) can render single point estimates from standard refinement protocols unreliable. We introduce MEROS (Multi-state Ensemble Refinement for Occupancy Statistics), a pipeline that implements an ensemble refinement approach to assess the post-refinement occupancy-ADP statistics of multiple overlapping states. MEROS utilizes a Monte Carlo sampling of the parameter space, performing independent refinements from randomized starting occupancies and ADP values to empirically characterize the convergence and uncertainty of the solution. The method is implemented as a modular Python pipeline that wraps established refinement programs, ensuring compatibility with existing workflows. We demonstrate its applicability in two case studies: a two-state ligand binding model in T4 lysozyme L99A and a four-state covalent catalysis mechanism in beta-lactamase CTX-M-14. MEROS provides occupancy and ADP mean values with standard deviations that directly quantify the informational content of the experimental diffraction data.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/10/biorxiv-10-64898-2026-05-05-722893-v1-label-free-quantitative-3d-mapping-of-collagen-architecture-by-holotomography",
+      "section": "quick",
+      "title_en": "Label-free quantitative 3D mapping of collagen architecture by holotomography",
+      "authors": "Lee, S., Park, W. S., Lee, J., Park, J., Park, H., Ahn, E. H., Kim, D.-H., Park, Y.",
+      "date": "2026-05-08",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.05.05.722893v1.full.pdf",
+      "score": "6.0",
+      "evidence": "利用折射率分布进行无标记定量 3D 映射",
+      "tldr": "胶原蛋白结构的定量无标记分析一直缺乏物理校准的体积测量方法。本研究提出利用全息断层扫描（HT）技术重建胶原网络的三维折射率（RI）分布。由于RI与干质量密度呈线性关系，HT仅需单次采集即可获得纤维级形态和质量信息。该方法能解析三维纤维结构，区分亚型差异，并追踪聚合与细胞驱动的重塑过程，为细胞外基质分析建立了定量框架。",
+      "tags": "query:iscat",
+      "abstract_en": "Quantitative label-free analysis of collagen architecture lacks physically calibrated volumetric methods. Here we present holotomography (HT), which reconstructs three-dimensional refractive-index (RI) distributions of collagen networks. Because RI scales linearly with dry mass density, HT yields fiber-level morphology and mass from a single acquisition. HT resolves 3D fibrillar structure, distinguishes subtype-specific organizational and mass differences, and tracks polymerization and cell-driven remodeling, establishing a quantitative framework for extracellular matrix analysis.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
