@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.07553v1/fig-001.webp",
+      "caption": "Figure 4. Event-yield comparison for white-LED modulation at 30 and 40 kHz. (a) Number of detected events per probing window over a representative temporal interval, where each point corresponds to the total number of events accumulated within one modulation period (integration time). (b) Mean number of events per probing window for each modulation frequency. The inset box reports the ratios between the 40 kHz and 30 kHz conditions for several metrics: mean events per frame, defined as the average number of events detected within one probing window; event rate, obtained by normalizing the event count by the integration time (events per second); active-pixel fraction, defined as the proportion of pixels that generated at least one event in the accumulated frame; and peak-to-background ratio, computed as the ratio between the event density within the signal band and that of the remaining background region. The reduction in event yield at 40 kHz is consistent with the lower optical power reaching the sensor at higher modulation frequencies.",
+      "page": 6,
+      "index": 1,
+      "width": 886,
+      "height": 364
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07553v1/fig-002.webp",
+      "caption": "Figure 5. Spectral tracking during a microfluidic experiment in an inverted microscope configuration (a). (b) Spectra reconstructed from the event-based spectrometer (EVS) at selected time instants, with colors encoding acquisition time. The inset shows the total number of events per frame, highlighting the moment of spectral change induced by the introduction of the absorbing medium (highlighted in red). (c) Corresponding spectra acquired with a reference frame-based spectrometer at matching times. The inset highlights the EVS spectral window (400–650 nm) within the full measurement range of the reference device. Colors are matched across both panels according to the closest acquisition timestamps.",
+      "page": 7,
+      "index": 2,
+      "width": 1044,
+      "height": 350
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07553v1/fig-003.webp",
+      "caption": "Figure 1. A. Illustration of the event-based spectrometer, consisting of a parabolic mirror for beam collimation, an achromatic lens for focusing, a beam splitter, and two detectors, namely an event-based camera used for spectral interrogation and a frame-based camera employed for monitoring and alignment. B. Illustration of the setup used for sample illumination and manipulation. The light transmitted through the sample and collected by the microscope objective is then sent to the event-based spectrometer system.",
+      "page": 3,
+      "index": 3,
+      "width": 1044,
+      "height": 435
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07553v1/fig-004.webp",
+      "caption": "Figure 2. (A) Asynchronous event stream represented in the spatio-temporal domain, where each event encodes changes in intensity (red and blue corresponding to brightness increases and decreases, respectively). (B) Events accumulated over a short temporal window to form an event-frame. Brighter pixels correspond to a higher number of accumulated events. (C) The final spectrum is obtained by summing events column-by-column across the selected vertical region, yielding a one-dimensional spectral profile.",
+      "page": 4,
+      "index": 4,
+      "width": 1044,
+      "height": 248
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07553v1/fig-005.webp",
+      "caption": "Figure 3. Accumulated event image and resulting spectra for a white LED modulated at 30 and 40 kHz (cases A. and B.). The event image was constructed with macropixels to improve visibility. Note that spatial binning is applied only for visualization, and all spectra are reconstructed from the original, full-resolution event data. For both spectra, a reference line is presented, in red, obtained from a commercial spectrometer.",
+      "page": 5,
+      "index": 5,
+      "width": 1044,
+      "height": 450
+    }
+  ]
+}

@@ -1,0 +1,1952 @@
+Title: 2605.02065v1.pdf
+
+URL Source: https://arxiv.org/pdf/2605.02065v1
+
+Published Time: Tue, 05 May 2026 01:25:19 GMT
+
+Number of Pages: 29
+
+Markdown Content:
+Multiscale computational approaches to magnetic b ehavio ur in Cobalt Ferrite (CoFe 2O4)
+
+nanostructures 
+
+Soham Chandra a and Soumyajit Sarkar a,* 
+
+> a
+
+Department of Physics, Brainware University, Kolkata 700 125, INDIA 
+
+# ABSTRACT 
+
+Cobalt ferrite ( CoFe 2O4) is a pr ototypical ferrimagnetic spinel oxide whose exceptional magnetic 
+
+anisotropy, magnetoelastic coupling, and thermal stability underpin applications in spintronics, 
+
+magnetic hyperthermia, energy harvesting, and catalysis. This chapter presents a comprehensive 
+
+computational framework that integrates electronic -structure calculations with atomistic spin 
+
+modelling, statistical mechanics, and continuum micro -magnetics to predict magnetic 
+
+functionality across length and time scales. Starting from density functional theory with Hubbard 
+
+corrections (DFT+U), we derive exchange constants Jij , magnetocrystalline anisotropy K1, and 
+
+magnetoelastic coefficients B1, accounting for cation inversion, strain, and correlation effects. 
+
+These parameters feed into generalized Heise nberg Hamiltonians, enabling Monte Carlo and 
+
+Landau -Lifshitz -Gilbert simulations of finite -size effects, hysteresis, coercivity, and hyperthermia 
+
+response in nanoparticles and thin films. Coarse -graining strategies bridge to micro -magnetic 
+
+modelling, ensur ing consistent parameter flow without empirical fitting. Computational case 
+
+studies demonstrate size -dependent anisotropy enhancement, surface spin disorder, strain -tunable 
+
+switching, and doping trends, revealing design principles inaccessible to experimen t alone. 
+
+Validation against benchmarks, e.g. Curie temperature, anisotropy constants, coercivity, 
+
+magnetostriction, confirms predictive accuracy. Current challenges, e.g., U -parameter sensitivity, 
+
+realistic surface chemistry, spin –lattice coupling, and lar ge -scale integration are discussed 
+
+alongside emerging directions including DFT+DMFT, coupled dynamics, and machine -learned 
+
+potentials. 
+
+This multiscale hierarchy establishes cobalt ferrite as a quantitatively designable material, bridging 
+
+microscopic elect ronic origins to device -relevant observables and providing the theoretical spine 
+
+for magnetic functionality in this volume. 
+
+KEYWORDS: 
+
+Cobalt ferrite, Multiscale modelling, Magnetic anisotropy, DFT+U, Atomistic spin simulation, 
+
+Magnetoelastic coupling 
+
+--------------------------------------------------------------------------------------------------
+
+corresponding au thor:  soumyajit.snb@gmail.com  (SS) Contents 
+
+ABSTRACT  ................................ ................................ ................................ ................................ ...  1
+
+Introduction ................................ ................................ ................................ ................................ ... 4
+
+1. Ab Initio Description of Magnetic Interactions in CoFe 2O4 ................................ ................. 6
+
+1.1. Electronic Structure and Correlation Effects ................................ ................................ ....... 6
+
+1.2. Extraction of Exchange Parameters ................................ ................................ ..................... 7
+
+1.3. Magnetocrystalline Anisotropy from First Principles ................................ .......................... 7
+
+1.4. Magnetoelastic Coupling and Strain Effects ................................ ................................ ........ 7
+
+1.5. Sensitivity to Cation Inversion and Defects ................................ ................................ ......... 8
+
+2. Construction of Atomistic Spin Hamiltonians ................................ ................................ ....... 8
+
+2.1. Generalized Heisenberg Hamiltonian ................................ ................................ .................. 8
+
+2.2. Incorporating Disorder and Partial Inversion ................................ ................................ ...... 9
+
+2.3 . Surface and Finite -Size Effects ................................ ................................ ............................ 9
+
+2.4. Parameter Transferability and Renormalization ................................ ................................ 10 
+
+2.5. Limitations of Classical Spin Approximations ................................ ................................ .. 10 
+
+3. Statistical Mechanics of Nanoscale Ferrimagnetism ................................ ........................... 11 
+
+3.1. Monte Carlo Framework and Equilibrium Thermodynamics ................................ ............ 11 
+
+3.2. Finite -Size Scaling and Determination of the Curie Temperature ................................ ..... 13 
+
+3.3. Hysteresis, Coercivity, and Energy Barrier Landscape ................................ ..................... 13 
+
+3.4. Spin Dynamics and the Landau –Lifshitz –Gilbert Equation ................................ .............. 13 
+
+3.5. Magnetic Relaxation and Superparamagnetism ................................ ................................ . 14 
+
+3.6. Dynamic Susceptibility and Hyperthermia Response ................................ ........................ 14 
+
+4. Multiscale Coupling: From Electronic Structure to Device -Relevant Observables ......... 15 
+
+4.1. Hierarchy of Length and Time Scales ................................ ................................ ............... 15 
+
+4.2. Paramete r Flow Across Scales ................................ ................................ ........................... 15 
+
+4.2.1. DFT → Atomistic Spin Models ................................ ................................ .................. 15 
+
+4.2.2. Atomistic → Mesoscale (Micromagnetics) ................................ ................................ 16 
+
+4.3. Coarse -Graining and Renormalization Strategies ................................ .............................. 17 
+
+4.4. Magnetostatic Interactions and Micromagnetic Dynamics ................................ ................ 17 
+
+4.5. Validation of the Multiscale Framework and Integration into Appl ication -Oriented 
+
+Modeling ................................ ................................ ................................ ................................ ... 17 
+
+5. Computational Case Studies ................................ ................................ ................................ .. 19 
+
+5.1. Nanoparticles: Biomedical and Catalytic Context ................................ ............................. 19 
+
+5.1.1. Size -Dependent Magnetic Anisotropy ................................ ................................ ........ 19 5.1.2. Surface Spin Disorder and Magnetization Reduction ................................ ................. 19 
+
+5.1.3. Implications for Magnetic Hyperthermia ................................ ................................ .... 19 
+
+5.1.4. Magnetic Structure and Catalytic Activity ................................ ................................ . 20 
+
+5.2. Thin Films: Spintronics Context ................................ ................................ ........................ 20 
+
+5.2.1. Epitaxial Strain and Anisotropy Control ................................ ................................ ..... 20 
+
+5.2.2. Strain -Inversion Coupling ................................ ................................ ........................... 20 
+
+5.3. Doped Systems ................................ ................................ ................................ ................... 20 
+
+5.3.1. Exchange Modification Trends ................................ ................................ ................... 20 
+
+5.3.2. Rare -Earth -Induced Anisotropy Enhancement ................................ ........................... 20 
+
+5.4. Predictive Design Guidelines ................................ ................................ ............................. 20 
+
+6. Current Challenges and Emerging Computational Directions ................................ .......... 21 
+
+6.1. Accurate Treatment of Strong Correlation ................................ ................................ ........ 21 
+
+6.2. Realistic Surface Chemistry Modeling ................................ ................................ .............. 21 
+
+6.3. Spin -Lattice Coupled Simulations ................................ ................................ ..................... 22 
+
+6.4. Large -Scale Micromagnetics Integration ................................ ................................ ........... 22 
+
+6.5. Data -Driven and Machine Learning Potentials ................................ ................................ .. 22 
+
+6.6. Accelerating Multiscale Modeling via Machine -Learned Potentials and Surrogates ........ 23 
+
+7. Concluding Perspective ................................ ................................ ................................ .......... 24 
+
+References ................................ ................................ ................................ ................................ .... 26 Introduction 
+
+Cobalt ferrite (CoFe 2O4) owes its tec hnological promine nce to its robust ferrimagnetism, 
+
+exceptionally large magneto -crystalline anisotropy, and strong magneto -elastic coupling. These 
+
+intrinsic characteristics directly govern the performance of the spin tronic, magneto -elastic 
+
+energy -harvesting, and bi omedical systems explored throughout this volume. In spin valves and 
+
+magnetic random - access memory (MRAM), anisotropy barriers and interfacial exchange control 
+
+thermal stability and field - or current -driven switching. In strain -mediated energy harv este rs, the 
+
+modulation of magnetic anisotropy through applied stress forms the cen tral tuning mec hanism. For 
+
+magnetic hyperthermia and targeted delivery, particle size, surface spin structure, and effective 
+
+anisotropy together determine relaxation pathways and heating efficiency. At the microscopic 
+
+level, the magnet ism of CoFe 2O4 arises from superexchange in teractions between tetrahedral (A) 
+
+and octahedral (B) sublattices, mediated by oxygen anions and governed by the Goo denough -
+
+Kanamori -Anderson rules (An derson 1950, Goodenough 1958, Anderson 1987) . The result ing 
+
+ferromagnetic order, first formalised by Néel (Néel 1948) , yields a net magnetisation whose 
+
+magnitude and temperature dependence reflect the delicate balance among competing exchange 
+
+pathways. In CoFe 2O4, the dominant antiferromagnetic A -B coupling co ex ists with weaker intra -
+
+sublattice (B -B and A-A) interactions. The presence of Co 2+ ions on octahedral sites further 
+
+introduces strong spin –orbit coupling, giving rise to a significant orbit al contribution to the 
+
+anisotropy (Coey 2010, Eskandari et al. 2017 ). Consequently , fundamental quantities such as the 
+
+first anisotrop y constant K 1, exchange stiffness, and saturation magnetization, Ms, originate 
+
+directly from electronic -scale interacti ons rather than from purely phenomenological assumptions. 
+
+Experimental characterisation of these parameters in nanoscale systems, however, remains 
+
+in trinsically difficult. Partial cation inv ersion -quantified by the inversion parameter, λ, modifies 
+
+A-B exchange pathways and can appreciably shift both the Curie temperature and the anisotrop y
+
+energy (Hou et al. 2010a, Hou et al. 2010b, Liu et al. 2019). Determining λ in nanocrystalline 
+
+samples is often indirect and model -dependen t. Surface spin disorder adds further complexity: 
+
+broken exchange bonds and reduced coordination at particle boundaries produce non -collinear 
+
+spin configurations and a suppression of magnetisation that cannot be uniquely separated from 
+
+bulk behaviour using magnetometry alone. In epitaxial thin films, strain - induced magneto elastic 
+
+coupling modifies the magneto -crystalline anisotropy , making it challenging to disentangle 
+
+intrinsic electronic effects from extrinsic structural influences. 
+
+These experimen tal limitations have motiv ated the development of a predictiv e mul tiscale 
+
+computational strategy capable of resolving magnetic interactions at their elec tronic origin and 
+
+systematically propagating them across relevant length and time scales. Density functional theory ,
+
+particularly within the GGA+U (or LSDA+U ) formalism, has become indisp ensable for treating 
+
+the localised 3d states in transition -metal o xides and for extracting reliable sublattice magnetic 
+
+moments and exchange constants in CoFe 2O4 (Frits ch and Ederer 2012). When spin -orbit 
+
+coupling is included, first -principles calculations can evaluate the magneto -crystalline anisotrop y
+
+energy and its dependence on strain (Eskandari et al. 2017). 
+
+Such studies offer controlled insight into the influence of cation inversion, lattice distortion, and 
+
+defect chemistry on intrinsic magnetic parameters. Electronic -structure methods alone, however, do not directly provide temperature -dependent observables or finite -size effects relevant to 
+
+applications. Bridging this gap requires mapping the first principles -derived exchange interactions 
+
+onto atomistic spin Hamiltonians, followed by statistical -mechanical treatment using Monte Carlo 
+
+sampling or spin -dynamics simulations. Finite -size scaling techniques and Binder cumulant 
+
+analysis (Binder 1981) allow reliable extraction of transition temperatures and critical behaviour 
+
+in finite systems, while dynamical simulations capture switching and hysteresis phenomena 
+
+beyond equilibrium thermodynamics. Only through this hiera rch ical approach can one connect 
+
+Angstro m-scale exchange interactions to nanometre -scale coercivity and device -level thermal 
+
+stability. 
+
+Figure 1: Multiscale computational framework for modeling magnetic properties of CoFe 2O4 inverse spinel 
+
+ferrites. (a) Workflow linking first -principles DFT+U calculations to atomistic spin modeling and 
+
+statistical -mechanics simulations. Interatomic parameters (exchange interactions, anisotropy, 
+
+magnetoelastic terms) are used to construct a spin Hamiltonian on the inverse spinel lattice, followed by 
+
+Monte Carlo and spin -dynamics approaches to obtain t hermodynamic and dynamic magnetic properties. 
+
+(b) Crystal and magnetic structure of CoFe 2O4, showing tetrahedral (A) and octahedral (B) sublattices. 
+
+Dominant antiferromagnetic A –B exchange leads to ferrimagnetic ordering with antiparallel alignment of 
+
+sub lattice moments. The present chapter does not revisit structural fundamentals or synthesis strategies – topics 
+
+comprehensively covered in preceding chapters –but instead focuses on the computational 
+
+integration of magnetic behaviour across scales. Its central aim is to establish a consistent 
+
+parameter flow from electronic structure through atomistic spin models to mesoscale observables, 
+
+with particular attention to transferability and proper scale separation. Although many studies have 
+
+reported either isolated DFT calculations or phenomenological Monte Carlo simulations, 
+
+rigorously parameterised multiscale treatments of CoFe 2O4 nanostructures remain relatively 
+
+scarce. The modelling gap addressed here therefore concerns hierarchical consistency: how to 
+
+derive exchange and anisotropy parameters from first principles, incorporate realistic disorder and 
+
+surface effects, and propagate these inputs into statistically robust simulations that quantitatively 
+
+reproduce established experimental benchm arks such as Curie temperature, coercivity, and 
+
+thermal stability (Franco and Silva 2010) . Establishing such a predictive pipeline is essential for 
+
+rationall y connecting structural modifications —including inversion control, strain engineering, 
+
+and doping —to quantitative magnetic functionality. A schematic overview of the multiscale 
+
+computational framework, discussed in this work is shown in Fig. 1. 
+
+# 1. Ab Initio Description of Magnetic Interactions in CoFe 2O4
+
+1.1. Electronic Structure and Correlation Effects 
+
+A predictive description of magnetism in CoFe 2O4 requires explicit treatment of its strongly 
+
+correlated 3d electronic structure. The ferrimagnetic order arises from the partially filled 3d shells 
+
+of Co 2+ and Fe 3+ ions distributed across octahedral (B) and te trahedral (A) sites. In the inverse 
+
+spinel configuration, Fe 3+ occupies both sublattices, while Co 2+ preferentially resides on octahedral 
+
+B sites, giving rise to strong antiferromagnetic A –B superexchange. Because these 3d electrons 
+
+are localised and exper ience significant on -site Coulomb repulsion, standard local or semi -local 
+
+density functionals often underestimate correlation effects and may incorrectly predict metallic 
+
+behaviour. The DFT+U method, introduced by Anisimov et al. (Anisimov et al. 1991) and later 
+
+cast in a rotationally invariant form by Dudarev et al. (Dudarev et al. 1998) , has therefore become 
+
+the standard approach for spinel ferrites. The additional on -site Coulomb parameter U corrects 
+
+self -interaction errors and restores the proper splitt ing between occupied and unoccupied d states. 
+
+For CoFe 2O4, both magnetic moments and exchange couplings display noticeable sensitivity to 
+
+the chosen U values (Hou et al. 2010a, Hou et al. 2010b, Fritsch and Ederer 2012) . Typical ranges 
+
+employed in the lite rature are :
+
+𝑈 𝐹𝑒 = 3 − 5 𝑒𝑉 , and 𝑈 𝐶𝑜 = 4 − 6 𝑒𝑉 ,
+
+which yield magnetic moments in good agreement with experiment ( ~ 5 𝜇𝐵 for Fe 3+ and a spin 
+
+contribution of ~ 3 𝜇𝐵 for Co 2+ ). Importantly, Co 2+ in octahedral coordination exhibits incomple te 
+
+orbital quenching. When spin -orbit coupling (SOC) is included, an orbital moment of 
+
+approximately 0.6 − 0.8 𝜇𝐵 appears on the Co sites (Fritsch and Ederer 2012, Rivas -Murias et al. 
+
+2023), contributing significantly to the magnetocrystalline anisotropy. 1. 2. Extraction of Exchange Parameters 
+
+To build predictive atomistic spin models, the interatomic exchange constants Jij must be obtained 
+
+from first principles. Within the magnetic force theorem, the Liechtenstein formalism 
+
+(Liechtenstein et al. 1987) maps small rotations of magnetic moments onto a classical Heisenberg 
+
+Hamiltonian: 
+
+𝐻 = − ∑ 𝐽 𝑖𝑗 𝑺 𝒊 ⋅ 𝑺 𝒋 
+
+> 𝑖 ≠𝑗
+
+… (1) 
+
+Alternatively, total energies of several collinear magnetic configurations can be com puted and 
+
+mapped onto effective exchange parameters. Both approaches consistently sh ow that the 
+
+antiferromagnetic A -B supe rexchange interaction dominates in CoFe 2O4, in line with the 
+
+Goodenough -Kanamori rules (Goodenough 1958) . The intrasublattice B -B and A -A interactions 
+
+are considerably weaker, yet they play an important role in determining spin -wave stiffness and 
+
+finite -te mperature behaviour. 
+
+First -principles studi es indicate that the dominant A -B couplings exceed the intrasublattice 
+
+interactions by nearly an order of magnitude, which readily accounts for the high Curie 
+
+temperature ( 𝑇 𝐶 ~ 790 𝐾 ) reported experimentally (Hou et al. 2010b, Fritsch and Ederer 2012) .
+
+Nevertheless, these exchange parameters remain sensitive to lattice distortions, the degree of 
+
+cation inversion, and the presence of defects. 
+
+1.3. Magnetocrystalline Ani sotropy from First Principles 
+
+The magnetocrystalline anisotropy energy (MAE) is evaluated from relativistic DFT calculations 
+
+by comparing total energies for different magnetisation directions. For the cubic case, the leading 
+
+term takes the form :
+
+𝐸 𝑀𝐴 𝐸 = 𝐾 1 (𝛼 1
+
+> 2
+
+𝛼 2 
+
+> 2
+
++ 𝛼 2
+
+> 2
+
+𝛼 3 
+
+> 2
+
++ 𝛼 3
+
+> 2
+
+𝛼 1
+
+> 2
+
+)
+
+where 𝛼 𝑖 are the direction cosines of the magnetisation vector. DFT calculations cons istently yield 
+
+a large positive 𝐾 1, corresponding to 〈100 〉 easy axes (Hou et al. 2010a, Fritsch a nd Ederer 2012) .
+
+The microscopic origin of this anisotropy lies in the spin –orbit coupling that links the orbital 
+
+moment of Co 2+ to the crystal field. Because anisotropy energies are small (typically o f the order 
+
+of 𝑚𝑒𝑉 per formula unit), high numerical precision, and dense k -point sampling are essential to 
+
+achieve reliable convergence. 
+
+1.4. Magnetoelastic Coupling and Strain Effects 
+
+Applied strain modifies the anisotropy through magnetoelastic coupling. First -principles 
+
+calculations performed under co ntrolled tetragonal distortion demonstrate that even modest biaxial 
+
+strain can significantly alter the MAE (Odkhuu and Hong 2014) . The magnetoelastic coefficient 
+
+B1 is readily extracted via the strain derivative :
+
+𝐵 1 = 𝜕 𝐸 𝑀𝐴𝐸 
+
+𝜕𝜖 where 𝜖 denotes the strain. Strain also influences exchange interac tions indirectly by changing Fe -
+
+O-Co bond angles and hopping amplitudes. Consequently, combined structural relaxation and 
+
+spin –orbit -coupled calculations provi de strain -dependent parameter sets that are indispensable for 
+
+modelling thin -film spintronic devices. 
+
+1.5. Sensitivity to Cation Inversion and Defects 
+
+Cation inversion adds a further layer of complexity. The inversion parameter 𝜆 alters exchange 
+
+pathway s and modifies the symmetry of the anisotropy. Supercell DFT calculations reveal that 
+
+partial inversion affects both the sublattice magnetic moments and the hierarchy of 𝐽 𝑖𝑗 values (Hou 
+
+et al. 2010b). By comparing total energies of different ordered configurations, it is also possible to 
+
+estimate the thermodynamics of the inversion process. Oxygen vacancies, on the other hand, 
+
+disrupt superexchange bridges and may introduce localised defect states. First -principles work 
+
+shows that such vacancies can either enhance or suppress local magnetic moments, depending on 
+
+the prevailing charge compensation mechanism. 
+
+The principal outcome of ab -initio modelling for CoFe 2O4 is therefore a coherent microscopic 
+
+parameter set: 
+
+{J ij , K 1, B 1, M s, and their dependenc e on strain and inversion}. 
+
+These quantities constitute the essential foundation for the atomistic spin Hamiltonians and finite -
+
+temperature simulations developed in the following sections. Without this electronic -structure 
+
+underpinning, higher -level model s would lack the predictive rigour required for quantitative 
+
+materials design. 
+
+# 2. Construction of Atomistic Spin Hamiltonians 
+
+2.1. Generalized Heisenberg Hamiltonian 
+
+The first -principles parameters obtained in the preceding section supply the microscop ic 
+
+foundation for atomistic magnetic modelling. At length scal es lying between the electronic 
+
+structure and the continuum micromagnetic regime, the magnetic behaviour of CoFe 2O4 is most 
+
+naturally described by a generalised classical spin Hamiltonian define d on the discrete cation 
+
+lattice. The starting point is the Heisenberg exchange term, 
+
+𝐻 𝑒𝑥 = − ∑ 𝐽 𝑖𝑗 𝑺 𝒊 ⋅ 𝑺 𝒋 
+
+> 𝑖 ≠𝑗
+
+where the exchange constants 𝐽 𝑖𝑗 are derived from first -principles calculations (Hou et al. 2010b, 
+
+Liechtenstein et al. 1987) and the classical spin vectors Si are normalised such that | Si | = 1. In 
+
+CoFe 2O4, the dominant contribution com es from the antiferromagnetic A -B superexcha nge, while 
+
+the weaker B -B and A -A interactions govern spin stiffness and finite -temperature fluctuations. Magnetocrystalline anisotropy is incorporated through single -ion terms. For cubic symmetry the 
+
+leadin g contribution reads 
+
+𝐻 𝑎𝑛𝑖 = −𝐾 1 ∑(𝛼 𝑖 1 
+
+> 2
+
+𝛼 𝑖 2 
+
+> 2
+
++ 𝛼 𝑖 2 
+
+> 2
+
+𝛼 𝑖 3 
+
+> 2
+
++ 𝛼 𝑖 3 
+
+> 2
+
+𝛼 𝑖 1 
+
+> 2
+
+)
+
+> 𝑖
+
+where , 𝛼 𝑖𝑘 are the direction cosines of spin 𝑺 𝑖 with respect to the crystalline axes, and K1 is 
+
+obtained from spin -orbit -coupled DFT calculations (Hou et al. 2010a, Fritsch and Ederer 2012 ).
+
+In atomistic simulations of nanoparticles it is often convenient to replace the cubic term by an 
+
+effective uniaxial anisotropy when the symmetry is lowered by shape or surface effects. 
+
+The Zeeman interaction with an ex ternal magnetic field H completes the minimal Hamiltonian: 
+
+𝐻 𝑍 = −𝜇 0 ∑ 𝜇 𝑖 𝑺 𝒊 ⋅ 𝑯 
+
+> 𝑖
+
+where 𝜇 𝑖 denotes the sublattice magnetic moments taken from first -principles calculations. 
+
+The complete generalised Hamiltonian is therefore 
+
+𝐻 = 𝐻 𝑒𝑥 + 𝐻 𝑎𝑛𝑖 + 𝐻 𝑍 
+
+This discrete spin representation forms the computational framework for both Monte Carlo 
+
+sampling and spin -dynamics simulations (Evans et al. 2014) , allowing the calculation of key 
+
+thermodynamic observables such as the temperature -dependent magnetisation M(T) , susceptibility 
+
+χ(𝑇 ), and coe rcivity. 
+
+2.2. Incorporating Disorder and Partial Inversion 
+
+Real CoFe 2O4 samples rarely exhibit perfect inverse spinel order. Partial inversion is quantified by 
+
+the inversion parameter , 𝜆 , which gives the fraction of Co 2+ ions occupying tetrahedral A sit es. At 
+
+the atomistic level this requires stochastic assignment of site occupancies. A practical approach is 
+
+to construct large supercells in which A - and B -site occupations are assigned according to 𝜆 , either 
+
+randomly or according to energetically weighte d probabilities derived from DFT total -energy 
+
+differences (Hou et al. 2010a, b) . The exchange constants 𝐽 𝑖𝑗 then become locally environment -
+
+dependent, reflecting the actual chemical surroundings. 
+
+Disorder introduces spatial fluctuations in exchange strengths, effectively replacing a single 𝐽 𝑖𝑗 
+
+value by a distribution , 𝑃 (𝐽 𝑖𝑗 ). Such rando mness tends to broaden magnetic phase transitions and 
+
+lower the effective Curie temperature, in agreement with finite -size scaling theory (Binder 1981). 
+
+In Monte Carlo simulations, proper disorder averaging over multiple independent configurations 
+
+is therefore essential for statistically reliable results. Vacancies and non -stoichiometric defects can 
+
+be included by selectively removing exchange bonds or modi fying local anisotropy constants. 
+
+Oxygen vacancies, for instance, break Fe -O-Co superexchange paths and reduce the local 𝐽 𝑖𝑗 
+
+values. 
+
+2.3. Surface and Finite -Size Effects In nanoparticles and thin films, surface effects become particularly prominent. Broken exchange 
+
+bonds at the surface reduce the coordination number and weaken the effective exchange field. In 
+
+atomisti c models , this is imple mented simply by truncating the e xchange interactions at the partic le 
+
+boundary. Surface spins also experience modified anisotropy owing to the reduced local 
+
+symmetry. A widely used approach is to introduce an additional surface aniso tropy term :
+
+𝐻 𝑠𝑢𝑟𝑓 = −𝐾 𝑠 ∑ (𝑺 𝑖 ⋅ 𝒏 𝑖 )2
+
+> 𝑖 ∈𝑠𝑢𝑟𝑓𝑎𝑐𝑒
+
+where 𝐾 𝑆 is the surface anisotropy constant and 𝒏 𝑖 is the local surface normal (Omelyanchik et al. 
+
+2020). This term can compete with the bulk cubic anisotropy and often induces spi n canting. The 
+
+competition between strong A -B exchange in the core and weakened interactions at the sur face 
+
+naturally leads to core -shell magnetic structures: an ordered ferrimagnetic core coexisting with a 
+
+disordered or canted surface shell. Atomistic sim ulations successfully reproduce the 
+
+experimentally observed reduction in saturation magnetisation and the enhancement of coercivity 
+
+in nanoscale CoFe 2O4 particles (Evans et al. 2014). Finite size also influences thermal stability. In 
+
+small particles, magne tisation reversal may proceed via coherent rotation or non -uniform modes, 
+
+depending on the particle diameter relative to the exchange length. Atomistic models capture this 
+
+crossover directly, without the need to impose continuum approximations. 
+
+2.4. Param eter Transferability and Renormalization 
+
+Although the exchange constants 𝐽 𝑖𝑗 and anisotropy 𝐾 1 are extracted from bulk DFT calculations, 
+
+their direct application to nanoscale systems must be treated with care. Surface relaxation, strain 
+
+gradients, and spatially varying inversion can modify the local environment and ren ormalise the 
+
+magnetic parameters. Temperature further renormalises both effective anisotropy and exchange 
+
+stiffness. Within classical spin models, these effects emerge naturally from thermal fluctuations. 
+
+Nevertheless, it is often useful to introduce an ex plicit temperature -dependent anisotropy of the 
+
+form :
+
+𝐾 1(𝑇 ) ∝ [𝑀 (𝑇 )]𝑛 
+
+Where , 𝑛 ≈ 3 for single -ion anisotropy in localised spin systems (Callen 1963). 
+
+True parameter transferability therefore demands consistency checks between bulk -derived values 
+
+and nanoscale observables. When discrepancies appear, s ite -dependent corrections or coarse -
+
+graining procedures that preserve thermodynamic behaviour can be employed. Bridging the 
+
+atomistic and micromagnetic scales involves extracting continuum parameters such as the 
+
+exchange stiffness 𝐴 and an effective aniso tropy constant 𝐾 𝑒𝑓𝑓 directly from the atomistic 
+
+simulations. This mapping guarantees hierarchical cohe rence throughout the multiscale 
+
+framework. 
+
+2.5. Limitations of Classical Spin Approximations 
+
+(a) Despite their considerable utility, classical spin H amiltonians have intrinsic limitations. 
+
+They neglect quantum fluctuations, which can be relevant at low temperatures. Moreover, 
+
+mapping itinerant -electron effects onto localised spin models assumes well -defined magnetic moments on every sit e - an approxima tion that is reasonable for CoFe 2O4 but not 
+
+universally valid. 
+
+(b) A second limitation concerns longitudinal spin fluctuations. Classical models usually fix 
+
+the spin magnitude, thereby omitting amplitude variations that become important near 𝑇 𝐶 .
+
+Extensions based on Landau –Lifshitz –Bloch dynamics offer a partial remedy, albeit at 
+
+higher computational cost (Garanin 1997). Finally, the exchange parameters themselves 
+
+inherit the uncertainty of the chosen U values in DFT+U calculations. This se nsitivity 
+
+propagates into the atomistic regime and underscores the need for careful parameter 
+
+sensitivity analysis. 
+
+The atomistic Hamiltonian constructed in this section forms the crucial intermediate bridge 
+
+between the electronic -structure description an d macroscopic magnetic observables. It 
+
+incorporates first -principles -derived exchange and anisotropy parameters, explicitly treats disorder 
+
+and finite -size effects, and serves as the computational engine for all temperature -dependent 
+
+modelling that follows . The reliability of every higher -level simulation presented in this chapter 
+
+ultimately rests on the rigour and internal consistency of this construction. 
+
+# 3. Statistical Mechanics of Nanoscale Ferrimagnetism 
+
+3.1. Monte Carlo Framework and Equilibrium Th ermodynamics 
+
+Having established the generalized atomistic spin Hamiltonian, 
+
+𝐻 = − ∑ 𝐽 𝑖𝑗 𝑺 𝒊 ⋅ 𝑺 𝒋 
+
+> 𝑖 ≠𝑗
+
++ 𝐻 𝑎𝑛𝑖 + 𝐻 𝑍 
+
+Finite -temperature properties of ferrimagnetic spinels such as CoFe 2O4 are obtained through 
+
+statistical sampling of spin configurations. The canonical ensemble distribution is: 
+
+𝑃 ({𝑆 𝑖 }) ∝ exp (− 𝐻 
+
+𝑘 𝐵 𝑇 )
+
+With 𝑘 𝐵 the Boltzmann constant and 𝑇 temperature. Metropolis Monte Carlo methods (Metropolis 
+
+et al. 1953) remain the standard numerical tool for classical spin systems. A trial rotation of a 
+
+randomly selected spin is accepted with p robability: 𝑃 𝑎𝑐𝑐 = min {1, exp (− 𝛥𝐸  
+
+> 𝑘 𝐵 𝑇
+
+)} ensuring 
+
+importance sampling of thermodynamically relevant configurations. 
+
+For CoFe 2O4, explicit treatment of both tetrahedral (A) and octahedral (B) sublattices is essent ial 
+
+to preserve ferrima gnetic A -B superexchange originally described by Néel (N éel 1948) . Separate 
+
+monitoring of sublattice magnetizations: 
+
+𝑀 𝐴 = 1
+
+> 𝑁 𝐴
+
+〈∑ 𝑆 𝑖 𝑧 〉𝑖 ∈𝐴 and , 𝑀 𝐵 = 1
+
+> 𝑁 𝐵
+
+〈∑ 𝑆 𝑖 𝑧 〉𝑖 ∈𝐵 
+
+reveals temperature -dependent compensatio n behavior in doped or inversion -modified 
+
+systems. Magnetic susceptibility follows from fluctuations :𝜒 = 𝑁 
+
+𝑘 𝐵 𝑇 (〈𝑀 2〉 − 〈𝑀 〉2)
+
+while specific heat derives from energy variance, 
+
+𝐶 = 𝑁 
+
+𝑘 𝐵 𝑇 2 (〈𝐸 2〉 − 〈𝐸 〉2)
+
+Near the transition r egion, critical slowing down necessitates extensive equilibration (typically 
+
+10 4 − 10 5 MCS per spin). Surface disorder in nanoparticles further increases equilibration time 
+
+due to metastable states separated by anisotropy barriers. 
+
+Figure 2: Monte Carlo simulation workflow for atomistic spin models of CoFe 2O4 inverse spinel ferrites. 
+
+The procedure includes initialization of the lattice and model parameters, construction of the spin 
+
+Hamiltonian, Metropolis -based Monte Carlo updates with energy evaluation, and measurement of 
+
+thermodynamic and magnetic observables after equilibration. 3.2. Finite -Size Sc aling and Determination of the Curie Temperature 
+
+Direct identification of 𝑇 𝐶 from magnetization collapse yields size -dependent values. Instead, 
+
+Binder cumulant analysis (Binder 1981) provides a reliable estimate: 
+
+𝑈 𝐿 = 1 − 〈𝑀 4〉
+
+3〈𝑀 2〉2
+
+Curves of 𝑈 𝐿 (𝑇 ) for different lattice sizes intersect at the thermodynamic Curie temperature. Bulk -
+
+like CoFe 2O4 simulations employing first -principles -derived exchange parameters reproduce 
+
+experimental Curie temperatures (~ 790 𝐾 ) when appropriate correlation corrections are used 
+
+(Szotek et al. 2006) . Deviations highlight sensitivity of 𝐽 𝑖𝑗 to electronic structure methodology. 
+
+Finite -size scaling (Binder 1981) predicts: 𝑇 𝐶 (𝐿 ) = 𝑇 𝐶 (∞) − 𝑎 𝐿 −1
+
+> 𝜈
+
+, and for nanoparticles of 
+
+diameter 𝐷 : 𝑇 𝐶 (𝐷 ) = 𝑇 𝐶 (∞) (1 − 𝑎 
+
+> 𝐷 1/𝜈
+
+) . Reduced coordination and enhanced surface spin 
+
+disorder suppress long -range ordering in nanoscale CoFe 2O4, explaining experimentally observed 
+
+𝑇 𝐶 reduction. 
+
+3.3. Hysteresis, Coercivity, and Energy Barrier Landscape 
+
+Quasi -static hysteresis loops are obtained by sweeping an external magnetic field at fixed 
+
+temperature. At each field value, the system is equilibrated and magnetization recorded, generating 
+
+𝑀 (𝐻 ) curves. The coercive field 𝐻 𝐶 and remanent magnetization 𝑀 𝑟 depend strongly on magneto -
+
+crystalline anisotropy 𝐾 1, particle size, and disorder. The large anisotropy of CoFe 2O4 enhances 
+
+coercivity relative to soft ferrites. Surface anisotropy further increases effective energy barriers in 
+
+nanoparticles. 
+
+Switching behavior may be interpreted through the energy barrier , Δ𝐸 ≈ 𝐾 𝑒𝑓𝑓 𝑉 , competing with 
+
+thermal energy 𝑘 𝐵 𝑇 . Monte Carlo sampling reveals metastable states and nonuniform reversal 
+
+pathways, particularly when exchange randomn ess arises from partial cation inversion. Because 
+
+conventional Monte Carlo lacks intrinsic time evolution, field sweep rate does not correspond to 
+
+physical time. Quantitative switching dynamics therefore require dynamical simulations. 
+
+3.4. Spin Dynamics a nd the Landau –Lifshitz –Gilbert Equation 
+
+Time -dependent magnetization processes are modeled via atomistic spin dynami cs, solving the 
+
+Landau -Lifshitz -Gilbert (LLG) equation (Gilbert 2004 , Bertotti 2004 ): 
+
+𝑑 𝑺 𝑖 
+
+𝑑𝑡 = −𝛾 𝑺 𝑖 × 𝑯 𝑖  
+
+> 𝑒𝑓𝑓
+
++ 𝛼 𝑺 𝑖 × 𝑑 𝑺 𝑖 
+
+𝑑𝑡 
+
+where γ is the gyromagnetic ratio and α the Gilbert damping parameter. The effective field is 
+
+𝑯 𝑖  
+
+> 𝑒𝑓𝑓
+
+= − 1
+
+𝜇 𝑖 
+
+𝜕𝐻 
+
+𝜕 𝑺 𝑖 Thermal fluctuations are incorporated through a stochastic f ield satisfying the fluctuation -
+
+dissipation theorem (Brown 1963a) . This stochastic LLG equation enables simulation of thermally 
+
+activated reversal and dynamic hysteresis. In CoFe 2O4 nanoparticles, very small particles exhibit 
+
+near -coherent r otation, while larger particles display non -uniform reversal involving surface 
+
+nucleation and domain -wall -like structures. The damping parameter , 𝛼 , controls rela xation time 
+
+and switching speed -parameters central to MRAM and spin -transfer torque applications. 
+
+3.5. Magnetic Relaxation and Superparamagnetism 
+
+When particle size becomes sufficiently small, thermal fluctuations overcome anisotropy bar riers, 
+
+leading to superparamagnetism. The re laxation time follows the Néel -Arrhenius law: 
+
+𝜏 = 𝜏 0 exp (𝐾 𝑒𝑓𝑓 𝑉 
+
+𝑘 𝐵 𝑇 )
+
+originally derived by Néel for fine magnetic grains (Néel 1949) and later refined in the classical 
+
+single -domain treatment (Brown 1963a) . The blocking temperature 𝑇 𝐵 is defined by the condition 
+
+𝜏 (𝑇 𝐵 ) ≈ 𝜏 𝑚 , where 𝜏 𝑚 is the experimental measurement time. Enhanced surface anisotropy in 
+
+CoFe 2O4 can significantly increase 𝐾 𝑒𝑓𝑓 , stabilizing magnetization in nanoscale particles. 
+
+Atomistic free -energy calculations quantify reversal barriers and clarify discrepancies between 
+
+experimental techniques operating on different time scales. 
+
+3.6. Dynamic Susceptibility and Hyperthermia Response 
+
+Under alternating mag netic fields, energy dissipation arises from both hysteresis losses and 
+
+relaxation processes. Spin -dynamics simulations can compute the dynamic susceptibility 𝜒 (𝜔 ) as 
+
+well as the absorbed power per unit volume. The hysteresis -loss co ntribution to the power density 
+
+is given by :
+
+𝑃 = 𝜇 0𝑓 ∫ 𝑀 (𝐻 )𝑑𝐻 ,
+
+where 𝑓 is the frequency of the applied field and the integral represents the area enclosed by the 
+
+dynamic hys teresis loop (Carrey et al. 2011) . (Equivalently, when working with angular frequency 
+
+𝜔 = 2𝜋𝑓 , the expression reads ,
+
+𝑃 = 𝜇 0𝜔 
+
+2𝜋 ∫ 𝑀 (𝐻 )𝑑𝐻 .
+
+.Monte Carlo and spin -dynamics simulations transform atomistic exchange and anisotropy 
+
+parameters into tem perature dependent magnetization curves, coercivity trends, blocking 
+
+temperatures, and dynamic susceptibilities. These outputs support MRAM stability criteria, spin -
+
+valve switching thresholds, and energy -harvesting performance metrics. When exchange consta nts 
+
+and anisotropy parameters originate from first -principles calculations without empirical 
+
+adjustment, the multiscale hierarchy becomes internally consistent. Structural modifications -
+
+strain, inversio n tuning, or defect engineering -can then be translated quantitatively into 
+
+macroscopic magnetic functionality in CoFe 2O4 and related ferrimagnetic nanostructures. 4. Multiscale Coupling: From Electronic Structure to Device -Relevant 
+
+# Observables 
+
+The predictive power of computational magnetism does not arise from any single method, but from 
+
+the coherent coupling of approaches across electronic, atomistic, mesoscopic, and device scales. 
+
+For technologically relevant ferrimagnetic oxides such as CoFe 2O4, magnetic functionality 
+
+emerges through a natural cascade of interactions: correlated 3d electrons determine the exchange 
+
+integrals; these exchange parameters, together with anisotropy, govern thermodynamic orderin g; 
+
+collective spin textures con trol switching behaviour; and the resulting switching characteristics 
+
+ultimately dictate device performance. This section develops the multiscale hierarchy that 
+
+systematically connects first -principles electronic structure to experimentally measurable and 
+
+device -relevant observables. By emphasising consistent parameter flow and proper scale 
+
+separation, the present treatment distinguishes itself from purely structural discussions or 
+
+application -focused chapters in this volume. 
+
+4.1. Hierarchy of Length and Time Scales 
+
+Magnetic phenomena in CoFe 2O4 span wide spatial and tempora l domains: 
+
+ Length scales: Å (electronic orbitals) → nm (atomic clusters and nanoparticles) → 10 -100 
+
+nm (domains and patterned elements). 
+
+ Time scales: fs (electronic hopping an d spin –orbit interactions) → ps -ns (precession and 
+
+damping) → μs and beyond (thermal relaxation and device s witching). 
+
+At the Angstrom scale, DFT calculations with Hubbard corrections (Anisimov et al. 1991, Dudarev 
+
+et al. 1998 ) determine band structure, exchange pathways, and magnetocrystalline anisotropy. 
+
+These microscopic quantities define the Hamiltonian tha t governs spin behaviour at the nanometre 
+
+scale. At the nanometre scale, atomistic spin simulations describe thermodynamic ordering, finite -
+
+size effects, and reversal mechanisms in CoFe 2O4 nanoparticles and thin films. Moving toward 
+
+tens of nanometres, mic romagnetic modelling captures domain -wall formation, non -uniform 
+
+magnetisation textures, and magnetostatic interactions. Finally, at device scales ( ∼100 nm and 
+
+above), transport, magnetoelastic, and thermal effects must be incorporated self -consistently. A 
+
+coherent multiscale strategy ensures that information flows smoothly across these regimes without 
+
+empirical disconnects. 
+
+4.2. Parameter Flow Acros s Scales 
+
+4.2.1. DFT → Atomistic Spin Models 
+
+Electronic -structure calculations provide the fundame ntal exchange constants , 𝐽 𝑖𝑗 , single -ion 
+
+anisotropy parameters 𝐾 , and magnetoelastic coefficients. In correlated oxides such as CoFe 2O4,
+
+the LSDA+U a pproach (Anisimov et al. 1991, Dudarev et al. 1998 ) is essential for capturing the 
+
+correct insulating behaviour and the proper distribution of magnetic moments. First -principles 
+
+studies demonstrate that cation inversion and strain signific antly modify exch ange pathways 
+
+(Hou et al. 2010b , Fritsch and Ederer 2012) . These 𝐽 𝑖𝑗 values populate the atomistic Heisenberg Hamiltonian used in Monte Carlo and spin -dynamics simulations. The Curie temperature, 
+
+sublattice magnetisation, and susceptibility then emerge naturally from statistical sampling. 
+
+Complementary electronic -structure work using the self -interaction corrected local spin density 
+
+approximation (SIC -LSDA) has examined both inverse and normal spine l structures (Szotek et al. 
+
+2006). Both configurations are insulating, although the normal spinel exhibits smaller ban d gaps. 
+
+The calculated spin magnetic moments and the exchange splitting of the conduction bands increase 
+
+when moving from the inverse to the normal spinel structure. More recent investigations 
+
+employing PBE -GGA+U have explored different sub -magnetic orderi ngs in CoFe 2O4, determining 
+
+band structures, densities of states, and exchange coupling energies via the magnetic force theorem 
+
+(Duru 2022) . These calculations reveal stronger C o-O hybridisation compared with Fe -O, varying 
+
+band gaps across magnetic states, and magnetocryst alline anisotropy values around 0.092 𝑒𝑉 . The 
+
+resulting DFT -derived parameters (exchange energies, anisotropy constants, and magnetic 
+
+moments) serve as direct inputs for Monte Carlo simulations on a classical Heisenberg model, 
+
+yielding Curie temperatures up to ~ 725 𝐾 for the ferromag netic sub -ordered state, with other 
+
+configurations transitioning at lower temperatures (below 500 K and 445 K), consistent with 
+
+variations observed in experimental synthesis conditions. 
+
+4.2.2. Atomistic → Mesoscale (Micromagnetics) 
+
+From experimental stud ies, we know spin reorientation in CoFe 2O4 thin single crystalline films 
+
+epitaxially grown on (100) MgO substrate, occurs at a critical thickness of 300 nm upon varying 
+
+the film thickness, driven by structural transition from tetragonal to cubic symmetry. For low film 
+
+thicknesses, the in -plane tensile stress induces tetragonal distortion of the crystal lattice, generating 
+
+a perpendicular anisotropy of sufficient magnitude to overcome the demagnetizing (shape) 
+
+anisotropy and stabilize an out -of -plane magneti zation easy axis. In thicker films, progressive 
+
+lattice relaxation toward the cubic bulk structure enables the shape anisotropy to prevail, 
+
+reorienting the easy axis back into the film -plane (Lisfi et al. 2007) 
+
+Atomistic simulations yield effective anisot ropy constants, temperature -dependent magnetization 
+
+𝑀 (𝑇 ), and exchange stiffness 𝐴 . These are coarse -grained to continuum parameters entering the 
+
+Lan dau -Lifshitz -Gilbert framework at the micromagnetic scale. For example, exchange stiffness 
+
+relates to atomistic exchange via: 
+
+𝐴 = 1
+
+2 ∑ 𝐽 𝑖𝑗 𝑟 𝑖 𝑗 
+
+> 2
+
+𝑉 𝑐𝑒𝑙𝑙 
+
+> 𝑗
+
+Where , 𝑟 𝑖𝑗 is interatomic separation and 𝑉 𝑐𝑒𝑙𝑙 the volume per spin (adjusted for multi -sublattice 
+
+ferrimagnets by averaging dominant contributions) (Atxitia et al. 2010 ). Atomistic spin -wave 
+
+dispersion fitting (𝜔 (𝑘 ) = 𝐷 𝑘 2) provides an alternative: 𝐴 = 𝐷 𝑀 𝑠  
+
+> 2𝛾
+
+(Waring et al. 2023 ). 
+
+Effective anisotropy , 𝐾 𝑒𝑓𝑓 , is renormalized by thermal fluctuations and surface effects. The 
+
+Callen -Callen law predicts : 𝐾 𝑒𝑓𝑓 (𝑇 ) ∝ [𝑀 (𝑇 )]3, for single -ion anisotro py (Callen 1963 , Moreno 
+
+et al. 2025 ). In nanoparticles, surface contributions yield : 𝐾 𝑒𝑓𝑓 = 𝐾 𝑏𝑢𝑙𝑘 + 6𝐾 𝑠  
+
+> 𝐷
+
+(Pujada et al. 2003 ,Mumtaz et al. 2007 ). Thus, micromagnetic simulations of patterned CoFe 2O4 elements inherit 
+
+physically grounded parameters rather than phenomenological fits. 
+
+4.3. Coarse -Graining and Renormalization Strategies 
+
+Direct simulation of device -scale systems with atomistic resolution is computationally prohibitive. 
+
+Coarse -graining strategies reduce degrees of freedom wh ile preserving essential physics. One 
+
+approach averages clusters of spins into macrospins, renormalizing exchange and anisotropy to 
+
+preserve long -wavelength excitations (Evans et al. 2014) . Renormalization group concepts justify 
+
+scale -dependent effective p arameters, particularly near criticality (Grinstein and Koch 2003) .
+
+Temperature renormalization is crucial: effective anisotropy 𝐾 𝑒𝑓𝑓 (𝑇 ) decreases with temperature 
+
+due to spin fluctuations, often following power -law behavior. Ignoring such renorma lization can 
+
+lead to overestimation of coercivity in device simulations. For CoFe 2O4, strong magnetocrystalline 
+
+anisotropy simplifies coarse -graining by stabilizing near -uniform local alignment, yet surface and 
+
+inversion disorder introduce spatial inhomoge neities requiring careful averaging. 
+
+4.4. Magnetostatic Interactions and Micromagnetic D ynamics 
+
+Continuum micromagnetics incorporates long -range dipolar interactions explicitly. The 
+
+magnetostatic energy is :
+
+𝐸 𝑑𝑒𝑚𝑎𝑔 = − 1
+
+2 𝜇 0∫ 𝑴 ⋅ 𝑯 𝒅 𝑑𝑣 
+
+where 𝐻 𝑑 is the demagnetizing field. Competition between exchange, anisotropy, and 
+
+magnetostatics determines domain structure. The characteristic exchange length, 
+
+𝑙 𝑒𝑥 = √ 2𝐴 
+
+𝜇 0𝑀 𝑠 
+
+> 2
+
+sets the natural length scale for domain -wall width and vortex formation (Brown 1963b) . For 
+
+CoFe 2O4, large 𝐾 1 and moderate 𝑀 𝑠 produce relatively narrow domain walls, consistent with its 
+
+high coercivity. Continuum dyna mics follow the Landau -Lifshitz -Gi lbert equation: 
+
+𝜕 𝑴 
+
+𝜕𝑡 = −𝛾 𝑴 × 𝑯 𝒆𝒇𝒇 + 𝛼 
+
+𝑀 𝑠 
+
+𝑴 × 𝜕 𝑴 
+
+𝜕𝑡 
+
+With , 𝑯 𝑒𝑓𝑓 = − 1 
+
+> 𝜇 0
+> 𝛿𝐸
+> 𝛿 𝑴
+
+. Solvers such as OOMMF (Donahue and Porter 1999) or MuMax3 
+
+(Vansteenkiste et al. 2014) enable simulation of patterned films, domain -wall m otion, and spin -
+
+torque effects using parameters from atomistic modeling. 
+
+4.5. Validation of the Multiscale Framework and Integration into Application -Oriented 
+
+Modeling 
+
+Rigorous validation of the proposed multiscale approach requires quantitative comparis on against 
+
+key experimental observables across length and time scales. • Curie temperature ( 𝑇 𝐶 ): Monte Carlo simulations, parameterized with first -principles 
+
+exchange interactions 𝐽 𝑖𝑗 , yield a bulk 𝑇 𝐶 ≈ 790 − 820 𝐾 for CoFe 2O4, in good agreement 
+
+with experimental values for bulk material ( ∼793 –825 K) and recent atomistic predictions. 
+
+• Magneto crystalline anisotropy constant (𝐾 1): Density functional theory calculations 
+
+predict strain -dependent trends in 𝐾 1, consistent with experimental torque magnetometry 
+
+data on epitaxial thin films and bulk systems (Fritsch and Ederer 2012). 
+
+• Coe rcivity (𝐻 𝐶 ): Finite -temperature micromagnetic simulations incorporating 
+
+renormalized, temperature -dependent anisotropy and realistic nanoparticle geometries 
+
+reproduce experimental 𝐻 𝐶 trends, including size -dependent maxima and thermal decay 
+
+obser ved in CoFe 2O4 nanoparticles (Lamouri et al. 2020). 
+
+• Magnetostriction and magnetoelastic response: First -principles magnetoelastic coefficients 
+
+enable accurate computation of strain –magnetization coupling, aligning with measured 
+
+piezomagnetic coefficients a nd strain -induced anisotropy modulation (Fritsch and Ederer 
+
+2012). 
+
+This multi -faceted agreement across thermal, structural, and magnetic benchmarks establishes the 
+
+predictive reliability of the framework. The validated parameters and effective models are 
+
+subsequently integrated into application -oriented simulations: 
+
+• Spin transport in magnetic tunnel junctions and MRAM: DFT -derived exchange splitting 
+
+and spin polarization inform tunneling magnetoresistance calculations, while 
+
+micromagnetic textures (domain walls, vortices) serve as input configurations for 
+
+micromagnetic -transport solvers. 
+
+• Magnetoelastic and strain -mediated devices: Combining first -principles magnetoelastic 
+
+tensors, atomistic temperature renormalization of anisotropy, and continuum elasticity 
+
+modeling enables prediction of strain -tunable magnetic switching and energy -harvesting 
+
+performance in low -power, voltage -controlled spintronic and multiferroic heterostructures. 
+
+This integrated workflow bridges ab initio accuracy with device -scale functio nality, facilitating 
+
+design optimization for emerging magnetic technologies. 
+
+Distinctive Role of Multiscale Coupling in Predictive Modeling 
+
+In contrast to structural studies centered on crystal chemistry or device -oriented chapters focused 
+
+on architecture s, multiscale coupling provides a causal continuum across length and energy scales: 
+
+electronic correlations dictate microscopic exchange interactions; these interactions govern 
+
+thermodynamic ordering and phase stability; macroscopic order in turn controls magnetization 
+
+reversal and switching dynamics; and switching ultimately dictates device -level performance 
+
+metrics. For CoFe 2O4, this hierarchy is particularly transparent owing to the material’s high 
+
+tunability through cation inversion degree, epitaxial st rain, and surface/interface engineering. The 
+
+consistent upward propagation of electronic -structure -derived parameters (e.g., exchange 
+
+constants J ij , anisotropy K 1, and magnetoelastic coefficients) through atomistic Monte Carlo and 
+
+mesoscale micromagnetic s imulations enables quantitatively predictive modeling. This approach 
+
+transforms cobalt ferrite from an empirically characterized material into a rationally designable 
+
+functional oxide for applications in spintronics, magnetoelastic devices, and multiferroi c
+
+heterostructures. 5. Computational Case Studies 
+
+5.1. Nanoparticles: Biomedical and Catalytic Context 
+
+5.1.1. Size -Dependent Magnetic Anisotropy 
+
+When the particle diameter D approaches the magnetic exchange length, the magnetic response of 
+
+CoFe 2O4 devi ates significantly from bulk behavior. Atomistic simulations parameterized using 
+
+first -principles exchange constants 𝐽 𝑖𝑗 and anisotropy constants K show systematic enhancement 
+
+of the effective anisotropy with decreasing size. 
+
+Within a core -surface decomposition framework, 
+
+𝐾 𝑒𝑓𝑓 (𝐷 ) = 𝐾 𝑏𝑢𝑙𝑘 + 6𝐾 𝑆  
+
+> 𝐷
+
+… (2) 
+
+Where 𝐾 𝑆 denotes the surface aniso tropy density. First -principles calculations indicate that 
+
+𝐾 𝑆 depends sensitively on surface termination and local inversion degree (Fritsch and Ederer 
+
+2012). Monte Carlo simulations incorporating these parameters reproduce experimentally 
+
+observed coe rcivity enhancement in the 8 –20 nm size regime (Evans et al. 2014). 
+
+5.1.2. Surface Spin Disorder and Magnetization Reduction 
+
+Broken A –B superexchange bonds at the surface reduce local exchange fields and induce spin 
+
+canting. Atomistic modeling reveals fo rmation of a core –shell spin structure consisting of an 
+
+ordered ferrimagnetic core and a disordered surface shell. The reduction in saturation 
+
+magnetization can be approximated as (Dutta et al. 2009): 
+
+𝑀 𝑆 (𝐷 ) = 92 (1 − 2𝛿  
+
+> 𝐷
+
+)3
+
+… (3) 
+
+where 𝛿 represents an effective shell thickness, though actual shel l thicknesses vary (1.9 - 6.8 Å)
+
+depending on material and synthesis method. Monte Carlo sim ulations within the Ising model 
+
+and free boundaries cond itions on cubic geometry with different nanopart icle sizes show 
+
+significant impact of particle size on magnetic properties of Cobalt -ferrite nanoparticles 
+
+(Lamouri et al. 2020), and reproduce the experimentally observed reduction in 𝑀 𝑆 for particle 
+
+si zes below ∼ 10 nm. 
+
+5.1.3. Implications for Magnetic Hyperthermia 
+
+For hyperthermia applications, heating efficiency depends on hysteresis losses or N´eel 
+
+relaxation dynamics. Spin -dynamics simulations indicate that optimal heating performance 
+
+occurs when 
+
+𝐾 𝑒𝑓𝑓 𝑉 ≈ 25 𝑘 𝐵 𝑇 … (4) 
+
+ensuring appropriate relaxation times within biomedical frequency windows (Carrey et al. 2011). 
+
+Excessively large anisotropy suppresses relaxation and reduces specific absorption rate (SAR), 
+
+highlighting the importance of quantitative optimization via tunable surface parameters. 5.1.4. Magnetic Structure and Catalytic Activity 
+
+First -principles studies demonstrate that surface spin polarization modifies adsorption energetics 
+
+via spin -dependent charge redistribution. Su rf ace cation inversion alters Fe -O covalency and 
+
+oxygen vacancy formation energies, linking magnetic order to catalytic performance in oxygen 
+
+evolution/reduction reactions. 
+
+5.2. Thin Films: Spintronics Context 
+
+5.2.1. Epitaxial Strain and Anisotropy Cont rol 
+
+In epitaxial thin films, biaxial strain ε acts as a tunabl e thermodynamic variable. Spin -orbit 
+
+coupled density functional theory calculations show that tetragonal distortion significantly 
+
+modifies magnetocrystalline anisotropy energy (MAE ) (Fritsch an d Ederer 2012) . For small 
+
+strain, 
+
+𝐾 (𝜀 ) = 𝐾 0 + 𝐵 1(𝜀 ) … (5) 
+
+where 𝐵 1 is the magnetoelastic coefficient extracted from total -energy calculations (Hou et al. 
+
+2010a, b ). CoFe 2O4 exhibits comparatively large 𝐵 1, explaining strong strain tu nability observed 
+
+experimentally .
+
+5.2.2. Strain -Inversion Coupling 
+
+Partial inversion modifies Co 2+ orbital occupancy, thereby altering the strain dependence of MAE. 
+
+Micromagnetic simulations incorporating DFT -derived parameters reproduce experimentally 
+
+measured switching fields in CFO -based heterostructures, demonstrating how combined strain and 
+
+inversion engineering enables anisotropy control for spintronic devices. 
+
+5.3. Doped Systems 
+
+5.3.1. Exchange Modification Trends 
+
+Substitutional doping modifies superexchange pathways. Zn 2+ preferentially occupies A sites, 
+
+reducing 𝐽 𝐴𝐵 and lowering Curie temperature. Mn 2+ substitution enhances magnetic moment but 
+
+weakens anisotropy due to reduced spin –orbit coupling. Atomistic simulations incorporating 
+
+modified exchange matrices reproduce experimentally observed 𝑇 𝐶 trends (Shaikh et al. 2015). 
+
+5.3.2. Rare -Earth -Induced Anisotropy Enhancement 
+
+Rare -earth substitution (e.g., Dy 3+ ) introduces strong localized single -ion aniso tropy contributions 
+
+due to unquenched orbital moments. Even modest substitution levels (5 -10%) can incr ease 
+
+effective anisotropy by 20 -40% in modeled systems (Li et al. 2022) .
+
+5.4. Predictive Design Guidelines The case studies collectively illustrate a m ultiscale modeling pipeline: 
+
+DFT → {𝐽 𝑖𝑗 , 𝐾 , 𝐵 1} → Spin Hamiltonian → Finite -T simulations → Device observables. 
+
+Simulations uniquely enable independent control of inversion degree, strain, dopant concentration, 
+
+and surface exchange parameters —variables that experiments can not isolate simultaneously. 
+
+Across nanoparticles, thin films, and doped systems, magnetic anisotropy emerges as the primary 
+
+determinant of functional performance (coercivity for hyperthermia, strain -tunability for 
+
+spintronics, enhanced barriers for stabili ty). However, most computational studies treat inversion, 
+
+strain, and defect effects independently. A predictive framework must incorporate their nonlinear 
+
+coupling within a unified statistical -mechanical description. Such integration reveals design rules -
+
+e.g., optimal inversion/strain combinations for m aximized SAR or switching speed -that guide 
+
+synthesis and device optimization beyond empirical trial -and -error. 
+
+# 6. Current Challenges and Emerging Computational Directions 
+
+6.1. Accurate Treatment of Strong Correlation 
+
+Although density functional theory augmented with on -site Hubbard corrections (DFT+U) has 
+
+been widely employed for CoFe 2O4, the quantitative reliability of predicted exchange constants 
+
+and magnetocrystalline anisotropy energies remains sensit ive to the chosen U parameters 
+
+(Anisimov et al. 1991, Dudarev et al. 1998 ). The partially filled 3d shells of Co 2+ and Fe 3+ 
+
+exhibit moderate to strong electronic correlation, and static mean -field corrections may not fully 
+
+capture multiplet structure and d ynamical fluctuations. 
+
+First -principles studies have shown that magnetic moments and exchange parameters 𝐽 𝑖𝑗 vary non -
+
+negligibly with U choice (Fritsch and Ederer 2012) . While DFT+U reproduces insulating behavior 
+
+and ferrimagnetic ordering, quantitat ive anisotropy energies -often of the order of 𝜇𝑒𝑉 per formula 
+
+unit —are particularly delicate. Beyond DF T+U, emerging approaches include hybrid functionals 
+
+and dynamical mean -field theory (DFT+DMFT), which incorporate frequency -dependent self -
+
+energies. Such treatments may become essential for resolving orbital contributions to anisotropy 
+
+and for predicting t emperature -dependent electronic renormalization in ferrimagnetic spinels. 
+
+6.2. Realistic Surface Chemistry Modeling 
+
+Most computational studies of CoFe 2O4 surfaces consider ideal terminations and vacuum 
+
+conditions. However, real nanoparticles and thin fil ms operate in chemically active environments, 
+
+where hydroxylation, adsorption, and defect formation modify both electronic structure and 
+
+magnetism. First -principles investigations demonstrate that surface reconstruction and oxygen 
+
+vacancy formation alter l ocal spin polarization and exchange pathways (Fritsch and Ederer 2012) .
+
+Yet, systematic modeling of chemically realistic surfaces —including solvent effects or reactive 
+
+atmospheres —remains limited. Ab initio thermodynamics provides a framework to couple DF T energetics with environmental 
+
+chemical potentials, enabling prediction of stable surface terminations under realistic conditions. 
+
+Extending such approaches to magnetic exchange extraction represents an important frontier, 
+
+particularly for catalytic and b iomedical applications where surface magnetism directly influences 
+
+functionality. 
+
+6.3. Spin -Lattice Coupled Simulations 
+
+Magnetoelastic coupling plays a central role in strain -tunable anisotropy and device performance. 
+
+First -principles calculations have q uantified magnetoelastic coefficients 𝐵 1 in CoFe 2O4 (Fritsch 
+
+and Ederer 2012) , yet most atomistic spin simulations assume fixed lattice structures. In reality, 
+
+spin and lattice degrees of freedom evolve simultaneously. Finite temperature phenomena such as 
+
+magnetostriction, spin reorientation, and strain -mediated switching require coupled spin –lattice 
+
+dynamics. Recent methodological advances combine classical spin Hamiltonians with molecular 
+
+dynamics, enabling simulations of coupled equations of motion:  
+
+> 𝑑 𝑺 𝒊
+> 𝑑𝑡
+
+= −𝛾 𝑺 𝑖 × 𝑯 𝒆𝒇𝒇  
+
+> 𝒊
+
+… (6) 
+
+𝑀 𝑖  
+
+> 𝑑 2𝑹 𝒊
+> 𝑑 𝑡 2
+
+= − 𝜕𝐸 
+
+> 𝜕 𝑹 𝑖
+
+… (7) 
+
+Where 𝑺 𝑖 and 𝑹 𝑖 denote spin and atomic coordinates, respectively. 
+
+For strongly magnetostrictive materials such as CoFe 2O4, such coupled treatments are essential for 
+
+quantitatively predicting strain -mediated switching and acoustic -spin interactions in energy -
+
+harvesting or low -power devices. 
+
+6.4. Large -Scale Micromagnetics Integration 
+
+While atomistic simulations capture exchange a nd anisotropy at nanometer scales, device -relevant 
+
+dimensions often extend to micrometers. Bridging this scale requires consistent parameter transfer 
+
+to continuum micromagnetics. Finite -size scaling concepts (Binder 1981) and systematic coarse -
+
+graining all ow extraction of effective exchange stiffness 𝐴 and anisotropy 𝐾 for use in Landau -
+
+Lifshitz -Gilbert simulations. However, disorder, inversion gradients, and surface anisotropy 
+
+complicate homogenization. Future computational frameworks must incorporate sp atially varying 
+
+anisotropy and exchange tensors derived from lower -scal e modeling. Multiscale coupling -where 
+
+atomistic regions dynamically inform micromagnetic domains –remains a n open computational 
+
+challenge, particularly for patterned thin films and heter ostructures. 
+
+6.5. Data -Driven and Machine Learning Potentials 
+
+The growing availability of DFT data enables construction of machine -learned interatomic 
+
+potentials capable of describing large supercells with near first -principles accuracy. Such 
+
+approaches can incorporate both structural and magnetic descript ors, extending beyond classical 
+
+Heisenberg forms. Machine learning models trained on DFT datasets for spinel ferrites have begun 
+
+to reproduce energy landscapes, defect energetics, and loca l magnetic mome nts with reduced 
+
+computational cost. These frameworks offer: 
+
+• Rapid exploration of dopant and inversion configurations, • Efficient sampling of large disordered supercells, 
+
+• Accelerated surface and defect chemistry evaluation. 
+
+A recently developed machine lea rning (ML) -enabled computational approach, in (Fang et al. 
+
+2025) , integrates a database constructed from DFT calculations, training of machine learning 
+
+models (support vector regression, SVR, to map system energy to atomic structures), and atomistic 
+
+MC sim ulations. 
+
+6.6. Accelerating Multiscale Modeling via Machine -Learned Potentials and Surrogates 
+
+Although the DFT+U framework provides the essential microscopic foundation for exchange 
+
+constants, anisotropy, and magnetoelastic coefficients, its computation al cost severely limits the 
+
+system sizes and configurational sampling required to capture realistic cation inversion 
+
+distributions, surface reconstructions, and finite -temperature statistics in CoFe 2O4 nanoparticles 
+
+and thin films. Machine -learned interato mic potentials and surrogate models trained on carefully 
+
+curated DFT databases have recently emerged as a powerful accelerator within the multiscale 
+
+hierarchy. The typical workflow begins with the construction of a comprehensive structural and 
+
+magnetic dat abase using density functional theory calculations on supercells that incorporate 
+
+varying degrees of cation inversion, strain states, oxygen vacancies, and surface terminations. 
+
+Special quasi -random structure s are often employed to efficiently sample disor dered 
+
+configurations. From this dataset, regression models, such as support -vector regression or 
+
+Gaussian -process regression are trained to predict total energies, local magnetic moments, and 
+
+effective superexchange interactions as functions of local atomi c environments. Once validated, 
+
+the trained surrogates replace expensive DFT total -energy evaluations, enabling Monte Carlo 
+
+simulations on systems containing several thousand magnetic ions. 
+
+A recent implementation of this strategy for CoFe 2O4 demonstrated its predictive power. A 
+
+machine -learning model trained on DFT d ata yielded an equilibrium inversion parameter λ ≈ 0.755 
+
+at 1237 K, in excellent agreement with neutron diffraction measurements. Linear regression on the 
+
+same database extracted a complete set of twenty -three superexchange constants, which were then 
+
+direc tly inserted into atomistic Monte Carlo simulations. The resulting Curie temperature of 914 𝐾 
+
+reproduced experimental values within approximately 10%, without any empirical adjustment. 
+
+Such accuracy across both structural (inversion) and magnetic (orderin g temperature) observables 
+
+under -scores the ability of data -driven potentials to preserve electronic -level fidelity while 
+
+dramatically expanding accessible length and time scales. Within the multiscale framework 
+
+developed in this chapter, machine -learned s urrogates occupy a strategic intermediate layer. They 
+
+bridge the accuracy of DFT+U with the extensive statistical sampling demanded by Monte Carlo 
+
+and spin -dynamics methods, naturally incorporating the effects of disorder, surface chemistry, and 
+
+temperatur e-dependent renormalization of 𝐽 𝑖𝑗 and 𝐾 1. Extensions toward spin –lattice machine -
+
+learned potentials further promise seamless coupling of magnetic and elastic degrees of freedom, 
+
+directly addressing one of the key challenges identified earlier. 
+
+Looking ahead, the integration of machine learning with DFT+DMFT and ab initio 
+
+thermodynamics will enable realistic treatment of chemically active surfaces and dynamical 
+
+correlations under operating conditions. Ultimately, these accelerated frameworks open the route 
+
+to high -throughput inverse design: systematic exploration of inversion – strain –doping phase space to optimize specific absorption rate for hyperthermia, switching fields for spintronic devices, or 
+
+magnetoelastic response for energy harvesting. I n this sense, machine -learned potentials do not 
+
+replace the multiscale hierarchy but rather strengthen its predictive reach, transforming cobalt 
+
+ferrite from a well -characterized material into one that can be rationally engineered at the 
+
+computational leve l. 
+
+Collectively, these challenges define the computational frontier for CoFe 2O4. Accurate treatment 
+
+of correlation, chemically realistic surfaces, spin –lattice coupling, scale bridging, and data -driven 
+
+acceleration are not independent directions; rather, they represent interconnected components of a 
+
+unified predictive framework. Progress along these axes will determine whether computational 
+
+modeling transitions from qualitative interpretation of experimental trends to quantitative, inverse 
+
+design of magnet ic functionality in cobalt ferrite and related materials. 
+
+# 7. Concluding Perspective 
+
+Computational magnetism has emerged throughout this chapter as the unifying intellectual thread 
+
+linking crystal chemistry, magnetic ordering, nanoscale phenomena, and dev ice functionality. 
+
+From quantum mechanical superexchange interactions originally formulated by Anderson 
+
+(Anderson 1950) and ferrimagnetic sublattice compensation described by Néel (Néel 1948 , Néel 
+
+1949 ), to modern first -principles electronic -structure meth ods, simulations provide the conceptual 
+
+continuity required to understand how atomic -scale physics propagates into macroscopic 
+
+performance. Within this framework, cobalt ferrite (CoFe 2O4) has served not merely as an 
+
+example, but as a structurally rich and technologically relevant spinel through which these broader 
+
+theoretical principles can be concretely demonstrated. 
+
+A central message of this chapter is parameter sensitivity awareness. Mag netic observables: Curie 
+
+temperature, magnetocrystalline ani sotropy , coercivity, and satura tion magnetization -are emergent 
+
+quantities shaped by subtle microscopic inputs. In CoFe 2O4, the inversion parameter controlling 
+
+Co 2+ and Fe 3+ sit e occupancy directly modifies A -B and B -B superexchange pathways, altering 
+
+the net ferr imagnetic moment predicted by Néel’s model (Néel 1948). First -principles 
+
+investigations show (Hou et al. 2010a,b) that small variations in structural relaxation or correlation 
+
+strength can change exchange constants and anisotropy energies appreciably. Like wise, strain -
+
+induced tetragonal distortion in epitaxial films reconfigures orbital occupation and spin –orbit 
+
+coupling, lead ing to easy -axis reorientation . These examples illustrate a broader principle 
+
+applicable to transition metal oxides: microscopic elec tronic parameters strongly dictate 
+
+macroscopic magnetic response. 
+
+This sensitivity underscores the necessity of predictive multiscale modeling. No single theoretical 
+
+scale is sufficient. Electronic -structure calculations, oft en employing LSDA+U correction s
+
+(Anisimov et al. 1991, Dudarev et al. 1998) , determine exchange integrals and magnetoelastic 
+
+coefficients. Atomistic Monte Carlo simulations then capture finite -size scaling and thermal 
+
+fluctuations, while micromagnetic approaches describe domain wall fo rmation and switching 
+
+fields in patterned geometries. For cobalt ferrite nanoparticles, such hierarchical coupling explains 
+
+how surface spin disorder reduces effective magnetization and modifies anisotropy. For strained thin films, it connects lattice dist ortion to macroscopic coercivity trends. The same multiscale logic 
+
+extends to doped or composite ferrite systems discussed elsewhere in this volume. 
+
+Looking ahead, integration with device -level simulations represents the next frontier. In cobalt 
+
+ferrite –based spin filters, magnetostrictive actuators, and magnetoelectric heterostructures, 
+
+predictive modeling must link ab initio –derived parameters to spintransport solvers and continuum 
+
+magnetization dynamics. Only through this seamless transfer of informatio n—from correlated 
+
+electronic structure to mesoscale magnetic textures —can one reliably forecast switching 
+
+thresholds, thermal stability, and energy dissipation. In conclusion, computational magnetism 
+
+functions as the organizing principle of this book, weav ing together synthesis, characterization, 
+
+and functional deployment. Cobalt ferrite exemplifies how parameter awareness, methodological 
+
+rigor, and multiscale integration transform simulation from interpretive assistance into a predictive 
+
+design engine for advanced magnetic materials. 
+
+Key Takeaways 
+
+• CoFe 2O4 crysta llizes in an inverse spinel structure with Fe 3+ ions on tetrahedral (A) sites 
+
+and Co 2+ /Fe 3+ ions on octahedral (B) sites, leading to two magnetically inequivalent 
+
+sublattices. 
+
+• T he dominant antiferromagnetic A -B superexchange interaction ( 𝐽 𝐴𝐵 ) gives ris e to 
+
+ferrimagnetic ordering and governs the overall magnetic behavior. 
+
+• Magnetic properties are strongly influenced by competing interactions ( 𝐽 𝐴𝐵 , 𝐽 𝐵𝐵 , 𝑎𝑛𝑑 𝐽 𝐴𝐴 ), 
+
+magnetocrystalline anisotropy, and magnetoelastic coupling. 
+
+• First -principles (DFT+U) calc ulations enable quantitative estimation of exchange 
+
+interactions, anisotropy constants, and electronic structure, forming the basis for atomistic 
+
+modeling. 
+
+• Atomistic spin Hamiltonians combined with Monte Carlo and spin -dynamics simulations 
+
+provide acces s to thermodynamic and dynamic properties across multiple length and time 
+
+scales. 
+
+• Finite -size, surface, and disorder effects play a crucial role in determining the magnetic 
+
+response of nanoparticles and thin films. 
+
+• Multiscale modeling frameworks enab le predictive understanding of macroscopic 
+
+observables such as magnetization, Curie temperature, coercivity, and exchange stiffness. 
+
+• The combination of strong anisotropy and tunable magnetic interactions makes CoFe 2O4 a
+
+promising system for applications in spintronics, magnetic storage, and hyperthermia. Funding : SS acknowledges the support by the Anusandhan National Research Foundation 
+
+(formerly Science and Engineering Research Board) through the start -up research grant 
+
+(SRG/2023/000122), to this work. 
+
+Notes on contributor(s ): Both th e authors contributed equally in writing this chapter. 
+
+# References 
+
+Anderson, P.W. 1950. Antiferromagnetism. Theory of superexchange interaction. Phys. Rev. 79: 
+
+350 –356. 
+
+Anderson, P.W. 1987. The resonating valence bond state in La2CuO4 and sup erconductivity. 
+
+Science 235: 1196 –1198. 
+
+Anisimov, V.I., Zaanen, J. and Andersen, O.K. 1991. Band theory and Mott insulators: Hubbard 
+
+U instead of Stoner I. Phys. Rev. B 44: 943 –954. 
+
+Atxitia, U., Hinzke, D., Chubykalo -Fesenko, O., Nowak, U., Kachkachi, H. and Mryasov, O.N. 
+
+2010. Multiscale modeling of magnetic materials: Temperature dependence of the exchange 
+
+stiffness. Phys. Rev. B 82: 134440. 
+
+Bertotti, M. 2004. Hysteresis in Magnetism: For Physicists, Materials Scientists, and Engineers. 
+
+Academic Press. 
+
+Binder, K. 1981. Finite size scaling analysis of Ising model block distribution functions. Z. Phys. 
+
+B 43: 119 –140. 
+
+Brown, W.F. 1963a. Thermal fluctuations of a single -domain particle. Phys. Rev. 130: 1677 –
+
+1686. 
+
+Brown, W.F. 1963b. Micromagnetics. John W iley & Sons, New York. 
+
+Callen, H.B. 1963. Use of the Green function in the theory of ferromagnetism. Phys. Rev. 130: 
+
+890 –897. 
+
+Carrey, J., Connord, V. and Respaud, M. 2011. Magnetic nanoparticles with high specific 
+
+absorption rate for hyperthermia applica tions. Appl. Phys. Lett. 99: 143103. 
+
+Coey, J.M.D. 2010. Magnetism and Magnetic Materials. Cambridge University Press. 
+
+Donahue, M.J. and Porter, D.G. 1999. OOMMF User's Guide, Version 1.0. NIST Interagency 
+
+Report NISTIR 6376, National Institute of Standar ds and Technology, Gaithersburg, MD. Dudarev, S.L., Botton, G.A., Savrasov, S.Y., Humphreys, C.J. and Sutton, A.P. 1998. Electron -
+
+energy -loss spectra and the structural stability of nickel oxide: An LSDA+U study. Phys. Rev. B 
+
+57: 1505 –1509. 
+
+Duru, I.P. 20 22. Electronic and magnetic properties of CoFe2O4 nanostructures: An ab -initio 
+
+and Monte Carlo study. Physica B 627: 413548. 
+
+Dutta, P., Pal, S., Seehra, M.S., Shah, N. and Huffman, G.P. 2009. Size dependence of magnetic 
+
+parameters and surface disorder in magnetite nanoparticles. J. Appl. Phys. 105: 07B501. 
+
+Eskandari, F., Porter, S.B., Venkatesan, M., Kameli, P., Rode, K. and Coey, J.M.D. 2017. 
+
+Magnetization and anisotropy of cobalt ferrite thin films. Phys. Rev. Materials 1: 074413. 
+
+Evans, R.F.L., Nowak, U., Chantrell, R.W., Atxitia, U. and Chubykalo -Fesenko, O. 2014. 
+
+Atomistic spin model simulations of magnetic nanomaterials. J. Phys.: Condens. Matter 26: 
+
+103202. 
+
+Fang, Y., Mullurkara, S., Taddei, K.M., Ohodnicki, P.R. and Wang, G. 2025. Machine learning 
+
+enabled accurate prediction of structural and magnetic properties of cobalt ferrite. npj Comput. 
+
+Mater. 11: 103. 
+
+Fritsch, D. and Ederer, C. 2012. First -principles calculation of magnetoelastic coefficients and 
+
+magnetostriction in spinel ferrites CoFe2O4 and NiFe2O4. Phys. Rev. B 86: 014406. 
+
+Franco, A. Jr. and e Silva, F.C. 2010. High temperature magnetic properties of cobalt ferrite 
+
+nanoparticles. Appl. Phys. Lett. 96: 172505. 
+
+Garanin, D.A. 1997. Fokker –Planck and Landau –Lifshitz –Bloch equations for cla ssical 
+
+ferromagnets. Phys. Rev. B 55: 3050 –3067. 
+
+Goodenough, J.B. 1958. An interpretation of the magnetic properties of the perovskite -type 
+
+mixed crystals. J. Phys. Chem. Solids 6: 287 –297. 
+
+Grinstein, G. and Koch, R.H. 2003. Coarse Graining in Micromagne tics. Phys. Rev. Lett. 90: 
+
+207201. 
+
+Hou, Y.H. et al. 2010a. First -principles calculations of magnetic anisotropy energy of CoFe2O4. 
+
+J. Appl. Phys. 108: 073901. 
+
+Hou, Y.H., Zhao, Y.J., Liu, Z.W., Ouyang, Y.F., Zhang, H.L. and Ma, S.C. 2010b. Structural, 
+
+electronic and magnetic properties of partially inverse spinel CoFe2O4. J. Phys. D: Appl. Phys. 
+
+43: 445003. 
+
+Kanamori, J. 1959. Superexchange interaction and symmetry properties of electron orbitals. J. 
+
+Phys. Chem. Solids 10: 87 –98. Lam ouri, R., Mounkachi, O., Salmani, E., Hamedoun, M., Benyoussef, A. and Ez -Zahraouy, H. 
+
+2020. Size effect on the magnetic properties of CoFe2O4 nanoparticles: A Monte Carlo study. 
+
+Ceram. Int. 46: 8092 –8096. 
+
+Li, J. et al. 2022. Enhanced magnetic anisotropy in rare -earth doped cobalt ferrite nanoparticles. 
+
+J. Alloys Compd. 895: 162678. 
+
+Liechtenstein, A.I., Katsnelson, M.I., Antropov, V.P. and Gubanov, V.A. 1987. Local spin 
+
+density functional approach to the theory of exchange interactions. J. Magn. Magn. Mat er. 67: 
+
+65 –74. 
+
+Liu, J., Wang, X., Borkiewicz, O.J., Hu, E., Xiao, R. -J., Chen, L. and Page, K. 2019. Unified 
+
+view of the local cation -ordered state in inverse spinel oxides. Inorg. Chem. 58: 14389 –14402. 
+
+Lisfi, A. et al. 2007. Reorientation of magnetic a nisotropy in epitaxial cobalt ferrite thin films. 
+
+Phys. Rev. B 76: 054405. 
+
+Metropolis, N., Rosenbluth, A.W., Rosenbluth, M.N., Teller, A.H. and Teller, E. 1953. Equation 
+
+of state calculations by fast computing machines. J. Chem. Phys. 21: 1087 –1092. 
+
+Mumt az, A., Maaz, K., Janjua, B., Hasanain, S.K. and Bertino, M.F. 2007. Exchange bias and 
+
+vertical shift in CoFe2O4 nanoparticles. J. Magn. Magn. Mater. 313: 266 –272. 
+
+Néel, L. 1948. Magnetic properties of ferrites. Ann. Phys. (Paris) 3: 137 –198. 
+
+Néel, L. 19 49. Théorie du traînage magnétique. Ann. Géophys. 5: 99 –136. 
+
+Odkhuu, D. and Hong, S.C. 2014. A first -principles study of magnetostrictions. J. Appl. Phys. 
+
+115: 17A916. 
+
+Omelyanchik, A., Varlamova, S., Kozlov, D., Rodionova, V., Gubin, S.P. and Hadjipanayi s, 
+
+G.C. 2020. Magnetocrystalline and surface anisotropy. Nanomaterials 10: 1288. 
+
+Pujada, B.R., Sinnecker, E.H.C.P., Rossi, A.M. and Guimaraes, A.P. 2003. Enhanced magnetic 
+
+anisotropy. J. Appl. Phys. 93: 7217. 
+
+Rivas -Murias, B., Testa -Anta, M., Skorikov, A .S., Comesaña -Hermo, M., Bals, S. and 
+
+Salgueiriño, V. 2023. Interfaceless exchange bias. Nano Lett. 23: 1688 –1695. 
+
+Shaikh, P.A., Kambale, R.C., Humbe, A.V., More, S.S. and Jadhav, S.E. 2015. Structural, 
+
+magnetic and electrical properties. J. Magn. Magn. M ater. 374: 689 –694. 
+
+Szotek, Z., Temmerman, W.M., Kodderitzsch, D., Svane, A., Petit, L. and Winter, H. 2006. 
+
+Electronic structures of spinel ferrites. Phys. Rev. B 74: 174431. Vansteenkiste, A., Leliaert, J., Dvornik, M., Helsen, M., Frachet, M. and Van Waeyenberge, B. 
+
+2014. The design and verification of MuMax3. AIP Adv. 4: 107133. 
+
+Waring, H.J., Li, Y., Johansson, N.A.B., Moutafis, C., Vera -Marun, I.J. and Thomson, T. 2023. 
+
+Exchange stiffness constant determination. J. Appl. Phys. 133: 063901. 
+
+Moreno, R., Bercoff, P.G., Atxitia, U., Evans, R.F.L. and Chubykalo -Fesenko, O. 2025. 
+
+Temperature dependence of exchange stiffness. Phys. Rev. B 111: 184416.

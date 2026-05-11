@@ -6,31 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-10
-- 运行时间：2026-05-10 20:27:47 UTC
+- 最新运行日期：2026-05-11
+- 运行时间：2026-05-11 20:37:19 UTC
 - 运行状态：成功
-- 本次总论文数：3
-- 精读区：1
-- 速读区：2
+- 本次总论文数：5
+- 精读区：0
+- 速读区：5
 
 ### 今日简报（AI）
-今日深度解析了量子自旋边缘态的纳米成像突破，并同步关注时间分辨晶体学与生物胶原三维制图的新进展。
-核心亮点在于通过磁性增强技术实现了自旋极化螺旋边缘态的可视化，为拓扑物态研究提供了关键观测手段。
-推荐对量子物理前沿及高精度生物成像感兴趣的读者重点研读首篇关于自旋模式的突破性成果。
-- 详情：[/202605/10/README](/202605/10/README)
+今日聚焦纳米磁性模拟、微秒级超快光谱重构及二维材料界面调控等前沿物理研究。
+重点关注利用异步事件传感器实现高时间分辨率光谱重构，以及通过界面工程优化二维材料的热载流子提取与稳定性。
+建议深入了解高频探测技术在光电材料性能监测中的跨界应用。
+- 详情：[/202605/11/README](/202605/11/README)
 
 ### 精读区论文标签
-1. [Magnetic Brightening and Nanoscale Imaging of Spin-Polarized Helical Edge Modes](/202605/10/2605.04883v1-magnetic-brightening-and-nanoscale-imaging-of-spin-polarized-helical-edge-modes)  
-   标签：评分：8.0/10、query:iscat
-   evidence：利用散射型扫描近场光学显微镜进行输运的纳米级成像
+- 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Multi-state Ensemble Refinement for Occupancy Statistics (MEROS) in Time-Resolved X-ray Crystallography](/202605/10/biorxiv-10-64898-2026-05-04-722701-v1-multi-state-ensemble-refinement-for-occupancy-statistics-meros-in-time-resolved-x-ray-crystallography)  
-   标签：评分：6.5/10、query:iscat
-   evidence：时间分辨晶体学中占有率统计的系综精修
-2. [Label-free quantitative 3D mapping of collagen architecture by holotomography](/202605/10/biorxiv-10-64898-2026-05-05-722893-v1-label-free-quantitative-3d-mapping-of-collagen-architecture-by-holotomography)  
+1. [Multiscale computational approaches to magnetic behaviour in Cobalt Ferrite (CoFe$_2$O$_4$) nanostructures](/202605/11/2605.02065v1-multiscale-computational-approaches-to-magnetic-behaviour-in-cobalt-ferrite-cofe2o4-nanostructures)  
+   标签：评分：7.0/10、query:iscat
+   evidence：带有Hubbard修正的密度泛函理论 (DFT+U)
+2. [Asynchronous Event-Based Spectroscopy for Microsecond-Resolved Spectral Reconstruction](/202605/11/2605.07553v1-asynchronous-event-based-spectroscopy-for-microsecond-resolved-spectral-reconstruction)  
+   标签：评分：7.0/10、query:iscat
+   evidence：物理过程的微秒级分辨率光谱重建
+3. [Interfacial control of hot-carrier extraction and photostability in two-dimensional materials](/202605/11/2605.07921v1-interfacial-control-of-hot-carrier-extraction-and-photostability-in-two-dimensional-materials)  
+   标签：评分：7.0/10、query:iscat
+   evidence：时域太赫兹光谱用于二维材料载流子动力学研究
+4. [Active Control of Topological Exceptional Points in Non-Hermitian Metasurfaces](/202605/11/2605.07702v1-active-control-of-topological-exceptional-points-in-non-hermitian-metasurfaces)  
    标签：评分：6.0/10、query:iscat
-   evidence：利用折射率分布进行无标记定量 3D 映射
+   evidence：超表面拓扑相位累积的时间分辨观察
+5. [In vivo elastography of the human retina using light-evoked intrinsic actuation](/202605/11/biorxiv-10-64898-2026-05-01-722017-v1-in-vivo-elastography-of-the-human-retina-using-light-evoked-intrinsic-actuation)  
+   标签：评分：6.0/10、query:iscat
+   evidence：相位解析光学相干断层扫描用于纳米级位移
 
 
 <div class="dpr-home-promo-card">

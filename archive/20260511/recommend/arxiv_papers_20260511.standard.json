@@ -1,0 +1,224 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-11T20:36:23.740067+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2605.02065v1",
+      "source": "arxiv",
+      "title": "Multiscale computational approaches to magnetic behaviour in Cobalt Ferrite (CoFe$_2$O$_4$) nanostructures",
+      "abstract": "Cobalt ferrite (CoFe$_2$O$_4$) is a prototypical ferrimagnetic spinel oxide whose exceptional magnetic anisotropy, magnetoelastic coupling, and thermal stability underpin applications in spintronics, magnetic hyperthermia, energy harvesting, and catalysis. This chapter presents a comprehensive computational framework that integrates electronic$-$structure calculations with atomistic spin modeling, statistical mechanics, and continuum micromagnetics to predict magnetic functionality across length and time scales. Starting from density functional theory with Hubbard corrections (DFT$+$U), we derive exchange constants J$_{ij}$, magnetocrystalline anisotropy K$_1$, and magnetoelastic coefficients B$_1$, accounting for cation inversion, strain, and correlation effects. These parameters feed into generalized Heisenberg Hamiltonians, enabling Monte Carlo and Landau-Lifshitz-Gilbert simulations of finite-size effects, hysteresis, coercivity, and hyperthermia response in nanoparticles and thin films. Coarse-graining strategies bridge to micromagnetic modeling, ensuring consistent parameter flow without empirical fitting. Computational case studies demonstrate size-dependent anisotropy enhancement, surface spin disorder, strain-tunable switching, and doping trends, revealing design principles inaccessible to experiment alone. Validation against benchmarks, e.g. Curie temperature, anisotropy constants, coercivity, magnetostriction, confirms predictive accuracy. Current challenges, e.g., U$-$parameter sensitivity, realistic surface chemistry, spin-lattice coupling, and large-scale integration are discussed alongside emerging directions including DFT$+$DMFT, coupled dynamics, and machine-learned potentials.",
+      "authors": [
+        "Soham Chandra",
+        "Soumyajit Sarkar"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.comp-ph"
+      ],
+      "published": "2026-05-03T21:21:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.02065v1",
+      "tags": [
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "density functional theory with Hubbard corrections (DFT+U)",
+      "llm_evidence_cn": "带有Hubbard修正的密度泛函理论 (DFT+U)",
+      "llm_evidence": "带有Hubbard修正的密度泛函理论 (DFT+U)",
+      "canonical_evidence": "带有Hubbard修正的密度泛函理论 (DFT+U)",
+      "llm_tldr_en": "Integrates DFT+U and spin modeling to predict magnetic functionality in cobalt ferrite nanostructures.",
+      "llm_tldr_cn": "结合DFT+U和自旋模型预测钴铁氧体纳米结构的磁性功能。",
+      "llm_tldr": "结合DFT+U和自旋模型预测钴铁氧体纳米结构的磁性功能。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "u",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.07702v1",
+      "source": "arxiv",
+      "title": "Active Control of Topological Exceptional Points in Non-Hermitian Metasurfaces",
+      "abstract": "Active control and ultrafast switching of non-Hermitian photonic systems are essential for next-generation reconfigurable optical technologies. Here, we demonstrate dynamic temporal manipulation of EPs in the terahertz (THz) regime using optically excited germanium (Ge) as an active medium. By exploiting pump-probe delay as a continuous tuning parameter, we achieve sub-picosecond eigenmode switching (~0.5 ps) and realize a complete time-resolved EP encirclement within ~2 ps, enabling direct observation of topological phase accumulation. At EP, the metasurface exhibits highly asymmetric transmission for circularly polarized light, characteristic of chiral mode response. Furthermore, we observe ultrafast eigenmode switching and topological phase evolution within ~1 ps, achieving >99% cross-polarization modulation depth. The measured results show strong agreement with theoretical modeling, with a high Petermann factor of approximately 10^3, confirming the effectiveness of the design. Our work establishes pump-probe delay time as a dynamical control parameter for EP topology, introducing a new regime of ultrafast non-Hermitian photonics for high-speed switching, enhanced sensitivity, and tunable polarization control in the THz domain.",
+      "authors": [
+        "Parul Sharma",
+        "Sobhan Subhra Mishra",
+        "Yash Gupta",
+        "Brijesh Kumar",
+        "Ranjan Singh",
+        "Abhishek Kumar",
+        "Anshuman Kumar"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-08T13:12:54+00:00",
+      "link": "https://arxiv.org/pdf/2605.07702v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved observation of topological phase accumulation in metasurfaces",
+      "llm_evidence_cn": "超表面拓扑相位累积的时间分辨观察",
+      "llm_evidence": "超表面拓扑相位累积的时间分辨观察",
+      "canonical_evidence": "超表面拓扑相位累积的时间分辨观察",
+      "llm_tldr_en": "Achieves sub-picosecond time-resolved manipulation of exceptional points in THz metasurfaces.",
+      "llm_tldr_cn": "实现了太赫兹超表面中异常点的亚皮秒时间分辨操控。",
+      "llm_tldr": "实现了太赫兹超表面中异常点的亚皮秒时间分辨操控。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.07553v1",
+      "source": "arxiv",
+      "title": "Asynchronous Event-Based Spectroscopy for Microsecond-Resolved Spectral Reconstruction",
+      "abstract": "Many physical and chemical processes of interest evolve on timescales that push the limits of conventional spectroscopic instrumentation. Indeed, the temporal resolution of standard spectrometers is often insufficient to track these dynamics, which is connected to the fact that most systems rely on frame-based sensors, imposing fundamental constraints on acquisition speed, sensitivity, and data efficiency, frequently limiting practical operation to the kHz regime. In this work, we present an approach to circumvent this limitation by developing an event-based spectrometer to enable spectral reconstruction with microsecond temporal resolution by leveraging a Czerny-Turner configuration combined with asynchronous and event-driven sensing. A dedicated signal processing pipeline converts the resulting stream of binary events into calibrated spectra through temporal accumulation, geometric correction, and vertical spatial integration of the spectral line, covering a 234nm bandwidth in the visible range with a spectral resolution of approximately 0.18nm per pixel. Performance characterization under temporally modulated illumination demonstrates that the event-based spectrometer can reconstruct spectra at probing rates of up to tens of kilohertz, far exceeding the practical limits of a conventional frame-based spectrometer operated in parallel, while accurately preserving spectral peak positions and relative spectral features. Finally, to further illustrate its potential applications, the system is validated in a microfluidic experiment integrated into an inverted microscope, where spectral changes induced by an absorbing dye are tracked with higher temporal fidelity and resolution compared with the frame-based approach. These results establish event-based spectroscopy as a promising paradigm for real-time, high-temporal-resolution spectral measurements in dynamic and low-light applications.",
+      "authors": [
+        "Joana M. Teixeira",
+        "Tomas Lopes",
+        "Tiago D. Ferreira",
+        "Catarina S. Monteiro",
+        "Pedro A. S. Jorge",
+        "Nuno A. Silva"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-08T10:30:42+00:00",
+      "link": "https://arxiv.org/pdf/2605.07553v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "microsecond-resolved spectral reconstruction for physical processes",
+      "llm_evidence_cn": "物理过程的微秒级分辨率光谱重建",
+      "llm_evidence": "物理过程的微秒级分辨率光谱重建",
+      "canonical_evidence": "物理过程的微秒级分辨率光谱重建",
+      "llm_tldr_en": "Event-based spectroscopy enables microsecond-resolved tracking of fast physical and chemical dynamics.",
+      "llm_tldr_cn": "基于事件的光谱学实现了对快速物理和化学动态的微秒级分辨率追踪。",
+      "llm_tldr": "基于事件的光谱学实现了对快速物理和化学动态的微秒级分辨率追踪。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-01-722017-v1",
+      "source": "biorxiv",
+      "title": "In vivo elastography of the human retina using light-evoked intrinsic actuation",
+      "abstract": "The biomechanical properties of the retina govern its function, structural integrity, and susceptibility to disease, yet remain difficult to measure in vivo due to the lack of safe, spatially localized mechanical actuation. Here, we introduce a framework for probing retinal biomechanics in the living human eye by leveraging intrinsic optical actuation driven by phototransduction. Using phase-resolved optical coherence tomography with a local phase-referencing approach, we resolved signed, nanometer-scale displacements of the major outer retinal interfaces evoked by light. The resulting deformation field, originating in the photoreceptor outer segment, was distributed across retinal compartments in an eccentricity-dependent manner, with efficient axial transfer in the fovea and attenuated propagation in the parafovea. A hybrid analytical and finite-element framework was developed that retrieved the biomechanical properties of the retinal compartments based on their coordinated deformation and the anatomical variation in retinal structure versus eccentricity. In retinitis pigmentosa, the paradigm enabled the detection of light-evoked deformation in the transition zone despite the loss of native lamination, enabling a functional readout of the vulnerable photoreceptors at the leading edge of degeneration. Together, these results establish intrinsic optical stimulation as a basis for in vivo retinal elastography and enable the non-invasive, quantitative imaging of retinal biomechanics and function in the living human retina.",
+      "authors": [
+        "Liu, T.",
+        "Li, H.",
+        "Pandiyan, V. P.",
+        "Chen, K.",
+        "Bharadwaj, P.",
+        "Wendel, B. J.",
+        "Mustafi, D.",
+        "Chao, J. R.",
+        "Ling, T.",
+        "Sabesan, R."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-05-04T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.01.722017v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "phase-resolved optical coherence tomography for nanometer-scale displacements",
+      "llm_evidence_cn": "相位解析光学相干断层扫描用于纳米级位移",
+      "llm_evidence": "相位解析光学相干断层扫描用于纳米级位移",
+      "canonical_evidence": "相位解析光学相干断层扫描用于纳米级位移",
+      "llm_tldr_en": "Uses phase-resolved OCT to measure light-evoked nanometer-scale displacements in the human retina.",
+      "llm_tldr_cn": "利用相位解析OCT测量人视网膜中光诱发的纳米级位移。",
+      "llm_tldr": "利用相位解析OCT测量人视网膜中光诱发的纳米级位移。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.07921v1",
+      "source": "arxiv",
+      "title": "Interfacial control of hot-carrier extraction and photostability in two-dimensional materials",
+      "abstract": "Two-dimensional transition metal dichalcogenides (TMDCs) are promising materials for next-generation optoelectronic devices, yet their implementation is hindered by limited sample stability and challenges in forming reliable electrical contacts. Here, by utilizing time-domain THz emission spectroscopy we directly probe charge carrier dynamics in monolayer WS2 on gold (Au) and fused silica (SiO2) as a function of interface morphology. For laser excitation above the band gap of WS2, we independently extract effective transport times for both electrons and holes and find that discontinuous WS2 contacts on rough Au generate larger net photocurrents than uniform, strongly coupled interfaces - a counterintuitive observation attributed to imbalanced electron and hole transfer from WS2 to Au. Crucially, we demonstrate that ultrafast charge extraction and separation suppress recombination-driven energy release and thereby prevent photo-induced degradation under ambient conditions, eliminating the need for encapsulation. These findings redefine interfacial design as a central control parameter for both performance and stability in 2D optoelectronic devices.",
+      "authors": [
+        "Claudia Gollner",
+        "Mohammad Taghinejad",
+        "Chenyi Xia",
+        "Zhepeng Zhang",
+        "Fang Liu",
+        "Francesco Laudani",
+        "Annette Foelske",
+        "Mark L. Brongersma",
+        "Andrew J. Mannix",
+        "Tony F. Heinz",
+        "Aaron Lindenberg"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-08T15:57:02+00:00",
+      "link": "https://arxiv.org/pdf/2605.07921v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-domain THz spectroscopy for charge carrier dynamics in 2D materials",
+      "llm_evidence_cn": "时域太赫兹光谱用于二维材料载流子动力学研究",
+      "llm_evidence": "时域太赫兹光谱用于二维材料载流子动力学研究",
+      "canonical_evidence": "时域太赫兹光谱用于二维材料载流子动力学研究",
+      "llm_tldr_en": "Probes hot-carrier extraction and transport times in monolayer WS2 using time-domain THz spectroscopy.",
+      "llm_tldr_cn": "利用时域太赫兹光谱探测了单层WS2中的热载流子提取和传输时间。",
+      "llm_tldr": "利用时域太赫兹光谱探测了单层WS2中的热载流子提取和传输时间。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

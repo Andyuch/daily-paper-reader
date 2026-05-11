@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.02065v1/fig-001.webp",
+      "caption": "Figure 1: Multiscale computational framework for modeling magnetic properties of CoFe2O4 inverse spinel ferrites. (a) Workflow linking first-principles DFT+U calculations to atomistic spin modeling and statistical-mechanics simulations. Interatomic parameters (exchange interactions, anisotropy, magnetoelastic terms) are used to construct a spin Hamiltonian on the inverse spinel lattice, followed by Monte Carlo and spin-dynamics approaches to obtain thermodynamic and dynamic magnetic properties. (b) Crystal and magnetic structure of CoFe2O4, showing tetrahedral (A) and octahedral (B) sublattices. Dominant antiferromagnetic A–B exchange leads to ferrimagnetic ordering with antiparallel alignment of sublattice moments.",
+      "page": 5,
+      "index": 1,
+      "width": 972,
+      "height": 823
+    },
+    {
+      "url": "assets/figures/arxiv/2605.02065v1/fig-002.webp",
+      "caption": "Figure 2: Monte Carlo simulation workflow for atomistic spin models of CoFe2O4 inverse spinel ferrites. The procedure includes initialization of the lattice and model parameters, construction of the spin Hamiltonian, Metropolis-based Monte Carlo updates with energy evaluation, and measurement of thermodynamic and magnetic observables after equilibration.",
+      "page": 12,
+      "index": 2,
+      "width": 960,
+      "height": 906
+    }
+  ]
+}

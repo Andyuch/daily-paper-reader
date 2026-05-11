@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.07921v1/fig-001.webp",
+      "caption": "Fig. 3 (a) Schematic energy band diagram showing simultaneous electron and hole extraction from WS2 to Au following above-band gap excitation. (b) Fourier spectra of the THz waveforms in (c), highlighting the broader bandwidth for Exf-WS2 (red), indicative of faster charge transfer. (c) THz fields measured with a 150 µm GaP crystal in dry air for Exf-WS2 (red dotted line) and CVD-WS2 (green dotted line), and their corresponding modeled THz waveforms. (d) Reference THz pulse from InSb, confirming hole injection into Au as the dominant photocurrent contribution. (e) Conceptual link between THz waveform shape and carrier transit time: the excitation pulse intensity envelope I(t) (black) determines the rise of the photocurrent J(t) (orange dashed), while its decay reflects the interfacial transit time. Because the THz field is proportional to the time derivative of the photocurrent density, fast transfer yields a symmetric, pulse-limited waveform (red), whereas slower transfer produces a stretched, asymmetric waveform (green).",
+      "page": 7,
+      "index": 1,
+      "width": 776,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07921v1/fig-002.webp",
+      "caption": "Fig. 5 (a) THz waveforms emitted from Exf-WS2 (red) and CVD-WS2 (green) on Au, as well as on SiO2 (purple and blue), respectively, measured with a 1 mm thick ZnTe crystal in dry air (0% RH) following 3.12 eV excitation. All samples exhibit stable THz emission when the chamber is purged with N2. (b)-(c) Peak-to peak THz amplitudes measured in ambient air as a function of time. WS2Au maintain stable THz emission, whereas signals from WS2-SiO2 samples decay within minutes. (d) Optical images showing clear photo-induced degradation of WS2-SiO2 samples after 3.17 eV excitation in ambient air containing H2O. (e)-(g) XPS spectra of CVD-WS2 on SiO2 measured on (e) a pristine sample area without laser exposure, (f) an intermediately exposed area where optical damage starts to appear, (g) a significantly damaged area wherein fully oxidised WS2 appears transparent. The inset shows the position of the measurement.",
+      "page": 10,
+      "index": 2,
+      "width": 776,
+      "height": 459
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07921v1/fig-003.webp",
+      "caption": "Fig. 4 (a) Peak to peak THz amplitude for Exf-WS2 (red) and CVD-WS2 (green) measured in dry air with a 1 mm ZnTe crystal as a function of pump fluence. (b)-(c) Modelled transient current densities for electrons (red) and holes (blue), along with the corresponding transport times from WS2 to Au, demonstrating asymmetric electron and hole transfer in CVD-WS2 (b) and efficient but balanced transfer in exfoliated WS2 (c), resulting in a diminished net photocurrent. Insets illustrate schematic energy band alignments at the interface and the corresponding current flow.",
+      "page": 8,
+      "index": 3,
+      "width": 776,
+      "height": 227
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07921v1/fig-004.webp",
+      "caption": "Fig. 1 (a)-(b) top: Exaggerated energy band diagram at the interface, including interface gap states for Exf - WS2, highlighting a reduced Schottky barrier height (SBH) for Exf - WS2 and tunnel barrier for CVD-WS2 (a)-(b) bottom: Schematic illustrations of exfoliated and CVD-grown WS2 on Au, showing a flush, uniform vdW contact for Exf-WS2 and a discontinuous contact on the rough Au surface for CVD-WS2. Panel (a) also includes a schematic of interfacial currents Jz in the WS2/Au stack that enables transient THz pulse emission. (c) THz waveforms from Exf- WS2 (red) and CVDWS2 (green) following 3.12 eV femtosecond excitation. Despite an additional tunnel barrier arising from the poor metal-TMDC contact, CVD-WS2 generates a stronger THz signal.",
+      "page": 4,
+      "index": 4,
+      "width": 776,
+      "height": 277
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07921v1/fig-005.webp",
+      "caption": "Fig. 2 (a) Energy band alignment of Au (left) and monolayer WS2 (right) before contact. Reported Au work functions are taken from [18, 20–22], with electronic density of states (DOS, green) from [24] and optical density of states (ODOS, grey dashed) from [21]. WS2 conduction and valence band parameters are taken from [25–27], electron affinity χ [28–31] and work function ΦWS2 [20, 23]. Excitation with 1.56 eV pulses predominantly excites free electrons just below the Au Fermi level EF, providing sufficient excess energy for interfacial transfer into WS2. (b) Fourier spectra of the time-domain signals shown in (d) for Exf-WS2 (red) and CVD-WS2 (green). (c) THz field from reference InSb. (d) THz waveforms from Exf-WS2 (red dotted line) and CVD-WS2 (green dotted line), measured with a 250 µm-thick GaP crystal, together with the corresponding waveform from our charge transport model, demonstrating faster charge transfer for Exf-WS2. (e) Peak-to-peak THz amplitude versus pump fluence for Exf-WS2 (red) and CVD-WS2 (green) as a measure of the transient photocurrent.",
+      "page": 5,
+      "index": 5,
+      "width": 776,
+      "height": 471
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.07702v1/fig-001.webp",
+      "caption": "FIG. 1. Metasurface exhibiting asymmetric circular polarization conversion and ultrafast dynamics. (a) Schematic representation of the metasurface, illustrating the temporal evolution of the polarization state via polarization ellipses, highlighting ultrafast switching dynamics on a sub-picosecond timescale. (b) Scanning electron microscopy (SEM) image of the fabricated metasurface. (c) Magnified view of an individual square unit cell with periodicity Px = Py = 100 µm, L1 = 40 µm, L2 = 30 µm, w = 5 µm, s = 3 µm, and d = 2 µm.",
+      "page": 3,
+      "index": 1,
+      "width": 852,
+      "height": 760
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07702v1/fig-002.webp",
+      "caption": "FIG. 2. Active evolution of eigenstates around EP: (a,e) Encirclement of EP on the absolute transmission eigensurfaces, realized by continuously varying the parameter pairs (ω, F ) in the experiment and (ω, σ) in simulations, respectively. The closed trajectories in parameter space traverse a non-Hermitian degeneracy associated with the EP. (b,f) Corresponding encirclement paths are mapped onto the Poincaré sphere, revealing the continuous evolution of the polarization eigenstates during the parameter sweep. (c,g) Topological eigenstate swapping induced by a complete loop around the EP, visualized through the evolution of polarization ellipses. The exchange of eigenstates after one encirclement is a hallmark of EP-associated non-Hermitian topology. (d,h) Progressive collapse of the eigenvalue splitting as the system parameters approach the EP, demonstrating the vanishing eigenvalue gap in both experiment and simulation.",
+      "page": 4,
+      "index": 2,
+      "width": 1062,
+      "height": 464
+    },
+    {
+      "url": "assets/figures/arxiv/2605.07702v1/fig-003.webp",
+      "caption": "FIG. 3. Ultrafast mode switching: (a) Carrier response dynamics of Ge showing switching through EP at a delay time of 0.5 ps. (b) Temporal evolution of eigenvalue gap ∆λ → 0 as the system approaches EP. (c) Eigenvalues λ± coalesce at EP ωEP = 0.6483 THz. (d-f) Encirclement around EP by varying probe frequency ω and pump delay ∆t for the fixed fluence 259 µJ/cm2. (g) Experimental values of Petermann factor K, reaching its maxima (K ≈ 1365) near EP marked as blue star. (h) Encirclement path (green rectangular loop in (g)) for S(R) = ∆λ2(R), where ∆λ is the eigenvalue gap √ S(R) in the complex plane spanned by parameter space vector R = (ω,∆t)T . The starting point is marked as plus, and the ending point is marked as cross. (i) Accumulated topological phase variation with normalised path length l(R)/L while encircling the loop shown in (g). C = 1/20 is a scaling factor introduced for better visibility in (h).",
+      "page": 6,
+      "index": 3,
+      "width": 1062,
+      "height": 864
+    }
+  ]
+}
