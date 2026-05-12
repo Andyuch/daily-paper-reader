@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-001.webp",
+      "caption": "Figure 6: Comparison of the predicted and true ∆λ values, residual distributions, and residual histograms for the models: (a) CBAMCNN; (b) ResCNN.",
+      "page": 6,
+      "index": 1,
+      "width": 475,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-002.webp",
+      "caption": "Figure 2: Test objects used in the simulations: (a) chirp pattern, (b) sinusoidal grating, (c) star pattern, and (d) USAF resolution target.",
+      "page": 2,
+      "index": 2,
+      "width": 943,
+      "height": 223
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-003.webp",
+      "caption": "Figure 8: MTF-based analysis for different values of the source spectral bandwidth: (a) contrast profile for the Siemens star test object at ∆λ=0.05 nm; (b) contrast profile at ∆λ=20 nm; (c) dependence of the effective MTF-based resolution proxy on ∆λ.",
+      "page": 7,
+      "index": 3,
+      "width": 821,
+      "height": 246
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-004.webp",
+      "caption": "Figure 7: FWHM analysis for different values of the source spectral bandwidth: (a) ROI, ESF, and LSF profiles for ∆λ=0.05 nm; (b) ROI, ESF, and LSF profiles for ∆λ=20 nm; (c) dependence of the FWHM and effective resolution on ∆λ.",
+      "page": 7,
+      "index": 4,
+      "width": 821,
+      "height": 243
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-005.webp",
+      "caption": "Figure 3: Example of hologram processing: (a) simulated hologram; (b) reconstructed image.",
+      "page": 3,
+      "index": 5,
+      "width": 787,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-006.webp",
+      "caption": "Figure 9: USAF test-target distinguishability analysis for different values of the source spectral bandwidth ∆λ: (a) examples of selected ROIs for contrast analysis; (b) contrast as a function of ∆λ for different ROIs; (c) limiting distinguishable spatial frequency as a function of ∆λ.",
+      "page": 8,
+      "index": 6,
+      "width": 917,
+      "height": 247
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-007.webp",
+      "caption": "Figure 4: Effect of source spectral bandwidth on reconstructed images: (a) reconstructed images of the test object for different values of ∆λ (0.5, 2, 10, and 20 nm); (b) corresponding dependence of the normalized RMS metric on ∆λ.",
+      "page": 4,
+      "index": 7,
+      "width": 777,
+      "height": 612
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-008.webp",
+      "caption": "Figure 10: Relative error of the resolution estimation as a function of the source spectral bandwidth ∆λ: (a) FWHM-based error; (b) MTF-based error; (c) USAF-based error. Solid lines correspond to the CBAMCNN and ResCNN models, and the dashed line represents the 5% relative-error threshold.",
+      "page": 9,
+      "index": 8,
+      "width": 917,
+      "height": 236
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09244v1/fig-009.webp",
+      "caption": "Figure 5: Validation MAE dynamics during training for the architectures: (a) CBAMCNN; (b) ResCNN.",
+      "page": 5,
+      "index": 9,
+      "width": 600,
+      "height": 317
+    }
+  ]
+}

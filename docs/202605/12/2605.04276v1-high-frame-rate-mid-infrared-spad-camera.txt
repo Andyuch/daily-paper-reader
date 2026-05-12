@@ -1,0 +1,424 @@
+ 
+1 
+ 
+ 
+High Frame-Rate Mid-Infrared SPAD Camera 
+Ziv Abelson1*†, Daniel Beitner1,2†, Ziv Livne2, Eyal Hollander2, Moshe Cohen Erner2, Edoardo 
+Charbon3 and Haim Suchowski1 
+1 Condensed Matter Physics Department, School of Physics and Astronomy, Faculty of Exact 
+Sciences and Center for Light-Matter Interaction, Tel-Aviv University, Tel-Aviv, Israel 
+2 Spiral Photonics LTD, Herzliya, Israel 
+3 Advanced Quantum Architecture Laboratory (AQUA), Ecole polytechnique fédérale de 
+Lausanne (EPFL), 2002 Neuchâtel, Switzerland 
+† These authors contributed equally to this work 
+*Corresponding author. Email: zivabelson@mail.tau.ac.il 
+Abstract:  
+Single-photon avalanche diode (SPAD) arrays have transformed optical imaging by enabling 
+photon-counting sensitivity, picosecond resolution, and high frame-rate operation. These 
+capabilities, however, have remained confined to the visible and near-infrared, leaving the 
+mid-infrared, the spectral region hosting the fundamental vibrational signatures of most 
+molecules, largely inaccessible. Here, we demonstrate the first mid-IR SPAD camera by 
+integrating broadband adiabatic frequency upconversion with a 512 × 512 Silicon SPAD array. 
+This architecture transfers full SPAD functionality to the mid-IR, enabling room-temperature, 
+low-noise, broadband photon-counting imaging. We achieve spectrally resolved mid-IR 
+imaging at frame rates of up to 60,000 frames per second and capture nanosecond-scale laser-
+induced thermal dynamics via weak mid-IR blackbody emission, revealing spatial-temporal 
+behavior inaccessible to existing technologies. These results establish a scalable platform for 
+photon-resolved, ultrafast thermal and chemical imaging in a spectral range previously 
+inaccessible to high-speed low-light detection. 
+Keywords:, Nonlinear Optics, Upconversion Imaging, Infrared Imaging, Adiabatic Poling, Mid-IR 
+SPAD, Single-Photon Imaging 
+Single-photon avalanche diode (SPAD) arrays have fundamentally reshaped optical imaging by 
+enabling true photon counting with picosecond temporal resolution, high frame rates, and digital 
+noise-free readout 1,2  These capabilities have driven major advances in fluorescence lifetime 
+imaging (FLIM) 3,4, time-of-flight sensing 5,6, ultrafast photon-resolved imaging 7, quantum 
+communication 8, and photon-correlation measurements 9,10. By shifting imaging from analog 
+signal accumulation to photon-resolved detection, SPAD cameras have unlocked regimes 
+inaccessible to conventional detectors. Although electron-multiplying CCD (EMCCD) and 
+scientific CMOS (sCMOS) technologies provide high sensitivity, with feasible yet not entirely 
+practical single photon detection capabilities and enable high speed low-light imaging. SPAD 
+arrays extend the performance boundaries further through intrinsic photon counting, low noise, 
+and precise temporal gating at picosecond timescale.  
+
+
+ 
+2 
+ 
+Despite this progress, SPAD imaging remains largely confined to the visible and near-infrared 
+spectral ranges 11, where silicon and InGaAs-based devices have reached technological maturity 
+12. In contrast, the mid-infrared (mid-IR, 2-5 µm) region, home to the fundamental vibrational 
+resonances of most molecules 13, relies on conventional detectors such as HgCdTe, which typically 
+require cryogenic cooling, offer limited temporal resolution, and do not support photon-counting 
+or ultrahigh frame rates 14,15. This technological gap is particularly consequential because mid-IR 
+light provides chemically specific contrast inaccessible at shorter wavelengths, underpinning 
+applications in chemical identification 16,17, environmental monitoring 18,19, thermal science 20, 
+astronomy 21,22, and medical diagnostics 23–25. As a result, many of the capabilities that transformed 
+visible-light imaging remain unavailable in one of the most information-rich spectral regions of 
+the electromagnetic spectrum. Although recent advances have employed frequency upconversion 
+to enable room-temperature mid-IR imaging that exploits the advantages of silicon detectors 26–29, 
+single photon detection has only been demonstrated using an individual upconverted detector 30. 
+Full-field mid-IR single-photon imaging has not previously been realized. 
+Here, we bridge this gap by extending SPAD-based imaging into the mid-infrared. By coupling a 
+broadband adiabatic frequency upconversion platform to a silicon SPAD array, we realize a first 
+high-frame-rate mid-IR SPAD camera that transfers the full functionality of SPAD imaging, 
+including photon counting, ultra-low noise, and picosecond timing, into the 2 −5 µ𝑚 band. Using 
+a 512 × 512 SPAD array, we demonstrate broadband mid-IR imaging at frame rates up to 60,000 
+frames per second and exploit the system’s temporal and spatial resolution to capture nanosecond-
+scale laser-induced heating and cooling dynamics via mid-IR thermal emission. The system 
+operates at room temperature in a compact, small-footprint architecture with no moving parts or 
+complex cooling apparatus. This work not only removes a significant barrier but also establishes 
+a scalable platform for photon-resolved, ultrafast mid-infrared imaging, bringing to the mid-IR 
+spectral range capabilities that have until now been restricted to visible-light SPAD technologies.  
+Results 
+Mid-Infrared Single-Photon Imaging 
+Because scalable single-photon detector arrays in the mid-infrared range remain technologically 
+limited, alternative strategies are required. Silicon SPAD arrays represent the most advanced 
+photon-counting imaging technology available, offering picosecond timing, ultralow noise, and 
+high frame rates. However, mid-infrared photons lie well below the silicon bandgap and therefore 
+cannot generate photoelectric charge carriers, rendering direct silicon-based detection impossible. 
+Access to SPAD-based mid-IR imaging, therefore, requires photon-to-photon frequency 
+conversion to translate the optical signal into the visible, where mature silicon SPAD arrays 
+operate efficiently. Conventional nonlinear upconversion approaches are typically limited by 
+narrow phase-matching bandwidths or require complex tuning and scanning to access broader 
+spectra 31–33. 
+To overcome this limitation, we employ broadband frequency upconversion based on an 
+adiabatically poled lithium niobate (APLN) crystal in an imaging configuration pumped by a Q-
+switched 1064 𝑛𝑚 laser (Fig. 1). In the APLN crystal, the poling period varies gradually along 
+the direction of propagation, implementing adiabatic quasi-phase-matching that maintains efficient 
+conversion over a broad spectral and angular range 34,35. This adiabatic design enables robust 
+frequency photon-to-photon conversion without fine-tuning, allowing a wide mid-IR bandwidth 
+
+
+ 
+3 
+ 
+to be mapped into the visible-near-infrared domain in a single exposure. Throughout this work, 
+illumination is provided by a filtered blackbody source spanning the 2 −5 µ𝑚 spectral range. 
+Residual pump and mid-IR light are rejected using dichroic filtering, and the upconverted image 
+is recorded with the silicon SPAD array. The pump pulses are synchronized with SPAD gating to 
+maximize detection efficiency of the upconverted photons (See Fig. 1). 
+Due to the intrinsic dead time and binary operation of SPAD pixels, each frame corresponds to a 
+1-bit image. While individual binary frames contain sparse photon events, synchronized 
+acquisition enables summation of multiple frames, yielding high-sensitivity images with ultralow 
+noise. This additive photon-counting scheme can be extended beyond static scenes to repetitive 
+dynamic processes by synchronizing acquisition to external events with picosecond precision as 
+illustrated in Fig. 1. 
+Using this approach, we capture images of a USAF 1951 resolution test target in the mid-IR range 
+(Fig. 2). As shown in Fig. 2a, individual SPAD frames contain sparse binary photon-detection 
+events and provide minimal spatial information. Summation of increasing numbers of frames (N 
+= 1–1000) progressively reconstructs the image, revealing fine spatial features with increasing 
+contrast as photon statistics accumulate.  
+Spectral sectioning of the mid-IR signal is implemented by inserting narrowband filters in the 
+visible after upconversion, without modifying the nonlinear conversion stage. Because the process 
+obeys energy conservation, a narrow visible-band filter corresponds to a broader spectral window 
+in the mid-IR range. For example, a 10 𝑛𝑚 FWHM filter centered near 800 𝑛𝑚 selects an effective 
+mid-IR bandwidth of approximately 160 𝑛𝑚 around 3.5 µ𝑚. Fig. 2b shows mid-IR images 
+acquired at different spectral sections across the 2 −5 µ𝑚 band. With optimized gating, the 
+camera resolves features as small as 35 µ𝑚 throughout this range.  Variations in magnification 
+and field of view between spectral sections arise from momentum-conservation-induced 
+dispersion 36 and the wavelength-dependent angular acceptance of the adiabatically poled crystal. 
+Further narrowing the spectral filtering improves image contrast at the expense of optical 
+throughput. Residual diffraction features introduced by the crystal can be mitigated through 
+straightforward image processing. 
+Beyond sensitivity and spatial resolution, a defining advantage of SPAD-based imaging is the 
+achievable frame rate, which remains inaccessible to conventional infrared cameras, particularly 
+in compact, room-temperature systems. As shown in Fig. 3, we capture dynamic mid-IR scenes at 
+high frame rate, including an optical chopper rotating at a chopping frequency of 900 𝐻𝑧 and a 
+butane burner that was positioned 15 meters from the adiabatic mid-IR SPAD camera. These 
+measurements demonstrate the ability to resolve rapid temporal dynamics and evolving thermal 
+features in the mid-IR at frame rates exceeding those of standard infrared imaging technologies. 
+This frame rate which is limited both by the SPAD and by the maximal operating frequency of the 
+pump laser can still be improved by adopting more advanced solutions. 
+Fig. 3b and 3c show time-resolved images of the rotating chopper acquired as 1-bit and 8-bit 
+frames, respectively. The SPAD array supports frame rates up to 100,000 frames per second (fps) 
+in 1-bit mode, but in practice, the achievable rate is governed by the available photon flux. For the 
+butane burner (Fig. 3d-f), images acquired at lower frame rates exhibit motion-induced blurring 
+
+
+ 
+4 
+ 
+due to flame dynamics. Increasing the frame rate reveals progressively sharper spatial features 
+(Fig. 3e), while at the highest frame rates only the most intense emitting regions remain visible 
+(Fig. 3f), reflecting photon-limited acquisition. Together, these results highlight the mid-IR SPAD 
+platform's ability to capture fast-evolving thermal phenomena over both laboratory and field-
+relevant distances. 
+Capturing Nanosecond Dynamics in the Mid-Infrared 
+To demonstrate the temporal capabilities of the mid-IR SPAD camera, we showcase nanosecond 
+laser-induced heating in various metals. As shown in Fig. 4a, a synchronized 1064 𝑛𝑚 Nd:YAG 
+laser (1 𝑚𝐽 pulse energy) is focused onto the metal surface to a spot diameter of approximately 
+200 −400 𝜇𝑚, with the fluence maintained well below the ablation threshold. The sample is 
+positioned in front of the camera such that the excitation beam impinges perpendicularly at a 
+grazing angle.  The heating laser, upconversion pump, and SPAD gating are synchronized and 
+operated at a fixed repetition rate. By incrementally shifting the relative delay in steps of 5 𝑛𝑠, we 
+reconstruct the full spatiotemporal evolution of the mid-IR blackbody emission (2 −5 µ𝑚) 
+following each excitation pulse. Fig. 4c shows representative time-resolved images and spatially 
+integrated dynamics.  
+Direct imaging of nanosecond-scale mid-IR thermal emission is intrinsically challenging because 
+the emitted photon flux is low and conventional detectors require longer integration times, 
+increasing noise and limiting temporal resolution. The photon-counting sensitivity and 
+synchronized gating of the mid-IR SPAD platform enable access to this regime with spatial 
+resolution. To our knowledge, this represents the first spatially resolved nanosecond-scale mid-
+infrared thermal emission imaging enabled by full-field photon counting.  
+The measurements reveal cooling dynamics that extend well beyond the ~7 𝑛𝑠 duration of the 
+excitation pulse. The spatial heating profile follows the Gaussian intensity distribution of the laser 
+beam, while the temporal response exhibits two distinct contributions. The first is rapid cooling of 
+the metal following each pulse, and the second is a weaker steady-state temperature resulting from 
+repetitive pulses’ excitation. The complete spatial-temporal evolution is readily resolved, and 
+wavelength-dependent sectioning provides additional insight into the thermal dynamics.  
+The cooling dynamics vary markedly across different metals (Fig. 4e), reflecting differences in 
+specific heat, thermal conductivity, and heat diffusion length. This sensitivity suggests a route 
+toward material discrimination based on time-resolved mid-IR thermal signatures and may be 
+extended to time-resolved absorption or emissivity studies. Additionally, an example of spectral 
+sectioning of the thermal dynamics is provided in supplementary information Fig S2. 
+Conventional characterization of fast pulsed laser heating dynamics has been typically performed 
+by probing reflectivity changes in the visible or near-infrared 37,38, characterizing plasma emission 
+39 or by pulsed photothermal radiometry 40,41. Since direct IR emission is extremely weak and short 
+lived, these methods rely on signal integration to obtain measurable data. In contrast, the present 
+approach provides the entire images of mid-IR thermal emission at nanosecond resolution, 
+providing not only the temporal response but also complementary spatial insights into energy 
+deposition and heat transport processes. 
+
+
+ 
+5 
+ 
+Discussion 
+We extend SPAD-based imaging into the mid-infrared by combining adiabatic frequency 
+upconversion with large-format silicon SPAD arrays, enabling photon-counting, high-frame-rate 
+imaging across the 2–5 µm band at room temperature. This platform bridges a longstanding 
+technological gap by bringing picosecond timing, ultralow noise, and full-field single-photon 
+sensitivity to a spectral region previously inaccessible to such capabilities. In doing so, it 
+establishes a scalable approach for high-speed, photon-resolved mid-IR imaging without 
+cryogenic cooling and any moving components. 
+The ability to capture spatially resolved nanosecond-scale thermal emission dynamics illustrates 
+the broader potential of this architecture for probing fast energy deposition and heat transport 
+directly in the mid-infrared. Beyond the demonstrations presented here, extending SPAD 
+functionality to this spectral regime opens opportunities for time-correlated and lifetime-resolved 
+measurements, high-speed vibrational imaging, and the investigation of non-equilibrium thermal 
+and emissive processes with simultaneous spatial, spectral, and temporal resolution. More broadly, 
+bringing mature SPAD capabilities to the mid-IR defines a new experimental regime at the 
+intersection of single-photon detection and infrared photonics. 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+6 
+ 
+ 
+Fig. 1.  Principles of mid-IR SPAD camera operation. a Schematic of the adiabatic 
+upconversion imaging configuration. Blackbody radiation filtered to the  𝟐−𝟓 𝝁𝒎 band is 
+collected by an objective lens and relayed in a 4f system, with the APLN crystal positioned at the 
+Fourier plane. The crystal, providing broadband spectral and angular acceptance, is pumped by a 
+high peak-power Nd-YAG laser (1064 nm, 𝟓 𝒏𝒔 pulse, 𝟏 𝒎𝑱). The mid-IR image is upconverted 
+to the 𝟔𝟖𝟎−𝟖𝟖𝟎 𝒏𝒎 visible–near-infrared range, where spectral filtering enables selection of 
+specific mid-IR bands.  b Energy conservation diagram illustrating the wavelength relationship in 
+the upconversion process. c Illustration of SPAD-based time-resolved acquisition for fast periodic 
+phenomena. Binary (1-bit) frames are accumulated at a fixed delay to form a high-sensitivity 
+image. The delay is then gradually incremented to reconstruct the temporal evolution of a periodic 
+event. d Illustration of the spectral sectioning. Since the upconversion is governed by energy 
+conservation, filtering the visible output selects the corresponding mid-IR spectral segment.  
+ 
+
+
+ 
+7 
+ 
+ 
+Fig. 2. Resolution and spectral sectioning of mid-IR images. a Progressive reconstruction of a 
+mid-IR image through summation of binary single-photon frames acquired after frequency 
+upconversion using a visible spectral filter centered at 𝟖𝟓𝟎 𝒏𝒎  (𝑭𝑾𝑯𝑴 𝟏𝟎 𝒏𝒎). For a pump 
+wavelength of 𝟏𝟎𝟔𝟒 𝒏𝒎, this corresponds to a mid-IR spectral band centered at 𝟑. 𝟓 µ𝒎 with an 
+effective bandwidth of 𝟏𝟔𝟎 𝒏𝒎), determined by the energy-conservation relation 𝝀𝐈𝐑
+ି𝟏= 𝝀𝐕𝐈𝐒
+ି𝟏−
+𝝀𝐩𝐮𝐦𝐩
+ି𝟏
+. Individual frames (N = 1) contain sparse photon-detection events, while summation over 
+increasing numbers of frames (N = 10, 100, 1000) progressively reconstructs the image, revealing 
+increasing contrast and spatial detail.  b Mid-IR images of a USAF1951 resolution test target 
+acquired at different spectral sections across the 𝟐−𝟓 µ𝒎 band, as indicated. The smallest 
+resolved features correspond to 𝟑𝟓 𝝁𝒎 line widths. Variations in magnification and field of view 
+between spectral sections arise from momentum-conservation-induced dispersion and the 
+wavelength-dependent angular acceptance of the adiabatically poled lithium niobate (APLN) 
+crystal.  
+ 
+ 
+
+
+ 
+8 
+ 
+ 
+Fig. 3. High Frame Rate mid-IR SPAD Imaging. a Experimental configuration for high-frame 
+rate mid-IR imaging. The SPAD camera was equipped with a telephoto lens, and dynamic scenes 
+were captured under filtered blackbody illumination (optical chopper) and under natural emission 
+(dual-head butane burner). b 1-bit images of an optical chopper rotating at a chopping frequency 
+of 900 Hz acquired with 𝟓𝟎 𝒏𝒔 exposure time c 8-bit images of the optical chopper rotating at a 
+chopping frequency of 300 Hz acquired with an 𝟏𝟏 𝝁𝒔 exposure time. 8-bit images are generated 
+by the summation of 𝟐𝟖−𝟏 binary 1-bit frames. d-f Mid-IR images of a dual-head Butane burner 
+located 𝟏𝟓 𝒎 from the camera, acquired at frame rates of 25 fps, 250 fps and 1000 fps, respectively 
+
+
+ 
+9 
+ 
+ 
+Fig. 4. Nanosecond-scale thermal dynamics in the mid-IR. a Experimental configuration for 
+time-resolved (ns-scale) mid-IR imaging of laser-induced heating in metals. A thin metal plate is 
+positioned in front of the mid-IR SPAD camera, while a synchronized 𝟏𝟎𝟔𝟒 𝒏𝒎 laser pulse (𝟕 𝒏𝒔,
+𝟏𝒎𝑱) is focused onto the surface at a grazing angle. b Representative mid-IR image showing the 
+spatial profile of the laser-heated region immediately following excitation. c Temporal cooling 
+dynamics following a single laser pulse, obtained by integrating the mid-IR signal over a region-
+of-interest (ROI). Numbered markers correspond to the time delayed mid-IR images shown to the 
+right.  The cooling profile corresponds to the typical temporal shape obtained by pulsed 
+photothermal radiometry measurements and the model suggested by Tam 41. d Time-resolved 
+spatiotemporal evolution of the thermal emission, shown as X- and Y- axis cross-sections through 
+the heated region (top and bottom, respectively), revealing the diffusion and decay of the thermal 
+profile from nanosecond to sub-microsecond timescales. e Normalized cooling dynamics for 
+different metals, illustrating distinct temporal responses arising from variations in thermal 
+properties such as specific heat and thermal conductivity (see supplementary information Fig. S1 
+for examples of spatiotemporal evolution for different materials).  
+ 
+ 
+
+
+ 
+10 
+ 
+REFERENCES AND NOTES 
+1. 
+Morimoto, K. et al. Megapixel time-gated SPAD image sensor for 2D and 3D imaging applications. Optica 
+7, 346–354 (2020). 
+2. 
+Ulku, A. C. et al. A 512×512 SPAD image sensor with integrated gating for widefield FLIM. IEEE Journal 
+of Selected Topics in Quantum Electronics 25, 1–12 (2018). 
+3. 
+Zickus, V. et al. Fluorescence lifetime imaging with a megapixel SPAD camera and neural network lifetime 
+estimation. Sci. Rep. 10, 20986 (2020). 
+4. 
+Castello, M. et al. A robust and versatile platform for image scanning microscopy enabling super-resolution 
+FLIM. Nat. Methods 16, 175–178 (2019). 
+5. 
+Piron, F., Morrison, D., Yuce, M. R. & Redouté, J.-M. A review of single-photon avalanche diode time-of-
+flight imaging sensor arrays. IEEE Sens. J. 21, 12654–12666 (2020). 
+6. 
+Della Rocca, F. M. et al. A 128× 128 SPAD motion-triggered time-of-flight image sensor with in-pixel 
+histogram and column-parallel vision processor. IEEE J. Solid-State Circuits 55, 1762–1775 (2020). 
+7. 
+Warburton, R. et al. Observation of laser pulse propagation in optical fibers with a SPAD camera. Sci. Rep. 
+7, 43302 (2017). 
+8. 
+Liang, H., Ahmed, H., Tam, W. Y., Chen, X. & Li, J. Continuous heralding control of vortex beams using 
+quantum metasurface. Commun. Phys. 6, 140 (2023). 
+9. 
+Lubin, G. et al. Quantum correlation measurement with single photon avalanche diode arrays. Opt. Express 
+27, 32863–32882 (2019). 
+10. 
+Ndagano, B. et al. Imaging and certifying high-dimensional entanglement with a single-photon avalanche 
+diode camera. npj Quantum Inf. 6, 94 (2020). 
+11. 
+Flannigan, L., Khalil, M., Chiu, P. & Xu, C. Recent progress on mid-infrared single-photon detectors and 
+sources for satellite-based quantum key distribution—a review. Quantum Sci. Technol. 11, 013001 (2026). 
+12. 
+Yildirim, H. K. et al. Room-temperature, 96× 96 pixel 3D-stacked InGaAs/InP SPAD sensor with 
+complementary gating for flash LiDAR. Opt. Express 34, 5064–5078 (2026). 
+13. 
+Ozaki, Y. Infrared spectroscopy—Mid-infrared, near-infrared, and far-infrared/terahertz spectroscopy. 
+Analytical Sciences 37, 1193–1212 (2021). 
+14. 
+Karim, A. & Andersson, J. Y. Infrared detectors: Advances, challenges and new technologies. in IOP 
+Conference series: materials science and engineering vol. 51 012001 (IOP Publishing, 2013). 
+15. 
+Rogalski, A. Scaling infrared detectors—Status and outlook. Reports on Progress in Physics 85, 126501 
+(2022). 
+16. 
+Gabrieli, F., Dooley, K. A., Facini, M. & Delaney, J. K. Near-UV to mid-IR reflectance imaging 
+spectroscopy of paintings on the macroscale. Sci. Adv. 5, eaaw7794 (2019). 
+17. 
+Pilling, M. & Gardner, P. Fundamental developments in infrared spectroscopic imaging for biomedical 
+applications. Chem. Soc. Rev. 45, 1935–1957 (2016). 
+18. 
+Reeves, J. B., McCarty, G. W. & Reeves, V. B. Mid-infrared diffuse reflectance spectroscopy for the 
+quantitative analysis of agricultural soils. J. Agric. Food Chem. 49, 766–772 (2001). 
+19. 
+Löder, M. G. J., Kuczera, M., Mintenig, S., Lorenz, C. & Gerdts, G. Focal plane array detector-based micro-
+Fourier-transform infrared imaging for the analysis of microplastics in environmental samples. 
+Environmental Chemistry 12, 563–581 (2015). 
+20. 
+Vollmer, M. & Möllmann, K.-P. Infrared Thermal Imaging: Fundamentals, Research and Applications. 
+(John Wiley & Sons, 2018). 
+21. 
+Habel, N. et al. Young Stellar Objects in NGC 346: A JWST NIRCam/MIRI Imaging Survey. Astrophys. J. 
+971, 108 (2024). 
+22. 
+Ahrer, E.-M. et al. Early Release Science of the exoplanet WASP-39b with JWST NIRCam. Nature 614, 
+653–658 (2023). 
+23. 
+Kümmel, T. et al. Rapid brain structure and tumour margin detection on whole frozen tissue sections by fast 
+multiphotometric mid-infrared scanning. Sci. Rep. 11, 11307 (2021). 
+24. 
+Fernandez, D. C., Bhargava, R., Hewitt, S. M. & Levin, I. W. Infrared spectroscopic imaging for 
+histopathologic recognition. Nat. Biotechnol. 23, 469–474 (2005). 
+25. 
+Walsh, M. J., Reddy, R. K. & Bhargava, R. Label-free biomedical imaging with mid-IR spectroscopy. IEEE 
+Journal of selected topics in quantum electronics 18, 1502–1513 (2012). 
+26. 
+Huang, K., Fang, J., Yan, M., Wu, E. & Zeng, H. Wide-field mid-infrared single-photon upconversion 
+imaging. Nat. Commun. 13, 1077 (2022). 
+27. 
+Fang, J. et al. Wide-field mid-infrared hyperspectral imaging beyond video rate. Nat. Commun. 15, 1811 
+(2024). 
+
+
+ 
+11 
+ 
+28. 
+Fang, J., Huang, K., Wu, E., Yan, M. & Zeng, H. Mid-infrared single-photon 3D imaging. Light Sci. Appl. 
+12, 144 (2023). 
+29. 
+Mrejen, M., Erlich, Y., Levanon, A. & Suchowski, H. Multicolor Time‐Resolved Upconversion Imaging by 
+Adiabatic Sum Frequency Conversion. Laser Photon. Rev. 14, 2000040 (2020). 
+30. 
+Mancinelli, M. et al. Mid-infrared coincidence measurements on twin photons at room temperature. Nat. 
+Commun. 8, 15184 (2017). 
+31. 
+Hu, Q., Seidelin Dam, J., Pedersen, C. & Tidemand-Lichtenberg, P. High-resolution mid-IR spectrometer 
+based on frequency upconversion. Opt. Lett. 37, 5232–5234 (2012). 
+32. 
+Huot, L., Moselund, P. M., Tidemand-Lichtenberg, P., Leick, L. & Pedersen, C. Upconversion imaging 
+using an all-fiber supercontinuum source. Opt. Lett. 41, 2466–2469 (2016). 
+33. 
+Kehlet, L. M., Tidemand-Lichtenberg, P., Dam, J. S. & Pedersen, C. Infrared upconversion hyperspectral 
+imaging. Opt. Lett. 40, 938–941 (2015). 
+34. 
+Suchowski, H., Prabhudesai, V., Oron, D., Arie, A. & Silberberg, Y. Robust adiabatic sum frequency 
+conversion. Opt. Express 17, 12731–12740 (2009). 
+35. 
+Suchowski, H., Porat, G. & Arie, A. Adiabatic processes in frequency conversion. Laser Photon. Rev. 8, 
+333–367 (2014). 
+36. 
+Coen, T., Mrejen, M. & Suchowski, H. Diffraction-based nonlinear model for the design of broadband 
+adiabatic up-conversion imaging. Opt. Express 31, 43280–43288 (2023). 
+37. 
+Winter, J. et al. Ultrafast pump-probe ellipsometry and microscopy reveal the surface dynamics of 
+femtosecond laser ablation of aluminium and stainless steel. Appl. Surf. Sci. 511, 145514 (2020). 
+38. 
+Porneala, C. & Willis, D. A. Time-resolved dynamics of nanosecond laser-induced phase explosion. J. Phys. 
+D Appl. Phys. 42, 155503 (2009). 
+39. 
+Zeng, X., Mao, X. L., Greif, R. & Russo, R. E. Experimental investigation of ablation efficiency and plasma 
+expansion during femtosecond and nanosecond laser ablation of silicon. Applied Physics A 80, 237–241 
+(2005). 
+40. 
+Martan, J., Cibulka, O. & Semmar, N. Nanosecond pulse laser melting investigation by IR radiometry and 
+reflection-based methods. Appl. Surf. Sci. 253, 1170–1177 (2006). 
+41. 
+Tam, A. C. Pulsed photothermal radiometry for noncontact spectroscopy, material testing and inspection 
+measurements. Infrared Phys. 25, 305–313 (1985). 
+  

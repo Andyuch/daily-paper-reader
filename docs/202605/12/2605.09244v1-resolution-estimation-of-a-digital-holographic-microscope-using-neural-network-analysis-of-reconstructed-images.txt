@@ -1,0 +1,632 @@
+Resolution Estimation of a Digital Holographic Microscope Using
+Neural Network Analysis of Reconstructed Images
+Arthur G. Fedorov
+North-Eastern Federal University, 58 Belinsky Str., Yakutsk, 677000 Russia
+Corresponding author: ag.fedorov@s-vfu.ru
+Abstract
+This paper presents a method for estimating the resolution of a digital holographic microscope
+based on the analysis of reconstructed images using neural networks. The spectral bandwidth of the
+source (∆λ) is used as a controlled degradation parameter.
+Numerical simulations were performed within inline Gabor holography. A dataset of reconstructed
+images was generated for several test objects over a ∆λ range from 0.05 to 20 nm.
+The model predicts ∆λ from the reconstructed images with high precision.
+The predictions
+are consistent with standard resolution metrics, including FWHM, MTF, and the USAF resolution
+criterion.
+The generalization analysis shows that the model is sensitive to the type of degradation.
+It
+correctly captures interferometric distortions and responds selectively to the underlying physical
+mechanism.
+The proposed approach allows resolution estimation without explicit modeling of all degradation
+factors and can be used for compact holographic systems.
+Keywords: digital holography, inline Gabor holography, resolution, temporal coherence, spectral
+bandwidth, neural networks, deep learning
+1
+Introduction
+Inline digital holography [1–3] is one of the simplest and most versatile configurations for recording and
+reconstructing object structure. In its basic form, the system consists of a radiation source, an object,
+and a detector [4], while image reconstruction is performed numerically [5–7]. Unlike conventional optical
+microscopes based on complex and expensive lens systems, digital holography enables the development
+of compact, portable [8–11], and low-cost devices [12] with integrated software for image reconstruction
+and analysis [13–15].
+The simplicity of the inline configuration (source–object–detector) makes it attractive for both fun-
+damental research and engineering applications. Such systems are widely used in electron microscopy
+[16–18], where holography is applied to study structural features of objects, as well as in optical digital
+holography for biomedical diagnostics [19,20], microfluidics [21], and field measurements [8,9].
+Recent trends in scientific instrument miniaturization have stimulated the development of compact
+and portable digital holographic microscopes [8,12,22,23]. Such systems can be built using standard
+components and provide a significant cost reduction compared to commercial solutions [12]. In particular,
+implementations based on low-cost laser diodes, LED sources, CMOS sensors, and simple printed circuit
+boards have been reported. The cost of a complete laboratory prototype in such systems often does not
+exceed 150 USD [23].
+However, the low cost of the components is also one of the main limitations of these systems. The
+quality of the coherent source, detector characteristics, system geometry, and limited field of view all
+affect the final resolution of a digital holographic microscope. Separating the influence of these factors
+analytically is difficult. Although each factor has its own spectral signature, their effects are combined
+in the reconstructed image, and the resolution is ultimately limited by the factor with the lowest cutoff
+frequency. As a result, the contribution of each individual factor becomes inseparable from the overall
+image degradation. This makes the analysis of individual factors inefficient and requires approaches
+capable of working with their combined effect.
+1
+arXiv:2605.09244v1  [physics.optics]  10 May 2026
+
+
+In this work, a method is proposed for estimating system resolution without explicitly considering a
+specific limiting factor. The approach is based on deep learning methods that operate on the combined
+effect of image degradation without explicit modeling of individual system parameters.
+As a demonstration case, the influence of source temporal coherence on the resolution of a digital
+holographic microscope is considered, since this factor produces a monotonic and well-controlled degra-
+dation of the reconstructed image quality. The applicability limits of the method and the transferability
+of the model to different object types are also analyzed.
+2
+Methods
+2.1
+Holographic configuration and object parameters
+Hologram simulation and image reconstruction were performed within inline Gabor holography (Fig.
+1). The input field was assumed to be a plane wave Uin. After interaction with the object, the object
+wave Uobj is formed, while part of the field propagates without changes and forms the reference wave
+Uref = Uin. The interference between Uobj and Uref in the detector plane produces the holographic image
+Uscr. Wave propagation was modeled numerically in this work [24].
+Figure 1: General scheme of the holographic configuration.
+The dataset included four types of test objects: a chirp pattern, a sinusoidal grating, a star pattern,
+and a USAF resolution target (Fig. 2). All objects were binary amplitude images with different spatial-
+frequency characteristics. The selected set of objects allows the robustness of the method to be analyzed
+for different types of spatial structure under fixed degradation conditions. Simulations were performed
+for square images of size N×N, where N=256.
+(a)
+(b)
+(c)
+(d)
+Figure 2: Test objects used in the simulations: (a) chirp pattern, (b) sinusoidal grating, (c) star pattern,
+and (d) USAF resolution target.
+2.2
+Hologram simulation and reconstruction
+Hologram simulation was based on the numerical solution of the Rayleigh–Sommerfeld integral [25,24,6]:
+Uscr = Uex ⊗h,
+where Uex = Uref+Uobj, h is the impulse response of the system, and ⊗denotes the convolution operation.
+2
+
+
+Numerical simulations were performed using the angular spectrum method:
+Uscr(x0, y0) ≈F−1 {F [Uex(x, y)] H(fX, fY )} ,
+where H(fX, fY ) is the transfer function, and F and F−1 are the forward and inverse Fourier transforms.
+Numerical reconstruction was performed using the back-propagation method:
+I(x0, y0) ≈
+F−1 {F [Uscr(x0, y0)] H(fX, fY )}
+ ,
+where I(x0, y0) is the image of the reconstructed object. Figure 3 shows an example of hologram simu-
+lation and reconstruction for one of the considered objects (USAF resolution target).
+(a)
+(b)
+Figure 3: Example of hologram processing: (a) simulated hologram; (b) reconstructed image.
+2.3
+Dataset generation
+For dataset generation, the spectral bandwidth of the illumination source ∆λ was used as a controlled
+degradation parameter. This parameter is an intrinsic property of real optical sources. An increase in ∆λ
+leads to spectral averaging of the interference pattern and, consequently, to a reduction in the contrast
+of high-frequency spatial components in the reconstructed image.
+The effect of finite temporal coherence was modeled during hologram formation. For each value of
+∆λ, the hologram was calculated as a weighted spectral average of the intensity over a set of wavelengths
+distributed around the central wavelength λ0 = 630 nm. The source spectrum was assumed to have a
+Gaussian profile, and the spectral standard deviation σ was determined from the following relation [26]:
+σ =
+∆λ
+2
+√
+2 ln 2
+.
+Numerical integration over the spectrum was performed using a discrete set of Nspec = 31wavelength
+values uniformly distributed within the range λ0 ± 3σ with normalized Gaussian weights.
+The spectral bandwidth range ∆λ extended from 0.05 to 20 nm and was discretized into 100 loga-
+rithmically spaced points. For each value of ∆λ, a spectrally averaged hologram was generated using
+fixed system geometry and object parameters.
+Image reconstruction from the averaged holograms was performed using back propagation at the
+central wavelength λ0, without taking the spectral bandwidth into account during reconstruction. This
+approach corresponds to typical experimental conditions and allows the effect of finite temporal coherence
+to be treated as an integral image degradation appearing in the reconstructed image.
+The generated dataset included reconstructed images of four object types for 100 values of ∆λ for
+each object, resulting in a total of 400 images. The dataset was divided into training, validation, and
+test subsets with a ratio of 70/15/15.
+3
+
+
+2.4
+Neural network model
+A neural network regression model was used to estimate the source spectral bandwidth ∆λ. The input
+data consisted of reconstructed images, while the output corresponded to the predicted value of ∆λ.
+Several convolutional neural network architectures were compared in this study, including baseline
+CNN models and their modifications with residual connections and attention mechanisms.
+All models were trained using the same training protocol with fixed optimization parameters. The
+dataset was divided into training, validation, and test subsets as described in Section 2.3.
+Model performance was evaluated on the test set using mean absolute error (MAE), mean squared
+error (MSE), and the coefficient of determination R2.
+3
+Results
+3.1
+Effect of spectral bandwidth ∆λ on reconstructed images
+Figure 4 shows examples of reconstructed images for different values of ∆λ, together with the corre-
+sponding dependence of the normalized RMS metric on ∆λ. As the source spectral bandwidth increases,
+the image contrast decreases, and the spatial structure of the reconstructed image gradually degrades.
+(a)
+(b)
+Figure 4: Effect of source spectral bandwidth on reconstructed images: (a) reconstructed images of
+the test object for different values of ∆λ (0.5, 2, 10, and 20 nm); (b) corresponding dependence of the
+normalized RMS metric on ∆λ.
+At small values of ∆λ, the degradation is weak and mainly appears as a reduction in local image
+contrast. As ∆λ increases, the boundaries of image features become blurred and fine details become
+indistinguishable. The dependence is nonlinear: only minor changes are observed at small ∆λ, while
+beyond a certain threshold the degradation increases rapidly, limiting the information content of the
+reconstructed images.
+3.2
+Neural network training results
+The study included 9 CNN-based architectures and 5 ResNet-based architectures.
+All models were
+trained using the same protocol with the Adam optimizer (learning rate LR = 1×10−3, batch size = 16)
+4
+
+
+and the Huber loss function (Smooth L1 implementation). Training was performed on the logarithmic
+scale log10 (∆λ) with Z-score normalization of the input images. Early stopping was applied based on
+the minimum validation MAE value (patience = 8).
+The architectures were quantitatively evaluated using mean absolute error (MAE, nm) and the co-
+efficient of determination R2 calculated on the validation set. Since the ∆λ range extends from 0.05 to
+20 nm, MAE values below 1 nm can be considered a high regression accuracy over most of the studied
+range.
+The CBAMCNN architecture demonstrated the best results (MAE = 0.682 nm, R2 = 0.835). This
+indicates the effectiveness of attention mechanisms for identifying informative regions in degraded images.
+High accuracy was also achieved by the ResCNN model (MAE = 0.777 nm, R2 = 0.808), demonstrating
+the effectiveness of residual connections for this task.
+Comparable results were obtained for the following architectures: ResNeXt (MAE = 0.922 nm, R2 =
+0.785); OptimizedCNN (MAE = 0.976 nm, R2 = 0.770); SimpleCNN (MAE = 0.990 nm, R2 = 0.746);
+ResNet18 (MAE = 0.954 nm, R2 = 0.741).
+It is important to note that SimpleCNN demonstrates accuracy comparable to that of more complex
+architectures. This indicates that the image degradation features are sufficiently pronounced for esti-
+mating ∆λ without significant increase in model complexity. At the same time, increasing the network
+depth does not lead to a substantial improvement in accuracy.
+The ResNet34, ResNetD, FPNCNN, WideResNet, and SECNN architectures demonstrated MAE
+values in the range of 1.0–1.2 nm with R2 values of approximately 0.70–0.76. The SECNN model (MAE
+= 1.161 nm, R2 = 0.758) showed a relatively high R2 despite a larger MAE, indicating preservation of
+the overall dependence with increased absolute error.
+The least effective architectures were MultiScaleCNN (MAE = 2.094 nm, R2 = 0.346) and Asymmet-
+ricCNN (MAE = 1.861 nm, R2 = 0.354). This indicates that the use of multiscale blocks or directionally
+asymmetric convolutions did not improve the model quality for the considered task. The relatively weak
+performance of ShallowCNN (MAE = 1.416 nm, R2 = 0.592) further confirms that insufficient network
+depth limits the stable extraction of degradation-related features.
+Analysis of the validation error dynamics shows that deeper architectures often reach their minimum
+error at early training stages (ResNet34 — epoch 9, MultiScaleCNN — epoch 13, FPNCNN — epoch
+16). Further training does not lead to significant improvement, indicating a limited effect of increasing
+the number of training epochs. Training dynamics for the CBAMCNN and ResCNN architectures are
+presented in Fig. 5.
+(a)
+(b)
+Figure 5: Validation MAE dynamics during training for the architectures: (a) CBAMCNN; (b) ResCNN.
+For the CBAMCNN architecture, the validation error decreases relatively smoothly with minor local
+fluctuations, indicating stable convergence during optimization. In contrast, the ResCNN model demon-
+strates more pronounced oscillations of the validation MAE, including several local spikes, which suggests
+lower optimization stability compared to CBAMCNN.
+Thus, the CBAMCNN and ResCNN models were selected for detailed analysis as representative
+architectures with attention mechanisms and residual connections, respectively.
+Figure 6 shows the comparison between the predicted and true ∆λ values, as well as the residual
+distributions for the CBAMCNN and ResCNN models. Both architectures demonstrate an approximately
+linear correspondence between the predicted and true values over the entire ∆λ range. In the region of
+5
+
+
+small ∆λ values (0–3 nm), the predictions closely follow the ideal correspondence line. At larger ∆λ
+values, several outliers are observed for both models.
+(a)
+(b)
+Figure 6: Comparison of the predicted and true ∆λ values, residual distributions, and residual histograms
+for the models: (a) CBAMCNN; (b) ResCNN.
+The residual plots exhibit a similar error distribution pattern: for small ∆λ, the residuals remain
+close to zero, whereas their spread increases with increasing spectral width. No significant structural
+differences in the residual distributions were observed; however, the CBAMCNN model demonstrates
+lower overall prediction error, consistent with its smaller MAE value.
+3.3
+Neural Network-Based Estimation of the Resolution of a Digital Holo-
+graphic System
+To evaluate the ability of the neural network model to correctly reproduce the physical image degradation,
+the accuracy of the system resolution estimation was analyzed for different values of the source spectral
+bandwidth.
+To verify the robustness of the proposed approach with respect to the choice of resolution criterion,
+the effective system resolution was evaluated using three independent metrics: FWHM (spatial blur
+width), MTF (modulation transfer function), and the USAF resolution criterion.
+In the general case, the effective resolution can be considered as a quantity determined from the
+reconstructed image:
+Reff = R (Irec) ,
+where Irec is the reconstructed image and R () is the resolution estimation operator.
+This formula-
+tion emphasizes that the resolution is determined not only by the system parameters, but also by the
+information contained in the reconstructed image.
+In this work, three implementations of the operator R () were used, corresponding to different aspects
+of system resolution. The RFWHM metric characterizes the spatial blur of the image and is sensitive to
+small resolution changes. The RMTF metric is related to the transfer of spatial frequencies and reflects
+the frequency characteristics of the system. The RUSAF metric is based on the distinguishability criterion
+of the USAF test target and corresponds to a practical resolution assessment.
+For each value of the source spectral bandwidth ∆λ, the calibration dependencies RFWHM(∆λ),
+RMTF(∆λ), and RUSAF(∆λ) were calculated. These dependencies were used to convert the spectral
+bandwidth value predicted by the neural network model, ∆λpred, into the corresponding resolution
+estimate. For each image from the test dataset, the true and predicted resolution values were determined:
+Rtrue (∆λtrue) ,
+Rpred (∆λpred) .
+The accuracy of the resolution estimation was characterized by the absolute error:
+MAER = |Rpred −Rtrue| .
+6
+
+
+To compare the results obtained using different resolution metrics, the relative error was additionally
+used:
+εrel = |Rpred −Rtrue|
+|Rtrue|
+For the quantitative evaluation of the system resolution degradation, the FWHM metric was used,
+characterizing the width of the spatial blur function. The FWHM determination was performed using
+a standard procedure based on the analysis of the intensity profile across an image edge (Fig. 7). At
+the first stage (Fig. 7(a)), a region of interest (ROI) containing a sharp intensity transition was selected
+from the reconstructed image. Next, the edge spread function (ESF) was calculated, followed by the line
+spread function (LSF), obtained by differentiating the ESF (Fig. 7(b)). The FWHM value was defined
+as the width of the LSF at half of its maximum value (Fig. 7(c)).
+(a)
+(b)
+(c)
+Figure 7: FWHM analysis for different values of the source spectral bandwidth: (a) ROI, ESF, and LSF
+profiles for ∆λ=0.05 nm; (b) ROI, ESF, and LSF profiles for ∆λ=20 nm; (c) dependence of the FWHM
+and effective resolution on ∆λ.
+As can be seen from Fig. 7, increasing the source spectral bandwidth leads to a broadening of the LSF
+profile, corresponding to an increase in the effective spatial blur and reflecting the gradual degradation
+of the system spatial resolution. At small values of ∆λ, the width of the blur function changes only
+slightly.
+For convenience of interpretation, the effective system resolution was additionally defined as:
+reff =
+1
+FWHM.
+As shown in Fig. 7(c), the effective system resolution decreases with increasing source spectral bandwidth.
+The most pronounced resolution change is observed at approximately ∆λ ≈2 nm, corresponding to the
+onset of significant degradation of the reconstructed image spatial structure.
+To analyze the frequency characteristics of the system, the modulation transfer function (MTF)
+was used, characterizing the ability of the system to transfer spatial image frequencies. The MTF was
+determined based on the spectral analysis of the reconstructed test-object image.
+In this work, the
+criterion MTF=0.1 was used.
+(a)
+(b)
+(c)
+Figure 8: MTF-based analysis for different values of the source spectral bandwidth: (a) contrast profile
+for the Siemens star test object at ∆λ=0.05 nm; (b) contrast profile at ∆λ=20 nm; (c) dependence of
+the effective MTF-based resolution proxy on ∆λ.
+Figures 8(a,b) show the MTF curves obtained for different values of the source spectral bandwidth
+∆λ. Comparison of the curves demonstrates that increasing ∆λ leads to a decrease in the MTF amplitude
+7
+
+
+at high spatial frequencies, as well as the appearance of pronounced oscillations in the curve shape. This
+indicates a reduction in the contrast of fine image structures and a nonuniform transfer of high-frequency
+components.
+Physically, this effect is caused by spectral averaging of the interference pattern at a finite source
+spectral width. As ∆λ increases, the interference fringes corresponding to different wavelengths become
+partially mismatched, leading to a reduction in contrast and distortion of the high-frequency image
+components.
+For the quantitative evaluation of the system resolution, the effective spatial frequency RMTF was
+used, defined as the frequency at which the MTF reaches a specified threshold level. The dependence
+RMTF(∆λ) is shown in Fig. 8(c).
+As shown in Fig. 8(c), the effective spatial frequency decreases with increasing ∆λ, corresponding to
+degradation of the system resolution. The most pronounced decrease is observed for ∆λ values on the
+order of several nanometers, which is consistent with the results obtained from the FWHM analysis.
+To evaluate the distinguishability of image elements, the USAF test target was used. The analysis
+was performed based on the intensity profile along selected regions of interest (ROIs) crossing the line
+patterns of the test target (Fig. 9(a)).
+The line contrast was determined using the Michelson formula:
+C = Imax −Imin
+Imax + Imin
+,
+where Imax and Imin are the maximum and minimum intensity values in the image profile.
+(a)
+(b)
+(c)
+Figure 9: USAF test-target distinguishability analysis for different values of the source spectral band-
+width ∆λ: (a) examples of selected ROIs for contrast analysis; (b) contrast as a function of ∆λ for
+different ROIs; (c) limiting distinguishable spatial frequency as a function of ∆λ.
+Figure 9(b) shows the dependence of the contrast on the source spectral bandwidth ∆λ for different
+ROIs. As ∆λ increases, a gradual reduction in line contrast is observed. At large ∆λ values, the contrast
+becomes insufficient for reliable distinguishability of the test-target elements.
+Additionally, Fig. 9(c) shows the dependence of the limiting distinguishable spatial frequency on
+∆λ. The sharp decrease of this parameter with increasing ∆λ corresponds to the loss of image-element
+distinguishability and a reduction in the effective system resolution.
+Using the calibration dependencies R(∆λ), the predicted values of the source spectral bandwidth
+were converted into the corresponding estimates of the system resolution. For each value of ∆λ, the
+relative error of the resolution estimation was calculated.
+The dependence of the relative error on ∆λ is shown in Fig. 10 for the three resolution metrics:
+FWHM, MTF, and USAF. The plots also include a 5% error threshold used to determine the critical
+value ∆λcrit, corresponding to the applicability limit of the proposed method.
+For the FWHM metric, the following critical values were obtained:
+∆λ(FWHM, CBAM)
+crit
+≈2.01,
+∆λ(FWHM, ResCNN)
+crit
+≈1.89.
+The obtained values are close, indicating a weak dependence of the result on the neural network archi-
+tecture.
+For the MTF metric, the critical values were:
+∆λ(MTF, CBAM)
+crit
+≈7.15,
+∆λ(MTF, ResCNN)
+crit
+≈0.47.
+8
+
+
+(a)
+(b)
+(c)
+Figure 10: Relative error of the resolution estimation as a function of the source spectral bandwidth
+∆λ: (a) FWHM-based error; (b) MTF-based error; (c) USAF-based error. Solid lines correspond to the
+CBAMCNN and ResCNN models, and the dashed line represents the 5% relative-error threshold.
+The large discrepancy is caused by the high sensitivity of the MTF-based metric to local errors in the
+estimation of ∆λ. For the ResCNN model, an isolated outlier appears at small ∆λ values that is not
+associated with physical image degradation. Therefore, the interpretation of the MTF-based results was
+based on the region of stable error growth, observed for both models at approximately ∆λ ≈6-8 nm.
+For the USAF test-target distinguishability criterion, the following values were obtained:
+∆λ(USAF, CBAM)
+crit
+≈14.78.,
+∆λ(USAF, ResCNN)
+crit
+≈12.32.
+The obtained results demonstrate consistency between the neural-network-based estimation and the
+physical criteria of resolution degradation. The sequence
+∆λ(FWHM)
+crit
+< ∆λ(MTF)
+crit
+< ∆λ(USAF)
+crit
+corresponds to the physical logic of image degradation: first, spatial blur increases; then, the transfer of
+high spatial frequencies decreases; and only at larger values of ∆λ does the distinguishability of image
+elements become lost.
+The obtained results show that the proposed approach enables the estimation of the resolution of a
+digital holographic system under different levels of image degradation. The consistency of the results
+obtained using the FWHM, MTF, and USAF distinguishability criteria confirms the physical validity of
+the method.
+3.4
+Analysis of the Model Response to Previously Unseen Types of Degra-
+dation
+Validation of the proposed approach was performed using an independent dataset containing recon-
+structed holographic images with different types of degradation not directly related to the source spec-
+tral bandwidth. The considered degradation factors included speckle noise, shot noise, read noise, dark
+current, as well as their combinations.
+Unlike the training dataset, where the degradation was formed exclusively by variations in ∆λ, the
+present analysis considered distortions of a different physical nature. This makes it possible to evaluate
+the generalization ability of the model and its sensitivity to different degradation mechanisms.
+The results of the equivalent spectral bandwidth estimation, ∆λequiv, showed that the prediction
+accuracy strongly depends on the noise type. The smallest error was observed for images with speckle
+noise (mean ≈0.09 nm), whereas for additive noise types (shot noise, read noise, and dark current) the
+error increased to 0.3–1.3 nm. A relatively high error was also observed for noise-free images (≈1.28
+nm), indicating a systematic prediction bias in the absence of degradation.
+This indicates that the model forms a representation associated with the specific physical degradation
+mechanism used during training. The best correspondence is observed for speckle noise, which can be
+explained by its interferometric nature and its similarity to the effects of spectral averaging. In contrast,
+additive noise does not modify the interference structure of the image; therefore, the model interprets
+such distortions as an equivalent increase in ∆λ, leading to increased prediction error.
+Thus, the model demonstrates selective sensitivity to the type of image degradation and extracts
+features associated with the interference structure rather than simply approximating the relationship
+between input and output. This confirms the possibility of using the neural-network-based approach for
+9
+
+
+indirect estimation of optical-system parameters, provided that the degradation type corresponds to the
+physical model used during training.
+4
+Conclusions
+The results obtained in this work demonstrate that the proposed approach for estimating the resolution
+of a digital holographic system based on the analysis of reconstructed images is physically justified and
+robust over a wide range of parameters.
+Numerical simulations confirmed that an increase in the source spectral bandwidth ∆λ leads to
+nonlinear degradation of the reconstructed images, manifested as contrast reduction and deterioration of
+spatial resolution. The observed behavior is consistent with the physical understanding of the influence
+of temporal coherence on the interference structure of the field, confirming the validity of the employed
+model.
+The neural network training results showed that the reconstructed images contain sufficient infor-
+mation for accurate estimation of the parameter ∆λ. The best performance was demonstrated by ar-
+chitectures with attention mechanisms and residual connections, indicating the importance of efficient
+extraction of image-degradation features.
+A key result of this work is the consistency between the neural-network-based estimation of ∆λ and
+independent physical criteria of system resolution. It was shown that the critical values of ∆λ determined
+using the neural network model are consistent with the estimates obtained from the FWHM, MTF, and
+USAF test-target distinguishability criteria. Moreover, the observed sequence
+∆λcrit(FWHM) < ∆λcrit(MTF) < ∆λcrit(USAF)
+corresponds to the physical logic of image degradation: first, spatial blur increases; then, the transfer of
+high spatial frequencies deteriorates; and only at larger values of ∆λ does the distinguishability of image
+structures become lost.
+The presented results make it possible to interpret the neural network model not as an abstract
+regressor, but as a tool that extracts physically meaningful features of image degradation. This conclusion
+is supported by the analysis of the model generalization ability: accurate estimation of ∆λ is observed
+for distortions of an interferometric nature (for example, speckle noise), whereas additive noise does not
+lead to correct interpretation. This indicates the selective sensitivity of the model and its connection to
+the physical degradation mechanism used during training.
+Thus, the proposed approach enables the transition from the analysis of individual optical-system
+parameters to an integral estimation of system resolution based on the reconstructed image. This is par-
+ticularly important for compact and low-cost digital holographic microscopes, in which the contributions
+of different degradation factors are inseparable.
+The limitations of the present work include the use of a synthetic dataset and the consideration of
+only one type of physical degradation, namely the finite temporal coherence of the source. A promising
+direction for future research is the extension of the model to the case of simultaneous action of multiple
+degradation factors, as well as validation of the proposed approach using experimental data.
+References
+[1] D. Gabor, “A new microscope principle,” Nature 161. 1948. pp. 777–778.
+[2] N.V. Egorov,
+A.G. Karpov,
+L.I. Antonova,
+et al. “Technique for investigating the spa-
+tial structure of thin films at a nanolevel,”
+J. Surf. Investig. 5,
+992–995 (2011);
+DOI:
+https://doi.org/10.1134/S1027451011100089.
+[3] H.-W. Fink, “Point Source for Ions and Electrons,” Physica Scripta. Vol. 38. 1988. pp. 260-263.
+[4] N.V. Egorov, L.I. Antonova, A.G. Karpov et al. “Theoretical and Experimental Evaluation of the
+Electrical Parameters of a Holographic Microscope,” J. Surf. Investig. 14, 1061–1065 (2020); DOI:
+https://doi.org/10.1134/S1027451020050250.
+[5] A. G. Fedorov, V. V. Trofimov and L. K. Fedorova, “Three-dimensional visualization of thin film
+structures obtained by lensless low-energy electron microscope,” AIP Conference Proceedings 2328,
+030005 (2021); https://doi.org/10.1063/5.0042214.
+10
+
+
+[6] Tatiana
+Latychevskaia
+and
+Hans-Werner
+Fink,
+”Practical
+algorithms
+for
+simulation
+and
+reconstruction
+of
+digital
+in-line
+holograms,”
+Appl.
+Opt.
+54,
+2424-2434
+(2015);
+DOI:
+https://doi.org/10.1364/AO.54.002424.
+[7] A.G.
+Fedorov,
+V.V.
+Trofimov,
+A.
+G.
+Karpov,
+“Two-step
+propagation
+for
+the
+numeri-
+cal reconstruction of holographic image,” AIP Conf. Proc. 2528 (1):020043. (2022);
+DOI:
+https://doi.org/10.1063/5.0106270.
+[8] J. K. Wallace, M. Bedrossian, S. Rider, et al. “Architecture and Field Operation of a Portable
+Digital Holographic Microscope for In Situ Measurements of Bacterial Motility,” The Planetary
+Science Journal. 6. 112; DOI: 10.3847/PSJ/adceec.
+[9] A. P. Khurchak, A. I. Khurchak, “Prototype of a Digital Holographic Microscope for Study-
+ing Marine Plankton,” Devices and Methods of Measurements. 2025;
+16(3):185-190;
+DOI:
+https://doi.org/10.21122/2220-9506-2025-16-3-185-190.
+[10] Maria J. Lopera-Acosta, Heidi Ottevaere, Carlos Trujillo, and Yunfeng Nie, ”Portable dig-
+ital lensless holographic microscope for fieldwork applications using a conventional smart-
+phone sensor and a customized freeform lens,” Opt. Continuum 3, 1753-1764 (2024); DOI:
+https://doi.org/10.1364/OPTCON.529685.
+[11] A.G. Fedorov, et al. ”Development of a digital holographic microscope model for the investigate
+of structures in the optical range,” Vestnik of NEFU. 2024, Vol. 21, No. 2. Pp. 77–83; DOI:
+10.25587/2222-5404-2024-21-2-77-83.
+[12] Jin L, Yu Z, Au A, Serles P, Wang N, Lant JT, Filleter T, Yip CM. P-TDHM: Open-source
+portable telecentric digital holographic microscope. HardwareX. 2024 Jan 26;17:e00508; DOI:
+10.1016/j.ohx.2024.e00508.
+[13] P. Sahoo, A. F. Gonzalez, C. Garman, C. Meadlin, S. Schiller, A. Dharmasiri, M. Har-
+low, B. Vaidya, A. Verhoef, and A. V. Sokolov, ”Aerosol Detection and Characterization
+using Digital Inline Holography,” in Optica Imaging Congress 2025 (3D, DH, COSI, IS,
+pcAOP,RadIT), Technical Digest Series (Optica Publishing Group, 2025), paper DTh1C.4; DOI:
+https://doi.org/10.1364/DH.2025.DTh1C.4.
+[14] Daniel R. Guildenbecher, Kathryn N. Gabet Hoffmeister, W. Marley Kunzler, Daniel R. Richardson,
+and Sean P. Kearney, ”Phase conjugate digital inline holography (PCDIH),” Opt. Lett. 43, 803-806
+(2018); DOI: https://doi.org/10.1364/OL.43.000803.
+[15] Pacheco C, McKay GN, Oommen A, Durr NJ, Vidal R, Haeffele BD. Adaptive sparse reconstruc-
+tion for lensless digital holography via PSF estimation and phase retrieval. Opt Express. 2022 Sep
+12;30(19):33433-33448; DOI: 10.1364/OE.458360.
+[16] N.V.
+Egorov,
+V.V.
+Trofimov,
+S.R.
+Antonov,
+et
+al.
+“Studying
+the
+electrophysical
+pa-
+rameters
+of
+a
+holographic
+microscope,”
+J.
+Surf.
+Investig.
+8,
+745–747
+(2014);
+DOI:
+https://doi.org/10.1134/S1027451014040259.
+[17] Shindo Daisuke, Akase Zentaro, “Principles and Practice of Electron Holography,” Springer Nature
+Singapore; DOI: 10.1007/978-981-97-3537-2.
+[18] Jes
+Ærøe
+Hyllested,
+Marco
+Beleggia,
+“Investigation
+of
+gas-electron
+interactions
+with
+electron
+holography,”
+Ultramicroscopy,
+Volume
+221,
+2021,
+113178;
+DOI:
+https://doi.org/10.1016/j.ultramic.2020.113178.
+[19] U. D. Anayet, S. Mandeep, A. Assif, et al. “Applications of artificial intelligence and digital holog-
+raphy in biomedical microscopy,” International Journal of System Assurance Engineering and Man-
+agement (2025); DOI: 10.1007/s13198-025-03070-2.
+[20] Chen, D., Wang, L., Luo, X., Xie, H., Chen, X. (2022). Resolution and Contrast Enhancement for
+Lensless Digital Holographic Microscopy and Its Application in Biomedicine. Photonics, 9(5), 358;
+DOI: https://doi.org/10.3390/photonics9050358/
+[21] Li J, Dai L, Yu N, Wu Y., “Red blood cell recognition and posture estimation in microfluidic chip
+based on lensless imagin,” Biomicrofluidics. 2021 May 28;15(3):034109; DOI: 10.1063/5.0050381.
+11
+
+
+[22] S.
+Amann,
+M.V.
+Witzleben,
+S.
+Breuer,
+“3D-printable
+portable
+open-source
+platform
+for
+low-cost
+lens-less
+holographic
+cellular
+imaging,”
+Sci
+Rep
+9,
+11260
+(2019);
+DOI:
+https://doi.org/10.1038/s41598-019-47689-1.
+[23] T. Zimmerman, N. Antipac, D. Elnatan, et al. “Stereo In-Line Holographic Digital Microscope,”
+(2019); DOI: 10.1101/790535.
+[24] A.G. Fedorov, V.V. Trofimov, A.G. Karpov, “Numerical methods and algorithms for reconstruction
+of holographic images with an flexibility choice of physical size of the object and observation area,”
+Vestnik of Saint Petersburg University. Applied Mathematics. Computer Science. Control Processes,
+2022, vol. 18, iss. 1, pp. 99–110.
+[25] J. Goodman, “Introduction to fourier optics,” (Roberts Co., 2005) pp. 84–89, 3rd ed.
+[26] Zh. Jialin, S. Jiasong, Ch. Qian, Zuo Chao, “Resolution Analysis in a Lens-Free On-Chip Digital
+Holographic Microscope,” IEEE Transactions on Computational Imaging. (2020). PP. 1-1; DOI:
+10.1109/TCI.2020.2964247.
+12

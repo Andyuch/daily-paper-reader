@@ -1,0 +1,810 @@
+Pulse, polarization and topology shaping of polariton fluids
+Lorenzo Dominicia, David Colasb, Stefano Donatib, Galbadrakh Dagvadorjc,
+Antonio Gianfratea, Carlos S´anchez Mu˜nozb, Dario Ballarinia, Milena De Giorgia,
+Giuseppe Giglia, Marzena H. Szyma´nskad, Fabrice P. Laussyb, and Daniele Sanvittoa
+aCNR NANOTEC, Istituto di Nanotecnologia, Via Monteroni, 73100 Lecce, Italy
+bDepartamento de F´ısica Te´orica de la Materia Condensada, UAM, 28049 Madrid, Spain
+cDepartment of Physics, University of Warwick, CV47AL Coventry, UK
+dDepartment of Physics and Astronomy, University College London, WC1E6BT London, UK
+ABSTRACT
+Here we present different approaches to ultrafast pulse and polarization shaping,
+based on a “quantum fluid” platform of polaritons. Indeed we exploit the normal
+modes of two dimensional polariton fluids made of strong coupled quantum well
+excitons and microcavity photons, by rooting different polarization and topological
+states into their sub-picosecond Rabi oscillations. Coherent control of two resonant
+excitation pulses allows us to prepare the desired state of the polariton, taking
+benefit from its four-component features given by the combination of the two normal
+modes with the two degrees of polarization.
+An ultrafast imaging based on the
+digital off-axis holography technique is implemented to study the polariton complex
+wavefunction with time and space resolution. We show in order coherent control of
+the polariton state on the Bloch sphere, an ultrafast polarization sweeping of the
+Poincar´e sphere, and the dynamical twist of full Poincar´e states such as the skyrmion
+on the sphere itself. Finally, we realize a new kind of ultrafast swirling vortices by
+adding the angular momentum degree of freedom to the two-pulse scheme. These
+oscillating topology states are characterized by one or more inner phase singularities
+tubes which spirals around the axis of propagation. The mechanism is devised in
+the splitting of the vortex into the upper and lower polaritons, resulting in an
+oscillatory exchange of energy and angular momentum and in the emitted time and
+space structured photonic packets.
+1. INTRODUCTION
+W
+e make use of microcavity polaritons,1 a “quantum fluid” platform constituted by bosonic hybrid quasi-
+particles of strongly coupled excitons and photons fields, in order to achieve different kind of intensity,
+polarization and topology shaping. Due to the photonic outcoupling of the polaritons, which makes possible
+their resonant excitation and detection, such time and space structured-field features are tranferred to the emit-
+ted optical pulses too. The realization of exciton polariton condensates in semiconductor microcavities2,3 has
+paved the way for a prolific series of studies into quantum hydrodynamics in two-dimensional systems.4–12 Mi-
+crocavity polaritons are intriguing systems for the study of topological excitations in nonequilibrium interacting
+superfluids, also thanks to rich spinorial patterns and polarization splitting terms leading to typical spin-orbit
+coupling.13–15 In very recent works,16,17 thanks to significant progress in both the quality of the structures and
+L.D.: lorenzo.dominici@gmail.com, F.P.L.: fabrice.laussy@gmail.com — This paper was originally published in:
+Complex Light and Optical Forces XI, edited by David L. Andrews, Enrique J. Galvez, Jesper Gl¨uckstad,
+Proc. of SPIE Vol. 10120, 101200E © 2017 SPIE CCC code: 0277-786X/17/$18 · doi: 10.1117/12.2250997.
+One print or electronic copy may be made for personal use only. Systematic or multiple reproduction, distribution to
+multiple locations via electronic or other means, duplication of any material in this paper for a fee or for commercial
+purposes, or modification of the content of the paper are prohibited.
+The final published version is available at:
+https://doi.org/10.1117/12.2250997
+arXiv:2605.10403v1  [cond-mat.other]  11 May 2026
+
+
+in the laboratory state of the art, we have been able to both observe and control the microcavity polariton Rabi
+dynamics. We can span from Rabi oscillating configurations to eigenstate superpositions, and control them by
+multiple optical pulses that can amplify or switch states. Moreover, by exploting the spin degree of freedom,
+we have been able to tranfer the intensity oscillations into polarization oscillations, thus making such systems
+even more suitable for polarization shaping engineering and applications. Space structured topology such as
+full Poincar´e skyrmion beams have be imprinted too and their reshaping described in the polarization space.18
+The most recent of our experiments and models are hence pushed further on, by empowering with the Rabi
+oscillations the ultrafast topology shaping of quantized vortices, as shown in the last section of this work.
+Figure 1. Experimental polariton dispersion. The emission is obtained after off-resonant excitation. The bare modes are
+denoted as dashed lines, microcavity mode (C, red) and quantum well exciton (X, blue). The polariton normal modes
+are denoted as solid lines, UPB (U, violet) and LPB (L, green). A sketch of a resonant femtosecond laser tuned to excite
+both LPB and UPB branches is shown as a gradient color ellipse at k = 0. Data readapted from Dominici et al. (2015).5
+2. POLARITON RABI OSCILLATIONS AND COHERENT CONTROL
+A
+n important peculiarity of polaritons here is at play, the so called Rabi oscillations.16,17 Indeed, a strong
+coupling of the two bare oscillators, the microcavity photons (C) and the quantum well exciton (X) fields,
+results also in their splitting into two normal modes of the system.
+These are the upper (UPB) and lower
+polariton branch (LPB) modes, which differ in energy and dephasing time (which is, mode bandwidth), and
+where the two bare fields oscillate with in-phase and phase-opposition, respectively. The simultaneous excitation
+of the two modes can be perceived as a time beating in their projection upon the photon and exciton basis. A
+complementary point of view is the continuous transformation of photons into excitons and then back. Rabi
+oscillations have been known since the early pioneering works on polaritons, but their space resolved ultrafast
+imaging only recently achieved, and never before exploting the high degree of coherence as here. Typical bare
+and normal modes of microcavity polaritons are shown in Fig. 1.
+Cyclical exchange of excitation between two coupled modes a and b can occur at either the single particle
+or many particle levels. When this occurs at the single particle level in a quantum two-level system, it provides
+the ground for a qubit,19 which, if it can be further manipulated, opens the possibility to perform quantum
+
+
+information processing.20 Such an oscillation is of probability amplitudes and therefore is a strongly quantum
+mechanical phenomenon, that involves maximally entangled states:
+|Ψ(t)⟩= α(t) |1a, 0b⟩+ β(t) |0a, 1b⟩.
+(1)
+The same physics also holds, not at the quantum level, but with coherent states of the fields, a situation known
+in the literature as implementing an “optical atom”21 or a “classical two-level system”.22 The oscillation is then
+more properly qualified as “normal mode coupling”23,24 as it is now between the fields themselves:
+|ψ(t)⟩= |α(t)⟩|β(t)⟩,
+(2)
+rather than their probability amplitudes. The terminology of Rabi oscillations is however used also in the classical
+case,25,26 such for example the purpose to realize classical bits, “cebit”.27 or other classical counterparts of the
+quantum version.28 As a futher example, classical two-level systems29 were recently pursued in the rising field
+of nanomechanical optics.22,30 In our case, the polariton system31 provides hence a good platform to implement
+two-level dynamics at both the quantum32 and classical level.33 As said, the polariton nature itself is that of
+a two-level system, giving the strong coupling regime between the cavity photon and a semiconductor exciton,
+also named bare oscillators. In the specific, two-dimensional microcavities embedding inorganic quantum wells
+(QWs)34 have attracted attention for their ability to reach the regime of Bose-Einstein condensation35 and
+superfluidity,11,36 with a plethora of collective wavefunction phenomena hydrodynamics including coherence,
+quantized vorticity, strong nonlinearities and real-space pattern formation.4,5,8,37,38 On the application side,
+the most intriguing perspectives involve schemes and demonstrations for new polariton lasers39,40 and all-optical
+transistors and logical operations.41
+Pioneering attempts to observe the Rabi oscillations at the core of the
+polariton physics, encountered intrisic difficulties represented, e.g., by their sub-ps time range and reported very
+few oscillations with orders of magnitude visibility loss each cycle.42 The inhomogeneous broadening of excitons,43
+not taking into account the space dephasing of the space-integrated signals, could provide a qualitative agreement
+only. Later on, nonlinear pump-probe techniques,44–47 achieved a better visibility in the registration of the modes
+beating but didn’t provided the necessary degree for a deeper analysis. Our recent experiments could image the
+time and spatially resolved oscillations and achieve Rabi piloting by two pulse schemes able to achieve the wished
+modes superposition including a polarization degree of freedom. Such schemes are of paramount importance48
+also in light of the possibility to address polaritons at the single particle level.49,50
+2.1 Single pulse Rabi oscillations
+As shown in Fig. 1, the 130 fs long and 8 nm energy broad laser pulse spreads in energy over the two branches,
+preparing the system in a bare state and not in an eigenstate, inducing oscillations between its two components.
+One can see on the outer panels of Fig. 2 a typical experimental observation of the space resolved photonic
+emission from the microcavity sample. As expected, the photon field arises and vanishes cyclically, during each
+Rabi cycle. The different dephasing times of the two modes, suggested by the inner scheme of the figure (with
+different radius of the rotating modes), is leading also to a damping of the oscillations between consecutive cycles.
+Here the polaritons have quite a large spatial extension, given by the exciting laser, ≈10µm. However, given
+the system is linear, presents a minimal diffusion and is not imparted by any momentum, the dynamics can be
+reduced to zero dimension (i.e., the field is homogeneous and with no space reshaping, there is no exploitation
+of the space degree of freedom).
+Indeed, the excitation power was set at a low enough density in order to
+maintain their bosonic properties in the linear regime. We could have thus access to the subpicosecond linear
+Rabi oscillations through the coherent fraction |ψC(r, t)|2 of the photonic field.
+To this extent, our setup can access the complex wavefunction, i.e., measuring both its amplitude and phase,
+by holography, a technique of increasing use to image polariton fluids for which both of these informations are of
+crucial importance.51,52 We recourse to a variation known as off-axis digital holography,53 which provides high-
+quality results by separation of the diffracted images of an off-axis reference frame and the signal. We adapted it
+to support ultrafast and tunable multiple-pulse experiments, as shown in Fig. 3. As such, our measurement does
+not rely on nonlinear detection scheme or interactions, as in previous works,44–46 but on interferences only. The
+photonic field that is accessible experimentally, have been fitted with the optical model developed in detailed
+in,16 and its excitonic counterpart recovered through the polaritonic equations .
+
+
+Figure 2.
+Two Rabi cycles seen through the time and space resolved photonic emission (outer panels) and the scheme
+of the UPB and LPB modes depiceted in the ω0 rotating frame of reference (inner panel). The time reference is given by
+the central frequency between the bare modes (ω0 = ωC+ωX
+2
+).
+2.2 Two-pulse coherent control
+With such an accurate command of the system, we are able to time precisely the arrival of a second pulse and
+perform a comprehensive coherent control on the coupled dynamics.
+The Rabi oscillations are triggered by
+sending a first pulse quite broad in energy that initiates a dominant photon or exciton fraction. One can refine
+the state by sending a second pulse, similar to the first one, to any desired configurations. The delay of the
+second photonic pulse can be set according to four different main preparations, depending on the combination
+of the pulses’ relative delay in both the Rabi period order Φ and optical period order ϕ. For example, the Rabi
+antiphase condition is achieved upon coupling the second pulse when the cavity field is empty and the state is
+fully excitonic. In such case, injecting a second fully photonic pulse in optical (resp. anti-optical) phase with the
+exciton, for instance, creates an LP (resp. UP), as shown in Fig. 4(a) (resp. Fig. 4(b)). The transformation of
+a bare state, created by the 1st pulse, into a LPB or UPB state when the second pulse arrives, is associated to
+the switching off of the Rabi oscillations, and the population decreases with the lifetime of the respective mode.
+In Fig. 4(c), the second pulse is arriving during the photonic phase of the condensate (Rabi in-phase condition),
+and also in optical phase with the cavity field.
+This is a case of Rabi oscillations enhancement, where the
+oscillations cycle is magnified with the second pulse. In the case of Fig. 4(d) instead the second pulse annihilates
+the field. This is achieved by sending a pulse optically out of phase but in phase with the Rabi oscillations,
+inducing destructive interferences that cancel the field intensity. All these cases demonstrate the possibility to
+do coherent control of the strong light-matter coupling dynamics. Such proof of principle fully demonstrated
+here also suggests that there would be no fundamental difficulty in sending more than two pulses. Interesting
+perspectives are now opened, notably at the single-particle level to perform quantum information processing.
+
+
+Figure 3. Experimental setup for double pulse coherent control experiments with polarization control and digital off-axis
+holography imaging. The interference between the device emission and the reference arms is implemented through a
+Mach-Zehnder configuration, while the two-pulse excitation is achieved in a Michelson configuration.
+Figure 4. Two-pulse experiment as seen through all the theoretical variables: bare states in solid and eigenstates in dashed
+lines. The experimentally available variable is the photon field, in red. The four cases correspond to: (a) switching-off
+of the Rabi oscillation by bringing the state into a LPB condensate, (b) switching-off of the Rabi oscillation by bringing
+the state into a UPB condensate, (c) enhancement of the oscillations and (d) annihilation of the field. Reprinted with
+permission from Dominici et al. (2014).16 Copyright (2014) by the American Physical Society.
+3. RABI POLARIZATION SHAPING
+W
+e here discuss how to generate new states of light by using this most fundamental of properties from the
+polaritons, their Rabi oscillations. The realization is based on the proposal to link these two concepts of
+polarized light by using the oscillating property of the microcavity polaritons. The idea is the following: a light
+whose polarization is varying in time can be emitted from a microcavity by exciting it with two orthogonally
+
+
+polarized pulses and with a suitable time delay between them.
+Working with orthogonally polarized pulses
+ensures that no interactions between the fields of different polarizations will occur. The superposition of the
+oscillating fields results in the precession of the Stokes vector of the emitted light. Polaritons being particles
+with finite lifetime, it results in a drift of the polarization from a circle on the Poincar´e sphere (whose radius
+and position can be controlled) to a single point at long time. This leads to the generation of a new kind of
+polarized light, suitable to cover selected area of the Poincar´e sphere, and possibly the whole sphere, in a range
+of a few picoseconds. The effect has been demonstrated as a proof of principle with microcavity polaritons at
+the femtosecond time scale in our previous work. It shows the emission of time varying polarized light, that, for
+instance, can cover a whole hemisphere of the Poincar´e sphere. But as it relies on the Rabi oscillations, this effect
+could be thus transposed and obtained with other platforms operating at different time scales (from attoseconds
+to milliseconds) and exploiting the same property.
+3.1 Polarization Shaping
+The first realization of a shaped pulse produced light whose intensity, momentary frequency and light polarization
+were varied as a function of time in a timescale of femtoseconds. This was reported by Brixner and Gerber in
+2001.54 Thereby was opened the era of ”polarization pulse shaping” with a huge number of potential applications.
+Before that, only simple polarization profiles could be achieved by using interferometric combinations of two
+polarization components. It has been demonstrated by Zhuang et al. (1997)55 that a stack of three homogeneous
+nematic liquid-crystal cells, or Liquid-Crystal display (LCD) could be used as a controller to bring any state
+of polarization of light from one arbitrary state to another. The idea of Brixner and Gerber was thus to build
+a device based on a set of many-pixel (256) two-layer LCDs to obtained a time varying polarized light, each
+pixel changing the state of polarization (SOP). By applying a suitable voltage to the separated pixels, one
+tune individual frequency intervals throughout the laser spectrum. The phases differences leasing to a complex
+polarization-modulated laser pulses in the time domain.
+The desired sequence of voltage modulations, that
+correspond to the various SOPs, can be computer-controlled with a corresponding algorithm.
+The range of applications is potentially huge since the interaction between light and matter is polarization
+sensitive. This technique was thus used to increase the performances of many applications based on polarization.
+In a later study, Brixner et al. (2004)56 reported the ionization of potassium dimer molecules, where dipole
+transitions are favoured by different directions of the exciting laser field. With this example, we understand
+directly the advantages of having a single laser beam whose polarization varies in time.
+Polarization pulse
+shaped lasers are also an efficient method for nano-optical manipulation. Aeschlimann et al. (2007)57 have
+achieved subwavelength dynamic localisation of electromagnetic intensity on the nanometre scale, overcoming
+the spatial restrictions of conventional optics by using adaptive polarization shaping of femtosecond laser pulses.
+This technique has also been used for the generation of ultrashort laser pulse pairs, whose time delay between
+them is controlled with a zeptosecond precision.58 Dozens of other further studies based on this principle have
+been done in the last fifteen years, feeding a rich literature. This technique of pulse shaping allows one to reach
+a huge variety of different time varying polarized pulses, but it suffers also from some limitations. The number
+of SOP contained in the resulting pulse depends directly on the number of LCD, as they are independently
+tuned to obtain the desired ellipticity. This cannot be enough to cover entire parts of a Poincar´e sphere. It also
+requires a complex setup, involving LCDs, all-reflective zero-dispersion compressor, interferometers and computer
+resources, the desired polarization being computed with special algorithms. Recent advances in polarization state
+generation (PSG) involve arbitrary polarization synthesis by a plasmonic nanoantenna fed by the coherent control
+of two input waveguides59 and parallel architecture based on digital micromirror devices.60
+Another class of polarized beams has been theoretically developed later in order to cover the whole Poincar´e
+sphere of polarization. The so-called ”Full Poincar´e Beams” have been introduced by Beckley et al. (2010)61
+and consists in a superposition of a Gaussian mode and a spiral-phase Laguerre-Gauss mode having orthogonal
+polarizations. In this case, and unlike the Brixner pulses, all the polarization states are displayed spatially into
+the beam.
+3.2 Polariton sweeping on the Poincar´e Sphere
+We can now take advantage of a feature that is usually regarded as a shortcoming of microcavity polaritons, but
+that in our case will turn the simple effect just proposed into a mechanism that powers a new type of light. This
+
+
+Figure 5.
+Experimental polarized Rabi oscillations and contro-polarized two pulse coherent control for polarization
+shaping. The top two panels show the time-space charts of the polariton amplitude for the right (R, blue) and left (L,
+red) circular polarization. Their Rabi oscillations remain decoupled. In the third row the spatial distributions of the
+density and polarization texture at 200 fs time intervals during one of the initial cycles after the second pulse arrival. The
+emitted intensity scale in each panel has been normalized to its top density but it is remains basically constant (color
+scale in the bottom row chart), after the second pulse arrival On the other hand, the oscillations are transferred to the
+polarization texture. The fourth, fifth and sixth panels show the time-space charts for the three Stokes parameter, S1, S2
+and S3. The Rabi oscillations in such panels are clearly seen after the arrival of the second pulse. The last panel shows
+the overall density. Data readapted from Colas et al. (2015).17
+effect would thus provide both of the mechanisms we have mentioned before, namely (i) full Poincar´e beams,
+(ii) in time. In the panels of Fig. 5 is highlighted the realization of a contro-polarized two-pulse coherent control
+experiment. This is achieved through the full exploitation of the setup previously introduced, (see the details of
+the two excitation arms with polarization control in Fig. 3). The top two rows in Fig. 5 report the time behavior
+of the cross-section density of the polariton emission resolved in the two spin populations, right (R, blue, first
+panel) and left (L, red, second panel) circular. The starting time of the two spin emission is correspondent to the
+arrival of the two pulses, respectively. As it can be seen the two spin populations oscillates mutually independent,
+nine or ten oscillations can be resolved before the polariton dephasing leads to the oscillations quench. Here we
+
+
+have set a relative time delay to achieve the condition of anti-Rabi phase, Φ = 1.5 TR. Such half-integer value
+is a good condition to transfer the density oscillations in each of the two spin to polarization oscillations. The
+resulting polarization texture can be observed in the real-space maps of the third row, where the normalized
+total density profile is overlapped too in a central square area of 20 x 20 µm2. The four time snapshots, at almost
+regular intervals of 200 fs, corresponds to the four vertical lines of the small boxes in the upper two rows. We see
+that right circular, antidiagonal linear, left circular and horizontal linear states are alternating in the ultrafast
+sequence. The associated Stokes parameter are evolving in time as highlighted by the following three time-space
+panels. Finally the bottom row, presenting the total density through time, shows that the initially high visibility
+Rabi time fringes are strongly (yet not completely) quenched by the arrival of the second, contropolarized and
+Rabi-antiphases pulse. The intensity oscillations quench can be improved upon a calibration not only of the time
+delay, but also of the two pulse relative power ratio.
+Now, we have already discussed the significant lifetime imbalance between the two types of polaritons. We
+know that the upper polariton enjoys a much shorter lifetime than its homologue the lower polariton, regardless
+of the polarization. From the fits realized on the previous Rabi experiments, we have found the upper polariton
+lifetime is typically of the order of 2 ps while it is of the order of 10 ps for the lower polariton. However these
+short values can be now tuned by orders of magnitudes in different samples.
+As an example, microcavities
+presenting particles lifetime of the order of the hundred of picoseconds have been demonstrated by M. Steger et
+al. (2013).62 In our case, the lifetime imbalance between the polaritons leads to time-dependent Rabi oscillations
+converging toward a monotonously decaying signal as the population of the upper polaritons ”evaporates” and
+only lower polaritons remain.
+The decay of the polariton fields leads to a continuous drift on the Poincar´e
+sphere, starting by describing the initial circle of the Rabi dynamics in the absence of dissipation, toward a final
+point defined by the polarized lower polaritons. This has, as an interesting consequence, the emission of a light
+”visiting” a plethora of states of polarization. In Fig. 6 are shown two realization cases spanning different areas
+of the Poincar´e sphere, which is reported as a cylindrical projextion to cartesian coordinates. One can see how
+the polarization evolves, starting from the north pole line of right circular spin corresponding to the first right
+polarized pulse, circles and starting to rotate over the sphere after the second, contro-polarized pulse arrival.
+Each circle is drawn in one Rabi cycle which in the present case is about 800 fs. The arrows on the trajectories
+follow the direction of time toward the final state, which here corresponds to almost linear polarization states
+of prevalently diagonal (D, on the left, solid blue trajectory) and anti-diagonal (A, on the right, dashed red
+trajectory) degree.
+Figure 6. Polarization shaping experiments plotted on the cylindrical projection of the Poincar´e sphere. The polarization
+oscillations are realized upon two contro-circular pulses excitation with half-integer time delay on the scale of the Rabi
+period: Φ = n · 0.5 TR with n odd number. The final state has a degree of circular polarization (ellipticity) depending on
+power balance, while its specific linear direction (azimuth) is set by the optical phase delay ϕ.
+
+
+4. TOPOLOGY TWIST
+H
+ere we show how to resonantly initialize the polariton condensate with non-homogeneous space textures of
+polarization, and their dynamical modification in the linear regime. In the specific, we realize a full Poincar´e
+pattern such as the skyrmion, whose reshaping on time lengths of the order of the polariton lifetimes can be
+described as a twist in the polarization space and reveal a wide framework of generalized skyrmions and spin
+vortex states.18 Again, the recent works we show here point to the large potentialities of microcavity polaritons
+and of their topological resonant excitation (e.g., associated to the presence of orbital angular momentum vortex
+states with non-trivial polarization textures), whose dynamical redistribution represents a polarization shaping
+approach fully exploitable in engineered microcavity devices.
+On the one hand, the polarization dynamics in semiconductor microcavities is often ascribed to spin-orbital-
+like coupling terms, such as the transverse-electric–transverse-magnetic (TE-TM) modes’ splitting resulting in
+the so the called optical spin Hall effect.63–65 Such term can exert a precessing action on the pseudospin vector,
+generating differently polarized regions even when starting from a homogeneous polarization.66,67 However in this
+case, it is usually needed the presence of an imprinted or nonlinearly-activated radial or at least inhomogeneous
+phase gradient, whose associated in-plane k is hence differently oriented with respect to the initial homogeneous
+polarization. On the other hand, it is sometimes useful to consider also the presence of a k-independent anisotropy
+term χ0 associated, e.g., to strain effects,68,69 that finally results in the dephasing between two given linear
+polarizations, say x and y, and hence in the change of any non-eigenmode that can be expressed in that basis.
+Such term is responsible for the polarization reshaping observed here.
+The experimental realization is carried upon a modification of the previous scheme in Fig. 3. Here we use
+only one of the two excitation arms on the top-left side (single pulse experiment). However, the single excitation
+pulse should be thought as sculpted by two different topologies in the two spin, respectively a LG01 vortex of
+unitary winding number and a Gaussian with zero azimuthal number LG00. Such configuration can be achieved
+by proper use of a single q-plate,70 an anisotropic and inhomogeneous liquid-crystal device which in the last years
+has unfolded a rich exploration of optical vorticity, with recent applications to full- and half-quantum vortex
+dynamics in polariton condensates71 too. In the present case, the exciting pulse is represented by a laser pulse (4
+ps duration and 0.5 nm bandwidth) which is tuned to selectively excite only the LPB mode. Indeed, we are not
+exploting the Rabi oscillations as before, but the peculiarity of microcavity polaritons stated above, that consists
+in the anisotropy splitting of linear polarizations along preferential axis of the samples. By means of polarization
+control of the incoming/outgoing pulse and tuning of the q-plate, we can set a specific superposition of two LG
+beams with integer or null phase winding in the two spin components: their combination is responsible for the
+resultant vector vortex beam.72 One relevant field pattern that is possible to obtain, among the others, is the
+skyrmion (see18), which we imprint on the photonic pulse and hence in the initial resonant polariton state. Upon
+specific conditions the skyrmion corresponds to the stereographic projection of the whole Poincar´e sphere itself
+(see also61), and it should be considered the full-Poincar´e beam by excellence.
+Our experimental skyrmions and their reshaping have been backed-up by theory and a numerical model,
+whose results are reported in Fig. 7. As shown on the left side column, projected onto the circular polarization
+basis, the skyrmions are characterized by the presence of an integer phase winding (orbital angular momentum)
+in one of the spin components and a zero-winding in the opposite one. The resultant vectorial field exhibits
+an inhomogeneous pattern comprising all polarization states, as typical of full Poincar´e beams (see the first
+panel of the central column of Fig. 7). The skyrmions possess a specific circumference of full linear polarization
+(l-line) and they are fingerprinted by the inversion of the sign of circular polarization degree when crossing this
+circumference in the radial direction. The l-line is conformally mapped to the equatorial loop of the Poincar´e
+sphere (right column) while the inner and outer regions to such circle corresponds to the two hemispheres of
+the sphere, respectively. Indeed the polarization changes from right-circular at the centre to left-circular at
+large distance (or viceversa). Two fundamental types of textures can be obtained, the star-like or the lemon-like
+skyrmion,18,73 depending on the winding direction along the equatorial line with respect to that in the real-space.
+In any case, the radial lines in real-space map to the meridians of the sphere, while the circle lines in real-space
+map to the parallels of the sphere. The conformal mapping of the polarization sphere to the real-space mantains
+the angles between these lines. We point out that by moving the light point of the stereographic projection into
+
+
+Figure 7.
+Skyrmion twist, numerical simulation. On the left column top panels are reported the density and phase
+maps of the initial two spin components (σ+ ≡R and σ−≡L) of the skyrmion. The central column reports instead the
+polarization texture at initial and subsequent time snapshots, where the colour scale is proportional to the circular degree
+of polarization S3. The l-line of linear polarization is reported as a dashed green circle. The three S1,2,3 Stokes degree
+of polarizations at different times are plotted in the small panels on the right. Several concentric circles in real space
+(each represented with a different color) are then conformally mapped onto the Poincar´e sphere on the right column.
+The anisotropy splitting χ0 = 0.08 meV between the horizontal (H) and vertical (V ) polarizations produces a dynamical
+twist of the whole texture on the Poincar´e sphere, leading at around 30 ps to a 90◦twisted skyrmion where the S2 and
+S3 distributions in real space have roughly swapped with respect to initial time. At even longer time (∼60 ps) the 180◦
+twist corresponds to a complete transmutation of the initial star skyrmion into its conjugate state (lemon skyrmion). The
+effect is discussed in Donati et al. (2016).18 The two left bottom panels (χ0 = 0.02 meV) show the additional effect of
+including the TE-TM splitting, which leads to a transverse shrinking and an azimuthal straining of the topological belt.
+See also Supplemental Video 1.
+the sphere, the skyrmion l-line would gradually move towards infinitity in real-space, obtaining the polarization
+field of an infinite-size HQV,74 associated to only one emisphere.
+In order to represent the dynamical behavior of our experimental observations, we used numerical computation
+implementing a two-component open-dissipative Gross-Pitaevskii model describing the system, including the
+anisotropy splitting term χ0. The polarization textures reshaping at four successive time frames is reported
+
+
+in the central column, highlighting a complex redistribution comprising spin transport flows across the l-line.
+However, the reshaping is decoupled from both the mass transport, given the linear regime, and from the (σ+)
+phase singularity movement, which remains in the centre (not shown). The dynamics can be projected onto each
+of the three Stokes basis for polarization states, as shown in the small panels (three for each time frame) in the
+third column. At the intermediate time here shown (∼30 ps), noteworthy the S2 and S3 distributions in real
+space have roughly exchanged with each other, with respect to initial time. The clearest picture of the complex
+reshaping appears however upon plotting on the Poincar´e sphere, as shown in the last column. The real-space
+loops of the skyrmion, which initially map to the parallels on the sphere, rotate during time around the S1
+basis axis associated with the anisotropy directions in real-space (i.e., xy ≡HV ). At the latest time here shown
+(∼60 ps) the twist reaches 180◦, i.e., to the reversal of the initial star skyrmion into its conjugate state (lemon
+skyrmion). The complete topology-flip has exchanged R and L spin population between the inner and outer
+regions to the l-line. Similar twists are observed when starting with opposite skyrmions or double-loop topologies
+such as the hedgehog and hyperbolic spin vortices. The twist speed is constant over time, as the effect is linear,
+independent on the density of polaritons which are leaking out of the microcavity according to an exponential
+law. The normalized twist speed retrieved from the numerical simulation is about β/χ0 ∼40◦(ps · meV)−1,
+as expected also by a theoretical evaluation. Moreover, such velocity is the same for any circle: the real-space
+circular corona maps to a ”topological belt” which is twisting rigidly. Finally, as shown in the bottom left panels
+of Fig. 7, we point out that the simultaneous presence of a finite TE-TM splitting term, is summing up to the
+χ0 anisotropy, resulting in a transverse shrinking and azimuthal straining of the topological belt. This effect
+would be influenced by a large density regime, given the nonlinear push of radial flows associated to finite radial
+k, summing up to the azimuthal flows of the vortex charge. We hope that the visualization of the reshaping
+dynamics of the full Poincar´e topology on the Poincar´e sphere itself and the description in terms of generalized
+skyrmions and spin vortices can help shedding light on a variety of topology states and dynamics and in the
+perspective of possible spintronics and polarization shaping technologies.
+5. QUANTUM VORTICES
+F
+ollowing the footsteps of the previous experiments on the coherent control of the polariton Rabi oscillations
+and the polariton polarization shaping, we introduced and observed the generation of Rabi-powered vortex
+oscillations in real space.
+This is achieved by using a series of two pulses, the first one creating a stable
+vortex in the polariton condensate, and the second one disturbing the density’s homogeneity leading to the
+vortex oscillations. These results can be reproduced by using standard coupled-Schr¨odinger Equations for the
+polaritons, fed with the adequate initial state. The different decay sources present in the system can be added
+in the Hamiltonian in order to model the oscillations damping. The system can also be solved formally and
+analytical solutions can be derived. To get more insights into this dynamics, we study the evolution of the
+orbital angular momentum (OAM) and see its connection with the Rabi coupling.
+Unlike their classical counterparts, quantum vortices appear to be stable configurations in a superfluid.
+These ”topological charges”, characterized by a quantized circulation
+H
+⃗v · ⃗dl = 2πh
+m have been initially predicted
+by Onsager in 1949 in his work on superfluid Helium. But these predictions were only widely accepted after
+Feynman’s contributions in 1955. Further theoretical developments have also been made by Gross and Pitaevskii
+(1961). Quantum vortices have been then observed in a wide range of systems generally described by a complex
+wave function whose phase plays a key role in their dynamics. We can mention superconductors75 where the
+vortex dynamics is mainly governed by the thermal and quantum fluctuations. Such vortices can be as well
+manipulated by applying external forces, such as electric currents. Superconductor vortices were extensively
+studied as they can carry Abrikosov vortices (fluxons) and exhibit some complex ordering like Abrikosov lattices,
+spin glasses etc. Bose-Einstein Condensates (BEC) are also a good platform to generate quantum vortices since
+they are superfluid systems.76 The vortex generation in a BEC has been first demonstrated by Cornell’s group
+in 199977 following his previous works on BEC for which he was awarded the Nobel prize in 2001. It was later
+demonstrated that vortices can even appear spontaneously during phase transitions in which the BEC formation
+occurs,78 and the reconnection of vortex lines has been studied in the framework of superfluid turbulence.79
+Vortex lattices were also observed in rotating BEC by the group of W. Ketterle,80 exhibiting a high vortex
+lifetime (≈1min). Another interesting feature of the vortices produced in atomic BECs and related to our
+
+
+polariton vortices behaviours, is their core’s precession. The phenomenon was characterized and observed by
+B. P. Anderson et al. (2000)81 in a BEC made of a superposition of two internal states of 87Rb. The vortex
+motion was in this case attributed to a Magnus effect applied on the vortex into the quantum fluid.
+More
+recently, it has been demonstrated that similarly to optical fields ,82–84 electron beams could also propagate with
+a phase singularity,85 giving a new degree of freedom to the electrons. Shortly later, electron vortex beams with
+high quanta of angular momentum (up to 100ℏ) were realized86,87 leading to potential applications in electron
+microscopy of magnetic and biological specimens.
+The polariton community was of course not left behind in the investigation of vortex experiments. Lagoudakis
+et al. (2008)12 have reported the formation of pinned single quantized vortices in the Bose-condensed phase of
+a polariton fluid, giving new clues to understand the superfluid nature of the polariton condensates. Quantum
+half-vortices were then observed in polariton condensates88 by the same group, following their prediction by
+Yu. Rubo.89The full-vortex twin-charge splitting90 dynamics pinned by defects was later observed.
+We can
+also mention the observation of metastable persistent polariton superflows,10 where it was shown how sustained
+quantized angular momenta can be transferred to the steady-state condensate, insuring a long-lived vorticity.
+The effect of the nonlinearity on the vortex size was discussed by Krizhanovskii et al.91
+and by Voronova
+et al. (2012).92 More elaborated topological structures were introduced, like the formation of a vortex chain,
+achieved in a resonantly pumped polariton superfluid.93 A circular chain containing 8 vortices of the same charge
+was generated with a Laguerre-Gauss beam, paving the way for more experiments involving self-arranged and
+same-sign vortex lattices. Other recent advances on the field include the generation of unconventional states,
+such as polarization textures corresponding to spin vortices in open-cavity polaritons,94 or exotic topologies (e.g.,
+those referred to as generalized skyrmions in the previous section) under confined nonresonant95 and imprinted
+resonant18 excitation dynamics. Intriguing 2D+t topological strings have been associated to the half-vortex
+precession, together with pair generation phenomena at high density.71 In the considered polariton system, the
+vortex dynamics is ruled by the interplay between the nonlinearity and the disorder landscape.
+In the following, we will deal with polariton vortices in the linear regime, where the vortices are directly
+imprinted to the condensate through the laser excitation. Thus, the size of the vortices in the different components
+will not be affected by any nonlinearity as it the case for interacting condensates. In order to analyze the vortex
+dynamics, will also focus on the OAM value for the different polariton components. Several applications are
+based on the OAM properties. For example, quantum correlations between the OAM variables can be used in
+quantum information96s processing and notably in protocols for quantum key distribution.97 The OAM based
+multiplexing was developed and used to increase the efficiency of millimetre-wave wireless communications98
+and to confer robustness to free-space communications,99 with demonstration of high accuracy transmission over
+distances of more than 100 km.100 Compact plasmonic metasurfaces can be designed for the spin-orbit coupling
+conversion of the spin into an arbitrary OAM photonic vortex,101 while new classes of lasers have been proposed
+to generate all the states of an higher-order Poincar´e sphere.102
+The data exchanged between OAM beams
+was reported to reaches Terabit rates values in free-space transmission103 and fibers,104 and recently a scheme
+for the time-division multiplexing of photonic pulses carrying different orbital angular momentum has been
+introduced.105 Topological light was also proposed to study new selection rules and manipulation of the ionized
+state in photoionization processes,106 thus enriching the scenarios of femtochemistry. Proposals of polariton
+vortices for information processing107 have been made as well as a scheme for gyroscopes108 that exploits the
+macroscopic response of the system to small perturbations to create sensitive devices.
+5.1 Swirling Rabi vortices
+We have already said that vortex oscillations can be obtained by sending a Gaussian pulse on an unperturbed
+vortex, the vortex core oscillating circularly into the beam. We have experimentally observed polariton vortex
+oscillations that are rapidly damped after a few picoseconds, the vortex becoming immobile again. As the vortex
+oscillations are powered by the Rabi oscillations between the photonic and excitonic field, we suspect that the
+lifetime imbalance between the upper and lower polaritons plays as well a key role in this mechanism.
+The system can be simply modeled by two coupled-Schr¨odinger Equations to which we add the excitation
+scheme, i.e. a Laguerre-Gauss pulse (carrying the vortex phase singularity) followed by a Gaussian pulse. One
+can see in Fig. 8(a) the basic vortex dynamics obtained from the computational model. Here, the Laguerre-Gauss
+
+
+Figure 8.
+Vortex oscillations generated by perturbing the system, that was initially prepared in a vortex state, with
+a Gaussian pulse sent at t = t02 ≈4ps. The vortex trajectory in the photonic (excitonic) field is plotted in red (blue)
+and also in the upper (lower) field in purple (green). The wave function intensity |ψC| is plotted in the x −y plane for
+a t > t02, where are as well projected the vortex trajectories. (a) Conservative case, without including decay. After
+the second pulse, the vortices in both fields describe circles with a non constant angular velocity. (b) Adding the upper
+polariton decay, it results in a damping of the oscillations at the rate of the UP decay.
+pulse is sent at early time to generate the vortex, and the Gaussian pulse is sent at t02 ≈4ps. After the first
+pulse, the vortex is perfectly centered into the beam and motionless. After the second pulse, the minimum of
+intensity no longer remains in the center of the beam, as shown on the density plot, which induces the vortex
+oscillations. The dynamical position of the vortex is displayed with a 3D curve for both photonic (in red) and
+excitonic fields (in blue). The vortices trajectory in space and time looks helical but it is actually not, the angular
+velocity varying periodically in time. The two vortices, in the photon and in the exciton, rotates around each
+other at the Rabi frequency similarly to a Newton’s cradle, one vortex slowing down while the other accelerates.
+In the case of Fig. 8(b) the upper polariton lifetime was included in the Hamiltonian. The vortex precession now
+follows a spiral whose radius damping corresponds to the UP lifetime, here 4ps. The vortex in both photonic and
+excitonic field converges towards the same fixed point. To understand these vortex motions, it is interesting to
+look at the vortex behaviours through the eigenstates of the system, namely by looking at the polaritonic fields
+ψ+ and ψ−which are obtained by combining the bare states. The vortex trajectories in the polaritonic fields are
+plotted with green (lower) and purple (upper) lines in Fig. 8. Before the Gaussian pulse, the vortex is located
+in the center of the beam for all the fields. After the second pulse, we see that unlike in the photon and exciton
+fields, into which the vortex oscillates, it is simply shifted to the periphery of the beam in the polaritonic fields,
+without exhibiting any oscillations. In the damped case, we see now clearly that as the upper field is dying,
+the vortex in the photon/exciton field converges toward the position of the lower one. We know now that the
+oscillations occur because the vortex of the polaritonic fields are shifted at different position into the beam, the
+vortex in the photon/exciton components oscillating between them. Yet the vortex oscillations are located close
+to the vortex position in the LP, possibly due to the mass imbalance between the two fields.
+More insight of the vortex dynamics can be obtained by looking at the value of the OAM for the different fields.
+For the polaritons, the OAM is conserved through the sum of the OAM of each sub-fields (photon/exciton), which
+allows the OAM of the individual fields to vary. In any case d(⟨bL⟩ψC + ⟨bL⟩ψX)/dt has to be 0. The total number
+of particles Nψ is similarly conserved through the sum of the different components NψC +NψX. However, it is not
+the case for the OAM per particle defined as the ratio lψ = ⟨L⟩ψ/Nψ. In order to illustrate these conservation
+
+
+Figure 9.
+Numerical dynamics of a topological two-pulse excitation.
+Various OAM computed from the two-pulse
+experiment simulation data, corresponding to the case of a first Gaussian pulse and a second Vortex pulse. (a) Fields
+intensities. (b) Angular Momentum for the different fields. (c) Angular momentum per particle, normalized in units of ℏ.
+See the legend on the right bottom corner for the color code of the operators b
+A(⟨L⟩, N or l) applied to the corresponding
+field. The conserved quantity are plotted in orange.
+rules, we have computed the different OAM for the conservative case of the oscillating vortex created with
+two pulses (see Fig. 8(a)). One can see in Fig. 9(a) the time evolution of the fields intensities Nψ. The bare
+fields ψC (in red) and ψX (in blue) exhibit Rabi oscillations while the polaritonic fields ψ+ (in purple) and ψ−
+(in green) do not. The different intensities of course increase after the second pulse arrival, the system being
+filled with more particles. The conserved quantities are plotted in orange. The OAM is plotted in (b) for the
+different fields. One can see that the OAM of the bare fields oscillates exactly between the OAM’s steady value
+of the polaritonic fields. The OAM for the different fields is not be affected by the second pulse, that initiates
+the vortex oscillations process. Which makes sense considering that the Gaussian does not carry additional
+angular momentum. Nevertheless, the vortex oscillations appear more explicitly when one computes the OAM
+per particle for the different fields, as plotted in (c). When the vortices are exactly in the center of the beam,
+that is before the second pulse, the angular momentum per particle is exactly quantized to one unit of ℏ. After
+the second pulse, the vortices in the polariton fields do not oscillate but are displaced to a fixed position on the
+periphery of the beam (see purple and green lines in Fig. 8), with a corresponding value of l which is lower than
+1. As mentioned by Pitaevskii and Stringari,109 for a vortex core displaced from the center of the beam, the
+OAM per particle takes a value lower than 1, the axial symmetry of the problem being lost. Here, the polaritonic
+vortices are symmetrically displaced into the beam, lψ+ and lψ−thus share the same value. In the photonic and
+excitonic fields, the vortices oscillate from the center to the periphery in circle, so that the variation range of the
+OAM per particle oscillations is constant. Since the vortex motion is directly powered by the Rabi oscillations,
+we expect that the accurate control of these new topological strings could be achieved in the same way that we
+performed the control of the quantum state or the polarization state in our previous experiments.
+ACKNOWLEDGMENTS
+We acknowledge Romuald Houdr´e for the growth of the microcavity polariton device and Alberto Bramati for
+the related know-how, Lorenzo Marrucci and Bruno Piccirillo for the q-plate devices and the related know-how.
+We acknowledge the project ERC POLAFLOW (Grant 308136) for financial support.
+
+
+REFERENCES
+[1] Byrnes, T., Kim, N. Y., and Yamamoto, Y., “Exciton-polariton condensates,” Nat. Phys. 10(11), 803–813
+(2014).
+[2] Kasprzak, J., Richard, M., Kundermann, S., Baas, A., Jeambrun, P., Keeling, J. M. J., Marchetti, F. M.,
+Szyma´nska, M. H., Andr´e, R., Staehli, J. L., Savona, V., Littlewood, P. B., Deveaud, B., and Dang, L. S.,
+“Bose-Einstein condensation of exciton polaritons.,” Nature 443(7110), 409–414 (2006).
+[3] Balili, R., Hartwell, V., Snoke, D., Pfeiffer, L., and West, K., “Bose-Einstein condensation of microcavity
+polaritons in a trap,” Science 316(5827), 1007–1010 (2007).
+[4] Whittaker, C. E., Dzurnak, B., Egorov, O. A., Buonaiuto, G., Walker, P. M., Cancellieri, E., Whittaker,
+D. M., Clarke, E., Gavrilov, S. S., Skolnick, M. S., and Krizhanovskii, D. N., “Polariton pattern formation
+and its statistical properties in a semiconductor microcavity,” arXiv:1612.03048 [cond-mat] (2016). arXiv:
+1612.03048.
+[5] Dominici, L., Petrov, M., Matuszewski, M., Ballarini, D., De Giorgi, M., Colas, D., Cancellieri, E.,
+Silva Fern´andez, B., Bramati, A., Gigli, G., Kavokin, A., Laussy, F., and Sanvitto, D., “Real-space collapse
+of a polariton condensate,” Nat. Commun. 6, 8993 (2015).
+[6] Dreismann, A., Cristofolini, P., Balili, R., Christmann, G., Pinsker, F., Berloff, N. G., Hatzopoulos, Z.,
+Savvidis, P. G., and Baumberg, J. J., “Coupled counterrotating polariton condensates in optically defined
+annular potentials,” Proc. Natl. Acad. Sci. 111(24), 8770–8775 (2014).
+[7] Roumpos, G., Lohse, M., Nitsche, W. H., Keeling, J., Szyma´nska, M. H., Littlewood, P. B., L¨offler, A.,
+H¨ofling, S., Worschech, L., Forchel, A., and Yamamoto, Y., “Power-law decay of the spatial correlation
+function in exciton-polariton condensates,” Proc. Natl. Acad. Sci. 109(17), 6467–6472 (2012).
+[8] Amo, A., Pigeon, S., Sanvitto, D., Sala, V. G., Hivet, R., Carusotto, I., Pisanello, F., Lem´enager, G.,
+Houdr´e, R., Giacobino, E., Ciuti, C., and Bramati, A., “Polariton superfluids reveal quantum hydrody-
+namic solitons.,” Science 332(6034), 1167–1170 (2011).
+[9] Pigeon, S., Carusotto, I., and Ciuti, C., “Hydrodynamic nucleation of vortices and solitons in a resonantly
+excited polariton superfluid,” Phys. Rev. B 83(14), 144513 (2011).
+[10] Sanvitto, D., Marchetti, F. M., Szyma´nska, M. H., Tosi, G., Baudisch, M., Laussy, F. P., Krizhanovskii,
+D. N., Skolnick, M. S., Marrucci, L., Lemaˆıtre, A., Bloch, J., Tejedor, C., and Vi˜na, L., “Persistent currents
+and quantized vortices in a polariton superfluid,” Nat. Phys. 6(7), 527–533 (2010).
+[11] Amo, A., Lefr`ere, J., Pigeon, S., Adrados, C., Ciuti, C., Carusotto, I., Houdr´e, R., Giacobino, E., and Bra-
+mati, A., “Superfluidity of polaritons in semiconductor microcavities,” Nat. Phys. 5(11), 805–810 (2009).
+[12] Lagoudakis, K. G., Wouters, M., Richard, M., Baas, A., Carusotto, I., Andr´e, R., Dang, L. S., and
+Deveaud-Pl´edran, B., “Quantized vortices in an exciton-polariton condensate,” Nat. Phys. 4(9), 706–710
+(2008).
+[13] Manni, F., Lagoudakis, K. G., Para¨ıso, T. K., Cerna, R., L´eger, Y., Liew, T. C. H., Shelykh, I. A., Kavokin,
+A. V., Morier-Genoud, F., and Deveaud-Pl´edran, B., “Spin-to-orbital angular momentum conversion in
+semiconductor microcavities,” Phys. Rev. B 83, 241307 (2011).
+[14] Toledo-Solano, M., Mora-Ramos, M. E., Figueroa, A., and Rubo, Y. G., “Warping and interactions of
+vortices in exciton-polariton condensates,” Phys. Rev. B 89, 035308 (2014).
+[15] Flayac, H., Shelykh, I. A., Solnyshkov, D. D., and Malpuech, G., “Topological stability of the half-vortices
+in spinor exciton-polariton condensates,” Phys. Rev. B 81, 045318 (2010).
+[16] Dominici, L., Colas, D., Donati, S., Restrepo Cuartas, J. P., De Giorgi, M., Ballarini, D., Guirales, G.,
+L´opez Carre´no, J. C., Bramati, A., Gigli, G., del Valle, E., Laussy, F. P., and Sanvitto, D., “Ultrafast
+control and Rabi oscillations of polaritons,” Phys. Rev. Lett. 113, 226401 (2014).
+[17] Colas, D., Dominici, L., Donati, S., Pervishko, A. A., Liew, T. C., Shelykh, I. A., Ballarini, D., De Giorgi,
+M., Bramati, A., Gigli, G., Valle, E. d., Laussy, F. P., Kavokin, A. V., and Sanvitto, D., “Polarization
+shaping of Poincar´e beams by polariton oscillations,” Light Sci. Appl. 4(11), e350 (2015).
+[18] Donati, S., Dominici, L., Dagvadorj, G., Ballarini, D., De Giorgi, M., Bramati, A., Gigli, G., Rubo, Y. G.,
+Szyma´nska, M. H., and Sanvitto, D., “Twist of generalized skyrmions and spin vortices in a polariton
+superfluid,” Proc. Natl. Acad. Sci. 113(52), 14926–14931 (2016).
+[19] Schumacher, B., “Quantum coding,” Phys. Rev. A 51, 2738 (1995).
+
+
+[20] Nielsen, M. A. and Chuang, I. L., [Quantum computation and quantum information], Cambridge University
+Press (2000).
+[21] Spreeuw, R. and Woerdman, J., “Optical atoms,” Progress in Optics 31, 263 (1993).
+[22] Faust, T., Rieger, J., Seitner, M. J., Kotthaus, J. P., and Weig, E. M., “Coherent control of a classical
+nanomechanical two-level system,” Nat. Phys. 9, 485 (2013).
+[23] Zhu, Y., Gauthier, D. J., Morin, S. E., Wu, Q., Carmichael, H. J., and Mossberg, T. W., “Vacuum Rabi
+splitting as a feature of linear-dispersion theory: Analysis and experimental observations,” Phys. Rev.
+Lett. 64, 2499 (1990).
+[24] Khitrova, G., Gibbs, H. M., Kira, M., Koch, S. W., and Scherer, A., “Vacuum Rabi splitting in semicon-
+ductors,” Nat. Phys. 2, 81 (2006).
+[25] Matthews, M. R., Anderson, B. P., Haljan, P. C., Hall, D. S., Holland, M. J., Williams, J. E., Wieman,
+C. E., and Cornell, E. A., “Watching a superfluid untwist itself: Recurrence of Rabi oscillations in a
+Bose–Einstein condensate,” Phys. Rev. Lett. 83, 3358 (1999).
+[26] Vasa, P., Wang, W., Pomraenke, R., Lammers, M., Maiuri, M., Manzoni, C., Cerullo, G., and Lienau, C.,
+“Real-time observation of ultrafast Rabi oscillations between excitons and plasmons in metal nanostructures
+with J-aggregates,” Nat. Photon. 7, 128 (2013).
+[27] Spreeuw, R. J. C., “A classical analogy of entanglement,” Found. Phys. 28, 361 (1998).
+[28] Dragoman, D. and Dragoman, M., [Quantum-Classical Analogies], The Frontiers Collection, Springer
+(2004).
+[29] Spreeuw, R. J. C., van Druten, N. J., Beijersbergen, M. W., Eliel, E. R., and Woerdman, J. P., “Classical
+realization of a strongly driven two-level system,” Phys. Rev. Lett. 65, 2642 (1990).
+[30] Okamoto, H., Gourgout, A., Chang, C.-Y., Onomitsu, K., Mahboob, I., Chang, E. Y., and Yamaguchi, H.,
+“Coherent phonon manipulation in coupled mechanical resonators,” Nat. Phys. 9, 480 (2013).
+[31] Kavokin, A., Baumberg, J. J., Malpuech, G., and Laussy, F. P., [Microcavities], Oxford University Press,
+2 ed. (2011).
+[32] Hennessy, K., Badolato, A., Winger, M., Gerace, D., Atature, M., Gulde, S., F˘alt, S., Hu, E. L., and
+˘Imamo¯glu, A., “Quantum nature of a strongly coupled single quantum dot–cavity system,” Nature 445,
+896 (2007).
+[33] Weisbuch, C., Nishioka, M., Ishikawa, A., and Arakawa, Y., “Observation of the coupled exciton-photon
+mode splitting in a semiconductor quantum microcavity,” Phys. Rev. Lett. 69, 3314 (1992).
+[34] Carusotto, I. and Ciuti, C., “Quantum fluids of light,” Rev. Mod. Phys. 85, 299 (2013).
+[35] Kasprzak, J., Richard, M., Kundermann, S., Baas, A., Jeambrun, P., Keeling, J. M. J., Marchetti, F. M.,
+Szymanska, M. H., Andr´e, R., Staehli, J. L., Savona, V., Littlewood, P. B., Deveaud, B., and Le Si Dang,
+“Bose–Einstein condensation of exciton polaritons,” Nature 443, 409 (2006).
+[36] Amo, A., Sanvitto, D., Laussy, F. P., Ballarini, D., del Valle, E., Martin, M. D., Lemaˆıtre, A., Bloch, J.,
+Krizhanovskii, D. N., Skolnick, M. S., Tejedor, C., and Vi˜na, L., “Collective fluid dynamics of a polariton
+condensate in a semiconductor microcavity,” Nature 457, 291 (2009).
+[37] Liew, T. C. H., Kavokin, A. V., and Shelykh, I. A., “Optical circuits based on polariton neurons in
+semiconductor microcavities,” Phys. Rev. Lett. 101, 016402 (2008).
+[38] Amo, A., Liew, T. C. H., Adrados, C., Houdr´e, R., Giacobino, E., Kavokin, A. V., and Bramati, A.,
+“Exciton-polariton spin switches,” Nat. Photon. 4, 361 (2010).
+[39] Baumberg, J. J., Kavokin, A. V., Christopoulos, S., Grundy, A. J. D., Butt´e, R., Christmann, G., Sol-
+nyshkov, D. D., Malpuech, G., von H¨ogersthal, G. B. H., Feltin, E., Carlin, J.-F., and Grandjean, N.,
+“Spontaneous polarization buildup in a room-temperature polariton laser,” Phys. Rev. Lett. 101, 136409
+(2008).
+[40] Schneider, C., Rahimi-Iman, A., Kim, N. Y., Fischer, J., Savenko, I. G., Amthor, M., Lermer, M., Wolf,
+A., Worschech, L., Kulakovskii, V. D., Shelykh, I. A., Kamp, M., Reitzenstein, S., Forchel, A., Yamamoto,
+Y., and H¨ofling, S., “An electrically pumped polariton laser,” Nature 497, 348 (2013).
+[41] Ballarini, D., De Giorgi, M., Cancellieri, E., Houdr´e, R., Giacobino, E., Cingolani, R., Bramati, A., Gigli,
+G., and Sanvitto, D., “All-optical polariton transistor.,” Nat. Commun. 4, 1778 (2013).
+
+
+[42] Norris, T., Rhee, J.-K., Sung, C.-Y., Arakawa, Y., Nishioka, M., and Weisbuch, C., “Time-resolved vacuum
+Rabi oscillations in a semiconductor quantum microcavity,” Phys. Rev. B 50, 14663 (1994).
+[43] Savona, V. and Weisbuch, C., “Theory of time-resolved light emission from polaritons in a semiconductor
+microcavity under resonant excitation,” Phys. Rev. B 54, 10835 (1996).
+[44] Wang, H., Shah, J., Damen, T. C., Jan, W. Y., Cunningham, J. E., Hong, M., and Mannaerts, J. P.,
+“Coherent oscillations in semiconductor microcavities,” Phys. Rev. B 51, 14713 (1995).
+[45] Marie, X., Renucci, P., Dubourg, S., Amand, T., Jeune, P. L., Barrau, J., Bloch, J., and Planel, R.,
+“Coherent control of exciton polaritons in a semiconductor microcavity,” Phys. Rev. B 59, 2494(R) (1999).
+[46] Huynh, A., Tignon, J., Roussignol, P., Delalande, C., Andr´e, R., Romestain, R., and D. Le Si Dang,
+“Coherent dynamics of microcavity polaritons in the nonlinear regime,” Physica E 13, 427 (2002).
+[47] Brunetti, A., Vladimirova, M., Scalbert, D., Nawrocki, M., Kavokin, A. V., Shelykh, I. A., and Bloch, J.,
+“Observation of spin beats at the Rabi frequency in microcavities,” Phys. Rev. B 74, 241101(R) (2006).
+[48] Ridolfo, A., Vilardi, R., Di Stefano, O., Portolan, S., and Savasta, S., “All Optical Switch of Vacuum Rabi
+Oscillations: The Ultrafast Quantum Eraser,” Phys. Rev. Lett. 106, 013601 (2011).
+[49] Boulier, T., Bamba, M., Amo, A., Adrados, C., Lemaˆıtre, A., Galopin, E., Sagnes, I., Bloch, J., Ciuti, C.,
+Giacobino, E., and Bramati, A., “Polariton-generated intensity squeezing in semiconductor micropillars,”
+Nat. Commun. 5 (2014).
+[50] Cuevas, A., Silva, B., Carre˜no, J. C. L., De Giorgi, M., Mu˜noz, C. S., Fieramosca, A., Forero, D. G. S.,
+Cardano, F., Marrucci, L., Tasco, V., Biasiol, G., del Valle, E., Dominici, L., Ballarini, D., Gigli, G.,
+Mataloni, P., Laussy, F. P., Sciarrino, F., and Sanvitto, D., “Entangling a polariton with one photon: effect
+of interactions at the single-particle level,” arXiv:1609.01244 [cond-mat, physics:physics, physics:quant-ph]
+(2016). arXiv: 1609.01244.
+[51] Nardin, G., Grosso, G., L´eger, Y., Pi¸etka, B., Morier-Genoud, F., and Deveaud-Pl´edran, B., “Hydrody-
+namic nucleation of quantized vortex pairs in a polariton quantum fluid,” Nat. Phys. 7, 635–641 (2011).
+[52] Ant´on, C., Tosi, G., Mart´ın, M. D., Vi˜na, L., Lemaˆıtre, A., and Bloch, J., “Role of supercurrents on
+vortices formation in polariton condensates,” Opt. Express 20(15), 16366 (2012).
+[53] Schnars, U. and J¨uptner, W., [Digital Holography], Springer Berlin Heidelberg (2005).
+[54] Brixner, T. and Gerber, G., “Femtosecond polarization pulse shaping,” Opt. Lett. 26(8), 557 (2001).
+[55] Zhuang, Z., Suh, S.-W., and Patel, J. S., “Polarization controller using nematic liquid crystals,” Opt.
+Lett. 24(10), 694 (1999).
+[56] Brixner, T., Krampert, G., Pfeifer, T., Selle, R., Gerber, G., Wollenhaupt, M., Graefe, O., Horn, C., Liese,
+D., and Baumert, T., “Quantum Control by Ultrafast Polarization Shaping,” Phys. Rev. Lett. 92(20)
+(2004).
+[57] Aeschlimann, M., Bauer, M., Bayer, D., Brixner, T., Garc´ıa de Abajo, F. J., Pfeiffer, W., Rohmer, M.,
+Spindler, C., and Steeb, F., “Adaptive subwavelength control of nano-optical fields,” Nature 446(7133),
+301–304 (2007).
+[58] K¨ohler, J., Wollenhaupt, M., Bayer, T., Sarpe, C., and Baumert, T., “Zeptosecond precision pulse shaping,”
+Opt. Express 19(12), 11638 (2011).
+[59] Rodr´ıguez-Fortu˜no, F. J., Puerto, D., Griol, A., Bellieres, L., Mart´ı, J., and Mart´ınez, A., “Universal
+method for the synthesis of arbitrary polarization states radiated by a nanoantenna: Synthezising arbitrary
+polarization states with a single nanoantenna,” Laser Photon. Rev. 8, L27–L31 (May 2014).
+[60] She, A. and Capasso, F., “Parallel Polarization State Generation,” Sci. Rep. 6, 26019 (May 2016).
+[61] Beckley, A. M., Brown, T. G., and Alonso, M. A., “Full Poincar´e beams,” Opt. Express 18(10), 10777
+(2010).
+[62] Steger, M., Liu, G., Nelsen, B., Gautham, C., Snoke, D. W., Balili, R., Pfeiffer, L., and West, K., “Long-
+range ballistic motion and coherent flow of long-lifetime polaritons,” Phys. Rev. B 88, 235314 (2013).
+[63] Kavokin, A., Malpuech, G., and Glazov, M., “Optical spin Hall effect,” Phys. Rev. Lett. 95, 136601 (Sep
+2005).
+[64] Leyder, C., Romanelli, M., Karr, J. P., Giacobino, E., Liew, T. C. H., Glazov, M. M., Kavokin, A. V.,
+Malpuech, G., and Bramati, A., “Observation of the optical spin Hall effect,” Nat. Phys. 3, 628–631 (Sept.
+2007).
+
+
+[65] Kammann, E., Liew, T. C. H., Ohadi, H., Cilibrizzi, P., Tsotsis, P., Hatzopoulos, Z., Savvidis, P. G.,
+Kavokin, A. V., and Lagoudakis, P. G., “Nonlinear optical spin Hall effect and long-range spin transport
+in polariton lasers,” Phys. Rev. Lett. 109, 036404 (Jul 2012).
+[66] Cilibrizzi, P., Sigurdsson, H., Liew, T. C. H., Ohadi, H., Askitopoulos, A., Brodbeck, S., Schneider, C.,
+Shelykh, I. A., H¨ofling, S., Ruostekoski, J., and Lagoudakis, P., “Half-skyrmion spin textures in polariton
+microcavities,” Phys. Rev. B 94, 045315 (Jul 2016).
+[67] Cilibrizzi, P., Sigurdsson, H., Liew, T. C. H., Ohadi, H., Wilkinson, S., Askitopoulos, A., Shelykh, I. A.,
+and Lagoudakis, P. G., “Polariton spin whirls,” Phys. Rev. B 92, 155308 (Oct 2015).
+[68] Balili, R., Nelsen, B., Snoke, D. W., Reid, R. H., Pfeiffer, L., and West, K., “Huge splitting of polariton
+states in microcavities under stress,” Phys. Rev. B 81 (Mar. 2010).
+[69] Klopotowski, L., Mart´ın, M., Amo, A., Vi˜na, L., Shelykh, I., Glazov, M., Malpuech, G., Kavokin, A., and
+Andr´e, R., “Optical anisotropy and pinning of the linear polarization of light in semiconductor microcavi-
+ties,” Solid State Commun. 139, 511–515 (Sept. 2006).
+[70] Cardano, F., Karimi, E., Slussarenko, S., Marrucci, L., de Lisio, C., and Santamato, E., “Polarization
+pattern of vector vortex beams generated by q-plates with different topological charges,” Appl. Opt. 51,
+C1–C6 (Apr 2012).
+[71] Dominici, L., Dagvadorj, G., Fellows, J. M., Ballarini, D., De Giorgi, M., Marchetti, F. M., Piccirillo,
+B., Marrucci, L., Bramati, A., Gigli, G., Szyma´nska, M. H., and Sanvitto, D., “Vortex and half-vortex
+dynamics in a nonlinear spinor quantum fluid,” Sci. Adv. 1(11), e1500807 (2015).
+[72] Schulz, S. A., Machula, T., Karimi, E., and Boyd, R. W., “Integrated multi vector vortex beam generator,”
+Opt. Express 21(13), 16130 (2013).
+[73] Bouchard, F., Larocque, H., Yao, A. M., Travis, C., De Leon, I., Rubano, A., Karimi, E., Oppo, G.-L.,
+and Boyd, R. W., “Polarization Shaping for Control of Nonlinear Propagation,” Phys. Rev. Lett. 117(23)
+(2016).
+[74] Rubo, Y. G., “Half vortices in exciton polariton condensates,” Phys. Rev. Lett. 99, 106401 (Sept. 2007).
+[75] Blatter, G., Feigel’man, M. V., Geshkenbein, V. B., Larkin, A. I., and Vinokur, V. M., “Vortices in
+high-temperature superconductors,” Rev. Mod. Phys. 66(4), 1125–1388 (1994).
+[76] Leggett, A. J., “Superfluidity,” Rev. Mod. Phys. 71(2), S318–S323 (1999).
+[77] Matthews, M. R., Anderson, B. P., Haljan, P. C., Hall, D. S., Wieman, C. E., and Cornell, E. A., “Vortices
+in a Bose–Einstein condensate,” Phys. Rev. Lett. 83, 2498 (1999).
+[78] Weiler, C. N., Neely, T. W., Scherer, D. R., Bradley, A. S., Davis, M. J., and Anderson, B. P., “Spontaneous
+vortices in the formation of Bose-Einstein condensates,” Nature 455(7215), 948–951 (2008).
+[79] Bewley, G. P., Paoletti, M. S., Sreenivasan, K. R., and Lathrop, D. P., “Characterization of reconnecting
+vortices in superfluid helium,” Proc. Natl. Acad. Sci. 105(37), 13707–13710 (2008).
+[80] Abo-Shaeer, J. R., Raman, C., Vogels, J. M., and Ketterle, W., “Observation of Vortex Lattices in Bose-
+Einstein Condensates,” Science 292(5516), 476–479 (2001).
+[81] Anderson, B. P., Haljan, P. C., Wieman, C. E., and Cornell, E. A., “Vortex Precession in Bose-Einstein
+Condensates: Observations with Filled and Empty Cores,” Phys. Rev. Lett. 85(14), 2857–2860 (2000).
+[82] Yao, A. M. and Padgett, M. J., “Orbital angular momentum: origins, behavior and applications,” Adv.
+Opt. Photonics 3(2), 161 (2011).
+[83] Franke-Arnold, S., Allen, L., and Padgett, M., “Advances in optical angular momentum,” Laser Photon.
+Rev. 2(4), 299–313 (2008).
+[84] Molina-Terriza, G., Torres, J. P., and Torner, L., “Twisted photons,” Nat. Phys. 3(5), 305–310 (2007).
+[85] Uchida, M. and Tonomura, A., “Generation of electron beams carrying orbital angular momentum,” Na-
+ture 464(7289), 737–739 (2010).
+[86] McMorran, B. J., Agrawal, A., Anderson, I. M., Herzing, A. A., Lezec, H. J., McClelland, J. J., and Unguris,
+J., “Electron Vortex Beams with High Quanta of Orbital Angular Momentum,” Science 331(6014), 192–195
+(2011).
+[87] Grillo, V., Gazzadi, G. C., Mafakheri, E., Frabboni, S., Karimi, E., and Boyd, R. W., “Holographic
+Generation of Highly Twisted Electron Beams,” Phys. Rev. Lett. 114(3) (2015).
+
+
+[88] Lagoudakis, K. G., Ostatnick´y, T., Kavokin, A. V., Rubo, Y. G., Andr´e, R., and Deveaud-Pl´edran, B.,
+“Observation of half-quantum vortices in an exciton-polariton condensate,” Science 326(5955), 974–976
+(2009).
+[89] Rubo, Y., “Half vortices in exciton polariton condensates,” Phys. Rev. Lett. 99(10), 106401 (2007).
+[90] Manni, F., Lagoudakis, K., and Liew, T. C. H., “Dissociation dynamics of singly charged vortices into
+half-quantum vortex pairs,” Nat. Commun. 3, 1309 (2012).
+[91] Krizhanovskii, D. N., Whittaker, D. M., Bradley, R. A., Guda, K., Sarkar, D., Sanvitto, D., Vi˜na, L.,
+Cerda, E., Santos, P., Biermann, K., Hey, R., and Skolnick, M. S., “Effect of interactions on vortices in a
+nonequilibrium polariton condensate,” Phys. Rev. Lett. 104, 126402 (2010).
+[92] Voronova, N. S. and Lozovik, Y. E., “Excitons in cores of exciton-polariton vortices,” Phys. Rev. B 86,
+195305 (2012).
+[93] Boulier, T., Ter¸cas, H., Solnyshkov, D. D., Glorieux, Q., Giacobino, E., Malpuech, G., and Bramati, A.,
+“Vortex Chain in a Resonantly Pumped Polariton Superfluid,” Sci. Rep. 5 (2015).
+[94] Dufferwiel, S., Li, F., Cancellieri, E., Giriunas, L., Trichet, A. A. P., Whittaker, D. M., Walker, P. M., Fras,
+F., Clarke, E., Smith, J. M., Skolnick, M. S., and Krizhanovskii, D. N., “Spin Textures of Exciton-Polaritons
+in a Tunable Microcavity with Large TE-TM Splitting,” Phys. Rev. Lett. 115, 246401 (2015).
+[95] Liu, G., Snoke, D. W., Daley, A., Pfeiffer, L. N., and West, K., “A new type of half-quantum circulation
+in a macroscopic polariton spinor ring condensate,” Proc. Natl. Acad. Sci. 112(9), 2676–2681 (2015).
+[96] Nagali, E., Sansoni, L., Sciarrino, F., De Martini, F., Marrucci, L., Piccirillo, B., Karimi, E., and Santam-
+ato, E., “Optimal quantum cloning of orbital angular momentum photon qubits through Hong-Ou-Mandel
+coalescence,” Nat. Photon. 3(12), 720–723 (2009).
+[97] Leach, J., Jack, B., Romero, J., Jha, A. K., Yao, A. M., Franke-Arnold, S., Ireland, D. G., Boyd, R. W.,
+Barnett, S. M., and Padgett, M. J., “Quantum Correlations in Optical Angle-Orbital Angular Momentum
+Variables,” Science 329(5992), 662–665 (2010).
+[98] Yan, Y., Xie, G., Lavery, M. P. J., Huang, H., Ahmed, N., Bao, C., Ren, Y., Cao, Y., Li, L., Zhao, Z.,
+Molisch, A. F., Tur, M., Padgett, M. J., and Willner, A. E., “High-capacity millimetre-wave communica-
+tions with orbital angular momentum multiplexing,” Nat. Commun. 5, 4876 (2014).
+[99] Paterson, C., “Atmospheric Turbulence and Orbital Angular Momentum of Single Photons for Optical
+Communication,” Phys. Rev. Lett. 94(15) (2005).
+[100] Krenn, M., Handsteiner, J., Fink, M., Fickler, R., Ursin, R., Malik, M., and Zeilinger, A., “Twisted light
+transmission over 143 km,” Proc. Natl. Acad. Sci. 113(48), 13648–13653 (2016).
+[101] Bouchard, F., De Leon, I., Schulz, S. A., Upham, J., Karimi, E., and Boyd, R. W., “Optical spin-to-orbital
+angular momentum conversion in ultra-thin metasurfaces with arbitrary topological charges,” Appl. Phys.
+Lett. 105(10), 101905 (2014).
+[102] Naidoo, D., Roux, F. S., Dudley, A., Litvin, I., Piccirillo, B., Marrucci, L., and Forbes, A., “Controlled
+generation of higher-order Poincar˜A© sphere beams from a laser,” Nat. Photon. 10(5), 327–332 (2016).
+[103] Wang, J., Yang, J.-Y., Fazal, I. M., Ahmed, N., Yan, Y., Huang, H., Ren, Y., Yue, Y., Dolinar, S.,
+Tur, M., and Willner, A. E., “Terabit free-space data transmission employing orbital angular momentum
+multiplexing,” Nat. Photon. 6(7), 488–496 (2012).
+[104] Bozinovic, N., Yue, Y., Ren, Y., Tur, M., Kristensen, P., Huang, H., Willner, A. E., and Ramachandran,
+S., “Terabit-Scale Orbital Angular Momentum Mode Division Multiplexing in Fibers,” Science 340(6140),
+1545–1548 (2013).
+[105] Karimi, E., Marrucci, L., de Lisio, C., and Santamato, E., “Time-division multiplexing of the orbital
+angular momentum of light,” Opt. Lett. 37(2), 127 (2012).
+[106] Pic´on, A., Mompart, J., V´azquez de Aldana, J. R., Plaja, L., Calvo, G. F., and Roso, L., “Photoionization
+with orbital angular momentum beams,” Opt. Express 18(4), 3660 (2010).
+[107] Sigurdsson, H., Egorov, O. A., Ma, X., Shelykh, I. A., and Liew, T. C. H., “Information processing with
+topologically protected vortex memories in exciton-polariton condensates,” Phys. Rev. B 90, 014504 (2014).
+[108] Franchetti, G., Berloff, N. G., and Baumberg, J. J., “Exploiting quantum coherence of polaritons for ultra
+sensitive detectors,” arXiv:1210.1187 [cond-mat] (2012). arXiv: 1210.1187.
+[109] Pitaevskii, L. and Stringari, S., [Bose-Einstein Condensation], Oxford University Press (2003).

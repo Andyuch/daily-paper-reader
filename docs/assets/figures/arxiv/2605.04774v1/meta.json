@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-001.webp",
+      "caption": "FIG. 4. Imaging of spin-wave transport. (a) SNS-MOKE microscopy maps of propagating spin waves in a 70-nm-thick YIG film with a CoFeB nanodisk array (d = 180 nm, p = 470 nm), recorded at excitation frequencies of 1.50, 1.85, and 2.20 GHz under an applied field of 12 mT along the y-axis. The selected frequencies correspond to the first transmission gap, the center of the allowed band, and the second transmission gap in the experimental transmission spectrum of Fig. 3(d). The dashed lines mark the boundaries of the 5-µm-wide nanodisk array. (b) Corresponding micromagnetic simulation maps at 1.51, 1.86, and 2.11 GHz, showing the real part of the mx phasor. The spatial extent along y spans only three lattice periods, significantly less than in the experimental maps in (a). The yellow lines indicate the center of the spin-wave excitation region.",
+      "page": 6,
+      "index": 1,
+      "width": 1001,
+      "height": 446
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-002.webp",
+      "caption": "FIG. 5. Tuning of spin-wave transport via variation of CoFeB nanodisk array parameters. (a) Experimental spin-wave transmission spectra (S21 amplitude) for a fixed disk diameter d = 180 nm and varying array period p = 390, 470, 550, and 630 nm. (b) Spin-wave transmission spectra for a fixed array period p = 470 nm and varying disk diameter d = 120, 180, 240, and 320 nm. All spectra are recorded under an applied magnetic field of 12 mT.",
+      "page": 7,
+      "index": 2,
+      "width": 980,
+      "height": 397
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-003.webp",
+      "caption": "FIG. 7. Analysis of the magnonic crystal with d = 180 nm and p = 630 nm. (a) Experimental spin-wave transmission map (S21 amplitude) as a function of excitation frequency and applied magnetic field. (b) Dispersion relation of the system along kx calculated for an applied magnetic field of 40 mT. The dashed blue, brown, and green lines indicate the bare-film dispersion branches obtained after backfolding into the first Brillouin zone. The solid gray line marks the FMR frequency of the uncovered YIG film and the white semitransparent circles indicate the hybridizations responsible for the opening of additional transmission gaps. (c) Experimental spin-wave transmission spectrum (amplitude of S21) for the uncovered YIG film (gray line) and the hybrid YIG/CoFeB nanodisk magnonic crystal (red line) at an applied field of 40 mT. In (a) and (c), the arrows with numbers label the transmission gaps. (d) Spatial mode profiles of the magnonic crystal modes at the (kx, f) values indicated in (b), showing the mx component of the dynamic magnetization in the central plane of the YIG film. Dotted lines indicate the lateral boundaries of the CoFeB disk. Clean versions of (b) and (c) are provided in Fig. S10 of the Supplemental Material.",
+      "page": 10,
+      "index": 3,
+      "width": 1014,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-004.webp",
+      "caption": "FIG. 6. Numerical analysis of the magnonic crystal band structure for d = 180 nm and p = 470 nm under an applied field of 12 mT. (a) Two-dimensional dispersion relation of an uncovered YIG film. (b) Dispersion relation along kx computed using the frozen-spins method, in which the dynamic magnetization within the CoFeB disks is constrained to zero. The blue, brown, and green dashed lines indicate the bare-film dispersion branches reproduced from (a). (c) Dispersion relation along kx incorporating both static and dynamic dipolar coupling between the YIG film and the CoFeB nanodisks. The solid cyan, yellow, red, orange, and purple lines trace dispersion branches I– V (displaced downward from the actual branches for clarity). Upward-pointing triangles mark the kx values at which mode profiles are shown in panel (e). In (b) and (c), the horizontal gray line indicates the FMR frequency of the uncovered YIG film. (d) Experimental spin-wave transmission spectrum (amplitude of S21) for the uncovered YIG film (gray line) and the hybrid YIG/CoFeB nanodisk magnonic crystal (red line). Arrows mark the first and second transmission gaps. (e) Spatial mode profiles of the magnonic crystal modes at the (kx, f) values indicated in (c), showing the mx component of the dynamic magnetization in the central plane of the YIG film. Dotted lines indicate the lateral boundaries of the CoFeB disk. Clean versions of (b) and (c) are provided in Fig. S9 of the Supplemental Material.",
+      "page": 8,
+      "index": 4,
+      "width": 1015,
+      "height": 369
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-005.webp",
+      "caption": "FIG. 2. Magnetic switching and effective field distribution in hybrid YIG film/CoFeB nanodisk magnonic crystals. (a) MOKE hysteresis loop of a CoFeB nanodisk array (d = 180 nm, p = 470 nm) fabricated on the 70-nm-thick YIG film. The magnetic contribution of the YIG film is subtracted in the main panel and shown separately in the inset. Micromagnetic simulations at different applied fields illustrate the evolution of the nanodisk magnetization when the field is swept from 200 mT to −200 mT. Red, green, and blue arrows indicate the fields corresponding to S state formation, vortex nucleation, and vortex annihilation, respectively. (b) Simulated in-plane effective magnetic field within the YIG film at an applied field of 12 mT along the y-axis. The effective field distribution is averaged over the film thickness. The color scale represents the field magnitude, while arrows denote the field direction. (c) Simulated out-of-plane effective magnetic field under the same conditions as in (b). Green dashed lines in (b) and (c) outline the lateral position of the CoFeB nanodisk.",
+      "page": 4,
+      "index": 5,
+      "width": 1059,
+      "height": 397
+    },
+    {
+      "url": "assets/figures/arxiv/2605.04774v1/fig-006.webp",
+      "caption": "FIG. 3. Spin-wave transport in YIG films integrated with CoFeB nanodisk arrays. (a),(b) Experimental spin-wave transmission maps (S21 amplitude) as a function of excitation frequency and applied magnetic field for (a) a bare 70-nm-thick YIG film and (b) the same film with a CoFeB nanodisk array (d = 180 nm, p = 470 nm). Experimental spin-wave transmission maps for CoFeB nanodisk arrays with other geometric parameters are provided in Fig. S4 and S5 of the Supplemental Material. (c) Simulated spin-wave transmission map for the same hybrid YIG/CoFeB nanodisk system as in (b). (d) Comparison of experimental and simulated spin-wave transmission spectra at an applied field of 12 mT, extracted along the red dashed lines in (a)-(c).",
+      "page": 5,
+      "index": 6,
+      "width": 983,
+      "height": 786
+    }
+  ]
+}

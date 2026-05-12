@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-001.webp",
+      "caption": "FIG. 3. Noise-resilient imaging with uniform noise - Three objects were imaged: Object 1: Binary plaintext image - IIT Kanpur; Object 2: QR code - a binary image with intricate structures; Object 3: Grayscale wheel with eight distinct gray levels. The parameter γ represents the ratio of the object intensity to noise intensity. The object is illuminated with incoherent light centred at 633 nm with a 10 nm bandwidth, while the noise is illuminated with incoherent light centred at 595 nm with a 90 nm bandwidth. The size of the object is 0.8125 mm x 0.8125 mm. When imaged using a conventional lensbased system, the object is completely obscured by noise, as shown in the Intensity Imaging column. Spectral filtering, using an optical filter centred at 633 nm with a 10 nm bandwidth at the camera, rejects some noise, making the object visible. Image quality is quantified using the peak signal-to-noise ratio (PSNR). Temporal coherence filtering significantly outperforms spectral filtering, achieving superior contrast and object clarity even under extreme noise conditions. The filtered QR code can be scanned accurately, validating the method’s ability to distil complex, real-world objects from noisy environments.",
+      "page": 6,
+      "index": 1,
+      "width": 1055,
+      "height": 659
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-002.webp",
+      "caption": "FIG. 1. Conceptual illustration of noise-resilient imaging techniques - (a) Conventional Intensity imaging with optical filter-based spectral filtering (b) Quantum illumination with coincidence detection (c) Coherence imaging with temporal coherence filtering",
+      "page": 2,
+      "index": 2,
+      "width": 500,
+      "height": 904
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-003.webp",
+      "caption": "TABLE I. Comparison of the filtering techniques",
+      "page": 2,
+      "index": 3,
+      "width": 533,
+      "height": 372
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-004.webp",
+      "caption": "FIG. 4. Noise-resilient imaging with spatially structured noise - The parameter γ represents the ratio of the object intensity to noise intensity. The object was imaged at various noise intensities to assess the impact of noise on the distillation performance of the protocol. The object is illuminated with incoherent light centred at 633 nm with a 10 nm bandwidth, while the noise is illuminated with incoherent light centred at 595 nm with a 90 nm bandwidth. The size of the object is 0.8125 mm x 0.8125 mm. When imaged using a conventional lens-based system, the object is completely obscured by noise, as shown in the Intensity Imaging column. Spectral filtering, using an optical filter centred at 633 nm with a 10 nm bandwidth at the camera, rejects some noise, making the object visible. Image quality is quantified using the peak signal-to-noise ratio (PSNR). Temporal coherence filtering significantly outperforms spectral filtering, achieving superior contrast and object clarity even under extreme noise conditions (20× noise-to-signal ratio). The filtered QR code can be scanned accurately, validating the method’s ability to distil complex, real-world objects from noisy environments.",
+      "page": 7,
+      "index": 4,
+      "width": 1048,
+      "height": 659
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-005.webp",
+      "caption": "FIG. 2. Schematic diagram of the experimental setup for Coherence Imaging - (a) Object illumination: Object - Image displayed on the OLED screen of a smartphone forms the object illuminated with spatially incoherent light. It is placed at the front focal plane of a converging lens L1 with focal length f = 500mm to get an object field that is spatially and temporally stationary. A red filter centred at 633 nm with a wavelength bandwidth of 10nm is used to ensure that the object field is narrow-band. (b) Noise - An LED source with a wavelength bandwidth of 90nm, centred at 595nm, imaged onto a transparent object forms the noise illuminated with spatially incoherent light. It is placed at the front focal plane of a converging lens L4 with a focal length of f = 500mm to obtain a noise field that is both spatially and temporally stationary. (c) Detector: Phase-shifting wavefront inversion interferometer - It consists of one Dove prism in each arm, at 90o to each other to invert the wavefront of the optical field. One arm contains a geometric phase unit with QWP1, HWP, and QWP2, through which a precise phase difference is introduced between the two arms. The other arm contains a linear translation stage with 0.5 µm precision, used to set the path length difference between the arms. L: thin lenses, BS: beam splitter, DP: dove prism, QWP: quarter-wave plate, HWP: half-wave plate and TS: linear translation stage.",
+      "page": 3,
+      "index": 5,
+      "width": 1079,
+      "height": 536
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09324v1/fig-006.webp",
+      "caption": "FIG. 5. Comparison of Temporal Coherence Filtering (TCF) and Spectral Filtering (SF) for the same-central-frequency case – Plot of the ratio γtcf/γsf as a function of m and ∆ωo/∆ωn. The ratio γtcf/γsf quantifies the relative effectiveness of TCF over SF in suppressing noise, where m denotes the factor by which the path-length difference between the interferometer arms exceeds the temporal-coherence length of the noise field. A ratio greater than 1 indicates that TCF outperforms SF. The plot demonstrates that there exists a threshold value of m for each ∆ωo/∆ωn beyond which TCF outperforms SF.",
+      "page": 9,
+      "index": 6,
+      "width": 1057,
+      "height": 595
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-12T21:25:07.855351+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 12,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2605.09244v1",
+      "source": "arxiv",
+      "title": "Resolution Estimation of a Digital Holographic Microscope Using Neural Network Analysis of Reconstructed Images",
+      "abstract": "This paper presents a method for estimating the resolution of a digital holographic microscope using neural network analysis of reconstructed images. The spectral bandwidth of the source ($Δλ$) is used as a controlled image degradation parameter.   Numerical simulations were performed within inline Gabor holography. A dataset of reconstructed images was generated for several test objects over a $Δλ$ range from 0.05 to 20 nm.   The model predicts $Δλ$ from reconstructed images with high precision. The predictions are consistent with standard resolution metrics, including FWHM, MTF, and the USAF resolution criterion.   The generalization analysis shows that the model is sensitive to the type of degradation. It captures interferometric distortions and responds selectively to the underlying physical mechanism.   The proposed approach enables resolution estimation without explicit modeling of all degradation factors and can be applied to compact holographic systems.",
+      "authors": [
+        "A. G. Fedorov"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-10T01:00:04+00:00",
+      "link": "https://arxiv.org/pdf/2605.09244v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "resolution estimation of a digital holographic microscope using neural networks",
+      "llm_evidence_cn": "使用神经网络估算数字全息显微镜的分辨率",
+      "llm_evidence": "使用神经网络估算数字全息显微镜的分辨率",
+      "canonical_evidence": "使用神经网络估算数字全息显微镜的分辨率",
+      "llm_tldr_en": "Proposes a neural network method to estimate resolution in digital holographic microscopy.",
+      "llm_tldr_cn": "提出了一种利用神经网络估算数字全息显微镜分辨率的方法。",
+      "llm_tldr": "提出了一种利用神经网络估算数字全息显微镜分辨率的方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.02749v1",
+      "source": "arxiv",
+      "title": "A delay-programmable two-color femtosecond source for multiphoton ionization studies based on chirped-seed NOPA",
+      "abstract": "We demonstrate a delay-programmable two-color femtosecond source based on a chirped-seed noncollinear optical parametric amplifier. Introducing controlled dispersion into the seed enables spectral selection through pump-seed delay, allowing flexible generation of two independently tunable pulse components with adjustable relative timing at high repetition rate. The temporal and spectral properties are characterized using nonlinear optical cross-correlation and dispersion-scan measurements. As a benchmark application, the source is employed in a COLTRIMS-based multiphoton ionization experiment on trapped Li atoms, revealing delay-dependent ionization pathways and demonstrating its suitability for bichromatic ultrafast spectroscopy.",
+      "authors": [
+        "Kyle Foster",
+        "Shruti Majumdar",
+        "Mason Toombs",
+        "Harshit Agarwal",
+        "Daniel Fischer"
+      ],
+      "primary_category": "physics.atom-ph",
+      "categories": [
+        "physics.atom-ph",
+        "physics.optics",
+        "quant-ph"
+      ],
+      "published": "2026-05-04T15:52:36+00:00",
+      "link": "https://arxiv.org/pdf/2605.02749v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "delay-programmable two-color femtosecond source for time-resolved studies",
+      "llm_evidence_cn": "用于时间分辨研究的延迟可编程双色飞秒光源",
+      "llm_evidence": "用于时间分辨研究的延迟可编程双色飞秒光源",
+      "canonical_evidence": "用于时间分辨研究的延迟可编程双色飞秒光源",
+      "llm_tldr_en": "Demonstrates a delay-programmable femtosecond source for time-resolved multiphoton ionization studies.",
+      "llm_tldr_cn": "演示了一种用于时间分辨多光子电离研究的延迟可编程飞秒光源。",
+      "llm_tldr": "演示了一种用于时间分辨多光子电离研究的延迟可编程飞秒光源。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.09324v1",
+      "source": "arxiv",
+      "title": "Noise-Resilient Imaging through Coherence Filtering",
+      "abstract": "Noise is a significant challenge in imaging. Conventional intensity-based techniques mitigate noise through various filtering methods, but they often require prior knowledge of noise characteristics and struggle, especially under low-light conditions and with spatially structured noise. Quantum distillation provides enhanced noise rejection; however, its applicability is limited as it requires specialised illumination and substantial modifications to existing imaging setups. In this article, we introduce a coherence-based image distillation approach that separates object from noise by leveraging the difference in their temporal coherence properties. We implement this through our interferometric protocol, which enables imaging based on spatial coherence while simultaneously filtering out noise via temporal coherence. This overcomes the limitations of both intensity-based and quantum distillation methods. We experimentally demonstrate noise resilience by successfully recovering feature-rich objects, such as QR codes and grayscale wheels, obscured by spatially uniform and structured noise 20 times as intense as the object. We further show that our method remains effective for fields with substantial spectral overlap, outperforming spectral filtering in regimes where the latter provides little noise suppression. This approach provides a robust framework for noise-resilient imaging with applications in optical communication, fluorescence microscopy, and biological imaging at both high and low light levels.",
+      "authors": [
+        "Pranay Mohta",
+        "Keval Moliya",
+        "Aniket Nag",
+        "Shaurya Aarav",
+        "Anand Kumar Jha"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.app-ph",
+        "quant-ph"
+      ],
+      "published": "2026-05-10T04:56:02+00:00",
+      "link": "https://arxiv.org/pdf/2605.09324v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "interferometric protocol for coherence-based image distillation",
+      "llm_evidence_cn": "基于相干性的图像提取干涉协议",
+      "llm_evidence": "基于相干性的图像提取干涉协议",
+      "canonical_evidence": "基于相干性的图像提取干涉协议",
+      "llm_tldr_en": "Introduces an interferometric protocol to separate objects from noise using temporal coherence.",
+      "llm_tldr_cn": "引入了一种干涉协议，利用时间相干性将物体与噪声分离。",
+      "llm_tldr": "引入了一种干涉协议，利用时间相干性将物体与噪声分离。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.03316v1",
+      "source": "arxiv",
+      "title": "Quantitative cavity-enhanced photothermal dynamics in TMDC-integrated ultrahigh-Q microcavities",
+      "abstract": "We investigate photothermal effects in monolayer transition metal dichalcogenides (TMDCs) integrated with an ultrahigh-Q silica microcavity. Launching a continuous-wave laser into a cavity resonance enables controlled intracavity heating, allowing direct observation of excitonic photoluminescence (PL) modulation. A distinct redshift of the PL peak energy is observed as the pump wavelength is tuned across resonance. This behavior is quantitatively reproduced by a temperature-dependent bandgap model that combines the Varshni relation with the thermo-optic response of the microcavity, from which the local temperature rise can be estimated. We further find that PL collected through a fiber waveguide exhibits spectral and temporal characteristics markedly different from free-space emission, indicating selective coupling of the microcavity to specific excitonic channels. These results provide a quantitative framework for understanding photothermal effects in TMDC-microcavity hybrid systems and offer a versatile approach for all-optical control and probing of thermal states in integrated nanophotonic devices.",
+      "authors": [
+        "Hidetoshi Kanzawa",
+        "Ryo Sugano",
+        "Hajime Kumazaki",
+        "Yuta Takahashi",
+        "Shinichi Watanabe",
+        "Shun Fujii"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-05T03:05:30+00:00",
+      "link": "https://arxiv.org/pdf/2605.03316v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "temporal characteristics of photoluminescence in TMDCs",
+      "llm_evidence_cn": "TMDCs中光致发光的时间特性",
+      "llm_evidence": "TMDCs中光致发光的时间特性",
+      "canonical_evidence": "TMDCs中光致发光的时间特性",
+      "llm_tldr_en": "Study of photothermal dynamics and excitonic modulation in TMDC-integrated microcavities.",
+      "llm_tldr_cn": "研究集成TMDC的微腔中的光热动力学和激子调制。",
+      "llm_tldr": "研究集成TMDC的微腔中的光热动力学和激子调制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.09645v1",
+      "source": "arxiv",
+      "title": "Purcell enhancement in layered InSe on the Mie-resonant silicon nitride waveguide",
+      "abstract": "Hybrid integration of layered van der Waals (vdW) semiconductors with dielectric resonant structures provides an effective approach for controlling excitonic emission dynamics. Here, we demonstrate Purcell-enhanced spontaneous emission from a thin InSe flake integrated with a Mie-resonant Si$_3$N$_4$ waveguide. The structure is designed to spectrally overlap with the InSe photoluminescence band and enhance coupling of excitonic emission to the guided mode. Time-resolved photoluminescence shows a reduction of the excitonic decay time by up to a factor of three relative to planar InSe. The extracted Purcell factors are approximately 3 for out-of-plane excitons and 2.1 for in-plane excitons. These results demonstrate resonator-induced control of excitonic recombination in layered InSe and highlight vdW-dielectric interfaces as a platform for integrated excitonic and quantum photonic devices.",
+      "authors": [
+        "A. I. Veretennikov",
+        "E. A. Shepelev",
+        "A. S. Shorokhov",
+        "P. A. Alekseev",
+        "I. A. Eliseyev",
+        "A. A. Fedyanin",
+        "M. V. Rakhlin"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-05-10T16:44:20+00:00",
+      "link": "https://arxiv.org/pdf/2605.09645v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved photoluminescence of layered semiconductors",
+      "llm_evidence_cn": "层状半导体的时间分辨光致发光",
+      "llm_evidence": "层状半导体的时间分辨光致发光",
+      "canonical_evidence": "层状半导体的时间分辨光致发光",
+      "llm_tldr_en": "Uses time-resolved photoluminescence to study Purcell enhancement in layered InSe.",
+      "llm_tldr_cn": "利用时间分辨光致发光研究层状InSe中的珀塞尔增强。",
+      "llm_tldr": "利用时间分辨光致发光研究层状InSe中的珀塞尔增强。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.04276v1",
+      "source": "arxiv",
+      "title": "High Frame-Rate Mid-Infrared SPAD Camera",
+      "abstract": "Single-photon avalanche diode (SPAD) arrays have transformed optical imaging by enabling photon-counting sensitivity, picosecond resolution, and high frame-rate operation. These capabilities, however, have remained confined to the visible and near-infrared, leaving the mid-infrared, the spectral region hosting the fundamental vibrational signatures of most molecules, largely inaccessible. Here, we demonstrate the first mid-IR SPAD camera by integrating broadband adiabatic frequency upconversion with a 512x512 Silicon SPAD array. This architecture transfers full SPAD functionality to the mid-IR, enabling room-temperature, low-noise, broadband photon-counting imaging. We achieve spectrally resolved mid-IR imaging at frame rates of up to 60,000 frames per second and capture nanosecond-scale laser-induced thermal dynamics via weak mid-IR blackbody emission, revealing spatial-temporal behavior inaccessible to existing technologies. These results establish a scalable platform for photon-resolved, ultrafast thermal and chemical imaging in a spectral range previously inaccessible to high-speed low-light detection.",
+      "authors": [
+        "Ziv Abelson",
+        "Daniel Beitner",
+        "Ziv Livne",
+        "Eyal Hollander",
+        "Moshe Cohen Erner",
+        "Edoardo Charbon",
+        "Haim Suchowski"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-05T20:27:24+00:00",
+      "link": "https://arxiv.org/pdf/2605.04276v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "high frame-rate operation and nanosecond time resolution in mid-IR imaging",
+      "llm_evidence_cn": "中红外成像中的高帧率运行和纳秒级时间分辨率",
+      "llm_evidence": "中红外成像中的高帧率运行和纳秒级时间分辨率",
+      "canonical_evidence": "中红外成像中的高帧率运行和纳秒级时间分辨率",
+      "llm_tldr_en": "Develops a high-speed mid-infrared SPAD camera for photon-counting and time-resolved imaging.",
+      "llm_tldr_cn": "开发了一种用于光子计数和时间分辨成像的高速中红外SPAD相机。",
+      "llm_tldr": "开发了一种用于光子计数和时间分辨成像的高速中红外SPAD相机。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.10483v1",
+      "source": "arxiv",
+      "title": "Laser-induced demagnetization in a MAX phase (Cr0.5Mn0.5)2GaC",
+      "abstract": "Magnetic MAX phases are nanolaminated metals that combine ceramic-like thermal and mechanical stability with peculiar magnetic ordering, making them attractive for thin-film optoelectronics and spintronics. However, their magnetization dynamics remain largely unexplored. Here, we investigate laser-induced ultrafast demagnetization in a 40-nm-thick epitaxial film of the magnetic MAX phase (Cr0.5Mn0.5)2GaC, which magnetically orders below ~250 K, using time-resolved magneto-optical Kerr effect spectroscopy. We reveal, that the demagnetization transients exhibit a two-step type-II demagnetization - a signature of two-dimensional magnetic systems. The fast demagnetization stage is small at low temperatures and fluences but becomes prominent with increasing excitation. The second stage dominates the process and has a characteristic time of approximately 100 ps. Applying the three-temperature model, we extract the electron-lattice, spin-lattice, and electron-spin coupling constants. The reconstructed spin heat capacity exhibits a weak temperature dependence, accounting for the absence of significant slowing down of demagnetization at elevated temperatures and fluences. Our results provide a starting point for experimental optical control of magnetism in MAX phases, bringing this broad class of materials into modern 2D spintronics.",
+      "authors": [
+        "Iaroslav Mogunov",
+        "Artyom Gorshkov",
+        "Mikhail Rautskii",
+        "Tatyana Andryushchenko",
+        "Alexandra Kalashnikova"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-11T12:43:58+00:00",
+      "link": "https://arxiv.org/pdf/2605.10483v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved magneto-optical spectroscopy for magnetization dynamics",
+      "llm_evidence_cn": "用于磁化动力学的时间分辨磁光光谱",
+      "llm_evidence": "用于磁化动力学的时间分辨磁光光谱",
+      "canonical_evidence": "用于磁化动力学的时间分辨磁光光谱",
+      "llm_tldr_en": "Uses time-resolved MOKE spectroscopy to study ultrafast demagnetization in magnetic MAX phase thin films.",
+      "llm_tldr_cn": "利用时间分辨MOKE光谱研究磁性MAX相薄膜中的超快退磁过程。",
+      "llm_tldr": "利用时间分辨MOKE光谱研究磁性MAX相薄膜中的超快退磁过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.04774v1",
+      "source": "arxiv",
+      "title": "Spin-wave bandgap engineering via mode hybridization in dipolar-coupled YIG film/CoFeB nanodisk magnonic crystals",
+      "abstract": "We investigate spin-wave transport in hybrid two-dimensional magnonic crystals comprising a low-damping yttrium iron garnet (YIG) film coupled to a periodic array of CoFeB nanodisks. Using propagating spin-wave spectroscopy, super-Nyquist magneto-optical Kerr effect microscopy, and micromagnetic simulations, we demonstrate the formation of pronounced and tunable bandgaps that do not originate from conventional Bragg scattering. Instead, these gaps arise from hybridization between the fundamental magnonic-crystal mode and in-plane transverse standing modes induced by the periodic nanodisk array. The spectral position and width of these gaps are controlled by geometric parameters and by the magnetic state of the nanodisks, including their vortex configuration, which governs both static and dynamic dipolar coupling. For larger lattice periods, additional gaps emerge through hybridization with modes quantized both transverse and parallel to the spin-wave propagation direction, reflecting dispersion folding in two dimensions. Our results establish mode hybridization as a versatile mechanism for engineering spin-wave band structures beyond the constraints of Bragg scattering and provide a pathway toward reconfigurable magnonic devices based on dipolar-coupled hybrid architectures.",
+      "authors": [
+        "Junyoung Hyun",
+        "Krzysztof Szulc",
+        "Mateusz Zelent",
+        "Nikolai Kuznetsov",
+        "Lukáš Flajšman",
+        "Maciej Krawczyk",
+        "Paweł Gruszecki",
+        "Sebastiaan van Dijken"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-06T11:20:36+00:00",
+      "link": "https://arxiv.org/pdf/2605.04774v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "magneto-optical Kerr effect microscopy for spin-wave transport",
+      "llm_evidence_cn": "用于自旋波传输的磁光克尔效应显微镜",
+      "llm_evidence": "用于自旋波传输的磁光克尔效应显微镜",
+      "canonical_evidence": "用于自旋波传输的磁光克尔效应显微镜",
+      "llm_tldr_en": "Investigation of spin-wave transport and bandgap engineering in hybrid magnonic crystals using microscopy.",
+      "llm_tldr_cn": "利用显微技术研究混合磁子晶体中的自旋波传输和带隙工程。",
+      "llm_tldr": "利用显微技术研究混合磁子晶体中的自旋波传输和带隙工程。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.06186v1",
+      "source": "arxiv",
+      "title": "Charge-Transfer Induced Reactivity in sp Carbon Atomic Wires: Towards 0-D sp-sp2 Nanostructures",
+      "abstract": "Carbon Atomic Wires (CAWs) are finite linear chains of sp-hybridized carbon atoms. Here the electrochemical reduction of CAWs in the form of polyynes (i.e. with alternated single-triple bonds) is reported. Upon applying a reducing potential to a solution containing polydispersed hydrogen-capped polyynes, the formation of a black precipitate was observed. Electronic absorption spectroscopy confirmed the irreversible reaction of the carbon chains while excluding degradation or side reactions. Subsequent analyses revealed that the precipitate consisted of amorphous carbon nanoparticles with tunable diameters. This control over particle size is attributed to the modulation of growth kinetics through restricted mass transport toward the solid-liquid interface. Raman spectroscopy showed that the resulting material exhibits an amorphous sp-sp2 character, with a retained sp fraction exceeding 60%. Smaller nanoparticles displayed reduced disorder within the sp2 domains and a broader distribution of sp-chain lengths preserved in the amorphous matrix. Additional experiments on size-selected polyynes suggest that this synthesis method allows to better preserve the starting chain length in the final structure. Unlike previously reported amorphous sp-sp2 carbon networks, the nanoparticles produced in this study show remarkable stability under ambient conditions, retaining their sp character for times in excess of six months. These findings pave the way for future applications, particularly as further diameter tuning may enable access to the quantum-dot regime.",
+      "authors": [
+        "Marco Agozzino",
+        "Eleonora Moroni",
+        "Yifan Zhang",
+        "Valeria Russo",
+        "Carlo Spartaco Casari"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-07T13:01:46+00:00",
+      "link": "https://arxiv.org/pdf/2605.06186v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "operando electrochemical reduction of carbon atomic wires",
+      "llm_evidence_cn": "碳原子线的原位电化学还原",
+      "llm_evidence": "碳原子线的原位电化学还原",
+      "canonical_evidence": "碳原子线的原位电化学还原",
+      "llm_tldr_en": "Reports on the electrochemical reduction of carbon atomic wires to form tunable amorphous nanoparticles.",
+      "llm_tldr_cn": "报道了碳原子线的电化学还原以形成可调控的非晶纳米颗粒。",
+      "llm_tldr": "报道了碳原子线的电化学还原以形成可调控的非晶纳米颗粒。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.07780v1",
+      "source": "arxiv",
+      "title": "Ferroelectric domains in methylammonium lead iodide perovskite thin-films",
+      "abstract": "We explore the ferroic properties of methylammonium lead iodide perovskite solar cells by Piezoresponse Force Microscopy (PFM). In vertical and horizontal PFM imaging, we find domains of alternating polarization with a width of 90 nm which we identify as polarized ferroelectric domains. High-resolution photo-conductive atomic force micrographs under illumination also show alternating charge carrier extraction patterns which we attribute to the local vertical polarization components within the ferroelectric domains. The correlation of the sample properties with Atomic Force and Kelvin Probe Force Micrographs evidence the piezo-electric nature of the domains.",
+      "authors": [
+        "Holger Röhm",
+        "Tobias Leonhard",
+        "Michael J. Hoffmann",
+        "Alexander Colsmann"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-08T14:18:53+00:00",
+      "link": "https://arxiv.org/pdf/2605.07780v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "charge carrier extraction patterns in perovskite thin-films",
+      "llm_evidence_cn": "钙钛矿薄膜中的载流子提取模式",
+      "llm_evidence": "钙钛矿薄膜中的载流子提取模式",
+      "canonical_evidence": "钙钛矿薄膜中的载流子提取模式",
+      "llm_tldr_en": "Investigates ferroelectric domains and carrier extraction in perovskite solar cells using PFM.",
+      "llm_tldr_cn": "使用PFM研究钙钛矿太阳能电池中的铁电畴和载流子提取。",
+      "llm_tldr": "使用PFM研究钙钛矿太阳能电池中的铁电畴和载流子提取。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.10403v1",
+      "source": "arxiv",
+      "title": "Pulse, polarization and topology shaping of polariton fuids",
+      "abstract": "Here we present different approaches to ultrafast pulse and polarization shaping, based on a ``quantum fluid'' platform of polaritons. Indeed we exploit the normal modes of two dimensional polariton fluids made of strong coupled quantum well excitons and microcavity photons, by rooting different polarization and topological states into their sub-picosecond Rabi oscillations. Coherent control of two resonant excitation pulses allows us to prepare the desired state of the polariton, taking benefit from its four-component features given by the combination of the two normal modes with the two degrees of polarization. An ultrafast imaging based on the digital off-axis holography technique is implemented to study the polariton complex wavefunction with time and space resolution. We show in order coherent control of the polariton state on the Bloch sphere, an ultrafast polarization sweeping of the Poincaré sphere, and the dynamical twist of full Poincaré states such as the skyrmion on the sphere itself. Finally, we realize a new kind of ultrafast swirling vortices by adding the angular momentum degree of freedom to the two-pulse scheme. These oscillating topology states are characterized by one or more inner phase singularities tubes which spirals around the axis of propagation. The mechanism is devised in the splitting of the vortex into the upper and lower polaritons, resulting in an oscillatory exchange of energy and angular momentum and in the emitted time and space structured photonic packets.",
+      "authors": [
+        "Lorenzo Dominici",
+        "David Colas",
+        "Stefano Donati",
+        "Galbadrakh Dagvadorj",
+        "Antonio Gianfrate",
+        "Carlos Sánchez Muñoz",
+        "Dario Ballarini",
+        "Milena De Giorgi",
+        "Giuseppe Gigli",
+        "Marzena H. Szymańska",
+        "Fabrice P. Laussy",
+        "Daniele Sanvitto"
+      ],
+      "primary_category": "cond-mat.other",
+      "categories": [
+        "cond-mat.other",
+        "cond-mat.quant-gas",
+        "physics.optics"
+      ],
+      "published": "2026-05-11T11:42:09+00:00",
+      "link": "https://arxiv.org/pdf/2605.10403v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "ultrafast imaging and time-resolved study of polariton fluids",
+      "llm_evidence_cn": "极化激元流体的超快成像和时间分辨研究",
+      "llm_evidence": "极化激元流体的超快成像和时间分辨研究",
+      "canonical_evidence": "极化激元流体的超快成像和时间分辨研究",
+      "llm_tldr_en": "Explores ultrafast pulse shaping and time-resolved imaging of polariton fluids using digital holography.",
+      "llm_tldr_cn": "利用数字全息技术探索极化激元流体的超快脉冲整形和时间分辨成像。",
+      "llm_tldr": "利用数字全息技术探索极化激元流体的超快脉冲整形和时间分辨成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+Purcell enhancement in layered InSe on the Mie-resonant silicon nitride waveguide
+A.I. Veretennikov1, E.A. Shepelev2, A.S. Shorokhov2, P.A.
+Alekseev1, I.A. Eliseyev1, A.A. Fedyanin2, and M.V. Rakhlin1∗
+1Ioffe Institute, 194021 St. Petersburg, Russia
+2Faculty of Physics, Lomonosov Moscow State University,
+119991 Moscow, Russia
+(Dated: May 12, 2026)
+Hybrid integration of layered van der Waals (vdW) semiconductors with dielectric resonant struc-
+tures provides an effective approach for controlling excitonic emission dynamics. Here, we demon-
+strate Purcell-enhanced spontaneous emission from a thin InSe flake integrated with a Mie-resonant
+Si3N4 waveguide. The structure is designed to spectrally overlap with the InSe photoluminescence
+band and enhance coupling of excitonic emission to the guided mode. The micro-photoluminescence
+measurements confirm enhanced waveguide transmission in close vicinity of the predefined optical
+resonance. Time-resolved photoluminescence shows a reduction of the excitonic decay time by up to
+a factor of three relative to planar InSe. The extracted Purcell factors are approximately 3 for out-
+of-plane excitons and 2.1 for in-plane excitons. These results demonstrate resonator-induced control
+of excitonic recombination in layered InSe and highlight vdW–dielectric interfaces as a platform for
+integrated excitonic and quantum photonic devices.
+I.
+INTRODUCTION
+Atomically thin van der Waals (vdW) semiconductors
+have emerged as a promising platform for next-generation
+photonic and optoelectronic devices owing to their unique
+electronic properties and mechanical flexibility [1, 2].
+However, their practical integration into on-chip photonic
+circuits remains hindered by inefficient coupling of lumi-
+nescence to guided photonic modes, which often arises
+from random excitonic dipole orientations and ultrafast
+radiative dynamics [3–5]. Among layered materials, III-
+VI metal chalcogenides such as InSe offer distinctive ad-
+vantages. They exhibit radiative lifetimes as long as 15 ns
+[6, 7] and predominantly possess an out-of-plane (OP) ex-
+citonic dipole moment orientation [8, 9]. These properties
+make them inherently suitable for efficient coupling to
+the fundamental modes of conventional dielectric waveg-
+uides [10, 11]. However, experimental implementations of
+2D vdW emitters integrated with conventional waveguide
+structures have so far demonstrated light-matter cou-
+pling efficiencies typically limited to the range of 5–15%
+[12, 13], while the operation speed remains limited by the
+relatively long radiative decay time [14, 15]. A promising
+route toward the simultaneous enhancement of coupling
+efficiency and operation rate in vdW-dielectric devices
+is the integration of low-loss resonant nanostructures in
+close proximity to the emitter [16, 17]. This approach en-
+ables the Purcell effect to be harnessed, offering not only
+enhanced spontaneous emission rates but also directional
+emission into desired optical channels. For operation in
+the near-infrared spectral range, compatible with mod-
+ern quantum information technologies, Si3N4 represents
+a particularly favorable waveguide material owing to its
+high transparency, low absorption losses, and mature fab-
+rication technology [5, 18, 19]. While recent studies on
+∗maximrakhlin@mail.ru
+resonant vdW-dielectric systems have demonstrated im-
+proved coupling efficiency [20], direct experimental obser-
+vation of Purcell-enhanced spontaneous recombination in
+such hybrid structures has remained elusive.
+FIG. 1. a) Schematic illustration of the optical coupling be-
+tween the resonant waveguide structure and the exciton emit-
+ter in the thin InSe film on top of it.
+b) Cross-section of
+the electric near-field distribution in the center of the studied
+structure at the resonant wavelength
+In this work, we experimentally demonstrate a reduc-
+tion of the photoluminescence (PL) lifetime in layered
+InSe enabled by efficient coupling of excitonic emission
+to a resonant mode of a dielectric photonic structure. To
+this end, a thin InSe flake was transferred onto a resonant
+Si3N4 waveguide incorporating Mie-type nanoparticles.
+The waveguide geometry was designed to enhance the
+coupling of excitonic emission from the InSe layer into the
+guided mode. Micro-photoluminescence (µ-PL) measure-
+ments reveal an increase in the collected emission inten-
+sity, attributed to improved coupling of the emitted light
+arXiv:2605.09645v1  [cond-mat.mes-hall]  10 May 2026
+
+
+2
+FIG. 2. Calculated spectra of the coupling coefficient (a) and
+Purcell factor (b) the electric OP dipole placed on top of
+the RW structure. All spectra are normalized on respective
+spectra of the CW structure
+into the on-chip waveguide and to Purcell enhancement
+associated with resonant local-field concentration. Time-
+resolved photoluminescence (TRPL) measurements fur-
+ther show that the PL decay time of the OP exciton
+emission is reduced by up to a factor of three compared
+with an InSe flake on a planar substrate.
+These find-
+ings establish hybrid vdW-dielectric resonant interfaces
+as a powerful platform for engineering radiative proper-
+ties in layered semiconductors, paving the way toward
+efficient quantum light sources and excitonic modulators
+with tunable emission dynamics for integrated photonics.
+II.
+NUMERICAL CALCULATIONS
+The structure under study is a silicon nitride reso-
+nant waveguide (RW) system shown in Figure 1. The
+RW structure consists of two distributed Bragg reflec-
+tors and a resonant cavity covered with a 12 nm thick
+InSe film.
+The cavity is implemented as a chain of
+resonant nanoparticles whose thickness decreases from
+the edges toward the center of the chainn following a
+parabolic profile. Such a spatially varying geometry in-
+duces a parabolic distribution of the effective refractive
+index within the structure, thereby enabling efficient op-
+tical field localization inside the resonator [21].
+To identify the optimal geometrical parameters of
+the resonant waveguide, numerical simulations were car-
+ried out using the finite-difference time-domain (FDTD)
+method. Based on the simulation results, the following
+waveguide parameters were adopted: waveguide width
+W = 0.85 µm, height H = 0.4 µm, nanoparticle period
+Λ = 0.3 µm, cavity length Lcav = 6 µm, and Bragg re-
+flector length Lref = 3 µm. The thickness of the nanopar-
+FIG. 3. a) Scanning electron microscope (SEM) image of the
+RW. b) Scaled SEM image of the resonant section of the RW
+c) Optical image of the transferred flake on the RW
+ticles within the cavity was varied from l = 150 nm to
+l = 170 nm.
+For this configuration, the Purcell factor and the cou-
+pling to the guided mode were calculated (Figure 2). Cal-
+culated values are expressed relative to those of a conven-
+tional waveguide (CW) with identical geometrical prop-
+erties. For the calculation, an electric dipole source with
+an out-of-plane orientation was placed on top of the film.
+Calculations were performed for various positions of the
+dipole source along the resonant cavity, after which the
+obtained results were averaged. The results in Figure 2
+confirm the presence of a high-Q resonance within the
+given optical range (927 nm). From the simulation the
+optical coupling efficiency of the resonant waveguide at
+the target wavelength was found to be 7 times higher
+than that of the conventional strip waveguide, and the
+Purcell factor to be 2.5 times higher.
+III.
+SAMPLES AND FABRICATION
+A.
+Waveguide structures etching
+Experimental samples based on a silicon nitride waveg-
+uide system were fabricated using the following methods:
+1. A silicon wafer was placed in a furnace at high tem-
+
+
+3
+perature in an oxygen atmosphere, resulting in the
+formation of a layer of silicon dioxide (SiO2) with
+a thickness of 2 µm on the silicon surface .
+2. A film of 0.4 µm thick silicon nitride (Si3N4)
+was deposited onto the oxide layer by low-pressure
+chemical vapor deposition (LPCVD).
+3. The mask with the desired geometry was patterned
+on the sample by electron-beam lithography.
+4. Reactive ion etching was performed through the ob-
+tained mask. During this process, the material was
+removed from the areas not protected by the mask
+down to the SiO2 layer.
+After etching was com-
+pleted, the remaining mask residues were removed
+by selective chemical etching.
+The SEM images of the etched resonant structure are
+presented in Figure 3. The geometrical properties of the
+RW closely match those obtained from the numerical sim-
+ulations. In addition to the resonant waveguides, a con-
+ventional strip waveguide was fabricated with the same
+height and width as the resonant one, serving as a refer-
+ence.
+B.
+InSe flakes preparation
+Two InSe flakes with comparable thicknesses of ∼13
+nm (16 monolayers) were prepared using a dry-transfer
+technique.
+The selected thickness simultaneously pro-
+vides an intense PL signal [7] and efficient coupling of
+OP exciton emission with the resonant mode of the RW
+[20]. The flakes were then placed sequentially at the cen-
+ter of the RW and CW structures. The optical image of
+the RW structure with the transferred flake is shown in
+Fig. 3c. Atomic force microscopy topography confirms
+the surface uniformity of the flakes over the entire area,
+and additional µ-Raman mapping across the full active
+region shows no qualitative or quantitative differences
+relative to planar InSe within the experimental uncer-
+tainty.
+IV.
+OPTICAL SPECTROSCOPY
+MEASUREMENTS
+For further characterization, optical spectroscopy was
+performed on the fabricated waveguide systems. Figure
+4b illustrates the experimental configuration.
+A TM-
+polarized laser beam was focused onto the input diffrac-
+tion grating, and the radiation transmitted through the
+resonant structure was collected from the output grating
+using a high-NA objective. To obtain the relative trans-
+mittance, the power measured from the RW structure
+was normalized to the transmission spectrum of the ref-
+erence CW. The experimentally obtained relative trans-
+mittance spectrum is shown by the blue curve in Fig. 4a,
+FIG. 4. Relative transmission spectra of the RW structure.
+The sketch above the graph show the experimental configu-
+ration for optical spectroscopy measurements.
+while the red curve represents the relative transmittance
+calculated from FDTD simulations. In the simulation, a
+Gaussian beam source, with the polarization correspond-
+ing to the TM-mode of the waveguide, was placed above
+the input grating, and a power monitor was positioned
+at the output grating to record the transmitted radia-
+tion. The transmission peak at approximately 925 nm
+corresponds to the wavelength at which the optical cou-
+pling efficiency between emitters in the InSe film and
+the resonant nanoparticles is maximized. The numeri-
+cal and experimental transmittance spectra show good
+agreement. The minor discrepancies observed between
+them can be attributed to fabrication-induced variations
+in the geometrical parameters of the resonant structures.
+V.
+MICRO-PHOTOLUMINESCENCE
+MEASUREMENTS
+Figure 5a presents the µ-PL spectra measured at dif-
+ferent positions on the sample in the back-scattering con-
+figuration, as illustrated by the left and central sketches
+at the top of the figure. The integrated PL intensity col-
+lected from the center of the CW region (red curve) is
+approximately 30% lower than that measured from an
+InSe flake on a planar substrate (blue curve). This de-
+crease can be attributed to efficient coupling of excitonic
+emission into the guided mode of the CW, which was pre-
+viously estimated to reach approximately 20% in similar
+structures [20]. In this geometry, part of the emitted ra-
+diation is redirected into the waveguide and therefore and
+is therefore not collected by the objective. In contrast,
+
+
+4
+FIG. 5. Results of µ-PL measurements. The sketches above the graphs show implemented schemes. a) µ-PL spectra of InSe
+flake lying on the planar substrate (blue curve), the CW (red curve) and the RW (green curve) measured in the back-scattering
+scheme. b) µ-PL spectra of luminescence signal excited in the center of the waveguide and collected from the grating for the
+CW (red curve) and the RW (green curve) structures.
+the PL signal from the active region of the RW structure
+(green curve) is substantially enhanced relative to the
+planar reference. This enhancement is attributed to res-
+onant electromagnetic-field concentration and redistribu-
+tion in the vicinity of the InSe flake induced by the Mie-
+type nanoparticles; similar effects have been reported for
+2D semiconductors integrated with all-dielectric resonant
+nanostructures [22, 23].
+The spectral modulation ob-
+served for both the RW and CW structures compared
+with planar InSe is attributed to imperfect spectral over-
+lap between the InSe emission band and the wavelength-
+dependent coupling resonances of the waveguides.
+To assess the impact of the resonant nanoparticles on
+the waveguiding performance of the structure, we em-
+ployed a modified optical configuration. In this configu-
+ration, the PL was excited at the center of the waveguide,
+while the signal was collected exclusively from the diffrac-
+tion grating (see the right-hand sketch in Fig. 5). This ar-
+rangement selectively probes the luminescence coupled to
+the guided mode. The corresponding spectra are shown
+in Fig. 5b. For the CW device, the spectrum exhibits
+an approximately Gaussian envelope determined by the
+broadband waveguide transmission, superimposed with a
+periodic modulation arising from Fabry-Perot-like inter-
+ference in the waveguide due to internal light reflection
+from the gratings. In contrast, the RW spectrum displays
+a stronger and spectrally narrower feature associated
+with the predefined resonance of the structure.
+Over-
+all, the observed intense narrow peak evidences improved
+spectral selectivity and increased strength of waveguide-
+mode coupling enabled by the resonant grating.
+VI.
+MEASUREMENTS OF LUMINESCENCE
+KINETICS
+The pronounced optical resonance supported by the
+RW structure is expected to affect not only the coupling
+efficiency but also the recombination dynamics of exci-
+tons whose emission is coupled to the resonant mode.
+To clarify the role of the RW resonances in the recom-
+bination process, we performed time-resolved photolumi-
+nescence (TRPL) measurements and extracted the cor-
+responding PL decay times. In all TRPL experiments,
+background signals not associated with InSe emission
+were suppressed by selecting the spectral range of 920–
+960 nm.
+Figure 6a shows normalized TRPL curves measured
+for an InSe flake on a planar substrate and for lumines-
+cence coupled from the flake into the RW and collected
+from the output grating. The decay curve of the guided
+emission (red) exhibits a markedly faster PL decay than
+that of the planar reference (blue). The same trend is
+observed for all probed positions on the planar region
+
+
+5
+FIG. 6. a) PL decay curves in logarithmic scale. The blue
+curve corresponds to PL of the InSe flake on the planar sub-
+strate, the green curve shows the PL kinetic of InSe measured
+on the center of the RW in the back-scattering configuration,
+the red curve shows the PL kinetic of InSe measured from the
+grating (solid lines represent exponential fitting). b) Recom-
+bination lifetimes, extracted from TRPL data in top Figure,
+in logarithmic scale. Red and blue bars correspond to fast
+and medium components, respectively.
+and across the resonant area of the waveguide, which
+allows us to attribute the lifetime reduction to Purcell-
+enhanced radiative recombination induced by the opti-
+cal resonator.
+Within this framework, the recombina-
+tion rate is enhanced for the emission channel coupled to
+the resonant mode, whereas emission into weakly cou-
+pled channels may exhibit an effectively reduced rate
+due to the redistribution of the local density of opti-
+cal states [24, 25]. This interpretation is supported by
+the TRPL signal measured from the RW region in the
+back-scattering geometry (green curve in Fig. 6a), which
+shows a slower decay than the planar reference.
+The
+same mechanism also explains the enhanced guided PL
+intensity observed for the RW structure, as discussed in
+the previous section. To verify that the observed lifetime
+modification originates from the resonant elements of the
+RW, we performed identical TRPL measurements on the
+CW structure using another InSe flake of similar thick-
+ness. No statistically significant changes in the PL decay
+times were observed for the CW structure, confirming the
+essential role of the resonator in the lifetime reduction.
+Although the decay curves clearly indicate a reduc-
+tion of the PL lifetime, a quantitative estimation of the
+Purcell factor requires identification of the independent
+recombination channels involved in the coupling pro-
+cess.
+In a recent study [7], the PL decay of InSe was
+decomposed into ”fast”, ”middle”, and ”slow” compo-
+nents associated with direct interband recombination,
+indirect phonon-assisted interband recombination, and
+defect-related recombination, respectively. Following this
+approach, we fitted all decay curves with a sum of three
+exponential functions, as described in Ref. [7]; the result-
+ing fits are shown as solid lines in Fig. 6a. For all TRPL
+curves, the lifetime of the ”slow” component exceeded
+100 ns, and this contribution was therefore excluded from
+the subsequent analysis. The extracted ”fast” and ”mid-
+dle” lifetimes are summarized in Fig. 6b. The ”fast” com-
+ponent exhibits a substantially stronger reduction than
+the ”middle” component, which we attribute to differ-
+ent coupling efficiencies of the corresponding excitonic
+recombination channels to the resonant mode.
+In line with Ref. [7], the ”fast” and ”middle” compo-
+nents are predominantly associated with recombination
+of OP and IP excitons, respectively. Band-structure cal-
+culations for layered InSe [9] indicate that the oscillator
+strength of OP excitons is significantly larger than that of
+IP excitons, implying intrinsically shorter radiative life-
+times for OP exciton recombination. Moreover, in the
+resonant waveguide geometry, OP excitons are expected
+to couple more efficiently to the magnetic-dipole (MD)
+mode, leading to a stronger Purcell enhancement for OP
+emission than for IP emission. From the measured life-
+time reductions, we estimate Purcell factors of approxi-
+mately 3 and 2.1 for OP and IP exciton recombination,
+respectively.
+VII.
+CONCLUSION
+We
+have
+experimentally
+demonstrated
+Purcell-
+enhanced
+spontaneous
+recombination
+in
+a
+hybrid
+vdW-dielectric structure consisting of a thin InSe flake
+integrated with a resonant Si3N4 waveguide incorporat-
+ing a Mie-type nanoparticle array. The optical resonance
+of the waveguide was spectrally matched to the InSe
+emission band, enabling enhanced coupling of excitonic
+emission to the guided mode. Using µ-PL spectroscopy,
+we
+observed
+an
+increase
+in
+the
+waveguide-coupled
+emission intensity in close vicinity to the predefined
+resonance for the resonant waveguide compared with a
+conventional strip waveguide, predicted by numerical
+simulations. Time-resolved photoluminescence measure-
+ments revealed a reduction of the PL decay time by up
+
+
+6
+to a factor of three relative to a planar InSe reference.
+By decomposing the decay kinetics into fast and middle
+components associated predominantly with out-of-plane
+and in-plane excitons, respectively, we estimated Purcell
+factors of approximately 3 for out-of-plane excitons and
+2.1 for in-plane excitons.
+Our results provide direct experimental evidence of
+Purcell-enhanced spontaneous recombination in layered
+InSe coupled to a dielectric resonant waveguide. These
+findings establish hybrid vdW-dielectric resonant inter-
+faces as a versatile platform for engineering radiative de-
+cay rates in layered semiconductors. This approach opens
+a route toward high-speed on-chip quantum light sources,
+excitonic modulators, and efficient integrated emitters for
+nanophotonic and quantum photonic applications.
+ACKNOWLEDGMENTS
+The work of M.V.R. was supported by a grant from
+the Russian Science Foundation (no.
+24-72-00148,
+https://rscf.ru/project/24-72-00148/).
+[1] N. P. Wilson, W. Yao, J. Shan, and X. Xu, Excitons and
+emergent quantum phenomena in stacked 2D semicon-
+ductors, Nature 599, 383 (2021).
+[2] T. Mueller and E. Malic, Exciton physics and device ap-
+plication of two-dimensional transition metal dichalco-
+genide semiconductors, npj 2D Materials and Applica-
+tions 2, 29 (2018).
+[3] A. G. Lamprianidis, X. Zambrana-Puyalto, C. Rock-
+stuhl, and I. Fernandez-Corbaton, Directional coupling
+of emitters into waveguides: A symmetry perspective,
+Laser & Photonics Reviews 16, 2000516 (2022).
+[4] N. Verhart,
+G. Lepert,
+A. Billing,
+J. Hwang, and
+E. Hinds, Single dipole evanescently coupled to a mul-
+timode waveguide, Optics express 22, 19633 (2014).
+[5] F.
+Peyskens,
+C.
+Chakraborty,
+M.
+Muneeb,
+D. Van Thourhout, and D. Englund, Integration of
+single photon emitters in 2d layered materials with a
+silicon nitride photonic chip, Nature communications
+10, 4435 (2019).
+[6] T. Venanzi, H. Arora, S. Winnerl, A. Pashkin, P. Chava,
+A. Patan`e, Z. D. Kovalyuk, Z. R. Kudrynskyi, K. Watan-
+abe, T. Taniguchi, A. Erbe, M. Helm, and H. Schneider,
+Photoluminescence dynamics in few-layer InSe, Physical
+Review
+Materials
+10.1103/PhysRevMaterials.4.044001
+(2020).
+[7] B. R. Borodin, I. A. Eliseyev, A. I. Galimov, L. V.
+Kotova, M. V. Durnev, T. V. Shubina, M. A. Yagov-
+kina, and M. V. Rakhlin, Indirect-to-direct band-gap
+transition in few-layer β -InSe as probed by photolu-
+minescence spectroscopy, Physical Review Materials 8,
+10.1103/PhysRevMaterials.8.014001 (2024).
+[8] D. V. Rybkovskiy, A. V. Osadchy, and E. D. Obraztsova,
+Transition from parabolic to ring-shaped valence band
+maximum in few-layer GaS, GaSe, and InSe, Physical
+Review B 90, 10.1103/physrevb.90.235302 (2014).
+[9] M. Brotons-Gisbert, R. Proux, R. Picard, D. Andres-
+Penares, A. Branny, A. Molina-S´anchez, J. F. S´anchez-
+Royo, and B. D. Gerardot, Out-of-plane orientation of
+luminescent excitons in two-dimensional indium selenide,
+Nature Communications 10, 1 (2019).
+[10] Y. C. Jun, R. M. Briggs, H. A. Atwater, and M. L.
+Brongersma, Broadband enhancement of light emission
+in silicon slot waveguides, Optics Express 17, 7479
+(2009).
+[11] L. Liebermeister, F. Petersen, A. v. M¨unchow, D. Bur-
+chardt, J. Hermelbracht, T. Tashima, A. W. Schell,
+O. Benson, T. Meinhardt, A. Krueger, et al., Tapered
+fiber coupling of single photons emitted by a determinis-
+tically positioned single nitrogen vacancy center, Applied
+Physics Letters 104 (2014).
+[12] P. Tonndorf, O. Del Pozo-Zamudio, N. Gruhler, J. Kern,
+R. Schmidt, A. I. Dmitriev, A. P. Bakhtinov, A. I. Tar-
+takovskii, W. Pernice, S. Michaelis De Vasconcellos, and
+R. Bratschitsch, On-Chip Waveguide Coupling of a Lay-
+ered Semiconductor Single-Photon Source, Nano Letters
+17, 5446 (2017).
+[13] C. Errando-Herranz, E. Sch¨oll, R. Picard, M. Laini,
+S. Gyger, A. W. Elshaari, A. Branny, U. Wennberg,
+S. Barbat, T. Renaud, M. Sartison, M. Brotons-Gisbert,
+C. Bonato, B. D. Gerardot, V. Zwiller, and K. D.
+J¨ons, Resonance Fluorescence from Waveguide-Coupled,
+Strain-Localized, Two-Dimensional Quantum Emitters,
+ACS Photonics 8, 1069 (2021), 2002.07657.
+[14] R. Wang, X. Jiang, S. Gao, J. Zhao, F. Zhang, W. Huang,
+T. Fan, W. Liang, Z. Li, H. Huang, Z. Guo, H. Wang,
+Y. Zhang, X. Zhang, Z. Luo, and H. Zhang, Unveiling
+the Stimulated Robust Carrier Lifetime of Surface-Bound
+Excitons and Their Photoresponse in InSe, Advanced
+Materials Interfaces 6, 1 (2019).
+[15] S. R. Tamalampudi, Y.-Y. Lu, R. K. U, R. Sankar, C.-
+D. Liao, K. M. B, C.-H. Cheng, F. C. Chou, and Y.-T.
+Chen, High performance and bendable few-layered inse
+photodetectors with broad spectral response, Nano let-
+ters 14, 2800 (2014).
+[16] A. E. Krasnok, A. E. Miroshnichenko, P. A. Belov, and
+Y. S. Kivshar, All-dielectric optical nanoantennas, Optics
+Express 20, 20599 (2012).
+[17] D. V. Obydennov, D. A. Shilkin, D. N. Gulkin, E. V.
+Lyubin, D. M. Zhigunov, V. O. Bessonov, and A. A.
+Fedyanin, Asymmetric silicon dimers made by single-shot
+laser-induced transfer demultiplex light of different wave-
+lengths, Advanced Optical Materials 12, 2302276 (2024).
+[18] J. F. Bauters, M. J. R. Heck, D. John, D. Dai, M.-C.
+Tien, J. S. Barton, A. Leinse, R. G. Heideman, D. J. Blu-
+menthal, and J. E. Bowers, Ultra-low-loss high-aspect-
+ratio Si3N4 waveguides, Optics Express 19, 3163 (2011).
+[19] D.
+J.
+Blumenthal,
+R.
+Heideman,
+D.
+Geuzebroek,
+A. Leinse, and C. Roeloffzen, Silicon nitride in silicon
+photonics, Proceedings of the IEEE 106, 2209 (2018).
+[20] M. Rakhlin, T. V. Antipov, A. D. Gartman, D. N.
+Gulkin, L. Kotova, A. Galimov, B. Borodin, I. Eliseyev,
+A. S. Shorokhov, and A. A. Fedyanin, Mie-resonant
+
+
+7
+silicon waveguide for efficient coupling with excitonic
+emitters in InSe, Journal of Materials Chemistry C
+10.1039/d5tc03144c (2025).
+[21] B.-H. Ahn, J.-H. Kang, M.-K. Kim, J.-H. Song, B. Min,
+K.-S. Kim, and Y.-H. Lee, One-dimensional parabolic-
+beam photonic crystal laser, Optics Express 18, 5654
+(2010).
+[22] T. Bucher, A. Vaskin, R. Mupparapu, F. J. F. L¨ochner,
+A. George, K. E. Chong, S. Fasold, C. Neumann, D.-
+Y. Choi, F. Eilenberger, F. Setzpfandt, Y. S. Kivshar,
+T. Pertsch, A. Turchanin, and I. Staude, Tailoring pho-
+toluminescence from MoS2 monolayers by Mie-resonant
+metasurfaces, ACS Photonics 6, 1002 (2019).
+[23] C. Ma, X. Li, P. Huang, X. Liu, J. Yan, Z. Zheng, J. Yao,
+C. Du, Y. Liu, X. Li, et al., Enhanced optical absorption
+and emission from monolayer ws2 integrated onto a tio2
+nanohole array, Advanced Optical Materials 13, 2402015
+(2025).
+[24] V. Bordo, Purcell factor for a cylindrical nanocavity: ab
+initio analytical approach, Journal of the Optical Society
+of America B 29, 1799 (2012).
+[25] P. Androvitsaneas, A. B. Young, C. Schneider, S. Maier,
+M. Kamp, S. H¨ofling, S. Knauer, E. Harbord, C. Y.
+Hu, J. G. Rarity, and R. Oulton, Charged quantum dot
+micropillar system for deterministic light-matter interac-
+tions, Phys. Rev. B 93, 241409 (2016).
