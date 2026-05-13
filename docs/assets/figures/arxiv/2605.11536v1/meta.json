@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-001.webp",
+      "caption": "Fig. 13. We implement ellipsoidal path connection [Pediredla et al. 2019b], adapted to a GPU environment, and use it as an initial candidate generation. Compared to a direct connection, an ellipsoidal path connection produces better initial samples at the cost of increased computation time. Our method improves the result regardless of the initial candidate generation method. The light source is collocated with the camera. For the Veach-Ajar scene, a collimated laser is used, while a point light is used for the others. Image size is 960 × 540, and max bounce is set to 6.",
+      "page": 11,
+      "index": 1,
+      "width": 1055,
+      "height": 516
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-002.webp",
+      "caption": "Fig. 19. Doppler frequency shift rendering under different frequencies. The large box is receding from the camera, resulting in a negative frequency shift, while the small box is approaching the camera, producing a positive frequency shift. Overall, our proposed algorithm also performs well under path-velocity constraints.",
+      "page": 15,
+      "index": 2,
+      "width": 502,
+      "height": 331
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-003.webp",
+      "caption": "Fig. 20. Simulation of NLOS imaging with temporal focusing [Pediredla et al. 2019a] using our rendering pipeline. (A) Scene configuration for detecting a hidden object behind a wall. Both the laser and the sensor scan ellipsoidal trajectories on the visible wall to determine whether a target voxel is occupied. (B) Example rendered image, and (C) reconstructed voxel grids (the version normalized by the maximum value is shown in the bottomleft), obtained using different methods under a time budget of 4 ms per image, demonstrating the advantage of our proposed method.",
+      "page": 15,
+      "index": 3,
+      "width": 450,
+      "height": 663
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-004.webp",
+      "caption": "Fig. 6. Two types of path-length-aware shift mappings are used for different purposes. (A) Path-length translation mapping is used for spatio-temporal path reuse. (B) Path-length shrinkmapping is used for efficient initial sample generation: samples are drawn from a wider time gate and then shrunk back to the original gate.",
+      "page": 7,
+      "index": 4,
+      "width": 478,
+      "height": 311
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-005.webp",
+      "caption": "Fig. 12. Comparison of gauge directions using fixed horizontal and vertical axes, and the proposed average-gradient direction. Our method consistently produces the best results, largely due to the reduced displacement.",
+      "page": 10,
+      "index": 5,
+      "width": 444,
+      "height": 470
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-006.webp",
+      "caption": "Fig. 18. Comparison of our method with progressive KDE [Jarabo et al. 2014] and the linear triangle approximation [Iseringhausen and Hullin 2020], both of which are biased. Progressive KDE produces less noisy results but exhibits noticeable temporal blurring. The triangle approximation works only for simple scenes and does not scale to complex geometry. The transient profile at a specific point is shown in (A), and the full image is shown in (B).",
+      "page": 14,
+      "index": 6,
+      "width": 420,
+      "height": 736
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-007.webp",
+      "caption": "Fig. 17. Comparison of path reuse in transient histogram rendering with different 𝐵s. We could find that the cost-to-performance efficiency of path reuse diminishes as 𝐵 becomes larger.",
+      "page": 14,
+      "index": 7,
+      "width": 472,
+      "height": 421
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-008.webp",
+      "caption": "Fig. 14. Results of path-length shrink mapping using a rough time gate. (A) When the rough time gate is too small, little benefit is gained from widening the gate, and variance dominates, whereas excessively large rough time gates introduce bias. (B) Visually acceptable results are typically obtained when the rough time gate is approximately 10–20 times wider than the fine time gate. (C) Simply increasing the time-gate width leads to over-blurring of scene details.",
+      "page": 12,
+      "index": 8,
+      "width": 476,
+      "height": 750
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-009.webp",
+      "caption": "Fig. 10. Comparison of the Cornell-Box scene with various objects and materials under an equal time budget. All images are rendered at a resolution of 1024 × 1024, with the maximum path depth set to 6.",
+      "page": 9,
+      "index": 9,
+      "width": 480,
+      "height": 526
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11536v1/fig-010.webp",
+      "caption": "Fig. 21. We simulate NLOS navigation [Young et al. 2025] using our rendering pipeline. (A) Overall scene configuration, where a camera with a collocated light source moves forward and captures transient histograms. (B) Rendered transient image used for inference. (C) Inferred hidden object position. When the camera reaches 𝑧 = 0.5, path planning is performed based on the averaged object inference. Compared to path tracing and naive reuse, which result in collisions with the true obstacle, our method achieves more accurate object localization and consequently more robust path planning.",
+      "page": 16,
+      "index": 10,
+      "width": 498,
+      "height": 327
+    }
+  ]
+}

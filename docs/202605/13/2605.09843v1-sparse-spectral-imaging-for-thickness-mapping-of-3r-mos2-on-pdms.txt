@@ -1,0 +1,745 @@
+Title: Sparse Spectral Imaging for Thickness Mapping of 3R-MoS_2 on PDMS
+
+URL Source: https://arxiv.org/pdf/2605.09843v1
+
+Published Time: Tue, 12 May 2026 03:09:33 GMT
+
+Number of Pages: 25
+
+Markdown Content:
+# Sparse Spectral Imaging for Thickness Mapping of 3R-MoS 2 on PDMS 
+
+BENJAMIN LAUDERT ,1,* FATEMEH ABTAHI ,1 SARKA VAVRECKOVA ,1,2 
+
+SEBASTIAN W. S CHMITT ,2 AND FALK EILENBERGER 1,2,3 
+
+> 1
+
+Institute of Applied Physics, Abbe Center of Photonics, Friedrich Schiller University Jena, Albert-Einstein-Str. 15, 07745 Jena, Germany 
+
+> 2
+
+Fraunhofer-Institute for Applied Optics and Precision Engineering IOF, Albert-Einstein-Str. 7, 07745 Jena, Germany 
+
+> 3
+
+Max Planck School of Photonics, Albert-Einstein-Str. 15, 07745 Jena, Germany 
+
+> *benjamin.laudert@uni-jena.de
+
+Abstract: We present a non-destructive, spatially resolved thickness characterization method for rhombohedral (3R) molybdenum disulfide (MoS 2) on polydimethylsiloxane (PDMS) substrates. Unlike broadband spectroscopic approaches, the proposed method reduces the measurement to a small number of discrete intensity images, enabling direct thickness mapping with a conventional microscope architecture and commercially available bandpass filters. Our approach combines a systematic framework for selecting optimal discrete wavelength samples of the material’s reflectance with a robust thickness retrieval algorithm based on a multivariate Gaussian probability model. By sampling the reflectance with just five strategically chosen near-infrared bandpass filters, we demonstrate thickness characterization up to 691 nm with a mean 95% confidence-interval width of 8.3 nm . The method is adaptable to other van der Waals materials and conventional optical thin-film systems. It therefore provides a foundation for scalable, real-time thickness characterization in, e.g., dry-transfer fabrication workflows, where thickness screening remains a critical bottleneck for the production of van der Waals heterostructure devices. 
+
+## 1 Introduction 
+
+In recent years, there has been a growing interest in utilizing van der Waals materials in the optical thin-film regime for a multitude of photonic applications spanning the linear [1–4], nonlinear [5–16], and quantum [17–23] regimes. One of the key parameters determining the optical response of such systems is the material thickness. However, deterministic growth of high-quality crystals with bottom-up techniques such as chemical vapor deposition remains challenging and requires multi-step processes [24], beyond the capabilities of most research groups. Thus, mechanical exfoliation from a bulk crystal with subsequent transfer in a soft-polymer-based stamping process remains one of the most common and reliable techniques for obtaining high-quality single-crystal thin films. However, as this is, fundamentally, a probabilistic process, obtaining the desired material thickness may require many attempts and screening of exfoliated flakes with respect to thickness is essential. As such, it is highly inconvenient that conventional thickness characterization techniques, such as atomic force microscopy (AFM), surface profilometry, or vertical scanning interferometry (VSI), are perturbed by the soft, uneven surface of the transfer substrate to which the material is attached, fundamentally limiting their accuracy (see, for example, Supplementary Figure S1). One is therefore forced to initially transfer vdW materials onto flat substrates for accurate thickness determination. This is especially problematic when a subsequent pick-up and transfer step is required (e.g. for integration in nanophotonic devices or heterostructures), which may lead to damage or destruction of the material. A direct characterization of vdW materials on polymers is 1
+
+> arXiv:2605.09843v1 [physics.optics] 11 May 2026
+
+therefore highly desirable. Characterization techniques based on white light [25] or photoluminescence [26] microscopy have proven effective for few- and single-layer crystals. However, they are fundamentally limited in the maximum thickness that can be determined unambiguously. This limitation is especially severe for commonly used transition metal dichalcogenides (TMDs), such as molybdenum disulfide/diselenide (MoS 2/MoSe 2) and tungsten disulfide/diselenide (WS 2/WSe 2). These materials rapidly become optically opaque in the visible range with increasing thickness, producing responses that are difficult to distinguish from their bulk forms. Recently, near-infrared extended reflection spectroscopy has emerged as a method for thickness characterization of vdW materials on PDMS substrates [27]. The authors demonstrated that the thickness of rhombohedral MoS 2 (3R-MoS 2) can be determined with nm -scale resolution. However, their approach relies on recording finely resolved broadband spectra, followed by least-squares optimization for film thickness retrieval. This approach is therefore unsuitable for the creation of complete thickness maps and requires a spectrometer as an additional measurement device. To overcome these limitations, we introduce a sparse wavelength sampling technique that exploits the pronounced thickness-dependent reflectance of high-index thin films. The method enables rapid, spatially resolved thickness characterization directly on PDMS substrates using only a microscope and a small set of spectral filters. We demonstrate the approach using 3R-MoS 2
+
+as a case study. This material has emerged as a promising platform for nonlinear and quantum photonic applications because of its commercial availability, high refractive index, and substantial second-order nonlinear optical response [5, 8]. We first present a procedure for selecting suitable sets of bandpass filters. This procedure is based on a distinguishability metric defined over the target thickness interval and derived from the material’s reflectance response. We then present reflectance measurements of mechanically exfoliated 3R-MoS 2 flakes on PDMS substrates. These measurements are correlated with reference thickness values obtained by vertical scanning interferometry after transfer. This correlation allows us to refine the initially calculated relationship between thickness and reflectance. It also provides the residual statistics used to define a multivariate Gaussian model for the thickness retrieval algorithm. Finally, we investigate the efficacy of the presented method for other vdW and conventional thin-film materials, covering a broad range of dielectric functions. 
+
+## 2 Method and Results 
+
+2.1 Bandpass Filter Set Selection 
+
+To identify a suitable combination of bandpass filters, we first calculate the expected reflectance 
+
+𝑅 of a 3R-MoS 2 thin film on a PDMS substrate. The reflectance is calculated as a function of thickness 𝑡 and wavelength 𝜆 using the optical transfer matrix method described in Section 4.5. The calculation assumes normally incident light, and is based purely on the in-plane refractive index of 3R-MoS 2 from Ref. [8] and the isotropic refractive index of PDMS from Ref. [28]. The result is shown in Figure 1(a) for our thickness range of interest (0 nm ≤ 𝑡 ≤ 1000 nm). In Figure 1(a), we can clearly see how, beyond the cutoff of absorption at 𝜆 ≈ 700 nm , 𝑅 
+
+oscillates with increasing 𝑡 at any given value of 𝜆 , which is the fundamental effect underpinning the thickness retrieval algorithm, which will be presented in Section 2.4. To enable unambiguous thickness determination beyond half a period of the reflectance oscillations, sampling at multiple wavelengths is required. A spatially resolved implementation can be achieved using various multispectral or hyperspectral imaging techniques. These techniques involve different trade-offs between measurement time, spatial resolution, spectral resolution, spectral bandwidth, and computational complexity [29–31]. In this work, we use a simple spectral 2500 750 1000 1250 1500 Wavelength [nm]                         
+
+> 0200 400 600 800 Thickness  t [nm]
+> 500 750 1000 1250 1500 BPF Center Wavelength c[nm]
+> 0200 400 600 800 Thickness  t [nm]
+> 0.1 0.2 0.3 0.4 0.5 0.6 0.7 Reflectance
+> 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 Detected Intensity  IDet  [arb. u.]
+> 0.03 0.04 0.05 0.06 0.07 0.08 0.09 Minimum Distinguishablity Dmin [arb. u.] 050 100 150 200 250 300 350 400 Count
+> Full Optimization c= 1650 nm Fixed Lognormal Fits
+> 0.07 0.08 0.09 010 20
+> Mean =0.049 Mean =0.053
+> 0200 400 600 800 Thickness t1[nm] 0200 400 600 800 Thickness  t2 [nm]
+> 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 Distinguishability  D(t 1 , t2 ) [arb. u.]
+
+(a) (b) (d) (c) 
+
+> Best
+> Dmin
+
+Figure 1: Optical modeling and bandpass filter set optimization. (a) Calculated reflectance 𝑅 
+
+for a 3R-MoS 2 thin film on PDMS of thickness 𝑡 at wavelength 𝜆 . (b) Calculated thickness depen-dent intensity 𝐼 Det for imaging 𝑅 through each considered bandpass filter. (c) Distinguishability matrix for the optimal bandpass filter set Λ = {920 nm , 1050 nm , 1350 nm , 1450 nm , 1650 nm }.
+
+(d) Histograms of minimum distinguishability values 𝐷 min resulting from the simulated annealing optimization processes and fitted lognormal distribution curves. filtering approach based on commercially available bandpass filters [32]. This enables robust and rapid image acquisition without intrinsic loss of resolution and can, in principle, be performed in a fully parallel fashion, if sufficiently few wavelength samples are required. We next calculate the total detected intensity for each bandpass filter. For a 3R-MoS 2 thin film of thickness 𝑡 , this intensity is obtained by integrating the product of the reflection spectrum 
+
+𝑅 (𝜆, 𝑡 ) and the filter transmission spectrum 𝑇 𝜆 c (𝜆 ) over wavelength: 
+
+𝐼 𝜆 c
+
+Det (𝑡 ) =
+
+∫
+
+𝑇 𝜆 c (𝜆 )𝑅 (𝜆, 𝑡 )d𝜆 (1) The resulting discretized spectral response is displayed in Figure 1(b). Note that the continuous spectral response is approximated reasonably well, due to the narrow ≈ 10 nm filter transmission window and the large total number of considered filters 𝑛 = 100. To serve as the foundation for our bandpass filter selection, we then define the measure of distinguishability 𝐷 based on any set of 𝑘 bandpass filters Λ = 𝜆 c1 , ..., 𝜆 c𝑘 , for any two given thickness values 𝑡 1 and 𝑡 2 which are to be discerned based on a measurement of 𝐼 Det :
+
+𝐷 (𝑡 1, 𝑡 2, Λ) = ∑︁ 
+
+𝜆 c ∈Λ
+
+
+
+𝐼 𝜆 c
+
+Det (𝑡 1) − 𝐼 𝜆 c
+
+Det (𝑡 2)
+
+2
+
+! 12
+
+, (2) 3which can be interpreted as the Euclidean distance between two points in a 𝑘 -dimensional space, both of which are constrained to the same trajectory given by the 𝜆 c components of 𝐼 𝜆 c 
+
+> Det
+
+(𝑡 ).Note that for 𝑡 1 = 𝑡 2, the distinguishability becomes zero, while for unequal values 𝐷 is likely to increase with rising dimensionality 𝑘 . In Figure 1(c), we have displayed 𝐷 as a matrix of thickness values 𝑡 1 and 𝑡 2 on a 1 nm grid for a set of bandpass filters particularly well suited for thickness determination, which we obtained from the optimization approach described in the following. Based on 𝐷 and our target thickness interval 𝑇 = [0 nm , 1000 nm ], we define the optimization function 
+
+𝐷 min (Λ) = min    
+
+> (𝑡 1,𝑡 2)
+
+{𝐷 (𝑡 1, 𝑡 2, Λ) : 𝑡 1, 𝑡 2 ∈ 𝑇 and |𝑡 1 − 𝑡 2 | ≥ 10 nm } (3) which yields the minimum distinguishability for all pairs of thicknesses in the target thickness interval, excluding the trivial 𝐷 ≈ 0 region around 𝑡 1 = 𝑡 2. Therefore, we seek to maximize 𝐷 min 
+
+to avoid errors due to the confusion of two thickness values with similar reflectance samples. Our choice of optimization target is not fundamental. A different function based on 𝐷 (𝑡 1, 𝑡 2) could be chosen to balance measurement precision against the risk of confusing different thickness values. If measurement uncertainties are known in advance, they could also be included explicitly to set desired probability limits for misclassification. Here, we consider the case of 𝑘 = 5 bandpass filters, to allow for practical operation in a standard 6-position filter wheel, while leaving one slot unoccupied for unfiltered acquisition. Even for this modest number, there are ≈ 9.2 × 10 7 possible Λ, as they form a multiset under evaluation of 𝐷 . A direct, brute-force search for the optimal Λ is therefore not computationally practical for us. Furthermore, gradient-descent-based optimization methods cannot be employed due to the discrete nature of the bandpass filters. However, as the total number of considered bandpass filters is fairly large, adjacency effects exist when the bandpass filters are ordered based on 𝜆 c. Correspondingly, we decided to employ gradient-free simulated annealing to search for maxima in 𝐷 min .The resulting distribution of optimization results for a total of 𝑁 ≈ 11000 attempts is shown in Figure 1(d). In addition to a fully unconstrained optimization, in which all 𝑘 = 5 filters are varied freely, we also tested a constrained strategy. In this case, one filter was fixed at the largest center wavelength 𝜆 c = 1650 nm . This filter has the longest reflectance oscillation period with respect to thickness 𝑡 , and therefore provides the longest interval over which the reflectance can be inverted unambiguously using a single wavelength. For both optimization strategies, the resulting distribution of 𝐷 min approximates a lognormal distribution (black curves). Additionally, we observe a significant advantage for the constrained strategy, as the mean of its distribution 𝐷 min = 0.053 is approximately 8% greater than that of the full optimization ( 𝐷 min = 0.049 ), while their standard deviations are almost equal at 
+
+𝜎 𝐷 min ≈ 0.065 . The best combination of bandpass filters we found across both optimization strategies was Λ = {920 nm , 1050 nm , 1350 nm , 1450 nm , 1650 nm } which has a corresponding minimum separation of 𝐷 min = 0.086 . The corresponding separation matrix is displayed in Figure 1(c) and has its minima at (𝑡 1, 𝑡 2) = (932 nm , 744 nm ) and vice versa. 
+
+2.2 Sample Characterization 
+
+To test the method, we prepared multiple samples of 3R-MoS 2 flakes on PDMS as described in the Methods section. For each sample, we recorded reflection images with the bandpass filter set Λ = {920 nm , 1100 nm , 1350 nm , 1480 nm , 1650 nm } using the microscopy setup depicted in Figure 2(a). Note that, due to availability, we used a slightly less optimal set of filters with a slightly lower 𝐷 min value of 0.078. A halogen lamp was used as a broadband, near-infrared (NIR) illumination source, which was focused onto the sample with a Schwarzschild objective. 4The light reflected off the sample was imaged with an indium gallium arsenide (InGaAs)-based NIR camera and referenced to a silver mirror, as described in the Methods section. After the multispectral image acquisition, each sample was transferred onto a flat fused silica glass substrate and characterized via vertical scanning interferometry (VSI), which we used as a reference thickness characterization method. (b) (a) (c)                
+
+> No Filter PDMS 920 nm PDMS 1100 nm PDMS
+> 1350 nm PDMS 1480 nm PDMS 1650 nm PDMS
+> 0.2 0.3 0.4 0.5 0.6 0.7 0.8 Re fl ectance
+> 25 m
+> 0100 200 300 Thickness via VSI [nm] Motorized Filter Mount Halogen Lamp Schwarzschild Objective (40x) Beamsplitter InGaAs Camera Glass PDMS 3R-MoS 2
+> Glass
+
+Figure 2: Multispectral imaging microscope and thickness validation. (a) Multispectral imaging microscope used for thickness mapping of 3R-MoS 2 on PDMS. The broadband NIR radiation from a halogen lamp is reflected off the sample, spectrally filtered through bandpass filters and imaged with an InGaAs camera. (b) Recorded NIR images of a 3R-MoS 2 flake on a PDMS substrate. The sections with different thicknesses each show a unique response for each filter due to thin-film interference. (c) Material thickness of the sample in (b) measured by vertical scanning interferometry (VSI) after transfer onto a glass substrate. In Figure 2(b) we have displayed the filtered reflectance images of one of our studied samples, alongside an image recorded without any spectral filtering. The reference thickness map, obtained via VSI after transfer, is displayed in Figure 2(c) and shows that the flake has several distinct sections with different thicknesses. Due to the broadband spectral sensitivity of the camera sensor, the contrast between the different sections is fairly low in the unfiltered image. In the spectrally filtered images, however, the sections can be distinguished much more clearly, as strong reflectance modulations in the range of 𝑅 = 0.20 and 𝑅 = 0.75 are observed with respect to the bandpass filter center wavelength. 52.3 Reflectance Model Refinement 
+
+In order to exploit the interference effect for thickness characterization, we model the expected reflectance as a function of thickness for each bandpass filter channel, taking into account the distribution of incidence angles of the Schwarzschild objective as described in Section 4.6. The resulting reflectance curves form our initial model and are displayed as the dotted lines in Figure 3(a). Initially, we attempted to determine the material thickness based on this model, however, in doing so, we observed a severe mismatch between the thickness values obtained via VSI and those obtained via the reflectance-based method. We therefore performed a preliminary refinement procedure for the reflectance model, based on a dataset of matching pairs of reflectance and thickness values, obtained via manual selection as detailed in Section 4.2. Note that we carefully avoided any edges or film imperfections to exclusively probe the thin-film response. In Figure 3(a), we have displayed the reflectance values of the refinement dataset against their corresponding thickness values obtained through VSI. The data qualitatively agrees with the initial model as regular oscillations with respect to thickness are observed. However, quantitatively, two deviations are shared systematically across all wavelength channels: Compared to the initial model, the oscillation amplitudes of the experimentally observed reflectance values are reduced, which is mainly caused by an increase of the lower limit of reflectance modulation from min (𝑅 model ) = 0.03 to min (𝑅 data ) ≈ 0.20 , while the upper limits remain similar at max (𝑅 model ) = 0.74 and max (𝑅 data ) ≈ 0.75 . We attribute this to reflections on the backside of the PDMS substrate, which can propagate back through the flake when transmittance is high, i.e., reflectance is low. Additionally, we observe a shorter oscillation period for the reflectance data compared to the model, leading to a gradual dephasing effect as the flake thickness increases. This is most likely caused by an underestimation of the refractive index of our 3R-MoS 2 material, as we used the refractive index data provided in Ref. [8] for our calculations. To account for these effects, we introduce three correction parameters 𝛼 , 𝛽 , and 𝛾 for each 𝜆 c
+
+channel, such that the refined reflectance is given by: 
+
+𝑅 ′ 
+
+> 𝜆 c
+
+(𝑡 ) = 𝛼 + 𝛽𝑅 𝜆 c (𝛾𝑡 ) (4) Here, 𝛼 and 𝛽 correct the offset and reduction of the oscillation amplitude caused by the back reflections, while 𝛾 corrects the dephasing resulting from the refractive index mismatch. These parameters are optimized for each channel via least-squares minimization. The resulting values for 𝛼 , 𝛽 , and 𝛾 are displayed in Table 1 and the refined reflectance curves are displayed in Figure 3(a) as dashed, black lines. In Figure 3(b), we have displayed histograms of the residuals of the refined model to the reflectance data for each bandpass filter channel, which show that the residuals are distributed reasonably close to normal distributions with standard deviations ranging from 𝜎 𝛿𝑅 = 0.027 to 
+
+𝜎 𝛿𝑅 = 0.038. Furthermore, as shown in Figure 3(c), the calculation of the overall residual covariances across the five 𝜆 𝑐 channels shows a strong positive correlation, indicating that, on average, residuals deviate systematically rather than independently, which implies that systematic deviations from the reflectance model are a substantial contributor to measurement error. Pinpointing the underlying mechanisms of these correlations is challenging and beyond the scope of this work, however, a likely contribution arises from wavy deformations of the PDMS substrates and attached 3R-MoS 2
+
+flakes, which perturb the optical response of the thin-film systems. Nonetheless, even without precise knowledge of their origin, these statistical correlations can be exploited for improved robustness in the thickness retrieval process, as we will show in the following section. 60 200 400 600 800 1000 Thickness via VSI tVSI [nm]        
+
+> 0
+> 1
+> 2
+> 3
+> 4
+> 5Re fl ectance  R + O ff set
+> c= 1650 nm c= 1480 nm c= 1350 nm c= 1100 nm c= 920 nm Data Initial Model Re fi ned Model
+
+(a) (b) (c) Normal Fit Data                                            
+
+> 920 1100 1350 1480 1650 c[nm] 920 1100 1350 1480 1650 c [nm] 1.52 0.29 0.17 0.17 0.74 0.29 1.01 0.23 0.24 0.61 0.17 0.23 0.95 0.36 0.14 0.17 0.24 0.36 0.75 0.43 0.74 0.61 0.14 0.43 1.28
+> 0.2 0.4 0.6 0.8 1.0 1.2 1.4 Residual Covariance (x1000)
+> 020 Count  c= 920 nm R= 0.04
+> 020 Count  c= 1100 nm R= 0.03
+> 020 Count  c= 1350 nm R= 0.03
+> 020 Count  c= 1480 nm R= 0.03
+> 0.1 0.0 0.1 Residual R=Rdata Rmodel 020 Count  c= 1650 nm R= 0.04
+
+Figure 3: Experimental validation and refinement of the reflectance model. (a) Measured reflectance values for each bandpass filter center wavelength 𝜆 c as a function of thickness as determined through VSI after transfer. Additionally, the initially calculated and refined models are displayed. (b) Histogram of the residuals between the measured data and the refined model and fitted normal distribution curves. (c) Covariance matrix of residuals. 
+
+Table 1: Optimized refinement parameters for each bandpass filter channel 𝜆 𝑐 .Parameter 920 nm 1100 nm 1350 nm 1480 nm 1650 nm 
+
+𝛼 0.23 0.22 0.21 0.19 0.19 
+
+𝛽 0.74 0.77 0.76 0.77 0.73 
+
+𝛾 1.07 1.05 1.05 1.04 1.04 72.4 Thickness Retrieval 
+
+Every data point in a multispectral image represents a measurement of multiple reflectance values that can be arranged into a vector ®𝑅 meas . Based on the refined reflectance model ®𝑅 model , a vector of residuals can be calculated for each potential thickness 𝑡 by subtracting the corresponding modeled vector of reflectance values: 
+
+𝛿 ®𝑅 (𝑡 ) = ®𝑅 meas − ® 𝑅 model (𝑡 ) (5) Analyzing this vector of residuals with respect to the multivariate Gaussian (global) probability density function (PDF) of all residuals [33]: 
+
+𝜌 G (𝛿 ®𝑅 ) = 1√︁ 
+
+(2𝜋 )𝑘 det (Σ) exp 
+
+
+
+− 12 𝛿 ®𝑅 𝑇 Σ−1𝛿 ®𝑅 
+
+
+
+, (6) where Σ is the covariance matrix of residuals shown in Figure 3(c), forms the foundation of our thickness retrieval algorithm. Initially, 𝜌 G is sampled with respect to 𝑡 . This is illustrated for a synthetic example in Figure 4(a) and (b) for varying levels of measurement error ®𝜀 for the case of 𝑘 = 2 bandpass filter channels. In the absence of error ®𝜀 a = 0, the trajectory of residuals traced by 𝛿 ®𝑅 (𝑡 |𝜀 a) intersects the maximum of the PDF at the origin at the true underlying value of 𝑡 . A non-zero measurement error, as illustrated for ®𝜀 b and ®𝜀 c in Figure 4(a), shifts this trajectory away from the origin, which, as displayed in Figure 4(b), may offset the maximum of the sampled curve away from the true underlying thickness value. Additionally, as the sampled trajectory is shifted away from the maximum of the residual PDF, the total sampled amount of 𝜌 G
+
+𝑁 =
+
+∫ 𝑡 max 
+
+> 𝑡 min
+
+𝜌 G
+
+
+
+𝛿 ®𝑅 (𝑡 )
+
+
+
+d𝑡 (7) is reduced. Although 𝑁 does not represent an absolute probability, it provides a measure of quality for the probed combination of residuals. As we have found 𝑁 to vary over multiple orders of magnitude experimentally, we use its natural logarithm as a global confidence metric 
+
+𝐶 G = ln (𝑁 ). (8) Furthermore, any sampled trajectory 𝜌 G (𝛿 ®𝑅 (𝑡 )) can be converted into a local PDF of potential thickness values by normalizing to 𝑁 :
+
+𝜌 L (𝑡 ) = 1
+
+𝑁 𝜌 G
+
+
+
+𝛿 ®𝑅 (𝑡 )
+
+
+
+. (9) The local PDF is then segmented at its minima to generate a series of thickness intervals, each of which has a certain probability of containing the true thickness. This is illustrated in Figure 4(c) for a synthetic 𝜌 L (𝑡 ), possessing many local maxima. Note that this segmentation is performed directly on the logarithmic PDF, i.e. the argument inside exp in Equation (6) , for improved numerical stability. To obtain a single thickness value, we choose the segment with the highest probability and select the maximum of 𝜌 L inside the PDF segment as the most likely thickness estimate 𝑡 𝑅 , while the segment probability is taken as a second quality metric (local confidence 𝐶 L). Finally, to estimate the precision of the obtained thickness value, we integrate the local PDF around 𝑡 𝑅 until 95% of 𝐶 L is reached, with the width of the resulting thickness interval yielding the precision 
+
+Δ𝑡 𝑅 .80.0 0.2 0.4 0.6 0.8 1.0 Sampled Thickness t [arb. u.] 0.000 0.001 0.002 0.003 0.004 0.005 0.006 0.007 0.008 Local PDF  L (t) =  G (t)/ N [arb. u.]  Log PDF Minima 4% 19% 4% 27% C L=46%                                    
+
+> ΔtR≥95%
+> CL
+> tR
+> 420246Residual R1[arb. u.] 420246Residual  R2 [arb. u.]
+> R(t|a)
+> R(t|b)
+> R(t|c)
+> 0.0 0.2 0.4 0.6 0.8 1.0 Global PDF  G ( R) [arb. u.]
+> 0.3 0.4 0.5 0.6 0.7 0.8 0.9 Sampled Thickness t[arb. u.] 0.0 0.2 0.4 0.6 0.8 1.0 1.2 Sampled Global PDF  G ( R(t))
+> R(t|a)
+> R(t|b)
+> R(t|c)
+
+Na
+
+N b
+
+N c
+
+ε a=0 
+
+ε b ε c(c) (d) (b) (a) Sampled  t
+
+True tt = 0
+
+t = 1True t        
+
+> 0200 400 600 Thickness via VSI tVSI [nm]
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> 600
+> 700 Thickness via Re fl ectance  t R [nm] Identity Data
+> 202468Global Con fi dence  C G = ln( N)
+> 225 250 275
+> 240
+> 260
+> 280
+
+Figure 4: Thickness retrieval algorithm and statistical confidence framework. (a) Illustration of a global probability density function (PDF) of residuals 𝜌 G (𝛿𝑅 1, 𝛿𝑅 2). Increasing reflectance measurement error ®𝜀 shifts the sampled trajectory of residuals away from the maximum value at the origin. (b) Values of 𝜌 G sampled by the trajectories displayed in (a). With increasing measurement error ®𝜀 , the integral of sampled probabilities 𝑁 decreases. (c) Illustration of the segmentation and thickness classification steps for the local PDF 𝜌 L (𝑡 ) from which the local confidence 𝐶 L, optimal thickness 𝑡 𝑅 and precision Δ𝑡 𝑅 are obtained. (d) Thickness values 𝑡 𝑅 
+
+obtained by performing the thickness retrieval algorithm on the model refinement dataset, plotted against their corresponding values obtained via VSI 𝑡 VSI . The errorbars shown in the inset are 
+
+Δ𝑡 𝑅 , while the color scale encodes the global confidence metric 𝐶 G = ln 𝑁 .9This hierarchical approach guards against several types of misclassification errors. In the case of large noise and total model breakdown, the global confidence 𝐶 G is severely reduced. If the trajectory of residuals is displaced by noise in such a way that two or more segments of different thicknesses become likely, 𝐶 L decreases. For a local PDF with a broad peak around 𝑡 𝑅 ,the precision decreases, as Δ𝑡 𝑅 increases. Note, however, that this assumes that the true film thickness falls inside the sampled interval. As we have chosen a sufficiently large 𝑡 max = 1000 nm ,this can easily be verified with e.g. standard white light microscopy using the depth-of-field effect of a high NA objective. In Figure 4(d) we have applied the thickness retrieval algorithm to the refinement dataset and see good agreement with the reference thickness obtained via VSI. For 𝑚 = 287 of the total 
+
+𝑛 = 293 data points ( 𝑚 /𝑛 = 98% ), we find that 𝑡 𝑅 agrees with 𝑡 VSI within the window of precision, for which we find a mean value of Δ𝑡 𝑅 = 8.3 nm and a maximum value of max (Δ𝑡 𝑅 ) = 23 nm across the entire dataset. Similarly, we find that 𝑚 = 286 of the sampled data points fulfill 
+
+𝐶 L > 0.95 , with the remaining data points having varying values of 𝐶 L ranging from 0.61 to 0.85 . For the global confidence, we find that 95% of values lie above 𝐶 G = 4.0, closer to the maximum of the obtained values max (𝐶 G) = 8.4 than the minimum min (𝐶 G) = −2.8. We next evaluate the method for spatially resolved thickness characterization. In this case, deviations from the ideal thin-film response are expected. We therefore apply the thickness retrieval procedure to each pixel of the reflectance images shown in Figure 2(b). In Figure 5(a) the thickness of the 3R-MoS 2 flake, as determined through the reflectance-based method on PDMS before transfer is displayed. Figure 5(b) shows the reference thickness map obtained by VSI after transfer to glass. Compared with this reference, the reflectance-based thickness map shows excellent agreement for the flat, pristine regions of the flake, with deviations of only a few nanometers. Around the flake edges and in narrow regions on the left-hand side and bottom of the flake, some thickness values are misclassified. We attribute these errors to the intermixing of reflectance values caused by the limited spatial resolution of the microscope. Accordingly, at least one of the three confidence metrics, shown in Figure 5(c)-(e), is reduced in those parts of the image. By applying the heuristic limits of 𝐶 G ≥ 4, 𝐶 L ≥ 0.95 , and 
+
+Δ𝑡 𝑅 ≤ 25 nm , based on the previous experimental observations, we generate the combined binary mask in Figure 5(f), which highlights the corresponding regions of the image likely to contain misclassified thickness values. Furthermore, as we observed a model-intrinsic dependence of 𝐶 G, 𝐶 L, and Δ𝑡 𝑅 on the probed thickness, as shown in Figures S2 and S3, which could potentially make the statistical model overly specific to the refinement dataset, we also applied the thickness retrieval algorithm to a separate set of samples. In doing so, we observed good agreement between 𝑡 VSI and 𝑡 𝑅 within the window of precision given by Δ𝑡 𝑅 in the vast majority of cases (Figure S4). This indicates that strong overspecialization did not occur and that the refinement dataset is a representative sample of 3R-MoS 2 thin films on PDMS in the studied thickness range. 
+
+2.5 Applicability to Other Materials 
+
+In principle, the thickness characterization methodology presented here can be applied to any material which has a refractive index contrast to the underlying substrate and is sufficiently transparent in the spectral range of detection. However, a change in the refractive index of the examined material leads to a change in the oscillation amplitude and frequency with respect to thickness for any given wavelength. To investigate how variations in refractive index affect the method for vdW materials beyond 3R-MoS 2, we apply the bandpass filter selection method (detailed in Section 2.1) using refractive index data for hBN [34], MoSe 2 [35], and MoTe 2 [35]. Notably, hBN exhibits a refractive index substantially lower than that of 3R-MoS 2, while MoSe 2 displays a dielectric response comparable 10 Figure 5: Thickness mapping and confidence analysis. (a) Thickness map of the 3R-MoS 2
+
+flake on PDMS displayed in Figure 2, obtained with the reflectance-based method. (b) Material thickness as determined through VSI after transfer of the flake onto a glass substrate. (c)-(e) Maps of global confidence 𝐶 G, local confidence 𝐶 L, and precision Δ𝑡 𝑅 derived from the reflectance-based thickness determination method. (f) Combined mask based on heuristic limits for 𝐶 G, 𝐶 L,and Δ𝑡 𝑅 which indicates potentially incorrect thickness values. to, but slightly stronger than, that of 3R-MoS 2. In contrast, MoTe 2 possesses a significantly higher refractive index, with an absorption cutoff in the near-infrared at 𝜆 ≈ 1350 nm . Together, these materials span a broad range of optical properties. They therefore serve as representative examples of vdW materials that are potentially compatible with this technique. Table 2 displays the results obtained from the bandpass filter selection scheme for these vdW materials, as well as the previously obtained values for 3R-MoS 2. Note that a comprehensive overview of the optimization results is presented in Figure S5. We observe a substantial dependence of the obtained best (highest) value of 𝐷 min on the studied material, with hBN showing the lowest minimum distinguishability value of 𝐷 hBN min = 0.045 among the tested vdW materials. hBN also has the lowest refractive index among the materials considered here, with 
+
+𝑛 ≈ 2.2. We therefore attribute the reduced 𝐷 min to the smaller reflectance oscillation amplitude with respect to film thickness. This smaller amplitude results from the lower refractive index contrast with the PDMS substrate, which has 𝑛 ≈ 1.4. This limitation is partially compensated by the reduced oscillation frequency. As a result, the distinguishability matrix varies more slowly and contains fewer local minima, as shown in Figure S5(d). In addition, the wide transparency window of hBN enables sampling across the full set of considered bandpass filters. For MoTe 2, the opposite is the case. Due to the material’s large refractive index of 11 Table 2: Bandpass filter optimization results for hBN, MoS 2, MoSe 2, and MoTe 2 on PDMS, as well as conventional thin-film systems of GaP and Si on insulator (SiO 2), as well as oxidized silicon (SiO 2 on Si). Additionally, the absorption cutoff wavelength, above which 𝑘 ≤ 0.1, is listed for each material. 3R-MoS 2
+
+on PDMS hBN on PDMS MoSe 2 on PDMS MoTe 2 on PDMS GaP on SiO 2
+
+Si on SiO 2
+
+SiO 2
+
+on Si Absorption Cutoff 𝜆 720 nm - 858 nm 1350 nm 476 nm 450 nm -Best 𝐷 min 0.086 0.045 0.077 0.051 0.076 0.089 0.040 Optimal 𝜆 c
+
+[nm] 920 1050 1350 1450 1650 580 610 780 1320 1650 990 1030 1300 1500 1650 1250 1300 1480 1500 1650 730 920 1030 1450 1650 850 1030 1330 1450 1650 400 420 450 510 950 
+
+𝑛 ≈ 4.8 inside the window of transparency, the refractive index contrast to the substrate and the reflectance oscillation amplitudes are large, while numerous off-diagonal minima are present in the distinguishability matrix (see Figure S5(f)). Furthermore, two of the optimal 𝜆 c lie below the absorption cutoff at 𝜆 = 1350 nm , which indicates that sampling a broader range of frequencies is advantageous for such a broadly absorbing material, even if the oscillation amplitude tapers off towards the upper limit of the target thickness interval, as is apparent in Figure S7. Unsurprisingly, as MoSe 2 is optically very similar to 3R-MoS 2, we obtain similar values of 
+
+𝐷 min , with 𝐷 MoSe2 min = 0.077 being only slightly lower than 𝐷 MoS2 min = 0.086 , and similar sets of optimal bandpass filters, both starting at around 𝜆 c ≈ 950 nm. Furthermore, we investigate the thickness characterization method for optical thin-film systems based on conventional materials. Specifically, we perform the bandpass filter selection scheme for gallium phosphide (GaP) and silicon (Si) on insulator (SiO 2) substrates, as well as thermally oxidized silicon (SiO 2 on a Si substrate), using the refractive index data from Refs. [36–38]. Note that Si and GaP on insulator both represent systems optically similar to the previously examined high-index vdW materials on low-index PDMS substrates, while SiO 2 on Si represents the inverse case. For the conventional optical thin-film systems, we observe that the bandpass filter selection method yields results comparable to those obtained for the vdW materials (see Figure S6). In the case of GaP on SiO 2, we find a minimum distinguishability of 𝐷 GaP min = 0.076 , which is only slightly lower than the value obtained for 3R-MoS 2, despite the substantially lower refractive index contrast of GaP ( 𝑛 ≈ 3.1) on SiO 2 (𝑛 ≈ 1.44 ) when compared to 3R-MoS 2 (𝑛 ≈ 4) on PDMS ( 𝑛 ≈ 1.4). Similarly, for Si on SiO 2, we obtain a minimum distinguishability of 𝐷 min = 0.089 , which is the highest value among all studied systems. The refractive index of Si, 𝑛 ≈ 3.5 , lies between those of GaP and 3R-MoS 2. This suggests that there is a broad range of dielectric functions for which the thickness characterization technique performs close to optimally over our chosen target interval up to 1 μm. Despite the significantly lower refractive index value of SiO 2 (𝑛 ≈ 1.44 ) in comparison to hBN ( 𝑛 ≈ 2.2), we obtain only a slightly diminished 𝐷 min value of 𝐷 SiO2 min = 0.040 for the SiO 2 on Si thin-film system. This is due to the refractive index contrast not being limited by the substrate, with 𝑛 ≈ 3.5, but by the cladding medium, with 𝑛 = 1 , which results in a comparable relative contrast of approximately 50% and similar oscillation amplitudes in reflectance with respect to 12 film thickness. Remarkably, constraining one of the bandpass filters to 𝜆 c = 1650 nm did not improve the optimization result, as shown in Figure S8. This indicates that, unlike for higher-index materials, the thickness characterization accuracy for SiO 2 is primarily limited by the reflectance oscillation amplitude rather than the oscillation period. Thus, the target thickness interval could likely be expanded for the set of bandpass filters considered here, without a substantial decrease in 𝐷 min .Altogether, these numerical analyses highlight the broad applicability of the proposed multispectral imaging approach. The set of bandpass filters can be tailored to the refractive index contrast and transparency window of a given material-substrate system. This allows robust, high-precision, spatially resolved thickness mapping to be extended to a wide variety of thin-film systems and positions our technique not merely as a specialized solution for pre-screening vdW flakes on polymer substrates, but as a highly adaptable, non-destructive, and cost-effective tool for general optical thin-film metrology. 
+
+## 3 Conclusion 
+
+We have presented a rigorous framework for the thickness characterization of optical thin films using sparse spectral sampling that combines theoretical modeling with experimental refinement and incorporates statistical correlations between measurement channels to enhance robustness against observed systematic deviations. The method’s key advantages are its simplicity, scalability, and compatibility with polymer substrates. It therefore addresses a critical limitation of conventional techniques, which typically require flat, rigid surfaces. The hierarchical confidence metrics ( 𝐶 G, 𝐶 L, and Δ𝑡 𝑅 ) provide built-in quality control, enabling the identification of potentially misclassified regions in thickness maps. We have demonstrated the technique’s practical applicability for the rhombohedral (3R) polytype of the transition metal dichalcogenide molybdenum disulfide on polydimethylsiloxane (PDMS) substrates. By strategically selecting five discrete near-infrared wavelengths, we achieved unambiguous thickness determination up to 691 nm with a mean 95% confidence-interval width of 8 .3 nm. Furthermore, we have shown that the bandpass filter selection strategy can be extended to materials with a broad range of dielectric functions. This suggests wide applicability across commonly used optical materials and also highlights the potential of the method as a general tool for ultrafast thin film characterization in fabrication workflows. 
+
+## 4 Methods 
+
+4.1 Sample Preparation 
+
+3R-MoS 2 flakes were mechanically exfoliated from a commercially acquired bulk crystal (HQ Graphene) using the standard Scotch tape method. The exfoliated flakes were transferred onto polydimethylsiloxane (PDMS) substrates (Gel-Pak, PF-30-X4) by pressing the tape onto the PDMS surface and peeling it off. Each PDMS sample was mounted onto a glass microscope slide while keeping the protective backside cover attached to maintain substrate flatness during imaging. 
+
+4.2 Multispectral Imaging 
+
+Reflectance measurements were performed using a custom-built near-infrared (NIR) microscope setup. A broadband halogen lamp (Thorlabs SLS302) served as the illumination source, 13 providing continuous spectral output from 360 nm to 2500 nm . The light was reflected off a 50:50 beamsplitter before being focused onto the sample using a reflective Schwarzschild objective (Thorlabs LMM40X-P01, NA = 0.5, 40x magnification). The reflected light was collected through the same objective, passed through the beamsplitter, and directed toward the detection path. Spectral filtering was achieved using a set of five commercially available bandpass filters (Thorlabs FBH920-10, FBH1100-10, FBH1350-12, FBH1480-12, and FBH1650-12). The filters were mounted on a motorized filter wheel (Thorlabs FW102C) for automated sequential imaging. Images were captured using an InGaAs camera (Xenics Xeva 320 Series, XEN-000101) with a 320 × 240 pixel sensor and a spectral sensitivity up to 1700 nm. To obtain absolute reflectance values, reference images were acquired using a protected silver mirror (Thorlabs PF10-03-P01). The sample reflectance 𝑅 was calculated as: 
+
+𝑅 = 𝐼 sample − 𝐼 dark 
+
+𝐼 mirror − 𝐼 dark 
+
+(10) where 𝐼 sample , 𝐼 mirror , and 𝐼 dark are the measured intensities of the sample, mirror, and dark signal, respectively. The sample and reference images for each bandpass filter channel were acquired with identical illumination conditions and exposure times. 
+
+4.3 Vertical Scanning Interferometry (VSI) 
+
+Following multispectral imaging, each sample was transferred onto a flat fused silica substrate in a dry stamping procedure. The VSI measurements were performed using a white light optical surface profiler (Bruker Contour GT) in VXI mode with a 50 × Mirau objective. The acquired height maps were post-processed using the open-source data analysis software Gwyddion [39] to correct for sample tilt and background offset using the three-point plane-fitting and subtraction method. 
+
+4.4 Data Processing and Analysis 
+
+All image processing and data analysis were performed with custom Python scripts. An affine transformation in pixel/data coordinates was used to correlate each multispectral reflectance image acquired before transfer with the corresponding VSI measurement acquired after transfer. The transformation is given by: 
+
+𝑥 ′
+
+𝑦 ′
+
+
+
+= 𝛼𝑅 (𝜃 )
+
+𝑥 − 𝑥 0
+
+𝑦 − 𝑦 0
+
+
+
+. (11) Here, 𝑥 , 𝑦 , 𝑥 ′, and 𝑦 ′ are the coordinates in the respective measurements, 𝑅 (𝜃 ) is the rotation matrix for angle 𝜃 , 𝑥 0 and 𝑦 0 are offsets in their respective coordinate directions, and 𝛼 is the scaling between the two coordinate systems. For each characterized sample, we manually selected distinct pairs of corresponding points in the reflectance and VSI maps. The optimal transformation parameters were then obtained by least-squares minimization of the total distance mismatch across all point pairs. 
+
+4.5 Transfer Matrix Method 
+
+We modeled the reflectance response of 3R-MoS 2 (and all other materials) using a transfer matrix approach. The transfer matrix of a single layer with refractive index 𝑛 and thickness 𝑡 is given by: 
+
+𝑀 =
+
+ cos (𝑘 𝑧 𝑡 ) sin (𝑘 𝑧 𝑡 )/ 𝑘 𝑧 𝛼 
+
+−𝑘 𝑧 𝛼 sin (𝑘 𝑧 𝑡 ) cos (𝑘 𝑧 𝑡 )
+
+
+
+(12) 14 where 𝑘 𝑧 is the component of the wavevector along the layer-normal direction 𝑧 , and 𝛼 = 1 for TE-polarized light and 𝛼 = 1/𝑛 2 for TM-polarized light. For TM-polarized light, the uniaxial anisotropy of 3R-MoS 2 must be taken into account. In this case, 𝑛 is calculated from the ordinary, or in-plane, refractive index 𝑛 o, the extraordinary, or out-of-plane, refractive index 𝑛 eo , and the propagation angle inside the material, 𝜃 MoS2 , relative to the ordinary axis of the crystal [5]: 
+
+𝑛 =
+
+ cos 2 (𝜃 MoS2 )
+
+𝑛 2o
+
++ sin 2 (𝜃 MoS2 )
+
+𝑛 2eo 
+
+ − 12
+
+(13) for which 𝜃 MoS2 is obtained from a generalized form of Snell’s law based on the angle of incidence 
+
+𝜃 AOI [5]: 
+
+𝜃 MoS2 = arctan 
+
+ 𝜃 AOI /𝑛 2o
+
+1 − sin 2 (𝜃 AOI )/ 𝑛 2eo 
+
+ 12
+
+(14) where we assume 𝑛 = 1 for the refractive index of the medium from which the light is incident. Based on 𝑀 , the refractive index of the substrate 𝑛 sub (PDMS), and the 𝑧 -components of the wavevector of the light entering and exiting the layer, 𝑘 inc  
+
+> 𝑧
+
+and 𝑘 sub  
+
+> 𝑧
+
+, the reflection coefficients for TE and TM polarization are given by 
+
+𝑟 TE = (𝑘 inc  
+
+> 𝑧
+
+𝑀 22 − 𝑘 sub  
+
+> 𝑧
+
+𝑀 11 ) − 𝑖 (𝑀 21 + 𝑘 inc  
+
+> 𝑧
+
+𝑘 sub  
+
+> 𝑧
+
+𝑀 12 )(𝑘 inc  
+
+> 𝑧
+
+𝑀 22 + 𝑘 sub  
+
+> 𝑧
+
+𝑀 11 ) + 𝑖 (𝑀 21 − 𝑘 inc  
+
+> 𝑧
+
+𝑘 sub  
+
+> 𝑧
+
+𝑀 12 ) (15) 
+
+𝑟 TM = (𝑛 2sub 𝑘 inc  
+
+> 𝑧
+
+𝑀 22 − 𝑘 sub  
+
+> 𝑧
+
+𝑀 11 ) − 𝑖 (𝑛 2sub 𝑀 21 + 𝑘 inc  
+
+> 𝑧
+
+𝑘 sub  
+
+> 𝑧
+
+𝑀 12 )(𝑛 2sub 𝑘 inc  
+
+> 𝑧
+
+𝑀 22 + 𝑘 sub  
+
+> 𝑧
+
+𝑀 11 ) + 𝑖 (𝑛 2sub 𝑀 21 − 𝑘 inc  
+
+> 𝑧
+
+𝑘 sub  
+
+> 𝑧
+
+𝑀 12 ) (16) respectively. The corresponding reflectances are then obtained by calculating 𝑅 TE /TM = |𝑟 TE /TM |2.The optical transfer matrix calculations were implemented in Python. 
+
+4.6 Schwarzschild Objective Reflectance Modeling 
+
+To model the observed reflectance response for each bandpass filter, we calculated the reflectance as a function of thickness 𝑡 and angle of incidence 𝜃 for TE- and TM-polarized light for the corresponding center wavelength 𝜆 c with the transfer matrix method described above. Both polarizations were averaged and, assuming uniform back-focal plane illumination of the Schwarzschild objective and negligible spatial coherence of our light source, weighted with sin (𝜃 ) for each incidence angle 𝜃 :
+
+𝑅 𝜆 c (𝑡 ) = 12𝑁 
+
+∫ 𝜃 max 
+
+> 𝜃 min
+
+(𝑅 TE (𝜆 c, 𝑡, 𝜃 ) + 𝑅 TM (𝜆 c, 𝑡, 𝜃 )) sin (𝜃 )d𝜃. (17) 
+
+𝜃 max = 30 ◦ was derived from the numerical aperture of the objective and 𝜃 min = 12 ◦ from the diameter of the obstructing mirror. Both quantities were taken from manufacturer specifications. Note that we approximated the response of each bandpass filter by its center wavelength. Furthermore, the normalization factor 𝑁 was calculated as: 
+
+𝑁 =
+
+∫ 𝜃 max 
+
+> 𝜃 min
+
+sin (𝜃 )d𝜃. (18) 15 Acknowledgments 
+
+The authors acknowledge the support from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation), Project ID: 437527638—IRTG 2675 (Meta-Active), and Collaborative Research Center (CRC/SFB) 1375 NOA Project B3. 
+
+## Disclosures 
+
+The authors declare no conflicts of interest. 
+
+## Data Availability 
+
+Data underlying the results presented in this paper are not publicly available at this time but may be obtained from the authors upon reasonable request. 
+
+## References 
+
+[1] N. Muhammad, Y. Chen, C. - W. Qiu, and G. P. Wang. “Optical Bound States in Continuum in MoS2-Based Metasurface for Directional Light Emission”. In: Nano Letters 21.2 (Jan. 27, 2021), pp. 967–972. issn : 1530-6984. doi : 10.1021/acs.nanolett.0c03818 .[2] P. G. Zotev, Y. Wang, D. Andres-Penares, et al. “Van der Waals Materials for Applications in Nanophotonics”. In: Laser & Photonics Reviews 17.8 (Aug. 2023), p. 2200957. issn :1863-8880. doi : 10.1002/lpor.202200957 .[3] B. Munkhbat, B. K¨ uc¸ ¨uk ¨oz, D. G. Baranov, T. J. Antosiewicz, and T. O. Shegai. “Nanos-tructured Transition Metal Dichalcogenide Multilayers for Advanced Nanophotonics”. In: 
+
+Laser & Photonics Reviews 17.1 (Jan. 2023), p. 2200057. issn : 1863-8880, 1863-8899. 
+
+doi : 10.1002/lpor.202200057 .[4] J. Du, K. Wang, P. Dai, et al. “Coupling-induced perfect absorption in TMD-based metasurface”. In: Applied Physics Letters 126.16 (Apr. 21, 2025), p. 161701. issn :0003-6951. doi : 10.1063/5.0267287 .[5] G. A. Wagoner, P. D. Persans, E. A. Van Wagenen, and G. M. Korenowski. “Second-harmonic generation in molybdenum disulfide”. In: Journal of the Optical Society of America B 15.3 (Mar. 1, 1998), p. 1017. issn : 0740-3224, 1520-8540. doi : 10.1364/ JOSAB.15.001017 .[6] M. Zhao, Z. Ye, R. Suzuki, et al. “Atomically phase-matched second-harmonic generation in a 2D crystal”. In: Light: Science & Applications 5.8 (Mar. 14, 2016), e16131–e16131. 
+
+issn : 2047-7538. doi : 10.1038/lsa.2016.131 .[7] J. Shi, P. Yu, F. Liu, et al. “3R MoS 2 with Broken Inversion Symmetry: A Promising Ul-trathin Nonlinear Optical Device”. In: Advanced Materials 29.30 (Aug. 2017), p. 1701486. 
+
+issn : 0935-9648, 1521-4095. doi : 10.1002/adma.201701486 .[8] X. Xu, C. Trovatello, F. Mooshammer, et al. “Towards compact phase-matched and waveguided nonlinear optics in atomically layered semiconductors”. In: Nature Photonics 
+
+16.10 (Oct. 2022), pp. 698–706. issn : 1749-4885, 1749-4893. doi : 10.1038/s41566-022-01053-4 .16 [9] I. Abdelwahab, B. Tilmann, Y. Wu, et al. “Giant second-harmonic generation in ferroelectric NbOI2”. In: Nature Photonics 16.9 (Sept. 2022), pp. 644–650. issn : 1749-4893. doi :
+
+10.1038/s41566-022-01021-y .[10] H. Hong, C. Huang, C. Ma, et al. “Twist Phase Matching in Two-Dimensional Materials”. In: Physical Review Letters 131.23 (Dec. 4, 2023), p. 233801. issn : 0031-9007, 1079-7114. 
+
+doi : 10.1103/PhysRevLett.131.233801 .[11] Q. Guo, Y. -K. Wu, D. Zhang, et al. “Polarization entanglement enabled by orthogonally stacked van der Waals NbOCl2 crystals”. In: Nature Communications 15.1 (Dec. 2, 2024), p. 10461. issn : 2041-1723. doi : 10.1038/s41467-024-54876-w .[12] J. Qi, C. Ma, Q. Guo, et al. “Stacking-Controlled Growth of rBN Crystalline Films with High Nonlinear Optical Conversion Efficiency up to 1%”. In: Advanced Materials 36.11 (Mar. 2024), p. 2303122. issn : 0935-9648, 1521-4095. doi : 10.1002/adma.202303122 .[13] Z. H. Peng, M. Cotrufo, D. Xu, et al. “3R-stacked transition metal dichalcogenide non-local metasurface for efficient second-harmonic generation”. In: Nature Photonics 19.12 (Dec. 2025), pp. 1376–1384. issn : 1749-4893. doi : 10.1038/s41566-025-01781-3 .[14] G. Zograf, B. K¨ uc¸ ¨uk ¨oz, A. Y. Polyakov, et al. “Ultrathin 3R-MoS2 metasurfaces with atomically precise edges for efficient nonlinear nanophotonics”. In: Communications Physics 8.1 (July 2, 2025), p. 271. issn : 2399-3650. doi : 10.1038/s42005-025-02194-y.[15] L. Seidt, T. Weber, A. A. Seredin, et al. “Ultrafast all-optical switching in nonlinear 3R-MoS2 van der Waals metasurfaces”. In: npj Nanophotonics 2.1 (Sept. 2, 2025), p. 37. 
+
+issn : 2948-216X. doi : 10.1038/s44310-025-00083-4 .[16] Y. Zhu, Y. - H. Hou, Q. Cai, L. - J. Chen, R. Peng, and M. Wang. “Nonreciprocal-Like Chiral Second-Harmonic Generation in a Chiral 3R-MoS 2 Metasurface”. In: Nano Letters 
+
+(Apr. 14, 2026), acs.nanolett.6c00536. issn : 1530-6984, 1530-6992. doi : 10.1021/acs. nanolett.6c00536 .[17] I. Aharonovich, J. -P. Tetienne, and M. Toth. “Quantum Emitters in Hexagonal Boron Nitride”. In: Nano Letters 22.23 (Dec. 14, 2022), pp. 9227–9235. issn : 1530-6984. doi :
+
+10.1021/acs.nanolett.2c03743 .[18] Q. Guo, X. - Z. Qi, L. Zhang, et al. “Ultrathin quantum light source with van der Waals NbOCl2 crystal”. In: Nature 613.7942 (Jan. 5, 2023), pp. 53–59. issn : 0028-0836, 1476-4687. doi : 10.1038/s41586-022-05393-7 .[19] M. A. Weissflog, A. Fedotova, Y. Tang, et al. “A tunable transition metal dichalcogenide entangled photon-pair source”. In: Nature Communications 15.1 (Sept. 1, 2024), p. 7600. 
+
+issn : 2041-1723. doi : 10.1038/s41467-024-51843-3 .[20] J. Feng, Y. -K. Wu, R. Duan, et al. “Polarization-entangled photon-pair source with van der Waals 3R-WS2 crystal”. In: eLight 4.1 (Aug. 23, 2024), p. 16. issn : 2662-8643. doi :
+
+10.1186/s43593-024-00074-6 .[21] Y. Tang, K. Sripathy, H. Qin, et al. “Quasi-phase-matching enabled by van der Waals stacking”. In: Nature Communications 15.1 (Nov. 18, 2024), p. 9979. issn : 2041-1723. 
+
+doi : 10.1038/s41467-024-53472-2 .[22] C. Trovatello, C. Ferrante, B. Yang, et al. “Quasi-phase-matched up- and down-conversion in periodically poled layered semiconductors”. In: Nature Photonics 19.3 (Mar. 2025), pp. 291–299. issn : 1749-4893. doi : 10.1038/s41566-024-01602-z .[23] P. Metuh, P. Wyborski, A. Paralikis, et al. Integrated on-chip quantum light sources on a van der Waals platform . Dec. 17, 2025. doi : 10.48550/arXiv.2512.15337 . arXiv: 
+
+2512.15337 [physics] . Pre-published. 17 [24] D. Moon, W. Lee, C. Lim, et al. “Hypotaxy of wafer-scale single-crystal transition metal dichalcogenides”. In: Nature 638.8052 (Feb. 2025), pp. 957–964. issn : 1476-4687. doi :
+
+10.1038/s41586-024-08492-9 .[25] D. C. Nguyen, M. Kim, M. Hussain, et al. “Visibility of hexagonal boron nitride on transparent substrates”. In: Nanotechnology 31.19 (May 8, 2020), p. 195701. issn : 0957-4484, 1361-6528. doi : 10.1088/1361-6528/ab6bf4 .[26] J. G. Crimmann, M. N. Junker, Y. M. Glauser, N. Lassaline, G. Nagamine, and D. J. Norris. “High-Throughput Optical Identification and Statistical Analysis of Atomically Thin Semiconductors”. In: Advanced Optical Materials 13.16 (2025), p. 2500150. issn :2195-1071. doi : 10.1002/adom.202500150 .[27] F. Abtahi, A. Shaji, G. Q. Ngo, et al. “Thickness Dependence of Linear and Nonlinear Optical Properties of Multilayer 3R-MoS2”. In: Advanced Optical Materials 14.7 (2026), e03498. issn : 2195-1071. doi : 10.1002/adom.202503498 .[28] V. Gupta, P. T. Probst, F. R. Goßler, et al. “Mechanotunable Surface Lattice Resonances in the Visible Optical Range by Soft Lithography Templates and Directed Self-Assembly”. In: ACS Applied Materials & Interfaces 11.31 (Aug. 7, 2019), pp. 28189–28196. issn :1944-8244. doi : 10.1021/acsami.9b08871 .[29] A. Plaza, J. A. Benediktsson, J. W. Boardman, et al. “Recent advances in techniques for hyperspectral image processing”. In: Remote Sensing of Environment . Imaging Spectroscopy Special Issue 113 (Sept. 1, 2009), S110–S122. issn : 0034-4257. doi :
+
+10.1016/j.rse.2007.07.028 .[30] G. R. Arce, D. J. Brady, L. Carin, H. Arguello, and D. S. Kittle. “Compressive Coded Aperture Spectral Imaging: An Introduction”. In: IEEE Signal Processing Magazine 31.1 (Jan. 2014), pp. 105–115. issn : 1558-0792. doi : 10.1109/MSP.2013.2278763 .[31] J. Park, Y. Choi, S. Kwon, et al. “Microsphere-assisted hyperspectral imaging: super-resolution, non-destructive metrology for semiconductor devices”. In: Light: Science & Applications 13.1 (May 28, 2024), p. 122. issn : 2047-7538. doi : 10.1038/s41377-024-01469-3 .[32] Thorlabs Inc. Spectral Filters . Jan. 11, 2026. url : https://www.thorlabs.com/ spectral-filters (visited on 01/11/2026). [33] M. P. Deisenroth, A. A. Faisal, and C. S. Ong. Mathematics for Machine Learning .First Edition. Cambridge, United Kingdom: Cambridge University Press, 2020. isbn :978-1-108-45514-5. [34] D. V. Grudinin, G. A. Ermolaev, D. G. Baranov, et al. “Hexagonal boron nitride nanopho-tonics: a record-breaking material for the ultraviolet and visible spectral ranges”. In: 
+
+Materials Horizons 10.7 (July 3, 2023), pp. 2427–2435. issn : 2051-6355. doi : 10.1039/ D3MH00215B .[35] B. Munkhbat, P. Wr ´obel, T. J. Antosiewicz, and T. O. Shegai. “Optical Constants of Several Multilayer Transition Metal Dichalcogenides Measured by Spectroscopic Ellipsometry in the 300–1700 nm Range: High Index, Anisotropy, and Hyperbolicity”. In: ACS Photonics 9.7 (July 20, 2022), pp. 2398–2407. issn : 2330-4022, 2330-4022. doi :
+
+10.1021/acsphotonics.2c00433 .[36] D. Khmelevskaia, D. I. Markina, V. V. Fedorov, et al. “Directly grown crystalline gallium phosphide on sapphire for nonlinear all-dielectric nanophotonics”. In: Applied Physics Letters 118.20 (May 17, 2021), p. 201101. issn : 0003-6951. doi : 10.1063/5.0048969 .18 [37] D. Franta, A. Dubroka, C. Wang, et al. “Temperature-dependent dispersion model of float zone crystalline silicon”. In: Applied Surface Science . 7th International Conference on Spectroscopic Ellipsometry 421 (Nov. 1, 2017), pp. 405–419. issn : 0169-4332. doi :
+
+10.1016/j.apsusc.2017.02.021 .[38] I. H. Malitson. “Interspecimen Comparison of the Refractive Index of Fused Silica”. In: 
+
+JOSA 55.10 (Oct. 1, 1965), pp. 1205–1209. doi : 10.1364/JOSA.55.001205 .[39] D. Ne ˇcas and P. Klapetek. “Gwyddion: an open-source software for SPM data analysis”. In: 
+
+Open Physics 10.1 (Feb. 1, 2012), pp. 181–188. issn : 2391-5471. doi : 10.2478/s11534-011-0096-2 .19 Supplementary 
+
+## S1 VSI Measurements of 3R-MoS 2 on PDMS 
+
+As stated in the main text, conventional thickness characterization techniques, such as vertical scanning interferometry (VSI), produce inaccurate results for measurement on PDMS, as any substrate deformations directly translate to film deformations, that cannot be corrected for without precise knowledge of the substrate geometry. This is demonstrated in Figure S1 where the results of a VSI measurement of a 3R-MoS 2 flake on a PDMS substrate are displayed. The height mapping in Figure S1(a) represents the best estimate for material thickness, which we obtained by leveling the data by subtracting a plane of height values fitted to the freely exposed PDMS substrate. Taking the profile along the long axis of the flake, as annotated in Figure S1(a) and displayed in Figure S1(b), we see that, while the approximate shape of the flake can be discerned, precise and consistent evaluation of the material’s thickness is not possible, due the distortion introduced by bonding to the PDMS substrate. Note that this is especially pronounced between profile lengths of 𝑙 = 150 μm and 𝑙 = 200 μm where a height difference of 120 nm is observed, despite the flake material itself lacking any steep changes in height, characteristic for thickness boundaries in layered materials. Note that this apparent indentation is also visible in the shaded 3D representation of the flake displayed Figure S1(c). 0 50 100 150 200         
+
+> x[μm] 050 100 150
+> y [μm]
+> 0200 400 600 800
+> 050 100 150 200 250 Pro fi le Length l[μm]
+> 0
+> 200
+> 400
+> 600 VSI Height  h [nm] VSI Height  h [nm]
+
+(a) (b) (c) (b) 120 nm 
+
+Figure S1: Vertical scanning interferometry (VSI) measurement of a 3R-MoS 2 flake on PDMS. (a) Obtained height map. (b) Height profile along the long axis of the flake as indicated in (a), showing height fluctuations and measurement distortions. (c) Shaded 3D representation of the VSI measurement showing an apparent indentation of the flake on the thickest section. 20 S2 Thickness Dependence of the Quality Metrics 
+
+The reflectance based thickness method presented in the main text provides intrinsic limits for the three derived quality metrics global confidence 𝐶 G, local confidence 𝐶 L, and precision Δ𝑡 𝑅 .To study the model intrinsic, thickness dependent behavior of 𝐶 G, 𝐶 L, and Δ𝑡 𝑅 , we calculate all possible residual combinations within in the studied interval of thickness values up to 1 μm
+
+𝛿 ®𝑅 (𝑡 ′, 𝑡 ) = ®𝑅 model (𝑡 ′) − ® 𝑅 model (𝑡 ), (S1) where ®𝑅 model is the refined reflectance model shown in Figure 3(a) of the main text, and for the sake of simplicity, we treat 𝑡 and 𝑡 ′ as the true and sampled thickness values, respectively. Performing the thickness retrieval procedure as described in the main text, we obtain the quality metrics as a function of thickness, which are displayed as black lines in Figure S2. Additionally, we obtain the local probability density function (PDF) matrix in Figure S3. Note that, in Figure S2 we have also plotted the experimentally observed quality metrics obtained from the thickness evaluation of the model refinement data set. 0       
+
+> 5
+> Global Confidence  CG
+> Model
+> Data
+> 0.6
+> 0.7
+> 0.8
+> 0.9
+> 1.0
+> Local Confidence  CL
+> Model
+> Data
+> 0200 400 600 800
+> True Thickness t, Thickness via VSI tVSI [nm]
+> 5
+> 10
+> 15
+> 20
+> 25
+> Precision  tR
+> Model
+> Data
+
+Figure S2: Model intrinsic upper limits for global confidence 𝐶 G, local confidence 𝐶 L, and precision Δ𝑡 𝑅 and observed values as a function of thickness. For the global confidence, the model intrinsic values undulate between 𝐶 G = 6.8 and 
+
+𝐶 G = 8.6 , while the observed values are above 𝐶 G = 5 , in the vast majority of cases. The model intrinsic local confidence is close to unity for almost the entire studied thickness range. The only exceptions are the two narrow double peak structures around 𝑡 = 262 nm and 𝑡 = 728 nm , which are caused by the crests perpendicular to the main diagonal of the local PDF matrix 𝜌 L (𝑡 ′ |𝑡 ) at those thickness values (see Figure S3). For Δ𝑡 𝑅 we observe a strong variation with respect to thickness throughout the target interval, with min (Δ𝑡 𝑅 ) = 3 nm and max (Δ𝑡 𝑅 ) = 25 nm . Note that the step like structure is due to the 1 nm resolution that was chosen for thickness sampling. Furthermore, drops in precision are observed around the previously mentioned drops in 𝐶 L, as 
+
+Δ𝑡 𝑅 similarly spikes in a double peak like structure. An additional feature of note in Δ𝑡 𝑅 is the broad peak around 𝑡 = 58 nm , which is caused by a broad section of the main diagonal of 
+
+𝜌 L (𝑡 ′ |𝑡 ).21 0 200 400 600 800        
+
+> Sampled Thickness t′[nm]
+> 0
+> 200
+> 400
+> 600
+> 800
+> True Thickness  t [nm]
+> 10 10
+> 10 8
+> 10 6
+> 10 4
+> 10 2
+> Local PDF  L(t′ | t) [nm  1]
+
+Figure S3: Model intrinsic local probability density function 𝜌 L (𝑡 ′ |𝑡 ) of sampled thickness 𝑡 ′
+
+for any given true thickness 𝑡 . 𝜌 L is fundamentally symmetric under permutation of 𝑡 and 𝑡 ′.
+
+## S3 Thickness Characterization Results of a Separate Dataset 
+
+We also applied the the thickness characterization method to a dataset of VSI and reflectance measurements which were not used in the model refinement process. Masking out any data-points which violate the heuristically obtained limits for 𝐶 G, 𝐶 L, and Δ𝑡 𝑅 , we obtain the results displayed in Figure S4(a) and (b) which show that, in the vast majority of cases, 𝑡 𝑅 is in agreement with 
+
+𝑡 VSI within the determined precision Δ𝑡 𝑅 0 100 200 300 400 500 600 Thickness via VSI tVSI [nm]         
+
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> 600 Thickness via Re fl ectance  t R [nm]
+> Identity Data
+> 0100 200 300 400 500 600 Thickness via VSI tVSI [nm]
+> 30
+> 20
+> 10
+> 0
+> 10
+> 20 Di ff erence  t R tVSI  [nm]
+> Zero Data
+
+(a) (b) 
+
+Figure S4: Thickness determination of 3R-MoS 2 on PDMS samples not used for model refinement. (a) Thickness as characterization through the BPF based reflectance method plotted against the thickness as determined via VSI after transfer onto a glass substrate. The errorbars denote the precision Δ𝑡 𝑅 . (b) Difference between both measurements. The errorbars also denote 
+
+Δ𝑡 𝑅 .22 S4 Other Materials and Thin Film Systems 
+
+As described in the main text, we also performed the bandpass filter selection scheme for the van der Waals (vdW) materials hexagonal boron nitride (hBN), molybdenum diselenide (MoSe 2), and molybdenum ditelluride (MoTe 2). The resulting optimization histograms, displaying the counts of minimum separation values 𝐷 min obtained during 𝑁 = 10000 attempts, are shown in Figure S5(a)-(c), respectively, for each material. In Figure S5(d)-(f), the distinguishability matrix for the optimal (highest 𝐷 min ) set of bandpass filters is displayed for each respective material. Similarly, we applied the optimization procedure to conventional thin-film systems, specifically gallium phosphide (GaP) on silicon dioxide (SiO 2), silicon (Si) on SiO 2, and SiO 2 on Si. The resulting histograms of 𝐷 min values and the distinguishability matrices for the best bandpass filter sets are shown in Figure S6. Figure S7 shows the reflectance of MoTe 2 as a function of thickness for the optimal bandpass filter set. Due to the material’s absorption cut-off at 𝜆 ≈ 1350 nm , dampening of the oscillation amplitude is observed for center wavelengths 𝜆 c below this value. Finally, Figure S8 presents the bandpass filter optimization histograms for an SiO 2 on Si layer system. The figure compares a fully unconstrained optimization (orange) with an optimization where one of the bandpass filters is constrained to the longest center wavelength 𝜆 c = 1650 nm (blue). For this material system, and the chosen target interval of thicknesses up to 1 μm,constraining the optimization yields lower 𝐷 min values. 0.03 0.04 0.05                                              
+
+> Dmin [arb. u.] 0500 1000 Count Mean = 0.038 SD = 0.002 hBN
+> 0.04 0.06
+> Dmin [arb. u.] 0100 200 300 Count Mean = 0.046 SD = 0.007 MoSe 2
+> 0.02 0.04 0.06
+> Dmin [arb. u.] 0100 200 300 400 Count Mean = 0.030 SD = 0.006 MoTe 2
+> 0250 500 750 Thickness t10200 400 600 800 Thickness  t2hBN
+> Dmin = 0.045
+> 0250 500 750 Thickness t10200 400 600 800 Thickness  t2MoSe 2
+> Dmin = 0.077
+> 0250 500 750 Thickness t10200 400 600 800 Thickness  t2MoTe 2
+> Dmin = 0.051
+> 0.0 0.1 0.2
+> D(t1,t2) [arb. u.]
+> 0.00 0.25 0.50 0.75
+> D(t1,t2) [arb. u.]
+> 0.00 0.25 0.50 0.75
+> D(t1,t2) [arb. u.]
+
+(d) (e) (f) (a) (b) (c) 
+
+Figure S5: Bandpass filter optimization results for other vdW materials on PDMS. (a)-(c) Histogram of 𝐷 min values obtained via the optimization procedure for hBN, MoSe 2, and MoTe 2,respectively. Mean and standard deviation (SD) of each histogram are given as annotated text. (d)-(f) Distinguishability matrix 𝐷 (𝑡 1, 𝑡 2) for the best set of bandpass filters for each material. 23 0.04 0.06 0.08 
+
+D min [arb. u.] 0200 400 600 Count Mean = 0.060 SD = 0.004 GaP on SiO 2
+
+0.04 0.06 0.08 
+
+D min [arb. u.] 0100 200 300 400 500 Count Mean = 0.063 SD = 0.005 Si on SiO 2
+
+0.025 0.030 0.035 0.040 
+
+Dmin [arb. u.] 0500 1000 1500 Count Mean = 0.033 SD = 0.002 SiO 2 on Si 
+
+0 250 500 750 Thickness t 10200 400 600 800 Thickness  t2GaP on SiO 2
+
+Dmin = 0.076 
+
+0 250 500 750 Thickness t 10200 400 600 800 Thickness  t2Si on SiO 2
+
+Dmin = 0.089 
+
+0 250 500 750 Thickness t 10200 400 600 800 Thickness  t2SiO 2 on Si 
+
+Dmin = 0.040 
+
+0.0 0.2 0.4 
+
+D(t 1 , t2 ) [arb. u.] 
+
+0.0 0.2 0.4 0.6 
+
+D(t 1 , t2 ) [arb. u.] 
+
+0.0 0.1 0.2 
+
+D(t 1 , t2 ) [arb. u.] (d) (e) (f) (a) (b) (c) Figure S6: Bandpass filter optimization results for conventional thin-film systems. (a)-(c) Histogram of 𝐷 min values obtained via the optimization procedure for GaP on SiO 2, Si on SiO 2,and SiO 2 on Si, respectively. Mean and standard deviation (SD) of each histogram are given as annotated text. (d)-(f) Distinguishability matrix 𝐷 (𝑡 1, 𝑡 2) for the best set of bandpass filters for each material. 0 200 400 600 800 1000 
+
+MoTe 2 Thickness [nm] 
+
+0.0 
+
+0.5 
+
+1.0 
+
+1.5 
+
+2.0 
+
+2.5 
+
+3.0  
+
+> IDet  + Offset [arb. u.]
+> c
+
+= 1250 nm  
+
+> c
+
+= 1300 nm  
+
+> c
+
+= 1480 nm  
+
+> c
+
+= 1560 nm  
+
+> c
+
+= 1650 nm 
+
+Figure S7: Reflectance as a function of thickness for the optimal bandpass filter set 
+
+Λ = {1250 nm , 1300 nm , 1480 nm , 1500 nm , 1500 nm , 1650 nm } for thickness determination of MoTe 2 on PDMS. For the center wavelengths 𝜆 c below the absorption cut-off at 𝜆 = 1350 nm ,dampening of the oscillation amplitude is observed with increasing thickness. 24 0.025 0.030 0.035 0.040   
+
+> Minimum Distinguishability Dmin
+> 0
+> 100
+> 200
+> 300
+> 400
+> 500
+> 600
+> 700
+> Count
+> c= 1650 nm fixed
+> Full Optimization
+
+Figure S8: Bandpass filter optimization histograms for an SiO 2 on Si layer system constraining one of bandpass filters to the longest center wavelength 𝜆 c = 1650 nm (blue) and a fully unconstrained optimization (orange). Contrary to the results of the other tested materials with higher refractive indices, constraining the optimization yields lower 𝐷 min for the chosen target interval of thicknesses up to 1 μm. 25

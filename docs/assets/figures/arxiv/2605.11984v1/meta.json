@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-001.webp",
+      "caption": "Figure 3. Two-quantum (2Q) F-PP spectroscopy. Pulse sequences with unique phase signatures described by the phase imparted from individual pump-pulse (φpump) and probe-pulse interactions (φprobe1 and φprobe2). A train of three pulses (red) is shown with mutual delays T and t and time ordering between pump and probe-pulse pairs for T ≥ 0 (top) and T ≤ 0 (bottom). We have 2Q coherences (gray) that evolve during t for 2Q F-PP. For T ≤ 0, population dynamics evolve between various doubly excited states (brown), while population evolves across singly excited states (blue) during both T ≤ 0 and T ≥ 0 delays. The 2Q F-PP signal probes 2Q coherences along t and thus requires each probe pulse to interact twice with the system in addition to the two interactions of the pump (Figure 3). This effectively results in a sixth-order signal with population dynamics evolving over T. The sixth-order nonlinear response is the leading-order contribution to the 2Q F-PP signal. In general, for an MQ signal, where M = 1, 2, 3, …, the nonlinear response of order 2M + 2 provides the leading term. In addition, there are higher-order terms that scale with Ipump M, where Ipump is the intensity of the pump pulse, that all add up to the total response. On the other hand, there are also MQ signals of at least an order of 2M + 2 that scale with the intensity Iprobe M of the identical probe pulses. These signals can be easily separated by an adequate phase-cycling scheme.43,44 Since we are discussing here the",
+      "page": 15,
+      "index": 1,
+      "width": 350,
+      "height": 383
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-002.webp",
+      "caption": "Figure 5. Double-sided Feynman diagrams for 2Q F-PP during pulse overlap. We consider a system with three manifolds of electronic states, a ground state |G〉, a first excited state |E〉, and a second excited state |F〉 and assume fast annihilation from |F〉 to |E〉. The 2Q F-PP diagrams are shown (a) for T ≥ 0 and (b) for T ≤ 0. For both cases, the Feynman diagrams for correct timeordered interactions are already shown in Figure 4. The incorrect time ordering between pump– probe and probe–probe interactions results in different types of pathways. The pump pulse and associated interactions are represented by green arrows in the diagrams. The pulse interactions with the first and the second pulse in the probe pair are represented by red and blue arrows, respectively. The weight of each pathway type, i.e., the number of times it contributes to the response, is provided at the bottom. These numbers were obtained using the ultrafast spectroscopy suite software developed by Krich et al.60,61 The diagrams are classified by the population",
+      "page": 30,
+      "index": 2,
+      "width": 850,
+      "height": 849
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-003.webp",
+      "caption": "Figure 2. Double-sided Feynman diagrams for 1Q F-PP in the case of a dimer. Top: Feynman diagrams for positive pump–probe delay assuming fast relaxation from the doubly excited manifold to the singly excited manifold, thus leading to the cancellation of excited-state absorption pathways. The dark-shaded region in each diagram highlights population dynamics. Bottom: 1Q F-PP Feynman diagrams for negative pump–probe delay. For ground-state pathways (Q1, Q2, Q1’, Q2’) and singly excited pathways (Q3, Q4, Q3’, Q4’), the population of the system evolves in the ground and the singly excited state, respectively. All pathways except for the energy-transfer pathways Q5 and Q5’ cancel off for the difference spectrum Δ1Q F-PP (𝜔 , T). We depict the 1Q F-PP excitation pathways through the system in Liouville space in Figure 2 using double-sided Feynman diagrams, under the assumption of the rotating-wave approximation52. The 1Q F-PP diagrams for T ≥ 0 (Figure 2, top row) and T ≤ 0 (Figure 2, bottom row) contain pairs of pathways with identical nonlinear response. Specifically, this applies to the ground-state pathways (Q1 and Q1’ as well as Q2 and Q2’) and the singly excited pathways (Q3 and Q3’ as well as Q4 and Q4’). In these pathway pairs, the population evolves in the ground state or the same singly excited state during T. Each member of such a pathway pair is expected to occupy the same spectral position along the Fourier-transformed 𝜔 detection axis as its associated twin, which in turn leads to their mirror-symmetric distribution relative to T = 0 in the 1Q F-PP spectrum.51 Note that there",
+      "page": 10,
+      "index": 3,
+      "width": 833,
+      "height": 550
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-004.webp",
+      "caption": "Figure 6. Simulation of one-quantum (1Q) and two-quantum (2Q) F-PP spectroscopy for an exemplary dimer system with a ground state, two single-exciton states, and a biexciton state. (a) 1Q F-PP map. (b) 2Q F-PP map. (c) Δ1Q F-PP (𝜔 , T) map according to Eq. (1). Oppositesigned features appear at the energies of the two single-exciton states. (d) Δ2Q F-PP (𝜔 , T) map according to Eq. (2). (e) 1Q F-PP signal obtained via the spectral integration of Δ1Q F-PP (𝜔 , T) spectrum over each single-exciton feature in the difference map. The lower peak is integrated from 1.71 eV to 1.76 eV to yield the blue curve, while the upper peak is integrated from 1.85 eV to 1.90 eV to yield the red curve. The integrated signal as a function of T decays or rises, respectively, with the rate of energy transfer between the single-exciton states. (f) 2Q F-PP signal obtained via the spectral integration of Δ2Q F-PP (𝜔 , T) over the complete energy axis. The signal rises with the rate of the annihilation of the biexciton to the single-exciton states. The negative and positive regions of the F-PP maps (1Q in Figure 6a and 2Q in Figure 6b) are separated by a “coherent spike” associated with spatial and temporal pulse overlap between all",
+      "page": 33,
+      "index": 4,
+      "width": 906,
+      "height": 527
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-005.webp",
+      "caption": "Figure 4. Double-sided Feynman diagrams for 2Q F-PP in the case of a dimer and generalization to larger systems. (a, b) Double-sided Feynman diagrams describing the 2Q F-PP signal with two subsystems and assuming fast relaxation from the doubly excited states to the singly excited states. The 2Q F-PP Feynman diagrams are shown for (a) T ≥ 0 and (b) T ≤ 0. Ground-state (Q6, Q7, Q8, Q6’, Q7’, and Q8’) and singly excited (Q9, Q10, Q9’, and Q10’) pathways represent diagrams for which the population of the system evolves in the ground and singly excited state, respectively. Energy-transfer pathways (Q11, Q12, Q11’, and Q12’) show energy transfer between singly excited states. All pathways except the doubly excited pathways (Q13’ and Q14’) and energy-transfer pathways cancel off for the difference spectrum Δ2Q F-PP (𝜔 , T). The weights indicated in parentheses above each pathway result from different possible time-ordering sequences of light– matter interactions and the possibilities to generate a final excited-state population that leads to",
+      "page": 18,
+      "index": 5,
+      "width": 646,
+      "height": 852
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-006.webp",
+      "caption": "Figure 1. One-quantum (1Q) F-PP spectroscopy and exemplary quantum system. (a) Pulse sequences with unique phase signatures described by the phase imparted from individual pumppulse (φpump) and probe-pulse interactions (φprobe1 and φprobe2) for capturing the 1Q F-PP signal. A train of three pulses (red) is shown with mutual delays T and t and time ordering between pump and probe-pulse pairs for T ≥ 0 (top) and T ≤ 0 (bottom). We have 1Q coherences (gray) that evolve during t for 1Q F-PP. During T, population dynamics evolve between various excited states (light blue). (b) Energy level manifold of an exemplary dimer system. Annihilation (brown arrows) occurs from the doubly excited (|F〉) manifold with individual states |e1e2〉, |g1f2〉, and |f1g2〉 to the singly excited manifold (|E〉). Energy transfer (light blue arrow) occurs between singly excited states |e1g2〉 and |g1e2〉. The ground state (|G〉) is represented by |g1g2〉. In coherently detected PP spectroscopy, a reversal of the time ordering, i.e., the probe pulse interacting before the pump pulse as denoted by a negative T delay, yields the perturbed freeinduction decay.49,50 Likewise in 1Q F-PP, when the probe pair interacts before the pump pulse (Fig. 1a, bottom), the resulting transient spectra also hold important information. The signal at negative T is considered as fluorescence excitation spectrum because the probe pulse, arriving before the pump, is solely responsible for exciting fluorescence.1 The delayed pump then interacts with the already-excited population and reduces the fluorescence. By measuring how much the pump quenches the fluorescence at different probe wavelengths, the technique effectively maps how efficiently each probe wavelength excites the system, just as in a conventional fluorescence excitation spectrum. The measurement of the 1Q F-PP spectrum at both negative and positive T delays thus can provide detailed spectroscopic insights into a system.1,51,31",
+      "page": 8,
+      "index": 6,
+      "width": 506,
+      "height": 268
+    },
+    {
+      "url": "assets/figures/arxiv/2605.11984v1/fig-007.webp",
+      "caption": "Figure 7. One-quantum (1Q) and two-quantum (2Q) F-PP spectroscopy experiment for a squaraine dimer and a hetero-polymer. (a) 1Q F-PP map of the squaraine heterodimer [SQA–SQB] in toluene. (b) Isolated population dynamics obtained by integrating Δ1Q F-PP (𝜔 , T) between 1.70 eV and 1.77 eV, displaying the energy-transfer dynamics between the single-exciton states, with a fit resulting in a time constant of 21.1 ± 1.8 fs. (c) 1Q F-PP map of the squaraine heteropolymer [SQA–SQB]5 in toluene that consists of five dimeric units. (d) Kinetics of energy transfer obtained by integrating Δ1Q F-PP (𝜔 , T) between 1.70 eV and 1.77 eV, with a fit resulting in a time constant of 20.6 ± 3.2 fs. (e) 2Q F-PP map of the squaraine dimer. (f) Isolated population dynamics obtained by integrating Δ2Q F-PP (𝜔 , T) between 3.35 eV and 3.70 eV, energetically",
+      "page": 37,
+      "index": 7,
+      "width": 496,
+      "height": 781
+    }
+  ]
+}

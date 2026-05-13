@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-001.webp",
+      "caption": "Figure 5: Thickness mapping and confidence analysis. (a) Thickness map of the 3R-MoS2 flake on PDMS displayed in Figure 2, obtained with the reflectance-based method. (b) Material thickness as determined through VSI after transfer of the flake onto a glass substrate. (c)-(e) Maps of global confidence 𝐶G, local confidence 𝐶L, and precision Δ𝑡𝑅 derived from the reflectancebased thickness determination method. (f) Combined mask based on heuristic limits for 𝐶G, 𝐶L, and Δ𝑡𝑅 which indicates potentially incorrect thickness values.",
+      "page": 11,
+      "index": 1,
+      "width": 786,
+      "height": 631
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-002.webp",
+      "caption": "Figure 3: Experimental validation and refinement of the reflectance model. (a) Measured reflectance values for each bandpass filter center wavelength 𝜆c as a function of thickness as determined through VSI after transfer. Additionally, the initially calculated and refined models are displayed. (b) Histogram of the residuals between the measured data and the refined model and fitted normal distribution curves. (c) Covariance matrix of residuals.",
+      "page": 7,
+      "index": 2,
+      "width": 738,
+      "height": 877
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-003.webp",
+      "caption": "Figure 1: Optical modeling and bandpass filter set optimization. (a) Calculated reflectance 𝑅 for a 3R-MoS2 thin film on PDMS of thickness 𝑡 at wavelength 𝜆. (b) Calculated thickness dependent intensity 𝐼Det for imaging 𝑅 through each considered bandpass filter. (c) Distinguishability matrix for the optimal bandpass filter set Λ = {920 nm, 1050 nm, 1350 nm, 1450 nm, 1650 nm}. (d) Histograms of minimum distinguishability values 𝐷min resulting from the simulated annealing optimization processes and fitted lognormal distribution curves.",
+      "page": 3,
+      "index": 3,
+      "width": 738,
+      "height": 562
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-004.webp",
+      "caption": "Table 2: Bandpass filter optimization results for hBN, MoS2, MoSe2, and MoTe2 on PDMS, as well as conventional thin-film systems of GaP and Si on insulator (SiO2), as well as oxidized silicon (SiO2 on Si). Additionally, the absorption cutoff wavelength, above which 𝑘 ≤ 0.1, is listed for each material.",
+      "page": 12,
+      "index": 4,
+      "width": 781,
+      "height": 287
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-005.webp",
+      "caption": "Figure 4: Thickness retrieval algorithm and statistical confidence framework. (a) Illustration of a global probability density function (PDF) of residuals 𝜌G (𝛿𝑅1, 𝛿𝑅2). Increasing reflectance measurement error ®𝜀 shifts the sampled trajectory of residuals away from the maximum value at the origin. (b) Values of 𝜌G sampled by the trajectories displayed in (a). With increasing measurement error ®𝜀, the integral of sampled probabilities 𝑁 decreases. (c) Illustration of the segmentation and thickness classification steps for the local PDF 𝜌L (𝑡) from which the local confidence 𝐶L, optimal thickness 𝑡𝑅 and precision Δ𝑡𝑅 are obtained. (d) Thickness values 𝑡𝑅 obtained by performing the thickness retrieval algorithm on the model refinement dataset, plotted against their corresponding values obtained via VSI 𝑡VSI. The errorbars shown in the inset are Δ𝑡𝑅, while the color scale encodes the global confidence metric 𝐶G = ln 𝑁 .",
+      "page": 9,
+      "index": 5,
+      "width": 793,
+      "height": 616
+    },
+    {
+      "url": "assets/figures/arxiv/2605.09843v1/fig-006.webp",
+      "caption": "Figure 2: Multispectral imaging microscope and thickness validation. (a) Multispectral imaging microscope used for thickness mapping of 3R-MoS2 on PDMS. The broadband NIR radiation from a halogen lamp is reflected off the sample, spectrally filtered through bandpass filters and imaged with an InGaAs camera. (b) Recorded NIR images of a 3R-MoS2 flake on a PDMS substrate. The sections with different thicknesses each show a unique response for each filter due to thin-film interference. (c) Material thickness of the sample in (b) measured by vertical scanning interferometry (VSI) after transfer onto a glass substrate.",
+      "page": 5,
+      "index": 6,
+      "width": 753,
+      "height": 590
+    }
+  ]
+}
