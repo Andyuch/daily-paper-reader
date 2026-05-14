@@ -1,0 +1,191 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-14T20:32:42.660885+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2605.12884v1",
+      "source": "arxiv",
+      "title": "Ultrafast wide-field 3D topography with extended depth of field",
+      "abstract": "Ultrafast optical imaging has enabled direct observation of femtosecond-nanosecond dynamics, yet three-dimensional (3D) dynamic measurements at high numerical aperture (NA) remain hindered by the intrinsically shallow depth of field (DoF) of conventional microscopes. Here, we propose an ultrafast, wide-field pump-probe interferometric microscope on a telecentric platform that significantly extends the effective DoF to ~18 micrometer at a high NA of 0.9 while maintaining high spatial resolution (down to 235 nm) and temporal resolution (~170 fs). The system enables single-frame 3D topography reconstruction without axial scanning or multi-view acquisition. We demonstrate these capabilities by capturing axial material flow during laser-induced microsphere melting that remain unobservable with conventional narrow-DoF systems, and by tracking the azimuthal rotation of ablation lobes during axial propagation of temporal focused spatiotemporal optical vortex (TF-STOV) pulses, directly revealing the spatiotemporal evolution of STOV-matter interactions",
+      "authors": [
+        "Qianyi Wei",
+        "Jielei Ni",
+        "Yuquan Zhang",
+        "Zhangyu Zhou",
+        "Shuoshuo Zhang",
+        "Zhiyong Tan",
+        "Jiahui Pan",
+        "Xiaocong Yuan",
+        "Changjun Min"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-13T01:58:56+00:00",
+      "link": "https://arxiv.org/pdf/2605.12884v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "Ultrafast wide-field pump-probe interferometric microscope for material dynamics",
+      "llm_evidence_cn": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "llm_evidence": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "canonical_evidence": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "llm_tldr_en": "Presents an ultrafast interferometric microscope for 3D topography of material dynamics.",
+      "llm_tldr_cn": "提出一种超快干涉显微镜，用于材料动力学的单帧三维形貌重建。",
+      "llm_tldr": "提出一种超快干涉显微镜，用于材料动力学的单帧三维形貌重建。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.13121v1",
+      "source": "arxiv",
+      "title": "Ultrafast Critical Slowing of Spin Dynamics and Emergent Nonequilibrium Fano Interference in Fe3GeTe2",
+      "abstract": "Fe$_3$GeTe$_2$ is a prototypical metallic van der Waals ferromagnet with itinerant magnetism and a highly tunable Curie temperature, yet how electronic excitations couple to spin and lattice degrees of freedom across its magnetic transition remains largely unexplored. Here, we use two-color pump-probe reflectivity to investigate the coupled electronic, spin, and lattice dynamics. The time-resolved reflectivity exhibits a tri-exponential relaxation, in which the intermediate component shows an anomaly near the Curie temperature due to enhanced interlayer spin-lattice interactions, while the slowest component displays pronounced critical slowing down with an exponent of ~ 0.3, revealing non-universal relaxation dynamics associated with intralayer spin correlations. Furthermore, we observe an emergent nonequilibrium A1g phonon Fano asymmetry that is suppressed in the ferromagnetic phase but anomalously enhanced in the paramagnetic regime, driven by thermally activated anharmonic decay pathways that bridge the kinematic gap to a hot electronic continuum. The pronounced enhancement of the acoustic strain pulse amplitude near T$_c$ further evidences robust magnetoelastic coupling. Overall, our results reveal how magnetic order governs the interplay among critical spin dynamics, electronic continuum excitations, and lattice response in metallic van der Waals ferromagnets",
+      "authors": [
+        "Anupama Chauhan",
+        "Sidhanta Sahu",
+        "Satyabrata Bera",
+        "Tuhin Debnath",
+        "Mintu Mondal",
+        "Anamitra Mukherjee",
+        "Siddhartha Lal",
+        "N. Kamaraju"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-13T07:47:50+00:00",
+      "link": "https://arxiv.org/pdf/2605.13121v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "time-resolved reflectivity for solid state spin dynamics",
+      "llm_evidence_cn": "用于固态自旋动力学的时间分辨反射率",
+      "llm_evidence": "用于固态自旋动力学的时间分辨反射率",
+      "canonical_evidence": "用于固态自旋动力学的时间分辨反射率",
+      "llm_tldr_en": "Uses pump-probe reflectivity to study ultrafast spin and lattice dynamics in a van der Waals ferromagnet.",
+      "llm_tldr_cn": "利用泵浦-探测反射率研究范德华铁磁体中的超快自旋和晶格动力学。",
+      "llm_tldr": "利用泵浦-探测反射率研究范德华铁磁体中的超快自旋和晶格动力学。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.13528v1",
+      "source": "arxiv",
+      "title": "High-temperature behavior of amorphous alumina coatings: Insights from in-situ nanoindentation and X-ray diffraction studies",
+      "abstract": "Further development of nuclear power plant technology relies heavily on materials durability under operating conditions. Estimating the materials performance in the operando tests is crucial. In this paper, the mechanical behavior of thin amorphous nuclear-dedicated Al2O3 coatings deposited by pulsed laser deposition was investigated by nanoindentation over the temperature range of 25-650C. Experimental nanomechanical analysis was supported by MD simulations. The results indicate that the hardness of the amorphous coating experiences a gradual, constant decrease with temperature, while the Young modulus value remains constant in the whole temperature range. Observed phenomena confirm the increasing plasticity of the material and it is postulated to be related to the bond-switching mechanism that accelerates at high temperatures. The post-mortem transmission electron microscopy characterization confirmed that the loaded material was non-crystalline over the entire range of the indentation temperatures. The thermal stability of the structure was further studied in-situ up to 1050C by X-ray diffraction. The implemented methodology allowed us to follow the dynamic process of phase transitions occurring in the material above 650C. First, thermally activated crystallization was observed at 700C. Intermediate alumina phases were present up to 950C, while above this temperature, exclusively the thermodynamically stable alpha-Al2O3 was observed. The in-situ high-temperature characterization of the evolution of thin films boosts the understanding of the application limits of the coating systems at elevated temperatures. The added value is that the paper demonstrates the potential usefulness of combining high-temperature techniques to characterize the complete behavior of thin films at elevated temperatures.",
+      "authors": [
+        "A. Zaborowska",
+        "L. Kurpaska",
+        "M. Zielinski",
+        "Q. Xu",
+        "E. Wyszkowska",
+        "J. OConnell",
+        "J. H. Neethling",
+        "F. Di Fonzo",
+        "M. Frelek-Kozak",
+        "S. Papanikolaou",
+        "R. Diduszko",
+        "J. Jagielski"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-13T13:40:50+00:00",
+      "link": "https://arxiv.org/pdf/2605.13528v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "estimating materials performance in operando tests",
+      "llm_evidence_cn": "在原位(operando)测试中评估材料性能",
+      "llm_evidence": "在原位(operando)测试中评估材料性能",
+      "canonical_evidence": "在原位(operando)测试中评估材料性能",
+      "llm_tldr_en": "Investigates mechanical behavior of Al2O3 coatings using in-situ nanoindentation and XRD.",
+      "llm_tldr_cn": "通过原位纳米压痕和X射线衍射研究氧化铝涂层的高温力学行为。",
+      "llm_tldr": "通过原位纳米压痕和X射线衍射研究氧化铝涂层的高温力学行为。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.04774v1",
+      "source": "arxiv",
+      "title": "Spin-wave bandgap engineering via mode hybridization in dipolar-coupled YIG film/CoFeB nanodisk magnonic crystals",
+      "abstract": "We investigate spin-wave transport in hybrid two-dimensional magnonic crystals comprising a low-damping yttrium iron garnet (YIG) film coupled to a periodic array of CoFeB nanodisks. Using propagating spin-wave spectroscopy, super-Nyquist magneto-optical Kerr effect microscopy, and micromagnetic simulations, we demonstrate the formation of pronounced and tunable bandgaps that do not originate from conventional Bragg scattering. Instead, these gaps arise from hybridization between the fundamental magnonic-crystal mode and in-plane transverse standing modes induced by the periodic nanodisk array. The spectral position and width of these gaps are controlled by geometric parameters and by the magnetic state of the nanodisks, including their vortex configuration, which governs both static and dynamic dipolar coupling. For larger lattice periods, additional gaps emerge through hybridization with modes quantized both transverse and parallel to the spin-wave propagation direction, reflecting dispersion folding in two dimensions. Our results establish mode hybridization as a versatile mechanism for engineering spin-wave band structures beyond the constraints of Bragg scattering and provide a pathway toward reconfigurable magnonic devices based on dipolar-coupled hybrid architectures.",
+      "authors": [
+        "Junyoung Hyun",
+        "Krzysztof Szulc",
+        "Mateusz Zelent",
+        "Nikolai Kuznetsov",
+        "Lukáš Flajšman",
+        "Maciej Krawczyk",
+        "Paweł Gruszecki",
+        "Sebastiaan van Dijken"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-05-06T11:20:36+00:00",
+      "link": "https://arxiv.org/pdf/2605.04774v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "magneto-optical Kerr effect microscopy for spin-wave transport in crystals",
+      "llm_evidence_cn": "磁光克尔效应显微镜用于晶体中的自旋波传输研究",
+      "llm_evidence": "磁光克尔效应显微镜用于晶体中的自旋波传输研究",
+      "canonical_evidence": "磁光克尔效应显微镜用于晶体中的自旋波传输研究",
+      "llm_tldr_en": "Investigates spin-wave transport and bandgap engineering in hybrid magnonic crystals using MOKE microscopy.",
+      "llm_tldr_cn": "利用磁光克尔显微镜研究混合磁子晶体中的自旋波传输和带隙工程。",
+      "llm_tldr": "利用磁光克尔显微镜研究混合磁子晶体中的自旋波传输和带隙工程。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

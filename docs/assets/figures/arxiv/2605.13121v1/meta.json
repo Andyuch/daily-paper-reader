@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.13121v1/fig-001.webp",
+      "caption": "FIG. 4. (a) The oscillatory component (A1g optical phonon) extracted from the transient normalized ∆R/R signal and the corresponding (b) Normalized Fourier intensity spectra at few selected temperatures; the solid black curve represents a fit to the Fano line shape (Eq. 2). The arrow denotes increasing temperature and the black dotted lines serve as guide to the eye. Temperature dependence of the phonon frequency (ν , left axis) and linewidth (Γ , right axis) obtained from the Fano fits. The solid green and blue curves show the fit to the cubic anharmonic decay model in the high-temperature regime (210-320 K), while the dashed lines are guides to the eye. (d) Temperature evolution of the Fano asymmetry parameter (1/|q|). (e) The strain component is extracted from the transient ∆R/R signal and it’s amplitude (dip-to-peak difference, (∆P)) is plotted as a function of temperature (see SM, Sec. IX, for details [23]). The light green shaded region marks the vicinity of the Curie temperature, Tc.",
+      "page": 10,
+      "index": 1,
+      "width": 974,
+      "height": 845
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13121v1/fig-002.webp",
+      "caption": "FIG. 3. (a) Schematic depicting the hierarchy of relaxation processes, with electron- phonon coupling occurring on sub-ps timescales, followed by interlayer and intralayer spin- lattice relaxation on tens and hundreds of ps timescales. The relaxation timescales (b) τ1, (c) τ2 and (d) τ3 extracted from a triexponential fit to the ∆R/R data (green squares) with error bars. The black dotted lines are guides to the eye. The light green shaded area highlights the region near the critical temperature, Tc. The red solid line in the (d) is the fit using the power-law (see text)",
+      "page": 8,
+      "index": 2,
+      "width": 974,
+      "height": 893
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13121v1/fig-003.webp",
+      "caption": "FIG. 1. Schematic illustrating the evolution of coupled electronic, spin, and lattice dynamics across the ferromagnetic phase transition in FGT. The left panel shows the temperature progression from the ferromagnetic phase (T < Tc) to the paramagnetic phase (T > Tc), with strong spin fluctuations near T ≈ Tc. The right panels summarize the dominant processes observed in this study: (top) critical slowing down of the intralayer spin-lattice relaxation associated with the divergence of the spin-spin correlation length near Tc; (middle) enhanced acoustic strain-pulse amplitude indicating strong magnetoelastic coupling; and (bottom) coupling between the electronic continuum and the coherent A1g optical phonon, producing a Fano-type asymmetric phonon lineshape above Tc.",
+      "page": 4,
+      "index": 3,
+      "width": 947,
+      "height": 529
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13121v1/fig-004.webp",
+      "caption": "FIG. 5. Thermal phonons boosted Fano asymmetry: Calculated softening, ∆ν(Tp) = ν(Tc)− ν(Tp), broadening ∆Γ(Tp) = Γ(Tp)− Γ(Tc) and Fano asymmetry parameter 1/|q| as a function of the phonon temperature (Tp) in the paramagnetic regime (T > Tc).",
+      "page": 19,
+      "index": 4,
+      "width": 974,
+      "height": 315
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13121v1/fig-005.webp",
+      "caption": "FIG. 2. The time-resolved differential reflectivity measurements. (a) 2D false color plot of the normalized ∆R/R vs temperature from 120-320 K. The black dashed line indicates the curie temperature (Tc). (b) The normalized ∆R/R at few selected temperatures (different colors) and the fit with Eq. (1) (black solid line). The data has been shifted vertically for clarity. (c) and (d) displays the variation in the exponential background below and above Tc respectively. Inset in (c) and (d) show early-time dynamics upto 5 ps, highlighting the optical phonon oscillations.",
+      "page": 5,
+      "index": 5,
+      "width": 974,
+      "height": 712
+    }
+  ]
+}
