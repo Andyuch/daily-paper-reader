@@ -1,0 +1,292 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-15T20:19:20.706792+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2605.12884v1",
+      "source": "arxiv",
+      "title": "Ultrafast wide-field 3D topography with extended depth of field",
+      "abstract": "Ultrafast optical imaging has enabled direct observation of femtosecond-nanosecond dynamics, yet three-dimensional (3D) dynamic measurements at high numerical aperture (NA) remain hindered by the intrinsically shallow depth of field (DoF) of conventional microscopes. Here, we propose an ultrafast, wide-field pump-probe interferometric microscope on a telecentric platform that significantly extends the effective DoF to ~18 micrometer at a high NA of 0.9 while maintaining high spatial resolution (down to 235 nm) and temporal resolution (~170 fs). The system enables single-frame 3D topography reconstruction without axial scanning or multi-view acquisition. We demonstrate these capabilities by capturing axial material flow during laser-induced microsphere melting that remain unobservable with conventional narrow-DoF systems, and by tracking the azimuthal rotation of ablation lobes during axial propagation of temporal focused spatiotemporal optical vortex (TF-STOV) pulses, directly revealing the spatiotemporal evolution of STOV-matter interactions",
+      "authors": [
+        "Qianyi Wei",
+        "Jielei Ni",
+        "Yuquan Zhang",
+        "Zhangyu Zhou",
+        "Shuoshuo Zhang",
+        "Zhiyong Tan",
+        "Jiahui Pan",
+        "Xiaocong Yuan",
+        "Changjun Min"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-13T01:58:56+00:00",
+      "link": "https://arxiv.org/pdf/2605.12884v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.5,
+      "llm_evidence_en": "ultrafast wide-field pump-probe interferometric microscope for material dynamics",
+      "llm_evidence_cn": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "llm_evidence": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "canonical_evidence": "用于材料动力学的超快宽场泵浦-探测干涉显微镜",
+      "llm_tldr_en": "An ultrafast interferometric microscope for 3D topography and observation of material dynamics.",
+      "llm_tldr_cn": "一种用于三维形貌测量和材料动力学观测的超快干涉显微镜。",
+      "llm_tldr": "一种用于三维形貌测量和材料动力学观测的超快干涉显微镜。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.13121v1",
+      "source": "arxiv",
+      "title": "Ultrafast Critical Slowing of Spin Dynamics and Emergent Nonequilibrium Fano Interference in Fe3GeTe2",
+      "abstract": "Fe$_3$GeTe$_2$ is a prototypical metallic van der Waals ferromagnet with itinerant magnetism and a highly tunable Curie temperature, yet how electronic excitations couple to spin and lattice degrees of freedom across its magnetic transition remains largely unexplored. Here, we use two-color pump-probe reflectivity to investigate the coupled electronic, spin, and lattice dynamics. The time-resolved reflectivity exhibits a tri-exponential relaxation, in which the intermediate component shows an anomaly near the Curie temperature due to enhanced interlayer spin-lattice interactions, while the slowest component displays pronounced critical slowing down with an exponent of ~ 0.3, revealing non-universal relaxation dynamics associated with intralayer spin correlations. Furthermore, we observe an emergent nonequilibrium A1g phonon Fano asymmetry that is suppressed in the ferromagnetic phase but anomalously enhanced in the paramagnetic regime, driven by thermally activated anharmonic decay pathways that bridge the kinematic gap to a hot electronic continuum. The pronounced enhancement of the acoustic strain pulse amplitude near T$_c$ further evidences robust magnetoelastic coupling. Overall, our results reveal how magnetic order governs the interplay among critical spin dynamics, electronic continuum excitations, and lattice response in metallic van der Waals ferromagnets",
+      "authors": [
+        "Anupama Chauhan",
+        "Sidhanta Sahu",
+        "Satyabrata Bera",
+        "Tuhin Debnath",
+        "Mintu Mondal",
+        "Anamitra Mukherjee",
+        "Siddhartha Lal",
+        "N. Kamaraju"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-13T07:47:50+00:00",
+      "link": "https://arxiv.org/pdf/2605.13121v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved reflectivity and pump-probe dynamics",
+      "llm_evidence_cn": "时间分辨反射率与泵浦-探测动力学",
+      "llm_evidence": "时间分辨反射率与泵浦-探测动力学",
+      "canonical_evidence": "时间分辨反射率与泵浦-探测动力学",
+      "llm_tldr_en": "Uses pump-probe reflectivity to study ultrafast spin and lattice dynamics in a van der Waals ferromagnet.",
+      "llm_tldr_cn": "利用泵浦-探测反射率研究范德华铁磁体中的超快自旋和晶格动力学。",
+      "llm_tldr": "利用泵浦-探测反射率研究范德华铁磁体中的超快自旋和晶格动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.13707v1",
+      "source": "arxiv",
+      "title": "Giant optical spin-orbit interactions in ferroelectric van der Waals waveguides",
+      "abstract": "Optical spin-orbit interactions (SOI) link photonic spin to momentum, offering a route toward on-chip polarization control and beam steering. Nevertheless, achieving sufficient optical SOI and nonlinearities on sub-micrometer scales - a prerequisite for dense photonic integration - remains an outstanding challenge. Here, we show that highly birefringent van der Waals (vdW) waveguides provide an ideal, chip-compatible platform to address this limitation. We focus on the ferroelectric semiconductor NbOI2, which exhibits record optical nonlinearities and dielectric anisotropy. Using femtosecond optical microscopy, we image light propagation and harmonic conversion beyond the total internal reflection barrier over tens of micrometers in NbOI2 slab waveguides. We report giant optical spin-splitting through the optical spin Hall effect, which facilitates spatial separation of optical spin currents on sub-micrometer scales, in quantitative agreement with a microscopic light-matter interaction model. We further leverage optical spin-momentum locking to realize polarization-controlled waveguide steering. We generalize these observations across various vdW waveguides and empirically confirm a scaling law linking dielectric anisotropy to geometric spin-splitting. Our results establish highly anisotropic vdW waveguides as an ideal platform for densely integrated opto-spintronic technologies.",
+      "authors": [
+        "Ding Xu",
+        "Saeed Rahmanian Koshkaki",
+        "Vicente Galicia",
+        "Chun-Ying Huang",
+        "Victoria Quirós-Cordero",
+        "Jakhangirkhodja A. Tulyagankhodjaev",
+        "André Koch Liston",
+        "Daniel G. Chica",
+        "Emma Lian",
+        "Amirhosein Amini",
+        "Yongseok Hong",
+        "Taketo Handa",
+        "P. James Schuck",
+        "Xiaoyang Zhu",
+        "Xavier Roy",
+        "Arkajit Mandal",
+        "Milan Delor"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.optics"
+      ],
+      "published": "2026-05-13T15:56:02+00:00",
+      "link": "https://arxiv.org/pdf/2605.13707v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "femtosecond optical microscopy for semiconductor imaging",
+      "llm_evidence_cn": "用于半导体成像的飞秒光学显微镜",
+      "llm_evidence": "用于半导体成像的飞秒光学显微镜",
+      "canonical_evidence": "用于半导体成像的飞秒光学显微镜",
+      "llm_tldr_en": "Imaging light propagation and nonlinearities in ferroelectric vdW waveguides using femtosecond microscopy.",
+      "llm_tldr_cn": "利用飞秒显微技术成像铁电范德华波导中的光传播和非线性。",
+      "llm_tldr": "利用飞秒显微技术成像铁电范德华波导中的光传播和非线性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.14238v1",
+      "source": "arxiv",
+      "title": "Ultrafast decoupling of quasiparticles and spin fluctuations in superconducting cuprates",
+      "abstract": "Understanding how quasiparticles are generated following a rapid quench of superconductivity in high-Tc cuprates is a key unresolved problem in nonequilibrium superconductivity. Here we resolve these processes in optimally doped YBCO [YBa2Cu3Oy(y=6.94, Tc=92 K)] using broadband (0.16 -4.1 eV, ca. 100 fs) and nearly single-cycle (6 fs) transient reflectivity spectroscopy. We show that within a few femtosecond, enhanced electron-electron Umklapp scattering dominates, signaling a transient modulation of long-range Coulomb interactions on the eV scale. This regime is followed by a rapid suppression of the scattering rate of the mid-infrared absorption associated with carriers dressed by spin fluctuations. We attribute this observation to an ultrafast decoupling of quasiparticles from the spin-fluctuation background, occurring on a 90 fs timescale set by the inverse optical gap. These findings reveal the correlated many-body dynamics underlying quasiparticle generation in cuprates and provide further clues for unconventional pairing mechanism.",
+      "authors": [
+        "Yuto Taniguchi",
+        "Ryo Kato",
+        "Tatsuya Amano",
+        "Hirotake Itoh",
+        "Yohei Kawakam",
+        "Yuto Nakamura",
+        "Hideo Kishida",
+        "Christian Bernhard",
+        "Jure Demsar",
+        "Takahiko Sasaki",
+        "Terukazu Nishizaki",
+        "Kenji Yonemitsu",
+        "Shinichiro Iwai"
+      ],
+      "primary_category": "cond-mat.str-el",
+      "categories": [
+        "cond-mat.str-el"
+      ],
+      "published": "2026-05-14T01:10:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.14238v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "transient reflectivity spectroscopy with femtosecond resolution",
+      "llm_evidence_cn": "具有飞秒分辨率的瞬态反射光谱",
+      "llm_evidence": "具有飞秒分辨率的瞬态反射光谱",
+      "canonical_evidence": "具有飞秒分辨率的瞬态反射光谱",
+      "llm_tldr_en": "Uses ultrafast transient reflectivity to resolve quasiparticle generation in superconducting cuprates.",
+      "llm_tldr_cn": "利用超快瞬态反射率解析超导铜酸盐中的准粒子生成。",
+      "llm_tldr": "利用超快瞬态反射率解析超导铜酸盐中的准粒子生成。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.12194v1",
+      "source": "arxiv",
+      "title": "Probing Non-Equilibrium Grain Boundary Dynamics with XPCS and Domain-Adaptive Machine Learning",
+      "abstract": "Grain-boundary (GB) dynamics control the stability, mechanical, and functional response of nanocrystalline materials, but direct experimental access to their slow non-equilibrium motion has been limited. Here we establish X-ray photon correlation spectroscopy (XPCS), combined with domain-adaptive machine learning, as a quantitative probe of GB dynamics. Temperature- and grain-size-dependent two-time XPCS measurements in nanocrystalline silicon reveal pronounced departures from time-translation invariance, showing that GB relaxation can remain far from equilibrium over experimental timescales. However, direct extraction of quantitative physical information from these high-dimensional, noisy fluctuation maps faces a significant challenge. To overcome this barrier, we develop a semi-supervised learning framework that transfers physical parameter labels from continuum simulations to unlabeled experimental XPCS maps through domain-adaptive representation alignment. This AI-augmented approach enables the extraction of key kinetic parameters, including bulk diffusivity, GB stiffness, and effective GB concentration, directly from experimental XPCS measurements. Our results show how machine learning can transform indirect fluctuation signals into quantitative materials dynamics, providing a general route to study non-equilibrium defect motion in solids.",
+      "authors": [
+        "Mouyang Cheng",
+        "Bowen Yu",
+        "Chu-Liang Fu",
+        "Nina Andrejevic",
+        "Matthias T. Agne",
+        "Riley Hanus",
+        "Qiwei Wan",
+        "Nathan C. Drucker",
+        "Thanh Nguyen",
+        "Andrei Fluerasu",
+        "Lutz Wiegart",
+        "Xiaoqian M Chen",
+        "Daniel Pajerowski",
+        "Yongqiang Cheng",
+        "Joshua J Turner",
+        "G. Jeffrey Snyder",
+        "Mingda Li"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ],
+      "published": "2026-05-12T14:37:17+00:00",
+      "link": "https://arxiv.org/pdf/2605.12194v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-dependent XPCS measurements of grain boundary dynamics",
+      "llm_evidence_cn": "晶界动力学的时间相关XPCS测量",
+      "llm_evidence": "晶界动力学的时间相关XPCS测量",
+      "canonical_evidence": "晶界动力学的时间相关XPCS测量",
+      "llm_tldr_en": "Using XPCS and machine learning to probe non-equilibrium grain boundary dynamics in nanocrystalline silicon.",
+      "llm_tldr_cn": "利用XPCS和机器学习探测纳米晶硅中的非平衡晶界动力学。",
+      "llm_tldr": "利用XPCS和机器学习探测纳米晶硅中的非平衡晶界动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.13483v1",
+      "source": "arxiv",
+      "title": "Vectorial field reconstruction without detecting the field",
+      "abstract": "Vector beams, whose polarization varies across the transverse profile, are a central resource in structured-light optics and quantum photonics. Their characterization, however, becomes challenging when the field lies in a spectral region for which efficient spatially resolving detectors are unavailable. Here we demonstrate the spatially resolved reconstruction of an undetected vector beam by exploiting induced coherence in a nonlinear interferometer. In this effect, indistinguishability between two down-conversion pathways allows information encoded in an undetected field to be read out through interference of its detected partner. A telecom-wavelength idler field acquires a spatially varying polarization transformation but is never directly detected. Instead, its local polarization information is inferred from single-photon interference in the visible signal field, enabled by momentum correlations of the photon pair. Using phase-shifting and off-axis quantum holography with two polarization projections, we reconstruct the horizontal and vertical amplitudes and their relative phase across the beam profile, thereby recovering the full vectorial structure of the undetected field. We experimentally retrieve the polarization texture of an $m=2$ vector beam and compare multi-shot and single-shot reconstruction strategies. Our results extend imaging with undetected light from scalar objects to vectorial optical fields and open a route to polarization-sensitive sensing and state reconstruction in spectral regions that are difficult to access directly.",
+      "authors": [
+        "Jonas Vasikonis",
+        "Sebastian Töpfer",
+        "Satyajeet Patil",
+        "Jorge Fuenzalida",
+        "Markus Gräfe"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-13T13:07:43+00:00",
+      "link": "https://arxiv.org/pdf/2605.13483v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "spatially resolved reconstruction using a nonlinear interferometer",
+      "llm_evidence_cn": "利用非线性干涉仪进行空间分辨重建",
+      "llm_evidence": "利用非线性干涉仪进行空间分辨重建",
+      "canonical_evidence": "利用非线性干涉仪进行空间分辨重建",
+      "llm_tldr_en": "Demonstrates vectorial field reconstruction via induced coherence in a nonlinear interferometer.",
+      "llm_tldr_cn": "通过非线性干涉仪中的诱导相干演示了矢量场的空间分辨重建。",
+      "llm_tldr": "通过非线性干涉仪中的诱导相干演示了矢量场的空间分辨重建。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

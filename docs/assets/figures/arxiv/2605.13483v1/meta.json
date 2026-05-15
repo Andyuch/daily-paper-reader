@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-001.webp",
+      "caption": "Figure 5: Fidelity for reconstructed polariaztion amplitudes of phase-shifting digital holography (a,b) and off-axis holography (c,d).The fidelity of the Hprojection is shown in Figures (a) and (c).The fidelity of the V-projection is displayed in (b) and (d).(a) and (b) demonstrate the fidelity for PSDH, while (c) and (d) demonstrate the fidelity for OAH.",
+      "page": 11,
+      "index": 1,
+      "width": 726,
+      "height": 653
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-002.webp",
+      "caption": "Figure 6: Schematics for OAH. The recorded image is converted to Fourier space via a fast Fourier transformation (FFT). In Fourier space, the first order is separated and can be suppressed by a first-order shift (FS). After an inverse fast Fourier transformation (IFFT), the complex field is obtained, from which the amplitude (modulus) and phase (argument) can be derived.",
+      "page": 15,
+      "index": 2,
+      "width": 802,
+      "height": 685
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-003.webp",
+      "caption": "Figure 2: Experimental setup for vectorial field reconstruction with undetected light. A continuous-wave single-mode pump laser at 532 nm pumps two nonlinear PPLN crystals, Q1 and Q2. The idler field at 1550 nm from Q1 is structured by a q-plate and a half-wave plate (HWP3), overlapped with the idler mode at Q2, and remains undetected. The corresponding signal fields at 810 nm are recombined at a beam splitter and detected on an sCMOS camera after spectral filtering.",
+      "page": 7,
+      "index": 3,
+      "width": 814,
+      "height": 460
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-004.webp",
+      "caption": "Figure 4: Off-axis holography reconstruction of the local polarization amplitudes (a,b,d) and phase (c) of the undetected vector field generated with a vortex wave plate of topological charge m = 2.While Image a) shows the reconstructed H-projection α(r), b) shows the reconstructed V-projection β(r). In c) the phase φ(r) is shown. This function extends from −π to π. The combined image of both projections is depicted in d)",
+      "page": 10,
+      "index": 4,
+      "width": 786,
+      "height": 587
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-005.webp",
+      "caption": "Figure 1: Principle of the characterization of undetected vector beams. A photon pair can be generated in either of two nonlinear sources. The vector state is prepared only in one idler arm, whereas the corresponding signal arm remains unaltered. After alignment of the idler modes, the two generation pathways become indistinguishable, so that induced coherence leads to interference in the detected signal field. The information encoded in the undetected idler field can thus be retrieved from the signal readout, while the idler field itself is never directly detected.",
+      "page": 3,
+      "index": 5,
+      "width": 814,
+      "height": 544
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13483v1/fig-006.webp",
+      "caption": "Figure 3: Phase-shifting holography reconstruction of the local polarization amplitudes (a,b,d) and phase (c) of the undetected vector field generated with a vortex wave plate of topological charge m = 2. While Image a) shows the reconstructed H-projection α(r), b) shows the reconstructed V-projection β(r). Both exhibit a visibility up to 0.6. In c) the phase φ(r) is shown. This function extends from −π to π. The combined image of both projections is depicted in d)",
+      "page": 9,
+      "index": 6,
+      "width": 780,
+      "height": 621
+    }
+  ]
+}

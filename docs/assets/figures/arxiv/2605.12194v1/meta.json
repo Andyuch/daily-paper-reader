@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.12194v1/fig-001.webp",
+      "caption": "Figure 1. Integrated workflow with experiment, theory, and AI for grain-boundary dynamics. Experimentally, X-ray photon correlation spectroscopy (XPCS) measures the two-time correlation function g2(q, t1, t2), capturing non-equilibrium dynamics of the grain boundary. Theoretically, stochastic differential equation (SDE)-based simulations incorporate thermal diffusion and curvature-driven grain-boundary migration to generate theoretical g2(q, t1, t2) maps. To bridge the domain gap between theory and experiment, we employ a semi-supervised domain adaptation framework with two coupled losses: a regression loss Ly that trains theoretical g2 maps to predict (D,Γ,λGB), and a domain alignment loss Ld that constrains experimental (orange triangles) and theoretical (blue diamonds) embeddings with matched non-equilibrium measures into a shared feature space. This alignment enables direct and robust inference of GB kinetic parameters from experimental XPCS measurements.",
+      "page": 3,
+      "index": 1,
+      "width": 1022,
+      "height": 558
+    },
+    {
+      "url": "assets/figures/arxiv/2605.12194v1/fig-002.webp",
+      "caption": "Figure 2. Experimental temperature-dependent XPCS dynamics and non-equilibrium behavior. a. Two-time correlation functions g2(t1, t2) measured at 299 K, 371 K, 421 K, and 471 K for the same nano-crystalline silicon sample. The results reveal increasingly non-equilibrium features in the dynamics as temperature rises. Here, g2(t1, t2) denotes g2(q, t1, t2) evaluated with in-plane momentum transfer qr = 0.045Å−1 and out-of-plane qz = 0.275Å−1. b. Corresponding intensity-intensity correlation slices f (τ; t1) = g2(t1, t1 + τ) at different times t1. As temperature increases, f (τ; t1) demonstrates systematic deviations between different t1, indicating a transition from near-equilibrium to non-equilibrium GB dynamics. A more quantitative non-equilibrium measure following the definition in Eq. 3 is also shown for each temperature.",
+      "page": 5,
+      "index": 2,
+      "width": 1030,
+      "height": 475
+    },
+    {
+      "url": "assets/figures/arxiv/2605.12194v1/fig-003.webp",
+      "caption": "Figure 3. Theoretical SDE predictions and mapping of non-equilibrium dynamics across parameter space. a. Simulated two-time correlation functions g2(t1, t2) for four representative parameter sets, showing the progression from nearly time-translation-invariant dynamics to strongly non-equilibrium behavior. Here g2(t1, t2) denotes g2(q, t1, t2) with in-plane qr = 0.045Å−1. b. Corresponding intensity-intensity correlation slices f (τ; t1) = g2(t1, t1 + τ) at different starting times t1, with non-equilibrium measures Snoneq = 0.062, 0.259, 0.406, and 0.851 for the four cases in a. c. Heatmap visualization of the predicted non-equilibrium measure across pairwise parameter spaces involving bulk diffusivity D, GB stiffness Γ, and effective GB concentration λGB; markers indicate the four representative cases shown in a and b.",
+      "page": 6,
+      "index": 3,
+      "width": 923,
+      "height": 741
+    },
+    {
+      "url": "assets/figures/arxiv/2605.12194v1/fig-004.webp",
+      "caption": "Figure 4. Semi-supervised domain adaptation for mapping experimental XPCS onto the theoretical parameter manifold. a. Prediction results before domain adaptation using the vanilla model trained only on simulated XPCS. Left and middle panel: predicted versus real D and λGB for simulated test data, with a test-set R2 = 0.995 and 0.893, respectively. Right panel: inferred experimental XPCS locations overlaid on the theoretical (D,λGB) parameter map, where the background colormap shows the simulated non-equilibrium measure. b. Latent feature representations visualized with UMAP before domain adaptation (left) and after contrastive domain adaptation (right). Cyan markers indicate theoretical XPCS samples, and orange markers indicate experimental XPCS samples. c. Prediction results after domain adaptation. Left and middle panel: predicted versus real D and λGB for simulated test data after adaptation, with a test-set R2 = 0.950 and 0.890, respectively. Right panel: inferred experimental XPCS locations on the same theoretical (D,λGB) map, showing their shift into the physically expected crossover region.",
+      "page": 8,
+      "index": 4,
+      "width": 886,
+      "height": 768
+    }
+  ]
+}

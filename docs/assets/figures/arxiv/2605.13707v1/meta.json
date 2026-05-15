@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.13707v1/fig-001.webp",
+      "caption": "Figure 1. Optical spin-splitting in NbOI2 slab waveguides. a, Schematic of optical spin splitting in a NbOI2 planar waveguide. The incident light is focused on the NbOI2 edge to couple into waveguide modes beyond the far-field light cone. Inset: side view of the NbOI2 crystal structure along the non-polar c-axis and polar b-axis. b, Measured dielectric function of NbOI2 along all crystal axes. Subscripts r, i indicate real and imaginary parts of the dielectric function, respectively. c-d, Comparison of out-of-plane and in-plane birefringence Δn-1 for selected highly birefringent 3-dimensional and layered semiconductors and insulators. Dielectric functions other than for NbOI2 and CRSI (CsRe6Se8I3) are adopted from previously reported results.26–29,36–40 e, Optical image of a 265 nm thick NbOI2 planar waveguide on a glass substrate. The crystal is cleaved along the b-axis. The yellow star marks the pump excitation location. The red and blue arrows represent the spin-split beam trajectories that emerge from linearly polarized excitation of the edge. Inset shows a side-view schematic of the edge excitation. f, Far-field microscope image of waveguided light at the excitation energy of Epump = 1.3 eV, in the region highlighted by the dashed square in panel (e). The purple arrow indicates the pump polarization orientation. The image shows scattered light at the in-coupling and outcoupling edges of the waveguide. FW = fundamental wave. g, S3 Stokes parameter imaging of the FW at 1.3 eV. h, S1 Stokes parameter imaging of the second harmonic wave (SH), spectrally separated from the FW with a bandpass filter. i, Stokes vectors of the FW (blue and red) and SH (green) on the Poincaré sphere, measured at the output edge marked by circles in panels (g, h). All scale bars are 10 µm.",
+      "page": 3,
+      "index": 1,
+      "width": 962,
+      "height": 695
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13707v1/fig-002.webp",
+      "caption": "Figure 3. Interplay of spin precession and spin-Hall drift. a, Magnified isofrequency contour near a diabolical point at E = 1.0 eV. b, S3 dynamical propagation calculated using the MLMC Hamiltonian for splitting guided modes with rapid spin-precession. c, Same as (b) at DP. d. Inplane projection of effective magnetic field G��⃗ . The DP is indicated by yellow circles. e. Beam width of the guided modes as a function of kb from DP. Simulated beam widths (grey) and experimental beam widths (yellow) are measured 7 µm from excitation. Error bars denote the standard deviation from the fits.",
+      "page": 8,
+      "index": 2,
+      "width": 879,
+      "height": 596
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13707v1/fig-003.webp",
+      "caption": "Figure 4. NbOI2 waveguides as beam steerers. a. Schematic of polarization-dependent beam steering in NbOI2 waveguides. The pump polarization orientation is controlled by a half-waveplate (HWP). b. Intensity profiles of waveguided light measured 5 µm away from the excitation edge at 300 fs pump-probe time delay (dashed rectangle in the insets). The centroids of the left (red circles) and right (blue circles) modes are obtained from Gaussian fits to the intensity profiles. Error bars are the fit standard deviations. The insets show the propagation for pump polarizations ψ = 3π/4, π/4, and 0 relative to the edge. c–e. Polarization-dependent evolution of beam splitting and steering. The intensities of the split beams in (c) are extracted from (b). Transverse momenta kb in (d) are determined from the measured propagation directions in panel (b) and group velocities (Extended Data Fig. 1). The total transverse momenta in (e) are calculated by summing over the products of transverse momenta kb and intensities 𝐼𝐼 for each beam. f. Beam-splitting angles across different optical SOI systems. The horizontal axis is the empirical anisotropy coefficient. The splitting angles for NbOI2 excited at the c-edge (purple circles), NbOI2 at the b-edge (green circles), CsRe6Se8I3 (CRSI, cyan triangle), and MoS2 (blue pentagon) are measured in this work. Multiple circles for the same system indicate measurements at different energies. Splitting angles from the literature in OSHE systems FAPbBr3 cavities (FA, yellow circle)21 and liquid crystals hybrids cavities (LC, brown circle)22 are also plotted.",
+      "page": 9,
+      "index": 3,
+      "width": 976,
+      "height": 387
+    },
+    {
+      "url": "assets/figures/arxiv/2605.13707v1/fig-004.webp",
+      "caption": "Figure 2. Spin splitting and the waveguide spin Hall effect. a,b, Spatiotemporal imaging of waveguided light propagation with c-polarized pump excitation (a, purple arrow) and b-polarized pump excitation (b, green arrow). The upper rows of each panel are experimental results; the lower rows show quantum dynamics simulations using the MLMC model. Scale bars are 10 µm. c, Experimental S3-resolved isofrequency contour at E = 1.3 eV under c-polarized illumination. The experimentally accessible momentum range is limited by the far-field light cone (objective numerical aperture NA = 1.45, black line). d, Simulated S3 isofrequency contour at E = 1.3 eV from the MLMC Hamiltonian. The corresponding in-plane momenta of waveguided modes in panels a and b are marked by purple and green circles, respectively. e, Simulated S3 energymomentum dispersion at kc = 14 µm-1 from the MLMC Hamiltonian.",
+      "page": 5,
+      "index": 4,
+      "width": 976,
+      "height": 660
+    }
+  ]
+}
