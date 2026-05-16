@@ -1,0 +1,176 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-16T20:00:54.401724+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2605.12884v1",
+      "source": "arxiv",
+      "title": "Ultrafast wide-field 3D topography with extended depth of field",
+      "abstract": "Ultrafast optical imaging has enabled direct observation of femtosecond-nanosecond dynamics, yet three-dimensional (3D) dynamic measurements at high numerical aperture (NA) remain hindered by the intrinsically shallow depth of field (DoF) of conventional microscopes. Here, we propose an ultrafast, wide-field pump-probe interferometric microscope on a telecentric platform that significantly extends the effective DoF to ~18 micrometer at a high NA of 0.9 while maintaining high spatial resolution (down to 235 nm) and temporal resolution (~170 fs). The system enables single-frame 3D topography reconstruction without axial scanning or multi-view acquisition. We demonstrate these capabilities by capturing axial material flow during laser-induced microsphere melting that remain unobservable with conventional narrow-DoF systems, and by tracking the azimuthal rotation of ablation lobes during axial propagation of temporal focused spatiotemporal optical vortex (TF-STOV) pulses, directly revealing the spatiotemporal evolution of STOV-matter interactions",
+      "authors": [
+        "Qianyi Wei",
+        "Jielei Ni",
+        "Yuquan Zhang",
+        "Zhangyu Zhou",
+        "Shuoshuo Zhang",
+        "Zhiyong Tan",
+        "Jiahui Pan",
+        "Xiaocong Yuan",
+        "Changjun Min"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-13T01:58:56+00:00",
+      "link": "https://arxiv.org/pdf/2605.12884v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "ultrafast wide-field pump-probe interferometric microscope for material flow",
+      "llm_evidence_cn": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "llm_evidence": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "canonical_evidence": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "llm_tldr_en": "Develops an ultrafast interferometric microscope for 3D topography of dynamic material processes.",
+      "llm_tldr_cn": "开发了一种超快干涉显微镜，用于动态材料过程的3D形貌测量。",
+      "llm_tldr": "开发了一种超快干涉显微镜，用于动态材料过程的3D形貌测量。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.14353v1",
+      "source": "arxiv",
+      "title": "Chiroptical Ternary Entropy Harvesting from Self-Assembled Block Copolymer Nanopatterns",
+      "abstract": "Nanoscale fabrication inevitably produces local stochasticity that is commonly treated as a defect, but can instead be harnessed as a material resource for information security. Here we report a chiroptical platform for ternary entropy harvesting based on stochastic Au nanopatterns formed by block copolymer self-assembly. By transducing fabrication-induced stochastic microstates into handedness-dependent optical responses through chiroptical mapping, our platform enables native ternary digitization rather than conventional binary encoding, allowing physically harvested ternary random sequences to be used for key generation. This raises the information density to log2(3) = 1.585 bits per trit, approximately 58.5% higher than the binary limit, enabling more entropy to be harvested from a limited physical footprint. The harvested outputs exhibit near-balanced symbol populations, negligible spatial and inter-sample correlations, Shannon entropy approaching the ternary ideal, and resistance to statistical and machine-learning-based prediction. These results establish self-assembled chiroptical nanostructures as a scalable platform for cryptographic key generation, secure edge devices, and distributed Internet-of-Things platforms.",
+      "authors": [
+        "Wookjin Jung",
+        "Serin Jeong",
+        "Kyulim Kim",
+        "Dongkyu Lee",
+        "Sang Ouk Kim",
+        "Jihyeon Yeom"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-14T04:26:33+00:00",
+      "link": "https://arxiv.org/pdf/2605.14353v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "characterizing chiroptical responses of self-assembled block copolymer nanopatterns",
+      "llm_evidence_cn": "表征自组装嵌段共聚物纳米图案的手性光学响应",
+      "llm_evidence": "表征自组装嵌段共聚物纳米图案的手性光学响应",
+      "canonical_evidence": "表征自组装嵌段共聚物纳米图案的手性光学响应",
+      "llm_tldr_en": "Uses chiroptical mapping of stochastic nanopatterns for entropy harvesting and information security.",
+      "llm_tldr_cn": "利用随机纳米图案的手性光学映射进行熵采集和信息安全。",
+      "llm_tldr": "利用随机纳米图案的手性光学映射进行熵采集和信息安全。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.14468v1",
+      "source": "arxiv",
+      "title": "Complex wavefront engineering via decoupled space-time modulation",
+      "abstract": "Solid-state Spatial Light Modulators (SLMs) are fundamentally limited in their ability to achieve high spatial complexity and high temporal bandwidth simultaneously. High-speed, low-energy modulation requires sub-wavelength active mode volumes, and sophisticated spatial wavefront engineering necessitates an ultra-fine pixel pitch. While small pixels can simultaneously solve both, in conventional architectures, the dense 2D electrical routing required for such pixels creates an insurmountable physical bottleneck. This results in a compromise between the SLM refresh rate, number of pixels and the field of view. Here, we demonstrate a hybrid architecture that overcomes this limit by spatially decoupling the electrical modulation plane from the optical output plane. By integrating a metasurface doublet with a photonic integrated circuit (PIC)-based optical phased array (OPA), we achieve independent 2D electrical control over each phase-element while simultaneously realizing a three-fold reduction in effective pixel pitch. This decoupling allows us to maintain the small active volume required for high-speed operation, while circumventing the routing constraints of dense spatial array of emitters. We utilize this platform to demonstrate tunable varifocal lensing, 2D beam steering, and 2D holography. Our work provides a scalable foundation for next-generation solid-state SLMs that simultaneously offer high speed, low power consumption, and large field of view.",
+      "authors": [
+        "Virat Tara",
+        "Anna Wirth-Singh",
+        "Johannes E. Fröch",
+        "Arka Majumdar"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-14T07:02:38+00:00",
+      "link": "https://arxiv.org/pdf/2605.14468v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "decoupled space-time modulation for high temporal bandwidth wavefront engineering",
+      "llm_evidence_cn": "用于高时间带宽波前工程的空间-时间解耦调制",
+      "llm_evidence": "用于高时间带宽波前工程的空间-时间解耦调制",
+      "canonical_evidence": "用于高时间带宽波前工程的空间-时间解耦调制",
+      "llm_tldr_en": "Proposes a hybrid architecture for high-speed wavefront engineering via space-time modulation.",
+      "llm_tldr_cn": "提出了一种通过时空调制进行高速波前工程的混合架构。",
+      "llm_tldr": "提出了一种通过时空调制进行高速波前工程的混合架构。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.14595v1",
+      "source": "arxiv",
+      "title": "Improving Optical Metrology by Engineering the Target Environment",
+      "abstract": "Measurements of positional coordinates and dimensions - whether by human vision or optical instrumentation - are fundamental to safety, industrial productivity, manufacturing quality/accuracy, and scientific discovery. The ultimate precision of such measurements is governed by the Fisher information conveyed from an object to a detector through the optical field, and strategies for enhancing measurement performance often focus on reducing detector noise and/or refining estimation algorithms. Building on the emerging understanding of Fisher information as a physical quantity that propagates through space in a wave-like fashion, we demonstrate that substantial gains in precision can also be made by engineering the electromagnetic environment of a measurement target to optimise the generation and transmission of Fisher information. Using nanowire position metrology based on light scattering at a wavelength λ = 640 nm as an architype system, we achieve a multifold enhancement in localisation precision, reaching beyond λ/10,000. Our results establish target environment engineering as a powerful and broadly applicable strategy for advancing measurement and sensing performance across platforms ranging from optical characterisation of micro- and nano-objects to microwave radars and optical LiDAR navigation systems.",
+      "authors": [
+        "Thomas A. Grant",
+        "Cheng-Hung Chi",
+        "Kevin F. MacDonald",
+        "Nikolay I. Zheludev"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-14T09:03:54+00:00",
+      "link": "https://arxiv.org/pdf/2605.14595v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "improving optical metrology precision by engineering electromagnetic environments",
+      "llm_evidence_cn": "通过工程化电磁环境提高光学计量精度",
+      "llm_evidence": "通过工程化电磁环境提高光学计量精度",
+      "canonical_evidence": "通过工程化电磁环境提高光学计量精度",
+      "llm_tldr_en": "Explores enhancing optical measurement precision by engineering the target's electromagnetic environment.",
+      "llm_tldr_cn": "探讨了通过工程化目标电磁环境来提高光学测量精度的策略。",
+      "llm_tldr": "探讨了通过工程化目标电磁环境来提高光学测量精度的策略。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

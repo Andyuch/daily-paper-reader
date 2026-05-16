@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-001.webp",
+      "caption": "Figure 5. Robustness assessment of the Au nanopattern-on-Si platform for ternary entropy harvester operation under harsh environments. After heating at 150 °C: (A) SEM image of the Au nanopattern, (B) extracted ternary heatmap, and (C) inter-sample normalized Hamming-distance matrix used to evaluate output stability. After cryogenic exposure in liquid nitrogen (−196 °C): (D) SEM image, (E) ternary heatmap, and (F) inter-sample normalized Hamming-distance matrix. After ultrasonication in water: (G) SEM image, (H) ternary heatmap, and (I) inter-sample normalized Hamming-distance matrix. After immersion in 1 M HCl for 1 h: (J) SEM image, (K) ternary heatmap, and (L) inter-sample normalized Hamming-distance matrix.",
+      "page": 25,
+      "index": 1,
+      "width": 904,
+      "height": 1231
+    },
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-002.webp",
+      "caption": "Figure 3. Ternary entropy harvesting utilizing local chiroptical responses of Au nanopatterns. (A) Statistical distribution of local chiroptical Raman contrast extracted at the 521 cm⁻¹ Raman band, where the handednessdependent modulation is induced by the stochastic Au nanopatterns. The dashed lines indicate specific thresholds: blue (μ−0.43σ), yellow (μ), and red (μ+0.43σ). (B) Averaged ROA spectra for the three groups (Positive, Neutral, and Negative) classified based on the μ±0.43σ criteria. (C) Stepwise procedure for extracting ternary random sequences from the ROA signals. Note that while a full 100 × 100 grid was employed for the actual sequence generation, a magnified 28 × 28 sub-region is displayed here for visual clarity. (D) Demonstration of image encryption and decryption protocols using the ternary sequences.",
+      "page": 15,
+      "index": 2,
+      "width": 887,
+      "height": 1202
+    },
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-003.webp",
+      "caption": "Table 1. NIST SP 800-22 statistical test suite applied to the binary bitstream (1,014,450 bits) deterministically encoded from the ternary entropy harvester output (640,000 trits).",
+      "page": 29,
+      "index": 3,
+      "width": 996,
+      "height": 1433
+    },
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-004.webp",
+      "caption": "Figure 4. Machine-learning–based predictability analysis of the chiroptical ternary entropy harvester output. Markov prediction results showing (A) validation accuracy and (B) per-trit categorical cross-entropy (loss) as a function of conditional length and prediction length. GRU-based sequence prediction results showing (C) validation accuracy and (D) minimum validation cross-entropy across training epochs as a function of lag and training-set size. VAE-based conditional generation results showing (E) validation accuracy and (F) minimum validation cross-entropy across training epochs as a function of conditional length and generation length.",
+      "page": 23,
+      "index": 4,
+      "width": 733,
+      "height": 1256
+    },
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-005.webp",
+      "caption": "Figure 1. Structural characterization of Au nanopatterns. (A) Photograph of the fabricated sample. (B) Top-down SEM image showing fingerprint-like morphology. (C) Cross-sectional TEM images and (D) corresponding EDS elemental mapping results showing the distribution of Au, Cr, and Si. (E) 2D GISAXS scattering pattern and (F) the corresponding 1D in-plane intensity profile.",
+      "page": 8,
+      "index": 5,
+      "width": 943,
+      "height": 715
+    },
+    {
+      "url": "assets/figures/arxiv/2605.14353v1/fig-006.webp",
+      "caption": "Figure 2. Real-space simulation of chiroptical responses in fabricated Au nanopatterns. (A) Top-down SEM image of the fabricated Au nanopatterns, which served as the structural basis for the realistic 3D models used in the ROA simulations. (B) Simulated ROA signals on the reconstructed 3D Au nanopattern models under rightand left-circularly polarized excitation at a wavelength of 633 nm. The colored frames correspond to the specific regions of interest marked in (A).",
+      "page": 12,
+      "index": 6,
+      "width": 943,
+      "height": 431
+    }
+  ]
+}

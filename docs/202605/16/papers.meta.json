@@ -1,0 +1,69 @@
+{
+  "label": "2026-05-16",
+  "date": "2026-05-16",
+  "generated_at": "2026-05-16T20:02:17",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202605/16/2605.12884v1-ultrafast-wide-field-3d-topography-with-extended-depth-of-field",
+      "section": "deep",
+      "title_en": "Ultrafast wide-field 3D topography with extended depth of field",
+      "authors": "Qianyi Wei, Jielei Ni, Yuquan Zhang, Zhangyu Zhou, Shuoshuo Zhang, Zhiyong Tan, Jiahui Pan, Xiaocong Yuan, Changjun Min",
+      "date": "2026-05-13",
+      "pdf": "https://arxiv.org/pdf/2605.12884v1",
+      "score": "8.0",
+      "evidence": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "tldr": "本研究针对高数值孔径显微镜景深极浅导致难以进行三维动态测量的问题，提出了一种基于远心平台的超快宽场泵浦-探测干涉显微镜。该系统在0.9高数值孔径下将有效景深扩展至约18微米，同时保持了235纳米的空间分辨率和170飞秒的时间分辨率。通过单帧成像即可实现无需轴向扫描的三维形貌重建，成功捕捉了激光诱导微球熔化过程中的轴向物质流动及飞秒脉冲与物质相互作用的空时演化过程。",
+      "tags": "query:iscat",
+      "abstract_en": "Ultrafast optical imaging has enabled direct observation of femtosecond-nanosecond dynamics, yet three-dimensional (3D) dynamic measurements at high numerical aperture (NA) remain hindered by the intrinsically shallow depth of field (DoF) of conventional microscopes. Here, we propose an ultrafast, wide-field pump-probe interferometric microscope on a telecentric platform that significantly extends the effective DoF to ~18 micrometer at a high NA of 0.9 while maintaining high spatial resolution (down to 235 nm) and temporal resolution (~170 fs). The system enables single-frame 3D topography reconstruction without axial scanning or multi-view acquisition. We demonstrate these capabilities by capturing axial material flow during laser-induced microsphere melting that remain unobservable with conventional narrow-DoF systems, and by tracking the azimuthal rotation of ablation lobes during axial propagation of temporal focused spatiotemporal optical vortex (TF-STOV) pulses, directly revealing the spatiotemporal evolution of STOV-matter interactions",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/16/2605.14353v1-chiroptical-ternary-entropy-harvesting-from-self-assembled-block-copolymer-nanopatterns",
+      "section": "quick",
+      "title_en": "Chiroptical Ternary Entropy Harvesting from Self-Assembled Block Copolymer Nanopatterns",
+      "authors": "Wookjin Jung, Serin Jeong, Kyulim Kim, Dongkyu Lee, Sang Ouk Kim, Jihyeon Yeom",
+      "date": "2026-05-14",
+      "pdf": "https://arxiv.org/pdf/2605.14353v1",
+      "score": "6.0",
+      "evidence": "表征自组装嵌段共聚物纳米图案的手性光学响应",
+      "tldr": "本研究利用嵌段共聚物自组装形成的随机金纳米图案，开发了一种手性光学三进制熵提取平台。通过将制造过程中的随机微观状态映射为依赖手性的光学响应，实现了原生三进制数字化，其信息密度比传统二进制高出58.5%。该系统具有高香农熵和抗机器学习预测能力，为高密度物理安全密钥生成提供了新方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Nanoscale fabrication inevitably produces local stochasticity that is commonly treated as a defect, but can instead be harnessed as a material resource for information security. Here we report a chiroptical platform for ternary entropy harvesting based on stochastic Au nanopatterns formed by block copolymer self-assembly. By transducing fabrication-induced stochastic microstates into handedness-dependent optical responses through chiroptical mapping, our platform enables native ternary digitization rather than conventional binary encoding, allowing physically harvested ternary random sequences to be used for key generation. This raises the information density to log2(3) = 1.585 bits per trit, approximately 58.5% higher than the binary limit, enabling more entropy to be harvested from a limited physical footprint. The harvested outputs exhibit near-balanced symbol populations, negligible spatial and inter-sample correlations, Shannon entropy approaching the ternary ideal, and resistance to statistical and machine-learning-based prediction. These results establish self-assembled chiroptical nanostructures as a scalable platform for cryptographic key generation, secure edge devices, and distributed Internet-of-Things platforms.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/16/2605.14468v1-complex-wavefront-engineering-via-decoupled-space-time-modulation",
+      "section": "quick",
+      "title_en": "Complex wavefront engineering via decoupled space-time modulation",
+      "authors": "Virat Tara, Anna Wirth-Singh, Johannes E. Fröch, Arka Majumdar",
+      "date": "2026-05-14",
+      "pdf": "https://arxiv.org/pdf/2605.14468v1",
+      "score": "6.0",
+      "evidence": "用于高时间带宽波前工程的空间-时间解耦调制",
+      "tldr": "传统的空间光调制器（SLM）在同时实现高空间复杂度和高时间带宽方面面临挑战，主要受限于像素布线的物理瓶颈。本研究提出一种混合架构，通过将电调制平面与光学输出平面空间解耦，结合超表面双透镜与光子集成电路（PIC）的光学相控阵（OPA），实现了独立2D电控并显著缩小了有效像素间距。该平台成功演示了变焦透镜、2D光束偏转和全息成像，为兼具高速、低功耗和大视场的新一代固态SLM奠定了可扩展基础。",
+      "tags": "query:iscat",
+      "abstract_en": "Solid-state Spatial Light Modulators (SLMs) are fundamentally limited in their ability to achieve high spatial complexity and high temporal bandwidth simultaneously. High-speed, low-energy modulation requires sub-wavelength active mode volumes, and sophisticated spatial wavefront engineering necessitates an ultra-fine pixel pitch. While small pixels can simultaneously solve both, in conventional architectures, the dense 2D electrical routing required for such pixels creates an insurmountable physical bottleneck. This results in a compromise between the SLM refresh rate, number of pixels and the field of view. Here, we demonstrate a hybrid architecture that overcomes this limit by spatially decoupling the electrical modulation plane from the optical output plane. By integrating a metasurface doublet with a photonic integrated circuit (PIC)-based optical phased array (OPA), we achieve independent 2D electrical control over each phase-element while simultaneously realizing a three-fold reduction in effective pixel pitch. This decoupling allows us to maintain the small active volume required for high-speed operation, while circumventing the routing constraints of dense spatial array of emitters. We utilize this platform to demonstrate tunable varifocal lensing, 2D beam steering, and 2D holography. Our work provides a scalable foundation for next-generation solid-state SLMs that simultaneously offer high speed, low power consumption, and large field of view.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202605/16/2605.14595v1-improving-optical-metrology-by-engineering-the-target-environment",
+      "section": "quick",
+      "title_en": "Improving Optical Metrology by Engineering the Target Environment",
+      "authors": "Thomas A. Grant, Cheng-Hung Chi, Kevin F. MacDonald, Nikolay I. Zheludev",
+      "date": "2026-05-14",
+      "pdf": "https://arxiv.org/pdf/2605.14595v1",
+      "score": "6.0",
+      "evidence": "通过工程化电磁环境提高光学计量精度",
+      "tldr": "本研究提出了一种通过工程化测量目标的电磁环境来提升光学计量精度的新策略。传统方法多关注降低探测器噪声或优化算法，而该方法基于费舍尔信息作为物理量传播的原理，优化信息的产生与传输。以640nm波长的纳米线位置测量为例，实现了超过λ/10,000的定位精度，为微纳物体表征、雷达及激光雷达导航等领域提供了通用的性能提升方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Measurements of positional coordinates and dimensions - whether by human vision or optical instrumentation - are fundamental to safety, industrial productivity, manufacturing quality/accuracy, and scientific discovery. The ultimate precision of such measurements is governed by the Fisher information conveyed from an object to a detector through the optical field, and strategies for enhancing measurement performance often focus on reducing detector noise and/or refining estimation algorithms. Building on the emerging understanding of Fisher information as a physical quantity that propagates through space in a wave-like fashion, we demonstrate that substantial gains in precision can also be made by engineering the electromagnetic environment of a measurement target to optimise the generation and transmission of Fisher information. Using nanowire position metrology based on light scattering at a wavelength λ = 640 nm as an architype system, we achieve a multifold enhancement in localisation precision, reaching beyond λ/10,000. Our results establish target environment engineering as a powerful and broadly applicable strategy for advancing measurement and sensing performance across platforms ranging from optical characterisation of micro- and nano-objects to microwave radars and optical LiDAR navigation systems.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
