@@ -6,34 +6,40 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-05-16
-- 运行时间：2026-05-16 20:02:05 UTC
+- 最新运行日期：2026-05-18
+- 运行时间：2026-05-18 20:44:53 UTC
 - 运行状态：成功
-- 本次总论文数：4
+- 本次总论文数：6
 - 精读区：1
-- 速读区：3
+- 速读区：5
 
 ### 今日简报（AI）
-今日聚焦光学成像与精密测量前沿，重点解析了具备扩展景深的超快大视场3D形貌测量技术。
-研究不仅实现了超快维度的三维表征突破，还同步探索了时空调制波前工程与手性纳米图案等前沿交叉方向。
-建议关注超快成像在精密制造中的落地潜力，并尝试通过优化测量环境来进一步提升光学计量精度。
-- 详情：[/202605/16/README](/202605/16/README)
+今日深度解析超快宽场 3D 成像技术，涵盖从半导体异质结到活细胞线粒体动态的 6 项前沿进展。
+核心突破在于实现了大景深下的极速三维形貌测量，并展示了从超快生成到微秒弛豫的全程动力学捕捉。
+推荐优先阅读 9.0 分的 3D 成像论文，了解如何通过无标记手段实时洞察微观世界的复杂演化。
+- 详情：[/202605/18/README](/202605/18/README)
 
 ### 精读区论文标签
-1. [Ultrafast wide-field 3D topography with extended depth of field](/202605/16/2605.12884v1-ultrafast-wide-field-3d-topography-with-extended-depth-of-field)  
-   标签：评分：8.0/10、query:iscat
+1. [Ultrafast wide-field 3D topography with extended depth of field](/202605/18/2605.12884v1-ultrafast-wide-field-3d-topography-with-extended-depth-of-field)  
+   标签：评分：9.0/10、query:iscat
    evidence：用于材料流动的超快宽场泵浦-探测干涉显微镜
 
 ### 速读区论文标签
-1. [Chiroptical Ternary Entropy Harvesting from Self-Assembled Block Copolymer Nanopatterns](/202605/16/2605.14353v1-chiroptical-ternary-entropy-harvesting-from-self-assembled-block-copolymer-nanopatterns)  
+1. [In-situ correlative SEM/KPFM for semiconductor devices and 2D heterostructures](/202605/18/2605.16062v1-in-situ-correlative-semkpfm-for-semiconductor-devices-and-2d-heterostructures)  
+   标签：评分：7.5/10、query:iscat
+   evidence：半导体器件的原位关联表征
+2. [Ultralong pump-probe movies of magnon and phonon dynamics from ultrafast generation to microsecond relaxation](/202605/18/2605.15709v1-ultralong-pump-probe-movies-of-magnon-and-phonon-dynamics-from-ultrafast-generation-to-microsecond-relaxation)  
+   标签：评分：7.0/10、query:iscat
+   evidence：用于时空动力学的超快泵浦-探测光谱学
+3. [Label-free real-time imaging of mitochondrial matrix volume changes and permeability transition in living cells](/202605/18/biorxiv-10-64898-2026-05-15-725497-v1-label-free-real-time-imaging-of-mitochondrial-matrix-volume-changes-and-permeability-transition-in-living-cells)  
+   标签：评分：7.0/10、query:iscat
+   evidence：利用散射光对比度的无标记成像
+4. [Optimized near-field optical response via adaptive tip illumination](/202605/18/2605.15900v1-optimized-near-field-optical-response-via-adaptive-tip-illumination)  
    标签：评分：6.0/10、query:iscat
-   evidence：表征自组装嵌段共聚物纳米图案的手性光学响应
-2. [Complex wavefront engineering via decoupled space-time modulation](/202605/16/2605.14468v1-complex-wavefront-engineering-via-decoupled-space-time-modulation)  
+   evidence：优化近场光学显微镜响应
+5. [Dimensionally traceable 3D microstructures for multimodal microscope calibration](/202605/18/biorxiv-10-64898-2026-05-07-722194-v1-dimensionally-traceable-3d-microstructures-for-multimodal-microscope-calibration)  
    标签：评分：6.0/10、query:iscat
-   evidence：用于高时间带宽波前工程的空间-时间解耦调制
-3. [Improving Optical Metrology by Engineering the Target Environment](/202605/16/2605.14595v1-improving-optical-metrology-by-engineering-the-target-environment)  
-   标签：评分：6.0/10、query:iscat
-   evidence：通过工程化电磁环境提高光学计量精度
+   evidence：利用散射区域进行多模态显微镜校准
 
 
 <div class="dpr-home-promo-card">

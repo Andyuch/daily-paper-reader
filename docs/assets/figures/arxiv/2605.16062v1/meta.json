@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-001.webp",
+      "caption": "Fig. 6. E-beam influence on 2D heterostructures. (a) SEM imaging with a tri-layer cantilever in view for locating regions of interest amongst hBN flakes and 2D heterostructures, scale: 100 µm. The inset highlights the region of interest. Topography (b) and CPD imaging (c) of hBN flakes on ITO obtained with H-KPFM sideband configuration, scale: 5 µm, followed by an SEM exposure on the dashed area, image shown in (d) at 2kV and 200 pA, scale: 2 µm at a dosage of 1.9 × 10−12 𝑚𝐶/µm2. The CPD image taken after SEM exposure (e), when compared to the CPD image when unexposed, showed that the electron irradiation shifted the contact potential in the exposed areas, scale: 5 µm.",
+      "page": 21,
+      "index": 1,
+      "width": 496,
+      "height": 814
+    },
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-002.webp",
+      "caption": "Fig. 3. Choice of the KPFM configuration to be used inside the vacuum chamber of the SEM. (a) Schematic of various KPFM configurations (amplitude modulated imaging in dual pass (white), left single pass heterodyne (H-) sideband detection in 1st eigenmode (green) and 2nd eigenmode (blue), and single pass heterodyne (H-) overtone detection: topography feedback in 2nd eigenmode and CPD compensation in 1st eigenmode (yellow) and topography feedback in 1st eigenmode and CPD compensation in 2nd eigenmode (red). (b) H-KPFM image of Au/Al sample inside SEM, scale: 4 µm (Electrostatic amplitude response curves shown in (c) are taken at point 1 (Au) and point 2 (Al)). The line profile for the CPD values is provided in the bottom inset. (c) Electrostatic amplitude response curve for the different H-KPFM configurations mentioned in (a) follows the same colour code for the H-KPFM configuration, where a lighter shade of the colour resembles point 1 (Au), and the darker shade resembles point 2 (Al). The voltage values mentioned are the difference in CPD obtained between point 1 (Au) and point 2 (Al) at each configuration.",
+      "page": 18,
+      "index": 2,
+      "width": 546,
+      "height": 672
+    },
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-003.webp",
+      "caption": "Fig. 4. Correlative KPFM-SEM analysis of semiconductor circuits. (a) SEM (secondary electrons) image of the semiconductor circuit (at 5 kV and 500 pA), scale: 5 µm. (b) CPD image of the same area, highlighting areas with different surface potentials within the circuit and highlighting the effects of polishing on the circuits, scale: 5 µm. (c) Topography of the polished semiconductor circuit. (d) Overlay of topography with KPFM, showing the cleanliness of KPFM analysis and its usefulness in semiconductor failure analysis. (e) Zoom insets of the same region in SEM (1), AFM topography (2), and KPFM (3) with arrows highlighting regions showing similar electronic properties validated by SEM and KPFM, scale: 3 µm.",
+      "page": 19,
+      "index": 3,
+      "width": 899,
+      "height": 912
+    },
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-004.webp",
+      "caption": "Fig. 2. In the piezo-resistive readout method, capacitive crosstalk affects KPFM acquisition. (a) 3D rendering of a conductive tri-layer cantilever. The polymer core is sandwiched between two silicon nitride films. (b) SEM image of a tri-layer cantilever, scale: 40 µm. Optical image of a tri-layer cantilever before the conductive coating is deposited, with an illustration of the resistors in a Wheatstone bridge configuration for strain sensing at the base of the cantilever beam. (c) Cantilever deflection amplitude and phase, measured by optical beam deflection at a 10 nm tip-sample distance, versus electrical excitation frequency at different AC amplitudes in air; inset shows response at resonance. (d) Cantilever deflection amplitude and phase, measured by piezo-resistive readout at a 10 nm tip-sample distance, versus electrical excitation frequency at different AC amplitudes in air, showing the dominance of capacitive crosstalk at higher frequencies; the inset shows the response at resonance.",
+      "page": 17,
+      "index": 4,
+      "width": 646,
+      "height": 639
+    },
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-005.webp",
+      "caption": "Fig. 5. Correlative KPFM-SEM analysis of 2D heterostructures deposited on an ITO substrate. (a) SEM (secondary electron) image and schematic with representative stacking orientation of flakes of hBN, neutron-irradiated hBN (VB- hBN), and PbI2 forming the 2D heterostructure assembly, scale: 10 µm. (b) SEM (SE), topography, and CPD image of the area highlighted in a solid box in (a), showing inhomogeneities, such as delamination (in arrow) in flakes in CPD imaging, missed by topography and SE image, scale: 2 µm. (c) SEM (SE), topography, and CPD image of the area highlighted in a dashed box in (a), showing inhomogeneities (in arrows), such as bubbles, and wrinkles in flake stacking, confirmed by correlative CPD, topography, and SE imaging, scale: 1 µm.",
+      "page": 20,
+      "index": 5,
+      "width": 943,
+      "height": 847
+    },
+    {
+      "url": "assets/figures/arxiv/2605.16062v1/fig-006.webp",
+      "caption": "Fig. 1. In-situ KPFM inside SEM with piezo-resistive cantilever (a) 3D rendering of the combined setup, AFM operating inside a dual beam (FIB SEM) chamber with piezo-resistive tri-layer polymer cantilever, with schematic illustration of KPFM electronics and setup. An example of the cantilever’s (b) mechanical response and (c) amplitude due to electrostatic forces obtained inside the SEM vacuum chamber using a tri-layer polymer piezo-resistive sensing cantilever. (d) In-situ topography, CPD, and SEM SE image of Ge nanowires on Si substrate correlated with energy dispersive X-ray analysis, scale: 1 µm.",
+      "page": 16,
+      "index": 6,
+      "width": 943,
+      "height": 679
+    }
+  ]
+}

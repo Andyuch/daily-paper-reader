@@ -1,0 +1,265 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-18T20:43:29.529870+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [
+    {
+      "id": "2605.12884v1",
+      "source": "arxiv",
+      "title": "Ultrafast wide-field 3D topography with extended depth of field",
+      "abstract": "Ultrafast optical imaging has enabled direct observation of femtosecond-nanosecond dynamics, yet three-dimensional (3D) dynamic measurements at high numerical aperture (NA) remain hindered by the intrinsically shallow depth of field (DoF) of conventional microscopes. Here, we propose an ultrafast, wide-field pump-probe interferometric microscope on a telecentric platform that significantly extends the effective DoF to ~18 micrometer at a high NA of 0.9 while maintaining high spatial resolution (down to 235 nm) and temporal resolution (~170 fs). The system enables single-frame 3D topography reconstruction without axial scanning or multi-view acquisition. We demonstrate these capabilities by capturing axial material flow during laser-induced microsphere melting that remain unobservable with conventional narrow-DoF systems, and by tracking the azimuthal rotation of ablation lobes during axial propagation of temporal focused spatiotemporal optical vortex (TF-STOV) pulses, directly revealing the spatiotemporal evolution of STOV-matter interactions",
+      "authors": [
+        "Qianyi Wei",
+        "Jielei Ni",
+        "Yuquan Zhang",
+        "Zhangyu Zhou",
+        "Shuoshuo Zhang",
+        "Zhiyong Tan",
+        "Jiahui Pan",
+        "Xiaocong Yuan",
+        "Changjun Min"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-13T01:58:56+00:00",
+      "link": "https://arxiv.org/pdf/2605.12884v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "ultrafast wide-field pump-probe interferometric microscope for material flow",
+      "llm_evidence_cn": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "llm_evidence": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "canonical_evidence": "用于材料流动的超快宽场泵浦-探测干涉显微镜",
+      "llm_tldr_en": "Ultrafast interferometric microscopy for 3D topography and femtosecond dynamics in materials.",
+      "llm_tldr_cn": "用于材料3D形貌和飞秒动力学研究的超快干涉显微成像技术。",
+      "llm_tldr": "用于材料3D形貌和飞秒动力学研究的超快干涉显微成像技术。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.16062v1",
+      "source": "arxiv",
+      "title": "In-situ correlative SEM/KPFM for semiconductor devices and 2D heterostructures",
+      "abstract": "Correlative nanoscale surface characterization benefits from simultaneously measuring electronic and structural properties in the same environment, a capability that is essential for modern-day materials science and semiconductor failure analysis. In-situ AFM-SEM measurements facilitated by self-sensing cantilevers offer great potential here; however, they are limited due to their inherent capacitive crosstalk. Here, we demonstrate for the first time the in-situ implementation of single-pass heterodyne Kelvin probe force microscopy inside a scanning electron microscope, using piezo-resistive cantilevers. We overcome the capacitive crosstalk prevalent in piezo-resistive cantilevers by demodulating excitation and detection to simultaneously map surface topography and contact potential difference for correlation with compositional analysis. We systematically compare different operational modes of this heterodyne technique, elucidating their spatial resolution, signal sensitivity, and signal-to-noise ratio. The integrated approach yields exceptional signal quality and reveals how electron beam scan parameters can directly influence surface potential contrast. We demonstrate this correlative analysis workflow on two-dimensional heterostructures and semiconductor circuits. This work establishes a robust and versatile correlative imaging mode for in-situ Kelvin force and topography imaging inside a scanning electron microscope for next-generation semiconductor device analysis and materials science.",
+      "authors": [
+        "Prabhu Prasad Swain",
+        "Nahid Hosseini",
+        "Eveline. S Mayner",
+        "Aleksandra Radenovic",
+        "Marcos Penedo",
+        "Georg E. Fantner"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "physics.app-ph",
+        "physics.ins-det"
+      ],
+      "published": "2026-05-15T15:27:04+00:00",
+      "link": "https://arxiv.org/pdf/2605.16062v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "in-situ correlative characterization of semiconductor devices",
+      "llm_evidence_cn": "半导体器件的原位关联表征",
+      "llm_evidence": "半导体器件的原位关联表征",
+      "canonical_evidence": "半导体器件的原位关联表征",
+      "llm_tldr_en": "Implements in-situ correlative SEM/KPFM for semiconductor and 2D heterostructure characterization.",
+      "llm_tldr_cn": "实现了用于半导体和二维异质结构表征的原位关联SEM/KPFM技术。",
+      "llm_tldr": "实现了用于半导体和二维异质结构表征的原位关联SEM/KPFM技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.15900v1",
+      "source": "arxiv",
+      "title": "Optimized near-field optical response via adaptive tip illumination",
+      "abstract": "The performance of tip-enhanced optical microscopy is often limited by inefficient coupling of the excitation field to the plasmonic tip apex, as well as by thermal drift and optical aberrations. Here, we demonstrate that adaptive wavefront shaping based on Zernike mode provides a practical approach to achieving robust near-field optimisation at the tip apex. Using a sequential feedback algorithm, initially using the near-field signal, we narrow the illumination point-spread function and suppress sidelobes. This demonstrates that Zernike-mode control can be used for both aberration correction and field engineering. In tip-enhanced Raman measurements of a Janus MoSSe monolayer, conventional near-field optimisation increases the signal intensity by around 1.4 fold. A second optimisation step based directly on the Raman-band intensity yields a further 5 to 15 fold enhancement, depending on the specific tips used. These results establish a systematic, optics-based strategy for optimising tip fields, providing a transferable framework for improving tip-enhanced and related near-field spectroscopies.",
+      "authors": [
+        "Tao Chen",
+        "Wei Wang",
+        "Ziyang Gan",
+        "Daniel Repp",
+        "Jinxin Zhan",
+        "Antony George",
+        "Henrik Schneidewind",
+        "Ulf Peschel",
+        "Andrey Turchanin",
+        "Volker Deckert"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-05-15T12:36:14+00:00",
+      "link": "https://arxiv.org/pdf/2605.15900v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "optimizing near-field optical microscopy response",
+      "llm_evidence_cn": "优化近场光学显微镜响应",
+      "llm_evidence": "优化近场光学显微镜响应",
+      "canonical_evidence": "优化近场光学显微镜响应",
+      "llm_tldr_en": "Demonstrates adaptive wavefront shaping to optimize near-field signals in tip-enhanced optical microscopy.",
+      "llm_tldr_cn": "演示了通过自适应波前整形优化针尖增强光学显微镜中的近场信号。",
+      "llm_tldr": "演示了通过自适应波前整形优化针尖增强光学显微镜中的近场信号。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.15709v1",
+      "source": "arxiv",
+      "title": "Ultralong pump-probe movies of magnon and phonon dynamics from ultrafast generation to microsecond relaxation",
+      "abstract": "The long lifetimes of magnons and phonons make them attractive for information-processing devices, highlighting the importance of visualizing their spatiotemporal dynamics from generation through relaxation. Ultrafast pump-probe spectroscopy is a powerful tool for investigating their early-stage dynamics after impulsive excitation; however, their long-lived nature makes it challenging to comprehensively track their evolution across all relevant time scales while maintaining sufficient temporal resolution. Here, we demonstrate spatiotemporal tracking of magnon and phonon dynamics over more than seven orders of magnitude in time, from 500 femtoseconds to 20 microseconds, using $4 \\times 10^7$ sampled time points enabled by the highly precise time base of optical frequency combs. The resulting spatiotemporal movie, consisting of $4.5 \\times 10^{5}$ frames, captures their generation, coherent motion, propagation, and relaxation, providing a powerful platform for exploring their full dynamical evolution.",
+      "authors": [
+        "Riku Shibata",
+        "Shun Fujii",
+        "Shinichi Watanabe"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-15T08:00:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.15709v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast pump-probe spectroscopy for spatiotemporal dynamics",
+      "llm_evidence_cn": "用于时空动力学的超快泵浦-探测光谱学",
+      "llm_evidence": "用于时空动力学的超快泵浦-探测光谱学",
+      "canonical_evidence": "用于时空动力学的超快泵浦-探测光谱学",
+      "llm_tldr_en": "Tracks magnon and phonon dynamics across seven orders of magnitude in time using pump-probe spectroscopy.",
+      "llm_tldr_cn": "利用泵浦-探测光谱技术在七个时间数量级上追踪磁振子和声子动力学。",
+      "llm_tldr": "利用泵浦-探测光谱技术在七个时间数量级上追踪磁振子和声子动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-07-722194-v1",
+      "source": "biorxiv",
+      "title": "Dimensionally traceable 3D microstructures for multimodal microscope calibration",
+      "abstract": "High-resolution microscopy techniques are used across research and industry to analyse biological systems, from biomolecules to subcellular organelles, multicellular models and tissues. As multimodal imaging workflows and quantitative analysis of bioimaging data become increasingly widespread, there is a growing need for materials and methods to calibrate imaging systems and evaluate the fidelity of generated image data. Here, we present three-dimensional microscopy phantoms fabricated using two-photon photolithography from transparent resins that exhibit both broadband visible autofluorescence and Raman scattering across the fingerprint and C-H stretching regions. Suitable for analysis using optical profilometry, the phantoms were dimensionally calibrated with SI traceability using a metrological confocal microscope. Immersible in air and common aqueous imaging media, the phantoms are compatible with a wide variety of optical microscopy techniques, including one and two-photon excited fluorescence and coherent Raman scattering microscopy. We employed a forked wedge design to validate image deconvolution results and a stacked lattice phantom to recover image distortion matrices under realistic biological imaging conditions. We demonstrate the impact of correcting chromatic offsets and axial scaling errors for a representative application: analysis of a cell seeded scaffold using confocal laser scanning fluorescence microscopy. These phantoms provide a versatile platform for calibration, quality control and validation of multimodal imaging pipelines and improved quantitative optical microscopy.",
+      "authors": [
+        "Jiang, J.",
+        "Jones, C.",
+        "Reid, B.",
+        "Tsikritsis, D.",
+        "Mingard, K.",
+        "Ghai, P.",
+        "Kurttila, M.",
+        "Shaw, M. J."
+      ],
+      "primary_category": "bioengineering",
+      "categories": [
+        "bioengineering"
+      ],
+      "published": "2026-05-11T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.07.722194v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multimodal microscope calibration using scattering regions",
+      "llm_evidence_cn": "利用散射区域进行多模态显微镜校准",
+      "llm_evidence": "利用散射区域进行多模态显微镜校准",
+      "canonical_evidence": "利用散射区域进行多模态显微镜校准",
+      "llm_tldr_en": "Develops 3D microstructures for calibrating high-resolution multimodal imaging systems.",
+      "llm_tldr_cn": "开发了用于校准高分辨率多模态成像系统的三维微结构。",
+      "llm_tldr": "开发了用于校准高分辨率多模态成像系统的三维微结构。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-15-725497-v1",
+      "source": "biorxiv",
+      "title": "Label-free real-time imaging of mitochondrial matrix volume changes and permeability transition in living cells",
+      "abstract": "Along with the membrane potential and respiration, mitochondrial matrix volume is a critical parameter that determines mitochondrial function. Mitochondria undergo constant changes in matrix volume and cristae dynamics, and in processes that are critical for normal metabolic rates and pathophysiological responses. Changes in matrix volume cannot be easily measured by conventional fluorescence imaging techniques due to the size of the sub-organellar structures, which are below resolution. This challenge was successfully resolved in studies of isolated mitochondria with the use of scattered light. Here we use dark-field imaging, which relies on scattered light contrast, to measure matrix volume dynamics in living cells. We demonstrate that mitochondrial volume changes can be easily detected as changes in intensity of the scattered light following matrix volume modulation with K+ ionophores or by onset of the permeability transition. Specifically, we found that stimulation of K+ influx leads to increase of mitochondrial matrix volume while stimulation of K+ efflux leads to matrix shrinkage, and that activation of the permeability transition leads to high-amplitude mitochondrial swelling in wild-type but not in cells lacking subunit c of ATP synthase. These results directly demonstrate the dynamic nature of mitochondrial matrix volume and its link to physiological and pathological ion transport.",
+      "authors": [
+        "Akosah, Y.",
+        "Azoidis, I.",
+        "Jensen, D. D.",
+        "Bernardi, P.",
+        "Pavlov, E."
+      ],
+      "primary_category": "cell biology",
+      "categories": [
+        "cell biology"
+      ],
+      "published": "2026-05-17T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.15.725497v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "label-free imaging using scattered light contrast",
+      "llm_evidence_cn": "利用散射光对比度的无标记成像",
+      "llm_evidence": "利用散射光对比度的无标记成像",
+      "canonical_evidence": "利用散射光对比度的无标记成像",
+      "llm_tldr_en": "Uses dark-field scattered light imaging for real-time monitoring of mitochondrial volume dynamics.",
+      "llm_tldr_cn": "利用暗场散射光成像实时监测线粒体体积动态。",
+      "llm_tldr": "利用暗场散射光成像实时监测线粒体体积动态。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
