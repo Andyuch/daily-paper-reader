@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.23480v1/fig-001.webp",
+      "caption": "FIG. 1. Transient optical response of 1L-WSe2 upon resonant pumping of A exciton (1.70 eV). a. (Left) steady-state optical absorption spectrum in the vis-UV spectral range, showing several resonances; red line indicates the excitation energy. (Center) pseudo-color energy-time differential transmission ∆T/T map for 5.0 µJ cm−2 pump fluence. (Right) ∆T/T spectra at select time delays. b. Normalized time traces from map (a) showing dynamics around the maxima of A, B, C, and D transitions. Black arrows are guides to the eye. The measurements are performed at 77 K.",
+      "page": 2,
+      "index": 1,
+      "width": 1062,
+      "height": 383
+    },
+    {
+      "url": "assets/figures/arxiv/2605.23480v1/fig-002.webp",
+      "caption": "FIG. 2. Pump energy and sample temperature effect. a. Normalized time traces of A, B, C, and D transitions upon pumping C (2.53 eV, left) and D transition (3.10 eV, right) (cf. Figure 1b). Pump fluence 5.0 µJ cm−2 for both pump photon energies; the measurements are performed at 77 K. b. Temperature dependence. (Left) transient spectra at 100 fs time delay and (right) D transition time traces. Resonant A exciton pump (1.70 eV), 15 µJ cm−2 pump fluence.",
+      "page": 3,
+      "index": 2,
+      "width": 512,
+      "height": 510
+    },
+    {
+      "url": "assets/figures/arxiv/2605.23480v1/fig-003.webp",
+      "caption": "FIG. 3. Theoretical analysis of excitons across the Brillouin zone (BZ). (a) Calculated absorption spectrum of 1L-WSe2. The vertical dashed line indicates the electronic bandgap obtained from GW calculations. The vertical black lines represent the electronic transitions, with their heights proportional to the corresponding oscillator strengths. Energy windows of ±25 meV and ±50 meV around the maxima of the C and D peaks, respectively, highlighted by the filled regions, are considered. (b-e) Distribution of the direct optical transitions contributing to individual peaks across the BZ: (b) A, (c) B, (d) C, and (e) D peaks. Contributions for each peak are normalized.",
+      "page": 4,
+      "index": 3,
+      "width": 512,
+      "height": 739
+    }
+  ]
+}

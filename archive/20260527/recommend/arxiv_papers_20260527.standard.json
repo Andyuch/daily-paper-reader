@@ -1,0 +1,516 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-05-27T21:15:52.873152+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2605.26727v1",
+      "source": "arxiv",
+      "title": "Visualizing Degradation in Anode-Free High-Utilization Aqueous Batteries Across Cell Lifetime",
+      "abstract": "Operando microscopy has unveiled key mechanistic insights in battery materials during early cycling, but long-term characterization to unveil material evolution, degradation, and failure remain limited. To address this gap, we develop a custom operando optical microscope that captures images across hundreds of cycles and hours using optically accessible, anode-free pouch cells. We image through-plane, bulk-representative electrodeposition behavior of aqueous tin metal anodes, which are promising due to their high energy density but whose reactivity limits practical cycle life. We show that substrate governs the morphology and stability of plated tin, particularly at high plated capacities. Specifically, copper substrates exhibit a multi-stage tin growth mode, which results in high overpotentials and irreversible active material loss at high plated capacities. In contrast, graphite substrates display a single-stage growth mode with slower kinetics. Using this insight, we balance performance and stability to demonstrate a high-utilization (70%, 630 mAh g$^{-1}_{Sn}$) porous graphite substrate Sn anode with high efficiency and long lifetime. Our results underscore the importance of material and device optimization guided by operando characterization across device lifetime with broad applicability to electrochemical systems.",
+      "authors": [
+        "Sofia K. Catalina",
+        "Kyle Frohna",
+        "Willow Thompson",
+        "Katherine J. Harmon",
+        "Dasol Yoon",
+        "Jianbo Wang",
+        "Colin Ophus",
+        "Daniel N. Congreve",
+        "William C. Chueh"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.chem-ph",
+        "physics.optics"
+      ],
+      "published": "2026-05-26T09:05:11+00:00",
+      "link": "https://arxiv.org/pdf/2605.26727v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "operando optical microscope for battery material degradation",
+      "llm_evidence_cn": "用于电池材料降解的原位光学显微镜",
+      "llm_evidence": "用于电池材料降解的原位光学显微镜",
+      "canonical_evidence": "用于电池材料降解的原位光学显微镜",
+      "llm_tldr_en": "Develops an operando optical microscope to visualize long-term degradation in anode-free aqueous batteries.",
+      "llm_tldr_cn": "开发了一种原位光学显微镜，用于可视化无负极水系电池的长期降解过程。",
+      "llm_tldr": "开发了一种原位光学显微镜，用于可视化无负极水系电池的长期降解过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2605.19160v1",
+      "source": "arxiv",
+      "title": "An evaluation framework for sparse 4D (3D + time) imaging reconstruction via bootstrapped cross-validation",
+      "abstract": "Four-dimensional (4D; 3D + time) microscopic imaging has emerged as a powerful technique for investigating dynamic phenomena in complex systems, enabling direct visualization of structural evolution in space and time. However, when pushing the limits of spatiotemporal resolution, most time-resolved imaging techniques yield inherently sparse 4D datasets. While deep learning-based reconstruction methods have shown promise in reconstructing 4D from sparse spatiotemporal measurements, a practical approach for evaluating their performance in the absence of a 4D reference has, to the best of our knowledge, been lacking. Here, we present a bootstrapped cross-validation framework that estimates reconstruction performance by quantifying correlations between reconstructions generated from independently sampled subsets of the acquired data, as inspired by the 3D validation strategy in cryo-electron microscopy, where reconstructions from split datasets are compared to assess resolutions. This enables both qualitative and quantitative assessment in the absence of ground truth. We investigate two representative scenarios with sparse and ultra-sparse X-ray datasets and validate this approach using 4D-ONIX, a 4D deep-learning reconstruction method, on simulated water droplet collision experiments. The proposed approach provides a reference-free framework for performance estimation and support for better-informed experimental strategies across a wide range of ultrafast imaging applications.",
+      "authors": [
+        "Yuhe Zhang",
+        "Zisheng Yao",
+        "Zhe Hu",
+        "Tobias Ritschel",
+        "Pablo Villanueva-Perez"
+      ],
+      "primary_category": "eess.IV",
+      "categories": [
+        "eess.IV",
+        "physics.comp-ph",
+        "physics.data-an",
+        "physics.optics"
+      ],
+      "published": "2026-05-18T22:26:03+00:00",
+      "link": "https://arxiv.org/pdf/2605.19160v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "time-resolved 4D imaging reconstruction framework",
+      "llm_evidence_cn": "时间分辨4D成像重建框架",
+      "llm_evidence": "时间分辨4D成像重建框架",
+      "canonical_evidence": "时间分辨4D成像重建框架",
+      "llm_tldr_en": "Develops a cross-validation framework for evaluating sparse 4D (3D + time) microscopic imaging reconstruction.",
+      "llm_tldr_cn": "开发了一个交叉验证框架，用于评估稀疏4D（3D+时间）显微成像重建性能。",
+      "llm_tldr": "开发了一个交叉验证框架，用于评估稀疏4D（3D+时间）显微成像重建性能。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2605.19408v1",
+      "source": "arxiv",
+      "title": "Ultrafast Nano-Imaging and Optical Control of Hyperbolic Phonon Polaritons at hBN/WS$_2$ Heterojunctions",
+      "abstract": "Manipulating nanoscale light-matter interactions on ultrafast time scales is indispensable for future polaritonic devices. Hyperbolic phonon polaritons (HPhPs) in van der Waals materials enable deep subwavelength confinement of electromagnetic fields in the infrared region and long-distance propagation of polaritonic waves. However, achieving ultrafast imaging and optical control of HPhPs remains a major challenge. Here, we demonstrate the direct observation of transient modulation of HPhPs induced by local photocarrier generation in WS$_2$/hBN heterostructures using ultrafast infrared scanning near-field optical microscopy. We implement grating-based spectral filtering of broadband near-field scattering to simultaneously achieve nanoscale and femtosecond spatiotemporal resolution together with fine spectral selectivity. This ultrafast nano-imaging technique reveals that photocarriers in WS$_2$ modulate the polaritonic field amplitudes and wavelengths of HPhPs in hBN. Theoretical simulations corroborate that these changes arise from photoinduced changes in WS$_2$ dielectric properties. This approach offers a versatile platform for exploring ultrafast polaritonic dynamics at the nanoscale.",
+      "authors": [
+        "Kazuki Kamada",
+        "Keisuke Shinokita",
+        "Fanyu Zeng",
+        "Ryo Kitaura",
+        "Kenji Watanabe",
+        "Takashi Taniguchi",
+        "Alexander Paarmann",
+        "Masahiro Shibuta",
+        "Takashi Kumagai",
+        "Jun Nishida"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-05-19T06:02:55+00:00",
+      "link": "https://arxiv.org/pdf/2605.19408v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "Ultrafast nano-imaging of transient modulation and photocarrier generation in heterostructures.",
+      "llm_evidence_cn": "异质结构中瞬态调制和光生载流子的超快纳米成像。",
+      "llm_evidence": "异质结构中瞬态调制和光生载流子的超快纳米成像。",
+      "canonical_evidence": "异质结构中瞬态调制和光生载流子的超快纳米成像。",
+      "llm_tldr_en": "Demonstrates ultrafast infrared scanning near-field optical microscopy for imaging phonon polaritons.",
+      "llm_tldr_cn": "展示了利用超快红外扫描近场光学显微镜对声子极化激元进行成像的研究。",
+      "llm_tldr": "展示了利用超快红外扫描近场光学显微镜对声子极化激元进行成像的研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.19496v1",
+      "source": "arxiv",
+      "title": "Nanoscale Thermal Imaging of Dislocation-Mediated Heat Transport",
+      "abstract": "Dislocations in crystalline materials are widely exploited to tailor the thermal conductivity of semiconductors and thermoelectrics, yet a critical gap persists: direct measurement of local thermal resistance at individual buried dislocations, along with its spatial extent, remains elusive due to the limitations of conventional thermal probes. Here, we use in situ scanning transmission electron microscopy-electron energy-loss spectroscopy to map nanoscale temperature distributions across a low-angle SrTiO3 grain boundary with periodic dislocation arrays. Our results reveal a temperature drop of 47 K across the dislocation array. The associated temperature-field distortions are concentrated near the dislocation cores, consistent with stronger local thermal resistance at these discrete sites rather than a uniformly distributed resistance along the array. We further identify a distinct two-scale heat transport characteristic near the dislocation array: core-dominated effects over approximately 4.8-6.2 nm and extended inter-core influences over approximately 10.3-14.3 nm. Atomic-scale structural and vibrational analyses further reveal core-associated atomic reconstruction and localized optical-phonon perturbations, providing a microscopic basis for the stronger local thermal resistance inferred near dislocation cores. These findings quantitatively resolve spatial heterogeneity of dislocation-mediated heat transport, uncover its atomic-scale mechanism, and provide a quantitative basis for defect engineering, guiding the design of high-performance thermoelectrics, semiconductors, high-temperature structural alloys, and other functional crystalline materials.",
+      "authors": [
+        "Ruilin Mao",
+        "Bingyao Liu",
+        "Jiaxin Liu",
+        "Xiaoyue Gao",
+        "Junping Luo",
+        "Fachen Liu",
+        "Ruochen Shi",
+        "Jiade Li",
+        "Jinlong Du",
+        "Peng Gao"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-19T07:50:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.19496v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "nanoscale imaging of material defects and transport",
+      "llm_evidence_cn": "材料缺陷与输运的纳米级成像",
+      "llm_evidence": "材料缺陷与输运的纳米级成像",
+      "canonical_evidence": "材料缺陷与输运的纳米级成像",
+      "llm_tldr_en": "Maps nanoscale temperature distributions to study heat transport at individual dislocations in semiconductors.",
+      "llm_tldr_cn": "绘制纳米级温度分布图，以研究半导体中单个位错处的热传输。",
+      "llm_tldr": "绘制纳米级温度分布图，以研究半导体中单个位错处的热传输。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.21249v1",
+      "source": "arxiv",
+      "title": "Step-scan interferometry for high-fidelity hyperspectral nanoscopy",
+      "abstract": "Fourier transform infrared nanospectroscopy (nano-FTIR) is a novel, increasingly adopted characterization method that leverages decades of established knowledge in infrared spectroscopy at the nanoscale. It opens up new possibilities in the characterization of composite materials and nanophotonic systems. Besides the rapid adoption and new possibilities, the nanoscale nature of these measurements poses new challenges for infrared spectroscopy. The current implementations of hyperspectral image acquisition at high spatial resolution suffer from significant artifacts due to thermal instabilities, which heavily affect positioning. As a result, the spatial and spectral fidelity of the measurements can be unreliable for long acquisitions. Here, we propose a new nano-FTIR measurement methodology based on step-scan interferometry and image registration. We demonstrate that the method provides superior spatial fidelity for photonics research and enables the collection of larger datasets, paving the way for bringing machine learning to characterize nanoscale heterogeneity.",
+      "authors": [
+        "Gergely Nemeth",
+        "Ferenc Borondics"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-20T14:38:16+00:00",
+      "link": "https://arxiv.org/pdf/2605.21249v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "step-scan interferometry for hyperspectral nanoscopy",
+      "llm_evidence_cn": "用于高光谱纳米成像的步进扫描干涉测量",
+      "llm_evidence": "用于高光谱纳米成像的步进扫描干涉测量",
+      "canonical_evidence": "用于高光谱纳米成像的步进扫描干涉测量",
+      "llm_tldr_en": "Proposes step-scan interferometry to improve spatial and spectral fidelity in nano-FTIR characterization.",
+      "llm_tldr_cn": "提出了步进扫描干涉测量法，以提高纳米傅里叶红外光谱表征的空间和光谱保真度。",
+      "llm_tldr": "提出了步进扫描干涉测量法，以提高纳米傅里叶红外光谱表征的空间和光谱保真度。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.21345v1",
+      "source": "arxiv",
+      "title": "Ultra-Confinement of Polaritons in Single Atomic Layer Ag Photonic Quantum Dots",
+      "abstract": "Light scattering by two-dimensional (2D) van der Waals heterostructures (vdWHs) is immense, especially given their infinitesimal volume, thus enabling strong light-matter interactions. Surface 2D polariton waves manifest through large concentration of electromagnetic field in vertical direction, normal to their propagation. By confining vdWH materials into 2D photonic shapes, one can manipulate and compress light in lateral directions. Scattering-type scanning near-field optical microscopy is a perfect tool for direct imaging of the propagating polaritons and studying the properties of confined polaritons in nanostructures. Though, thus far the quantitative analysis, such the wavelength extraction, has been challenged for confined polaritons by incapability of mapping of the wave period on sub-wavelength scale and difficulty of identifying an adequate substrate's \"background\" to subtract. Here, an analytical approach is developed to reveal the local propagation constant of confined polaritons under abovementioned constraints and map it with the sub-wavelength resolution. Applied to analysis of the SiC/2D-Ag/EG (epitaxial graphene) photonic nanostructures, the technique uncovered that the polaritons are highly confined in both vertical ($\\simλ$/50) and lateral directions ($\\simλ$/40) by 2D metal.",
+      "authors": [
+        "Xinyi Li",
+        "Tetyana Ignatova",
+        "Chengye Dong",
+        "Krishnan Mekkanamkulam Ananthanarayanan",
+        "Rinu Abraham Maniyara",
+        "Arpit Jain",
+        "Furkan Turker",
+        "Vinay Kammarchedu",
+        "Aida Ebrahimi",
+        "Joshua A. Robinson",
+        "Slava V. Rotkin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall",
+        "physics.optics"
+      ],
+      "published": "2026-05-20T16:12:19+00:00",
+      "link": "https://arxiv.org/pdf/2605.21345v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scattering-type scanning near-field optical microscopy for imaging polaritons in nanostructures",
+      "llm_evidence_cn": "散射型扫描近场光学显微镜用于纳米结构中极化激元的成像",
+      "llm_evidence": "散射型扫描近场光学显微镜用于纳米结构中极化激元的成像",
+      "canonical_evidence": "散射型扫描近场光学显微镜用于纳米结构中极化激元的成像",
+      "llm_tldr_en": "Uses near-field optical microscopy to image and study ultra-confined polaritons in 2D nanostructures.",
+      "llm_tldr_cn": "利用近场光学显微镜成像并研究二维纳米结构中的超局域极化激元。",
+      "llm_tldr": "利用近场光学显微镜成像并研究二维纳米结构中的超局域极化激元。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.23480v1",
+      "source": "arxiv",
+      "title": "Nonequilibrium dynamics of high energy transitions in monolayer WSe$_{2}$",
+      "abstract": "High-energy optical transitions in monolayer transition-metal dichalcogenides exhibit characteristics that are markedly distinct from those of lower-lying band-edge excitons. These differences arise from the involvement of electronic states located at regions of the Brillouin zone that are displaced from the $K$ valleys. In this work, we investigate the ultrafast dynamics of these high-energy excitations by employing broadband ultrafast transient absorption spectroscopy spanning the visible to ultraviolet spectral range. We observe that the formation and relaxation dynamics of one of the high energy transitions display a distinct behavior compared to the lower-energy excitonic resonances, developing on a significantly slower timescale. First-principles calculations of the excitonic landscape allow us to account for this delayed response and attribute it to the phonon-mediated formation of momentum-dark excitons.",
+      "authors": [
+        "Oleg Dogadov",
+        "Jorge Cervantes-Villanueva",
+        "Nicholas Olsen",
+        "Chiara Trovatello",
+        "Xiaoyang Zhu",
+        "Giulio Cerullo",
+        "Alejandro Molina-Sánchez",
+        "Davide Sangalli",
+        "Stefano Dal Conte"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-05-22T10:39:57+00:00",
+      "link": "https://arxiv.org/pdf/2605.23480v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "ultrafast dynamics and time-resolved spectroscopy",
+      "llm_evidence_cn": "超快动力学和时间分辨光谱",
+      "llm_evidence": "超快动力学和时间分辨光谱",
+      "canonical_evidence": "超快动力学和时间分辨光谱",
+      "llm_tldr_en": "Investigates ultrafast dynamics of high-energy transitions in monolayer WSe2 using transient absorption.",
+      "llm_tldr_cn": "利用瞬态吸收光谱研究了单层WSe2中高能跃迁的超快动力学。",
+      "llm_tldr": "利用瞬态吸收光谱研究了单层WSe2中高能跃迁的超快动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.21944v1",
+      "source": "arxiv",
+      "title": "Cathodoluminescence Wavefront Retrieval",
+      "abstract": "Free-electron-based nanoscopy enables the study of optical excitations in materials with deep-subwavelength spatial resolution, with cathodoluminescence (CL) being one of the resulting radiation signals. When combined with an optical collection system, CL measurements can access multidimensional information of light; yet the phase of the emitted optical fields has remained largely elusive. Here, we demonstrate a reference-free phase retrieval approach for far-field CL wavefronts using the Gerchberg-Saxton algorithm implemented with real-space and angular-space CL intensity data. Applying this approach to representative nanostructures, including a planar surface, nanosphere, plasmonic crystal, and nanowire, we reconstruct distinct phase distributions that reveal their underlying radiation mechanisms. This reference-free framework offers a robust and flexible route for retrieving the phase of electron-beam-excited optical fields without relying on a reference wave, making it readily extendable to a wide range of nanostructures.",
+      "authors": [
+        "Izzah Machfuudzoh",
+        "Ryoichi Horisaki",
+        "Takumi Sannomiya"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-05-21T03:22:06+00:00",
+      "link": "https://arxiv.org/pdf/2605.21944v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "nanoscale optical field phase retrieval in materials",
+      "llm_evidence_cn": "材料中纳米尺度光场相位恢复",
+      "llm_evidence": "材料中纳米尺度光场相位恢复",
+      "canonical_evidence": "材料中纳米尺度光场相位恢复",
+      "llm_tldr_en": "Presents a phase retrieval method for cathodoluminescence to study optical excitations at subwavelength scales.",
+      "llm_tldr_cn": "提出了一种阴极发光相位检索方法，用于研究亚波长尺度的光学激发。",
+      "llm_tldr": "提出了一种阴极发光相位检索方法，用于研究亚波长尺度的光学激发。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.26083v1",
+      "source": "arxiv",
+      "title": "Characterizing emergent multi-scale dynamics in colloidal nanoparticle gels",
+      "abstract": "Colloidal gels assembled from nanoparticles (NPs) are a versatile class of soft network-based materials capable of rich dynamic, mechanical, and even optical or magnetic responses to stimuli. Understanding how their hierarchically organized processes relate to macroscopic network properties remains a broad and unresolved problem in soft matter physics. The mechanisms of gel formation can depend sensitively on the pathway and the nature of NP interactions, thus far preventing a unified theoretical bridge between nanoscopic interactions and structural evolution and network dynamics. Indirect measurement of dynamics using light-scattering techniques provides an experimental means to quantify underlying particle and network motion. X-ray photon correlation spectroscopy (XPCS) has emerged as a powerful tool for probing nanoscopic motion in nanoparticle gels, but alone cannot resolve the full spatiotemporal spectrum of dynamics that drive gelation, aging, and network mechanical properties. While in situ rheo-XPCS enables simultaneous probing of nanoscale and bulk mechanical responses, complementary light scattering, microscopy, or simulations can extend spatiotemporal characterization and, consequently, understanding of NP gel network physics. Implementing a modular model platform with tunable primary nanoparticle features allows systematic variation of nanoscopic characteristics that drive emergent gel responses and inform the development of theoretical models for a wide range of soft, dynamic, nanostructured materials. The rapid expansion of XPCS capabilities at fourth-generation light sources, combined with complementary tools and robust model systems, positions the field to move beyond descriptive fundamental studies toward the design of nanoparticle gels with adaptive and programmable behaviors.",
+      "authors": [
+        "William D. Brackett",
+        "Zachary M. Sherman",
+        "Felix Lehmkühler",
+        "Thomas M. Truskett",
+        "Delia J. Milliron"
+      ],
+      "primary_category": "cond-mat.soft",
+      "categories": [
+        "cond-mat.soft",
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci",
+        "cond-mat.stat-mech"
+      ],
+      "published": "2026-05-25T17:47:52+00:00",
+      "link": "https://arxiv.org/pdf/2605.26083v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "light-scattering techniques for nanoparticle dynamics",
+      "llm_evidence_cn": "用于纳米颗粒动力学的散射技术",
+      "llm_evidence": "用于纳米颗粒动力学的散射技术",
+      "canonical_evidence": "用于纳米颗粒动力学的散射技术",
+      "llm_tldr_en": "Uses light-scattering to quantify multi-scale dynamics and structural evolution in colloidal nanoparticle gels.",
+      "llm_tldr_cn": "利用光散射技术量化胶体纳米颗粒凝胶中的多尺度动力学和结构演变。",
+      "llm_tldr": "利用光散射技术量化胶体纳米颗粒凝胶中的多尺度动力学和结构演变。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2605.22452v1",
+      "source": "arxiv",
+      "title": "Transport Enhancement and In Situ Control of Electronic Correlation via Photoinduced Modulation Doping of van der Waals Heterostructures",
+      "abstract": "Modulation doping, a well-established technique for traditional semiconductor heterostructures, is a promising approach for tailoring carrier concentration in 2D materials devices. In this letter we report on photoinduced modulation doping in hBN-graphene-hBN-SiO2 heterostructures utilizing standard white light sources and no additional fabrication complexity. We establish the use of this technique to both dope the channel material and to photoanneal devices, providing control over electronic doping and disorder in the graphene channel. We analyze the transport properties by employing Drude and Landauer transport models, highlighting the ability to reversibly tune the mobility and mean scattering length of the graphene with a high degree of accuracy. This tunability allows us to switch our device between the diffusive and quasi-ballistic transport regimes in situ. We utilize the exceptional control our technique provides over local disorder to realize quantum Hall isospin ferromagnetic states in a device whose initial quality would otherwise leave such states unobservable. These results demonstrate precise manipulation of carrier density and charge disorder in van der Waals heterostructures, providing a highly accessible approach to creating high-quality devices capable of realizing correlated electronic states.",
+      "authors": [
+        "Collin R. Sanborn",
+        "Son T. Le",
+        "Thuc T. Mai",
+        "Maria F. Munoz",
+        "Riccardo Torsi",
+        "Angela R. Hight Walker",
+        "Curt A. Richter",
+        "Samuel W. LaGasse",
+        "Aubrey T. Hanbicki",
+        "Adam L. Friedman"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-05-21T13:17:57+00:00",
+      "link": "https://arxiv.org/pdf/2605.22452v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in situ control and transport properties of semiconductor heterostructures",
+      "llm_evidence_cn": "半导体异质结构的原位控制与输运性质",
+      "llm_evidence": "半导体异质结构的原位控制与输运性质",
+      "canonical_evidence": "半导体异质结构的原位控制与输运性质",
+      "llm_tldr_en": "Reports on photoinduced modulation doping for in situ control of carrier concentration in 2D heterostructures.",
+      "llm_tldr_cn": "报道了通过光诱导调制掺杂原位控制二维异质结构中载流子浓度的方法。",
+      "llm_tldr": "报道了通过光诱导调制掺杂原位控制二维异质结构中载流子浓度的方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.24265v1",
+      "source": "arxiv",
+      "title": "ChatMOSP: A Chemistry-Grounded Mobile Agent for Working-State Catalyst Simulations",
+      "abstract": "Catalytic nanoparticles restructure dynamically under reaction conditions, so their working morphology and activity are governed by temperature, pressure, and gas composition. However, converting experimentally specified environments into physically meaningful morphology-performance simulations remains difficult because the translation of reaction conditions into model-specific energetic, kinetic, and execution parameters requires the specialized knowledge in computational catalysis. Here we report ChatMOSP, a chemistry-grounded mobile scientific agent that translates natural-language and voice-expressed catalytic requests into parameter-validated simulations using the Multi-scale Operando Simulation Package. ChatMOSP maps catalyst identity, temperature, pressure, gas composition, and target observables onto multiscale structure reconstruction and kinetic Monte Carlo tasks, retrieves database parameters or constructs missing inputs from an online literature-retrieval workflow, and executes validated MOSP workflows. Using CO oxidation on Pd nanoparticles as an example, we verify the ChatMOSP simulations capture the temperature-induced transition from faceted to rounded morphologies observed by in-situ TEM experiments either by built-in database or from web-retrieved literature information when the parameters are absent. Moreover, we demonstrate the capability of ChatMOSP to perform end-to-end study at mobile devices to simulate a pressure-coverage-morphology-activity feedback cycle for Pt CO oxidation to interpret the oscillatory CO conversion. These results establish ChatMOSP as a physically constrained mobile agent for accessible and interpretable catalyst working-state simulations.",
+      "authors": [
+        "Sanyang Ye",
+        "Rui Qi",
+        "Beien Zhu",
+        "Yi Gao"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.atm-clus",
+        "physics.class-ph"
+      ],
+      "published": "2026-05-22T22:35:59+00:00",
+      "link": "https://arxiv.org/pdf/2605.24265v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multi-scale Operando Simulation Package for catalysts",
+      "llm_evidence_cn": "催化剂多尺度原位模拟软件包",
+      "llm_evidence": "催化剂多尺度原位模拟软件包",
+      "canonical_evidence": "催化剂多尺度原位模拟软件包",
+      "llm_tldr_en": "Introduces ChatMOSP, an AI agent for operando simulations of catalytic nanoparticle morphology and activity.",
+      "llm_tldr_cn": "介绍了 ChatMOSP，一种用于催化纳米颗粒形貌和活性的原位模拟 AI 代理。",
+      "llm_tldr": "介绍了 ChatMOSP，一种用于催化纳米颗粒形貌和活性的原位模拟 AI 代理。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2605.27252v1",
+      "source": "arxiv",
+      "title": "Real-Time Time-Dependent Density Functional Theory for Pump-Probe Spectroscopies",
+      "abstract": "The last decade has witnessed a rapid advancement in laser technology, enabling the direct monitoring and control of electronic motion on its natural attosecond to sub-femtosecond timescales. Ultrafast processes are conventionally studied using pump-probe spectroscopic techniques, where a pump pulse drives the molecule out of equilibrium and a time-delayed probe pulse records the response of the coherent non-stationary state. Since, these processes are non-linear and non-perturbative in nature, real-time formalisms provide a suitable theoretical framework for studying ultrafast light-induced dynamics. In addition, relativistic effects can play an important role in such simulations, either because the external field lies in the XUV to soft-X-ray region targeting core-level excitations, or because the molecular system contains heavy elements. In this chapter, we provide an overview of recent developments in real-time time-dependent density functional theory for simulating pump-probe spectroscopies (namely, transient absorption and transient electronic circular dichroism) at both non-relativistic and relativistic Hamiltonian levels. In order to further interpret these spectroscopic signals, we analyze several spectroscopically relevant time-dependent sub-observables, such as induced electronic densities and induced dipole moments as well as analytical formulations of generalized non-equilibrium response functions. We provide examples to show that the framework can be used to investigate and design new light-induced phenomena that emerge only in the attosecond regime.",
+      "authors": [
+        "Torsha Moitra"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-05-26T16:30:07+00:00",
+      "link": "https://arxiv.org/pdf/2605.27252v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "real-time time-dependent density functional theory for pump-probe spectroscopies",
+      "llm_evidence_cn": "用于泵浦-探测光谱的实时时间相关密度泛函理论",
+      "llm_evidence": "用于泵浦-探测光谱的实时时间相关密度泛函理论",
+      "canonical_evidence": "用于泵浦-探测光谱的实时时间相关密度泛函理论",
+      "llm_tldr_en": "Develops a theoretical framework for simulating ultrafast light-induced dynamics in pump-probe experiments.",
+      "llm_tldr_cn": "开发了用于模拟泵浦-探测实验中超快光诱导动力学的理论框架。",
+      "llm_tldr": "开发了用于模拟泵浦-探测实验中超快光诱导动力学的理论框架。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

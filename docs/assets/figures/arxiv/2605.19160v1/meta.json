@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2605.19160v1/fig-001.webp",
+      "caption": "Table 1: Summary of evaluation metrics used for 4D reconstruction assessment.",
+      "page": 4,
+      "index": 1,
+      "width": 944,
+      "height": 521
+    },
+    {
+      "url": "assets/figures/arxiv/2605.19160v1/fig-002.webp",
+      "caption": "Figure 1: Schematic of the bootstrapped cross-validation framework. (a) Illustration of the workflow for the proposed framework applying to sparse (or ultra-sparse) 4D reconstruction. Starting from an experimental dataset consisting of 16 experiments with 16 projections per time point, bootstrapping is performed by selecting i projections (or k experiments) from the full set. A reconstruction from all 16 projections yields a full-set reconstruction ỹ, which serves as a pseudo-reference when ground truth y is unavailable in real experiments. Independently bootstrapped subsets Pi(k) are used to train multiple models, producing a collection of subset reconstructions ŷ i(k). Two examples, ŷ i(k)",
+      "page": 5,
+      "index": 2,
+      "width": 896,
+      "height": 343
+    },
+    {
+      "url": "assets/figures/arxiv/2605.19160v1/fig-003.webp",
+      "caption": "Figure 2: Performance evaluation of 4D reconstructions under sparse spatial sampling. The performance of the reconstructions is shown as a function of the number of projections. The six metrics used are MSE, DSSIM, FHC, PSNR, NCC, and NMI, with error bars indicating standard deviations across 100 subset reconstructions and 1000 cross-validation pairs. Three comparisons are shown: subset reconstructions ŷi versus ground truth y (circles, blue solid lines), subset reconstructions ŷi versus the full 16-projection reconstruction ỹ (triangles, yellow dashdotted lines), and cross-validation between independently reconstructed 4D volumes (squares, green dotted lines). The gray dashed line denotes the baseline performance of the full 16-projection reconstruction ỹ relative to the ground truth y.",
+      "page": 7,
+      "index": 3,
+      "width": 943,
+      "height": 494
+    },
+    {
+      "url": "assets/figures/arxiv/2605.19160v1/fig-004.webp",
+      "caption": "Figure 3: Performance evaluation of 4D reconstructions under ultra-sparse spatial sampling. The performance of the reconstructions is shown as a function of the number of experiments. The six metrics used are MSE, DSSIM, FHC, PSNR, NCC, and NMI, with error bars indicating standard deviations across 100 subset reconstructions and 1000 cross-validation pairs. Three comparisons are reported: subset reconstructions ŷi versus ground truth y (circles, blue solid lines), subset reconstructions ŷi versus the full 16-experiment reconstruction ỹ (triangles, yellow dashdotted lines), and cross-validation between independently reconstructed 4D volumes (squares, green dotted lines). The gray dashed line denotes the baseline performance of the full 16-experiment reconstruction ỹ relative to the ground truth y.",
+      "page": 8,
+      "index": 4,
+      "width": 943,
+      "height": 498
+    }
+  ]
+}
