@@ -1,0 +1,497 @@
+Title: Plasmon-Enabled High-Precision Single Molecule Localization Microscopy over an Extended Field of View
+
+URL Source: https://arxiv.org/pdf/2606.31758v1
+
+Published Time: Wed, 01 Jul 2026 01:17:15 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# Plasmon-Enabled High-Precision Single Molecule Localization Microscopy over an Extended Field of View 
+
+Muzzamal I. Shaukat, 1, ∗ Carlos E. Rodriguez, 2, ∗ M. Suhail Zubairy, 1, 2, † and Oumeng Zhang 1, 2, ‡
+
+> 1
+
+Institute for Quantum Science and Engineering 
+
+> 2
+
+Department of Physics and Astronomy Texas A&M University, College Station, Texas 77843, USA 
+
+We propose PIFLUX, a single-molecule localization scheme combining deep-subwavelength plas-monic illumination with widefield detection. Interference between counter-propagating gap plasmons and a normally incident optical field generates an illumination pattern whose position can be tuned through the plasmon phase while preserving its spatial period. A Cram´ er-Rao analysis shows PI-FLUX reaches few-nanometer precision matching MINFLUX while doubling that of SIMFLUX over a micrometer field of view, and a maximum-likelihood estimator confirms this on a synthetic nuclear pore complex. 
+
+Single-molecule localization microscopy (SMLM) [1– 9] has become an indispensable tool in biophysics and biochemistry, enabling access to cellular architecture, protein interactions, and molecular dynamics at spatial scales beyond the classical diffraction limit. By stochas-tically activating sparse subsets of fluorophores and lo-calizing their emission, SMLM overcomes diffraction and enables molecular-scale mapping . In conventional SMLM, the localization precision scales as λ/ (NA √N )[10], where λ is the emission wavelength, NA the numer-ical aperture, and N the number of detected photons. Pushing the precision into the few-nanometer regime thus demands large photon budgets per localization, which in practice are limited by photobleaching and fluorophore blinking kinetics. Patterned-illumination approaches have recently shown that localization precision can be improved be-yond this conventional scaling. A prominent example is MINFLUX [11–13], which excites single molecules (SMs) with a donut-shaped excitation beam. By inferring the molecular position from photon counts acquired at multiple beam positions, MINFLUX can reach 
+
+∼ 1 nm precision with substantially fewer photons than centroid-based localization. However, MINFLUX relies on addressing essentially one emitter per donut, resulting in an intrinsically small field of view (FOV, typically 
+
+∼50-100 nm) and requiring sequential excitation of molecules, which limits throughput. To mitigate this limitation, SIMFLUX combines si-nusoidal illumination with widefield camera detection [14]. By correlating emitter positions with photon counts across phase-shifted pattern exposures, SIMFLUX en-ables patterned-illumination localization over fields of view of tens of micrometers. Yet its precision gain is fundamentally limited by the illumination-pattern pitch; for standing-wave interference this is bounded by 
+
+∼ λ/ (2NA), restricting the improvement to roughly a    
+
+> ∗These authors contributed equally to this work.
+> †zubairy@tamu.edu
+> ‡ozhang@tamu.edu
+
+twofold enhancement relative to conventional SMLM. This motivates a central question: can the illumination-pattern pitch be reduced further to ap-proach MINFLUX-level localization precision while re-taining the large field of view and parallelism of wide-field detection? Achieving a smaller pitch requires optical fields with larger transverse spatial frequencies than are available in conventional far-field interference. Beyond fluorescence microscopy, structured optical fields have long been exploited for subwavelength localization across other areas of physics. In particular, Zubairy and col-laborators developed a broad range of quantum-optical approaches to subwavelength localization and imaging based on coherent atom-field interactions and quantum interference, demonstrating spatial resolution beyond the classical diffraction limit [15–25]. Drawing inspiration from these approaches, we exploit the large in-plane wavevectors of evanescent plasmonic near fields to gen-erate deep-subwavelength illumination patterns over an extended field of view. Surface plasmon polaritons (SPPs) are evanescent elec-tromagnetic modes bound to metal-dielectric interfaces, central to plasmonic control of light at the nanoscale [26– 29]. Their guided propagation and strong near-field con-finement support optical fields with in-plane wavevectors exceeding those of freely propagating light, thereby pro-viding access to spatial frequencies beyond the diffrac-tion limit [30–32]. This capability enables optical dis-persion and field localization to be engineered through material composition, operating frequency, and geometry [26, 30, 33]. In multilayer plasmonic systems, coupling between neighboring metal-dielectric interfaces gives rise to hybridized modes with tunable confinement, propaga-tion length, and field enhancement, motivating extensive studies of multilayer architectures for nanoscale guiding, imaging, sensing, and light–matter interactions [34–38]. The present water-metal-dielectric-metal-water (WMDMW) structure belongs to the broader class of finite-thickness metal-dielectric-metal (MDM) plas-monic waveguides, which support strongly confined gap-plasmon modes within nanoscale dielectric spacers. The coupling between the two metal-dielectric interfaces 
+
+> arXiv:2606.31758v1 [physics.optics] 30 Jun 2026
+
+2gives rise to even- and odd-symmetry gap-plasmon modes, whose dispersion and confinement can be tuned through the thickness of the spacer, the thickness of the metal, and the surrounding dielectric environment [27, 39–42]. As the dielectric gap decreases, the modal confinement increases and the in-plane propagation constant β′ becomes substantially larger than the free-space wavevector, enabling deeply subwavelength optical fields and illumination patterns [26, 31, 32]. These characteristics have established MDM architectures as a versatile platform for nanophotonic integration, subwavelength waveguiding, and plasmonic circuitry [43–47]. In realistic finite-thickness structures, both the surrounding dielectric medium and the metal-film thick-ness influence the modal dispersion and propagation loss of the supported gap-plasmon modes [27, 39, 40]. Here, we propose a new microscopy approach that combines plasmonic illumination with widefield local-ization. We term this method PIFLUX (plasmon-illumination FLUX), in analogy with other structured-illumination localization schemes. We first introduce a WMDMW architecture that supports SPP excitation patterns with pitches substantially smaller than those attainable with conventional optics. Using a Cram´ er-Rao bound analysis, we show that PIFLUX can approach MINFLUX-level localization precision over a field of view spanning several micrometers. Finally, we develop a po-sition estimator for SM localizations and validate its per-formance on synthetic data. 
+
+FIG. 1. Surface plasmon polariton mode supported by a finite water–metal–dielectric–metal–water structure. The complex propagation constant βspp = β′ + iβ ′′ determines the spatial oscillation and attenuation of the gap-plasmon field, which excites nearby fluorescent emitters whose emission is collected by an objective lens. 
+
+We consider a finite-thickness water–metal–dielectric– metal–water structure, where a dielectric spacer of thick-ness td is confined between two metal films of thickness 
+
+tm. The supported gap-plasmon modes are obtained from the transverse-magnetic dispersion relation of the multilayer geometry, which explicitly incorporates the fi-nite metal thickness and surrounding dielectric environ-ment (see Supplemental Sec. 1). Numerical solution yields a complex propagation constant β = β′ + iβ ′′ ,where β′ determines the plasmonic spatial frequency and 
+
+β′′ characterizes propagation loss. 0 0.875 x (7m) 2.625 3.5                                                       
+
+> 0
+> 1Normalized intensity (a) E=1:02eV
+> E=2:01eV
+> E=2:50eV
+> 00.25x(7m)0.751
+> 0
+> 1Normalized intensity (b) '=0
+> '=2:=3
+> '=4:=3
+> 00.25x(7m)0.751
+> 0
+> 1Normalized intensity (c) td=3nm
+> td=6nm
+> td=10nm
+> td=30nm
+> 00.25x(7m)0.751
+> 0
+> 1Normalized intensity (d) tm=20nm
+> tm=30nm
+> tm=100nm
+
+FIG. 2. Plasmonic intensity modulation computed from Eq. (1) with χ = 0 and θ = 0, as used throughout. (a) Dependence of the gap-plasmon wavevector on excitation en-ergy. Increasing energy increases β′ and reduces the modula-tion period. (b) Phase-dependent shift of the interference pat-tern. (c) Dependence of the plasmonic intensity modulation on spacer thickness. Smaller gaps increase β′ and enhance confinement. (d) Dependence on metal thickness. Thinner metal films increase attenuation and modify the standing-wave profile. 
+
+The superposition of counter-propagating gap plas-mons forms a standing-wave field, proportional to 2e−β′′ |x| cos( β′x + ϕ) and 2 ie −β′′ |x| sin( β′x + ϕ), respec-tively. While the individual components oscillate, the total intensity is uniform in the lossless limit, reflecting the quadrature relation between the field components [48, 49]. Now consider simultaneous illumination by an inci-dent plane wave Ea = Ea (cos χ ex + sin χ ez ) eik 0 sin χ x 
+
+with incidence angle χ and complex amplitude Ea =
+
+E0eiθ . The total intensity then reads 
+
+I(x) = 4 e−2β′′ |x| + |Ea|2
+
++ 4 E0e−β′′ |x| cos( k0 sin χ x + θ) cos( β′x − φ). (1) where φ = χ − ϕ. Spatial modulation along the interface is governed by plasmon propagation β′, resulting in an ef-fective period Λ eff = 2 π/β ′ corresponding to a subwave-length plasmonic standing-wave pattern. A 10 nm di-electric spacer is selected to support the long-range SPP branch while maintaining strong confinement, consistent with the meta-sandwich geometry of Ref. [50]. The metal permittivity is taken from the experimentally tabulated optical constants of Ref. [51]. Fig. 2a shows that increasing the excitation energy increases β′, leading to progressive compression of the 3oscillation period. The resulting reduction in Λ eff di-rectly reflects plasmonic wavelength shortening and es-tablishes the energy-tunable subwavelength structured illumination. Fig. 2b shows that varying φ shifts the plasmonic interference pattern while preserving the spa-tial period set by β′. This phase-controlled translation enables structured illumination without altering the un-derlying plasmon wavelength. As shown in Fig. 2c, de-creasing the thickness of the dielectric spacer increases the interfacial coupling, thus improving the in-plane mo-mentum β′ and reducing the effective modulation period. Fig. 2d shows that decreasing the metal thickness en-hances the coupling between neighboring plasmonic in-terfaces, leading to increased attenuation and a modifica-tion of the standing-wave intensity profile. Consequently, thinner metal layers exhibit more rapidly decaying plas-monic modulations. (a)          
+
+> (c) b = 1b = 20
+> (b)
+> (d)
+> intensity
+> Normalized
+> -65y(nm)65
+> 0
+> 0.4PIFLUXSMLM
+> -65y(nm)65
+> 0
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+
+FIG. 3. Principle of PIFLUX. (a,b) Phase-shifted excitation patterns (green) for td = 10 nm and 2.01 eV ( λex = 617 nm), translated along (a) x and (b) y, together with representa-tive synthetic camera frames. The purple dot marks the SM position. Six images are acquired per localization. The total signal is 500 photons and the total background is 1 (middle row) or 20 (bottom row) photons per (65 nm) 2 pixel (summed over all six frames). Scale bar: 233 nm ( λem /2NA). (c,d) Photon counts for the three phase shifts compared with the corresponding excitation profiles along (c) x and (d) y. Solid curves: normalized excitation intensity; dotted curves: nor-malized detected emission, with shaded areas indicating inten-sity uncertainty; light and dark gray areas: estimated position with its uncertainty for SMLM and PIFLUX, respectively. 
+
+We next describe how the SPP intensity pattern (Eq. 1) enables PIFLUX; the concept is illustrated in Fig. 3. For each localization event, six images are ac-quired: three with the excitation pattern phase shifted along x (Fig. 3a) and three along y (Fig. 3b), with succes-sive phase shifts of 2 π/ 3 in each direction. Using two or-thogonal directions is sufficient to obtain nearly isotropic localization precision [14], in contrast to Fourier-space filling approaches that require multiple pattern orienta-tions (e.g., conventional [52], nonlinear [53] and plasmon-enabled [49] structured illumination microscopy). In each direction, successive exposures are phase shifted by ∆ φ =2π/ 3, so the detected photon counts vary across the three frames according to the molecule’s position within the pattern. By first assigning the emitter to a single period of the decaying sinusoidal profile and then refining its po-sition by matching the measured counts to the known ex-citation patterns, PIFLUX extracts additional positional information and achieves improved localization precision relative to conventional SMLM (Fig. 3c,d). To benchmark PIFLUX against other techniques, we computed the Cram´ er-Rao bound (CRB) from the Fisher information (FI) [54, 55] of the Poisson-distributed pho-ton counts, using a scalar point-spread function (PSF, see Supplemental Sec. 2). We fixed the excitation energy at 2.01 eV ( λex = 617 nm), metal thickness tm = 20 nm, and emission wavelength λem = 676 nm, with an objec-tive of NA = 1 .45 and immersion oil index n = 1 .515. The total signal s and background b per pixel are dis-tributed over N frames ( N = 6 for PIFLUX and SIM-FLUX, 4 for MINFLUX, 1 for SMLM). 1                    
+
+> 2
+> 3
+> 4
+> 5
+> <(CRB)
+> x (nm) s=500,b=1(i) (a)
+> 1
+> 2
+> 3
+> 4
+> 5
+> <(CRB)
+> y (nm) (i) (b)
+> -6x(7m)6
+> 1
+> 2
+> 3
+> 4
+> 5
+> <(CRB)
+> r (nm) (i) (c)
+> 2
+> 4
+> 6
+> 8
+> 10
+> <(CRB)
+> x (nm) s=500,b=20(ii)
+> 2
+> 4
+> 6
+> 8
+> 10
+> <(CRB)
+> y (nm) (ii)
+> -6x(7m)6
+> 2
+> 4
+> 6
+> 8
+> 10
+> <(CRB)
+> r (nm) (ii)
+> SMLM
+> PIFLUX6nm
+> PIFLUX10nm
+> MINFLUX
+> SIMFLUX
+
+FIG. 4. Lateral localization CRB (a) σ(CRB)  
+
+> x
+
+, (b) σ(CRB)  
+
+> y
+
+,and (c) mean lateral localization CRB σ(CRB)  
+
+> r
+
+for 500 signal photons over a 12 μm range with background levels of (i) 1 and (ii) 20 photons per (65 nm) 2 pixel (summed over all six frames). Gray: conventional SMLM; blue: PIFLUX with td =6 nm; red: PIFLUX with td = 10 nm; orange: MINFLUX; green: SIMFLUX. For PIFLUX and SIMFLUX, the shaded areas indicate the minimum and maximum CRB values within one-third of an excitation period (33 nm for td = 6 nm, 43 nm for td = 10 nm, and 71 nm for SIMFLUX), and the solid lines show the corresponding average over each one-third period. 
+
+The resulting CRBs are shown in Fig. 4. In addition to σ(CRB)  
+
+> x
+
+and σ(CRB)  
+
+> y
+
+, we define an overall lateral local-ization precision, σ(CRB)  
+
+> r
+
+= det(CRB) 1/4. This metric corresponds to the geometric mean of the localization precision along x and y, while also accounting for the 
+
+x–y covariance. We evaluated the CRBs as functions of 
+
+x at fixed y = 2 .26 μm for PIFLUX with td = 10 nm 4and at fixed y = 1 .32 μm for PIFLUX with td = 6 nm. Compared with conventional SMLM, PIFLUX provides better localization precision in all lateral directions across the entire 12 μm range under both low and high signal-to-background ratio (SBR) conditions. Our main comparison, however, is between PIFLUX and SIMFLUX. Because of the excitation symmetry in PIFLUX and SIMFLUX, the localization precision in x
+
+varies within each one-third period of the decaying si-nusoidal excitation pattern. We therefore show not only the average CRB within each period, but also the corre-sponding minimum and maximum values. In the x di-rection, PIFLUX with td = 6 nm performs consistently better than SIMFLUX in σ(CRB)  
+
+> x
+
+over a ∼5 μm range for both low and high SBR (Fig. 4a). Its σ(CRB)  
+
+> y
+
+is mostly about half that of SIMFLUX across the full 12 μm range (Fig. 4b) and remains nearly constant as the SM’s x po-sition changes, except near x = 0, where it becomes slightly worse because the point ( x, y ) = (0 , 1.32 μm) allocates a larger fraction of the detected photons to estimating the x position due to the stronger excita-tion (Fig. 2). The overall lateral precision σ(CRB)  
+
+> r
+
+re-mains consistently better than that of SIMFLUX across a ∼10 μm range, with a best improvement of 93% at both high and low SBRs (Fig. 4c). Notably, the best perfor-mance of PIFLUX with td = 6 nm is even 47% better than that of MINFLUX with a donut shift diameter of 100 nm at high SBR [Fig. 4c(i)] and 27% at low SBR [Fig. 4c(ii)]. For PIFLUX with td = 10 nm, which may be easier to manufacture experimentally, the overall trend remains the same, although the improvement over SIMFLUX is smaller. In this case, the best improvement in overall localization precision is 50% relative to SIMFLUX. How-ever, it provides a larger region in which both σ(CRB) 
+
+> x
+
+and σ(CRB)  
+
+> y
+
+are better than those of SIMFLUX, span-ning 4 .7 μm for td = 10 nm compared with 4 .4 μm for 
+
+td = 6 nm at high SBR [Fig. 4a,b(i)], and 4 .4 μm for 
+
+td = 10 nm compared with 3 .8 μm for td = 6 nm at low SBR [Fig. 4a,b(ii)]. These results show that PIFLUX of-fers a favorable tradeoff between localization precision, FOV size, and practical implementation. Finally, we evaluated PIFLUX with a multi-stage maximum-likelihood estimator and synthetic data (see Supplemental Sec. 3), and benchmarked it against SIM-FLUX and MINFLUX, all using the same parameters as in the CRB analysis. The test structure was an ideal-ized 2-D nuclear pore complex (NPC), specified by the coordinates of its ring center. Eight bright emitters arranged on a 110 nm diameter circle represented the ground truth, each emitting 500 total photons per local-ization distributed across all frames (six for PIFLUX and SIMFLUX, four for MINFLUX). Following the sparse-blinking condition of SMLM, a single emitter was as-sumed active per frame. For MINFLUX, the donut scan pattern was centered on each emitter during localization, placing the emitter at the most sensitive point of the pat-PIFLUX 6 nm                                     
+
+> PIFLUX10nm
+> MINFLUX
+> SIMFLUX
+> (2.26,2.26)
+> (iii)
+> 0rad.error(nm)30
+> (1.32,1.32)
+> (ii)
+> 0rad.error(nm)30
+> probability
+> (0,0)
+> (i)
+> 0rad.error(nm)30
+> 0
+> 0.3
+> (i) (ii)
+> (iii) (iv)
+> (0,0)(0,0)
+> (1.32,1.32)(2.26,2.26)
+> (i) (ii)
+> (0,0)(0,0)
+> (a) (b)
+> (c)
+> FIG. 5. The localization estimates are shown against the ground-truth ring of a simulated NPC. For each method, 500 localizations were performed per emitter, with a total signal of 500 photons and a total background of 1 photon per pixel distributed across all frames (six for PIFLUX and SIMFLUX, four for MINFLUX). (a) PIFLUX: (i) td= 6 nm and (ii)
+> td= 10 nm with the ring centered at the origin, and (iii)
+> td= 6 nm and (iv) td= 10 nm with the ring at their optimal distances of (1 .32 ,1.32) and (2 .26 ,2.26) μm, respectively. (b) Corresponding results for (i) SIMFLUX and (ii) MINFLUX. Scale bar: 20 nm. (c) The distribution of radial error between each localization estimate and the ground truth. The center of the simulated NPC ring was located at (i) (0 ,0) μm, (ii) (1 .32 ,1.32) μm, and (iii) (2 .26 ,2.26) μm.
+
+tern and thus representing a best-case comparison. We first tested the high-SBR regime, with a total back-ground of 1 photon per pixel distributed across all frames. The localization estimates are shown against the ground-truth ring in Figs. 5a,b, where all methods recover the eight-point geometry of the NPC. For each method, 500 localizations were performed per emitter, from which the median radial error (MRE) was computed. The MRE was 4.3 nm and 2.6 nm for SIMFLUX and MINFLUX, respectively. For PIFLUX, td = 6 nm gave 2.2 nm both at the origin and at (1 .32 , 1.32) μm, while td = 10 nm gave 2.8 nm at the origin and 3 .1 nm at (2 .26 , 2.26) μm(Fig. 5c). These results were slightly worse than the CRB predictions; moreover, the precision at (1 .32 , 1.32) and (2 .26 , 2.26) μm was not better than at the origin, in contrast to the CRB. We attribute this to the MLE operating on the summed intensity within the 5 × 5 ROI for computational efficiency, whereas the CRB is evalu-ated from the full image over all pixels. At low SBR (20 background photons per pixel summed over all frames, same 500 signal photons; Supplemental Fig. S2), the ring remained identifiable but the localizations were more scattered, and all methods followed the same trend with uniformly larger errors: MRE of 7.1 nm (SIMFLUX), 3.7 nm (MINFLUX), 3.8 nm ( td = 6 nm PIFLUX), and 4.9-5.4 nm ( td = 10 nm PIFLUX). In summary, we have developed an analytical model 5for long-range gap plasmons in a symmetric metal– dielectric–metal structure and used it to introduce PI-FLUX, a plasmon-illumination localization scheme that combines deep-subwavelength structured illumination with widefield detection. Using a Cram´ er-Rao bound analysis, we showed that PIFLUX reaches few-nanometer localization precision on par with that of MINFLUX while doubling the precision of SIMFLUX, retaining the micrometer-scale field of view and parallelism of camera-based detection. A multi-stage estimator validated on a synthetic nuclear pore complex confirmed nanometer-level accuracy across the field of view. By decoupling localization precision from the diffraction-limited illumi-nation pitch, PIFLUX points toward a route to high-throughput fluorescence imaging that approaches single-digit-nanometer resolution without sequential, emitter-by-emitter excitation. 
+
+[1] P. Storey, M. Collett, and D. Walls, Measurement-induced diffraction and interference of atoms, Physical Review Letters 68 , 472 (1992). [2] P. Storey, M. Collett, and D. Walls, Atomic-position reso-lution by quadrature-field measurement, Physical Review A 47 , 405 (1993). [3] S. Kunze, G. Rempe, and M. Wilkens, Atomic-position measurement via internal-state encoding, Europhysics Letters 27 , 115 (1994). [4] A. M. Herkommer, W. P. Schleich, and M. S. Zubairy, Autler–townes microscopy on a single atom, Journal of Modern Optics 44 , 2507 (1997). [5] S. T. Hess, T. P. Girirajan, and M. D. Mason, Ultra-High Resolution Imaging by Fluorescence Photoactiva-tion Localization Microscopy, Biophysical Journal 91 ,4258 (2006). [6] M. J. Rust, M. Bates, and X. Zhuang, Sub-diffraction-limit imaging by stochastic optical reconstruction mi-croscopy (STORM), Nature Methods 3, 793 (2006). [7] E. Betzig, G. H. Patterson, R. Sougrat, O. W. Lind-wasser, S. Olenych, J. S. Bonifacino, M. W. Davidson, J. Lippincott-Schwartz, and H. F. Hess, Imaging Intra-cellular Fluorescent Proteins at Nanometer Resolution, Science 313 , 1642 (2006). [8] A. Sharonov and R. M. Hochstrasser, Wide-field subd-iffraction imaging by accumulated binding of diffusing probes, Proceedings of the National Academy of Sciences 
+
+103 , 18911 (2006). [9] M. Lelek, M. T. Gyparaki, G. Beliu, F. Schueder, J. Griffi´ e, S. Manley, R. Jungmann, M. Sauer, M. Lakadamyali, and C. Zimmer, Single-molecule local-ization microscopy, Nature Reviews Methods Primers 1,39 (2021). [10] B. Rieger and S. Stallinga, The Lateral and Axial Lo-calization Uncertainty in Super-Resolution Light Mi-croscopy, ChemPhysChem 15 , 664 (2014). [11] F. Balzarotti, Y. Eilers, K. C. Gwosch, A. H. Gynn˚ a, V. Westphal, F. D. Stefani, J. Elf, and S. W. Hell, Nanometer resolution imaging and tracking of fluores-cent molecules with minimal photon fluxes, Science 355 ,606 (2017), arXiv: 1611.03401. [12] K. C. Gwosch, J. K. Pape, F. Balzarotti, P. Hoess, J. El-lenberg, J. Ries, and S. W. Hell, MINFLUX nanoscopy delivers 3D multicolor nanometer resolution in cells, Na-ture Methods 17 , 217 (2020). [13] S. J. Sahl, J. Matthias, K. Inamdar, M. Weber, T. A. Khan, C. Br¨ user, S. Jakobs, S. Becker, C. Griesinger, J. Broichhagen, and S. W. Hell, Direct optical measure-ment of intramolecular distances with angstrom preci-sion, Science 386 , 180 (2024). [14] J. Cnossen, T. Hinsdale, R. Ø. Thorsen, M. Siemons, F. Schueder, R. Jungmann, C. S. Smith, B. Rieger, and S. Stallinga, Localization microscopy at doubled preci-sion with patterned illumination, Nature Methods 17 ,59 (2020). [15] S. Qamar, S.-Y. Zhu, and M. S. Zubairy, Atom localiza-tion via resonance fluorescence, Physical Review A 61 ,063806 (2000). [16] T. Azim, M. Ikram, and M. S. Zubairy, Sub-wavelength atom localization via autler–townes spectroscopy: effect of the quantized field, Journal of Optics B: Quantum and Semiclassical Optics 6, 248 (2004). [17] M. Sahrai, H. Tajalli, K. T. Kapale, and M. S. Zubairy, Subwavelength atom localization via amplitude and phase control of the absorption spectrum, Physical Re-view A 72 , 013820 (2005). [18] K. T. Kapale and M. S. Zubairy, Subwavelength atom lo-calization via amplitude and phase control of the absorp-tion spectrum. ii, Physical Review A 73 , 023813 (2006). [19] M. Macovei, J. Evers, C. H. Keitel, and M. S. Zubairy, Localization of atomic ensembles via superfluorescence, Physical Review A 75 , 033801 (2007). [20] M. Kiffner, J. Evers, and M. S. Zubairy, Resonant inter-ferometric lithography beyond the diffraction limit, Phys-ical Review Letters 100 , 073602 (2008). [21] J.-T. Chang, J. Evers, M. O. Scully, and M. Suhail Zubairy, Measurement of the separation between atoms beyond diffraction limit, Phys. Rev. A 
+
+73 , 031803(R) (2006). [22] H. Li, V. A. Sautenkov, M. M. Kash, A. V. Sokolov, G. R. Welch, Y. V. Rostovtsev, M. S. Zubairy, and M. O. Scully, Optical imaging beyond the diffraction limit via dark states, Phys. Rev. A 78 , 013803 (2008). [23] S. Qamar, J. Evers, and M. S. Zubairy, Atom microscopy via two-photon spontaneous emission spectroscopy, Phys-ical Review A 79 , 043814 (2009). [24] Z. Y. Liao, M. Al-Amri, and M. S. Zubairy, Resonance-fluorescence-localization microscopy with subwavelength resolution, Physical Review A 85 , 023810 (2012). [25] Q. Sun, M. Al-Amri, M. O. Scully, and M. S. Zubairy, Subwavelength optical microscopy in the far field, Phys-ical Review A 83 , 063818 (2011). [26] S. A. Maier, Plasmonics: Fundamentals and Applications 
+
+(Springer US, New York, NY, 2007). [27] E. N. Economou, Surface Plasmons in Thin Films, Phys-ical Review 182 , 539 (1969). [28] H. Raether, Surface Plasmons on Smooth and Rough Surfaces and on Gratings , Springer Tracts in Modern Physics, Vol. 111 (Springer Berlin Heidelberg, Berlin, Heidelberg, 1988). 6
+
+[29] P. Berini and I. De Leon, Surface plasmon–polariton am-plifiers and lasers, Nature Photonics 6, 16 (2012). [30] W. L. Barnes, A. Dereux, and T. W. Ebbesen, Surface plasmon subwavelength optics, Nature 424 , 824 (2003). [31] S. I. Bozhevolnyi, V. S. Volkov, E. Devaux, J.-Y. Laluet, and T. W. Ebbesen, Channel plasmon subwave-length waveguide components including interferometers and ring resonators, Nature 440 , 508 (2006). [32] D. K. Gramotnev and S. I. Bozhevolnyi, Plasmonics be-yond the diffraction limit, Nature Photonics 4, 83 (2010). [33] J. A. Schuller, E. S. Barnard, W. Cai, Y. C. Jun, J. S. White, and M. L. Brongersma, Plasmonics for extreme light concentration and manipulation, Nature Materials 
+
+9, 193 (2010). [34] J. A. Dionne, H. J. Lezec, and H. A. Atwater, Highly Confined Photon Transport in Subwavelength Metallic Slot Waveguides, Nano Letters 6, 1928 (2006). [35] N. Wickremasinghe, J. Thompson, X. Wang, H. Schmitzer, and H. P. Wagner, Controlling guided modes in plasmonic metal/dielectric multilayer waveg-uides, Journal of Applied Physics 117 , 213102 (2015). [36] Y. Liu and Y. Ma, One-Dimensional Plasmonic Sensors, Frontiers in Physics 8, 312 (2020). [37] P. Saeidi, B. Jakoby, G. P¨ uhringer, A. Tortschanoff, G. Stocker, J. Spettel, F. Dubois, T. Grille, and R. Jan-nesari, Design, Analysis, and Optimization of a Plas-monic Slot Waveguide for Mid-Infrared Gas Sensing, Nanomaterials 12 , 1732 (2022). [38] S. Verma, A. K. Pathak, and B. M. A. Rahman, Review of Biosensors Based on Plasmonic-Enhanced Processes in the Metallic and Meta-Material-Supported Nanostruc-tures, Micromachines 15 , 502 (2024). [39] J. J. Burke, G. I. Stegeman, and T. Tamir, Surface-polariton-like waves guided by thin, lossy metal films, Physical Review B 33 , 5186 (1986). [40] F. Yang, J. R. Sambles, and G. W. Bradberry, Long-range surface modes supported by thin films, Physical Review B 44 , 5855 (1991). [41] E. Verhagen, J. A. Dionne, L. K. Kuipers, H. A. Atwater, and A. Polman, Near-field visualization of strongly con-fined surface plasmon polaritons in metal-insulator-metal waveguides, Nano Letters 8, 2925 (2008). [42] C. Xiang and J. Wang, Long-Range Hybrid Plasmonic Slot Waveguide, IEEE Photonics Journal 5, 4800311 (2013). [43] J. A. Dionne, L. A. Sweatlock, H. A. Atwater, and A. Pol-man, Plasmon slot waveguides: Towards chip-scale prop-agation with subwavelength-scale localization, Physical Review B 73 , 035407 (2006). [44] A. Messner, D. Moor, D. Chelladurai, R. Svoboda, J. Smajic, and J. Leuthold, Plasmonic, photonic, or hy-brid? Reviewing waveguide geometries for electro-optic modulators, APL Photonics 8, 100901 (2023). [45] B. Zhang, Y. Bian, L. Ren, F. Guo, S.-Y. Tang, Z. Mao, X. Liu, J. Sun, J. Gong, X. Guo, and T. J. Huang, Hy-brid Dielectric-loaded Nanoridge Plasmonic Waveguide for Low-Loss Light Transmission at the Subwavelength Scale, Scientific Reports 7, 40479 (2017). [46] C. Zhang, Y. Xu, H. Tao, P. Wang, Y. Cui, and Q. Wang, On chip control and detection of complex SPP and waveguide modes based on plasmonic interconnect cir-cuits, Nanophotonics 13 , 4243 (2024). [47] L. Rojas Yanez, H. Hu, C. Cirac` ı, and S. Palomba, Plas-monic slot waveguides: a quantum leap in nonlinear nanophotonics, Frontiers in Nanotechnology 7, 1536462 (2025). [48] X. Zeng, L. Fan, and M. S. Zubairy, Deep-subwavelength lithography via graphene plasmons, Physical Review A 
+
+95 , 053850 (2017). [49] H. T. Abbas, X. Zeng, R. D. Nevels, and M. S. Zubairy, Deep subwavelength imaging via tunable terahertz plas-mons, Applied Physics Letters 113 , 051106 (2018). [50] S. Cao, T. Wang, J. Yang, B. Hu, U. Levy, and W. Yu, Numerical analysis of wide-field optical imaging with a sub-20 nm resolution based on a meta-sandwich struc-ture, Scientific Reports 7, 1328 (2017). [51] P. B. Johnson and R. W. Christy, Optical Constants of the Noble Metals, Physical Review B 6, 4370 (1972). [52] M. G. L. Gustafsson, Surpassing the lateral resolution limit by a factor of two using structured illumination mi-croscopy: SHORT COMMUNICATION, Journal of Mi-croscopy 198 , 82 (2000). [53] M. G. L. Gustafsson, Nonlinear structured-illumination microscopy: Wide-field fluorescence imaging with the-oretically unlimited resolution, Proceedings of the Na-tional Academy of Sciences 102 , 13081 (2005). [54] T. K. Moon and W. C. Stirling, Mathematical Methods and Algorithms for Signal Processing (Prentice Hall, New Jersey, 2000). [55] J. Chao, E. Sally Ward, and R. J. Ober, Fisher informa-tion theory for parameter estimation in single molecule microscopy: tutorial, Journal of the Optical Society of America A 33 , B36 (2016). Supplemental Material for Plasmon-Enabled High-Precision Single Molecule Localization Microscopy over an Extended Field of View 
+
+Muzzamal I. Shaukat, 1, ∗ Carlos E. Rodriguez, 2, ∗ M. Suhail Zubairy, 1, 2, † and Oumeng Zhang 1, 2, ‡
+
+> 1
+
+Institute for Quantum Science and Engineering 
+
+> 2
+
+Department of Physics and Astronomy Texas A&M University, College Station, Texas 77843, USA 
+
+I. WATER-CLAD MDM DISPERSION WITH EXPERIMENTALLY DETERMINED PERMITTIVITY 
+
+We consider a finite-thickness plasmonic structure con-sisting of a dielectric spacer of thickness td and permit-tivity εd, confined between two identical metal films of thickness tm and complex frequency-dependent permit-tivity εm(ω), embedded in an external dielectric medium of permittivity εw. The resulting multilayer geome-try is w | m( tm) | d( td) | m( tm) | w. Because the structure is translationally invariant along the propagation direc-tion, the guided plasmonic modes propagate with a com-plex longitudinal wavevector β. For transverse-magnetic (TM) polarization, Maxwell’s equations in each homoge-neous region yield evanescent field solutions character-ized by transverse decay constants κj =  β2 − k20 εj
+
+1/2,where j ∈ { w, m, d } and k0 = ω/c . The finite metal claddings together with the external dielectric medium can be incorporated through a reduced admittance [1, 2], 
+
+P (m)in = Pm
+
+Pw + Pm tanh( κmtm)
+
+Pm + Pw tanh( κmtm) (S1) with Pj = κj /ε j . The symmetry of the structure allows the guided gap-plasmon modes to be classified accord-ing to their parity. For the even magnetic-field branch, corresponding to the long-range gap-plasmon mode, the dispersion relation becomes 
+
+κd
+
+εd
+
+tanh 
+
+ κdtd
+
+2
+
+
+
++ P (m)in = 0 . (S2) The corresponding odd-parity branch is obtained by re-placing the hyperbolic tangent by a hyperbolic cotangent. The dielectric response of the metallic layers is described using the experimentally measured optical constants of Johnson and Christy [3], from which the complex re-fractive index ˜ n = n + ik is obtained. The metal per-mittivity then follows as εm = ˜ n 2 = ε′ 
+
+> m
+
++ iε ′′ 
+
+> m
+
+, with 
+
+ε′ 
+
+> m
+
+= n2 − k2 and ε′′  
+
+> m
+
+= 2 nk . Because the metal permit-tivity is complex, the propagation constant is likewise complex, β = β′ + iβ ′′ . The real and imaginary parts of 
+
+β are obtained by numerically solving Eq. (S2) at each    
+
+> ∗These authors contributed equally to this work.
+> †zubairy@tamu.edu
+> ‡ozhang@tamu.edu
+
+frequency. In the limit tm → ∞ , the effective admittance approaches P (m)in → κm/ε m, and Eq. (S2) reduces to the familiar metal–dielectric–metal gap-plasmon dispersion relation. As an illustration, Table S1 lists representative values of the complex propagation constant β = β′ + iβ ′′ 
+
+for the finite water-clad metal–dielectric–metal structure studied here, with εd = 2 .25. The large values of β′ re-flect strong subwavelength confinement, while the finite value of β′′ determines the propagation length and ulti-mately limits the attainable resolution enhancement. 
+
+TABLE S1. Representative values of the complex propagation constant β = β′ + iβ ′′ for the even TM gap-plasmon mode supported by the finite water–metal–dielectric–metal–water structure. The outer water cladding has permittivity εw =1.77, the dielectric spacer has permittivity εd = 2 .25 and the free-space wavenumber is k0 = 2 π/λ .
+
+E(eV) β′(m −1) β′′ (m −1) td(nm) tm(nm) 1.02 2.13 × 10 7 1.64 × 10 5 10 20 2.01 1.00 × 10 8 2.07 × 10 6 3 20 2.01 6.34 × 10 7 1.00 × 10 6 6 20 2.01 4.82 × 10 7 6.63 × 10 5 10 20 2.01 3.04 × 10 7 3.44 × 10 5 30 20 2.01 4.43 × 10 7 5.69 × 10 5 10 30 2.01 4.26 × 10 7 5.19 × 10 5 10 100 2.50 6.90 × 10 7 1.27 × 10 6 10 20 
+
+II. CRAM´ ER-RAO BOUND FOR LOCALIZATION 
+
+To benchmark the performance of PIFLUX and com-pare it with other techniques, we compute the Cram´ er-Rao bound (CRB) from the Fisher information (FI) [4, 5]. The emission point-spread function (PSF) is modeled us-ing a scalar Fourier-optics description, PSF( x, y ) = A F
+
+(
+
+Circ 
+
+ nρ 
+
+NA 
+
+ exp[ ik em (xu + yv )] (1 − ρ2)1/4
+
+) 2
+
+,
+
+(S3) where F denotes a 2D Fourier transform, ( u, v ) are pupil-plane coordinates, ρ = √u2 + v2, and kem = 2 π/λ em .Circ( ·) is the circular pupil function set by the objective NA (with cutoff ρ ≤ NA /n ), and A is a normalization factor chosen such that the PSF integrates to unity. 2For an SM at position ( x, y ) with total signal s and to-tal background b per pixel (both summed over N frames: 
+
+N = 6 for PIFLUX and SIMFLUX, N = 4 for MIN-FLUX, and N = 1 for conventional SMLM), we gener-ated synthetic data under an independent Poisson noise model. Specifically, for frame m the detected image is sampled as 
+
+Iem ,m (x, y ) ∼ Poisson( s I ex ,m (x, y ) PSF( x, y ) + b/N ) ,
+
+(S4) where Iex ,m (x, y ) is the excitation intensity profile for frame m, normalized such that PNm=1 Iex ,m (x, y ) = 1. The FI matrix for ( x, y ) is then FI = 
+
+> N
+
+X
+
+> m=1
+
+X
+
+> p
+
+1
+
+Ip,m 
+
+"
+
+(∂xIp,m )2 (∂xIp,m ) ( ∂y Ip,m )(∂xIp,m ) ( ∂y Ip,m ) (∂y Ip,m )2
+
+#
+
+,
+
+(S5) where Im,p is the expected photon count in pixel p of frame m, and ∂x and ∂y denote derivatives with respect to the emitter position. The CRB is then given by the inverse Fisher information, CRB = FI −1.y (7m)                
+
+> (i) (a)
+> 0x(7m)5
+> 0
+> 5
+> y (7m)
+> (ii)
+> 0x(7m)3
+> 0
+> 3
+> y (7m)
+> (i) (b)
+> 0x(7m)5
+> 0
+> 5
+> y (7m)
+> SIMFLUX
+> PIFLUX(10nm)
+> PIFLUX(6nm)
+> (ii)
+> 0x(7m)3
+> 0
+> 3
+
+FIG. S1. CRB covariance ellipses for lateral localization with 500 signal photons and total background levels of (a) 1 and (b) 20 photons per (65 nm) 2 pixel (summed over all six frames). PIFLUX with (i) td = 10 nm and (ii) td = 6 nm is compared with SIMFLUX. The ellipses are magnified by factors of 50 in (a) and 25 in (b) for visualization. 
+
+We visualize the CRB comparison between PIFLUX (with td = 6 nm and td = 10 nm at 2.01 eV) and SIM-FLUX (Fig. S1). We plot CRB covariance ellipses to capture not only the one-dimensional precisions σ(CRB) 
+
+> x
+
+and σ(CRB)  
+
+> y
+
+, but also the x–y covariance. Across most of the field of view (5 μm× 5 μm for td = 10 nm and 3 μm× 3 μm for td = 6 nm), the PIFLUX ellipses are smaller than those of SIMFLUX for both high (Fig. S1a) and low (Fig. S1b) SBRs, indicating improved localiza-tion precision. 
+
+III. MAXIMUM LIKELIHOOD ESTIMATOR 
+
+Here, we present the details of the maximum-likelihood estimator. PIFLUX and SIMFLUX share the same phase-shifted acquisition and estimator, differing only in the illumination pattern, whereas MINFLUX was simulated with its standard donut-scanning scheme; all three localizations were obtained under the Poisson noise model of Eq. S4. For PIFLUX, each phase shift of the excitation pattern generated an image using the scalar PSF (Eq. S3) and the local excitation intensity (Eq. 1 of the main text). This resulted in three images per axis ( φ = 0, 2 π/ 3, and 4 π/ 3) and six in total. Local-ization then proceeded in three stages across both axes. First, all six images were summed into a high signal-to-noise composite, then cross-correlated with a PSF tem-plate to bound an initial 5 × 5-pixel region of interest, balancing estimator performance against computational cost. A maximum-likelihood evaluation over a 500-point grid was next performed per axis within the region of interest to determine a coarse localization. Finally, the grid was refined around the coarse-stage maximum and its two neighboring grid points to yield the fine per-axis PIFLUX 6 nm                     
+
+> PIFLUX10nm
+> MINFLUX
+> SIMFLUX
+> (2.26,2.26)
+> (iii)
+> 0rad.error(nm)30
+> (1.32,1.32)
+> (ii)
+> 0rad.error(nm)30
+> probability
+> (0,0)
+> (i)
+> 0rad.error(nm)30
+> 0
+> 0.2
+> (i) (ii)
+> (iii) (iv)
+> (0,0)(0,0)
+> (1.32,1.32)(2.26,2.26)
+> (i) (ii)
+> (0,0)(0,0)
+> (a) (b)
+> (c)
+
+FIG. S2. The localization estimates are shown against the ground-truth ring of a simulated NPC, with a total signal of 500 photons and a total background of 20 photons per pixel distributed across all frames (six for PIFLUX and SIMFLUX, four for MINFLUX). (a) PIFLUX: (i) td = 6 nm and (ii) 
+
+td = 10 nm with the ring centered at the origin, and (iii) 
+
+td = 6 nm and (iv) td = 10 nm with the ring at their optimal distances of (1 .32 , 1.32) and (2 .26 , 2.26) μm, respectively. (b) Corresponding results for (i) SIMFLUX and (ii) MINFLUX. Scale bar: 20 nm. 3localizations, which were combined into the overall 2-D localization. The NPC localization results under the low-SBR con-dition, complementing the high-SBR case of the main text, is presented in Fig S2. The simulation follows the same protocol, with the total background increased to 20 photons per pixel while the signal is kept at 500 photons. The localization accuracy and precision as functions of molecular position, for both high- and low-SBR condi-tions, are shown in Fig. S3. x bias (nm)                
+
+> -10
+> 0
+> 10
+> y bias (nm) b=1
+> td=6nm
+> -10
+> 0
+> 10
+> x bias (nm)
+> -10
+> 0
+> 10
+> y bias (nm) td=10nm
+> -10
+> 0
+> 10
+> x bias (nm)
+> -20
+> 0
+> 20
+> y bias (nm) b=20
+> -20
+> 0
+> 20
+> x bias (nm)
+> 0distance(7m)2.5
+> -20
+> 0
+> 20
+> y bias (nm)
+> 0distance(7m)2.5
+> -20
+> 0
+> 20
+> (a)
+> (b)
+
+FIG. S3. Mean localization bias along x and y for emit-ters at varying diagonal distances from the origin, for (a) a background photon per pixel count of 1 and (b) a background photon per pixel count of 20. Error bars denote the standard deviation. The blue graphs represent td = 6 nm PIFLUX while the red graphs represent td = 10 nm PIFLUX. 
+
+IV. FIELD-OF-VIEW LIMIT SET BY THE MODULATION ENVELOPE 
+
+Fig. S4 further illustrates that the usable FOV in PI-FLUX is set by the depth of the normalized minima within each period of the excitation pattern, and thus by the decay rate of the plasmonic modulation envelope, with FOV length inversely proportional to β′′ . As long as the valley within each period remains sufficiently low, the excitation retains strong sinusoidal modulation and the relative excitation intensities provide strong positional information for localization refinement. However, when the valley rises to approximately one-third of the peak intensity, the modulation contrast is noticeably reduced (Fig. S4a), and the excitation pattern is better regarded as a sinusoidal variation on top of a large constant off-set. In this regime, the spatially varying component is no longer dominant, so the ability to refine emitter position from intensity differences degrades accordingly. Compar-ing Figs. S4a and S4b, the td = 10 nm and td = 6 nm designs exhibit different decay behaviors, which deter-mine how quickly this loss of modulation contrast occurs and therefore how long strong localization performance can be maintained. 0             
+
+> 1
+> normalized
+> intensity
+> td=10nm
+> (a)
+> 012x(7m)456
+> 0
+> 1
+> normalized
+> intensity
+> td=6nm
+> (b)
+
+FIG. S4. The FOV of PIFLUX is set by the normalized minima in each period of the excitation pattern. The pat-terns shown are computed at 2.01 eV ( λex = 617 nm) for (a) 
+
+td = 10 nm and (b) td = 6 nm, and are normalized within each period (see Fig. 2 for normalization over the full pat-tern). [1] E. N. Economou, Surface Plasmons in Thin Films, Physi-cal Review 182 , 539 (1969). [2] J. J. Burke, G. I. Stegeman, and T. Tamir, Surface-polariton-like waves guided by thin, lossy metal films, Physical Review B 33 , 5186 (1986). [3] P. B. Johnson and R. W. Christy, Optical Constants of the Noble Metals, Physical Review B 6, 4370 (1972). [4] T. K. Moon and W. C. Stirling, Mathematical Methods and Algorithms for Signal Processing (Prentice Hall, New Jersey, 2000). [5] J. Chao, E. Sally Ward, and R. J. Ober, Fisher informa-tion theory for parameter estimation in single molecule microscopy: tutorial, Journal of the Optical Society of America A 33 , B36 (2016).

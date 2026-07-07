@@ -1,0 +1,347 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-07T21:21:49.057623+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 8,
+    "quick_skim_target": 11,
+    "quick_selected": 8
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-07-03-736163-v1",
+      "source": "biorxiv",
+      "title": "Time-of-flight-resolved interferometric speckle-contrast optical spectroscopy (TOF-iSCOS) for depth-resolved blood-flow sensing",
+      "abstract": "SignificanceContinuous, noninvasive, and depth-resolved monitoring of blood-flow-related tissue dynamics remains an important unmet need. Speckle-contrast optical spectroscopy (SCOS), including interferometric implementations such as iSCOS, provides a scalable optical route to blood-flow sensing, but conventional continuous-wave approaches lack intrinsic depth selectivity. Time-of-flight (TOF) gating offers a way to separate superficial and deeper dynamic contributions in layered tissues, such as skin- muscle or scalp-cortex, by resolving photon path lengths.\n\nAimWe introduce a swept-source, single-channel implementation of interferometric speckle-contrast optical spectroscopy (iSCOS) to obtain TOF-resolved temporal speckle contrast,{kappa} 2, from the measured field autocorrelation g1, and evaluate its feasibility for depth-resolved blood-flow sensing.\n\nApproachA swept-source iNIRS system operating at 780 nm acquired interferometric signals, which were Fourier-transformed along the optical-frequency axis to recover complex TOF-resolved speckle fields. Temporal speckle contrast was then estimated at each TOF gate indirectly from g1 using the speckle-visibility relation. Diffusion-based numerical simulations were first used to compare the direct variance-based estimator and the indirect g1-based estimator under varying reduced scattering coefficient, diffusion coefficient, additive noise level, and bi-layer geometry. Because the simulations showed that the g1-derived{kappa} 2 estimator was substantially less sensitive to additive noise than the direct estimator, this estimator was used for the main phantom and in vivo analyses, while the direct estimator served as a simulation comparator. The g1-derived estimator was then applied to liquid and bi-layer phantoms, followed by proof-of-concept in vivo measurements on the human forearm during cuff occlusion and on the forehead during a Sudoku task.\n\nResultsTOF-resolved{kappa} 2 curves recovered with the g1-derived estimator matched DWS theory across scattering coefficients, photon path lengths, and exposure times. The estimator preserved theoretical accuracy for additive noise amplitudes up to 50% of the field amplitude, whereas the direct variance estimator showed substantial noise-induced bias and required correction. Bi-layer simulations and phantom experiments reproduced the predicted direction and onset of TOF-dependent decorrelation-rate trends in layered media. In vivo, the recovered blood-flow index tracked the expected TOF-dependent cuff-occlusion and reactive-hyperemia response in the forearm. During the single-subject Sudoku task, the left-forehead recording showed a TOF-dependent relative blood-flow-index increase of +0.8 {+/-} 1.9% at TOF = 400 ps, +9.8 {+/-} 2.2% at TOF = 600 ps, and +15.2 {+/-} 5.6% at TOF = 800 ps. This pattern is consistent with increased sensitivity to deeper tissue at longer photon path lengths, but requires cohort-level validation before quantitative interpretation as cognitive activation.\n\nConclusionsCoupling temporal speckle-contrast analysis with swept-source iNIRS yields a proof-of-concept, depth-resolved platform for blood-flow sensing. By estimating TOF-resolved speckle contrast through the g1-derived{kappa} 2 route, TOF-iSCOS suppresses additive-noise bias while preserving sensitivity to deeper dynamic tissue layers. The present single-channel results bridge continuous-wave iSCOS, interferometric NIRS and time-domain diffuse correlation spectroscopy (TD-DCS), and motivate future multi-channel and cohort studies for scalable cortical hemodynamic monitoring.",
+      "authors": [
+        "Nowacka-Pieszak, K.",
+        "Borycki, D.",
+        "Mogharari, N.",
+        "Marzejon, M."
+      ],
+      "primary_category": "bioengineering",
+      "categories": [
+        "bioengineering"
+      ],
+      "published": "2026-07-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.07.03.736163v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "interferometric speckle-contrast optical spectroscopy (iSCOS) for depth-resolved sensing",
+      "llm_evidence_cn": "用于深度分辨传感的干涉斑点对比光学光谱 (iSCOS)",
+      "llm_evidence": "用于深度分辨传感的干涉斑点对比光学光谱 (iSCOS)",
+      "canonical_evidence": "用于深度分辨传感的干涉斑点对比光学光谱 (iSCOS)",
+      "llm_tldr_en": "Introduces TOF-iSCOS for depth-resolved blood-flow sensing using interferometric techniques.",
+      "llm_tldr_cn": "介绍了利用干涉技术进行深度分辨血流传感的 TOF-iSCOS。",
+      "llm_tldr": "介绍了利用干涉技术进行深度分辨血流传感的 TOF-iSCOS。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02178v1",
+      "source": "arxiv",
+      "title": "Coherent two-dimensional electronic spectroscopy integrated with confocal back focal plane microscopy",
+      "abstract": "We introduce a setup for coherent two-dimensional electronic spectroscopy in the pump-probe reflection geometry that is integrated with a confocal back focal plane imaging microscope. The angle-resolved capability is utilized to control pump and probe wavevectors, while real space imaging enables co-localization of the collection spots for linear and ultrafast experiments. Compression of pulses down to 20 fs is achieved. We demonstrate the capabilities of this approach on an exfoliated WSe$_2$ monolayer on Si/SiO$_2$. The setup is suited to investigate excitons and exciton-polaritons in 2D Materials and their heterostructures.",
+      "authors": [
+        "Trideep Kawde",
+        "Pavel Trofimov",
+        "Anton Trenczek",
+        "Matteo Russo",
+        "Jasper Wilhelm Schwering",
+        "Hélène Seiler"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.ins-det"
+      ],
+      "published": "2026-07-02T13:49:53+00:00",
+      "link": "https://arxiv.org/pdf/2607.02178v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "ultrafast experiments and real-space imaging of 2D materials",
+      "llm_evidence_cn": "二维材料的超快实验和实空间成像",
+      "llm_evidence": "二维材料的超快实验和实空间成像",
+      "canonical_evidence": "二维材料的超快实验和实空间成像",
+      "llm_tldr_en": "Integrates 2D electronic spectroscopy with confocal microscopy for ultrafast studies of 2D materials.",
+      "llm_tldr_cn": "将二维电子光谱与共聚焦显微镜结合，用于二维材料的超快动力学研究。",
+      "llm_tldr": "将二维电子光谱与共聚焦显微镜结合，用于二维材料的超快动力学研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.03137v1",
+      "source": "arxiv",
+      "title": "Self-Driven Atomic Dispersion in Graphitic Layers",
+      "abstract": "Carbon-supported single-atom catalysts maximize metal utilization, but how metal nanoparticles transform into isolated atoms within carbon remains unclear. We show that metal nanoparticles can undergo a self-driven dispersion process under hydrocarbon oxidation conditions, transforming into single atoms that are confined in carbon matrix. Using Pt-catalysed hydrocarbon oxidation as a model, we combine operando electron microscopy, near-ambient-pressure X-ray photoelectron spectroscopy and mass spectrometry to track coupled structural and chemical evolution. Graphitic carbon grows at step edges of Pt nanoparticle, continuously reconstructing Pt surface and generating undercoordinated sites for atom release. In-situ generated CO accumulates at the metal-carbon interface, weakening bonding and facilitating self-amplified atom release and migration. Defective carbon overlayers then trap, stabilize and transport liberated atoms, while oxidative etching preserves interfacial access of reaction-gas. Similar behaviour across other metals suggests a general atomization pathway for single-atom catalyst synthesis, yielding products with electrocatalytic hydrogen production activity beyond standard commercial benchmarks.",
+      "authors": [
+        "Zhaoxi Chen",
+        "Yulu He",
+        "Zhuoran Yao",
+        "Jian Liu",
+        "Jun Cai",
+        "Ziyi Fan",
+        "Wenjun Zhang",
+        "Lei Lei",
+        "Zupeng Chen",
+        "Bo Yang",
+        "Zhi Liu",
+        "Zhu-Jun Wang"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.chem-ph"
+      ],
+      "published": "2026-07-03T09:26:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.03137v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "operando electron microscopy for tracking structural and chemical evolution",
+      "llm_evidence_cn": "用于追踪结构和化学演变的原位电镜技术",
+      "llm_evidence": "用于追踪结构和化学演变的原位电镜技术",
+      "canonical_evidence": "用于追踪结构和化学演变的原位电镜技术",
+      "llm_tldr_en": "Uses operando microscopy to track the self-driven dispersion of metal nanoparticles into single atoms.",
+      "llm_tldr_cn": "利用原位显微技术追踪金属纳米颗粒自驱动分散为单原子的过程。",
+      "llm_tldr": "利用原位显微技术追踪金属纳米颗粒自驱动分散为单原子的过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31750v1",
+      "source": "arxiv",
+      "title": "Visualizing the Hidden Architecture of Molecular Films with Phase-Resolved Rotational SFG Microscopy",
+      "abstract": "The highly variable physico-chemical properties of thin molecular films play an essential role in numerous research fields ranging from biophysics to the fabrication of functional devices such as molecular sensors. The properties of molecular films are largely governed by their three-dimensional molecular structure which often exhibits important spatial heterogeneity, either naturally, or introduced deliberately. In order to understand and control these properties microscopic insight into structural parameters such as composition, molecular orientation and conformation, as well as molecular order is required, which, so far, represents a mostly unachieved experimental target. In this contribution we present a powerful experimental approach that can overcome this limitation. Using phase-resolved rotational sum-frequency generation (SFG) microscopy all of these structural parameters can be obtained with sub-monolayer sensitivity and at sub-micron resolution. In measurements of monolayer assemblies of mixed phospholipids, we uncover the molecular packing structure in previously-unattained detail and demonstrate the large potential of the technique for the elucidation of the complex architecture inside molecular films. The structural insight provided by this nonlinear microscopy approach spans all the way from the molecular to the macroscopic scale opening the door to a completely new type of interfacial studies.",
+      "authors": [
+        "Ben John",
+        "Tuhin Khan",
+        "Nasim Mirzajani",
+        "Martin Wolf",
+        "Alexander P. Fellows",
+        "Martin Thämer"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-06-30T14:41:13+00:00",
+      "link": "https://arxiv.org/pdf/2606.31750v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "microscopic insight into molecular films and material structure",
+      "llm_evidence_cn": "分子薄膜和材料结构的微观洞察",
+      "llm_evidence": "分子薄膜和材料结构的微观洞察",
+      "canonical_evidence": "分子薄膜和材料结构的微观洞察",
+      "llm_tldr_en": "Introduces phase-resolved rotational SFG microscopy to visualize the 3D architecture of molecular films.",
+      "llm_tldr_cn": "引入相位解析旋转SFG显微技术，以可视化分子薄膜的三维结构。",
+      "llm_tldr": "引入相位解析旋转SFG显微技术，以可视化分子薄膜的三维结构。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.03170v1",
+      "source": "arxiv",
+      "title": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "abstract": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "authors": [
+        "Emmanuel Kotu Robertson",
+        "Dennis van de Lockand",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-03T10:10:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.03170v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "femtosecond mid-infrared pump-probe holographic microscope for phototransient imaging",
+      "llm_evidence_cn": "用于光瞬态成像的飞秒中红外泵浦-探测全息显微镜",
+      "llm_evidence": "用于光瞬态成像的飞秒中红外泵浦-探测全息显微镜",
+      "canonical_evidence": "用于光瞬态成像的飞秒中红外泵浦-探测全息显微镜",
+      "llm_tldr_en": "Presents a bidirectional holographic microscope for high-resolution phototransient phase imaging.",
+      "llm_tldr_cn": "介绍了一种用于高分辨率光瞬态相位成像的双向全息显微镜。",
+      "llm_tldr": "介绍了一种用于高分辨率光瞬态相位成像的双向全息显微镜。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2606.31758v1",
+      "source": "arxiv",
+      "title": "Plasmon-Enabled High-Precision Single Molecule Localization Microscopy over an Extended Field of View",
+      "abstract": "We propose PIFLUX, a single-molecule localization scheme combining deep-subwavelength plasmonic illumination with widefield detection. Interference between counter-propagating gap plasmons and a normally incident optical field generates an illumination pattern whose position can be tuned through the plasmon phase while preserving its spatial period. A Cramér-Rao analysis shows PIFLUX reaches few-nanometer precision matching MINFLUX while doubling that of SIMFLUX over a micrometer field of view, and a maximum-likelihood estimator confirms this on a synthetic nuclear pore complex.",
+      "authors": [
+        "Muzzamal I. Shaukat",
+        "Carlos E. Rodriguez",
+        "M. Suhail Zubairy",
+        "Oumeng Zhang"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "quant-ph"
+      ],
+      "published": "2026-06-30T14:46:00+00:00",
+      "link": "https://arxiv.org/pdf/2606.31758v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "single molecule localization microscopy using optical field interference",
+      "llm_evidence_cn": "利用光场干涉的单分子定位显微技术",
+      "llm_evidence": "利用光场干涉的单分子定位显微技术",
+      "canonical_evidence": "利用光场干涉的单分子定位显微技术",
+      "llm_tldr_en": "Proposes PIFLUX for high-precision single-molecule localization using plasmonic illumination interference.",
+      "llm_tldr_cn": "提出了 PIFLUX 技术，利用等离激元照明干涉实现高精度单分子定位。",
+      "llm_tldr": "提出了 PIFLUX 技术，利用等离激元照明干涉实现高精度单分子定位。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.02071v1",
+      "source": "arxiv",
+      "title": "Anisotropic nanoscale coherent polariton transport in CrSBr",
+      "abstract": "In a combined experimental and theoretical study, we demonstrate anisotropic polariton transport on the nanoscale in the van der Waals antiferromagnet CrSBr. While effective cavity-polariton formation emerges via the self-hybridization of ultra-high oscillator strength excitons with a thin slab photonic mode, the absence of external mirrors facilitates spectroscopic investigation of these polaritons via cathodoluminescence (CL) on length scales determined by the electron wavelength. This direct access allows us to perform precise charting of the polariton landscape with nanometric resolution, and to probe polariton interference phenomena. The main finding of the work highlights that the coherent polariton transport follows the $C_{2v}$ symmetry of CrSBr, allowing exclusive transport along the crystallographic a-axis, while no coherent feature is found along the b-axis direction. Our work sets the foundation to use CL spectroscopy in cavity-polaritonics in more advanced landscapes, such as photonic crystals or optical lattices, and establishes the technique as a powerful tool to probe anisotropic expansion and relaxation phenomena on the nanoscale",
+      "authors": [
+        "Paritosh Malik",
+        "Dogyun Ko",
+        "Vita Solovyeva",
+        "Chirag Chandrakant Palekar",
+        "Imad Limame",
+        "Sven Rodt",
+        "Kseniia Mosina",
+        "Zdeněk Sofer",
+        "Alexander Steinhoff",
+        "Martin Esmann",
+        "Stephan Reitzenstein",
+        "Bo Han",
+        "Christopher Gies",
+        "Christian Schneider"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-02T12:05:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.02071v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "nanoscale coherent polariton transport in van der Waals materials",
+      "llm_evidence_cn": "范德华材料中的纳米级相干极化子传输",
+      "llm_evidence": "范德华材料中的纳米级相干极化子传输",
+      "canonical_evidence": "范德华材料中的纳米级相干极化子传输",
+      "llm_tldr_en": "Investigates anisotropic polariton transport in CrSBr using cathodoluminescence with nanometric resolution.",
+      "llm_tldr_cn": "利用纳米分辨率的阴极射线发光研究 CrSBr 中的各向异性极化子传输。",
+      "llm_tldr": "利用纳米分辨率的阴极射线发光研究 CrSBr 中的各向异性极化子传输。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-24-734378-v1",
+      "source": "biorxiv",
+      "title": "Long-term single-particle tracking by NIR imaging using Au42 (gold) quantum needles",
+      "abstract": "Single-particle tracking (SPT) over time enables direct observation of molecular transport and interactions in living cells. Fluorescence-based SPT has provided insights into intracellular processes such as endocytosis, receptor signaling, and drug delivery. Extending the observation window to several hours and beyond is critical for capturing slow intracellular dynamics, including the full course of endosomal trafficking, the long-term accumulation of particles within subcellular compartments, and transitions between transport modes that occur on hour-scale timescales. However, long-term intracellular SPT under visible-wavelength excitation remains challenging because fluorescence probes generally suffer from photobleaching and phototoxicity. While near-infrared (NIR) excitation can simultaneously mitigate these issues, generally weak emission of NIR-emitting dyes has hindered its wide application in long-term SPT. Here, we demonstrate long-term NIR SPT using atomically precise gold quantum needles, Au42(PET)32 (PET = 2-phenylethanethiolate). Continuous tracking of intracellular particles in living HEK293 cells was achieved for up to 12 h. Trajectory analysis revealed temporal transitions between directional and diffusive transport, as well as the accumulation of multiple particles within localized intracellular domains over several-hour timescales. The high photostability of Au42, combined with low phototoxicity of NIR excitation, enables visualization of intracellular transport dynamics over timescales difficult to access using conventional visible fluorescent probes. These results establish Au42-based NIR imaging as a platform for long-term, low-phototoxicity intracellular SPT and provide a framework for investigating slow intracellular dynamics in living systems.",
+      "authors": [
+        "Yagi, S.",
+        "Takano, S.",
+        "Nishiyama, R.",
+        "Oketani, R.",
+        "Tsukuda, T.",
+        "Hiramatsu, K."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-06-30T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.24.734378v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "single-particle tracking of gold quantum needles",
+      "llm_evidence_cn": "金量子针的单颗粒追踪",
+      "llm_evidence": "金量子针的单颗粒追踪",
+      "canonical_evidence": "金量子针的单颗粒追踪",
+      "llm_tldr_en": "Uses gold quantum needles for long-term single-particle tracking of molecular transport in living cells.",
+      "llm_tldr_cn": "利用金量子针对活细胞中的分子运输进行长时单颗粒追踪。",
+      "llm_tldr": "利用金量子针对活细胞中的分子运输进行长时单颗粒追踪。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

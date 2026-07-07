@@ -1,0 +1,216 @@
+Title: Coherent two-dimensional electronic spectroscopy integrated with confocal back focal plane microscopy
+
+URL Source: https://arxiv.org/pdf/2607.02178v1
+
+Published Time: Fri, 03 Jul 2026 01:27:53 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+# Coherent two-dimensional electronic spectroscopy integrated with confocal back focal plane microscopy 
+
+## Trideep Kawde 1,** , Pavel Trofimov 1,** , Anton Trenczek 1, Matteo Russo 1, Jasper Wilhelm Schwering 1, and H´ el` ene Seiler 1,* 1Physics department, Freie Universit¨ at Berlin, Arnimallee 14, 14195 Berlin 
+
+> *
+
+## helene.seiler@fu-berlin.de 
+
+> **
+
+## Contributed equally July 3, 2026 
+
+# Abstract 
+
+We introduce a setup for coherent two-dimensional electronic spectroscopy in the pump-probe reflection geometry that is inte-grated with a confocal back focal plane imag-ing microscope. The angle-resolved capabil-ity is utilized to control pump and probe wavevectors, while real space imaging enables co-localization of the collection spots for lin-ear and ultrafast experiments. Compression of pulses down to 20 fs is achieved. We demon-strate the capabilities of this approach on an exfoliated WSe 2 monolayer on Si/SiO 2. The setup is suited to investigate excitons and exciton-polaritons in 2D Materials and their heterostructures. 
+
+# 1 Introduction 
+
+Coherent two-dimensional electronic spectroscopy (2DES) is a powerful tool to reveal couplings between quantum states and disentangle homogeneous and inhomogeneous contributions to spectroscopic line-shapes [10]. The rise of 2D materials and their com-bination in heterostructures provides unique oppor-tunities for the method [19]. Over the last decade, 2DES has become a popular tool to reveal excitonic processes in transition metal dichalcogenide monolay-ers [9, 11, 17, 14, 30] and charge transfer processes in heterostructures [22, 23, 24]. Building on these ad-vances, 2DES holds substantial untapped potential for probing more complex systems, such as twisted bilayers, gated van der Waals devices, or 2D materi-als integrated with metasurfaces [13, 31]. A common challenge of working with such samples, in particular exfoliated materials, is their typical sizes of 10-20 μm .This adds another level of complexity to the experi-ment since conventionally 2DES is conducted without high-magnification optics. Most previous studies on 2D materials were performed on samples grown by chemical vapor deposition [17, 9, 11, 14, 22] or on large exfoliated flakes of 50 μm or more. Moreover, samples are often produced on opaque substrates in the visible range, such as Si/SiO 2, thereby preventing the use of the transmission geometry most commonly used in 2DES. Therefore, it is desirable to develop methods that can overcome these challenges. Coupling confocal or widefield optical microscopes with ultrafast experiments is a natural way to in-crease spatial resolution in ultrafast optical experi-ments. Transient-absorption microscopies have been carried out in a variety of ways, and we refer the reader to recent review [8]. Extending the tech-1
+
+> arXiv:2607.02178v1 [cond-mat.mtrl-sci] 2 Jul 2026
+
+niques to 2D spectroscopy is more challenging due to the addition of pulses and dimensions to scan. Few realizations of widefield 2DES microscopy in the pump-probe geometry have been demonstrated by placing the microscope objective after the sample [2, 28], making this approach well suited for spatially-resolved 2DES in a transmission geometry. Most im-plementations of 2D microscopy operate in a fully collinear geometry [3, 7, 32, 20, 12, 24]. By filling the entire numerical aperture of the objective, these se-tups optimize for spatial resolution. However, isolat-ing the 2D signals typically involves numerous phase-cycling steps [3, 7, 20] or relies on color/polarization filtering [12]. Moreover, optimizing for the highest spatial resolution comes at the cost of losing angu-lar resolution, making it difficult to disentangle the angle-dependent response of the system. These re-cent approaches motivate further exploration of the trade-offs between spatial and angular resolution, ex-perimental complexity and flexibility. Here we introduce a broadband visible 2DES setup in the pump-probe reflection geometry that is inte-grated with a confocal Fourier optical microscope. This microscope, based on a high numerical aperture apochromat objective, is used to perform imaging and various linear spectroscopies at the same posi-tion as the 2DES measurements. Real and back focal plane imaging can be utilized for filtering of the 2D signals and quantitative determination of pump and probe wavevectors. We demonstrate the capabilities of our instrument on a prototypical 2D material, an exfoliated monolayer of WSe 2 on Si/SiO 2. Our setup opens up studies on 2D materials and heterostruc-tures with sizes down to 10-20 μm , while retaining full flexibility in pump and probe color, polarization as well as experiment geometry (transmission, reflec-tion). We envision its back focal plane imaging capa-bilities to be particularly relevant for future ultrafast studies on polaritonic systems [36]. 
+
+# 2 Experimental setup 
+
+A sketch introducing the key components of the ex-periment is shown in Fig. 1(a). The optical setup is designed to conduct 2DES while adding the func-tionality of confocal Fourier optical microscopy at the same sample position. The output pulses from a Ti:sapphire regenerative amplifier (Astrella, Coher-ent, 1 kHz, 70 fs) are attenuated and sent to a 2.35 m long hollow-core fiber setup (Few-cycle) filled with argon to a pressure of 2 bar for spectral broadening, similar to previous reports [25, 27, 29, 16, 1]. Alter-natively, the fiber can be pumped with the output of a commercial optical parametric amplifier (TOPAS, 0.47 eV - 2.61 eV). The input beam to the fiber is actively stabilized (Aligna, TEM Messtechnik). The spectrally broadened pulses generated in the fiber are collimated and split into pump and probe channels via a beamsplitter (BS1), each containing an acousto-optic programmable pulse shaper (WR25 Dazzler, Fastlite, working range: 1.30 -2.69 eV) [35], AOPDF1 and AOPDF2 in Fig. 1(a). As an op-tion, a pair of GRating and PrISMs (GRISMs) can be used for dispersion pre-compensation of the pulses when working with energies higher than 1.77 eV. The laser pulses are coupled to the GRISMs using a hor-izontal D-shaped mirror (D1). The pulse shaper in the pump arm is used to generate two phase-locked collinear pump pulses with well-defined coherence time (t 1) and relative carrier envelope phase (CEP). Both shapers are also employed for pre-compensation of the significant chirp generated in the thick apoc-hromat glassy objective [21]. To scan through pop-ulation time (t 2), probe pulses are delayed using a motorized 3 ns delay stage (Newport, DL225). While the setup features both a transmission and a reflection channel, we decide to focus here on the less common reflection geometry. Pump and probe pulses are combined in the beamsplitter (BS2) in the chosen operating channel and coupled to a high numerical aperture apochromat objective (Mitutoyo 50x, NA 0.42, working distance 17 mm), providing a broad range of excitation angles. Lenses L2 and L3 are used to control the incident angles and beam sizes of pump and probe beams in the back focal plane of the objective. The pump and probe pulses are characterized at the sample position using a com-bination of chirp scans and a home-built transient-grating frequency-resolved optical gating (tg-FROG) setup [15, 33]. Specifically, for pulse characterization, the pump and probe beams behind the sample posi-2D1               
+
+> (a)
+> 1.6 1.7
+> Energy (eV)
+> 0.15
+> 0.10
+> 0.05
+> 0.00
+> RR
+> (e)
+> 1.6 1.7
+> Energy (eV)
+> 0.15
+> 0.10
+> 0.05
+> 0.00
+> RR
+> (d)
+> 0246810 12
+> Pixel index
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> Pixel index
+> (b) Amplitude
+> 0246810 12
+> Pixel index
+> (c) E0
+> 0.0
+> 0.5
+> 1.0
+> PL Intensity (arb.u.)
+> 0.01
+> 0.03
+> 0.04
+> 0.06
+> 1.660
+> 1.663
+> 1.665
+> 1.667
+> (eV)
+
+Figure 1: Instrument overview and linear properties of the sample. (a) Sketch of the setup combining 2DES with a back focal plane imaging microscope. Linear reflectivity maps showing (b) exciton amplitude and (c) exciton energy E 0 measured with a spatial resolution of 1 μm . (d) Exemplary local linear reflectivity spectra, color-coded by small squares in (b) and (c). Inset: Real Image of the sample (scale bar = 10 μm ). The black square shows the region where reflectivity mapping is performed. (e) Linear reflectivity (black) and photoluminescence (red) spectra acquired at the same position as 2DES measurements (white circle in inset (d)). tion are collimated by a 0.5” diameter silver off-axis parabolic mirror with an effective numerical aperture (NA) of 0.44. The beam is then routed towards the characterization setups. To facilitate the search for optimal compression parameters, chirp scans are per-formed first to find the optimal second-order coeffi-cient to be applied by the pulse shapers [15]. Resid-ual chirp as well as third and fourth order spectral phase distortions are subsequently analyzed with the tg-FROG setup and further corrected using the com-bination of AOPDFs and GRISMs. The generated 2D signals from the sample are col-lected with the same apochromat objective and cou-pled through beamsplitter (BS2) towards a custom built infinity corrected back focal plane confocal op-tical microscope. The signals can be spatially fil-tered in the intermediate real image of the sample (A1). Alternatively, an aperture placed in the in-termediate Fourier image (A2) can be employed to block the pump or increase angular resolution (Fig. S1). Adding/Removing L8 enables imaging either the real/back focal plane into the detector and CCD2. In the pump-probe geometry, the desired rephasing and non-rephasing 2D signals are emitted alongside the undesired pump-probe and linear signals in the probe direction [18, 26]. To eliminate those contributions, a two-step phase-cycling procedure is carried out. The nonlinear reflectivity is obtained as ((R ON (ϕ12 = π) -RON (ϕ12 = 0))/R OF F , where R ON and R OF F are re-flectivity with and without pumps and ϕ12 is the CEP difference between pulse 1 and 2. This signal, homo-dyne detected with the third pulse, is imaged (L10) towards the entrance slit of the detection spectrome-ter (Stresing, Hamamatsu S12600-1006 CCD sensor), thereby performing the Fourier transform along the detection time axis. In addition to the 2DES capabilities, the detec-tion part of the setup is designed to conduct imag-3ing and linear spectroscopies (transmission, reflec-tivity, and photoluminescence) of the sample at the same position as 2DES measurements are performed [28]. This aspect of the spectrometer makes it particularly well-suited to investigate 2D materials, in view of their high heterogeneity. Sample map-ping is performed using automated raster scans with piezoelectric stages, enabling direct visualization of the spatially-distributed spectral inhomogeneities. A continuous wave light source (laser or stabilized white light) and imaging cameras (CCD1 for real space imaging and CCD2 with L8 for back focal plane imag-ing) are optically coupled using beamsplitters (BS4, BS5) to the main part of the optical microscope. 
+
+# 3 Example: monolayer WSe 2We demonstrate the capabilities of our setup us-ing a mechanically exfoliated monolayer of WSe 2 on Si/SiO 2, a prototypical 2D material. A real space image of the sample is shown in the inset of Fig. 1(d), and the monolayer is identified by AFM mea-surements as the blue triangle in the image. Before the ultrafast experiments, linear reflectivity of the monolayer is measured at the sample position (black curve in Fig. 1(e)). The spectra feature a charac-teristic peak of the A exciton of WSe 2 around 1.667 eV. A photoluminescence spectrum acquired at the same position is overlaid (shaded red). Furthermore, mapping linear reflectivity on a heterogeneous region of the sample reveals differences in local properties of the exciton as shown in Fig. 1(b-d). This addition-ally allows characterization of sample homogeneity to determine the optimal location of the pump and probe beams and can be used to correlate the inhomo-geneous linewidth of the excitonic response extracted from 2DES with the statistics of the mapped linear reflectivity spectra (Fig. S3). Having recorded the linear properties of the sam-ple, we move forward with the 2DES experiments. Here, the fiber was pumped with the laser at 1.55 eV. A spectrum of the fiber output after the 1.55 eV shortpass filter is shown in black in Fig. 2(a). This spectrum is subsequently shaped using pulse shapers in order to obtain a Gaussian-like spectrum centered 1.55 1.6 1.65 1.7 1.75 1.8       
+
+> Energy (eV)
+> 0.0
+> 0.25
+> 0.5
+> 0.75
+> 1.0
+> Counts (arb.u.)
+> (a)
+> -40 050 100 150
+> Delay (fs)
+> 0.0
+> 0.25
+> 0.5
+> 0.75
+> 1.0
+> Amplitude (arb.u.)  (b)
+> 50 050
+> Delay (fs)
+> 1.55
+> 1.7
+> 1.85
+> Energy (eV)
+> 2
+> 0
+> 2
+> Phase (rad).
+
+Figure 2: Pulse characteristics at the sample position after going through the transmission objective. (a) fiber output spectrum (black, filtered ¡ 800 nm) and shaped pump (blue) and probe (red) spectra. (b) Retrieved electric field amplitude and phase for the pump pulse at the sample position. Inset: tg-FROG trace of the pulse. Retrieval algorithm: COPRA [6] around 1.667 eV, matching the center position of the A exciton (blue and red curves). An exemplary tg-FROG trace of the compressed beams at the sample position is shown as an inset of Fig. 2(b), while the retrieved field is shown in the main panel. A pulse duration of around 20 fs for both pump and probe is achieved. At the central energy of 1.667 eV, about 2900 fs 2 of chirp accumulated in the apochromat ob-jective had to be compensated. The temporal profile of the pulse is exempt from tails or pedestals, which is made possible by compensating for phase distortions beyond second order with the pulse shaper. For the 2D experiment, the coherence time t1 was scanned from 0 to 150 fs in steps of 1 fs. The popula-tion time was sampled from -200 fs to 800 fs with 69 points in a partial rotating frame with a frequency of around 0.20 PHz. Each population time is averaged over 1000 independent shots. The experiment was carried out with pump energies of 500 nJ/pulse and a probe energy of 133 pJ/pulse. We use L2 and L3, as indicated in Fig. 1(a), to independently adjust the pump and probe spot sizes onto the back focal plane of the objective (imaged using CCD 2). Hav-ing the possibility to independently tune pump and probe sizes can come in handy, for example, to rule out any diffusion effects arising from the pump. The 4(a) (c) (b) 
+
+> 0.05
+
+Figure 3: Beam coupling into the microscope objec-tive and principle of wavevector control. (a) Detailed schematics. (b) Image of the back focal plane (scale bar = 0.1 kk0 ) taken with CCD 2, with pump and probe beams circled in green and pink, respectively. (c) Corresponding real space image (scale bar = 10 
+
+μm ), taken with CCD 1. Pump and probe beam spots are circled with matching colors to (b). principle is illustrated in more detail in Fig. 3(a). Here, the pump size was adjusted on the objective back focal plane using L3 to obtain a full-width at half-maximum spot size on the sample of around 14.9 
+
+μm (1 /e 2 = 25.3 μm ), see Fig. 3(c). Its position on the back focal plane is shown in Fig. 3(b) as the green circle. Similarly, we use L2 to adjust the spot size of the probe. Here we employ a probe size with a full-width at half-maximum of 10.4 μm (1 /e 2 =17.7 μm ) (Fig. S2). Its position on the back focal plane of the objective is shown as the pink circle. In addition to controlling pump and probe sizes on the sample, this technique also permits working with pump and probe beams of the same color and polar-ization. While this way of coupling to the objective rules out diffraction-limited imaging, it still enables us to probe samples with sizes of 10-20 μm. Finally, imaging of the back focal plane enables us to precisely determine the wavevectors of the incident beams on the sample. The use of an apochromat transmission-type ob-jective enables access to any wavevector of light within the NA, in contrast to reflective-type objec-tives, where a significant part of the wavevectors are inaccessible due to their design. We anticipate that this feature will prove powerful to investigate light-momentum dependent 2D spectra in polaritonic sys-tems [31, 13]. More generally, exciton lifetimes and optical properties of 2D materials were shown to de-pend on substrate or encapsulation layer thickness due to the Purcell effect [5, 34]. Having control over the angle of the light beams therefore, enables more systematic measurements of dynamical properties in 2D materials. 1.65                       
+
+> 1.70
+> 1.75
+> E3 (eV)
+> (a)
+> t2= 20 fs
+> (b)
+> t2= 50 fs
+> 1.60 1.65 1.70 1.75
+> E1(eV)
+> 1.65
+> 1.70
+> 1.75
+> E3 (eV)
+> (c)
+> t2= 100 fs
+> 1.60 1.65 1.70 1.75
+> E1(eV)
+> (d)
+> t2= 800 fs
+> 1.60 1.65 1.70 1.75
+> E3(eV)
+> 1
+> 0
+> 1
+> R/R
+> (f)
+> 200 0200 400 600 800
+> t2(fs)
+> 0
+> Integrated ROI (arb.u.)
+> (e)
+
+Figure 4: Overview of 2D spectroscopy signals on monolayer WSe 2 on Si/SiO 2 (a-d) Exemplary 2D spectra at population times, t2 = 20 fs, 50 fs, 100 fs and 800 fs, respectively. (e) Integrated temporal dynamics of spectral features shown by rectangles in (a), matching colors. (f) Pseudo transient reflectivity spectra at E1 = 1.667 eV for different t2.Exemplary room temperature 2D spectra of the A exciton of WSe 2 are shown in Fig. 4(a-d), for selected population times. The spectra feature a derivative-5like shape that is related to the reflection geometry. A cut at E 1 = 1.667 eV (vertical dashed lines), corre-sponding to the center energy of the resonance, shows pseudo transient-resolved reflectivity spectra in Fig. 4(f). To assess the signal quality in more detail, we select a region of interest (ROI) along the blue and red features of the spectrum, shown as the dark blue and red rectangles in Fig. 4(a). The time-resolved traces obtained by integrating over the 2D signals within these ROIs are shown in Fig. 4(e). The trace in blue is fitted using a bi-exponential function con-volved with a Gaussian to account for the finite in-strument response function of the instrument. We recover a fast time constant of 60.0 ± 10.0 fs, and a slower time constant of 5.00 ± 0.75 ps. The fast time constant is comparable with previously measured ul-trafast exciton dynamics in WSe 2 [4]. Overall, the data in Fig. 4 demonstrate the capabilities of our instruments to retrieve ultrafast dynamics on mono-layer 2D materials. In conclusion, we demonstrated the integration of confocal back-focal plane microscopy and 2D spec-troscopy. Our setup retains the simplicity and flex-ibility of the pump-probe geometry, can operate in both reflection and transmission geometries, and en-ables control over pump and probe wavevectors, of particular relevance for probing exciton-polaritons. The access to samples with sizes of 10-20 μm opens the door to several 2D materials of contemporary in-terest. 
+
+# 4 Funding 
+
+We acknowledge funding from the DFG, under grant INST 130/1289-1 FUGG (Gross Ger¨ ate Antrag). The authors also acknowledge the DFG within Tran-sregio TRR 227 Ultrafast Spin Dynamics (Project B11, Project-ID 328545488), within CRC 1772 on Heterostructures of Molecules and Two-Dimensional Materials (Project A02, Project ID No. 555467911), and within FOR 5750 (Project P4). This work was supported by the SupraFAB Research Center for sample production. 
+
+# 5 Acknowledgment 
+
+We acknowledge Prof. Paul Fumagalli for providing the piezoelectric stages used for mapping linear re-flectivity. 
+
+# 6 Disclosures 
+
+The authors declare no conflicts of interest. sectionData Availability Statement The data shown in this paper will be available on Zenodo upon acceptance. 
+
+# References 
+
+[1] A. Al Haddad et al. In: Optics Letters 40.3 (Jan. 2015), p. 312. issn : 1539-4794. doi : 10. 1364/ol.40.000312 . url : http://dx.doi. org/10.1364/OL.40.000312 .[2] Mohammadjavad Azarm et al. 2026. eprint: 
+
+arXiv:2603.23759 .[3] Carlos R. Baiz, Denise Schach, and Andrei Tok-makoff. In: Optics Express 22.15 (July 2014), p. 18724. issn : 1094-4087. doi : 10.1364/oe. 22 . 018724 . url : http : / / dx . doi . org / 10 . 1364/OE.22.018724 .[4] Jan Philipp Bange et al. In: 2D Materials 10.3 (2023). issn : 2053-1583. doi : 10.1088/2053-1583 / ace067 . url : https : / / iopscience . iop . org / article / 10 . 1088 / 2053 - 1583 / ace067/meta .[5] H. H. Fang et al. In: Physical Review Letters 
+
+123.6 (Aug. 2019). issn : 1079-7114. doi : 10 . 1103/physrevlett.123.067401 . url : http: //dx.doi.org/10.1103/PhysRevLett.123. 067401 .[6] Nils C. Geib et al. In: Optica 6.4 (2019). issn :495-505. doi : 10 . 1364 / OPTICA . 6 . 000495 .
+
+url : https : / / doi . org / 10 . 1364 / OPTICA . 6.000495 .6[7] Sebastian Goetz et al. In: Optics Express 26.4 (Feb. 2018), p. 3915. issn : 1094-4087. doi : 10. 1364/oe.26.003915 . url : http://dx.doi. org/10.1364/OE.26.003915 .[8] Niklas Gross et al. In: The Journal of Physical Chemistry C 127.30 (July 2023), pp. 14557– 14586. issn : 1932-7455. doi : 10 . 1021 / acs . jpcc.3c02091 . url : http://dx.doi.org/10. 1021/acs.jpcc.3c02091 .[9] Liang Guo et al. In: Nature Physics 15.3 (Dec. 2018), pp. 228–232. issn : 1745-2481. doi : 10. 1038/s41567-018-0362-y . url : http://dx. doi.org/10.1038/s41567-018-0362-y .[10] Peter Hamm and Martin Zanni. Cambridge University Press, 2012. isbn : 9780511675935. 
+
+url : https : / / doi . org / 10 . 1017 / CBO9780511675935 .[11] Kai Hao et al. In: Nature Physics 12.7 (Feb. 2016), pp. 677–682. issn : 1745-2481. doi : 10. 1038/nphys3674 . url : http://dx.doi.org/ 10.1038/nphys3674 .[12] Andrew C. Jones et al. In: The Journal of Physical Chemistry A 123.50 (Nov. 2019), pp. 10824–10836. issn : 1520-5215. doi : 10 . 1021/acs.jpca.9b09099 . url : http://dx. doi.org/10.1021/acs.jpca.9b09099 .[13] Donghai Li et al. In: Physical Review Letters 
+
+128.8 (Feb. 2022). issn : 1079-7114. doi : 10 . 1103/physrevlett.128.087401 . url : http: //dx.doi.org/10.1103/PhysRevLett.128. 087401 .[14] Lawson T. Lloyd et al. In: ACS Nano 15.6 (June 2021), pp. 10253–10263. issn : 1936-086X. 
+
+doi : 10.1021/acsnano.1c02381 . url : http: //dx.doi.org/10.1021/acsnano.1c02381 .[15] Vincent Loriot, Gregory Gitzinger, and Nicolas Forget. In: Optics Express 21.21 (Oct. 2013), p. 24879. issn : 1094-4087. doi : 10.1364/oe. 21 . 024879 . url : http : / / dx . doi . org / 10 . 1364/OE.21.024879 .[16] Xiaonan Ma, Jakub Dost´ al, and Tobias Brixner. In: Optics Express 24.18 (Aug. 2016), p. 20781. issn : 1094-4087. doi : 10.1364/oe. 24 . 020781 . url : http : / / dx . doi . org / 10 . 1364/OE.24.020781 .[17] Galan Moody et al. In: Nature Communica-tions 6.1 (Sept. 2015). issn : 2041-1723. doi :
+
+10.1038/ncomms9315 . url : http://dx.doi. org/10.1038/ncomms9315 .[18] Jeffrey A. Myers et al. In: Optics Express 16.22 (Oct. 2008), p. 17420. issn : 1094-4087. doi : 10. 1364/oe.16.017420 . url : http://dx.doi. org/10.1364/oe.16.017420 .[19] K. S. Novoselov et al. In: Science 353.6298 (2016). issn : 1095-9203. doi : 10 . 1126 / science.aac9439 . url : http://dx.doi.org/ 10.1126/science.aac9439 .[20] Joshua S. Ostrander et al. In: ACS Photon-ics 3.7 (June 2016), pp. 1315–1323. issn : 2330-4022. doi : 10.1021/acsphotonics.6b00297 .
+
+url : http : / / dx . doi . org / 10 . 1021 / acsphotonics.6b00297 .[21] Monika Pawlowska et al. In: Optics Express 
+
+22.25 (Dec. 2014), p. 31496. issn : 1094-4087. 
+
+doi : 10 . 1364 / oe . 22 . 031496 . url : http : //dx.doi.org/10.1364/OE.22.031496 .[22] Veronica R. Policht et al. In: Nano Letters 
+
+21.11 (May 2021), pp. 4738–4743. issn : 1530-6992. doi : 10.1021/acs.nanolett.1c01098 .
+
+url : http : / / dx . doi . org / 10 . 1021 / acs . nanolett.1c01098 .[23] Torben L. Purz et al. In: Physical Review B 
+
+104.24 (Dec. 2021). issn : 2469-9969. doi : 10. 1103 / physrevb . 104 . l241302 . url : http : / / dx . doi . org / 10 . 1103 / PhysRevB . 104 . L241302 .[24] Torben L. Purz et al. In: The Journal of Chem-ical Physics 156.21 (June 2022). issn : 1089-7690. doi : 10.1063/5.0087544 . url : http: //dx.doi.org/10.1063/5.0087544 .7[25] H´ el` ene Seiler et al. In: Optics Letters 42.3 (Feb. 2017), p. 643. issn : 1539-4794. doi : 10.1364/ ol.42.000643 . url : http://dx.doi.org/10. 1364/OL.42.000643 .[26] Sang-Hee Shim and Martin T. Zanni. In: Phys. Chem. Chem. Phys. 11.5 (2009), pp. 748–761. 
+
+issn : 1463-9084. doi : 10.1039/b813817f . url :
+
+http://dx.doi.org/10.1039/B813817F .[27] Colin Sonnichsen et al. In: Optics Express 29.18 (Aug. 2021), p. 28352. issn : 1094-4087. doi :
+
+10.1364/oe.431988 . url : http://dx.doi. org/10.1364/OE.431988 .[28] Megan A. Steves, Hongjun Zheng, and Ken-neth L. Knappenberger. In: Optics Letters 44.8 (Apr. 2019), p. 2117. issn : 1539-4794. doi : 10. 1364/ol.44.002117 . url : http://dx.doi. org/10.1364/OL.44.002117 .[29] Daniel Timmer et al. In: Optics Express 32.1 (Dec. 2023), p. 835. issn : 1094-4087. doi : 10. 1364/oe.511906 . url : http://dx.doi.org/ 10.1364/OE.511906 .[30] Daniel Timmer et al. In: Nano Letters 24.26 (June 2024), pp. 8117–8125. issn : 1530-6992. 
+
+doi : 10.1021/acs.nanolett.4c01991 . url :
+
+http : / / dx . doi . org / 10 . 1021 / acs . nanolett.4c01991 .[31] Daniel Timmer et al. In: Nature Nanotechnol-ogy (Jan. 2026). issn : 1748-3395. doi : 10 . 1038 / s41565 - 025 - 02054 - 4 . url : http : / / dx.doi.org/10.1038/s41565-025-02054-4 .[32] Vivek Tiwari et al. In: Nature Communications 
+
+9.1 (Oct. 2018). issn : 2041-1723. doi : 10.1038/ s41467-018-06619-x . url : http://dx.doi. org/10.1038/s41467-018-06619-x .[33] Rick Trebino et al. In: Review of Scientific In-struments 68.9 (1997), pp. 3277–3295. issn :1089-7623. doi : 10 . 1063 / 1 . 1148286 . url :
+
+http://dx.doi.org/10.1063/1.1148286 .[34] P. Trofimov et al. In: The Journal of Chemi-cal Physics 163.8 (Aug. 2025). issn : 1089-7690. 
+
+doi : 10.1063/5.0279864 . url : http://dx. doi.org/10.1063/5.0279864 .[35] F. Verluise et al. In: Optics Letters 25.8 (Apr. 2000), p. 575. issn : 1539-4794. doi : 10.1364/ ol.25.000575 . url : http://dx.doi.org/10. 1364/OL.25.000575 .[36] Ding Xu et al. In: Nature Communications 
+
+14.1 (2023). issn : 2041-1723. doi : 10 . 1038 / s41467-023-39550-x . url : http://dx.doi. org/10.1038/s41467-023-39550-x .8

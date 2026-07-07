@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-001.webp",
+      "caption": "Figure 1: Time domain interferometric approach to SFG Microscopy. A top-down schematic of the interferometer is shown in the top-left, accompanied by a flow diagram illustrating the generation of an interferogram. This occurs through the heterodyning interference between the SFG signal (blue) and the ‘reference’ local oscillator (LO, red). As the time-difference (tIR) between the IR (gray) and the combination of visible upconversion (purple) and LO is increased, the phase and amplitude of the SFG is modulated, reflecting the vibrational coherence. This modulation is thus imprinted onto the heterodyned SFG signal. Fourier transforming (FT) the resulting interferogram results in a complex SFG spectrum, as depicted on the right side.",
+      "page": 6,
+      "index": 1,
+      "width": 943,
+      "height": 685
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-002.webp",
+      "caption": "Figure 3: Paired-pixel balanced imaging of a molecular monolayer. (a) Schematic of the structure of the protonated DPPC and deuterated dPOPC lipids. These lipid molecules are compressed using a Langmuir trough to form a simplistic model membrane that exhibits phase-separated liquid condensed (LC) domains surrounded by a liquid expanded (LE) phase. (b) Schematic of the microscope, illustrating its geometry and the balanced imaging setup. The balancing of the two images generates a time trace image. (c) Three different frequency planes of the Fourier-transformed response, showing the imaginary amplitudes at 2820, 2880, and 2960 cm-1, corresponding to an off-resonant background, the resonance of the CH3 symmetric stretch, and the resonance of the CH3 antisymmetric stretch, respectively. (d) Time traces of a selected single pixel from each image (A and B), along with its corresponding balanced subtraction (A-B). Note the difference is presented on a different y-axis scale. (e) Fourier transform of the balanced time trace from (d), showing the resulting complex SFG spectrum from a single pixel.",
+      "page": 11,
+      "index": 2,
+      "width": 943,
+      "height": 977
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-003.webp",
+      "caption": "Figure 7: Density and composition analysis. (a) Magnitude images of the effective PPP response (including Fresnel factors and beam geometry factors) in the 0-fold contribution for both C-H and CD, given as absolute values. (b) Spectra (imaginary parts) averaged over each of the two structural phases, LC (blue) and LE (green), also shown in absolute units. (c) Extracted images of the molecular density for DPPC and dPOPC, using the PPP data and calculated tilt angle from Figure 6b, and the known average density and mixing ratio of the lipids. The presented surface region corresponds to that",
+      "page": 25,
+      "index": 3,
+      "width": 943,
+      "height": 487
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-004.webp",
+      "caption": "Figure 6: Extracted tilt angle and in-plane structure. (a) Schematic workflow showing how the different tensor elements are combined to extract structural parameters. (b) Image of the CH3 tilt angle, calculated from the 𝜒𝑥𝑥𝑧",
+      "page": 23,
+      "index": 4,
+      "width": 943,
+      "height": 588
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-005.webp",
+      "caption": "Figure 5: Extraction of individual tensor elements. (a) Schematic workflow showing how the SFG signals in different polarization combinations and their resulting rotational frequency harmonics are combined to isolate the different tensor elements. (b) Images and spectra showing the hyperspectral magnitudes of the five different tensor elements in absolute units. The spectra are shown through their imaginary parts, having been normalized to their maximum peak (to 1 or -1), with the magnitudes of the susceptibility elements being reflected in the 2D images. All images are plotted on the same color scale for clarity. The spectra are also shown with their contributing resonances (CH3 in blue and CH2 in green), as determined from a global fitting procedure (see Experimental section for details). (c) A schematic showing the Euler transform between the molecular and lab frames. (d) The CH2 symmetric stretch, showing the change in dipole and polarizability during the vibrational coordinate, and how these parameters are encoded in the hyperpolarizability, 𝛽, elements. (e) Diagrams depicting the orientation of CH2 groups for different tilts of the lipid tails, showing (i) CH2 groups with significant zcharacter for a tilted chain and (ii) CH2 groups essentially in-plane for upright tails.",
+      "page": 19,
+      "index": 5,
+      "width": 943,
+      "height": 766
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-006.webp",
+      "caption": "Figure 4: Polarization- and azimuth-dependent SFG hyperspectral imaging. Spectra and images in the 0-fold and 1-fold rotational frequency components of three distinct polarization combinations: PPP, SSP, and SSS, in the C-H stretching region. The spectra are shown only through their imaginary parts and have been normalized to their strongest peak (to either 1 or -1), with the corresponding absolute amplitudes of the effective second-order susceptibilities, 𝜒𝑒𝑓𝑓",
+      "page": 17,
+      "index": 6,
+      "width": 943,
+      "height": 847
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-007.webp",
+      "caption": "Figure 2: Schematic of the SFG microscope and paired-pixel balanced imaging. The IR (gray), visible upconversion (purple), and LO (red) beams are collinearly directed through a custom-made hole in a reflective objective. The resulting SFG signal (blue) and reflected incident beams are collected in a wide-field manner and subsequently pass through frequency-selective filters to isolate the SFG and LO. Delay compensation optics (DCO) are then used to temporally overlap the two pulses, followed by them being focused using a tube lens. Before arriving at the camera, a series of polarization optics are used to perform paired-pixel balanced detection, whereby two images (A and B) are created on the same camera with opposite sign interference.",
+      "page": 9,
+      "index": 7,
+      "width": 943,
+      "height": 769
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31750v1/fig-008.webp",
+      "caption": "Table 1: Summary of the contributions from different tensor elements to each of the PPP, SSP, and SSS polarization combinations in the 0-fold and 1-fold rotational frequency harmonics.",
+      "page": 16,
+      "index": 8,
+      "width": 946,
+      "height": 271
+    }
+  ]
+}

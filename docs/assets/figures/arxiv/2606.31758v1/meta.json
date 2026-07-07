@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2606.31758v1/fig-001.webp",
+      "caption": "FIG. 4. Lateral localization CRB (a) σ (CRB) x , (b) σ (CRB) y , and (c) mean lateral localization CRB σ (CRB)",
+      "page": 3,
+      "index": 1,
+      "width": 503,
+      "height": 445
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31758v1/fig-002.webp",
+      "caption": "FIG. 3. Principle of PIFLUX. (a,b) Phase-shifted excitation patterns (green) for td = 10 nm and 2.01 eV (λex = 617 nm), translated along (a) x and (b) y, together with representative synthetic camera frames. The purple dot marks the SM position. Six images are acquired per localization. The total signal is 500 photons and the total background is 1 (middle row) or 20 (bottom row) photons per (65 nm)2 pixel (summed over all six frames). Scale bar: 233 nm (λem/2NA). (c,d) Photon counts for the three phase shifts compared with the corresponding excitation profiles along (c) x and (d) y. Solid curves: normalized excitation intensity; dotted curves: normalized detected emission, with shaded areas indicating intensity uncertainty; light and dark gray areas: estimated position with its uncertainty for SMLM and PIFLUX, respectively.",
+      "page": 3,
+      "index": 2,
+      "width": 509,
+      "height": 323
+    },
+    {
+      "url": "assets/figures/arxiv/2606.31758v1/fig-003.webp",
+      "caption": "FIG. 1. Surface plasmon polariton mode supported by a finite water–metal–dielectric–metal–water structure. The complex propagation constant βspp = β′ + iβ′′ determines the spatial oscillation and attenuation of the gap-plasmon field, which excites nearby fluorescent emitters whose emission is collected by an objective lens.",
+      "page": 2,
+      "index": 3,
+      "width": 496,
+      "height": 335
+    }
+  ]
+}
