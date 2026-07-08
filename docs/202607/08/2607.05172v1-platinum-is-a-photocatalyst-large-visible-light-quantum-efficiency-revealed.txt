@@ -1,0 +1,1278 @@
+Title: 2607.05172v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.05172v1
+
+Published Time: Tue, 07 Jul 2026 03:35:44 GMT
+
+Number of Pages: 21
+
+Markdown Content:
+Platinum is a Photocatalyst: Large Visible -Light 
+
+# Quantum Efficiency Revealed 
+
+Olivier Henrotte 1,2 *, Yin C hak  Wong 3, Jordan Edwards 3, Simão Meneses João 3, Štěpán Kment 1,4 ,
+
+Emiliano Cortés 2, Johannes Lischner 3, Alberto Naldoni 5* 
+
+1. Regional Centre of Advanced Technologies and Materials, Czech Advanced Technology 
+
+and Research Institute, Palacky University, Olomouc, Slechtitelu 27, 77900 Olomouc, 
+
+Czech Republic 
+
+2. Nanoinstitut München, Fakultät für Physik, Ludwig -Maximilians -Universität München, 
+
+80539 Munich, German y
+
+3. Department of Materials and Thomas Young Centre for Theory and Simulation of 
+
+Materials, Imperial College London, SW7 2AZ London , United Kingdom. 
+
+4. Nanotechnology Centre, Centre for Energy and Environmental Technologies, VSB -
+
+Technical University of Ostrava, 17. listopadu 2172/15, 708 00, Ostrava, Poruba, Czech 
+
+Republic 
+
+5. Department of Chemistry and NIS Centre, University of Turin, Turin 10125, Italy 
+
+e-mail: o.henrotte@lmu.de ; alberto.naldoni@unito.it 
+
+ABSTRACT 
+
+Metal –semiconductor junctions in optoelectronic dev ices are commonly engineered to promote 
+
+charge separation. In Pt/TiO 2 Schottky junctions, Pt is typically regarded as a catalytic electron 
+
+sink rather than a visible -light -active component. Here, we demonstrate that Pt nanoislands on 
+
+TiO 2 can generate photochemically active carriers under visible light excitation. Using quantitative 
+
+scanning photoelectrochemical microscopy, we measure the wavelength -resolved external 
+
+quantum efficiency (EQE) of Au and Pt nanoisland arrays on TiO 2, and corr elate their reactivity 
+
+with their morphology and extinction spectra . Discrete ~10 nm Pt nanoislands exhibit robust 
+
+broadband visible light photoactivity —exceeding the photoactivity of similar -sized Au 
+
+nanoislands under blue –green excitation —whereas Pt ’s ph otoactivity is strongly suppressed when 
+
+the nanoislands are connected . Surprisingly , Pt exhibits an EQE -per -atom ~20 times higher than 
+
+Au at 455 nm and ~2 times higher at 595 nm (at Au’s optimum) . We show an approximately 
+
+wavelength -independent Pt internal quantum efficiency of ~1% across the visible spectral region. 
+
+These findings reposition catalytic metals with strongly damped optical response in the visible as 
+
+light -responsive component s in metal -semiconductor hybrids , challenging the prevailing 
+
+percept ion that they function solely as passive co -catalysts in photocatalytic systems .
+
+Keywords : photocatalysis; scanning electrochemical microscopy; quantum efficiency ; visible 
+
+light ; transition metal Introduction 
+
+Metal -semiconductor hybrid materials are central to photocatalysis and photoelectrochemistry 
+
+because they combine strong optical absorption with efficient interfacial redox chemistry. 1,2 TiO 2
+
+remains a benchmark semiconductor in this area owing t o its stability and well -established surface 
+
+science, yet its wide bandgap limits direct visible -light u tilization. A common strategy is therefore 
+
+to integrate metallic nanostructures that (i) harvest visible photons and generate highly energetic 
+
+(“hot”) carriers, or (ii) promote charge separation and catalytic turnover at the solid -liquid 
+
+interface. 3 Gold (Au) is often used as the metallic light harvesting component: it supports 
+
+pronounced localized surface plasmon resonances (LSPRs) in the visible range of the 
+
+electromagnetic spectrum , enabling strong optical absorption and near -field concentration that can 
+
+dr ive photoredox chemistry or hot -carrier injection into adjacent materials. In contrast, pla tinum 
+
+(Pt) is commonly viewed as a co -catalyst and electron sink —an efficient site for catalytic reaction s
+
+and a reservoir for photogenerated electrons originating from the semiconductor —rather than as 
+
+an optical a ntenna or primary light absorber , such as Au .4
+
+Following this classification , th e community usually describes Au nanoparticles (NPs) on TiO 2 as 
+
+exhibiting LSPR -enabled hot -carrier generation/near -field effects, with size -, geometry - and 
+
+environment -dependent optical resonances producing characteristic wavelength -selective 
+
+activity. 5 Pt -TiO 2 hybrids, by contrast, are often thought of as optically inefficient in the visible 
+
+because Pt ’s resonances are strongly damped by substantial interband losses. 6,7 Moreover, Au and 
+
+Pt exhibit a different hot carrier relaxation dynamics under visible -light excitation with charge 
+
+carrier thermalization in Pt ( described by the ele ctron phonon -phonon coupling parameter ,8
+
+Gep >10 17 W m -3 K-1)9 being one to two order of magnitudes faster than in Au (G ep =2.3×10 16 W m - 
+
+> 3
+
+K-1)10 , which means that electrons thermalize much faster in Pt than in Au .11 This contrast is also 
+
+reflected in their carrier transport lengths: the electronic mean free path in Au is comparatively 
+
+long and can reach tens of nanometers ( ~40 nm), 12 whereas in Pt it is typically ~10 nm, consistent 
+
+with the stronger electron scattering in Pt. 13 Pt’s optical response in the visible , its strong electron -
+
+phonon coupling , and its short free carrier mean free path have led to the common expectation that 
+
+its quantum efficiency of e xtracting photogenerated charge carriers under visible -light excitation 
+
+is low .
+
+However, this widely accepted classification is increasingly difficult to reconcile with a growing 
+
+body of work showing that Pt nanostructures can exhibit appreciable visible -light extinction and 
+
+participate in photoredox processes when coupled to high -index dielectric environments or 
+
+engineered interfaces. A pivotal example is the demonstration that near -field dielectric scattering 
+
+promote s the visible -light activity of Pt -hybrid nanostructures. 14 –16 Additionally, a recent study 
+
+demonstrated that Pt NPs are photoactivated b y the strongly enhanced local electric field in the 
+
+hot -spots of an Au NP supercrystal, with negligible influence from heat and charge transfer. 17 
+
+Moreover, quantitative measurements of absorption and scattering cross -sections of Pt and Au 
+
+nanodisks show that Pt can be strongly absorption -dominated in the visible, with broad and heavily 
+
+damped spectral features. 6,18 A recent kinetic study further indicate that Pt illumination can drive 
+
+direct photochemical surface pathways .19 Collectively, t hese studies suggest that the absence of a 
+
+sharp LSPR peak does not mean that Pt cannot harvest visible light, but it indicates that Pt c onverts 
+
+absorbed photons predominantly into electron -hole pairs .The bottleneck towards establishing Pt as a photoactive material is that the field still lack s a
+
+quantitative , operando framework linking Pt’s broad band visible absorption to chemically 
+
+productive charge extraction at the solid -liquid interface. In other words, the presence of visible -
+
+light extinction does not guarantee photoactivity: electron -hole pairs mus t be separated and 
+
+extracted at an interface bef ore thermalization and recombination erase their chemical potential. 
+
+This competition is especially severe for metals, w here electronic relaxation is a fast process, 
+
+necessitating interfacial extraction to occur on short time and length scales. 8 For Au -based hybrids, 
+
+an intuitive structure -optics -reactivity relationship exists because LSPR tuning provides clear 
+
+spectral markers and size trends. For Pt -based hybrids, the mechanistic narrative is fragmented: Pt 
+
+is typically viewed as an electron sink, and studies emphasizing Pt’s optical role often rely on 
+
+specialized scatterer geometries or ensemble measurements that do not resolve where activity 
+
+originates, how it depends on nanoscale morphology/connectivity, or why chemically pr oductive 
+
+charge extraction emerges in some Pt -TiO 2 systems but not others. Overall, this motivates a more 
+
+careful investigation of hybrid materials under local operando conditions relevant to 
+
+photoprocesses at the solid -liquid interface. 
+
+Here we address th is gap by combining quantitative scanning photoelectrochemical microscopy 
+
+(SPECM) with co -localized morphology and spectroscopy to directly compare Au and Pt 
+
+nanoisland populations under identical working conditions on a TiO 2 thin film —namely Au -TiO 2
+
+and Pt -TiO 2, respectively . Our approach decouple s optical absorption from interfacial extraction 
+
+by measuring the local external quantum efficiency (EQE) for a fast redox probe (ferrocene 
+
+di methanol; FcDM). We demonstrate that Pt nanoislands on TiO 2 can d isplay strong visible -light -
+
+driven photoactivity if the metal is nanostructured into discrete, non -connected islands and 
+
+supported by a TiO 2 film that enables efficient charge separation and extraction. By comparing Au 
+
+and Pt nanoislands , we find that Pt can function as an effective visible -light absorber in the hybrid 
+
+architecture , with efficiencies comparable to Au . The observed response is consistent with Pt’s 
+
+lossy optical behavior in the visible and with an interfacial energy level alignment that supp orts 
+
+carrier separation at the liquid -metal -semiconductor junction. Collectively, these results identify 
+
+Pt as an active participant in the photogeneration /extraction process in metal -TiO 2 hybrids, rather 
+
+than a passive electron trap. 
+
+Results and discussion 
+
+SPECM platform and sample architecture 
+
+To enable a direct photoactivity comparison between Au and Pt, we performed SPECM 
+
+measurements on co -fabricated Au and Pt nanoisland arrays prepared on the same TiO 2 support 
+
+(Figure 1a) . Au and Pt thin film s were deposited as patterned micro -squares and subsequently 
+
+transformed into nanoisland array s by controlled thermal dewetting ( see Section 1 in the Methods 
+
+for fabrication and dewetting conditions ). The methodology follows our previously reported 
+
+approach, in which oxidized species generated under illumination are detected in solution by an 
+
+ultramicroelectrode (UME; with an active radius rtip = 0. 5 μm , and a ratio between the insulating 
+
+part radius and active radius RG = 5 0).20 Importantly, the substrate is electrically floating during 
+
+all experiments; only the probe (UME) is biased for product detection. This configuration ensures 
+
+that the recorded currents report on local interfacial photochemistry. The measured photoactivity 
+
+(ΔI) corresponds to the differential current (under illumination and in the dark). Because the me asured signal reflects the net outcome of ph otoexcitation —interfacial charge 
+
+separation and carrier transfer to molecules in the electrolyte —we first define the working 
+
+energetic framework for Au -TiO 2 and Pt -TiO 2 (Figure 1b). The expected behaviors of Au a nd Pt 
+
+under visible light excitation can be explained by their electronic band structures and resulting 
+
+optical loss channels near the Fermi level (Figure 1b -d). In Au, the filled 5d band s have an onset 
+
+at ~2 eV below E F, and Au ’s photoresponse depends on whether electron -hole pair excitations are 
+
+predominantly intraband (i.e., involving only sp -band states) or interband (creating d -holes) in 
+
+character. The onset of interband absorption in Au occurs near ~2 eV (620 nm), w hich can damp 
+
+the plasmonic response and increase the fraction of absorbed energy that rapidly thermalizes 
+
+electronically .18,21 Because carrier extraction is an interfacial process, the Au NP size influences 
+
+the measured photoactivity in multiple ways: via spectral tuning, but also because the non -
+
+equilibrium carrier generated within the metal needs to reach th e interface before thermalization 
+
+(typical non -equilibrium carrier diffusion length s are on the order of tens of nanometers). 22,23 
+
+In Pt, by contrast, the high dens ity of d -states near E F produces strong damping and broadband 
+
+absorption across the entire visible spectrum, leading to an optical response dominated by a broad 
+
+set of interband transitions rather than a sharp, tunable LSPR. Measurements on nanodisks 
+
+expli citly show that Pt is absorption -dominated with strongly damped plasmon -like collective 
+
+oscillation compared to Au. 6,7 This suggests that visible -light illumination can generate electro n-
+
+hole pairs in Pt efficiently. To distinguish the extracted carriers from the recombined one s, we 
+
+consider effective electron Sc hottky barrier heights of ΦB = 1.1 eV for Au -TiO 2 and ΦB = 1.3 eV 
+
+for Pt -TiO 2 (Figure 1b). 24 We emphasize that these values are representative parameters to support 
+
+energy band -diagram construction and mechanistic discussion, as the effective Schottky barrier 
+
+may vary at the nanoscale. 25 In light of these considerations, t he central question is to what extent 
+
+these excitations translate into chemically productive interfacial charge transfer, which is governed 
+
+by the competition between charge carrier separation/extraction and 
+
+ther malization/recombination. 8,9,11 Figure 1. Scanning photoelectroche mical microscopy platform and energetic framework for Au -
+
+TiO 2 and Pt -TiO 2 photoactivity. (a) Schematic of the SPECM configuration. (b) Energy -level band 
+
+showing the relevant electronic levels of Au and Pt (Fermi level E F; schematic sp - and d -bands), 
+
+the Ti O2 band edges (conduction band, C.B.; valence band, V.B.), and the FcDM/FcDM + redox 
+
+couple. (c,d) Electronic band structure of Au (c), and Pt (d) from tight -binding highlighting 
+
+representative optical excitation pathways under visible illumination. 
+
+Wavelength -dependent photoactivity and EQE 
+
+To address this question experimentally, we combine d position -resolved S PECM with co -
+
+localized structural and optical characterization on the same nanoisland arrays. We first acquired 
+
+a positioning map to identify the Au and Pt arrays and to define a consistent scan trajectory across 
+
+the patterned regions (Figure 2a). We then recorded wavelength -resolved line scans across each 
+
+array and converted the collected probe currents into an external quantum eff iciency (EQE ) using 
+
+a diffusion model (Figure s 2b & S1 ; see Sections 2 and 3 in the Methods ). 26 Because the dewetting 
+
+process generates systematic gradients in nanoisland size and connectivity across each array , the 
+
+quantitative inte rpretation of Figure 2b requires assigning to each spatial position a nanoisland 
+
+population and its optical response (Figure 2c -e).
+
+To rationalize the wavelength - and position -dependent EQE trends, we quantified the nanoisland 
+
+morphology as a function of lateral position within each array (Figure 2c ,d ; Figures S 2-4). This 
+
+analysis reveals distinct size regimes across the scan line and enables a controlled comparison between Au and Pt populations with similar characteristic dimensions. In the following, we focus 
+
+on two representative populations corresponding to approximately 10 nm and 30 nm nano island 
+
+array s (Fig ure s 2d & S4 ; Table S 1). The diameters of the chosen pop ulation we re (i) 34±11 nm 
+
+and 11±7 nm with a surface coverage of 26 .3 % and 8 .5 %, respectively , for Au (Figure S2a,d) ; and 
+
+(ii) 33±23 nm and 9±9 nm with a surface coverage of 26 .5 % and 9.8 %, respectively , for Pt (Figure 
+
+S3c,d) .
+
+We next obtained local extinction spectra at the positions corresponding to these populations using 
+
+the S PECM platform coupled to spatially resolved optical characterization (Figure 2 e; see Section 
+
+4 in the Methods ). 26 Au exhibits a distinct LSPR feature that shifts to longer wavelength with 
+
+increasing island size : ~540 nm for ~11 nm islands and ~600 nm for ~34 nm islands. In contrast, 
+
+Pt nanoislands display broadba nd extinction across the visible, with a wide maximum spanning 
+
+approximately 400 –700 nm and modest size -dependent shifts of the maximum position : ~450 nm 
+
+for ~9 nm islands and ~4 80 nm for ~33 nm islands . This spectral behavior is consistent with the 
+
+strong ly damped optical response of Pt, where extinction is predominantly absorptive and possible 
+
+resonances are completely damped by optical losses. 6
+
+With the position -resolved nanoisland populations established, we now discuss the wavelength -
+
+dependent EQE line scans (Figure 2b). For the Au array, the EQE increases from 455 nm toward 
+
+the green –orange region peaking at 595 nm ( ~0.06%) and then decreases toward the near -infrared, 
+
+approaching negligible activity at 850 nm. Consiste nt with the size -dependent plasmonic response, 
+
+the array center —dominated by larger Au nanoislands —exhibits a higher EQE at longer 
+
+wavelengths (6 60 nm and higher ) than the array edges, which contain smaller islands. 26 This trend 
+
+aligns with the expected red -shift of the Au LSPR and the associated redistribution of optical 
+
+absorption and near -field enhancement with increasing particle size (Fig ure 2d) .21 
+
+Strikingly, the Pt array displays a qualitatively different spatial dependence. While the center of 
+
+the Pt array shows almost no activity, the array edges exhibit a pronounced EQE that, under blue –
+
+green excitation (<550 nm), can match or exceed the response measured on Au under identical 
+
+conditions with an EQE reaching ~0.09% at 455 nm . The suppression of activity at the Pt arra y
+
+center correlates with the onset of nanoisland connectivity (Fig ure S3), which likely introduces 
+
+efficient recombination pathways. Importantly, additional Pt arrays with reduced connectivity 
+
+exhibit substantial activity within the central region (Fig ures S5 and S 6), reinforcing that Pt 
+
+photoactivity is maximized for discrete islands rather than continuous metallic networks. Finally, 
+
+Pt retains detectable activity even at 850 nm, consistent with its broadband extinction extending 
+
+into the red/near -IR. 15 Figure 2. Position -resolved external quantum efficiency (EQE ), morphology, and optical 
+
+properties of Au and Pt nanoislands. (a) SPECM pho toactivity map acquired over the Pt nanoisland 
+
+array and the Au nanoisland array under visible illumination, used to identify the scan trajectories 
+
+and regions of interest ; the star s indicate the centre of the arrays . The markers (i) to (v) correspond 
+
+to positions of interest. (b) EQE as a function of position along the scan line indicated in (a); 0 μm 
+
+corresponds to the stars in (a) . Au data are shown from purple to pink and Pt data from teal to cyan, 
+
+with each trace corresponding to a different excitation wavelength. (c) SEM images of the Au array 
+
+after dewetting a t the line scan position of 0 μm (i) and -100 μm (ii), and of the Pt array after dewetting at the line scan position of 0 μm (iii), -60 μm (iv), and -70 μm (v). (d) Position -resolved 
+
+nanoisland diameter s (filled diamonds ) for Au (purple) and Pt (teal) extr acted from SEM images 
+
+for the same trajectories than (b) . (e) E xtinction spectra measured at positions corresponding to the 
+
+nanoisland diameters identified in (d). SPECM measurements ’ conditions were r T=5 μm, RG= 5
+
+and vscan = 50 μm/s for (a) and rT=0.5 μm, RG= 50 and vscan = 20 μm/s for (b). The measurements 
+
+were performed in an aerated solution of 1 mM Fc(MeOH) 2 and 0.1 M KCl at Z=10 μm .
+
+Hot carrier generation and extraction at the interface 
+
+Motivated by the unexpectedly high EQE observed for Pt NPs , we ana lyze our experimental 
+
+findings by theoretically investigating environment -dep endent hot -carrier generation in Au and Pt 
+
+NPs . Specifically, we perform atomistic calculations of hot -carrier generation rates in Pt and Au 
+
+nanoparticles using the approach developed in Ref. 27 (see Section 5 in the Methods ). This is 
+
+essential because Pt i s still commonly discussed as an electron sink that improves charge separation 
+
+in TiO 2, rather than as a visible -light absorber on its own —even in recent works .4,28,29 
+
+The dielectric environment affect s hot -carrier processes primarily by (i) modifying the optical 
+
+mode energy and field distribution (and thus the balance between intraband and interband 
+
+excitation) and (ii) regulating the carrier yield through environmental screening of the electron -
+
+photon interaction . Recent stu dies show that, in plasmonic nanostructures, increasing the dielectric 
+
+constant of the surrounding medium can suppress hot carriers generated via interband transitions 
+
+while enhancing intraband -derived hot -carrier generation, highlighting the dielectric en vironment 
+
+as a design parameter on the same footing as material choice and particle size .27,30 Consistent with 
+
+this fram ework, we calculated the hot -carrier generation rate under specific wavelength excitation 
+
+for Au and Pt nanoislands, explicitly accounting for nanoparticle size and the optical dielectric 
+
+environment imposed by TiO 2 (Figure 3 , see Section 5 in the Methods ).
+
+To connect the model to our experimental results, we define the generation rate of potentially 
+
+extractable holes. This rate is assumed equal to the generation rate of hot electrons with energies 
+
+exceeding ΦB at the metal -TiO 2 junction , as electrons injected into the TiO 2 cannot recombine with 
+
+holes in the metal NP resulting in long -lived holes that can be extracted at the NP -electrolyte 
+
+interface. We note that our hot carrier model does not explicitly include interfacial electronic states 
+
+formed at t he metal -TiO 2 junction. 20,31 –33 Those interfacial states can introduce nanoscale 
+
+variations in charge -extraction probability and effective Schottky barrier energy. Accordingly, this 
+
+model does not take into account thermalization losses, nanoscale barrier inhomogeneity , and 
+
+defect -mediated recombination but it provides a physically transparent metric and an upper limit 
+
+for comparing how composition and dielectric environment affect photoactivity .
+
+For Au, the calculated hot -carrier distribution is strongly dependent on the LSPR position. Under 
+
+higher -energy excitation (shorter wavelengths), Au ’s absorption is dominated by interband 
+
+transitions, which generate energetic holes but do not yield a large population of electrons with 
+
+energies exceeding ΦB. This manifests as a comparatively smaller above -ΦB hot electron population in the blue -green regime (Figure 3a), consistent with the reduced EQE observed 
+
+experimentally (Figure 2b ). 
+
+By contrast, the calculated population of electrons above -ΦB for Pt increases monotonically with 
+
+photon energy across the studied range (Figure 3 b). This trend is consistent with Pt’s broadband, 
+
+strongly damped optical response in the visible (Figure 2 e), and qualitatively mirrors the 
+
+wavelength dependence of the experimentally collected EQE (Fig ure 2b). This correspondence 
+
+supports the hypothesis that for Pt nanoislands the spectral dependence of carrier extraction is 
+
+more directly linked to broadband optical absorption , mean free path, and barrier -filtered carrier 
+
+generation than to a resonant p lasmonic mode. 
+
+To further isolate the role of the environment, we compared the calculated hot -carrier generation 
+
+rates for identical nanoislands embedded in two dielectric media: a high -permittivity environment 
+
+representative of TiO 2 (εm=4; Figure 3 ) and a lower -permittivity one representative of a colloidal 
+
+system (in water) or on a glass -like surrounding (εm=2 ; Figure S 7). This controlled comparison 
+
+allows us to evaluate how dielectric screening alter s the predicted above -ΦB carrier population and 
+
+thus provides a mechanistic bridge between the simulated generation trends and the experimentally 
+
+observed wavelength -dependent EQE (Figure S 8, the choice of εm is explained in Figure S8 
+
+caption ).
+
+For Au, increasing εm produces the expected perturbation of the plasmonic response, consistent 
+
+with the literature. 27,30 At shorter wavelengths (<500 nm), the predicted change in above -ΦB
+
+electron population is comparatively small. In comparison, Pt shows a monotonic enhancement in 
+
+above -ΦB carrier generation as εm increases, particularly in the blue -green region. For example, at 
+
+450 nm, the model yields a ~4-fold increase when εm is raised from 2 to 4 (Figure S 8). This trend 
+
+supports an important message : Pt ’s photoresponse is more strongly modulated by the dielectric 
+
+environment than Au ’s in the blue -green spectral region .Figure 3 . Theoretical simulation of hot carrier generation in Au and Pt nanoislands on a TiO 2 thin 
+
+film. (a) Energetic distribution of hot electrons (purple line) and hot holes (red line) in a spherical 
+
+Au nanoparticle of 10 nm diameter for different excitation wav elengths in a high -permittivity 
+
+environment (ε m=4). (b ) Energetic distribution of hot electrons (cyan line) and hot holes (red line) 
+
+in a spherical Pt nanoparticle of 10 nm diameter for different excitation wavelengths in a high -
+
+permittivity environment (ε m=4). The number of above -Schottky barrier electrons (corresponding 
+
+to the number of extractable holes) are represented by the filled region in purple for Au and cyan 
+
+for Pt. The Fermi energy is set to 0. 
+
+Keeping in mind the hot -carrier generation calculat ions, we examine how the measured EQE 
+
+depends on photon energy for the Au and Pt nanoisland populations (Figure S9) , and how this 
+
+dependence evolves with nanoisland size and surface coverage. 
+
+For Au nanoislands, the EQE exhibits a pronounced maximum in the orange -red spectral region 
+
+(595 nm and 660 nm), i.e., near the LSPR of the larger nanoislands, and falls off rapidly toward s
+
+higher and lower photon energies (blue -green and near -IR regions). In our data, the peak EQE for the 34 nm Au population reaches ~0.06%, about 4 -times higher than the 11 nm population 
+
+(~0.015%) under identical conditions (Figure S9 a) . An intermediate Au population (~20 nm) 
+
+follows the same size -dependent trend ( Figure S9a). This behavior is qualitatively consistent with 
+
+the well -esta blished optical response of Au nanostructures, where (i) the spectral position of the 
+
+LSPR red -shifts with increasing size (Figure 2 e), and (ii) the growing contribution of interband 
+
+transitions at photon energie s above the interband onset (~2 eV) increase s the quantity of carriers 
+
+that recombine before reacting .34,35 
+
+Pt nanoislands display a markedly different spectral response. For both 9 nm and 33 nm Pt 
+
+populations, the EQE is highest at the shortest wavelength measured (455 nm, with EQE up to 
+
+~0.09%) and decreases monotonically toward the near -IR, while remaining measurable even at 
+
+850 nm (Figure S9b ). A larger Pt population (42 nm) exhibited 3-times lower EQE at 455 nm 
+
+compared with the smaller Pt islands (Fig ure S9b). This broadband behavior is consistent with the 
+
+heavily damp ed optical response of Pt in the visible (Figure 2 e), where absorption via electron -
+
+hole pair excitation dominates and resonances are broadened by strong electronic losses. 7
+
+Notably, the smallest nano islands cover substantially less area than larger nano islands (around 3 
+
+times less , see Table S1 ). Therefore, the obtained EQE combines intrinsic efficiency with how 
+
+much metal is actually present and accessible. To separate these effects, we normalized th e
+
+response using different EQE descriptors : (i) per nanoisland —using the island density from SEM 
+
+images (Fig ure S10 ), (ii) per atom (considering the islands as perfect sphere s) (Fig ure S11 ), (iii) 
+
+per surface area (considering the surface of the nanoisland s from perfect spheres) (Figure S12), 
+
+and the outer -shell atom (consider ing 2 nm of the outer volume from perfect spheres) 36 (Figure 
+
+S13) . A rat ionale for the choice of normalization is provided in Supplementary Section 1. We use 
+
+the per -atom metric as the main descriptor because it best reflects metal -utilization efficiency in a 
+
+photoinduced charge -extraction process, where the nanoisland volume contributes to light 
+
+absorption and carrier generation before extraction occurs at the interface. This normalization does 
+
+not imply that all atoms are catalytically equivalent or equally accessible to the electrolyte; instead, 
+
+it provides a consistent scal ing parameter that accounts for differences in metal loading, surface 
+
+coverage, and nanoisland size. 
+
+Using this normalization, the smallest Pt nanoislands remain strikingly efficient: at 455 nm, the Pt 
+
+(9 nm) population exhibits an EQE -per -atom ~15 -folds higher than Au (11 nm), while still ~1.2 -
+
+times higher at 595 nm , which correspond to Au ’s optimum (Figure 4 a). This demonstrates that, 
+
+under the present conditions, small Pt nanoislands transduce absorbed photons into reacting 
+
+charges with unexpecte dly high effectiveness. Interestingly, the large Pt nanoislands ( ~33 nm) 
+
+showed a 1.5 -fold higher EQE than the small Au nanoislands ( ~11 nm) at 455 nm even after 
+
+normalization (Figure 4a ), highlighting the excellent photocatalytic performance of Pt under b lue 
+
+light. 
+
+When we compare the EQE with (i) the measured extinction (Figure 2 e) and (ii) the simulated rate 
+
+of above -barrier hot -carrier generation (Figure s 4b & S8) , Pt shows a close spectral correspondence across the visible range, whereas Au displays a modest mismatch around its LSPR 
+
+maximum (Figure s 4 & 2e). The Au deviation is consistent with the well -known sensitivity of Au 
+
+plasmonic response to interband damping. 37 For Pt, the closer correspondence supports that optical 
+
+absorption is a reasonable predictor of extractable carriers —but only when the interface and 
+
+environment enable efficient separation , keeping in mind Pt electron mean free path of ~10 nm .
+
+To further compare Au and Pt, we estimate an internal quantum efficiency (IQE) as EQE/A (λ), 
+
+where A is absorption. Because absor ption is difficult to measure directly for our smallest 
+
+nanoislands, we approximate it from the extinction, while considering existing literature for similar 
+
+systems. Pt nanodisks in the regime of tens of nanometers are reported to be strongly absorption -
+
+dominated, with negligible scattering in the visible. For Au, the scattering becomes increasingly 
+
+important with size, but for size s comparable to 30 nm in diameter , the scattering fraction at the 
+
+LSPR remain on the order of ~10%. 6,7,37 Accordingly, we treat Pt as non -scattering and Au as low -
+
+scattering ( ~10%). We provided in the Supplementary Information an example of our data set for 
+
+different scattering consideration s (Pt for 0 and 10%, and Au for 0, 10 and 20%) , which highlights 
+
+the negligible influence of the scattering on our findings (Fig ure S14). As depicted in Figure S1 4,
+
+the ~30 nm nanoislands yield higher IQE for Pt than Au at 455 nm (0.58% vs 0.18 %), while at 595 
+
+nm Pt and Au become comparable (~0.3%), reflecting opposite spectral trends: Pt IQE decreases 
+
+toward longer wavelengths, whereas A u IQE increases moving away from the interband -damped 
+
+region toward the more purely intraband regime. 
+
+For the ~10 nm nano islands, Pt shows an approximately wavelength -indepen dent IQE near ~1% 
+
+across the visible ; consistent with the idea that Pt ’s broadband absorption can trans late into a 
+
+relatively uniform absorption -to -carrier separation efficiency when the interfac ial energy level 
+
+alignment is favorable. Au, by contrast, reaches higher IQE (~2.4%) at the blue edge in our 
+
+estimate, but shows a pronounced d ip near the LSPR maximum (~0.6%) —consistent with the 
+
+general expectation that the LSPR maximum does not necessarily maximize extractable carriers 
+
+because ultrafast thermalization and competing decay pathways can increase at conditions where 
+
+optical losses are strongest. 26,34,35,37 
+
+Our findings confirm that Au remains an excellent resonant photocatalyst whose apparent 
+
+advantage depends strongly on size -tuned spectral overlap and extraction /recombination 
+
+competition, whereas Pt —despite being non -plasmonic —can act as a highly effective broadband 
+
+light -to -carrier extraction material when structured at dimensions comparable to the carrier mean 
+
+free path .Figure 4. Comparison of external quantum efficiency and theoretical hot carrier generation with 
+
+above Schottky barrier energy of Au and Pt nanoislands on TiO 2 thin film. (a) External quantum 
+
+efficiency (EQE) per atom as a function of excitation wavelength for diff erent population s of Au 
+
+(11 nm, pink; 34 nm, purple) and Pt (9 nm, cyan; 33 nm, teal) nanoislands. (b) Calculated number 
+
+of generated hot electrons above Schottky barrier per atom for a 10 nm nanoparticle of Au (purple 
+
+to pink) and Pt (teal to cyan) for different εm.
+
+Concl usion s
+
+This work demonstrate s via operando SPECM and theoretical investigations that charge carriers 
+
+generated in plasmonic and catalytic metals on TiO 2 thin films under visible -light excitation can 
+
+react with molecules in the surrounding media with simila r efficiencies. We revealed a significant 
+
+photoactivity for Pt at a distinct regime : discrete ~10 nm Pt nanoislands (corresponding to the 
+
+electron mean free path in Pt) exhibit robust broadband visible -light activity —approaching or 
+
+exceeding size -matched Au under blue -green excitation (EQE -per -atom 20 -folds higher). 
+
+Furthermore, Pt photoactivity is strongly suppressed when islands become connected , identifying 
+
+connectivity as a critical parameter controlling chemical productivity. In contrast, Au shows the 
+
+expected size - and wavelength -selective behavior associated with resonant plasmonic response. 
+
+Additionally, the IQE is approximately wavelength -independent for Pt across the visible (~1%) ,
+
+consistent with broadband absorption translating into a relatively uniform absorption -to -
+
+extractable -carrier efficiency. 
+
+Overall, these findings address a key gap in metal -semiconductor photocatalysis: visible extinction 
+
+in Pt is not intrinsically photochemically silent, but its conversion into interfacial redox activity 
+
+depends sensitively on nanoscale morphology and environment conditions . Beyond repositioning 
+
+Pt as an active participant in light -to -chemical energy conversion, our work suggest s that transition 
+
+metals, commonly adopted for catalysis, exhibit ing strongly damped optical response in the visible are actively participating in photochemical processes . Controlling the local environment and 
+
+interfacial junction at metal nanostructures is essential for maximizing photocatalytic performance. 
+
+In this context, nanosc ale operando tools , such as SPECM , offer a powerful strategy to provide the 
+
+mechanistic insight needed to rationally design more efficient solar -to -chemical energy conversion 
+
+architectures. 
+
+Methods 
+
+Section 1 – Fabrication and morphology of Au and Pt nanoislands on TiO 2.
+
+Fabrication . The Au and Pt nanoisland arrays on TiO 2 thin films were prepared on 25x25 mm² 
+
+ITO coated glass (Ossila, UK). The ITO coated glass substrates were cleaned by ultrasonication in 
+
+acetone, ethanol then deionized water for 5 m inutes each. A TiO 2 layer of 10 nm was deposited by 
+
+plasma -assisted atomic layer deposition (ALD, Ultratech/CambridgeNanoTech Fiji 200) using 
+
+tetrakis(dimethylamido)titanium as precursor (99% purity, Strem, USA) at 250 °C. An ALD cycle 
+
+consisted of 0.1 s o f precursor exposure, 5 s purge, 20 s O 2 plasma exposure (300 W), and 5 s 
+
+purge of reaction products. The so -obtained TiO 2 thin layers were annealed at 450°C (2°C/min) 
+
+under air for 2 h to insure TiO 2 anatase phase formation. A 10 nm thick Pt film was sput tered 
+
+through a patterned mask (Micronlaser Technology, USA) divided into 16x16 squares (around 
+
+100x100 μm² spaced by 400 μm). The samples were then annealed at 550°C (2°C/min) under air 
+
+for 2 h forming the Pt nanoisland arrays. Subsequently, t he Au nanois land arrays were formed 
+
+upon annealing in air at 400°C (2°C/min) for 1 h of a 10 nm thick Au film sputtered through a 
+
+similar mask on another region of the sample. This ensured well -defined and mono -elemental 
+
+arrays of nanoisland gradients for both Pt and Au. 
+
+Morphological characterization. A field emission scanning electron microscope (FE -SEM, 
+
+Hitachi SU 6600, Japan) was used to investigate the nanomaterials morphology. The Pt and Au 
+
+size distribution was obtained by ImageJ applying a filter depending of t he observed contrast. The 
+
+calculated diameter were retrieved from the area of the nanoisland s measured by ImageJ by 
+
+approximating all nanoisland s shape to a circumference .
+
+Section 2 – Scanning photoelectrochemical microscopy (SPECM). 
+
+SPECM experiments were conducted using an ELP 3 SPECM -FL (HEKA Elektronik GmbH, 
+
+Lambrecht, Germany), a PG 618 USB bipotentiostat (HEKA Elektronik GmbH, Lambrecht, 
+
+Germany) and fiber -coupled LED with different wavelengths: 455 ± 7, 530 ± 15, 595 ± 40, 660 ± 
+
+9, 740 ± 11 and 850 ± 15 nm (Thorlabs, USA). The SPECM employed an optical path below the 
+
+sample to focus the LED light beam (~ 5 μm radius) with a 40x objective lens (LUCPLFLN 40x, 
+
+NA = 0.6, Olympus, Japan) to locally irradiate the sample and drive the p hotochemical reactions ,
+
+following a previously established methodology .26 The experiments were performed in aerated 
+
+solution of 0.1 M KCl and 1 mM Fc(MeOH) 2 (ferrocene dimethanol, FeC 12 H14 O2). Chemicals 
+
+were bought from Sigma Aldrich with the highest purity and used without further purification. 
+
+Milli -Q water was used for the p reparation of all aqueous solutions. SPECM consists of a four -electrode setup with two working electrodes (WE): the substrate (WE1, not connected in this 
+
+study) and the ultramicroelectrode (WE2), a Ag/AgCl wire used as reference electrode and a Pt 
+
+wire as counter electrode. The ultramicroelectrode (from HEKA Elektronik GmbH, Lambrecht, 
+
+Germany) used in this work has: rT = 5 μm and RG = 5 for the photoactivity position map (Figure 
+
+2a); and rT = 0.5 μm and RG = 50 for the EQE measurements (Figures 2b and 4a,b , and Figures 
+
+S1, S5, S9, S10, S11, and S13) . The probe moves in the vicinity (Z=10 μm) of the studied sample 
+
+to detect the local species concentration in solution. The light beam and the probe were aligned 
+
+before measurements. The samples were scanned on the XY stage while the probe was placed at a 
+
+constant height ( Z) using the Z stage. The redox mediator is oxidized from the extracted holes as 
+
+follow: 
+
+𝐹𝑐 (𝑀𝑒𝑂𝐻 )2 + ℎ+ → 𝐹𝑐 +(𝑀𝑒𝑂𝐻 )2 (1) 
+
+This locally modifies the concentration of both species (reduced and oxidized) in the vicinity of 
+
+the beam position. The probe detects this reaction by reducing back (substrate generation – tip 
+
+collection, SG -TC mode) the species produced by the investigated surface :
+
+𝐹𝑐 +(𝑀𝑒𝑂𝐻 )2 + 𝑒 − → 𝐹𝑐 (𝑀𝑒𝑂𝐻 )2 (2) 
+
+The probe is biased at a potential (E T) corresponding to the diffusion limited regime ( -0.1 V vs 
+
+Ag/AgCl ). Thus, the probe current (I T) corresponds to a steady -state regime and is given by 
+
+equation 3 in solution ( 𝐼 𝑇 ,∞) and equation 4 near the substrate ( 𝐼 𝑇 ,𝑖𝑛𝑠 ) due to the hindering effect 
+
+on the diffusion of both the substrate and the probe (corresponding to negative feedback): 38 
+
+𝐼 𝑇 ,∞ = 4𝑛𝐹𝐶𝐷 𝑟 𝑇  (3) 
+
+𝐼 𝑇 ,𝑖𝑛𝑠 = 4𝑛𝐹𝐶𝐷 𝑟 𝑇 𝛽 (𝑅𝐺 )𝑁𝑖 𝑇 (𝐿 , 𝑅𝐺 ) (4) 
+
+where n is the number of electrons involved; F, the fa raday constant (96485.33 C/mol); C, the 
+
+concentration in species; D, the diffusion coefficient of the species (7.8x10 -6 cm²/s); r T, the probe 
+
+active part radius; RG, the ratio between the probe insulating part radius and rT; 𝛽 (𝑅𝐺 ), the RG 
+
+impact on the diffusion to the probe active area and 𝑁𝑖 𝑇 (𝐿 ), the hindering effect of the near surface 
+
+on the probe current with L corresponding to the ratio between the probe -substrate distance ( Z)
+
+and rT.
+
+The photochemical map acquisition w as done with an XY scan method consisting of 1001 
+
+acquisitions in X and 51 lines in Y. The probe was scanning at determined scan speed (v scan ). The 
+
+Z axis position was constant through the scan and was determined by approach curves nearby the 
+
+zone of interes t thanks to the negative feedback observed due to the TiO 2 insulating properties. 
+
+Section 3 – Diffusion model. 
+
+The diffusion model was simulated with COMSOL Multiphysics using the “Transport of Diluted 
+
+Species ” physics in a 2D asymmetric mode considers th e substrate as an electrochemical object 
+
+corresponding to the light beam size. 26 This simulation model gives information such as the ratio between the probe current and the substrate current (called collection efficiency, CE, equation 5), 
+
+the probe geometry influence and the impact of the probe -substrate distance on the CE . The 
+
+diffusion profiles were already provided in previous works .23,26 CE refers to the ability of the probe 
+
+to collect species produced by the substrate and is defined as the probe current divided by the 
+
+substrate current: 
+
+𝐶𝐸 (%) = 𝐼 𝑇 
+
+> 𝐼 𝑆𝑢𝑏
+
+× 100  (5) 
+
+To avoid consequential influence from the probe on the measurements , every measurement were 
+
+done with Z ≥ 10 μm. From the obtained CE, I Sub was calculated thanks to the measured ΔI. The 
+
+external quantum efficiency (EQE) was calculated from the following equation: 
+
+𝐸𝑄𝐸 (%) = 𝐼 𝑆 𝑢 𝑏 𝑒 ⁄  
+
+> 𝑃 ℎ𝑣 ⁄
+
+× 100  (6) 
+
+where e is the charge of one electron, P is the light power and h  is the photon energy. 
+
+Section 4 – Scanning spectrophotometer microscopy (SSM). 
+
+The optical properties were measured with a spectrophotometer coupled with the scanni ng 
+
+photoelectrochemical microscope position system to locally investigate the substrate (HEKA 
+
+Gmbh, Lambrecht, Germany). SSM consists of a white light focused through an objective 
+
+(U PLFLN 60x, NA = 0. 9, Olympus, Japan) below the sample and aligned with the 
+
+spectrophotometer thanks to a glass capillary (100 μm radius) connected to an optical fiber (100 
+
+μm radius, NA = 0.22, Thorlabs, USA) above it to collect the transmitted light. The illumination 
+
+beam r adius was ~ 5 μm and the lamp used was a Lambda LS Xenon Arc bulb (wavelength from 
+
+330 to 6 70 nm, Sutter instruments, USA). The measured linescans were generated thanks to the 
+
+localized transmission spectra at different XY positions of the sample (every 10 μm). From those 
+
+spectra, the values from the wavelength of interest were extracted and combined together 
+
+depending of their XY position to form the measured linescans . Those values correspond 
+
+to −𝐿𝑜𝑔 (𝑇 ), where 𝑇 = 𝐼 
+
+> 𝐼 0
+
+, with 𝐼 and 𝐼 0 corresponding to the transmitted light through the 
+
+measured sample and the bare TiO 2/ITO substrate, respectively . Due to the white lamp limitation 
+
+in wavelength and with lower light intensities at shorter and longer wavelengths, we were able to 
+
+investigate wavelengths from 400 to 670 nm , with higher intensity (signal -to -noise ratio) between 
+
+475 nm and 600 nm .
+
+Section 5 - Hot -carrier modelling .
+
+To study hot -carrier properties of Pt an d Au nanoparticles, we evaluate Fermi ’s golden rule using 
+
+the MaxTB code. 27,39 We first construct atomistic models for spherical Pt and Au nanoparticles. 
+
+For the Au nanoparticles, the electronic Hamiltonian is parametrized using the tight -binding model 
+
+from Ref. 40 and for the Pt nanop articles, the tight -binding model from Ref. 41 is used. The 
+
+perturbing potential caused by the illumination is evaluated using the quasi -static approximation 
+
+with experimental dielectric functions from Ref. 42 .Data Availability Statement 
+
+The data that support the findings of this study are available from the corresponding author upon 
+
+reasonable request. 
+
+Supporting Information 
+
+The Supporting Information is available: 
+
+The Supporting Information consists of additional SPECM measurements, SEM images, and 
+
+theoretical simulation of charge carrier generations. 
+
+Author contributions 
+
+O.H . conceived and designed the project. A.N. coordinated, supervised and financed the project. 
+
+O.H. performed the samples preparation, SPECM measurements, and analyzed the data. Y.C.W. ,
+
+J.E., S.M.J. and J.L. performed the hot carrier generation theory and DFT calculations . O.H. 
+
+prepared the figures and wrote the first draft. All authors discussed and edited the manuscript. 
+
+Acknowledgements 
+
+The authors acknowledge the support of the Czech Science Foundation (GACR) through the award 
+
+n. 22 -26416S. The authors thank Dr. Luca Mascaretti for the TiO 2 at omic layer deposition (ALD) 
+
+and Jiří Hošek for the SEM measurements. ALD experiments were performed at CEITEC Nano 
+
+supported by the CzechNanoLab Research Infrastructure (ID 90251) funded by MEYS CR . A.N. 
+
+acknowledges the support from the Project CH4.0 under the MIUR program "Dipartimenti di 
+
+Eccellenza 2023 -2027" (CUP: D13C2200352001) . O.H. acknowledges financial support from the 
+
+European Union ’s Horizon Europe research and in novation programme under the Marie 
+
+Skłodowska -Curie grant agreement No 101205585. We acknowledge funding and support from 
+
+the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s 
+
+Excellence Strategy – EXC 2089/2 –390776260, the Bavarian program Solar Technologies Go 
+
+Hybrid (SolTech) and the Center for NanoScience (CeNS). J. L. acknowledges funding from the 
+
+EPSRC programme grant EP/W017075/1. Š.K. acknowledges support from the ERDF/ESF project 
+
+TECHSCALE (No. CZ.02.01.01/00/22_008/0 004587). This work was also supported by the 
+
+European Union under the REFRESH – Research Excellence for Region Sustainability and High -
+
+tech Industries project (No. CZ.10.03.01/00/22_003/0000048) through the Operational 
+
+Programme Just Transition. 
+
+Competing interests 
+
+The authors declare no competing interests. References 
+
+(1) Wu, N. Plasmonic Metal –Semiconductor Photocatalysts and Photoelectrochemical Cells: A 
+
+Review. Nanoscale 2018 , 10 (6), 2679 –2696. https://doi.org/10.1039/C7NR08487K. 
+
+(2)  Wang, J.; Liao, W.; Tan, Y.; Henrotte, O.; Kang, Y.; Liu, K.; Fu, J.; Lin, Z.; Chai, L.; Cortes, 
+
+E.; Liu, M. Transfer Dynamics of Photo -Generated Carriers in Catalysis. Chemical Society 
+
+Reviews 2025 , 54 (13), 6553 –6596. https://doi.org/10.1039/D5CS00512D. 
+
+(3) Du, L.; Furube, A.; Yamamoto, K.; Hara, K.; Katoh, R.; Tachiya, M. Plasmon -Induced Charge 
+
+Separation and Recombination Dynamics in Gold −TiO2 Nanoparticle Systems: Dependence 
+
+on TiO2 Particle Size. J. Phys. Chem. C 2009 , 113 (16), 6454 –6462. 
+
+https://doi.org/10.1021/jp810576s. 
+
+(4)  Bano, D.; Qin, S.; Kim, H.; Zhou, X.; Zhou, X.; Schmuki, P. Platinum as Co -Catalyst in 
+
+Photocatalysis: Single Atoms vs Nanoparticles. ACS Energy Lett. 2026 , 11 (1), 89 2–898. 
+
+https://doi.org/10.1021/acsenergylett.5c03789. 
+
+(5)  Kang, Y.; Tan, Y.; Tian, W.; Zhang, H.; Chen, Q.; Wang, J.; Henrotte, O.; Kammerer, D.; 
+
+Akkerman, Q. A.; Fan, C.; Xie, D.; Zhu, L.; Fu, J.; Liu, M.; Cortés, E. Promoting Formation 
+
+and Suppressing De composition of H2O2 via Photocarrier Flow at Au@TiO2 Interfaces. J. 
+
+Am. Chem. Soc. 2025 , 147 (51), 47244 –47254. https://doi.org/10.1021/jacs.5c14650. 
+
+(6) Langhammer, C.; Kasemo, B.; Zorić, I. Absorption and Scattering of Light by Pt, Pd, Ag, and 
+
+Au Nanodis ks: Absolute Cross Sections and Branching Ratios. The Journal of Chemical 
+
+Physics 2007 , 126 (19), 194702. https://doi.org/10.1063/1.2734550. 
+
+(7) Zorić, I.; Zäch, M.; Kasemo, B.; Langhammer, C. Gold, Platinum, and Aluminum Nanodisk 
+
+Plasmons: Material Indepe ndence, Subradiance, and Damping Mechanisms. ACS Nano 2011 ,
+
+5 (4), 2535 –2546. https://doi.org/10.1021/nn102166t. 
+
+(8)  Medvedev, N.; Milov, I. Electron -Phonon Coupling in Metals at High Electronic 
+
+Temperatures. Phys. Rev. B 2020 , 102 (6), 064302. 
+
+https://doi .org/10.1103/PhysRevB.102.064302. 
+
+(9) Zahn, D.; Seiler, H.; Windsor, Y. W.; Ernstorfer, R. Ultrafast Lattice Dynamics and Electron –
+
+Phonon Coupling in Platinum Extracted with a Global Fitting Approach for Time -Resolved 
+
+Polycrystalline Diffraction Data. Stru ct. Dyn. 2021 , 8 (6), 064301. 
+
+https://doi.org/10.1063/4.0000120. 
+
+(10)  Bonn, M.; Denzler, D. N.; Funk, S.; Wolf, M.; Wellershoff, S. -S.; Hohlfeld, J. Ultrafast 
+
+Electron Dynamics at Metal Surfaces: Competition between Electron -Phonon Coupling and 
+
+Hot -Electro n Transport. Phys. Rev. B 2000 , 61 (2), 1101 –1105. 
+
+https://doi.org/10.1103/PhysRevB.61.1101. 
+
+(11 ) He, X.; Ghosh, M.; Yang, D. -S. Impacts of Hot Electron Diffusion, Electron –Phonon 
+
+Coupling, and Surface Atoms on Metal Surface Dynamics Revealed by Reflection Ultrafast 
+
+Electron Diffraction. J. Chem. Phys. 2024 , 160 (22), 224701. 
+
+https://doi.org/10.1063/5.0205948. 
+
+(12)  Karna, P.; Hoque, M. S. B.; Thakur, S.; Hopkins, P. E.; Giri, A. Direct Measurement of 
+
+Ballistic and Diffusive Electron Transport in Gold. Nano Lett. 2023 , 23 (2), 491 –496. 
+
+https://doi.org/10.1021/acs.nanolett.2c03781. 
+
+(13)  Fischer, G.; Hoffmann, H.; Vancea, J. Mean Free Path and Density of Conductance 
+
+Electrons in Platinum Determined by the Size Effect in Extremely Thin Films. Phys. Rev. B 
+
+1980 , 22 (12), 6065 –6073. https://doi.org/10.1103/PhysRevB.22.6065. (14)  Zhang, N.; Han, C.; Xu, Y. -J.; Foley Iv, J. J.; Zhang, D.; Codrington, J.; Gray, S. K.; Sun, 
+
+Y. Near -Field Dielectric Scattering Promotes Optical Absorption by Platinum Nanoparticles. 
+
+Natur e Photon 2016 , 10 (7), 473 –482. https://doi.org/10.1038/nphoton.2016.76. 
+
+(15)  Ji, S.; Zhao, X.; Li, P.; Zheng, P.; Tang, H.; Amendola, V.; Zhang, D.; Cai, Y.; Ma, K.; 
+
+Wang, C.; Cheng, X.; Wei, S.; Wu, L.; Ye, Y.; Wang, J.; Liang, C. Pt Colloidosomes with 
+
+Broadband Absorption for Near -Infrared Light Photocatalysis Through D -Band Hot -Carriers 
+
+Generation. Angewandte Chemie International Edition 2025 , 64 (39), e202509431. 
+
+https://doi.org/10.1002/anie.202509431. 
+
+(16)  Yu, C.; Huang, Z.; Wang, J.; Xie, G.; Jiang, S.; Xie, X.; Ma, T.; Zhang, N. Engineering the 
+
+Metal/Dielectric Interface to U nlock the Potential of Scattered Light for Boosted Photoredox 
+
+Catalysis. ACS Nano 2023 , 17 (16), 15666 –15677. https://doi.org/10.1021/acsnano.3c02766. 
+
+(17)  Herran, M.; Juergensen, S.; Kessens, M.; Hoeing, D.; Köppen, A.; Sousa -Castillo, A.; 
+
+Parak, W. J.; L ange, H.; Reich, S.; Schulz, F.; Cortés, E. Plasmonic Bimetallic Two -
+
+Dimensional Supercrystals for H2 Generation. Nat Catal 2023 , 6 (12), 1205 –1214. 
+
+https://doi.org/10.1038/s41929 -023 -01053 -9. 
+
+(18)  Johnson, P. B.; Christy, R. W. Optical Constants of the No ble Metals. Phys. Rev. B 1972 , 6
+
+(12), 4370 –4379. https://doi.org/10.1103/PhysRevB.6.4370. 
+
+(19)  Beck, A.; Gordon, M. J.; Christopher, P. Distinct Kinetic Signatures of Photodesorption 
+
+from Metal Nanoparticles. J. Am. Chem. Soc. 2026 , 148 (7), 7024 –7034. 
+
+ht tps://doi.org/10.1021/jacs.5c17718. 
+
+(20 ) Henrotte, O.; Kment, Š.; Naldoni, A. Interfacial States in Au/Reduced TiO2 Plasmonic 
+
+Photocatalysts Quench Hot -Carrier Photoactivity. J. Phys. Chem. C 2023 , 127 (32), 15861 –
+
+15870. https://doi.org/10.1021/acs.jpcc.3c 04176. 
+
+(21)  Ghorai, N.; Yang, Z.; Gebre, S. T.; Wu, S.; Zhao, F.; Ivanov, I. N.; Lian, T. Efficient Size -
+
+Dependent Hot Electron Transfer from Au to TiO2 Nanoparticles. Nano Lett. 2025 , 25 (8), 
+
+3253 –3258. https://doi.org/10.1021/acs.nanolett.4c06154. 
+
+(22)  Mao, Z.; Vang, H.; Garcia, A.; Tohti, A.; Stokes, B. J.; Nguyen, S. C. Carrier Diffusion —
+
+The Main Contribution to Size -Dependent Photocatalytic Activity of Colloidal Gold 
+
+Nanoparticles. ACS Catal. 2019 , 9 (5), 4211 –4217. https://doi.org/10.1021/acscatal.9b0 0390 .
+
+(23 ) Henrotte, O.; Kment, Š.; Naldoni, A. Mass Transport Limitations in Plasmonic 
+
+Photocatalysis. Nano Lett. 2024 , 24 (29), 8851 –8858. 
+
+https://doi.org/10.1021/acs.nanolett.4c01386. 
+
+(24)  Yang, C.; Zhao, Z. -Y. Interfacial Properties and Band Alignment of Noble -Metal/Anatase 
+
+TiO2(1 0 1) Hetero -Structures. Computational Materials Science 2018 , 151 , 160 –173. 
+
+https://doi.org/10.1016/j.commatsci.2018.05.001. 
+
+(25)  Amirav, L.; Wächtler, M. Nano Schottky?  Nano Lett.  2022 , 22  (24), 9783 –9785. 
+
+https://doi.org/10. 1021/acs.nanolett.2c04150. 
+
+(26)  Henrotte, O.; Santiago, E. Y.; Movsesyan, A.; Mascaretti, L.; Afshar, M.; Minguzzi, A.; 
+
+Vertova, A.; Wang, Z. M.; Zboril, R.; Kment, S.; Govorov, A. O.; Naldoni, A. Local 
+
+Photochemical Nanoscopy of Hot -Carrier -Driven Catalytic Reactions Using Plasmonic 
+
+Nan osystems.  ACS Nano  2023 , 17  (12), 11427 –11438. 
+
+https://doi.org/https://doi.org/10.1021/acsnano.3c01009. 
+
+(27)  Jin, H.; Kahk, J. M.; Papaconstantopoulos, D. A.; Ferreira, A.; Lischner, J. Plasmon -
+
+Induced Hot Carriers from Interband and Intraband Transitions in Large Noble Metal 
+
+Nanoparticles. PRX Energy 2022 , 1 (1), 013006. 
+
+https://doi.org/10.1103/PRXEnergy.1.013006. (28)  Zhang, X.; Wu, F.; Li, G.; Wang, L.; Huang, J.; Song, A.; Meng, A.; Li, Z. Mechanistic 
+
+Insight into the Synergy between Platinum Cluster an d Indium Particle Dual Cocatalysts for 
+
+Enhanced Photocatalytic Water Splitting. Journal of Colloid and Interface Science 2024 , 670 ,
+
+774 –784. https://doi.org/10.1016/j.jcis.2024.05.146. 
+
+(29)  Zaera, F. Role of Metal Cocatalysts in the Photocatalytic Producti on of Hydrogen from 
+
+Water Revisited. Energy Fuels 2025 , 39 (5), 2422 –2434. 
+
+https://doi.org/10.1021/acs.energyfuels.4c06100. 
+
+(30)  Román Castellanos, L.; Hess, O.; Lischner, J. Dielectric Engineering of Hot -Carrier 
+
+Generation by Quantized Plasmons in Embedde d Silver Nanoparticles. J. Phys. Chem. C 2021 ,
+
+125 (5), 3081 –3087. https://doi.org/10.1021/acs.jpcc.0c07617. 
+
+(31)  Bonkerud, J.; Zimmermann, C.; Weiser, P. M.; Vines, L.; Monakhov, E. V. On the 
+
+Permittivity of Titanium Dioxide. Sci Rep 2021 , 11 (1), 12443. https://doi.org/10.1038/s41598 -
+
+021 -92021 -5. 
+
+(32)  Sun, Z.; Fang, Y. Electrical Tuning Effect for Schottky Barrier and Hot -Electron Harvest 
+
+in a Plasmonic Au/TiO2 Nanostructure. Sci Rep 2021 , 11 (1), 338. 
+
+https://doi.org/10.1038/s41598 -020 -79746 -5. 
+
+(33)  Schi erbaum, K. D.; Fischer, S.; Torquemada, M. C.; de Segovia, J. L.; Román, E.; Martín -
+
+Gago, J. A. The Interaction of Pt with TiO2(110) Surfaces: A Comparative XPS, UPS, ISS, 
+
+and ESD Study. Surface Science 1996 , 345 (3), 261 –273. https://doi.org/10.1016/0039 -
+
+6028(95)00887 -X. 
+
+(34 ) Du, L.; Furube, A.; Hara, K.; Katoh, R.; Tachiya, M. Ultrafast Plasmon Induced Electron 
+
+Injection Mechanism in Gold –TiO2 Nanoparticle System. Journal of Photochemistry and 
+
+Photobiology C: Photochemistry Reviews 2013 , 15 , 21 –30. 
+
+https: //doi.org/10.1016/j.jphotochemrev.2012.11.001. 
+
+(35)  Lee, A.; Wu, S.; Yim, J. E.; Zhao, B.; Sheldon, M. T. Hot Electrons in a Steady State: 
+
+Interband vs Intraband Excitation of Plasmonic Gold. ACS Nano 2024 , 18 (29), 19077 –19085. 
+
+https://doi.org/10.1021/acs nano.4c03702. 
+
+(36)  Khurgin, J. B. Fundamental Limits of Hot Carrier Injection from Metal in Nanoplasmonics. 
+
+Nanophotonics 2020 , 9 (2), 453 –471. https://doi.org/10.1515/nanoph -2019 -0396. 
+
+(37)  Licklederer, M.; Mohammadi, R.; Nguyen, N. T.; Park, H.; Hejazi, S.; Halik, M.; Vogel, 
+
+N.; Altomare, M.; Schmuki, P. Dewetted Au Nanoparticles on TiO2 Surfaces: Evidence of a 
+
+Size -Independent Plasmonic Photoelectrochemical Response. J. Phys. Chem. C 2019 , 123 
+
+(27), 16934 –16942. https://doi.org/10.1021/acs.jpcc.9b02769. 
+
+(38)  Cornut, R.; Lefrou, C. A Unified New Analytical Approximation for Negative Feedback 
+
+Currents with a Microdisk SECM Tip. Journal of Electroanalytical Chemistry 2007 , 608 (1), 
+
+59 –66. https://doi.org/10.1016/j.jelechem.2007.05.007. 
+
+(39)  João, S. M.; Jin, H.; Lischner, J. C. Atomistic Theory of Hot -Carrier Relaxation in Large 
+
+Plasmonic Nanoparticles. J. Phys. Chem. C 2023 , 127 (48), 23296 –23302. 
+
+https://doi.org/10.1021/acs.jpcc.3c05347. 
+
+(40)  Jin, H.; Xiao, C.; Herran, M.; Cortés, E.; Gao, S.; Lischner, J. Hot -Carrier Generation in 
+
+Bimetallic Janus Nanoparticles. ACS Nano 2026 , 20 (5), 4291 –4300. 
+
+https://doi.org/10.1021/acsnano.5c17401. 
+
+(41)  Papaconstantopoulos, D. A. Handbook of the Band Structure of Elemental Solids: From Z 
+
+= 1 To Z = 112 ; Springer US: Bos ton, MA, 2015. https://doi.org/10.1007/978 -1-4419 -8264 -3. 
+
+(42)  CRC Handbook of Chemistry and Physics , 95th ed.; Haynes, W. M., Ed.; CRC Press: Boca 
+
+Raton, 2014. https://doi.org/10.1201/b17118.

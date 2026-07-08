@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-001.webp",
+      "caption": "Fig. 4 Physics-informed encoder recovers scanner-driving descriptors in physical units. a, Predicted versus measured distance anchors for training curves and held-out curves. b, Predicted versus measured phase anchors. Points on the diagonal indicate exact recovery. c, Held-out median error for each anchor in physical units. The setpoint anchor is recovered to 0.4 nm, showing that the descriptor state can be inferred accurately enough to drive the instrument twin.",
+      "page": 11,
+      "index": 1,
+      "width": 718,
+      "height": 493
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-002.webp",
+      "caption": "Fig. 3 Physical descriptors and operational quality metrics. a, FD descriptors extracted from a measured Tap-300 curve, including free amplitude, characteristic amplitude crossings, phase extrema, and the attractive-repulsive transition marked by the 90-degree phase crossing. b, The scan-quality metric 𝑄!\"#$%&' is defined from trace-retrace mismatch in the height channel. c, The safety metric 𝑄(#)*&' is derived from amplitude reduction and phase branch information. Amplitude reduction reports increasing force, while phase below 90-degree marks repulsive operation.",
+      "page": 10,
+      "index": 2,
+      "width": 902,
+      "height": 633
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-003.webp",
+      "caption": "Fig. 5 Deterministic scanner fidelity gap reveals an operating-point failure mode. a, Held-out scan-line standard deviation versus setpoint shows that the experiment becomes unstable near light tapping, while the deterministic twin remains stable. b, Rank correlation with experiment for a control-only predictor, the deterministic twin, and a global-gain re-simulation. c, A measured FD curve shows that the local amplitude-distance slope collapses near the free amplitude. d, The zerofit amplification factor 1/𝐴′(𝑑) at the operating point 𝑑+, tracks held-out experimental quality, identifying noise amplification as the dominant missing-physics coordinate.",
+      "page": 14,
+      "index": 3,
+      "width": 768,
+      "height": 577
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-004.webp",
+      "caption": "Fig. 2 Descriptor-aligned digital-twin framework for amplitude-modulation SPM. a, The microscope supplies force-distance (FD) curves and scan traces. A physics-informed encoder converts FD curves into physical anchors that reconstruct the height, amplitude, and phase response. These anchors parameterize a deterministic scanner that predicts scan quality and forcebased safety. A CNN-LSTM residual model then corrects the remaining instrument-specific error, giving predicted scan quality, inferred topography, and peak-force-derived safety. b, The five-step workflow links descriptor extraction, PINN-based sample-state inference, deterministic scanning, short-term residual correction, and long-term drift monitoring.",
+      "page": 8,
+      "index": 4,
+      "width": 730,
+      "height": 451
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-005.webp",
+      "caption": "Fig. 7 Physical anchors and learned residuals play complementary roles. a, Held-out scalar scan-quality error for pure physics, pure data-driven prediction, and the hybrid model. b, Held-out line-shape error for the same models. c, The Pareto trade-off shows that no single model is best for both scalar quality and detailed line shape. d-f, A held-out grating line compares experiment with pure physics, pure data-driven prediction, and the hybrid model. Physics captures the dominant period but misses detailed shape, while learned models recover the line profile. The hybrid strategy preserves physical interpretability while adding data-driven flexibility.",
+      "page": 19,
+      "index": 5,
+      "width": 848,
+      "height": 579
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-006.webp",
+      "caption": "Fig. 6 Learned residual correction enables predictive quality and safety estimates. a, Tap-300 force-based 𝑄(#)*&' parity for the deterministic prior and corrected prediction. b, Tap-300 𝑄!\"#$%&' parity on a log-log scale after correction. c, Held-out median 𝑄!\"#$%&' error versus setpoint shows that the correction maintains low error across the tapping regime. d, Amplitude and phase provide complementary information: amplitude tracks force and setpoint, while phase identifies the interaction branch. Keeping these channels separate enables prediction of both scan quality and force-related safety before acquisition.",
+      "page": 17,
+      "index": 6,
+      "width": 798,
+      "height": 547
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05758v1/fig-007.webp",
+      "caption": "Fig. 1 Coupled digital twins as the predictive layer for autonomous microscopy. a, The experimental planner uses coupled sample and instrument digital twins to evaluate candidate actions before execution. b, The planner proposes candidate operations across an experimental workflow, while the twins predict expected outcomes, uncertainty, and risk. The observed outcome is then compared with the prediction to update the twins. c, The instrument twin estimates the consequence of candidate operating choices, supports risk-aware parameter selection, and helps interpret the resulting measurements.",
+      "page": 5,
+      "index": 7,
+      "width": 902,
+      "height": 518
+    }
+  ]
+}

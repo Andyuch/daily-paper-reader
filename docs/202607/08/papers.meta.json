@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-08",
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T21:08:24",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/08/2607.03170v1-bidirectional-phase-sensitivity-in-holographic-phototransient-microscopy",
+      "section": "quick",
+      "title_en": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "authors": "Emmanuel Kotu Robertson, Dennis van de Lockand, Matz Liebel",
+      "date": "2026-07-03",
+      "pdf": "https://arxiv.org/pdf/2607.03170v1",
+      "score": "7.5",
+      "evidence": "用于光瞬态成像的飞秒泵浦-探测全息显微镜",
+      "tldr": "本研究针对中红外光热显微镜中前向散射（FWS）定量准确但需双侧光路，以及后向散射（BWS）单侧便捷但信号易失真的矛盾，开发了一种双向飞秒全息显微镜。通过引入内部前向散射（IFS）模式，利用基底反射光作为照明源并结合相干门控技术，实现了在单侧成像条件下获得与FWS一致的定量相位对比度，为生物及溶剂环境下的样品成像提供了新方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/08/2607.05758v1-from-closed-loop-optimization-to-open-decision-making-coupled-digital-twins-for-predictive-and-autonomous-microscopy",
+      "section": "quick",
+      "title_en": "From Closed-Loop Optimization to Open Decision Making: Coupled Digital Twins for Predictive and Autonomous Microscopy",
+      "authors": "Yu Liu, Boris Slautin, Ian Mercer, Jon-Paul Maria, Sergei V. Kalinin",
+      "date": "2026-07-07",
+      "pdf": "https://arxiv.org/pdf/2607.05758v1",
+      "score": "6.5",
+      "evidence": "用于预测和自主显微镜的数字孪生框架，模拟仪器检测和样品响应",
+      "tldr": "本研究提出一种耦合数字孪生框架，旨在将自动化实验从闭环优化转向开放式决策。该框架通过分离并链接样本孪生（编码材料状态）与仪器孪生（捕捉信号动力学），实现了对显微镜操作结果的预测。在振幅调制扫描探针显微镜中的应用证明，该方法能以亚纳米精度恢复描述符并预测实验风险，为自主实验规划奠定了基础。",
+      "tags": "query:iscat",
+      "abstract_en": "Automated experimentation is moving from closed-loop optimization toward open decision-making, where human or AI planners must forecast the consequences of candidate actions before executing them. Such forecasts require a model of both sides of the experiment: how the sample is likely to respond and what the instrument is likely to detect. We therefore introduce a coupled digital-twin framework that separates these roles and then links them. In this framework, the sample twin encodes material state inferred from prior knowledge and measurements till the moment. The instrument twin captures signal formation, feedback dynamics, and operating constraints based on prior knowledge. When coupled, the two twins estimate expected outcomes, uncertainty, and risk for candidate microscope operations. For amplitude-modulation scanning probe microscopy, we realize this framework with a physics-informed encoder of force-distance curves, a deterministic scanner model of cantilever and feedback dynamics, and sparse learned residual corrections. The encoder first recovers scanner-driving descriptors with sub-nanometer accuracy. The calibrated scanner then reproduces typical traces within a few nanometers and identifies operating-point noise amplification as the main source of mismatch. Supplementary phase analysis localizes residual error to the phase channel, which clarifies where added physics is needed. Together, these results establish coupled sample and instrument twins as a practical foundation for predictive microscope operation and autonomous experimental planning.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/08/2607.00689v1-in-situ-polarimetry-in-collimated-magneto-infrared-spectroscopy-system",
+      "section": "quick",
+      "title_en": "In-Situ Polarimetry in Collimated Magneto-Infrared Spectroscopy System",
+      "authors": "Zeping Shi, Wenbin Wu, Zhiwei Zhang, Yuhan Du, Chenyao Xu, Congming Hao, Xiangyu Jiang, Xin Chen, Guangyi Wang, Mingsen Zhou, Chunhui Pan, Wei Lu, Hao Shen, Haifeng Pan, Zhenrong Sun, Junhao Chu, Xiang Yuan",
+      "date": "2026-07-01",
+      "pdf": "https://arxiv.org/pdf/2607.00689v1",
+      "score": "6.0",
+      "evidence": "磁红外光谱中的原位偏振测量",
+      "tldr": "本研究开发了一种集成原位偏振测量功能的准直磁红外光谱系统，解决了强磁场下红外光束因多次管壁反射导致的偏振退化问题。该系统采用开普勒式光学架构实现光束准直，并结合远程控制的偏振模块，实现了在不破坏真空或改变温度的情况下，对线偏振、圆偏振及任意椭圆偏振态的连续原位调节，为研究磁场诱导的集体激发提供了高精度的实验平台。",
+      "tags": "query:iscat",
+      "abstract_en": "Magneto-infrared spectroscopy under strong magnetic fields provides a powerful probe of Landau quantization and field-induced collective excitations, yet its full potential has long been constrained by the lack of in-situ polarization control, because the highly divergent infrared beam propagating through narrow light tubes undergoes multiple wall reflections, leading to severe polarization degradation. Here we report a collimated magneto-infrared spectroscopy system that integrates continuous in-situ polarimetry. The system employs incident and exit collimation chambers forming a Kepler type optical architecture, which converts the large-aperture FTIR output into a low-divergence beam and strongly suppresses multi-reflection trajectories inside long gold-plated light tubes, thereby enhancing both optical throughput and polarization fidelity. A remotely controlled polarization module, consisting of an automated linear polarizer and a switchable Fresnel rhomb positioned entirely outside the high-field region, enables continuous in-situ tuning between linear, circular, and arbitrary elliptical polarization states without thermal cycling, manual realignment, or breaking vacuum. Interchangeable compact focusing modules further support Faraday and Voigt geometries in both transmission and reflection experiments within a 50 mm magnet bore, providing efficient beam focusing and signal collection while maintaining polarization fidelity. The setup achieves a minimum root-mean-square noise of 0.0033%, an average noise of 0.0082%, and a linear polarization extinction ratio up to 40:1. We demonstrate the capability through continuous in-situ linear polarimetry and broadband circular polarimetry in the magneto-infrared spectroscopy of various single crystals. This platform establishes a robust experimental framework for in-situ polarization-resolved magneto-infrared spectroscopy.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/08/2607.05172v1-platinum-is-a-photocatalyst-large-visible-light-quantum-efficiency-revealed",
+      "section": "quick",
+      "title_en": "Platinum is a Photocatalyst: Large Visible-Light Quantum Efficiency Revealed",
+      "authors": "Olivier Henrotte, Yin Chak Wong, Jordan Edwards, Simão Meneses João, Štěpán Kment, Emiliano Cortés, Johannes Lischner, Alberto Naldoni",
+      "date": "2026-07-06",
+      "pdf": "https://arxiv.org/pdf/2607.05172v1",
+      "score": "6.0",
+      "evidence": "使用扫描光电化学显微镜将金属-半导体结的反应性与形貌联系起来",
+      "tldr": "本研究挑战了铂（Pt）在光催化中仅作为被动助催化剂的传统认知，揭示了其作为可见光活性组分的潜力。通过定量扫描光电化学显微镜技术，研究人员发现TiO2上的Pt纳米岛在可见光下具有显著的光化学活性，其单位原子外量子效率在特定波长下远超金（Au）。这一发现重新定义了具有强阻尼光学响应的催化金属在金属-半导体杂化体系中的角色。",
+      "tags": "query:iscat",
+      "abstract_en": "Metal-semiconductor junctions in optoelectronic devices are commonly engineered to promote charge separation. In Pt/TiO2 Schottky junctions, Pt is typically regarded as a catalytic electron sink rather than a visible-light-active component. Here, we demonstrate that Pt nanoislands on TiO2 can generate photochemically active carriers under visible light excitation. Using quantitative scanning photoelectrochemical microscopy, we measure the wavelength-resolved external quantum efficiency (EQE) of Au and Pt nanoisland arrays on TiO2, and correlate their reactivity with their morphology and extinction spectra. Discrete 10 nm Pt nanoislands exhibit robust broadband visible light photoactivity - exceeding the photoactivity of similar-sized Au nanoislands under blue-green excitation - whereas Pt's photoactivity is strongly suppressed when the nanoislands are connected. Surprisingly, Pt exhibits an EQE-per-atom approx. 20 times higher than Au at 455 nm and approx. 2 times higher at 595 nm (at Au's optimum). We show an approximately wavelength-independent Pt internal quantum efficiency of approx. 1 percent across the visible spectral region. These findings reposition catalytic metals with strongly damped optical response in the visible as light-responsive components in metal-semiconductor hybrids, challenging the prevailing perception that they function solely as passive co-catalysts in photocatalytic systems.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

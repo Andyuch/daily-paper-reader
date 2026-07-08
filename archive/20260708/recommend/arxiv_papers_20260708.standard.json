@@ -1,0 +1,190 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-08T21:06:21.722774+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.03170v1",
+      "source": "arxiv",
+      "title": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "abstract": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "authors": [
+        "Emmanuel Kotu Robertson",
+        "Dennis van de Lockand",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-03T10:10:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.03170v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "femtosecond pump-probe holographic microscope for phototransient imaging",
+      "llm_evidence_cn": "用于光瞬态成像的飞秒泵浦-探测全息显微镜",
+      "llm_evidence": "用于光瞬态成像的飞秒泵浦-探测全息显微镜",
+      "canonical_evidence": "用于光瞬态成像的飞秒泵浦-探测全息显微镜",
+      "llm_tldr_en": "Presents a bidirectional holographic microscope for mid-infrared phototransient imaging with phase sensitivity.",
+      "llm_tldr_cn": "介绍了一种具有相位灵敏度的中红外光瞬态成像双向全息显微镜。",
+      "llm_tldr": "介绍了一种具有相位灵敏度的中红外光瞬态成像双向全息显微镜。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.05758v1",
+      "source": "arxiv",
+      "title": "From Closed-Loop Optimization to Open Decision Making: Coupled Digital Twins for Predictive and Autonomous Microscopy",
+      "abstract": "Automated experimentation is moving from closed-loop optimization toward open decision-making, where human or AI planners must forecast the consequences of candidate actions before executing them. Such forecasts require a model of both sides of the experiment: how the sample is likely to respond and what the instrument is likely to detect. We therefore introduce a coupled digital-twin framework that separates these roles and then links them. In this framework, the sample twin encodes material state inferred from prior knowledge and measurements till the moment. The instrument twin captures signal formation, feedback dynamics, and operating constraints based on prior knowledge. When coupled, the two twins estimate expected outcomes, uncertainty, and risk for candidate microscope operations. For amplitude-modulation scanning probe microscopy, we realize this framework with a physics-informed encoder of force-distance curves, a deterministic scanner model of cantilever and feedback dynamics, and sparse learned residual corrections. The encoder first recovers scanner-driving descriptors with sub-nanometer accuracy. The calibrated scanner then reproduces typical traces within a few nanometers and identifies operating-point noise amplification as the main source of mismatch. Supplementary phase analysis localizes residual error to the phase channel, which clarifies where added physics is needed. Together, these results establish coupled sample and instrument twins as a practical foundation for predictive microscope operation and autonomous experimental planning.",
+      "authors": [
+        "Yu Liu",
+        "Boris Slautin",
+        "Ian Mercer",
+        "Jon-Paul Maria",
+        "Sergei V. Kalinin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ],
+      "published": "2026-07-07T02:31:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.05758v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "Digital twin framework for predictive and autonomous microscopy modeling instrument detection and sample response",
+      "llm_evidence_cn": "用于预测和自主显微镜的数字孪生框架，模拟仪器检测和样品响应",
+      "llm_evidence": "用于预测和自主显微镜的数字孪生框架，模拟仪器检测和样品响应",
+      "canonical_evidence": "用于预测和自主显微镜的数字孪生框架，模拟仪器检测和样品响应",
+      "llm_tldr_en": "Introduces a digital-twin framework to forecast instrument-sample interactions for autonomous microscopy.",
+      "llm_tldr_cn": "引入数字孪生框架，为自主显微镜预测仪器与样品的相互作用。",
+      "llm_tldr": "引入数字孪生框架，为自主显微镜预测仪器与样品的相互作用。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.00689v1",
+      "source": "arxiv",
+      "title": "In-Situ Polarimetry in Collimated Magneto-Infrared Spectroscopy System",
+      "abstract": "Magneto-infrared spectroscopy under strong magnetic fields provides a powerful probe of Landau quantization and field-induced collective excitations, yet its full potential has long been constrained by the lack of in-situ polarization control, because the highly divergent infrared beam propagating through narrow light tubes undergoes multiple wall reflections, leading to severe polarization degradation. Here we report a collimated magneto-infrared spectroscopy system that integrates continuous in-situ polarimetry. The system employs incident and exit collimation chambers forming a Kepler type optical architecture, which converts the large-aperture FTIR output into a low-divergence beam and strongly suppresses multi-reflection trajectories inside long gold-plated light tubes, thereby enhancing both optical throughput and polarization fidelity. A remotely controlled polarization module, consisting of an automated linear polarizer and a switchable Fresnel rhomb positioned entirely outside the high-field region, enables continuous in-situ tuning between linear, circular, and arbitrary elliptical polarization states without thermal cycling, manual realignment, or breaking vacuum. Interchangeable compact focusing modules further support Faraday and Voigt geometries in both transmission and reflection experiments within a 50 mm magnet bore, providing efficient beam focusing and signal collection while maintaining polarization fidelity. The setup achieves a minimum root-mean-square noise of 0.0033%, an average noise of 0.0082%, and a linear polarization extinction ratio up to 40:1. We demonstrate the capability through continuous in-situ linear polarimetry and broadband circular polarimetry in the magneto-infrared spectroscopy of various single crystals. This platform establishes a robust experimental framework for in-situ polarization-resolved magneto-infrared spectroscopy.",
+      "authors": [
+        "Zeping Shi",
+        "Wenbin Wu",
+        "Zhiwei Zhang",
+        "Yuhan Du",
+        "Chenyao Xu",
+        "Congming Hao",
+        "Xiangyu Jiang",
+        "Xin Chen",
+        "Guangyi Wang",
+        "Mingsen Zhou",
+        "Chunhui Pan",
+        "Wei Lu",
+        "Hao Shen",
+        "Haifeng Pan",
+        "Zhenrong Sun",
+        "Junhao Chu",
+        "Xiang Yuan"
+      ],
+      "primary_category": "physics.ins-det",
+      "categories": [
+        "physics.ins-det",
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el",
+        "physics.optics"
+      ],
+      "published": "2026-07-01T09:38:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.00689v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "In-Situ Polarimetry in Magneto-Infrared Spectroscopy",
+      "llm_evidence_cn": "磁红外光谱中的原位偏振测量",
+      "llm_evidence": "磁红外光谱中的原位偏振测量",
+      "canonical_evidence": "磁红外光谱中的原位偏振测量",
+      "llm_tldr_en": "Reports a collimated magneto-infrared spectroscopy system with in-situ polarimetry for probing excitations.",
+      "llm_tldr_cn": "报告了一种具有原位偏振测量功能的准直磁红外光谱系统，用于探测激发态。",
+      "llm_tldr": "报告了一种具有原位偏振测量功能的准直磁红外光谱系统，用于探测激发态。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05172v1",
+      "source": "arxiv",
+      "title": "Platinum is a Photocatalyst: Large Visible-Light Quantum Efficiency Revealed",
+      "abstract": "Metal-semiconductor junctions in optoelectronic devices are commonly engineered to promote charge separation. In Pt/TiO2 Schottky junctions, Pt is typically regarded as a catalytic electron sink rather than a visible-light-active component. Here, we demonstrate that Pt nanoislands on TiO2 can generate photochemically active carriers under visible light excitation. Using quantitative scanning photoelectrochemical microscopy, we measure the wavelength-resolved external quantum efficiency (EQE) of Au and Pt nanoisland arrays on TiO2, and correlate their reactivity with their morphology and extinction spectra. Discrete 10 nm Pt nanoislands exhibit robust broadband visible light photoactivity - exceeding the photoactivity of similar-sized Au nanoislands under blue-green excitation - whereas Pt's photoactivity is strongly suppressed when the nanoislands are connected. Surprisingly, Pt exhibits an EQE-per-atom approx. 20 times higher than Au at 455 nm and approx. 2 times higher at 595 nm (at Au's optimum). We show an approximately wavelength-independent Pt internal quantum efficiency of approx. 1 percent across the visible spectral region. These findings reposition catalytic metals with strongly damped optical response in the visible as light-responsive components in metal-semiconductor hybrids, challenging the prevailing perception that they function solely as passive co-catalysts in photocatalytic systems.",
+      "authors": [
+        "Olivier Henrotte",
+        "Yin Chak Wong",
+        "Jordan Edwards",
+        "Simão Meneses João",
+        "Štěpán Kment",
+        "Emiliano Cortés",
+        "Johannes Lischner",
+        "Alberto Naldoni"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-06T14:55:05+00:00",
+      "link": "https://arxiv.org/pdf/2607.05172v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scanning photoelectrochemical microscopy to correlate reactivity with morphology in metal-semiconductor junctions",
+      "llm_evidence_cn": "使用扫描光电化学显微镜将金属-半导体结的反应性与形貌联系起来",
+      "llm_evidence": "使用扫描光电化学显微镜将金属-半导体结的反应性与形貌联系起来",
+      "canonical_evidence": "使用扫描光电化学显微镜将金属-半导体结的反应性与形貌联系起来",
+      "llm_tldr_en": "Reveals Pt nanoislands as visible-light photocatalysts using scanning photoelectrochemical microscopy.",
+      "llm_tldr_cn": "利用扫描光电化学显微镜揭示了铂纳米岛作为可见光光催化剂的特性。",
+      "llm_tldr": "利用扫描光电化学显微镜揭示了铂纳米岛作为可见光光催化剂的特性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
