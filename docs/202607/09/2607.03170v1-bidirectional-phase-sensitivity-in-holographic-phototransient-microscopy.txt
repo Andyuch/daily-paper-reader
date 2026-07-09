@@ -1,0 +1,787 @@
+Title: 2607.03170v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.03170v1
+
+Published Time: Tue, 07 Jul 2026 00:47:38 GMT
+
+Number of Pages: 11
+
+Markdown Content:
+Bidirectional phase sensitivity in holographic phototransient microscopy 
+
+Emmanuel Kotu Robertson 1, Dennis van de Lockand 1, Matz Liebel 1,a    
+
+> 1Department of Physics and Astronomy, Vrije Universiteit Amsterdam, De Boelelaan 1100, Amsterdam 1081 HZ,
+> The Netherlands
+> aemail: m.liebel@vu.nl
+
+ABSTRACT 
+
+Mid -infrared photothermal microscopy combines the chemical specificity of infrared absorption with 
+
+the spatial resolution of visible -light detection, but practical implementations face a persistent trade -
+
+off between forward -scattering (FWS) and backward -sc attering (BWS) detection geometries. FWS 
+
+provides quantitative, shape -independent phase contrast but requires two -sided optical access that is 
+
+difficult to achieve in aqueous or thick samples . BWS offers convenient single -sided access, but its 
+
+signals are strongly distorted by depth -dependent interference for micron -scale objects. Here we 
+
+present a bidirectional femtosecond mid -infrared pump -probe holographic microscope capable of 
+
+switching between FWS and BWS geometries within a single instrument, and use it to introduce and 
+
+validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back -reflection 
+
+generated at the t op surface of the mid -infrared -transparent sample substrate as an internally 
+
+generated forward -scattering illumination wave, isolated from the directly backscattered field via 
+
+temporal coherence gating. Using polystyrene beads on CaF₂ substrates in air, wa ter, and a refractive -
+
+index -matched glycerol -water mixture, we show that IFS reproduces the signal magnitudes and 
+
+temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single -
+
+sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to 
+
+conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, 
+
+imaging, with direct relevance to single -sided imaging of biological or solvent -contained specimens. 
+
+INTRODUCTION 
+
+Mid ‑infrared photothermal (MIP) microscopy is an emerging and very power ful chemically specific, 
+
+label ‑free imaging approach . MIP convert s vibrational absorption , typically in the near - to mid -infrared 
+
+(MIR) spectral range , into measurable refractive index or volumetric changes 1–6. These changes are 
+
+then read -out at visible wavelength s7. As such, MIP microscopy delivers the best of both worlds: high 
+
+spatial resolution , as enabled by observations in the visible, and the chemical specificity inherent to 
+
+vibration ally -selective infrared absorption 8–10 . Many different experimental implementations of MIP 
+
+have been demonstrated comprising approaches relying on point -scanning as well as widefield and 
+
+holographic imaging schemes 1,2,8,11,12 . A compelling advantage of MIP microscopy is its inherent 
+
+compatibility with aqueous environments 13 . As a result of the visible readout, signals can be detected 
+
+as long as the MIR excitation reaches the sample before total absorption. This is a crucial advantage 
+
+over traditional infrared imaging, which require s extremely thin sample chambers thus complicating 
+
+the experimental design 14,15 and impacting biological samples by limiting nutrient flows . MIP 
+
+microscopy promises to eliminate these aspects and is thus conceptually superior , especially for 
+
+studying complex biomedical processes yet the current literature remains limited to a few proof -of -
+
+concept works. A possible explanation for this shortcoming are the stringent requirements regarding the combination 
+
+of excitation and detection geometr ies . While MIP microscopy has the conceptual advantages outlined 
+
+above, t he optics required for high resolution microscopy at visible wavelengths are not compatible 
+
+with MIR -requirements 16 . Additionally, the sample of interest needs to be in contact with a MIR -
+
+transparent substrate to allow MIR -excitation prior to absorption of the MIR radiation in water .
+
+Ultimately , a conceptually elegant approach becomes experimentally cumbersome, requiring complex 
+
+illumination and detection arrangements, often reverting to a configuration similar to the one used in 
+
+traditional infrared imaging with the only conceptual advantage being that a thin sample cell can be 
+
+replaced by a thick one thus allowing suffi cient nutrient exchange. 
+
+Figure 1a schematically summarises the problem. The need for MIR -transparent substrate proximity, 
+
+optical MIR -access and high resolution visible readout leaves two viable configurations: a sandwich -
+
+system or dip immersion (Figure 1a, inset) . Irrespective of the specific geometry, imaging can be 
+
+conducted in a forward ‑scattering (F WS) or backward ‑scattering (B WS) direction . E ach geometry 
+
+imposes distinct constraints on sensitivity, sample compatibility, and optical design 17 . FWS is often 
+
+preferable if quantitative signal information for larger or heterogeneous samples is of interest but 
+
+requires two -sided optical access 17 –19 . Meeting this requirement is particularly challenging in 
+
+solution -based measurements due to the considerations given above . BWS detection, in contrast, is 
+
+naturally compatible with single ‑sided access, making it attractive for thick 20 , opaque, or in vivo 
+
+samples 21,22 . However, information content can be a problem as the signal amplitude of BWS is strongly 
+
+impacted by the physical size of the objects. Figure 1b summarises the problem based on Mie 
+
+scattering calculations for spherical objects with varying size . BWS scattering is well suited for 
+
+nanoscale structures . On the microscale , however, BWS signals can suffer from destructive 
+
+depth ‑dependent interference, leading to reduced sensitivity and partial loss of structural 
+
+information 17,20,23 . These competing behaviours mean that the optimal detection geometry depends 
+
+on sample size, scattering regime, and experimental constraints. For tiny nano objects , BWS offers 
+
+advantages as the signal magnitude is enhanced compared to the illumination light. However, FWS is 
+
+generally preferable if quantitative signal information for larger or heterogeneous samples is of 
+
+interest 17,22 .                   
+
+> Figure 1 , D etection geometries ,scattering regimes and their compatibility with mid -infrared excitation .a)
+> Comparison of forward ‑scattering ( FW S) and backward ‑scattering (B WS) detection highlights the differences in
+> wavefront preservation and access requirements , especially when MIR -excitation is of interest .Inset: Two
+> suitable sample geometries for liquid -phase specimen: sandwich and dip -immersion. b) Particle -size dependent
+> angular scattering pattern highlighting observation angle dependent differences in information content .
+> Simulated using MiePlot v3.0.5 with particle refractive index of 1.56 and surrounding medium refractive index of
+> 1.0. c) Proposed internal forward scattering (IFS) geometry enabled by an internal reflection off the top surface of the sample substrate. d) The phase information from the first pass is largely lost after the second traversal,
+> yielding an F WS‑like signal using single ‑sided access.
+
+MIR ‑compatible substrates, objectives, and beam paths often limit the ability to switch between F WS
+
+and B WS within the same instrument. While several studies have compared FWS and BWS signals or 
+
+have enabled simultaneous acquisition in both directions, these investigations have primarily focused 
+
+on scattering intensity, structural contrast, or complementary imaging information rather than 
+
+photothermal phase measurements. For example, recent bidirectional scattering approaches 
+
+simultaneously acquire forward - and backward -scattered fields and analy se their correlations, but do 
+
+not systematically evaluate geometry -dependent photothermal phase responses under identical 
+
+excitation and sample conditions 17,20 . Consequently, the influence of detection geometry on 
+
+photothermal phase sensitivity, to our knowledge , remains largely unexplored. 
+
+Here, we rigorously address this shortcoming , enabled by a specifically designed ultrafast 
+
+implementation of MIP: a MIR phototransient holographic microscope 24 –26 capable of operating in 
+
+both FWS and BWS geometries . Based on the insight gained, we then propose and validate an
+
+alternative imaging modality , which we term internal forward scattering ( IFS) . IFS retains the 
+
+experimentally advantageous single sided BWS illumination but provides quantitative signals 
+
+equivalent to FWS which typically requires experimentally complex transmission geometries . Figure 1c 
+
+schematically outlines IFS which uses the in situ generate strong back reflection o ff the top of the MIR -
+
+tran sparent substrate to image the sample. This wave can be regarded as a quasi -plane wave even if 
+
+the field acquires sample ‑dependent phase shifts during its first pass . T he considerable distance 
+
+between the surface where the sample is located and the t op substrate which generates the back 
+
+reflection acts as an optical low -pass filter (Figure 1d) . Combined with coherence gated holography, 
+
+discussed in detail below, t his modality offers a practical route to obtaining images that are nominally 
+
+identical to FWS -detection while preserving the mechanical simplicity and MIR ‑compatibility of 
+
+reflection ‑mode operation. 
+
+The manuscript is organised as follows, we will first introduce and summarise the experimental 
+
+implementation of the bidirectional phototransient microscope including important aspects related to 
+
+temporal coherence gating. We will then explain the hologram and data processing pipeline for all 
+
+three detection geometries. Using polystyrene (PS) beads on CaF₂ substrates, we then quantitatively 
+
+compare the phototransient responses in FWS, B WS, and IFS for samples contained in both air and 
+
+water . Finally, we conclude by measuring PS beads contained in a fully refractive ‑index ‑matched 
+
+environment as an approximation of imaging objects in true 3D environments where no sample -
+
+substrate interface is present. Pump –probe temporal dynamics are provided throughout to 
+
+experimentally highlight the strengths and limitations of each modality, thus providing a rigorous 
+
+framework for designing optimal ge ometries , especially for applications where sample geometry and 
+
+optical accessibility impose competing constraints. 
+
+RESULTS AND DISCUSSION 
+
+Figure 2a schematically summarises our bidirectional MIR phototransient holographic microscope 
+
+capable of operating in F WS and B WS geometrie s (Figure 2a). At its core, the setup can be regarded as 
+
+a conventional off -axis holographic microscope , operated with 515 nm femtosecond light (Methods), 
+
+which directly accesses the complex optical field of the image , including its phase 24 . In brief, a
+
+beamsplitter splits the visible input light into an illumination , or probe, and a reference field . The 
+
+former interacts with the sample thus generating the signal field which contains sample -information 
+
+in line with the illumination direction -dependent information transfer , as discussed in Figure 1 . T he signal field is collected by the microscope objective and imaged onto a camera where it interferes with 
+
+the reference wave , thus generating the off -axis hologram. 
+
+Thre e additional features are crucial for the specific aspects of this paper , as highlighted in Figure 2: i) 
+
+a flip mount which allows changing between FWS and BWS/IFS geometries without changing sample 
+
+or MIR excitation; ii) a MIR -pump (Methods), coupled into the system through a Ge window, including 
+
+a motorised delay line for time -resolved phototransient imaging (Figure 2b , Methods) ; and iii ) a delay 
+
+line for the reference wave which selects interference terms of interest through temporal coherence 
+
+gating (Figure 2c). Images are acquired at 1 kHz, while modulating the MIR pump at 500 Hz to generate 
+
+alternating pump -on (“hot”) and pump -off (“cold”) holograms. MIP contrast is obtained as the phase 
+
+difference, or differential signal, between hot and cold frames (Methods) , which reflects MIR -induced 
+
+refractive -index and/or thermoelastic changes in the specimen 6,26 .          
+
+> Figure 2. Bidirectional off -axis holographic microscope design , implementation and data processing .a)
+> Bidirectional MIR phototransient holographic microscope design with removable pick -off (i) to switch between
+> FWS and IFS/BWS geometries , a delay line to acquire time -resolved sample response (ii) and a delay line to adjust
+> the probe to reference time delay (iii) .b) The pump -probe delay line accesses temporal heating dynamics. c)
+> Tuning the probe -reference delay ensures selective interference with a signal modality of interest through
+> temporal coherence gating . d )Fourier -filtering based hologram processing extracts the phase and amplitude
+> information of interest .
+
+Figure 2d outlines the image processing steps, from as -recorded hologram to complex field using a
+
+5 μm diameter PS bead on CaF₂ in air as an example . In brief, the hologram is Fourier transformed and 
+
+the momentum -shifted interference term of interest is hard -aperture selected and then isolated in 
+
+image space through an inverse Fourier transformation. Phase and amplitude images are directly 
+
+obtained from the resulting complex field. The division of “hot” and “cold” complex fields yields the 
+
+differential phas e thus accessing MIR -pump induced signals as outlined in Figure 3a. 
+
+To highlight the impact of the detection geometr y on the information content of the image, it is 
+
+instructive to directly compare phase and differential phase images obtained for FWS and BWS 
+
+geometries . Figures 3 b provide s this information using the 5 μm diameter PS bead on CaF₂ system. In 
+
+FWS, we observe d a geometric appearance reminiscent of a spherical object , in line with expectations 
+
+albeit a smaller than expected phase change with aliasing towards the edges , aspects we attribute to 
+
+the strong phrase retardation caused by the object. In contrast, the BWS images show ed a sudden phase jump without clear relation to the underlying spherical geometry, features likely caused by 
+
+depth -dependent destructive interference , in line with the Mie scattering patterns discussed in Figure 
+
+1b . Using the same field of observation, we switch ed from BWS to IFS detection via coherence gating ,
+
+as discussed in Figure 2c. The approximately 30 μm temporal coherence length of our observation light 
+
+allows conveniently isolating either the EIFS or EBWS field by adjusting the relative path length difference 
+
+between signal and reference fields . We observe d strong similarities between FWS and IFS, both for 
+
+the phase and differential phase images. The minor shape differences between the two are likely due 
+
+to slight illumination k -vector differences as the IFS experiment had to be performed with  𝑘 ≠ 0 to 
+
+prevent parasitic back -reflections from saturating the camera.      
+
+> Figure 3 , Differential phase retrieval and comparison between detection geometries. a) The differential phase
+> is obtained as the phase difference, or complex division, between a “hot” complex image, recorded in the
+> presence of the pump pulse, and “cold” complex image, obtained while blocking the pump pulse. b) Direct
+> comparison of conven tional, “cold”, phase images and differential phase images for the three detection
+> geometries: FWS, BWS and IFS. All images show 5 μmPS beads on CaF 2in air .
+
+While static pictures provide interesting insight regarding the different modalities and a clear validation 
+
+of IFS, they do not provide a full temporal picture where signal modulations through acoustic modes 
+
+might play an important role . Towards this goal, we recorded differential phase images while 
+
+systematically varying the pump –probe time delays. Representative time -resolved images are shown 
+
+in Figure 4a for PS in air on CaF 2 (Methods). Irrespective of the illumination geometry, we observe d
+
+oscillatory phase dynamics following MIR excitation, with comparable oscillation frequencies and 
+
+gradually decreasing amplitudes , in line with our recent work on overtone -excitation based imaging 26 .
+
+Figure 4 b highlights these coherent dynamics by averaging the differential phase signal over the bead 
+
+area. Leaving image -quality considerations (Figure 3) aside , the consistent appearance across all three 
+
+modalities confirms the integrity of the measured signals .
+
+Figure 4a,b indicate that the temporal dynamics probed via all three imaging geometries is comparable 
+
+yet signal magnitudes differ. The mean photothermal phase change is largest in B WS, consistent with 
+
+the expected enhancement arising from the fact that the probe effectively passes the bead twice in a 
+
+temporal window that is shorter than the coherence gating capability of our system. The illumination 
+
+first passes through the bead and is then partially reflected on the first interface of the CaF 2 substrate ,in close vicinity of the PS bead . This reflection then samples the bead in a FWS geometry giving rise to 
+
+a complex mixture of superimposed FWS and BWS with different driving amplitudes that will not be 
+
+discussed in further detail. In contrast, F WS and IFS yield straight -forward to rationalise signals whose 
+
+temporal phase profiles and images match closely, as expected given that IFS is essentially FWS with 
+
+an internally generated illumination wave .                  
+
+> Figure 4. Photothermal phase dynamics of a 5 μm polystyrene bead in air and water across detection
+> geometries .a) Representative ,time delay dependent, differential phase images for a PS bead in air acquired in
+> FWS, BWS and IFS , showing consistent oscillatory responses. Scalebar: 20 μm.The numbers indicate the time
+> delay in nanoseconds. b) Mean differential phase signals for all three modalities as averaged over the area of
+> the PS bead. c) Representative, time delay dependent, differential phase images for a PS bead in H 2O acquired in
+> FWS, BWS and IFS, showing consistent oscillatory responses. Scalebar: 20 μm. T he numbers indicate the time
+> delay in nanoseconds. d) Mean differential phase signals for all three modalities as averaged over the area of the
+> PS bead (solid lines, circles) and a background (BG) region in close vicinity to the bead reporting on the H2Osignal
+> (dashed lines).
+
+Figure 4c s ummarises the changes observed when moving from a bead contained in air to a water 
+
+environment . Notably, we now observe d differential phase signals which we associate d with 
+
+contributions from both the bead as well as the surrounding, and strongly MIR absorbing, water. 
+
+Qualitatively, we observe d a rapidly rising differential signal at the location of the PS sphere as well as 
+
+a slowly rising, featureless, background signal , consistent with thermoelastic expansion propagating 
+
+through the medium at velocities comparable to the speed of sound in water. To gain further insight 
+
+into bead and background contribution s, we compared the temporal dynamics measured at the centre 
+
+of the bead with a location in close proximity thus providing reference -like dynamics without 
+
+attempting a potentially artefact -pron e decomposition into PS bead and water -background signals 
+
+(Figure 4d) . In line with our previous observations, we note d a consistent behaviour across modalities 
+
+where FWS and IFS produced near -identical phase responses and dynamics , while B WS yield ed the 
+
+largest overall signal. These observations support the central conclusion that IFS emulates F WS even 
+
+under strong background absorption. 
+
+As mentioned above, BWS observation of a structure near an interface yields a complex mixture of 
+
+scattering and reflection contributions. An immediate question is what would happen if the structure would not be located near said interface but in an isotropic medium. To approximate such a
+
+three -dimensional environment , we performed experiments in a glycerol –water mixture with a 
+
+refractive index matched to that of the CaF₂ substrate thus optically eliminating the substrate and 
+
+hence the reflection (Figure 5a). Figure 5b compare s differential phase changes acquired via IFS and 
+
+BWS, as accessed by temporal coherence gating by simply adjusting the probe -reference time delay 
+
+while retaining the overall experimental configuration (Figure 2c) . In IFS , phase changes due to both 
+
+the PS bead and the surrounding solution are apparent , with the background signal being dramatically 
+
+increase d compared to the PS bead in water -only experiments (Figure 4c, 5b ). In stark contrast, B WS
+
+shows no background signal but a very strong, clover -leaf shaped particle signal which can be 
+
+qualitatively rationalised by considering Mie scattering (Figure 1 b) . To rationalise the origin of this 
+
+signal, we compare d the temporal dynamics obtained for IFS and BWS (Figure 5 c). Both IFS and BWS 
+
+show comparable dynamics with similar signal magnitudes which are, however, strongly dependent 
+
+on the precise signal location given the spatially highly non -uniform BWS signal at the PS bead locations 
+
+(Figure 5b) . Irrespective, on long time -scales the dynamics at the particle locations qualitatively 
+
+matches those of IFS -background signals obtained at locations in close proximity. On short time -scales 
+
+deviations between particle and background signals are apparent. The beads exhibit two temporal 
+
+components which we attribute to a rapidly rising bead signal plus the slowly increasing solvent 
+
+background. BWS shows essentially no background signal (Figure 5b) , which is unsurprising given that 
+
+the refractive index matched nature of the experiment makes it highly non trivial to obtain any 
+
+information in these particle -free areas.               
+
+> Figure 5. Impact of illumination geometry in quasi -3D environments. a) Transitioning from water to a glycerol -
+> water mixture refractive index matches the CaF₂ substrate thus suppressing substrate reflections. b) Differential
+> phase imaging at different pump -probe delays, Δt, of two 5 μm PS beads at an index -matched CaF 2/glycerol -
+> water interface, comparing BWS (top) and IFS (bottom). The squares and the line indicate regions of signal
+> averaging for the temporal dynamics (squares) and the spatial evolution (line). c) Comparison of the temporal evolution of the differential phase signals for BWS and IFS at the previously indicated locations. d) Comparison
+> of the spatial profiles obtained at selected time -delays, as indicated in b). BWS and IFS signals are offset for
+> clarity, as indicated. IFS and BWS signals are scaled by a factor of two with respect to each other, as indicated by
+> the scale bar.
+
+To gain further insight, we compare d the temporal evolution along a line profile (Figure 5 d) passing 
+
+through the centre of both PS beads as indicated in Figure 5 b. For IFS we observe a rapidly rising bead 
+
+signal as well as the slow emergence of a broad solvent background. In contrast, BWS shows the 
+
+emergence of the strongly spatially modulated bead signal with a rise comparable to the solvent 
+
+background and roughly twice its differential phase change. In empty regions, no signal emerges in 
+
+line with the exp lanation given above. The origin of these strikingly different spatial observations 
+
+(Figure 5b,d) is the combination of bead and solvent signals. In IFS, the transmitted probe directly 
+
+measures the pump -induced differential phase thus picking up the spatially localised bead signals 
+
+alongside the broad background in a quantita tive manner. In contrast, BWS report s on a combination 
+
+of solvent background and bead signals through back -scattered probe photons. As the probe field 
+
+samples the volume twice, travelin g to the bead and then back, the resulting BWS signals are roughly 
+
+twice the IFS signals’ magnitude. 
+
+Given the combined observations (Figure 3 -5) we believe that FWS or IFS are the most suitable 
+
+observation geometries with IFS being the experimentally easier -to -implement variant. Our rational is 
+
+simple, BWS might, under certain geometries, yield larger si gnal magnitudes but this minor boost in 
+
+signal comes at a huge cost. Firstly, the strong dependence of scattering signals on the sample shape 
+
+(Figure 1b) is a huge problem that dramatically complicates quantitative measurements. Secondly, in 
+
+solvent -enviro nments it is generally necessary to interrogate the sample of interest near a MIR -
+
+transparent substrate . Even though the interface provides a back -reflection that somewhat mitigates 
+
+the Mie -scattering problem outlined above, the resulting signals are generally a complex combination 
+
+of various scattering and reflection contributions (Figures 3,4). Thirdly , eliminating the interface 
+
+removes complexity by eliminating all but the sample -intrinsic backscattering signal but this aspect 
+
+results in highly complex s patial signals even for intrinsically simple objects such as uniform spheres 
+
+(Figure 5). To make matters worse, the back -scattered signals report on background signals as well as 
+
+those from the object of interest. While generally the case (Figures 3 -5), a quantitative spatial 
+
+measurement of signal and background signals opens straight -forward avenues towards separating 
+
+the two by, for example, high -pass filtering or similar. BWS provides no information on the underlying 
+
+background signal as it only measures at positions where particles are present thus rendering 
+
+background -estimation a highly complex problem. Lastly, the backscattering efficiency is generally 
+
+poor which results in poor signal to noise ratios albeit the nominal increase in absolute differential 
+
+phase signals. 
+
+SUMMARY & CONCLU SION 
+
+To summarise, we introduced and systematically evaluated a bidirectional femtosecond MIR pump -
+
+probe off -axis holographic microscope capable of operating in FWS and BWS and then used this 
+
+microscope to implement and validate a favourable illumination scheme that we term IFS. IFS is 
+
+essentially a FWS observation but measured while illuminating the sample in a BWS -manner . IFS is 
+
+enabled by the back -reflection of a substrate interface that is further away from the sample than the 
+
+temporal coherence length of the illumination source. Time -gating the hologram acquisition through 
+
+temporal coherence gating then allow s isolating the IFS information . By rapid ly switching between IFS ,
+
+BWS and FWS geometries while preserving pump –probe alignment, we directly and quantitative ly 
+
+compared the photothermal phase sensitivity and image quality across all three geometries. 
+
+Our results demonstrate that conventional B WS measurements suffer from reduced structural fidelity 
+
+and interpretability in the Mie scattering regime due to depth -dependent destructive interference, limiting their usefulness for quantitative phase imaging despite their higher intrinsic signal amplitude. 
+
+In contrast, F WS preserve s quantitative phase information but requires two -sided optical access, 
+
+complicating high -NA implementations for MIR photothermal imaging. The IFS addresses this 
+
+limitation by combining F WS-like phase sensitivity and identical signals with one -sided access, 
+
+achieved through coherent temporal gating that selectively isolates a forward -scattered component 
+
+within the nominal BWS ge ometry. 
+
+Across multiple experimental conditions , PS beads in air, water, and refractive -index -matched 
+
+environments , IFS consistently reproduced the amplitude and temporal dynamics of F WS signals while 
+
+retaining the mechanical simplicity and accessibility of B WS configurations. Measurements in 
+
+index -matched media further confirmed the existence of two distinct B WS contributions and validated 
+
+the temporal gating strategy under lying IFS . Together, these findings establish IFS as a robust and 
+
+versatile alternative imaging modality for quantitative MIR photothermal microscopy and holographic 
+
+microscopies in general . Importantly, BWS remains the method of choice for nanoscopy applications 
+
+in the Rayleigh regime where near isotropic signals, combined with the crucially important illumination 
+
+light attenuation through reflection, offer clear advantages. In terms of appli cability, IFS can readily be 
+
+implemented using off -the -shelf diode lasers which exhibit temporal coherence lengths around 100 -
+
+200 μm thus enabling the coherence gating strategies proposed here 24 .
+
+The demonstrated equivalence between F WS and IFS opens new opportunities for high -resolution, 
+
+one -sided MIR photothermal imaging in experimentally constrained settings. Biological samples are a 
+
+prime candidate where the need for high resolution combined with aqueous environments as well as 
+
+temperature control dramatically complicate photothermal as well as conventional IR -imaging. We will 
+
+extend the IFS approach to wards biologically relevant specimens , including live cells and tissues, to 
+
+assess its robustn ess under complex refractive -index landscapes. Integrating high -NA objectives and 
+
+faster delay or modulation schemes could further improve spatial and temporal resolution. More 
+
+broadly, the IFS concept may be adaptable to other pump –probe or quantitative phase imaging 
+
+modalities where access geometry play s a critical role. 
+
+METHODS 
+
+Light Generation 
+
+Spectrally tuneable MIR pump pulses were produced using a home ‑built multi ‑stage noncollinear 
+
+optical parametric amplifier (NOPA) pumped by the second harmonic (515 nm) of an amplified Yb:KGW 
+
+laser (Pharos PH2 ‑20W ‑SP, Light Conversion; 1 kHz, 2 mJ, 800 fs ). A white ‑light continuum was 
+
+generated by focusing <1 μJ of the 1030 nm fundamental into a 10 mm YAG crystal and subsequently 
+
+amplified in a double ‑pass noncollinear optical parametric amplifier (noncollinear -OPA ) tuned for 
+
+broadband phase matching, yielding 2 –3 μJ of tuneable light (650 –980 nm, ~150 cm⁻¹ bandwidth). A n
+
+OPA booster stage comprising three BBO crystals 27 , pumped with 500 μJ of 515 nm light, further 
+
+amplified this seed to produce MIR pulses tuneable from 1150 –1850 nm. MIR pulses of 1593 cm -1 (~ 
+
+8 μJ) where generated via difference fre quency generation in a type II AGS crystal by combining the 
+
+chirped, ~ 3 ps , OPA output ( ~ 40 μJ) with residual, equally chirped, 1030 nm light of the fundamental 
+
+(~ 1 mJ) . MIR light was spatially separated from the two driving beams by operating the difference 
+
+frequency generation in a slightly non -collinear geometry . A small fraction of the 1030 nm 
+
+fundamental was frequency ‑doubled to generate the 515 nm probe pulse. The MIR spectra were 
+
+characterized using a h ome -built Michelson interf er ometer together with a MIR -photo diode .
+
+Microscope Setup The 515 nm probe beam was split into sample and reference arms using a 50/50 beamsplitter. A mirror 
+
+mounted on a linear translation slider enabled rapid switching between F WS and B WS/IFS detection 
+
+geometries without disturbing MIR pump alignment. For FWS, the MIR pump and the 515 nm probe 
+
+were collinearly combined by reflecting the 515 nm probe off a Ge window which transmitted the MIR 
+
+pump. The MIR pump (<4 μJ, 1593 cm -1) was modulated at 500 Hz using a mechanical chopper and 
+
+focused onto the sample with a 40 mm Ge lens. Probe images were acquired at 1 kHz, producing 
+
+alternating pump ‑on/pump ‑off holograms for differential phase retrieval. 
+
+Scattered probe light was collected using a 20×/0.45 NA objective . A 200 mm tube lens formed an 
+
+image on a CMOS camera (Basler acA1920 ‑155um) at an effective magnification of 22 ×, corresponding 
+
+to a n approximately 41.1 μm × 41.1 μm field of view. Probe –reference delay matching was performed 
+
+using a manual translation stage, while pump –probe delay scans were controlled using two motorized 
+
+stages: a fine ‑stepping stage (M230.25, Physik Instrumente) and a long ‑travel stage (FPB45, 2000 mm, 
+
+FUYU Automation) ope rated in a double ‑pass configuration and driven by an in ‑house Nexys A7 ‑100T –
+
+based controller. Active beam stabilization ensured drift ‑free acquisition for mechanical delays 
+
+exceeding 7 m. 
+
+Data Processing 
+
+Images were acquired at 1000 frames per second , with equal numbers of pump -on and pump -off 
+
+frames. Each hologram was Fourier ‑transformed, and a single off ‑axis interference term was isolated 
+
+in k ‑space, shifted to the origin, and inverse ‑transformed to recover the complex field (see Figure 2d ).
+
+Hot and cold complex images were separated, and the differential phase was extracted from the ratio 
+
+of the two complex fields and subsequently averaged. 
+
+Sample Preparation 
+
+Polystyrene beads were diluted in absolute ethanol, deposited onto CaF₂ windows, and allowed to dry. 
+
+#1.5H cover glasses were cleaned by 20 min sonication in acetone followed by 20 min in Milli ‑Q water. 
+
+The cover glass was fixed to a 1 mm CaF ₂ window using 200 μm double ‑sided tape, forming a shallow 
+
+chamber for introducing aqueous or glycerol/water solutions. 
+
+Refractive ‑Index ‑Matching Solution 
+
+Refractive ‑index ‑matched media were prepared by using the Lorentz –Lorenz mixing rule to calculate 
+
+the fractional volumes of water and glycerol required to obtain a target effective refractive index 
+
+matching that of the CaF₂ substrate. Based on this calculation, a mixture of 0.31 mL water and 0.69 mL 
+
+glycerol was prepared to achieve an effective refractive index of 𝑛 eff = 1.433. 
+
+REFERENCES                   
+
+> (1) Xia, Q.; Yin, J.; Guo, Z.; Cheng, J. -X. Mid -Infrared Photothermal Microscopy: Principle, Instrumentation, and
+> Applications. J. Phys. Chem. B 2022 ,126 (43), 8597 –8613. https://doi.org/10.1021/acs.jpcb.2c05827.
+> (2) Bai, Y.; Yin, J.; Cheng, J. -X. Bond -Selective Imaging by Optically Sensing the Mid -Infrared Photothermal
+> Effect. Sci. Adv. 2021 ,7(20), eabg1559. https://doi.org/10.1126/sciadv.abg1559.
+> (3) Furstenberg, R.; Kendziora, C.; Papantonakis, M.; Nguyen, V.; Mcgill, R. Chemical Imaging Using Infrared
+> Photo -Thermal Microspectroscopy. Proc. SPIE -Int. Soc. Opt. Eng. 2012 ,8374 , 33.
+> https://doi.org/10.1117/12.919574.
+> (4) Zhang, D.; Li, C.; Zhang, C.; Slipchenko, M. N.; Eakins, G.; Cheng, J. -X. Depth -resolved mid -infrared
+> photothermal imaging of living cells and organisms with submicrometer spatial resolution .
+> https://doi.org/10.1126/sciadv.1600521.
+
+(5) Lee, E. S.; Lee, J. Y. Nonlinear Optical Infrared Microscopy with Chemical Specificity. Appl. Phys. Lett. 2009 ,
+
+94 (26), 261101. https://doi.org/10.1063/1.3167286. 
+
+(6) Bolarinho, R.; Yin, J.; Ni, H.; Xia, Q.; Cheng, J. -X. Background -Free Mid -Infrared Photothermal Microscopy 
+
+via Single -Shot Measurement of Thermal Decay. Anal. Chem. 2025 , 97 (8), 4299 –4307. 
+
+https://doi.org/10.1021/acs.analchem.4c03689. 
+
+(7) Teng, X.; Li, M.; He, H.; Jia, D.; Yin, J.; Bolarinho, R.; Cheng, J. -X. Mid -Infrared Photothermal Imaging: 
+
+Instrument and Life Science Applications. Anal. Chem. 2024 , 96 (20), 7895 –7906. 
+
+https://doi.org/10.1021/acs.analchem.4c02017. 
+
+(8) Lee, E. S.; Lee, J. Y. Nonlinear Optical Infrared Microscopy with Chemical Specificity. Appl. Phys. Lett. 2009 ,
+
+94 (26), 261101. https://doi.org/10.1063/1.3167286. 
+
+(9) Palounek, D.; Vala, M.; Bujak, Ł.; Kopal, I.; Jiříková, K.; Shaidiuk, Y.; Piliarik, M. Surpassing the Diffraction 
+
+Limit in Label -Free Optical Microscopy. ACS Photonics 2024 , 11 (10), 3907 –3921. 
+
+https://doi.org/10.1021/acsphotonics.4c00745. 
+
+(10) Lim, J. M.; Park, C.; Park, J. -S.; Kim, C.; Chon, B.; Cho, M. Cytoplasmic Protein Imaging with Mid -Infrared 
+
+Photothermal Microscopy: Cellular Dynamics of Live Neurons and Oligodendrocytes. J. Phys. Chem. Lett. 
+
+2019 , 10 (11), 2857 –2861. https://doi.org/10.1021/acs.jpclett.9b00616. 
+
+(11) Xia, Q.; Guo, Z.; Zong, H.; Seitz, S.; Yurdakul, C.; Ünlü, M. S.; Wang, L.; Connor, J. H.; Cheng, J. -X. Single Virus 
+
+Fingerprinting by Widefield Interferometric Defocus -Enhanced Mid -Infrared Photothermal Microscopy. 
+
+Nat. Commun. 2023 , 14 (1), 6655. https://doi.org/10.1038/s41467 -023 -42439 -4. 
+
+(12) Tamamitsu, M.; Toda, K.; Badarla, V. R.; Shimada, H.; Konishi, K.; Ideguchi, T. Mid -Infrared Wide -Field 
+
+Nanoscopy. Nat. Photonics 2024 , 18 (7), 738 –743. https://doi.org/10.1038/s41566 -024 -01423 -0. 
+
+(13) Ideguchi, T. Mid -Infrared Photothermal Microscopy. JSAP Rev. 2025 , 2025 , 250209. 
+
+https://doi.org/https://doi.org/10.11470/jsaprev.250209. 
+
+(14) Chang, Y. -R.; Kim, S. -M.; Lee, Y. J. Benchtop IR Imaging of Live Cells: Monitoring the Total Mass of 
+
+Biomolecules in Single Cells. Anal. Chem. 2024 , 96 (37), 14783 –14790. 
+
+https://doi.org/10.1021/acs.analchem.4c02108. 
+
+(15) Bhargava, R. Infrared Spectroscopic Imaging: The Next Generation. Appl. Spectrosc. 2012 , 66 (10), 1091 –
+
+1120. https://doi.org/10.1366/12 -06801. 
+
+(16) Hanninen, A. M.; Prince, R. C.; Ramos, R.; Plikus, M. V.; Potma, E. O. High -Resolution Infrared Imaging of 
+
+Biological Samples with Third -Order Sum -Frequency Generation Microscopy. Biomed. Opt. Express 2018 , 9
+
+(10), 4807 –4817. https://doi.org/10.1364/BOE.9.004807. 
+
+(17) Horie, K.; Toda, K.; Nakamura, T.; Ideguchi, T. Bidirectional Quantitative Scattering Microscopy. Nat. 
+
+Commun. 2025 , 16 (1), 9712. https://doi.org/10.1038/s41467 -025 -65570 -w. 
+
+(18) Ishigane, G.; Toda, K.; Tamamitsu, M.; Shimada, H.; Badarla, V. R.; Ideguchi, T. Label -Free Mid -Infrared 
+
+Photothermal Live -Cell Imaging beyond Video Rate. Light Sci. Appl. 2023 , 12 (1), 174. 
+
+https://doi.org/10.1038/s41377 -023 -01214 -2. 
+
+(19) Bertie, J. E.; Lan, Z. Infrared Intensities of Liquids XX: The Intensity of the OH Stretching Band of Liquid 
+
+Water Revisited, and the Best Current Values of the Optical Constants of H20(I) at 25 °C between 15,000 
+
+and 1 Cm -1. Appl. Spectrosc. 1996 , 50 , 1047 –1057. 
+
+(20) Matlock, A.; Sentenac, A.; Chaumet, P. C.; Yi, J.; Tian, L. Inverse Scattering for Reflection Intensity Phase 
+
+Microscopy. Biomed. Opt. Express 2020 , 11 (2), 911 –926. https://doi.org/10.1364/BOE.380845. 
+
+(21) Park, J. -S.; Lee, I. -B.; Moon, H. -M.; Hong, S. -C.; Cho, M. Long -Term Cargo Tracking Reveals Intricate 
+
+Trafficking through Active Cytoskeletal Networks in the Crowded Cellular Environment. Nat. Commun. 
+
+2023 , 14 (1), 7160. https://doi.org/10.1038/s41467 -023 -42347 -7. 
+
+(22) Hu, C.; Popescu, G. Physical Significance of Backscattering Phase Measurements. Opt. Lett. 2017 , 42 (22), 
+
+4643. https://doi.org/10.1364/OL.42.004643. 
+
+(23) Liu, Y.; Uttam, S. Perspective on Quantitative Phase Imaging to Improve Precision Cancer Medicine. J. 
+
+Biomed. Opt. 2024 , 29 (S2), S22705. https://doi.org/10.1117/1.JBO.29.S2.S22705. 
+
+(24) Ortega Arroyo, J.; Liebel, M. The Next Dimension: Digital Holography for 3D Interferometric Scattering. ACS 
+
+Nano 2025 , 19 (44), 38630 –38640. https://doi.org/10.1021/acsnano.5c13224. 
+
+(25) Liebel, M.; Camargo, F. V. A.; Cerullo, G.; Van Hulst, N. F. Ultrafast Transient Holographic Microscopy. Nano 
+
+Lett. 2021 , 21 (4), 1666 –1671. https://doi.org/10.1021/acs.nanolett.0c04416. 
+
+(26) Lockand, D. van de; Wolters, D.; Liebel, M. Time -Resolved Infrared Photothermal Imaging: From Transient 
+
+Observations towards the Steady -State. arXiv August 1, 2025. https://doi.org/10.48550/arXiv.2508.01025. 
+
+(27) Jansonas, G.; Budriūnas, R.; Valiulis, G.; Varanavičius, A. Polarization -Based Idler Elimination: Enhancing 
+
+the Efficiency of Optical Parametric Amplification. Opt. Express 2023 , 31 (12), 19794. 
+
+https://doi.org/10.1364/OE.488760.

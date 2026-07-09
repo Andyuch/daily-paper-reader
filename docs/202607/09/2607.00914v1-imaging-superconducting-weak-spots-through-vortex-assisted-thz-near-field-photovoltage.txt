@@ -1,0 +1,795 @@
+Title: 2607.00914v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.00914v1
+
+Published Time: Thu, 02 Jul 2026 01:03:32 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+1
+
+# Imaging superconducting weak spots through vortex -assisted THz near -field 
+
+# photovoltage 
+
+S.J. Salv ía-Fern ández 1, E. Khestanova 1, Z. Velluire -Pellat 1, L.R. Cadorim 2,3, S. Battle -Porro 1, D.A. Czaplewski 4, J. 
+
+Osmond 1, S. Castilla 1, A. Bachtold 1, M. V. Milošević 2,3, A. Kapitulnik 5,6,7,8, F.H.L. Koppens 1,9                
+
+> 1. ICFO –Institut de Ciències Fo tòniques , The Barcelona Institute of Science and Technology, Castelldefels (Barcelona) , Spain.
+> 2. COMMIT, Department of Physics, University of Antwerp, Groenenborgerlaan 171, B -2020, Antwerp, Belgium .
+> 3. Stavropoulos Center for Complex Quantum Matter, Department of Physics and Astronomy, University of Notre Dame, Notre Dame, IN , USA .
+> 4. Center for Nanoscale Materials, Argonne National Laboratory, Lemont, IL 60439, USA .
+> 5. Geballe Laboratory for Advanced Materials, Stanford University, Stanford, CA, USA .
+> 6. Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, CA, US A.
+> 7. Department of Applied Physics, Stanford University, Stanford, CA, USA.
+> 8. Department of Physics, Stanford University, Stanford, CA, USA .
+> 9. ICREA –Institució Catalana de Recerca i Estudis Avançats, Barcelona, Spain.
+
+# Abstract 
+
+Nanoscale inhomogeneities are a defining feature of many superconducting materials, yet their local 
+
+electromagnetic response has remained difficult to access experimentally. This is because their relevant energy 
+
+scale lies in the terahertz range, where wav elengths — on the order of hundreds of microns — are too large to 
+
+spatially resolve nanoscopic variations. Here, we demonstrate the first application of THz near -field 
+
+photovoltage nanoscopy in a superconductor, achieving 300 nm spatial resolution at 2.52 THz. Scanning a 
+
+current -biased NbN strip, we reveal photovoltage peaks within the bulk associated with nanoscopic defects of 
+
+reduced superfluid density. The observed photovoltage follows the evolution of the vortex -dissipative state and 
+
+is attributed to en hanced vortex –antivortex pair nucleation at defect sites. Together, these results open a direct 
+
+route to probing how material inhomogeneities influence light –matter interactions in superconductors, with 
+
+implications for superconducting devices and strongly inhomogeneous systems such as high -Tc and moiré 
+
+materials. 2
+
+# Introduction 
+
+Nanoscale disorder often determines where a superconductor first becomes dissipative. In thin film 
+
+superconductors, compositional variations, grain boundaries and stoichiometric def ects lead to local regions 
+
+where the order parameter is suppressed and where vortices are more readily nucleated under current bias. 
+
+Such weak superconducting spots directly affect device operation, from the position -dependent detection 
+
+efficiency of super conducting nanowire single -photon detectors 1,2  to defect -limited coherence in transmon 
+
+qubits 3. In strongly inhomogeneous quantum materials, spatial variations of superconductivity are not only 
+
+extrinsic imperfections but part of the electronic ground state itself, as in electronic phase separation in high -Tc 
+
+superconductors 4 and correlated moiré  systems 5. Therefore, the central challenge is to probe superconducting 
+
+inhomogeneity in the regime where it matters most, that is, at superconductivity -relevant energy scales, on sub -
+
+micron length scales, and under the current -biased conditions in whi ch weak spots generate dissipation. 
+
+The relevant energy scale of the problem is in the range of millielectronvolt s (meV) , that is sub -terahertz and 
+
+terahertz electromagnetic frequencies. Superconducting gaps commonly lie in the microwave -THz range 6,7 and 
+
+THz spectroscopy has become a key probe of superconducting electrodynamics, including collective modes 8–11 ,
+
+gap symmetry 6,7,12 and non -equilibrium superconducting states 13 . However, THz wavelengths are macroscopic 
+
+compared with the disorder landscape: at 3 THz, the diffraction -limited spatial resolution is ∼100 μm, whereas 
+
+defects, grains, weak links and phase -separated regions can be 10 -1000 nm in size. This energy -lengthscale 
+
+mismatch has prevented direct access to the local THz response of individual superconducting weak spots. 
+
+Resolving this problem requires a probe that combines THz -frequency exc itation with nanoscale spatial 
+
+confinement and an electrical readout sensitive to the onset of dissipation. 
+
+Here we address this mismatch using THz near -field photovoltage nanoscopy 14 in a current -biased 
+
+superconductor. The used metallic AFM tip confines 2.52 THz radiation to a nanoscale hotspot, achieving 300 
+
+nm spatial resolution, almost 400 time s below the far -field diffraction limit. In NbN, this THz photon energy 
+
+exceeds the superconducting gap, so the near field acts as a local pair -breaking perturbation. The applied DC 
+
+current then converts the local suppression of superconductivity into a me asurable photovoltage through 
+
+vortex -assisted dissipation. Scanning across an NbN strip, we observe reproducible bulk photovoltage peaks 
+
+fixed in sample coordinates. We interpret these peaks as vortex -nucleation weak spots, in particular, defect -
+
+associated regions of reduced condensate robustness where the THz hotspot preferentially enhances vortex -
+
+antivortex pair creation. Their non -monotonic bias -current dependence tracks the vortex -dissipative state, and 
+
+time -dependent Ginzburg -Landau simulations support a mechanism in which local order -parameter suppression 
+
+enhances vortex entry at the edges and vortex -antivortex nucleation at the defects. These results establish THz 
+
+near -field photovoltage nanoscopy as a functional probe of superconducting weak spots un der current bias, 
+
+directly linking nanoscale inhomogeneity to light -driven vortex dissipation in superconducting films and devices. 3
+
+# Result s                                                                  
+
+> Fig .1.Electron transport and n ear -field photovoltage profiling under THz illumination. a Microscope image of the device
+> (scale bar 150 μm ). Orange regions correspond to the NbN film , purple corresponds to the Si /SiO 2substrate. bDevice
+> resistivity ,𝜌 ,as a function of temperature measured in the dark and under continuous -wave 2.52 THz illumination with the
+> laser power of 1.7 mW at the cryostat window. The inset shows the temperature derivative d𝜌 /dT , with dashed lines
+> marking the superconducting transition temperature ( 𝑇 c)defined a tthe maxi mum of the derivative .cSchematic diagram
+> of the THz near -field photovoltage experiment. dTHz near -field p hotovoltage (purple line ) and AFM topography (black line )
+> profiles obtained at 𝑇 =13 .86 Kby averaging in the DC current range 𝐼 b=[380, 420] μA.
+
+Sample characterization 
+
+Fig . 1a shows an optical micrograph of the device under study. A NbN film with thickness 𝑑 = 320 nm was 
+
+sputter -deposited on a Si/SiO 2 substrat e. The scanning electron microscopy (SEM) images (Supplementary Note 
+
+1) reveal a granular morphology , with triangular grains of typical size ∼ 15 - 35 nm , characteristic of (111) -
+
+orientat ed NbN films 15 , as confirmed by X -ray diffraction (Fig. S2). The final stru cture consists of a strip with 
+
+width 𝑤 = 20 μm t erminated by two contact pads for current sourcing and two voltage probes, separated by a
+
+length 𝐿 = 1 mm. In t he normal state , the sample resistivity 𝜌 n(17 K) = 1006  μΩ·cm  (Fig . 1b) is close to the 
+
+values found in granular NbN films 15 . The film exhibits a sharp superconducting transition at 𝑇 c 
+
+> Dark
+
+= 14.53 K 
+
+(defined as the 𝑑𝜌 /𝑑𝑇 maximum) , with width Δ𝑇 Dark = 0.3 ± 0.03 K (defined between 90% and 10% of 
+
+𝜌 𝑛 (17 K)).
+
+A 2.52 THz laser beam was collimated to deliver 1.7 mW of power at the cryostat window and focused onto the 
+
+sample using a parabolic mirror. Under far -field THz exposure, the critical temperature is lowered to 𝑇 c 
+
+> 2.52 THz
+
+=
+
+14.35 K, as shown in  Fig . 1b. Since the photon energy (ℏ𝜔 = 10.4 meV ) exceeds the NbN superconducting gap 
+
+(2Δ ≈ 5.8 meV )16 , photon absorption induces Cooper pair breaking and quasiparticle excitation, increasing the 
+
+electronic temp erature . This bolometric response is observed as a reduction of the critical temperature of Δ𝑇 c ≈
+
+0.18 K , that leaves the width of the superconducting transition (Δ𝑇 2.52 THz = 0.27 ± 0.03 K ) unchanged .
+
+THz Near -field photovoltage nanoscopy 
+
+To probe the local THz response of the device shown in  Fig . 1a with nanometric resolution we employ THz near -
+
+field photovoltage nanoscopy (Fig . 1c). A gold -coated AFM tip operated in tapping mode under THz illumination 
+
+acts as a nanoantenna 17 –19 , confining the incident 2.52 THz radiation to a volume set by the tip radius (∼ 250 
+
+nm) . This yields a spatial resolution of ∼100 - 300 nm, an improvement of ∼ 300 – 10 00 times over the far -field 
+
+diffraction limit ( ∼ 100  μm  at this frequency).  The measured quantity (the near -field photovoltage,  𝑉 PV ) is the 
+
+change in the global voltage across the strip, detected at the tapping frequency  Ω20 –22 , that results from the local 
+
+near -field perturbation while a DC bias current , 𝐼 b, is applied. 4
+
+Fig . 1d shows a 𝑉 PV profile measured at 𝑇 = 13 .86 K under DC current bias. The profile was obtained by 
+
+averaging near -field line scans over the current range  𝐼 b = [380, 420] μA . The DC current was applied along the 
+
+y-axis while the tip was scanned perpendicular to the current flow , across the width of the stri p. The 
+
+simultaneously acquired AFM topography image exhibits a flat central region and a step of 320 nm , consistent 
+
+with the device cross section . In contrast , the 𝑉 PV trace shows a pronounced spatial dependence , featuring an 
+
+enhanced response near the edges and a localized peak in the central region , at  𝑥 = 12 .52 μm. 
+
+Fig . 2. Local peak in the near -field photovoltage at 𝑻 = 𝟏𝟑 . 𝟖𝟔 𝐊 . a Current -space near -field photovoltage map measured 
+
+at 𝑇 = 13 .86 K. b Zoomed -in view of the 𝑉 PV profile obtained by averaging the line scans from the map in (a) over the 
+
+current range 𝐼 b = [380, 420] μA, with a Gaussian fit to the photovoltage peak (solid purple line) found at 𝑥 = 12 .52 μm.
+
+Orange vertical dashed lines indicate the FWHM of the peak. c Current dependence of the FWHM of the peak extracted 
+
+from the map in (a). d Current dependence of amplitude of the central peak extracted from the analysis of the map in panel 
+
+(a). 
+
+We first focus on the local 𝑉 PV peak within the bulk.  To study it further , we record ed  𝑉 PV  profiles at different DC 
+
+currents , 𝐼 b. The traces are combined to form a current -space near -field photovoltage map , 𝑉 PV (𝑥 , 𝐼 b) (Fig . 2a). 
+
+The obtained  𝑉 PV  map shows that the local photovoltage response is present for a broad range of bias currents ,
+
+appearing at a fixed position (𝑥 = 12 .52 μm) . As shown in the zoomed -in view of the 𝑉 PV trace (Fig . 2b) this 
+
+feature rises above the noise level and can be fitted using a Gaussian profile from which we extract the FWHM 
+
+and the amplitude of the local signal as a function of 𝐼 b. The found FWHM is approximately constant with 
+
+current, with an average FWHM ⟨Δx⟩ = 300 ± 30 nm (Fig . 2c).  The amplitude of the peak follows a pronounced 
+
+non -monotonic trend (Fig . 2d), reaching a maximum at 𝐼 b = 410 μA. 
+
+Fig . 3. Multiple local near -field photovoltage peaks at 𝑻 = 𝟏𝟑 . 𝟗𝟕 𝐊 . a Current -space near -field photovoltage map 
+
+measured at 𝑇 = 13 .97 K (full map shown in Fig. S6). b Horizontal 𝑉 PV profiles (trace and retrace) obtained by averaging 
+
+the line scans from the map in panel (a) over the current range 𝐼 b = [290, 350] μA. The tra ce and retrace profiles were 
+
+shifted by 1 μm to account for hysteresis in the piezoelectric scanners. c Zoomed -in view of the trace and retrace 𝑉 PV 
+
+profiles shown in (b). The green line plots the Gaussian fit to the peak in the trace profile. d Normalize d autocorrelation 5  
+
+> functions computed for two different regions taken from the PV trace signal shown in (b). eCurrent dependence of the
+> amplitude of the local peak fitted in (c).
+
+The presence of local peaks of  𝑉 PV  in the bulk of the strip is confirmed by measuring a current -space map at a 
+
+different sample location and temperature, shown in  Fig . 3a. The  𝑉 PV  map reveals again several region s of 
+
+increased photovoltage, appearing as vertical lines in the current -space maps.  These features are reproducible 
+
+between trace (increasing 𝑥 ) and retrace (decreasing 𝑥 ) scans, as demonstrated by the clear overlap of the local 
+
+peaks ( Fig . 3b. , dashed arrows).  To ensure that the observed features are genuine localized peaks and not noise, 
+
+we compute the autocorrelation function (ACF) of the 𝑉 PV trace in different regions ( Fig. 3c, more details in 
+
+Supplementary Note 5). The central region (𝑥 = [10, 15] μm ), which contains two peaks highlighted in  Fig . 3b,
+
+exhibits a slowly decaying ACF as expected for spatially correlated features. In contrast, in an off -central region 
+
+(𝑥 = [18, 21] μm ) the ACF decays to the noise level after the first lag, indicating that the observed spikes in 𝑉 PV 
+
+in this region are related to noise, as confirmed by the absence of overlap between trace and retrace.  We fit the 
+
+signal of one representative 𝑉 PV peak ag ain using a Gaussian  (Fig . 3d), yielding a FWHM of 470 ± 110 nm , broader 
+
+than the peak obtained at 13.86 K (300 ± 30 nm ). Similar to what was observed in  Fig . 2d, the current evolution 
+
+of the peak follows a non -monotonic dependence on current (Fig. 3 e), reaching a maximum around 𝐼 b = 300 
+
+μA. 
+
+The reproducible localized peaks in 𝑉 PV observed across multiple locations, temperatures, and bias currents ,
+
+presented in  Fig . 2 and  Fig . 3 demonstrate the presence of regions within the bulk of the superconducting strip 
+
+that interact with the THz near -field generating a photovoltage signal . We ascribe this response to nanometric 
+
+defects within the NbN strip with locally weaken ed superconductivity . Possible origins for these defects will be 
+
+further addressed in the discussion section. 
+
+Vortex -assisted n ear -field p hotovoltage mechanism     
+
+> Fig .4.Current dependence of the near -field photovoltage signal. a Current -space
+
+𝑉 PV  maps measured at various                          
+
+> temperatures. Short -dashed lines mark the 𝐼 𝑐 values obtained from the far -field VI curves using the criterion 𝑉 >50 μV.
+> Long -dashed lines indicate the current corresponding to the maximum observed photovoltage. The purple shaded area
+> corresponds to the region used to extract the horizontal cuts shown in (b). bNear -field photovoltage at the edge as a
+> function of bias current, extracted from the maps in panel (a) .Vertical dashed lines indicate the current of maximum 𝑉 PV .
+> cdV/ dI curves extracted from the DC transport data under far -field illumination .dZoomed -in current -space map taken at
+> T = 13.86K showing a local photovoltage peak close to the center of the microstrip. eSimulated current -space map obtained
+> from the TDGL simulations. fSnapshots of the order parameter when the near -field hotspot is placed close to the edge
+> (situation I) and when the near -field hotspot is placed on top of the defect (situation II). Arrows indicate the direction of
+> movement of the vortices.
+
+6
+
+Having established that the local photovoltage peaks arise from defects, we now turn to the response at the 
+
+edges, which provides insight into the underlying 𝑉 PV generation mechanism.  Fig . 4a shows current -space maps 
+
+taken at three different temperatures . In all cases, similar to what was shown in  Fig . 2 and Fig. 3, we observe an 
+
+increase in 𝑉 PV towards the edge of the strip.  The evolution of 𝑉 PV at the edge with current (Fig . 4b) shows a
+
+strong non -monotonic dependence , similar to that observed for the response of defects . To further characterize 
+
+this behavior, we compare th ese traces with the evolution of the differential resistance, d𝑉 /d𝐼 , obtained from 
+
+DC transport under far -field THz illumination taken wh en the tip is retracted (Fig . 4c) . The edge  𝑉 PV  signal onsets 
+
+close to the critical current ( 𝐼 𝑐 ) determined from DC transport (short -dashed lines in  Fig . 4a). Above 𝐼 𝑐 , the edge 
+
+signal increase s, reach ing a maximum at a current slightly below the maximum of the d𝑉 /d𝐼 (long -dashed lines 
+
+in  Fig . 4b). Increasing the bias current further reduces the  𝑉 PV  signal , as the strip transitions in to the normal 
+
+state , characterized by a resistance 𝑅 N. Both the  𝑉 PV  traces and the differential resistance trends broaden in 
+
+current as temperature is increased .
+
+The close correspondence between the trend observed in 𝑉 PV and the differential resistance suggests a common 
+
+physical origin . In type -II superconductor s such as NbN, a resistive state appear s above the critical current due 
+
+to the onset of vortex motio n23 –25 . In the absence of magnetic field, current -induced vortices and antivortices 
+
+form at opposing edges of the strip and traverse the sam ple perpendicular to the current direction . Their motion 
+
+produces time -dependent phase slips that , via the Josephson relation, generate a voltage along the current 
+
+direction 26 . Since vortex dynamics govern this resistive state, any local perturbation that modifies vortex 
+
+nucleation or motion should produce a measurable voltage change. The THz near -field provides precisely such 
+
+a perturbation: the tip confines THz radiation into a nanoscale volume, where photons with energy above the 
+
+superconducting gap break Cooper pairs and suppress the local order parameter –creating, in effect, a nanoscale 
+
+hotspot.  We therefore attribute the measured 𝑉 PV to the interaction between this near -fi eld induced hotspot 
+
+and current -induced vortices.  Importantly, t he interaction between vortices and light is known to play a 
+
+significant role in the response of superconducting photode te ctors 27,28 .
+
+We confirm this interpretation performing time -dependent Ginzburg -Landau (TDGL) simulations of a current -
+
+carrying superconducting strip close to 𝑇 𝑐 . The simulated strip contain s a defect close to the center and a hotspot 
+
+whose position is varied across t he width of the strip (more details in Methods ).  The simulations were performed 
+
+at 𝑇 /𝑇 𝑐 = 0.98 . To model the near -field induced hotspot we introduced a circular region with radius 𝑟 ℎ𝑜𝑡𝑠𝑝𝑜𝑡 =
+
+196 nm and a local temperature 1% above the bath temperatur e. The defect was included as a circular region 
+
+with radius 𝑟 𝑑𝑒𝑓𝑒𝑐𝑡 = 118 nm and local 𝑇 𝑐 1% lower than the bulk 𝑇 𝑐 . We compare our TDGL simulation results 
+
+to the experimental current -space map taken at  𝑇 = 13.86 K containing one local photovoltage peak close to 
+
+the center ( Fig . 4d).  A constant background, taken as the average of the signal outside of the strip, was 
+
+subtracted from the experimental map to facilitate the comparison. The simulated current -space map  (Fig . 4e) 
+
+reproduces the main features observed in the experimental current -space maps: an increased signal at the edges 
+
+whose magnitude decreases towards the bulk, and a local photovoltage peak at the position of the defect. 
+
+These features can be explained by examining the time evolution of the order parameter and the effects arising 
+
+from its suppression by the near -field hotspot . Th is local suppression by the hotspot forces the supercurrent to 
+
+bend around it , leading to local current crowdin g and thereby enhanc ing th e force acting on the vortices .
+
+Additionally, w hen the hotspot overlaps with the edge ( Fig . 4f, Situation I ) it lowers the vortex entry barrier ,
+
+thereby allowing vortices to penetrate at lower bias currents . Together, these two effects promote vortex 
+
+penetration , resulting in an enhanced signal at the edges. 
+
+The same current crowding mechanism accounts for 𝑉 PV generation when the hotspot does not overlap with 
+
+the edge . In this case , the induced curl in the supercurrent generates a magnetic dipole at the hot spot position ,
+
+leading to the formation of vortex -antivortex pair s (V -AV pair s)27,29,30 . The se pair s are launched once the current 
+
+density and supervelocity in the hotspot become sufficient to unbind the m, producing a measurable 𝑉 PV signa l. 
+
+As the hotspot moves away from the edge, current crowding weakens , explaining the decay in 𝑉 PV towards th e
+
+bulk. This phenomenology is  in agreement with rep orts of spatially resolved responsivity in superconducting 
+
+photodetectors , as well as theoretical predictions from vortex -assisted detection models 2,27,28,31 –33 .7
+
+When the hotspot overlaps with a defect ( Fig . 4f, Situation I I) , V-AV pair creation is enhanced . This is due to the 
+
+additional suppression of the order parameter provided by the defect , which further reduces the V -AV binding 
+
+energy . Overal l, the creation of V -AV pairs inside the near -field -induced hotspot is controlled by three different 
+
+factors: the injection curren t, the distance from the edge, and the local supe rfluid density .
+
+The current dependence of 𝑉 PV can be attributed to the evolution of the vortex state in the strip. Close to the 
+
+critical current (𝐼 𝑐 ), vortices at the edge are highly sensitive to perturbations that reduce the entry barrier, 
+
+explaining the onset of the photovoltage near this bias. Once the current has surp assed this value the strip enters 
+
+the flux -flow regime , where the voltage drop across the strip is determined by the vortex velocity . In this case ,
+
+incrementing the injection current leads to an enhancement of V -AV pair creation and an increase in their 
+
+velocity, which translates to an increase of 𝑉 PV , as shown in the simulated current -space map  (Fig . 4e). 
+
+In the simulated map we do not reach the downturn in 𝑉 PV observed in the experiment. One possible reason is 
+
+that ou r simulations are constrained to current values below the flux -flow instability. This point, signalled by the 
+
+maximum of the d𝑉 /d𝐼 , is characterized by the appearance of quasi -phase -slip lines that appear when the 
+
+moving vortices start merging 25,34,35 . As shown in  Fig . 4c, the downturn in 𝑉 PV starts close to this point, suggesting 
+
+that the near -field photovoltage decreases when the strip crosses th e flux -flow instability.  Given that beyond 
+
+this point dissipation becomes dominated by the quasi -phase -slip -lines dynamic s rather than by vortex 
+
+launching , the influence of the tip -induced hotspot diminishes, explaining the downturn of 𝑉 PV . Upon reaching 
+
+the normal state, vortices are no longer present and 𝑉 PV vanishes . This is clearly observed at 𝑇 = 13 .82 K, where 
+
+the signal suddenly drops after the strip sharply transitions to the normal state .
+
+# Conclusion 
+
+In this study, w e have demonstrated that THz near -field photovoltage measurements are capable of spatially 
+
+mapping inhomogeneities present in a superconductor and measure their vortex -assisted pho to response with 
+
+nanometric resolution.  The average size of the defect analyz ed in  Fig . 2, ⟨Δx⟩ = 300 ± 30 nm , is comparable to 
+
+the tip radius used in the experiment , suggesting that our resolution is limited by tip size, as expected for near -
+
+field measurements. This resolution could be further improved using sharper tips, potentially pushing the 
+
+resolution limit below 100 nm and enabling further valuable insights into light -matter interaction in 
+
+superconducting materials .
+
+Compared to low -temperature laser scanning microscopy (LTLSM), which is typically limited to resolutions above 
+
+1 μm 36,37 , our technique improves the spatial resolution by at least a factor of 3. The crucial difference between 
+
+THz near -field photovoltage and LTLSM lies in the photon energy used : the energy of 2.52 THz radiation (10.4 
+
+meV) is more than two orders of magnitude lower than that of visible photons employed in LTLSM, making THz 
+
+near -field photovoltage measurements less disruptive to the superconducting state. As a consequence, we are 
+
+able to explore the vortex -assisted photoresponse of defects, revealing a strong non -monotonic dependence on 
+
+current -bias that correlates with the evolution of the vortex -dissipative state in the film. Notably, the observe d
+
+maximum in 𝑉 PV close to the vortex flow instability indicates that THz near -field photovoltage is sensitive to the 
+
+transition between different vortex regimes , offering a local probe complementary to the study of global 
+
+transport. 
+
+Within the proposed detection mechanism, an enhanced response is expected at defects where 
+
+superconductivity is locally suppressed, consistent with the  behavior  reported in  Fig . 2 and  Fig . 3. While a direct, 
+
+one -to -one correlation between near -field maps and electro n microscopy is not possible, complementary SEM 
+
+and energy -dispersive X -ray spectroscopy measurements reveal several Nb -depleted regions with lateral 
+
+dimensions ranging from 150 to 700 nm (Supplementary Note 2). These length scales are comparable to the 
+
+sp atial extent of the observed localized 𝑉 PV peaks , making such regions plausible candidates for sites of 
+
+enhanced V-AV pair generation. An additional contribution to defects may arise from the intrinsic granularity of 
+
+the film, which exhibits grain sizes of order 30 nm and comparable intergrain spacing (Supplementary Note 1). 
+
+In this case, the observed size of the photovoltage features would be limited by the resolution of the 
+
+measurement. 8
+
+THz near -field photovoltage offers an alternative route to probing the superconducting state locally, giving 
+
+access to its local electromagnetic response. Other scanning probes , such as magnetic force microscopy, 
+
+scanning NV magnetometry, and scanning SQUID , can detect static magnetic flux from vortices with comparable 
+
+spatial resolution, but have limited sensitivity to dynamic, light -driven responses. Scanning tunnelling 
+
+microscopy can map the superconducting gap with atomic resolution in equ ilibrium, but is blind to dynamical 
+
+responses at THz frequencies and is not easily operated under finite in -plane bias. What distinguishes THz near -
+
+field photovoltage is the combination of all three: local access, excitation at the natural energy scale of the 
+
+condensate, and compatibility with non -equilibrium transport regimes . More broadly, its sensitivity to local 
+
+variations in superfluid density opens new opportunities to study light –matter interactions at low energies in 
+
+inhomogeneous superconductors, p articularly in high -Tc materials and moiré systems, where the nanoscale 
+
+coexistence of competing correlated phases lies at the heart of the physics .9
+
+# Methods 
+
+Sample fabrication and microstructure characterization 
+
+The NbN film with thickness 320 nm was sputtered at 250 °C in a N 2 + Ar atmosphere, at 5 mTorr pressure, onto 
+
+a high -resistivity silicon wafer with 370 nm thermal SiO 2. After sputtering, the geometry was defined using 
+
+photolithography and reactive -ion etching with the mixture of CHF 3 and SF 6 gases . Lastly, t he wafer was spin -
+
+coated with photoresist before dicing and shipment . Once received, the samples were sonicated in acetone and 
+
+isopropanol to remove the photoresist and expose the clean surface. SEM imaging was performed with ZEISS 
+
+Gemini 560 in the secondary electron scattering mode. 
+
+THz Near -field photovoltage nanoscopy 
+
+2.52 THz continuous -wave light was generated using a commercial THz gas laser (Edinburgh Instruments FIRL -
+
+100) . The THz light was coupled to a commercial cryoSNOM system (Neaspec cryo -neaSCOPE) . We used Au -
+
+coated AFM tips (Team Nanotec LR CH) with large tip radius ( ⁓ 250 nm) and resonance frequency Ω ≈ 60 kHz .
+
+The Neaspec AFM controller incorporates a damping system that allows for the lowering of the quality factor of 
+
+the tip resonance. This ensures stable AFM tapping mode at cryogenic temperatures. DC current was injected 
+
+using a source meter (Keithley 2470). The near -fi eld photovoltage was first filtered (bandpass 3 -100 kHz) and 
+
+enhanced with an Ithaco pre -amplifier and then recorded using the digital lock -in amplifier available in the 
+
+Neaspec cryo -neaSCOPE interface .
+
+Electron transport characterization 
+
+B-field electron transport was measured in an ICE Oxford cryostat with standard lock -in and DC measurement 
+
+techni ques . All the IV curves were collected in the current -bias mode. Zero -field IV curves in the dark and under 
+
+illumination were taken in the cryoSNOM bef ore each near -field scan. 
+
+Simulation details 
+
+The simulations were carried out through the numerical solution of the two -dimensional generalized time -
+
+dependent Ginzburg -Landau equation (TDGL) 38 :
+
+𝑢 
+
+√1 + 𝛾 2|𝜓 |2 ( 𝜕 
+
+𝜕𝑡 + 𝑖𝜑 + 𝛾 2
+
+2
+
+𝜕 |𝜓 |2
+
+𝜕𝑡 ) 𝜓 = (∇ − 𝑖 𝑨 )2𝜓 + 𝜓 (1 − 𝑇 (𝒓 )
+
+𝑇 𝑐 (𝒓 ) − |𝜓 |2).
+
+The  order parameter 𝜓 is in units of the field -free order parameter 𝜓 ∞ at 𝑇 = 0; lengths in units of the 
+
+superconducting coherence length 𝜉 (0); time in units of 𝑡 𝐺𝐿 = 𝜋 ℏ/8𝑢 𝑘 𝑏 𝑇 𝑐 , where 𝑢 = 5.79 comes from 
+
+microscopic theory; the parameter 𝛾 is proportional to the product inelastic electron -collision time 𝜏 𝑒 and 𝜓 ∞,
+
+being given by 𝛾 = 2𝜏 𝑒 𝜓 ∞/ℏ. Here, we have fixed 𝛾 = 10 . The vector potential 𝑨 in units of 𝐻 𝑐 2(0)𝜉 (0), with 
+
+𝐻 𝑐 2(0) being the upper critical field at 𝑇 = 0; the current density is in units of 𝐽 (0) = 𝜎 𝑛 𝜑 (0)/𝜉 (0), where 
+
+𝜎 𝑛 is the material normal conductivity; and the electrostatic potential 𝜑 in units of 𝜑 (0) = ℏ/2𝑒 𝑡 𝐺𝐿 . At each 
+
+time step, 𝜑 is obtained from the Poisson equation 
+
+∇2𝜑 = ∇ ⋅ 𝑱 𝒔 ,
+
+Where the supercurrent is given by: 
+
+𝑱 𝒔 = Im [𝜓 ̅ (∇ − 𝑖 𝑨 )𝜓 ].
+
+Boundary conditions for 𝜓 are set to guarantee no supercurrent flows out of the film. The bias current density 
+
+𝑱 𝒃 is sourced along the y direction through the boundary condition for 𝜑 , with 𝛻 𝜑 = 𝑗 b along the surfaces 
+
+perpendicular to the external current, while ∇𝜑 = 0 is set at the remaining surfaces.  The simulated strip had 
+
+dimensions 𝑤 = 1120 𝜉 (0) and 𝐿 = 890 𝜉 (0). For practical reasons, the ratio 𝑤 /𝜉 (0) is limited to ∼ 10 3,
+
+whereas in our experiment it is closer to 10 4. Achieving the experimental 𝑤 /𝜉 (0) ratio would lead to excessively 
+
+long computation times, as the TDGL equations are solved on a finite mesh with cell area ∼ 𝜉 (0)2. Details on 
+
+the numerical discretization can be found in Refs 35,39 .10 
+
+# Acknowledgements 
+
+The aut hors are thankful to D. Yu.  Vodolazov, A. G. Sivakov, M. van Exter  and C. Feuillet -Palma for the discussions 
+
+on vortex physics, and I. Iorsh and L. Bishop -Van Horn for the discussions on the vortex dynamics simulations. 
+
+E.K. acknowledges Marie -Sklodowska -Curie Fellowship, Project SUPERTERA, Ref. 101033521 . F.H.L.K. 
+
+acknowledges support from the Gordon and Betty Moore Foundation through Grant GBMF12212, and the 
+
+Government of Spain (QTWIST RD0768/2022, PID2022 -141081NB -I00;  PRE2022 -101705,  Severo Ochoa 
+
+CEX2024 - 001490 -S, MCIN/AEI/10.13039/501100011033). This work was also supported by the European 
+
+Union NextGenerationEU / PRTR(PRTR -C17.I1),  PCI2021 -122020 -2A within the FLAG -ERA grant 
+
+[PhotoTBG],  and EXQIRAL 101131579, Fundació Cellex, Fundació Mir -Puig, Generalitat de Catalunya (CERCA, 
+
+Department of Digital Policies and Territory, AGAURAn Electronic Quantum Simulator – BBVA Foundation 2022 
+
+Fundamentals Program. Views and opinions expressed are those of the author(s) only and do not necessarily 
+
+refle ct those of the European Union Research Executive Agency. Neither the European Union nor the granting 
+
+authority can be held responsible for them. This material is based upon work supported by the Air Force Office 
+
+of Scientific Research under Award Number F A8655 -23 -1-7047. Any opinions, findings, conclusions, or 
+
+recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views 
+
+of the United States Air Force.  Work performed at the Center for Nanoscale Materials, a U.S. Department of 
+
+Energy Office of Science User Facility, was supported by the U.S. DOE, Office of Basic Energy Sciences, under 
+
+Contract No. DE -AC02 -06CH11357. L.R.C. and M.V.M. acknowledge funding from the Research Foundation -
+
+Flanders (FWO Vlaanderen) an d the US -Army Research Office under Grant Number W911NF -24 -1-0145. 11 
+
+# References 
+
+1. Engel, A., Renema, J. J., Il’In, K. & Semenov, A. Detection mechanism of superconducting nanowire single -
+
+photon detectors. Supercond. Sci. and Technol. 28 , 114003 (2015). 
+
+2. Renema, J. J. et al. Position -Dependent Local Detection Efficiency in a Nanowire Superconducting Single -
+
+Photon Detector. Nano Lett. 15 , 4541 –4545 (2015). 
+
+3. Lisenfeld, J. et al. Electric field spectroscopy of material defects in transmon qubits. npj Quantum Inf 5,
+
+105 (2019). 
+
+4. Emery, V. J. & Kivelson, S. A. Frustrated ele ctronic phase separation and high -temperature 
+
+superconductors. Physica C: Supercond . 209 , 597 –621 (1993). 
+
+5. Mukherjee, A. et al. Superconducting magic -angle twisted trilayer graphene with competing magnetic 
+
+order and moiré inhomogeneities. Nat. Mater. 24 , 1400 –1406 (2025). 
+
+6. Basov, D. N. & Timusk, T. Electrodynamics of high - Tc superconductors. Rev. Mod. Phys. 77 , 721 –779 
+
+(2005). 
+
+7. Dressel, M. Electrodynamics of Metallic Superconductors. Adv. Condensed Matter Physics 2013 , 1 –25 
+
+(2013). 
+
+8. Matsunaga, R. et al. Light -induced collective pseudospin precession resonating with Higgs mode in a 
+
+superconductor. Science 345 , 1145 –1149 (2014). 
+
+9. Kamatani, T., Kitamura, S., Tsuji, N., Shimano, R. & Morimoto, T. Optical response of the Leggett mode in 
+
+multiband super conductors in the linear response regime. Phys. Rev. B 105 , 094520 (2022). 
+
+10. Laplace, Y. & Cavalleri, A. Josephson plasmonics in layered superconductors. Adv. Phys. X 1, 387 –411 
+
+(2016). 
+
+11. Lu, Q. et al. Surface Josephson plasma waves in a high -temperatu re superconductor. npj Quantum Mater. 
+
+5, 1 –8 (2020). 
+
+12. Van Der Marel, D., Barantani, F. & Rischau, C. W. Possible mechanism for superconductivity in doped 
+
+SrTiO 3. Phys. Rev. Research 1, 013003 (2019). 
+
+13. Budden, M. et al. Evidence for metastable photo -induced superconductivity in K 3C60 . Nat. Phys. 17 , 611 –
+
+618 (2021). 12 
+
+14. Woessner, A. et al. Near -field photocurrent nanoscopy on bare and encapsulated graphene. Nature 
+
+Commun. 7, 10783 (2016). 
+
+15. Lamura, G. et al. Granularity -induced gapless superconductivity in NbN films: Evidence of thermal phase 
+
+fluctuations. Phys. Rev. B 65 , 104507 (2002). 
+
+16. Wu, Y. F. et al. Superconducting NbN and CaFe 0.88 Co 0.12 AsF studied by point -contact spectroscopy with a 
+
+nanoparticle Au array. Phys. Rev. B 101 , 174502 (2020). 
+
+17. Chen, X. et al. Modern Scattering‐Type Scanning Near‐Field Optical Microscopy for Advanced Material 
+
+Research. Adv. Mater. 31 , 1804774 (2019). 
+
+18. Hillenbrand, R., Abate, Y., Liu, M., Chen, X. & Basov, D. N. Visi ble -to -THz near -field nanoscopy. Nat. Rev. 
+
+Mater. 10 , 285 -310 (2025) 
+
+19. Hillenbrand, R. & Keilmann, F. Complex Optical Constants on a Subwavelength Scale. Phys. Rev. Lett. 85 ,
+
+3029 –3032 (2000). 
+
+20. Batlle Porro, S. et al. Photovoltage microscopy of symmet rically twisted trilayer graphene. Nat. Phys. 21 ,
+
+1934 -1941 (2025) 
+
+21. Hesp, N. C. H. et al. Nano -imaging photoresponse in a moiré unit cell of minimally twisted bilayer 
+
+graphene. Nat. Commun . 12 , 1640 (2021). 
+
+22. Hesp, N. C. H. et al. Cryogenic nano -imagi ng of second -order moiré superlattices. Nat. Mater. 23 , 1664 -
+
+1670 (2024) 
+
+23. Aslamazov, L. G. & Lemnitskii, S. V. Resistive state in broad superconducting films, Zh. Eksp. Teor. Fiz , 84, 
+
+2216 -2217 (1983) 
+
+24. Bardeen, J. & Stephen, M. J. Theory of the Motio n of Vortices in Superconductors. Phys. Rev. 140 , A1197 –
+
+A1207 (1965). 
+
+25. Dobrovolskiy, O. V. Fast Dynamics of Vortices in Superconductors, ECMP 2, 735 -734 (2024) 
+
+26. Bulaevskii, L. N., Graf, M. J., Batista, C. D. & Kogan, V. G. Vortex -induced dissipation in narrow current -
+
+biased thin -film superconducting strips. Phys. Rev. B 83 , 144526 (2011). 
+
+27. Zotova, A. N. & Vodolazov, D. Y. Intrinsic detection efficiency of superconducting nanowire single photon 
+
+detector in the modified hot spot model. Supercond. Sci . Technol. 27 , 125001 (2014). 13 
+
+28. Renema, J. J. et al. Experimental Test of Theories of the Detection Mechanism in a Nanowire 
+
+Superconducting Single Photon Detector. Phys. Rev. Lett. 112 , 117604 (2014). 
+
+29. Ge, J. -Y., Gladilin, V. N., Tempere, J., Devreese, J. & Moshchalkov, V. V. Controlled Generation of Qua ntized 
+
+Vortex –Antivortex Pairs in a Superconducting Condensate. Nano Lett. 17 , 5003 –5007 (2017). 
+
+30. Ge, J. -Y. et al. Magnetic dipoles at topological defects in the Meissner state of a nanostructured 
+
+superconductor. Phys. Rev. B 93 , 224502 (2016). 
+
+31. Bula evskii, L. N., Graf, M. J. & Kogan, V. G. Vortex -assisted photon counts and their magnetic field 
+
+dependence in single -photon superconducting detectors. Phys. Rev. B 85 , 014505 (2012). 
+
+32. Johnson, M. W., Herr, A. M. & Kadin, A. M. Bolometric and nonbolomet ric infrared photoresponses in 
+
+ultrathin superconducting NbN films. J. of Appl. Phys . 79 , 7069 –7074 (1996). 
+
+33. Berdiyorov, G. R., Milošević, M. V. & Peeters, F. M. Spatially dependent sensitivity of superconducting 
+
+meanders as single -photon detectors. App l. Phys. Lett. 100 , 262603 (2012). 
+
+34. Vodolazov, D. Y. & Peeters, F. M. Rearrangement of the vortex lattice due to instabilities of vortex flow. 
+
+Phys. Rev. B 76 , 014521 (2007). 
+
+35. Embon, L. et al. Imaging of super -fast dynamics and flow instabilities of superconducting vortices. Nat. 
+
+Commun. 8, 85 (2017). 
+
+36. Zhuravel, A. P. et al. Laser scanning microscopy of HTS films and devices (Review Article). Low Temp. Phys. 
+
+32 , 592 –607 (2006). 
+
+37. Sivakov, A. G., Turutanov, O. G., Kolinko, A. E. & Pokhila, A. S. S patial characterization of the edge barrier 
+
+in wide superconducting films. Low Temp. Phys. 44 , 226 –232 (2018). 
+
+38. Chapman, S. J., Du, Q. & Gunzburger, M. D. A model for variable thickness superconducting thin films. Z. 
+
+Angew. Math. Phys. 47 , 410 –431 (1996 ). 
+
+39. Milošević, M. V. & Geurts, R. The Ginzburg –Landau theory in application. Physica C: Supercond. 470 , 791 –
+
+795 (2010).

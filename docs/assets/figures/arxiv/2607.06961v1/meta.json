@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.06961v1/fig-001.webp",
+      "caption": "Fig. 4. Frequency-step-dependent spectral estimation performance of SL-EOM SBS microscopy. (a)-(c) Fitted Brillouin peak amplitude GB, frequency shift ΩB/2π, and linewidth ΓB/2π as functions of the frequency step sf in the SL mode (blue) and DL mode (red). Symbols represent the mean values obtained from ten repeated measurements, and error bars denote one standard deviation. (d)-(f) Corresponding measurement precision, defined as the standard deviation of the fitted peak amplitude, frequency shift, and linewidth over ten repeated measurements. Solid lines are empirical guides to the eye. The gray dashed line in (c) represents the low-NA reference linewidth of 27.69 MHz from Ref. [23]. The same dashed line in (f) is plotted only as a scale reference.",
+      "page": 7,
+      "index": 1,
+      "width": 790,
+      "height": 411
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06961v1/fig-002.webp",
+      "caption": "Fig. 1. Conceptual diagram of the SBS process in the (a) dual-laser wavelength-tuning (DL-WT) configuration and (b) single-laser electro-optic-modulation (SL-EOM) configuration.",
+      "page": 3,
+      "index": 2,
+      "width": 771,
+      "height": 247
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06961v1/fig-003.webp",
+      "caption": "Fig. 5. SL-EOM SBS imaging of a femtosecond-laser-modified As2Se3 glass. (a) Schematic of the femtosecond-laser-written rectangular regions inside the As2Se3 sample. The modified regions have dimensions of 25 μm × 10 μm. The average femtosecond-laser writing pulse energies from top to bottom are 0.32, 0.65, 1.18 and 1.73 μJ, respectively. The red dashed line indicates the position used for the line profile in panel (f). (b-d) Two-dimensional maps of the fitted Brillouin peak amplitude GB, frequency shift ΩB/2π, and linewidth ΓB/2π, respectively. The second color scale in (c) indicates the apparent relative longitudinal-modulus contrast",
+      "page": 8,
+      "index": 3,
+      "width": 696,
+      "height": 410
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06961v1/fig-004.webp",
+      "caption": "Fig. 2. (a) Experimental setup. FS, fiber splitter; EDFA, Erbium-Doped Fiber Amplifier; EOM, electro-optic modulator; AOM, acousto-optic modulator; FBG, fiber Bragg grating filter; ISO, isolator; C, collimator; HWP, half-wave plate; QWP, quarter-wave plate; M, mirror; L, lens; PBS, polarizing beam splitter; PD, photodetector; DAQ, data acquisition card; LIA, lock-in amplifier; T, terminator; PC, personal computer. (b) Gain-sideband and loss-sideband pump spectra after FBG filtering. (c) SBG and SBL spectra of As2Se3 chalcogenide glass acquired using the gain and loss sidebands as the pump beam, respectively.",
+      "page": 4,
+      "index": 4,
+      "width": 770,
+      "height": 404
+    }
+  ]
+}

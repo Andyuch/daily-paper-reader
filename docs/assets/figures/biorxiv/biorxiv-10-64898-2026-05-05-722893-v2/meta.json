@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-05-05-722893-v2/fig-001.webp",
+      "caption": "Figure 5 | Time-resolved HT imaging of cell-associated collagen matrix dynamics. a, b, Time-lapse HT imaging of HT1080 cells embedded in fibrillar collagen matrices under pharmacological perturbation. a, HT1080 cells embedded in type I collagen and treated with the Rho-associated kinase (ROCK) inhibitor Y-27632. b, HT1080 cells embedded in type III collagen and treated with the broad-spectrum matrix metalloproteinase (MMP) inhibitor GM6001. For each condition, full-field RI views at representative time points show embedded cells and the surrounding collagen network over a 2 h imaging window. Collagen fibers are shown in grayscale RI contrast, and cell-associated regions are overlaid in blue. Time-colored images of the boxed regions encode local temporal changes in the matrix, highlighting fiber displacement and bending near the cell–matrix interface. Magnified timeseries panels show representative single-fiber-level reorganization events; yellow dashed circles mark regions with prominent local fiber changes. Images were acquired at 5 min intervals. Scale bars, 40 μm in full-field views and 5 μm in magnified views. Color bars indicate RI and elapsed time.",
+      "page": 21,
+      "index": 1,
+      "width": 1052,
+      "height": 960
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-05-05-722893-v2/fig-002.webp",
+      "caption": "Figure 2 | SHG validation of HT collagen contrast and subtype-dependent fibrillar architecture. a, Coregistered HT and SHG images of the same reconstituted collagen network. Depth-colored projections show spatially corresponding fibrillar structures across the registered volume; boxed regions indicate the positions used for magnified axial-plane comparisons at z = 0 μm and z = 4.8 μm. b, Representative projection and axial-section views of HT, SHG and merged images; solid lines mark the fiber segments used for the line profiles in c (i, z = 0 μm; ii, z = 4.8 μm). HT-derived RI contrast spatially co-localizes with SHG-positive fibrillar collagen, supporting the interpretation that the fibrillar structures resolved by HT correspond to collagen fibers. HT and SHG are shown in green and magenta, respectively. c, Line profiles along the fiber segments lined in b, taken at (i) z = 0 μm and (ii) z = 4.8 μm. HT and SHG signals show matched peak positions, whereas the broader SHG profiles reflect its lower spatial resolution. d, Volumetric RI renderings of separately prepared, concentration-matched type I and type III collagen networks. HT resolves subtype-dependent fibrillar organization without exogenous labeling, with type I collagen forming broader and more sparsely distributed fibers and type III collagen forming a finer, denser network. Scale bars, 20 μm in overview images and projections, and 10 μm in magnified axial sections and volumetric renderings. Color bars indicate depth or RI as shown.",
+      "page": 18,
+      "index": 2,
+      "width": 1052,
+      "height": 762
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-05-05-722893-v2/fig-003.webp",
+      "caption": "Figure 3 | Fiber-level quantification of collagen network architecture and RI-derived dry mass. a, Analysis workflow for extracting fiber-level metrics from RI tomograms. Representative axial sections from reconstructed 3D RI volumes were analyzed using curvelet-transform-based fiber segmentation to generate individual fiber center lines and fiber masks. For each segmented fiber, morphological and biophysical descriptors were extracted, including effective width, fiber length, straightness, orientation angle and RI-derived dry mass. b, Representative concentration-matched type I and type III collagen sections and corresponding fiber-segmentation results. From left to right, panels show the RI section, CT-FIRE-derived fiber center lines, effective-width-weighted fiber masks and magnified insets shown to illustrate segmentation quality, with per-fiber quantification performed over the full field of view. c, RI probability-density distributions of segmented fiber regions in type I and type III collagen networks. Segmented fibrillar regions occupy a higher-RI population than the background. Colored dashed lines indicate the mean RI of the fiber-associated population, and black dashed lines the mean RI of the background. d, Concentrationdependent distributions of effective fiber width and per-fiber dry mass for type I and type III collagen. Type I collagen shows a stronger concentration-dependent increase in fiber width and integrated dry mass, whereas type III collagen maintains a finer fibrillar architecture across the tested concentration range. Points indicate individual segmented fibers; violin plots show distribution densities; black markers and error bars indicate mean ± s.d. Perfiber dry mass was calculated by integrating positive RI contrast within segmented fiber masks over the analyzed axial slab, as described in Methods. Scale bars, 10 μm in main images and 5 μm in insets. Color bars indicate RI.",
+      "page": 19,
+      "index": 3,
+      "width": 944,
+      "height": 770
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-05-05-722893-v2/fig-004.webp",
+      "caption": "Figure 1 | Label-free HT reconstruction of three-dimensional fibrillar collagen architecture. a, Optical schematic of the HT system. Low-coherence LED illumination is spatially modulated by a DMD, projected onto the sample through lens L1, collected by the objective lens and recorded by an image sensor through lens L2. b, Three-dimensional RI reconstruction workflow. Intensity images acquired under sequential structured-illumination conditions are computationally reconstructed into a volumetric RI tomogram. c–e, Representative 3D RI tomogram of a reconstituted fibrillar collagen gel. c, Orthogonal slice views showing RI-resolved fibrillar structures across the imaged volume. d, Volumetric rendering of the boxed region in c. e, Maximum-RI projection and depth-colored projection showing the depth-dependent organization of RI-resolved fibrillar structures over an axial range of approximately 30 μm, without exogenous labeling. Scale bars, 50 μm in c and 10 μm in d and e. Color bars indicate RI and depth.",
+      "page": 17,
+      "index": 4,
+      "width": 836,
+      "height": 424
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-05-05-722893-v2/fig-005.webp",
+      "caption": "Figure 4 | Time-resolved HT imaging of collagen fibrillogenesis. a, Time-lapse HT maximum-RI projections of type I collagen during gelation, showing the progressive emergence and densification of RI-resolved fibrillar structures over 60 min. Magnified insets highlight early fibril formation within the boxed region, resolving the transition from weak, diffuse RI texture to a more defined fibrillar network within the first several minutes. b, Quantification of the volumetric mean refractive index change, Δn, during gelation. The increase in Δn provides a label-free RI-based kinetic readout of collagen assembly, linking fibrillar network formation to assembly-associated changes in volumetric RI contrast. Because early Δn values are comparable to the system RI noise floor, the trajectory is interpreted as a qualitative assembly readout rather than as a calibrated mass-accumulation curve. As a volume-averaged quantity reconstructed under nonlinear total-variation regularization, its absolute scale and early-time shape also reflect reconstruction behavior and bulk effects rather than fibril mass alone. Scale bars, 10 μm in full-field images and 2 μm in magnified insets. Color bars indicate RI.",
+      "page": 20,
+      "index": 5,
+      "width": 1052,
+      "height": 397
+    }
+  ]
+}

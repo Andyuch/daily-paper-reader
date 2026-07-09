@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.02733v1/fig-001.webp",
+      "caption": "Figure 2. Static transmission and polarization response of the metasurface as a function of the incident probe azimuth angle. (a) Simulated transmission spectra (Tr) under linearly polarized excitation at azimuth angles of φpr = 0° (blue dash-dotted line), φpr =45° (orange solid line), and φpr =90° (green dotted line). The 0° and 90° spectra isolate the individual orthogonal resonances, while the 45° spectrum reflects their simultaneous excitation. (b) Corresponding ellipticity (η) of the transmitted light. For excitation purely along the structural axes (0° and 90°), the polarization remains strictly linear (η = 0°). At a 45° incidence, the interference between the orthogonal modes yields a strongly wavelength-dependent ellipticity. (c) Optical rotation angle (α) of the transmitted light. Similar to the ellipticity, significant optical rotation is only observed for the 45° excitation, demonstrating the static birefringent properties of the dual-nanorod unit cell prior to ultrafast optical pumping.",
+      "page": 6,
+      "index": 1,
+      "width": 314,
+      "height": 752
+    },
+    {
+      "url": "assets/figures/arxiv/2607.02733v1/fig-002.webp",
+      "caption": "Figure 4. Dynamic evolution of the transmitted polarization states mapped on the Poincaré sphere. (a–d) Temporal trajectories of the polarization state evaluated at selected probe wavelengths (λ = 770, 790, 810, and 831 nm). The left column displays the global Poincaré sphere, illustrating the absolute position of the polarization states",
+      "page": 10,
+      "index": 2,
+      "width": 632,
+      "height": 658
+    },
+    {
+      "url": "assets/figures/arxiv/2607.02733v1/fig-003.webp",
+      "caption": "Table 1. Comparative analysis of state-of-the-art ultrafast all-optical polarization control platforms. The performance metrics of the proposed Au orthogonal nanorod dimer metasurface are benchmarked against recent literature,",
+      "page": 12,
+      "index": 3,
+      "width": 979,
+      "height": 1222
+    },
+    {
+      "url": "assets/figures/arxiv/2607.02733v1/fig-004.webp",
+      "caption": "Figure 3. Ultrafast thermodynamic and transient optical response of the orthogonal nanorod dimer metasurface. (a) Simulated spatial absorption density profile, demonstrating the selective, symmetry-breaking excitation of the x-oriented nanoantenna under an x-polarized femtosecond pump pulse. (b–d) Temporal evolution of the internal physical dynamics derived from the 3TM for the excited antenna: (b) non-thermal electron energy density (N), (c) thermal electron temperature (θₑ) peaking rapidly above 2000 K, and (d) lattice temperature (θₗ) driven by subsequent electron-phonon thermalization. The grey shaded region at Δt = 0 fs indicates the incident pump pulse profile. (e) Corresponding transient modulations in the real (ΔReal(εTotal)) and imaginary (ΔImag(εTotal)) components of the gold dielectric function. (f, i) Absolute transmission (Tr) and the transient differential transmission (ΔTr) maps as a function of probe wavelength (λ) and pump-probe delay (Δt). (g, j) Absolute ellipticity (η) and its pump-induced transient modulation (Δη), achieving sub-picosecond peak shifts of approximately 10°. (h, k) Absolute optical",
+      "page": 9,
+      "index": 4,
+      "width": 976,
+      "height": 937
+    },
+    {
+      "url": "assets/figures/arxiv/2607.02733v1/fig-005.webp",
+      "caption": "Figure 1. Static linear optical response and eigenmode analysis of the orthogonal dimer nanorod metasurface. (a) Schematic illustration of unit cell geometry. (b) Eigenmode visualization shows radiative dipole modes and nonradiative quadrupole modes",
+      "page": 5,
+      "index": 5,
+      "width": 727,
+      "height": 483
+    }
+  ]
+}

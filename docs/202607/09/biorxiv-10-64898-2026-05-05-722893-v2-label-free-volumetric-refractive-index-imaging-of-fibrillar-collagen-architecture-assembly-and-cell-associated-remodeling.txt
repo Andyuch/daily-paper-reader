@@ -1,0 +1,1340 @@
+Title: Label-free volumetric refractive-index imaging of fibrillar collagen architecture, assembly, and cell-associated remodeling
+
+URL Source: https://www.biorxiv.org/content/10.64898/2026.05.05.722893v2.full.pdf
+
+Number of Pages: 21
+
+Markdown Content:
+Label -free volumetric refractive -index imaging of fibrillar 
+
+# collagen architecture, assembly, and cell -associated remodeling 
+
+Sehyeon Lee 1,2 , Wei Sun Park 1,2 , Juheon Lee 1,2 , Juyeon Park 1,2 , Hyeoncheol Park 3,4 , Eun Hyun Ahn 3,4 ,
+
+Deok -Ho Kim 3,4,5* , YongKeun Park 1,2,6* 
+
+> 1
+
+Department of Physics, Korea Advanced Institute of Science and Technology (KAIST), Daejeon 34141, Republic 
+
+of Korea ;
+
+> 2
+
+KAIST Institute for Health Science and Technology, KAIST, Daejeon 34141, Republic of Korea ;
+
+> 3
+
+Department of Biomedical Engineering, Johns Hopkins University, Baltimore, MD 21205, USA; 
+
+> 4
+
+Center for Microphysiological Systems, Johns Hopkins University, Baltimore, MD 21205, USA; 
+
+> 5
+
+Department of Medicine, Johns Hopkins University, Baltimore, MD 21205, USA; 
+
+> 6
+
+Tomocube Inc., Daejeon 34109, Republic of Korea .
+
+Corresponding authors: D.H.K. (dhkim@jhu.edu) and Y.K.P. (yk.park@kaist.ac.kr) 
+
+Abstract 
+
+Fibrillar collagen architecture regulates tissue mechanics and cell –matrix interactions, but following how 
+
+collagen -rich matrices assemble and remodel in three dimensions requires non -destructive measurements that can 
+
+link structure to matrix -associated ma ss without exogenous labels. Here we present holotomography (HT) as a 
+
+label -free platform for volumetric imaging and quantitative profiling of reconstituted fibrillar collagen. 
+
+Volumetric RI tomograms resolved fibrillar collagen networks without exogenous labels, and co -registration with 
+
+second -harmonic generation (SHG) microscopy supported the correspondence between HT -resolved RI structures 
+
+and SHG -positive fibrillar collagen. Curvelet -transform -based segmentation of representative axial sections 
+
+converte d the tomograms into fiber -level descriptors, including morphology, orientation and RI -derived fiber -
+
+associated dry mass. At the matched 0.8 mg/mL condition, HT resolved distinct network organization, with type I 
+
+forming thicker, more sparsely distributed fibers and type III a finer, denser network, while mean fiber -associated 
+
+RI remained comparable between subtypes. Across the concentration series, type I showed stronger increases in 
+
+fiber width and RI -derived mass, whereas type III remained comparatively fine. Time -lapse HT further captured 
+
+RI dynamics during type I fibrillogenesis and visualized local cell –matrix reorganization in HT1080 cell -
+
+embedded gels, capturing cells and surrounding matrix in a single label -free measurement. Together, these results 
+
+position HT as a complementary label -free approach for volumetric visualization and RI -based quantification of 
+
+collagen -rich extracellular matrices. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Introduction 
+
+Fibrillar collagen is the dominant load -bearing scaffold of the extracellular matrix and a major regulator of tissue 
+
+architecture, mechanical integrity and cell behavior 1,2 . Its organi zation is continuously remodeled during 
+
+development, wound healing, fibrosis, tumor invasion and tissue engineering 3. At the level of individual fibe rs, 
+
+changes in width, density, alignment, branching and local mass distribution can reshape matrix mechanics and 
+
+regulate cell migration, contractility and invasion 4,5 . Conversely, cells remodel the surrounding collagen network 
+
+through contractile forces and proteolytic degradation 6. The ability to quantify collagen architecture in three 
+
+dimensions (3D) and over time is therefore central to extracellular -matrix biophysics, disease modeling, engineered -
+
+tissue evaluation and the development of anti -fibrotic or anti -invasive therapeutic strategies. 
+
+Existing imaging approaches provide powerful but incomplete views of collagen -rich matrices (Supplementary 
+
+Table 1) . Fluorescence microscopy can visualize collagen using labeled collagen, collagen -binding probes or 
+
+immunolabeling, but exogenous labels can perturb polymeri zation, alter matrix assembly, introduce photobleaching 
+
+and limit longitudinal observation 7. Second -harmonic generation (SHG) microscopy provides endogenous contrast 
+
+for non -centrosymmetric fibrillar collagen 8, but its intensity depends on molecular order, fiber orientation, 
+
+polari zation state and detection geometry 9, making it difficult to interpret signal intensity as a direct measure of 
+
+local collagen mass 10 . Confocal reflection microscopy and optical coherence tomography 14,15 can monitor collagen -
+
+rich matrices over time 11,12 , but their scattering -based contrast is not readily converted into mass -related fiber 
+
+descriptors 13 . Quantitative phase imaging provides label -free optical path length information and has enabled dry -
+
+mass -related analysis in biological samples 16,17 , yet many implementations remain projected or two -dimensional 
+
+rather than volumetric at the fiber -network scale 18,19 . Spatial light interference microscopy has, in particular, 
+
+quantified collagen -fiber organization in tissue from label -free phase contrast 20,21 although as projected two -
+
+dimensional measurements. Thus, a need remains for non -destructive 3D imaging approaches that connect collagen 
+
+network architecture with quantitative, mass -related readouts during matrix assembly and remodeling. 
+
+Holotomography (HT) , an implementation of 3D quantitative phase imaging, reconstructs volumetric refractive 
+
+index (RI) distributions from intensity images acquired under multiple illumination conditions 22,23 . RI is an intrinsic 
+
+optical property related to local biomolecular concentration and can be linked to dry -mass density through the 
+
+specific refractive index increment 24 . This physical relationship has enabled quantitative, label -free analysis of cells 
+
+and subcellular structures 25 –32 . To date, however, volumetric RI tomography has been applied predominantly to 
+
+cells and tissues; its application to reconstituted fibrillar extracellular matrices —where the structures of interest are 
+
+sparse, high -aspect -ratio fibers rather than compact ce ll bodies, and where fiber -level mass quantification has not 
+
+been established —remains largely unexplored. For collagen -rich extracellular matrices, RI tomography offers a 
+
+complementary route to visuali ze 3D matrix architecture while extracting fiber -associated, mass -related information. 
+
+Because RI contrast is not intrinsically collagen -specific, however, its use for collagen matrix analysis requires 
+
+validation against collagen -selective or collagen -enriched reference modalities. 
+
+Here, we present low -coherence HT as a label -free platform for volumetric imaging, quantitative profiling and time -
+
+resolved analysis of reconstituted fibrillar collagen matrices. We validate RI -resolved fibrillar structures against 
+
+SHG microscopy and combine RI tomography with curvelet -based fiber segmentation to quantify collagen network 
+
+architecture and fiber -associated RI -derived mass readouts. Applied to type I and type III collagen gels, this 
+
+framework reveals subtype - and concentration -dependent differences in collagen network organi zation under 
+
+matched preparation and imaging conditions. Beyond static profiling, time -resolved HT captures fibrillogenesis 
+
+during gelation and visualizes local cell -associated matrix remodeling in cell -embedded collagen gels. By linking 
+
+3D structure, mass -related quantification and dynamics in a single label -free measurement, this work positions HT 
+
+as a complementary modality for quantitative analysis of collagen -rich extracellular matrices. 
+
+Results 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Label -free volumetric RI imaging of fibrillar collagen gels by HT 
+
+We first established a low -coherence HT workflow for imaging reconstituted fibrillar collagen gels without 
+
+exogenous labeling. LED illumination patterned by a digital micromirror device (DMD) generated multiple 
+
+illumination conditions, from which intensity images were computationally reconstructed into three -dimensional 
+
+RI tomograms (Fig. 1a, b). This workflow provided label -free volumetric contrast based on local RI variations 
+
+within collagen -rich gels. 
+
+HT resolved fiber -like structures throughout the reconstructed volume (Fig. 1c –e). Orthogonal sections revealed 
+
+fibrillar features across both lateral and axial dimensions, and three -dimensional rendering of a selected region 
+
+showed that these structures formed continuous networks within the gel (Fig. 1c, d). Maximum -RI and depth -
+
+colored projections further visuali zed the depth -dependent organi zation of the network over an axial range of 
+
+approximately 30 μm (Fig. 1e). These data show that HT can capture the three -dimensional architecture of collagen -
+
+rich matrices under fully label -free conditions. Because RI contrast is not intrinsically collagen -specific, we next 
+
+compared HT with SHG microscopy to test whether the RI -resolved structures corresponded to fibrillar collagen. 
+
+HT captures SHG -validated and preparation -specific collagen network architectures 
+
+We next tested whether the fibrillar structures resolved by HT corresponded to fibrillar collagen. Because SHG 
+
+microscopy provides endogenous contrast from non -centrosymmetric fibrillar collagen 8,33 , we used it as an 
+
+orthogonal reference modality. HT and SHG image stacks acquired from the same reconstituted collagen gel were 
+
+co -registered by intensity -based affine registration . Depth -colored projections showed similar axial organi zation of 
+
+the network in both modalities, indicating that the RI -resolved structures detected by HT corresponded spatially to 
+
+SHG -positive collagen fibers (Fig. 2a). 
+
+This correspondence was further supported at individual axial planes. Magnified views revealed overlapping RI -
+
+positive and SHG -positive fibrillar structures in both dense and sparse regions of the gel (Fig. 2b). Line profiles 
+
+across selected fiber segments showed coincident signal peaks at z = 0 μm and z = 4.8 μm, confirming spatial 
+
+alignment between the HT -resolved RI features and SHG -positive fibrillar collagen (Fig. 2c). The HT and SHG 
+
+profiles showed spatially corresponding fiber -associated signals, while the broader SHG profiles were consistent 
+
+with the lower spatial resolution and the distinct, ensemble -averaged contrast mechanism of SHG. Notably, HT and 
+
+SHG identified the same fibrillar structures despite relying on distinct contrast mechanisms: HT reports local RI 
+
+variation, whereas SHG depends on collagen molecular order, fiber orientation, polarization state and nonlinear 
+
+signal generation. This agreement indicates that , in reconstituted collagen -rich gels, the fiber -like RI structures 
+
+resolved by HT represent fibrillar collagen. An independent comparison with fluorescence -labeled collagen showed 
+
+the same fiber -level correspondence (Supplementary Fig. 1), so that the RI -resolved fibers were corroborated by 
+
+two contrast mechanisms with distinct physical origins —nonlinear molecular order (SHG) and chemical labeling 
+
+(FITC). 
+
+We then investigated wh ether HT could resolve differences in collagen network architecture between subtypes . In 
+
+concentration -matched gels, type I and type III collagen exhibited distinct RI -resolved fibrillar phenotypes (Fig. 
+
+2d). Type I collagen formed broader, more sparsely distributed fiber -li ke structures, whereas type III collagen 
+
+formed a finer and denser network 34 , consistent with known subtype -dependent differences in fibrillar 
+
+organi zation 35 –37 . Because the cited studies largely examined type I/III copolymerization rather than pure type III 
+
+networks, this agreement is contextual rather than a direct match. These observations establish HT as a label -free 
+
+volumetric readout of collagen -rich network architecture and motivate the quantitative fiber -level analysis 
+
+developed below. 
+
+Section -based fiber segmentation reveals preparation - and concentration -dependent collagen architecture 
+
+and dry mass 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Having established multimodal correspondence between HT -resolved RI structures and SHG -positive fibrillar 
+
+collagen, we next converted RI tomograms into quantitative fiber -level phenotypes. Representative axial sections 
+
+from the 3D RI volumes were analy zed using a curvelet -transform -based fiber -extraction pipeline 38 , yielding 
+
+individual fiber cent er lines and corresponding fiber masks (Fig. 3a). From these segmented fibrillar regions, we 
+
+quantified effective width, fiber length, straightness and orientation, together with RI -derived dry -mass density and 
+
+per -fiber dry mass. Because RI is linearly related to local biomolecular concentration through the specific RI 
+
+increment 39 , RI analysis within segmented fibers links collagen network morphology to dry -mass measurements. 
+
+We applied this workflow to type I and type III collagen gels prepared across defined concentration ranges 
+
+(Supplementary Fig. 2) . At the concentration shared by both subtypes, 0.8 mg /mL, the segmentation captured the 
+
+RI -resolved architectures observed in the tomograms: type I collagen formed broader, more sparsely distributed 
+
+fibers, whereas type III collagen formed a finer and denser network (Fig. 3b). Effective -width maps followed the 
+
+RI -resolved fibrillar structures in both subtypes, enabling matched comparison of fiber morphology and per -fiber 
+
+dry mass under identical imaging and sample -preparation conditions. 
+
+Using the segmented fiber masks, we next examined how collagen -associated RI and dry mass were distributed 
+
+within the two sub types. Segmented fiber regions occupied higher -RI distributions than the local background in 
+
+both type I and type III collagen gels (Fig. 3c). At 0.8 mg /mL, however, the mean RI of fiber -associated regions 
+
+differed between the two subtypes by less than 10 -4, below the level we interpret as physically meaningful. Thus, 
+
+the subtype -dependent phenotype was not primarily explained by a difference in average fiber RI . Instead, the two 
+
+subtypes differed in how collagen was spatially distributed across the network; that is, at matched local RI, the 
+
+subtypes are distinguished by network organization rather than by per -fiber collagen density. 
+
+We then analy zed concentration -dependent trends within each collagen subtype (Fig. 3d and Supplementary Fig. 
+
+3). In type I collagen gels, higher -concentration preparations showed broader effective -width distribution and 
+
+increased integrated fiber -associated dry mass, consistent with thickening, bundling or increased mass accumulation 
+
+within fibrillar structures; because each concentration corresponds to a single gel, this trend is descriptive and cannot 
+
+be separated from preparation -to -preparation variation. In type III collagen gels, changes in effective width and per -
+
+fiber dry mass were comparatively modest across the tested range, consistent with maintenance of a finer network 
+
+architecture. Because type I and type III collagen were analy zed over different concentration ranges, direct subtype 
+
+comparison was restricted to the matched 0.8 mg /mL condition, whereas concentration -dependent responses were 
+
+interpreted within each subtype. 
+
+These results show that HT -derived RI tomograms can be combined with section -based fiber segmentation to 
+
+quantify both collagen network architecture and fiber -associated dry -mass distribution. Although this section -based 
+
+analysis is not equivalent to full three -dimensional fiber tracing, it demonstrates that volumetric RI imaging 
+
+provides a label -free quantitative basis for linking fibrillar morphology, local dry -mass density and fiber -associated 
+
+dry mass in extracellular matrices. 
+
+Time -resolved HT quantifies RI dynamics during collagen fibrillogenesis 
+
+We next tested whether HT could follow collagen assembly in a label -free, time -resolved manner. Type I collagen 
+
+solutions were imaged during gelation, and volumetric RI tomograms were reconstructed over a 60 -min imaging 
+
+window. Early time points showed weak, spatially diffuse RI contrast with only faint fiber -like signals above 
+
+background. Within minutes, discrete fibrillar structures emerged and progressively densified into a fibrillar 
+
+network (Fig. 4a and Supplementary Video 1 ). Magnified views captured this transition from a weakly organi zed 
+
+pre -gelation state to an assembled collagen matrix, demonstrating that time -lapse HT can visuali ze fibrillogenesis 
+
+without fluorescent labels or exogenous probes. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+To quantify the accompanying RI dynamics, we measured the volumetric mean RI change, Δ n, computed as the 
+
+spatial average of the reconstructed RI over the entire field of view relative to the initial state. Δ n increased over 
+
+the imaging window and gradually approached a plateau (Fig. 4b), consistent with progressive collagen fibril 
+
+assembly and network maturation 40,41 . Thus, time -resolved HT links the emergence of fibrillar morphology to a 
+
+quantitative RI -based kinetic readout, providing a non -destructive approach for monitoring collagen gelation in 
+
+three dimensions. 
+
+Time -lapse HT visuali zes local cell -associated remodeling in collagen matrices 
+
+We next tested whether time -resolved HT could visuali ze cell -driven matrix remodeling in collagen gels. HT1080 
+
+fibrosarcoma cells were embedded in type I or type III collagen matrices and imaged over early and late windows 
+
+(0 –2 h and 24 –26 h after gelation; Supplementary Figs. 4 −7) under pharmacological perturbations of cell 
+
+contractility or matrix proteolysis. Because HT provides RI contrast from both cellular structures and surrounding 
+
+collagen fibers, the same time -lapse tomograms enabled simultaneous label -free visuali zation of cell morphology 
+
+and local matrix organi zation. 
+
+In type I collagen gels treated with the Rho -associated kinase (ROCK) inhibitor 42,43 Y-27632, HT resolved the 
+
+spatial relationship between embedded HT1080 cells and the surrounding fibrillar network (Fig. 5a ; see also 
+
+Supplementary Figs. 4 –7 and Supplementary Video 2 –5 for all subtype and inhibitor conditions ). Temporally color -
+
+coded projections of cell -proximal regions showed local fiber displacement and bending at the cell –matrix interface, 
+
+and magnified time -series views resolved individual fiber -level rearrangement events . Matched PBS vehicle 
+
+controls are shown for both conditions at the 0 –2 h and 24 –26 h windows (Supplementary Fig. 4); because each 
+
+condition comprised a single gel, these data illustrate the label -free readout of cell -proximal fiber dynamics rather 
+
+than qua ntifying a ROCK -dependent effect, and HT1080 cells additionally remodel collagen proteolytically, so a 
+
+contractility -specific attribution is not warranted here. 
+
+We then examined HT1080 cells embedded in type III collagen gels treated with the broad -spectrum matrix 
+
+metalloproteinase (MMP) inhibitor 44,45 GM6001 (Fig. 5b). Despite the finer and denser architecture of type III 
+
+collagen, HT resolved individual fibrillar structures around the embedded cell and captured their temporal 
+
+reorgani zation over the 2 h imaging window. These observations show that time -lapse HT can visuali ze local cell -
+
+associated collagen dynamics across matrices with distinct fibrillar architectures. 
+
+These proof -of -concept experiments demonstrate that HT can capture cells and surrounding collagen fibers in the 
+
+same label -free, time -resolved RI measurement. Although the experiments were not designed as a quantitative drug -
+
+response assay, they establish a basis for future studies of matrix remodeling in engineered tissues, cancer -invasion 
+
+models and perturbation -based assays of cell –matrix interactions. 
+
+Discussion 
+
+Fibrillar collagen matrices are structurally heterogeneous, dynamically remodeled and mechanically central to 
+
+fibrosis, cancer invasion and engineered -tissue function. Yet imaging these matrices in a way that is simultaneously 
+
+label -free, volumetric, time -resolved and quantitatively interpretable remains challenging. Here, we present HT as 
+
+a complementary approach for three -dimensional R I imaging of reconstituted fibrillar collagen matrices. By 
+
+integrating HT with SHG -based validation, section -based fiber segmentation and RI -derived dry -mass analysis, we 
+
+show that volumetric RI imaging can capture collagen -rich network architecture, fibrillogenesis -associated RI 
+
+dynamics and local cell -associated matrix remodeling without exogenous labeling. 
+
+The central contribution of this work is not collagen -specific molecular imaging, but the use of volumetric RI 
+
+reconstruction as a physically interpretable contrast mechanism for collagen -rich extracellular matrices. In 
+
+reconstituted gels, the RI -resolved fibrillar structures detected by HT showed spatial and axial correspondence with 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+SHG -positive fibrillar collagen, supporting their interpretation as collagen -rich fibers. Once this correspondence 
+
+was established, RI tomograms provided information that is not directly encoded by SHG intensity alone, in 
+
+particular fiber -associated RI distributions and per -fiber dry mass . Thus, HT enables collagen matrices to be 
+
+analy zed not only by fiber morphology, but also by RI -derived dry -mass distribution. 
+
+This capability allowed us to resolve subtype - and concentration -associated phenotypes in reconstituted collagen 
+
+gels. At the matched concentration analy zed here, type I collagen formed broader and more sparsely distributed RI -
+
+resolved fibrillar structures, whereas type III collagen formed a finer and denser network 35 . The mean fiber -
+
+associated RI was similar between subtypes, indicating that the observed phenotype was not primarily explained by 
+
+a shift in average local RI or dry -mass density. Rather, type I and type III collagen differed in how collagen was 
+
+spatially distributed across the network. Across the concentration series, type I collagen showed stronger broadening 
+
+and higher fiber -associated dry mass with increasing concentration, whereas type III collagen maintained a 
+
+comparatively fine network architecture across the te sted range. These findings are broadly consistent with 
+
+previously described tendencies of type I collagen to form thicker fibrillar bundles and type III collagen to associate 
+
+with finer reticular networks. Because the preparations differed not only in subtype but also in tissue source and 
+
+stock concentration , these observations should be interpreted as preparation -specific collagen network phenotypes 
+
+rather than subtype identity alone. 
+
+A second implication is that HT can follow collagen assembly without labels. During type I collagen gelation, time -
+
+lapse RI imaging captured the transition from weak, diffuse RI contrast to a densified fibrillar network. The rise in 
+
+volumetric mean RI change , which increased rapidly before approaching a plateau, provided a kinetic readout of 
+
+fibrillogenesis, linking the emergence of fibrillar morphology to quantitative changes in RI contrast. Unlike 
+
+fluorescence -based tracer approaches, this measurement does not require label incorporation and is not limited by 
+
+photobleaching. HT may therefore be useful for studying collagen polymeri zation, matrix maturation and 
+
+environmental or pharmacological modulation of fibrillogenesis, particularly when longitudinal, non -destructive 
+
+observation is required. 
+
+The ability to visuali ze both cells and the surrounding collagen network in a single RI volume further extends HT 
+
+to cell –matrix systems. In HT1080 cell -embedded collagen gels, time -lapse HT resolved local fiber displacement 
+
+and bending near the cell –matrix interface 46 . Experiments performed under ROCK - or MMP -related 
+
+pharmacological perturbation showed that HT can capture cell -associated matrix reorgani zation in collagen 
+
+matrices with distinct fibrillar architectures. These experiments were designed as proof -of -concept visuali zations 
+
+rather than quantitative drug -response assays, but they demonstrate a practical advantage of RI imaging: cells and 
+
+matrix can be monitored simultaneously, without separate labels, in the same three -dimensional time -lapse 
+
+measurement. This capability provides a foundation for future assays of matrix remodeling in fibrosis models, 
+
+cancer -invasion systems, organoid –matrix interfaces and engineered tissues. Because anti -fibrotic and anti -invasive 
+
+agents act largely by modulating the contractility - and proteolysis -driven remodeling visualized here, a label -free 
+
+volumetric readout of cell -asso ciated collagen reorganization may be particularly suited to phenotypic drug -
+
+response screening in matrix -embedded culture. 
+
+HT should therefore be viewed as complementary to, rather than a replacement for, established collagen imaging 
+
+modalities. SHG microscopy provides strong endogenous sensitivity to non -centrosymmetric fibrillar collagen and 
+
+can report molecular organi zation, especially when combined with polari za tion -resolved imaging. Fluorescence 
+
+labeling and immunolabeling provide molecular identity and compositional specificity. Confocal reflection 
+
+microscopy and optical coherence -based methods enable longitudinal imaging of collagen -rich matrices using 
+
+scattering contrast. Quantitative collagen -fiber morphometry in histopathology is well established using picrosirius -
+
+red staining combined with curvelet -based fiber analysis 47 , but requires fixation and staining; HT extends 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+comparable fiber -level descriptors to living, unstained samples while adding an RI -derived dry -mass channel. HT 
+
+contributes a different contrast dimension: quantitative volumetric RI reconstruction, dry -mass -related optical 
+
+information and simultaneous label -free visuali zation of cells and matrix. Multimodal combinations of HT with 
+
+SHG, fluorescence, mechanical testing or biochemical assays could therefore provide a more complete description 
+
+of extracellular -matrix structure 48 , composition, dynamics and function than any single modality alone. 
+
+Several limitations should be considered. First, RI contrast is not intrinsically collagen -specific. In the reconstituted 
+
+matrices studied here, collagen was the dominant fibrillar high -RI component, and SHG validation supported the 
+
+interpretation of RI -re solved fibers as fibrillar collagen; in native tissues, organoids or more complex matrix 
+
+environments, however, cells, other extracellular proteins, lipids or mineralized components may also contribute to 
+
+RI contrast, so application of HT to such samples w ill require multimodal validation, collagen -selective reference 
+
+measurements or computational models that incorporate additional contrast mechanisms. 
+
+Second, fiber -level analysis was restricted to individual axial sections, because it relied on an established 2D 
+
+curvelet -transform workflow; while sufficient to quantify effective fiber width, orientation and RI -derived dry mass, 
+
+it does not yet constitut e full three -dimensional fiber tracing 49 –51 . Extending the analysis to volumetric segmentation, 
+
+branch and pore -size analysis, network connectivity and deformation -field metrics would more fully exploit the 3D 
+
+RI data and enable direct quantification of collagen topology and cell -induced matrix rem odeling in three 
+
+dimensions. 
+
+Third, the present comparisons were performed on fibers pooled within representative gels rather than across 
+
+independent preparations, and RI -derived dry mass depends on the assumed specific refractive -index increment, 
+
+the medium RI and the hydration and p acking state of collagen 52 . The reported values are therefore most robust as 
+
+relative comparisons under matched preparation, imaging and reconstruction conditions; absolute mass 
+
+quantification and statistically generalizable collagen -subtype signatures will require biological repli cation and 
+
+calibration against independent biochemical, gravimetric or correlative measurements. Finally, optical scattering, 
+
+sample thickness and reconstruction artifacts may limit RI accuracy in dense or highly heterogeneous tissues; the 
+
+reconstituted ma trices and cell -embedded gels studied here were chosen for optical compatibility with high -
+
+resolution RI reconstruction, and extension to thicker tissues, organoids or native fibrotic samples will require 
+
+optimized sample preparation, reconstruction and or thogonal validation. 
+
+In summary, this study positions holotomography as a complementary label -free platform for volumetric 
+
+visuali zation and RI -based quantification of fibrillar collagen matrices. By combining 3D RI imaging with SHG -
+
+supported validation, fiber segmentation and time -lapse imaging, H T connects co llagen network architecture, dry -
+
+mass distribution and matrix dynamics in a single non -destructive measurement. These capabilities open 
+
+opportunities for quantitative extracellular --matrix biophysics, engineered -tissue analysis, cancer -invasion studies, 
+
+organoid matrix engineering and longitudinal drug -response assays where label -free, volumetric and time -resolved 
+
+matrix readouts are needed. 
+
+Methods 
+
+Holotomography 
+
+Three -dimensional RI tomograms were acquired using a HT system (HT -X1, Tomocube Inc. , Republic of Korea ). 
+
+The system used low -coherence 450 nm LED illumination combined with DMD -based structured illumination. 
+
+Sequential illumination patterns generated by the DMD were projected on to the sample, and transmitted intensity 
+
+images were recorded under multiple illumination conditions and at successive axial positions. The acquired 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+intensity stacks were reconstructed into volumetric RI tomograms using a 3D deconvolution algorithm, with the 
+
+missing -cone problem regulari zed by total variation regularization 33,53 –55 . The illumination and detection numerical 
+
+apertures were NA illum = 0.72 and NA det = 0.95 , corresponding to theoretical lateral and axial resolutions of ~135 
+
+nm and ~74 0 nm, respectively 56 . The resolution realized under total -variation -regularized reconstruction is object -
+
+and SNR -dependent and generally coarser, particularly axially, so effective fiber width is reported as a relative 
+
+morphometric descriptor rather than an absolute fibril d iameter. The reconstructed RI volumes were used for three -
+
+dimensional visuali zation, fiber segmentation and quantitative analysis of fibrillar collagen networks. 
+
+For experiments involving fluorescein isothiocyanate (FITC) -labeled type I collagen, co -registered HT and 
+
+fluorescence imaging were performed using the integrated confocal fluorescence module of the HT -X1 platform. 
+
+Because the HT and fluorescence channel share the same lateral sample coordinate system, the fluorescence image 
+
+was acquired from the same lateral field of view as the RI tomogram. The fluorescence image and RI reconstruction 
+
+were already registered in the x–y plane, whereas their axial coordinate systems exhibited a constant offset. The two 
+
+volumetric datasets were therefore matched by applying an axial shift to the fluorescence z -stack. The co -registered 
+
+datasets were used to compare label -free RI contrast with fluorescence -labeled collagen fibers (Supplementary Fig. 
+
+1) .
+
+Second harmonic generation microscopy and HT –SHG registration 
+
+SHG imaging was performed using an two -photon microscope ( IVIM -CMS, IVIM Technology , Republic of Korea )
+
+with 920 nm excitation. After HT imaging, the same collagen gel sample was transferred to the SHG microscope. 
+
+The corresponding region of interest was manually identified using the collagen network morphology as a spatial 
+
+landmark, and SHG z -stacks were acquired from the matched field of view for comparison with the HT -derived RI 
+
+tomograms. 
+
+Post -acquisition registration of HT and SHG datasets was performed in MATLAB. The HT volume was resampled 
+
+to match the SHG voxel spacing, and gradient -magnitude images were generated to enhance corresponding fibrillar 
+
+structures. Mutual -information -based r igid and affine registration was used for initial volumetric alignment. 
+
+Because minor nonuniform deformation occurred between acquisitions, alignment was locally refi ned in the image 
+
+planes and regions used for direct comparison. Registered datasets were used for overlay visualization and line -
+
+profile analysis of corresponding collagen fibers. 
+
+Fiber segmentation and morphological descriptors 
+
+Fiber -level morphological descriptors were extracted from representative axial RI sections after curvelet -transform -
+
+based segmentation using CT -FIRE 38,57,58 . CT -FIRE generated traced fiber cent er lines and corresponding fiber -
+
+width estimates for individual segmented fibrillar structures. Fiber length was defined as the cumulative path length 
+
+along the traced cente r line. Fiber orientation was defined as the in -plane angle, modulo 180°, of the vector 
+
+connecting the two fiber endpoints relative to the image x axis. Fiber straightness was calculated as the ratio of the 
+
+end -to -end distance to the cumulative cent er -line length, with values closer to 1 indicating straighter fibers. 
+
+Effective fiber width was estimated from the CT -FIRE -derived fiber geometry and converted to micromet er s using 
+
+the calibrated image pixel size (0.196 μm). These descriptors were used to compare section -based collagen network 
+
+architecture across collagen subtypes and concentrations. 
+
+Conversion of RI contrast to dry mass in fibrillar collagen matrices 
+
+Dry mass density was estimated from RI contrast using the linear relationship between RI and non -aqueous 
+
+biomolecular concentration,  𝑛 (𝑟 ) = 𝑛 𝑚 + 𝛼𝐶 (𝑟 ), where n(r) is the local RI, nm is the RI of the surrounding 
+
+medium, α is the specific RI increment and C(r) is the local dry mass density. This relationship was originally 
+
+established by Barer 24,39,59 and is widely applied in quantitative phase imaging and RI tomography studies 23,39,50 .
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+The local RI contrast was defined as  𝛥𝑛 (𝑟 ) = 𝑛 (𝑟 ) − 𝑛 𝑚  , and dry mass density was calculated as  𝐶 (𝑟 ) =
+
+𝛥𝑛 (𝑟 )/𝛼 .
+
+For the collagen -rich fibrillar matrices analy zed here, we used nm = 1.3370 for the surrounding aqueous medium 
+
+(1 × DPBS for acellular gels and DMEM -based culture medium for cell -embedded gels, which have closely matched 
+
+refractive indices) and α = 0.18 mL /g as a protein -regime specific RI increment 60,61 . The same nm and α values were 
+
+used for all conditions, enabling direct relative comparison of RI -derived local dry mass density and per -fiber dry 
+
+mass under matched sample -preparation, imaging and reconstruction conditions. Although the exact value of α can 
+
+vary with protein composition, hydration, and molecular packing 52 , this value is consistent with commonly used 
+
+estimates for non -aqueous biomolecular material in protein -rich biological samples. Because individual fibrils 
+
+(~50 –200 nm) lie below the imaging resolution, each mask voxel is a partial -volume mixture of fibril and interstitial 
+
+water; the resulting values are therefore RI -derived, partial -volume mass -related esti mates whose absolute scale is 
+
+governed primarily by the unresolved fibril fill fraction rather than by uncertainty in α, so they are interpreted only 
+
+as relative comparisons under matched conditions. 
+
+Per -fiber dry mass was calculated only within CT -FIRE -segmented fiber regions. For each segmented fiber 
+
+fragment, the rectified local RI contrast was integrated voxel -by -voxel over the fiber mask for conversion, and any 
+
+fragment whose mask -mean RI fell below the medium RI ( nm) was assigned zero contrast, thereby excluding non -
+
+physical negative mass contributions arising from reconstruction noise . The fragment -dry mass assigned to a 
+
+segmented fiber fragment f was then calculated as :
+
+𝑚 𝑓 = 𝑉 vox 
+
+𝛼 ∑ max (𝑛 𝑖 − 𝑛 𝑚 , 0)
+
+> 𝑖 ∈𝑓
+
+where i indexes pixels within the segmented fiber mask, Vvox is the voxel -equivalent volume assigned to each mask 
+
+pixel. Because this calculation was performed on representative 2D axial sections rather than on full 3D fiber traces, 
+
+𝑚 𝑓  represents the dry mass assigned to the segmented fiber fragment within the sampled axial slab (assigned axial 
+
+slab thickness = z -step 0.8394 μm), not the total mass of the complete three -dimensional fiber. The fiber mask was 
+
+formed by dilating each CT -FIRE center line by the local fiber radius (half the local width), and Δn was integrated 
+
+over the resulting mask so that fiber width contributes through the mask area rather than an explicit weighting (Code 
+
+availability). Each fragment retained the index of its parent traced fiber, and the per -fiber dry mass reported here 
+
+was o btained by summing the fragment dry masses mf over all fragments belonging to the same fiber. 
+
+Uncertainty in RI -derived dry mass estimat ion arises from RI reconstruction noise, the assumed medium RI, the 
+
+selected specific refractive increment and possible variation in collagen hydration or molecular packing 62 . The 
+
+spatial RI noise level, measured as the standard deviation of RI in fiber -free medium regions, was approximately 
+
+σRI = 0.0003 –0.0004. Accordingly, small differences in mean fiber -associated RI below this level were interpreted 
+
+cautiously, whereas morphology -driven and mask -integrated dry mass differences were used for fiber -level 
+
+comparisons. Uncertainty propagation for per -fragment dry mass, including the medium -RI term, is described in 
+
+Supplementary Note 1. 
+
+Sample preparation 
+
+Collagen matrices. Type I collagen from rat tail tendon (4 mg /mL ; Advanced BioMatrix, Cat. No. 5153) and type 
+
+III collagen from human placenta (1 mg /mL; Advanced BioMatrix, Cat. No. 5021) were stored under refrigerated 
+
+and handled under chilled conditions before gelation. Collagen solutions were neutralized by mixing with 10× PBS 
+
+to a final concentration of 1× PBS, followed by pH adjustment to 7.2 –7.4 using 0.1 M NaOH. Neutralized collagen 
+
+solutions were cast onto the 2 0 × 20 mm imaging area of a TomoDish (Tomocube Inc.) in 60 μ L volumes (20 μL
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+for SHG co -registration experiments) . Type I and type III collagen gels were prepared at the final concentrations 
+
+specified for each experiment. 
+
+After casting, gels were polymerized at 37°C for 1 h for type I collagen and 2 h for type III collagen. Acellular 
+
+collagen gels were imaged in 1 × DPBS. For cell -embedding experiments, complete culture medium, consisting of 
+
+DMEM supplemented with 10% fetal bovine serum and 1% penicillin –streptomycin, was added to the gels, and 
+
+imaging was performed in complete medium at 37°C under 5% CO 2. For RI -based analysis, the local medium 
+
+background was estimated from fiber -free regions of each reconstructed volume; the medium RI value used for dry -
+
+mass conversion (nm = 1.3370) is specified above .
+
+Cell embedding and drug treatments. HT1080 fibrosarcoma cells (ATCC, CCL -121) were dissociated into a 
+
+single -cell suspension and mixed with neutralized collagen before casting. Cells were embedded at 8,000 cells per 
+
+60 μ L gel, corresponding to a final density of 1.3 × 10⁵ cells /mL. For pharmacological perturbation experiments, 
+
+cells were pretreated for 1 h with either the ROCK inhibitor Y -27632 dihydrochloride (15 μM; Tocris, Cat. No. 
+
+1254) or the broad -spectrum matrix metalloproteinase inhibitor GM6001 (10 μM; GLPBio, Cat. No. GC14523 -
+
+1MG). After pretreatment, cells were embedded in collagen gels and imaged in complete medium containing the 
+
+corresponding compound. 
+
+GM6001 was prepared in DMSO and used at a final concentration of 10 μM. Matched vehicle -control samples 
+
+received the same final concentration of DMSO in complete medium without GM6001. Y -27632 was prepared in 
+
+1× PBS and used at a final concentration of 15 M. Matched vehicle -control samples received the corresponding 
+
+volume of PBS in complete medium without Y -27632. Time -lapse datasets were acquired at 5 min intervals over 
+
+early and late imaging windows, corresponding to 0 –2 h and 24 –26 h after gelation, respectively. 
+
+FITC -collagen tracer. For fluorescence -based validation experiments, FITC -labeled type I collagen (Sigma -
+
+Aldrich, Cat. No. C4361) was mixed with unlabeled type I collagen at 5% w/w of the total collagen mass before 
+
+neutralization and casting. Mixed collagen gels were prepared using the same neutralization, casting and gelation 
+
+procedures described above and w ere used for co -registered HT and fluorescence imaging (Supplementary Fig. 1) .
+
+Statistics and reproducibility 
+
+Independent collagen gel preparations were considered the experimental unit for collagen -network characteri zation. 
+
+For static collagen -network analysis (Fig. 3), one independent gel preparation was analy zed for each collagen 
+
+subtype and concentration condition. For each gel, one representative field of view and one representative axial 
+
+section were used for CT -FIRE -based fiber extraction. Segmented fibers were included if they satisfied predefined 
+
+quality criteria: a minimum traced length of 5 pixels, corresponding to approximately 1.0 μm, and at least three 
+
+constituent vertices. For per -fiber dry -mass analysis, local RI contrast (Δn relative to nm = 1.3370) was summed 
+
+voxel -wise as max( Δn, 0) over each segmented fiber mask, and fiber fragments with non -positive mask -mean 
+
+contrast ( Δn ≤ 0) were assigned zero mass. The numbers of fiber fragments and analyzed fibers for the matched 0.8 
+
+mg/mL condition are reported in Supplementary Table 2, together with the number of gels, fields of view and 
+
+analy zed sections. 
+
+Per -fiber measurements were pooled within each gel to visuali ze fiber -level distributions. Because each 
+
+subtype/concentration condition was represented by a single independent gel preparation, these pooled fiber 
+
+measurements are technical replicates rather than independent biological replicates. Distributional comparisons of 
+
+effective fiber width and per -fiber dry mass were therefore used as descriptive characteri zations of the analy zed 
+
+fiber populations within representative gels, not as population -level inference across independent gel preparations. 
+
+Data are presented as mean ± s.d. or as kernel density estimates with individual fiber measurements overlaid. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+For collagen fibrillogenesis experiments (Fig. 4), one independent type I collagen gel was imaged over a 60 min 
+
+gelation period , at 30 s intervals during the first 30 min, when fibril assembly is most rapid, and at 1 min intervals 
+
+during the subsequent 30 min . The kinetic trace in Fig. 4b is plotted from the 1 min frames, whereas Supplementary 
+
+Video 1 visualizes all acquired frames. The volumetric mean refractive index change, Δ n(t), was calculated relative 
+
+to the initial pre -gelation baseline and is reported as a descriptive time course that rose progressively before 
+
+approaching a plateau ; because early -assembly Δ n values are close to the RI noise floor and the experiment was 
+
+performed on a single gel, the trajectory was interpreted only qualitatively .
+
+For cell –matrix remodeling experiments (Fig. 5 and Supplementary Figs. 4 –7), one independent cell -containing 
+
+collagen gel was prepared for each collagen subtype, treatment and matched vehicle -control condition. HT1080 
+
+cells embedded in collagen matrices were imaged at 5 min intervals during early and late remodeling windows, 
+
+corresponding to 0 –2 h and 24 –26 h after gelation, respectively ; between these windows (2 –24 h), imaging 
+
+continued at 30 min intervals, and all acquired frames are included in the corresponding Supplementary Videos. 
+
+Because these experiments were not replicated across independent gels for each condition, they were used as proof -
+
+of -concept visuali zations of cell -associated matrix remodeling rather than as quantitative drug -response assays or 
+
+tests of ROCK - or MMP -specific mechanisms. 
+
+No statistical method was used to predetermine sample size. Experiments were not randomi zed, and investigators 
+
+were not blinded to collagen subtype or treatment condition during imaging or analysis. Statistical analyses were 
+
+performed in MATLAB (The MathWorks). Fiber extraction was performed using CT -FIRE with the parameters 
+
+listed in Supplementary Table 3, and the analysis code is provided in the accompanying GitHub repository. 
+
+Data availability 
+
+A representative subset of the imaging data generated in this study is available on Zenodo at 
+
+https://doi.org/10.5281/zenodo.20048299. The complete raw tomogram datasets exceed Zenodo size limits and are 
+
+available from the corresponding author, Y.K.P., upo n reasonable request. Requests will be reviewed for research 
+
+use and data will be provided within four weeks, subject to institutional data -transfer requirements. 
+
+Code availability 
+
+The code used for image processing, fiber segmentation, quantitative analysis and figure generation is available on 
+
+GitHub at https://github.com/KAIST -Biomedical -Optics -Lab/HT -collagen -analysis. 
+
+Acknowledgements 
+
+This work was supported by National Research Foundation of Korea grants funded by the Ministry of Science and 
+
+ICT (MSIT) (RS -2024 -00442348, RS -2022 -NR068141 and RS -2024 -00351903 to Y.K.P. and W.S.P.), the 
+
+National Institutes of Health (NIH) (R01CA279948 to E.H.A. and D.H.K.), the Korea Institute for Advancement 
+
+of Technology (KIAT) through the International Cooperative R&D program (P0028463 to Y.K.P.), and the Korean 
+
+Fund for Regenerative Medicine (KFRM) funded by MSIT (RS -2024 -00332454 to Y.K.P.). The auth ors thank 
+
+Professor Pilhan Kim and his group for providing access to second harmonic generation microscopy. 
+
+Author contributions 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Y.K.P., D.H.K. and S.L. conceived the study. S.L. and W.S.P. performed the experiments. S.L. analy zed the data. 
+
+W.S.P., J.L. and J.P. provided samples and analytical tools. Y.K.P. acquired funding. Y.K.P., D.H.K. and E.H.A. 
+
+supervised the study. Y.K.P., D.H.K., H.P. and E.H.A. administered the project. S.L., Y.K.P., E.H.A., H.P. and 
+
+D.H.K. wrote and edi ted the manuscript. All authors reviewed and approved the final manuscript. 
+
+Competing interests 
+
+J.P. and Y.K.P. have financial interests in Tomocube Inc., a company that commerciali zes HT instruments. 
+
+Y.K.P. is a co -founder of Tomocube Inc. D.H.K. is a co -founder of Curi Bio Inc. The remaining authors declare 
+
+no competing interests. 
+
+References 
+
+1. Kadler, K. E. Fell Muir Lecture: Collagen fibril formation in vitro and in vivo . Int. J. Exp. Pathol. 98 , 4 –16 
+
+(2017). 
+
+2. Frantz, C., Stewart, K. M. & Weaver, V. M. The extracellular matrix at a glance. J. Cell Sci. 123 , 4195 –4200 
+
+(2010). 
+
+3. Bonnans, C., Chou, J. & Werb, Z. Remodelling the extracellular matrix in development and disease. Nat. Rev. 
+
+Mol. Cell Biol. 15 , 786 –801 (2014). 
+
+4. Provenzano, P. P. et al. Collagen reorganization at the tumor -stromal interface facilitates local invasion. BMC 
+
+Med. 4, 38 (2006). 
+
+5. Conklin, M. W. et al. Aligned Collagen Is a Prognostic Signature for Survival in Human Breast Carcinoma. 
+
+Am. J. Pathol. 178 , 1221 –1232 (2011). 
+
+6. Friedl, P. & Wolf, K. Tumour -cell invasion and migration: diversity and escape mechanisms. Nat. Rev. 
+
+Cancer 3, 362 –374 (2003). 
+
+7. Yang, Y., Leone, L. M. & Kaufman, L. J. Elastic Moduli of Collagen Gels Can Be Predicted from Two -
+
+Dimensional Confocal Microscopy. Biophys. J. 97 , 2051 –2060 (2009). 
+
+8. Campagnola, P. J. & Loew, L. M. Second -harmonic imaging microscopy for visualizing biomolecular arrays 
+
+in cells, tissues and organisms. Nat. Biotechnol. 21 , 1356 –1360 (2003). 
+
+9. Mostaço -Guidolin, L., Rosin, N. & Hackett, T. -L. Imaging Collagen in Scar Tissue: Developments in Second 
+
+Harmonic Generation Microscopy for Biomedical Applications. Int. J. Mol. Sci. 18 , 1772 (2017). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+10. Williams, R. M., Zipfel, W. R. & Webb, W. W. Interpreting Second -Harmonic Generation Images of 
+
+Collagen I Fibrils. Biophys. J. 88 , 1377 –1386 (2005). 
+
+11. Brightman, A. O. et al. Time -lapse confocal reflection microscopy of collagen fibrillogenesis and 
+
+extracellular matrix assembly in vitro. Biopolymers 54 , 222 –234 (2000). 
+
+12. Maska, M. et al. Quantification of the 3D collagen network geometry in confocal reflection microscopy. in 
+
+2015 IEEE International Conference on Image Processing (ICIP) 1791 –1794 (IEEE, Quebec City, QC, 
+
+Canada, 2015). doi:10.1109/ICIP.2015.7351109. 
+
+13. Tang, P. et al. Polarization sensitive optical coherence tomography with single input for imaging depth -
+
+resolved collagen organizations. Light Sci. Appl. 10 , 237 (2021). 
+
+14. Levitz, D., Hinds, M. T., Ardeshiri, A., Hanson, S. R. & Jacques, S. L. Non -destructive label -free monitoring 
+
+of collagen gel remodeling using optical coherence tomography. Biomaterials 31 , 8210 –8217 (2010). 
+
+15. Levitz, D. et al. Quantitative characterization of developing collagen gels using optical coherence 
+
+tomography. J. Biomed. Opt. 15 , 026019 (2010). 
+
+16. Park, Y., Depeursinge, C. & Popescu, G. Quantitative phase imaging in biomedicine. Nat. Photonics 12 , 578 –
+
+589 (2018). 
+
+17. Zangle, T. A. & Teitell, M. A. Live -cell mass profiling: an emerging approach in quantitative biophysics. 
+
+Nat. Methods 11 , 1221 –1228 (2014). 
+
+18. Majeed, H., Okoro, C., Kajdacsy -Balla, A., Toussaint, K. C. & Popescu, G. Quantifying collagen fiber 
+
+orientation in breast cancer using quantitative phase imaging. J. Biomed. Opt. 22 , 046004 (2017). 
+
+19. Kandel, M. E. et al. Phase imaging with computational specificity (PICS) for measuring dry mass changes in 
+
+sub -cellular compartments. Nat. Commun. 11 , 6256 (2020). 
+
+20. Majeed, H., Nguyen, T. H., Kandel, M. E., Kajdacsy -Balla, A. & Popescu, G. Label -free quantitative 
+
+evaluation of breast tissue using Spatial Light Interference Microscopy (SLIM). Sci. Rep. 8, 6875 (2018). 
+
+21. Majeed, H. et al. Quantitative Histopathology of Stained Tissues using Color Spatial Light Interference 
+
+Microscopy (cSLIM). Sci. Rep. 9, 14679 (2019). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+22. Wolf, E. Three -dimensional structure determination of semi -transparent objects from holographic data. Opt. 
+
+Commun. 1, 153 –156 (1969). 
+
+23. Kim, G. et al. Holotomography. Nat. Rev. Methods Primer 4, 51 (2024). 
+
+24. Barer, R. Determination of dry mass, thickness, solid and water concentration in living cells. Nature 172 ,
+
+1097 –1098 (1953). 
+
+25. Park, J. et al. Revealing 3D microanatomical structures of unlabeled thick cancer tissues using 
+
+holotomography and virtual H&E staining. Nat. Commun. 16 , 4781 (2025). 
+
+26. Hugonnet, H. et al. Multiscale label -free volumetric holographic histopathology of thick -tissue slides with 
+
+subcellular resolution. Adv. Photonics 3, 026004 (2021). 
+
+27. Kim, G. et al. Rapid species identification of pathogenic bacteria from a minute quantity exploiting three -
+
+dimensional quantitative phase imaging and artificial neural network. Light Sci. Appl. 11 , 190 (2022). 
+
+28. Kim, D. et al. Label -free high -resolution 3 -D imaging of gold nanoparticles inside live cells using optical 
+
+diffraction tomography. Methods 136 , 160 –167 (2018). 
+
+29. Kim, T. et al. RNA -mediated demixing transition of low -density condensates. Nat. Commun. 14 , 2425 
+
+(2023). 
+
+30. Kim, H. et al. Diverse bat organoids provide pathophysiological models for zoonotic viruses. Science 388 ,
+
+756 –762 (2025). 
+
+31. Esposito, M. et al. TGF -β-induced DACT1 biomolecular condensates repress Wnt signalling to promote bone 
+
+metastasis. Nat. Cell Biol. 23 , 257 –267 (2021). 
+
+32. Cangkrama, M. et al. MIRO2 -mediated mitochondrial transfer from cancer cells induces cancer -associated 
+
+fibroblast differentiation. Nat. Cancer https://doi.org/10.1038/s43018 -025 -01038 -6 (2025) 
+
+doi:10.1038/s43018 -025 -01038 -6. 
+
+33. Hugonnet, H., Lee, M. & Park, Y. Optimizing illumination in three -dimensional deconvolution microscopy 
+
+for accurate refractive index tomography. Opt. Express 29 , 6293 –6301 (2021). 
+
+34. Asgari, M., Latifi, N., Heris, H. K., Vali, H. & Mongeau, L. In vitro fibrillogenesis of tropocollagen type III 
+
+in collagen type I affects its relative fibrillar topology and mechanics. Sci. Rep. 7, 1392 (2017). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+35. Liu, X., Wu, H., Byrne, M., Krane, S. & Jaenisch, R. Type III collagen is crucial for collagen I fibrillogenesis 
+
+and for normal cardiovascular development. Proc. Natl. Acad. Sci. 94 , 1852 –1856 (1997). 
+
+36. Hulmes, D. J. S. Building Collagen Molecules, Fibrils, and Suprafibrillar Structures. J. Struct. Biol. 137 , 2 –10 
+
+(2002). 
+
+37. Romanic, A. M., Adachi, E., Kadler, K. E., Hojima, Y. & Prockop, D. J. Copolymerization of pNcollagen III 
+
+and collagen I. pNcollagen III decreases the rate of incorporation of collagen I into fibrils, the amount of 
+
+collagen I incorporated, and the diamete r of the fibrils formed. J. Biol. Chem. 266 , 12703 –12709 (1991). 
+
+38. Bredfeldt, J. S. et al. Computational segmentation of collagen fibers from second -harmonic generation 
+
+images of breast cancer. J. Biomed. Opt. 19 , 016007 (2014). 
+
+39. Popescu, G. et al. Optical imaging of cell mass and growth dynamics. Am. J. Physiol. -Cell Physiol. 295 ,
+
+C538 –C544 (2008). 
+
+40. Na, G. C., Butz, L. J. & Carroll, R. J. Mechanism of in vitro collagen fibril assembly. Kinetic and 
+
+morphological studies. J. Biol. Chem. 261 , 12290 –12299 (1986). 
+
+41. Wood, G. C. & Keech, M. K. The formation of fibrils from collagen solutions 1. The effect of experimental 
+
+conditions: kinetic and electron -microscope studies. Biochem. J. 75 , 588 –598 (1960). 
+
+42. Petroll, W. M., Cavanagh, H. D. & Jester, J. V. Dynamic three‐dimensional visualization of collagen matrix 
+
+remodeling and cytoskeletal organization in living corneal fibroblasts. Scanning 26 , 1 –10 (2004). 
+
+43. Uehata, M. et al. Calcium sensitization of smooth muscle mediated by a Rho -associated protein kinase in 
+
+hypertension. Nature 389 , 990 –994 (1997). 
+
+44. Grobelny, D., Poncz, L. & Galardy, R. E. Inhibition of human skin fibroblast collagenase, thermolysin, and 
+
+Pseudomonas aeruginosa elastase by peptide hydroxamic acids. Biochemistry 31 , 7152 –7154 (1992). 
+
+45. Sabeh, F. et al. Tumor cell traffic through the extracellular matrix is controlled by the membrane -anchored 
+
+collagenase MT1 -MMP. J. Cell Biol. 167 , 769 –781 (2004). 
+
+46. Legant, W. R., Chen, C. S. & Vogel, V. Force -induced fibronectin assembly and matrix remodeling in a 3D 
+
+microtissue model of tissue morphogenesis. Integr. Biol. 4, 1164 (2012). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+47. Keikhosravi, A. et al. Quantification of collagen organization in histopathology samples using liquid crystal 
+
+based polarization microscopy. Biomed. Opt. Express 8, 4243 (2017). 
+
+48. Shaked, N. T., Boppart, S. A., Wang, L. V. & Popp, J. Label -free biomedical optical imaging. Nat. Photonics 
+
+17 , 1031 –1041 (2023). 
+
+49. Lee, W. et al. Quantitative Classification of 3D Collagen Fiber Organization From Volumetric Images. IEEE 
+
+Trans. Med. Imaging 39 , 4425 –4435 (2020). 
+
+50. Yeh, L. -H. et al. Permittivity tensor imaging: modular label -free imaging of 3D dry mass and 3D orientation 
+
+at high resolution. Nat. Methods 21 , 1257 –1274 (2024). 
+
+51. Liu, Y. et al. Fibrillar Collagen Quantification With Curvelet Transform Based Computational Methods. 
+
+Front. Bioeng. Biotechnol. 8, 198 (2020). 
+
+52. Leonard, D. W. & Meek, K. M. Refractive indices of the collagen fibrils and extrafibrillar material of the 
+
+corneal stroma. Biophys. J. 72 , 1382 –1387 (1997). 
+
+53. Lim, J. et al. Comparative study of iterative reconstruction algorithms for missing cone problems in optical 
+
+diffraction tomography. Opt. Express 23 , 16933 (2015). 
+
+54. Hugonnet, H., Lee, M. J. & Park, Y. K. Quantitative phase and refractive index imaging of 3D objects via 
+
+optical transfer function reshaping. Opt. Express 30 , 13802 –13809 (2022). 
+
+55. Lee, C. et al. Single -shot refractive index slice imaging using spectrally multiplexed optical transfer function 
+
+reshaping. Opt. Express 31 , 13806 (2023). 
+
+56. Park, C., Shin, S. & Park, Y. Generalized quantification of three -dimensional resolution in optical diffraction 
+
+tomography using the projection of maximal spatial bandwidths. J. Opt. Soc. Am. A 35 , 1891 –1898 (2018). 
+
+57. Stein, A. M., Vader, D. A., Jawerth, L. M., Weitz, D. A. & Sander, L. M. An algorithm for extracting the 
+
+network geometry of three‐dimensional collagen gels. J. Microsc. 232 , 463 –475 (2008). 
+
+58. Liu, Y., Keikhosravi, A., Mehta, G. S., Drifka, C. R. & Eliceiri, K. W. Methods for Quantifying Fibrillar 
+
+Collagen Alignment. in Fibrosis (ed. Rittié, L.) vol. 1627 429 –451 (Springer New York, New York, NY, 
+
+2017). 
+
+59. Barer, R., Ross, K. F. A. & Tkaczyk, S. Refractometry of Living Cells. Nature 171 , 720 –724 (1953). 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+60. Zhao, H., Brown, P. H. & Schuck, P. On the Distribution of Protein Refractive Index Increments. Biophys. J. 
+
+100 , 2309 –2317 (2011). 
+
+61. Davies, H. G. & Wilkins, M. H. F. Interference Microscopy and Mass Determination. Nature 169 , 541 –541 
+
+(1952). 
+
+62. Aknoun, S. et al. Living cell dry mass measurement using quantitative phase imaging with quadriwave lateral 
+
+shearing interferometry: an accuracy and sensitivity discussion. J. Biomed. Opt. 20 , 126009 (2015). 
+
+Figure 1 | Label -free HT reconstruction of three -dimensional fibrillar collagen architecture. a, Optical 
+
+schematic of the HT system. Low -coherence LED illumination is spatially modulated by a DMD, projected on to 
+
+the sample through lens L1, collected by the objective lens and recorded by an image sensor through lens L2. b, 
+
+Three -dimensional RI reconstruction workflow. Intensity images acquired under sequential structured -illumination 
+
+conditions are computationally reconstructed into a volumetric RI tomogram. c–e, Representative 3D RI tomogram 
+
+of a reconstituted fibrillar collagen gel. c, Orthogonal slice views showing RI -resolved fibrillar structures across the 
+
+imaged volume. d, Volumetric rendering of the boxed region in c. e, Maximum -RI projection and depth -colored 
+
+projection showing the depth -dependent organi zation of RI -resolved fibrillar structures over an axial range of 
+
+approximately 30 μm, without exogenous labeling. Scale bars, 50 μm in c and 10 μm in d and e. Color bars indicate 
+
+RI and depth. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Figure 2 | SHG validation of HT collagen contrast and subtype -dependent fibrillar architecture. a, Co -
+
+registered HT and SHG images of the same reconstituted collagen network. Depth -colored projections show 
+
+spatially corresponding fibrillar structures across the registered volume; boxed regions indicate the positions used 
+
+for magnified axial -plane compariso ns at z = 0 μm and z = 4.8 μm. b, Representative projection and axial -section 
+
+views of HT, SHG and merged images ; solid lines mark the fiber segments used for the line profiles in c (i, z = 0 
+
+μm ; ii, z = 4.8 μm ). HT -derived RI contrast spatially co -locali zes with SHG -positive fibrillar collagen, supporting 
+
+the interpretation that the fibrillar structures resolved by HT correspond to collagen fibers. HT and SHG are shown 
+
+in green and magenta, respectively. c, Line profiles along the fiber segments lined in b, taken at (i) z = 0 μm and (ii) 
+
+z = 4.8 μm. HT and SHG signals show matched peak positions, whereas the broader SHG profiles reflect its lower 
+
+spatial resolution. d, Volumetric RI renderings of separately prepared, concentration -matched type I and type III 
+
+collagen networks. HT resolves subtype -dependent fibrillar organi zation without exogenous labeling, with type I 
+
+collagen forming broader and more sparsely distributed fibers and type III collagen forming a finer, denser network. 
+
+Scale bars, 20 μm in overview images and projections, and 10 μm in magnified axial sections a nd volumetric 
+
+renderings. Color bars indicate depth or RI as shown. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Figure 3 | Fiber -level quantification of collagen network architecture and RI -derived dry mass. a, Analysis 
+
+workflow for extracting fiber -level metrics from RI tomograms. Representative axial sections from reconstructed 
+
+3D RI volumes were analy zed using curvelet -transform -based fiber segmentation to generate individual fiber cente r
+
+lines and fiber masks. For each segmented fiber, morphological and biophysical descriptors were extracted, 
+
+including effective width, fiber length, straightness, orientation angle and RI -derived dry mass. b, Representative 
+
+concentration -matched type I and type III collagen sections and corresponding fiber -segmentation results. From left 
+
+to right, panels show the RI section, CT -FIRE -derived fiber cent er lines, effective -width -weighted fiber masks and 
+
+magnified insets shown to illustrate segmentation quality, with per -fiber quantification performed over the full field 
+
+of view . c, RI probability -density distributions of segmented fiber regions in type I and type III collagen networks. 
+
+Segmented fibrillar regions occupy a higher -RI population than the background. Colored d ashed lines indicate the 
+
+mean RI of the fiber -associated population , and black dashed lines the mean RI of the background . d, Concentration -
+
+dependent distributions of effective fiber width and per -fiber dry mass for type I and type III collagen. Type I 
+
+collagen shows a stronger concentration -dependent increase in fiber width and integrated dry mass, whereas type 
+
+III collagen maintains a finer fibrillar architecture across the tested concentration range. Points indicate individual 
+
+segmented fibers; violin plots show distribution densities; blac k markers and error bars indicate mean ± s.d. Per -
+
+fiber dry mass was calculated by integrating positive RI contrast within segmented fiber masks over the analy zed 
+
+axial slab, as described in Methods. Scale bars, 10 μm in main images and 5 μm in insets. Color bars indicate RI. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Figure 4 | Time -resolved HT imaging of collagen fibrillogenesis. a, Time -lapse HT maximum -RI projections of 
+
+type I collagen during gelation, showing the progressive emergence and densification of RI -resolved fibrillar 
+
+structures over 60 min. Magnified insets highlight early fibril formation within the boxed region, resolving the 
+
+transition from weak, diffuse RI texture to a more defined fibrillar network within the first several minutes. b, 
+
+Quantification of the volumetric mean refractive index change, Δ n, during gelation. The increase in Δ n provides a 
+
+label -free RI -based kinetic readout of collagen assembly, linking fibrillar network formation to assembly -associated 
+
+changes in volumetric RI contrast. Because early Δ n values are comparable to the system RI noise floor, the 
+
+trajectory is interpreted as a qualitative assembly readout rather than as a calibrated mass -accumulation curve. As 
+
+a volume -averaged quantity reconstructed under nonlinear total -variation regulariza tion, its absolute scale and 
+
+early -time shape also reflect reconstruction behavior and bulk effects rather than fibril mass alone. Scale bars, 10 
+
+μm in full -field images and 2 μm in magnified insets. Color bars indicate RI. 
+
+> .CC-BY 4.0 International license available under a (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made The copyright holder for this preprint this version posted June 24, 2026. ;https://doi.org/10.64898/2026.05.05.722893 doi: bioRxiv preprint
+
+Figure 5 | Time -resolved HT imaging of cell -associated collagen matrix dynamics. a, b, Time -lapse HT imaging 
+
+of HT1080 cells embedded in fibrillar collagen matrices under pharmacological perturbation. a, HT1080 cells 
+
+embedded in type I collagen and treated with the Rho -associated kinase (ROCK) inhibitor Y -27632. b, HT1080 
+
+cells embedded in type III collagen and treated with the broad -spectrum matrix metalloproteinase (MMP) inhibitor 
+
+GM6001. For each condition, full -field RI views at representative time points show embedded cells and the 
+
+surrounding collagen network over a 2 h imaging window. Collagen fibers are shown in gr ayscale RI contrast, and 
+
+cell -associated regions are overlaid in blue. Time -colored images of the boxed regions encode local temporal 
+
+changes in the matrix, highlighting fiber displacement and bending near the cell –matrix interface. Magnified time -
+
+series panels show representative single -fiber -level reorgani zation events; yellow dashed circles mark regions with 
+
+prominent local fiber changes. Images were acquired at 5 min intervals. Scale bars, 40 μm in full -field views and 5 
+
+μm in magnified views. Color bars indicate RI and elapsed time.

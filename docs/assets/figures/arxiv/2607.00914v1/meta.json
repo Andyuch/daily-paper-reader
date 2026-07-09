@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.00914v1/fig-001.webp",
+      "caption": "Fig. 1. Electron transport and near-field photovoltage profiling under THz illumination. a Microscope image of the device (scale bar 150 µm). Orange regions correspond to the NbN film, purple corresponds to the Si/SiO2 substrate. b Device resistivity, 𝜌, as a function of temperature measured in the dark and under continuous-wave 2.52 THz illumination with the laser power of 1.7 mW at the cryostat window. The inset shows the temperature derivative d𝜌/dT, with dashed lines marking the superconducting transition temperature (𝑇c) defined at the maximum of the derivative. c Schematic diagram of the THz near-field photovoltage experiment. d THz near-field photovoltage (purple line) and AFM topography (black line) profiles obtained at 𝑇 = 13.86 K by averaging in the DC current range 𝐼b = [380, 420] µA.",
+      "page": 3,
+      "index": 1,
+      "width": 1037,
+      "height": 461
+    },
+    {
+      "url": "assets/figures/arxiv/2607.00914v1/fig-002.webp",
+      "caption": "Fig. 3. Multiple local near-field photovoltage peaks at 𝑻 = 𝟏𝟑. 𝟗𝟕 𝐊. a Current-space near-field photovoltage map measured at 𝑇 = 13.97 K (full map shown in Fig. S6). b Horizontal 𝑉PV profiles (trace and retrace) obtained by averaging the line scans from the map in panel (a) over the current range 𝐼b = [290, 350] µA. The trace and retrace profiles were shifted by 1 µm to account for hysteresis in the piezoelectric scanners. c Zoomed-in view of the trace and retrace 𝑉PV profiles shown in (b). The green line plots the Gaussian fit to the peak in the trace profile. d Normalized autocorrelation",
+      "page": 4,
+      "index": 2,
+      "width": 1037,
+      "height": 321
+    },
+    {
+      "url": "assets/figures/arxiv/2607.00914v1/fig-003.webp",
+      "caption": "Fig. 2. Local peak in the near-field photovoltage at 𝑻 = 𝟏𝟑. 𝟖𝟔 𝐊. a Current-space near-field photovoltage map measured at 𝑇 = 13.86 K. b Zoomed-in view of the 𝑉PV profile obtained by averaging the line scans from the map in (a) over the current range 𝐼b = [380, 420] µA, with a Gaussian fit to the photovoltage peak (solid purple line) found at 𝑥 = 12.52 μm. Orange vertical dashed lines indicate the FWHM of the peak. c Current dependence of the FWHM of the peak extracted from the map in (a). d Current dependence of amplitude of the central peak extracted from the analysis of the map in panel (a).",
+      "page": 4,
+      "index": 3,
+      "width": 1037,
+      "height": 319
+    },
+    {
+      "url": "assets/figures/arxiv/2607.00914v1/fig-004.webp",
+      "caption": "Fig. 4. Current dependence of the near-field photovoltage signal. a Current-space 𝑉PV maps measured at various temperatures. Short-dashed lines mark the 𝐼𝑐 values obtained from the far-field VI curves using the criterion 𝑉 > 50 μV. Long-dashed lines indicate the current corresponding to the maximum observed photovoltage. The purple shaded area corresponds to the region used to extract the horizontal cuts shown in (b). b Near-field photovoltage at the edge as a function of bias current, extracted from the maps in panel (a). Vertical dashed lines indicate the current of maximum 𝑉PV. c dV/dI curves extracted from the DC transport data under far-field illumination. d Zoomed-in current-space map taken at T = 13.86K showing a local photovoltage peak close to the center of the microstrip. e Simulated current-space map obtained from the TDGL simulations. f Snapshots of the order parameter when the near-field hotspot is placed close to the edge (situation I) and when the near-field hotspot is placed on top of the defect (situation II). Arrows indicate the direction of movement of the vortices.",
+      "page": 5,
+      "index": 4,
+      "width": 1037,
+      "height": 477
+    }
+  ]
+}

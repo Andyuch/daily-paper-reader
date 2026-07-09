@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.06208v1/fig-001.webp",
+      "caption": "Fig. 1. Optical and electronic layout of the wide-field F-MIP microscope. LED illumination is filtered (F2) and relayed by lens L1 to the back focal plane of the microscope objective (MO). The excitation light is reflected by a dichroic mirror (DM) onto the sample. Fluorescence emission is collected by the MO, transmitted through the DM and emission filter (F1), and detected by a CMOS camera. The mid-IR beam is directed to the sample plane by a series of mirrors and off-axis parabolic mirrors. A function generator synchronizes the mid-IR pulse train with the visible LED and the CMOS camera triggers to acquire alternating “hot (mid-IR-on)” and “cold (mid-IR-off)” frames.",
+      "page": 2,
+      "index": 1,
+      "width": 379,
+      "height": 352
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06208v1/fig-002.webp",
+      "caption": "Fig. 2. F-MIP multispectral imaging of 5 µm PS beads. (a) Wide-field F-MIP image at 3026 cm-1, with the FOV dimensions of ~1 mm diameter (white circle). (b) Magnified view of the green rectangular region marked in (a). (c-d) Wide-field F-MIP contrast at 2850 cm-1 and 2980 cm-1 extracted from the same green rectangular region. Pulse energy of OPO at the sample plane was ~280 µJ (2500 – 3200 cm-1 range). (e) F-MIP image at 698 cm-1. (f) F-MIP image at 756 cm-1. Pulse energy of OPO at the sample plane was ~20 µJ (at 698 and 756 cm-1). (g) Spectra acquired from hyperspectral imaging of F-MIP images across two wavenumber ranges, 650–850 cm-1 and 2800–3100 cm-1, with a wavenumber interval of 10 cm-1.",
+      "page": 4,
+      "index": 2,
+      "width": 764,
+      "height": 764
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06208v1/fig-003.webp",
+      "caption": "Fig. 3. Fluorescence and wide-field F-MIP imaging of a tuberculosis-infected tissue section. (a) Fluorescence image. (b) FMIP image at 2920 cm⁻¹. (c) 3×3 mosaic F-MIP image at 2920 cm⁻¹, spanning an area exceeding 2 mm. Pulse energy at the sample plane was ~280 µJ for (b) and (c). (d,e) Wide-field F-MIP images of a different region of the same tissue section at 1660 cm⁻¹ and 1740 cm⁻¹, respectively. (f) Overlay of the images in (d) and (e). Pulse energy at the sample plane was <30 µJ for (d–f).",
+      "page": 6,
+      "index": 3,
+      "width": 948,
+      "height": 645
+    }
+  ]
+}

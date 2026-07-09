@@ -1,0 +1,474 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-09T21:45:23.365639+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 12,
+    "quick_skim_target": 11,
+    "quick_selected": 11
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.00914v1",
+      "source": "arxiv",
+      "title": "Imaging superconducting weak spots through vortex-assisted THz near-field photovoltage",
+      "abstract": "Nanoscale inhomogeneities are a defining feature of many superconducting materials, yet their local electromagnetic response has remained difficult to access experimentally. This is because their relevant energy scale lies in the terahertz range, where wavelengths -- on the order of hundreds of microns -- are too large to spatially resolve nanoscopic variations. Here, we demonstrate the first application of THz near-field photovoltage nanoscopy in a superconductor, achieving 300 nm spatial resolution at 2.52 THz. Scanning a current-biased NbN strip, we reveal photovoltage peaks within the bulk associated with nanoscopic defects of reduced superfluid density. The observed photovoltage follows the evolution of the vortex-dissipative state and is attributed to enhanced vortex-antivortex pair nucleation at defect sites. Together, these results open a direct route to probing how material inhomogeneities influence light-matter interactions in superconductors, with implications for superconducting devices and strongly inhomogeneous systems such as high-Tc and moiré materials.",
+      "authors": [
+        "Sergio J. Salvía-Fernández",
+        "Ekaterina Khestanova",
+        "Zoe Velluire-Pellat",
+        "Leonardo R. Cadorim",
+        "Sergi Batlle-Porro",
+        "David A. Czaplewski",
+        "Johann Osmond",
+        "Sebastian Castilla",
+        "Adrian Bachtold",
+        "Milorad V. Milošević",
+        "Aharon Kapitulnik",
+        "Frank H. L. Koppens"
+      ],
+      "primary_category": "cond-mat.supr-con",
+      "categories": [
+        "cond-mat.supr-con",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-01T13:19:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.00914v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "imaging superconducting weak spots and nanoscale inhomogeneities",
+      "llm_evidence_cn": "超导弱点成像与纳米尺度不均匀性",
+      "llm_evidence": "超导弱点成像与纳米尺度不均匀性",
+      "canonical_evidence": "超导弱点成像与纳米尺度不均匀性",
+      "llm_tldr_en": "Achieves 300 nm resolution imaging of superconducting defects using THz near-field photovoltage nanoscopy.",
+      "llm_tldr_cn": "利用太赫兹近场光电压纳米镜实现了超导缺陷的300纳米分辨率成像。",
+      "llm_tldr": "利用太赫兹近场光电压纳米镜实现了超导缺陷的300纳米分辨率成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.07220v1",
+      "source": "arxiv",
+      "title": "Terahertz Phase Inversion via Field-Free Spin-Orbit Torque Switching in an Antenna-Integrated Spintronic Heterostructure",
+      "abstract": "We demonstrate microsecond-timescale electrical control of the terahertz (THz) emission phase in broadband field-free spintronic THz emitters, enabling megahertz-rate phase inversion while overcoming the kilohertz limitations of conventional mechanical and field-driven approaches. Our device integrates an H-dipole antenna with a spintronic heterostructure exhibiting uniaxial magnetic anisotropy, enabling deterministic spin-orbit torque induced in-plane magnetization switching without external magnetic fields. The corresponding THz phase inversion is directly observed in the time domain signal, by applying $1\\,μ\\mathrm{s}$ electrical pulses on the bias striplines of the H-dipole. This field-free operation reduces system complexity while significantly extending modulation bandwidth. Our results establish electrically programmable spintronic THz emitters that could be used to develop a compact and scalable platform for integrated on-chip THz devices and ultrafast applications, including phase-sensitive spectroscopy and near-field imaging, where high-speed and precise control of THz waveforms is essential.",
+      "authors": [
+        "Amir Khan",
+        "Tiago de Oliveira Schneider",
+        "Suraj Joshi",
+        "Mohammad Faraz Abdullah",
+        "Reshma Rajeev Lekha",
+        "Sascha Preu",
+        "Markus Meinert"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-08T10:02:51+00:00",
+      "link": "https://arxiv.org/pdf/2607.07220v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "field-free operando electrical control of spintronic THz emission",
+      "llm_evidence_cn": "自旋电子THz发射的无场原位电学控制",
+      "llm_evidence": "自旋电子THz发射的无场原位电学控制",
+      "canonical_evidence": "自旋电子THz发射的无场原位电学控制",
+      "llm_tldr_en": "Demonstrates microsecond-scale operando electrical control of THz phase in spintronic heterostructures.",
+      "llm_tldr_cn": "演示了自旋电子异质结构中THz相位的微秒级原位电学控制。",
+      "llm_tldr": "演示了自旋电子异质结构中THz相位的微秒级原位电学控制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.03170v1",
+      "source": "arxiv",
+      "title": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "abstract": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "authors": [
+        "Emmanuel Kotu Robertson",
+        "Dennis van de Lockand",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-03T10:10:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.03170v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved holographic phototransient microscopy with scattering phase sensitivity",
+      "llm_evidence_cn": "具有散射相位敏感性的时间分辨全息光瞬态显微镜",
+      "llm_evidence": "具有散射相位敏感性的时间分辨全息光瞬态显微镜",
+      "canonical_evidence": "具有散射相位敏感性的时间分辨全息光瞬态显微镜",
+      "llm_tldr_en": "A bidirectional holographic microscope for mid-infrared photothermal imaging with high phase sensitivity.",
+      "llm_tldr_cn": "一种具有高相位灵敏度的双向全息中红外光热显微镜，用于瞬态成像。",
+      "llm_tldr": "一种具有高相位灵敏度的双向全息中红外光热显微镜，用于瞬态成像。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.02733v1",
+      "source": "arxiv",
+      "title": "Ultrafast All-Optical Polarization Control via Symmetry Breaking in an Au Nanorod Dimer Metamaterial",
+      "abstract": "The continuous evolution of ultrafast optical technologies requires advanced solutions for the dynamic and selective manipulation of light's degrees of freedom. While metamaterials excel at tailoring these properties through static geometrical design, achieving sub-picosecond, all-optical dynamic control without sacrificing signal throughput remains a fundamental challenge. Here, an Au orthogonal nanorod dimer plasmonic metasurface capable of ultrafast, transmissive control over the ellipticity, and optical rotation of light is presented. By exploiting the transient optical nonlinearity of Au under femtosecond excitation, hot-electron generation can be selectively induced in either nanorod by leveraging the pronounced geometric anisotropy of the unit cell. The transient response is captured by coupling a Three-Temperature Model (3TM) with Finite-Difference Time-Domain (FDTD) simulations. This ultrafast response is driven by non-thermal electron excitation, rapid electron-electron thermalization, and subsequent lattice heating, which dynamically break the optical symmetry of the orthogonal localized surface plasmon (LSP) modes supported by the dimers. Crucially, this active mode-mixing drives sub-picosecond polarization switching, reaching peak shifts of approximately 10 degrees in ellipticity and up to approximately 20 degrees in optical rotation with an instantaneous response and a relaxation time of approximately 3 ps, while the absolute amplitude of the transmitted signal is only weakly perturbed. By achieving macroscopic transmissive polarization shifts alongside a highly stable 40% transmission efficiency, this platform overcomes the severe optical attenuation and geometric constraints that bottleneck existing nonlinear architectures, paving the way for low-latency, high-speed optical switches and modulators essential for next-generation nanophotonic networks.",
+      "authors": [
+        "Nikolaos Matthaiakakis",
+        "Lea Teste",
+        "George Kakarantzas"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-02T19:55:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.02733v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "ultrafast optical technologies and transient optical nonlinearity",
+      "llm_evidence_cn": "超快光学技术和瞬态光学非线性",
+      "llm_evidence": "超快光学技术和瞬态光学非线性",
+      "canonical_evidence": "超快光学技术和瞬态光学非线性",
+      "llm_tldr_en": "Demonstrates ultrafast all-optical polarization control in Au nanorod dimers using femtosecond excitation.",
+      "llm_tldr_cn": "展示了利用飞秒激发在金纳米棒二聚体中实现超快全光偏振控制。",
+      "llm_tldr": "展示了利用飞秒激发在金纳米棒二聚体中实现超快全光偏振控制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07087v1",
+      "source": "arxiv",
+      "title": "Phonon scattering mechanisms in WTe$_2$ observed by ultrafast coherent phonon spectroscopy",
+      "abstract": "Revealing the mechanisms of phonon scattering is crucial for understanding material properties such as transport characteristics and optical responses. It can be discussed by measuring the temperature dependence of the phonon energy and lifetime. To gain insight into these mechanisms in Weyl semimetal T$_d$-WTe$_2$, we investigated coherent phonons using time-resolved pump-probe spectroscopy in a wide temperature range from 4.6 to 300 K. The temperature dependence of the frequency and decay rate of the two high-frequency optical modes was described by the conventional anharmonic phonon-phonon scattering model. In contrast, the low-frequency mode at 2.4 THz exhibited anomalous behavior, which can be interpreted as the contribution of phonon-electron scattering.",
+      "authors": [
+        "Mizuki Akei",
+        "Yu Mizukoshi",
+        "Muneaki Hase"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-08T07:20:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.07087v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved pump-probe spectroscopy for phonon scattering",
+      "llm_evidence_cn": "用于声子散射的时间分辨泵浦-探测光谱",
+      "llm_evidence": "用于声子散射的时间分辨泵浦-探测光谱",
+      "canonical_evidence": "用于声子散射的时间分辨泵浦-探测光谱",
+      "llm_tldr_en": "Investigates phonon scattering in WTe2 using time-resolved spectroscopy to understand transport properties.",
+      "llm_tldr_cn": "利用时间分辨光谱研究WTe2中的声子散射机制，以理解其输运特性。",
+      "llm_tldr": "利用时间分辨光谱研究WTe2中的声子散射机制，以理解其输运特性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03753v1",
+      "source": "arxiv",
+      "title": "Efficient Analysis of Carrier Transport and TM-TE Emission in AlGaN UVC LEDs via Multi-band Localization Landscape Theory",
+      "abstract": "AlGaN-based UVC LEDs (220-250 nm) suffer from poor hole confinement and strain-induced |Z>-band dominance at high Al content (>60%), leading to increased TM emission and reduced external quantum efficiency (EQE). While conventional k.p models combined with Schrodinger, Poisson, and drift-diffusion solvers are widely used to study optical transitions, they are computationally expensive. In this work, we apply the multiband Localization Landscape (LL) model, including the effect of strain, as an alternative that replaces the eigenvalue problem to efficiently capture quantum effects and carrier localization. Using the 3D multi-band LL model with the Wigner-Weyl formalism, we reproduce emission and absorption spectra trends similar to the results in 3D k.p calculations, but with significantly reduced simulation time. The polarization ratio also agrees well with published experimental results across a wide spectral range. Furthermore, we analyze electrical characteristics such as band structure, polarization switching, and carrier confinement under alloy fluctuations and strain. This multi-band LL-based approach provides a fast and reliable solution for understanding and optimizing UVC LED performance.",
+      "authors": [
+        "Yu-Ming Chang",
+        "Ping-Jie Zhuang",
+        "Marcel Filoche",
+        "Claude Weisbuch",
+        "James S. Speck",
+        "Yuh-Renn Wu"
+      ],
+      "primary_category": "physics.app-ph",
+      "categories": [
+        "physics.app-ph",
+        "physics.comp-ph",
+        "quant-ph"
+      ],
+      "published": "2026-07-04T07:57:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.03753v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "carrier transport analysis in AlGaN UVC LEDs",
+      "llm_evidence_cn": "AlGaN UVC LED中的载流子输运分析",
+      "llm_evidence": "AlGaN UVC LED中的载流子输运分析",
+      "canonical_evidence": "AlGaN UVC LED中的载流子输运分析",
+      "llm_tldr_en": "Applies Localization Landscape theory to efficiently analyze carrier transport in UVC LEDs.",
+      "llm_tldr_cn": "应用局域化景观理论高效分析UVC LED中的载流子输运。",
+      "llm_tldr": "应用局域化景观理论高效分析UVC LED中的载流子输运。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05370v1",
+      "source": "arxiv",
+      "title": "Calibration of systematic distortions in quantum emitter localization microscopy for deterministic nanophotonic fabrication",
+      "abstract": "Quantum photonic technologies greatly benefit from quantum light emitters with high brightness, indistinguishability, and reliable polarization characteristics. Achieving optimal performance relies on the accurate localization of emitters and their deterministic integration into tailored photonic structures with nanometer-scale accuracy. Although marker-based photoluminescence imaging techniques can achieve statistical fitting uncertainties below 10 nm, the ultimate integration yield is often limited by uncorrected systematic distortions in custom cryo-optical setups that compromise metrological accuracy. Here, we present an in situ calibration protocol that uses lithographically defined gold nanodisk arrays as references to calibrate optical distortions with a Zernike vector-field model. On held-out validation patterns beyond the calibration dataset, this correction reduces the residual systematic bias to 5.3 nm with a 2D scatter of 24.6 nm across the analyzed field of view. Furthermore, we demonstrate that applying this correction to the deterministic fabrication of circular mesa structures around semiconductor quantum dots reduces the variance in emission polarization by 49%, indicating improved registration accuracy. This calibration strategy offers a practical route to high-yield deterministic integration of quantum emitters into scalable quantum photonic circuits.",
+      "authors": [
+        "Chenxi Ma",
+        "Maximilian Heller",
+        "Timon Handrup",
+        "Yiteng Zhang",
+        "Tobias M. Krieger",
+        "Thomas Oberleitner",
+        "Zenghui Jiang",
+        "Xian Zheng",
+        "Eddy P. Rugeramigabo",
+        "Folke Dencker",
+        "Armando Rastelli",
+        "Fei Ding",
+        "Michael Zopf"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall",
+        "physics.app-ph"
+      ],
+      "published": "2026-07-06T17:47:40+00:00",
+      "link": "https://arxiv.org/pdf/2607.05370v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "localization microscopy for nanophotonic fabrication",
+      "llm_evidence_cn": "用于纳米光子制造的定位显微镜",
+      "llm_evidence": "用于纳米光子制造的定位显微镜",
+      "canonical_evidence": "用于纳米光子制造的定位显微镜",
+      "llm_tldr_en": "Develops a calibration protocol for quantum emitter localization to improve nanophotonic integration accuracy.",
+      "llm_tldr_cn": "开发量子发射器定位校准协议，以提高纳米光子集成精度。",
+      "llm_tldr": "开发量子发射器定位校准协议，以提高纳米光子集成精度。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.05758v1",
+      "source": "arxiv",
+      "title": "From Closed-Loop Optimization to Open Decision Making: Coupled Digital Twins for Predictive and Autonomous Microscopy",
+      "abstract": "Automated experimentation is moving from closed-loop optimization toward open decision-making, where human or AI planners must forecast the consequences of candidate actions before executing them. Such forecasts require a model of both sides of the experiment: how the sample is likely to respond and what the instrument is likely to detect. We therefore introduce a coupled digital-twin framework that separates these roles and then links them. In this framework, the sample twin encodes material state inferred from prior knowledge and measurements till the moment. The instrument twin captures signal formation, feedback dynamics, and operating constraints based on prior knowledge. When coupled, the two twins estimate expected outcomes, uncertainty, and risk for candidate microscope operations. For amplitude-modulation scanning probe microscopy, we realize this framework with a physics-informed encoder of force-distance curves, a deterministic scanner model of cantilever and feedback dynamics, and sparse learned residual corrections. The encoder first recovers scanner-driving descriptors with sub-nanometer accuracy. The calibrated scanner then reproduces typical traces within a few nanometers and identifies operating-point noise amplification as the main source of mismatch. Supplementary phase analysis localizes residual error to the phase channel, which clarifies where added physics is needed. Together, these results establish coupled sample and instrument twins as a practical foundation for predictive microscope operation and autonomous experimental planning.",
+      "authors": [
+        "Yu Liu",
+        "Boris Slautin",
+        "Ian Mercer",
+        "Jon-Paul Maria",
+        "Sergei V. Kalinin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ],
+      "published": "2026-07-07T02:31:01+00:00",
+      "link": "https://arxiv.org/pdf/2607.05758v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "digital twins for predictive and autonomous microscopy",
+      "llm_evidence_cn": "用于预测和自主显微镜的数字孪生",
+      "llm_evidence": "用于预测和自主显微镜的数字孪生",
+      "canonical_evidence": "用于预测和自主显微镜的数字孪生",
+      "llm_tldr_en": "Introduces a digital-twin framework for automated microscopy and material state inference.",
+      "llm_tldr_cn": "引入了一种用于自动化显微镜和材料状态推断的数字孪生框架。",
+      "llm_tldr": "引入了一种用于自动化显微镜和材料状态推断的数字孪生框架。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.06208v1",
+      "source": "arxiv",
+      "title": "Millimeter-scale wide-field mid-infrared photothermal imaging enabled by a broadly tunable picosecond optical parametric oscillator",
+      "abstract": "Wide-field mid-infrared photothermal (MIP) imaging enables chemically specific microscopy with submicron spatial resolution but remains fundamentally limited by the trade-off between field of view, mid-infrared pulse energy, and spectral tunability. As a result, current wide-field implementations are typically restricted to fields of view below 200 μm and to either the fingerprint or high-wavenumber spectral regions. Here, we overcome these limitations by developing a wide-field fluorescence-detected mid-infrared photothermal (F-MIP) imaging platform driven by a commercial picosecond optical parametric oscillator (OPO). The system provides pulse energies of up to 360 μJ together with a broad tuning range from 625 to 4327 cm-1, enabling millimeter-scale wide-field imaging in the high-wavenumber regions. We demonstrate a field of view of approximately 1 mm in diameter for fluorescently labeled polystyrene beads while preserving spectral fidelity. Furthermore, the platform enables, to our knowledge, the first wide-field MIP imaging below 900 cm-1. To demonstrate its applicability to biomedical imaging, we performed large-area mosaic imaging of fluorescent tuberculosis-infected tissue sections, providing chemically resolved maps over millimeter-sized sample areas. These results establish broadly tunable OPO-driven F-MIP as a scalable platform for high-throughput vibrational imaging of large biological specimens and advanced materials.",
+      "authors": [
+        "Anooj Thayyil Raveendran",
+        "Supatcharee Cael",
+        "Anju Jose",
+        "Jürgen Popp",
+        "Christoph Krafft"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.app-ph",
+        "physics.bio-ph",
+        "physics.ins-det"
+      ],
+      "published": "2026-07-07T12:31:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.06208v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "wide-field photothermal imaging for material characterization",
+      "llm_evidence_cn": "用于材料表征的宽场光热成像",
+      "llm_evidence": "用于材料表征的宽场光热成像",
+      "canonical_evidence": "用于材料表征的宽场光热成像",
+      "llm_tldr_en": "Develops a wide-field mid-infrared photothermal imaging platform for submicron spatial resolution.",
+      "llm_tldr_cn": "开发了一种具有亚微米空间分辨率的宽场中红外光热成像平台。",
+      "llm_tldr": "开发了一种具有亚微米空间分辨率的宽场中红外光热成像平台。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.06961v1",
+      "source": "arxiv",
+      "title": "Single-laser stimulated Brillouin scattering microscopy",
+      "abstract": "Stimulated Brillouin scattering (SBS) microscopy enables label-free mapping of local viscoelastic properties, but frequency-domain implementations are often limited by uncertainty in the pump-probe frequency-difference axis. We demonstrate an RF-defined single-laser electro-optic-modulation SBS microscope in which the pump and probe are derived from the same optical carrier and their frequency difference is set by an electro-optically generated sideband. This architecture makes laser-frequency noise largely common mode and eliminates optical wavelength tuning during spectral scanning. It achieves Brillouin frequency shift and linewidth precisions of 0.07 MHz and 0.30 MHz, respectively. Comparison with a low-NA reference linewidth indicates a system-level spectral broadening of approximately 3.1 MHz, corresponding to an effective spectral resolution of approximately 3 MHz. Imaging of femtosecond-laser-modified chalcogenide glass resolves MHz-level Brillouin contrasts corresponding to 10^-4-level apparent longitudinal-modulus contrast. This work demonstrates the feasibility of transferring the frequency definition of SBS spectral scanning from optical wavelength tuning to RF-domain control, providing a new conceptual and technical basis for high-precision, high-spectral-fidelity Brillouin imaging.",
+      "authors": [
+        "Feihong Lin",
+        "Zechao Wen",
+        "Jiahui Li",
+        "Xiaoyu Yang",
+        "Haonan Zhang",
+        "Jiahe Zhang",
+        "Peiqing Zhang",
+        "Xu Liu",
+        "Qing Yang"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-08T03:39:25+00:00",
+      "link": "https://arxiv.org/pdf/2607.06961v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-free scattering microscopy for material properties",
+      "llm_evidence_cn": "用于材料特性的无标记散射显微技术",
+      "llm_evidence": "用于材料特性的无标记散射显微技术",
+      "canonical_evidence": "用于材料特性的无标记散射显微技术",
+      "llm_tldr_en": "Demonstrates a single-laser stimulated Brillouin scattering microscope for mapping viscoelastic properties.",
+      "llm_tldr_cn": "演示了一种单激光受激布里渊散射显微镜，用于映射材料的粘弹性。",
+      "llm_tldr": "演示了一种单激光受激布里渊散射显微镜，用于映射材料的粘弹性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-05-05-722893-v2",
+      "source": "biorxiv",
+      "title": "Label-free volumetric refractive-index imaging of fibrillar collagen architecture, assembly, and cell-associated remodeling",
+      "abstract": "Fibrillar collagen architecture regulates tissue mechanics and cell-matrix interactions, but following how collagen-rich matrices assemble and remodel in three dimensions requires non-destructive measurements that can link structure to matrix-associated mass without exogenous labels. Here we present holotomography (HT) as a label-free platform for volumetric imaging and quantitative profiling of reconstituted fibrillar collagen. Volumetric RI tomograms resolved fibrillar collagen networks without exogenous labels, and co-registration with second-harmonic generation (SHG) microscopy supported the correspondence between HT-resolved RI structures and SHG-positive fibrillar collagen. Curvelet-transform-based segmentation of representative axial sections converted the tomograms into fiber-level descriptors, including morphology, orientation and RI-derived fiber-associated dry mass. At the matched 0.8 mg/mL condition, HT resolved distinct network organization, with type I forming thicker, more sparsely distributed fibers and type III a finer, denser network, while mean fiber-associated RI remained comparable between subtypes. Across the concentration series, type I showed stronger increases in fiber width and RI-derived mass, whereas type III remained comparatively fine. Time-lapse HT further captured RI dynamics during type I fibrillogenesis and visualized local cell-matrix reorganization in HT1080 cell-embedded gels, capturing cells and surrounding matrix in a single label-free measurement. Together, these results position HT as a complementary label-free approach for volumetric visualization and RI-based quantification of collagen-rich extracellular matrices.",
+      "authors": [
+        "Lee, S.",
+        "Park, W. S.",
+        "Lee, J.",
+        "Park, J.",
+        "Park, H.",
+        "Ahn, E. H.",
+        "Kim, D.-H.",
+        "Park, Y."
+      ],
+      "primary_category": "cell biology",
+      "categories": [
+        "cell biology"
+      ],
+      "published": "2026-07-08T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.05.05.722893v2.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-free volumetric imaging and refractive-index profiling",
+      "llm_evidence_cn": "无标记体积成像和折射率分析",
+      "llm_evidence": "无标记体积成像和折射率分析",
+      "canonical_evidence": "无标记体积成像和折射率分析",
+      "llm_tldr_en": "Presents holotomography for label-free volumetric refractive-index imaging of collagen architecture.",
+      "llm_tldr_cn": "展示了用于胶原结构无标记体积折射率成像的全息断层扫描技术。",
+      "llm_tldr": "展示了用于胶原结构无标记体积折射率成像的全息断层扫描技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

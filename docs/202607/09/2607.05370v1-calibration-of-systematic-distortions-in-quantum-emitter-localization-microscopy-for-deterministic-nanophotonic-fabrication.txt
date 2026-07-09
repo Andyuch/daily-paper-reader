@@ -1,0 +1,316 @@
+Title: Calibration of systematic distortions in quantum emitter localization microscopy for deterministic nanophotonic fabrication
+
+URL Source: https://arxiv.org/pdf/2607.05370v1
+
+Published Time: Tue, 07 Jul 2026 03:32:50 GMT
+
+Number of Pages: 10
+
+Markdown Content:
+## Calibration of systematic distortions in quantum emitter localization microscopy for deterministic nanophotonic fabrication 
+
+Chenxi Ma, 1, ∗ Maximilian Heller, 1, ∗ Timon Handrup, 1 Yiteng Zhang, 1 Tobias M. Krieger, 2 Thomas Oberleitner, 2 Zenghui Jiang, 1 Xian Zheng, 1 Eddy P. Rugeramigabo, 1 Folke Dencker, 3 Armando Rastelli, 2 Fei Ding, 1, 4 and Michael Zopf 1, 4, † 
+
+> 1
+
+Institute of Solid State Physics, Leibniz University Hannover, Appelstraße 2, 30167 Hannover, Germany 
+
+> 2
+
+Institute of Semiconductor and Solid State Physics, Johannes Kepler University Linz, Altenberger Straße 69, 4040 Linz, Austria 
+
+> 3
+
+Institute of Micro Production Technology, Leibniz University Hannover, An der Universität 2, 30823 Garbsen, Germany 
+
+> 4
+
+Laboratory of Nano and Quantum Engineering, Leibniz University Hannover, Schneiderberg 39, 30167 Hannover, Germany 
+
+Quantum photonic technologies greatly benefit from quantum light emitters with high brightness, indistinguishability, and reliable polarization characteristics. Achieving optimal performance relies on the accurate localization of emitters and their deterministic integration into tailored photonic structures with nanometer-scale accuracy. Although marker-based photoluminescence imaging techniques can achieve statistical fitting uncertainties below 10 nm , the ultimate integration yield is often limited by uncorrected systematic distortions in custom cryo-optical setups that compromise metrological accuracy. Here, we present an in situ calibration protocol that uses lithographically defined gold nanodisk arrays as references to calibrate optical distortions with a Zernike vector-field model. On held-out validation patterns beyond the calibration dataset, this correction reduces the residual systematic bias to 5.3 nm with a 2D scatter of 24 .6 nm across the analyzed field of view. Furthermore, we demonstrate that applying this correction to the deterministic fabrication of circular mesa structures around semiconductor quantum dots reduces the variance in emission polarization by 49 % , indicating improved registration accuracy. This calibration strategy offers a practical route to high-yield deterministic integration of quantum emitters into scalable quantum photonic circuits. 
+
+I. INTRODUCTION 
+
+Photons serve as ideal carriers of quantum information due to their strong resilience to environmental decoherence, establishing quantum light sources as essential components for advanced photonic quantum technologies [ 1 , 2 ]. Among different types of quantum emitters, epitaxial semiconductor quantum dots (QDs) stand out as key sources for bright and highly indistinguishable single photons [ 3– 5 ], entangled photon pairs [ 6 , 7 ], and photonic cluster states [ 8 , 9 ], with applications ranging from photonic quantum computing [ 10 ]to long-distance quantum communication [11 – 14 ]. In addition, their material platforms are compatible with mature semiconductor fabrication techniques, paving the way for scalable integration with photonic circuits [15, 16]. Various photonic cavities and waveguides have been integrated with QDs to enhance light extraction, tailor spontaneous emission, and improve photon indistinguishability [ 17 – 24 ]. However, scaling quantum photonic systems from single-emitter devices to multi-emitter architectures remains challenging because optimal integration requires precise spatial and spectral matching between individual emitters and target optical modes, together with preselection of emitters with favorable optical properties. These requirements are difficult to satisfy because high-quality epitaxial QDs are typically grown by self-assembly mechanisms, which lead to random spatial distribution and inhomogeneous wavelength broadening. Even displacements as small as tens of nanometers can already degrade the coupling efficiency and Purcell enhancement, and modify the   
+
+> ∗Contributed equally to this work
+> †michael.zopf@fkp.uni-hannover.de
+
+polarization response of QD-nanostructure systems [ 25 – 27 ]. Therefore, deterministic integration strategies are essential: the position and spectroscopic properties of selected QDs must be obtained before fabricating photonic nanostructures. To meet these demands, two strategies are generally employed: marker-free in situ lithography and marker-based optical positioning. Marker-free low-temperature optical lithography has achieved spatial accuracy within 50 nm and spectral accuracy within 0.5 nm [17 , 28 ]. However, since the fabrication pattern is defined by diffraction-limited optical exposure, this approach is less suited for complex, subwavelength nanostructures. Cathodoluminescence-integrated electron beam lithography (EBL) provides an alternative in situ route that bypasses the optical diffraction limit and has achieved QD-structure misalignments of 34 nm [29 , 30 ]. In contrast, marker-based wide-field photoluminescence (PL) imaging adopts a different approach by decoupling emitter localization from subsequent lithographic patterning [ 31 – 35 ]. This separation enables flexible EBL fabrication while allowing emitters to be preselected via micro-PL for desired optical properties, such as emission wavelength, brightness, linewidth, and exciton fine-structure splitting. Building upon this conventional framework, recent advancements have incorporated hyperspectral imaging to further improve throughput and device yield by simultaneously extracting spectral information and spatial coordinates [ 36 , 37 ]. This evolving wide-field PL imaging technique has become particularly attractive for the high-throughput selection and deterministic integration of high-quality emitters into scalable quantum photonic architectures. Statistical localization uncertainties in marker-based optical positioning have been reduced to below 10 nm . However, the ultimate integration yield is not only limited by fitting noise, but also by uncorrected systematic optical distortions. 
+
+> arXiv:2607.05370v1 [physics.optics] 6 Jul 2026
+
+2Raw localization precise fitting but inaccurate Error identification optical distortions Camera Sample 810 nm LED 450 nm LED Objective Lens Lens BS BS Filter 
+
+> Zernike polynomial calibration model Accurate positioning after calibration
+
+ba c
+
+Figure 1. Schematic of the optical setup and calibration workflow. (a) 3D illustration of the wide-field PL microscope setup for optical positioning. BS, beamsplitter. (b) From bottom to top: SEM image of a 3 × 3 gold nanodisk calibration array; wide-field reflection image of the central marker field; and conceptual illustration comparing positions extracted from wide-field images (blue) with their nominal design positions (gray). Spatially varying residuals between the two coordinate sets are used to map the optical distortion field. Scale bars in the SEM and reflection images are 10 μm. (c) Distortion calibration workflow. 
+
+These errors are particularly relevant in custom cryogenic PL microscopes, where non-trivial, setup-specific distortions may differ between sample exchanges and measurement runs. Even carefully aligned imaging systems retain intrinsic geometric distortion and lateral chromatic aberration, as detailed by Copeland et al. [38 ]. This creates a critical gap between statistical localization precision and metrological positioning accuracy [ 39 ], motivating rigorous in situ calibration protocols for every measurement run and thus enabling real-time characterization of the distortion field of the imaging system to ensure accurate emitter localization. In this work, we present an in situ metrological calibration framework for characterizing and correcting systematic optical distortions in cryogenic quantum emitter localization microscopy. Using lithographically defined gold nanodisk arrays as references, the measured field-dependent coordinate offsets in wide-field PL images are represented with a Zernike vector-field model. We validate this model using held-out nanodisk arrays and show that systematic position offsets are suppressed across the marker field. Applying this calibration routine to the deterministic fabrication of mesa structures around individual QDs results in reduced anisotropy in emission polarization and narrower device-to-device variation, indicating improved QD-mesa registration. This versatile method bridges the gap between localization precision and accuracy, providing a practical calibration strategy for improving the reliability of imaging-based quantum emitter localization in custom microscopy platforms. 
+
+II. OPTICAL SETUP CHARACTERIZATION 
+
+The optical positioning calibration technique is demonstrated using a sample with strain-free GaAs QDs grown by droplet etching and nanohole infilling [ 40 , 41 ], which provides bright emission with a central wavelength around 785 nm . After epitaxial growth, 40 × 40 μm 2 alignment marker grids, consisting of a 10 nm titanium adhesion layer and a 50 nm gold layer, were patterned by EBL and metal lift-off. The sample was characterized at 4 K in a closed-cycle cryostat equipped with a low-temperature objective with a numerical aperture (NA) of 0.82. The bichromatic wide-field imaging setup is mounted above the cryostat window, as illustrated in Fig. 1(a). The imaging scheme is designed to record QD emission and marker reflection within a common optical coordinate frame. In the horizontal illumination arm, a 450 nm LED provides above-bandgap excitation for QDs, and an 810 nm LED illuminates the alignment markers. Both beams merge at a beamsplitter, with the marker-illumination beam routed through the transmission port to facilitate coaxial alignment with the microscope. At the same time, 90 % of the 450 nm excitation power is retained in reflection, providing the excitation intensity required for rapid image acquisition. The LED beams are focused onto the back focal plane of the objective for better illumination uniformity. Image distortion is reduced by using a vertical collection path, which keeps the sample, objective, imaging lens, and camera close to a common optical axis. An air-spaced achromatic doublet lens with a focal length of 100 mm images the sample onto a 3400 600 800 1000 FWHM (nm) 
+
+e     
+
+> QD
+> Nanodisk 0510 15 20 25 Combined fitting uncertainty (nm) 015 30 Percent
+
+f      
+
+> QD
+> Nanodisk 0510 15 20 Repeatability σ(nm) 025 50 75 Percent
+> 010 20 30 Percent
+
+g
+
+> QD
+> Nanodisk
+
+a c    
+
+> 160 180 200 220 Position (pixel) 0.55 0.60 0.65 0.70 0.75 Intensity (a.u.)
+> 0.1 0.2 0.3 0.4 0.5
+> 0.6
+
+bd
+
+Figure 2. Performance of the optical positioning setup. (a) Representative wide-field PL image of QD emission acquired through a 785 nm narrow bandpass filter. (b) Magnified image of a 2D Gaussian fit for a representative QD. (c) Reflection image of the marker frame and nanodisks from the same field as (a), acquired through a 785 nm narrow bandpass filter. The markers define an area of 40 × 40 μm 2. (d) Representative cross-section of a marker arm and the corresponding fit. (e) Distributions of the fitted FWHM values for QDs and nanodisks, with the shaded region spanning from the Gaussian approximation of the diffraction-limited PSF ( FWHM diff = 473 nm ) to 2 × FWHM diff . (f) Distributions of the localization fitting uncertainties for QDs and nanodisks. (g) Localization repeatability of QDs and nanodisks, quantified by the standard deviation of repeated localizations of the same object. 
+
+camera sensor with 1920 × 1080 resolution and a pixel size of 2.9 μm . The resulting field of view is ∼76 .5 μm wide in the sample plane, corresponding to an effective pixel size of ∼70 .8 nm . A 785 nm narrow bandpass filter with a 3 nm bandwidth is inserted into the collection path to reject the excitation light while transmitting QD emission. Owing to the broad spectrum of the 810 nm LED, sufficient illumination for marker imaging still transmits through this filter. We first evaluate the performance of the custom cryogenic microscope to establish the statistical precision of the localization pipeline. Figures 2(a,c) show a representative PL image of QDs and a reflection image of nanodisks (diameter ∼740 nm ) and alignment markers. The global coordinate frame is defined by localizing the alignment markers. Cross-sections extracted from individual pixel slices of each marker are fitted with a boxcar function convolved with a Gaussian approximation of the system point spread function (PSF), as shown in Fig. 2(d). To reduce errors caused by fabrication defects or nearby QD emission, slices with large fitting uncertainty or pronounced asymmetry are discarded. The marker centers are then obtained from the intersection of linear fits through the remaining slice centers, weighted by their fitting uncertainties. Single-QD emission spots are localized using 2D Gaussian fits, as shown in Fig. 2(b), where the fitted QD center is denoted by a cross. The full width at half maximum (FWHM) of the QD spots is centered at 606 .5 nm , as shown in Fig. 2(e). This value is slightly broader than the Gaussian approximation of the diffraction-limited microscope PSF, indicating proper focusing under experimental conditions [ 42 ]. The combined QD-marker fitting uncertainty, obtained by propagating the covariance matrix of the 2D Gaussian QD fit together with the uncertainty of the marker-defined coordinate frame, has a mean of 6.6 nm ,as shown in Fig. 2(f). The corresponding independent uncertainties along the x and y directions are listed in Tab. I. The high-uncertainty tail is attributed primarily to the reduced signal-to-noise ratio of weakly detected QDs caused by spectral detuning from the bandpass filter. These results show that our imaging system provides sufficient image quality for reliable nanometer-scale localization under cryogenic conditions. Mechanical vibration from the cryostat cold head can blur wide-field PL images and degrade localization precision. To 45 10 15 20 25 30 35 X position (μm) 510 15 20 25 30 35 Y position (μm)       
+
+> 510 15 20 25 30 35 X position (μm) 510 15 20 25 30 35 Y position (μm)
+
+be  
+
+> 020 40 60 Offset magnitude (nm)
+> −60 060 X offset (nm)
+> −60
+> 0
+> 60 Y offset (nm)
+> Raw Corrected
+> 020 40 60 Offset magnitude (nm)
+> Raw Corrected
+> −40
+> −20
+> 0
+> 20 Offset (nm)
+> Array2 corrected by Array1
+> Raw Corrected
+> Array1 corrected by Array2 XY
+
+cfSelf-calibration Forward validation   
+
+> Array1 Array1
+> Array2 Array2
+> fit apply
+> Zernike model
+
+a  
+
+> Array2
+> Array1
+> Array1
+> Array2
+> fit apply
+> Zernike model
+> fit apply
+> Zernike model
+
+d Array2 corrected by Array1 
+
+Figure 3. Training and forward validation of the distortion-calibration model. (a) Schematic of the self-calibration process, in which a Zernike distortion model is fitted to the nanodisk offsets of both arrays. (b) Spatial map of the raw nanodisk offsets between optically extracted positions and design positions for both arrays. The arrows indicate the offset directions, and the color scale indicates the offset magnitude. (c) Overlaid 2D histogram of the nanodisk offsets before (blue) and after (orange) correction by the Zernike distortion model. (d) Schematic of the forward validation process. The model is trained on one array and then applied to the held-out array, after which the residual nanodisk offsets are evaluated. (e) Residual offset map of Array 2 after correction using the distortion model trained on Array 1. The same color scale as in (b) is used to visualize the reduction in offset magnitude. (f) Forward-validation performance for the two reciprocal train-test directions. Left: Array 2 corrected using the model trained on Array 1. Right: Array 1 corrected using the model trained on Array 2. The red and blue lines denote the x
+
+and y mean offsets, and shaded bands indicate the corresponding standard deviation. 
+
+evaluate the mechanical stability of the cryostat and optical setup, we acquired 100 consecutive images of the same marker field and calculated the standard deviation of the fitted QD positions. Each image was acquired with an exposure time of 4 s , which is much longer than the vibration oscillation period; the measured positions therefore reflect the time-averaged stability of the imaging system. The resulting QD localization repeatability is (3.9 ± 6.2) nm , as shown in Fig. 2(g). This shows that our localization protocol is robust against setup vibration, image noise, and variations in the initial fitting parameters over repeated acquisitions. 
+
+III. DISTORTION CALIBRATION 
+
+A fundamental limitation is that low statistical localization uncertainty does not, by itself, guarantee the absolute positioning accuracy required for deterministic nanofabrication. Systematic optical distortions, schematically illustrated in the top panel of Fig. 1(b), can introduce position-dependent localization errors even when the fitting uncertainty is only a few nanometers. Because the true coordinates of self-assembled QDs are unknown, we use a lithographically defined calibration pattern whose design coordinates serve as known reference positions to quantify and correct these systematic errors. The calibration pattern consists of 1600 gold nanodisks randomly distributed across two adjacent 3 × 3marker-grid arrays (Array 1 and Array 2). A scanning electron microscope (SEM) image of Array 2 is shown in the bottom panel of Fig. 1(b). Conventionally, in a periodic calibration pattern, the spacing between resolvable features is constrained by the diffraction-limited resolution of the microscope (∼479 nm in our setup). By contrast, our random distribution strategy probes a broader range of subfield coordinates; 
+
+Table I. Comparison of different localization errors Type Position error in x
+
+(nm) Position error in y
+
+(nm) Fitting uncertainty (QD + marker) 4.9 ± 3.1 4.4 ± 3.0Optical distortion −31 .3 ± 16 .5 −21 .5 ± 23 .7EBL overlay alignment [43] 11 .0 ± 13 .6 −10 .5 ± 15 .05after registering multiple marker fields into a common coordinate frame, the resulting localization measurements can be superimposed to reconstruct the distortion field with an effectively higher spatial sampling density. The nanodisk patterns were imaged using the 810 nm LED reflection and the 785 nm narrow bandpass filter, and their reflection profiles were subsequently analyzed using the same 2D Gaussian fitting protocol applied to QDs. The nanodisk diameter was chosen to yield reflection profiles comparable in size to QD emission spots; however, the fitted nanodisk profiles show a larger mean FWHM, as shown in Fig. 2(e). This profile broadening arises from size enlargement due to fabrication imperfections and reduced contrast in the reflection images, which can also account for the slightly larger fitting uncertainty and poorer repeatability. Thus, the nanodisk-based experiments provide a conservative estimate of the distortion-correction performance expected for actual QD localization. The optical distortions are quantified from the residual offset vectors between the detected and design positions of all nanodisks after transformation into the marker-defined coordinate frame, as mapped in Fig. 3(b). The arrows point from the detected positions to the design positions and therefore indicate the direction of the required correction, while their lengths and the cell colors represent the offset magnitudes. Each cell shows the average offset of all nanodisks falling within that spatial bin. A dominant pincushion-distortion pattern can be observed, with the distortion center located near the lower left corner of the marker field. As summarized in Tab. I, optical distortion is the largest error contribution in the uncorrected coordinate mapping, substantially exceeding the statistical fitting uncertainties. This necessitates digital distortion calibration to convert precise localization into accurate positioning. Recent work has shown that standard computer vision calibration methods, such as Zhang’s method, can yield high QD localization accuracy in deterministic nanofabrication workflows [ 37 , 44 ]. Such general-purpose geometric models provide powerful numerical corrections, but they often describe the optical system through an effective projection matrix. For our custom cryogenic microscope, where field-dependent localization errors can arise from residual optical aberrations, alignment imperfections, and nonideal optical elements, we adopt a more physically interpretable representation. Specifically, we model the measured distortion field as a linear combination of Zernike polynomial terms up to the 
+
+n-th Noll index ( n = 10 ), following the approach described by Copeland et al. [45]: 
+
+xcorr = xdet +
+
+> n
+
+# ∑
+
+> i=1
+
+Zi(ρ, ϕ)pi (1) where xcorr is the distortion-corrected position vector, xdet is the detected position vector, Zi denotes the i-th Zernike polynomial in Noll indexing, and pi is a coefficient vector describing the x and y correction components of this term. The polar coordinates (ρ, ϕ) are defined with respect to the distortion center pc. For the calibration, the design coordinates are first transformed into the image coordinate system. We ensure the markers are in the same position during the acquisition of calibration images and QD images to minimize the error introduced by this transformation. Each transformed design coordinate is then paired with the nearest detected nanodisk position within a predefined distance threshold. The optimal model parameters P = {pc, p1, . . . , pn} are determined by minimizing residuals between the corrected detected positions and the transformed design coordinates: 
+
+Popt = arg min 
+
+> P
+> N
+
+# ∑
+
+> k=1
+
+xdet ,k +
+
+> n
+
+# ∑
+
+> i=1
+
+Zi(ρk, ϕk)pi − ˜xdesign ,k
+
+> 22
+
+(2) where k indexes the N calibration nanodisks. The minimization is performed using the Broyden–Fletcher–Goldfarb–Shanno algorithm implemented by SciPy [ 46 ]. Afterwards, the fitted model is evaluated by applying it to the detected coordinates. The corrected coordinates are transformed back into the marker-defined coordinate system and compared with the original lithographic design coordinates. After calibration, the residual positioning offsets are reduced to 
+
+(−0.2 ± 12 .3) nm along the x direction and (−0.8 ± 19 .1) nm along the y direction, represented by the orange histogram in Fig. 3(c). Note that the off-centered distribution of the residual y offset is associated with an EBL writing asymmetry, possibly due to dynamic beam-deflection effects. This imperfection can be removed from the calibration analysis if SEM-measured nanodisk positions are used as reference coordinates (see Supplementary Note 2). As a result, this calibration framework converts nanometer-scale localization precision into improved absolute positioning accuracy by explicitly correcting field-dependent optical distortion. In addition, the decomposition of different Zernike terms provides a physically interpretable description of the dominant distortion components, offering a useful diagnostic for future optimization of the imaging system. To assess the reliability and transferability of this calibration framework, we perform forward predictive validation. The Zernike distortion model is trained only on Array 1 by fitting the coordinate offsets, while Array 2 is excluded from this training procedure as a held-out validation field, as illustrated in Fig. 3(d). Before correction, the detected nanodisk positions in Array 2 exhibit raw offsets of (−28 .3 ± 16 .5) nm along the x direction and (−21 .1 ± 23 .6) nm along the y direction. These values are comparable to those obtained from the full dataset (Tab. I), indicating a consistent optical distortion across neighboring areas. We then apply the correction map derived from Array 1 to the detected coordinates in Array 2. As shown in Fig. 3(e) and the left panel of Fig. 3(f), the Zernike-based correction substantially suppresses the residual offsets in Array 2 to (5.3 ± 12 .5) nm and (0.4 ± 21 .2) nm ,corresponding to a residual mean-vector bias of 5.3 nm and a 2D scatter of 24 .6 nm . The outliers are attributed primarily to bins containing only a small number of nanodisks, which makes the local average less statistically robust. This limitation can be mitigated in future implementations by increasing the nanodisk density. The reciprocal validation, in which the distortion model trained on Array 2 is applied to Array 1, is shown in the right panel of Fig. 3(f). In both validation directions, the residual mean x offset is not 6788 792 796 Wavelength (nm) 0600 1200 1800 Intensity (a.u.) 
+
+b
+
+> 0°
+> 45°
+> 90°
+> 135°
+> 180°
+> 225°
+> 270°
+> 315°
+> Co-pol Cross-pol
+> 0
+> 2
+> 4
+> 6
+> 8Frequency
+
+d         
+
+> 0.0 0.1 0.2 System-corrected DOLP
+> 0
+> 2
+> 4
+> 6
+> 8Background: 0.009 ± 0.005 Raw: 0.112 ± 0.055 Distortion-corrected: 0.070 ± 0.028
+> −150 −100 −50 050 100 150 X displacement (nm)
+> −150
+> −100
+> −50 050 100 150 Y displacement (nm)
+
+e       
+
+> 0.02 0.04 0.06 0.08 DOLP
+> −150 −100 −50 050 100 150 X displacement (nm)
+> −150
+> −100
+> −50 050 100 150 Y displacement (nm)
+
+f
+
+> 0.01 0.02 Stokes sensitivity per 10 nm
+
+a   
+
+> 10 μm
+> σ= 0.086
+> σ= 0.031
+
+c       
+
+> σ = 0.084
+> σ = 0.033
+> −0.3 −0.2 −0.1 0.0 0.1 0.2 0.3
+> S1, corr
+> −0.3
+> −0.2
+> −0.1
+> 0.0
+> 0.1
+> 0.2
+> 0.3
+> S2, corr
+> Background Raw Distortion-corrected
+
+Figure 4. Polarization response of deterministically fabricated mesas. (a) SEM image of a region inside the mesa array. (b) Background-subtracted co- and cross-polarized PL spectra from a distortion-corrected mesa, corresponding to the polarization angles of Imax and Imin . The inset shows representative polar plots of the integrated PL intensity as a function of the linear polarization angle for a background QD (gray), a raw-positioned mesa (blue), and a distortion-corrected mesa (orange). (c) Scatter plot of the system-corrected Stokes components. The dashed circle indicates the DOLP expected for a centered emitter in an elliptical mesa with SEM-measured diameters. (d) Histograms of system-corrected DOLP for background QDs, raw-positioned mesas, and distortion-corrected mesas. (e) Simulated DOLP for different emitter displacements inside an elliptical mesa with SEM-measured diameters. (f) Simulated Stokes sensitivity, calculated from the gradient magnitude q
+
+∇S1,sim 2 + ∇S2,sim 2 and scaled to represent the expected local Stokes-vector change for a 10 nm emitter displacement. 
+
+fully reduced to zero, indicating a small difference in the 
+
+x component of the distortion field between the two arrays. This observation suggests that calibration fields are better placed close to the target fabrication fields to minimize spatial variations in the distortion correction. Overall, this forward predictive validation demonstrates that the Zernike model captures reproducible, field-dependent optical distortion rather than merely overfitting the training data. These results also establish the nanodisk-based calibration model as a transferable correction strategy for optical localization of quantum emitters. 
+
+IV. EXPERIMENTAL VALIDATION 
+
+Having validated the nanodisk-based distortion calibration model, we next apply it to QD localization and evaluate the resulting QD-device registration. In addition to marker reflection images, PL images of QDs were acquired using the 450 nm LED and the 785 nm narrow bandpass filter. After extracting the QD positions with the localization workflow described above, circular mesas were deterministically fabricated around selected QDs via EBL and chlorine-based dry etching, using either raw or distortion-corrected QD coordinates. A representative SEM image of fabricated mesas is shown in Fig. 4(a). Because the mesa polarization response is sensitive to the relative displacement between the QD and the mesa center, polarization-resolved micro-PL provides a probe of QD-mesa registration (see Supplementary Note 3). Under above-bandgap excitation, carrier relaxation largely removes memory of the excitation polarization. Therefore, the measured emission polarization is primarily governed by the QD-mesa system [ 47 ]. Figure 4(b) shows typical emission spectra from a QD embedded in a distortion-corrected mesa. The counts within the QD emission window are then integrated to obtain the PL intensity for each half-wave plate angle 
+
+θ and fitted with I(θ ) = Imin + ( Imax − Imin ) cos 2(2θ − φ ),where φ is the principal polarization angle at which the maximum intensity occurs. As the fitting is performed independently for each emitter, our method of extracting only Imax and Imin is equivalent to the Stokes parameter measurement with fixed polarization bases, considering the circular polarization component is negligible according to simulations (see Supplementary Note 3). Therefore, the degree of linear polarization (DOLP) can be calculated as 
+
+Π = ( Imax − Imin )/(Imax + Imin ). We can also calculate the normalized linear Stokes vectors as S1 = Π cos (2φ ) and S2 =
+
+Π sin (2φ ). Note that these reconstructed components are defined in the analyzer basis rather than in the absolute H/V and D/A polarization bases. Background QDs without mesas were also measured as references, exhibiting a reproducible 7small DOLP with a preferred polarization angle, which we attribute to a system-induced polarization bias. The inset of Fig. 4(b) shows representative polarization-resolved PL intensities from a background QD, a raw-coordinate mesa, and a distortion-corrected mesa. To remove the system-induced bias, we use the average normalized Stokes vector of the background QDs as the system response function. The corrected linear polarization components can then be retrieved via vector subtraction: 
+
+S1,corr = S1,mesa − ¯S1,ref 
+
+S2,corr = S2,mesa − ¯S2,ref 
+
+(3) The corrected DOLP is then reconstructed as Πcorr =q
+
+S21,corr + S22,corr .As shown in Fig. 4(c), the distortion-corrected mesas feature not only smaller S1,corr and S2,corr but also a more compact distribution, compared with raw-coordinate mesas. This trend further manifests itself in Fig. 4(d): the mean corrected DOLP decreases from 0.112 for raw-coordinate mesas to 0.070 for distortion-corrected mesas, corresponding to a reduction of approximately 38 % . The device-to-device variation is also substantially reduced, with the standard deviation decreasing from 0.055 to 0.028, corresponding to an improvement of approximately 49 % . These results indicate improved average QD-mesa centering and reduced placement dispersion after distortion correction. The residual DOLP should not be interpreted as adirect measure of the emitter displacement, as it also contains contributions from structure-induced anisotropy. SEM measurements reveal a slight ellipticity of (2.07 ±
+
+0.51 ) % of the fabricated mesas (see Supplementary Note 4). Finite-difference time-domain simulations using the measured mesa diameters ( 2.00 μm along the long axis and 1.96 μm along the short axis) show that even a centered emitter can already produce an appreciable DOLP of approximately 0.070 (Fig. 4(e)), comparable to the mean experimental result. Furthermore, the collapse of the reconstructed Stokes vectors into a narrow distribution after distortion correction (Fig. 4(c)) can be interpreted in the following way: before correction, QDs are more likely to occupy a non-central position where Stokes-vector changes are highly sensitive to small position variations; after correction, QD positions are shifted towards the central area, where position variations lead to a narrower Stokes distribution, as can be deduced from Fig. 4(f). Therefore, the most plausible interpretation is that the distortion-corrected mesas contain near-centered QDs whose residual DOLPs are dominated by the structural ellipticity, with possible small contributions from residual displacement. Quantitative evaluation of the integration accuracy can be conducted by correlating cathodoluminescence mapping with SEM in future investigations.  
+
+> V. CONCLUSION
+
+In conclusion, we have developed a reference-based metrological framework that distinguishes statistical localization precision from absolute integration accuracy in deterministic quantum-emitter fabrication. Using lithographically defined gold nanodisks as a reference, we quantified the offset field between optically detected positions and design coordinates, and represented it with a Zernike vector-field model. This approach provides a physically interpretable calibration of field-dependent optical distortions. Applied to our cryogenic wide-field localization microscope, the calibration reduces the nanodisk mean offsets to nearly zero, with residual spreads approaching the statistical and fabrication-related limits. Forward validation on held-out nanodisk arrays demonstrates that the fitted Zernike model captures reproducible field-dependent distortions rather than merely overfitting the calibration data. Device-level validation using polarization-resolved PL measurements of QDs embedded in circular mesas further confirms improved registration accuracy: distortion correction yields both a reduced mean DOLP and a narrower device-to-device polarization distribution compared with raw-coordinate devices. The proposed method can be implemented in a broad range of emitter systems, custom microscopy setups, and nanofabrication workflows [ 48 ]. Traceable and predictive positioning protocols of this type will be important for improving fabrication yield as quantum photonic devices evolve from isolated proof-of-concept structures toward larger-scale integrated circuits.  
+
+> METHODS A. Sample preparation
+
+The QD sample was grown by molecular beam epitaxy (Riber C21T) on a GaAs wafer. The heterostructure consists of a 200 nm GaAs buffer layer, a 400 nm Al 0.75 Ga 0.25 As sacrificial layer, and a 130 nm Al 0.23 Ga 0.77 As barrier layer, where strain-free GaAs QDs were formed at the center by droplet etching and nanohole infilling. The barrier layer was capped on both sides by 10 nm GaAs layers to suppress oxidation. The alignment markers were fabricated using standard EBL (Raith PIONEER Two) and metal lift-off processes. The mesa structures were patterned by EBL with a positive electron-beam resist (Allresist AR-P 6200.13), and subsequently etched into the QD sample using inductively coupled Ar/Cl 2/BCl 3 plasma.  
+
+> B. Polarization-resolved PL
+
+The PL measurements were performed at cryogenic temperature using a closed-cycle cryostat (Montana Instruments). QDs were excited above-bandgap using a 635 nm continuous-wave laser, which was rejected from the detection path by a 750 nm longpass filter. The emission polarization was analyzed by a rotating half-wave plate followed by a fixed linear polarizer, placed directly after the objective and beamsplitter. The QD emission was then guided into a spectrometer (Princeton Instruments) equipped 8with a 1800 l /mm grating for high spectral resolution and a 500 μm wide slit to reduce sensitivity to the exact collection position [ 49 ]. For each measurement, the excitation power was kept below saturation. The spectral background was estimated from the average intensity in the first and last 1.5 nm ranges and subtracted from the spectra.  
+
+> C. Numerical simulation
+
+Simulations were performed using Ansys Lumerical FDTD. The QD was modeled as an incoherent and unpolarized emitter by averaging the far-field intensities generated by two orthogonal in-plane electric dipoles oriented along the 
+
+x and y directions. The dipole was placed at 75 nm below the sample surface, same as the actual QD heterostructure. The mesa geometry was defined according to the measured device dimensions, with a long diameter of approximately 2.00 μm , a short diameter of 1.96 μm , and a height (etch depth) of approximately 600 nm . The far-field intensity was integrated over the collection cone corresponding to the experimental objective (Mitutoyo LCD Plan Apo NIR HR 100X, NA = 0.7). 
+
+> AUTHOR CONTRIBUTIONS
+
+Y.Z. and E.P.R. grew the QD samples. C.M. fabricated the sample with the assistance of X.Z. and F.De. C.M. carried out optical measurements with the support of M.H. and Z.J. M.H. wrote the image analysis algorithm with contributions from T.H. T.M.K., T.O., and A.R. performed complementary optical measurements at their facility. C.M. and M.H. analyzed and interpreted the results together. C.M. prepared the first manuscript draft and revised it with M.H. and M.Z., with input from all other co-authors. M.Z. conceived and supervised the project together with F.D. 
+
+> ACKNOWLEDGMENTS
+
+We thank Tobias Huber-Loyola, Quirin Buchinger, and Qiushuang Lian for fruitful discussions. We also thank Rolf J. Haug, Ronny Hüther, Jürgen Becker, and Lukas Steinhoff for their technical support. 
+
+> FUNDING
+
+The authors gratefully acknowledge the funding from the German Federal Ministry of Research, Technology and Space (BMFTR) within the projects SemIQON (13N16291) and QVLS-iLabs: Dip-QT (03ZU1209DD), the project CLICS funded by the funding program zukunft.niedersachsen of the Lower Saxony Ministry of Science and Culture and the Volkswagen Foundation, the European Research Council (MiNet – No. GA101043851), the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy (EXC-2123) QuantumFrontiers (390837967). A.R. acknowledges support of the Austrian Science Fund (FWF) [10.55776/COE1, 10.55776/PIN4389523, 10.55776/FG5] and the QuantERA program via the project MEEDGARD (FFG Grant No. 906046). T.M.K. acknowledges support of the Linz Institute of Technology (LIT), via the LIT project PEPSI (LIT-2025-14-YOU-121), that received funding from the State of Upper Austria and the Austrian Federal Ministry of Women, Science and Research. Y.Z. acknowledges the China Scholarship Council (CSC201908370225). 
+
+> DISCLOSURES
+
+The authors declare no conflicts of interest.                  
+
+> [1] J. Yin, Y. Cao, Y.-H. Li, S.-K. Liao, L. Zhang, J.-G. Ren, W.-Q. Cai, W.-Y. Liu, B. Li, H. Dai, G.-B. Li, Q.-M. Lu, Y.-H. Gong, Y. Xu, S.-L. Li, F.-Z. Li, Y.-Y. Yin, Z.-Q. Jiang, M. Li, J.-J. Jia, G. Ren, D. He, Y.-L. Zhou, X.-X. Zhang, N. Wang, X. Chang, Z.-C. Zhu, N.-L. Liu, Y.-A. Chen, C.-Y. Lu, R. Shu, C.-Z. Peng, J.-Y. Wang, and J.-W. Pan, Science 356 , 1140 (2017). [2] L. S. Madsen, F. Laudenbach, M. F. Askarani, F. Rortais, T. Vincent, J. F. F. Bulmer, F. M. Miatto, L. Neuhaus, L. G. Helt, M. J. Collins, A. E. Lita, T. Gerrits, S. W. Nam, V. D. Vaidya, M. Menotti, I. Dhand, Z. Vernon, N. Quesada, and J. Lavoie, Nature 606 , 75 (2022). [3] Y. Wei, S. Liu, X. Li, Y. Yu, X. Su, S. Li, X. Shang, H. Liu, H. Hao, H. Ni, S. Yu, Z. Niu, J. Iles-Smith, J. Liu, and X. Wang, Nature Nanotechnology 17 , 470 (2022). [4] L. Zhai, G. N. Nguyen, C. Spinnler, J. Ritzmann, M. C. Löbl, A. D. Wieck, A. Ludwig, A. Javadi, and R. J. Warburton, Nature Nanotechnology 17 , 829 (2022). [5] X. Ding, Y.-P. Guo, M.-C. Xu, R.-Z. Liu, G.-Y. Zou, J.-Y. Zhao, Z.-X. Ge, Q.-H. Zhang, H.-L. Liu, L.-J. Wang, M.-C. Chen, H. Wang, Y.-M. He, Y.-H. Huo, C.-Y. Lu, and J.-W. Pan, Nature Photonics 19 , 387 (2025). [6] F. Basso Basset, M. B. Rota, C. Schimpf, D. Tedeschi, K. D. Zeuner, S. F. Covre da Silva, M. Reindl, V. Zwiller, K. D. Jöns, A. Rastelli, and R. Trotta, Phys. Rev. Lett. 123 , 160501 (2019). [7] M. Zopf, R. Keil, Y. Chen, J. Yang, D. Chen, F. Ding, and O. G. Schmidt, Phys. Rev. Lett. 123 , 160502 (2019). [8] D. Cogan, Z.-E. Su, O. Kenneth, and D. Gershoni, Nature Photonics 17 , 324 (2023). [9] N. Coste, D. A. Fioretto, N. Belabas, S. C. Wein, P. Hilaire, R. Frantzeskakis, M. Gundin, B. Goes, N. Somaschi, M. Morassi, A. Lemaître, I. Sagnes, A. Harouri, S. E. Economou, A. Auffeves, O. Krebs, L. Lanco, and P. Senellart, Nature Photonics 17 , 582
+
+9
+
+(2023). [10] N. Maring, A. Fyrillas, M. Pont, E. Ivanov, P. Stepanov, N. Margaria, W. Hease, A. Pishchagin, A. Lemaître, I. Sagnes, T. H. Au, S. Boissier, E. Bertasi, A. Baert, M. Valdivia, M. Billard, O. Acar, A. Brieussel, R. Mezher, S. C. Wein, A. Salavrakos, P. Sinnott, D. A. Fioretto, P.-E. Emeriau, N. Belabas, S. Mansfield, P. Senellart, J. Senellart, and N. Somaschi, Nature Photonics 18 , 603 (2024). [11] J. Yang, Z. Jiang, F. Benthin, J. Hanel, T. Fandrich, R. Joos, S. Bauer, S. Kolatschek, A. Hreibi, E. P. Rugeramigabo, M. Jetter, S. L. Portalupi, M. Zopf, P. Michler, S. Kück, and F. Ding, Light: Science & Applications 13 , 150 (2024). [12] T. Strobel, M. Vyvlecka, I. Neureuther, T. Bauer, M. Schäfer, S. Kazmaier, N. L. Sharma, R. Joos, J. H. Weber, C. Nawrath, W. Nie, G. Bhayani, C. Hopfmann, C. Becher, P. Michler, and S. L. Portalupi, Nature Communications 16 , 10027 (2025). [13] A. Laneve, G. Ronco, M. Beccaceci, P. Barigelli, F. Salusti, N. Claro-Rodriguez, G. De Pascalis, A. Suprano, L. Chiaudano, E. Schöll, L. Hanschke, T. M. Krieger, Q. Buchinger, S. F. Covre Da Silva, J. Neuwirth, S. Stroj, S. Höfling, T. Huber-Loyola, M. A. Usuga Castaneda, G. Carvacho, N. Spagnolo, M. B. Rota, F. Basso Basset, A. Rastelli, F. Sciarrino, K. D. Jöns, and R. Trotta, Nature Communications 16 , 10028 (2025). [14] D. A. Vajner, K. Kaymazlar, F. Drauschke, L. Rickert, M. Von Helversen, H. Liu, S. Li, H. Ni, Z. Niu, A. Pappa, and T. Heindel, Nature Communications 17 , 2074 (2026). [15] H. Larocque, M. A. Buyukkaya, C. Errando-Herranz, C. Papon, S. Harper, M. Tao, J. Carolan, C.-M. Lee, C. J. K. Richardson, G. L. Leake, D. J. Coleman, M. L. Fanto, E. Waks, and D. Englund, Nature Communications 15 , 5781 (2024). [16] X. Wang, X. Zhang, B. Chen, Y. Zhu, Y. Qin, L. Dong, J. Cai, D. Sui, J. Wu, Q. Zhang, R. Liu, Y. Huo, J. Liu, X. Ou, and J. Zhang, Nature Materials 24 , 1898 (2025). [17] N. Somaschi, V. Giesz, L. De Santis, J. C. Loredo, M. P. Almeida, G. Hornecker, S. L. Portalupi, T. Grange, C. Antón, J. Demory, C. Gómez, I. Sagnes, N. D. Lanzillotti-Kimura, A. Lemaítre, A. Auffeves, A. G. White, L. Lanco, and P. Senellart, Nature Photonics 10 , 340 (2016). [18] F. Liu, A. J. Brash, J. O’Hara, L. M. P. P. Martins, C. L. Phillips, R. J. Coles, B. Royall, E. Clarke, C. Bentham, N. Prtljaga, I. E. Itskevich, L. R. Wilson, M. S. Skolnick, and A. M. Fox, Nature Nanotechnology 13 , 835 (2018). [19] J. Liu, R. Su, Y. Wei, B. Yao, S. F. C. d. Silva, Y. Yu, J. Iles-Smith, K. Srinivasan, A. Rastelli, J. Li, and X. Wang, Nature Nanotechnology 14 , 586 (2019). [20] R. Uppu, F. T. Pedersen, Y. Wang, C. T. Olesen, C. Papon, X. Zhou, L. Midolo, S. Scholz, A. D. Wieck, A. Ludwig, and P. Lodahl, Science Advances 6, eabc8268 (2020). [21] J. Yang, Y. Chen, Z. Rao, Z. Zheng, C. Song, Y. Chen, K. Xiong, P. Chen, C. Zhang, W. Wu, Y. Yu, and S. Yu, Light: Science & Applications 13 , 33 (2024). [22] Y. Zhu, R. Liu, A. Yi, X. Wang, Y. Qin, Z. Zhao, J. Zhao, B. Chen, X. Zhang, S. Song, Y. Huo, X. Ou, and J. Zhang, Light: Science & Applications 14 , 86 (2025). [23] Y.-T. Wang, Q.-H. Ye, J.-Y. Yan, Y. Qiao, Y.-X. Liu, Y.-Z. Ye, C. Chen, X.-T. Cheng, C.-H. Li, Z.-J. Zhang, C.-N. Huang, Y. Meng, K. Zou, W.-K. Zhan, C. Zhao, X. Hu, C. A. T. H. Tee, W. E. I. Sha, Z. Huang, H. Liu, C.-Y. Jin, L. Ying, and F. Liu, Science Advances 11 , eadv8115 (2025). [24] X.-R. Mao, W.-J. Ji, S.-L. Wang, H.-Q. Liu, B. Wu, X.-J. Wang, L. Liu, L. Zhou, H. Ni, Z. Niu, and Z. Yuan, Light: Science & Applications 14 , 295 (2025). [25] X.-L. Chu, T. Pregnolato, R. Schott, A. D. Wieck, A. Ludwig, N. Rotenberg, and P. Lodahl, Advanced Quantum Technologies 
+
+3, 2000026 (2020). [26] G. Peniakov, Q. Buchinger, M. Helal, S. Betzold, Y. Reum, M. B. Rota, G. Ronco, M. Beccaceci, T. M. Krieger, S. F. C. da Silva, A. Rastelli, R. Trotta, A. Pfenning, S. Höfling, and T. Huber-Loyola, Laser & Photonics Reviews 18 , 2300835 (2024). [27] K. Gaur, A. Barua, S. Tripathi, L. J. Roche, S. Wilksen, A. Steinhoff, S. Baraz, N. Nitin, C. C. Palekar, A. Koulas-Simos, I. Limame, P. Mudi, S. Rodt, C. Gies, and S. Reitzenstein, Light: Science & Applications 15 , 260 (2026). [28] A. Dousse, L. Lanco, J. Suffczy´ nski, E. Semenova, A. Miard, A. Lemaître, I. Sagnes, C. Roblin, J. Bloch, and P. Senellart, Phys. Rev. Lett. 101 , 267404 (2008). [29] M. Gschrey, R. Schmidt, J.-H. Schulze, A. Strittmatter, S. Rodt, and S. Reitzenstein, Journal of Vacuum Science & Technology B 33 , 021603 (2015). [30] M. Gschrey, A. Thoma, P. Schnauber, M. Seifried, R. Schmidt, B. Wohlfeil, L. Krüger, J.-H. Schulze, T. Heindel, S. Burger, F. Schmidt, A. Strittmatter, S. Rodt, and S. Reitzenstein, Nature Communications 6, 7662 (2015). [31] L. Sapienza, M. Davanço, A. Badolato, and K. Srinivasan, Nature Communications 6, 7833 (2015). [32] J. Liu, M. I. Davanço, L. Sapienza, K. Konthasinghe, J. V. De Miranda Cardoso, J. D. Song, A. Badolato, and K. Srinivasan, Review of Scientific Instruments 88 , 023116 (2017). [33] T. Pregnolato, X.-L. Chu, T. Schröder, R. Schott, A. D. Wieck, A. Ludwig, P. Lodahl, and N. Rotenberg, APL Photonics 5,086101 (2020). [34] P. Holewa, D. A. Vajner, E. Zi˛ eba-Ostój, M. Wasiluk, B. Gaál, A. Sakanas, M. G. Mikulicz, P. Mrowi´ nski, B. Krajnik, M. Xiong, K. Yvind, N. Gregersen, A. Musiał, A. Huck, T. Heindel, M. Syperek, and E. Semenova, Nature Communications 15 ,3358 (2024). [35] M. B. Rota, T. M. Krieger, Q. Buchinger, M. Beccaceci, J. Neuwirth, H. Huet, N. Horová, G. Lovicu, G. Ronco, S. F. Covre Da Silva, G. Pettinari, M. Moczała-Dusanowska, C. Kohlberger, S. Manna, S. Stroj, J. Freund, X. Yuan, C. Schneider, M. Ježek, S. Höfling, F. Basso Basset, T. Huber-Loyola, A. Rastelli, and R. Trotta, eLight 4, 13 (2024). [36] S. Liu, X. Li, H. Liu, G. Qiu, J. Ma, L. Nie, Y. Meng, X. Hu, H. Ni, Z. Niu, C.-W. Qiu, X. Wang, and J. Liu, Nature Photonics 
+
+18 , 967 (2024). [37] Q. Buchinger, C. Krause, A. Zhang, G. Peniakov, M. Helal, Y. Reum, A. T. Pfenning, S. Höfling, and T. Huber-Loyola, Nano Convergence 12 , 36 (2025). [38] C. R. Copeland, A. L. Pintar, R. G. Dixson, A. Chanana, K. Srinivasan, D. A. Westly, B. R. Ilic, M. I. Davanco, and S. M. Stavis, Optica Quantum 2, 72 (2024). [39] A. A. Madigawa, J. N. Donges, B. Gaál, S. Li, M. A. Jacobsen, H. Liu, D. Dai, X. Su, X. Shang, H. Ni, J. Schall, S. Rodt, Z. Niu, N. Gregersen, S. Reitzenstein, and B. Munkhbat, ACS Photonics 
+
+11 , 1012 (2024). [40] R. Keil, M. Zopf, Y. Chen, B. Höfer, J. Zhang, F. Ding, and O. G. Schmidt, Nature Communications 8, 15501 (2017). [41] D. Huber, M. Reindl, Y. Huo, H. Huang, J. S. Wildmann, O. G. Schmidt, A. Rastelli, and R. Trotta, Nature Communications 8,15506 (2017). [42] B. Zhang, J. Zerubia, and J.-C. Olivo-Marin, Appl. Opt. 46 , 1819 (2007). [43] See Supplementary information at [url will be inserted by the production group]. [44] Z. Zhang, IEEE Transactions on Pattern Analysis and Machine Intelligence 22 , 1330 (2000). 10 
+
+[45] C. R. Copeland, J. Geist, C. D. McGray, V. A. Aksyuk, J. A. Liddle, B. R. Ilic, and S. M. Stavis, Light: Science & Applications 7, 31 (2018). [46] P. Virtanen, R. Gommers, T. E. Oliphant, M. Haberland, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson, W. Weckesser, J. Bright, S. J. van der Walt, M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, ˙ I. Polat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero, C. R. Harris, A. M. Archibald, A. H. Ribeiro, F. Pedregosa, P. van Mulbregt, and SciPy 1.0 Contributors, Nature Methods 17 , 261 (2020). [47] E. Poem and D. Gershoni, in Handbook of Luminescent Semiconductor Materials (CRC Press, 2012). [48] A. W. Elshaari, A. Skalli, S. Gyger, M. Nurizzo, L. Schweickert, I. Esmaeil Zadeh, M. Svedendahl, S. Steinhauer, and V. Zwiller, Advanced Quantum Technologies 4, 2100032 (2021). [49] A. Laneve, M. B. Rota, F. Basso Basset, M. Beccaceci, V. Villari, T. Oberleitner, Y. Reum, T. M. Krieger, Q. Buchinger, R. Prasad, S. F. C. da Silva, A. Pfenning, S. Stroj, S. Höfling, A. Rastelli, T. Huber-Loyola, and R. Trotta, Nature Communications 16 ,6209 (2025).

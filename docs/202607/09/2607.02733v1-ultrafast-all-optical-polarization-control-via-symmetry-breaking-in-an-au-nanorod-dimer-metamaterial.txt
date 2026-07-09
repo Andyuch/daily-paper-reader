@@ -1,0 +1,2051 @@
+Title: 2607.02733v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.02733v1
+
+Published Time: Tue, 07 Jul 2026 00:09:53 GMT
+
+Number of Pages: 32
+
+Markdown Content:
+Ultrafast All -Optical Polarization Control via Symmetry Breaking in a n Au Nanorod 
+
+## Dimer Metamaterial 
+
+Nikolaos Matthaiakakis, 1, 2* Léa Test é2, George Kakarantzas 2 
+
+> 1
+
+Institute of Nanoscience and Nanotechnology, National Center for Scientific Research “Demokritos”, 15341 Ag. 
+
+Paraskevi, Greece  
+
+> 2
+
+Theoretical and Physical Chemistry Institute, National Hellenic Research Foundation, NHRF, 48 Vassileos 
+
+Constantinou Ave., 11635 Athens, Greece 
+
+Abstract: The continuous evolution of ultrafast optical technologies requires advanced solutions for the dynamic and 
+
+selective manipulation of light’s degrees of freedom. While metamaterials excel at tailoring these properties through 
+
+static geometrical design, achi eving sub -picosecond, all -optical dynamic control without sacrificing signal throughput 
+
+remains a fundamental challenge. Here, an Au orthogonal nanorod dimer plasmonic metasurface capable of ultrafast, 
+
+transmissive control over the ellipticity, and optical rotation of light is presented. By exploiting the transient optical 
+
+nonlinearity of Au under femtosecond excitation, hot -electron generation can be selectively induced in either nanorod 
+
+by leveraging the pronounced geometric anisotropy of the unit cell. The transient response is captured by coupling a 
+
+Three -Temperature Model (3TM) with Finite -Difference Time -Domain (FDTD) simulations. This ultrafast response 
+
+is driven by non -thermal electron excitation, rapid electron -electron thermalization, and subsequent lattice heating, 
+
+which dynamically break the optical symmetry of the orthogonal localized surface plasmon (LSP) modes supported 
+
+by the dimers. Crucially, this active mode -mixing drives sub -picosecond polarization switching , reaching peak shifts 
+
+of ~10° in ellipticity and up to ~20° in optical rotation with an instantaneous response and a relaxation time of ~3 ps ,
+
+while the absolute amplitude of the transmitted signal is only weakly perturbed. By achieving macroscopic 
+
+transmissive polarization shifts alongside a highly stable 40% transmission efficiency, this platform overcomes the 
+
+severe optical attenuation and geo metric constraints that bottleneck existing nonlinear architectures, paving the way 
+
+for low -latency, high -speed optical switches and modulators essential for next -generation nanophotonic networks. KEYWORDS: Ultrafast, All -optical, Polarization , Three -Temperature Model, Au Metamaterial , Transient Symmetry 
+
+Breaking 
+
+Introduction 
+
+The increasing demand for higher data rates, multifunctionality, and low latency in modern communication, optical 
+
+computing, and sensing systems necessitates the development of advanced solutions to manipulate light’s degrees of 
+
+freedom, such as amplitude, phase, polarization, and angular momentum, on ultrafast timescales. Consequently, 
+
+artificial optical metamaterials have emerged as a leading platform for advanced light -matter interactions 1–6.
+
+Complex control of the degrees of freedom of light , including polarization conversion and arbitrary wavefront 
+
+shaping, is typically achieved by superimposing distinct optical modes and exploiting their amplitude and phase 
+
+interference 7–9. The simultaneous excitation of these modes (mode -mixing) can be intrinsic, dictated by static 
+
+geometri cal designs 10 –12 , or extrinsic, achieved by dynamically breaking the excitation or detection symmetry 7,8,13,14 .
+
+However, relying on a single static metamaterial for dynamic control is inherently limited; different functionalities 
+
+require varying amplitude -phase relations that remain inextricably tied to the fixed state of the meta -atoms. 
+
+To overcome these limitations, dynamically tunable metamaterials driven by external stimuli have been proposed 
+
+> 3,8,13,15 –17
+
+. All -optical ultrafast tuning, achieved via high -power femtosecond laser pulses, is a highly promising strategy 
+
+> 9,18 –30
+
+. It bypasses the RC -time constant limitations of electrical gating, enabling sub -picosecond response times, 
+
+massive operational bandwidths, and seamless integration with photonic systems. Beyond the fundamental exploration 
+
+of nonlinear light -matter interactions, mastering the temporal evolution of the instantaneous polarization state on such 
+
+timescales is practically critical for next -generation optical technologies 18,31,32 . In modern telecommunications and 
+
+hyperscale data centers , ultrafast polarization control is essential for expanding bandwidth capacities through 
+
+multiplexing and dynamic, sub -nanosecond optical routing , minimizing the thermal and latency bottlenecks inherent 
+
+to electronic processors. Furthermore, in the rapidly accelerating fields of optical computing and quantum information 
+
+processing, the ability to rapidly and coherently switch polarization states is critical . It provides the necessary 
+
+framework for executing parallel all -optical logic operations, performing analog real -time image processing, and 
+
+establishing secure quantum key distribution channels where fragile quantum data must be encoded and manipulated 
+
+non -destructively. Achieving ultrafast, all -optical control over light polarization , specifically the dynamic modulation of ellipticity 
+
+and optical rotation , remains fundamentally constrained by the physical trade -offs between modulation depth, 
+
+recovery speed, and absolute transmission efficiency. Platforms relying on free -carrier recombination or structural 
+
+phase transitions face inherent bottlenecks in recove ry speed; for instance, hybrid silicon metasurfaces 33 are 
+
+fundamentally delayed by relaxation times ranging from several picoseconds to the sub -nanosecond scale. Conversely, 
+
+while materials operating in the epsilon -near -zero (ENZ) regime facilitate massive, ultrafast nonlinear modulations 34 ,
+
+they traditionally suffer from severe transmissive attenuation. Although reflective perfect absorbers can circumvent 
+
+these losses 35 , their completely opaque architectures render high -efficiency transmissive control elusive. To bridge 
+
+this gap, recent efforts have shifted toward active plasmonic and dielectric metasurfaces driven by hot -electron transfer  
+
+> 36
+
+and photogenerated carrier nonlinearities 32 . However, these promising architectures remain practically constrained: 
+
+high -contrast dielectric platforms rely on strictly reflective geometries that prevent transmissive routing, while 
+
+transmissive linear plasmonic devices historically yield modest polarization shifts confined to only a few degrees 
+
+(typically < 5°) . Consequently , to achieve macroscopic transmissive polarization shifts, state -of -the -art designs 
+
+frequently must resort to low -efficiency frequency conversion processes, such as second -harmonic generation 37 , or 
+
+operate in highly absorptive self -phase modulation regimes 38 , drastically reducing absolute signal throughput. 
+
+Furthermore, these conventional all -optical switches typically rely on uniform spatial pumping that preserves the 
+
+initial mode -symmetry of the metasurface, precluding the selective mode -mixing required for complex polarization 
+
+control. Consequently, a crit ical need remains for a transmissive platform capable of transiently breaking spatial 
+
+symmetry to deliver significant , sub -picosecond polarization shifts without sacrificing absolute transmission 
+
+efficiency. 
+
+In modern state -of -the -art devices, typically a structurally homogeneous metasurface is pumped, yield ing a uniform 
+
+spectral shift of all supported modes, preserving the initial mode -symmetry and precluding selective mode -mixing 
+
+that is critical for achieving complex and efficient selective control over different light degrees of freedom . Achieving 
+
+selective control of individual modes supported by the metasurface is critical for improving the efficiency and control 
+
+freedom of these devices. To tackle this challenge, a metamaterial design that combines extrinsic mode -mixing with 
+
+the ultrafast nonlinear optical response of noble metals is selected . Specifically, a n orthogonal nanorod dimer meta -
+
+atom architecture that separates orthogonal localized surface plasmon (LSP) modes into two independently excitable 
+
+Au nano rods is employed for this purpose . In the visible -to -near -infrared regime, gold’s nonlinearity is driven by extreme, non -equilibrium electron heating following femtosecond laser absorption. This process triggers the 
+
+instantaneous generation of non -thermal electrons, which rapidly thermalize via electron -electron scattering into a hot 
+
+electron gas, before ultimat ely cooling through electron -phonon coupling to the lattice. The resulting smearing of the 
+
+Fermi -Dirac distribution drastically alters interband transitions and modifies intraband Drude damping. By matching 
+
+the pump polarization to the orientation of one s pecific Au nano rod , that element can be selectively excited while the 
+
+orthogonal nano rod remains relatively unperturbed. This transient, sub -picosecond symmetry breaking alters the 
+
+relative amplitude and phase between the orthogonal LSPs, providing on -demand, ultrafast control over the amplitude 
+
+and polarization of the transmitted light .
+
+To accurately capture and validate this transient response, a time -resolved Three -Temperature Model (3TM) 20,39 is 
+
+combined with full -wave finite -difference time -domain (FDTD) simulations. The transient response of the Au 
+
+metasurface pumped by an 800 nm femtosecond optical pulse is investigated . By rigorously tracking the non -
+
+equilibrium dynamics of the non -thermal electron density ( N), the thermal electron temperature ( θₑ), and the lattice 
+
+temperature ( θₗ), the temporal evolution of the complex permittivity (Δε) across a broad spectrum can be evaluated 
+
+explicitly accounting for both Drude intraband variations and the X - and L -point interband transitions. 
+
+The simulations reveal that an intense non -thermal electron population followed by intense electronic heating, 
+
+dictates a rapid transient dielectric shift that uniquely reconfigures the structural anisotropy of the unit cell. This 
+
+asymmetric perturbation yields a significant , time -dependent modulation of the polarization states within the 700 –850 
+
+nm wavelength range. Demonstrating sub -picosecond shifts of up to  ~10° in ellipticity ( η) and  ~20° in optical rotation 
+
+(α) with an absolute transmission value of 40% (mai ntaining very weak perturbation of absolute transmission ), this 
+
+framework successfully bypasses the limitations of static structural tuning and offers a n overall solution to the 
+
+common trade -offs between modulation depth, recovery speed, and insertion loss . Ultimately, this active mode -mixing 
+
+underscores the formidable potential of noble metal metasurfaces for high -speed, all -optical polarization modulation 
+
+and the realization of next -generation nanophotonic networks. 
+
+Proposed design and principle of operation 
+
+The metamaterial consists of an array of Au orthogonal nanorod dimers situated on a dielectric substrate ( n = 1.45, 
+
+representative of CaF₂ or SiO₂), as illustrated in Figure 1a . The unit cell features a 500 nm periodicity along both the 
+
+x- and y -axes . The Au nanorods have a uniform thickness of 100 nm. To establish the required geometric anisotropy, 
+
+the first antenna (60 nm wide and 170 nm long) is aligned parallel to the y -axis and displaced by +100 nm from the unit cell centr e along that same axis. Conversely, the second antenna (210 nm long and 60 nm wide) is aligned parallel 
+
+to the x -axis and offset by −100 nm from the centre along the y -axis. 
+
+Optically, the transmission of an incident linearly polarized wave through this structure is described by the 
+
+scattering matrix: 
+
+[𝐸 𝑥 ,𝑡𝑟 
+
+𝐸 𝑦 ,𝑡𝑟 
+
+] = [𝜏 𝑥𝑥 𝜏 𝑥𝑦 
+
+𝜏 𝑦𝑥 𝜏 𝑦𝑦 ] [𝐸 𝑥 ,𝑖𝑛𝑐 
+
+𝐸 𝑦 ,𝑖𝑛𝑐 
+
+] (1) 
+
+Because the two nano rods support only radiative dipole modes strictly orthogonal to each other , as confirmed by the 
+
+eigenmode visualizations and FDTD simulations (Figure 1b ), cross -polarization scattering is negligible ( 𝜏 𝑥𝑦  ≈ 0, 
+
+## 𝜏 𝑦𝑥 ≈ 0) allow ing each antenna to operate as an independent polarization channel. Specifically, the x -oriented antenna 
+
+supports a radiative dipole mode (LSP x) driven by x -polarized light, exhibiting a static transmission dip at 800 nm 
+
+(Figure 1c ). Similarly, the y -oriented antenna supports a transverse mode (LSP y) that couples exclusively to y -
+
+polarized light, with a static resonance at 740 nm. The spectral evolution of the transmission amplitudes, | 𝜏 𝑥𝑥 | and 
+
+|𝜏 𝑦𝑦 |, is accompanied by a pronounc ed inherent phase retardation, ΔArg( τ), between the two channels ( Figure 1d ). 
+
+Figure 1. Static linear optical response and eigenmode analysis of the orthogonal dimer nanorod metasurface. (a) Schematic 
+
+illustration of unit cell geometry. (b) Eigenmode visualization shows radiative dipole modes and nonradiative quadrupole modes LSP x and LSP y. (c) Simulated amplitude spectra of the transmission coefficients, |𝜏 𝑥𝑥 | (blue solid line) and | 𝜏 𝑦𝑦 | (orange solid 
+
+line). The pronounced transmission dips correspond to the static dipole resonances at 800 nm and 740 nm, respectively. (d) 
+
+Corresponding spectral p hase, Arg( 𝜏 𝑥𝑥 ) and Arg( 𝜏 𝑦𝑦 ), alon gside the relative phase difference ΔArg(τ) (dashed green line), 
+
+which dictates the inherent phase retardation between the two polarization channels prior to ultrafast optical excitation. 
+
+Figure 2. Static transmission and polarization response of the metasurface as a function of the incident probe azimuth 
+
+angle. (a) Simulated transmission spectra (Tr) under linearly polarized excitation at azimuth angles of  φpr = 0° (blue dash -dotted 
+
+line),  φpr =45° (orange solid line), and  φpr =90° (green dotted line). The 0° and 90° spectra isolate the individual orthogonal 
+
+resonances, while the 45° spectrum reflects their simultaneous excitation. (b ) Corresponding ellipticity ( η) of the transmitted light. 
+
+For excitation purely along the structural axes (0° and 90°), the polarization remains strictly linear ( η = 0°). At a 45° incidence, the 
+
+interference between the orthogonal modes yields a strongly wavelength -dependent ellipticity. (c) Optical rotation angle (α) of the 
+
+transmitted light. Similar to the ellipticity, significant optical rotation is only observed for the 45° excitation, demonstr ating the 
+
+static birefringent properties of the dual -nano rod unit cell prior to ultrafast optical pumping. Ultimately, the complex interference between these direct transmission coefficients governs the final polarization 
+
+state of the transmitted light. To exploit this, the metamaterial is illuminated with a linearly polarized probe pulse at 
+
+an azimuth angle of  φpr = 45°, simultaneously exciting both orthogonal modes ( Figure 2a ). While probing purely 
+
+along the structural axes (0° and 90°) preserves a strictly linear polarization state, the simultaneous 45° excitation 
+
+leverages the static amplitude and phase differences to induce a strongly wavelength -dependent ellipticity ( η) and 
+
+optical rotation ( α), as shown in Figures 2b and 2c , respectively. This static configuration establishes the critical 
+
+baseline amplitude -phase relationship required to achieve active, ultrafast polarization control upon laser pumping. 
+
+All -Optical Ultrafast Polarization Control 
+
+To achieve ultrafast dynamic control, transient changes are introduced in the dielectric permittivity of gold via a 
+
+femtosecond pump pulse. To accurately capture these sub -picosecond dynamics, the temporal evolution of the system 
+
+is governed by a 3TM 20 . The validity of the model is verified against other published works in the supplementary 
+
+information. This model tracks the energy density of the non -thermal electrons ( 𝑁 ), the temperature of the thermalized 
+
+electron gas ( 𝛩 𝑒 ), and the lattice temperature ( 𝛩 𝑙  ): 
+
+𝑑𝑁 (𝑡 )
+
+𝑑𝑡 = −𝛼 𝑠 𝑁 (𝑡 ) − 𝑏𝑁 (𝑡 ) + 𝑃 𝑎𝑏𝑠 (𝑡 ), (2)
+
+𝐶 𝑒 
+
+𝑑 𝛩 𝑒 (𝑡 )
+
+𝑑𝑡 = −𝐺 (𝛩 𝑒 (𝑡 ) − 𝛩 𝑙 (𝑡 )) + 𝛼 𝑠 𝑁 (𝑡 ), (3)
+
+𝐶 𝑙 
+
+𝑑 𝛩 𝑙 (𝑡 )
+
+𝑑𝑡 = 𝐺 (𝛩 𝑒 (𝑡 ) − 𝛩 𝑙 (𝑡 )) + 𝑏𝑁 (𝑡 ), (4)
+
+where  𝑃 𝑎𝑏𝑠  is the absorbed power density from the pump pulse,  𝛼 𝑠  and  𝑏  are the scattering rates defining non -
+
+thermal energy transfer to the electron gas and lattice respectively,  𝐶 𝑒  and  𝐶 𝑙  are the volumetric heat capacities, and 
+
+## 𝐺  is the electron -phonon coupling constant. This multi -stage energy transfer drastically modifies both the intraband 
+
+Drude damping and the interband transitions, yielding a total transient complex dielectric permittivity,  Δ𝜀 (𝜔 , 𝑡 ) =
+
+Δ𝜀 intra (𝜔 , 𝑡 ) + Δ𝜀 inter (𝜔 , 𝑡 ). To trace this transient optical response, the 3TM dynamics are included in the FDTD 
+
+simulations. Detailed information on the 3TM and permittivity calculations in the supplementary information. 
+
+A 70 fs pump pulse at  λ = 800  nm with a fluence of  F = 680 μ J/cm2 is used to excite the metamaterial . By 
+
+polarizing the pump exclusively along the x -axis (φpu = 0°)  the pump couples predominantly to the LSP x mode, 
+
+confining the absorption almost entirely within the x -oriented nanoantenna ( Figure 3a ). Consequently, this selective excitation drives an instantaneous surge in non -thermal electron density ( Figure 3b ). Through rapid electron -electron 
+
+thermalization, the thermal electron gas temperature ( 𝛩 𝑒 ) in the x -oriented antenna spikes beyond 2000 K within the 
+
+first 200 fs ( Figure 3c ), followed by a slower picosecond energy transfer to the lattice ( 𝛩 𝑙  ) via electron -phonon 
+
+coupling ( Figure 3d ). Crucially, throughout this intense thermodynamic cycle, the orthogonal y -oriented antenna 
+
+remains largely unperturbed, effectively breaking the structural optical symmetry on a sub -picosecond timescale. 
+
+The extreme heating of the electron gas directly modulates both the real and imaginary components of the complex 
+
+dielectric function within the pumped x -oriented nanoantenna ( Figure 3e ). This rapid transient permittivity shift 
+
+fundamentally alters the resonant conditions of the LSP x mode. Consequently, the metasurface exhibits a pronounced, 
+
+time -dependent modulation in its broadband transmission spectrum ( Figure 3f ). As mapped in the transient 
+
+differential transmission (ΔTr) profiles ( Figure 3i ), this optical response is characterized by sharp spectral 
+
+modulations centred around 800 nm. These distinct absorption and bleaching features correspond directly to the 
+
+ultrafast spectral broadening of the selectively pumped LSP x resonance, while the orthogonal 740 nm LSP y resonance 
+
+remains comparatively unaffected. 
+
+Because the ultrafast pump selectively perturbs only one of the orthogonal antennas, it dynamically breaks the 
+
+structural symmetry of the unit cell. This active mode -mixing alters the relative amplitude and phase retardation 
+
+between the x and y polarizatio n channels on a sub -picosecond timescale. By probing the structure at an azimuth angle 
+
+of (φpr = 45 °), this transient anisotropy can be harnessed to achieve ultrafast, all -optical modulation of the polarization 
+
+state. As demonstrated in Figures 3j and 3k , the metasurface induces pronounced dynamic shifts in ellipticity  (Δη)
+
+reaching up to 10°, and robust optical rotations  (Δα) peaking at 20°. Crucially, these peak polarization modulations 
+
+are achieved almost  instantaneously . This sub -picosecond onset perfectly mirrors the excited non -thermal electron 
+
+distribution  𝑁  followed by the non -equilibrium electron temperature profile ( 𝛩 𝑒  ), before the system undergoes a 
+
+slower, few picosecond -scale recovery as the electron gas cools via energy transfer to the lattice. Figure 3. Ultrafast thermodynamic and transient optical response of the orthogonal nanorod dimer metasurface . (a) 
+
+Simulated spatial absorption density profile, demonstrating the selective, symmetry -breaking excitation of the x -oriented 
+
+nanoantenna under an x -polarized femtosecond pump pulse. (b –d) Temporal evolution of the internal physical dynamics derived 
+
+from the 3TM for the excited antenna: (b) non -thermal electron energy density ( N), (c) thermal electron temperature ( θₑ) peaking 
+
+rapidly above 2000 K, and (d) lattice temperature ( θₗ) driven by subsequent electron -phonon thermalization. The grey shaded region 
+
+at Δ t = 0 fs indicates the incident pump pulse profile. (e) Corresponding transient modulations in the real (ΔReal( εTotal )) and 
+
+imaginary (ΔImag( εTotal )) components of the gold dielectric function. (f, i) Absolute transmission ( Tr ) and the transient differential 
+
+transmission (Δ Tr ) maps as a function of probe wavelength ( λ) and pump -probe delay (Δ t). (g, j) Absolute ellipticity ( η) and its 
+
+pump -induced transient modulation (Δ η), achieving sub -picosecond peak shifts of approximately 10°. (h, k) Absolute optical rotation ( α) and the corresponding transient change (Δ α), demonstrating ultrafast dynamic rotation reaching up to 20°. The temporal 
+
+> evolutions in panels (i –k) confirm the high -speed, active control over light’s degrees of freedom via selective structural pumping.
+
+To comprehensively visualize the trajectory of these dynamically evolving polarization states, the transmitted 
+
+Stokes parameters can be mapped onto the Poincaré sphere across selected probe wavelengths ( Figure 4 ). The 
+
+temporal evolution manifests as distinct, loop -like excursions within the of  𝑆 1 − 𝑆 2 − 𝑆 3 coordinate space. The initial, 
+
+highly nonlinear outward trajectory is driven by the rapid thermalization of the hot electron gas, while the slower 
+
+retraction back toward the static resting state is governed by picosecond electron -phonon relaxation. The sig nificant 
+
+variation in the shape, direction, and volumetric span ( ΔS) of these trajectories , ranging from a tight, highly elliptical 
+
+loop at 770 nm to a broad, sweeping arc at 810 nm , highlights the broadband, highly tunable nature of this active 
+
+mode -mixing architecture. 
+
+Figure 4. Dynamic evolution of the transmitted polarization states mapped on the Poincaré sphere. (a –d) 
+
+Temporal trajectories of the polarization state evaluated at selected probe wavelengths ( λ = 770, 790, 810, and 831 
+
+nm). The left column displays the global Poincaré sphere, illustrating the absolute position of the polarization states relative to the principal poles (H: Horizontal, V: Vertical, LCP/RCP: Left/Right Circular Polarization) in the S₁, S₂, 
+
+and S₃ Stokes parameter space. The right column provides a magnified, localized view of the transient trajectories. 
+
+The View Box dimension (Δ S) quantifies the maximum span of the coordinate bounding box in Stokes space for each 
+
+specific wavelength. The color gradient along the trajectories encodes the pump -probe delay time (Δ t) from 0 to 6000 
+
+fs. The distinct, loop -like excursions reflect the underlying thermodynamic sequence: an initial, highly nonlinear 
+
+polarization shift driven by excitation of non -thermal electrons and sub -picosecond hot -electron thermalization, 
+
+followed by a slower picosecond retraction governed by electron -phonon relaxation and lattice cooling. The 
+
+pronounced variation in trajectory shapes across different wavelengths underscores the broadband, highly tunable 
+
+nature of the active mode -mixing. 
+
+As summarized in the comparative analysis (Table 1), the current landscape of ultrafast all -optical polarization 
+
+control is fundamentally defined by the stringent trade -offs between absolute modulation depth, temporal response, 
+
+and transmissive signal effi ciency. While state -of -the -art platforms, such as the nonlinear plasmonic metasurfaces 
+
+demonstrated or the active all -dielectric architectures, report extreme orthogonal polarization shifts of up to 90°, these 
+
+architectures achieve macroscopic modulation a t the severe expense of practical signal throughput. They inherently 
+
+rely on either highly inefficient frequency -conversion processes (e.g., second -harmonic generation) or strict reflective 
+
+geometries, both of which severely complicate sequential cascading in dense nanophotonic networks. Similarly, 
+
+platforms leveraging Epsilon -Near -Zero (ENZ) nonlinearities or structural phase transitions typically suffer from 
+
+crippling transmissive attenuation or sluggish, multi -picosecond recovery times. Against this hist orical backdrop, the 
+
+proposed orthogonal Au nanorod dimer metasurface establishes a critical operational sweet spot. By utilizing localized 
+
+transient symmetry breaking to drive active mode -mixing, this platform successfully overcomes the modulation limits 
+
+of conventional linear metasurfaces. Operating directly within the fundamental transmitted beam, it delivers 
+
+simultaneous sub -picosecond shifts of 10° in ellipticity and up to 20° in optical rotation while preserving a highly 
+
+practical ~40% absolute transm ission efficiency that remains only weakly perturbed during dynamic modulation ,
+
+thereby offering a uniquely viable pathway for high -bandwidth, transmissive all -optical routing. Publication 
+
+(Year) 
+
+Platform / 
+
+Architecture 
+
+Spectral 
+
+Region 
+
+Geometry & 
+
+Efficiency 
+
+Polarization 
+
+Control (Rotation 
+
+& Ellipticity) 
+
+Temporal 
+
+Response 
+
+Driving 
+
+Mechanism 
+
+Matthaiakakis 
+
+(2025) 26 
+
+Dual -Stack 
+
+Graphene 
+
+Nanoribbon 
+
+Metamaterial 
+
+THz / 
+
+Mid -IR 
+
+Transmissive / 
+
+Reflective. High 
+
+efficiency via 
+
+ultrathin 2D 
+
+geometry. 
+
+Multiple Degrees 
+
+of Freedom .
+
+Picosecond  Ultrafast 
+
+selective mode -
+
+mixing via 
+
+pump -induced 
+
+carrier heating. 
+
+Matthaiakakis 
+
+(2024) 9
+
+Nanostructured 
+
+Graphene 
+
+Metasurface 
+
+THz / 
+
+Mid -IR 
+
+Transmissive / 
+
+Reflective. 
+
+Linear -to -Circular: 
+
+Dynamic 
+
+conversion of 
+
+light. 
+
+Picosecond  All -optical 
+
+pump -induced 
+
+free carrier 
+
+heating .
+
+Wang (2024) 
+
+> 37
+
+Nonlinear 
+
+Plasmonic 
+
+Metasurface 
+
+(Au, C3 
+
+symmetry) 
+
+Near -IR 
+
+pump to 
+
+Visible 
+
+output 
+
+Transmissive 
+
+(SHG). Negligible 
+
+signal throughput 
+
+(low conversion 
+
+efficiency). 
+
+90 ° Rotation (97% 
+
+modulation 
+
+depth). 
+
+Hundreds of 
+
+fs 
+
+SHG utilizing 
+
+broken 
+
+inversion 
+
+symmetry. 
+
+Crotti (2024) 
+
+> 32
+
+All -Dielectric 
+
+Active Nonlocal 
+
+Metasurface 
+
+(AlGaAs) 
+
+Near -IR 
+
+(740 -750 
+
+nm) 
+
+Strictly Reflective. 
+
+Weak to 
+
+moderate 
+
+insertion loss 
+
+Up to 90 °rotation 
+
+and 90 ° phase 
+
+shift .
+
+~1 to 2 ps  Band filling 
+
+effect and 
+
+photogenerated 
+
+carriers. 
+
+Saha (2023) 34  Bilayer of TiN 
+
+and AZO ENZ 
+
+Media 
+
+Vis -NIR  Reflective. Severe 
+
+signal attenuation 
+
+at the ENZ 
+
+condition. 
+
+Amplitude/Phase 
+
+Tuning 
+
+Tunable (~1 
+
+ps to >1 ns) 
+
+Epsilon -Near -
+
+Zero (ENZ) 
+
+nonlinearity. 
+
+Cong (2018) 33  Hybrid Metal -
+
+Silicon 
+
+Metasurface 
+
+THz (0.30 -
+
+0.55 THz) 
+
+Transmissive. 
+
+Moderate loss; 
+
+Dynamic toggling 
+
+of linear cross -
+
+polarization 
+
+states. 
+
+Hundreds of 
+
+ps 
+
+Photoexcitation 
+
+of free carriers 
+
+in silicon 
+
+(pump -probe). 
+
+Taghinejad 
+
+(2018) 36 
+
+Plasmonic 
+
+Crystal (Au on 
+
+Indium Tin 
+
+Oxide) 
+
+Visible  Reflective. Strong 
+
+resonant 
+
+absorption. 
+
+Modest 
+
+polarization shifts 
+
+confined to only a 
+
+few degrees (< 
+
+5°). 
+
+Hundreds of 
+
+fs 
+
+Ultrafast hot -
+
+electron 
+
+transfer from 
+
+plasmonic 
+
+metal into ITO. 
+
+Yang (2017) 35  Cadmium Oxide 
+
+(CdO) Perfect 
+
+Absorber 
+
+Mid -IR 
+
+(2.08 um) 
+
+Reflective. Weak 
+
+to Moderate 
+
+resonant 
+
+absorption. 
+
+Reflective 
+
+Polarizer: 
+
+Switches ON/OFF 
+
+with an extinction 
+
+ratio of 91. 
+
+Hundreds of 
+
+fs 
+
+Sub -bandgap 
+
+optical pumping 
+
+transient 
+
+effective 
+
+electron mass 
+
+increase. 
+
+Nicholls 
+
+(2017) 38 
+
+Plasmonic Au 
+
+Nanorod Array 
+
+(Hyperbolic 
+
+Metamaterial) 
+
+Visible  Transmissive. 
+
+Highly absorptive 
+
+(significant ohmic 
+
+loss due to 
+
+hyperbolic 
+
+regime). 
+
+Macroscopic Shift: 
+
+Up to 60 ° rotation 
+
+of the polarization 
+
+ellipse. 
+
+Hundreds of 
+
+fs 
+
+Free -electron 
+
+nonlinearities 
+
+operating in a 
+
+self -phase 
+
+modulation 
+
+regime. 
+
+This Work  Au Orthogonal 
+
+Nanorod Dimer 
+
+Metasurface 
+
+Vis -NIR 
+
+(700 -850 
+
+nm) 
+
+Transmissive. 
+
+High throughput 
+
+(stable ~40% 
+
+absolute 
+
+transmission). 
+
+Transmissive 
+
+Shift: Up to 20 °
+
+optical rotation 
+
+and 10 ° ellipticity. 
+
+Hundreds of 
+
+fs 
+
+symmetry 
+
+breaking via 
+
+non -equilibrium 
+
+hot -electron 
+
+heating. 
+
+Table 1. Comparative analysis of state -of -the -art ultrafast all -optical polarization control platforms. The performance 
+
+metrics of the proposed Au orthogonal nanorod dimer metasurface are benchmarked against recent literature, highlighting the fundamental trade -offs between modulation depth (optical rotation and ellipticity), temporal recovery 
+
+speed, and absolute transmissive efficiency across various material architectures and driving mechanisms. 
+
+Discussion and Conclusions 
+
+In summary, this work demonstrates a robust plasmonic metasurface platform capable of ultrafast, sub -picosecond 
+
+polarization control through selective, all -optical symmetry breaking, by utilizing an orthogonal nanorod dimer and 
+
+the transient thermo -modulat ory optical nonlinearities of Au. Unlike conventional tunable metamaterials that rely on 
+
+optical pumping which results in uniform modulation of optical modes, without altering mode symmetry, this design 
+
+enables independent, pathway -specific mode manipulati on. Supported by full -wave FDTD simulations and a time -
+
+resolved 3TM, the results of this work prove that polarization -selective pumping on orthogonally oriented dimer meta -
+
+atoms drives highly localized, non -equilibrium electron thermalization. This selecti ve heating acts as a transient 
+
+symmetry breaker, dynamically altering the relative amplitude and phase retardation between orthogonal localized 
+
+surface plasmon modes. By leveraging this active mode -mixing, sub -picosecond, real -time polarization switching, 
+
+demonstrating peak ellipticity modulations of  ~10° and optical rotations up to  ~20°, is achieved. 
+
+Crucially, this pronounced polarization control occurs while the absolute amplitude of the transmitted signal is only 
+
+weakly perturbed. By maintaining a highly stable transmission efficiency of ~40% alongside these transient 
+
+polarization shifts, the propos ed design establishes an exceptionally favourable performance profile for transmissive 
+
+linear metasurfaces. While recent all -dielectric architectures have reported larger absolute modulations, demonstrating 
+
+up to 90° in both polarization rotation and phase retardation (ellipticity), they rely on often lossy reflective geometries 
+
+that fundamentally lack transmissive signal throughput , and severely complicate cascading integration in dense 
+
+photonic networks. Conversely, existing transmissive platforms have historically struggled to surpass a < 5° 
+
+modulation barrier; while exceptional designs have achieved macroscopic rotations, they only do so by operating in 
+
+highly absorptive regimes or utilizing inherently inefficient frequency conversion processes that drastically reduce 
+
+absolute transmission efficiencies. 
+
+By delivering macroscopic polarization manipulation directly within the transmitted beam, this active mode -mixing 
+
+approach successfully overcomes both the structural constraints of reflective devices and the severe optical attenuation 
+
+of prior transmissive platforms. While future experimental realizations will necessitate considerations for 
+
+morphological dampening inherent to nanofabrication and thermal management at high repetition rates, the proposed 
+
+design establishes a highly practical theoretical parad igm for ultrafast all -optical control. It successfully overcomes the fundamental trade -offs that limit existing architectures, bypassing the severe transmissive attenuation of ENZ 
+
+materials, the multi -picosecond latency of structural phase -change devices, and the negligible signal throughput 
+
+inherent to nonlinear freque ncy -conversion techniques. Ultimately, this methodology provides a crucial stepping stone 
+
+for the realization of high -bandwidth, low -latency all -optical switches, data multiplexers, and dynamic polarization 
+
+modulators, which are essential components for th e advancement of next -generation telecommunications and 
+
+neuromorphic nanophotonic networks. 
+
+Author information 
+
+Corresponding Author N. Matthaiakakis 1, 2*
+
+E-mail: n.matth ai akakis@inn. demokritos.gr 
+
+Disclosures 
+
+The authors declare no conflicts of interest. 
+
+Acknowledgements 
+
+The research project is implemented in the framework of H.F.R.I call “4th Call for H.F.R.I.’s Research Projects to 
+
+Support Postdoctoral Researchers” (H.F.R.I. Project Number: 28197). The authors gratefully acknowledge the 
+
+Flexcompute EM Premium Education Program for providing complimentary access to the Tidy3D simulation tools 
+
+used in this research . We would like to also Acknowledge the valuable discussions with Dr. Andrea Schirato that were 
+
+very useful in correctly replicating the 3TM model. 
+
+References 
+
+(1) Qian, C.; Kaminer, I.; Chen, H. A Guidance to Intelligent Metamaterials and Metamaterials Intelligence. 
+
+Nature Communications 2025 , 16 (1). https://doi.org/10.1038/s41467 -025 -56122 -3. 
+
+(2) Zheludev, N. I.; Kivshar , Y. S. From Metamaterials to Metadevices. Nat. Mater. 2012 , 11 (11), 917 –924. 
+
+https://doi.org/10.1038/nmat3431. 
+
+(3) Fan, K.; Averitt, R. D.; Padilla, W. J. Active and Tunable Nanophotonic Metamaterials. Nanophotonics 2022 ,
+
+11 (17), 3769 –3803. https://doi.org/10.1515/nanoph -2022 -0188. 
+
+(4) Ali, A.; Mitra, A.; Aïssa, B. Metamaterials and Metasurfaces: A Review from the Perspectives of Materials, 
+
+Mechanisms and Advanced Metadevices. Nanomaterials 2022 , 12 (6). 
+
+https://doi.org/10.3390/nano12061027. 
+
+(5) Neshev, D.; Aharonovich, I. Optical Metasurfaces: New Generation Building Blocks for Multi -Functional 
+
+Optics. Light Sci. Appl. 2018 , 7 (1), 1 –5. https://doi.org/10.1038/s41377 -018 -0058 -1. 
+
+(6) Kuznetsov, A. I.; Brongersma, M. L.; Yao, J.; Chen, M. K.; Levy, U.; Tsai, D. P.; Zheludev, N. I.; Faraon, A.; 
+
+Arbabi, A.; Yu, N.; Chanda, D.; Crozier, K. B.; Kildishev, A. V.; Wang, H.; Yang, J. K. W.; Valentine, J. G.; 
+
+Genevet , P.; Fan, J. A.; Miller, O. D.; Majumdar, A.; Fröch, J. E.; Brady, D.; Heide, F.; Veeraraghavan, A.; 
+
+Engheta, N.; Alù, A.; Polman, A.; Atwater, H. A.; Thureja, P.; Paniagua -Dominguez, R.; Ha, S. T.; Barreda, A. I.; Schuller, J. A.; Staude, I.; Grinblat, G.; Kivshar, Y.; Peana, S.; Yelin, S. F.; Senichev, A.; Shalaev, V. 
+
+M.; Saha, S.; Boltasseva, A.; Rho, J.; Oh, D. K.; Kim, J.; Park, J.; Devlin, R.; Pala, R. A. Roadmap for Optical 
+
+Metasurfaces. ACS Photonics . 2024, pp 816 –865. https://doi.org/10.1021/acsphotonics.3c00457. 
+
+(7) Matsukata, T.; Wadell, C.; Matthaiakakis, N.; Yamamoto, N.; Sannomiya, T. Selected Mode Mixing and 
+
+Interference Visualized within a Single Optical Nanoantenna. ACS Photonics 2018 , 5 (12), 4986 –4992. 
+
+https://doi.org/10.1021/acsphotonics.8b01231. 
+
+(8) Matthaiakakis, N.; Droulias, S.; Kakarantzas, G. Dynamic Control of Light Chirality with Nanostructured 
+
+Monolayer Black Phosphorus for Broadband Terahertz Applications. 2022 , 2102273 , 1–9. 
+
+https://doi.org/10.1002/adom.202102273. 
+
+(9) Matthaiakakis, N.; Droulias, S.; Kakarantzas, G. Ultrafast All -Optical Control of Light Chirality with 
+
+Nanostructured Graphene. Adv. Opt. Mater. 2024 . https://doi.org/10.1002/adom.202303181. 
+
+(10) Huang, Y.; Yao, Z.; Hu, F.; Liu, C.; Yu, L.; Jin, Y.; Xu, X. Tunable Circular Polarization Conversion and 
+
+Asymmetric Transmission of Planar Chiral Graphene -Metamaterial in Terahertz Region. Carbon N. Y. 2017 ,
+
+119 , 305 –313. https://doi.org/10.1016/j.carbon.2017.04.037. 
+
+(11) Kenanakis, G.; Economou, E. N.; Soukoulis, C. M.; Kafesaki, M. Controlling THz and Far -IR Waves with 
+
+Chiral and Bianisotropic Metamaterials. https://doi.org/10.1051/epjam/2015019. 
+
+(12) Bai, J.; Yao, Y. Highly Efficient Anisotropic Chiral Plasmonic Metamaterials for Polarization Conversion and 
+
+Detection. ACS Nano 2021 , 15 (9), 14263 –14274. https://doi.org/10.1021/acsnano.1c02278. 
+
+(13) Matthaiakakis, N.; Sannomiya, T. Boundary Element Method Simulations of Tunable Chiral Radiation and 
+
+Active Chirality Switching from Rectangular Graphene Nanosheets: Implications for Dynamic Control of 
+
+Light Chirality. ACS Appl. Nano Mater. 2020 , 3 (7), 6816 –6826. https://doi.org/10.1021/acsanm.0c01202. 
+
+(14) Ogura, S.; Negoro, H.; Machfuudzoh, I.; Thollar, Z.; Hinamoto , T.; García de Abajo, F. J.; Sugimoto, H.; 
+
+Fujii, M.; Sannomiya, T. Dielectric Sphere Oligomers as Optical Nanoantenna for Circularly Polarized Light. 
+
+ACS Photonics 2024 , 11 (8), 3323 –3330. https://doi.org/10.1021/acsphotonics.4c00761. 
+
+(15) Dorrah, A. H.; Capasso, F. Tunable Structured Light with Flat Optics. Science (1979). 2022 , 376 (6591). 
+
+https://doi.org/10.1126/science.abi6860. 
+
+(16) Zahra, S.; Ma, L.; Wang, W.; Li, J.; Chen, D.; Liu, Y.; Zhou, Y.; Li, N.; Huang, Y.; Wen, G. Electromagnetic 
+
+Metasurfaces and Reconfigurable Metasurfaces: A Review. Front. Phys. 2021 , 8 (January), 1–16. 
+
+https://doi.org/10.3389/fphy.2020.593411. 
+
+(17) Ma, Q.; Ren, G.; Xu, K.; Ou, J. Z. Tunable Optical Properties of 2D Materials and Their Applications. 
+
+Advanced Optical Materials . 2020. https://doi.org/10.1002/adom.202001313. 
+
+(18) Maiuri, M.; Schirato, A.; Cerullo, G.; Della Valle, G. Ultrafast All -Optical Metasurfaces: Challenges and New 
+
+Frontiers. ACS Photonics 2024 , 11 (8), 2888 –2905. https://doi.org/10.1021/acsphotonics.4c00776. 
+
+(19) Schirato, A.; Toma, A.; Proietti Zaccaria, R.; Alabastri, A.; Cerullo, G.; Della Valle, G.; Maiuri, M. All -
+
+Optical Reconfiguration of Ultrafast Dichroism in Gold Metasurfaces. Adv. Opt. Mater. 2022 , 10 (10). 
+
+https://doi.org/10.1002/adom.202102549. 
+
+(20) Schirato, A.; Maiuri, M.; Cerullo, G.; Della Valle, G. Ultrafast Hot Electron Dynamics in Plasmonic 
+
+Nanostructures: Experiments, Modelling, Design. Nanophotonics 2023 , 0 (0). https://doi.org/10.1515/nanoph -
+
+2022 -0592. 
+
+(21) Wang, G.; Liu, T.; Chao, J.; Jin, H.; Liu, J.; Zhang, H.; Lyu, W.; Yin, P.; Al -Ghamdi, A.; Wageh, S.; Fu, B. 
+
+Recent Advances and Challenges in Ultrafast Photonics Enabled by Metal Nanomaterials. Advanced Optical 
+
+Materials . 2022. https://doi.org/10.1002/adom.202200443. (22) Mazzanti, A.; Pogna, E. A. A.; Ghirardini, L.; Celebrano, M.; Schirato, A.; Marino, G.; Lemaítre, A.; Finazzi, 
+
+M.; De Angelis, C.; Leo, G.; Cerullo, G.; Della Valle, G. All‐Optical Modulation with Dielectric 
+
+Nanoantennas: Multiresonant Control and Ultrafast Spatial Inho mogeneities. Small Science 2021 , 1 (7), 
+
+2000079. https://doi.org/10.1002/smsc.202000079. 
+
+(23) Wu, Q.; Peng, L.; Huang, Z.; Liu, X.; Luo, M.; Gao, D.; Meng, H. Advancements in Ultrafast Photonics: 
+
+Confluence of Nonlinear Optics and Intelligent Strategies. Light Sci. Appl. 2025 , 14 (1). 
+
+https://doi.org/10.1038/s41377 -024 -01732 -7. 
+
+(24) Kim, S.; Jeong, T. -I.; Park, J.; Ciappina, M. F.; Kim, S. Recent Advances in Ultrafast Plasmonics: From Strong 
+
+Field Physics to Ultraprecision Spectroscopy. Nanophotonics 2022 . https://doi.org/10.1515/nanoph -2021 -
+
+0694. 
+
+(25) Crotti, G.; Schirato, A.; Pashina, O.; Sergaeva , O.; Petrov, M.; De Angelis, C.; Della Valle, G. Ultrafast 
+
+Switching of a Metasurface Quasi -Bound State in the Continuum via Transient Optical Symmetry Breaking. 
+
+Light Sci. Appl. 2025 , 14 (1). https://doi.org/10.1038/s41377 -025 -01885 -z. 
+
+(26) Matthaiakakis, N.; Droulias, S.; Kakarantzas, G. Ultrafast All -Optical Control of Multiple Light Degrees of 
+
+Freedom through Mode Mixing in a Graphene Nanoribbon Metamaterial for Modulation of Electromagnetic 
+
+Waves. ACS Appl. Nano Mater. 2025 , 8 (33), 16499 –16508. https://doi.org/10.1021/acsanm.5c02949. 
+
+(27) Maccaferri, N.; Meuret, S.; Kornienko, N.; Jariwala, D. Speeding up Nanoscience and Nanotechnology with 
+
+Ultrafast Plasmonics. Nano Lett. 2020 , 20 (8), 5593 –5596. https://doi.org/10.1021/acs.nanolett.0c02452. 
+
+(28) Brongersma, M. L.; Halas, N. J.; Nordlander, P. Plasmon -Induced Hot Carrier Science and Technology. Nat. 
+
+Nanotechnol. 2015 , 10 (1), 25 –34. https://doi.org/10.1038/nnano.2014.311. 
+
+(29) Shcherbakov, M. R.; Liu, S.; Zubyuk , V. V.; Vaskin, A.; Vabishchevich, P. P.; Keeler, G.; Pertsch, T.; 
+
+Dolgova, T. V.; Staude, I.; Brener, I.; Fedyanin, A. A. Ultrafast All -Optical Tuning of Direct -Gap 
+
+Semiconductor Metasurfaces. Nat. Commun. 2017 , 8 (1). https://doi.org/10.1038/s41467 -017 -00019 -3. 
+
+(30) Taghinejad, M.; Taghinejad, H.; Xu, Z.; Liu, Y.; Rodrigues, S. P.; Lee, K. -T.; Lian, T.; Adibi, A.; Cai, W. 
+
+Hot -Electron -Assisted Femtosecond All -Optical Modulation in Plasmonics. Advanced Materials 2018 , 30 (9), 
+
+1704915. https://doi.org/https://doi.org/10.1002/adma.201704915. 
+
+(31) Hu, Y.; Chi, H.; Duan, H. Metaoptics Merging Computational Optics and Optical Computing toward 
+
+Intelligent Visual Perception. Sci. Adv 2026 , 12 , 8941. 
+
+(32) Crotti, G.; Akturk, M.; Schirato, A.; Vinel, V.; Trifonov, A. A.; Buchvarov, I. C.; Neshev, D. N.; Proietti 
+
+Zaccaria, R.; Laporta, P.; Lemaître, A.; Leo, G.; Cerullo, G.; Maiuri, M.; Della Valle, G. Giant Ultrafast 
+
+Dichroism and Birefringence with Active Nonlocal Metasurfaces. Light Sci. Appl. 2024 , 13 (1). 
+
+https://doi.org/10.1038/s41377 -024 -01545 -8. 
+
+(33) Cong, L.; Srivastava, Y. K.; Zhang, H.; Zhang, X.; Han, J.; Singh, R. All -Optical Active THz Metasurfaces 
+
+for Ultrafast Polarization Switching and Dynamic Beam Splitting. Light Sci. Appl. 2018 , 7 (1). 
+
+https://doi.org/10.1038/s41377 -018 -0024 -y. 
+
+(34) Saha, S.; Diroll, B. T.; Ozlu, M. G.; Chowdhury, S. N.; Peana, S.; Kudyshev, Z.; Schaller, R. D.; Jacob, Z.; 
+
+Shalaev, V. M.; Kildishev, A. V.; Boltasseva , A. Engineering the Temporal Dynamics of All -Optical 
+
+Switching with Fast and Slow Materials. Nat. Commun. 2023 , 14 (1). https://doi.org/10.1038/s41467 -023 -
+
+41377 -5. 
+
+(35) Yang, Y.; Kelley, K.; Sachet, E.; Campione, S.; Luk, T. S.; Maria, J. P.; Sinclair, M. B.; Brener, I. 
+
+Femtosecond Optical Polarization Switching Using a Cadmium Oxide -Based Perfect Absorber. Nature 
+
+Photonics 2017 11:6 2017 , 11 (6), 390 –395. https://doi.org/10.1038/nphoton.2017.64. 
+
+(36) Taghinejad, M.; Taghinejad, H.; Xu, Z.; Lee, K. T.; Rodrigues, S. P.; Yan, J.; Adibi, A.; Lian, T.; Cai, W. 
+
+Ultrafast Control of Phase and Polarization of Light Expedited by Hot -Electron Transfer. Nano Lett. 2018 , 18 (9), 5544 –5551. 
+
+https://doi.org/10.1021/ACS.NANOLETT.8B01946/SUPPL_FILE/NL8B01946_SI_001.PDF. 
+
+(37) Wang, H.; Hu, Z.; Deng, J.; Zhang, X.; Chen, J.; Li, K.; Li, G. All -Optical Ultrafast Polarization Switching 
+
+with Nonlinear Plasmonic Metasurfaces. Sci. Adv. 2024 , 10 (8), 10.1126/sciadv.adk 3882. 
+
+https://doi.org/10.1126/sciadv.adk3882. 
+
+(38) Nicholls, L. H.; Rodríguez -Fortuño, F. J.; Nasir, M. E.; Córdova -Castro, R. M.; Olivier, N.; Wurtz, G. A.; 
+
+Zayats, A. V. Ultrafast Synthesis and Switching of Light Polarization in Nonlinear Anisotropic Metamaterials. 
+
+Nature Photonics 2017 11:10 2017 , 11 (10), 628 –633. https://doi.org/10.1038/s41566 -017 -0002 -6. 
+
+(39) Sun, C. -K.; Vallee, F.; Acioli, L. H.; Ippen, E. P.; Fujimoto, J. G. Femtosecond -Tunable Measurement of 
+
+Electron Thermalization in Gold. Phys. Rev. B 1994 , 50 , 15337 –15348. S-1
+
+# Supporting Information : 
+
+# Ultrafast All -Optical Polarization Control via Symmetry 
+
+# Breaking in an Au Nanorod Dimer Metamaterial 
+
+## Nikolaos Matthaiakakis ,1,2* Léa Test é2, George Kakarantzas 2 
+
+> 1
+
+Institute of Nanoscience and Nanotechnology, National Center for Scientific Research “Demokritos”, 15341 Ag. Paraskevi, Greec e 
+
+> 2
+
+Theoretical and Physical Chemistry Institute, National Hellenic Research Foundation, NHRF, 48 Vassileos Constantinou Ave., 11635 Athens, Greece 
+
+*Corresponding author s: n.matth ai akakis@inn.demokritos.gr 
+
+## This document provides supplementary information to “ Ultrafast All -Optical Polarization Control via 
+
+## Symmetry Breaking in an Au Nanorod Dimer Metamaterial ”. 
+
+## Content 
+
+S1. Computational Methodology 
+
+S2. Three temperature model 
+
+S3. Permittivity changes 
+
+S4. Absorption of LSP x
+
+S5. Influence of probe duration S-2
+
+S1. Computational Methodology 
+
+The linear optical properties and the ultrafast transient response of the Au nanorod dimer are investigated using full -wave 3D 
+
+Finite -Difference Time -Domain (FDTD) simulations (Tidy3D). 
+
+Static Geometrical Setup 
+
+In the simulations, the metamaterial is defined by a unit cell with periodic boundary conditions along the x - and y -directions, 
+
+featuring a periodicity of 500 nm. The unit cell comprises two discrete, orthogonally oriented Au nanoantennas resting on a s emi -
+
+infinite dielectric substrate with a refractive index of n = 1.45. Both nanoantennas share a uniform thickness of 100 nm and are 
+
+strictly co -planar. The y -oriented antenna  (60 × 170 𝑛𝑚 ) is displaced by +100 nm from the unit cell centre along the y -axis, 
+
+while the x -oriented antenna  (210 × 60 𝑛𝑚 ) is displaced by -100 nm along the y -axis. The computational domain is terminated 
+
+with Perfectly Matched Layers (PMLs) along the z -direction, placed sufficiently far from the metasurface to prevent artificial 
+
+reflections. A high -resolution sub -grid mesh i s enforced in the immediate vicinity of the gold structures to accurately resolve the 
+
+highly confined near -fields of the localized surface plasmon (LSP) modes. 
+
+Multiphysics Simulation Pipeline 
+
+Because the ultrafast optical response of gold in the visible -to -near -infrared regime is governed by extreme non -equilibrium 
+
+electron dynamics, the transient response is calculated using a unidirectional coupled multiphysics approach. The pipeline is 
+
+execu ted in the following sequence: 
+
+1.  Static Pump Simulation: First, a static FDTD simulation is performed to determine the absorbed power density  (𝑃 𝑎𝑏𝑠 ).
+
+The structure is illuminated at normal incidence by an x -polarized pump pulse ( λ= 800 nm, azimuth angle  φpu = 0 °). The 
+
+absorption profile within the excited Au nanorod is extracted to act as the driving source for the thermodynamic model. 
+
+2.  Three -Temperature Model (3TM): The extracted  𝑃 𝑎𝑏𝑠  is then used to solve the coupled differential equations of the 
+
+3TM. This yields the temporal evolution of the non -thermal electron density ( N), the thermal electron temperature ( θe), 
+
+and the lattice temperature ( θl) following the femtosecond excitation. 
+
+3.  Transient Permittivity Calculation: Using the time -dependent temperatures derived from the 3TM, the transient 
+
+complex dielectric permittivity of gold,  𝛥𝜀 (𝜔 , 𝑡 ), is analytically calculated. This calculation rigorously accounts for both 
+
+the modification of the intraband Drude damping rate (due to increased electron -electron and electron -phonon scattering) 
+
+and the smearing of the Fermi -Dirac distribution, which alt ers the X - and L -point interband transitions. S-3
+
+4.  Dynamic Probe Simulation: Finally, the explicitly calculated transient permittivity  (𝛥𝜀 ) is saved and imported back 
+
+into the FDTD solver to update the material properties of the pumped gold nanorod . A broadband, linearly polarized 
+
+probe pulse (azimuth angle  𝜑 𝑝𝑟 = 45 ∘) is then simulated at various pump -probe delay times  (𝛥𝑡 ). The time -resolved 
+
+transmission (Tr) is captured in the far field, from which the dynamic polarization parameters , ellipticity  (𝜂 )and optical 
+
+rotation  (𝛼 ), are extracted. 
+
+This sequential methodology is justified by two primary assumptions in accordance with previously published works 1:
+
+• Slowly Varying Envelope Approximation (SVEA): The temporal duration of the pump pulse encompasses a sufficient 
+
+number of optical cycles, making the SVEA valid for optical calculations. 
+
+• Linear Absorption Regime: We assume the pump fluence is sufficiently low to neglect nonlinear optical interactions 
+
+within the pump pulse . While modelling femtosecond laser absorption in the purely linear regime is an approximation, 
+
+recent literature indicates that this primarily results in a minor quantitative deviation in total absorbed energy, rather 
+
+than altering the fundamental ultrafast dynamics (prov ided the fluence is moderate) 1.
+
+Substrate Modelling Approximations and Experimental Considerations 
+
+a. Parasitic Nonlinear Substrate Effects (Optical Kerr Effect) 
+
+In our simulations, the substrate is modelled as an idealized linear medium ( 𝑛 = 1.45 ). In experiments using standard bulk 
+
+substrates (e.g., 500 μm SiO 2 or CaF 2), the pump induces transient cross -phase modulation and birefringence via the instantaneous 
+
+optical Kerr effect. Given the nonlinear refractive index of fused silica 2 (𝑛 2 ≈ 2.5 × 10 −16 cm 2/W) and our peak pump intensity 
+
+(𝐼 ∼ 6.8 × 10 9 W/cm 2), the transient index change is  𝛥𝑛 ∼ 10 −6. Across 500 μm, this generates a parasitic phase retardation of 
+
+< 1∘. Crucially, because this instantaneous response is strictly confined to the  ∼ 70 fs pump -probe overlap window, its impact 
+
+on the broader metasurface modulation is minimal. Any residual artifacts are easily eliminated experimentally using standard 
+
+baseline subtraction, non -collinear pump -probe geometries, or ultra -thin membrane substrat es (e.g., 50 nm SiN) .
+
+b. Decoupling of Ultrafast Thermalization from Substrate Heat Dissipation 
+
+The 3TM computes the internal thermodynamic evolution of the gold nanorods while intentionally neglecting thermal diffusion 
+
+into the surrounding substrate. This approximation is justified by the stark separation of timescales inherent to nanoscale h eat 
+
+transport. The internal electron -phonon thermalization responsible f or the transient symmetry breaking and macroscopic S-4
+
+dielectric modulation occurs almost entirely within a < 3 ps window. Conversely, heat transfer from the gold lattice to the 
+
+dielectric substrate is bottlenecked by the interfacial Kapitza resistance, unfolding over tens to hundreds of picoseconds. Because 
+
+the peak polarization shifts reported here operate within the sub -picosecond regime (~0.4 ps), the substrate effectively acts as a 
+
+perfect thermal insulator during the active switching wi ndow. The bulk thermal conductivity of the substrate only becomes 
+
+physically relevant on nanosecond timescales during the long -term cooling phase; here, higher -conductivity substrates like CaF ₂
+
+can be strategically utilized to accelerate steady -state heat dissipation, thereby raising the boundary for the maximum allowable 
+
+laser repetition rate .
+
+Pump fluence selection 
+
+The selection of the incident pump fluence  (680 𝜇 J/cm 2) represents a rigorously optimized balance between maximizing 
+
+nonlinear polarization modulation and ensuring the structural survivability of the metasurface . The value used is well below that 
+
+used in other theoretical works 3 and in the range of experimentally verified works 1. Furthermore, o ur architecture is explicitly 
+
+designed to maintain a high absolute signal throughput (~40%), it inherently suppresses resonant absorption compared to other 
+
+works (e.g. 1). Consequently, while a slightly higher incident fluence might sometimes be required to adequately drive the hot -
+
+electron nonlinearity, the total absorbed thermal load remains safely within established, non -destructive bounds, ensuring stable 
+
+and repeatable macroscopic switching at high repetition rates. 
+
+S2. Three temperature model 
+
+To quantitatively describe the ultrafast thermodynamic response of the gold nanoantennas following femtosecond laser 
+
+excitation, a 3TM is employed 3–5. When an intense, ultrashort pump pulse interacts with a metal, the absorbed photon energy 
+
+initially creates a highly non -equilibrium, non -thermal distribution of electrons. The 3TM tracks the sub -picosecond energy 
+
+relaxation through three coupled thermod ynamic reservoirs: the non -thermal electron energy density ( N), the thermalized electron 
+
+gas temperature  (𝛩 𝑒 ), and the lattice temperature  (𝛩 𝑙 ). The temporal dynamics of these interacting energy subsystems are 
+
+governed by the set of coupled differential equations :
+
+𝑑𝑁 (𝑡 )
+
+𝑑𝑡 = −𝛼 𝑠 𝑁 (𝑡 ) − 𝑏𝑁 (𝑡 ) + 𝑃 𝑎𝑏𝑠 (𝑡 ), (𝑠 1)
+
+𝐶 𝑒 
+
+𝑑 𝛩 𝑒 (𝑡 )
+
+𝑑𝑡 = −𝐺 (𝛩 𝑒 (𝑡 ) − 𝛩 𝑙 (𝑡 )) + 𝛼 𝑠 𝑁 (𝑡 ), (𝑠 2)
+
+𝐶 𝑙 
+
+𝑑 𝛩 𝑙 (𝑡 )
+
+𝑑𝑡 = 𝐺 (𝛩 𝑒 (𝑡 ) − 𝛩 𝑙 (𝑡 )) + 𝑏𝑁 (𝑡 ), (𝑠 3)S-5
+
+where  𝑃 𝑎𝑏𝑠  is the absorbed power density from the pump pulse,  𝛼 𝑠  and  𝑏  are the scattering rates defining non -thermal energy 
+
+transfer to the electron gas and lattice respectively, and  𝐶 𝑒  and  𝐶 𝑙  are the electron gas and lattice heat capacities. The lattice heat 
+
+capacity  (𝐶 𝑙 = 2.49 × 10 6 J/(m 3 K) ) remains approximately constant over the temperature range of interest 1. Conversely, the 
+
+electron heat capacity ( 𝐶 𝑒 ) exhibits a strong linear dependence on the electronic temperature, defined as  𝐶 𝑒 (𝛩 𝑒 ) = 𝛾 𝑒 𝛩 𝑒  4, where 
+
+𝛾 𝑒  is the electron heat capacity coefficient.  𝐺  is the electron -phonon coupling constant 1:
+
+𝐺 (𝛩 𝑒 ) = 𝜋 ℏ𝑘 𝐵 𝛬 ⟨𝜔 𝑝 ℎ  
+
+> 2⟩
+> 𝐷 (𝐸 𝐹 )
+
+∫ 𝐷 2∞ 
+
+> −∞
+
+(𝐸 ) (− 𝜕𝑓 
+
+> 𝜕𝐸
+
+) 𝑑𝐸 (𝑠 4)
+
+where  𝛬  is the electron -phonon coupling factor specific for Au , ⟨𝜔 𝑝 ℎ 
+
+> 2
+
+⟩ is the average value of the square of the phonon frequency 
+
+with  Λ⟨𝜔 𝑝 ℎ 
+
+> 2
+
+⟩ = 23 ± 4 meV 2 , 𝐸 𝐹  is the Fermi energy of gold , 𝐷 (𝐸 ) is the density of states 6, and  𝑓  is the Fermi -Dirac 
+
+distribution. 
+
+The system is driven by the source term  𝑃 abs (𝐭 ), which defines the instantaneous absorbed power density injecting energy into 
+
+the non -thermal electron population. This term is calculated as: 
+
+𝑃 abs (𝑡 ) = 𝐹𝑆  
+
+> 𝑉
+
+𝐴𝑔 (𝑡 ) (𝑠 5)
+
+In this expression,  𝐹  denotes the incident pump fluence,  𝑆  represents the area of the metasurface unit cell, and  𝑉  is the volume of 
+
+the individual meta -atom , 𝐴  the absorption by the nanostructure.  Finally,  𝑔 (𝑡 ) defines the temporal intensity envelope of the 
+
+ultrashort pump pulse, modeled as a normalized Gaussian function: 
+
+𝑔 (𝑡 ) = √ 4 ln 2 
+
+> 𝜋𝛥 𝑡 𝑝𝑢𝑙𝑠𝑒 2
+
+exp [− 4 ln 2(𝑡 −𝑡 0)2 
+
+> 𝛥 𝑡 𝑝𝑢𝑙𝑠𝑒 2
+
+] (𝑠 6)
+
+Here,  𝛥𝑡 𝑝𝑢𝑙𝑠𝑒  represents the pulse duration defined as the full -width at half -maximum (FWHM). An effective pulse duration of 
+
+𝛥𝑡 𝑝𝑢𝑙𝑠𝑒 = 70 fs  was utilized in the simulations. The coupled differential equations (S1 –S3) governing the temporal dynamics 
+
+were solved numerically via a standard fourth -order Runge -Kutta (RK4) method .
+
+The parameter  𝛼 𝑠  represents the average heating rate at which the highly energetic, non -thermal electrons scatter and 
+
+thermalize into a hot Fermi -Dirac distribution. Based on Fermi liquid theory, this scattering rate scales quadratically with the 
+
+excitation energy. Thus, w e define the rate as  𝛼 𝑠 = ⟨1/𝜏 𝑒 −𝑒 ⟩, given by 3:
+
+𝛼 𝑠 = (ℏ𝜔 pump )2 
+
+> 2𝜏 0𝐸 𝐹
+> 2
+
+(𝑠 7)S-6
+
+where  ℏ𝜔 pump  is the pump photon energy , and  𝜏 0 = 7 𝑓𝑠  an empirical scattering time constant characteristic of the metal. 
+
+Concurrently, the parameter  𝑏  governs the direct energy transfer rate from the non -thermal electron population to the lattice 
+
+(phonons). This out -of -equilibrium decay rate is defined as  𝑏 = ⟨1/𝜏 𝑒 −𝑝 ℎ⟩, expressed as: 
+
+𝑏 = 𝑘 𝐵 𝛩 𝐷 
+
+> 𝜏 𝑓 ℏ𝜔 pump
+
+(𝑠 8)
+
+where  𝑘 𝐵  is the Boltzmann constant,  𝛩 𝐷 = 165 𝐾  is the Debye temperature of gold, and  𝜏 𝑓 = 13 .824 𝑓𝑠  is the quasi -particle 
+
+free flight time 1. Together, these terms accurately capture the transient decay of the non -thermalized distribution before the system 
+
+fully converges into the coupled thermal dynamics of  𝛩 𝑒  and  𝛩 𝑙  .
+
+S3. Permittivity changes 
+
+Once the temporal dynamics of  𝑁 , 𝛩 𝑒 , and  𝛩 𝑙  are determined via the 3TM, the corresponding photogenerated modulation of 
+
+the complex permittivity is computed by evaluating both intraband and interband contributions 1.
+
+Intraband Contribution: In this modelling framework, the intraband contribution is expressed using a Drude term. This term 
+
+is modified by changes in both electron and lattice temperatures through the Drude damping Γ and plasma frequency  𝜔 𝑝 . For 
+
+energy -loss processes involving electron scattering, the total scattering rate can be expressed as the sum of electron -electron and 
+
+electron -phonon contributions 1:
+
+𝛤 = 𝛤 𝑒 −𝑒 + 𝛤 𝑒 −𝑝 ℎ (𝑠 9)
+
+The electron -electron scattering rate, derived from Landau's Fermi liquid theory for electron gas at temperature  𝜃 𝑒 , is given 
+
+by: 
+
+𝛤 𝑒 −𝑒 (ℏ𝜔 , 𝛩 𝑒 ) = (𝑘 𝐵 𝛩 𝑒 )2
+
+ℏ2𝜔 𝑝 
+
+[1 + ( ℏ𝜔 
+
+2𝜋 𝑘 𝐵 𝛩 𝑒 
+
+)
+
+> 2
+
+] (𝑠 10 )
+
+where ℏω represents the photon energy. The electron -phonon scattering rate, assuming parabolic conduction bands and negligible 
+
+phonon energies compared to photon energies at optical frequencies, is expressed as: 
+
+𝛤 𝑒 −𝑝 ℎ(ℏ𝜔 , 𝛩 𝑙 , 𝛩 𝑒 ) = 𝛾 𝑒 −𝑝 ℎ
+
+𝛩 𝑙 
+
+ℏ𝜔 ∫ √𝐸 
+
+> ∞
+> 0
+
+√𝐸 + ℏ𝜔 𝑓 (𝐸 , 𝛩 𝑒 )[1 − 𝑓 (𝐸 + ℏ𝜔 , 𝛩 𝑒 )]𝑑𝐸 (𝑠 11 )
+
+Here, E is electron energy,  𝑓 (𝐸 , 𝜃 𝑒 ) is the Fermi -Dirac distribution :S-7
+
+𝑓 (𝐸 , θ𝑒 ) = 1
+
+1 + exp (𝐸 − 𝐸 𝐹 
+
+𝑘 𝐵 θ𝑒 
+
+)
+
+(𝑠 12 )
+
+where  𝐸  is the absolute electron energy , and  𝛩 0 is the initial electron temperature.  𝛾 𝑒 −𝑝 ℎ ≈ 7 × 10 10 rad s−1eV −1K−1 is a fitting 
+
+constant . For the electron temperature range in this study, a simplified expression can be used: 
+
+𝛤 𝑒 −𝑝 ℎ(ℏ𝜔 , 𝛩 𝑙 ) ≃ 𝛤 𝑒 −𝑝 ℎ 
+
+> 0
+
+(ℏ𝜔 ) + 𝛽 𝑒 −𝑝 ℎ(ℏ𝜔 )2𝛥 𝛩 𝑙 (𝑠 13 )
+
+where the linearization constant is  𝛽 𝑒 −𝑝 ℎ = 1.95 × 10 48 s−1J−2K−1 . The equilibrium electron -phonon scattering rate is 
+
+computed from the full integral expression by setting the electron and lattice temperatures equal to the ambient temperature  𝛩 𝑙 =
+
+𝛩 𝑒 = 𝛩 0 = 300 K. The plasma frequency contribution to permittivity modulation arises from thermal expansion of the metal 
+
+structure, which affects free electron density in the conduction band. The particle volume changes with temperature with a volume 
+
+thermal expansion coefficient  𝛼 𝑉 (𝛩 𝑒 ) = 1 
+
+> 𝐵
+
+[𝜆 𝐺 𝐶 𝑙 + 2 
+
+> 3
+
+𝐶 𝑒 (𝛩 𝑒 )] with  𝐵 = 180 GPa  being the bulk modulus and  𝜆 𝐺 = 2.95  the 
+
+Grüneisen parameter. The temperature -dependent plasma frequency becomes: 
+
+𝜔 𝑝 (𝛩 𝑒 , 𝛩 𝑙 ) = √ 𝑒 2
+
+𝜀 0𝑚 ∗ 𝑛 (𝛩 𝑒 , 𝛩 𝑙 ) (𝑠 14 )
+
+where e is electron charge,  𝜀 0 is vacuum permittivity, m* is effective electron mass, n is conduction electron density. 
+
+Interband Contribution: The interband contribution to the dielectric function arises from direct electronic transitions between 
+
+the occupied d -band states and unoccupied sp -band states above the Fermi level. In gold, the dominant interband transitions occur 
+
+at the X and L high -symmetry points of the Brillouin zone  6,7 .
+
+Following the formulation of Marini et al. 8, the imaginary part of the interband permittivity is expressed as: 
+
+𝜀 𝑖𝑛𝑡𝑒𝑟 ′′ (𝜔 , 𝜃 𝑒 ) = 𝜋 𝑒 2
+
+3𝜀 0𝑚 0
+
+> 2
+
+𝜔 2 [|𝑝 ˜𝑐𝑣  
+
+> 𝑋
+
+|2𝐽 𝑐𝑣  
+
+> 𝑋
+
+(𝜔 , 𝜃 𝑒 ) + |𝑝 ˜𝑐𝑣  
+
+> 𝐿
+
+|2𝐽 𝑐𝑣  
+
+> 𝐿
+
+(𝜔 , 𝜃 𝑒 )] (𝑠 15 )
+
+where e is the electron charge, ε₀ is the vacuum permittivity, m₀ is the free electron mass, ω is the angular frequency, | p̃ cv |² are the 
+
+squared dipole matrix elements, and Jcv (ω,  θe) is the temperature -dependent joint density of states for each transition.  The squared 
+
+dipole matrix elements characterize the optical transition strength at each symmetry point. Following Ref. 8, the L-point matrix 
+
+element is:  |𝑝 ˜𝑐𝑣  
+
+> 𝐿
+
+|2 = 2.00 × 10 −48 J ⋅ kg . The ratio of oscillator strengths between X and L transitions was determined by Guerrisi S-8
+
+et al. 6 from analysis of the interband absorption edge splitting in gold  |𝑝 ˜𝑐𝑣    
+
+> 𝑋 |2
+> |𝑝 ˜𝑐𝑣
+> 𝐿 |2
+
+= 0.321 × 𝑔 𝐿 
+
+> 𝑔 𝑋
+
+where  𝑔 𝐿 = 8 and  𝑔 𝑋 = 6. The larger 
+
+value for the L transition reflects its dominant contribution to interband absorption in gold near 2.5 eV. This can be expressed 
+
+directly in terms of the change in joint density of states (JDOS) which accounts for the number of allowed transitions at a given 
+
+photon energy, weighted by the Fermi -Dirac occupation factors. Following the parabolic band approximation 4,7,9 :
+
+𝛥 𝜀 𝑖𝑛𝑡𝑒𝑟 ′′ (𝜔 ) = 𝜋 𝑒 2
+
+3𝜀 0𝑚 0
+
+> 2
+
+𝜔 2 [|𝑝 ˜𝑐𝑣  
+
+> 𝑋
+
+|2𝛥 𝐽 𝑋 (𝜔 ) + |𝑝 ˜𝑐𝑣  
+
+> 𝐿
+
+|2𝛥 𝐽 𝐿 (𝜔 )] (𝑠 16 )
+
+where 4:
+
+𝛥𝐽 (𝜔 ) = ∫ [𝑓 (𝐸 , 𝛩 𝑒 ) − 𝑓 (𝐸 , 𝛩 0)]
+
+> 𝐸 𝑚𝑎𝑥
+> 𝐸 𝑚𝑖𝑛
+
+𝐷 (𝐸 ) 𝑑𝐸 (𝑠 17 )
+
+The occupation of electronic states is governed by the Fermi -Dirac distribution . For the evaluation of the interband transitions, it 
+
+is computationally convenient to perform a change of variables such that the electron energy  𝐸  is defined relative to the Fermi 
+
+level ( 𝐸 = 0 at  𝐸 𝐹  ). The integration over final states extends from  𝐸 𝑚𝑖𝑛 = −20 𝑘 𝐵 𝛩 0 ≈-0.52 eV to an upper limit that depends 
+
+on photon energy and band structure. For the X transition: 
+
+𝐸 𝑚𝑎𝑥 ,𝑋 = ℏ𝜔 𝑋 6 
+
+> −
+
++ (ℏ𝜔 𝑋 7 + ℏ𝜔 𝑋 6 
+
+> −
+
+− ℏ𝜔 )𝑚 𝑢 ,𝑋 
+
+> 𝐼𝐼
+
+𝑚 𝑙 ,𝑋  
+
+> 𝐼𝐼
+
+− 𝑚 𝑢 ,𝑋  
+
+> 𝐼𝐼
+
+(𝑠 18 )
+
+and for the L transition: 
+
+𝐸 𝑚𝑎𝑥 ,𝐿 = ℏ𝜔 𝐿 4 
+
+> −
+
++ (ℏ𝜔 𝐿 4 
+
+> −
+
++ ℏ𝜔 𝐿 4 − ℏ𝜔 )𝑚 𝑢 ,𝐿 
+
+> 𝐼𝐼
+
+𝑚 𝑙 ,𝐿  
+
+> 𝐼𝐼
+
+− 𝑚 𝑢 ,𝐿  
+
+> 𝐼𝐼
+
+(𝑠 19 )
+
+where  ℏ𝜔 𝑋 7 + ℏ𝜔 𝑋 6 
+
+> −
+
+and  ℏ𝜔 𝐿 4 
+
+> −
+
++ ℏ𝜔 𝐿 4 are the interband gap energies at the critical points. 
+
+The band structure near the X and L points is described using a parabolic approximation with effective masses determined 
+
+from relativistic band calculations by Christensen and Seraphin 7,9 . The X -point transition involves the  𝑋 6
+
+> −
+
+and  𝑋 7 bands. The 
+
+relevant effective masses are:  𝑚 𝑙 ,𝑋 = 0.770 𝑚 0 , 𝑚 𝑙 ,𝑋  
+
+> 𝐼𝐼
+
+= 0.814 𝑚 0 and  𝑚 𝑢 ,𝑋 = 0.220 𝑚 0 , 𝑚 𝑢 ,𝑋  
+
+> 𝐼𝐼
+
+= 0.180 𝑚 0 . The critical point 
+
+energies defining the X transition are the gap  ℏ𝜔 𝑋 7 + ℏ𝜔 𝑋 6 
+
+> −
+
+= 3.125  eV, and the upper final state band limit  ℏ𝜔 𝑋 6 
+
+> −
+
+= 1.475  eV. 
+
+The L -point transition involves the  𝐿 4 and  𝐿 4 
+
+> −
+
+bands. The effective masses are:  𝑚 𝑙 ,𝐿 = 0.720 𝑚 0, 𝑚 𝑙 ,𝐿  
+
+> 𝐼𝐼
+
+= 0.774 𝑚 0 and  𝑚 𝑢 ,𝐿 =
+
+0.190 𝑚 0, 𝑚 𝑢 ,𝐿  
+
+> 𝐼𝐼
+
+= 0.260 𝑚 0. The critical point energies for the L transition are the gap  ℏ𝜔 𝐿 4 
+
+> −
+
++ ℏ𝜔 𝐿 4 = 2.292  eV, and the upper 
+
+final state band limit  ℏ𝜔 𝐿 4 
+
+> −
+
+= 0.717  eV. S-9
+
+Following the approach of Ref. 9, the non -thermal electron population N generated by ultrafast laser excitation also modifies 
+
+the interband response. The change in JDOS due to non -thermal carriers is 4:
+
+𝛥 𝐽 𝑁 (𝜔 ) = 𝑁 
+
+𝛼 𝐽𝑁 
+
+∫ [𝑓 (𝐸 − ℏ𝜔 𝑝𝑢𝑚𝑝 , 𝛩 0)(1 − 𝑓 (𝐸 , 𝛩 0)) − 𝑓 (𝐸 , 𝛩 0) (1 − 𝑓 (𝐸 + ℏ𝜔 𝑝𝑢𝑚𝑝 , 𝛩 0))]
+
+> 𝐸 𝑚𝑎𝑥
+> 𝐸 𝑚𝑖𝑛
+
+𝐷 (𝐸 ) 𝑑𝐸 (𝑠 20 )
+
+where  𝛼 𝐽𝑁  is a scaling parameter relating the non -thermal population to the induced carrier density . The real and imaginary parts 
+
+of the dielectric function are not independent but are connected through the Kramers -Kronig relations, which arise from causality 
+
+requirements 1. Thus, h aving computed the change in the imaginary part of the interband permittivity, the corresponding change 
+
+in the real part is obtained via the Kramers -Kronig transformation. 
+
+To elucidate the microscopic origin of the transient polarization control, the temporal and spectral evolution of the gold 
+
+permittivity was rigorously decomposed into its constituent thermodynamic drivers (Figure S1 and S2). Upon optical excitation, 
+
+the initial dielectric response is governed by the non -thermal electron population  (𝑁 ), which induces an instantaneous but short -
+
+lived perturbation mostly confined to the duration of the pump pulse (Figure S1a -b). As these highly energetic carriers rapidly 
+
+interact, they form a thermalized hot -electron gas  (𝛩 𝑒 ) that overwhelmingly dominates the macroscopic optical nonlinearity. As 
+
+seen in Figure S1c and S1d, this  𝛩 𝑒  contribution drives a massive, sub -picosecond modulation of the dielectric function, primarily 
+
+arising from Fermi -Dirac smearing around the interband transition. Finally, subsequent electron -phonon coupling transfers this 
+
+energy to the lattice  (𝛩 𝑙 ), which contributes a comparatively weak, delayed background responsible for the long -tail picosecond 
+
+relaxation (Figure S1e -f). S-10 
+
+Figure S1. Decomposed transient dielectric permittivity dynamics of gold. Simulated maps detailing the distinct physical 
+
+contributions to the pump -induced changes in the real (left column) and imaginary (right column) parts of the complex dielectric 
+
+function (Δ ε) as a function of probe wavelength ( λ) and pump -probe delay (Δ t). (a, b) Contribution from the non -thermal electron 
+
+population ( N), characterized by an instantaneous, highly transient response strictly confined to the duration of the pump pulse. 
+
+(c, d) Contribution from the thermalized electron gas temperature ( θₑ), which dominates the overall magnitude of the optical 
+
+nonlinearity and drives the pronounced sub -picosecond permittivity shift primarily via Fermi smearing of the interband 
+
+transitions. (e, f) Contribution from the lattice temperature ( θₗ), exhibiting a significantly smaller magnitude (note the reduced 
+
+scale of the colorbar) and a delayed onset that governs the long -tail picosecond relaxation dynamics as the hot electron gas 
+
+transfers energy to the phonons. (g, h) The total transient permittivity change (Δ εTotal ), representing the comprehensive sum of all 
+
+three thermodynamic subsystems, which are ultimately imported into the dynamic FDTD simulations. S-11 
+
+Figure S 2. Absolute complex permittivity of gold (Au) under varying transient thermodynamic conditions. The graph 
+
+displays the spectral dispersion of the real (𝜀 1) and imaginary (𝜀 2) components of the Au dielectric function as a function of 
+
+photon energy. The black dotted line represents the material's static baseline at room -temperature equilibrium  (𝛩 𝑒 = 300 𝐾 , 𝛩 𝑙 
+
+= 300 K, N = 0.0 J/cm³). The colored curves illustrate the pronounced modulation of the complex permittivity at different stages 
+
+of ultrafast optical excitation. These dynamic states are defined by the interplay of the thermal electron temperature (𝛩 𝑒 ), lattice 
+
+temperature (𝛩 𝑙 ), and non -thermal electron energy density (𝑁 ), capturing the progression from an initial surge in non -thermal 
+
+electrons to extreme thermal electron heating peaking near 2258 K. 
+
+The absolute permittivity spectra (Figure S2) further reflect this temporal progression, illustrating pronounced shifts in bo th 
+
+𝜀 1 and  𝜀 2 as the electron temperature spikes near 2258 K. Crucially, the spectral shape, magnitude, and temporal hierarchy of 
+
+these extracted dynamics are in excellent quantitative agreement with established literature. The extreme modulation of the 
+
+complex permitti vity under strong electronic excitation perfectly mirrors the high -temperature responses validated by Yurkevich 
+
+et al. 10 . Furthermore, the temporal decomposition , specifically the rapid progression from  𝑁  to a dominant, symmetry -breaking 
+
+𝛩 𝑒  regime, followed by a weak  𝛩 𝑙  background , is wholly consistent with works of Schirato et al. 1 for active plasmonic 
+
+architectures. This cross -validation ensures that the fundamental material inputs driving our dynamic FDTD framework are 
+
+physically robust and accurately capture the state -of -the -art limits of hot -electron nonlinearities. S-12 
+
+Figure S 3. Replication of Brown et al. (2017) Figure 1a. This map displays the differential extinction cross section (𝛥 𝐶 𝑒𝑥𝑡 )
+
+of colloidal gold nanoparticles as a function of probe delay time and probe wavelength. As i n the original study 11 , this response 
+
+was generated using a pump pulse with an energy density of  68 𝜇𝐽 /𝑐 𝑚 2 at 380 nm. At a delay time of zero, the pump pulse excites 
+
+the sample. As internal thermalization of the electrons occurs, the extinction near the 533 nm absorption peak decreases, res ulting 
+
+in a strong negative signal. Simultaneously, the extinction increases in the wings on either side of the absorption peak, 
+
+corresponding to the positive signal regions. The dashed black contour lines represent the threshold of zero extinction chang e. 
+
+To further validate the accuracy of our computational framework, we benchmarked our material models against the 
+
+experimental and ab I nitio ultrafast carrier dynamics reported by Brown et al. 11 . Figure S3 presents our precise replication of 
+
+their transient extinction cross -section  (𝛥 𝐶 𝑒𝑥𝑡 ) map for colloidal gold nanoparticles. Following optical excitation, the rapid 
+
+thermalization of the electron gas induces a pronounced bleaching of the localized surface plasmon resonance (LSPR) near 533 
+
+nm, manifesting as the dominant negative  𝛥 𝐶 𝑒𝑥𝑡  signal. This central bleach is immediately accompanied by positive transient 
+
+absorption in the spectral wings, a classic signature of plasmon broadening driven by Fermi smearing of the interband transit ions. 
+
+The temporal evolution captured in our model , featuring a sub -picosecond onset during electron thermalization followed by a 
+
+multi -picosecond relaxation tail governed by lattice heating , perfectly mirrors the experimental and ab initio results of the original 
+
+study. Successfully reproducing these complex spectral contours confirms that our coupled 3TM -FDTD methodology is highly 
+
+robust and accurately translates microscopic hot -carrier thermodynamics into realistic, macroscopic plasmonic observables. S-13 
+
+S4. Absorption of LSP x
+
+Figure S 4. Static absorption spectrum of the selectively pumped x -oriented nanoantenna. Simulated absorption as a function 
+
+of incident wavelength ( λ) under purely x -polarized illumination ( φpu = 0°). The spectrum reveals a distinct localized surface 
+
+plasmon resonance (LSP x) peaking exactly at 800 nm. This optimal spectral overlap justifies the selection of the 800 nm pump 
+
+pulse utilized in the dynamic simulations, ensuring maximum energy deposition into the nanostructure. The geometric 
+
+confinement of this absorption profile dictates the initial absorbed power density ( Pabs ) required to drive the highly localized, 
+
+non -equilibrium hot -electron thermalization within the 3TM. 
+
+S5. Influence of probe duration 
+
+In theoretical pump -probe simulations, the calculated optical parameters typically represent an idealized, instantaneous material 
+
+response. However, in physical transient polarimetry experiments, the measured signal is governed by the temporal cross -
+
+correlation between this intrinsic material response and the intensity envelope of the probe pulse. To assess the practical 
+
+experimental observability of our results, we evaluated the effect of finite probe pulse d urations on the transient mode -mixing 
+
+dynamics. 
+
+The idealized, instantaneous transient response was convolved with Gaussian probe intensity envelopes of varying Full -Width at 
+
+Half -Maximum (FWHM) durations, ranging from 35 fs to 240 fs. As illustrated in Figure S 5, the temporal smearing introduced 
+
+by the finite probe width fundamentally alters the observed sub -picosecond dynamics. Specifically, longer probe pulses (e.g., 
+
+240 fs ) artificially broaden the signal onset, delay the apparent peak time, and dampen the maximum achievable amplitude of the 
+
+optical modulation (including Δ Tr , Δ η, and Δ α). S-14 
+
+Conversely, the slower picosecond recovery tail , driven by electron -phonon thermalization , remains largely unaffected by the 
+
+probe duration, as its timescale safely exceeds the pulse width. These findings underscore a critical experimental design 
+
+parameter: to accurately resolve and utilize the massive, sub -picosecond polarization switching capa bilities of the proposed 
+
+metasurface, deploying ultrashort probe pulses (≤ 70 fs) is important to prevent severe temporal attenuation of the signal. 
+
+Figure S 5. Effect of temporal convolution with finite -duration probe pulses. Simulated transient decay curves evaluated at a 
+
+probe wavelength of λ = 810 nm for transient differential transmission (ΔTr), ellipticity (Δ η), and optical rotation (Δ α). The 
+
+instantaneous, raw material response (blue dots) is compared against signals convoluted with Gaussian probe pulses of varying 
+
+FWHM durations (35 fs to 240 fs). While ultrashort probes (35 fs, 70 fs) precisely track the highly nonlinear sub -picosecon d
+
+onset and preserve the peak modulation depth, longer probes (140 fs, 240 fs) introduce temporal smearing, effectively dampeni ng 
+
+the peak amplitude and artificially broadening the ultrafast response time. 
+
+References 
+
+## (1) Schirato, A.; Maiuri, M.; Toma, A.; Fugattini, S.; Proietti Zaccaria, R.; Laporta, P.; Nordlander, P.; 
+
+## Cerullo, G.; Alabastri, A.; Della Valle, G. Transient Optical Symmetry Breaking for Ultrafast 
+
+## Broadband Dichroism in Plasmonic Metasurfaces. Nat. Photonics 2020 , 14 (12), 723 –727. 
+
+## https://doi.org/10.1038/s41566 -020 -00702 -w. S-15 
+
+## (2) Milam, D. Review and Assessment of Measured Values of the Nonlinear Refractive -Index 
+
+## Coefficient of Fused Silica. Appl. Opt. 1998 , 37 (3), 546 –550. 
+
+## https://doi.org/10.1364/AO.37.000546. 
+
+## (3) Schirato, A.; Mazzanti, A.; Proietti Zaccaria, R.; Nordlander, P.; Alabastri, A.; Della Valle, G. All -
+
+## Optically Reconfigurable Plasmonic Metagrating for Ultrafast Diffraction Management. Nano Lett. 
+
+## 2021 , 21 (3), 1345 –1351. https://doi.org/10.1021/acs.nanolett.0c04075. 
+
+## (4) Schirato, A.; Maiuri, M.; Cerullo, G.; Della Valle, G. Ultrafast Hot Electron Dynamics in Plasmonic 
+
+## Nanostructures: Experiments, Modelling, Design. Nanophotonics 2023 , 0 (0). 
+
+## https://doi.org/10.1515/nanoph -2022 -0592. 
+
+## (5) Sun, C. -K.; Vallee, F.; Acioli, L. H.; Ippen, E. P.; Fujimoto, J. G. Femtosecond -Tunable 
+
+## Measurement of Electron Thermalization in Gold. Phys. Rev. B 1994 , 50 , 15337 –15348. 
+
+## (6) Guerrisi, M.; Rosei, R.; Winsemius, P. Splitting of the Interband Absorption Edge in Au. Phys. Rev. 
+
+## B 1975 , 12 (2), 557 –563. 
+
+## (7) Christensen, N. E.; Seraphin, B. O. Relativistic Band Calculation and the Optical Properties of Gold. 
+
+## Phys. Rev. B 1971 , 4 (10), 3321 –3344. https://doi.org/10.1103/PhysRevB.4.3321. 
+
+## (8) Marini, A.; Conforti, M.; Della Valle, G.; Lee, H. W.; Tran, T. X.; Chang, W.; Schmidt, M. A.; 
+
+## Longhi, S.; St J Russell, P.; Biancalana, F. Ultrafast Nonlinear Dynamics of Surface Plasmon 
+
+## Polaritons in Gold Nanowires Due to the Intrinsic Nonlinearity of M etals. New J. Phys. 2013 , 15 .
+
+## https://doi.org/10.1088/1367 -2630/15/1/013033. 
+
+## (9) Schirato, A.; Silva, M. G.; Teles -Ferreira, D. C.; Manzoni, C.; de Paula, A. M.; Cerullo, G.; Della 
+
+## Valle, G.; Di Vece, M. Disentangling the Ultrafast Nonlinear Optical Behavior of Plasmonic 
+
+## Resonances Near the Interband Transition. Adv. Photonics Res. 2022 , 2200081 , 2200081. 
+
+## https://doi.org/10.1002/adpr.202200081. 
+
+## (10) Yurkevich, A. A.; Ashitkov, S. I.; Agranat, M. B. Permittivity of Gold with a Strongly Excited 
+
+## Electronic Subsystem. Phys. Plasmas 2017 , 24 (11). https://doi.org/10.1063/1.5000285. 
+
+## (11) Brown, A. M.; Sundararaman, R.; Narang, P.; Schwartzberg, A. M.; Goddard, W. A.; Atwater, H. A. 
+
+## Experimental and Ab Initio Ultrafast Carrier Dynamics in Plasmonic Nanoparticles. Phys. Rev. Lett. 
+
+## 2017 , 118 (8). https://doi.org/10.1103/PhysRevLett.118.087401.

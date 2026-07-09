@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.07220v1/fig-001.webp",
+      "caption": "Figure 3: a) Schematic illustration of the THz time-domain emission spectroscopy setup, where a collimated optical pump beam is focused to an approximately 10µm diameter spot at the gap of the H-dipole antenna-coupled emitter. b) Optical image of the antenna-coupled device. The inset shows a magnified view of the H-dipole antenna gap, highlighting the dipole length (L = 200µm) and gap width (W = 10µm). (c) Electrical circuit schematic of the packaged device integrated with a hyper-hemispherical Si lens (not to scale). Electrical contacts from the printed circuit board (PCB) are connected to the antenna contact pads to inject differential write-current pulses (±VP/2), thereby creating a virtual ground at the device center. The ∆Rxx measurement sequence is also illustrated. (d) Photographs of the packaged device with the attached PCB shown from three perspectives.",
+      "page": 6,
+      "index": 1,
+      "width": 1131,
+      "height": 1064
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07220v1/fig-002.webp",
+      "caption": "Figure 4: (a) Current-induced magnetization switching loop for type y configuration measured in the absence of laser excitation using dc USMR. (b) THz phase switching at 100mW laser excitation obtained during current-induced magnetization reversal loops at Ipulse = 0, +22.84, and −26.24mA in the absence of an external magnetic field. (c) Current-induced magnetization switching loop measured under laser excitation at 100mW. (d) THz phase switching induced by both the external magnetic field and current-driven magnetization switching. (e) Peak-to-peak THz emission amplitude as a function of laser power for the antenna coupled emitter measured at µ0Hext = 0mT.",
+      "page": 7,
+      "index": 2,
+      "width": 1040,
+      "height": 438
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07220v1/fig-003.webp",
+      "caption": "Figure 1: Deposition geometry and magnetic characterization of the spintronic THz emitter. a) Schematic of the deposition geometry showing oblique-angle deposition of the Ta underlayer at θB=60◦, followed by normal-incidence deposition of the Co40Fe40B20/Pt layers at θA=0◦. b) Definition of the easy axis (EA) and hard axis (HA) of the spintronic THz emitter (STE). The EA is oriented parallel to the ripple structure [33]. c) L-MOKE hysteresis loops measured with the external magnetic field µ0H applied either parallel or perpendicular to the sample mark, confirming the EA and HA orientations. d) Schematic illustration of THz emission from an unpatterned emitter mounted on a hyper-hemispherical Si lens.",
+      "page": 3,
+      "index": 3,
+      "width": 1131,
+      "height": 764
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07220v1/fig-004.webp",
+      "caption": "Figure 5: Current-induced magnetization switching loops measured under laser excitation at incident powers of 0, 15, and 30mW. The inset shows the corresponding THz phase switching for both 15 and 30mW excitation powers under positive and negative critical switching current pulses. For clarity, the laser-on switching loops are vertically offset along the y-axis to allow direct comparison with the laser-off switching loops.",
+      "page": 9,
+      "index": 4,
+      "width": 694,
+      "height": 776
+    }
+  ]
+}

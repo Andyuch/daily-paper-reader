@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.05370v1/fig-001.webp",
+      "caption": "Figure 3. Training and forward validation of the distortion-calibration model. (a) Schematic of the self-calibration process, in which a Zernike distortion model is fitted to the nanodisk offsets of both arrays. (b) Spatial map of the raw nanodisk offsets between optically extracted positions and design positions for both arrays. The arrows indicate the offset directions, and the color scale indicates the offset magnitude. (c) Overlaid 2D histogram of the nanodisk offsets before (blue) and after (orange) correction by the Zernike distortion model. (d) Schematic of the forward validation process. The model is trained on one array and then applied to the held-out array, after which the residual nanodisk offsets are evaluated. (e) Residual offset map of Array 2 after correction using the distortion model trained on Array 1. The same color scale as in (b) is used to visualize the reduction in offset magnitude. (f) Forward-validation performance for the two reciprocal train-test directions. Left: Array 2 corrected using the model trained on Array 1. Right: Array 1 corrected using the model trained on Array 2. The red and blue lines denote the x and y mean offsets, and shaded bands indicate the corresponding standard deviation.",
+      "page": 4,
+      "index": 1,
+      "width": 985,
+      "height": 631
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05370v1/fig-002.webp",
+      "caption": "Figure 2. Performance of the optical positioning setup. (a) Representative wide-field PL image of QD emission acquired through a 785 nm narrow bandpass filter. (b) Magnified image of a 2D Gaussian fit for a representative QD. (c) Reflection image of the marker frame and nanodisks from the same field as (a), acquired through a 785 nm narrow bandpass filter. The markers define an area of 40×40 µm2. (d) Representative cross-section of a marker arm and the corresponding fit. (e) Distributions of the fitted FWHM values for QDs and nanodisks, with the shaded region spanning from the Gaussian approximation of the diffraction-limited PSF (FWHMdiff = 473nm) to 2×FWHMdiff. (f) Distributions of the localization fitting uncertainties for QDs and nanodisks. (g) Localization repeatability of QDs and nanodisks, quantified by the standard deviation of repeated localizations of the same object.",
+      "page": 3,
+      "index": 2,
+      "width": 1005,
+      "height": 697
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05370v1/fig-003.webp",
+      "caption": "Figure 1. Schematic of the optical setup and calibration workflow. (a) 3D illustration of the wide-field PL microscope setup for optical positioning. BS, beamsplitter. (b) From bottom to top: SEM image of a 3×3 gold nanodisk calibration array; wide-field reflection image of the central marker field; and conceptual illustration comparing positions extracted from wide-field images (blue) with their nominal design positions (gray). Spatially varying residuals between the two coordinate sets are used to map the optical distortion field. Scale bars in the SEM and reflection images are 10 µm. (c) Distortion calibration workflow.",
+      "page": 2,
+      "index": 3,
+      "width": 1019,
+      "height": 549
+    },
+    {
+      "url": "assets/figures/arxiv/2607.05370v1/fig-004.webp",
+      "caption": "Figure 4. Polarization response of deterministically fabricated mesas. (a) SEM image of a region inside the mesa array. (b) Background-subtracted co- and cross-polarized PL spectra from a distortion-corrected mesa, corresponding to the polarization angles of Imax and Imin. The inset shows representative polar plots of the integrated PL intensity as a function of the linear polarization angle for a background QD (gray), a raw-positioned mesa (blue), and a distortion-corrected mesa (orange). (c) Scatter plot of the system-corrected Stokes components. The dashed circle indicates the DOLP expected for a centered emitter in an elliptical mesa with SEM-measured diameters. (d) Histograms of system-corrected DOLP for background QDs, raw-positioned mesas, and distortion-corrected mesas. (e) Simulated DOLP for different emitter",
+      "page": 6,
+      "index": 4,
+      "width": 1054,
+      "height": 575
+    }
+  ]
+}
