@@ -1,0 +1,436 @@
+Title: Probing individual phonon-polaritonic nanoparticle-on-mirror cavities by infrared nanospectroscopy
+
+URL Source: https://arxiv.org/pdf/2607.07941v1
+
+Published Time: Fri, 10 Jul 2026 00:14:21 GMT
+
+Number of Pages: 35
+
+Markdown Content:
+## Probing individual phonon-polaritonic nanoparticle-on-mirror cavities by infrared nanospectroscopy 
+
+Isabel Pascual Robledo, 1, 2, 3, ∗ Iker Herrero León, 1, 3, ∗ Karol Kołątaj, 4 Guillermo P. Acuna, 4 Javier Aizpurua, 5, 6, 7 Philippe Roelli, 1, † and Rainer Hillenbrand 1, 6, 7, ‡
+
+> 1
+
+CIC nanoGUNE BRTA, Tolosa Hiribidea 76, 20018 Donostia-San Sebastián, Spain 
+
+> 2
+
+Materials Physics Center, CSIC-UPV/EHU, Manuel de Lardizabal 5, 20018 Donostia-San Sebastián, Spain 
+
+> 3
+
+Department of Physics, University of the Basque Country UPV/EHU, Barrio Sarriena s/n, 48940 Leioa, Spain 
+
+> 4
+
+Department of Physics, University of Fribourg, Chem. du Musée 3, 1700 Fribourg, Switzerland 
+
+> 5
+
+Donostia International Physics Center (DIPC), Paseo Manuel de Lardizabal 4, 20018 Donostia-San Sebastián, Spain 
+
+> 6
+
+Department of Electricity and Electronics, FCT-ZTF, University of the Basque Country EHU, Barrio Sarriena z/g, 48940 Leioa, Spain 
+
+> 7
+
+IKERBASQUE, Basque Foundation for Science, 48009 Bilbao, Spain 
+
+(Dated: July 10, 2026) 
+
+1arXiv:2607.07941v1 [physics.optics] 8 Jul 2026 Abstract 
+
+Nanoparticle-on-mirror (NPoM) cavities enable extreme light confinement and strong light–matter inter-actions, but their realization with phonon-polariton materials in the mid-infrared spectral range remains largely unexplored. Here, we use nano-FTIR spectroscopy to study the near-field response of individual phononic NPoM cavities formed by gold nanoparticles on a quartz substrate supporting phonon-polaritons. By placing a metal tip on top of the NPoM and recording the tip-scattered field, we observe two reproducible cavity resonances, identified as the fundamental and a second-order antenna modes by numerical simula-tions. The calculations show that, in absence of the tip, the NPoM cavity exhibits ultrasmall mode volumes (V ∼ 10 3 nm 3) and high quality factors ( Q ∼ 100), resulting in extraordinary field intensity enhancements (F ∼ 10 4) and Purcell factors ( PF ∼ 10 9). They also indicate that the nano-FTIR tip enables efficient excitation and readout of these phononic NPoM modes without perturbing them, while enhancing the in-trinsic local field intensity in the NPoM gap by two orders of magnitude. Our results establish phononic NPoM cavities as a promising platform for mid-infrared nanophotonics and pave the way for ultrasensitive vibrational spectroscopy based on nano-FTIR measurements of individual cavities. 
+
+I. INTRODUCTION 
+
+Nanoparticle-on-mirror (NPoM) cavities typically consist of a plasmonic metallic nanoparticle, commonly gold or silver, positioned above a metallic mirror and separated by a nanometric gap.[1, 2] Together, the nanoparticle (NP) and mirror form a well-defined optical nanocavity in which the nanoparticle plasmon couples with its mirror image, forming plasmon polaritons in the gap. As a result, light is confined to volumes well below the diffraction limit, leading to a strong field confine-ment and enhancement in the nanoparticle–mirror gap.[3, 4] These cavities are readily fabricated through chemical synthesis and are generally more practical to realize than other lithographically fabricated plasmonic cavities.[5] NPoM cavities support highly tunable visible (VIS) resonances with ultrasmall normalized mode volumes ( Vnorm ∼ 10 −6 λ3 − 10 −5 λ3, where λ is the incident wavelength) and moderate quality factors ( Q ∼ 10 − 50 ), yielding large Purcell enhancements ( PF ∼ 10 5 − 10 6).[2, 6] Consequently, NPoMs have become a versatile platform for fluorescence enhancement,[7] surface-enhanced Ra-man scattering (SERS),[8–10] nanoscale sensing,[11, 12] nonlinear optics[13, 14] and plasmon-driven chemistry.[15, 16] Intriguingly, picocavities may emerge within the NPoM gap,[17–19] further con-centrating the electromagnetic field to atomic-scale dimensions, thereby enabling single-molecule    
+
+> ∗These authors contributed equally to this work.
+> †p.roelli@nanogune.eu
+> ‡r.hillenbrand@nanogune.eu
+
+2spectroscopy and strong coupling.[20] By contrast, mid-infrared (mid-IR) resonant NPoM cavities remain comparatively unexplored despite their potential for vibrational molecular spectroscopy in this spectral range. Coupling molecular vibrations to the strongly confined NPoM fields could enable surface-enhanced infrared absorption spectroscopy (SEIRA) and vibrational strong coupling (VSC) at the nanoscale. While conventional metallic nanoparticles do not typically support plasmonic resonances in the mid-IR, doped semiconductor particles can be used in this context to support resonant modes in this spec-tral range.[21] However, the performance of such materials is often limited by their higher optical losses and reduced oscillator strength, leading to broader resonances and weaker field confinement compared to metallic plasmonic systems[22] and metasurfaces.[23, 24] Phonon-polaritonic nanostructures based on polar dielectrics provide an alternative platform for mid-IR nanophotonics. Polar materials such as silicon carbide (SiC), hexagonal boron nitride (hBN), or molybdenum trioxide ( α-MoO 3) support low-loss surface and volume phonon polaritons within their Reststrahlen bands, enabling strong infrared field confinement with significantly re-duced losses compared to conventional plasmonic systems.[25–30] Phonon-polariton nanoresonators have therefore emerged as promising candidates for applications including SEIRA[31] and VSC.[32] Although strong infrared field enhancement and confinement may be realized in NPoM cavi-ties using polar crystals, preparing nanoparticles from polar crystals with controlled shapes and sizes remains challenging.[33] A practical alternative can take advantage of the combination of non-resonant metallic particles with a polar dielectric substrate. Recently silver (Ag) nanocubes deposited on a SiC substrate were shown to support confined phonon-polaritonic NPoM modes through the excitation of SiC surface phonon polaritons by the NP near field.[34] These cavities reported normalized mode volumes as small as Vnorm ∼ 10 -8 λ3 and quality factors of Q ∼ 170. However, the extremely small extinction cross-section of these systems restricts conventional spec-troscopy to ensemble measurements, preventing direct access to the response of individual cavities. Probing single phonon-polaritonic NPoM cavities is nevertheless essential for understanding cavity-to-cavity variations and the influence of local geometry and material properties on the optical cavity response. Probing individual NPoM cavities could also enable studies of intrinsic emitter decay channels and nanoscale mid-IR light-matter interactions, including VSC with very small molecular ensembles. In the visible spectral range, single particle spectroscopy[1, 35, 36] has become a key tool for observing dynamical reshaping of the cavities and the formation of atomic protrusions, which enable enhanced interaction between light and single emitters.[11, 12, 37] A powerful method for probing individual nanostructures in the infrared is nanoscale Fourier 3transform infrared (nano-FTIR) spectroscopy.[38, 39] In nano-FTIR, an atomic force microscope (AFM) tip serves as a nanoscale optical antenna that concentrates broadband infrared radiation at its apex, generating a strong near-field enhancement. When the sample is brought into close proximity to the tip apex, the localized near field interacts with the sample, which leads to a modification of the tip-scattered light depending on the local optical properties of the sample. By interferometrically detecting the scattered light as a function of frequency, nano-FTIR provides infrared amplitude and phase spectra with nanoscale spatial resolution determined by the AFM tip radius. Here, we experimentally demonstrate that infrared spectra of individual phonon-polaritonic NPoMs can be measured using nano-FTIR spectroscopy. Simulations indicate that positioning the tip above the NP enhances the electromagnetic field amplitude inside the nanoparticle–mirror gap by a factor of ∼ 20. This enhancement occurs without significantly perturbing the properties of the cavity modes, including their spectral positions, quality factors, and spatial extent of the electric near-field distribution. This approach enables the experimental study of mid-IR nanocavity physics at the level of individual NPoMs, with potential applications in nanoscale infrared sensing and VSC.  
+
+> II. RESULTS AND DISCUSSION
+
+Figure 1a illustrates nano-FTIR spectroscopy of an individual phononic NPoM cavity. The NPoM sample is prepared by drop-casting a colloidal solution of Au nanoparticles (AuNPs) onto a quartz substrate acting as a mirror (see Experimental Methods in the Supplement Information, SI), resulting in the formation of NPoM cavities. A representative topography image of an individual NPoM is shown in Fig. 1b. Each AuNP is coated with a ∼ 1 nm thin dielectric layer of citrate formed during NP synthesis, which defines a nanoscale gap between the particle and the mirror. Quartz is chosen as a mirror because its transverse optical (TO) phonons give rise to a spectral window where surface phonon polaritons (SPhPs) can be excited. In addition, quartz can be polished to achieve atomically flat surfaces with sub-nanometer roughness, which is essential for achieving NPoM cavities with ultra-small mode volumes comparable to those reported for plasmonic NPoMs. As a uniaxial anisotropic crystal, quartz is characterized by its in-plane ε⊥ and out-of-plane ε∥
+
+dielectric tensor components.[40–42] We use c-cut samples and determine the in-plane component 
+
+ε⊥ (Fig. 1c) by fitting far-field reflectivity measurements (see SI Section 1). Two phonons are observed at νT O, 1 = 1065 cm −1 and νT O, 2 = 1160.7 cm −1, giving rise to a spectral region where 4Re {ε⊥} < 0, which enables the excitation of SPhPs. We note that Re {ε⊥} is non-monotonic near 
+
+νT O, 2, which complicates the analysis of NPoM cavity modes. We therefore focus our study on the spectral range between νT O, 1 and νT O, 2, where Re {ε⊥} < 0 and behaves monotonically (white region in Fig. 1c). 
+
+FIG. 1. Nano-FTIR spectroscopy on a phonon-polaritonic NPoM cavity. (a) Schematics of the experiment. A PtIr tip with 50 nm apex radius oscillates at a frequency Ω above a AuNP deposited on a c-cut oriented quartz mirror. The red arrows indicate the incident illumination Ein and the backscattered light Eout . (b) Topography image (top) and line profile (bottom) of a 60 nm AuNP on quartz. (c) Real (solid line) and imaginary (dashed line) parts of the in-plane dielectric component ε⊥(ν) of quartz, fitted from far-field reflectivity measurements. νT O, 1 = 1065 cm −1 and νT O, 2 = 1160.7 cm −1 mark the TO phonon frequencies of quartz. The white area marks the spectral region where Re {ε⊥} is negative and monotonic. (d) nano-FTIR amplitude spectra, s4(ν)/s 4,Au (ν), of three NPoM cavities (red curves), of the quartz mirror when the oscillating tip is retracted by 60 nm (green curve), and of the quartz mirror when the oscillating tip is in contact (blue curve in the inset). Schematics on the right illustrate the different sample configurations. Vertical dashed red lines mark the peak spectral positions of the NPoM nano-FTIR amplitude spectra. 
+
+To obtain infrared near-field spectra of individual NPoM cavities, we position the metal tip of the nano-FTIR setup on top of the corresponding AuNP and illuminate it with broadband mid-infrared laser radiation (Experimental Methods, SI). Due to the lightning rod effect, the tip concentrates 5the incident mid-infrared radiation into a nanoscale spot at the tip apex, which illuminates the individual NPoM cavity and excites its modes. The near-field response of the NPoM cavity modifies the field back-scattered by the tip. By recording the tip-scattered field with an asymmetric Fourier-transform spectrometer, we obtain near-field amplitude and phase spectra. To isolate the near-field response from the background scattering, the tip oscillates normal to the quartz mirror at a frequency Ω, and the detector signal is demodulated at a higher frequency nΩ (n = 1, 2, 3, . . . ). The demodulated signal yields background-free near-field spectra, of which we show and analyze only the amplitude spectra, denoted sn(ν).Figure 1d shows nano-FTIR amplitude spectra recorded on three individual 60 nm diameter NPs (red), measured with a PtIr tip of 50 nm apex radius and normalized to a 200 nm thick gold reference, s4(ν)/s 4,Au (ν). Each spectrum shows two peaks at approximately ν1 = 1090 cm −1 and 
+
+ν2 = 1140 cm −1 (dashed lines in Fig. 1d) with the same relative peak heights for all three particles, demonstrating a reproducible spectral response. We attribute these peaks to the NPoM cavity resonances, as corroborated by numerical simulations in Fig. 2. To gain further experimental insight into the origin of these peaks, we record nano-FTIR spectra in the absence of the AuNP. In a first measurement, the oscillating tip is in direct contact with the quartz surface, yielding a broad peak (blue curve in the inset of Fig. 1d) with a higher near-field amplitude signal compared to that measured when the tip is positioned above the AuNP (red curves in Fig. 1d). This spectral response arises from tip-excited SPhPs in quartz, which lead to a resonant near-field coupling between the tip and quartz surface, analogue to the coupling that forms the phonon-polaritonic modes within the NPoM gap.[43, 44] When the tip is retracted by a distance comparable to the diameter of the AuNP (details in SI Section 2), we again observe a single broad peak, but with reduced amplitude, which arises from the weaker near-field coupling in the increased tip–quartz gap (green curve in Fig. 1d).[44] These measurements confirm that the two peaks observed when the tip is positioned above the AuNP (red curves in Fig. 1d) arise from the presence of the AuNP and not from direct tip–quartz near-field coupling. Therefore, these peaks can be attributed to phonon-polaritonic resonances at the NPoM cavity. To corroborate that phonon-polaritonic NPoM cavity modes are responsible for the two peaks observed in the nano-FTIR spectra (red curves in Fig. 1d), we perform electromagnetic numerical simulations of the phononic NPoM, with a 1 nm gap, in the presence of the nano-FTIR tip (details in see SI Numerical Methods and SI Section 3). We compute the near-field distribution around the NPoM cavity, |E(x, y, z ; ν)|/|E0(ν)|, over a range of wavenumbers ν between 1000 cm −1 and 1200 cm −1, where |E| is the amplitude of the local electric field and |E0| is the incident field amplitude. 6We consider two configurations: (i) a NPoM cavity formed by a 50 nm diameter AuNP, and (ii) the same NPoM cavity with a 50 nm apex radius tip positioned 2 nm above the AuNP. As an example, the insets of Fig. 2b show the near-field distribution |E(y, z ; ν)|/|E0(ν)| at ν ∼ 1110 cm −1 for the two configurations, with the tip (top inset) and without the tip (bottom inset). In both cases, we observe strong near-field confinement and enhancement in the gap between the AuNP and the quartz mirror. When the tip is on top of the NPoM, this field enhancement is significantly stronger, indicating that the near field at the tip apex provides enhanced local illumination of the nanoparticle and thereby stronger excitation of NPoM cavity modes. We first analyze the spectral response of the first configuration, that is the NPoM cavity without tip. To that end, we plot in Fig. 2b the maximum field enhancement, max {| E|(ν)/|E0|(ν)}, in the horizontal mid-gap plane as a function of wavenumber ν (black curve). We observe two peaks in the spectral region of interest (white area in Fig. 2b), at 1110 cm −1 and 1130 cm −1, indicating phonon-polaritonic NPoM cavity resonances. To identify the NPoM modes corresponding to these resonances, we analyze the near-field distributions around the nanoparticle–mirror gap (without tip) at each resonance wavenumber (black-framed maps in Fig. 2a). The top panel displays vertical cross-sections through the AuNP and quartz mirror ( y − z plane), while the bottom panel shows horizontal cross-sections across the mid-gap ( x − y plane). In both cases, we plot the real part of the z-component of the electric field, Re {Ez }. At 1110 cm −1, the field distribution exhibits a single maximum at the gap center in both vertical and horizontal cross-sections, revealing that this resonance peak corresponds to the fundamental antenna mode of the NPoM cavity, denoted L01 .[45] Here, L denotes the longitudinal (dipolar) character of the mode along the vertical axis between the nanoparticle and the mirror. The first index specifies the azimuthal mode order while the second index represents the radial mode order. These numbers correspond to the number of electric field amplitude |E| maxima along the angular coordinate and the radial direction respectively. At 1130 cm −1, the horizontal cross-section exhibits two concentric maxima around the gap center, characteristic of a second-order axially symmetric mode.[46] We identify this mode as the second-order antenna mode L02 , based on the charge distribution on the NP surface (SI Section 4). We note that both mode patterns deviate from perfect circular symmetry, due to the tilted illumination. After identifying the cavity modes, we calculate the mode volumes and quality factors for both of them (see SI Section 5). For the fundamental L01 mode, we obtain a mode volume of V = 1309 nm 3 (Vnorm = 1.8 · 10 -9 λ3) and a quality factor Q = 81, corresponding to a Purcell Factor of 
+
+PF = 3.4 · 10 9. For the second-order L02 mode, we obtain V = 690 nm 3 (Vnorm = 1.0 · 10 -9 λ3), 
+
+Q = 96 and PF = 7.3 · 10 9. Notably, these phononic NPoM cavities exhibit higher quality factors 7FIG. 2. Numerical simulations of spectral field enhancement and mode profiles in phonon-polaritonic nanocavities. (a) Vertical (top) and mid-gap horizontal (bottom) near-field distribution (real part of the out-of-plane electric field, Re {Ez }) in the NPoM cavity gap (50 nm AuNP on quartz) at the wavenumbers indicated above. Red frames: static Pt tip (50 nm radius) positioned 2 nm above the NPoM cavity; black frames: NPoM cavity without tip. (b) Spectra of the maximum field enhancement, 
+
+max {| E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of a NPoM cavity (50 nm AuNP on quartz). Red spectrum: static Pt tip (50 nm radius) positioned 2 nm above NPoM cavity; black curve: NPoM cavity with-out tip. Insets show vertical near-field distribution at 1110 cm −1. (c) Vertical (top) and horizontal (bottom) near-field distributions ( Re {Ez }, in the midgap plane) at indicated wavenumbers for a static Pt tip (25 nm radius) positioned 1 nm (blue frames) and 10 nm (green frame) above a quartz surface (no AuNP present). (d) Spectra of the maximum field enhancement max {| E|(ν)/|E0|(ν)} in the mid-gap horizontal plane for a static Pt tip (25 nm radius) at 1 nm (blue frames) and 10 nm (green frames) above the quartz. Insets show vertical near-field distribution at the frequency of the L01 mode. In all calculations, the illumination is a p-polarized wave of amplitude |E0| = 1 V/m, and incident 35 ◦ relative to the quartz surface plane. 
+
+and similar mode volumes compared to plasmonic NPoMs in the visible range.[6] As observed in Fig. 2a,b, the presence of the tip does not significantly modify the NPoM spectral response, with resonance positions, field distribution, and quality factors remaining essentially unchanged ( Q = 80 and Q = 108, respectively). The tip, however, strongly enhances the local electric field in the gap to a factor of |E(ν)|/|E0(ν)| ∼ 2700, corresponding to a local intensity 8enhancement of F ∼ 7 · 10 7. This enhancement occurs without modifying the lateral extent of the mode, which is about 8 nm, by more than 3% (see SI Section 6). Comparing these simulation results with the experimental near-field amplitude spectra obtained from the NPoM cavities (red curves, Fig. 1d), we find good qualitative agreement. In particular, the presence of two resonance peaks in the spectral region of interest is properly reproduced, although in the experiment these peaks are broader and appear at lower frequencies. These discrepancies may originate from geometrical parameters not included in the simulation, such as the precise optical thickness of the NP capping layer, the likely presence of a NP facet, the optical anisotropy of the quartz substrate, or defects and strain from polishing of the quartz surface. Despite these quantitative differences, the simulations reproduce the experimentally observed spectral features and allow us to identify the peaks of the red spectra in Fig. 1d as the L01 and L02 NPoM cavity modes. For reference and comparison with the experimental near-field spectra recorded directly on quartz (blue and green curves in Fig. 1d), we also calculate the near-field distributions and the field enhancement in the gap between a static tip of 25 nm apex radius (same as the AuNP particle radius) and a quartz mirror, following the same procedure as for the NPoM simulations shown in Fig. 2a,b (Numerical Methods, SI). When the static tip is positioned 1 nm above the quartz surface, the calculated spectrum (blue curve in Fig. 2d) exhibits two peaks, identified as the L01 and L02 
+
+modes, based on the near-field distributions (blue-framed maps in Fig. 2c). This shows that the tip and quartz form a phonon-polaritonic cavity, qualitatively similar to an NPoM cavity. However, the modes in the tip–quartz gap exhibit larger field enhancement and are red-shifted compared to those in the NPoM configuration. This can be explained by the larger polarizability of the Pt tip compared to the AuNP, which leads to a stronger near-field interaction in the gap created between the tip and the quartz substrate. Increasing the tip–quartz distance to 10 nm, strongly reduces the field enhancement in the gap (green curve in Fig. 2d). In addition, only one peak is observed in this situation, corresponding to the L01 mode and significantly blueshifted. This behavior contrasts with that observed for the NPoM configuration (Fig. 2a,b), where the gap defining the NPoM cavity remains fixed independently of the presence of the tip and its position. By comparing the calculated spectra in Fig. 2d with the experimental near-field amplitude spectrum (blue curve in Fig. 1d, inset), a clear discrepancy is observed. In the experiment, only a single broad peak is present, whereas the simulation with a static tip positioned 1 nm above the quartz surface (blue curve in Fig. 2d) exhibits two distinct peaks corresponding to the cavity modes. On the other hand, the experimental spectrum is reproduced by calculations of the tip-scattered field 9using an analytical model (SI Section 7), which includes tip oscillation and signal demodulation.[47] We explain the appearance of a single broad peak in both experimental and calculated near-field amplitude spectra, rather than two distinct cavity resonances, by the tip oscillation. This leads to a modulation of the tip–mirror gap that alters the near-field interaction throughout the oscillation cycle, thereby modifying both the resonance frequencies and field enhancements of the cavity modes (SI Section 7). The averaging inherent to the signal demodulation process consequently merges the two resonances into a single broadened spectral feature. Summarizing the simulations and their comparison with experiments, both the NPoM cavity and the tip–quartz system support phonon-polaritonic cavity modes. However, in nano-FTIR measurements on bare quartz, the oscillating tip introduces a time-dependent tip–sample coupling, which, together with signal demodulation, leads to a broad and shifted peak in the nano-FTIR spectra. In contrast, in nano-FTIR measurements of the NPoM cavity, the particle–quartz gap is maintained fixed during the tip oscillation cycle, such that the NPoM cavity modes remain well defined. Consequently, the peaks observed in the nano-FTIR spectrum remain at the same spectral positions. In the tip-on-NPoM configuration, the tip primarily provides enhanced local field excitation without altering the NPoM cavity. This makes this configuration particularly well suited for implementation of stable and controlled field-enhanced infrared spectroscopy of ultrathin layers. We explore now the possibilities to tune the phononic NPoM modes with NP size. To that end we show in Fig. 3a nano-FTIR spectra of phononic NPoMs with AuNPs of diameters dNP = 40 nm (blue curve), dNP = 60 nm (red curve) and dNP = 80 nm (green curve). All spectra exhibit two peaks, in agreement with the experimental and theoretical analysis discussed in Fig. 1 and Fig. 2. Based on our previous analysis, we identify the peaks to be the L01 and L02 NPoM modes, marked by dots and diamonds in Fig. 3a, respectively. Notably, both peaks redshift with increasing particle size, accompanied by an overall reduction in signal amplitude. This trend is reproduced by numerical calculations of max {| E|(ν)/|E0|(ν)} at the center of the NPoM gap in the presence of the tip (Fig. 3b), confirming that phononic NPoM cavity modes can be tuned via nanoparticle size within the Reststrahlen band of the substrate. We note that similar size-dependent spectral shifts have been reported in plasmonic NPoM systems.[8] In addition to the spectral redshift, the simulations including the tip (Fig. 3b) show a reduction of the local field enhancement for larger NPs. This contrasts with plasmonic NPoMs, where the local field enhancement typically increases with the NP size.[8] To elucidate whether this reduction arises from the phononic NPoM itself or from the presence of the tip, we performed simulations 10 b
+
+> 0s 3 / s  3,Au 0.8 0.4
+
+a     
+
+> Wavenumber (cm -1 )Wavenumber (cm -1 )1000 1100 1200 1100 1140
+
+c         
+
+> Wavenumber (cm -1 )1100 1140 |E|/|E 0| (10  3)|E|/|E 0| (10  2)
+> 40 nm 60 nm 80 nm 40 nm 60 nm 80 nm E0dNP E0dNP dNP
+> = 40 nm 60 nm 80 nm dNP
+> Ω
+
+d NP FIG. 3. Nano-FTIR spectroscopy on phononic NPoMs of different size. (a) nano-FTIR amplitude spectra, s3/s 3,Au , of NPoM cavities with NPs of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve). Schematics on the top-left illustrate the variation of dNP . (b) Spectra of the maximum field enhancement, max {| E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of NPoM cavities (AuNPs on quartz) of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve). In all spectra a Pt tip (50 nm radius) is positioned 2 nm above the NPoM cavity. (c) Spectra of max {| E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of NPoM cavities (AuNPs on quartz) of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve) without the tip. In all panels symbols mark the positions of the 
+
+L01 (dots) and L02 (diamonds) NPoM cavity modes. 
+
+of phononic NPoMs without the tip (Fig. 3c). In this case, max {| E|(ν)/|E0|(ν)} increases with NP size, analogue to the tendency in plasmonic NPoMs. This demonstrates that the reduction of the local field enhancement with increasing nanoparticle size (Fig. 3b) does not originate from the NPoM cavity itself but rather from the presence of the tip. This effect can be attributed to the increased tip–quartz separation with increasing NP size, which weakens the electromagnetic coupling between the tip and quartz substrate, as discussed in Fig. 1 and Fig. 2. The strong influence of the tip on how the field enhancement scales with nanoparticle size raises the question of whether it also affects the peak positions and the observed size-dependent redshift. Comparing simulations with and without the tip (Figs. 3b and 3c), we find that the peak positions exhibit the same size-dependent shift in both cases, confirming that the observed redshift with increasing particle size is intrinsic to the NPoM cavity rather than tip-induced. This conclusion is further supported by previous studies reporting that increasing the tip–substrate distance induces a blueshift,[44] in contrast to the redshift observed here. 11 III. CONCLUSION 
+
+In summary, we demonstrate nano-FTIR spectroscopy of individual phonon-polariton NPoM cavities formed by gold nanoparticles on quartz substrates. These nanocavities support well-defined mid-infrared phonon-polaritonic resonances, including the fundamental L01 and a second-order 
+
+L02 antenna-like NPoM modes, identified via electromagnetic simulations. The simulated cavities exhibit ultrasmall mode volumes V ∼ 700 − 1300 nm 3 (Vnorm ∼ 10 -9 λ3), and high quality factors (Q ∼ 80 − 110 ). In addition, the electric field in the phononic NPoM cavity is strongly enhanced within the nanoscale cavity gap ( |E|/|E0| ∼ 150) and is further enhanced by the presence of the tip (|E|/|E0| ∼ 2700). We thus anticipate the possibility to engineer strongly enhanced IR light–matter interaction in future experiments, where the gap is filled with molecules. We further show that the NPoM cavity resonances can be tuned within the Reststrahlen band of the phononic substrate by changing the nanoparticle size to match for example, specific molecular vibrations. Phonon-polariton NPoMs thus represent a promising platform for nanoscale infrared sensing, vibrational strong coupling, and mid-infrared nanophotonics. Importantly, we demonstrate that the nano-FTIR tip acts as a non-invasive local excitation and detection probe, enabling single-particle spectroscopy of mid-IR NPoMs. The tip does not perturb the stable cavity modes but enhances the electromagnetic field in the NPoM gap by more than one order of magnitude, which may benefit future nonlinear vibrational studies of minute amounts of matter in the NPoM gap, such as vibrational sum-frequency generation[14] and two-dimensional infrared spectroscopy.[48, 49] Detailed experimental and numerical methods are provided in the Supplementary Information. 
+
+> ACKNOWLEDGEMENTS
+
+R.H. and I.H. acknowledge financial support from Grant CEX2020-001038-M funded by the Spanish MICIU/AEI/10.13039/501100011033 and by ERDF/EU; Grant PID2021-123949OB-I00 funded by the Spanish MICIU/AEI/10.13039/501100011033 and by ERDF/EU. J.A. and I.P. ac-knowledge financial support from Grant PID2022-139579NB-I00 funded by MICIU/AEI/10.13039/ 501100011033 and by ERDF/EU and Grant IT 1526-22 from the Basque Government for consoli-dated groups of the Basque University, through the Department of Science, Universities and Inno-vation of the Basque Government. P. R. acknowledges financial support from the Swiss National Science Foundation (Grant No. 206926) and from the European Union’s Horizon 2020 research and 12 innovation program under the Marie Skłodowska-Curie grant agreement No. 101065661. R.H. is a co-founder of Neaspec GmbH, which now is a part of Attocube systems GmbH, a company producing s-SNOM systems, such as the one used in this study. The remaining authors declare no competing financial interest. 
+
+[1] Mock, J. J.; Hill, R. T.; Degiron, A.; Zauscher, S.; Chilkoti, A.; Smith, D. R. Distance-Dependent Plasmon Resonant Coupling between a Gold Nanoparticle and Gold Film. Nano Lett. 2008 , 8 (8), 2245–2252. https://doi.org/10.1021/nl080872f. [2] Baumberg, J. J.; Aizpurua, J.; Mikkelsen, M. H.; Smith, D. R. Extreme Nanophotonics from Ultrathin Metallic Gaps. Nature Materials . Nature Publishing Group July 1, 2019, pp 668–678. https://doi.org/10.1038/s41563-019-0290-y. [3] Ciracì, C.; Hill, R. T.; Mock, J. J.; Urzhumov, Y.; Fernández-Domínguez, A. I.; Maier, S. A.; Pendry, J. B.; Chilkoti, A.; Smith, D. R. Probing the Ultimate Limits of Plasmonic Enhancement. Science (1979). 
+
+2012 , 337 (6098), 1072–1074. https://doi.org/10.1126/science.1224823. [4] Chen, W.; Zhang, S.; Kang, M.; Liu, W.; Ou, Z.; Li, Y.; Zhang, Y.; Guan, Z.; Xu, H. Probing the Limits of Plasmonic Enhancement Using a Two-Dimensional Atomic Crystal Probe. Light Sci. Appl. 
+
+2018 , 7 (1). https://doi.org/10.1038/s41377-018-0056-3. [5] Zhu, W.; Crozier, K. B. Quantum Mechanical Limit to Plasmonic Enhancement as Observed by Surface-Enhanced Raman Scattering. Nat. Commun. 2014 , 5. https://doi.org/10.1038/ncomms6228. [6] Roelli, P.; Hu, H.; Verhagen, E.; Reich, S.; Galland, C. Nanocavities for Molecular Optomechanics: Their Fundamental Description and Applications. ACS Photonics . American Chemical Society May 2024, pp 4486–4501. https://doi.org/10.1021/acsphotonics.4c01548. [7] Hoang, T. B.; Akselrod, G. M.; Mikkelsen, M. H. Ultrafast Room-Temperature Single Photon Emis-sion from Quantum Dots Coupled to Plasmonic Nanocavities. Nano Lett. 2016 , 16 (1), 270–275. https://doi.org/10.1021/acs.nanolett.5b03724. [8] Benz, F.; Chikkaraddy, R.; Salmon, A.; Ohadi, H.; De Nijs, B.; Mertens, J.; Carnegie, C.; Bowman, R. W.; Baumberg, J. J. SERS of Individual Nanoparticles on a Mirror: Size Does Matter, but so Does Shape. Journal of Physical Chemistry Letters 2016 , 7 (12), 2264–2269. https://doi.org/10.1021/acs.jpclett.6b00986. [9] Lu, Z.; Ji, J.; Ye, H.; Zhang, H.; Zhang, S.; Xu, H. Quantifying the Ultimate Limit of Plasmonic Near-Field Enhancement. Nat. Commun. 2024 , 15 (1), 8803. https://doi.org/10.1038/s41467-024-53210-8. [10] Peng, W.; Zhou, J. W.; Li, M. L.; Sun, L.; Zhang, Y. J.; Li, J. F.; Li, J. F. Construction of Nanoparticle-on-Mirror Nanocavities and Their Applications in Plasmon-Enhanced Spectroscopy. Chemical Science .Royal Society of Chemistry January 16, 2024, pp 2697–2711. https://doi.org/10.1039/d3sc05722d. [11] Carnegie, C.; Urbieta, M.; Chikkaraddy, R.; de Nijs, B.; Griffiths, J.; Deacon, W. M.; Kamp, M.; Zabala, 
+
+13 N.; Aizpurua, J.; Baumberg, J. J. Flickering Nanometre-Scale Disorder in a Crystal Lattice Tracked by Plasmonic Flare Light Emission. Nat. Commun. 2020 , 11 (1). https://doi.org/10.1038/s41467-019-14150-w. [12] Chen, W.; Roelli, P.; Ahmed, A.; Verlekar, S.; Hu, H.; Banjac, K.; Lingenfelder, M.; Kippenberg, T. J.; Tagliabue, G.; Galland, C. Intrinsic Luminescence Blinking from Plasmonic Nanojunctions. Nat. Commun. 2021 , 12 (1). https://doi.org/10.1038/s41467-021-22679-y. [13] Li, G. C.; Lei, D.; Qiu, M.; Jin, W.; Lan, S.; Zayats, A. V. Light-Induced Symmetry Breaking for En-hancing Second-Harmonic Generation from an Ultrathin Plasmonic Nanocavity. Nat. Commun. 2021 ,
+
+12 (1). https://doi.org/10.1038/s41467-021-24408-x. [14] Roelli, P.; Pascual Robledo, I.; Niehues, I.; Aizpurua, J.; Hillenbrand, R. In-Operando Con-trol of Sum-Frequency Generation in Tip-Enhanced Nanocavities. Light Sci. Appl. 2025 , 14 (1). https://doi.org/10.1038/s41377-025-01855-5. [15] Jeong, J.; Shin, H.-H.; Kim, Z. H. Unveiling the Mechanism of Plasmon Photocatal-ysis via Multiquantum Vibrational Excitation. ACS Nano 2024 , 18 (36), 25290–25301. https://doi.org/10.1021/acsnano.4c08521. [16] Oksenberg, E.; Shlesinger, I.; Xomalis, A.; Baldi, A.; Baumberg, J. J.; Koenderink, A. F.; Garnett, E. C. Energy-Resolved Plasmonic Chemistry in Individual Nanoreactors. Nat. Nanotechnol. 2021 , 16 
+
+(12), 1378–1385. https://doi.org/10.1038/s41565-021-00973-6. [17] Park, W.-H.; Kim, Z. H. Charge Transfer Enhancement in the SERS of a Single Molecule. Nano Lett. 
+
+2010 , 10 (10), 4040–4048. https://doi.org/10.1021/nl102026p. [18] Urbieta, M.; Barbry, M.; Zhang, Y.; Koval, P.; Sánchez-Portal, D.; Zabala, N.; Aizpurua, J. Atomic-Scale Lightning Rod Effect in Plasmonic Picocavities: A Classical View to a Quantum Effect .[19] Carnegie, C.; Griffiths, J.; De Nijs, B.; Readman, C.; Chikkaraddy, R.; Deacon, W. M.; Szabó, I.; Rosta, E.; Zhang, Y.; Aizpurua, J.; Baumberg, J. J. Room Temperature Optical Picocavities below 1nm 3 Accessing Single Atom Geometries .[20] Baumberg, J. J. Picocavities: A Primer. Nano Lett. 2022 , 22 (14), 5859–5865. https://doi.org/10.1021/acs.nanolett.2c01695. [21] Naik, G. V.; Shalaev, V. M.; Boltasseva, A. Alternative Plasmonic Materials: Beyond Gold and Silver. 
+
+Advanced Materials . June 25, 2013, pp 3264–3294. https://doi.org/10.1002/adma.201205076. [22] Khurgin, J. B. Relative Merits of Phononics vs. Plasmonics: The Energy Balance Approach. Nanopho-tonics 2018 , 7 (1), 305–316. https://doi.org/10.1515/nanoph-2017-0048. [23] Niemann, R.; Mueller, N. S.; Wasserroth, S.; Lu, G.; Wolf, M.; Caldwell, J. D.; Paarmann, A. Spec-troscopic and Interferometric Sum-Frequency Imaging of Strongly Coupled Phonon Polaritons in SiC Metasurfaces. Advanced Materials 2024 , 36 (33). https://doi.org/10.1002/adma.202312507. [24] Weber, T.; Kühner, L.; Sortino, L.; Ben Mhenni, A.; Wilson, N. P.; Kühne, J.; Finley, J. J.; Maier, S. A.; Tittl, A. Intrinsic Strong Light-Matter Coupling with Self-Hybridized Bound States in the Continuum in van Der Waals Metasurfaces. Nat. Mater. 2023 , 22 (8), 970–976. https://doi.org/10.1038/s41563-
+
+14 023-01580-7. [25] Hillenbrand, R.; Taubner, T.; Keilmann, F. Phonon-Enhanced Light-Matter Interaction at the Nanome-tre Scale. Nature 2002 , 418 (6894), 159–162. https://doi.org/10.1038/nature00899. [26] Caldwell, J. D.; Lindsay, L.; Giannini, V.; Vurgaftman, I.; Reinecke, T. L.; Maier, S. A.; Glembocki, O. J. Low-Loss, Infrared and Terahertz Nanophotonics Using Surface Phonon Polaritons. Nanophotonics .Walter de Gruyter GmbH January 1, 2015, pp 44–68. https://doi.org/10.1515/nanoph-2014-0003. [27] Galiffi, E.; Carini, G.; Ni, X.; Álvarez-Pérez, G.; Yves, S.; Renzi, E. M.; Nolen, R.; Wasserroth, S.; Wolf, M.; Alonso-Gonzalez, P.; Paarmann, A.; Alù, A. Extreme Light Confinement and Control in Low-Symmetry Phonon-Polaritonic Crystals. Nature Reviews Materials . Nature Research January 1, 2024, pp 9–28. https://doi.org/10.1038/s41578-023-00620-7. [28] Low, T.; Chaves, A.; Caldwell, J. D.; Kumar, A.; Fang, N. X.; Avouris, P.; Heinz, T. F.; Guinea, F.; Martin-Moreno, L.; Koppens, F. Polaritons in Layered Two-Dimensional Materials. Nature Materials .Nature Publishing Group February 1, 2017, pp 182–194. https://doi.org/10.1038/nmat4792. [29] Duan, J.; Álvarez-Pérez, G.; Lanza, C.; Voronin, K.; Tresguerres-Mata, A. I. F.; Capote-Robayna, N.; Álvarez-Cuervo, J.; Tarazaga Martín-Luengo, A.; Martín-Sánchez, J.; Volkov, V. S.; Nikitin, A. Y.; Alonso-González, P. Multiple and Spectrally Robust Photonic Magic Angles in Reconfigurable α-MoO3 Trilayers. Nat. Mater. 2023 , 22 (7), 867–872. https://doi.org/10.1038/s41563-023-01582-5. [30] Tamagnone, M.; Ambrosio, A.; Chaudhary, K.; Jauregui, L. A.; Kim, P.; Wilson, W. L.; Capasso, F. Ultra-Confined Mid-Infrared Resonant Phonon Polaritons in van Der Waals Nanostructures ; 2018. http://advances.sciencemag.org/. [31] Autore, M.; Li, P.; Dolado, I.; Alfaro-Mozaz, F. J.; Esteban, R.; Atxabal, A.; Casanova, F.; Hueso, L. E.; Alonso-González, P.; Aizpurua, J.; Nikitin, A. Y.; Vélez, S.; Hillenbrand, R. Boron Nitride Nanores-onators for Phonon-Enhanced Molecular Vibrational Spectroscopy at the Strong Coupling Limit. Light Sci. Appl. 2018 , 7 (4). https://doi.org/10.1038/lsa.2017.172. [32] Dolado, I.; Maciel-Escudero, C.; Nikulina, E.; Modin, E.; Calavalle, F.; Chen, S.; Bylinkin, A.; Alfaro-Mozaz, F. J.; Li, J.; Edgar, J. H.; Casanova, F.; Vélez, S.; Hueso, L. E.; Esteban, R.; Aizpurua, J.; Hillenbrand, R. Remote Near-Field Spectroscopy of Vibrational Strong Coupling between Organic Molecules and Phononic Nanoresonators. Nat. Commun. 2022 , 13 (1). https://doi.org/10.1038/s41467-022-34393-4. [33] Wang, Y.; Dong, S.; Li, X.; Hong, C.; Zhang, X. Synthesis, Properties, and Multifarious Applications of SiC Nanoparticles: A Review. Ceramics International . Elsevier Ltd April 1, 2022, pp 8882–8913. https://doi.org/10.1016/j.ceramint.2021.12.208. [34] Klein, M.; Gershuni, Y.; Perutski, A.; Hugonin, J. P.; Epstein, I. Nanometer-Scale Cavities for Mid-Infrared Radiation via Image Phonon Polariton Resonators. Nano Lett. 2025 , 25 (22), 8999–9005. https://doi.org/10.1021/acs.nanolett.5c01352. [35] Lei, D. Y.; Fernández-Domínguez, A. I.; Sonnefraud, Y.; Appavoo, K.; Haglund, R. F.; Pendry, J. B.; Maier, S. A. Revealing Plasmonic Gap Modes in Particle-on-Film Systems Using Dark-Field Spec-
+
+15 troscopy. ACS Nano 2012 , 6 (2), 1380–1386. https://doi.org/10.1021/nn204190e. [36] Hu, M.; Ghoshal, A.; Marquez, M.; Kik, P. G. Single Particle Spectroscopy Study of Metal-Film-Induced Tuning of Silver Nanoparticle Plasmon Resonances. The Journal of Physical Chemistry C 
+
+2010 , 114 (16), 7509–7514. https://doi.org/10.1021/jp911416a. [37] Chikkaraddy, R.; Nijs, B. De; Benz, F.; Barrow, S. J.; Scherman, O. A.; Rosta, E.; Demetriadou, A.; Fox, P.; Hess, O.; Baumberg, J. J. Single-Molecule Strong Coupling at Room Temperature in Plasmonic Nanocavities. Nature 2016 , 535 (7610), 127–130. https://doi.org/10.1038/nature17974. [38] Huth, F.; Schnell, M.; Wittborn, J.; Ocelic, N.; Hillenbrand, R. Infrared-Spectroscopic Nanoimaging with a Thermal Source. Nat. Mater. 2011 , 10 (5), 352–356. https://doi.org/10.1038/nmat3006. [39] Hillenbrand, R.; Abate, Y.; Liu, M.; Chen, X.; Basov, D. N. Visible-to-THz near-Field Nanoscopy. 
+
+Nature Reviews Materials . Nature Research April 1, 2025, pp 285–310. https://doi.org/10.1038/s41578-024-00761-3. [40] Gervais, F.; Piriou, B. Temperature Dependence of Transverse and Longitudinal Optic Modes in the α and β Phases of Quartz. Phys. Rev. B 1975 , 11 (10), 3944–3950. https://doi.org/10.1103/PhysRevB.11.3944. [41] Winta, C. J.; Wolf, M.; Paarmann, A. Low-Temperature Infrared Dielectric Function of Hyperbolic α
+
+-Quartz. Phys. Rev. B 2019 , 99 (14). https://doi.org/10.1103/PhysRevB.99.144308. [42] Tappert, M. C.; Rivard, B.; Tappert, R.; Feng, J. Using Reflectance Spectroscopy to Es-timate the Orientation of Quartz Crystals in Rocks. Can. Mineral. 2013 , 51 (3), 405–413. https://doi.org/10.3749/canmin.51.3.405. [43] Autore, M.; Mester, L.; Goikoetxea, M.; Hillenbrand, R. Substrate Matters: Surface-Polariton En-hanced Infrared Nanospectroscopy of Molecular Vibrations. Nano Lett. 2019 , 19 (11), 8066–8073. https://doi.org/10.1021/acs.nanolett.9b03257. [44] Amarie, S.; Keilmann, F. Broadband-Infrared Assessment of Phonon Resonance in Scattering-Type near-Field Microscopy. Phys. Rev. B Condens. Matter Mater. Phys. 2011 , 83 (4). https://doi.org/10.1103/PhysRevB.83.045404. [45] Zhang, C.; Hugonin, J. P.; Greffet, J. J.; Sauvan, C. Surface Plasmon Polaritons Emission with Nanopatch Antennas: Enhancement by Means of Mode Hybridization. ACS Photonics 2019 , 6 (11), 2788–2796. https://doi.org/10.1021/acsphotonics.9b00797. [46] Tserkezis, C.; Esteban, R.; Sigle, D. O.; Mertens, J.; Herrmann, L. O.; Baumberg, J. J.; Aizpurua, J. Hybridization of Plasmonic Antenna and Cavity Modes: Extreme Optics of Nanoparticle-on-Mirror Nanogaps. Phys. Rev. A 2015 , 92 (5). https://doi.org/10.1103/PhysRevA.92.053811. [47] Voronin, K. V.; León, I. H.; Hillenbrand, R.; Nikitin, A. Y. Quantitative Analytical Spheroid Model for Scattering-Type Scanning Near-Field Optical Spectroscopy. Adv. Opt. Mater. 2025 , 13 (31). https://doi.org/10.1002/adom.202501539. [48] Saurabh, P.; Mukamel, S. Two-Dimensional Infrared Spectroscopy of Vibrational Polari-tons of Molecules in an Optical Cavity. J. Chem. Phys. 2016 , 144 (12), 124115. 
+
+16 https://doi.org/10.1063/1.4944492. [49] Xiang, B.; Wang, J.; Yang, Z.; Xiong, W. Nonlinear Infrared Polaritonic Interaction between Cav-ities Mediated by Molecular Vibrations at Ultrafast Time Scale. Sci. Adv. 2021 , 7 (19), eabf6397. https://doi.org/10.1126/sciadv.abf6397. 
+
+17 – Supplementary Information – Probing individual phonon-polaritonic nanoparticle-on-mirror cavities by infrared nanospectroscopy  
+
+> Supplementary Section 1. Far-field reflectivity measurements on quartz
+
+To determine the in-plane dielectric function ε⊥ of quartz presented in the main text (Fig. 1c) and used in all the numerical calculations, we perform far-field FTIR reflectivity measurements (dots in Fig. S1). The measurements are carried out at near normal incidence on a c-cut quartz crystal (see schematics in Fig. S1). In this configuration, the measured optical response corresponds to the in-plane dielectric function ε⊥,[S1] which is obtained through the normalized reflectivity R(ν)
+
+R(ν) = | n⊥(ν) − 1 |2
+
+| n⊥(ν) + 1 |2 (S1) where n⊥(ν) = pε⊥(ν) is the complex-valued refractive index corresponding to the in-plane dielec-tric function. In the spectral range of interest, the in-plane dielectric response of quartz is dominated by two infrared-active phonon modes.[S1, S2] Accordingly, we model the in-plane dielectric function 
+
+ε⊥ using a double Lorentz oscillator model to account for these two phonon modes: 
+
+ε⊥ (ν) = ε⊥∞ 1 + ν2 
+
+> LO, 1
+
+− ν2
+
+> T O, 1
+
+ν2 
+
+> T O, 1
+
+− ν2 − i γ 1 ν + ν2 
+
+> LO, 2
+
+− ν2
+
+> T O, 2
+
+ν2 
+
+> T O, 2
+
+− ν2 − i γ 2 ν
+
+!
+
+(S2) where ε⊥∞ is the high-frequency permittivity. νT O,j , νLO,j and γj (j = 1, 2) are the transverse and longitudinal optical phonon frequencies, and the damping constant of each phonon mode, respectively. Fitting the experimental reflectivity with Eq. S1 using the dielectric model of Eq. S2 yields the solid curve shown in Fig. S1. The extracted parameters are ε⊥∞ = 1.95; νLO, 1 = 1225 cm -1 ,
+
+νT O, 1 = 1065 cm -1 , γ1 = 12.5 cm -1 ; νLO, 2 = 1163.5 cm -1 , νT O, 2 = 1160.7 cm -1 , γ2 = 10.5 cm -1 .These parameters are used in the main text to describe the optical response of the quartz samples employed in the experiments and in all the numerical calculations performed in this study. 18 Supplementary Figure S1. Normalized reflectivity spectrum of quartz under normal incidence for a c-cut orientation (see schematics). The dots represent the experimental data, and the solid line corresponds to the fit obtained using a double Lorentz oscillator model.  
+
+> Supplementary Section 2. Spectra as a function of tip–quartz separation
+
+In the discussion of Fig. 1 of the main text, we present spectra measured on various phononic NPoMs, which show two distinct peaks within the region of interest. To verify that the observed spectral features arise from the presence of the NPoM rather than from variations in the tip–quartz separation, we compare two types of spectra: (i) nano-FTIR spectra with the tip positioned on top of the NPoM (Fig. 1d, red). (ii) spectrum recorded on quartz at a tip–quartz distance similar to the NP size, i.e. 60 nm (Fig. 1d, green). In this section we explain in detail how these measurements were performed and the reasons for not using standard nano-FTIR spectroscopy. To retract the sample from the tip, the closed-loop feedback controlling the vertical sample position is switched off, leaving the tip–sample distance unstable. However, standard nano-FTIR measurements typically require acquisition times of 30 seconds to a few minutes, making stable tip–sample positioning essential. Without feedback, the tip position in our setup is insufficiently stable to record conventional nano-FTIR spectra in the non-contact regime. To overcome this limitation, we use a monochromatic quantum cascade laser (QCL) to record retraction curves at selected wavenumbers, enabling reconstruction of near-field spectra as a function of the tip–sample distance. Retraction curves are acquired as follows. The tip is positioned above the sample and operated 19 s 4 / s  4,Au 1000 1100 z = 0 nm 2 nm 3 nm 5 nm 10 nm 20 nm 30 nm 40 nm 60 nm 1200 Wavenumber (cm -1 )s 4Mechanical Amplitude  (nm) Tip position (nm) 0 20 40 60 M1A s40864254 62 70 10 nm 20 nm 60 nm 0123
+
+a b 
+
+> 1 nm
+> 1100 1140 10
+
+Supplementary Figure S2. (a) Representative retraction curve on a quartz sample measured at a laser wavenumber of 1095 cm -1 , using an oscillating Pt/Ir tip, with tapping amplitude 70 nm and tip apex radius 50 nm. The mechanical amplitude recorded by the AFM quadrant detector is shown in orange, while the fourth order demodulated optical amplitude is shown in blue. The black dashed line marks the point at which the tip loses contact with the sample. Green markers indicate the optical amplitude at selected tip–quartz distances. (b) In blue, nano-FTIR spectrum measured on quartz. In green, spectra constructed from a set of retraction curves acquired at different illumination wavenumbers. The optical amplitude is extracted at fixed tip distances for each wavenumber, as illustrated in (a). The inset shows the same data after normalization, for improved visualization of the spectral shift with tip–quartz separation. 
+
+in tapping mode under standard feedback conditions. The feedback controlling the tip–sample distance is then switched off, and the sample is retracted from the oscillating tip along the z-axis using a piezoelectric actuator. During retraction, both the tip ´s oscillation amplitude and the near-field signal are measured as a function of the tip–sample separation. An example retraction curve acquired on quartz with the QCL tuned to 1095 cm −1 is shown in Fig. S2a. The mechanical oscillation amplitude (shown in orange) is used to identify the point at which the oscillating tip loses contact with the surface. This point, marked by the dashed line, defines the reference position z = 0. For positions z > 0, the tip oscillates above the surface without contact to the sample. When the sample is retracted, i.e when z increases, the near-field signal s4
+
+decreases because of the decreasing near-field interaction between tip and sample.[S3] To reconstruct near-field spectra at different tip–quartz separations, the procedure is repeated at multiple laser wavenumbers spanning 1050 – 1150 cm −1. For each wavenumber, a retraction curve is recorded and the corresponding s4(z) values are extracted. These values are then referenced to a standard nano-FTIR spectrum measured on quartz under identical conditions (same tip, tapping amplitude and signal demodulation order). By combining the referenced near-field amplitudes 20 acquired through the QCL tuning range, we obtain spectra as a function of tip–quartz distance 
+
+z. The reconstructed spectra are displayed in Fig. S2b, showing that the near-field resonance of quartz redshifts and broadens with increasing tip–sample distance. This behavior is consistent with previous experimental[S3, S4] and theoretical studies[S5] on phononic materials. Comparison of the reconstructed spectra with the nano-FTIR spectra measured on phononic NPoMs (Fig. 1d, red curves) shows that the two distinct peaks observed in the NPoM spectra within the spectral region of interest cannot be explained by an increased tip–quartz distance. Instead, they arise from the presence of the nanoparticle and its associated phonon-polaritonic cavity modes. 21 Supplementary Section 3. Effect of quartz anisotropy on the local field enhancement in the NPoM cavity 
+
+All the simulations shown in the main text were performed using only the in-plane dielectric function ε⊥ of quartz, rather than its full dielectric tensor ←→
+
+ε = Diag( ε⊥, ε ⊥, ε ∥).[S1] In this section we show that this isotropic approximation based on ε⊥ provides an accurate description of the system, justifying its use in the main text and in all numerical calculations. As discussed in the main text, quartz is a uniaxial anisotropic crystal whose dielectric tensor, for a c-cut orientation, is given by ←→
+
+ε = Diag( ε⊥, ε ⊥, ε ∥).[S1] We extract the in-plane dielectric function ε⊥ directly from FTIR measurements, as discussed in Section S1 of this Supplementary Information (SI). However, the out-of-plane dielectric function ε∥ cannot be directly measured using our experimental configuration.              
+
+> Supplementary Figure S3. (a) In-plane dielectric function ε⊥fitted from reflectivity measurements (black) and estimated out-of-plane dielectric function ε∥(red). (b) Maximum electric field enhancement in the NPoM gap for two cavities with the quartz modelled as: (i) an isotropic material with dielectric function
+> ε⊥(black), and (ii) an anisotropic material with dielectric tensor ←→
+> ε= Diag( ε⊥, ε ⊥, ε ∥)(red).
+
+To estimate ε∥, we rely on published FTIR measurements of quartz from the literature.[S1, S2] These studies show that ε∥ closely follows the spectral behavior of ε⊥. In particular, ε∥ exhibits a single phonon resonance at 1071 cm −1, with a quality factor similar to that of the 1065 cm −1
+
+phonon resonance observed for ε⊥. The two phonon resonances define a narrow spectral region (of 
+
+∼ 6 cm −1) in which Re {ε⊥} < 0 and Re {ε∥} > 0, corresponding to a region of hyperbolic light propagation. However, the effect of hyperbolic propagation is expected to be limited due to the 22 following factors: (i) spectral window is only 6 cm −1 wide, (ii) this window is located approximately 30 cm −1 away from the main NPoM cavity resonances (1100 cm −1, as observed experimentally in Fig. 1d and theoretically in Fig. 2 of the main text), and (iii) the large negative values of Re {ε⊥}∼ − 25 strongly restrict electromagnetic field penetration into the substrate. To evaluate the impact of quartz anisotropy, we implement the complete quartz dielectric tensor 
+
+> ←→
+
+ε = Diag( ε⊥, ε ⊥, ε ∥) in the numerical simulations. We estimate the out-of-plane dielectric function 
+
+ε∥ by modifying the measured in-plane dielectric function ε⊥ (black curve in Fig. S3a). In particular, we use a dielectric model similar as the one used for ε∥ in Eq. S2. 
+
+ε∥(ν) = ε∥∞ 1 + ν2 
+
+> LO, 1
+
+− ν2
+
+> T O, 1
+
+ν2 
+
+> T O, 1
+
+− ν2 − iγ 1ν
+
+!
+
+, (S3) with parameters ε∥∞ = 1.95, νLO, 1 = 1225 cm -1 , νT O, 1 = 1071 cm -1 , γ1= 11.0 cm -1 . We plot the resulting dielectric function for ε∥ as a red curve in Fig. S3a. In Fig. S3b we compare electromagnetic simulations performed using only ε⊥, with simulations including the full anisotropic tensor ←→
+
+ε = Diag( ε⊥, ε ⊥, ε ∥). In particular, we plot the spectrum of maximum field enhancement in the NPoM gap max {| E|(ν)/|E0|(ν)}. For both types of simulations, the electric field spectra in the NPoM cavity exhibit two characteristic peaks, corresponding to the L01 and L02 modes discussed in the main text. The inclusion of anisotropy only results in a slight blueshift of the peaks and a modest increase in the field intensity, consistent with the contribution of the out-of-plane component ε∥ to the optical response of quartz. These results indicate that quartz anisotropy has a negligible influence on the optical response of the NPoM cavities considered in this study. 23 Supplementary Section 4. Surface charge distribution of the NPoM 
+
+In Fig. 2 of the main text, the field enhancement spectra in the NPoM cavity gap exhibit two resonance peaks, both in presence and absence of the tip (Fig. 2b). To identify the modes associated with these resonances, we plot the nanoparticle surface charge distributions at the corresponding wavenumbers. For the first resonance, occurring at 1110 cm −1 for the bare NPoM (1108 cm −1
+
+with the tip), the surface charge distribution exhibits a single sign change along the nanoparticle ´svertical axis (Fig. S4a), characteristic of the fundamental antenna mode, denoted as L01 . The second resonance, occurring at 1130 cm −1 (1128 cm −1 respectively), displays two sign changes along the vertical axis, indicating a second order antenna mode, which we label as L02 .         
+
+> Supplementary Figure S4. (a) Surface charge distribution on the NP associated with the L01 NPoM cavity mode in absence (left) and presence (right) of the tip. (b) Same for the L02 NPoM cavity mode. The quartz substrate has been excluded to improve visualization at the bottom surface of the NP.
+
+24 Supplementary Section 5. Mode volume and quality factor calculation 
+
+To quantitatively characterize the cavity modes identified in the main text (Fig. 2), we extract the quality factor Q, the mode volume V and the Purcell factor PF . These quantities provide a quantitative description of the spectral and spatial confinement of the NPoM cavity modes. The quality factor Q is a dimensionless parameter that quantifies how long the cavity stores en-ergy, corresponding to the ratio between the energy stored and the energy dissipated per oscillation cycle of the light inside the cavity. In this context, the definition of Q is expressed by the ratio between the resonance wavenumber νj and its linewidth (FWHM) γj , given by 
+
+Q = νj
+
+γj
+
+(S4) We determine Q from the spectrum of the field enhancement at the center of the NPoM cavity under plane-wave excitation max {| E|(ν)/|E0|(ν)}, shown in the Fig. 2 of the main text. To extract 
+
+Q, the amplitude of the electric field in the gap is fitted using a coherent sum of two uncoupled harmonic oscillators, which models the response of the electric field enhancement in the gap as: 
+
+f1(ν) = efb + A1
+
+ν21 − ν2 − iγ 1ν + A2eiϕ 
+
+ν22 − ν2 − iγ 2ν (S5) Here, efb is a complex-valued non-resonant background contribution, and each oscillator term de-scribes a cavity mode with resonance frequency νj , linewidth (FWHM) γj , amplitude Aj and relative phase ϕ.Fitting this model to the electric field in the gap (black curve in Fig. 2 of the main text) yields the parameters efb = 1.434 + i0.01, ϕ = 3.174 rad, ν1 = 1108.1 cm −1, γ1 = 13.7 cm −1, ν2 = 1132.8 cm −1, γ2 = 11.8 cm −1. In Fig. S5a, we compare the electric field enhancement in the NPoM gap (plotted in black) with the corresponding fit (plotted in red). From the fit values, we obtain Q1 =
+
+81 for the fundamental NPoM cavity mode and Q2 = 96 for the second-order mode. To determine the Purcell factor and, consequently, the mode volume, we perform numerical simulations using a point-dipole source instead of a plane wave. In particular, the dipolar source must be positioned at the center of the NPoM gap. This approach provides access to quantities such as the local density of optical states ρ (LDOS), the decay rate of the emitter Γ, which characterize light-matter interaction at the cavity.[S6] The electromagnetic response of the system to a dipole source is described through the Green’s tensor formalism.[S6] The electric field generated by a dipole moment −→p at position −→r 0 is given by 
+
+−→
+
+E (−→r , ω ) = μ0ω2←→
+
+G (−→r , −→r 0; ω) · −→p , (S6) 25 where ←→
+
+G(−→r , −→r 0; ω) is the dyadic Green’s tensor of the system, ω = 2 πν is the angular frequency and μ0 is the vacuum permeability. From this formalism, the power emitted by the dipole is given by 
+
+P (ω) = ω
+
+2 Im 
+
+h−→p ∗ · −→
+
+E (r0, ω )
+
+i
+
+, (S7) which quantifies the coupling between the dipole and the cavity modes and is directly computed from the local fields obtained in the simulations. The emitted power is directly related to both the LDOS ρ and to the decay rate of the emitter. The LDOS ρ at the dipole position is given by 
+
+ρ (−→r , ω ) = P (ω) 4ε0
+
+πω 2
+
+1
+
+|−→p |2 , (S8) while the emitter decay rate is 
+
+Γ( ω) = P (ω)
+
+ℏω . (S9) The Purcell factor is defined as the modification of the emission rate of an emitter inside of a cavity with respect to its emission in free space. To compute it, we perform a simulation with the same dipolar source in vacuum. The Purcell factor is then given by 
+
+PF (ω) = Γ( ω)Γ0(ω) = P (ω)
+
+P0(ω) (S10) The Purcell factor calculated for the NPoM cavity is shown in black in Fig. S5b. In this spectrum, two broad and prominent peaks are observed, which correspond to the collective contribution of a quasi-continuum of higher-order modes.[S7] As a result, the cavity modes of interest of this study, namely the fundamental L01 and second-order L02 NPoM resonances discussed in the main text, appear as weaker shoulders superimposed on top of a dominant background corresponding to contribution of the higher-order modes.[S8] To properly isolate and analyze the cavity modes of interest, the background must be removed. To this end, the background is fitted using a model of two Lorentzian functions, 
+
+f2(ν) = h1
+
+γ1
+
+(ν − ν1)2 + γ21
+
++ h2
+
+γ2
+
+(ν − ν2)2 + γ22
+
++ b (S11) The resulting fit (plotted in dashed-red in Fig. S5b) is subtracted from the total Purcell factor (plotted in black in Fig. S5b). The resulting background-free Purcell spectrum is shown in blue in Fig. S5c, exhibiting two clear peaks at the resonance frequencies of the L01 and L02 NPoM modes. To properly extract the linewidths and the corresponding quality factors of these modes, we fit 26 Supplementary Figure S5. Extraction of cavity parameters. (a) Maximum electric field enhance-ment max {| E|(ν)/|E0|(ν)} in the NPoM gap under plane-wave excitation (black) and its corresponding fit to Eq. S5 (red dashed line), used to extract the resonance frequencies and linewidths of the NPoM cavity modes. (b) Total Purcell factor PF (black), with background contributions fitted by to Eq. S11 (red dashed line). (c) Isolated Purcell factor PF after subtraction of the background (blue line). Intrinsic NPoM cavity resonances (orange) and their fit to Eq. S11 (orange dashed line), used to extract linewidths and resonance positions. Grey vertical lines in all panels mark the resonance frequencies of the L01 and L02 NPoM modes. 
+
+the background-free Purcell spectrum using Eq. S11. The fit is shown as an orange dashed line in Fig. S5c. For completeness, we provide in Table S1 the resonance frequencies, spectral linewidths and quality factor of the L01 and L02 NPoM modes. These values are consistently obtained from physical observables, such as electric field enhancement (Fig. S5a), the LDOS (Eq. S8, radiative decay rate (Eq. S9 or the isolated Purcell factor (Fig. S5c). Overall, we obtain Q1 ∼ 80 for the 
+
+L01 mode and Q2 ∼ 110 for the L02 mode. This confirms that the extracted quality factors are independent of the specific observable used for the fitting, with only slight numerical discrepancies. Once both the quality factor Q and the Purcell factor PF are determined, the mode volume V
+
+can be extracted. The mode volume quantifies the spatial confinement of the electromagnetic field inside the cavity. For a resonant cavity supporting well-defined eigenmodes ( j = 1, 2, . . . ), the Purcell factor of each mode j is related to the quality factor Qj and the mode volume Vj as 
+
+PF,j = 34π2
+
+ λj
+
+n
+
+3 Qj
+
+Vj
+
+, (S12) where λj is the resonance wavelength of the mode j and n is the refractive index of the reference medium (in our case n = 1, as the reference emission is in vacuum). From this relation, the mode volume of each mode is obtained as 
+
+Vj = 34π2
+
+ λj
+
+n
+
+3 Qj
+
+PF,j 
+
+. (S13) 27 Supplementary Table S1. Resonance frequencies νj , spectral linewidths (FWHM) γj and quality factors 
+
+Qj for the first ( j = 1) and second ( j = 2) NPoM cavity modes, obtained from different physical observables such as the electric field enhancement in the NPoM gap |E|/|E0|, the local density of optical states (LDOS), the radiative decay rate Γ, and the isolated PF after background subtraction. 
+
+|E|/|E0| LDOS Γ Isolated PF
+
+ν1 (cm −1) 1108 1108 1108 1108 
+
+γ1 (cm −1) 14 12 13 12 
+
+Q1 81 89 86 91 
+
+ν2 (cm −1) 1133 1129 1131 1130 
+
+γ2 (cm −1) 12 8 10 12 
+
+Q2 96 142 109 97 
+
+Using the extracted values of Qj (Supplementary Table S1) and the Purcell factor PF,j (Fig. S5b) at each resonance, we obtain mode volumes of approximately 1500 nm 3 for the L01 mode ( j = 1) and 700 nm 3 for the L02 mode ( j = 2). When normalized to the resonant wavelength of each of the modes ( λ1 = 9000 nm, λ2 = 8850 nm), the mode volume can be expressed as a dimensionless compression factor, yielding values of approximately 2 · 10 -9 for L01 and 1 · 10 -9 for L02 . The full set of mode volumes and compression factors for L01 and L02 is reported in Supplementary Table S2. 
+
+Supplementary Table S2. Mode volumes Vj and wavelength-normalized compression factors Vj /λ 3 
+
+> j
+
+for the first ( j = 1) and second ( j = 2) NPoM cavity modes, obtained from the extracted quality factors Qj
+
+and Purcell enhancements PF reported in Supplementary Table S1. 
+
+|E|/|E0| LDOS Γ Isolated PF
+
+V1 (nm 3) 1312 1458 1355 1485 
+
+V1/λ 31 1.8 · 10 −9 2.0 · 10 −9 1.9 · 10 −9 2.0 · 10 −9
+
+V2 (nm 3) 690 1040 762 699 
+
+V2/λ 32 1.0 · 10 −9 1.5 · 10 −9 1.1 · 10 −9 1.0 · 10 −9
+
+28 Supplementary Section 6. Modification of the modes upon tip approach 
+
+In the main text, we show that the presence of the tip leads to a stronger enhancement of the local electric field in the NPoM gap, while the spectral position and linewidth of the cavity resonances remain essentially unchanged. However, given the strong near-field interaction between the tip and the NPoM cavity, it is not obvious a priori that the tip does not perturb the intrinsic NPoM cavity properties. In this section, we verify this by quantifying the effect of the tip on the quality factor and on the lateral confinement of the NPoM cavity modes. To evaluate the quality factor Q we follow the same procedure described in the previous section, where Q is extracted from the electric field spectra in the NPoM gap. In Fig. S6 we compare the spectral response of the system without and with the tip, corresponding to the data shown in Fig. 2b of the main text. By fitting the electric field in the presence of the tip (Fig. S6b) with a double harmonic oscillator model (Eq. S4, we obtain for the first NPoM cavity mode a resonance frequency ν1 = 1105 cm −1 and a linewidth (FWHM) of γ1 = 14 cm −1, while for the second-order mode we obtain ν2 = 1131 cm −1, γ2 = 11 cm −1. These values correspond to quality factors Q1 =
+
+80 and Q2 = 108, respectively. When comparing these values with those obtained for the NPoM cavity in absence of the tip (Supplementary Table S1), we find a good quantitative agreement. This indicates that the tip does not introduce additional losses comparable to the non-radiative losses of the cavity modes nor significantly modify their resonance frequencies.               
+
+> Supplementary Figure S6. Variation of Qupon tip approach. Maximum field enhancement
+> max {| E|(ν)/|E0|(ν)}in the NPoM gap under plane-wave excitation (solid line) and its corresponding fit to a double Lorentz harmonic oscillator model (dashed line), used to extract the resonance frequencies and linewidths of the NPoM cavity modes. (a) NPoM cavity in absence of the tip (b) NPoM cavity in presence of the tip.
+
+29 To quantify the effect of the tip on the lateral confinement of the NPoM cavity modes, we analyze the spatial distribution of the electric field in the gap at the resonance frequencies. To this end, we consider the total field amplitude in the gap region (Fig. S7a) and extract a line profile along the y-axis ( x = 0) through the gap horizontal midplane (Fig. S7b). The field is normalized to its maximum value, and the spatial extent w is defined as the distance between the spatial positions at which the field amplitude decreases to 1/ e of its maximum. We plot the spatial profiles and the corresponding spatial extents w in Fig. S7b. The fundamental 
+
+L01 mode exhibits a well-defined Gaussian shape with a spatial extent w = 8 nm and a variation of approximately 3 % upon tip approach. For the second-order L02 mode, the presence of side lobes complicates the analysis. To include their contribution, we estimate w using a Gaussian fit (dashed line in Fig. S7b) of the full field profile. The extracted spatial extent is w = 10.2 nm in absence of the tip and w = 8.4 nm in presence of the tip, corresponding to a 18 % variation. When considering only the central lobe, the variation upon tip approach is of about 5 %. In absolute numbers, the spatial extent of the NPoM modes always remains ∼ 10 nm.         
+
+> Supplementary Figure S7. Lateral confinement of NPoM cavity modes. (a) Spatial distribution of the total electric field enhancement |E|(ν)/|E0|(ν)in the NPoM gap at the resonance frequencies in presence and absence of the tip. (b) Line profiles of the normalized electric field amplitude in the gap (solid lines) and the corresponding Gaussian fits for the second-order mode. Horizontal dashed lines mark the 1/ evalue, from which the spatial extent is defined, as indicated by the horizontal arrows.
+
+Overall, these results demonstrate that the presence of the tip has a negligible impact on both the quality factor and the spatial confinement of the NPoM modes. They validate the conclusion presented in the main text: the tip strongly enhances the local field in the NPoM cavity without significantly altering the intrinsic spectral properties or spatial extent of the cavity modes, thereby acting primarily as a near-field probe. 30 Supplementary Section 7. Calculated demodulated near-field spectra on quartz 
+
+As illustrated in Fig. 2d of the main text and Supplementary Section 2, the tip–quartz distance strongly influences the spectral position and intensity of the surface phonon polariton. Increasing the tip–quartz separation by only 10 nm results in a substantial blueshift and attenuation of the fundamental mode, while the higher-order modes become strongly suppressed. Since nano-FTIR measurements rely on modulation of the near-field signal through tip oscillation, understanding how these resonances evolve as a function of tip–quartz distance is essential for interpreting the measured spectra. s 4 / s  4,Au 40     
+
+> 810s 0 / s  0,Au 1050 1150 1100
+> s 4 / s  4,Au 408102s 0 / s  0,Au 1050 1150 1100 Wavenumber (cm -1 )Wavenumber (cm -1 )H0= 2 nm 3 nm 4 nm 6 nm 8 nm 10 nm 14 nm 20 nm 32 nm 42 nm
+
+a b
+
+Supplementary Figure S8. (a) Numerical calculation of demodulated signal (blue) for a tip oscillating with 40 nm tapping amplitude on top of quartz, compared to non-demodulated signals with a static tip at different distances H0 from quartz (red). (b) Same data as in (a) , a vertical offset is applied for better visualization. Red dots and diamonds mark the spectral position attributed to the L01 mode and the L02 
+
+mode respectively. 
+
+To investigate the effect of the dynamically varying tip–quartz separation during a tip tapping cycle, we employ the spheroid tip model.[S9] We first calculate non-demodulated spectra corre-sponding to a static tip positioned at fixed distances above the quartz surface (Fig. S8, red curves). These calculations are performed for tip–quartz separations H0 ranging from 2 to 42 nm and are referenced to a gold substrate. For the smallest separation ( H0 = 2 nm), the fundamental L01 mode appears at 1105 cm −1. As the tip is retracted, this resonance exhibits a pronounced blueshift, reach-ing 1146 cm −1 at H0 = 42 nm, while its amplitude decreases due to the reduced electromagnetic interaction between the tip and the quartz substrate. A similar trend is observed for the L02 mode, which is located at 1134 cm −1 for H0 = 2 nm. This mode also blueshifts with increasing distance but decays much faster in amplitude, becoming negligible for H0 > 10 nm. 31 We next calculate the demodulated near-field response using the same model. Specifically, we evaluate the fourth harmonic of the scattered field for a tip oscillating with a tapping amplitude of 40 nm and a minimum tip–quartz distance of 2 nm. The resulting spectrum (Fig. S8, blue curve), also referenced to gold, exhibits a substantially broader resonance than the corresponding static spectra. This broadening arises from the demodulation process. During tapping-mode operation, the tip samples a continuous range of tip–quartz distances within each oscillation cycle, and the detected higher-harmonic signal represents a weighted average of the near-field response over this trajectory. Since the resonance frequency of the L 01 mode depends strongly on the tip–quartz distance (see Supplementary Section 2), averaging over the oscillation cycle results in a broadening of the main spectral peak, while other peaks remain indistinguishable. This behavior is consistent with the experimental results (see inset of Fig. 1d in the main text). In summary, direct nano-FTIR measurements on quartz are not suitable for accessing the phononic cavity modes that emerge at nanometer-scale tip–quartz separations. In contrast, in the NPoM geometry the nanoparticles remain at a fixed distance from the quartz substrate, enabling the cavity modes to persist and be directly observed in the measured spectra. 32 Supplementary Section 8. Experimental Methods 
+
+Sample preparation: We use alpha-quartz substrates with a [0001] orientation (CrysTek, c-cut, citrate capping agent). We prepare the samples via dropcasting, using commercially available Au nanoparticles (40 nm, 60 nm and 80 nm gold colloids from BBI Solutions). After increasing the nanoparticle solution concentration by a factor of four via centrifugation (5 minutes with 10000 rpm for 40 nm, 6000 rpm for 60 nm and 5000 rpm for 80 nm). We deposit a drop of the solution on the quartz substrates. The samples are then left in a fume hood to allow most of the water to evaporate. This process takes 30 – 60 minutes, depending on the drop size and conditions. The sample is then gently rinsed with distilled water to remove residual impurities, followed by 5-minute of plasma cleaning. 
+
+FTIR measurements: FTIR spectra are recorded with a Bruker Hyperion 2000 FTIR spec-trometer using a 15x IR Cassegrain objective with numerical aperture NA = 0.4. The measurements are performed in reflection mode with unpolarized light. We use a separate gold substrate as a ref-erence. The spectrum shown in Fig. S1 is an average of 200 spectra recorded over the spectral range 600 – 4000 cm −1, with a resolution of 4 cm −1.
+
+Nano-FTIR measurements: We use a commercial nano-FTIR setup (Attocube Systems AG), in which an oscillating Pt/Ir-coated AFM tip (nano-IR, NanoWorld AG), operated at a frequency at a frequency Ω ≈ 250 kHz with a tapping amplitude of 70 nm, is illuminated by p-polarized mid-IR broadband radiation generated by a supercontinuum laser (Femtofiber pro IR and SCIR; Toptica; average power of 0.5 mW; wavenumber range 800 – 1400 cm −1). The detector signal is demodulated at a frequency nΩ (with n = 3, 4) for effective background suppression. Interferograms are measured by recording the demodulated detector signal as a function of the position of the reference mirror and averaged over 20 runs. For apodization of the interferograms, a Tukey window function with α =
+
+0.2 is applied. After zero-filling (3 × padding), we Fourier transform the interferograms to obtain complex-valued near-field point spectra, Es(ω). We normalize the resulting spectra to a reference spectrum measured on a separate gold sample, Es, Au (ω), acquired under the same conditions and parameters. Each interferogram consists of 1024 pixels, with an integration time of 15 ms per pixel, so that each measurement lasted 5 minutes. The spectral resolution is 6.25 cm −1, which is the limit of the setup. 
+
+Retraction curve measurements: We used the same setup and settings as described in the section above. The tip is illuminated with radiation from a quantum cascade laser (QCL; MIRcat; Daylight Photonics) at wavenumbers between 1050 and 1150 cm −1. The detector signal is 33 demodulated at a frequency 4 Ω for effective background suppression. Each measurement consists of a retraction scan in which the sample is retracted in 1000 steps over a total distance of 150 nm, with an integration time of 50 ms per step.  
+
+> Supplementary Section 9. Numerical Methods
+
+IR materials response: We model the IR response of the materials considered in the numerical calculations as follows. The dielectric function for the platinum (Pt) tip, corresponds to a Brendel and Bormann model.[S10] The dielectric function of gold (Au) is obtained by linearly interpolating data from literature.[S11] For the quartz substrate, we obtain the in-plane dielectric function ε⊥(ω)
+
+by fitting FTIR reflectivity measurements described in Supplementary Section 1. For simplicity, we neglect the intrinsic optical anisotropy of quartz and treat its optical response as isotropic with dielectric tensor ←→
+
+ε = Diag( ε⊥ , ε ⊥ , ε ⊥). The impact of this approximation is discussed in the Supplementary Section 3. 
+
+Numerical simulations: The electromagnetic simulations are performed with a commercial FEM package (COMSOL). The simulation universe contains a Pt tip, modeled as a 1 micron height half ellipsoid with either 25 nm or 50 nm apex diameter, a spherical gold nanoparticle with no facet of diameter dNP = 40, 50, 60, 80 nm, which is separated from a 1 um thick quartz bulk by a 1 nm thin dielectric layer with refractive index n = 1.4. The simulation universe consists of a box of 6.5 μm width and 4.5 μm height, surrounded by a 3 μm thick PML layer. Special care is taken to mesh the near-contact regions of the tip-enhanced phononic NPoM, that is the tip-NP and NP-quartz gaps. From the numerical calculations, we obtain the maximum of the scattered field in the horizontal midgap plane between the NP and substrate. We illuminate the system with a p-polarized plane-wave excitation incident at an angle of 35 ◦ from the quartz surface ( x − y plane). 34 [S1] Winta, C. J.; Wolf, M.; Paarmann, A. Low-Temperature Infrared Dielectric Function of Hyperbolic 
+
+α -Quartz. Phys. Rev. B 2019 , 99 (14). https://doi.org/10.1103/PhysRevB.99.144308. [S2] Gervais, F.; Piriou, B. Temperature Dependence of Transverse and Longitudinal Optic Modes in the α and β Phases of Quartz. Phys. Rev. B 1975 , 11 (10), 3944–3950. https://doi.org/10.1103/PhysRevB.11.3944. [S3] Amarie, S.; Keilmann, F. Broadband-Infrared Assessment of Phonon Resonance in Scattering-Type near-Field Microscopy. Phys. Rev. B Condens. Matter Mater. Phys. 2011 , 83 (4). https://doi.org/10.1103/PhysRevB.83.045404. [S4] Hillenbrand, R.; Taubner, T.; Keilmann, F. Phonon-Enhanced Light-Matter Interaction at the Nanometre Scale. Nature 2002 , 418 (6894), 159–162. https://doi.org/10.1038/nature00899. [S5] Renger, J.; Grafström, S.; Eng, L. M.; Hillenbrand, R. Resonant Light Scattering by Near-Field-Induced Phonon Polaritons. Phys. Rev. B Condens. Matter Mater. Phys. 2005 , 71 (7). https://doi.org/10.1103/PhysRevB.71.075410. [S6] Novotny, L.; Hecht, B. Principles of Nano-Optics ; Cambridge University Press, 2012. https://doi.org/10.1017/CBO9780511794193. [S7] Delga, A.; Feist, J.; Bravo-Abad, J.; Garcia-Vidal, F. J. Quantum Emitters Near a Metal Nanoparticle: Strong Coupling and Quenching. Phys. Rev. Lett. 2014 , 112 (25), 253601. https://doi.org/10.1103/PhysRevLett.112.253601. [S8] Esteban, R.; Baumberg, J. J.; Aizpurua, J. Molecular Optomechanics Approach to Surface-Enhanced Raman Scattering. Acc. Chem. Res. 2022 , 55 (14), 1889–1899. https://doi.org/10.1021/acs.accounts.1c00759. [S9] Voronin, K. V.; León, I. H.; Hillenbrand, R.; Nikitin, A. Y. Quantitative Analytical Spheroid Model for Scattering-Type Scanning Near-Field Optical Spectroscopy. Adv. Opt. Mater. 2025 , 13 (31). https://doi.org/10.1002/adom.202501539. [S10] Rakić, A. D.; Djurišić, A. B.; Elazar, J. M.; Majewski, M. L. Optical Properties of Metallic Films for Vertical-Cavity Optoelectronic Devices. Appl. Opt. 1998 , 37 (22), 5271. https://doi.org/10.1364/AO.37.005271. [S11] Babar, S.; Weaver, J. H. Optical Constants of Cu, Ag, and Au Revisited. Appl. Opt. 2015 , 54 (3), 477. https://doi.org/10.1364/AO.54.000477. 
+
+35

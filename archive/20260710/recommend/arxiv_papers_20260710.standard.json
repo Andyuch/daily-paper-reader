@@ -1,0 +1,460 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-10T21:26:42.483209+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 10,
+    "quick_skim_target": 11,
+    "quick_selected": 10
+  },
+  "deep_dive": [
+    {
+      "id": "2607.03170v1",
+      "source": "arxiv",
+      "title": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "abstract": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "authors": [
+        "Emmanuel Kotu Robertson",
+        "Dennis van de Lockand",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-03T10:10:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.03170v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Femtosecond pump-probe holographic microscopy for phototransient phase contrast",
+      "llm_evidence_cn": "用于光瞬态相位对比的飞秒泵浦-探测全息显微术",
+      "llm_evidence": "用于光瞬态相位对比的飞秒泵浦-探测全息显微术",
+      "canonical_evidence": "用于光瞬态相位对比的飞秒泵浦-探测全息显微术",
+      "llm_tldr_en": "Presents a bidirectional holographic microscope for high-resolution phototransient imaging.",
+      "llm_tldr_cn": "介绍了一种用于高分辨率光瞬态成像的双向全息显微镜。",
+      "llm_tldr": "介绍了一种用于高分辨率光瞬态成像的双向全息显微镜。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.01922v1",
+      "source": "arxiv",
+      "title": "Physics-based self-supervised learning of a deep network for single-shot in-line hologram reconstruction",
+      "abstract": "Digital in-line holographic microscopy is a computational imaging method useful for characterizing the refractive properties of a sample, i.e. the phase shift and absorption. This indirect measurement technique captures a diffraction pattern and uses reconstruction algorithms to retrieve the optical properties of the sample. Since only the intensity of the diffracted wave is recorded on the sensor, this inversion is not trivial, and simple backward propagation leads to artifacts known in optics as the ``twin-image''. With advances in deep learning, various algorithms have been developed for the reconstruction of in-line holograms, providing computationally efficient alternatives to iterative algorithms. These algorithms rely either on supervised learning, which requires ground truth knowledge, or physics-based self-supervised algorithms that require additional information, like phase diversity, but require multiple holograms for inference. This paper introduces a new self-supervised physics-based deep learning strategy that leverages phase diversity during training and then reconstructs sample's transmission function from a single in-line hologram during inference. We introduce five datasets of simulated and experimental in-line holograms of beads and bacteria. The proposed method produces accurate quantitative reconstructions similar or even more accurate than those obtained by regularized inversion while reducing the computational time by a factor of 1000.",
+      "authors": [
+        "Dylan Brault",
+        "Félix Riedel",
+        "Corinne Fournier",
+        "Thomas Olivier",
+        "Loïc Denis"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-02T09:18:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.01922v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "holographic microscopy for characterizing refractive properties",
+      "llm_evidence_cn": "全息显微术用于表征折射特性",
+      "llm_evidence": "全息显微术用于表征折射特性",
+      "canonical_evidence": "全息显微术用于表征折射特性",
+      "llm_tldr_en": "Develops a self-supervised deep learning method for single-shot in-line hologram reconstruction.",
+      "llm_tldr_cn": "开发了一种用于单幅同轴全息图重建的自监督深度学习方法。",
+      "llm_tldr": "开发了一种用于单幅同轴全息图重建的自监督深度学习方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.03588v1",
+      "source": "arxiv",
+      "title": "Beyond the Parasitic Limit: A Nanoprobing Framework for De-embedding Intrinsic Ferroelectric Properties at the Deep Sub-Micrometer Scale",
+      "abstract": "The continued scaling of ferroelectric devices is critical for next-generation computing architectures, yet it is fundamentally challenged by a metrological bottleneck: at the deep sub-micrometer scale, intrinsic material properties are heavily masked by extrinsic parasitic impedances and geometric fringing fields. Here, we introduce a quantitative, in-situ nanoprobing framework capable of resolving the true electrical response of ferroelectric capacitors down to 165 nm in diameter without the need for lithographic bond pads. Using 20 nm thick AlScN as a model system, we establish a non-linear 'Screened Power Law' model to decouple attofarad-level device capacitances from massive near-field probe interactions. Furthermore, we demonstrate that the apparent degradation of dielectric loss at the nanoscale is a geometric dilution artifact, which we overcome through a conductance scaling analysis. Finally, we apply this framework to large-signal characterization, utilizing leakage-compensation and noise filtering protocols to extract pristine intrinsic hysteresis (C-V and J-E) loops in the discrete few-grain limit. These findings provide a universal analytical toolkit required to overcome the measurement limits of deep-submicron ferroelectrics.",
+      "authors": [
+        "Niklas Kyoushi",
+        "Georg Schönweger",
+        "Ole Gronenberg",
+        "Dirk Meyners",
+        "Adrian Petraru",
+        "Fabian Lofink",
+        "Simon Fichtner"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-03T20:12:59+00:00",
+      "link": "https://arxiv.org/pdf/2607.03588v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in-situ nanoprobing framework for resolving electrical response of ferroelectrics",
+      "llm_evidence_cn": "用于解析铁电体电响应的原位纳米探测框架",
+      "llm_evidence": "用于解析铁电体电响应的原位纳米探测框架",
+      "canonical_evidence": "用于解析铁电体电响应的原位纳米探测框架",
+      "llm_tldr_en": "Introduces an in-situ nanoprobing framework to de-embed intrinsic properties of sub-micron ferroelectrics.",
+      "llm_tldr_cn": "引入原位纳米探测框架，以提取亚微米铁电体的固有特性。",
+      "llm_tldr": "引入原位纳米探测框架，以提取亚微米铁电体的固有特性。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08149v1",
+      "source": "arxiv",
+      "title": "Generation and Characterization of Surface-Attached Ultrathin Liquid Sheets for Grazing-Incidence X-ray Scattering",
+      "abstract": "Capturing the ultrafast structural dynamics that occur at the solid-liquid interface is key to understanding adsorption, desorption, diffusion, and aggregation processes in catalysis and interfacial chemical reactions. Hard-X-ray scattering in grazing-incidence geometry can, in principle, access interfacial structural changes with angstrom-scale structural sensitivity and ultrafast temporal resolution. However, the long optical paths of the optical pump and hard-X-ray pulses inside the liquid sample pose significant challenges to the temporal resolution, signal-to-noise ratio, and overall stability of such an experimental scheme. Here, we report a method for creating and characterizing ultrathin surface-attached free-flowing liquid sheets, whose submicrometer thickness enables ultrafast temporal resolution and reduces the bulk-liquid scattering contribution. The impinging-jet geometry produces stable micrometer-scale sheets whose morphology depends systematically on incidence angle, jet velocity, and capillary diameter. Gas-assisted shaping using a second capillary further narrows and thins the sheet, producing an extended ultrathin region and reducing the measured minimum thickness below 500~nm for acetonitrile. The resulting platform provides a reproducible, continuously flowing, surface-attached liquid geometry for grazing-incidence scattering experiments.",
+      "authors": [
+        "Yibo Wang",
+        "Daniel P. DePonte",
+        "Adi Natan"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-07-09T06:41:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.08149v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Ultrafast structural dynamics and temporal resolution at solid-liquid interfaces",
+      "llm_evidence_cn": "固液界面的超快结构动力学和时间分辨率",
+      "llm_evidence": "固液界面的超快结构动力学和时间分辨率",
+      "canonical_evidence": "固液界面的超快结构动力学和时间分辨率",
+      "llm_tldr_en": "Develops ultrathin liquid sheets for grazing-incidence X-ray scattering to study ultrafast interface dynamics.",
+      "llm_tldr_cn": "开发用于掠入射X射线散射的超薄液层，以研究超快界面动力学。",
+      "llm_tldr": "开发用于掠入射X射线散射的超薄液层，以研究超快界面动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.06208v1",
+      "source": "arxiv",
+      "title": "Millimeter-scale wide-field mid-infrared photothermal imaging enabled by a broadly tunable picosecond optical parametric oscillator",
+      "abstract": "Wide-field mid-infrared photothermal (MIP) imaging enables chemically specific microscopy with submicron spatial resolution but remains fundamentally limited by the trade-off between field of view, mid-infrared pulse energy, and spectral tunability. As a result, current wide-field implementations are typically restricted to fields of view below 200 μm and to either the fingerprint or high-wavenumber spectral regions. Here, we overcome these limitations by developing a wide-field fluorescence-detected mid-infrared photothermal (F-MIP) imaging platform driven by a commercial picosecond optical parametric oscillator (OPO). The system provides pulse energies of up to 360 μJ together with a broad tuning range from 625 to 4327 cm-1, enabling millimeter-scale wide-field imaging in the high-wavenumber regions. We demonstrate a field of view of approximately 1 mm in diameter for fluorescently labeled polystyrene beads while preserving spectral fidelity. Furthermore, the platform enables, to our knowledge, the first wide-field MIP imaging below 900 cm-1. To demonstrate its applicability to biomedical imaging, we performed large-area mosaic imaging of fluorescent tuberculosis-infected tissue sections, providing chemically resolved maps over millimeter-sized sample areas. These results establish broadly tunable OPO-driven F-MIP as a scalable platform for high-throughput vibrational imaging of large biological specimens and advanced materials.",
+      "authors": [
+        "Anooj Thayyil Raveendran",
+        "Supatcharee Cael",
+        "Anju Jose",
+        "Jürgen Popp",
+        "Christoph Krafft"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.app-ph",
+        "physics.bio-ph",
+        "physics.ins-det"
+      ],
+      "published": "2026-07-07T12:31:17+00:00",
+      "link": "https://arxiv.org/pdf/2607.06208v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "wide-field mid-infrared photothermal imaging",
+      "llm_evidence_cn": "宽场中红外光热成像",
+      "llm_evidence": "宽场中红外光热成像",
+      "canonical_evidence": "宽场中红外光热成像",
+      "llm_tldr_en": "Develops a wide-field mid-infrared photothermal imaging platform for chemically specific microscopy.",
+      "llm_tldr_cn": "开发了一种用于化学特异性显微镜的宽场中红外光热成像平台。",
+      "llm_tldr": "开发了一种用于化学特异性显微镜的宽场中红外光热成像平台。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.06941v1",
+      "source": "arxiv",
+      "title": "Visualizing modified spin-wave wavefronts near magnetic defects and domains using nitrogen-vacancy centers",
+      "abstract": "Direct, real-space imaging of spin-wave propagation and wavefronts in magnetic materials is crucial for advancing both fundamental understanding of spin dynamics and the development of functional devices. This, however, remains a significant challenge, especially in materials with complex magnetic characteristics at the nanoscale. Here, we employ scanning nitrogen-vacancy center spectroscopy to achieve visualization of spin waves in two archetypical magnetic films: yttrium-iron-garnet and lanthanum strontium manganese oxide. We reveal a wavelength-dependent spin-wave filtering effect near point-like magnetic scatterers and a modified spin wavefront in antiferromagnetically coupled stripe domains. The spin-wave characteristics are explained using micromagnetic simulations and analytical calculations. These findings point to possible fine control of spin-wave propagation near complex magnetic structures and extend the scope of spin-wave imaging based on nitrogen-vacancy centers beyond uniform magnets.",
+      "authors": [
+        "Wenxin Cheng",
+        "Chang Liu",
+        "Dekun Shen",
+        "Jiaxin Li",
+        "Shangyuan Wang",
+        "Hongyu Wang",
+        "Miming Cai",
+        "Jihao Xia",
+        "Peng Chen",
+        "Caihua Wan",
+        "Ka Shen",
+        "Xiufeng Han",
+        "Yuelin Zhang",
+        "Jinxing Zhang",
+        "Yangmu Li"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "quant-ph"
+      ],
+      "published": "2026-07-08T03:10:44+00:00",
+      "link": "https://arxiv.org/pdf/2607.06941v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "real-space imaging of spin-wave propagation in magnetic materials",
+      "llm_evidence_cn": "磁性材料中自旋波传播的实空间成像",
+      "llm_evidence": "磁性材料中自旋波传播的实空间成像",
+      "canonical_evidence": "磁性材料中自旋波传播的实空间成像",
+      "llm_tldr_en": "Uses NV center spectroscopy to visualize spin-wave dynamics and wavefronts in magnetic thin films.",
+      "llm_tldr_cn": "利用 NV 色心光谱技术可视化磁性薄膜中的自旋波动力学和波前。",
+      "llm_tldr": "利用 NV 色心光谱技术可视化磁性薄膜中的自旋波动力学和波前。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07221v1",
+      "source": "arxiv",
+      "title": "Understanding surface potential dynamics of passivated perovskites via Kelvin Probe Force Microscopy",
+      "abstract": "Molecular passivation has become central to reducing photovoltage losses in metal-halide perovskite solar cells, but its electronic action is still often inferred from device-level metrics rather than directly resolved at the nanoscale. Here, we use amplitude-modulated Kelvin probe force microscopy to examine how [3-(2-aminoethylamino)propyl]trimethoxysilane (AEAPTMS) modifies the surface potential and photovoltage dynamics of mixed-cation, mixed-halide perovskite thin films. AEAPTMS homogenises the dark contact potential difference (CPD), narrowing its distribution from ~45.7 to ~14.6 mV without obvious morphological changes. Under illumination, passivated films show a larger steady-state surface photovoltage (SPV) and faster stabilisation, with the SPV increasing from ~345 to ~417 mV and the stabilisation time constant decreasing from ~840 to ~470 s. Wavelength-dependent SPV further indicates reduced sub-bandgap electronic disorder. By separating grain-boundary and grain-interior contributions, we show that AEAPTMS suppresses grain-boundary potential barriers, linking amino-silane passivation to a more homogeneous and stable carrier landscape.",
+      "authors": [
+        "Rehmat Sood-Goodwin",
+        "Xue-Li Cao",
+        "Benjamin C. Kinvig",
+        "Robert D. J. Oliver",
+        "Yen-Hung Lin",
+        "Nic Mullin",
+        "Alexandra J. Ramadan"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-07-08T10:03:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.07221v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Resolving surface potential and photovoltage dynamics at the nanoscale in perovskites",
+      "llm_evidence_cn": "在纳米尺度上解析钙钛矿的表面电位和光电压动力学",
+      "llm_evidence": "在纳米尺度上解析钙钛矿的表面电位和光电压动力学",
+      "canonical_evidence": "在纳米尺度上解析钙钛矿的表面电位和光电压动力学",
+      "llm_tldr_en": "Uses KPFM to study surface potential dynamics in passivated perovskite solar cells at the nanoscale.",
+      "llm_tldr_cn": "利用KPFM研究钝化钙钛矿太阳能电池在纳米尺度上的表面电位动力学。",
+      "llm_tldr": "利用KPFM研究钝化钙钛矿太阳能电池在纳米尺度上的表面电位动力学。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07450v1",
+      "source": "arxiv",
+      "title": "Chip-scale nanostructured chaotic billiards for broadband speckle spectrometry",
+      "abstract": "Computational on-chip spectrometers are emerging as a powerful platform for portable spectral analysis, combining photonic integration with advanced signal processing to enable a wide range of in-situ sensing applications. We propose a broadband reconstructive spectrometer based on wave chaos in a stadium microresonator with a nanostructured scattering layer for full-area speckle readout. Wavelength dependent interference within the chaotic microresonator encodes the spectral information into a spatial intensity pattern that can be computationally inverted to reconstruct the input spectra. The optimal fabrication parameters of the SU-8 polymer nanostructured layer yield a surface roughness of 176nm and a root mean square thickness of ~2um. We experimentally validate our spectrometer at visible and infrared wavelengths, with resolutions of 43pm at 630nm and 8.2pm at 1550nm. The spectral reconstruction is demonstrated for single and multiple narrowline sources as well as for a broadband (~1nm) pulsed laser source. The broad experimental validation and compact footprint (0.05mm2) establishes our chaotic microresonator-based speckle spectrometer as a robust and versatile platform for high-resolution, on-chip spectral sensing.",
+      "authors": [
+        "Matthew R. Wilson",
+        "Benoit Guilhabert",
+        "Jack A. Smith",
+        "Michael J. Strain",
+        "Xavier Porte"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-08T14:19:36+00:00",
+      "link": "https://arxiv.org/pdf/2607.07450v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "nanostructured scattering layer for speckle readout and spectral analysis",
+      "llm_evidence_cn": "用于散斑读取和光谱分析的纳米结构散射层",
+      "llm_evidence": "用于散斑读取和光谱分析的纳米结构散射层",
+      "canonical_evidence": "用于散斑读取和光谱分析的纳米结构散射层",
+      "llm_tldr_en": "Proposes a chip-scale spectrometer using wave chaos and nanostructured scattering for spectral reconstruction.",
+      "llm_tldr_cn": "提出了一种利用波混沌和纳米结构散射进行光谱重建的芯片级光谱仪。",
+      "llm_tldr": "提出了一种利用波混沌和纳米结构散射进行光谱重建的芯片级光谱仪。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07941v1",
+      "source": "arxiv",
+      "title": "Probing individual phonon-polaritonic nanoparticle-on-mirror cavities by infrared nanospectroscopy",
+      "abstract": "Nanoparticle-on-mirror (NPoM) cavities enable extreme light confinement and strong light-matter interactions, but their realization with phonon-polariton materials in the mid-infrared spectral range remains largely unexplored. Here, we use nano-FTIR spectroscopy to study the near-field response of individual phononic NPoM cavities formed by gold nanoparticles on a quartz substrate supporting phonon-polaritons. By placing a metal tip on top of the NPoM and recording the tip-scattered field, we observe two reproducible cavity resonances, identified as the fundamental and a second-order antenna modes by numerical simulations. The calculations show that, in absence of the tip, the NPoM cavity exhibits ultrasmall mode volumes ($V \\sim 10^3$ nm$^3$) and high quality factors ($Q \\sim 100$), resulting in extraordinary field intensity enhancements ($F \\sim 10^4$) and Purcell factors ($P_F \\sim 10^9$). They also indicate that the nano-FTIR tip enables efficient excitation and readout of these phononic NPoM modes without perturbing them, while enhancing the intrinsic local field intensity in the NPoM gap by two orders of magnitude. Our results establish phononic NPoM cavities as a promising platform for mid-infrared nanophotonics and pave the way for ultrasensitive vibrational spectroscopy based on nano-FTIR measurements of individual cavities.",
+      "authors": [
+        "Isabel Pascual Robledo",
+        "Iker Herrero León",
+        "Karol Kołataj",
+        "Guillermo P. Acuna",
+        "Javier Aizpurua",
+        "Philippe Roelli",
+        "Rainer Hillenbrand"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-08T21:38:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.07941v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "probing individual nanoparticle cavities by infrared nanospectroscopy",
+      "llm_evidence_cn": "通过红外纳米光谱探测单个纳米颗粒腔",
+      "llm_evidence": "通过红外纳米光谱探测单个纳米颗粒腔",
+      "canonical_evidence": "通过红外纳米光谱探测单个纳米颗粒腔",
+      "llm_tldr_en": "Uses nano-FTIR to study near-field response and antenna modes in phonon-polaritonic nanoparticle-on-mirror cavities.",
+      "llm_tldr_cn": "利用纳米傅里叶变换红外光谱研究声子极化激元纳米颗粒镜面腔的近场响应。",
+      "llm_tldr": "利用纳米傅里叶变换红外光谱研究声子极化激元纳米颗粒镜面腔的近场响应。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-28-735089-v1",
+      "source": "biorxiv",
+      "title": "Genetically Encoded Melanin as a Photostable Scattering Contrast for Whole-Brain Tomography",
+      "abstract": "Large-scale brain imaging has traditionally depended on fluorescent reporters, but challenges like photobleaching and inconsistent signals hinder quantitative analysis in intact tissues. In response, we present MelaCAST (melanin-based scattering CAST imaging), a novel genetically encoded scattering method for whole-brain visualization. Using AAV to deliver tyrosinase allows for cell-type-specific melanin synthesis, providing a stable intracellular scattering contrast across the mouse brain. Combining tissue clearing with scattering tomography, MelaCAST offers non-photobleaching, high-throughput volumetric imaging of genetically targeted cell populations in intact brains. This technique establishes melanin as a genetically encoded scattering reporter and broadens whole-organ imaging capabilities beyond traditional fluorescence methods.",
+      "authors": [
+        "Gu, P.",
+        "Chen, C.",
+        "Ren, J."
+      ],
+      "primary_category": "neuroscience",
+      "categories": [
+        "neuroscience"
+      ],
+      "published": "2026-07-02T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.28.735089v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "genetically encoded scattering contrast for volumetric imaging",
+      "llm_evidence_cn": "用于体积成像的基因编码散射对比度",
+      "llm_evidence": "用于体积成像的基因编码散射对比度",
+      "canonical_evidence": "用于体积成像的基因编码散射对比度",
+      "llm_tldr_en": "Introduces MelaCAST, a scattering-based imaging method using melanin for stable, non-photobleaching brain tomography.",
+      "llm_tldr_cn": "介绍了 MelaCAST，一种利用黑色素进行稳定、无光漂白脑部断层扫描的散射成像方法。",
+      "llm_tldr": "介绍了 MelaCAST，一种利用黑色素进行稳定、无光漂白脑部断层扫描的散射成像方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-30-735216-v1",
+      "source": "biorxiv",
+      "title": "dSTORMQuant: A Python Package for Post-Processing and Quantitative Analysis of SMLM datasets",
+      "abstract": "SummarySingle-molecule localization microscopy techniques, such as (direct) stochastic optical reconstruction microscopy ((d)STORM) and photo-activated localization microscopy (PALM) enable the visualization of subcellular molecular organization beyond the diffraction limit of conventional light microscopy. Not only is data acquisition rather slow, but the downstream analysis of localization datasets often remains computationally challenging and time-consuming. Consequently, the complexity and duration of data processing often limit experiments to the acquisition and analysis of only small numbers of cells or regions of interest, thereby restricting the statistical power and biological reliability of SMLM studies. To address this limitation, we developed an open-source Python-based package for automated, high-throughput post-processing and quantitative analysis of SMLM localization data, enabling efficient and straightforward handling of extensive datasets with minimal manual intervention.\n\nAvailability and implementationdSTORMQuant (source code and documentation) are freely available on GitHub at https://github.com/BCMM-Bielefeld-University/dSTORMQuant under GPL v3 license.",
+      "authors": [
+        "Karki, S.",
+        "Nemeita, B.",
+        "Hammann, A. S.",
+        "Thoms, S."
+      ],
+      "primary_category": "bioinformatics",
+      "categories": [
+        "bioinformatics"
+      ],
+      "published": "2026-07-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.30.735216v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "stochastic optical reconstruction microscopy (dSTORM) analysis",
+      "llm_evidence_cn": "随机光学重建显微镜 (dSTORM) 分析",
+      "llm_evidence": "随机光学重建显微镜 (dSTORM) 分析",
+      "canonical_evidence": "随机光学重建显微镜 (dSTORM) 分析",
+      "llm_tldr_en": "A Python package for quantitative analysis of single-molecule localization microscopy datasets.",
+      "llm_tldr_cn": "一个用于单分子定位显微镜数据集定量分析的Python软件包。",
+      "llm_tldr": "一个用于单分子定位显微镜数据集定量分析的Python软件包。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

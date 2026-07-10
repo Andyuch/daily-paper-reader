@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.07941v1/fig-001.webp",
+      "caption": "FIG. 1. Nano-FTIR spectroscopy on a phonon-polaritonic NPoM cavity. (a) Schematics of the experiment. A PtIr tip with 50 nm apex radius oscillates at a frequency Ω above a AuNP deposited on a c-cut oriented quartz mirror. The red arrows indicate the incident illumination Ein and the backscattered light Eout. (b) Topography image (top) and line profile (bottom) of a 60 nm AuNP on quartz. (c) Real (solid line) and imaginary (dashed line) parts of the in-plane dielectric component ε⊥(ν) of quartz, fitted from far-field reflectivity measurements. νTO,1 = 1065 cm−1 and νTO,2 = 1160.7 cm−1 mark the TO phonon frequencies of quartz. The white area marks the spectral region where Re{ε⊥} is negative and monotonic. (d) nano-FTIR amplitude spectra, s4(ν)/s4,Au(ν), of three NPoM cavities (red curves), of the quartz mirror when the oscillating tip is retracted by 60 nm (green curve), and of the quartz mirror when the oscillating tip is in contact (blue curve in the inset). Schematics on the right illustrate the different sample configurations. Vertical dashed red lines mark the peak spectral positions of the NPoM nano-FTIR amplitude spectra.",
+      "page": 5,
+      "index": 1,
+      "width": 927,
+      "height": 590
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07941v1/fig-002.webp",
+      "caption": "FIG. 2. Numerical simulations of spectral field enhancement and mode profiles in phononpolaritonic nanocavities. (a) Vertical (top) and mid-gap horizontal (bottom) near-field distribution (real part of the out-of-plane electric field, Re{Ez}) in the NPoM cavity gap (50 nm AuNP on quartz) at the wavenumbers indicated above. Red frames: static Pt tip (50 nm radius) positioned 2 nm above the NPoM cavity; black frames: NPoM cavity without tip. (b) Spectra of the maximum field enhancement, max{|E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of a NPoM cavity (50 nm AuNP on quartz). Red spectrum: static Pt tip (50 nm radius) positioned 2 nm above NPoM cavity; black curve: NPoM cavity without tip. Insets show vertical near-field distribution at 1110 cm−1. (c) Vertical (top) and horizontal (bottom) near-field distributions (Re{Ez}, in the midgap plane) at indicated wavenumbers for a static Pt tip (25 nm radius) positioned 1 nm (blue frames) and 10 nm (green frame) above a quartz surface (no AuNP present). (d) Spectra of the maximum field enhancement max{|E|(ν)/|E0|(ν)} in the mid-gap horizontal plane for a static Pt tip (25 nm radius) at 1 nm (blue frames) and 10 nm (green frames) above the quartz. Insets show vertical near-field distribution at the frequency of the L01 mode. In all calculations, the illumination is a p-polarized wave of amplitude |E0| = 1 V/m, and incident 35◦ relative to the quartz surface plane.",
+      "page": 8,
+      "index": 2,
+      "width": 927,
+      "height": 594
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07941v1/fig-003.webp",
+      "caption": "FIG. 3. Nano-FTIR spectroscopy on phononic NPoMs of different size. (a) nano-FTIR amplitude spectra, s3/s3,Au, of NPoM cavities with NPs of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve). Schematics on the top-left illustrate the variation of dNP. (b) Spectra of the maximum field enhancement, max{|E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of NPoM cavities (AuNPs on quartz) of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve). In all spectra a Pt tip (50 nm radius) is positioned 2 nm above the NPoM cavity. (c) Spectra of max{|E|(ν)/|E0|(ν)}, in the mid-gap horizontal plane of NPoM cavities (AuNPs on quartz) of diameter dNP = 40 nm (blue curve), 60 nm (red curve) and 80 nm (green curve) without the tip. In all panels symbols mark the positions of the L01 (dots) and L02 (diamonds) NPoM cavity modes.",
+      "page": 11,
+      "index": 3,
+      "width": 925,
+      "height": 334
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-001.webp",
+      "caption": "Figure 2: Capacitance de-embedding and the Screened Power Law model. a) Raw measured small-signal capacitance as a function of the effective electrode radius, demonstrating the severe deviation from ideal parallel-plate scaling at the nanoscale due to probe-sample fringing fields. b) The extracted geometric factor (𝐾𝑓) capturing the divergence of the stray field. The exponent transition strictly defines the shift from macroscopic remote-probe coupling to a highly localized, super-linear field concentration at the conductive electrode boundary. c) The final deconvolved relative permittivity (휀𝑟), demonstrating a size-independent intrinsic dielectric response (휀𝑟 ≈ 17) across five orders of magnitude in device area. The error bounds represent the root-sum-square of the geometric and instrumental measurement uncertainties.",
+      "page": 6,
+      "index": 1,
+      "width": 1066,
+      "height": 381
+    },
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-002.webp",
+      "caption": "Table 1: Extracted Fitting Parameters for the Screened Power Law Model. A fixed Intrinsic 휀𝑟 ≈ 16.94 extracted from the larger pads of Chip 1. The actual thickness of the AlScN film was estimated at ≈17 nm to align with the permittivity previously reported [19, 20].",
+      "page": 7,
+      "index": 2,
+      "width": 1096,
+      "height": 413
+    },
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-003.webp",
+      "caption": "Figure 4: Small-signal ferroelectric switching and localized perimeter leakage. a) De-embedded relative permittivity vs. electric field (C-V) loops across the dimensional spectrum. b) Extracted coercive field (𝐸𝐶) scaling. The systematic hardening of the negative 𝐸𝐶 at sub-micrometer dimensions is driven by intense negative field emission at the top-electrode taper. This localized leakage acts as a parallel shunt, inducing a series voltage drop that forces the analyzer to apply a higher external bias to achieve polarization reversal. c) Normalized dynamic loss tangent vs. electric field. The amplitude variance near 𝐸𝐶 strictly reflects fewgrain nucleation statistics at the nanoscale, while the universal high-field U-shape divergence marks the transition to direct Fowler-Nordheim tunneling [25, 26], defining the absolute physical limit of the LCR measurement principle.",
+      "page": 10,
+      "index": 3,
+      "width": 1093,
+      "height": 304
+    },
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-004.webp",
+      "caption": "Figure 1: Device structure, fabrication, and in-situ electrical nanoprobing. a) Schematic of the Al0.72Sc0.28N capacitor stack and the fabrication process flow combining UV lithography and electron beam lithography (EBL) to define devices from 2 µm down to 100 nm in diameter. Inset SEM micrographs show the representative top-down views of the resulting Pt/AlScN/Pt devices. b) Photograph of the kleindiek MM3A-EM micromanipulators used for direct electrical probing inside the SEM chamber. c), d) High-magnification SEM micrographs showing tungsten probe tips making direct, stable contact with c) a 1 µm in diameter and d) a 250 nm diameter device. d) Demonstrating the precision of the characterization technique.",
+      "page": 3,
+      "index": 4,
+      "width": 1006,
+      "height": 783
+    },
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-005.webp",
+      "caption": "Figure 5: Large-signal J-E characterization and history-dependent kinetics at 10 kHz. a) Signal processing methodology for the sub-micrometer limit. The raw leakage-corrected current (grey) is processed via a Fast Fourier Transform (FFT) low-pass filter (red) and multi-peak fitting (blue) to recover the pristine switching transient from the attofarad noise floor. b) Overlay of J-E loops for device diameters ranging from 50 µm down to 190 nm, demonstrating robust switching across all scales. c) Extracted 𝐸𝐶 stability versus area 10-13 m² to 10-9 m² (Ø190 nm-Ø50 µm), scaling under fast dynamic driving (PUND). The severe hardening of the positive 𝐸𝐶 directly correlates with the leakage asymmetry shown in d). d) Leakage current density vs. area. The exponential divergence of the positive leakage, driven by bottom-interface injection routing through the conductive sidewalls, acts as a massive dynamic shunt, severely suppressing the internal positive electric field and dictating the observed 𝐸𝐶 hardening.",
+      "page": 13,
+      "index": 5,
+      "width": 1091,
+      "height": 898
+    },
+    {
+      "url": "assets/figures/arxiv/2607.03588v1/fig-006.webp",
+      "caption": "Figure 3: De-embedding parasitic impedance and intrinsic dielectric loss extraction. a) Series resistance (𝑅𝑠) as a function of device radius. The physical spreading resistance model (blue triangles) isolates the currentconstriction at the nanoscale probe contact, while the measurement plateaus at 104 Ω due to the static vacuum impedance limit. b) Measured dielectric loss tangent (𝑡𝑎𝑛 𝛿) for pristine and cycled devices. The apparent loss suppression in the deep sub-micrometer regime is governed by a geometric dilution artifact, accurately modeled by a double-exponential decay representing the lossless vacuum shunt of the probe shaft. c) Conductance scaling per unit area (𝐺 𝐴⁄ ) versus inverse diameter (1 𝐷⁄ ). The quadratic fit mathematically extracts the size-independent bulk conductance density, yielding a true intrinsic 𝑡𝑎𝑛 𝛿 ≈ 1.41 % for the fully cycled ferroelectric state.",
+      "page": 8,
+      "index": 6,
+      "width": 1091,
+      "height": 377
+    }
+  ]
+}

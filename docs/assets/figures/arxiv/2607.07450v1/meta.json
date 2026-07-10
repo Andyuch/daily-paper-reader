@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-001.webp",
+      "caption": "Figure 4: Exemplary grayscale images of speckle patterns observed via nanograss for stadiums etched (a) 2 minutes, (b) 4 minutes, (c) 6 minutes, and (d) 8 minutes. Images are shown in log scale with a false color map to aid visualization.",
+      "page": 6,
+      "index": 1,
+      "width": 962,
+      "height": 581
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-002.webp",
+      "caption": "Figure 7: Spectrometer characterization in the visible domain. (a) Correlation of speckle patterns as a function of wavelength step size for 635nm TLS. (b) Wavelength extracted from reconstruction of a wavelength sweep within a 2nm band starting from 635nm. The blue crosses represent the extracted peaks from the reconstruction algorithm and the orange solid line represents the expected wavelength based on the laser set-point. The mean absolute wavelength error was calculated to be 4pm over this band. The central wavelength recovered from every 10th reconstruction steps is shown for clarity. (c) Reconstruction example.",
+      "page": 11,
+      "index": 2,
+      "width": 968,
+      "height": 437
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-003.webp",
+      "caption": "Figure 5: Spatial and spectral correlation dependencies of speckle patterns as a function of etch time. (a) Autocorrelation of speckle patterns from cavities etched 2, 4, 6 and 8 minutes with λ = 1550nm. δr denotes the decay half-width at C(∆r) = 1 e . (b) Spectral correlation function for the different etch times.",
+      "page": 7,
+      "index": 3,
+      "width": 966,
+      "height": 306
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-004.webp",
+      "caption": "Figure 6: Quantitative and qualitative characterization of spectral reconstruction in the IR. (a) Reconstruction accuracy over a 1nm range when the microresonator is injected by two laser sources simultaneously. The solid orange line and the dashed red line denote the set-point wavelength of the TLS and the measured wavelength of the DFB respectively. The blue crosses and green circles denote the dominant wavelengths present in the spectral reconstruction respectively. (b) Example of single line reconstruction of the TLS source at a central wavelength of 1548.50nm. (c) Example reconstruction of the DFB source. (d-f) Reconstructions for the two laser sources with corresponding spectral separations of (d) 0.06nm, (e) 0.04nm and (f) 0.02nm.",
+      "page": 10,
+      "index": 4,
+      "width": 968,
+      "height": 573
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-005.webp",
+      "caption": "Figure 1: Qualitative imaging examples and spectrometer schematic. (a) Optical profilometer scan of an unetched stadium. Colour map denotes the height in µm units. (b) SEM of a stadium after a 6 minute etch process, showing clear nanograss formation. (c) Schematic of the spectral to spatial transformation performed by the on-chip chaotic microresonator. The insert image on the right is a measured InGaAs camera image of the device at a single wavelength injection at 1550nm.",
+      "page": 3,
+      "index": 5,
+      "width": 966,
+      "height": 457
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-006.webp",
+      "caption": "Figure 2: Examples of topology scans over a 10µm×10µm area located at the center of each stadium device, for chips with etch times 2 minutes (a,b), 4 minutes (c,d), 6 minutes (e,f), and 8 minutes (g,h). Left side panels depict the surface map of the height in grayscale. The vertical (red) and horizontal (blue) line cuts are plotted in the right side panels. 4",
+      "page": 4,
+      "index": 6,
+      "width": 916,
+      "height": 1281
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-007.webp",
+      "caption": "Figure 8: IR broadband source reconstruction. (a) Failed reconstruction of a broadband source resulting from the NNLS method used in narrowband reconstruction. (b) Example successful reconstruction of a broadband source using ridge regression method. Blue crosses denote the reconstruction and red dashed line shows experimentally measured OSA trace.",
+      "page": 12,
+      "index": 7,
+      "width": 967,
+      "height": 293
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07450v1/fig-008.webp",
+      "caption": "Figure 3: Characterization results. (a) Height of SU-8 devices recorded by NC-AFM measurements. Data shows average height measured across multiple devices per etch time with standard deviation error bars. Linear fit to the data returns an etch rate of 355nm ± 22nm per minute. The red dotted line denotes the ≃ 0.5µm cut-off height for guided modes at 1550nm. (b) RMS surface roughness measured by NC-AFM, with standard deviation error bars. (c) Average speckle intensity measured across the identical cavities with standard deviation error bars as a function of etch time. (d) Speckle coverage measurement. Fraction of the stadium microresonators containing a measurable speckle pattern as a function of etch time.",
+      "page": 5,
+      "index": 8,
+      "width": 952,
+      "height": 521
+    }
+  ]
+}

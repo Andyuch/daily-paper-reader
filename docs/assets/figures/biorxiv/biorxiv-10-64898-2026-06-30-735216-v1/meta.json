@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-06-30-735216-v1/fig-001.webp",
+      "caption": "Fig. 1: Overview of the dSTORMQuant analysis workflow. A Schematic illustration of the dSTORMQuant processing and analysis pipeline. Arrows indicate the sequential progression from input through processing to analysis. Individual modules are listed beneath each stage. The dashed border of the cell detection module denotes its optional use, depending on experimental requirements. B-E Example results of processing and analysis of a U2OS WT cell stained for mitochondria and peroxisomes as two different organelle markers: B Localization map of Voronoi- and grid-based cell detection. C Localization map by Coordinate-Based Co-localization (CBC) and Relative Enrichment (RE) methods. D DBSCAN (Density-based spatial clustering of applications with noise) result. Scale bar: 10 µm. E Reconstructed dSTORM image using the initial localization list in comparison with the post-processed localization list. The number of localizations per channel is noted on the upper left. Scale bar: 10 µm.",
+      "page": 3,
+      "index": 1,
+      "width": 902,
+      "height": 964
+    }
+  ]
+}

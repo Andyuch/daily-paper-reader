@@ -1,0 +1,387 @@
+Title: Physics-based self-supervised learning of a deep network for single-shot in-line hologram reconstruction
+
+URL Source: https://arxiv.org/pdf/2607.01922v1
+
+Published Time: Fri, 03 Jul 2026 01:01:28 GMT
+
+Number of Pages: 18
+
+Markdown Content:
+> IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 1
+
+# Physics-based self-supervised learning of a deep network for single-shot in-line hologram reconstruction 
+
+Dylan Brault, F´ elix Riedel, Corinne Fournier, Thomas Olivier, Lo¨ ıc Denis 
+
+Abstract 
+
+Digital in-line holographic microscopy is a computational imaging method useful for characterizing the refractive properties of a sample, i.e. the phase shift and absorption. This indirect measurement technique captures a diffraction pattern and uses reconstruction algorithms to retrieve the optical properties of the sample. Since only the intensity of the diffracted wave is recorded on the sensor, this inversion is not trivial, and simple backward propagation leads to artifacts known in optics as the “twin-image”. With advances in deep learning, various algorithms have been developed for the reconstruction of in-line holograms, providing computationally efficient alternatives to iterative algorithms. These algorithms rely either on supervised learning, which requires ground truth knowledge, or physics-based self-supervised algorithms that require additional information, like phase diversity, but require multiple holograms for inference. This paper introduces a new self-supervised physics-based deep learning strategy that leverages phase diversity during training and then reconstructs sample’s transmission function from a single in-line hologram during inference. We introduce five datasets of simulated and experimental in-line holograms of beads and bacteria. The proposed method produces accurate quantitative reconstructions similar or even more accurate than those obtained by regularized inversion while reducing the computational time by a factor of 1000. 
+
+Index Terms 
+
+Phase retrieval, self-supervised deep learning, physics-based deep learning, digital in line holography. 
+
+I. I NTRODUCTION 
+
+Characterizing the refractive properties of a sample is a widely studied topic in the computational imaging field. Phase imaging techniques such as holography, ptychography and diffractive tomography have been used to image transparent samples with electromagnetic waves (optical [1]–[5], X-ray [6] and terahertz [7]) and electron microscopy [8]–[10]. In these configurations, the phase of the wave in the sensor plane is not directly measured as the sensors only record intensity. Retrieving the phase-shift introduced by the sample, i.e. its refractive properties, from these intensity measurements involves solving an ill-posed inverse problem. Digital in-line holographic microscopy (DIHM) is a computational imaging technique that relies on two steps, the acquisition of a hologram and its numerical reconstruction [1], [11]. The digital hologram is obtained by illuminating a sample with a (partially) coherent incident wave and recording the intensity of the diffraction pattern produced by the sample on a camera. The hologram can also be seen as an out-of-focus measurement of the sample. Reconstruction algorithms aim at retrieving the complex-valued transmission function of the sample, which describes how the sample absorbs and shifts the phase of the incident wave. Because only the intensity of the wave is recorded on the sensor (and not the phase), simple back-propagation reconstructions are hampered by the intrinsic “twin-image” issue, wherein a superimposed, out-of-focus virtual image of the object corrupts the reconstructed image of the sample. Many advanced algorithms have been suggested to retrieve the sample’s phase-shift by suppressing the twin-image artifacts. These approaches, grounded in physical modeling of diffraction, treat the reconstruction task as an optimization problem. Iterative phase retrieval (PR) algorithms are among the most popular. However, they are computationally expensive as they rely on multiple propagations of the wavefront. The Gerchberg-Saxton (GS) algorithm [12] is a widely used PR algorithm based on phase diversity of two holograms of the same specimen, taken at two propagation distances ( z and z + δz ). The GS algorithm iteratively propagates the wavefront between the two planes, imposing the measured intensity as a constraint, at each plane, while letting the phase evolve through the iterations. After convergence, the reconstructed wavefront is back-propagated to the object plane, yielding the estimation of the in-focus transmission function. 
+
+D. Brault is with PSI Center for Life Sciences, 5232 Villigen PSI, Switzerland (e-mail: dylan.brault@telecom-st-etienne.fr). F. Riedel, C. Fournier, T. Olivier, and L. Denis are with Universit´ e Jean Monnet Saint-Etienne, CNRS, Institut d Optique Graduate School, Laboratoire Hubert Curien UMR 5516, F-42023, SAINT-ETIENNE, France. This work was supported by Agence Nationale de la Recherche (ANR), project ATICS (ANR-23-CE51-0023), and by the NIH BRAIN CONNECTS program of the National Institutes of Health under award number 5U01NS132317 and by the SERI-funded ERC Starting Grant #MB22.00042. (Dylan Brault and F´ elix Riedel are co-first authors.) (Corresponding author: Dylan Brault.) © 2026 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works.  
+
+> arXiv:2607.01922v1 [physics.optics] 2 Jul 2026 IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 2
+
+In many experimental contexts, like live imaging, it is difficult to acquire two holograms at two different propagation distances. Iterative methods using a single hologram, like error-reduction algorithms, have been proposed for these cases. These methods, initially introduced by Fienup in [13]–[15] and subsequently applied to holography by Latychevskaia [16], leverage prior knowledge of the sample as optimization constraints. As an example, the sample’s non-emissivity prior can be imposed using a positivity constraint on the object transmission function. These iterative reconstruction techniques are generalized by the regularized inverse problems approaches (IPA) [14], [17]. Within this framework, the reconstruction task implies minimizing a loss function combining two terms: a term defining how closely the data matches the theoretical image formation model, and a term capturing the prior knowledge of the sample. This minimization problem is equivalent to a classical maximum a posteriori (MAP) estimation where the data fidelity term corresponds to the negative log-likelihood, and the regularization term is the negative log prior. These more comprehensive approaches allow for greater flexibility in the selection of object priors and improve the accuracy of DIHM reconstruction [18]– [22]. Nevertheless, they are computationally expensive and depend either on closed-form regularization priors, or on learned regularization priors [23]–[25] which require ground truth data for training. In recent years, the rise of deep learning approaches has also impacted the field of inverse problems in imaging [26]. After a neural network has been trained to solve an image reconstruction task, inference on new images can be very fast. They have been applied successfully to phase reconstruction problems, including digital in-line holography applications [27], [28]. Among these approaches, supervised training of a deep neural network is the easiest way to train a network to reconstruct an image when pairs of inputs (data and ground truth image) are available. The network is trained by minimizing the discrepancy between the reconstructed transmission function and the ground truth image. First attempts to reconstruct holograms with deep-learning considered a simple approach in which holograms were fed directly to the deep neural network [29], [30]. Closer to classical iterative reconstruction approaches, unrolled methods incorporate the physics of the problem by mimicking the iterations of a reconstruction algorithm [31]. In this framework, each block of the network corresponds to a single iteration of the unrolled algorithm [32]–[35]. For example, to reproduce a proximal gradient descent, each layer of the unrolled network can be broken down into a gradient descent step based on the image formation model, followed by a small regularizer network that acts as a proximal operator. As the regularizer network has many degrees of freedom, it can provide more realistic priors than a handcrafted one. Exploiting the high number of degrees of freedom of neural networks, generative adversarial neural networks have also been exploited to solve inverse problems in DIHM [36], [37]. In this framework, a generator is first trained to reproduce images that follow the distribution of the objects (and hence fool the discriminator). The network is then used as a strong prior when reconstructing the transmission function images. The reconstruction task is formulated as the retrieval of the latent vector that, once fed to the network, generates an image that is close to the data according to the image formation model. These approaches have been applied successfully to digital in-line hologram reconstruction, but they rely heavily on ground truth datasets. Such paired datasets of diffracting objects and holograms were obtained by using an SLM to display phase patterns coming from publicly available image dataset, such as Faces-LFW, ImageNet, and MNIST in the work of [30]. However, these images hardly represent the samples encountered in real-world applications of holographic imaging. Alternatively, but at a high computational cost, experimental holograms can be reconstructed using other existing phase reconstruction techniques to provide surrogate ground truth data [38]–[41]. To avoid the acquisition/reconstruction of ground truth datasets, self-supervised approaches are being increasingly considered. As the architecture of convolutional neural networks acts as an implicit prior that favors natural images outputs, it was proposed to use a neural network as a regularization prior. This principle relates to “Deep Image Prior”-based methods where a network fed by a random image is trained to reconstruct an image [42]–[44]. Similarly to inverse problems approaches, physical modeling can also be included in the loss function of these networks, as proposed by Wang et al. [45]. In these approaches, the reconstruction aims at estimating the parameters of a neural network that, once fed with a given random vector, provides the best reconstruction according to the physics-based loss function. Neural networks have a large number of degrees of freedom, allowing more realistic reconstructions than handcrafted prior, such as sparsity and total variation (TV). However, interpreting the learned prior is more challenging due to the high number of degrees of freedom. Moreover, these approaches often rely on early stopping of the training because there is a risk of overfitting the data if the training goes on for too many iterations. A major drawback is that a different network needs to be trained for each input image, leading to a high computational-time per reconstruction. There is no need for a training dataset, but the downside is that the network does not leverage common features that could be extracted from multiple data. To exploit both the capabilities of deep neural networks to produce high-quality reconstructions while leveraging multiple data, physics can be incorporated directly in the training loss function. Such a self-supervised approach is close to the inverse problem one. Yet, instead of estimating a single reconstruction, the network learns a reconstruction operator that can be applied to many images. To the best of our knowledge, these physics-based approaches have only been applied to reconstruct the transmission function from multiple out-of-focus measurements in DIHM [46], [47]. Such a setting can be experimentally prohibitive. Training a neural network that can reconstruct the transmission function from a single measurement has a much stronger practical interest. The contributions of this paper are the following : IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 3 
+
+> •
+
+introducing a self-supervised training of the network, relying on phase diversity (pairs of out-of-focus measurements) and physics (hologram formation model);  
+
+> •
+
+providing a fast reconstruction method from a single-shot hologram, using a deep neural network;  
+
+> •
+
+obtaining quantitative phase reconstructions that match the reconstructions achieved by state-of-the-art methods based on multiple holograms (pairs of holograms recorded at two depths);  
+
+> •
+
+releasing five open datasets of simulated and experimental holograms of spherical objects and bacteria to promote further research on the topic and allow for reproducible research. The paper is organized as follows. Section II details the principle of our approach. Section III and IV validate this approach on simulated and experimental DIHM holograms by providing comparison with state-of-the-art reconstruction algorithms. II. P ROPOSED SELF -SUPERVISED METHOD FOR SINGLE -SHOT HOLOGRAM RECONSTRUCTION 
+
+This section introduces the image formation model of DIHM and discusses the “twin-image” problem to lay the groundwork for our approach. Then, we present the principle of our self-supervised phase diversity and physics-based deep learning approach. The training step uses holograms defocused at various distances as well as image formation models. The inference step, uses a single hologram for the reconstruction. To clarify the terminology, we describe our technique as self-supervised as it does not require any ground truth for training; however, additional measurement is necessary for the training step. The principle of our approach is outlined in Fig.1. 
+
+A. Image formation model 
+
+The optical properties of a biological sample on a glass slide can be described by the complex-valued transmittance function in the object plane. In discrete form, this two-dimensional (2D) transmission function is represented by the vector t ∈ CN ,where N is the number of pixels. Its modulus |t| = a ∈ RN 
+
+> +
+
+characterizes the absorption of the sample, while its phase shift 
+
+ϕ ∈ [−π, π [N accounts for the delay induced on the incident wavefront by the sample: 
+
+t = a exp [ iϕ] . (1) Under coherent illumination by a plane wave of unit amplitude, the sample diffracts and produces, at distance z, a hologram 
+
+dz captured by the camera: 
+
+dz = mz (t) + η with mz (t) = |Hz t|2, (2) where mz () models the noise-free intensity of the diffraction pattern (i.e., the hologram formation model) and η represents the measurement noise. Hz ∈ CN ×N , is a 2D convolution operator which models propagation of the complex amplitude of the wave exiting the object plane. The computation of the squared modulus at each pixel, |·| 2, models intensity-only recording. In the following, we consider the angular spectrum [11] to model forth-and-back-propagation. The introduction of lenses between the sample and the camera produces both a magnification and, due to the finite size of the pupil, an optical cutoff frequency (i.e., a low-pass filtering effect). The magnification can be accounted for by adjusting the pixel size. In the following, 
+
+Hz accounts for both free-space propagation and low-pass filtering introduced by optical elements. In a simple linear reconstruction approach, the hologram is back-propagated directly to the sample plane as if the sensor had recorded the complex amplitude of the wavefront. This method is computationally inexpensive, requiring a single convolution. However, as the sensor only records the intensity of the wave, this approach results in the superimposition of an in-focus image of the object and an out-of-focus version of it, the so-called twin-image (See Appendix A). Losing the phase information in the sensor plane introduces morphological and quantitativity errors in the reconstructed plane. 
+
+B. Inference step of the proposed approach 
+
+To facilitate the network reconstruction task, it is common in inverse problems applications to feed the network with an approximate inversion of the image and add a skip connection to networks such that they only learn to recover the difference between the ideal inversion and the approximated one [48]. In the case of linear inverse problems, this approximate inversion usually corresponds to the adjoint of the forward operator, or to its pseudo inverse. In holography, it is common to feed the network with a back-propagation of the hologram [38], [49]. This pre-processing of the data is also applied to our approach. Our proposed network, fϑ (parameterized by weights ϑ), reconstructs the sample’s transmission function directly from the back-propagation of a single hologram ( H−z dz ). 
+
+btOURS = fbϑ (H−z dz ) (3) With this back-propagation as a pre-processing of the data, the reconstruction task is simplified as it becomes an unmixing task that is directly performed in the object plane and consists in separating the contribution of the real image from those of the twin- and 0-order images (Appendix A, eq.10). IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 4       
+
+> Fig. 1. Framework of the proposed self-supervised approach. For illustration purpose, the vectors t,dz,H−zdzare represented as 2D images.
+
+C. Physics and phase-diversity -based training 
+
+The training step uses the phase diversity from two out-of-focus intensity measurements dz and dz+δz captured at the distances z and z + δz . To train the network to suppress the twin-image from the back-propagation, phase diversity is exploited by introducing two data-fidelity terms for the two holograms in the physics-based loss function Lz . To avoid the optimization process to fall into a non-physical local minimum of the loss function, a regularization term applied on the reconstruction is added. Its weight α↓ is decayed over the training. Once the parameters of the network have converged to a well-behaving configuration, this hyperparameter is set to 0. The resulting loss function is defined by: 
+
+L(ϑ, (dz , dz+δz )) = ∥dz − mz (fϑ (H−z dz )) ∥22
+
++ ∥dz+δz − mz+δz (fϑ (H−z dz )) ∥22
+
++ α↓R (fϑ (H−z dz )) .
+
+(4) The reconstruction problem can be solved during the training step such that fϑ(H−z dz ) provides an accurate transmission function, regarding the loss function, for all the hologram pairs {(dz ,dz+δz )i} of the training dataset: 
+
+bϑ = arg min 
+
+> ϑ
+
+X
+
+> i
+
+L(ϑ, (dz , dz+δz )i) (5) where L(ϑ, (dz , dz+δz )i) stands for the loss function term described in Eq. 4 for the ith pair of holograms of the batch. In practice, to prevent border issues arising from the propagation, the loss is evaluated only in the center of each patch, dividing the image size by 2 in each dimension. 
+
+D. Network architecture 
+
+We selected a U-Net architecture [50] with a residual connection [51]. The residual connection, added to the popular U-Net architecture, allows simplifying the reconstruction task as the hologram back-propagation, provided as input to the network, is already an approximation of the final reconstruction (see section II-A). In this framework, the network untangles the twin and real image contributions from the back-propagated images. III. E VALUATION OF THE METHOD ON SIMULATED DATA 
+
+In this section, our approach is validated using two simulated hologram datasets: one modeling rod-shaped bacteria (bacilli), and the other consisting of spherical particles (simulating calibration beads). Our motivation for considering simulated holograms is to run well-controlled numerical experiments where ground-truth transmission functions tGT can be used to conduct a quantitative evaluation of the reconstructed transmission functions. These simulations are also used to perform a supervised training of a reference network to evaluate how closely our self-supervised approach can get, without ever using the ground-truth images during training. First, we describe the simulation of the dataset; second, we discuss the metrics used to evaluate the performances of our algorithm; finally, we compare our approach with other state-of-the-art reconstruction methods. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 5               
+
+> TABLE I TABLE OF PARAMETERS FOR THE HOLOGRAMS SIMULATION AND EXPERIMENTAL RECORDING
+> Parameter Value
+> Wavelength 637.6 nm Input hologram size (in pixels) 512x512 Pixel pitch 11 μm Magnification 67.5 Object space pixel pitch 163 nm Refractive index of the immersion medium (silicon oil) 1.402 Numerical aperture 1.3
+> zand δz 10 μm ± 0.5 μm and 4 μm TABLE II TABLE OF BEADS PARAMETERS FOR SIMULATIONS
+> Parameter Value
+> Range of diameter for main beads [0.5 μm, 5 μm] Range of diameter for secondary beads [0.5 μm, 2.75 μm] Range of refractive index [1.402, 1.713]
+
+A. Simulation of hologram datasets 
+
+Simulation parameters were chosen close to the experimental parameters (Sec. IV). The wavelength, magnification, refractive indices and sensor parameters are given in Table.I. 
+
+1) Simulated holograms of bacteria: To evaluate the performance of the networks on simulated objects close to biological experimental ones, we generated a dataset of simulated bacteria holograms, referred in the following as “SIM BACT”. It contains 9000 paired samples (with train:validation:test ratios of 91%:6%:3%). To represent small bacteria in silicon oil, we simulated 0.5 μm thick 2D B´ eziers curves with a length drawn randomly from a uniform distribution in the range [1-2 μm], and sampled it on the 2D grid of the sensor. The refractive index of the bacteria was chosen to match the experimental values. The obtained transmission function, which is used as ground truth, is propagated to the sensor plane. The hologram is then obtained by retaining the square modulus of this diffracted wave. A white Gaussian noise is added, leading to a signal-to-noise ratio of 62.5. Figure 2 shows examples of paired simulated bacteria holograms and their corresponding ground truth transmission function. 
+
+2) Simulation of bead holograms: Datasets of 9000 paired holograms (with train:validation:test ratios of 91%:6%:3%), referred as “SIM BEADS” in the following, were simulated. The simulated objects, latex beads in silicon oil, have all the same defocus distance. Considering a coherent illumination by a uniform plane wave of unitary amplitude, the complex amplitude of the diffracted wave on the sensor plane is computed using the Lorenz–Mie model [52]. The hologram is obtained by taking the squared modulus of this complex amplitude. The propagation distances are : z = 10 μm ± 0.5 μm and δz = 4 
+
+μm. A white Gaussian noise η is added to the simulated holograms, leading to a signal-to-noise ratio of 31.25 (SNR = ⟨dz ⟩ /σ 
+
+where ⟨dz ⟩ is the spatial average of the hologram dz , and σ the standard deviation of the noise), which matches the SNR of experimental data. In these simulations, two populations of beads are simulated. In the following they are referred as main and secondary beads. The main population corresponds to isolated objects around which the secondary bead’s population makes clusters. The positions and parameters of the beads are drawn from uniform laws while ensuring there is no overlap between the beads. Table II indicate the values of all the parameters used. The ground truth transmission function, tGT , is obtained by back-propagating the complex amplitude in the sensor plane to the object plane with an angular spectrum propagation [11]. This simulation dataset provides a much more complex example of samples with a higher diversity of objects than the SIM BACT and the experimental ones and aims at evaluating the robustness of our approach. 
+
+B. Evaluation metrics of the reconstructions 
+
+The performance of the reconstruction algorithms on the simulated datasets is evaluated by comparing the phase and modulus of the reconstructions bt, to those of the ground truth tGT . They were assessed using three metrics: the Root Mean Square Error (RMSE) over the entire field-of-view, the Objects Root Mean Square Error (RMSE-O), and the processing time:  
+
+> •
+
+The RMSE on the reconstructed modulus/phase of the transmission function provides a quantitative indicator of the accuracy of the reconstructions. RMSE (uGT , bu) = 
+
+vuut 1
+
+N
+
+> N
+
+X
+
+> k=1
+
+|uGT  
+
+> k
+
+− buk|2 (6) IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 6                    
+
+> TABLE III REGULARIZATION HYPERPARAMETERS FOR IPA APPROACHES
+> Dataset αIPA-1 αIPA-2 ϵ
+> SIM BACT 0.05 0.1 1e-6 SIM BEADS 0.1 0.025 1e-6 EXP BEADS 0.05 0.05 1e-6 EXP ECOLI 0.05 0.05 1e-6 EXP MLUTEUS 0.05 0.05 1e-6
+
+where u can stand for the modulus or the phase of the transmission function.  
+
+> •
+
+The RMSE-O accounts only for the objects of interest, without considering all the background of the transmission function (due to the sparsity of the samples, most of the pixels correspond to the background). RMSE-O (tGT ,bt) = 
+
+vuut 1
+
+M
+
+> M
+
+X
+
+> k=1
+
+wk|tGT  
+
+> k
+
+− btk|2 (7) with M = NP
+
+> k=1
+
+wk and wk a binary mask at pixel position k, with value 1 granted if the pixel belongs to an object and 0 if it doesn’t. The metrics are presented as an average over the test image dataset. 
+
+C. State-of-the-art methods used in the comparisons 
+
+Our method is compared to five state-of-the-art reconstruction approaches. On the one hand, back-propagation, regularized IPA using one hologram (IPA-1) and supervised learning are methods that provide reconstructions by processing a single hologram. On the other hand, both GS and IPA with two holograms (IPA-2) exploit phase diversity to achieve quantitative reconstructions, but they require two holograms to perform a reconstruction. IPA-1 and IPA-2 reconstructions consist of minimizing Eq. 8 using a single (resp. two) hologram. 
+
+btIPA = arg min 
+
+> t∈CN
+
+h
+
+D(t) + αR(t)
+
+i
+
+(8) where  D(t) = ∥dz − mz (t)∥22 (IPA-1) 
+
+D(t) = ∥dz − mz (t)∥22 + ∥dz+δz − mz+δz (t)∥22 (IPA-2) The noise is assumed to be Gaussian, therefore, the L 2 norm, ∥·∥ 2, is used to compute the data-fidelity terms D. For regularization, we chose a piecewise constant prior, expressed as a hyperbolic total variation term: 
+
+R(t) = 1
+
+N
+
+> N
+
+X
+
+> k=1
+
+q
+
+|∇ x,k t|2 + |∇ y,k t|2 + ϵ (9) where the gradient operators ∇x,k , ∇y,k corresponds to the finite differences at pixel k in the x and y directions, and ϵ is a hyperparameter to make the TV term differentiable near 0. In simulation, α is tuned optimally regarding the minimum of RMSE on the phase reconstruction and ϵ is set manually to the value 10 −6. In experimental conditions, both regularization hyperparameters are tuned manually to the values of α = 0 .05 and ϵ = 10 −6. Table III summarizes the values of the hyperparameters that where used for IPA reconstructions. 
+
+D. Training on simulated data 
+
+The neural network is trained over 500 epochs, with a learning rate of 0.002, a batch size of 8 and a dropout regularization of 10%. The learning rate is updated by a scheduler that reduces it on plateau. Parameters ϑ are then optimized using the AMSGRAD optimizer [53]. The TV regularization hyperparameter α↓ of the training loss (eq. 4) is updated at each epoch e with the formula α(e) 
+
+> ↓
+
+= max (0 , 0.5 − 0.002 e). Therefore, the regularization only serves as a guide for the training’s first steps and is completely discarded at half-training time, allowing the network to free itself from this handcrafted prior. Reconstruction on an EXP BEADS image without regularization is shown in the supplementary materials Fig. 7. It shows low-frequencies oscillations artifacts that illustrates the need of the regularization term at the beginning of the training. Our approach is implemented with Pytorch, and the code is available at https://gitlab.univ-st-etienne.fr/rif02493/self-supervised-dihm. To validate its performance, we performed the experiments with a Graphics Processing Unit NVIDIA RTX A6000. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 7      
+
+> TABLE IV TRAINING PARAMETERS
+> Parameter Value
+> Epochs 500 Learning rate 0.002 Batch size 8Dropout percentage 10 Optimiser AMSGRAD
+
+E. Reconstruction of simulated data 
+
+First, we provide a qualitative analysis of the reconstruction results on the SIM BEADS dataset. Figure 2 shows an example of phase reconstructions using five state-of-the-art methods and our proposed approach, on a simulated hologram of the SIM BEADS test dataset. A similar example on the SIM BACT test dataset is provided in the supplementary materials Fig. 5. As can be seen in Fig. 2, the back-propagation reconstruction suffers from twin-image artifacts that may lead to segmentation errors and/or misinterpretation of both the reconstructions in modulus and in phase. The GS algorithm provides a more accurate reconstruction with reduced twin-image artifacts. This confirms that exploiting phase diversity allows solving the ill-posed phase retrieval problem in DIH. However, as there is no other constraint on the reconstructed image, the algorithm is not robust to noise. Indeed, the GS algorithm fits the noise, leading to noisy reconstructions. In this example, regularized IPA with a single hologram fails to produce an accurate quantitative reconstruction on all the objects. This is due to the high diversity of objects in size and phase shift in this dataset. Indeed, even though the weight of the total variation is tuned optimally, this regularization prior is not adapted for all objects. In comparison, our method provides better results, close to supervised deep learning and regularized IPA with two holograms while being self-supervised and requiring a single hologram for inference. This qualitative analysis is confirmed by the performance metrics values that are provided in Table V evaluated on the phase of 300 reconstructed holograms from both SIM BEAD and SIM BACT validation dataset. Indeed, the back-propagation and GS methods provide the worst RMSE and RMSE-O values, while our approach and supervised deep learning methods provide the best. In these simulations, supervised deep learning represents the highest performance that is achievable by the network architecture because it is directly trained on ground truth data. However, in real cases this ground truth is hardly accessible. With the same number of parameters, our self-supervised approach achieves similar performances. The RMSE/RMSE-O are of the same order of magnitude with values of only of 4.75/12.9 mrad on the SIM BEADS dataset and 4.61/15.2 mrad on the SIM BACT dataset. With this accuracy, our self-supervised approach is significantly more accurate than the GS ones. Comparison with regularized IPA emphases the ability of our approach to reconstruct the samples. Indeed, while on SIM BACT, both RMSE and RMSE-O for IPA-1, IPA-2 and our approach are close, on the more complex SIM BEADS dataset, our approach performs significantly better. The RMSE and RMSE-O are almost divided by 2 in comparison with IPA-2, which requires two holograms for reconstruction, and by 10 compared to IPA-1. The inference computational time of our approach, is also much lower compared to state-of-the-art reconstruction methods, and improved even further when reconstructing multiple images simultaneously (batched inference). Table V provides the computational time of all reconstruction methods on 300 simulated images, showing that our approach achieves similar or better performances than IPA methods while being 1000 times faster. To investigate our network’s ability to reconstruct objects outside the distribution of the training dataset, we evaluated its performance when trained and evaluated on two different datasets (see Table V). In this case, the network does not improve the back-propagation reconstruction. Indeed, as the network learns an implicit prior on the distribution of the target objects, it is advised to train it on a specific dataset of interest. In the appendix C, we provide the RMSE and RMSE-O values for the modulus. The analysis of these metrics leads to similar conclusions. IV. R ECONSTRUCTION OF EXPERIMENTAL HOLOGRAMS 
+
+To evaluate our method’s performance in experimental conditions, we recorded three experimental hologram datasets of monodispersed calibration beads and bacteria. We compare the performance of our approach when applied to these experimental datasets with that of the state-of-the-art methods. 
+
+A. Experiments 
+
+Images of the datasets were acquired using an Olympus inverted microscope adapted for in-line holography (see Figure 3). The experimental parameters are the same as the ones used for the simulations (Table I). The illumination source is both spatially and temporally coherent and can be considered a plane wave. The image datasets were acquired using a silicon oil immersion objective with a numerical aperture of 1.3 and a tube lens in a telecentric configuration. Using a microscopy target, the magnification has been estimated to be 67.5. The equivalent pixel size in the object plane is 163 nm. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 8                                                
+
+> Fig. 2. Reconstruction of a test image of the the SIM BEADS dataset using state-of-the-art approaches and our proposed method. Deep learning reconstructions are trained on the SIM BEADS dataset. The purple squares represent the zoom region, of size 64×64 pixels. TABLE V RECONSTRUCTION METRICS ON THE PHASE OF SIMULATED DATASETS OVER 300 TEST IMAGES
+> Method Training set Test dataset # of holograms used for reconstruction
+> SIM BACT SIM BEADS RMSE (mrad) RMSE-O (mrad) RMSE (mrad) RMSE-O (mrad) Back-propagation 42.5 138 406 1180 1
+> IPA-1 4.68 27.0 245 750 1Gerchberg-Saxton 35.3 54.7 176 387 2IPA-2 3.41 19.3 41.1 100 2Supervised DL SIM BACT 2.92 23.3 270 778 1Self-supervised DL (ours) 7.56 24.1 415 1280 1Supervised DL SIM BEADS 11.1 98.2 4.75 12.9 1Self-supervised DL (ours) 15.9 136 22.7 56.3 1*unbatched/batched (16 images)
+
+Three different samples were prepared: polystyrene calibration beads (“EXP BEADS”) and two types of bacteria: a Gram-negative bacillus, Escherichia Coli (“EXP ECOLI”), and a Gram-positive coccus, Micrococcus Luteus (“EXP MLUTEUS”). They were spread on microscope coverslips in silicon oil. A more detailed version of the setup description, sample preparation and acquisition can be found in the supplementary materials B. Images acquired with our experimental setup are cropped into sub-images of size 512 ×512 pixels, and are split into training and validation sets in a (95%,2.5%,2.5%) ratio for train, validation and test respectively. This yields 7168 images for EXP BEAD, 7003 images for EXP ECOLI, and 10781 images for EXP MLUTEUS. These image have been distributed with train:validation:test ratios of 90%,5%,5% for each experimental dataset. All experimental datasets are available at https://labh-curien.univ-st-etienne.fr/public-data/BioDIHM/. The neural network is trained on each training dataset using the same hyper-parameters as those used for the simulation tests. Training on images of the bead samples uses a regularization hyperparameter update rule defined by max(0 .05 , 0.5 − 0.002 e) with e the epoch number. 
+
+B. Validation of our approach on experimental data 
+
+For experimental data, the ground truth is not known; thus, we compared the reconstruction to a baseline computed with a TV-regularized inverse problems approach that uses two holograms (IPA-2) to perform the reconstruction. As seen in the simulations, such an approach gives reconstructions close to the ground truth. The method’s performance on the experimental IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 9PCL TL Se LI Sa PS TS OP IP Ob MMMMSli SM IM CS OP IL 
+
+# z
+
+Ob                                      
+
+> Fig. 3. Experimental setup: LI: Laser Illumination, M: Mirrors, P: Pinhole, CL: Condenser Lens, Sa: Sample, PS: Piezo Stage, TS: Translation Stage, OP: Object Plane, Ob: Objective, TL: Tube Lens, IP: Image Plane, Se: Sensor. Inset: details of the sample. IL: Illumination Light, Sli: Slide, SM: Sample Medium (Silicon oil and micro-objects), CS: Coverslip, OP: Object Plane, IM: Immersion Medium (Silicon oil), Ob: Objective, z: defocus distance (distance from the micro-object to the object plane, defined as the plane conjugated with the sensor plane) TABLE VI COMPARISON OF PHASE RECONSTRUCTION METRICS ON EXPERIMENTAL TEST DATASETS
+> Methods Test dastaset # of holograms used for reconstruction
+> EXP BEADS EXP ECOLI EXP MLUTEUS RMSE (mrad) RMSE-O (mrad) RMSE (mrad) RMSE-O (mrad) RMSE (mrad) RMSE-O (mrad) Back-propagation 34.3 198 92.2 313 108 408 1IPA-1 5.98 75.9 23.4 92.6 39.1 163 1Gerchberg-Saxton 18.4 86.6 44.5 101 51.4 135 2Self-supervised DL (Ours) 5.10 63.6 22.0 82.3 31.5 112 1
+
+data is evaluated in a similar way to that previously done on the simulated data (see Sec.III-B), except that the ground truth is replaced by the baseline reconstruction btIPA-2 .Prior to reconstruction, we estimated the defocus distances of the hologram using the commonly used GRA sharpness criterion [54]. This criterion involves maximizing the gradient of the back-propagation with respect to the distance z to retrieve the in-focus plane. For real-world data, holograms at the distance z and z + δz often suffer from a slight shift in the x and y
+
+directions due to misalignment of the optical and mechanical components of the experimental setup. Our algorithm accounts for these shifts, computed using the correlation between the two back-propagated holograms, in the forward model. In our experiment the average shift is about one-third of a pixel (54 nm) along the horizontal axis and negligible on the vertical axis. Figure 4 shows the result of the state-of-the-art methods (III-C) and the proposed method on the EXP BEADS, EXP ECOLI and EXP MLUTEUS datasets. Zooms on the reconstructions are provided in supplementary material Fig.6. As observed for simulation data, the back-propagation and GS approaches provide unsatisfactory reconstructions, which are either disturbed by twin-image or noise contamination. Our proposed method provides a more satisfying reconstruction that is free of twin-image artifacts and close to the ground truth. Visually, these reconstructions are similar to reconstructions provided by IPA-1. The RMSE and RMSE-O values in Table VI support this qualitative analysis. Quantitatively, our method achieves lower RMSE and RMSE-O than IPA-1 on all the experimental datasets. Among all the compared methods, ours is the fastest one with a computational reconstruction time of a few milliseconds. This shows the potential of our network to perform accurate live imaging reconstructions with a single hologram. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 10  
+
+> Fig. 4. Comparison between state-of-the-art reconstructions methods and ours on three different samples types from the experimental datasets. Our approach produces significantly less artifacts than most reconstruction methods, including Gerchberg-Saxton which uses two holograms for reconstruction.
+
+V. C ONCLUSION 
+
+In this paper, we proposed a self-supervised physics-based deep learning approach for reconstructing the transmission function of a sample from a single digital in-line hologram. Our approach exploits phase diversity during training by means of two defocused measurements. The loss function to train the network relies on an accurate modeling of image formation that is used as a physical constraint to train the reconstruction network. After training, the network can be used for fast inference by applying it to a simple backpropagation of the input hologram. The performance of this method has been compared to other phase retrieval techniques. On simulated datasets, the method provides accurate phase reconstructions, comparable to regularized inverse problems approaches and supervised learning in simple cases and outperforming regularized inverse IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 11 
+
+problem approaches in more complex cases. In contrast to regularized inverse problems approaches, our approach does not rely on priors in the object space or delicate hyperparameter tuning. The computational time for inference is also a major advantage of our method, with a speedup by three orders of magnitude, which makes live reconstruction of biological samples possible. Regarding experimental holograms, the method yields phase reconstructions of similar quality to IPA-1 regarding the RMSE and the RMSE on the objects. In addition to the proposed method, we provide two simulated datasets or beads and bacteria, and three experimental datasets of beads, E. Coli and M-Luteus bacteria acquired with a DIHM setup available at https://labh-curien.univ-st-etienne.fr/public-data/BioDIHM/. To ensure the reproducibility of the results, the code of our deep neural networks is made available at https://gitlab.univ-st-etienne.fr/rif02493/self-supervised-dihm. ACKNOWLEDGMENTS 
+
+The authors would like to thank Jean-Louis Magnard (Laboratoire BVpam, UMR CNRS 5079, University Jean Monnet, Saint-Etienne) and technicians of the biology department of the faculty of Sciences and Techniques of University Jean Monnet, Saint-Etienne, for sharing their advice, competence and materials for the preparation of the bacteria samples. APPENDIX ATWIN IMAGE ISSUE 
+
+The back-propagation of the hologram leads to the reconstruction of the in-focus object transmission function mixed with unwanted signal. Indeed, by considering the difference o between the transmittance and a unitary plane wavefront (such that 
+
+t = 1 + o), the back-propagation of a hologram is modeled by: 
+
+H−z dz = H−z |Hz (1 + o)|2 ≈ H−z |1 + Hz o|2
+
+considering the propagation operator over a distance z, Hz , modified not to consider the constant phase shift, kz , due to propagation along the z-axis such that Hz 1 ≈ 1 (property of the operator Hz 1). By developing the square modulus and considering that H−z Hz = H† 
+
+> z
+
+Hz ≈ I where H† 
+
+> z
+
+is the Hermitian transpose 2:
+
+H−z dz ≈ 1 + H−z |Hz o|2
+
+| {z }
+
+> 0 order
+
++ o
+
+|{z} 
+
+> +1 order
+
++ H−2z o∗
+
+| {z }
+
+> -1 order
+
+(10) The different terms of this equation can be interpreted as follows:  
+
+> •
+
+a low-frequency 0-order term that contains: a term corresponding to the backpropagation of the intensity of the object wave propagated on the sensor (without interference);  
+
+> •
+
+a +1 order term corresponding to the object (called the real image);  
+
+> •
+
+a -1 order term corresponding to the conjugate of this object propagated by a distance −2z. This contribution is that of a twin image (or virtual image) positioned symmetrically to the real image with respect to the hologram. This last term is the most significant term that degrades the back propagation reconstruction. It is known as the twin image issue. Thus, reconstructing the sample’s transmission function from the backpropagation of a hologram can be seen as an unmixing problem. APPENDIX BEXPERIMENTAL SETUP 
+
+1) Experiments: Images of the datasets were acquired using an IX71 inverted microscope from Olympus that has been adapted for in-line holography (see Figure 3). The illumination source is an Oxxius LBX-638 laser diode emitting at 637.6 nm and coupled in a monomode fiber. The output of the fiber is then magnified with a microscope objective to illuminate a 200 μm-diameter pinhole placed in the front focal plane of a lens. The focal length of the lens is 100 mm. This lens replaces the usual condenser lens of the microscope, allowing for the setting of a spatially coherent illumination. The sample is placed near the back focal plane of the lens and is therefore illuminated by an Airy pattern that is large enough to cover the whole field of view without introducing stray light in the optical system. In these conditions, the illumination of the sample can be considered to be a plane wave. The inverted microscope is equipped with a Corvus stepper-motor XY-translation stage and a piezo Z-stage (P737.5SL from PI, with 1.6 nm resolution and 5 nm repeatability). The image datasets used in this work were acquired with an Olympus UPlanSApo 60 × silicon oil immersion objective with a numerical aperture of 1.3 and a coverslip thickness correction collar. The refractive index of silicon oil is 1.402 at 637.6 nm. The silicon oil is also used as the sample medium. It is viscous enough to prevent any motion of the micro-objects during acquisitions and its relatively low refractive index enhances the contrast of the holograms. Moreover, silicon oil is not hygroscopic like glycerol, which guarantees a high stability of the refractive index. The optical system is then  
+
+> 1Physically, the propagation of a plane wave gives a plane wave. Due to the sensor field truncation, this is only approximately verified.
+> 2Physically, a propagation followed by a back-propagation does not change the wave amplitude [55]. Due to the sensor field truncation and numerical aperture filtering, this operator is not the exact inverse of the propagation. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 12
+
+complemented with a 200 mm-focal length apochromatic tube lens designed to work with infinity-corrected objectives in a telecentric configuration (TTL200MP from Thorlabs). In this configuration, the magnification has been calibrated to be 67.5 with a microscopy target. The images are finally acquired with a S805MU1 monochrome CCD sensor from Thorlabs. This sensor has 3296 ×2472 pixels with a pixel size of 5.5 μm. In these conditions, the field of view is 268.5 ×201.4μm. Every image is downsampled by a factor 2, yielding a final pixel size of 163 nm at the object plane. 
+
+2) Samples preparation: Two different types of microscopy samples have been tested here: transparent calibration beads and Gram-stained bacteria. Moreover, two types of non-pathogenic and very common bacteria have been tested: a Gram-negative bacillus ( Escherichia Coli ) and a Gram-positive coccus ( Micrococcus Luteus ). All the samples have been spread and prepared (see below) on a 22 ×22mm coverslip (Precision cover glasses No. 1.5H) with a thickness of 0.17 ±0.005mm. Once completely dried, a droplet of silicon oil (Olympus silicon immersion oil for microscopy, SIL300CS-30CC) was poured on a standard glass microscopy slide (75 ×26 ×1mm) and the coverslip was flipped on it and sealed with varnish.  
+
+> •
+
+Preparation of beads : The beads are NIST-certified polystyrene beads from ThermoFischer Scientific in aqueous sus-pension (10%w/w) whose size is 1.0 ±0.03μm in diameter. Their refractive index at 637.6 nm is 1.587. First a dilution of this suspension is done in ethanol with a ratio 1:1500 and then 5 μL of this dilution was spread on the coverslip with an inoculation loop or the tip of the pipette.  
+
+> •
+
+Preparation of bacteria : both bacteria types were incubated at 37 °C overnight to reach their stationary phase. Their growth was controlled with the standard optical density measurement at 600 nm. Before slide preparation, the stationary culture is diluted in a liquid culture medium with a ratio of 1:20 and incubated again at 37 °C until the bacteria population is doubled to reach an optical density approximately equal to 0.3. Then, 3 μL of bacteria suspension is mixed to 27 μL ethanol and spread on the coverslip with an inoculation loop to ensure bacteria fixation and homogeneous spreading. Then, the Gram-staining procedure consists in flooding the coverslip for 1 min in Crystal Violet (primary stain), 1 min in Lugol (mordant), 5 s in acetone/ethanol (decolorizer) and 1 min in Safranin (counterstain). The sample is moreover rinsed with water between each step. After this procedure, as they are Gram-negative, E. Coli are colored in pink, because the Crystal Violet dye was bleached by the acetone/ethanol mix. On the contrary, Gram-positive bacteria like M. Luteus are colored in dark purple. Therefore, Gram-stained E. Coli and M. Luteus are supposed to be weakly absorbing at 637.6 nm, with M. Luteus absorbing a little more and are likely to have different dephasing properties [22]. 
+
+3) Aquisition and preprocessing: The XY-stage, the Piezo Z-stage and the sensor are controlled with μManager [56]. This allowed to perform automatized acquisition of contiguous, but non-overlapping fields of views of our different samples (typically 10 ×10 to 16 ×16 fields of view, depending on the sample density). For each field of view, 3 images are recorded, one in focus and 2 at different defocused positions (10 and 14 μm, see subsection III-A). Because the slide is usually tilted relatively to the optical axis, the focus position can change, typically within ±3 μm when 16 ×16 fields of view are acquired (corresponding to an area of 4.5 ×3.5mm explored on the sample). To correct this, the best focus positions are evaluated in the four corners of the total explored area and corrected during the acquisition of the various fields of view. Because of its nanometric resolution and repeatability, the δz movement of the piezo stage between the two defocused positions is known very precisely. Additionally, a set of images (as a function of time) is recorded with the laser diode off to calculate an average black level image that is subtracted from every image. A background image is also estimated by calculating the median value of all the images at focus. All images are then normalized by dividing them by the background image. APPENDIX CSUPPLEMENTARY RESULTS : MODULUS RECONSTRUCTION 
+
+In this section we provide the performances of our proposed approach on modulus estimations for both simulated (Table VII) and experimental datasets (Table VIII). Analysis of these results lead to similar conclusions as the ones described for phase in the main manuscript. REFERENCES [1] T. S. Huang, “Digital holography,” Proceedings of the IEEE , vol. 59, no. 9, pp. 1335–1346, 1971. [2] S. Yeom, I. Moon, and B. Javidi, “Real-time 3-d sensing, visualization and recognition of dynamic biological microorganisms,” Proceedings of the IEEE ,vol. 94, no. 3, pp. 550–566, 2006. [3] U. S. Kamilov, I. N. Papadopoulos, M. H. Shoreh, A. Goy, C. Vonesch, M. Unser, and D. Psaltis, “Optical tomographic image reconstruction based on beam propagation and sparse regularization,” IEEE Transactions on Computational Imaging , vol. 2, no. 1, pp. 59–70, 2016. [4] Z. Ren, H. K.-H. So, and E. Y. Lam, “Fringe pattern improvement and super-resolution using deep learning in digital holography,” IEEE Transactions on industrial informatics , vol. 15, no. 11, pp. 6179–6186, 2019. [5] M. D. Priscoli, P. Memmolo, G. Ciaparrone, V. Bianco, F. Merola, L. Miccio, F. Bardozzo, D. Pirone, M. Mugnano, F. Cimmino et al. , “Neuroblastoma cells classification through learning approaches by direct analysis of digital holograms,” IEEE Journal of Selected Topics in Quantum Electronics , vol. 27, no. 5, pp. 1–9, 2021. [6] J. Miao, R. L. Sandberg, and C. Song, “Coherent x-ray diffraction imaging,” IEEE Journal of selected topics in quantum electronics , vol. 18, no. 1, pp. 399–410, 2011. [7] Y. Y. Choporova, B. A. Knyazev, and M. S. Mitkov, “Classical holography in the terahertz range: Recording and reconstruction techniques,” IEEE Transactions on Terahertz Science and Technology , vol. 5, no. 5, pp. 836–844, 2015. [8] D. Gabor, “A new microscopic principle.” 1948. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 13 
+
+TABLE VII RECONSTRUCTION METRICS ON THE MODULUS OF SIMULATED DATASETS OVER 300 TEST IMAGES 
+
+Method Training set Test dataset # of holograms 
+
+SIM BACT SIM BEADS RMSE (× 10 −3)RMSE-O (× 10 −3)RMSE (× 10 −3)RMSE-O (× 10 −3)Back-propagation 39.8 88.0 200 556 1
+
+IPA-1 3.29 13.1 40.5 108 1Gerchberg-Saxton 34.7 45.7 40.0 45.1 2IPA-2 2.44 10.8 9.50 14.9 2Supervised DL SIM BACT 1.96 13.7 108 299 1Self-supervised DL (ours) 5.11 14.9 3450 4040 1Supervised DL SIM BEADS 6.44 66.3 2.73 5.37 1Self-supervised DL (ours) 8.11 61.1 5.90 7.79 1*unbatched/batched (16 images) TABLE VIII COMPARISON OF MODULUS RECONSTRUCTION METRICS ON EXPERIMENTAL TEST DATASETS 
+
+Methods Test dastaset # of holograms 
+
+EXP BEADS EXP ECOLI EXP MLUTEUS RMSE (× 10 −3)RMSE-O (× 10 −3)RMSE (× 10 −3)RMSE-O (× 10 −3)RMSE (× 10 −3)RMSE-O (× 10 −3)Back-propagation 31.0 103 75.7 168 70.5 190 1IPA-1 3.30 36.5 10.2 35.6 12.7 43.8 1Gerchberg-Saxton 18.7 38.5 37.8 42.4 34.9 41.8 2Self-supervised DL (Ours) 3.40 40.6 8.52 32.3 10.6 32.1 1[9] C. Ophus, “Quantitative scanning transmission electron microscopy for materials science: Imaging, diffraction, spectroscopy, and tomography,” Annual Review of Materials Research , vol. 53, no. 1, pp. 105–141, 2023. [10] G. Sanchez-Santolino, L. Clark, S. Toyama, T. Seki, and N. Shibata, “Phase imaging methods in the scanning transmission electron microscope,” Nano Letters , 2025. [11] J. W. Goodman, Introduction to Fourier optics . Roberts and Company publishers, 2005. [12] R. W. Gerchberg, “A practical algorithm for the determination of plane from image and diffraction pictures,” Optik , vol. 35, no. 2, pp. 237–246, 1972. [13] J. R. Fienup, “Reconstruction of an object from the modulus of its fourier transform,” Optics letters , vol. 3, no. 1, pp. 27–29, 1978. [14] J. Fienup, “Phase retrieval algorithms: a comparison,” Applied optics , vol. 21, no. 15, pp. 2758–2769, 1982. [15] M. Guizar-Sicairos and J. R. Fienup, “Understanding the twin-image problem in phase retrieval,” Journal of the Optical Society of America A , vol. 29, no. 11, pp. 2367–2375, 2012. [16] T. Latychevskaia and H.-W. Fink, “Solution to the twin image problem in holography,” Physical review letters , vol. 98, no. 23, p. 233901, 2007. [17] F. Momey, L. Denis, T. Olivier, and C. Fournier, “From fienup’s phase retrieval techniques to regularized inversion for in-line holography: tutorial,” 
+
+Journal of the Optical Society of America A , vol. 36, no. 12, pp. D62–D80, 2019. [18] S. Sotthivirat and J. A. Fessler, “Penalized-likelihood image reconstruction for digital holography,” Journal of the Optical Society of America A , vol. 21, no. 5, pp. 737–750, 2004. [19] L. Denis, D. Lorenz, E. Thi´ ebaut, C. Fournier, and D. Trede, “Inline hologram reconstruction with sparsity constraints,” Optics letters , vol. 34, no. 22, pp. 3475–3477, 2009. [20] S.-H. Lee, Y. Roichman, G.-R. Yi, S.-H. Kim, S.-M. Yang, A. van Blaaderen, P. van Oostrum, and D. G. Grier, “Characterizing and tracking single colloidal particles with video holographic microscopy,” Opt. Express , vol. 15, no. 26, pp. 18 275–18 282, 2007. [21] F. Soulez, L. Denis, C. Fournier, ´ E. Thi´ ebaut, and C. Goepfert, “Inverse-problem approach for particle digital holography: accurate location based on local optimization,” Journal of the Optical Society of America A , vol. 24, no. 4, pp. 1164–1171, 2007. [22] D. Brault, T. Olivier, N. Faure, S. Dixneuf, C. Kolytcheff, E. Charmette, F. Soulez, and C. Fournier, “Multispectral in-line hologram reconstruction with aberration compensation applied to Gram-stained bacteria microscopy,” Scientific Reports , vol. 13, no. 1, p. 14437, Sep. 2023, publisher: Nature Publishing Group. [Online]. Available: https://www.nature.com/articles/s41598-023-41079-4 [23] S. V. Venkatakrishnan, C. A. Bouman, and B. Wohlberg, “Plug-and-play priors for model based reconstruction,” in 2013 IEEE global conference on signal and information processing . IEEE, 2013, pp. 945–948. [24] S. H. Chan, X. Wang, and O. A. Elgendy, “Plug-and-play admm for image restoration: Fixed-point convergence and applications,” IEEE Transactions on Computational Imaging , vol. 3, no. 1, pp. 84–98, 2016. [25] Y. Romano, M. Elad, and P. Milanfar, “The little engine that could: Regularization by denoising (red),” SIAM journal on imaging sciences , vol. 10, no. 4, pp. 1804–1844, 2017. [26] G. Ongie, A. Jalal, C. A. Metzler, R. G. Baraniuk, A. G. Dimakis, and R. Willett, “Deep learning techniques for inverse problems in imaging,” IEEE Journal on Selected Areas in Information Theory , vol. 1, no. 1, pp. 39–56, 2020. [27] G. Situ, “Deep holography,” Light: Advanced Manufacturing , vol. 3, no. 2, pp. 278–300, 2022. [28] K. Wang, L. Song, C. Wang, Z. Ren, G. Zhao, J. Dou, J. Di, G. Barbastathis, R. Zhou, J. Zhao et al. , “On the use of deep learning for phase recovery,” 
+
+Light: Science & Applications , vol. 13, no. 1, p. 4, 2024. [29] A. Sinha, J. Lee, S. Li, and G. Barbastathis, “Lensless computational imaging through deep learning,” Optica , vol. 4, no. 9, p. 1117, 2017. [30] H. Wang, M. Lyu, and G. Situ, “eHoloNet: a learning-based end-to-end approach for in-line digital holographic reconstruction,” Optics Express , vol. 26, no. 18, p. 22603, 2018. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 14 
+
+[31] K. Gregor and Y. LeCun, “Learning fast approximations of sparse coding,” in Proceedings of the 27th international conference on international conference on machine learning , 2010, pp. 399–406. [32] C. Metzler, P. Schniter, A. Veeraraghavan, and R. Baraniuk, “prdeep: Robust phase retrieval with a flexible deep network,” in International Conference on Machine Learning . PMLR, 2018, pp. 3501–3510. [33] F. Zhang, X. Liu, C. Guo, S. Lin, J. Jiang, and X. Ji, “Physics-based iterative projection complex neural network for phase retrieval in lensless microscopy imaging,” 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) , vol. 00, pp. 10 518–10 526, 2021. [34] S. BaoShun and L. QiuSheng, “Dualprnet: Deep shrinkage dual frame network for deep unrolled phase retrieval,” IEEE Signal Processing Letters ,vol. 29, pp. 1177–1181, 2022. [35] Y. Yang, Q. Lian, X. Zhang, D. Zhang, and H. Zhang, “Hionet: deep priors based deep unfolded network for phase retrieval,” Digital Signal Processing ,vol. 132, p. 103797, 2023. [36] D. Yin, Z. Gu, Y. Zhang, F. Gu, S. Nie, J. Ma, and C. Yuan, “Digital holographic reconstruction based on deep learning framework with unpaired data,” 
+
+IEEE Photonics Journal , vol. 12, no. 2, pp. 1–12, 2019. [37] Y. Zhang, M. A. Noack, P. Vagovic, K. Fezzaa, F. Garcia-Moreno, T. Ritschel, and P. Villanueva-Perez, “PhaseGAN: a deep-learning phase-retrieval approach for unpaired datasets,” Optics Express , vol. 29, no. 13, p. 19593, 2021. [38] Y. Rivenson, Y. Zhang, H. G¨ unaydın, D. Teng, and A. Ozcan, “Phase recovery and holographic image reconstruction using deep learning in neural networks,” Light: Science & Applications , vol. 7, no. 2, pp. 17 141–17 141, 2018. [39] K. Wang, J. Dou, Q. Kemao, J. Di, and J. Zhao, “Y-net: a one-to-two deep learning framework for digital holographic reconstruction,” Optics letters ,vol. 44, no. 19, pp. 4765–4768, 2019. [40] I. Moon, K. Jaferzadeh, Y. Kim, and B. Javidi, “Noise-free quantitative phase imaging in gabor holography with conditional generative adversarial network,” Optics Express , vol. 28, no. 18, pp. 26 284–26 301, 2020. [41] H. Chen, L. Huang, T. Liu, and A. Ozcan, “Fourier imager network (FIN): A deep neural network for hologram reconstruction with superior external generalization,” Light: Science & Applications , vol. 11, no. 1, p. 254, 2022. [42] H. Li, X. Chen, H. Wu, Z. Chi, C. Mann, and A. Razi, “Deep DIH: Single-shot digital in-line holography reconstruction by deep learning,” IEEE Access , vol. 8, pp. 202 648–202 659, 2020. [Online]. Available: http://dx.doi.org/10.1109/access.2020.3036380 [43] F. Niknam, H. Qazvini, and H. Latifi, “Holographic optical field recovery using a regularized untrained deep decoder network,” Scientific Reports ,vol. 11, no. 1, p. 10903, 5 2021. [Online]. Available: https://www.nature.com/articles/s41598-021-90312-5 [44] A. S. Galande, V. Thapa, H. P. R. Gurram, and R. John, “Untrained deep network powered with explicit denoiser for phase recovery in inline holography,” 
+
+Applied Physics Letters , vol. 122, no. 13, p. 133701, 3 2023. [45] F. Wang, Y. Bian, H. Wang, M. Lyu, G. Pedrini, W. Osten, G. Barbastathis, and G. Situ, “Phase imaging with an untrained neural network,” Light: Science & Applications , vol. 9, no. 1, p. 77, 2020. [46] R. Li, G. Pedrini, Z. Huang, S. Reichelt, and L. Cao, “Physics-enhanced neural network for phase retrieval from two diffraction patterns,” Optics Express ,vol. 30, no. 18, p. 32680, 2022. [47] L. Huang, H. Chen, T. Liu, and A. Ozcan, “Self-supervised learning of hologram reconstruction using physics consistency,” Nature Machine Intelligence ,vol. 5, no. 8, pp. 895–907, 2023. [48] M. T. McCann, K. H. Jin, and M. Unser, “Convolutional neural networks for inverse problems in imaging: A review,” IEEE Signal Processing Magazine ,vol. 34, no. 6, pp. 85–95, 2017. [49] L. Huang, T. Liu, X. Yang, Y. Luo, Y. Rivenson, and A. Ozcan, “Holographic image reconstruction with phase recovery and autofocusing using recurrent neural networks,” ACS Photonics , vol. 8, no. 6, pp. 1763–1774, 2021. [50] O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolutional networks for biomedical image segmentation,” in International Conference on Medical image computing and computer-assisted intervention . Springer, 2015, pp. 234–241. [51] E. Dalsasso, L. Denis, and F. Tupin, “Sar2sar: A semi-supervised despeckling algorithm for sar images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing , vol. 14, pp. 4321–4329, 2021. [52] F. Slimani, G. Gr´ ehan, G. Gouesbet, and D. Allano, “Near-field lorenz-mie theory and its application to microholography,” Applied optics , vol. 23, no. 22, pp. 4140–4148, 1984. [53] S. J. Reddi, S. Kale, and S. Kumar, “On the convergence of adam and beyond,” in International Conference on Learning Representations , 2018. [54] P. Langehanenberg, G. von Bally, and B. Kemper, “Autofocusing in digital holographic microscopy,” 3D Research , vol. 2, no. 1, pp. 1–11, 2011. [55] M. Liebling, T. Blu, and M. Unser, “Fresnelets: new multiresolution wavelet bases for digital holography,” IEEE Transactions on image processing ,vol. 12, no. 1, pp. 29–43, 2003. [56] A. Edelstein, N. Amodaj, K. Hoover, R. Vale, and N. Stuurman, “Computer control of microscopes using μManager,” Current Protocols in Molecular Biology , vol. Chapter 14, p. Unit14.20, Oct. 2010. 
+
+D B IOGRAPHY SECTION 
+
+Dylan Brault received his Ph.D. degree in Image, Vision and signal science from Universit´ e Jean Monnet (France) in 2022. He is currently a postdoctoral fellow at the Paul Scherrer Institute (Switzerland). His research interests include computational imaging, inverse problems, design of optical-digital imaging systems, physics informed machine learning and image and volume reconstruction with applications mostly related to biomedical imaging. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 15 
+
+F´ elix Riedel is currently working towards his PhD. degree on digital in-line holography, deep learning and inverse problems. He received the signal processing engineering degree from T´ el´ ecom Saint- ´ Etienne and the M.Sc. degree in image processing from Jean Monnet university in 2024. His research interests include deep/machine learning for image reconstruction and signal processing. 
+
+Corinne Fournier received the Ph.D. degree in image science from Universit´ e Jean Monnet (France) in 2003. She is currently Associate Professor with the Laboratoire Hubert Curien, a joint research unit of CNRS, Universit´ e Jean Monnet. She obtained her Habilitation ` a Diriger des Recherches (HDR) in 2017. Her research interests include computational imaging, design of optical-digital imaging systems, inverse problems for image reconstruction, digital holography, physics informed machine learning and biomedical applications. 
+
+Thomas Olivier graduated from Ecole Centrale Marseille and received his Ph.D. degree in optics, electronics, optronics and systems from University of Aix-Marseille in 2004. He worked for Institut Fresnel, Marseille from 1998 to 2004. Since 2005, he is an assistant professor at Jean Monnet University, in Laboratoire Hubert Curien, UMR CNRS 5516, Saint-Etienne, France. After he worked on various biomedical applications of microscopy, he joined the ODIR team (Optical Design and Image Reconstruction) on digital holographic microscopy projects. His research interests concern computational microscopy and more particularly holography for biomedical applications. 
+
+Lo¨ ıc Denis (Senior Member, IEEE) received the M.Sc. degree from CPE Lyon, Villeurbanne, France, in 2003, and the Ph.D. degree from the Universit´ e de Saint-Etienne, Saint- ´ Etienne, France, in 2006. He is currently a Full Professor with the Universit´ e Jean Monnet Saint-Etienne, Saint- ´ Etienne. His research interests include image denoising and reconstruction, robust signal processing, source detection, and machine learning with applications in remote sensing, diffractive microscopy, and astronomy. Dr. Denis was a co-recipient of the IEEE ICIP Best Student Paper Award in 2010, the EUSPICO Best Student Paper Award in 2015, the IEEE Geoscience and Remote Sensing Society 2016 Transactions Prize Paper Award in 2016, and the 2021 IEEE GRSS Symposium Prize Paper Award. He served as an Associate Editor for the IEEE TRANSACTIONS ON IMAGE PROCESSING. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 1
+
+# Physics-based self-supervised learning of a deep network for single-shot in-line hologram reconstruction - Supplementary material 
+
+Dylan Brault, F´ elix Riedel, Corinne Fournier, Thomas Olivier, Lo¨ ıc Denis 
+
+D. Brault is with PSI Center for Life Sciences, 5232 Villigen PSI, Switzerland (e-mail: dylan.brault@telecom-st-etienne.fr). F. Riedel, C. Fournier, T. Olivier, and L. Denis are with Universit´ e Jean Monnet Saint-Etienne, CNRS, Institut d Optique Graduate School, Laboratoire Hubert Curien UMR 5516, F-42023, SAINT-ETIENNE, France. This work was supported by Agence Nationale de la Recherche (ANR), project ATICS (ANR-23-CE51-0023), and by the NIH BRAIN CONNECTS program of the National Institutes of Health under award number 5U01NS132317 and by the SERI-funded ERC Starting Grant #MB22.00042. (Dylan Brault and F´ elix Riedel are co-first authors.) (Corresponding author: Dylan Brault.) 
+
+Fig. 5. Reconstruction of an example of the SIM BACT dataset. The purple squares represent the zoomed regions. IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 2
+
+Fig. 6. Zoom on experimental reconstructions provided in Fig. 4 IEEE TRANSACTIONS ON COMPUTATIONAL IMAGING, MARCH 2026 30.8 11.2 
+
+00.5 11.5 
+
+0.8 11.2 
+
+00.5 11.5 
+
+15μm 5μm 
+
+Fig. 7. Comparison between the reconstructions obtained with IPA-2, our approach and our approach without regularization on a EXP BEADS dataset image

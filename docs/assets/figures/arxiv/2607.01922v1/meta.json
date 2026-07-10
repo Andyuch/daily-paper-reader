@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-001.webp",
+      "caption": "TABLE III REGULARIZATION HYPERPARAMETERS FOR IPA APPROACHES",
+      "page": 6,
+      "index": 1,
+      "width": 1052,
+      "height": 465
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-002.webp",
+      "caption": "Fig. 4. Comparison between state-of-the-art reconstructions methods and ours on three different samples types from the experimental datasets. Our approach produces significantly less artifacts than most reconstruction methods, including Gerchberg-Saxton which uses two holograms for reconstruction.",
+      "page": 10,
+      "index": 2,
+      "width": 968,
+      "height": 1115
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-003.webp",
+      "caption": "Fig. 7. Comparison between the reconstructions obtained with IPA-2, our approach and our approach without regularization on a EXP BEADS dataset image",
+      "page": 18,
+      "index": 3,
+      "width": 648,
+      "height": 792
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-004.webp",
+      "caption": "TABLE VII RECONSTRUCTION METRICS ON THE MODULUS OF SIMULATED DATASETS OVER 300 TEST IMAGES",
+      "page": 13,
+      "index": 4,
+      "width": 1175,
+      "height": 329
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-005.webp",
+      "caption": "TABLE VIII COMPARISON OF MODULUS RECONSTRUCTION METRICS ON EXPERIMENTAL TEST DATASETS",
+      "page": 13,
+      "index": 5,
+      "width": 1156,
+      "height": 199
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-006.webp",
+      "caption": "Fig. 2. Reconstruction of a test image of the the SIM BEADS dataset using state-of-the-art approaches and our proposed method. Deep learning reconstructions are trained on the SIM BEADS dataset. The purple squares represent the zoom region, of size 64×64 pixels.",
+      "page": 8,
+      "index": 6,
+      "width": 1076,
+      "height": 508
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-007.webp",
+      "caption": "TABLE V RECONSTRUCTION METRICS ON THE PHASE OF SIMULATED DATASETS OVER 300 TEST IMAGES",
+      "page": 8,
+      "index": 7,
+      "width": 1175,
+      "height": 328
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-008.webp",
+      "caption": "Fig. 1. Framework of the proposed self-supervised approach. For illustration purpose, the vectors t, dz , H−zdz are represented as 2D images.",
+      "page": 4,
+      "index": 8,
+      "width": 968,
+      "height": 488
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-009.webp",
+      "caption": "Fig. 6. Zoom on experimental reconstructions provided in Fig. 4",
+      "page": 17,
+      "index": 9,
+      "width": 1076,
+      "height": 1252
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-010.webp",
+      "caption": "TABLE VI COMPARISON OF PHASE RECONSTRUCTION METRICS ON EXPERIMENTAL TEST DATASETS",
+      "page": 9,
+      "index": 10,
+      "width": 1154,
+      "height": 217
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-011.webp",
+      "caption": "Fig. 3. Experimental setup: LI: Laser Illumination, M: Mirrors, P: Pinhole, CL: Condenser Lens, Sa: Sample, PS: Piezo Stage, TS: Translation Stage, OP: Object Plane, Ob: Objective, TL: Tube Lens, IP: Image Plane, Se: Sensor. Inset: details of the sample. IL: Illumination Light, Sli: Slide, SM: Sample Medium (Silicon oil and micro-objects), CS: Coverslip, OP: Object Plane, IM: Immersion Medium (Silicon oil), Ob: Objective, z: defocus distance (distance from the micro-object to the object plane, defined as the plane conjugated with the sensor plane)",
+      "page": 9,
+      "index": 11,
+      "width": 790,
+      "height": 554
+    },
+    {
+      "url": "assets/figures/arxiv/2607.01922v1/fig-012.webp",
+      "caption": "Fig. 5. Reconstruction of an example of the SIM BACT dataset. The purple squares represent the zoomed regions.",
+      "page": 16,
+      "index": 12,
+      "width": 1076,
+      "height": 483
+    }
+  ]
+}

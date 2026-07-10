@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.07221v1/fig-001.webp",
+      "caption": "Figure 5 (a) Demonstration of grain analysis pipeline, further information can be obtained in Supplementary Information. Masks are drawn using height channels and extracted before being distributed onto CPD images. Pixel distributions are collated for grain interior (GI) and boundary (GB). Masked region (black) is nominally the GB distribution, and unmasked regions (white) are nominally GI. With increasing mask width GB distribution is made larger, GI distribution is made smaller, see SI fig 4. ΔCPD calculated using CPDGI – CPDGB, indicated with shaded region on collated pixel fitting peaks. (b, c) Scatter plots for unpassivated and passivated films respectively showing ΔCPD (CPDGI – CPDGI) dependence with increasing mask widths, with image used shown in inset. Error bars calculated from fitting. See Fig S4a, b for scaled plots of unpassivated and passivated samples.",
+      "page": 10,
+      "index": 1,
+      "width": 944,
+      "height": 546
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07221v1/fig-002.webp",
+      "caption": "Figure 2 Temporal surface photovoltage characteristics for (a) unpassivated and (b) passivated perovskite thin films. Dashed lines indicate points at which illumination is turned on or off. Time constant, 𝜏, is related to the time taken to reach SPVSS. Grey shaded areas correspond to spread (FWHM) of each image, and solid lines indicate the peak SPV from fitting (See Fig S1a-d). Blue and pink shaded regions indicate post-illumination region for unpassivated and passivated respectively. (c, d) Schematic of band diagram for unpassivated and passivated samples respectively. Blue arrow indicates carrier excitation in bulk under illumination. Dashed arrow indicates hole accumulation at scanning surface. Solid black arrow indicates direction and Steady state SPV is calculated using exponential fitting shown in Fig S1e-f.",
+      "page": 5,
+      "index": 2,
+      "width": 943,
+      "height": 567
+    }
+  ]
+}
