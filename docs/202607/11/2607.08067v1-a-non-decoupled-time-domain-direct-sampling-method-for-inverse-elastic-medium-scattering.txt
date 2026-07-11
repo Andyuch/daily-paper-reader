@@ -1,0 +1,2617 @@
+Title: A Non-Decoupled Time-Domain Direct Sampling Method for Inverse Elastic Medium Scattering
+
+URL Source: https://arxiv.org/pdf/2607.08067v1
+
+Published Time: Fri, 10 Jul 2026 00:24:04 GMT
+
+Number of Pages: 23
+
+Markdown Content:
+# A Non-Decoupled Time-Domain Direct Sampling Method for Inverse Elastic Medium Scattering 
+
+Lefu Cai ∗ Hongjie Li † Xianchao Wang ‡
+
+Abstract 
+
+This work is concerned with an inverse medium problem for elastic waves, in which unknown inhomo-geneities are reconstructed from time-resolved boundary measurements. We propose a novel time-domain direct sampling method for locating scatterers from a single incident source, without imposing specific assumptions on the temporal profile of the excitation. In particular, the imaging functional introduces a time-shifted correlation strategy that replaces the traditional P -S wave decomposition with a travel-time alignment mechanism, thereby enabling direct imaging from the coupled elastic wave field. To analyze the proposed time-domain imaging functional, we employ Parseval’s identity for the Fourier–Laplace trans-form and reformulate the functional in the frequency domain. By exploiting properties of modified Bessel functions, we characterize the asymptotic behavior of the imaging functional and show that it attains its maximum at the target location, which enables reliable identification of the scatterer. Rigorous the-oretical justifications are provided to substantiate the effectiveness of the proposed method. Numerical experiments are also presented to demonstrate its performance and applicability. 
+
+Keywords: inverse medium problem, elastic waves, time-domain direct sampling method, modified Bessel functions 
+
+2020 Mathematics Subject Classification: 
+
+# 1 Introduction 
+
+In this paper, we investigate an inverse medium scattering problem in time-domain elasticity, where the objective is to reconstruct unknown scatterers from boundary measurements of coupled elastic waves. Typi-cally, an incident elastic wave is emitted toward the targets of interest, and an array of receivers is placed on a closed or open measurement boundary located away from the scatterers. The scattered elastic wave fields recorded by these receivers are then used to determine the locations and geometric shapes of the unknown objects. This class of inverse problems arises in numerous scientific and engineering applications, including seismic exploration in geophysics [9], nondestructive evaluation of engineering structures [1], and medical ultrasound elastography [3]. We next present the mathematical formulation of the inverse medium problem for time-dependent elastic waves. Let D ⊂ Rd, d = 2 , 3, denote the inhomogeneous scatterers with Lam´ e parameters ( λ1, μ 1) and density ρ1(x). The background medium Rd \ D is characterized by the constants ( λ2, μ 2, ρ 2), and we assume that λ2/λ 1 = μ2/μ 1. Then the global parameters ( λ, μ, ρ ) admit the representation 
+
+λ(x) = λ1χ(D) + λ2χ(Rd\D),μ(x) = μ1χ(D) + μ2χ(Rd\D),ρ(x) = ρ1(x)χ(D) + ρ2χ(Rd\D).
+
+(1.1) 
+
+> ∗
+
+School of Mathematics, Harbin Institute of Technology, Harbin, People’s Republic of China. (25B312009@stu.hit.edu.cn). 
+
+> †
+
+Yau Mathematical Sciences Center, Tsinghua University, Beijing, China. The work of this author was substantially sup-ported by NSFC grant (12401561). (hongjieli@tsinghua.edu.cn; hongjie li@yeah.net). 
+
+> ‡
+
+School of Mathematics, Harbin Institute of Technology, Harbin, People’s Republic of China. The work of this au-thor was supported by NSFC grant 12471397 and Heilongjiang Provincial Natural Science Foundation grant YQ2024A003. (xcwang90@gmail.com). 
+
+1arXiv:2607.08067v1 [math.NA] 9 Jul 2026 Moreover, the Lam´ e constants in the two regions are assumed to satisfy the following strong convexity condition: i) . μi > 0 and ii) . 3λi + 2 μi > 0,
+
+with i = 1 , 2. Given a causal incident wave ui, namely ui ≡ 0 for t ≤ 0, the propagation of the elastic scattered wave us(x, t ) is governed by the following initial-value problem: 
+
+Lλ,μ us(x, t ) − ρ(x) ∂2us(x, t )
+
+∂t 2 =
+
+
+
+ρ(x) − λ(x)
+
+λ2
+
+ρ2
+
+ ∂2ui(x, t )
+
+∂t 2 , (x, t ) ∈ Rd × R+,
+
+us(x, 0) = ∂tus(x, 0) = 0, x ∈ Rd.
+
+(1.2) In (1.2), the differential operator Lλ,μ , associated with the Lam´ e parameters λ and μ, is defined by 
+
+Lλ,μ u := μ△u + ( λ + μ)∇∇ · u.
+
+The inverse problem considered in this work is to determine the compact support of the inhomogeneous medium from measurements collected on an observation surface Γ ⊂ Rd \ D, namely, Λ := {u(x, t ) : ( x, t ) ∈ Γ × R+} .
+
+During the past few decades, inverse medium problems in elasticity have been studied extensively in the frequency domain. In particular, uniqueness and stability results have been established in the literature [7, 12, 17]. Nevertheless, the numerical reconstruction of unknown scatterers remains highly challenging because of the inherent nonlinearity and ill-posedness of the inverse problem. Existing numerical methods can be broadly classified into iterative and non-iterative approaches. Iterative methods reformulate the inverse problem as a PDE-constrained optimization problem, typically using shape optimization, level-set representations, or domain derivative techniques [4, 27]. Although these approaches can yield high-resolution reconstructions, they require repeated solutions of the full forward elastic wave system, which leads to substantial computational costs, especially in higher dimensions. Moreover, their performance depends strongly on the quality of the initial guess. To address these limitations, non-iterative methods have been developed as efficient alternatives. These approaches avoid repeated forward simulations and enable fast imaging. Among them, sampling-type methods provide direct characterizations of the scatterer support, including the linear sampling method [10], the factorization method [23], the probe method [31], the direct sampling method [20], and the recently developed monotonicity method [11, 18]. These methods rely on operator-theoretic criteria to determine whether sampling points or regions lie inside the scatterer [2, 19]. It should be noted, however, that the aforementioned imaging approaches are restricted to single-frequency measurements. Furthermore, in the context of elastic waves, an additional difficulty arises from the coexistence of compressional (P) and shear (S) waves, which are usually decoupled before mode-dependent imaging functionals are constructed [21, 28]. Compared with frequency-domain data, time-domain signals are often more naturally available and physically informative in practical scenarios [22, 24, 30]. However, most existing time-domain methods have been developed for scalar acoustic or electromagnetic wave models governed by the Helmholtz or Maxwell equations [25, 33]. Extending these methods to elastodynamics governed by the Navier equation is far from straightforward. The primary difficulty lies in the coexistence of P- and S-waves, which propagate at different speeds and are intrinsically coupled through the governing system. To address this challenge, one approach is to employ the Helmholtz decomposition together with retarded layer potentials to derive coupled bound-ary integral formulations in the Laplace domain [35]. Nevertheless, this reconstruction procedure still relies on iterative solvers and requires explicit separation of wave modes, thereby introducing additional compu-tational and modeling complexity in the time domain. Consequently, considerable effort has been devoted to time-domain sampling-type approaches, leading to the development of methods such as the time-domain linear sampling method [8, 15] and time-domain factorization techniques [5, 16]. It is important to note that both classes of methods encounter theoretical challenges associated with transmission eigenvalue problems. Although the solvability of the time-domain linear sampling method has been rigorously established for acoustic waves [6], its extension to elastic waves remains open. To overcome these difficulties, the direct 2sampling method has recently been extended to the time domain [13, 14]. The main idea is to construct a space–time imaging functional involving delayed measurements and carefully designed test functions. The behavior of the corresponding indicator function is then characterized by exploiting properties of modified Bessel functions. However, to the best of our knowledge, no direct sampling method has yet been proposed for the time-domain inverse scattering problem governed by the Navier equation. Moreover, the signals recorded by the sensors contain superposed P- and S-wave components. This naturally raises the important question of whether a non-decoupled imaging functional can be designed directly from the elastic wave field. Motivated by this gap, we develop a new direct sampling framework for inverse elastic medium scattering problems in the time domain. Let eD denote the sampling domain containing the scatterer, so that D ⊂ eD.We introduce the imaging functional 
+
+I(z) = 
+
+Z ∞−∞ 
+
+X 
+
+> τ=p,s
+
+Z
+
+> Γ
+
+e−σ(t+c−1 
+
+> τ|x−z|)
+
+|x − z| d−12
+
+Γτ (x − z)us(x, t + c−1 
+
+> τ
+
+|x − z|) d s(x) 2
+
+dt, (1.3) for z ∈ eD, where the constants cp = p(λ2 + 2 μ2)/ρ 2 and cs = pμ2/ρ 2 represent the phase velocities of the compressional and shear waves, respectively, and 
+
+Γp(x) = − ˆx ˆx⊤, Γs(x) = −I + ˆ x ˆx⊤. (1.4) It follows from (1.3) that the proposed functional is a non-decoupled time-domain indicator. It incorporates contributions from both P- and S-waves while accounting for their respective propagation delays, and it constructs the image by applying the corresponding time-shift corrections directly to the measured scattered field. To analyze the behavior of the imaging functional, we first establish the well-posedness of the forward time-domain elastic wave system. We then employ the Fourier–Laplace transform to derive an equivalent frequency-domain representation of the indicator function. The imaging mechanism of the corresponding frequency-domain indicator is further investigated through a quasi-static analysis and properties of modified Bessel functions. Numerical experiments are finally presented to demonstrate the robustness and resolution capability of the proposed method. The main contributions of this work can be summarized as follows. First, we propose a time-domain imaging functional for inverse elastic scattering, thereby extending the frequency-domain direct sampling methodology to the time domain. Second, the proposed method does not require decoupling of the P- and S-wave components, which substantially simplifies both the theoretical analysis and the practical imple-mentation. Third, the reconstruction functional involves only space–time integrals over the measurement boundary and does not require iterative forward solves, making it particularly suitable for large-scale and real-time imaging problems in elastodynamics. The remainder of this paper is organized as follows. Section 2 establishes the analytical framework through the Fourier–Laplace transform and studies the well-posedness of the associated system. Section 3 analyzes the behavior of the proposed imaging functional. In Section 4, we present numerical experiments that validate the theoretical results and demonstrate the effectiveness of the proposed method. A non-decoupled frequency-domain imaging functional for the elastic model is presented in the Appendix. 
+
+# 2 Fourier–Laplace Transform and Forward Problem Analysis 
+
+In this section, we recall the Fourier–Laplace transform and then discuss the well-posedness of system (1.2). We first introduce the notation for the relevant space–time Sobolev spaces and the Fourier–Laplace transform. Let X be a Hilbert space. We denote by D(R, X ) the space of X-valued C∞ 
+
+> 0
+
+functions on R
+
+with compact support in ( −∞ , ∞), and by D′(R, X ) the corresponding space of X-valued distributions. The Schwartz space of X-valued functions on the real line is denoted by S(R, X ), and S′(R, X ) denotes the corresponding space of tempered distributions. With this notation, we define 
+
+L′
+
+> σ
+
+(R, X ) := f ∈ D ′(R, X ) : e−σt f ∈ S ′(R, X ) , σ ∈ R.
+
+3Let Cσ0 = {ω = ξ + i σ ∈ C : ℑ(ω) ≥ σ0 > 0} denote a half-plane in the complex plane. To pass from the time domain to the frequency domain, we use the Fourier–Laplace transform of a function f ∈ L ′
+
+> σ
+
+(R, X ), defined by 
+
+L[f ]( ω) := 
+
+Z +∞−∞ 
+
+eiωt f (t) d t, ω ∈ Cσ0 .
+
+For the Fourier–Laplace transform, the following Parseval identity holds: 
+
+Z +∞−∞ 
+
+|e−σt f (t)|2 dt = 12π
+
+Z +∞+i σ
+
+> −∞ +i σ
+
+|L [f ]( ω)|2 dω. (2.1) To handle time-dependent wave fields, we introduce the following Hilbert space for m ∈ R:
+
+Hmσ (R, X ) := 
+
+n
+
+f ∈ L ′
+
+> σ
+
+(R, X ) : 
+
+Z +∞+i σ
+
+> −∞ +i σ
+
+|ω|2m ∥L [f ]( ω)∥2 
+
+> X
+
+dω < +∞
+
+o
+
+,
+
+equipped with the norm 
+
+∥f ∥Hmσ (R,X ) =
+
+ Z +∞+i σ
+
+> −∞ +i σ
+
+|ω|2m ∥L [f ]( ω)∥2 
+
+> X
+
+dω
+
+1/2
+
+.
+
+The wave fields can therefore be transformed from the time domain to the frequency domain through the Fourier–Laplace transform, namely, ˆus(x, ω ) := 
+
+Z +∞−∞ 
+
+eiωt us(x, t ) d t, ˆu(x, ω ) := 
+
+Z +∞−∞ 
+
+eiωt u(x, t ) d t. 
+
+System (1.2) can then be expressed in the frequency domain as 
+
+Lλ2,μ 2 ˆus(x, ω ) + ρ2ω2 ˆus(x, ω ) = 
+
+
+
+ρ2 − λ2
+
+λ(x) ρ(x)
+
+
+
+ω2 ˆu(x, ω ), x ∈ Rd. (2.2) By the Lippmann–Schwinger integral representation and a straightforward simplification, the solution to (2.2) can be written as ˆus(x, ω ) = 
+
+Z
+
+> D
+
+Γω(x, y)
+
+ λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+
+
+ω2 ˆu(y, ω ) d y. (2.3) In (2.3), the function Γω = (Γ ωi,j )di,j =1 denotes the fundamental solution of the operator Lλ2,μ 2 + ρ2ω2 and is given by [26] 
+
+Γωi,j (x) = 
+
+
+
+− δij i4μ H(1) 0 (ωc −1 
+
+> s
+
+|x|) + i4ω2ρ2
+
+∂2
+
+> ij
+
+
+
+H(1) 0 (ωc −1 
+
+> p
+
+|x|) − H(1) 0 (ωc −1 
+
+> s
+
+|x|)
+
+
+
+, d = 2 ,
+
+− δij 
+
+4πμ |x| eiωc −1  
+
+> s|x|
+
++ 14πω 2ρ2
+
+∂2
+
+> ij
+
+eiωc −1  
+
+> p|x|
+
+− eiωc −1 
+
+> s|x|
+
+|x| , d = 3 ,
+
+(2.4) where H(1) 0 is the Hankel function of the first kind of order zero. Furthermore, as |x| → ∞ , the following asymptotic expansion holds: 
+
+Γω(x) = ad, 1Γp(x) eiωc −1 
+
+> p|x|
+
+|ω| 3−d 
+
+> 2
+
+|x| d−12
+
++ ad, 2Γs(x) eiωc −1 
+
+> s|x|
+
+ω 3−d 
+
+> 2
+
+|x| d−12
+
++ O  1
+
+|x| d+1 2
+
+,
+
+where 
+
+a2,1 = 1 + i 4pπ(λ2 + 2 μ2) , a2,2 = 1 + i 4√πμ 2
+
+, a3,1 = 14π(λ2 + 2 μ2) , a3,2 = 14πμ 2
+
+. (2.5) We next discuss the well-posedness of (1.2). To this end, we first recall the following lemma; further details can be found in [29] and [32, Chapter 3]. 4Lemma 2.1. Let X and Y be Banach spaces, and let B(X, Y ) denote the space of all bounded linear operators from X to Y . Suppose that ψ : Cσ0 → B (X, Y ) is an analytic function satisfying the bound 
+
+∥ψ(ω)∥B(X,Y ) ≤ C|ω|k, ω ∈ Cσ0 , k ∈ R,
+
+where C > 0 is a constant independent of ω. Define the inverse transform 
+
+ˇψ(t) := 12π
+
+Z ∞+i σ
+
+> −∞ +i σ
+
+e−iωt ψ(ω) d ω, 
+
+and the associated convolution operator 
+
+Ψg := 
+
+Z ∞−∞ 
+
+ˇψ(ℓ)g(t − ℓ) d ℓ. 
+
+Then, for any m ∈ R, the operator Ψ extends to a bounded operator from Hm+kσ (R, X ) into Hmσ (R, Y ).
+
+Using Lemma 2.1, we establish the following result. 
+
+Theorem 2.1. Suppose that the medium parameters are given by (1.1) and that the density ρ1(x) has a positive lower bound. Let m ∈ R and σ ≥ σ0 > 0. Then, for any incident field ui(x, t ) ∈ Hmσ (R, (L2(D)) d),system (1.2) admits a unique scattered-field solution us(x, t ) ∈ Hm−2 
+
+> σ
+
+(R, (H1(D)) d). Moreover, the solution 
+
+us(x, t ) satisfies the following regularity estimate: 
+
+∥us∥Hm−2  
+
+> σ(R,(H1(D)) d)
+
+≤ C∥ui∥Hmσ (R,(L2(D)) d),
+
+where C > 0 is a constant independent of ui.Proof. For x ∈ D, equation (2.2) can be written as 
+
+Lλ1,μ 1 ˆus(x, ω ) + ρ1(x)ω2 ˆus(x, ω ) = 
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x)
+
+
+
+ω2 ˆui(x, ω ).
+
+Multiplying the equation by a smooth test function v ∈ (C∞ 
+
+> 0
+
+(D)) d and integrating over D yield 
+
+Z
+
+> D
+
+ Lλ1,μ 1 ˆus(x, ω ) + ρ1(x)ω2 ˆus(x, ω ) v(x) d x =
+
+Z
+
+> D
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x)
+
+
+
+ω2 ˆui(x, ω )v(x) d x.
+
+Applying integration by parts, we obtain 
+
+A( ˆ us, v) = 
+
+Z
+
+> D
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x)
+
+
+
+ω2 ˆui(x, ω )v(x) d x, (2.6) where the sesquilinear form A is defined by 
+
+A(u, v) := 
+
+Z
+
+> D
+
+μ1∇u : ∇v + ( λ1 + μ1)( ∇ · u)( ∇ · v) − ρ1ω2u · v dx, (2.7) with the notation 
+
+∇u : ∇v := X
+
+> i,j
+
+∂u i
+
+∂x j
+
+∂v i
+
+∂x j
+
+.
+
+Since the density ρ1(x) is bounded, i.e., 0 < ρ min ≤ ρ1(x) ≤ ρmax , setting v = u in (2.7) yields 
+
+ℜ (i ωA (u, u)) = ℜ
+
+Z 
+
+> D
+
+iμ1ω∇u : ∇u + ( λ1 + μ1)( ∇ · u)( ∇ · u) − iρ1ω|ω|2u · u dx
+
+
+
+=ℑ(ω)
+
+Z
+
+> D
+
+μ1∇u : ∇u + ( λ1 + μ1)( ∇ · u)( ∇ · u) + ρ1|ω|2u · u dx
+
+≥ℑ (ω) min μ1, ρ min |ω|2 ∥u∥2(H1(D)) d .
+
+5On the other hand, the Cauchy–Schwarz inequality gives the continuity estimate 
+
+ℜ (i ωA (u, v)) ≤ ℑ (ω) max λ1 + 2 μ1, ρ max |ω|2 ∥u∥(H1(D)) d ∥v∥(H1(D)) d .
+
+Therefore, the sesquilinear form A(·, ·) is both coercive and continuous. By the Lax–Milgram theorem, there exists a unique solution ˆ us satisfying (2.6), and consequently (2.2). Furthermore, we observe that 
+
+ℜ
+
+
+
+iω
+
+Z
+
+> D
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x)
+
+
+
+ω2 ˆui(x, ω )v(x) d x
+
+
+
+≤ ℑ (ω)|ω|2 λ1
+
+λ2
+
+ρ2 − ρ1(x) C(D)
+
+∥ ˆui∥(L2(D)) d ∥v∥(L2(D)) d .
+
+Taking v = us in (2.6), we obtain 
+
+ℑ(ω) min μ1, ρ min |ω|2 ∥ ˆus∥2(H1(D)) d ≤ ℜ (i ωA ( ˆ us, ˆus)) = ℜ
+
+
+
+iω
+
+Z
+
+> D
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x)
+
+
+
+ω2 ˆui(x, ω ) ˆ us(x, ω ) d x
+
+
+
+≤ ℑ (ω)|ω|2 λ1
+
+λ2
+
+ρ2 − ρ1(x) C(D)
+
+∥ ˆui∥(L2(D)) d ∥ ˆus∥(L2(D)) d .
+
+Consequently, for σ ≥ σ0 > 0, we obtain the following frequency-domain estimate: 
+
+∥ ˆus∥(H1(D)) d ≤ max 
+
+ |ω|2
+
+μ1
+
+, 1
+
+ρmin 
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x) C(D)
+
+∥ ˆui∥(L2(D)) d
+
+≤ max 
+
+ |ω|2
+
+ρmin σ20
+
+, |ω|2
+
+μ1
+
+, 1
+
+ρmin 
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x) C(D)
+
+∥ ˆui∥(L2(D)) d
+
+=|ω|2 max 
+
+ 1
+
+ρmin σ20
+
+, 1
+
+μ1
+
+ λ1
+
+λ2
+
+ρ2 − ρ1(x) C(D)
+
+∥ ˆui∥(L2(D)) d .
+
+Define the frequency-domain solution operator ˆK(ω) associated with (2.2) by ˆK(ω) : ˆ ui ∈ (L2(D)) d 7 → ˆus ∈ (H1(D)) d,
+
+and define the corresponding time-domain solution operator K for (1.2) by 
+
+K : ui ∈ Hmσ (R, (L2(D)) d) 7 → us ∈ Hm−2 
+
+> σ
+
+(R, (H1(D)) d).
+
+The operator K can be expressed through convolution as 
+
+Kui = us = L−1 [ ˆ us] = L−1 h ˆK ˆuii
+
+= L−1 L[K]L[ui] = K ∗ ui.
+
+Finally, applying Lemma 2.1 with k = 2 yields the time-domain regularity estimate 
+
+∥us∥Hmσ (R,(H1(D)) d) ≤ C∥ui∥Hm−2 
+
+> σ(R,(L2(D)) d)
+
+.
+
+# 3 Analysis of the Time-Domain Direct Sampling Method 
+
+In this section, we analyze the asymptotic behavior of the proposed imaging functional (1.3) and clarify its mechanism for identifying the locations of the scatterers. To this end, we employ the Fourier–Laplace transform and conduct the theoretical analysis in the frequency domain. 6Theorem 3.1. Let the time-domain imaging functional be defined by (1.3) . Applying the Fourier–Laplace transform, the imaging functional admits the following frequency-domain representation: 
+
+I(z) = 12π
+
+Z ∞+i σ
+
+> −∞ +i σ
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| d−12
+
+ˆus(x, ω ) d s(x) 2
+
+dω, z ∈ eD. 
+
+Proof. Applying Parseval’s identity (2.1) and performing a direct calculation, we obtain 
+
+I(z) = 
+
+Z ∞−∞ 
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+e−σ(t+c−1 
+
+> τ|x−z|)
+
+|x − z| d−12
+
+Γτ (x − z)us(x, t + c−1 
+
+> τ
+
+|x − z|) d s(x) 2
+
+dt
+
+= 12π
+
+Z ∞+i σ
+
+> −∞ +i σ
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+e−σc −1 
+
+> τ|x−z|
+
+|x − z| d−12
+
+Γτ (x − z)L[us(x, t + c−1 
+
+> τ
+
+|x − z|)]( ω) d s(x) 2
+
+dω
+
+= 12π
+
+Z ∞+i σ
+
+> −∞ +i σ
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| d−12
+
+ˆus(x, ω ) d s(x) 2
+
+dω. 
+
+This completes the proof. Before investigating the asymptotic behavior of the proposed imaging functional, we introduce several preliminary lemmas. 
+
+Lemma 3.1. The functions Γp and Γs defined in (1.4) satisfy the following properties: 
+
+Γp(x)Γp(x) = −Γp(x), Γs(x)Γs(x) = −Γs(x), Γp(x)Γs(x) = Γs(x)Γp(x) = 0 .
+
+Proof. The proof follows from a direct calculation using the definitions of Γp(x) and Γs(x) in (1.4), and is therefore omitted. 
+
+Lemma 3.2. For α ∈ C3, the following identities hold: 
+
+Z
+
+> S2
+
+Ieˆx·α ds( ˆ x) = 4 πi 0(√α · α)I,
+
+Z
+
+> S2
+
+ˆx ˆx⊤eˆx·α ds( ˆ x) = 4π
+
+3 (i0(√α · α) − i2(√α · α)) I + 4 πi 2(√α · α) αα ⊤
+
+α · α .
+
+Furthermore, in the two-dimensional case, for α ∈ C2, one has 
+
+Z
+
+> S1
+
+Ieˆx·α ds( ˆ x) = 2 πI 0(√α · α)I,
+
+Z
+
+> S1
+
+ˆx ˆx⊤eˆx·α ds( ˆ x) = π(I0(√α · α) − I2(√α · α)) I + 2 πI 2(√α · α) αα ⊤
+
+α · α .
+
+Here, In and in denote, respectively, the modified Bessel function and the modified spherical Bessel function of the first kind of order n, and Sd−1 denotes the unit sphere in Rd for d = 2 , 3.Proof. It suffices to prove the result in the three-dimensional case, since the two-dimensional case follows by an analogous argument. Let Y mn ( ˆ x) denote the spherical harmonic functions, where ˆ x = (ˆ x1, ˆx2, ˆx3) ∈ S2.We recall their explicit forms: 
+
+Y 00 ( ˆ x) = 12
+
+r 1
+
+π , Y 02 ( ˆ x) = 14
+
+r 5
+
+π (3ˆ x23 − 1) = 14
+
+r 5
+
+π (2 − 3ˆ x21 − 3ˆ x22),Y −12 ( ˆ x) − Y 12 ( ˆ x) = 
+
+r 15 2π ˆx1 ˆx3, Y −12 ( ˆ x) + Y 12 ( ˆ x) = −i
+
+r 15 2π ˆx2 ˆx3,Y −22 ( ˆ x) − Y 22 ( ˆ x) = −i
+
+r 15 2π ˆx1 ˆx2, Y −22 ( ˆ x) + Y 22 ( ˆ x) = 
+
+r 15 8π (ˆ x21 − ˆx22).
+
+(3.1) 7We expand the exponential function in spherical harmonics as 
+
+eˆx·α = 4 π
+
+> ∞
+
+X
+
+> n=1
+> n
+
+X
+
+> m=−n
+
+in(√α · α)Y mn ( α
+
+√α · α )Y mn ( ˆ x).
+
+Multiplying by spherical harmonic functions and integrating over the unit sphere yield 
+
+Z
+
+> S2
+
+Y mn ( ˆ x)eˆx·αds( ˆ x) = 4 πi n(√α · α)Y mn ( α
+
+√α · α ).
+
+Combining the above identities, we obtain 
+
+Z
+
+> S2
+
+Ieˆx·α ds( ˆ x) = 4 πi 0(√α · α)I,
+
+Z
+
+> S2
+
+ˆx ˆx⊤eˆx·α ds( ˆ x) = 4π
+
+3 (i0(√α · α) − i2(√α · α)) I + 4 πi 2(√α · α) αα ⊤
+
+α · α .
+
+This completes the proof. 
+
+Remark 3.1 . In the two-dimensional case, the conclusion can be established using the expansion 
+
+eˆx·α = I0(√α · α) + 2 
+
+> ∞
+
+X
+
+> n=1
+
+In(√α · α) cos( nφ ),
+
+where φ denotes the angle between x and α.Building on the identities established in Lemma 3.2, we derive the following key estimates for the subsequent analysis of the indicator function. 
+
+Lemma 3.3. Let Γ = {x ∈ Rd\D : |x| = r} denote the sphere of radius r. For y ∈ D, define the matrix-valued integral 
+
+Gω(z, y) = 
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| d−12
+
+Γω(x, y) d s(x).
+
+Assume that ω ∈ Cσ0 satisfies ω ∈ (0+i σ, ξ max +i σ), where ξmax is a positive constant such that |ℜ (ω)| < ξ max .Then the following asymptotic behavior holds as r → ∞ :
+
+|Gi,j ω (z, y)| = 4 d−2π ad, 1
+
+e−σc −1 
+
+> pr
+
+|ω| 3−d
+
+> 2
+
+Ki,j p (η) + ad, 2
+
+e−σc −1 
+
+> sr
+
+|ω| 3−d
+
+> 2
+
+Ki,j s (η)
+
+n
+
+1 + O  |ω|
+
+r d−12
+
+o
+
+, (3.2) 
+
+where η = σy + i ℜ(ω)( z − y), and 
+
+Kp(η) = 
+
+
+
+−  I0(c−1
+
+> p
+
+√η · η) − I2(c−1
+
+> p
+
+√η · η) I − 2I2(c−1
+
+> p
+
+√η · η) ηη ⊤
+
+√η · η , d = 2 ,
+
+− i0(c−1
+
+> p
+
+√η · η) − i2(c−1
+
+> p
+
+√η · η)3 I − i2(c−1
+
+> p
+
+√η · η) ηη ⊤
+
+√η · η , d = 3 ,
+
+Ks(η) = 
+
+
+
+−  I0(c−1
+
+> s
+
+√η · η) + I2(c−1
+
+> s
+
+√η · η) I + 2 I2(c−1
+
+> s
+
+√η · η) ηη ⊤
+
+√η · η , d = 2 ,
+
+− 2i0(c−1
+
+> s
+
+√η · η) + i2(c−1
+
+> s
+
+√η · η)3 I + i2(c−1
+
+> s
+
+√η · η) ηη ⊤
+
+√η · η , d = 3 .
+
+(3.3) 
+
+Furthermore, the components Gi,j ω (z, y) satisfy the estimates 
+
+|Gi,j ω (z, y)| =  ad, 1e−σc −1  
+
+> pr
+
++ ad, 2e−σc −1 
+
+> sr
+
+O
+
+ 1
+
+|ω|| z − y| d−12
+
+ 
+
+1 + O  |ω|
+
+r d−12
+
+
+
+, (3.4) 
+
+as |z − y| → ∞ and r → ∞ , where the constants ad, 1 and ad, 2 are defined in (2.5) .
+
+8Proof. We give the proof for the three-dimensional case only, since the two-dimensional case follows by an analogous argument. We first note the following asymptotic expansions: 
+
+|x − y| = |x| − ˆx · y + O  1
+
+|x|
+
+, 1
+
+|x − y| = 1
+
+|x|
+
+n
+
+1 + O  1
+
+|x|
+
+o
+
+.
+
+Consequently, by invoking Lemma 3.1, we obtain 
+
+Gω(z, y) = − (a3,1Gω,p (z, y) + a3,2Gω,s (z, y)) 
+
+n
+
+1 + O  |ω|
+
+r
+
+o
+
+, r → ∞ ,
+
+where 
+
+Gω,τ (z, y) = e−σc −1 
+
+> τr
+
+Z
+
+> S2
+
+Γτ (x)ec−1  
+
+> τˆx·η
+
+ds( ˆ x), τ = p, s, 
+
+and η = σy + i ℜ(ω)( z − y). Applying Lemma 3.2, it follows that 
+
+Gω,p (z, y) =4 πe −σc −1 
+
+> pr
+
+
+
+− i0(c−1
+
+> p
+
+√η · η) − i2(c−1
+
+> p
+
+√η · η)3 I − i2(c−1
+
+> p
+
+√η · η) ηη ⊤
+
+√η · η
+
+
+
+,
+
+Gω,s (z, y) =4 πe −σc −1 
+
+> sr
+
+
+
+− 2i0(c−1
+
+> s
+
+√η · η) + i2(c−1
+
+> s
+
+√η · η)3 I + i2(c−1
+
+> s
+
+√η · η) ηη ⊤
+
+√η · η
+
+
+
+.
+
+This establishes (3.2). Furthermore, using properties of oscillatory integrals [34], we have 
+
+Z
+
+> Sd−1
+
+eiℜ(ω)c−1 
+
+> τx·(z−y)
+
+eσc −1  
+
+> τx·y
+
+ds(x) = O
+
+ 1
+
+|ω(z − y)| d−12
+
+
+
+, |z − y| → ∞ ,
+
+Thus, the estimate (3.4) follows, which completes the proof. Assume that the bounded domain D, which characterizes the region containing the inhomogeneous scatterers, consists of finitely many well-separated subdomains with small diameters. Specifically, let 
+
+D =
+
+> N
+
+[
+
+> j=1
+
+Dj , Dj = yj + εB j , N ∈ N, (3.5) where yj and Bj denote, respectively, the center and the normalized support of the scatterer Dj , while ε > 0is a scaling parameter. Furthermore, define the minimum separation distance between the scatterers by 
+
+L := min  
+
+> 1≤i,j ≤N,i ̸=j
+
+dist( Di, D j ),
+
+where dist( Di, D j ) denotes the distance between Di and Dj . Under these geometric assumptions, the Born approximation remains valid. 
+
+Lemma 3.4. Suppose that the parameters are given by (1.1) and that the density ρ1(x) is bounded in D.Assume that the scatterer configuration (3.5) holds. Then the solution ˆus(x, ω ) to (2.2) satisfies the following asymptotic estimates: 
+
+∥ ˆus(·, ω )∥C(D)d =
+
+(O  |ω|2ε2 ln( |ω|ε) , d = 2 ,
+
+O  |ω|2ε2 , d = 3 ,
+
+as |ω|ε → 0.Proof. In accordance with (2.3), introduce the operator T : C(D)d → C(D)d defined by 
+
+T f (x) = ω2
+
+Z
+
+> D
+
+Γω(x, y)
+
+ λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+
+
+f (y) d y.
+
+9From the definition of Γω(x, y) in (2.4), it follows that 
+
+Z
+
+> D
+
+Γωi,j (x, y) d y ≤
+
+> N
+
+X
+
+> k=1
+
+Z
+
+> Dk
+
+Γωi,j (x, y) d y =
+
+(O  ε2 ln( |ω|ε) , d = 2 ,
+
+O  ε2 , d = 3 .
+
+Consequently, we obtain the following norm estimates: 
+
+∥T f ∥C(D)d ≤ λ2
+
+λ1
+
+ρ1 − ρ2 C(D)d ∥f ∥C(D)d
+
+(O  |ω|2ε2 ln( |ω|ε) , d = 2 ,
+
+O  |ω|2ε2 , d = 3 .
+
+Hence, the operator norm of T satisfies 
+
+∥T ∥ =
+
+(O  |ω|2ε2 ln( |ω|ε) , d = 2 ,
+
+O  |ω|2ε2 , d = 3 .
+
+Using the relation ˆ us = T ˆu, we deduce that ( I − T ) ˆ u = ˆ ui. Choosing |ω| and ε sufficiently small so that 
+
+∥T ∥ ≤ 1/2 ensures that the operator I − T is invertible. Therefore, 
+
+∥ ˆus∥C(D)d = ∥T ˆu∥C(D)d = ∥T (I − T )−1 ˆui∥C(D)d =
+
+(O  |ω|2ε2 ln( |ω|ε) , d = 2 ,
+
+O  |ω|2ε2 , d = 3 ,
+
+as |ω|ε → 0. This completes the proof. With the preliminary results established, we now present the principal theorem of this paper, which provides a rigorous analysis of the imaging functional I(z). 
+
+Theorem 3.2. Suppose that the conditions of Lemmas 3.3 and 3.4 hold, and let the incident wave satisfy 
+
+ui(x, t ) ∈ H4+ sσ (R, (L2(D)) d) with s > 0. Let ωmax := ξmax + i σ ∈ Cσ0 denote an upper bound for the frequency of the incident wave ui(x, t ) such that 1 < |ωmax | ≪ 1/ε . If the sampling point z lies in a neighborhood of the scatterer Dj , then 
+
+I(z) =16 d−2π2ε2d ad, 1e−σc −1 
+
+> pr
+
+Kp(ηj ) + ad, 2e−σc −1 
+
+> sr
+
+Ks(ηj ) 2n
+
+Mj
+
+
+
+1 + O  |ωmax |
+
+r d−12
+
+ + O(ε)
+
+
+
++ Nj O  1
+
+Ld−1
+
+o
+
++ εd(e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+)O  1
+
+|ωmax |2s−d+3 
+
+
+
+≤Cdεd e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+n
+
+εdMj
+
+
+
+1 + O  |ωmax |
+
+r d−12
+
+ + O(ε)
+
+
+
++ εdNj O  1
+
+Ld−1
+
+ + O  1
+
+|ωmax |2s−d+3 
+
+o
+
+,
+
+as r → ∞ , ε → 0, L → ∞ , and |ωmax |2s → ∞ . Here, Kp and Ks are defined in (3.3) , while Mj and Nj are defined by 
+
+Mj =
+
+Z ξmax +i σ
+
+> 0
+
+|ω|d+1 
+
+Z
+
+> Bj
+
+  λ2
+
+λ1
+
+ρ1(yj + εζ) − ρ2
+
+ ˆui(yj + εζ, ω ) d ζ 2
+
+dω, Nj =
+
+Z ξmax +i σ
+
+> 0
+
+|ω|d−1
+
+Z
+
+> Bj
+
+  λ2
+
+λ1
+
+ρ1(yj + εζ) − ρ2
+
+ ˆui(yj + εζ, ω ) d ζ 2
+
+dω. 
+
+(3.6) 
+
+Furthermore, if the sampling point z is located sufficiently far from D, then 
+
+I(z) = εd e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+O
+
+ 1dist( z, D ) d−12
+
+n 
+
+εd
+
+1 + O  |ωmax |
+
+r d−12
+
+ + O(ε)
+
+
+
++ O  1
+
+|ωmax |2s−d+3 
+
+o
+
+,
+
+as r → ∞ , ε → 0, |ωmax |2s → ∞ , and dist (z, D ) → ∞ , where dist( z, D ) := min 1≤j≤N |z − yj |.
+
+10 Proof. It suffices to present the proof in the three-dimensional case, since the two-dimensional analogue follows by a similar argument. By (2.3) and Lemma 3.4, the scattered wave can be represented as ˆus(x, ω ) = ω2
+
+Z
+
+> D
+
+Γω(x, y)  λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+   ˆui(y, ω ) + O(|ω|2ε2) dy.
+
+Applying a Taylor expansion yields 
+
+ω2
+
+Z
+
+> D
+
+Γω(x, y)  λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+ ˆui(y, ω ) d y
+
+=ω2ε3
+
+> N
+
+X
+
+> k=1
+
+Z
+
+> Bk
+
+Γω(x, yk + εζ)  λ2
+
+λ1
+
+ρ1(yk + εζ) − ρ2
+
+ ˆui(yk + εζ, ω ) d ζ
+
+=ω2ε3
+
+> N
+
+X
+
+> k=1
+
+Γω(x, yk)
+
+ Z
+
+> Bk
+
+  λ2
+
+λ1
+
+ρ1(yk + εζ) − ρ2
+
+ ˆui(yk + εζ, ω ) d ζ + O(ε)
+
+
+
+.
+
+Assume that ∥z − yj ∥ < L/ 2. Using Lemma 3.3 together with the preceding two identities, we obtain 
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| ˆus(x, ω ) d s(x)
+
+=ω2ε3
+
+> N
+
+X
+
+> k=1
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| Γω(x, yk) d s(x)
+
+×
+
+ Z
+
+> Bk
+
+  λ2
+
+λ1
+
+ρ1(yk + εζ) − ρ2
+
+ ˆui(yk + εζ, ω ) d ζ + O(ε|ω|)
+
+
+
+=4 πω 2ε3  a3,1e−σc −1 
+
+> pr
+
+Kp(ηj ) + a3,2e−σc −1 
+
+> sr
+
+Ks(ηj )
+
+×
+
+Z
+
+> Bj
+
+  λ2
+
+λ1
+
+ρ1(yj + εζ) − ρ2
+
+ ˆui(yj + εζ, ω ) d ζ
+
+n
+
+1 + O  |ω|
+
+r
+
+ + O  1
+
+|ω|L
+
+ + O(ε)
+
+o
+
+,
+
+where ηj = −ℜ (ω)( z − yj ) + i σyj as r → ∞ , ε → 0, and L → ∞ . On the one hand, 
+
+Q1(z) := 1
+
+π
+
+Z ξmax +i σ
+
+> 0
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| ˆus(x, ω ) d s(x) 2
+
+dω
+
+=16 π2ε6 a3,1e−σc −1 
+
+> pr
+
+Kp(ηj ) + a3,2e−σc −1 
+
+> sr
+
+Ks(ηj ) 2n
+
+Mj
+
+
+
+1 + O  |ωmax |
+
+r
+
+ + O(ε)
+
+
+
++ Nj O  1
+
+L2
+
+o
+
+,
+
+(3.7) where Mj and Nj are defined in (3.6). The boundedness of Mj and Nj follows from the regularity assumption 
+
+ui(x, t ) ∈ H4+ sσ (R, (L2(D)) 3) for s > 0. On the other hand, define 
+
+Q2(z) := 1
+
+π
+
+Z +∞+i σξmax +i σ
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| ˆus(x, ω ) d s(x) 2
+
+dω
+
+= 1
+
+π
+
+Z +∞+i σξmax +i σ
+
+ω2
+
+Z
+
+> D
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+Γτ (x − z) e−iℜ(ω)c−1 
+
+> τ|x−z|
+
+|x − z| Γω(x, y)
+
+ λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+
+
+ˆu(y, ω ) d s(x) d y 2
+
+dω. 
+
+Applying the Cauchy–Schwarz inequality yields 
+
+Q2(z) ≤C
+
+Z +∞+i σξmax +i σ
+
+|ω|4
+
+Z
+
+> D
+
+|e−σc −1  
+
+> pr
+
++ e−σc −1 
+
+> sr
+
+|2 dy
+
+Z
+
+> D
+
+ λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+
+
+ˆu(y, ω ) 2
+
+dy dω
+
+≤Cε 3(e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+) λ2
+
+λ1
+
+ρ1(y) − ρ2
+
+> 2
+> C(D)3
+
+Z +∞+i σξmax +i σ
+
+|ω|4
+
+Z
+
+> D
+
+ˆu2(y, ω ) d y dω. 
+
+11 By Theorem 2.1, the condition ui(x, t ) ∈ H4+ sσ (R, (L2(D)) 3) implies u(x, t ) ∈ H2+ sσ (R, (H1(D)) 3). Conse-quently, there exists a constant C1 > 0 such that 
+
+|ωmax |2s
+
+Z +∞+i σξmax +i σ
+
+|ω|4∥ ˆu(y, ω )∥2(L2(D)) 3 dω ≤
+
+Z +∞+i σξmax +i σ
+
+|ω|2(2+ s)∥ ˆu(y, ω )∥2(H1(D)) 3 dω ≤ C1.
+
+Therefore, 
+
+Q2(z) = ε3(e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+)O  1
+
+|ωmax |2s
+
+, s > 0,
+
+as |ωmax |2s → ∞ . Combining (3.7) with the estimate for Q2(z) and using I(z) = Q1(z) + Q2(z), we obtain 
+
+I(z) ≤ ε3 e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+n
+
+ε3Mj
+
+
+
+1 + O  |ωmax |
+
+r
+
+ + O(ε)
+
+
+
++ ε3Nj O  1
+
+L2
+
+ + O  1
+
+|ωmax |2s
+
+o
+
+,
+
+as r → ∞ , ε → 0, L → ∞ , and |ωmax |2s → ∞ . The estimate for a sampling point z located far from the domain D follows by a similar argument, yielding 
+
+I(z) = ε3 e−2σc −1  
+
+> pr
+
++ e−2σc −1 
+
+> sr
+
+O
+
+ 1dist( z, D )
+
+n 
+
+ε3
+
+1 + O  |ωmax |
+
+r
+
+ + O(ε)
+
+
+
++ O  1
+
+|ωmax |2s
+
+o
+
+,
+
+as r → ∞ , ε → 0, |ωmax |2s → ∞ , and dist( z, D ) → ∞ , where dist( z, D ) := min 1≤j≤N |z − yj |.This completes the proof. 
+
+Remark 3.2 . Theorem 3.2 shows that the proposed imaging functional attains a local maximum when the sampling point z coincides with a scatterer Dj and decays rapidly as z moves away from Dj . This property provides a natural mechanism for identifying the scatterer locations through the functional I(z). Furthermore, the asymptotic expansion of I(z) clarifies the conditions required for accurate reconstruction. Specifically, controlling the higher-order term O(|ωmax |/r ) requires a sufficiently large observation radius 
+
+r. The term ε|ωmax | indicates that the scatterer size parameter ε must be significantly smaller than the reciprocal of the maximum frequency, namely ε ≪ 1/|ωmax |. In addition, the term O(1 /L ) requires a sufficiently large minimum separation distance L between individual scatterers. In summary, high-resolution imaging requires the scatterers to be well separated, small relative to the probing wavelength, and observed from a sufficiently large distance. 
+
+# 4 Numerical Examples 
+
+In this section, we present several numerical examples to illustrate the effectiveness of the proposed imaging functional. To obtain the scattered-field data, we solve the forward problem (1.2) using the finite element method. The unbounded exterior domain is truncated by imposing an absorbing boundary condition. The measurement surface is chosen as a circle, or as a sphere in the three-dimensional case, with radius r.Assume that the elastic wave is generated by a point source located at y ∈ Rd. The incident wave ui
+
+satisfies the following equation: 
+
+Lλ2,μ 2 ui(x, t ) − ρ2
+
+∂2ui(x, t )
+
+∂t 2 = dχ(t)δ(x − y), (x, t ) ∈ Rd × R+,
+
+where d ∈ Rd, |d| = 1 is a unit direction vector, χ is a causal temporal signal satisfying χ(t) ≡ 0 for t < 0, and δ(x − y) is the Dirac delta function. In what follows, we use the Ricker wavelet 
+
+χ(t) = (1 − 2a(t − t0)2)e−a(t−t0)2
+
+, (4.1) as the source modulation function for the incident field, where a = 2 π2f 20 , f0 is the peak frequency of the source, and t0 is the time delay. 12 (a) computational geometry (b) Ricker wavelet (c) Fourier spectrum of Ricker wavelet 
+
+Figure 1: Computational geometry, Ricker wavelet, and corresponding Fourier spectra for different peak frequencies f0.                
+
+> (a) TFM, f0= 1 (b) TFM, f0= 2 (c) TFM, f0= 3
+> (d) DSM, f0= 1 (e) DSM, f0= 2 (f) DSM, f0= 3
+
+Figure 2: Reconstruction of three small square scatterers using the total focusing method (TFM) and the time-domain direct sampling method (DSM) for different peak frequencies f0.
+
+4.1 Single Incident Source in Two Dimensions 
+
+In the two-dimensional setting, the measurement circle is uniformly discretized into n observation points. Furthermore, the indicator function (1.3) is truncated at the terminal time T . The time interval [0 , T ] is uniformly discretized into m time steps with step size ∆ t = T /m , yielding the partition t0 = 0 < t 1 < . . . < tm = T and tk = kT /m . Thus, the indicator function is approximated by 
+
+I(z) = Tm
+
+> m
+
+X
+
+> i=1
+
+2d−1πr d−1
+
+n
+
+> n
+
+X
+
+> j=1
+
+X 
+
+> τ=p,s
+
+e−σ(ti+c−1  
+
+> τ|xj−z|)
+
+|xj − z| d−12
+
+Γτ (xj − z)us(xj , t i + c−1 
+
+> τ
+
+|xj − z|) 2
+
+, z ∈ eD. (4.2) For the first numerical example, the incident source is located at ( −1.5, 0). Figure 1(a) illustrates the computational configuration, where the red point denotes the incident source, the three small squares represent the scatterers, and the circle indicates the observation surface. The observation radius is set to 
+
+r = 1 .8, and n = 48 uniformly distributed observation points are used. The terminal time is set to T = 9, 13 (a) SNR= 0 dB (b) SNR= −3 dB (c) SNR= −6 dB      
+
+> (d) SNR= −9 dB (e) SNR= −12 dB (f) SNR= −15 dB
+
+Figure 3: Reconstruction of three small square scatterers under different noise levels δ.                                              
+
+> (a) θ∈(π
+> 4,7π
+> 4)(b) θ∈(π
+> 2,3π
+> 2)(c) θ∈(3π
+> 4,5π
+> 4)
+> (d) θ∈(−3π
+> 4,3π
+> 4)(e) θ∈(−π
+> 2,π
+> 2)(f) θ∈(−π
+> 4,π
+> 4)
+
+Figure 4: Reconstruction of three small square scatterers with limited-aperture data. and the time interval is uniformly discretized into m = 450 time steps. The sampling domain is taken to be eD = [ −1.26 , 1.26] × [−1.26 , 1.26]. Furthermore, Figures 1(b)–(c) show the Ricker wavelet and its corresponding Fourier spectra for different peak frequencies f0, respectively. To demonstrate the advantages of the proposed approach, we compare the time-domain direct sampling method with the total focusing method. The imaging functional of the total focusing method [36] is given 14 by 
+
+ITFM (z) = 
+
+Z
+
+> Γ
+
+us(x, t 0 + c−1 
+
+> p
+
+(|x − z| + |y0 − z|)) d x , z ∈ eD, 
+
+where t0 is the time delay of the Ricker wavelet χ(t) and y0 is the location of the incident point source. Figure 2 presents the reconstruction results for three point-like scatterers obtained using the total focusing method (TFM) and the proposed time-domain direct sampling method (DSM) with incident waves of dif-ferent peak frequencies f0. Both imaging functionals attain local maxima at the scatterer locations, and the reconstruction quality improves as the peak frequency f0 increases. A comparison of the two methods shows that the proposed time-domain direct sampling method achieves higher imaging resolution and characterizes the scatterers more accurately than the total focusing method. Next, we demonstrate the stability of the proposed method. Additive Gaussian noise corresponding to a prescribed signal-to-noise ratio (SNR) is added to the time-dependent measurements, i.e., 
+
+usδ = us +
+
+r Psignal (us)10 SNR /10 Z, 
+
+where Psignal (us) = E(|us|2) denotes the signal power, E is the expectation operator over time t, and 
+
+Z ∼ N (0 , 1) is a standard Gaussian random variable. Figure 3 shows the reconstruction results under various noise levels, with the signal-to-noise ratio ranging from 0 dB to −15 dB. The proposed method achieves high-resolution reconstructions even under severe noise contamination, demonstrating its robustness with respect to measurement noise. Furthermore, we investigate the performance of the proposed method under limited-aperture measurements. Figure 4 presents the reconstructed images of three small square scatterers for observation surfaces with different apertures. The reconstruction quality gradually deteriorates as the aperture decreases. 
+
+4.2 Multiple Incident Sources in Two Dimensions 
+
+In this example, we consider the reconstruction of an extended scatterer. The scatterer has a kite-shaped geometry, as shown in Figure 5(a), and is parameterized by 
+
+x(ϕ) = (0 .4 cos( ϕ) + 0 .26 cos(2 ϕ), 0.6 sin( ϕ)) , ϕ ∈ [0 , 2π].
+
+We first evaluate the proposed imaging functional (4.2) using the scattered field generated by a single incident source. As shown in Figure 5(b), only the portion of the scatterer closest to the source is reconstructed. To overcome this limitation, we introduce an imaging functional that incorporates multiple incident sources: 
+
+eI(z) = 
+
+Z ∞−∞ 
+
+Z
+
+> eΓ
+
+Z
+
+> Γ
+
+X 
+
+> τ=p,s
+
+e−σ(t+c−1 
+
+> τ|x−z|)
+
+p|x − z| Γτ (x − z)us(x, ˜x, t + c−1 
+
+> τ
+
+|x − z|) d s(x) 2
+
+d ˜ x dt, z ∈ eD, (4.3) where eΓ denotes the surface on which the incident sources are placed. We then discretize eΓ into a uniformly distributed array of incident sources. The discretization of the observation surface Γ and the time interval follows the same strategy as that used for the indicator function (4.2). The reconstructions generated by the discretized indicator eI(z) are presented in Figures 5(c)–5(f). The source radius is set to ˜ r = 1 .5, and the number of incident sources is set to ˜ n = 8 , 16 , 24 , 32, respectively. All other parameters are chosen as in Section 4.1. The black points arranged in a circle indicate the positions of the incident sources, while those enclosed by a small red circle are the active sources for each illumination. As shown in Figures 5(c)–5(f), the reconstruction quality improves as the number of incident sources increases, resulting in a more complete recovery of the scatterer. Furthermore, the portions of the scatterer facing the incident sources are reconstructed more accurately, which is consistent with the observation in Figure 5(b). 15 (a) computational geometry (b) single incident source (c) 8 incident sources   
+
+> (d) 16 incident sources (e) 24 incident sources (f) 32 incident sources
+
+Figure 5: Reconstruction of a kite-shaped scatterer using a single incident source and multiple incident sources. 
+
+4.3 Single Incident Source in Three Dimensions 
+
+In the final example, we investigate the identification of two small scatterers in three-dimensional space using a single incident source. The point source is located at ( −1.5, 0, 0), as indicated by the red marker in Figure 6(a). The two small cubes represent the scatterers under investigation. The spherical surface denotes the observation domain, and the discretized points on it correspond to the measurement locations. For improved visualization, projections of the scatterers onto the planes z1 = 1, z2 = 1, and z3 = −1 are also presented in Figure 6(b). The reconstruction results are shown in Figures 6(c) and 6(d). The sampling domain eD is taken as the cube [ −1, 1] × [−1, 1] × [−1, 1]. In Figure 6(c), the indicator function I(z) is visualized on the slices 
+
+z1 = 0 , z 2 = ±0.5 and z3 = ±0.5, which clearly reveal the locations of its peak values. Furthermore, Figure 6(d) displays the isosurfaces of I(z) together with its projections onto the planes z1 = 1 , z 2 = 1, and 
+
+z3 = −1. A comparison between the true scatterers in Figure 6(b) and the corresponding reconstruction in Figure 6(d) demonstrates that the proposed direct sampling method also yields satisfactory reconstructions in the three-dimensional setting. 
+
+# A Direct Sampling Method in the Frequency Domain 
+
+In this appendix, we present a non-decoupled direct sampling method in the frequency domain that is applicable to both two- and three-dimensional elastic wave problems. This approach provides an efficient tool for locating scatterers from full-aperture measurement data without requiring iterative inversion procedures. 
+
+A.1 Mathematical Formulation 
+
+We consider the same configuration as that described in (1.1). Let ˆ ui denote the time-harmonic incident elastic wave satisfying the governing elastic equation in the whole space Rd, d = 2 , 3: 
+
+Lλ2,μ 2 ˆui(x) + ω2ρ2 ˆui(x) = 0 , x ∈ Rd. (A.1) 16 (a) computational geometry (b) exact scatterers  
+
+> (c) slice plots of the reconstruction (d) isosurface plot of the reconstruction
+
+Figure 6: Plots of the exact and reconstructed scatterers in three dimensions. The total displacement field ˆ u satisfies 
+
+Lλ,μ ˆu(x) + ω2ρ(x) ˆ u(x) = 0 , x ∈ Rd, (A.2) and the scattered wave ˆ us := ˆ u − ˆui satisfies the radiation condition (∇ × ∇ × ˆus)( x) × x
+
+|x| − iks∇ × ˆus(x) = O(|x|−2),
+
+x
+
+|x| · [∇(∇ · ˆus)]( x) − ikp∇ ˆus(x) = O(|x|−2),
+
+as ∥x∥ → ∞ , where ks = ω/c s and kp = ω/c p, with cs and cp defined in Section 1. Here, ks and kp denote the wavenumbers corresponding to the shear and pressure waves of the background medium. To facilitate the analysis, we introduce the perturbation parameters 
+
+λ3(x) = λ(x) − λ2, μ3(x) = μ(x) − μ2, ρ3(x) = ρ(x) − ρ2,
+
+which are compactly supported in the scatterer domain D. Then (A.2) can be rewritten as 
+
+Lλ2,μ 2 ˆu(x) + ω2ρ2 ˆu(x) = −L λ3,μ 3 ˆu(x) − ω2ρ3(x) ˆ u(x). (A.3) Subtracting (A.1) from (A.3) gives 
+
+Lλ2,μ 2 ˆus(x) + ω2ρ2 ˆus(x) = −L λ3,μ 3 ˆu(x) − ω2ρ3(x) ˆ u(x).
+
+17 Defining 
+
+f (x) = Lλ3,μ 3 ˆu(x) + ω2ρ3(x) ˆ u(x),
+
+the Lippmann–Schwinger representation yields ˆus(x) = 
+
+Z
+
+> D
+
+Γω(x, y)f (y) d y, (A.4) where Γω = (Γ ωi,j )di,j =1 is the fundamental solution of the background elastic operator; see (2.4). In the static case ω = 0, the corresponding fundamental solution Γ0 is Γ0 
+
+> i,j
+
+(x) = 
+
+
+
+− 14π
+
+ 1
+
+μ + 1
+
+λ + 2 μ
+
+
+
+δij ln |x| + 14π
+
+ 1
+
+μ − 1
+
+λ + 2 μ
+
+ xixj
+
+|x|2 , d = 2 ,
+
+− 18π
+
+ 1
+
+μ + 1
+
+λ + 2 μ
+
+ δij 
+
+|x| − 18π
+
+ 1
+
+μ − 1
+
+λ + 2 μ
+
+ xixj
+
+|x|3 , d = 3 .
+
+A.2 Frequency-Domain Direct Sampling Method 
+
+Assume that full-aperture measurement data are collected on an observation surface Γ ⊂ Rd\D, which, for simplicity, is taken to be a sphere of radius r. The frequency-domain indicator function is defined by ˆI(z) = 
+
+Z
+
+> Γ
+
+Υω(x, z) ˆ us(x) d s(x),
+
+where Υ ω(x, y) is given by Υω(x, y) = bd, 1Γp(x) eikp(|x|− ˆx·y)
+
+|x| d−12
+
++ bd, 2Γs(x) eiks(|x|− ˆx·y)
+
+|x| d−12
+
+,
+
+and the parameters bd, 1 and bd, 2 are given by 
+
+b2,1 = ( λ2 + 2 μ2)3/2, b2,2 = μ3/22 , b3,1 = ( λ2 + 2 μ2)2, b3,2 = μ22.
+
+This indicator function is designed to exhibit local maxima near the scatterer locations, thereby providing a non-iterative approach for detecting the presence and approximate positions of inclusions. To analyze the behavior of ˆI(z), we introduce 
+
+G(z, y) = 
+
+Z
+
+> Γ
+
+Υω(x, z)Γω(x, y) d s(x), (A.5) which captures the interaction between the sampling point z and the source point y.
+
+Lemma A.1. For α ∈ R3, the following identities hold: 
+
+Z
+
+> S2
+
+Ie−i ˆ x·α ds( ˆ x) = 4 πj 0(|α|)I,
+
+Z
+
+> S2
+
+ˆx ˆx⊤e−i ˆ x·α ds( ˆ x) = 4π
+
+3 (j0(c−1|α|) + j2(c−1|α|)) I − 4πj 2(c−1|α|) ˆ α ˆαT .
+
+Furthermore, in the two-dimensional case, for α ∈ R2, one has 
+
+Z
+
+> S1
+
+Ie−i ˆ x·α ds( ˆ x) = 2 πJ 0(|α|)I,
+
+Z
+
+> S1
+
+ˆx ˆx⊤e−i ˆ x·α ds( ˆ x) = π(J0(|α|) + J2(|α|)) I − 2πJ 0(|α|) ˆ α ˆαT .
+
+Here, jn denotes the spherical Bessel function of the first kind of order n, and Jn denotes the cylindrical Bessel function of the first kind of order n.
+
+18 Proof. Applying the Funk–Hecke formula [10] 
+
+Z
+
+> S2
+
+e−i ˆ x·αY mn ( ˆ x) d s( ˆ x) = 4 π(−i) njn(|α|)Y mn ( ˆ α),
+
+together with the explicit forms of the spherical harmonic functions in (3.1) yields the three-dimensional identities. Similarly, the two-dimensional case follows from the Jacobi–Anger expansion 
+
+e−i ˆ x·α = J0(|α|) + 2 
+
+> ∞
+
+X
+
+> n=1
+
+(−i) nJn(|α|) cos( nφ ),
+
+where φ is the angle between x and α.
+
+Lemma A.2. The function G(z, y) defined in (A.5) decays to zero as z moves away from y. More precisely, 
+
+G(z, y) = O
+
+ 1
+
+|z − y| d−12
+
+
+
++ O
+
+ 1
+
+r d−12
+
+
+
+, |z − y| → ∞ , r → ∞ .
+
+Proof. By a direct calculation using Lemma 3.1, we have 
+
+G(z, y) = − ad, 1bd, 1
+
+ω 3−d
+
+> 2
+
+Gp(z, y) − ad, 2bd, 2
+
+ω 3−d
+
+> 2
+
+Gs(z, y) + O
+
+ 1
+
+r d−12
+
+
+
+, (A.6) where 
+
+Gp(z, y) = 
+
+Z
+
+> Sd−1
+
+Γp(x)e−ikp ˆx·(z−y) ds(x), Gs(z, y) = 
+
+Z
+
+> Sd−1
+
+Γp(x)e−iks ˆx·(z−y) ds(x).
+
+Let η = z − y. Using Lemma A.1, we obtain 
+
+Gp(z, y) = 
+
+
+
+−π(J2(kp|η|) + J0(kp|η|)) I + 2 πJ 2(kp|η|) ˆ η ˆη⊤, d = 2 ,
+
+− 4π
+
+3 (j2(kp|η|) + j0(kp|η|)) I + 4 πj 2(kp|η|) ˆ η ˆη⊤, d = 3 ,
+
+Gs(z, y) = 
+
+
+
+π(J2(ks|η|) − J0(ks|η|)) I − 2πJ 2(ks|η|) ˆ η ˆη⊤, d = 2 ,
+
+4π
+
+3 (j2(ks|η|) − 2j0(ks|η|)) I − 4πj 2(ks|η|) ˆ η ˆη⊤, d = 3 .
+
+For large arguments, the Bessel function Jn(s) and the spherical Bessel function jn(s), n = 0 , 2, admit the asymptotic expansions 
+
+Jn(s) = 
+
+r 2
+
+πs cos  s − nπ 
+
+2 − π
+
+4
+
+ 1 + O  1
+
+s
+
+ ,jn(s) = 1
+
+s cos  s − nπ 
+
+2 − π
+
+2
+
+ 1 + O  1
+
+s
+
+ ,
+
+as s → ∞ . Hence, for d = 2, the terms involving J0 and J2 are of order O  1
+
+> |z−y|1/2
+
+, whereas for d = 3, the terms involving j0 and j2 are of order O  1
+
+> |z−y|
+
+. Therefore, in both two and three dimensions, 
+
+Gp(z, y) = O
+
+ 1
+
+|z − y| d−12
+
+
+
+, Gs(z, y) = O
+
+ 1
+
+|z − y| d−12
+
+
+
+,
+
+as |z − y| → ∞ . Substituting these estimates into the representation formula for G(z, y) yields 
+
+G(z, y) = O
+
+ 1
+
+|z − y| d−12
+
+
+
++ O
+
+ 1
+
+r d−12
+
+
+
+.
+
+This completes the proof. 19 Lemma A.3. Let the function G(z, y) be defined by (A.5) . For z = y, one has 
+
+G(z, y) = 
+
+
+
+√π(1 + i)( λ2 + 3 μ2)4√ω I + O
+
+ 1
+
+√r
+
+
+
+, d = 2 ,λ2 + 4 μ2
+
+3 I + O
+
+ 1
+
+r
+
+
+
+, d = 3 ,
+
+and for z near y,
+
+G(z, y) = 
+
+
+
+√π(1 + i) 4√ω
+
+ λ2 + 3 μ2 − 3ω2ρ2
+
+4 |z − y|2I + O(|z − y|4), d = 2 ,
+
+  λ2 + 4 μ2
+
+3 − ω2ρ2
+
+6 |z − y|2I + O(|z − y|4), d = 3 .
+
+Proof. We note that the Bessel function Jn(s) and the spherical Bessel function jn(s), n = 0 , 2, admit the asymptotic expansions 
+
+J0(s) = 1 − s2
+
+4 + O(s4), J2(s) = s2
+
+8 + O(s4),j0(s) = 1 − s2
+
+6 + O(s4), j2(s) = s2
+
+15 + O(s4),
+
+as s → 0. Substituting these expansions into (A.6) and simplifying the resulting expression yield the desired result. We are now ready to state the properties of the indicator function ˆI(z). 
+
+Theorem A.1. Assume that the scatterer configuration is given by (3.5) . Then the indicator function satisfies the following properties: 
+
+• If z lies near a scatterer Dj , then, as ε → 0, |z − yj | → 0, r → ∞ , and L → ∞ ,
+
+ˆI(z) = εdCd
+
+Z
+
+> Bj
+
+f (yj + εζ) d ζ
+
+n
+
+1 + O(|z − yj |2) + O  1
+
+r d−12
+
+ + O(ε) + O  1
+
+L d−12
+
+o
+
+,
+
+where 
+
+C2 =
+
+√π(1 + i)( λ2 + 3 μ2)4√ω , C3 = λ2 + 4 μ2
+
+3 .
+
+• If z is far from all scatterers, then, as ε → 0 and r → ∞ ,
+
+ˆI(z) = εdNX
+
+> j=1
+
+Z
+
+> Bj
+
+f (yj + εζ) d ζ
+
+n
+
+O  1
+
+r d−12
+
+ + O(ε) + O  1dist( z, D ) d−12
+
+o
+
+.
+
+Proof. Applying the Taylor expansion to (A.4), the scattered wave ˆ us(x) can be written as ˆus(x) = εdNX
+
+> j=1
+
+Γω(x, yj )
+
+ Z
+
+> Bj
+
+f (yj + εζ) d ζ + O(ε)
+
+
+
+.
+
+Consequently, ˆI(z) = 
+
+Z
+
+> Γ
+
+Υω(x, z) ˆ us(x) d s(x)=εdNX
+
+> j=1
+
+Z
+
+> Γ
+
+Υω(x, z)Γω(x, yj )
+
+ Z
+
+> Bj
+
+f (yj + εζ) d ζ + O(ε)
+
+
+
+ds(x)=εdNX
+
+> j=1
+
+G(z, yj )
+
+ Z
+
+> Bj
+
+f (yj + εζ) d ζ + O(ε)
+
+
+
+.
+
+20 Using the properties of G(z, y) stated in Lemmas A.2 and A.3, if the sampling point z lies in a neighborhood of the scatterer Dj , then ˆI(z) = εdG(z, yj )
+
+ Z
+
+> Bj
+
+f (yj + εζ) d ζ + O(ε)
+
+
+
++ εdNX 
+
+> k=1
+> k̸=j
+
+G(z, yk)
+
+ Z
+
+> Bk
+
+f (yk + εζ) d ζ + O(ε)
+
+
+
+=εdCd
+
+Z
+
+> Bj
+
+f (yj + εζ) d ζ
+
+n
+
+1 + O(|z − yj |2) + O
+
+ 1
+
+r d−12
+
+
+
++ O(ε) + O
+
+ 1
+
+L d−12
+
+o 
+
+,
+
+as ε → 0, |z − yj | → 0, r → ∞ , and L → ∞ . On the other hand, if the sampling point z is located sufficiently far away from D, the same argument gives ˆI(z) = εdNX
+
+> j=1
+
+Z
+
+> Bj
+
+f (yj + εζ) d ζ
+
+n
+
+O
+
+ 1
+
+r d−12
+
+
+
++ O(ε) + O
+
+ 1dist( z, D ) d−12
+
+o 
+
+,
+
+as ε → 0, r → ∞ , and dist( z, D ) → ∞ .This completes the proof. In summary, the frequency-domain direct sampling method provides a fast and reliable approach for detect-ing scatterers from elastic wave measurements. Its theoretical foundation, based on the asymptotic behavior of the indicator function ˆI(z) and the decay properties of G(z, y), ensures that sampling points near the scatterers produce local maxima, whereas points far away yield negligible values. This makes the method suitable for non-iterative imaging of multiple scatterers in both two- and three-dimensional domains. We emphasize that the proposed method does not rely on the Helmholtz decomposition of the elastic wave field; instead, it directly uses the measured scattered wave fields for imaging. 
+
+# References 
+
+[1] H. Ammari, Y. T. Chow, and J. Zou. Super-resolution in imaging high contrast targets from the perspective of scattering coefficients. Journal de Math´ ematiques Pures et Appliqu´ ees , 111:191–226, 2018. [2] T. Arens. Linear sampling methods for 2d inverse elastic wave scattering. Inverse Problems , 17(5):1445, 2001. [3] G. Bal and S. Imperiale. Displacement reconstructions in ultrasound elastography. SIAM Journal on Imaging Sciences , 8(2):1070–1089, 2015. [4] G. Bao, G. Hu, J. Sun, and T. Yin. Direct and inverse elastic scattering from anisotropic media. Journal de Math´ ematiques Pures et Appliqu´ ees , 117:263–301, 2018. [5] F. Cakoni, H. Haddar, and A. Lechleiter. On the factorization method for a far field inverse scattering problem in the time domain. SIAM journal on mathematical analysis , 51(2):854–872, 2019. [6] F. Cakoni, P. Monk, and V. Selgas. Analysis of the linear sampling method for imaging penetrable obstacles in the time domain. Analysis & PDE , 14(3):667–688, 2021. [7] B. Chen, Y. Gao, S. Ji, and Y. Liu. Stability for time-domain elastic wave equations. SIAM Journal on Mathematical Analysis , 56(1):433–453, 2024. [8] Q. Chen, H. Haddar, A. Lechleiter, and P. Monk. A sampling method for inverse scattering in the time domain. Inverse Problems , 26(8):085001, 2010. [9] Z. Cheng, Y. Jiang, Y. Ge, Y. Li, Z. Qin, R. Lin, and J. Ma. Feature-space planes searcher: A universal domain adaptation framework for interpretability and computational efficiency. IEEE Transactions on Pattern Analysis and Machine Intelligence , 2026. 21 [10] D. Colton and R. Kress. Inverse Acustic and Electromagnetic Scattering Theory . Springer Cham, 2019. [11] S. Eberle-Blick and B. Harrach. Resolution guarantees for the reconstruction of inclusions in linear elasticity based on monotonicity methods. Inverse Problems , 39(7):075006, 2023. [12] J. Elschner and M. Yamamoto. Uniqueness in inverse elastic scattering with finitely many incident waves. Inverse Problems , 26(4):045005, 2010. [13] C. Geng, M. Song, X. Wang, and Y. Wang. Time-domain direct sampling method for inverse electro-magnetic scattering with a single incident source. SIAM Journal on Imaging Sciences , 18(2):1208–1234, 2025. [14] Y. Guo, H. Li, and X. Wang. A novel time-domain direct sampling approach for inverse scattering problems in acoustics. SIAM Journal on Applied Mathematics , 84(5):2152–2174, 2024. [15] Y. Guo, P. Monk, and D. Colton. Toward a time domain approach to the linear sampling method. 
+
+Inverse Problems , 29(9):095016, 2013. [16] H. Haddar and X. Liu. A time domain factorization method for obstacles with impedance boundary conditions. Inverse Problems , 36(10):105011, 2020. [17] P. Hahner and G. C. Hsiao. Uniqueness theorems in inverse obstacle scattering of elastic waves. Inverse Problems , 9(5):525, 1993. [18] B. Harrach and M. Ullrich. Monotonicity-based shape reconstruction in electrical impedance tomogra-phy. SIAM Journal on Mathematical Analysis , 45(6):3382–3403, 2013. [19] G. Hu, A. Kirsch, and M. Sini. Some inverse problems arising from elastic scattering by rigid obstacles. 
+
+Inverse Problems , 29(1):015009, 2012. [20] K. Ito, B. Jin, and J. Zou. A direct sampling method for inverse electromagnetic medium scattering. 
+
+Inverse problems , 29(9):095018, 2013. [21] X. Ji, X. Liu, and Y. Xi. Direct sampling methods for inverse elastic scattering problems. Inverse Problems , 34(3):035008, 2018. [22] B. Jin, F. Wang, and J. Zou. An iterative direct sampling method for reconstructing moving inhomo-geneities in parabolic problems. arXiv:2511.08197 , 2025. [23] A. Kirsch and N. Grinberg. The factorization method for inverse problems . Oxford University Press, Oxford, UK, 2007. [24] M. V. Klibanov, J. Li, V. G. Romanov, and Z. Yang. Convexification for the 3d problem of travel time tomography. SIAM Journal on Scientific Computing , 47(3):A1436–A1457, 2025. [25] T. L¨ ahivaara, P. Monk, and V. Selgas. The time domain linear sampling method for determining the shape of multiple scatterers using electromagnetic waves. Computational Methods in Applied Mathe-matics , 22(4):889–913, 2022. [26] H. Li. Recent progress on the mathematical study of anomalous localized resonance in elasticity. 
+
+Electronic Research Archive , 28(3):1257–1272, 2020. [27] P. Li, Y. Wang, Z. Wang, and Y. Zhao. Inverse obstacle scattering for elastic waves. Inverse Problems ,32(11):115018, 2016. [28] J. Liu, X. Liu, and J. Sun. Extended sampling method for inverse elastic scattering problems using one incident wave. SIAM Journal on Imaging Sciences , 12(2):874–892, 2019. 22 [29] C. Lubich. On the multistep time discretization of linear initial-boundary value problemsand their boundary integral equations. Numerische Mathematik , 67:365–389, 1994. [30] G. Ma, H. Guo, and G. Hu. Imaging a moving point source from multifrequency data measured at one and sparse observation points (part ii): Near-field case in 3d. SIAM Journal on Imaging Sciences ,17(3):1377–1414, 2024. [31] R. Potthast. A survey on sampling and probe methods for inverse problems. Inverse Problems , 22(2):R1– R47, 2006. [32] F.-J. Sayas. Retarded Potentials and Time Domain Boundary Integral Equations . Springer Cham, 2016. [33] M. Sini and H. Wang. The inverse source problem for the wave equation revisited: A new approach. 
+
+SIAM Journal on Mathematical Analysis , 54(5):5160–5181, 2022. [34] E. M. Stein. Real variable methods, orthogonality, and oscillatory integrals. Princeton Math. Series ,43, 1993. [35] L. Zhao, H. Dong, and F. Ma. Inverse obstacle scattering for elastic waves in the time domain. Inverse Problems , 38(4):045005, 2022. [36] T. Zhao, Z. Liu, D. Zhang, J. Wang, and G. Peng. Research on acoustic field correction vector-coherent total focusing imaging method based on coarse-grained elastic anisotropic material properties. Sensors ,25(15), 2025. 23

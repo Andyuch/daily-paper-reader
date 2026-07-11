@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-06-30-735666-v1/fig-001.webp",
+      "caption": "Figure 1. msaGUI analysis workflow. User inputs images for an arbitrary number of image groups and sets up analysis pipeline. The analysis pipeline is comprised of a modular set of operations with user defined recipes. The batch analysis is performed, yielding processed images, histograms, and associated statistics of each group. If desired, these outputs are exported to a filesystem outside of the program.",
+      "page": 2,
+      "index": 1,
+      "width": 498,
+      "height": 433
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-06-30-735666-v1/fig-002.webp",
+      "caption": "Figure 2. Signal from two unique molecules (blue and orange) sum together in a single spectrum (black). Signal from one molecule (blue) is completely resolvable at wavelength A. Signal from another molecule (orange) is not resolvable with a single wavelength. Fitting the spectrum (black) to a combination of Gaussians deconvolves the individual blue and orange contributions. Unmixing shows that 10% of blue signal at A is at B. Since only the blue molecule is present at A, subtracting 10% of the total signal at A from B reveals the true signal of the orange molecule at B.",
+      "page": 3,
+      "index": 2,
+      "width": 502,
+      "height": 344
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-06-30-735666-v1/fig-003.webp",
+      "caption": "Figure 3. msaGUI interface false colored and labeled by feature: (A) file list (magenta), (B) data visualizer (blue), (C) file buttons (green), (D) file descriptors (yellow) and (E) analysis set-up menu (grey). Clicking the (C) Set-Up button opens (E) the analysis set-up menu. In the analysis set-up menu users can input steps on the left by typing in a keyword, operation, output key, and either a second keyword or value. Alternatively, users can input steps with the operation buttons on the right side. Steps can be rearranged or deleted with the up, down, and x buttons to the side of each step. A series of modular operations (i.e. an analysis pipeline) can be exported and later imported with the buttons on the right side. Save confirms the set-up for analysis.",
+      "page": 6,
+      "index": 3,
+      "width": 1090,
+      "height": 1029
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-06-30-735666-v1/fig-004.webp",
+      "caption": "Figure 4. O-PTIR image of a Huh-7 cell 72 hours after feeding with 13C-glucose collected at (A) 1744 cm-1, (B) 1703 cm-1, and (C) 1655 cm-1. (D) Ratio image of 1703 cm-1 and 1744 cm-1, both corrected for overlapping signal at 1655 cm-1. (E) The ratios can also be displayed as a histogram. (F) Comparison of results between msaGUI and previously published results.[4]",
+      "page": 7,
+      "index": 4,
+      "width": 1018,
+      "height": 465
+    }
+  ]
+}

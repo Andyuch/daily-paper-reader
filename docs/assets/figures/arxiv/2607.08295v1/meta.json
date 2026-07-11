@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.08295v1/fig-001.webp",
+      "caption": "FIG. 2. TR-MOKE microscopy images recorded at f = 1.44GHz and αH = 0◦ for external magnetic fields µ0H = 3–10mT (a)–(h). At 3mT (a), no clear reflected beam is observed. At higher fields (b)–(h), successive reflections at the waveguide edges produce a characteristic zig-zag pattern; dashed contours in (f) indicate the fitted beam extents of the free beam Ifree, the incident waveguide beam Iwg, and reflected beams RI and RII. At high fields (g),(h), the steeper beam angle produces a denser multi-reflection pattern. All images share the same color scale. (i)–(k) Extracted beam parameters – propagation direction θV,e, carrier wavenumber ke, and wavefront angle φe – as a function of µ0H for Ifree, Iwg, RI, and RII. Dashed curves show the theoretically predicted caustic point properties. (l) Amplitude ratio |Ar/Ai| for the first (RI, blue) and second (RII, red) reflection.",
+      "page": 3,
+      "index": 1,
+      "width": 1061,
+      "height": 710
+    },
+    {
+      "url": "assets/figures/arxiv/2607.08295v1/fig-002.webp",
+      "caption": "FIG. 3. TR-MOKE microscopy images and reciprocal-space spectra recorded at f = 1.44GHz and µ0H = 5mT for field angles αH ≈ 1.7◦, 6.8◦, 11.1◦, 16.6◦, 21.3◦, 26.5◦ (a)–(f). Below each Kerr image, the corresponding Fourier transform (FT) panel shows the measured spin-wave spectrum (greyscale) together with the theoretical iso-frequency curve (dashed), the two caustic points (colored dots), their group velocity directions (arrows), and the external magnetic field direction. (g) Propagation directions θV,e of the incident beam Iwg and reflected beam RI as a function of αH, together with their average. The average remains approximately constant, consistent with the αH = 0◦ caustic point prediction. (h) Amplitude ratio |Ar/Ai| as a function of αH. (i),(j) Reflected carrier wavenumber kr and wavefront angle φr as a function of αH; colored symbols are experimental data, the dashed line shows the Snell’s law prediction.",
+      "page": 4,
+      "index": 2,
+      "width": 1058,
+      "height": 662
+    }
+  ]
+}

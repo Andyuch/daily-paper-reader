@@ -1,0 +1,206 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-11T20:50:57.368853+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.03170v1",
+      "source": "arxiv",
+      "title": "Bidirectional phase sensitivity in holographic phototransient microscopy",
+      "abstract": "Mid-infrared photothermal microscopy combines the chemical specificity of infrared absorption with the spatial resolution of visible-light detection, but practical implementations face a persistent trade-off between forward-scattering (FWS) and backward-scattering (BWS) detection geometries. FWS provides quantitative, shape-independent phase contrast but requires two-sided optical access that is difficult to achieve in aqueous or thick samples. BWS offers convenient single-sided access, but its signals are strongly distorted by depth-dependent interference for micron-scale objects. Here we present a bidirectional femtosecond mid-infrared pump-probe holographic microscope capable of switching between FWS and BWS geometries within a single instrument, and use it to introduce and validate a new imaging modality, internal forward scattering (IFS). IFS exploits the back-reflection generated at the top surface of the mid-infrared-transparent sample substrate as an internally generated forward-scattering illumination wave, isolated from the directly backscattered field via temporal coherence gating. Using polystyrene beads on CaF2 substrates in air, water, and a refractive-index-matched glycerol-water mixture, we show that IFS reproduces the signal magnitudes and temporal dynamics of true FWS measurements while retaining the mechanical simplicity and single-sided accessibility of BWS. These results establish IFS as a practical, quantitative alternative to conventional FWS and BWS geometries for photothermal, and more broadly quantitative phase, imaging, with direct relevance to single-sided imaging of biological or solvent-contained specimens.",
+      "authors": [
+        "Emmanuel Kotu Robertson",
+        "Dennis van de Lockand",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-03T10:10:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.03170v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "phototransient microscopy using pump-probe holographic scattering detection",
+      "llm_evidence_cn": "使用泵浦-探测全息散射检测的光瞬态显微镜",
+      "llm_evidence": "使用泵浦-探测全息散射检测的光瞬态显微镜",
+      "canonical_evidence": "使用泵浦-探测全息散射检测的光瞬态显微镜",
+      "llm_tldr_en": "Presents a bidirectional holographic microscope for phototransient imaging with phase sensitivity.",
+      "llm_tldr_cn": "介绍了一种具有相位灵敏度的双向全息显微镜，用于光瞬态成像。",
+      "llm_tldr": "介绍了一种具有相位灵敏度的双向全息显微镜，用于光瞬态成像。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.04635v1",
+      "source": "arxiv",
+      "title": "Aperture-aware Dispersion 5-D Light-field Imaging Spectrometer",
+      "abstract": "Enhancing perceptual dimensions while miniaturizing imaging systems presents significant challenges for high-dimensional visual sensing. Conventionally, the acquisition of the 5D (x,y,u,v,λ) spectral light field (5D-SLF) data cube relies on bulky and expensive camera arrays, which are impractical for widespread application. Existing single-detector systems are fundamentally limited by a trade-off between the resolutions of different dimensions owing to insufficient coding capabilities. Here we introduce an Aperture-aware Dispersion Light-field Imaging Spectrometer (ADLIS), that targets a synergy between compactness and resolution through aperture-multiplexed modulation, leveraging the inherent spectral-filtering properties of birefringent material. Using only a manufacturing-friendly and cost-effective phase plate made of birefringent quartz crystal, the aperture of the proposed ADLIS enables compact angular-spectral encoding that is highly sensitive to both the incident angle and spectrum of incoming light. In contrast to the viewpoint-separation approach of microlens arrays, ADLIS employs aperture encoding to superimpose all viewpoints onto each sensor pixel. This shifts the design paradigm from spatial division to encoding integration, aiming to achieve full-resolution light field recovery. Thus, we develop the Aperture-aware Dispersion Light-field Imaging (ADLI) framework, which optimizes the aperture design and 5D-SLF reconstruction in an end-to-end (E2E) manner. Trained by simulation data and validated through real-world experiments, our system achieves robust high-performance 5D-SLF imaging while maintaining full spatial resolution.",
+      "authors": [
+        "Chenglong Huang",
+        "Tao Lv",
+        "Jianing Yang",
+        "Chongde Zi",
+        "Linsen Chen",
+        "Xun Cao"
+      ],
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.CG"
+      ],
+      "published": "2026-07-06T03:37:16+00:00",
+      "link": "https://arxiv.org/pdf/2607.04635v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "5D light-field imaging including u and v dimensions",
+      "llm_evidence_cn": "包含 u 和 v 维度的五维光场成像",
+      "llm_evidence": "包含 u 和 v 维度的五维光场成像",
+      "canonical_evidence": "包含 u 和 v 维度的五维光场成像",
+      "llm_tldr_en": "Develops a compact 5D light-field imaging spectrometer using birefringent materials.",
+      "llm_tldr_cn": "利用双折射材料开发了一种紧凑型五维光场成像光谱仪。",
+      "llm_tldr": "利用双折射材料开发了一种紧凑型五维光场成像光谱仪。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "u",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08295v1",
+      "source": "arxiv",
+      "title": "Anomalous Reflection of Caustic Spin-Wave Beams in a Magnonic Waveguide",
+      "abstract": "Reflection of waves at interfaces is conventionally governed by Snell's law, which follows from conservation of momentum parallel to the interface. Here we show experimentally that caustic spin-wave beams in anisotropic media obey a fundamentally different reflection mechanism. Applying time-resolved Kerr microscopy to a yttrium iron garnet waveguide, we observe that reflected beams are selected by transitions between caustic points on the anisotropic iso-frequency contour rather than by momentum conservation. As a consequence, the reflected carrier wave vector and wavefront orientation exhibit trends opposite to those predicted by Snell's law. By tuning the magnitude and orientation of an external magnetic field, we continuously control the resulting reflection process and beam routing. Our results establish caustic-point transitions as a distinct reflection law for anisotropic wave beams and provide a route towards reconfigurable magnonic beam steering.",
+      "authors": [
+        "Franz Vilsmeier",
+        "Christian Back"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "physics.optics"
+      ],
+      "published": "2026-07-09T09:39:20+00:00",
+      "link": "https://arxiv.org/pdf/2607.08295v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved Kerr microscopy for imaging spin-wave beams in waveguides",
+      "llm_evidence_cn": "用于波导中自旋波束成像的时间分辨克尔显微镜",
+      "llm_evidence": "用于波导中自旋波束成像的时间分辨克尔显微镜",
+      "canonical_evidence": "用于波导中自旋波束成像的时间分辨克尔显微镜",
+      "llm_tldr_en": "Uses time-resolved microscopy to observe anomalous reflection of spin-waves in waveguides.",
+      "llm_tldr_cn": "利用时间分辨显微镜观察波导中自旋波的反常反射。",
+      "llm_tldr": "利用时间分辨显微镜观察波导中自旋波的反常反射。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08067v1",
+      "source": "arxiv",
+      "title": "A Non-Decoupled Time-Domain Direct Sampling Method for Inverse Elastic Medium Scattering",
+      "abstract": "This work is concerned with an inverse medium problem for elastic waves, in which unknown inhomogeneities are reconstructed from time-resolved boundary measurements. We propose a novel time-domain direct sampling method for locating scatterers from a single incident source, without imposing specific assumptions on the temporal profile of the excitation. In particular, the imaging functional introduces a time-shifted correlation strategy that replaces the traditional $P$-$S$ wave decomposition with a travel-time alignment mechanism, thereby enabling direct imaging from the coupled elastic wave field. To analyze the proposed time-domain imaging functional, we employ Parseval's identity for the Fourier--Laplace transform and reformulate the functional in the frequency domain. By exploiting properties of modified Bessel functions, we characterize the asymptotic behavior of the imaging functional and show that it attains its maximum at the target location, which enables reliable identification of the scatterer. Rigorous theoretical justifications are provided to substantiate the effectiveness of the proposed method. Numerical experiments are also presented to demonstrate its performance and applicability.",
+      "authors": [
+        "Lefu Cai",
+        "Hongjie Li",
+        "Xianchao Wang"
+      ],
+      "primary_category": "math.NA",
+      "categories": [
+        "math.NA",
+        "math.AP"
+      ],
+      "published": "2026-07-09T02:51:09+00:00",
+      "link": "https://arxiv.org/pdf/2607.08067v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "reconstructing inhomogeneities from time-resolved boundary measurements of elastic wave scattering",
+      "llm_evidence_cn": "通过弹性波散射的时间分辨边界测量重建不均匀性",
+      "llm_evidence": "通过弹性波散射的时间分辨边界测量重建不均匀性",
+      "canonical_evidence": "通过弹性波散射的时间分辨边界测量重建不均匀性",
+      "llm_tldr_en": "Proposes a time-domain direct sampling method for imaging scatterers using time-resolved elastic wave data.",
+      "llm_tldr_cn": "提出了一种利用时间分辨弹性波数据对散射体进行成像的时域直接采样方法。",
+      "llm_tldr": "提出了一种利用时间分辨弹性波数据对散射体进行成像的时域直接采样方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-06-30-735666-v1",
+      "source": "biorxiv",
+      "title": "msaGUI: Multispectral Analysis Graphical User Interface for Ratiometric Analysis and Background Correction",
+      "abstract": "Chemical imaging is a powerful branch of modern microscopy encumbered by a lack of flexible, high-throughput analysis tools. Bespoke analytical pipelines typically perform ratiometric analysis on two layers in a multispectral image to describe the relative composition of molecules in a sample. This strategy has been implemented across fields, spanning histopathology, cell biology, environmental science, and materials science. The commercialization of chemical imaging microscopes has facilitated the collection of large multispectral datasets, necessitating accessible ways to process them. This paper describes Multispectral Analysis Graphical User Interface (msaGUI), a desktop graphical user interface to analyze individual and batch datasets of multispectral images. Data is loaded as CSV, TSV, or TIFFs and processed through a user-defined sequence of modular image operations that can be flexibly combined, e.g. to reduce spectral crosstalk or background noise. After analysis, data is visualized as exportable images, histograms, and statistics. To yield publication-quality figures, outputted images are fully customizable. Written in Python with open-source libraries, the msaGUI program is packaged into an executable for Windows and Mac for a fully no-code application. Other operating systems are supported via the Python source code. In summary, msaGUI provides a rapid and user-friendly solution for analyzing and visualizing multispectral data.",
+      "authors": [
+        "Hoy, G. R.",
+        "Davis, C. M."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-07-03T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.30.735666v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "multispectral analysis GUI for chemical imaging in materials science and microscopy",
+      "llm_evidence_cn": "用于材料科学和显微成像中化学成像的多光谱分析GUI",
+      "llm_evidence": "用于材料科学和显微成像中化学成像的多光谱分析GUI",
+      "canonical_evidence": "用于材料科学和显微成像中化学成像的多光谱分析GUI",
+      "llm_tldr_en": "Introduces msaGUI, a tool for ratiometric analysis and background correction in multispectral chemical imaging.",
+      "llm_tldr_cn": "介绍了msaGUI，一种用于多光谱化学成像中比例分析和背景校正的工具。",
+      "llm_tldr": "介绍了msaGUI，一种用于多光谱化学成像中比例分析和背景校正的工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
