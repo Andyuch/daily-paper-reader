@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-12",
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T20:02:18",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/12/2607.07933v1-atomistic-modeling-for-electro-chemical-reactions",
+      "section": "quick",
+      "title_en": "Atomistic Modeling for Electro-chemical Reactions",
+      "authors": "K. Doblhoff-Dier, B. Ballotta, L. Bonati, V. J. Bukas, F. Calle-Vallejo, C. S. Cucinotta, K. S. Exner, M. García-Melchor, L. Giordano, K. Honkala, N. Hörmann, G. Kastlunger, M. M. Melander, Zehra B. Öcal, A. A. Reka, S. Steinmann, M. Vandichel, J. -X. Zhu, G. Cicero",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07933v1",
+      "score": "7.0",
+      "evidence": "在原位(operando)条件下模拟电化学反应",
+      "tldr": "本文探讨了电化学反应的原子级建模在可持续能源技术中的核心作用。针对目前在操作条件下模拟带电固液界面所面临的预测性和可靠性挑战，欧洲COST行动EU-CONCERT项目提出了通过系统基准测试和交叉验证来推动该领域发展的路线图。文章总结了当前技术现状，明确了优先解决的方法论难题，并定义了急需的基准测试，为电化学建模社区提供了重要的指导方针。",
+      "tags": "query:iscat",
+      "abstract_en": "Computational modeling plays a central role in advancing our understanding of electro-chemical reactions and may thus guide the rational development of sustainable energy technologies. Despite significant methodological progress, achieving predictive and quantitatively reliable simulations of electrified solid-liquid interfaces under operando conditions remains a major challenge. Recently, the European COST Action EU-CONCERT (EUropean COllaborative Network on electroCatalysis for Efficient Renewable Technologies) was launched with the aim of advancing atomistic modeling of electrochemical reactions through systematic benchmarking and cross-validation. This position paper outlines the consortium's view of the current state of the art, identifies the priority methodological challenges to be addressed, and defines the benchmark tests that are urgently needed. This paper should serve as a guide to the community and a roadmap for the EU-CONCERT COST Action.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/12/2607.07221v1-understanding-surface-potential-dynamics-of-passivated-perovskites-via-kelvin-probe-force-microscopy",
+      "section": "quick",
+      "title_en": "Understanding surface potential dynamics of passivated perovskites via Kelvin Probe Force Microscopy",
+      "authors": "Rehmat Sood-Goodwin, Xue-Li Cao, Benjamin C. Kinvig, Robert D. J. Oliver, Yen-Hung Lin, Nic Mullin, Alexandra J. Ramadan",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07221v1",
+      "score": "6.0",
+      "evidence": "纳米尺度的表面电势和光电压动力学",
+      "tldr": "本研究利用振幅调制开尔文探针力显微镜（KPFM）深入探讨了AEAPTMS钝化对钙钛矿薄膜表面电势动态的影响。研究发现，钝化处理显著提高了暗态接触电势差的均匀性，并增强了光照下的表面光电压（SPV）及其稳定速度。通过分析晶界与晶粒内部的贡献，揭示了氨基硅烷钝化通过消除晶界势垒来优化载流子分布的机制，为提升钙钛矿电池性能提供了纳米尺度的直接证据。",
+      "tags": "query:iscat",
+      "abstract_en": "Molecular passivation has become central to reducing photovoltage losses in metal-halide perovskite solar cells, but its electronic action is still often inferred from device-level metrics rather than directly resolved at the nanoscale. Here, we use amplitude-modulated Kelvin probe force microscopy to examine how [3-(2-aminoethylamino)propyl]trimethoxysilane (AEAPTMS) modifies the surface potential and photovoltage dynamics of mixed-cation, mixed-halide perovskite thin films. AEAPTMS homogenises the dark contact potential difference (CPD), narrowing its distribution from ~45.7 to ~14.6 mV without obvious morphological changes. Under illumination, passivated films show a larger steady-state surface photovoltage (SPV) and faster stabilisation, with the SPV increasing from ~345 to ~417 mV and the stabilisation time constant decreasing from ~840 to ~470 s. Wavelength-dependent SPV further indicates reduced sub-bandgap electronic disorder. By separating grain-boundary and grain-interior contributions, we show that AEAPTMS suppresses grain-boundary potential barriers, linking amino-silane passivation to a more homogeneous and stable carrier landscape.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/12/2607.07848v1-quantum-sensors-for-chemistry-and-materials-science",
+      "section": "quick",
+      "title_en": "Quantum Sensors for Chemistry and Materials Science",
+      "authors": "Piotr Put, Arjun Pillai, Xuan Hoang Le, Mikhail D. Lukin, Hongkun Park",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07848v1",
+      "score": "6.0",
+      "evidence": "用于实时反应监测和材料分析的量子传感器",
+      "tldr": "本综述探讨了量子传感器（如OPM和NV中心）在化学与材料科学中的应用。文章对比了OPM的高灵敏度与NV中心的原子级分辨率，重点介绍了其在零场核磁共振、实时反应监测及电池原位诊断等领域的突破。这些技术克服了传统工具的局限，为复杂现实问题提供了高灵敏度、高空间分辨率的量子增强分析方案。",
+      "tags": "query:iscat",
+      "abstract_en": "The advancement of chemistry and materials science relies on transformative analytical tools which can overcome the sensitivity, spatial resolution, and throughput limitations of conventional techniques. This review explores the application of quantum sensors - specifically optically pumped magnetometers (OPMs) and nitrogen-vacancy (NV) centers in diamond - as robust platforms for molecular and materials analysis. We contrast the extreme magnetic sensitivity of macroscopic OPM ensembles with the atomic-scale resolution and multimodal capabilities of solid-state NV centers. We highlight their deployment in zero- to ultralow-field and nanoscale NMR spectroscopy, real-time reaction monitoring, and transient radical and pH detection. Furthermore, we discuss their integration into high-throughput chemical assays and non-destructive materials diagnostics, such as operando battery monitoring. With the ongoing commercialization of these technologies and advances in quantum-enhanced sensitivities, quantum sensors are poised to routinely address complex real-world analytical challenges.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

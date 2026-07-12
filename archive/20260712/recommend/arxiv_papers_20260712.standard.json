@@ -1,0 +1,153 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-12T20:01:22.463966+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.07933v1",
+      "source": "arxiv",
+      "title": "Atomistic Modeling for Electro-chemical Reactions",
+      "abstract": "Computational modeling plays a central role in advancing our understanding of electro-chemical reactions and may thus guide the rational development of sustainable energy technologies. Despite significant methodological progress, achieving predictive and quantitatively reliable simulations of electrified solid-liquid interfaces under operando conditions remains a major challenge. Recently, the European COST Action EU-CONCERT (EUropean COllaborative Network on electroCatalysis for Efficient Renewable Technologies) was launched with the aim of advancing atomistic modeling of electrochemical reactions through systematic benchmarking and cross-validation. This position paper outlines the consortium's view of the current state of the art, identifies the priority methodological challenges to be addressed, and defines the benchmark tests that are urgently needed. This paper should serve as a guide to the community and a roadmap for the EU-CONCERT COST Action.",
+      "authors": [
+        "K. Doblhoff-Dier",
+        "B. Ballotta",
+        "L. Bonati",
+        "V. J. Bukas",
+        "F. Calle-Vallejo",
+        "C. S. Cucinotta",
+        "K. S. Exner",
+        "M. García-Melchor",
+        "L. Giordano",
+        "K. Honkala",
+        "N. Hörmann",
+        "G. Kastlunger",
+        "M. M. Melander",
+        "Zehra B. Öcal",
+        "A. A. Reka",
+        "S. Steinmann",
+        "M. Vandichel",
+        "J. -X. Zhu",
+        "G. Cicero"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-07-08T21:29:07+00:00",
+      "link": "https://arxiv.org/pdf/2607.07933v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "modeling electrochemical reactions under operando conditions",
+      "llm_evidence_cn": "在原位(operando)条件下模拟电化学反应",
+      "llm_evidence": "在原位(operando)条件下模拟电化学反应",
+      "canonical_evidence": "在原位(operando)条件下模拟电化学反应",
+      "llm_tldr_en": "Outlines advances in atomistic modeling of electrochemical reactions under operando conditions.",
+      "llm_tldr_cn": "概述了在原位条件下电化学反应原子级模拟的进展。",
+      "llm_tldr": "概述了在原位条件下电化学反应原子级模拟的进展。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.07221v1",
+      "source": "arxiv",
+      "title": "Understanding surface potential dynamics of passivated perovskites via Kelvin Probe Force Microscopy",
+      "abstract": "Molecular passivation has become central to reducing photovoltage losses in metal-halide perovskite solar cells, but its electronic action is still often inferred from device-level metrics rather than directly resolved at the nanoscale. Here, we use amplitude-modulated Kelvin probe force microscopy to examine how [3-(2-aminoethylamino)propyl]trimethoxysilane (AEAPTMS) modifies the surface potential and photovoltage dynamics of mixed-cation, mixed-halide perovskite thin films. AEAPTMS homogenises the dark contact potential difference (CPD), narrowing its distribution from ~45.7 to ~14.6 mV without obvious morphological changes. Under illumination, passivated films show a larger steady-state surface photovoltage (SPV) and faster stabilisation, with the SPV increasing from ~345 to ~417 mV and the stabilisation time constant decreasing from ~840 to ~470 s. Wavelength-dependent SPV further indicates reduced sub-bandgap electronic disorder. By separating grain-boundary and grain-interior contributions, we show that AEAPTMS suppresses grain-boundary potential barriers, linking amino-silane passivation to a more homogeneous and stable carrier landscape.",
+      "authors": [
+        "Rehmat Sood-Goodwin",
+        "Xue-Li Cao",
+        "Benjamin C. Kinvig",
+        "Robert D. J. Oliver",
+        "Yen-Hung Lin",
+        "Nic Mullin",
+        "Alexandra J. Ramadan"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-07-08T10:03:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.07221v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "surface potential and photovoltage dynamics at the nanoscale",
+      "llm_evidence_cn": "纳米尺度的表面电势和光电压动力学",
+      "llm_evidence": "纳米尺度的表面电势和光电压动力学",
+      "canonical_evidence": "纳米尺度的表面电势和光电压动力学",
+      "llm_tldr_en": "Uses KPFM to resolve the impact of molecular passivation on perovskite solar cell photovoltage dynamics.",
+      "llm_tldr_cn": "利用KPFM解析了分子钝化对钙钛矿太阳能电池光电压动力学的影响。",
+      "llm_tldr": "利用KPFM解析了分子钝化对钙钛矿太阳能电池光电压动力学的影响。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.07848v1",
+      "source": "arxiv",
+      "title": "Quantum Sensors for Chemistry and Materials Science",
+      "abstract": "The advancement of chemistry and materials science relies on transformative analytical tools which can overcome the sensitivity, spatial resolution, and throughput limitations of conventional techniques. This review explores the application of quantum sensors - specifically optically pumped magnetometers (OPMs) and nitrogen-vacancy (NV) centers in diamond - as robust platforms for molecular and materials analysis. We contrast the extreme magnetic sensitivity of macroscopic OPM ensembles with the atomic-scale resolution and multimodal capabilities of solid-state NV centers. We highlight their deployment in zero- to ultralow-field and nanoscale NMR spectroscopy, real-time reaction monitoring, and transient radical and pH detection. Furthermore, we discuss their integration into high-throughput chemical assays and non-destructive materials diagnostics, such as operando battery monitoring. With the ongoing commercialization of these technologies and advances in quantum-enhanced sensitivities, quantum sensors are poised to routinely address complex real-world analytical challenges.",
+      "authors": [
+        "Piotr Put",
+        "Arjun Pillai",
+        "Xuan Hoang Le",
+        "Mikhail D. Lukin",
+        "Hongkun Park"
+      ],
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "cond-mat.mtrl-sci",
+        "physics.chem-ph"
+      ],
+      "published": "2026-07-08T18:28:22+00:00",
+      "link": "https://arxiv.org/pdf/2607.07848v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "quantum sensors for real-time reaction monitoring and materials analysis",
+      "llm_evidence_cn": "用于实时反应监测和材料分析的量子传感器",
+      "llm_evidence": "用于实时反应监测和材料分析的量子传感器",
+      "canonical_evidence": "用于实时反应监测和材料分析的量子传感器",
+      "llm_tldr_en": "Reviews quantum sensors like NV centers for high-resolution molecular and materials analysis.",
+      "llm_tldr_cn": "综述了 NV 色心等量子传感器在分子和材料高分辨率分析中的应用。",
+      "llm_tldr": "综述了 NV 色心等量子传感器在分子和材料高分辨率分析中的应用。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "recent advances in iSCAT for solid state materials research",
+      "matched_requirement_id": "req-9",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

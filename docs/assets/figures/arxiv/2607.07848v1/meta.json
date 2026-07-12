@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.07848v1/fig-001.webp",
+      "caption": "Figure 2 Chemical identification using quantum sensors. (a) NMR chemical fingerprinting using OPM detection. A compact OPM (top left) records the NMR signal from a liquid sample hyperpolarized with parahydrogen under zero magnetic field, yielding a chemically specific zero-field spectrum (bottom) and enabling relaxometry measurements (top right). The spectrum reflects J-couplings between nuclear spins in the investigated molecule (2-13C ethanol). Adapted from Ref. (Van Dyke et al., 2022). (b) Chemically specific proton NMR with NVs. High spectral resolution and micron-scale spatial resolution is achieved via hyperpolarization of 15N-labeled pyridine. ∼10 Hz J-coupling between 15N and 1H spins is easily resolvable. Adapted from Ref. (Arunkumar et al., 2021). (c) Real-time chemical monitoring by OPM-ZULF NMR. Formation of reaction products from partial hydrogenation (maleate) and full hydrogenation (succinate) is monitored in real time as the reaction with parahydrogen proceeds. Adapted from Ref. (Burueva et al., 2020). (d) Detection of self-assembled monolayer formation using surface-sensitive NMR with ∼5-nm deep NVs. 19F detection allows for real-time monitoring of PFPDPA binding to Al2O3 on the diamond surface. Adapted from Ref. (Liu et al., 2022a). (e) Radical detection with NVs in nanodiamonds. Higher *OH concentration exponentially reduces NV T1. Adapted from Ref. (Perona Mart́ınez et al., 2020). (f) Reversible pH sensing with NVs with carboxyl-functionalized nanodiamonds. At higher pH, the carboxyl groups are converted to negatively charged carboxylate ions, impacting NV T1. Adapted from Ref. (Fujisaku et al., 2019).",
+      "page": 6,
+      "index": 1,
+      "width": 1051,
+      "height": 676
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07848v1/fig-002.webp",
+      "caption": "Figure 4 Quantum sensors for studying materials (a) Widefield optical (left) and magnetic (right) imaging of MTB. MNPs inside magnetosomes of MTB produce stray fields detectable by NVs in the diamond chip on which the bacteria are placed. Adapted from Ref. (Le Sage et al., 2013). (b) Probing structural phase transitions in iron. Under high pressure, iron undergoes α → ϵ phase transition from bcc to hcp crystal structure, leading to a change of effective dipole field the sample produces. Using NV centers in a DAC, this dipole field can be extracted by measuring the full vector magnetic field profile. Adapted from Ref. (Hsieh et al., 2019). (c) Correlating local stoichiometric composition with superconductivity in high-TC nickelate superconductor La3Ni2O7. The regions with higher Ni concentration, as determined by energy-dispersive X-ray spectroscopy (left), correspond to the regions having no diamagnetic response, and thus no Meissner effect, as measured by NV centers in a DAC (right). Adapted from Ref. (Mandyam et al., 2026). (d) Measurement of electrolyte composition in batteries. The NMR signal from a coin-cell battery (left) is detected using compact OPMs yielding chemically specific zero-field spectra for various samples (top right). The amplitude of the NMR signal characteristic of PF− 6 is used to quantify the electrolyte concentration in a non-destructive manner (bottom right). Adapted from Ref. (Fabricant et al., 2026). (e) In situ measurement of electrodes in a battery. Nanodiamonds are embedded in an Fe3O4 electrode (left). ODMR of an embedded nanodiamond shows changes in local magnetic fields which can be attributed to the creation or depletion of paramagnetic and ferromagnetic species throughout the electrochemical evolution of the battery (right). Adapted from Ref. (Liu et al., 2024).",
+      "page": 11,
+      "index": 2,
+      "width": 1049,
+      "height": 611
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07848v1/fig-003.webp",
+      "caption": "Figure 1 Quantum sensors. (a) Principle of OPM-based sensing. Sample is brought close to glass cell hosting alkali-metal vapor. Atoms in the vapor are optically polarized by a pump laser beam. Sample magnetic field leads to spin evolution, changing the absorption or polarization rotation which is probed with a weak laser beam. (b) Energy-level structure of alkali atoms (here 87Rb) used in OPMs. A laser tuned to (or near) an optical transition in the fine structure of the atom is used as a pump and probe. External magnetic field lifts the degeneracy of the energy levels within the hyperfine manifolds. The population and coherence between these Zeeman sublevels are then optically probed. (c) Illustration of the vapor’s optical properties — the transmission of on-resonance light and the polarization rotation of linearly polarized detuned light — as a function of the magnetic field. Changes are monitored to measure the magnetic field. (d) A glass vapor cell. Large active sensing volume enables high magnetic sensitivity. (e) Photograph of alkali-metal vapor microcells, which form the core sensing volume in many minature OPMs. (f) Principle of NV-based sensing. NV centers are typically excited with green light, and red PL is measured. PL intensity is coupled to the electron spin state of the center (ms = ±1 is relatively darker than ms = 0). (g) Simplified energy-level diagram of the negatively charged NV center (NV−). Sensing typically relies on coherent spin dynamics within the ground state, which can be manipulated using microwaves (MWs). A non-radiative metastable state facilitates optical spin polarization and provides contrast for PL-based readout. (h) NV PL as a function of swept MW frequency during an ODMR measurement. Dips in the PL correspond to transitions between the ground-state spin sublevels. The position of the zero-field splitting parameter D can be used to measure temperature or electric fields, while probing the Zeeman splitting allows for magnetometry. (i) Simplified energy structure illustrating the NV− and NV0 charge states. The local electrostatic environment of the NV can induce charge-state conversion, which can be optically detected due to distinct PL spectra. (j) A bulk diamond with a high density of NV centers under green optical excitation. The characteristic red PL is visible. (k) Scanning electron micrograph of nanodiamonds hosting NV centers.",
+      "page": 3,
+      "index": 3,
+      "width": 1057,
+      "height": 649
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07848v1/fig-004.webp",
+      "caption": "Figure 5 Advancements in quantum sensing for chemical applications (a) Gradiometric configuration for enhanced OPM performance. Magnetic sensitivity of two OPMs operating in a differential gradiometric configuration is compared under unshielded environmental conditions. The gradiometric approach significantly improves noise rejection, enabling quantum sensing in demanding settings. Adapted from Ref. (Xiao et al., 2023). (b) Large-scale OPM system demonstrating the scalability of quantum sensing platforms. Adapted from Ref. (Hill et al., 2024). (c) Quantum-enhanced metrology with OPMs. Magnetic sensitivity is shown as a function of atomic density for coherent (blue) and squeezed (green) probe light, illustrating sensitivity enhancement achieved with quantum resources. Adapted from Ref. (Troullinou et al., 2023). (d) Interactionenhanced magnetic sensing with an ensemble of NVs. Engineered many-body dynamics improve magnetic sensitivity through 1-, 2-, and 3-stage signal amplification. Adapted from Ref. (Gao et al., 2026b). (e) Sustained ZULF NMR signal oscillations in a J-oscillator driven by digital feedback and enabled by a continuous polarization source (left). Resulting NMR spectra exhibit sub-mHz linewidths (right). Adapted from Ref. (Xu et al., 2026). (f) Towards chemical shift resolution noise spectroscopy for nanoscale NMR. Phase rectification utilizing the nitrogen nuclear spin of the NV center allows for applying coherently averaged readout to the measurement of statistically polarized nuclear spins. Schematic shows how significantly higher SNR and spectral resolution ensemble NV-NMR can be achieved using such protocols. Adapted from Ref. (Maier et al., 2025). (g) Novel quantum sensors based on fluorescent proteins. Here, the EYFP sensor qubit is conjugated to a target glutaredoxin protein to be sensed, allowing for close sensor-sensee proximitization. Schematic of energy levels which allow for coherent manipulation and optical readout of the triplet metastable spin states (whose orbitals are shown). Adapted from Ref. (Feder et al., 2025).",
+      "page": 13,
+      "index": 4,
+      "width": 1063,
+      "height": 668
+    },
+    {
+      "url": "assets/figures/arxiv/2607.07848v1/fig-005.webp",
+      "caption": "Table I Comparison of OPM and NV center key properties and figures of merit.",
+      "page": 5,
+      "index": 5,
+      "width": 1056,
+      "height": 533
+    }
+  ]
+}
