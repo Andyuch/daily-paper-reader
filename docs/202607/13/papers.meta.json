@@ -1,0 +1,54 @@
+{
+  "label": "2026-07-13",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T21:32:54",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202607/13/2607.09413v1-unlocking-ultrafast-spin-dynamics-in-a-rare-earth-magnet",
+      "section": "quick",
+      "title_en": "Unlocking ultrafast spin dynamics in a rare-earth magnet",
+      "authors": "Paul Herrgen, Christian Holzmann, Torben Manzke, Ulrich Nowak, Peter M. Oppeneer, Manfred Albrecht, Benjamin Stadtmüller, Martin Aeschlimann",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09413v1",
+      "score": "6.5",
+      "evidence": "飞秒泵浦-探测磁光光谱",
+      "tldr": "本研究探讨了稀土磁体中超快自旋动力学的限制。传统光驱动磁化过程因激发巡游电子而非局域4f态而较慢。研究人员通过飞秒泵浦-探测磁光光谱技术，共振激发钆铁石榴石中Gd3+的4f轨道跃迁，实现了仅38飞秒的超快退磁，比金属钆快两个数量级。这一发现证明了通过选择性激发局域磁性状态可有效调控角动量流动，为超快磁性控制提供了新途径。",
+      "tags": "query:iscat",
+      "abstract_en": "The speed of optically driven magnetization dynamics is fundamentally determined by how efficiently angular momentum can be transferred between electronic, spin and lattice degrees of freedom. In rare-earth magnets, this process is typically slow because optical excitation primarily addresses itinerant electrons, whereas the magnetic moment resides in localized 4f states. Here we show that selective optical excitation of localized magnetic states can overcome this limitation. Using femtosecond pump-probe magneto-optical spectroscopy of ferrimagnetic gadolinium iron garnet, we resonantly excite an intra-4f transition of Gd3+ at 4.65 eV and resolve the ensuing dynamics of the antiferromagnetically coupled Gd and Fe sublattices. Direct excitation of the 4f manifold induces an ultrafast demagnetization of the Gd sublattice with a characteristic time of 38 fs, more than two orders of magnitude faster than in elemental gadolinium and even faster than the response of the Fe sublattice in the same material. By contrast, off-resonant excitation strongly suppresses the acceleration of the Gd dynamics while leaving the Fe response largely unchanged. These results demonstrate that the ultrafast magnetic response of rare-earth systems is governed not only by intrinsic material properties but also by the optical excitation pathway. Selective access to localized magnetic states therefore provides a powerful photonic handle for engineering angular-momentum flow and controlling magnetism far from equilibrium.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/13/2607.07221v1-understanding-surface-potential-dynamics-of-passivated-perovskites-via-kelvin-probe-force-microscopy",
+      "section": "quick",
+      "title_en": "Understanding surface potential dynamics of passivated perovskites via Kelvin Probe Force Microscopy",
+      "authors": "Rehmat Sood-Goodwin, Xue-Li Cao, Benjamin C. Kinvig, Robert D. J. Oliver, Yen-Hung Lin, Nic Mullin, Alexandra J. Ramadan",
+      "date": "2026-07-08",
+      "pdf": "https://arxiv.org/pdf/2607.07221v1",
+      "score": "6.0",
+      "evidence": "在纳米尺度上解析钙钛矿的光电压动力学",
+      "tldr": "本研究利用振幅调制开尔文探针力显微镜（AM-KPFM）深入探讨了AEAPTMS钝化对钙钛矿薄膜表面电势及光电压动力学的影响。研究发现，钝化处理显著提高了表面接触电势差的均匀性，并增强了稳态表面光电压，同时缩短了稳定时间。通过区分晶界与晶粒内部的贡献，揭示了氨基硅烷钝化通过抑制晶界势垒来优化载流子分布的机制，为提升钙钛矿电池性能提供了微观层面的理论依据。",
+      "tags": "query:iscat",
+      "abstract_en": "Molecular passivation has become central to reducing photovoltage losses in metal-halide perovskite solar cells, but its electronic action is still often inferred from device-level metrics rather than directly resolved at the nanoscale. Here, we use amplitude-modulated Kelvin probe force microscopy to examine how [3-(2-aminoethylamino)propyl]trimethoxysilane (AEAPTMS) modifies the surface potential and photovoltage dynamics of mixed-cation, mixed-halide perovskite thin films. AEAPTMS homogenises the dark contact potential difference (CPD), narrowing its distribution from ~45.7 to ~14.6 mV without obvious morphological changes. Under illumination, passivated films show a larger steady-state surface photovoltage (SPV) and faster stabilisation, with the SPV increasing from ~345 to ~417 mV and the stabilisation time constant decreasing from ~840 to ~470 s. Wavelength-dependent SPV further indicates reduced sub-bandgap electronic disorder. By separating grain-boundary and grain-interior contributions, we show that AEAPTMS suppresses grain-boundary potential barriers, linking amino-silane passivation to a more homogeneous and stable carrier landscape.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/13/2607.09419v1-coherent-dynamics-of-individual-excitons-in-a-quantum-dot-embedded-in-a-nanopost",
+      "section": "quick",
+      "title_en": "Coherent dynamics of individual excitons in a quantum dot embedded in a nanopost",
+      "authors": "Maxime Gaignard, Karolina Ewa Polczynska, Niels Gregersen, Daniel Wigger, Jean-Philippe Poizat, Jean-Michel Gérard, Julien Claudon, Jacek Kasprzak",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09419v1",
+      "score": "6.0",
+      "evidence": "相干超快动力学和时间分辨四波混频显微镜",
+      "tldr": "本研究利用四波混频显微技术，测量了嵌入在砷化镓纳米柱中的单个强局域砷化铟量子点内激子复合物的相干超快动力学。该纳米柱结构结合了波导与腔效应，显著增强了光与物质的相互作用。研究成功评估了激子-双激子系统的相干特性，证明了这种宽带光子结构在探测固态量子系统相干耦合及能级动力学方面的卓越潜力。",
+      "tags": "query:iscat",
+      "abstract_en": "We measured coherent ultrafast dynamics of exciton complexes in a single strongly-confined InAs quantum dot embedded in a GaAs nanopost. Such a photonic structure combines a wave guiding with a cavity effect and assures an enhanced light-matter coupling. Coherence properties of an exciton-biexciton system hosted by a quantum dot are assessed with four-wave mixing microscopy. Our results show that this broad-band photonic structure is an excellent asset to probe coherent couplings in a small set of solid state quantum systems and to investigate the coherence dynamics within the level structure of their excited states.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
