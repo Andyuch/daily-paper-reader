@@ -1,0 +1,201 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-14T21:37:05.366863+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 5,
+    "quick_skim_target": 11,
+    "quick_selected": 5
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.09901v1",
+      "source": "arxiv",
+      "title": "Bragg Interferometry of Moiré Superlattices: From Geometric Phase Principles to Atomic Reconstruction",
+      "abstract": "The emergence of moiré superlattices formed by twisting and stacking two-dimensional materials has created a need for characterization techniques capable of mapping sub-angstrom atomic reconstruction across micron-scale fields of view. This review surveys a suite of methodologies developed to extract geometric phases in electron microscopy and X-ray spectroscopy, with a primary focus on the interference of overlapping Bragg reflections in the dark field. We provide a comparative analysis of some established techniques, including geometric phase analysis, converged beam electron diffraction holography, and various ptychographic paradigms, culminating in a discussion of Bragg interferometry for measuring interlayer displacement fields and strain in moiré materials. We demonstrate the utility of Bragg interferometry through case studies of twisted bilayer and trilayer graphene as well as transition metal dichalcogenide moiré systems. Special attention is given to the unique advantages of this dark-field interferometric method for probing buried interfaces and encapsulated heterostructures, as well as the inherent challenges of interpreting incomplete phase information in the presence of dynamical scattering. By examining the physical principles underlying these approaches, this review highlights the conceptual similarities and practical trade-offs involved in high-resolution structural mapping of materials in which the interplay between structural relaxation and electronic behavior defines a scientific frontier at the nexus of modern condensed matter physics, nanomaterials engineering, and interfacial chemistry.",
+      "authors": [
+        "Isaac M. Craig",
+        "D. Kwabena Bediako"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-10T18:45:26+00:00",
+      "link": "https://arxiv.org/pdf/2607.09901v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Bragg interferometry for characterization of moire superlattices",
+      "llm_evidence_cn": "用于莫尔超晶格表征的布拉格干涉测量法",
+      "llm_evidence": "用于莫尔超晶格表征的布拉格干涉测量法",
+      "canonical_evidence": "用于莫尔超晶格表征的布拉格干涉测量法",
+      "llm_tldr_en": "Reviews interferometric techniques in electron microscopy for mapping atomic reconstruction in 2D materials.",
+      "llm_tldr_cn": "综述了电子显微镜中用于绘制二维材料原子重构图谱的干涉测量技术。",
+      "llm_tldr": "综述了电子显微镜中用于绘制二维材料原子重构图谱的干涉测量技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.10117v1",
+      "source": "arxiv",
+      "title": "Plasmon Gun: high-power mid-IR emission at a temporal interface",
+      "abstract": "We propose a mechanism for the generation of intense ultrafast mid-infrared radiation from heavily doped semiconductors. An ultrafast optical pulse transfers a finite impulse to the free carriers, displacing the screening clouds surrounding ionized dopants and inducing coherent plasma-frequency oscillations of the resulting polarization. We derive an exact analytical solution for the corresponding nonequilibrium dynamics and the resulting far-field radiation emitted by a thin semiconductor film. For realistic parameters of heavily doped GaAs, the emitted mid-infrared pulses can reach electric-field amplitudes on the order of $10^7\\,{\\rm V/m}$ directly in the far field, without relying on optical focusing.",
+      "authors": [
+        "Evgenii E. Narimanov"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-11T04:39:34+00:00",
+      "link": "https://arxiv.org/pdf/2607.10117v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "ultrafast mid-infrared radiation from semiconductors",
+      "llm_evidence_cn": "半导体产生的超快中红外辐射",
+      "llm_evidence": "半导体产生的超快中红外辐射",
+      "canonical_evidence": "半导体产生的超快中红外辐射",
+      "llm_tldr_en": "Proposes a mechanism for generating intense ultrafast mid-IR radiation from heavily doped semiconductors.",
+      "llm_tldr_cn": "提出了一种从重掺杂半导体中产生强超快中红外辐射的机制。",
+      "llm_tldr": "提出了一种从重掺杂半导体中产生强超快中红外辐射的机制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.06866v1",
+      "source": "arxiv",
+      "title": "Disorder signatures in coherent electronic waveguides",
+      "abstract": "Microscopic disorder in a coherent conductor is encoded in the magnitude of the transmitted current and in the energy- and channel-resolved structure of the scattering response. We develop a conductance-balanced learning framework for identifying microscopic disorder mechanisms from coherent quantum-transport spectra. Using armchair graphene nanoribbons as controlled multichannel tight-binding waveguides, we generate ensembles in which distinct disorder classes occupy the same intervals of integrated transmission, removing the dominant shortcut associated with average conductance. Within this constrained setting, we compare scalar transmission spectra with transmission-eigenvalue spectra, and use supervised classification, scale-normalizing controls, plateau-resolved tests, and principal-component analysis to identify the spectral structures that remain informative. The learned distinctions persist after normalization of the conductance envelope and are strongest in multichannel energy windows, where mode mixing and channel redistribution shape the scattering response. Principal components provide interpretable transport coordinates whose loadings identify the energy and eigenchannel sectors responsible for the dominant spectral deformations. The results establish a controlled AI-assisted protocol for learning disorder signatures from nonlinear quantum-scattering data.",
+      "authors": [
+        "Alejandro Lopez-Bezanilla"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.dis-nn"
+      ],
+      "published": "2026-07-07T23:45:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.06866v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "scattering response in coherent electronic waveguides",
+      "llm_evidence_cn": "相干电子波导中的散射响应",
+      "llm_evidence": "相干电子波导中的散射响应",
+      "canonical_evidence": "相干电子波导中的散射响应",
+      "llm_tldr_en": "Develops a learning framework to identify disorder mechanisms from quantum-transport scattering spectra.",
+      "llm_tldr_cn": "开发了一个学习框架，从量子输运散射光谱中识别无序机制。",
+      "llm_tldr": "开发了一个学习框架，从量子输运散射光谱中识别无序机制。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.10388v1",
+      "source": "arxiv",
+      "title": "The evolution of AI from image interpretation toward scientific inference in nanoparticle electron microscopy",
+      "abstract": "Artificial intelligence (AI) is transforming electron microscopy by enabling quantitative analysis of increasingly large and complex datasets for nanoparticle characterization. Recent advances in machine learning (ML) and deep learning (DL) have expanded microscopy from a descriptive imaging technique into a data-driven platform for structural interpretation, dynamic analysis, and scientific inference. This review examines AI methodologies for nanoparticle electron microscopy, focusing on transmission electron microscopy (TEM), high-resolution transmission electron microscopy (HRTEM), scanning transmission electron microscopy (STEM), and in situ TEM. The discussion is organized around the principal challenges in nanoparticle characterization, including particle detection, segmentation, morphology quantification, atomic-resolution restoration, defect identification, two-dimensional-to-three-dimensional structural inference, and analysis of dynamic processes in situ. We review computational approaches from conventional ML and convolutional neural networks to transformer architectures, self-supervised learning, foundation models, multimodal AI, and physics-informed learning. We further discuss integrating microscopy data with simulations, metadata, and autonomous experimentation to relate nanoparticle structure, dynamics, synthesis conditions, and functional properties. The advantages, limitations, benchmarking, and data requirements of current methodologies are critically assessed. Finally, emerging opportunities for foundation models, AI-guided microscopy, closed-loop experimentation, and autonomous materials discovery are discussed. By integrating advances across computer vision, materials informatics, and electron microscopy, this review highlights the role of AI in next-generation nanoparticle characterization and accelerated materials discovery.",
+      "authors": [
+        "Evropi Toulkeridou",
+        "Jiafei Li",
+        "Leonardo Lari",
+        "Panagiotis Grammatikopoulos"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.AI"
+      ],
+      "published": "2026-07-11T16:35:14+00:00",
+      "link": "https://arxiv.org/pdf/2607.10388v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "AI for nanoparticle characterization and in situ TEM analysis",
+      "llm_evidence_cn": "用于纳米颗粒表征和原位透射电镜分析的人工智能",
+      "llm_evidence": "用于纳米颗粒表征和原位透射电镜分析的人工智能",
+      "canonical_evidence": "用于纳米颗粒表征和原位透射电镜分析的人工智能",
+      "llm_tldr_en": "Reviews AI methodologies for quantitative analysis and scientific inference in nanoparticle electron microscopy.",
+      "llm_tldr_cn": "综述了用于纳米颗粒电子显微镜定量分析和科学推断的人工智能方法。",
+      "llm_tldr": "综述了用于纳米颗粒电子显微镜定量分析和科学推断的人工智能方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.10440v1",
+      "source": "arxiv",
+      "title": "Connecting Diffuse Scattering to Atomic-Site-Resolved Occupancy and Displacement Fields through Fourier Filtering",
+      "abstract": "Local structural correlations are encoded in diffuse scattering, but identifying atomic motifs that produce specific diffuse features can be challenging. We introduce MOSAIC, a computational framework for this task when an atomistic configuration is available and a phase-bearing scattering amplitude can be calculated. Our approach relies on applying the Fourier filter to this amplitude over the reciprocal-space regions encompassing the scattering features of interest to obtain maps of atomic displacements and site occupancies responsible for those features. The method is effective in interrogating the nature and spatial distributions of interatomic correlations in large-scale structural models, such as obtained using Reverse Monte Carlo refinements from experimental data, molecular dynamics, or Monte Carlo simulations, or 2D structural projections derived from atomic-resolution electron microscopy images.",
+      "authors": [
+        "Maksim Eremenko",
+        "Victor Krayzman",
+        "Matthew G. Tucker",
+        "Igor Levin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-11T18:57:52+00:00",
+      "link": "https://arxiv.org/pdf/2607.10440v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "connecting scattering to atomic-site-resolved occupancy",
+      "llm_evidence_cn": "将散射与原子位点分辨的占据联系起来",
+      "llm_evidence": "将散射与原子位点分辨的占据联系起来",
+      "canonical_evidence": "将散射与原子位点分辨的占据联系起来",
+      "llm_tldr_en": "MOSAIC framework connects diffuse scattering to atomic structural correlations.",
+      "llm_tldr_cn": "MOSAIC 框架将漫散射与原子结构相关性联系起来。",
+      "llm_tldr": "MOSAIC 框架将漫散射与原子结构相关性联系起来。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

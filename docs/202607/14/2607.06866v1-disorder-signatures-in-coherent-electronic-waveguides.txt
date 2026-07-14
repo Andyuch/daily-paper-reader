@@ -1,0 +1,618 @@
+Title: Disorder signatures in coherent electronic waveguides
+
+URL Source: https://arxiv.org/pdf/2607.06866v1
+
+Published Time: Thu, 09 Jul 2026 00:22:50 GMT
+
+Number of Pages: 14
+
+Markdown Content:
+## Disorder signatures in coherent electronic waveguides 
+
+Alejandro Lopez-Bezanilla 1
+
+> 1
+
+Theoretical Division, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA 
+
+(Dated: July 9, 2026) Microscopic disorder in a coherent conductor is encoded in the magnitude of the transmitted current and in the energy- and channel-resolved structure of the scattering response. We develop a conductance-balanced learning framework for identifying microscopic disorder mechanisms from coherent quantum-transport spectra. Using armchair graphene nanoribbons as controlled multi-channel tight-binding waveguides, we generate ensembles in which distinct disorder classes occupy the same intervals of integrated transmission, removing the dominant shortcut associated with average conductance. Within this constrained setting, we compare scalar transmission spectra with transmission-eigenvalue spectra, and use supervised classification, scale-normalizing controls, plateau-resolved tests, and principal-component analysis to identify the spectral structures that re-main informative. The learned distinctions persist after normalization of the conductance envelope and are strongest in multichannel energy windows, where mode mixing and channel redistribution shape the scattering response. Principal components provide interpretable transport coordinates whose loadings identify the energy and eigenchannel sectors responsible for the dominant spectral deformations. The results establish a controlled AI-assisted protocol for learning disorder signatures from nonlinear quantum-scattering data. 
+
+I. INTRODUCTION 
+
+Transmission through a structured medium is a bound-ary probe of the internal scattering landscape. This per-spective is common to optical speckle, wavefront shaping, acoustic and microwave scattering, elastic-wave propa-gation, and coherent electronic conduction: microscopic inhomogeneity inside the medium is converted into an input–output response measured at external channels or detectors. The forward problem is well posed once the Hamiltonian or wave operator, contacts, and boundary conditions are known. The inverse problem is more con-strained by physics. One asks which properties of a high-dimensional internal structure can be inferred from a fi-nite set of transmitted observables. In coherent multiple-scattering systems the map is nonlinear and generally many-to-one because interference, resonances, evanescent propagation, and mode conversion combine contributions from many paths before any external observable is mea-sured [1–7]. Mesoscopic electronic transport provides a sharp real-ization of this inverse problem. The scattering medium is a Hamiltonian, and the measured response is encoded in the scattering matrix connecting incoming and out-going lead modes. Within the Landauer–Büttiker pic-ture, conductance is determined by transmission prob-abilities; in the Green-function formulation those prob-abilities are nonlinear functionals of the central-region Hamiltonian and of the lead self-energies [8–14]. A trans-mission spectrum should therefore be interpreted as a coherent scattering fingerprint rather than as a direct image of the disorder landscape. The same microscopic perturbation can affect a spectrum through phase shifts, quasi-bound states, intersubband scattering, intervalley mixing, and band-edge modifications. Conversely, dis-tinct microscopic disorder configurations can generate very similar two-terminal spectra. The transmission eigenvalues provide a natural lan-guage for this problem. In a multichannel conduc-tor the scalar transmission gives the total transmitted weight, whereas the eigenvalues of the transmission ma-trix determine how that weight is distributed among eigenchannels. This distinction is central in mesoscopic transport: transmission eigenvalue distributions under-lie conductance fluctuations, shot noise, full-counting-statistics observables, and localization theory in quasi-one-dimensional conductors [14–17]. For the present pur-pose, the eigenvalue spectrum also separates physically distinct types of conductance loss. Smooth scalar poten-tials, random hopping, dopants, vacancies, and edge dis-order can produce comparable reductions in total trans-mission while suppressing or redistributing channels in different ways. Graphene nanoribbons are useful as a controlled plat-form for this question. A nearest-neighbor π-orbital model gives a sparse Hamiltonian with well-defined leads, sublattice structure, transverse quantization, edge sensi-tivity, and several physically interpretable disorder chan-nels [18–22]. Scalar onsite disorder models electrostatic inhomogeneity or charge puddles. Hopping disorder modifies the covalent network and is naturally associated with bond-length fluctuations, strain-like perturbations, or local chemistry. Dopants introduce localized onsite scattering centers and can generate resonant spectral fea-tures. Vacancies and edge roughness disrupt connectiv-ity and are particularly effective in narrow nanoribbons, where boundary conditions control the transverse modes and can promote localization or strong sample-to-sample variability [23–26]. The objective of this work is to determine which as-pects of these microscopic disorder mechanisms remain visible in coherent transport after the most obvious scalar cue, the average transmission, has been removed. The analysis targets the disorder-dependent structure that arXiv:2607.06866v1 [cond-mat.mes-hall] 7 Jul 2026 23 2 1 0 1 2 3Energy [eV] 04812 16 Transmission    
+
+> pristine T0(E)std mean T(E)
+
+FIG. 1. Schematic transport setup and transmission statistics for a defected armchair graphene ribbon. The left panel shows a disordered scattering region connected to left and right defect-free leads with electrochemical potentials μL and μR. An incoming mode Ψin from the left lead is partially reflected, rΨin , and partially transmitted, tΨin , through the defected channel; colored sites indicate spatial disorder in the ribbon. The right panel shows the corresponding ensemble transmission T (E) as a function of energy. Thin curves denote individual disorder realizations, the red curve is the ensemble-averaged transmission 
+
+⟨T (E)⟩, the blue band indicates the standard deviation, and the black staircase curve is the pristine reference transmission 
+
+T0(E).
+
+survives in the scattering response, rather than a one-to-one reconstruction of the microscopic disorder realiza-tion. The task is to infer the disorder mechanism and associated statistical descriptors from energy-resolved transport observables, while accepting that a unique re-construction of the disorder field is generally unavailable from two-terminal data alone. This distinction is essen-tial: a high classification accuracy in an unconstrained data set could merely indicate that one disorder class is stronger or more opaque than another. A physically meaningful test must compare disorder classes at fixed integrated transmission. Here we construct conductance-balanced ensembles of disordered armchair graphene nanoribbons. Each dis-order class is sampled so that it populates the same windows of energy-averaged transmission. We then in-quire whether the remaining spectral structure distin-guishes the underlying Hamiltonian perturbation. The analysis compares the scalar transmission T (E) with the transmission-eigenvalue spectrum {τn(E)}, applies hard normalizations that remove conductance scale, and in-terprets the residual disorder information using plateau-resolved spectral tests, channel-participation descriptors, and principal-component transport coordinates. This or-ganization keeps the learning machinery deliberately sim-ple, so that the central claim concerns the physics of the transport observables: class-dependent disorder informa-tion persists in spectral shape and eigenchannel redistri-bution even when average conductance is controlled. 
+
+II. TIGHT-BINDING MODEL OF THE RIBBON WAVEGUIDE 
+
+We study an armchair graphene ribbon connected to two semi-infinite pristine leads. The scattering region has width N = 36 armchair dimer lines and length L = 56 
+
+armchair unit cells. The purpose of the model is to pro-vide a reproducible multichannel tight-binding waveguide with graphene lattice connectivity. The conclusions are therefore phrased in terms of coherent waveguide trans-port rather than as a claim about a single experimentally realized graphene device. The system is partitioned into left lead, central scat-tering region, and right lead, as shown schematically in Fig. 1. The semi-infinite leads are ballistic and have the same defect-free lattice structure as the clean ribbon. The contacts are thus mode matched, such that elastic backscattering is generated by the disorder inside the fi-nite central region rather than by lead mismatch. This choice isolates the intrinsic scattering signatures of the disorder classes and avoids conflating them with contact-induced reflections. The pristine Hamiltonian is 
+
+H0 = X
+
+> i
+
+ϵ(0)  
+
+> i
+
+c† 
+
+> i
+
+ci − X
+
+> ⟨i,j ⟩
+
+tcc 
+
+
+
+c† 
+
+> i
+
+cj + c† 
+
+> j
+
+ci
+
+
+
+, (1) where c† 
+
+> i
+
+creates an electron in a pz orbital on site i, and 
+
+⟨i, j ⟩ denotes nearest-neighbor pairs. The onsite energy is ϵ(0)  
+
+> i
+
+= 0 , and the nearest-neighbor carbon-carbon hop-ping is tcc = 2 .7 eV . Boundary atoms may carry the same fixed edge onsite shift in both the scattering region and the leads to mimic effective passivation; because this term is included in the reference Hamiltonian, it acts as a fixed model parameter rather than sample-dependent disorder. The same pristine lead Hamiltonian is used for all samples. A disordered realization is written as Hs = H0 +δH dis ,with 
+
+δH dis = X
+
+> i
+
+Vic† 
+
+> i
+
+ci − X
+
+> ⟨i,j ⟩
+
+δt ij 
+
+
+
+c† 
+
+> i
+
+cj + c† 
+
+> j
+
+ci
+
+
+
++ δH def . (2) Here Vi is a scalar onsite perturbation, δt ij is a bond per-turbation, and δH def represents discrete defects such as dopants, vacancies, or edge modifications. This decom-position is physically important. Onsite disorder shifts 3local orbital energies and primarily acts as an electro-static perturbation. Hopping disorder changes the con-nectivity and velocity structure of the lattice Hamilto-nian. Vacancies and edge defects remove or strongly modify sites and therefore create short-range scatterers that can mix transverse modes and valleys more effi-ciently than a smooth scalar field.  
+
+> A. Disorder classes
+
+In our benchmark, eight disorder families are used. Figure 2 displays the different types of defects consid-ered in this work. They are chosen to span several quali-tatively different Hamiltonian perturbations while retain-ing a common geometry, lead structure, and energy grid. The classes are defined at the Hamiltonian level; their strength parameters are sampled over prescribed ranges before the conductance-balancing selection described in Sec. IV. 
+
+Smooth onsite disorder. The onsite potential Vi =
+
+V (ri) is a correlated smooth field generated from a fi-nite set of long-wavelength Fourier components. This class models electrostatic inhomogeneity, smooth sub-strate disorder, or remote-charge puddles. Because the perturbation varies slowly on the lattice scale, it mainly produces phase accumulation, gradual mode-dependent reflection, and broad plateau distortions. It is compara-tively inefficient at producing atomically sharp interval-ley scattering. 
+
+Pixelated gate disorder. A coarse real-valued grid is sampled and interpolated onto the atomic sites. This produces a scalar gate landscape with a controlled spa-tial resolution. It is rougher than the Fourier field while remaining onsite in character. This class bridges smooth electrostatic disorder and high-dimensional gate patterns of the kind that could be imposed by structured local gates or electrostatic environments. 
+
+Gaussian gate disorder. The potential is a sum of localized Gaussian barriers or wells, V (r) =
+
+PKk=1 Ak exp 
+
+h
+
+− |r−Rk |2
+
+> 2σ2
+> k
+
+i
+
+. The amplitudes, centers, widths, and number of Gaussians vary across realizations. This class represents localized puddles, gate-defined bar-riers, or smooth impurity clusters. Compared with the Fourier and pixel classes, it can introduce more localized resonant structure while preserving the scalar onsite na-ture of the perturbation. 
+
+Smooth hopping disorder. The nearest-neighbor hop-pings are modified by smooth bond-direction-dependent fields, tij = tcc 
+
+1 + ηd(i,j )(rij ) , where d(i, j ) labels the bond orientation and rij is the bond center. Smooth hop-ping disorder emulates strain-like or chemistry-induced bond modulation. It changes the kinetic part of the Hamiltonian, and therefore it can perturb velocities, sub-band dispersions, and mode mixing in a way that differs from scalar onsite disorder. 
+
+Random bond disorder. The hopping amplitudes are Smooth onsite Pixel gate                         
+
+> Gaussian gates Smooth hopping
+> Random bonds Dopants
+> Vacancies / edge Mixed
+> FIG. 2. Catalog of disorder mechanisms used in the conductance-balanced transport ensemble. The panels schematically represent scalar onsite perturbations, gate-defined potentials, hopping-amplitude disorder, localized dopants, vacancies and edge roughness, and mixed perturba-tions. The figure provides a schematic overview of the Hamil-tonian modifications applied to the finite scattering region, rather than a literal microscopic realization from the dataset; the semi-infinite leads remain pristine.
+
+perturbed on shorter length scales, producing a bond network with stronger local randomness. This class is a controlled representation of lattice-scale hopping fluctua-tions. Because the perturbation enters through bonds, it can broaden subbands, alter current pathways, and mix transverse channels even when the total transmission is constrained to match scalar-potential samples. 
+
+Dopants. Substitutional dopants are represented by a random set of sites carrying onsite shifts. A dopant real-ization is characterized by a dopant density and by the distribution of onsite strengths. The scattering is local-ized in real space and can therefore produce Fano-like resonances, antiresonances, and particle-hole asymmetry that differ from the broad deformations associated with smooth scalar gates. 4
+
+Vacancies and edge disorder. Vacancies are introduced by removing sites or equivalently decoupling them from the tight-binding network. Edge roughness is generated by removing or modifying atoms near the ribbon bound-aries. This class is important in narrow waveguides be-cause transverse quantization and boundary conditions determine the propagating modes. Edge perturbations can strongly affect modes with large boundary weight, while bulk vacancies can create localized states and trans-mission zeros. 
+
+Mixed disorder. The mixed class contains multiple dis-order ingredients in the same sample. It is included as a deliberately nonideal class: many real devices contain overlapping perturbations rather than a single clean dis-order mechanism. Its role is to test whether the trans-port observables identify spectra produced by superposed mechanisms or whether they assign such spectra to the nearest single-mechanism class in transport space.  
+
+> B. Physical expectations from the disorder catalog
+
+The disorder classes can be organized by three physi-cal attributes: the Hamiltonian sector they perturb, their real-space correlation length, and the symmetries they preserve or break at the lattice scale. This catalog is use-ful because the classifier is expected to learn physically meaningful distinctions rather than arbitrary labels. It should separate classes only when the associated pertur-bations produce distinct scattering processes in the avail-able modes. A smooth onsite field and a smooth Gaus-sian gate both enter as scalar potentials. Their strongest signatures should therefore appear as energy-dependent phase shifts, changes in local carrier density, and broad distortions of conductance plateaus. Their ability to mix valleys or strongly couple transverse modes is limited when their spatial Fourier content remains small com-pared with reciprocal-lattice momenta. This expectation explains why scalar-potential-like classes are the most likely to overlap after conductance balancing. Short-range onsite disorder and dopants have a differ-ent scattering character. They still perturb the onsite sector, yet their spatial localization introduces large mo-mentum components and can couple states that a smooth field would leave nearly independent. Localized onsite shifts can also create quasi-bound states whose interfer-ence with propagating modes generates narrow suppres-sions of T (E). In transport language, these appear as resonance and antiresonance features superimposed on the broader subband structure. Such features can sur-vive conductance balancing because their energy posi-tions and widths are governed by factors beyond the in-tegrated transmission. They depend on the microscopic arrangement of dopants, their sublattice positions, and their coupling to the propagating eigenchannels. Hopping disorder perturbs the kinetic part of the Hamiltonian. In the long-wavelength Dirac description of graphene, slowly varying bond modulations can be in-terpreted in terms of effective gauge-field-like perturba-tions and local velocity changes, while atomically sharp bond randomness has substantial intervalley and inter-subband content. In the tight-binding waveguide used here, this distinction appears through the transmission eigenvalues: a hopping perturbation can redistribute cur-rent across channel ranks even when the scalar transmis-sion is forced to match an onsite-disorder sample. The same value of T (E) may arise from nearly uniform at-tenuation of many eigenchannels or from stronger mixing that converts a few open channels into several partially transmitting channels. Vacancies and edge roughness form the most singu-lar class in the catalog. A vacancy changes the graph on which the tight-binding Hamiltonian is defined; edge roughness changes the boundary conditions that quantize transverse modes. These perturbations are expected to be especially visible in narrow nanoribbons because a siz-able fraction of the wave-function weight can reside near the edges, and because the separation between transverse subbands is large enough for mode-dependent scattering to be resolved over the energy grid. In a noninteracting nearest-neighbor model, the calculation excludes mag-netic reconstruction around vacancies or zigzag segments. It isolates the single-particle scattering consequence of connectivity loss and boundary modification. This physical catalog also clarifies the role of the mixed class. Mixed disorder provides a critical test of whether transport spectra can be described as linear combinations of single-mechanism signatures or whether interference among perturbations produces distinct regions of trans-port space. Because coherent scattering is nonlinear in the Hamiltonian perturbation, the spectrum of a mixed sample is generally more than a weighted sum of spectra from its ingredients. The mixed class is therefore ex-pected to overlap with several single-mechanism classes while still carrying information about the combined scat-tering landscape.  
+
+> III. TRANSPORT OBSERVABLES AND METROLOGICAL FORMULATION
+
+For each Hamiltonian Hs we compute coherent two-terminal transport on a fixed energy grid E ∈ [−3, 3] eV 
+
+with NE = 401 points using Kwant’s scattering-matrix solver. Kwant returns the dimensionless transmission associated with the degrees of freedom explicitly in-cluded in the tight-binding Hamiltonian. In the spin-less model used here, the corresponding spin-degenerate linear-response conductance is 
+
+G(EF ) = 2e2
+
+h T (EF ), (3) where T (EF ) is the total transmission at the Fermi en-ergy. The full energy dependence T (E) is used in the present analysis rather than a single Fermi-level value. 5For each energy E, Kwant constructs the propagating modes of the semi-infinite leads and solves the station-ary scattering problem for the finite disordered region attached to those leads. The scattering matrix relates in-coming and outgoing propagating modes and is expressed in a current-normalized lead-mode basis. In block form, 
+
+S(E) = 
+
+r(E) t′(E)
+
+t(E) r′(E)
+
+
+
+, (4) where r and r′ are reflection matrices and t and t′ are transmission matrices. The block t(E) maps incoming modes in the left lead into outgoing modes in the right lead. The scalar two-terminal transmission returned by the scattering matrix is 
+
+T (E) = Tr t†(E)t(E) . (5) Equivalently, the same coherent elastic transmission can be written in the Green-function or Caroli form, 
+
+T (E) = Tr [Γ L(E)Gr (E)Γ R(E)Ga(E)] , (6) with 
+
+Gr (E) = (E + i0+)I − Hs − ΣrL(E) − ΣrR(E)−1 (7) and Ga = ( Gr )†. The lead broadenings are Γα(E) = 
+
+i[Σ rα(E) − Σaα(E)] for α = L, R . Equations (5) and (6) are equivalent forms of the Landauer–Caroli transmis-sion for coherent elastic transport; the scattering-matrix expression in Eq. (5) is the numerical route used in the present calculations. The transmission eigenvalues are the eigenvalues of the positive semidefinite matrix T (E) = t†(E)t(E), so that 
+
+T (E)|ϕin  
+
+> n
+
+(E)⟩ = τn(E)|ϕin  
+
+> n
+
+(E)⟩, 0 ≤ τn(E) ≤ 1. (8) The vectors |ϕin  
+
+> n
+
+⟩ define incoming transmission eigen-channels, which are coherent superpositions of lead modes that diagonalize the transmission problem at fixed energy. A singular-value decomposition, 
+
+t(E) = U (E) diag 
+
+p τ1(E), pτ2(E), . . . 
+
+
+
+V †(E), (9) makes the channel interpretation explicit. The total transmission is recovered as 
+
+T (E) = X
+
+> n
+
+τn(E). (10) Thus T (E) reports the total transmitted weight, while 
+
+{τn(E)} records how that weight is partitioned among eigenchannels. Two samples with equal T (E) can differ sharply: one may transmit through a small number of nearly open channels, whereas another may distribute current over many partially transmitting channels. For numerical learning, the eigenvalues are sorted by magnitude at each energy and stored as an energy-dependent spectrum. Closed or absent channels are rep-resented by zero-valued entries when a fixed feature di-mension is required. This sorting and padding are post-processing conventions applied to the Kwant scattering-matrix output. The index n therefore labels an eigen-value rank rather than a fixed transverse lead mode over the entire energy range. This convention retains the in-formation needed to analyze disorder-induced redistribu-tion among transmission eigenchannels while providing a uniform feature representation. The direct microscopic inverse problem would seek a map T (E) −→ δH dis , Preliminary tests with atom-resolved onsite fields and coarse pixel fields show the expected nonuniqueness: samples close in spectral dis-tance can remain widely separated in microscopic dis-order space, and deterministic inverse networks recover broad trends more reliably than the original field. This behavior reflects the many-to-one character of the coher-ent scattering map. The more appropriate formulation is metrological. We ask whether a transport observable determines a disorder class and a set of statistical descriptors, 
+
+O(E) −→ (C, θdis ) , (11) where O denotes T (E), {τn(E)}, or their concatenation. The descriptor vector may include disorder strengths, hopping-amplitude scales, dopant counts, vacancy frac-tions, and the induced standard deviations of onsite and hopping fields. This formulation recognizes that two-terminal data generally lack sufficient information to identify the microscopic disorder realization. It asks in-stead which coarse Hamiltonian information survives the projection from disorder space to transport space. The eigenvalue hierarchy also connects the present analysis to experimentally motivated observables. The conductance depends on the first moment of the eigen-value distribution, P 
+
+> n
+
+τn. The zero-temperature shot-noise power contains the second combination P 
+
+> n
+
+τn(1 −
+
+τn), often expressed through the Fano factor 
+
+F (E) = 
+
+P 
+
+> n
+
+τn(E)[1 − τn(E)] 
+
+P 
+
+> n
+
+τn(E) . (12) Higher current cumulants probe higher moments. The full transmission-eigenvalue spectrum used in this numer-ical study is therefore an idealized upper-information ob-servable within coherent two-terminal transport. Com-paring T (E) with {τn(E)} establishes how much addi-tional disorder information is available when the distri-bution over channels is resolved beyond its first moment. Several compact descriptors are useful for interpreting the channel-resolved spectra. The effective number of transmitting channels is 
+
+Neff (E) = [P 
+
+> n
+
+τn(E)] 2
+
+P 
+
+> n
+
+τ 2
+
+> n
+
+(E) , (13) which is a participation ratio in eigenchannel space. It approaches unity when one eigenchannel dominates and increases when several eigenchannels carry comparable current. A normalized eigenchannel entropy is defined as 
+
+Sτ (E) = − 1ln Nprop (E)
+
+> Nprop (E)
+
+X
+
+> n=1
+
+pn(E) ln pn(E),pn(E) = τn(E)
+
+P 
+
+> m
+
+τm(E) .
+
+(14) 6Here Nprop (E) is the number of propagating channels re-tained at energy E, and zero eigenvalues are excluded from the sum. When T (E) = 0 or Nprop (E) ≤ 1, the entropy is set to zero by convention. These descriptors complement the full spectra by providing interpretable summaries of mode participation and channel redistribu-tion.  
+
+> IV. CONDUCTANCE-BALANCED BENCHMARK CONSTRUCTION
+
+A meaningful disorder-metrology benchmark must sep-arate microscopic scattering fingerprints from the trivial fact that different disorder mechanisms may have differ-ent average scattering strengths. Without such control, a classifier could identify a disorder class by using only the energy-averaged transmission. That result would mainly establish an opacity hierarchy among the sampled disor-der classes. It would give little evidence that the spectra contain mechanism-specific structure beyond total con-ductance loss. For each sample we compute 
+
+T = 1
+
+NENEX
+
+> ℓ=1
+
+T (Eℓ), (15) where the sum runs over the 401 energies in the interval 
+
+[−3, 3] eV. We then perform acceptance sampling in win-dows of T . The production data set was generated with a target of 400 samples per disorder class and conduc-tance bin over the interval 4.0 < T < 5.75 , divided into three equal-width bins. Since a few class–bin cells fell short of the target, the final conductance-balanced sub-set was constructed by retaining 307 samples from every class–bin cell, giving 8 × 3 × 307 = 7368 spectra. Conductance balancing removes a dominant scalar variable while preserving the physical constraints im-posed by the band structure. Samples in the same T
+
+bin can have different distributions of transmission over energy because the average in Eq. (15) is insensitive to where transmission is lost. A disorder realization that weakly suppresses many plateaus and another that pro-duces localized antiresonances can have the same T . Sim-ilarly, two samples can have the same scalar spectrum while displaying different channel participation. The benchmark is therefore intentionally stringent without being artificially impossible: it suppresses the most triv-ial cue while preserving the spectral degrees of freedom that coherent scattering theory predicts should remain mechanism dependent. The use of three bins rather than a single narrow window also matters. A single extremely narrow con-ductance interval would reduce the data set and could overemphasize accidental spectral degeneracies. Three balanced windows retain a range of transparencies while enforcing the same transmission distribution for every class. The classification task therefore asks whether each class occupies a reproducible region of transport space across several conductance levels, rather than whether a single carefully selected opacity slice can be separated. This construction fixes the role of T . The model can still use the detailed energy dependence of T (E)
+
+and {τn(E)}, including plateau distortions, particle-hole asymmetry, resonances, antiresonances, and mode-dependent suppression. The task requires more than a simple rule that assigns one disorder class to low average transmission and another to high average transmission. In the balanced subset, class-averaged values of T lie in a narrow range, from approximately 4.80 for the pixel-gate class to approximately 4.94 for the mixed and va-cancy/edge classes. The remaining differences are small compared with the class separation in unconstrained en-sembles and are further tested using area-normalized and standardized spectra in Sec. VI C.  
+
+> V. LEARNING PROTOCOL AND CONTROL TRANSFORMATIONS
+
+The learning task is supervised disorder metrology. Each sample is represented by one of three transport ob-servables, 
+
+xT = [ T (E1), . . . , T (ENE )] , (16) 
+
+xτ = [ τ1(E1), . . . , τ Nmax (E1), . . . , τ Nmax (ENE )] , (17) 
+
+xT +τ = xT ⊕ xτ . (18) The scalar input has 401 components. The eigenchannel representation stores Nmax = 32 eigenvalues at each en-ergy in the present geometry, giving 12832 components. The combined representation has 13233 components. Random-forest classifiers and regressors are trained on principal-component analysis (PCA)-compressed fea-tures, while neural-network baselines use standardized in-puts. These models are intentionally conventional. Their role is to determine whether the chosen transport observ-able retains recoverable information about the disorder mechanism and its descriptors. The central interpre-tation comes from comparisons among observables and from controlled transformations of the spectra, rather than from the architecture itself. The categorical target is the disorder class C. The continuous targets include strengths of onsite, pixel-gate, Gaussian-gate, hopping, and random-bond disor-der. And also dopant density, vacancy fraction, and in-duced standard deviations of onsite and hopping fields. We report class accuracy and the mean coefficient of de-termination R2 over these continuous descriptors. These numerical scores are used as diagnostics of recoverability in transport space. Two scale-removing transformations are central. In the area-normalized representation, each spectrum is divided by its integrated spectral weight. In the per-spectrum standardized representation, each spectrum is centered and divided by its own feature-axis standard deviation. 7                   
+
+> TABLE I. PCA dimensionality of the conductance-balanced production subset. Dpis the number of principal components required to explain p%of the variance. The table is used as an information-content diagnostic rather than as the primary performance result. Observable D90 D95 D99
+> T(E)22 66 215
+> {τn(E)}541 1053 2180
+> T(E) + {τn(E)}492 995 2130
+
+For the scalar T (E) input, we also use a finite-difference representation along the energy axis. These controls sup-press simple spectral cues, such as the overall conduc-tance scale, and test whether class information remains in the shape of the response. Robust performance after area normalization or standardization indicates that the model is using correlated deformations of the spectrum rather than a residual offset in conductance scale.   
+
+> VI. RESULTS A. Spectral dimensionality and PCA transport coordinates
+
+A useful first diagnostic is the number of independent spectral directions required to describe the conductance-balanced ensemble. We use PCA as an interpretable linear decomposition and as a controlled dimensionality-reduction step for the random-forest baseline. Rather than using PCA as evidence for a microscopic mechanism by itself, its purpose is to identify whether the spectra vary along a few trivial transmission directions or occupy a higher-dimensional manifold of transport deformations. For a set of standardized transport features Xi, PCA writes 
+
+Xi ≃ ¯X + X
+
+> α
+
+ziα uα, (19) where uα is the α-th principal component and ziα is the score of sample i along that component. For the scalar transmission, Xi is the function Ti(E). For the eigen-channel representation, Xi is the two-dimensional object 
+
+τi,n (E), flattened before PCA and reshaped into energy and eigenvalue-rank indices for interpretation. Table I gives the number Dp of principal components required to explain p% of the variance in the balanced subset. For example, for the scalar transmission, 66 com-ponents are required to capture 95% of the variance. The eigenchannel representation requires 1053 compo-nents to reach the same threshold. This dimensional in-crease has a direct physical interpretation: after average conductance has been controlled, the remaining variabil-ity is distributed across mode-opening distortions, reso-nant structures, particle-hole asymmetries, and channel-redistribution patterns. Thus, the ensemble requires                     
+
+> TABLE II. Main supervised-learning scores for the conductance-balanced data set. Accuracy refers to disorder-class classification. The regression score is the mean R2over continuous disorder descriptors. Input representation Accuracy Mean R2
+> T(E)0.887 0.614
+> {τn(E)}0.922 0.731
+> T(E) + {τn(E)}0.923 0.735
+
+more than a single opacity coordinate. Figure 3 summarizes the PCA transport coordinates. Panel (a) shows cumulative explained variance for T (E)
+
+and {τn(E)}. Panels (b) and (c) show how disorder mechanisms are organized in the leading PCA plane of the eigenchannel spectra. The class clouds overlap, (b), is consistent with transport-similar microscopic pertur-bations, yet the class centroids, (c), occupy reproducibly different regions of the same plane. The scores there-fore act as empirical transport coordinates: without re-constructing the disorder field, they reveal how disorder mechanisms are embedded in the dominant directions of spectral variability. The loading maps in panels (d) and (e) connect these coordinates to the multichannel scattering structure. The sign of a principal component is arbitrary; the spa-tial pattern of positive and negative loading over (E, n )
+
+is meaningful because it identifies which parts of the transmission-eigenvalue spectrum are enhanced or sup-pressed as the PCA score changes. The leading defor-mations are concentrated in selected energy and eigen-channel sectors rather than being uniformly distributed across the band. The energy-resolved loading weight 
+
+Wα(E) = P 
+
+> n
+
+u2
+
+> α
+
+(E, n ) shows that the multichannel re-gions carry substantial weight in the dominant PCA coor-dinates. This observation anticipates the energy-window analysis below, where higher-energy sectors are more di-agnostic than the central low-energy sector.  
+
+> B. Transport distinguishability
+
+We summarize the class-identification results through transport distinguishability maps constructed from row-normalized confusion matrices. Let Cij denote the num-ber of test spectra whose actual disorder mechanism is i
+
+and whose predicted mechanism is j. We plot 
+
+Mij = Cij 
+
+P 
+
+> j
+
+Cij 
+
+, (20) so that each row gives the conditional probability P (bc =
+
+j|c = i) of assigning a spectrum from class i to class j. In this representation, large diagonal entries indicate mech-anisms whose spectra are assigned to their own class, whereas off-diagonal entries identify pairs of mechanisms that generate similar transport responses. Because the 80 50 100 150 200 250 Number of principal components 0.4 0.6 0.8 1.0 Cumulative explained variance                           
+
+> D90=51 D95=115 D90=246
+> Spectral dimensionality
+> T E (){()} τEn
+> −20 020
+> Onsite / Pixel
+> Onsite Pixel
+> Gauss / Hop
+> Gauss Hop
+> −20 020 40 PC1 of () (27.5%) τEn
+> −20 020
+> Bond / Dopant
+> Bond Dopant
+> −20 020 40 PC1 of ()(27.5%) τEn
+> Vac/edge / Mixed
+> Vac/edge Mixed
+> −20 020 PC1 of ()(27.5%) τEn
+> −6
+> −4
+> −20246PC2  of  ( ) (16.2%) τ En
+
+(c) Class-averaged scores   
+
+> Onsite
+> Pixel
+> Gauss
+> Hop
+> Bond
+> Dopant
+> Vac/edge
+> Mixed
+> −202Energy [eV] 0.0 2.5 5.0 7.5 10.0 12.5 15.0 17.5 Eigenchannel  index  n
+
+(d) PC1 loading map   
+
+> PC2 loading map
+> −202Energy [eV] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 Loading  weight  ( ) [%] W Ek
+
+(e) Energy weight PC1 PC2 010                  
+
+> Onsite / Mixed
+> ddTraw z= 0.10, = 0.09 Transport-similar examples
+> Onsite Mixed 010
+> Gauss / Onsite
+> ddTraw z= 0.10, = 0.10
+> Gauss Onsite 010
+> Vac/edge / Gauss
+> ddTraw z= 0.11, = 0.11
+> Vac/edge Gauss 010
+> Pixel / Gauss
+> ddTraw z= 0.12, = 0.12
+> Pixel Gauss
+> −202Energy [eV] 010
+> Bond / Dopant
+> ddTraw z= 0.12, = 0.12
+> Bond Dopant
+> −0.03
+> −0.02
+> −0.01 0.00 0.01 0.02 0.03 PC2  of  ( ) (16.2%) τ EnT E ( )
+
+(a) (b) (f) 
+
+FIG. 3. Principal-component analysis of the conductance-balanced transport ensemble. (a) Cumulative explained variance for the scalar transmission T (E) and the transmission-eigenvalue spectrum {τn(E)}. (b) Individual disorder realizations projected onto the first two principal components of {τn(E)}, showing the overlap and separation of representative classes in transport space. (c) Class-averaged PC1-PC2 scores for {τn(E)}; error bars denote the standard error of the mean. (d,e) Loading maps of the first two principal components, u1(E, n ) and u2(E, n ), resolved by energy and sorted transmission-eigenvalue index 
+
+n. (f) Energy-resolved loading weights Wα(E) = P 
+
+> n
+
+u2
+
+> α
+
+(E, n ), indicating which spectral regions dominate the leading PCA coordinates. The principal components provide empirical transport coordinates for the dominant spectral deformations of the conductance-balanced ensemble. 
+
+data set is conductance balanced, the off-diagonal struc-ture probes similarity in the energy- and channel-resolved scattering response at comparable integrated transmis-sion, rather than differences in the overall conductance scale. For the balanced subset, the random-forest baseline trained on T (E) reaches an accuracy of 0.887 and a mean regression R2 of 0.614. The eigenchannel repre-sentation gives 0.922 and 0.731, respectively, while the combined representation gives 0.923 and 0.735. These metrics are summarized in Table II. The small gain ob-tained by adding T (E) to {τn(E)} is consistent with the identity T (E) = P 
+
+> n
+
+τn(E): the scalar transmission is contained in the eigenvalue spectrum, while the latter also resolves how the transmitted current is distributed over channel ranks. The distinguishability maps in Fig. 4 show a struc-tured pattern rather than a random distribution of errors. Bond disorder, dopants, and vacancy/edge disorder have strongly concentrated diagonal weight, indicating trans-port signatures that remain well separated after conduc-tance balancing. The principal ambiguities occur among scalar-potential-like classes and the mixed class. Smooth onsite disorder, pixelated gates, Gaussian gates, and mixed perturbations can generate similar conductance-balanced spectral envelopes because they perturb related sectors of the Hamiltonian. By contrast, bond disorder modifies the hopping network, dopants introduce local-ized resonant scatterers, and vacancies or edge rough-ness disrupt lattice connectivity and boundary-sensitive modes. The off-diagonal entries therefore have a direct physical interpretation: they identify mechanisms that become close in the two-terminal transport representa-tion, while the diagonal entries identify mechanisms that retain distinct spectral structure. 
+
+C. Removing conductance-scale information 
+
+The conductance-balanced construction already sup-presses the strongest scale cue. A stricter test is to transform each spectrum before training. The scale-normalization controls are summarized in Fig. 5. For 
+
+T (E), the raw, area-normalized, and per-spectrum stan-dardized inputs give classification accuracies of 0.883, 0.884, and 0.885, respectively. The scalar spectrum re-mains predictive after its absolute scale is removed. The derivative-only representation is weaker, with an accu-racy of 0.666, indicating that local slopes alone capture only part of the fingerprint. The classifier therefore uses broader spectral structure: plateau distortions, correla-tions among energy windows, particle-hole asymmetry, and resonance patterns. For the eigenchannel input, the corresponding raw, area-normalized, and standardized accuracies are 0.927, 0.915, and 0.921. The performance remains high under normalization. The recoverable information is therefore distinct from a residual conductance offset left by imper-9onsite 
+
+> smooth
+> pixel
+> gate
+> gaussian
+> gates
+> hopping
+> smooth
+> bond
+> disorder
+> dopants
+> vacancy/
+> edge
+> mixed
+
+Predicted disorder mechanism 
+
+> onsite
+> smooth
+> pixel
+> gate
+> gaussian
+> gates
+> hopping
+> smooth
+> bond
+> disorder
+> dopants
+> vacancy/
+> edge
+> mixed
+> Actual disorder mechanism
+
+Transport disorder mechanism map 
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> Row-normalized prediction probability
+
+FIG. 4. Transport distinguishability map for the conductance-balanced disorder ensemble. Rows denote the actual disorder mechanism and columns the predicted mech-anism. The plotted entries are row-normalized prediction probabilities, Eq. (20). Each square is split by input represen-tation: lower-left triangles use the total transmission T (E),while upper-right triangles use the transmission-eigenvalue spectra {τn(E)}. Large diagonal entries indicate disorder mechanisms whose spectra are assigned to their own class, whereas off-diagonal entries reveal disorder classes with simi-lar conductance-balanced transport responses. 
+
+fect balancing. The persistence of class information in normalized eigenchannel spectra is one of the main pieces of evidence that disorder mechanisms imprint themselves through mode redistribution and energy-dependent scat-tering structure. 
+
+D. Energy-window sensitivity 
+
+By restricting the analysis to individual pristine-conductance plateaus, the energy-window tests re-veal which mode sectors carry the strongest disorder-dependent structure. The classifier is trained on re-stricted spectral intervals and compared with the full-window result. The central low-energy region is the least diagnostic. Windows near the middle of the spectrum give classification accuracies near 0.63 for both scalar and channel-resolved inputs. This trend is consistent with the limited number of active propagating modes near the central sector of the armchair ribbon spectrum. When only a small set of modes contributes, different disorder mechanisms have fewer independent channel degrees of freedom through which to express distinct scattering sig-natures. The outer multichannel regions are more informative. In the windows [−3, −1.5] and [1 .5, 3] eV, (see Fig. 5 for 0.0 0.5 1.0 1.5 2.0 2.5 3.0 
+
+Energy [eV]   
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> Classification accuracy
+> T(E)
+> {n(E)}
+> pristine T0(E)
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> 14
+> 16
+> 18
+> Pristine transmission  T0(E)
+
+FIG. 5. Spectral-shape controls for the conductance-balanced disorder ensemble. The figure compares disorder-class classification after transformations that suppress abso-lute conductance scale: raw spectra, area-normalized spec-tra, per-spectrum standardized spectra, and finite-difference spectra for the scalar transmission. Robust performance un-der area normalization and standardization indicates that the learned fingerprints are carried by spectral shape and channel redistribution rather than by average transmission. 
+
+the latter interval) the scalar spectrum reaches accuracies around 0.75, while the channel-resolved representation reaches approximately 0.81–0.82. The full spectrum re-mains stronger than any isolated window, with accuracies around 0.875 for T (E) and 0.919 for the channel-resolved representation in the learning-curve analysis. The dis-order fingerprint is therefore distributed across energy rather than localized at one diagnostic point. The high-energy sectors are important because multiple transverse modes contribute, allowing disorder to act through inter-mode scattering, selective channel suppression, and re-distribution of transmission among open eigenchannels. This result also clarifies the role of graphene in the study. The physical contrast arises less from a sin-gle graphene-specific band feature than from the co-existence of subband thresholds, transverse quantiza-tion, and lattice-scale scattering channels in a coher-ent waveguide. A different multichannel tight-binding system should display analogous behavior whenever its disorder mechanisms couple differently to propagating modes, boundary-sensitive states, and localized resonant structures. The same analysis suggests a practical strategy for fu-ture calculations. If computation or measurement re-stricts the available energy range, windows with sev-eral open channels should be prioritized. Low-energy windows remain valuable for detecting band-edge shifts, 10 0                      
+
+> 5
+> 10
+> Neff (E)
+> Effective channel number
+> (a)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> S (E)
+> Eigenchannel entropy
+> (b)
+> 0123
+> Energy [eV]
+> 1
+> 0
+> 1
+> 2
+> Neff (E)
+> Class deviation
+> (c)
+> 0123
+> Energy [eV]
+> 0.05
+> 0.00
+> 0.05
+> 0.10
+> S (E)
+> Class deviation
+> (d)
+> onsite
+> pixel
+> gauss
+> hop
+> bond
+> dopant
+> vac/edge
+> mixed
+> FIG. 6. Class-averaged eigenchannel descriptors in the conductance-balanced ensemble. (a) Effective number of transmitting eigenchannels Neff (E).(b) Normalized eigen-channel entropy Sτ(E). (c,d) Deviations from the ensemble-averaged reference, which remove the common mode-opening envelope and emphasize class-dependent channel redistribu-tion.
+
+localized midgap states, or strong vacancy-induced fea-tures, yet they provide fewer independent mode-mixing degrees of freedom. A broad multichannel window offers a richer response because each disorder mechanism can couple differently to transverse mode profiles, subband velocities, and boundary amplitudes.  
+
+> E. Channel redistribution behind the spectral fingerprints
+
+To connect the classification results with scattering physics, we analyze the distribution of transmitted cur-rent among eigenchannels using Neff (E) and Sτ (E) from Eqs. (13) and (14). These quantities summarize dif-ferent aspects of the transmission-eigenvalue spectrum. 
+
+Neff measures the participation of eigenchannels in carry-ing current; Sτ measures how uniformly the transmitted current is distributed over channel space. Both quan-tities are insensitive to the detailed phase of scattering states, yet they are sensitive to whether disorder blocks a few channels, attenuates many channels, or redistributes transmission weight broadly. Figure 6 shows these descriptors for the conductance-balanced ensemble. Panels (a) and (b) display the class-averaged quantities Neff (E) and Sτ (E). Their domi-nant increase with energy reflects the opening of addi-tional propagating modes in the clean ribbon. To remove this common band-structure envelope and isolate class-dependent redistribution, panels (c) and (d) show 
+
+∆N (c)eff (E) = ⟨Neff (E)⟩c − ⟨ Neff (E)⟩all ,
+
+∆S(c) 
+
+> τ
+
+(E) = ⟨Sτ (E)⟩c − ⟨ Sτ (E)⟩all , (21) where c labels the disorder class and ⟨· · · ⟩ all denotes the average over the full conductance-balanced ensemble. The distinction between Neff and Sτ is useful in inter-preting these curves. Neff is dominated by the participa-tion of the largest eigenvalues and is therefore sensitive to whether the leading channels remain open. Sτ responds more directly to the relative uniformity of the eigenvalue distribution. A sample can have a moderate Neff and a lower entropy if one channel remains dominant while sev-eral weak channels contribute small weights. Conversely, a more uniform set of partially transmitting eigenchan-nels raises the entropy. Reading the two descriptors to-gether helps distinguish selective blocking from broad channel mixing. The mean-subtracted descriptors reveal distinct channel-redistribution signatures. Bond disorder pro-duces positive deviations in both Neff and Sτ over broad energy intervals, consistent with random hopping per-turbations that modify lattice connectivity and enhance transverse-mode mixing. Dopant disorder also increases channel participation in selected energy windows, with a different energy dependence that reflects localized reso-nant onsite scattering. Vacancy and edge disorder show stronger energy dependence, indicating that they can suppress selected channels or redistribute current among several partially transmitting modes depending on the available propagating states. Smoother scalar-potential disorder remains closer to the ensemble average over much of the spectrum, consistent with a coherent per-turbation that is less efficient at randomizing the channel distribution. These descriptors complement the full spectral classi-fiers by providing a compact physical interpretation of why disorder classes remain distinguishable after con-ductance balancing. Even when average transmission is controlled, different microscopic perturbations orga-nize the transmitted current differently in eigenchannel space. Neff and Sτ expose this mode-mixing and channel-participation structure directly.  
+
+> F. Learning curves and finite-sample stability
+
+Learning curves are used as a stability check. The classification accuracy increases rapidly when the train-ing set grows from 5% to 20% and then approaches a plateau. For T (E) the full-training accuracy is approx-imately 0.88 in the learning-curve run; for the channel-resolved representation it is approximately 0.92. The re-gression metrics follow the same qualitative trend. This behavior indicates that the reported fingerprints are ro-bust across different train/test splits. Since the classifica-tion curves are already close to saturation, increasing the 11 data set should primarily refine regression, confidence in-tervals, and class-boundary structure rather than change the qualitative conclusion. The finite-sample analysis also clarifies the status of the mixed class. Its overlap with scalar-potential-like classes is more than failure of the classifier. Mixed disor-der occupies intermediate regions of transport space be-cause its Hamiltonian contains several scattering mech-anisms at once. Additional samples would sharpen the boundaries of that region, but the overlap itself reflects the physics of superposed perturbations.  
+
+> VII. DISCUSSION
+
+The results support a metrological interpretation of inverse quantum transport. A deterministic map from a scalar spectrum to an atom-resolved disorder field is an ill-suited target for a two-terminal coherent measure-ment, because the scattering map compresses a high-dimensional Hamiltonian into a finite set of boundary observables. The conductance-balanced benchmark in-stead asks which coarse Hamiltonian information remains recoverable once average transmission is controlled. For the disorder families studied here, the answer is affir-mative: transport spectra retain mechanism-dependent information in their energy dependence and in the distri-bution of transmission among eigenchannels. The confusion structure is part of this conclusion. Smooth onsite disorder, pixelated gates, Gaussian gates, and mixed disorder overlap because several of them act primarily through scalar onsite potentials. Bond dis-order, dopants, and vacancy/edge disorder leave more distinct fingerprints because they perturb connectivity, introduce localized resonances, or disrupt boundary-sensitive modes. The energy-window analysis adds a complementary interpretation: multichannel regions are more diagnostic than the central low-energy sector, con-sistent with the idea that disorder mechanisms separate most clearly when several propagating modes are avail-able to be mixed, suppressed, or redistributed. The channel-resolved results should be interpreted as a hierarchy of observable information. In numerical trans-port, the full matrix t(E) and its eigenvalues are directly available. In an experiment, a conventional two-terminal conductance measurement gives only P 
+
+> n
+
+τn. Shot noise gives access to P 
+
+> n
+
+τn[1 − τn], and higher current cumu-lants or multi-terminal/tomographic protocols would be needed to reconstruct more of the eigenvalue distribu-tion. The present work therefore establishes the infor-mation content of the transport response under idealized coherent conditions. It also identifies which additional measurements would be most valuable experimentally: observables sensitive to the variance and higher moments of the transmission eigenvalues should distinguish disor-der mechanisms more effectively than conductance alone. The framework goes beyond graphene-specific band-structure features, but to the availability of a coherent scattering description for a finite region coupled to ex-ternal channels [13, 17, 27]. The armchair ribbon is used here as a controlled tight-binding waveguide with atomically defined edges, transverse subbands, and sev-eral independently tunable disorder channels [20, 27, 28]. The same protocol can be transferred to semiconductor quantum wires and molecular tight-binding junctions, where conductance is naturally formulated in terms of channel transmission or Green-function scattering ap-proaches [13, 29–31]. It can also be adapted to supercon-ducting hybrid structures, spinful chains, and photonic or acoustic scattering networks, provided the measured response can be represented by an appropriate normal, Bogoliubov–de Gennes, spin-resolved, or classical-wave scattering matrix [32–36]. The general principle is that inverse transport should target the part of the Hamil-tonian disorder that is recoverable from the chosen ob-servable, since distinct Hamiltonians or graph structures can produce identical or incomplete scattering data when the scattering map contains symmetries, projections, or other degeneracies [37, 38]. Two methodological limitations should be kept ex-plicit. First, PCA and random forests operate on sorted eigenvalue ranks, providing a representation of spectral ordering rather than continuous tracking of individual transverse modes through avoided crossings or subband openings. This representation is appropriate for trans-mission eigenvalue statistics, yet it discards phase infor-mation and the detailed composition of the eigenvectors in lead-mode space. Second, the class labels are gener-ated by simulation priors. A real sample may contain disorder outside this catalog, and its spectrum would then be projected onto the closest learned transport class. These limitations clarify the scope within which the passive-metrology result should be applied. The controlled coherent-scattering baseline established here opens a route toward a broader program of dis-order metrology. The extensions listed below therefore serve to transfer and stress-test the fingerprinting proto-col across additional physical regimes, while the present work defines the reference limit in which the disorder signatures are cleanly isolated. Varying ribbon width, length, edge termination, and lead geometry would sep-arate signatures that are generic to multichannel waveg-uides from those tied to the armchair realization, whose subbands, boundary conditions, edge disorder, and con-tact geometry are known to shape graphene-ribbon trans-port [20, 28, 39, 40]. Finite temperature, dephasing, electron–electron interactions, and electron–phonon scat-tering can be introduced as controlled broadening and relaxation mechanisms, allowing the crossover from ideal coherent spectra to experimentally realistic device re-sponses to be quantified [13, 41–43]. Relaxing the ideal-contact assumption by adding interface disorder and imperfect mode matching would place contact-induced spectral structure on the same footing as intrinsic disor-der, which is important because electrode coupling and contact geometry can strongly affect nanoscale conduc-12 tance spectra [40, 44]. Finally, sweeping the disorder-strength priors within each class would distinguish con-fusion patterns that are stable properties of the scat-tering mechanisms from those that reflect a particular sampling distribution [45, 46]. Fifth, a direct bridge to experimentally accessible observables can be devel-oped by extending the present two-terminal conductance analysis to additional response functions. Shot noise is a natural first extension because it probes transmission partitioning and is directly sensitive to the distribution of transmission eigenvalues [47–49]. Thermopower and thermal conductance provide complementary access to the energy dependence of the transmission spectrum [50– 52]. Finite-bias spectroscopy and gate-dependent con-ductance maps are standard probes of mesoscopic and molecular junctions, and would test whether the disor-der signatures identified here persist beyond linear re-sponse [31, 42]. Magnetotransport and gate-modulated response functions add phase- and interference-sensitive dimensions to the scattering data, providing further han-dles on disorder-dependent transport structure [53–55].  
+
+> VIII. CONCLUSIONS
+
+We have formulated inverse quantum transport as a conductance-controlled disorder-metrology problem and tested it in ensembles of disordered armchair graphene nanoribbons. The benchmark is balanced by disorder class and by windows of energy-averaged transmission, preventing the task from reducing to a simple ordering by conductance loss. Within this controlled ensemble, transport spectra retain mechanism-specific fingerprints. These fingerprints survive area normalization and per-spectrum standardization, and energy-window analysis shows that they are strongest in multichannel spectral regions. The physical origin of the fingerprints is channel redistribution. Scalar transmission records only the total transmitted probability, while the transmission-eigenvalue spectrum resolves how current is partitioned among eigenchannels. Disorder mechanisms that look similar in average conductance can differ in their mode mixing, selective channel suppression, resonance struc-ture, and boundary sensitivity. PCA transport coordi-nates and eigenchannel participation descriptors provide complementary views of this structure. PCA identifies the dominant spectral deformation directions, and Neff 
+
+together with Sτ connects those directions to current re-distribution among channels. The introduction posed the central question of what can be inferred about a high-dimensional disordered Hamiltonian from finite coherent transport observables. The conclusion is deliberately metrological. It is unlike that two-terminal spectra could provide a unique image of the microscopic disorder realization. They neverthe-less encode reproducible information about the mecha-nism and statistical character of the disorder, provided that average conductance is controlled and the channel-resolved structure of the scattering response is consid-ered. This result provides a physically interpretable basis for Hamiltonian disorder metrology in coherent quantum waveguides. It also establishes a reference problem from which a continuing sequence of studies can add geomet-ric variation, contact nonideality, finite temperature, de-phasing, interactions, phonons, finite-bias driving, mag-netotransport, and active gate probes in a controlled or-der.  
+
+> IX. ACKNOWLEDGMENTS
+
+Los Alamos National Laboratory is managed by Triad National Security, LLC, for the National Nuclear Security Administration of the U.S. Department of Energy under Contract No. 89233218CNA000001.                                       
+
+> [1] D. Colton and R. Kress, Inverse Acoustic and Elec-tromagnetic Scattering Theory , 3rd ed. (Springer, New York, 2013). [2] S. Rotter and S. Gigan, Light fields in complex media: Mesoscopic scattering meets wave control, Rev. Mod. Phys. 89 , 015005 (2017). [3] A. P. Mosk, A. Lagendijk, G. Lerosey, and M. Fink, Con-trolling waves in space and time for imaging and focusing in complex media, Nat. Photon. 6, 283 (2012). [4] D. L. Donoho, Compressed sensing, IEEE Trans. Inf. Theory 52 , 1289 (2006). [5] M. F. Duarte, M. A. Davenport, D. Takhar, J. N. Laska, T. Sun, K. F. Kelly, and R. G. Baraniuk, Single-pixel imaging via compressive sampling, IEEE Signal Process. Mag. 25 , 83 (2008). [6] J. H. Shapiro, Computational ghost imaging, Phys. Rev. A78 , 061802(R) (2008). [7] Y. Bromberg, O. Katz, and Y. Silberberg, Ghost imaging with a single detector, Phys. Rev. A 79 , 053840 (2009). [8] R. Landauer, Spatial variation of currents and fields due to localized scatterers in metallic conduction, IBM J. Res. Dev. 1, 223 (1957). [9] R. Landauer, Electrical resistance of disordered one-dimensional lattices, Philos. Mag. 21 , 863 (1970). [10] M. Büttiker, Four-terminal phase-coherent conductance, Phys. Rev. Lett. 57 , 1761 (1986). [11] C. Caroli, R. Combescot, P. Nozières, and D. Saint-James, Direct calculation of the tunneling current, J. Phys. C: Solid State Phys. 4, 916 (1971). [12] D. S. Fisher and P. A. Lee, Relation between conductivity and transmission matrix, Phys. Rev. B 23 , 6851 (1981). [13] S. Datta, Electronic Transport in Mesoscopic Systems
+> (Cambridge University Press, Cambridge, 1995). [14] Y. V. Nazarov and Y. M. Blanter, Quantum Trans-port: Introduction to Nanoscience (Cambridge Univer-
+
+13 
+
+sity Press, Cambridge, 2009). [15] S. M.-M. Dubois, A. Lopez-Bezanilla, A. Cresti, F. Tri-ozon, B. Biel, J.-C. Charlier, and S. Roche, Quantum transport in graphene nanoribbons: Effects of edge re-construction and chemical reactivity, ACS Nano 4, 1971 (2010). [16] P. Mello, P. Pereyra, and N. Kumar, Macroscopic ap-proach to multichannel disordered conductors, Annals of Physics 181 , 290 (1988). [17] C. W. J. Beenakker, Random-matrix theory of quantum transport, Rev. Mod. Phys. 69 , 731 (1997). [18] K. Nakada, M. Fujita, G. Dresselhaus, and M. S. Dressel-haus, Edge state in graphene ribbons: Nanometer size ef-fect and edge shape dependence, Phys. Rev. B 54 , 17954 (1996). [19] Y.-W. Son, M. L. Cohen, and S. G. Louie, Energy gaps in graphene nanoribbons, Phys. Rev. Lett. 97 , 216803 (2006). [20] L. Brey and H. A. Fertig, Electronic states of graphene nanoribbons studied with the dirac equation, Phys. Rev. B 73 , 235411 (2006). [21] A. H. Castro Neto, F. Guinea, N. M. R. Peres, K. S. Novoselov, and A. K. Geim, The electronic properties of graphene, Rev. Mod. Phys. 81 , 109 (2009). [22] C. W. Groth, M. Wimmer, A. R. Akhmerov, and X. Waintal, Kwant: a software package for quantum transport, New Journal of Physics 16 , 063065 (2014). [23] P. Gallagher, K. Todd, and D. Goldhaber-Gordon, Disorder-induced gap behavior in graphene nanoribbons, Phys. Rev. B 81 , 115409 (2010). [24] D. A. Areshkin, D. Gunlycke, and C. T. White, Ballistic transport in graphene nanostrips in the presence of dis-order: importance of edge effects, Nano Letters 7, 204 (2007). [25] E. R. Mucciolo, A. H. Castro Neto, and C. H. Lewenkopf, Conductance quantization and transport gaps in disor-dered graphene nanoribbons, Phys. Rev. B 79 , 075407 (2009). [26] A. Cresti, A. Lopez-Bezanilla, P. Ordejón, and S. Roche, Oxygen surface functionalization of graphene nanorib-bons for transport gap engineering, ACS Nano 5, 9271 (2011). [27] C. W. Groth, M. Wimmer, A. R. Akhmerov, and X. Waintal, Kwant: a software package for quantum transport, New J. Phys. 16 , 063065 (2014). [28] J. Tworzydło, B. Trauzettel, M. Titov, A. Rycerz, and C. W. J. Beenakker, Sub-poissonian shot noise in graphene, Phys. Rev. Lett. 96 , 246802 (2006). [29] B. J. van Wees, H. van Houten, C. W. J. Beenakker, J. G. Williamson, L. P. Kouwenhoven, D. van der Marel, and C. T. Foxon, Quantized conductance of point contacts in a two-dimensional electron gas, Phys. Rev. Lett. 60 , 848 (1988). [30] D. A. Wharam, T. J. Thornton, R. Newbury, M. Pep-per, H. Ahmed, J. E. F. Frost, D. G. Hasko, D. C. Pea-cock, D. A. Ritchie, and G. A. C. Jones, One-dimensional transport and the quantisation of the ballistic resistance, J. Phys. C: Solid State Phys. 21 , L209 (1988). [31] A. Nitzan and M. A. Ratner, Electron transport in molec-ular wire junctions, Science 300 , 1384 (2003). [32] G. E. Blonder, M. Tinkham, and T. M. Klapwijk, Tran-sition from metallic to tunneling regimes in supercon-ducting microconstrictions: Excess current, charge im-balance, and supercurrent conversion, Phys. Rev. B 25 ,4515 (1982). [33] C. W. J. Beenakker and H. van Houten, Josephson cur-rent through a superconducting quantum point contact shorter than the coherence length, Phys. Rev. Lett. 66 ,3056 (1991). [34] S. Datta and B. Das, Electronic analog of the electro-optic modulator, Appl. Phys. Lett. 56 , 665 (1990). [35] L. Zhang, F. Monticone, and O. D. Miller, All electro-magnetic scattering bodies are matrix-valued oscillators, Nat. Commun. 14 , 7724 (2023). [36] H. Zhang, T. Delaporte, and G. Ma, Scattering matrices of two-dimensional complex acoustic media, npj Acous-tics 1, 17 (2025). [37] J. Boman and P. Kurasov, Symmetries of quantum graphs and the inverse scattering problem, Adv. Appl. Math. 35 , 58 (2005). [38] E. Blåsten, P. Exner, H. Isozaki, M. Lassas, and J. Lu, Inverse problems for locally perturbed lattices – dis-crete hamiltonian and quantum graph, Annales Henri Lebesgue 7, 267 (2024). [39] F. Libisch, S. Rotter, and J. Burgdörfer, Coherent trans-port through graphene nanoribbons in the presence of edge disorder, New Journal of Physics 14 , 123006 (2012). [40] T. Stegmann, J. A. Franco-Villafañe, U. Kuhl, F. Mortes-sagne, and T. H. Seligman, Transport gap engineering by contact geometry in graphene nanoribbons: Experimen-tal and theoretical studies on artificial materials, Phys. Rev. B 95 , 035413 (2017). [41] H. Förster, P. Samuelsson, S. Pilgram, and M. Büttiker, Voltage and dephasing probes in mesoscopic conductors: A study of full-counting statistics, Phys. Rev. B 75 ,035340 (2007). [42] Y. Meir and N. S. Wingreen, Landauer formula for the current through an interacting electron region, Phys. Rev. Lett. 68 , 2512 (1992). [43] T. Frederiksen, M. Paulsson, M. Brandbyge, and A.-P. Jauho, Inelastic transport theory from first principles: Methodology and application to nanoscale devices, Phys. Rev. B 75 , 205413 (2007). [44] M. Brandbyge, J.-L. Mozos, P. Ordejón, J. Taylor, and K. Stokbro, Density-functional method for nonequilib-rium electron transport, Phys. Rev. B 65 , 165401 (2002). [45] T. Hastie, R. Tibshirani, and J. Friedman, The Elements of Statistical Learning: Data Mining, Inference, and Pre-diction , 2nd ed. (Springer, 2009). [46] J. Quiñonero-Candela, M. Sugiyama, A. Schwaighofer, and N. D. Lawrence, eds., Dataset Shift in Machine Learning (MIT Press, 2008). [47] Y. M. Blanter and M. Büttiker, Shot noise in mesoscopic conductors, Physics Reports 336 , 1 (2000). [48] A. Kumar, L. Saminadayar, D. C. Glattli, Y. Jin, and B. Etienne, Experimental test of the quantum shot noise reduction theory, Phys. Rev. Lett. 76 , 2778 (1996). [49] M. Reznikov, M. Heiblum, H. Shtrikman, and D. Mahalu, Temporal correlation of electrons: Suppression of shot noise in a ballistic quantum point contact, Phys. Rev. Lett. 75 , 3340 (1995). [50] U. Sivan and Y. Imry, Multichannel landauer formula for thermoelectric transport with application to ther-mopower near the mobility edge, Phys. Rev. B 33 , 551 (1986). [51] P. N. Butcher, Thermal and electrical transport formal-ism for electronic microstructures with many terminals, J. Phys.: Condens. Matter 2, 4869 (1990). 14 
+
+[52] L. W. Molenkamp, H. van Houten, C. W. J. Beenakker, R. Eppenga, and C. T. Foxon, Quantum oscillations in the transverse voltage of a channel in the nonlinear trans-port regime, Phys. Rev. Lett. 65 , 1052 (1990). [53] P. A. Lee and A. D. Stone, Universal conductance fluc-tuations in metals, Phys. Rev. Lett. 55 , 1622 (1985). [54] C. M. Marcus, A. J. Rimberg, R. M. Westervelt, P. F. Hopkins, and A. C. Gossard, Conductance fluctuations and chaotic scattering in ballistic microstructures, Phys. Rev. Lett. 69 , 506 (1992). [55] Y. Alhassid, The statistical theory of quantum dots, Rev. Mod. Phys. 72 , 895 (2000).

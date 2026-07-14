@@ -6,32 +6,38 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-13
-- 运行时间：2026-07-13 21:24:33 UTC
+- 最新运行日期：2026-07-14
+- 运行时间：2026-07-14 21:38:13 UTC
 - 运行状态：成功
-- 本次总论文数：3
+- 本次总论文数：5
 - 精读区：0
-- 速读区：3
+- 速读区：5
 
 ### 今日简报（AI）
-今日追踪微观动力学前沿，速览了稀土磁体超快自旋、钙钛矿表面电势及量子点激子相干性三项进展。
-核心亮点在于揭示了稀土磁体中的极速自旋演化规律，以及钝化技术对钙钛矿表面电荷动态的影响。
-推荐对自旋电子学和新型光伏材料感兴趣的读者，深入了解这些微观机制如何为提升器件性能提供底层支撑。
-- 详情：[/202607/13/README](/202607/13/README)
+今日聚焦微纳尺度下的光电前沿，涵盖莫尔超晶格成像与中红外增强发射等突破。
+重点关注利用布拉格干涉仪解析超晶格原子重构的几何相位原理，以及通过时间界面实现高功率辐射的“等离激元枪”技术。
+建议深入了解几何相位与时间界面在纳米光子学中的应用，探索其对未来高性能光电器件设计的启发。
+- 详情：[/202607/14/README](/202607/14/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Unlocking ultrafast spin dynamics in a rare-earth magnet](/202607/13/2607.09413v1-unlocking-ultrafast-spin-dynamics-in-a-rare-earth-magnet)  
+1. [Bragg Interferometry of Moiré Superlattices: From Geometric Phase Principles to Atomic Reconstruction](/202607/14/2607.09901v1-bragg-interferometry-of-moir-superlattices-from-geometric-phase-principles-to-atomic-reconstruction)  
+   标签：评分：7.0/10、query:iscat
+   evidence：用于莫尔超晶格表征的布拉格干涉测量法
+2. [Plasmon Gun: high-power mid-IR emission at a temporal interface](/202607/14/2607.10117v1-plasmon-gun-high-power-mid-ir-emission-at-a-temporal-interface)  
    标签：评分：6.5/10、query:iscat
-   evidence：飞秒泵浦-探测磁光光谱
-2. [Understanding surface potential dynamics of passivated perovskites via Kelvin Probe Force Microscopy](/202607/13/2607.07221v1-understanding-surface-potential-dynamics-of-passivated-perovskites-via-kelvin-probe-force-microscopy)  
+   evidence：半导体产生的超快中红外辐射
+3. [Disorder signatures in coherent electronic waveguides](/202607/14/2607.06866v1-disorder-signatures-in-coherent-electronic-waveguides)  
    标签：评分：6.0/10、query:iscat
-   evidence：在纳米尺度上解析钙钛矿的光电压动力学
-3. [Coherent dynamics of individual excitons in a quantum dot embedded in a nanopost](/202607/13/2607.09419v1-coherent-dynamics-of-individual-excitons-in-a-quantum-dot-embedded-in-a-nanopost)  
+   evidence：相干电子波导中的散射响应
+4. [The evolution of AI from image interpretation toward scientific inference in nanoparticle electron microscopy](/202607/14/2607.10388v1-the-evolution-of-ai-from-image-interpretation-toward-scientific-inference-in-nanoparticle-electron-microscopy)  
    标签：评分：6.0/10、query:iscat
-   evidence：相干超快动力学和时间分辨四波混频显微镜
+   evidence：用于纳米颗粒表征和原位透射电镜分析的人工智能
+5. [Connecting Diffuse Scattering to Atomic-Site-Resolved Occupancy and Displacement Fields through Fourier Filtering](/202607/14/2607.10440v1-connecting-diffuse-scattering-to-atomic-site-resolved-occupancy-and-displacement-fields-through-fourier-filtering)  
+   标签：评分：6.0/10、query:iscat
+   evidence：将散射与原子位点分辨的占据联系起来
 
 
 <div class="dpr-home-promo-card">

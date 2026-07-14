@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.06866v1/fig-001.webp",
+      "caption": "FIG. 6. Class-averaged eigenchannel descriptors in the conductance-balanced ensemble. (a) Effective number of transmitting eigenchannels Neff(E). (b) Normalized eigenchannel entropy Sτ (E). (c,d) Deviations from the ensembleaveraged reference, which remove the common mode-opening envelope and emphasize class-dependent channel redistribution.",
+      "page": 10,
+      "index": 1,
+      "width": 499,
+      "height": 430
+    },
+    {
+      "url": "assets/figures/arxiv/2607.06866v1/fig-002.webp",
+      "caption": "FIG. 2. Catalog of disorder mechanisms used in the conductance-balanced transport ensemble. The panels schematically represent scalar onsite perturbations, gatedefined potentials, hopping-amplitude disorder, localized dopants, vacancies and edge roughness, and mixed perturbations. The figure provides a schematic overview of the Hamiltonian modifications applied to the finite scattering region, rather than a literal microscopic realization from the dataset; the semi-infinite leads remain pristine.",
+      "page": 3,
+      "index": 2,
+      "width": 470,
+      "height": 559
+    }
+  ]
+}
