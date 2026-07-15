@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-15",
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T21:18:49",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/15/2607.10339v1-enabling-temperature-controlled-in-situ-vapor-dosing-for-lab-source-x-ray-reflectivity-measurements",
+      "section": "quick",
+      "title_en": "Enabling temperature controlled in-situ vapor dosing for lab source X-ray reflectivity measurements",
+      "authors": "Erin E. Dunphy, Mara A. Fischer, Sasha R. Neefe, Devin L. Shaffer, Anthony P. Straub, Michael F. Toney, J. Will Medlin",
+      "date": "2026-07-11",
+      "pdf": "https://arxiv.org/pdf/2607.10339v1",
+      "score": "7.5",
+      "evidence": "用于薄膜和电池应用的 operando 和原位反射池",
+      "tldr": "本研究开发了一种适用于实验室X射线衍射仪的原位透射池，解决了以往原位X射线反射率（XRR）测量高度依赖同步辐射光源的局限性。该装置支持精确的蒸汽剂量控制（0-250 mbar）和变温实验（25-200°C）。通过对聚酰胺膜水分吸附和聚苯乙烯刷热重组的案例研究，证明了其在埃级尺度上解析结构变化的能力，显著提升了实验室环境下薄膜与界面研究的可访问性与表征精度。",
+      "tags": "query:iscat",
+      "abstract_en": "X-ray Reflectivity (XRR) is a valuable technique for probing buried interfaces in complex systems relevant to thin-film, membrane, and battery applications, among others. However, many operando and in situ reflectivity cells are designed for use at synchrotron facilities, limiting the broader accessibility of these measurements. We present an XRR transmission cell that enables in situ vapor dosing and temperature-dependent experiments on in-house diffractometers. We demonstrate its capabilities with two case studies: the adsorption of water into polyamide (PA) membranes on silicon and temperature-dependent restructuring of polystyrene (PS) pseudo brushes on alumina. Vapor dosing allows for controlled release of vapor into the cell, allowing operation across a wide range of conditions from rough vacuum to saturation. We demonstrate that the manifold can reach 90-95% of saturated pressures, with the measurements presented here spanning 0-250 mbar, which is desirable for adsorption isotherms. Heating studies performed between 25 and 200C demonstrate the ability to resolve Ångstrom scale structural changes in a surface bound polymer. These results establish a novel streamlined approach to temperature controlled vapor dosing on a laboratory diffractometer, offering straightforward probe-molecule exchange, vacuum-sealed operations, and variable temperature capabilities.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/15/2607.09466v1-unraveling-atomic-resolution-valence-electron-energy-loss-spectroscopic-imaging-in-a-single-crystal-canb2o6",
+      "section": "quick",
+      "title_en": "Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6",
+      "authors": "Sz-Chian Liou, Xiang-Lin Huang, Vladimir P. Oleshko, I-Ching Lin, Yin-Ping Lan, Hsin-An Chen, Guo-Jiun Shu",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.09466v1",
+      "score": "7.0",
+      "evidence": "单晶 CaNb2O6 的原子分辨率光谱成像",
+      "tldr": "本研究针对非弹性电子散射去局域化导致的原子级价电子能量损失谱（VEELS）成像难题，利用配备混合像素直接电子探测器的球差校正扫描透射电子显微镜（Cs-STEM），对单晶CaNb2O6进行了多电子激发和带间跃迁分析。研究成功实现了体等离激元、丛子（plexcitons）及带间跃迁的原子级分辨率成像，揭示了其与HAADF图像的对比度差异，为在原子尺度研究复杂晶体结构的电子特性提供了强有力工具。",
+      "tags": "query:iscat",
+      "abstract_en": "Despite advancements in electron optics and spectrometer design over the past twenty years, atomic-resolution valence-electron energy-loss spectroscopy imaging remains challenging due to the delocalization of inelastic electron scattering. In this study, we used an energy-filtered spectrometer equipped with a hybrid-pixel direct electron detector and spherical aberration-corrected scanning transmission electron microscopy to analyze many-electron excitations and interband transitions in a single-crystal calcium niobate, CaNb2O6, with spatial resolution ranging from the nanometers to the atomic scale. In the low-loss region above the bandgap at about 3.8 eV, we observed volume plasmons, around 6 eV and 15 eV energy loss, as well as a mix of strongly correlated plasmons and excitons, known as plexcitons, at approximately 7.3 eV energy loss. Additionally, we employed an on-axis EELS setup for atomic-resolution zero-loss peak (ZLP) imaging and visualized energy- and atom-resolved images of plexcitons and VPs, which showed contrast reversal relative to high-angle annular dark-field images. To investigate elastic contrast preservation, we also analyzed the effect of the collection angle and minimized its influence to produce delocalized VP images. In fact, the ZLP and VEELS images obtained using the weak-beam setup demonstrate that, in both cases, the contrast resembles Z-contrast. Moreover, we found that [NbO6] octahedra directly contributed to the lateral maps of interband transitions in the range from 3.2 eV to 3.5 eV energy loss. These findings demonstrate that Cs-STEM-EELS, which examines atomic-scale contrast associated with low-energy losses, can be a powerful tool for visualizing the structure, bonding, and electronic properties of complex crystalline nanostructures, including individual atomic sites, interstitial sites, and point defects.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/15/2607.08922v1-seeing-inside-a-plasmonic-nanogap-few-molecule-orientation-and-preferential-adsorption",
+      "section": "quick",
+      "title_en": "Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption",
+      "authors": "Francesco Ciccarello, Nobuaki Oyamada, Thwahira Shirin Alampara, Konstantin Malchow, Christophe Galland",
+      "date": "2026-07-09",
+      "pdf": "https://arxiv.org/pdf/2607.08922v1",
+      "score": "6.0",
+      "evidence": "监测间隙内的侧向特定相互作用和相对分子取向",
+      "tldr": "本研究针对金属纳米间隙中分子与表面相互作用难以监测的问题，提出了一种等离激元增强非线性振动光谱技术。通过在双共振纳米腔中利用和频与差频产生，实现了对间隙内少数分子的取向及择优吸附行为的探测。该方法不仅揭示了分子-表面相互作用对非共振电子响应的主导作用，还为分子电子学和近场光谱学提供了一种易于集成的分析工具。",
+      "tags": "query:iscat",
+      "abstract_en": "Molecule-surface interactions are central to many research and technological areas, spanning from heterogeneous catalysis and polymer science to electrochemistry. Of particular relevance are metallic nanogaps used in molecular electronics and near-field spectroscopy. Due to the buried nature of these double interfaces, few methods exist to monitor side-specific interactions and relative molecular orientation inside the gap. In this work, we introduce plasmon-enhanced nonlinear vibrational spectroscopy as an efficient tool to investigate surface molecular adsorption within metallic nanojunctions. By exploiting simultaneous vibrational sum- and difference-frequency generation in dual-resonant nanocavities, we resolve molecular orientation and preferential binding to one of the two gold surfaces, with few-molecule sensitivity. We also discover that the non-resonant (electronic) second-order nonlinear response is not an intrinsic property of the metal surface, but is instead governed by the molecule-surface interaction. Our findings provide a powerful analytical tool, easily implementable as an add-on to Raman spectroscopy, thanks to commercially available mid-infrared quantum cascade lasers.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/15/biorxiv-10-64898-2026-07-02-736216-v1-planck-super-multiplex-optical-imaging-without-labeling",
+      "section": "quick",
+      "title_en": "PLANCK: super-multiplex optical imaging without labeling",
+      "authors": "Liu, X., Min, W., He, Y., Li, X., Xu, L., Wei, M., Niaz, A.",
+      "date": "2026-07-07",
+      "pdf": "https://www.biorxiv.org/content/10.64898/2026.07.02.736216v1.full.pdf",
+      "score": "6.0",
+      "evidence": "具有分子特异性的无标记光学成像",
+      "tldr": "针对传统光学成像依赖标记导致的多重成像受限及高成本问题，本研究开发了名为PLANCK的无标记超多重光学成像技术。通过发现振动光谱成像与质谱成像在潜空间中存在极高相关性（>0.9），利用AI监督学习模型从无标记振动图像中直接预测出超过100种分子物种的空间分布。该技术在器官尺度及活体组织成像中表现优异，为基础研究和临床转化提供了一种低成本、可扩展的高通量分子成像方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Molecular information is vital for imaging technology. Optical imaging acquires molecular specificity almost exclusively via labeling strategy, which is fundamentally constrained by limited multiplexing capacity, high running costs, and experimental complexity. Conversely, label-free optical imaging offers substantial technical simplicity but is believed to have little true molecular specificity. Contrary to common belief, here we introduce super-multiplex optical imaging without labeling. By systematically studying paired vibrational spectroscopic imaging and mass spectrometry imaging, we discovered a surprisingly strong (more than 0.9) correlation between their latent space representations, supported by both experiments and theory. This insight prompts us to build supervised learning models to successfully predict spatial distribution of 100 molecular species directly from label-free vibrational images across diverse tissue systems. We developed this technology, named Prediction through Learning with AdvaNced Chemical Kaleidoscope (PLANCK), and demonstrated it with both infrared-based vibrational imaging of organ-scale tissues and Raman-based vibrational imaging of live tissues. Powered by AI, PLANCK decodes the exquisitely rich but otherwise hidden vibrational information into a surprisingly large number of ( [&ge;] 100) specific molecular species, providing a cost-effective and scalable solution for basic research and translation, including applications in live imaging.",
+      "source": "biorxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

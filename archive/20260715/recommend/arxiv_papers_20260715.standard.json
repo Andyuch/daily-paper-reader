@@ -1,0 +1,180 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-15T21:17:38.508972+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.10339v1",
+      "source": "arxiv",
+      "title": "Enabling temperature controlled in-situ vapor dosing for lab source X-ray reflectivity measurements",
+      "abstract": "X-ray Reflectivity (XRR) is a valuable technique for probing buried interfaces in complex systems relevant to thin-film, membrane, and battery applications, among others. However, many operando and in situ reflectivity cells are designed for use at synchrotron facilities, limiting the broader accessibility of these measurements. We present an XRR transmission cell that enables in situ vapor dosing and temperature-dependent experiments on in-house diffractometers. We demonstrate its capabilities with two case studies: the adsorption of water into polyamide (PA) membranes on silicon and temperature-dependent restructuring of polystyrene (PS) pseudo brushes on alumina. Vapor dosing allows for controlled release of vapor into the cell, allowing operation across a wide range of conditions from rough vacuum to saturation. We demonstrate that the manifold can reach 90-95% of saturated pressures, with the measurements presented here spanning 0-250 mbar, which is desirable for adsorption isotherms. Heating studies performed between 25 and 200C demonstrate the ability to resolve Ångstrom scale structural changes in a surface bound polymer. These results establish a novel streamlined approach to temperature controlled vapor dosing on a laboratory diffractometer, offering straightforward probe-molecule exchange, vacuum-sealed operations, and variable temperature capabilities.",
+      "authors": [
+        "Erin E. Dunphy",
+        "Mara A. Fischer",
+        "Sasha R. Neefe",
+        "Devin L. Shaffer",
+        "Anthony P. Straub",
+        "Michael F. Toney",
+        "J. Will Medlin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-11T14:38:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.10339v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.5,
+      "llm_evidence_en": "operando and in situ reflectivity cells for thin-film and battery applications",
+      "llm_evidence_cn": "用于薄膜和电池应用的 operando 和原位反射池",
+      "llm_evidence": "用于薄膜和电池应用的 operando 和原位反射池",
+      "canonical_evidence": "用于薄膜和电池应用的 operando 和原位反射池",
+      "llm_tldr_en": "Presents an XRR transmission cell for in situ and operando measurements of buried interfaces in lab settings.",
+      "llm_tldr_cn": "介绍了一种用于实验室环境下埋藏界面原位和 operando 测量的 XRR 透射池。",
+      "llm_tldr": "介绍了一种用于实验室环境下埋藏界面原位和 operando 测量的 XRR 透射池。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.08922v1",
+      "source": "arxiv",
+      "title": "Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption",
+      "abstract": "Molecule-surface interactions are central to many research and technological areas, spanning from heterogeneous catalysis and polymer science to electrochemistry. Of particular relevance are metallic nanogaps used in molecular electronics and near-field spectroscopy. Due to the buried nature of these double interfaces, few methods exist to monitor side-specific interactions and relative molecular orientation inside the gap. In this work, we introduce plasmon-enhanced nonlinear vibrational spectroscopy as an efficient tool to investigate surface molecular adsorption within metallic nanojunctions. By exploiting simultaneous vibrational sum- and difference-frequency generation in dual-resonant nanocavities, we resolve molecular orientation and preferential binding to one of the two gold surfaces, with few-molecule sensitivity. We also discover that the non-resonant (electronic) second-order nonlinear response is not an intrinsic property of the metal surface, but is instead governed by the molecule-surface interaction. Our findings provide a powerful analytical tool, easily implementable as an add-on to Raman spectroscopy, thanks to commercially available mid-infrared quantum cascade lasers.",
+      "authors": [
+        "Francesco Ciccarello",
+        "Nobuaki Oyamada",
+        "Thwahira Shirin Alampara",
+        "Konstantin Malchow",
+        "Christophe Galland"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-09T20:35:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.08922v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "monitor side-specific interactions and relative molecular orientation inside the gap",
+      "llm_evidence_cn": "监测间隙内的侧向特定相互作用和相对分子取向",
+      "llm_evidence": "监测间隙内的侧向特定相互作用和相对分子取向",
+      "canonical_evidence": "监测间隙内的侧向特定相互作用和相对分子取向",
+      "llm_tldr_en": "Uses nonlinear vibrational spectroscopy to resolve molecular orientation and adsorption in plasmonic nanogaps.",
+      "llm_tldr_cn": "利用非线性振动光谱解析等离激元纳米间隙中的分子取向和吸附。",
+      "llm_tldr": "利用非线性振动光谱解析等离激元纳米间隙中的分子取向和吸附。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.09466v1",
+      "source": "arxiv",
+      "title": "Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6",
+      "abstract": "Despite advancements in electron optics and spectrometer design over the past twenty years, atomic-resolution valence-electron energy-loss spectroscopy imaging remains challenging due to the delocalization of inelastic electron scattering. In this study, we used an energy-filtered spectrometer equipped with a hybrid-pixel direct electron detector and spherical aberration-corrected scanning transmission electron microscopy to analyze many-electron excitations and interband transitions in a single-crystal calcium niobate, CaNb2O6, with spatial resolution ranging from the nanometers to the atomic scale. In the low-loss region above the bandgap at about 3.8 eV, we observed volume plasmons, around 6 eV and 15 eV energy loss, as well as a mix of strongly correlated plasmons and excitons, known as plexcitons, at approximately 7.3 eV energy loss. Additionally, we employed an on-axis EELS setup for atomic-resolution zero-loss peak (ZLP) imaging and visualized energy- and atom-resolved images of plexcitons and VPs, which showed contrast reversal relative to high-angle annular dark-field images. To investigate elastic contrast preservation, we also analyzed the effect of the collection angle and minimized its influence to produce delocalized VP images. In fact, the ZLP and VEELS images obtained using the weak-beam setup demonstrate that, in both cases, the contrast resembles Z-contrast. Moreover, we found that [NbO6] octahedra directly contributed to the lateral maps of interband transitions in the range from 3.2 eV to 3.5 eV energy loss. These findings demonstrate that Cs-STEM-EELS, which examines atomic-scale contrast associated with low-energy losses, can be a powerful tool for visualizing the structure, bonding, and electronic properties of complex crystalline nanostructures, including individual atomic sites, interstitial sites, and point defects.",
+      "authors": [
+        "Sz-Chian Liou",
+        "Xiang-Lin Huang",
+        "Vladimir P. Oleshko",
+        "I-Ching Lin",
+        "Yin-Ping Lan",
+        "Hsin-An Chen",
+        "Guo-Jiun Shu"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-10T14:40:57+00:00",
+      "link": "https://arxiv.org/pdf/2607.09466v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "atomic-resolution spectroscopic imaging of single-crystal CaNb2O6",
+      "llm_evidence_cn": "单晶 CaNb2O6 的原子分辨率光谱成像",
+      "llm_evidence": "单晶 CaNb2O6 的原子分辨率光谱成像",
+      "canonical_evidence": "单晶 CaNb2O6 的原子分辨率光谱成像",
+      "llm_tldr_en": "Achieves atomic-resolution valence electron energy-loss spectroscopic imaging in single-crystal materials.",
+      "llm_tldr_cn": "在单晶材料中实现了原子分辨率的价电子能量损失谱成像。",
+      "llm_tldr": "在单晶材料中实现了原子分辨率的价电子能量损失谱成像。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-07-02-736216-v1",
+      "source": "biorxiv",
+      "title": "PLANCK: super-multiplex optical imaging without labeling",
+      "abstract": "Molecular information is vital for imaging technology. Optical imaging acquires molecular specificity almost exclusively via labeling strategy, which is fundamentally constrained by limited multiplexing capacity, high running costs, and experimental complexity. Conversely, label-free optical imaging offers substantial technical simplicity but is believed to have little true molecular specificity. Contrary to common belief, here we introduce super-multiplex optical imaging without labeling. By systematically studying paired vibrational spectroscopic imaging and mass spectrometry imaging, we discovered a surprisingly strong (more than 0.9) correlation between their latent space representations, supported by both experiments and theory. This insight prompts us to build supervised learning models to successfully predict spatial distribution of 100 molecular species directly from label-free vibrational images across diverse tissue systems. We developed this technology, named Prediction through Learning with AdvaNced Chemical Kaleidoscope (PLANCK), and demonstrated it with both infrared-based vibrational imaging of organ-scale tissues and Raman-based vibrational imaging of live tissues. Powered by AI, PLANCK decodes the exquisitely rich but otherwise hidden vibrational information into a surprisingly large number of ( [&ge;] 100) specific molecular species, providing a cost-effective and scalable solution for basic research and translation, including applications in live imaging.",
+      "authors": [
+        "Liu, X.",
+        "Min, W.",
+        "He, Y.",
+        "Li, X.",
+        "Xu, L.",
+        "Wei, M.",
+        "Niaz, A."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-07-07T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.07.02.736216v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "label-free optical imaging with molecular specificity",
+      "llm_evidence_cn": "具有分子特异性的无标记光学成像",
+      "llm_evidence": "具有分子特异性的无标记光学成像",
+      "canonical_evidence": "具有分子特异性的无标记光学成像",
+      "llm_tldr_en": "Introduces PLANCK for label-free super-multiplex optical imaging using vibrational spectroscopy.",
+      "llm_tldr_cn": "介绍了 PLANCK，一种利用振动光谱进行无标记超多重光学成像的技术。",
+      "llm_tldr": "介绍了 PLANCK，一种利用振动光谱进行无标记超多重光学成像的技术。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

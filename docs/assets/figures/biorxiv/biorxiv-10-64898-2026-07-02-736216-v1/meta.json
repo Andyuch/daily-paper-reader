@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736216-v1/fig-001.webp",
+      "caption": "Fig. 1. Principle illustration of PLANCK. Summary and comparison of optical imaging techniques in the context of multiplex imaging. a, Traditional multi-color optical (fluorescence) imaging through probe labeling, with limitations of 3~5 colors due to fluorescence’s color barrier. b, Sophisticated labeling techniques for multiplex optical imaging (100-1000 plex), which often requires high-cost instrument and reagents and complex sample preparations via probe cycling or barcoding. c, Label-free optical imaging with limited molecular information (0-5 plex). d, PLANCK: label-free super multiplex optical imaging (100 – 1000 plex), achieved by paired measurements between vibrational imaging and molecular-specific imaging first (MALDI selected here as an example) followed by machine learning. Leveraging the power of AI and cloud technologies with continuing upgrades, the deployment of PLANCK is expected to meet minimum barrier among the wide community.",
+      "page": 2,
+      "index": 1,
+      "width": 911,
+      "height": 481
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736216-v1/fig-002.webp",
+      "caption": "Fig. 3. Regression analysis on paired IR and MALDI datasets, connecting two datasets through matrix transformation. IR data can be decoded into MALDI data through a fitted transformation matrix, T, in regression analysis. Three examples (oleic acid, glutathione and PG 40:6) were used to showcase that the dot product between an IR spectrum vector of a single pixel and a column vector in the transformation matrix, T, represents the MALDI intensity signal of a given biomolecule at that pixel. When this calculation is applied to all pixels, it produces the entire fitted image of the given biomolecule, which matches well with the ground truth MALDI image. For each column vector, red color in the middle corresponds to IR peaks with larger weights in transformation of a given biomolecule. Note that while the column vectors’ two extreme ends often appear largely weighted, they hold little biological significance due to their near-zero IR intensity. Scale bar: 1mm. Color scale: signal intensity in transformation matrix.",
+      "page": 7,
+      "index": 2,
+      "width": 976,
+      "height": 806
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736216-v1/fig-003.webp",
+      "caption": "Fig. 5. PLANCK: deep learning decodes SRS imaging into MALDI imaging with 100-plex specific molecular information in fixed and live samples. a, Illustration of the decoding mechanism from SRS to MALDI via a designed deep learning model (Hyper-pix2pix). b, Demonstration of 5 biomolecular images predicted from SRS, showing highly similar patterns to the MALDI ground truth. Scale bar: 500 microns. c, Quantitative evaluations of SRS prediction performance using PSNR, SSIM and correlation metrics, with average of 20.69 dB (PSNR), 0.8994 (SSIM), and 0.9259 (PCC). The boxplots summarize the prediction performance across 100 m/z peaks in all quarter coronal sections in the testing dataset. d, Correlation performance of 11 classified biomolecular categories in mouse quarter coronal sections. e, Correlation performance of 8 GP subgroups in mouse quarter coronal sections. f, Average mass spectrum from SRS prediction and MALDI ground truth, showing strong alignment in spectrum profiles. g, Demonstration of predicted biomolecular images in 2 live mouse quarter coronal samples, indicating the ability of PLANCK for super-multiplex live imaging. Left are SRS lipid images and right are predicted 5 images from the same biomolecules in b. Scale bar: 500 microns. h, Average mass spectrum in the dentate gyrus (DG) region from SRS prediction in live sample 1 and MALDI in another fixed sample.",
+      "page": 12,
+      "index": 3,
+      "width": 976,
+      "height": 981
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736216-v1/fig-004.webp",
+      "caption": "Fig. 4. PLANCK: partial least square (PLS) regression decodes IR imaging into MALDI imaging with 100-plex specific molecular information in mouse brain systems. a, Illustration of the decoding mechanism from IR to MALDI via PLS. b, Demonstration of 5 predicted biomolecular images predicted from IR, showing highly similar patterns to the MALDI ground truth. Scale bar: 1mm. c, Average mass spectrum from IR prediction and MALDI ground truth, showing strong alignment. d, Quantitative evaluations of IR prediction performance using PSNR, SSIM and correlation metrics, with average of 24.03 dB (PSNR), 0.8995 (SSIM), and 0.8610 (PCC). The boxplots summarize the prediction performance across 100 m/z peaks in 2 whole-brain sagittal sections in the testing dataset. e, Correlation performance of 11 classified biomolecular categories in whole-brain sagittal sections. f, Demonstration of 5 predicted biomolecular images in mouse whole-brain coronal section, indicating the generality of PLANCK. Scale bar: 1mm. g, Correlation performance of 11 classified biomolecular categories in whole-brain coronal sections.",
+      "page": 9,
+      "index": 4,
+      "width": 976,
+      "height": 1072
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-02-736216-v1/fig-005.webp",
+      "caption": "Fig. 2. Canonical correlation analysis (CCA) reveals the high correlation and similar latent distribution between FTIR imaging and MALDI imaging. a, CCA principle of analyzing the correlation of IR and MALDI datasets. b, Correlation heatmap of the top 2 pairs of latent canonical variables of IR (U1, U2) and MALDI (V1, V2) in CCA, demonstrating high correlation of canonical variables across the two datasets and the orthogonal relationship of canonical variables within one dataset. c, Scatter plots of top 2 latent variables between IR and MALDI (U1 vs V1, U2 vs V2), showing nearly linear association. d, Real-space visualization of top 2 canonical variables’ scores in both IR and MALDI dataset, showing high similarity. e, Low-dimensional data distribution of IR and MALDI when projected to their own latent variables (U1, U2) and (V1, V2), respectively, showing highly resembled latent space. Color scale: normalized intensity of signal at latent space.",
+      "page": 5,
+      "index": 5,
+      "width": 948,
+      "height": 704
+    }
+  ]
+}

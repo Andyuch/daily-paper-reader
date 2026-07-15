@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.10339v1/fig-001.webp",
+      "caption": "Figure 5: Reflectivity obtained for PA films at 0 mbar prior to vapor exposure (solid lines), after exposure to maximum vapor pressure (dashed lines) and after the sample was heated to 40ºC (orange dots).",
+      "page": 14,
+      "index": 1,
+      "width": 800,
+      "height": 471
+    },
+    {
+      "url": "assets/figures/arxiv/2607.10339v1/fig-002.webp",
+      "caption": "Figure 4: A) In situ reflectivity of PA membranes in contact with water vapor at various vapor pressures. Colors correspond to the respective pressure ranging from 0 to 30 mbar. B) Extracted thickness in nm vs. pressure of PA membranes. A smoothing spline was fit the data to guide the eye and highlight overall trends and is shown with a red line. C) XRR of PA membranes under rough vacuum conditions (0 mbar – black) and at maximum vapor pressure (30 mbar – orange). D) Cell pressure versus time for the duration of sample measurements. Orange stars denote pressure transients upon throttling.",
+      "page": 13,
+      "index": 2,
+      "width": 979,
+      "height": 591
+    },
+    {
+      "url": "assets/figures/arxiv/2607.10339v1/fig-003.webp",
+      "caption": "Figure 2: Manifold system for vapor dosing. A) Schematic of manifold system displaying the system inside of the diffractometer (gray shaded box) and outside of the diffractometer. (1) Pressure gauge, (3) cell body, (6) heater, (16) critical junction for cell removal, (17) computer, (18) temperature controller, (19) oil trap, (20) vacuum pump, (21) glass beaker. The X-ray source and area detector are shown explicitly with momentum transfer vectors (ki and kf) to clarify reflection geometry. Wires extending out of the heater (6) signify the power cord (red line) and thermocouple (black line). V1, V2, and V3 are needle valves, designated with a line bisecting the valve. V2 is a gate valve. B) Photo of system set up inside of the diffractometer. A yellow asterisk highlights the throttle valve (V1).",
+      "page": 8,
+      "index": 3,
+      "width": 519,
+      "height": 777
+    }
+  ]
+}

@@ -6,38 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-14
-- 运行时间：2026-07-14 21:38:13 UTC
+- 最新运行日期：2026-07-15
+- 运行时间：2026-07-15 21:18:33 UTC
 - 运行状态：成功
-- 本次总论文数：5
+- 本次总论文数：4
 - 精读区：0
-- 速读区：5
+- 速读区：4
 
 ### 今日简报（AI）
-今日聚焦微纳尺度下的光电前沿，涵盖莫尔超晶格成像与中红外增强发射等突破。
-重点关注利用布拉格干涉仪解析超晶格原子重构的几何相位原理，以及通过时间界面实现高功率辐射的“等离激元枪”技术。
-建议深入了解几何相位与时间界面在纳米光子学中的应用，探索其对未来高性能光电器件设计的启发。
-- 详情：[/202607/14/README](/202607/14/README)
+今日速览 4 篇前沿论文，聚焦实验室原位 X 射线反射率测量与原子级光谱成像技术的最新突破。
+重点关注温控原位蒸汽给药 XRR 系统及 CaNb2O6 的价电子能量损失谱研究，揭示了微观结构与电子态的演变规律。
+建议对原位表征工具创新及纳米间隙分子行为感兴趣的读者深入了解相关实验装置的设计思路。
+- 详情：[/202607/15/README](/202607/15/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Bragg Interferometry of Moiré Superlattices: From Geometric Phase Principles to Atomic Reconstruction](/202607/14/2607.09901v1-bragg-interferometry-of-moir-superlattices-from-geometric-phase-principles-to-atomic-reconstruction)  
+1. [Enabling temperature controlled in-situ vapor dosing for lab source X-ray reflectivity measurements](/202607/15/2607.10339v1-enabling-temperature-controlled-in-situ-vapor-dosing-for-lab-source-x-ray-reflectivity-measurements)  
+   标签：评分：7.5/10、query:iscat
+   evidence：用于薄膜和电池应用的 operando 和原位反射池
+2. [Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6](/202607/15/2607.09466v1-unraveling-atomic-resolution-valence-electron-energy-loss-spectroscopic-imaging-in-a-single-crystal-canb2o6)  
    标签：评分：7.0/10、query:iscat
-   evidence：用于莫尔超晶格表征的布拉格干涉测量法
-2. [Plasmon Gun: high-power mid-IR emission at a temporal interface](/202607/14/2607.10117v1-plasmon-gun-high-power-mid-ir-emission-at-a-temporal-interface)  
-   标签：评分：6.5/10、query:iscat
-   evidence：半导体产生的超快中红外辐射
-3. [Disorder signatures in coherent electronic waveguides](/202607/14/2607.06866v1-disorder-signatures-in-coherent-electronic-waveguides)  
+   evidence：单晶 CaNb2O6 的原子分辨率光谱成像
+3. [Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption](/202607/15/2607.08922v1-seeing-inside-a-plasmonic-nanogap-few-molecule-orientation-and-preferential-adsorption)  
    标签：评分：6.0/10、query:iscat
-   evidence：相干电子波导中的散射响应
-4. [The evolution of AI from image interpretation toward scientific inference in nanoparticle electron microscopy](/202607/14/2607.10388v1-the-evolution-of-ai-from-image-interpretation-toward-scientific-inference-in-nanoparticle-electron-microscopy)  
+   evidence：监测间隙内的侧向特定相互作用和相对分子取向
+4. [PLANCK: super-multiplex optical imaging without labeling](/202607/15/biorxiv-10-64898-2026-07-02-736216-v1-planck-super-multiplex-optical-imaging-without-labeling)  
    标签：评分：6.0/10、query:iscat
-   evidence：用于纳米颗粒表征和原位透射电镜分析的人工智能
-5. [Connecting Diffuse Scattering to Atomic-Site-Resolved Occupancy and Displacement Fields through Fourier Filtering](/202607/14/2607.10440v1-connecting-diffuse-scattering-to-atomic-site-resolved-occupancy-and-displacement-fields-through-fourier-filtering)  
-   标签：评分：6.0/10、query:iscat
-   evidence：将散射与原子位点分辨的占据联系起来
+   evidence：具有分子特异性的无标记光学成像
 
 
 <div class="dpr-home-promo-card">
