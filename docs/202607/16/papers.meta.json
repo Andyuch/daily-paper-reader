@@ -1,0 +1,69 @@
+{
+  "label": "2026-07-16",
+  "date": "2026-07-16",
+  "generated_at": "2026-07-16T21:24:57",
+  "count": 4,
+  "papers": [
+    {
+      "paper_id": "202607/16/2607.13893v1-revealing-the-mos2-growth-mechanism-in-chemical-vapor-deposition-real-time-imaging-and-statistical-analysis",
+      "section": "quick",
+      "title_en": "Revealing the MoS2 Growth Mechanism in Chemical Vapor Deposition: Real-Time Imaging and Statistical Analysis",
+      "authors": "Faizal Arifurrahman, Tianshu Zhai, Yuguo Wang, Jing Zhang, Andrew L. Hitt, Jun Lou, Ming Tang",
+      "date": "2026-07-15",
+      "pdf": "https://arxiv.org/pdf/2607.13893v1",
+      "score": "7.0",
+      "evidence": "CVD中MoS2生长机制的实时成像",
+      "tldr": "本研究针对化学气相沉积（CVD）合成二维二硫化钼（MoS2）时可控性不足的问题，开发了一套半自动图像处理流程，对原位光学显微镜下的生长过程进行高通量分析。通过重建400多个独立晶体的生长轨迹，研究揭示了MoS2的生长受边缘附着限制而非前驱体扩散控制，且晶体间呈现非竞争性生长。这一成果为理解二维材料生长动力学提供了定量依据，对优化CVD制备工艺具有重要意义。",
+      "tags": "query:iscat",
+      "abstract_en": "Chemical Vapor Deposition (CVD) is a promising method for scalable synthesis of two-dimensional transitional metal dichalcogenides (TMDs) such as MoS2, but challenges in reproducibility and controllability persist due to an incomplete understanding of their dynamic growth mechanisms. While in-situ characterization methods could provide valuable insights, it remains challenging to track a large ensemble of crystals to enable quantitative, statistical analysis. Here, we address this gap by developing and applying a semi-automated image processing pipeline to analyze in-situ optical microscopy footage of MoS2 growth. This framework enables the high-throughput reconstruction of complete growth trajectories for over 400 individual crystals from a single experiment. Our statistical analysis demonstrates that MoS2 crystallization is governed by an edge-attachment-limited mechanism rather than by precursor diffusion. Furthermore, MoS2 crystals exhibit non-competitive growth, indicating that precursor supply does not limit the growth of neighboring flakes until physical impingement occurs. These findings provide direct, quantitative evidence that advances the fundamental understanding of TMD growth, establishing a powerful methodology for rational optimization of the CVD growth of two-dimensional materials.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/16/2607.13262v1-direct-measurement-of-out-of-plane-thermal-conductivity-via-transient-depth-thermography",
+      "section": "quick",
+      "title_en": "Direct Measurement of Out-of-Plane Thermal Conductivity via Transient Depth Thermography",
+      "authors": "Dmitrii Shymkiv, Chun Wang, Yan Jiang, Rajat Srivastava, Nandika D'Souza, Yuzhe Xiao",
+      "date": "2026-07-14",
+      "pdf": "https://arxiv.org/pdf/2607.13262v1",
+      "score": "6.5",
+      "evidence": "用于内部热传输动力学的时间分辨热辐射",
+      "tldr": "本研究针对多层薄膜材料面外热导率测量难的问题，提出了一种名为瞬态深度热成像（TDT）的非接触式光谱方法。该方法利用波长相关的光学穿透深度，将深度信息编码进发射光谱中，从而直接重建时空温度分布。实验验证显示该技术在石英和氟化镁上的测量误差仅为2-5%，为复杂材料的热特性表征提供了高精度的新框架。",
+      "tags": "query:iscat",
+      "abstract_en": "Accurate measurement of out-of-plane thermal conductivity remains challenging, particularly for multilayer thin-film materials, due to the reliance of existing techniques on indirect, surface-sensitive observables. Here, we introduce transient depth thermography, a non-contact spectroscopic method that directly reconstructs spatiotemporal temperature profiles using time-resolved thermal radiation. By leveraging the wavelength-dependent optical penetration depth, the technique encodes depth information into the emission spectrum, enabling direct access to internal heat transport dynamics. We demonstrate the method on fused silica and MgF2, achieving agreement with established techniques while attaining an uncertainty of 2-5%. In addition, we measure the temperature-dependent thermal conductivity of MgF2 over a broad temperature range. Applicable to both bulk and thin-film systems, transient depth thermography provides a general and accurate framework for thermal characterization of complex materials.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/16/2607.08922v1-seeing-inside-a-plasmonic-nanogap-few-molecule-orientation-and-preferential-adsorption",
+      "section": "quick",
+      "title_en": "Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption",
+      "authors": "Francesco Ciccarello, Nobuaki Oyamada, Thwahira Shirin Alampara, Konstantin Malchow, Christophe Galland",
+      "date": "2026-07-09",
+      "pdf": "https://arxiv.org/pdf/2607.08922v1",
+      "score": "6.0",
+      "evidence": "表征金属纳米间隙中的分子-表面相互作用",
+      "tldr": "本研究针对金属纳米间隙内分子相互作用难以监测的挑战，提出了一种等离激元增强非线性振动光谱技术。通过在双共振纳米腔中利用和频与差频产生，实现了对间隙内少数分子的取向及表面选择性吸附的精确解析，并揭示了非共振电子响应受分子-表面相互作用支配的特性，为分子电子学提供了强有力的分析工具。",
+      "tags": "query:iscat",
+      "abstract_en": "Molecule-surface interactions are central to many research and technological areas, spanning from heterogeneous catalysis and polymer science to electrochemistry. Of particular relevance are metallic nanogaps used in molecular electronics and near-field spectroscopy. Due to the buried nature of these double interfaces, few methods exist to monitor side-specific interactions and relative molecular orientation inside the gap. In this work, we introduce plasmon-enhanced nonlinear vibrational spectroscopy as an efficient tool to investigate surface molecular adsorption within metallic nanojunctions. By exploiting simultaneous vibrational sum- and difference-frequency generation in dual-resonant nanocavities, we resolve molecular orientation and preferential binding to one of the two gold surfaces, with few-molecule sensitivity. We also discover that the non-resonant (electronic) second-order nonlinear response is not an intrinsic property of the metal surface, but is instead governed by the molecule-surface interaction. Our findings provide a powerful analytical tool, easily implementable as an add-on to Raman spectroscopy, thanks to commercially available mid-infrared quantum cascade lasers.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/16/2607.10009v1-quantitative-analysis-of-exciton-composition-and-dynamics-in-y6-films-for-single-component-solar-cells",
+      "section": "quick",
+      "title_en": "Quantitative Analysis of Exciton Composition and Dynamics in Y6 Films for Single-Component Solar Cells",
+      "authors": "Saba Mahmoodpour, Jiyeon Oh, Yanlin Liu, Zijian Gan, Wei You, Andrew M. Moran",
+      "date": "2026-07-10",
+      "pdf": "https://arxiv.org/pdf/2607.10009v1",
+      "score": "6.0",
+      "evidence": "用于太阳能电池薄膜激子动力学的超快瞬态吸收",
+      "tldr": "本研究利用超快瞬态吸收光谱和混合Frenkel-电荷转移（CT）态解析模型，深入探讨了非富勒烯受体Y6薄膜中的激子动力学。研究发现Y6激子具有20-40%的显著CT特征，且其传输机制由离域介导而非单纯的扩散跳跃。该工作为理解有机太阳能电池中的激子输运提供了定量框架，揭示了约1皮秒内的短程注入机制。",
+      "tags": "query:iscat",
+      "abstract_en": "Non-fullerene acceptors such as Y6 have enabled high-efficiency organic photovoltaic devices and motivated the development of single-component architectures; however, the microscopic mechanisms governing exciton transport and charge dissociation remain under active investigation. In particular, the interplay between Frenkel-charge-transfer excitations and their coupling to environmental fluctuations complicates the description of light absorption and subsequent exciton dynamics. Here, ultrafast transient absorption spectroscopy is used to probe exciton quenching dynamics in Y6 films interfaced with hole-transport layers. To interpret these measurements, we develop an analytical model based on hybrid Frenkel-charge-transfer states that enables direct extraction of intermolecular electronic couplings, charge-transfer character, and system-bath interaction strengths from experimental data. The analysis reveals a substantial charge-transfer admixture of 20-40% in the exciton states and identifies a transport regime characterized by delocalization-mediated exciton motion rather than purely diffusive hopping. Consistent with this interpretation, the corresponding quenching dynamics occur on a ~1 ps timescale within ~4 nm of the interface, suggesting a short-range injection mechanism facilitated by exciton delocalization. In addition to providing physical parameters for Y6, these results establish a quantitative framework that connects spectroscopic observables to microscopic transport mechanisms and can be generalized to other non-fullerene acceptors.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

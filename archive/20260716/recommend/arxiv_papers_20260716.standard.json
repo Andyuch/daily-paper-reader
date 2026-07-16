@@ -1,0 +1,178 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-16T21:24:08.380273+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.13893v1",
+      "source": "arxiv",
+      "title": "Revealing the MoS2 Growth Mechanism in Chemical Vapor Deposition: Real-Time Imaging and Statistical Analysis",
+      "abstract": "Chemical Vapor Deposition (CVD) is a promising method for scalable synthesis of two-dimensional transitional metal dichalcogenides (TMDs) such as MoS2, but challenges in reproducibility and controllability persist due to an incomplete understanding of their dynamic growth mechanisms. While in-situ characterization methods could provide valuable insights, it remains challenging to track a large ensemble of crystals to enable quantitative, statistical analysis. Here, we address this gap by developing and applying a semi-automated image processing pipeline to analyze in-situ optical microscopy footage of MoS2 growth. This framework enables the high-throughput reconstruction of complete growth trajectories for over 400 individual crystals from a single experiment. Our statistical analysis demonstrates that MoS2 crystallization is governed by an edge-attachment-limited mechanism rather than by precursor diffusion. Furthermore, MoS2 crystals exhibit non-competitive growth, indicating that precursor supply does not limit the growth of neighboring flakes until physical impingement occurs. These findings provide direct, quantitative evidence that advances the fundamental understanding of TMD growth, establishing a powerful methodology for rational optimization of the CVD growth of two-dimensional materials.",
+      "authors": [
+        "Faizal Arifurrahman",
+        "Tianshu Zhai",
+        "Yuguo Wang",
+        "Jing Zhang",
+        "Andrew L. Hitt",
+        "Jun Lou",
+        "Ming Tang"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-15T14:38:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.13893v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "real-time imaging of MoS2 growth mechanism in CVD",
+      "llm_evidence_cn": "CVD中MoS2生长机制的实时成像",
+      "llm_evidence": "CVD中MoS2生长机制的实时成像",
+      "canonical_evidence": "CVD中MoS2生长机制的实时成像",
+      "llm_tldr_en": "Develops an image processing pipeline for real-time in-situ optical microscopy of 2D material growth.",
+      "llm_tldr_cn": "开发了一种用于二维材料生长实时原位光学显微成像的图像处理流水线。",
+      "llm_tldr": "开发了一种用于二维材料生长实时原位光学显微成像的图像处理流水线。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.13262v1",
+      "source": "arxiv",
+      "title": "Direct Measurement of Out-of-Plane Thermal Conductivity via Transient Depth Thermography",
+      "abstract": "Accurate measurement of out-of-plane thermal conductivity remains challenging, particularly for multilayer thin-film materials, due to the reliance of existing techniques on indirect, surface-sensitive observables. Here, we introduce transient depth thermography, a non-contact spectroscopic method that directly reconstructs spatiotemporal temperature profiles using time-resolved thermal radiation. By leveraging the wavelength-dependent optical penetration depth, the technique encodes depth information into the emission spectrum, enabling direct access to internal heat transport dynamics. We demonstrate the method on fused silica and MgF2, achieving agreement with established techniques while attaining an uncertainty of 2-5%. In addition, we measure the temperature-dependent thermal conductivity of MgF2 over a broad temperature range. Applicable to both bulk and thin-film systems, transient depth thermography provides a general and accurate framework for thermal characterization of complex materials.",
+      "authors": [
+        "Dmitrii Shymkiv",
+        "Chun Wang",
+        "Yan Jiang",
+        "Rajat Srivastava",
+        "Nandika D'Souza",
+        "Yuzhe Xiao"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-14T20:52:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.13262v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.5,
+      "llm_evidence_en": "time-resolved thermal radiation for internal heat transport dynamics",
+      "llm_evidence_cn": "用于内部热传输动力学的时间分辨热辐射",
+      "llm_evidence": "用于内部热传输动力学的时间分辨热辐射",
+      "canonical_evidence": "用于内部热传输动力学的时间分辨热辐射",
+      "llm_tldr_en": "Transient depth thermography uses time-resolved radiation to measure out-of-plane thermal conductivity.",
+      "llm_tldr_cn": "瞬态深度热成像利用时间分辨辐射直接测量薄膜材料的面外热导率。",
+      "llm_tldr": "瞬态深度热成像利用时间分辨辐射直接测量薄膜材料的面外热导率。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.08922v1",
+      "source": "arxiv",
+      "title": "Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption",
+      "abstract": "Molecule-surface interactions are central to many research and technological areas, spanning from heterogeneous catalysis and polymer science to electrochemistry. Of particular relevance are metallic nanogaps used in molecular electronics and near-field spectroscopy. Due to the buried nature of these double interfaces, few methods exist to monitor side-specific interactions and relative molecular orientation inside the gap. In this work, we introduce plasmon-enhanced nonlinear vibrational spectroscopy as an efficient tool to investigate surface molecular adsorption within metallic nanojunctions. By exploiting simultaneous vibrational sum- and difference-frequency generation in dual-resonant nanocavities, we resolve molecular orientation and preferential binding to one of the two gold surfaces, with few-molecule sensitivity. We also discover that the non-resonant (electronic) second-order nonlinear response is not an intrinsic property of the metal surface, but is instead governed by the molecule-surface interaction. Our findings provide a powerful analytical tool, easily implementable as an add-on to Raman spectroscopy, thanks to commercially available mid-infrared quantum cascade lasers.",
+      "authors": [
+        "Francesco Ciccarello",
+        "Nobuaki Oyamada",
+        "Thwahira Shirin Alampara",
+        "Konstantin Malchow",
+        "Christophe Galland"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-09T20:35:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.08922v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "characterizing molecule-surface interactions in metallic nanogaps",
+      "llm_evidence_cn": "表征金属纳米间隙中的分子-表面相互作用",
+      "llm_evidence": "表征金属纳米间隙中的分子-表面相互作用",
+      "canonical_evidence": "表征金属纳米间隙中的分子-表面相互作用",
+      "llm_tldr_en": "Uses plasmon-enhanced spectroscopy to resolve molecular orientation in nanogaps.",
+      "llm_tldr_cn": "利用等离激元增强光谱解析纳米间隙中的分子取向。",
+      "llm_tldr": "利用等离激元增强光谱解析纳米间隙中的分子取向。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.10009v1",
+      "source": "arxiv",
+      "title": "Quantitative Analysis of Exciton Composition and Dynamics in Y6 Films for Single-Component Solar Cells",
+      "abstract": "Non-fullerene acceptors such as Y6 have enabled high-efficiency organic photovoltaic devices and motivated the development of single-component architectures; however, the microscopic mechanisms governing exciton transport and charge dissociation remain under active investigation. In particular, the interplay between Frenkel-charge-transfer excitations and their coupling to environmental fluctuations complicates the description of light absorption and subsequent exciton dynamics. Here, ultrafast transient absorption spectroscopy is used to probe exciton quenching dynamics in Y6 films interfaced with hole-transport layers. To interpret these measurements, we develop an analytical model based on hybrid Frenkel-charge-transfer states that enables direct extraction of intermolecular electronic couplings, charge-transfer character, and system-bath interaction strengths from experimental data. The analysis reveals a substantial charge-transfer admixture of 20-40% in the exciton states and identifies a transport regime characterized by delocalization-mediated exciton motion rather than purely diffusive hopping. Consistent with this interpretation, the corresponding quenching dynamics occur on a ~1 ps timescale within ~4 nm of the interface, suggesting a short-range injection mechanism facilitated by exciton delocalization. In addition to providing physical parameters for Y6, these results establish a quantitative framework that connects spectroscopic observables to microscopic transport mechanisms and can be generalized to other non-fullerene acceptors.",
+      "authors": [
+        "Saba Mahmoodpour",
+        "Jiyeon Oh",
+        "Yanlin Liu",
+        "Zijian Gan",
+        "Wei You",
+        "Andrew M. Moran"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-07-10T22:11:11+00:00",
+      "link": "https://arxiv.org/pdf/2607.10009v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "ultrafast transient absorption for exciton dynamics in solar cell films",
+      "llm_evidence_cn": "用于太阳能电池薄膜激子动力学的超快瞬态吸收",
+      "llm_evidence": "用于太阳能电池薄膜激子动力学的超快瞬态吸收",
+      "canonical_evidence": "用于太阳能电池薄膜激子动力学的超快瞬态吸收",
+      "llm_tldr_en": "Analyzes exciton transport and quenching in organic photovoltaic films using ultrafast spectroscopy.",
+      "llm_tldr_cn": "利用超快光谱分析了有机光伏薄膜中的激子传输和猝灭。",
+      "llm_tldr": "利用超快光谱分析了有机光伏薄膜中的激子传输和猝灭。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

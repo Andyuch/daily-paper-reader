@@ -1,0 +1,1448 @@
+Title: 2607.13893v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.13893v1
+
+Published Time: Thu, 16 Jul 2026 01:10:51 GMT
+
+Number of Pages: 48
+
+Markdown Content:
+1
+
+Revealing the MoS 2 Growth Mechanism in Chemical Vapor Deposition: Real -Time Imaging and 
+
+Statistical Analysis 
+
+Faizal Arifurrahman 1,2 †, Tianshu Zhai 1†, Yuguo Wang 1, Jing Zhang 1, Andrew L. Hitt 1, Jun 
+
+Lou 1, 3*, Ming Tang 1, 3*
+
+1. Department of Materials Science and Nanoengineering, Rice University, Houston, TX 
+
+2. Faculty of Mechanical and Aerospace Engineering, Institut Teknologi Bandung, Jalan 
+
+Ganesha 10, Bandung, 40132, Indonesia 
+
+3. Rice A dvanced Materials Institute, Rice University, Houston, TX 77005, USA  
+
+> †
+
+These authors contributed equally.  
+
+> *
+
+Corresponding author emails: jlou@rice.edu , mingtang@rice.edu 2
+
+Abstract 
+
+Chemical Vapor Deposition (CVD) is a promising method for scalable synthesis of two -
+
+dimensional transitional metal dichalcogenides (TMD s) such as MoS ₂, but challenges in 
+
+reproducibility and control lability persist due to an incomplete understandin g of their dynamic 
+
+growth mechanisms. While in -situ characterization methods could provide valuable insights , it 
+
+remains challenging to track a large ensemble of crystals to enable quantitative, statistical analysis. 
+
+Here, we address this gap by developing and applying a semi -automated image processing pipeline 
+
+to analyze in -situ optical microscopy footage of MoS ₂ growth. This framework enables the high -
+
+throughput reconstruction of complete growth trajectories for over 400 individual crystals from a 
+
+single experiment. Our statistical analysis demonstrates that MoS ₂ crystallization is governed by 
+
+an edge -attachment -limited mechanism rather than by precursor diffusion. Furthermore, MoS 2
+
+crystals exhi bit non -competitive growth, indicating that precursor supply does not limit the growth 
+
+of neighboring flakes until physical impingement occurs. These findings provide direct, 
+
+quantitative evidence that advances the fundamental understanding of TMD growth, establishing 
+
+a powerful methodology for rational optimization of the CVD growth of two -dimensional 
+
+materials. 3
+
+Introduction 
+
+Two -dimensional (2D) materials including graphen e,1–3 hexagonal boron nitride 4–7 and transition 
+
+metal dichalcogenides (TMDs) 8–11 , ha ve been the subject of intensive research over the past decade, 
+
+revealing a wealth of exceptional properties from high carrier mobility to layer -dependent 
+
+bandgaps. A primary challenge in harnessing these properties for next -generation device 
+
+app lications such as field -effect transistors, gas sensors, and photodetectors lies in developing 
+
+scalable synthesis methods that produce high -quality, large -area 2D materials with well -controlled 
+
+defect population and distribution s.12 –23 While mechanical e xfoliation can produce large flakes for 
+
+fundamental studies, 24 –27 chemical vapor deposition (CVD) has emerged as one of the most 
+
+promising fabrication techniques for mass manufacturing .28 –31 Despite significant progress, CVD 
+
+growth of 2D materials continues to face challenges in reproducibility and controllability. Subtle 
+
+variations in growth conditions such as reactor geometry, precursor ratios and temperature profiles 
+
+often lead to inconsiste nt crystal morpholog y and defect population , hinder ing the transition of 2D 
+
+materials from the laboratory to industrial applications. 32 These challenges stem from an 
+
+incomplete knowledge of the 2D crystal growth mechanisms during CVD processes. 
+
+To establish a more thorough mec hanistic understanding and guide the optimization of 
+
+CVD processes, in -situ characterization techniques are invaluable . Direct observation of crystal 
+
+nucleation and growth can provide critical insights into transient phenome na such as crystal 
+
+nucleation and intermediate phases that are often missed in conventional ex -situ analyses, which 
+
+only capture snapshots of the initial and final states. Recent advances in real -time monitoring 
+
+unveil distinct growth modes of MoS 2 due to changes in the gasification behavior of MoO 3
+
+precursors, 33 growth and self -assembly of graphene flakes on liquid metal, 34 and the dynamic 
+
+growth process of 2D van der Waals heterostructures (e.g. CdI 2/MoS 2, PbI 2/WS 2).35 While high -
+
+magnification characterization method s like in -situ transmission electron microscopy (TEM) can 4
+
+reveal the earl y growth stage s,36,37 their narrow field of view restricts the number of crystals that 
+
+could be studied and the special reaction chambers required may not fully represent typical CVD 
+
+set tings . In comparison , in -situ optical microscopy could captur e the evolution of many crystals 
+
+within a large region and also under more realistic synthesis conditions. 38 –41 However, existing 
+
+optical imaging studies have generally been limited to qualitative observation or a small number 
+
+of crystals. A comprehensive, quantitative analysis of a large 2D crystal population to yield 
+
+statistical insights has remained elusive, largely because manual ly tracking the shape ev olution of 
+
+individual crystals is very labor -intensive .42 –46 
+
+In a previous work, we integrated a miniaturized CVD apparatus with optical microscop y
+
+and image -processing capabilit ies .8 This system was used to acquire real -time footage of 
+
+monolayer MoS ₂ crystal growth , and the resultant observations were leveraged to guide the 
+
+synthesis process and the manipulation of crystal morphologies. Th e study successfully 
+
+demonstrate s an effective workflow that combin es in -situ observation with image data analysis 
+
+and machine learning predictions to achieve 2D crystal growth with control led properties .
+
+However, one important aspect missing from that work is the extraction and analysis of the growth 
+
+trajectories of individual MoS ₂ crystals , which should facilitate a deeper understanding of the 
+
+fundamental growth mechanism s. 
+
+Building upon our pr ior study , here we introduce a semi -automated image processing 
+
+pipeline designed to systematically track the nucleation and growth of a large ensemble of MoS ₂
+
+flake s from in -situ optical video s. By applying this framework, the growth history of over 474 
+
+individual crystals was extracted from a single experiment, enabling a robust statistical 
+
+investigation of their behavior. We comprehensively examined the growth rates of these MoS 2
+
+crystals and their correlation with crystal size, orientation and surrounding crystal distribution . Our 5
+
+analysis reveals that the MoS ₂ growth kinetics are primarily controlled by the precursor attachment 
+
+to crystal edges rat her than mass transport . Furthermore, we observed that neighbor MoS 2 crystals 
+
+do not compete for precursors and exhibit independent growth until their coalescence . Such 
+
+behavior is attributed to the presence of MoO xSy nanoparticles at the center of MoS 2 flakes, which 
+
+supply Mo feedstocks to crystal growth from within. These insights advance our understanding of 
+
+the CVD synthesis of MoS 2 and help pave the way toward s more reproducible synthesis of 2D 
+
+materials. 
+
+Results & Discussion 
+
+A custom -designed miniaturized CVD reactor , featuring a rectangular quartz tube, was employed 
+
+to synthesize MoS 2 on a c -plane (0001) sapphire (Al ₂O₃) substrate as shown in Error! Reference 
+
+source not found. Real -time monitoring of MoS 2 growth was achieved by placing an objective 
+
+lens with an ultra -long working distance above the substrate, which is connected to a digital camera. 
+
+During a typical growth experiment conducted withi n this setup, where the reactor temperature 
+
+was ramped from room temperature to 890 °C at a rate of 100 °C/min, the recorded video footage 
+
+shows that triangular MoS 2 flakes emerged , expanded and merged across the substrate, see 
+
+snapshots in Error! Reference source not found. and Supplementary Video 1 in Supplementary 
+
+Information. Figure 2 pre sents the corresponding segmented images at 0, 30, 60, and 150 s after 
+
+the first nucleation of MoS 2 was observed , illustrating the temporal evolution of the MoS 2 crystal 
+
+domains. 6
+
+Figure 1. Schematics of the miniaturized CVD reactor. 
+
+Post -growth characterization confirmed the monolayer nature of the as -grown MoS 2 flakes . Raman 
+
+spectroscopy revealed two distinctive peaks at 385.6 and 404.4 cm -1, corresponding to the E 12g and 
+
+A1g vibration mo des of MoS 2, respectively (Figure S 2a). The peak separation of 18.8 cm -1 is 
+
+characteristic of MoS 2 monolayers, which is consistent with a strong excitonic peak at ~660 nm in 
+
+the photoluminescence spectr um (Figure S2b). Atomic force microscopy (AFM) further 
+
+corroborated this, showing a uniform height of 0.6 nm across the crystals, matching the expected 
+
+thickness of monolayer MoS 2 (Figure S3 ). 7
+
+Figure 2. Snapshots of an in -situ optical video showing the formation and evolution of triangular 
+
+MoS 2 crystal s on the (0001) sapphire substrate at 0, 30, 60, and 150 s econds after first MoS 2
+
+nucleation events .
+
+The in -situ optical video footage provides a d etailed view of the MoS 2 growth process . In 
+
+the experiment, burst nucleation of MoS 2 was observed when the reactor temperature reached c.a. 
+
+860°C , where a large number of crystals suddenly appeared and began rapidly gr owing on the 
+
+substrate . As shown in Figure 3a, t he nucleation rate remained roughly constant during the initial 
+
+phase of ~20 seconds , and the total crystal area increased with time t as #$%$ ∝ ().+, with t = 0 s 
+
+defined as the moment when the first crystal was detected. Notably, after t ≈ 20 seconds, both 
+
+nucleation and growth of MoS 2 began to slow down significantly . By ( ≈ 100 s, c rystal growth 
+
+effectively stagnated , with minimal increase in MoS 2 coverage afterwards . Th is deceleration 
+
+suggests a continuous reduction in the thermodynamic driving force during the CVD process .
+
+Given that excess sulfur was found to remain in the reactor after the experiment end ed, we attribute 
+
+this primarily to the depletion of Mo precursor s rather than sulfur species. 8
+
+Figure 3. MoS ₂ nucleation and growth dynamics revealed by in -situ optical observation. (a) 
+
+Number and relative area coverage of MoS 2 flake s (top) and reactor temperature profile (bottom). 
+
+(b) Area of individual Mo S₂ crystal s versus growth time defined as t - tnucl , where tnucl is the time 
+
+a crystal was first detected. T he curve color reflects tnucl . (c) MoS 2 growth rate vs tnucl . (d) Final 
+
+MoS 2 crystal size, which is measured either at the end of the experiment or when the crystal 
+
+coalesced with other MoS 2 flakes, vs tnucl .
+
+Growth kinetics of individual crystals 
+
+By a ppl ying the semi -automated processing workflow to the in -situ optical video , we were able to 
+
+track the growth history of each individual MoS 2 crystal that appears in the footage . Figure 3b
+
+presents the size evolution of 474 crystals over time . To facilita te comparison, the ir growth curves 
+
+are shifted horizontally so that they all start from the origin, which corresponds to the time a crystal 
+
+was first detected. The growth curve of a MoS 2 crystal is terminated on the plot either when the 
+
+end of the experiment was reached or the crystal merged with a neighbor. While these crystals 9
+
+display a wide range of growth rates and final sizes, the ir growth trajectories commonly display 
+
+two distinct stages , i.e. a “steady -state” period where the crystal size increase d approximately 
+
+linear ly with time , followed by a stagnation period where growth effectively ceased . Some crystals 
+
+did not exhibit the second stage in Figure 3b because they coalesced with other crystals before 
+
+growth slow ed down . The individual growth trajectories are consistent with the ensemble behavior 
+
+shown in Figure 3a.
+
+To quantitatively analyze the growth process , we plotted the steady -state growth rate and 
+
+the final size of all tracked MoS 2 flakes against their nominal nucleation time (i.e. the time they 
+
+were first detected ), in Figure 3c and 3d, respectively . The growth rate shown in Figure 3c is 
+
+calculated from the average slope s of the quasi -linear portion of the growth curve s. The se plots 
+
+reveal a clear trend : crystals that nucleated earlier grew faster and also attained larger sizes . The 
+
+MoS 2 growth speed decay ed rapidly with increasing nucleation time , reflecting the progressive 
+
+decline in precursor supersaturation with in the reactor . Later -nucleating crystals wer e smaller 
+
+because they grew more slowly and also had less time to grow. We note that many crystals that 
+
+nucleated in the early stage also have small apparent sizes because they quickly merged with other 
+
+crystals after nucleation. 
+
+Diffusion - vs. Edge -attachment -limited growth 
+
+The CVD growth of 2D materials , such as graphene , is known to proceed via either diffusion -
+
+limited or edge -attachment -limited mechanisms, depending on experimental conditions such as 
+
+precursor supersaturation .47,48 In the diffusion -limited regime , crystal growth is rate -controlled by 
+
+the transport of precursor species from the surrounding to the crystal edges . Crystal size typically 
+
+increases at a constant speed in such a growth mode 49 :10  
+
+> -.
+> -$
+
+= constant 1) 
+
+Conversely, edge -attachment -limited growth occurs when precur sor diffusion is facile relative to 
+
+their incorporat ion into the lattice. Crystal growth rate in this mode exhibits a parabolic size 
+
+dependence : 
+
+> -.
+> -$
+
+∝ √# 2) 
+
+Compared to graphene, whe ther TMD growth is diffusion - or edge -attachment -limited is less 
+
+clear despite several modeling studies .50 –54 
+
+Direct measurement of individual MoS 2 crystal growth rates from the optical video enable s
+
+us to distinguish the dominant growth mechanism. It should be pointed out that t he quasi -linear 
+
+growth (# ∝ () exhibited by individual MoS 2 is not a sure sign of a diffusion -limited mechanism. 
+
+That is because it may also result from edge -attachment -limited growth with a decaying edge 
+
+velocity due to precursor depletion. To resolve this ambiguity, we compared the instantaneous 
+
+growth rates (0# /0( ) of different cry stals at the same time during growth , since all crystals should 
+
+experience similar supersaturation . As shown in Figure 4, we calculated 0# /0( at t = 50 seconds 
+
+after the detection of the first MoS 2 flake based on the linear regression of the MoS 2 growth curves 
+
+between 46 s and 54 s. It exhibits a clear positive correlation with crystal size , i.e. larger crystals 
+
+also gr ew faster. Th is trend is inconsistent with diffusion -limited growth , where 0# /0( should be 
+
+size -independent , but aligns with edge -attachment -limited kinetics. In this regime, larger crystals 
+
+have larger 0# /0( because their longer edges provide more sites for precursor incorporation. Such 
+
+size dependen ce of the instantaneous growth rate was also evident at other times (see Figure S4 ).
+
+Th is result confirms that MoS 2 growth is limited by interface reaction kinetics at relatively high 
+
+reaction temperatures above 850 °C , with precursor transport remain ing facile over a wide range 
+
+of supersaturations as experienced in the experiments .11 
+
+Figure 4. Instantaneous MoS 2 growth rate 0# /0( versus crystal area at 50 s after the first MoS 2
+
+was detected .
+
+In contrast to the detailed single crystal analysis performed here , the classic Johnson -Mehl -
+
+Avrami -Kolmogolov (JMAK) model 55 –57 is a tool widely used to analyze phase transformation 
+
+kinetics under isothermal condition when only aggregated information of the transformation 
+
+process is available . This involves fitting the experimental data to the JMAK equation 
+
+2 = 1 − exp (−:(;) 3) 
+
+where f is the transformed fraction of the system, and n and k are parameters known as the Avrami 
+
+exponent and the rate constant k, respectively . The Avrami exponent is often expressed as 
+
+= = > + @A 4) 
+
+where a is the nucleation index , b is the growth dimensionality, and c equals 1 or 1/2 for interface -
+
+or diffusion -limited growth, respectively. a = 0 correspond s to instantaneous nucleation, a = 1 for 
+
+constant -rate nucleation , and 0 < a < 1 represent s continuous nucleation with a decaying rate. 
+
+Finding a reasonable set of values for (a, b, c) helps interpret the nucleation and growth behavior. 
+
+Fitting the area coverage of MoS 2 vs time curve (Figure 3a) with Eq. 3 yields an Avrami exponent 
+
+of 1.71. The JMAK analysis alone may prompt the assign ment of a = 0.71 , b = 2 and c = ½, which 12 
+
+leads to the incorrect conclusion that MoS 2 growth is diffusion -limited . This demonstrates the 
+
+limitation of the traditional JMAK analysis and highlights the value of in -situ imaging of 
+
+individual crystals coupled with statistical analysis in obtain ing an accurat e understanding of 2D 
+
+material synthesis. 
+
+Effect of MoS 2/substrate orientation relation 
+
+Due to van der Waals epitaxy, TMD crystals grown on c -plane sapphire substrate typically show 
+
+preferential alignment along specific crystallographic directions. The MoS 2/Al 2O3 interaction 
+
+energy is minimized when 〈10 1D0〉 of F-Al 2O3 is parallel to the 〈10 1D0〉 or 〈01 1D0〉 zigzag edge s of 
+
+MoS 2, which are denoted as the 0° / 60° alignments, respectively .29 Metastable ± 30° 
+
+mis orientation s between MoS 2 and Al 2O3 have also been observed , which represent the local 
+
+energy minima .58 Our in -situ optical video revealed two predominant orientation groups separated 
+
+by 60°, which should correspond to the preferred 0°/60° alignments . Because optical microscopy 
+
+alone cannot distinguish the MoS 2/sapphire orientation relation, one group was somewhat 
+
+arbitrarily assigned to 0° and the other to 60° . To quantify the orientation distribution of MoS 2
+
+crystals , we measured the orientations of all resolvable crystals by fitting regular triangles to their 
+
+segmented images either at the end of the video footage or right before they merged with neighbors. 
+
+Small crystals (< 10 μm 2) were excluded from the analysis due to limited i mage resolution. When 
+
+assigning crystals to one of the two major orientation s (0° and 60°) , a ±15° tolerance was used to 
+
+account for measurement uncertainties from instrument vibration, air flow fluctuations, and 
+
+segmentation artifacts, etc. Figure S 5 show s that crystals with 0° or 60° orientations were 
+
+uniformly distributed across the substrate. Nevertheless, there are more 0°-oriented ( 50 % of all 
+
+crystals ) than 60° -oriented ( 36 %) crystals, see Figure 5a. This asymmetry may arise from factors 13 
+
+such as the substrate conditions (e.g. , miscut angle between the substrate surface and (0001) 
+
+plane 59 ) and carrier gas flow. 
+
+The existence of preferred MoS 2-substrate alignment prompted us to investigate whether 
+
+the crystal growth rate is orientation -dependent. Figure 5b show s that the growth speeds of crystals 
+
+with 0°, 60° and other orientations are not statistically distinguishable. This suggests that while 
+
+the crystal -substrate interaction strongly influence s nucleation rate by favoring certain epitaxy 
+
+relations , it ha s min imal impact on the edge attachment kinetics, rendering the growth rate 
+
+insensitive to crystal orientation. 
+
+Figure 5. (a) Orientation distribution of MoS 2 crystals on the c -plane sapphire substrate. The b lue 
+
+and red groups represent the two preferred orientations (0° and 60°) with a 15° tolerance. (b) 
+
+Comparison of the growth rates of MoS 2 with different orientations: blue – 0° , red – 60° , and tan 
+
+– other .14 
+
+Growth competition between MoS 2 crystals 
+
+During crystal growth, it is commo n that neighboring crystals compete for feedstocks when their 
+
+diffusion fields overlap , leading to phenomena like nucleation/growth depletion zone .60 We 
+
+examine d whether such competition is present during MoS 2 growth and affects the ov erall growth 
+
+kinetics in our experiment . In Figure 6a and 6b , individual MoS 2 flakes at t = 50 s after the 
+
+detection of the first crystal were divided into different groups based on the number (Nsurr ) of their 
+
+neighbor crystals. A crystal is considered a neighbor if the centroid distance is less than 3 R, where 
+
+R = H#/I is the equivalent crystal radius. In Figure 6b, the flaks are grouped b ased on the area 
+
+coverage (fsurr ) of neighbor crystals within a radius of 3 R from the crystal’s centroid . These plots 
+
+clearly show that t he average crystal growth rate does not exhibit a noticeable correlation with Nsurr 
+
+or fsurr , indicating that the local crystal density did not affect growth kinetics. The absence of 
+
+competition between neighbor crystals persisted even at later times when precursor depletion was 
+
+more severe (Figure S 6). To further validate this conclusion, we tracked the morphological 
+
+evolution of two MoS 2 crystal s with parallel opposing edges upon approaching each other (Figure 
+
+6c) . As illustrated in Figure 6d, if two neighbor crystals compet e for precursors during growth ,
+
+their facing edges would grow slower than other edges due to local precursor depletion , which will 
+
+caus e the ir centroids to move away from each other. However, such behavior is not observed in 
+
+the experiment: Figure 6e shows that the centroid distance between the two crystals remained 
+
+constant until they impinge d against ea ch other . For completeness , the centroid distances of crystal 
+
+pairs with other orientation relations (0°/0°, 0°/30°) were also examined (Figure S 7), which do not 
+
+exhibit any significant variation over time either . These results provide convincing evidence that 
+
+individual MoS 2 flakes grew independently and did not interfere with one an other. This is in sharp 
+
+contrast to the growth of neighbor ing graphene domains on the catalyst substrate , which 15 
+
+experiences a gradual slowdown when they approach each other .47 Different from the centroid 
+
+distance, Figure S 7g-i shows that the gap distance between the facing edges or vertices of two 
+
+MoS 2 crystals is reduced at an increasingly slow speed , which was caused by the global decline of 
+
+precursor supersaturation .
+
+Figure 6. Analysis of MoS 2 crystal interaction during CVD growth . (a) Instantaneous crystal 
+
+growth rate vs. number of neighbor flak es within a distance of 3 R to the crystal . ( b) Instantaneous 
+
+crystal growth rate vs. area cover age of neighbor flakes within a distance of 3 R to the crystal . ( c)
+
+Two neighbor MoS 2 crystals with parallel opposing edges from the in -situ video (left) and their 
+
+centroid distance as a function of time . (d) Hypothetical evolution of the centroid locations of two 
+
+growing MoS 2 crystals if they compete for precursors .
+
+Seeded MoS 2 crystal growth 
+
+To better understand the orig in of th e absence of inter -crystal competition during MoS 2 growth ,
+
+we examined the as -grown samples using scanning electron microscopy (SEM). Figure 7a reveal s
+
+that nearly all triangular MoS 2 crystals contain a nanoparticle at the ir center s. The formation of 16 
+
+these nan oparticles could be attributed to the relatively high Mo precursor temperature (850 °C) 
+
+employed in our experiments. Previous work has shown that raising the Mo precursor temperature 
+
+above 750 °C promote the deposition of molybdenum oxynitride ( MoO xSy) nanoparticles on to 
+
+substrates due to the increased vapor -phase supersaturation .61,62 The y were found to act as seeding 
+
+centers , initiating the growth of MoS 2 flakes around them .37,63 
+
+We propose that the presence of MoO xSy seeds is responsible for the non -competitive MoS 2
+
+growth as observed in our study. As illustrated in Figure 7b, when a MoO xSy nanoparticle is 
+
+deposited onto the substrate , it serve s as the localized Mo reservoir to continuously supply Mo 
+
+feedstocks to t he surrounding MoS 2 crystal. Because of their large diffusion coefficient on TMD 
+
+surfaces 64 , Mo feedstocks can diffuse rapidly across the MoS 2 terrace to reach crystal edges, where 
+
+the y are incorporat ed into the MoS 2 lattice . However, a Schwoebel -Ehrlich barrier 65,66 present at 
+
+step edges , along with a much lower diffusivity on the sapphire substrate 64 , prevents Mo feedstocks 
+
+from escaping to the surrounding, effectively isolating each crystal’s Mo supply. As each MoS 2
+
+crystal draws Mo feedstock s from its own seed, adjacent crystals grow independently until 
+
+physical impingement occurs . When Mo is primarily supplied by MoO xSy seeds rather than from 
+
+the vapor phase, the number of MoS 2 crystals formed on the substrate is controlled by the seed 
+
+density. The confinement of Mo feedstocks within the seed -containing crystals makes the 
+
+nucleation of additional seedless MoS 2 flakes difficult. Therefore, i f CVD condition s could be 
+
+controlled to deposit fewer MoO xSy particles onto the substrate, the formation of large r MoS 2
+
+flakes will be promoted . While earlier works reported that the seeded growth mechanism mainly 
+
+produces multilayer TMD flakes 37,63 , MoS 2 obtained by our setup was dominated by the monolayer 
+
+structure , with a much smaller second layer occasionally observed on some crystals. This is likely 17 
+
+because the limited Mo O3 supply used in the experiment s led to rapid reduction of the precursor 
+
+supersaturation within the reacto r, prevent ing the nucleation and growth of additional MoS 2 layers. 
+
+Figure 7. Seeded MoS ₂ monolayer growth . (a) SEM image of grown MoS 2 flakes, with a 
+
+nanoparticle visible at the center of each crystal. ( b) Schematic of the seeded MoS 2 growth process. 
+
+Conclusions 
+
+In this work, we established a robust framework for high -throughput analysis of the CVD growth 
+
+of a large number of MoS 2 crystals by integrating in -situ optical microscopy with a semi -
+
+automated image processing pipeline. By tracking the morphological evolution of over 400 
+
+individual MoS ₂ crystals throughout the CVD process, we extract quantitative , statistical insights 
+
+into the underlying nucleation and growth kinetics. Our analysis reveals several important features 
+
+of MoS ₂ growth at high temperatures . We demonstrate that the MoS 2 growth rate is edge -
+
+attachment -limited, with precursor incorporation at the crystal periphery as the rate -determining 
+
+step. Furthermore, MoS ₂ crystals were found to grow in a non -competitive manner , in which 18 
+
+neighboring MoS 2 do not compete for precursors because each crystal relies on its own MoS xOy
+
+seed at the center to supply the Mo feedstock. While t he nucleation rate of MoS 2 is sensitive to its 
+
+van der Waals interaction with the sapphire substrate, its growth rate does not exhibit statistically 
+
+significant dependence on the crystal/substrate orientation relation. These findings re solve existing 
+
+ambiguities in the MoS ₂ growth mechanism and provide useful guid ance for selecti ng CVD 
+
+process parameters to achiev e desired material morphologies. In particular, our study shows that 
+
+it could be a fruitful approach to constrain the deposition of MoS xOy nanoparticles on the subs trate 
+
+to facilitate the growth of large MoS 2 crystals. The workflow developed here for analyzing in -situ 
+
+observations is not limited to MoS ₂ and serve as a versatile platform for investigating the growth 
+
+dynamics of a wide range of 2D material systems. This methodology provides a valuable tool 
+
+towards establishing predictive control over the scalable synthesis of 2D materials. 
+
+Methods 
+
+Miniaturized CVD 
+
+The miniaturized CVD system incorporates two distinct heating zones to separat ely control the 
+
+evaporation rates of sulfur and MoO 3 precursors. MoO 3 was placed directly beneath the substrate. 
+
+The optical microscope consists of an objective lens with ultra -long working distance and 10 ×
+
+magnification and a digital camera connected to i t. It images the substrate through a dedicated 
+
+window on the top of the furnace, generating a field of view of 1920x1080 pixels (or 1422 μm x 
+
+800 μm). The transparent sapphire substrate makes it possible for the optical microscope to image 
+
+MoS 2 deposited o n the bottom side of the substrate . A scratch was created on the substrate surface 
+
+as a marker to aid microscope focusing ( Figure S 8). Experiments were recorded at 30 frames per 19 
+
+second. Additionally, temperature profiles for both the sulfur and MoO 3 heating zones were 
+
+recorded and synchronized with the video. 
+
+Crystal Tracking Algorithm 
+
+A semi -automated image analysis workflow was developed to extract the growth history of each 
+
+individual MoS 2 crystal appearing in the field of view from the video foot age in a high -throughput 
+
+manner. As illustrated in Figure S9 , the workflow consists the following three modules: 
+
+1. Image pre -processing 
+
+This module performs essential pre -processing of raw video data before tracking the evolution of 
+
+each individual cryst al. Because the MoS 2 growth rate shows a significant slowdown in the 
+
+experiments, the original video footage is manually separated into two clips , correspond ing to the 
+
+fast vs slow growth periods . The first clip is resampled at a relatively high frequency of 5 Hz , and 
+
+the second clip is resampled at 2 Hz. Re sampling reduces the number of video frames for analysis 
+
+by 7 -9 folds. The original image frames are in RGB color . They are converted to gray scale by 
+
+taking the weighted average of the red, green and b lue channel intensities, yielding a single 
+
+luminance value between 0 and 255. After cropping the frames , the region of interest (ROI) 
+
+typically contains 600 – 2000 pixels in both dimensions, with a pixel size of 1.35 × 1.35 μm 2. The 
+
+image frames are then subject to a series of operations as described below. 
+
+Histogram equalization is applied to images to enhance the contrast between MoS 2 and the 
+
+surrounding substrate. As the field of view is sometimes not evenly illuminated, the contrast -
+
+limited adaptive hi stogram equalization (CLAHE) algorithm is employed to remove the non -
+
+uniform illumination ( Figure S1 0). 20 
+
+Artifact removal : pre -existing features on the substrate (e.g. dirt, surface defects) could be 
+
+mistakenly identified as MoS 2 crystals in the segmentation step. Background subtraction is 
+
+performed to remove these artifacts from images. This is accomplished by subtracting a frame 
+
+containing only the initial bare substrate from the frames to be analyzed (Figure S1 1). We found 
+
+that this simple procedure effectively eliminates stray artifacts and retrain only real crystals in the 
+
+output images. 
+
+Stabilization of image sequence is implemented in commercial software (Topaz Video AI) 
+
+to reduce video shaking or drifting due to the vibration of the optical microscope stage. This 
+
+operation improves the accuracy of tracking crystals over time, which relies on the centroid 
+
+locations to identify the same crystals in different frames. 
+
+Segmentation : processed image frames are binarized by histogram thresholding to 
+
+distinguish MoS 2 crystals from the substrate. We found that traditional thresholding algorithms 
+
+such as the Otsu’s method do not yield consistent segmentation results across different frames. As 
+
+a result, manual threshold adjustme nt needs to be applied to many frames, rendering the procedure 
+
+extremely cumbersome. To address this issue, a supervised machine learning model based on a 
+
+pixelwise random forest classifier was developed for the segmentation task. To train the model, 
+
+only one frame from the video footage was manually labeled to generate the training dataset. This 
+
+frame was selected based on the criterion that it provides a balanced representation of the MoS 2
+
+crystal and substrate regions. It was then divided into 52 smaller patches of 256 × 256 pixels with 
+
+50% overlap between adjacent regions. As shown in Figure S 12, each patch in the training and test 
+
+sets was passed through 12 image filters, including Gabor (0°, 45°, 90°, and 135°), Roberts, Sobel, 
+
+Prewitt, Scharr, Gaussia n, median, and variance filters. These filters are commonly used for edge 
+
+detection, texture characterization, and feature extraction. Along with the original grayscale image, 21 
+
+the y generate 13 feature descriptors for each pixel, which serve as input to a r andom forest (RF) 
+
+model with 100 trees . The RF model was trained to classify pixels as crystal (1) or background (0), 
+
+which achieves a 96% accuracy on the validation set (520 256 ×256 images). Figure S 13 shows an 
+
+example of a video frame segmented by the RF model. It only took 3 -4 hours to prepare the training 
+
+and validation sets, less than 30 minutes to train the RF model and around 1 hour to binarize all 
+
+the frames in a video, which is substantially faster than manual thresholding. 
+
+2. Crystal tracking 
+
+In this module, each crystal that appears in the footage is assigned a unique identification (ID) 
+
+number. This ID number is the same for a specific crystal across different frames so that its shape 
+
+evolution could be tracked. A binarized image sequence is ana lyzed frame -by -frame in the forward 
+
+direction. For each frame, isolated objects in the ROI are first determined by the contour detection 
+
+method. To avoid noise being mistakenly recognized as a crystal, an object is labeled a crystal 
+
+cluster only when its a rea exceeds a minimum size of 15 pixels (or ~27 μm 2). As such, the nominal 
+
+nucleation time of a crystal detected by the algorithm differs from the real nucleation time due to 
+
+the resolution limitation of the optical microscope and the image analysis method , although they 
+
+are correlated. Objects detected in a frame will first be compared with crystals present in the 
+
+previous frame. If the centroid of an object is within a threshold distance of 15 pixels from an 
+
+already identified crystal, they are deemed the same crystal and each pixel in the object is labeled 
+
+by the crystal ID. Otherwise it is treated as a new MoS 2 nucleus and assigned a new ID. 
+
+Several complications could arise in this module and are addressed as follows. First, due 
+
+to segmentation errors, some small crystals may disappear from the ROI after being detected in a 
+
+previous frame , which is unphysical . A “redraw” step is introduced to correct this type of error. If 22 
+
+a crystal is detected at a given location in an early frame but disappears subseq uently, the crystal 
+
+will be “copied” from the previous frame and “pasted” onto the same location with the same ID. 
+
+Second, crystals near the ROI borders could grow out of the field of view in the footage, 
+
+rendering their shape evolution not completely know n. These crystals are excluded from the 
+
+analysis to prevent erroneous statistics. Therefore, whenever the tracking algorithm detects a 
+
+crystal object touching a border, it filters out the crystal from the binarized image frames (Figure 
+
+S14) and removes it from the tracked crystal list. 
+
+Lastly, when a crystal merges with its neighbor(s), the coalesced polycrystal could 
+
+potentially be misidentified as a single crystal object, leading to incorrect tracking. It is thus 
+
+necessary for the workflow to distin guish between single -crystalline and polycrystalline objects 
+
+and analyze them separately. We employed supervised learning techniques to classify the two 
+
+types of crystalline objects based on their shape descriptors. The descriptors used for classification 
+
+include circularity, outer/inner circle circumference, inner/outer regular triangle circumference, 
+
+and shape invariants values (Hu moments). The Hu moments are a set of seven numerical features 
+
+derived from image moments that are invariant to translation, rotation, and scaling, making them 
+
+particularly effective for distinguishing geometric shapes. The training dataset consists of ~1000 
+
+objects manually labeled as single - or poly -crystals, which was augmented to a total of 2340 
+
+objects. Figure S 15a compares the performance of three different classifi ers : RF, k -nearest 
+
+neighbors (kNN) and support vector machine (SVM). For the kNN classifier, the number of 
+
+neighbors was set to 50 with Euclidean distance (Minkowski, p = 2) and uniform weighting. The 
+
+SVM classif ier employs a radial basis function (RBF). The RF classifier was trained with 100 
+
+decision trees using the Gini impurity criterion, unrestricted maximum depth, and a fixed random 
+
+state for reproducibility. When applied to a validation dataset containing ~1 560 crystal objects, 23 
+
+kNN, SVM and RF achieve prediction accuracies of 65.1% , 97.3% and 99.7%, respectively. The 
+
+RF model outperforms the other classifiers and is adopted in the tracking module. When a 
+
+polycrystalline object is identified in a frame, the a lgorithm searches the image sequence backward 
+
+to determine the IDs of individual single crystals it contains. The polycrystal is labeled by a tuple 
+
+of these ID numbers, which allows the coalescence process to be reconstructed. Eventually, two 
+
+image sequenc es result from the tracking process: one contains indexed single crystals only and 
+
+the other records distinct polycrystalline clusters (Figure S15b) .
+
+3. Crystal feature extraction 
+
+After each unique MoS 2 crystal is identified and labeled throughout the image sequence, the 
+
+workflow extracts time -dependent shape features of all the crystals from the labeled frames. These 
+
+features include centroid location, orientation, size and boundary contour. 
+
+Because se gmented crystals are often not perfectly polygonal, we first fit their images with 
+
+equilateral triangles to extract the orientations of single -crystalline MoS 2 (Figure S1 6a ). 
+
+Specifically, the area and centroid location of a crystal are first determined fr om the object image. 
+
+A regular triangle is initialized with the same area and center as the measured values and a 
+
+randomly assigned orientation. The orientation ( θ) and the side length of the triangle are then 
+
+iteratively optimized to maximize the intersec tion over union (IoU) between the regular triangle 
+
+and the crystal image . After convergence is reached, the returned θ value is used as the crystal 
+
+orientation. The differential evolution algorithm is used for optimization as it efficiently explores 
+
+conti nuous parameter spaces without requiring an exhaustive search. Polycrystalline MoS 2 flakes 
+
+are fitted by two or more regular triangles in a similar way (Figure S1 6b). The centers of the 
+
+triangles are placed at the centroids of the individual constituent cr ystals identified from previous 
+
+frames. 24 
+
+The final outputs of the entire workflow include a list of unique MoS 2 single - and poly -
+
+crystals, their shape features as a function of time, and records of crystal coalescence events (time 
+
+and participating cryst al IDs). Such information constitutes a complete digitized representation of 
+
+the in -situ observation, from which the MoS 2 nucleation and growth process could be 
+
+reconstructed and analyzed. 25 
+
+Acknowledgement 
+
+FA gratefully acknowledges support from the Fulbright Fellowship Program . ALH was supported 
+
+by the Air Force Office of Scientific Research under Award No. FA9550 -21 -1-0460. MT was 
+
+supported by the Air Force Office of Scientific Research under Award No. FA9550 -23-1-04 44. 
+
+TZ, YW, JZ, and JL acknow ledge the support by the NSF I/UCRC Center for Atomically Thin 
+
+Multifunctional Coating (ATOMIC) under award no. EEC -213882, NSF PFI grant no. 2431965, 
+
+and the Welch grant C -2248. 
+
+Author Contributions 
+
+MT and JL conceived and supervised the project. TZ, YW, JZ and JL designed and performed the 
+
+experiments. FA, ALH and MT designed the in -situ video processing workflow and analyzed the 
+
+data. FA, TZ, JL and MT drafted the original manuscript. All authors discussed th e results and 
+
+revised the manuscript. 
+
+Competing interests 
+
+The authors declare no competing interests. 26 
+
+Reference s
+
+(1) Koppens, F. H. L.; Mueller, T.; Avouris, P.; Ferrari, A. C.; Vitiello, M. S.; Polini , M. 
+
+Photodetectors Based on Graphene, Other Two -Dimensional Materials and Hybrid 
+
+Systems. Nat. Nanotechnol. 2014 , 9 (10), 780 –793. 
+
+https://doi.org/10.1038/nnano.2014.215. 
+
+(2) Dong, J.; Zhang, L.; Ding, F. Kinetics of Graphene and 2D Materials Growth. Adva nced 
+
+Materials . Wiley -VCH Verlag March 1, 2019. https://doi.org/10.1002/adma.201801583. 
+
+(3) Wang, H. S.; Chen, L.; Elibol, K.; He, L.; Wang, H.; Chen, C.; Jiang, C.; Li, C.; Wu, T.; 
+
+Cong, C. X.; Pennycook, T. J.; Argentero, G.; Zhang, D.; Watanabe, K.; Tan iguchi, T.; 
+
+Wei, W.; Yuan, Q.; Meyer, J. C.; Xie, X. Towards Chirality Control of Graphene 
+
+Nanoribbons Embedded in Hexagonal Boron Nitride. Nat. Mater. 2021 , 20 (2), 202 –207. 
+
+https://doi.org/10.1038/s41563 -020 -00806 -2. 
+
+(4) Yang, Y.; Song, Z.; Lu, G.; Zhang , Q.; Zhang, B.; Ni, B.; Wang, C.; Li, X.; Gu, L.; Xie, 
+
+X.; Gao, H.; Lou, J. Intrinsic Toughening and Stable Crack Propagation in Hexagonal 
+
+Boron Nitride. Nature 2021 , 594 (7861), 57 –61. https://doi.org/10.1038/s41586 -021 -
+
+03488 -1. 
+
+(5) Zuo, K.; Zhang, X.; H uang, X.; Oliveira, E. F.; Guo, H.; Zhai, T.; Wang, W.; Alvarez, P. 
+
+J. J.; Elimelech, M.; Ajayan, P. M.; Lou, J.; Li, Q. Ultrahigh Resistance of Hexagonal 
+
+Boron Nitride to Mineral Scale Formation. Nat. Commun. 2022 , 13 (1). 
+
+https://doi.org/10.1038/s41467 -022 -32193 -4. 
+
+(6) Jia, S.; Chen, W.; Zhang, J.; Lin, C. -Y.; Guo, H.; Lu, G.; Li, K.; Zhai, T.; Ai, Q.; Lou, J. 
+
+CVD Growth of High -Quality and Large -Area Continuous h -BN Thin Films Directly on 
+
+Stainless -Steel as Protective Coatings. Mater. Today Nano 2021 , 16 , 100135. 
+
+https://doi.org/https://doi.org/10.1016/j.mtnano.2021.100135. 
+
+(7) Zhang, K.; Feng, Y.; Wang, F.; Yang, Z.; Wang, J. Two Dimensional Hexagonal Boron 
+
+Nitride (2D -HBN): Synthesis, Properties and Applications. Journal of Materials 
+
+Chemistry C . Royal Society of Chemistry 2017, pp 11992 –12022. 
+
+https://doi.org/10.1039/c7tc04300g. 
+
+(8) Zhang, J.; Zhai, T.; Arifurrahman, F.; Wang, Y.; Hitt , A.; He, Z.; Ai, Q.; Liu, Y.; Lin, C. -
+
+Y.; Zhu, Y.; Tang, M.; Lou, J. Toward Controlled Synthesis of 2D Crystals by CVD: 
+
+Learning from the Real -Time Crystal Morphology Evolutions. Nano Lett. 2024 , 24 (8), 
+
+2465 –2472. https://doi.org/10.1021/acs.nanolett.3c0 4016. 
+
+(9) Zhang, J.; Jia, S.; Kholmanov, I.; Dong, L.; Er, D.; Chen, W.; Guo, H.; Jin, Z.; Shenoy, V. 
+
+B.; Shi, L.; Lou, J. Janus Monolayer Transition -Metal Dichalcogenides. ACS Nano 2017 ,
+
+11 (8), 8192 –8198. https://doi.org/10.1021/acsnano.7b03186. 
+
+(10) Wan g, Q. H.; Kalantar -Zadeh, K.; Kis, A.; Coleman, J. N.; Strano, M. S. Electronics and 
+
+Optoelectronics of Two -Dimensional Transition Metal Dichalcogenides. Nat. 
+
+Nanotechnol. 2012 , 7 (11), 699 –712. https://doi.org/10.1038/nnano.2012.193. 
+
+(11) Zhou, J.; Lin, J .; Huang, X.; Zhou, Y.; Chen, Y.; Xia, J.; Wang, H.; Xie, Y.; Yu, H.; Lei, 
+
+J.; Wu, D.; Liu, F.; Fu, Q.; Zeng, Q.; Hsu, C. H.; Yang, C.; Lu, L.; Yu, T.; Shen, Z.; Lin, 
+
+H.; Yakobson, B. I.; Liu, Q.; Suenaga, K.; Liu, G.; Liu, Z. A Library of Atomically Thin 
+
+Metal Chalcogenides. Nature 2018 , 556 (7701), 355 –359. https://doi.org/10.1038/s41586 -
+
+018 -0008 -3. 
+
+(12) Xu, L.; Zhang, P.; Jiang, H.; Wang, X.; Chen, F.; Hu, Z.; Gong, Y.; Shang, L.; Zhang, J.; 
+
+Jiang, K.; Chu, J. Large -Scale Growth and Field -Effect Transistors Electrical Engineering 
+
+of Atomic -Layer SnS2. Small 2019 , 15 (46). https://doi.org/10.1002/smll.2019 04116. 27 
+
+(13) Liang, J.; Zhao, P.; Wang, C.; Wang, Y.; Hu, Y.; Zhu, G.; Ma, L.; Liu, J.; Jin, Z. 
+
+CsPb0.9Sn0.1IBr2 Based All -Inorganic Perovskite Solar Cells with Exceptional 
+
+Efficiency and Stability. J. Am. Chem. Soc. 2017 , 139 (40), 14009 –14012. 
+
+https://doi .org/10.1021/jacs.7b07949. 
+
+(14) Tian, X.; Zhang, J.; Rigby, K.; Rivera, D. J.; Gao, G.; Liu, Y.; Zhu, Y.; Zhai, T.; Stavitski, 
+
+E.; Muhich, C. Tuning Local Atomic Structures in MoS2 Based Catalysts for 
+
+Electrochemical Nitrate Reduction. Small 2024 , 2310562. 
+
+(15) Yong, K.; De, S.; Hsieh, E. Y.; Leem, J.; Aluru, N. R.; Nam, S. Kirigami -Inspired Strain -
+
+Insensitive Sensors Based on Atomically -Thin Materials. Materials Today 2020 , 34 , 58 –
+
+65. https://doi.org/10.1016/j.mattod.2019.08.013. 
+
+(16) Perkins, F. K.; Fried man, A. L.; Cobas, E.; Campbell, P. M.; Jernigan, G. G.; Jonker, B. T. 
+
+Chemical Vapor Sensing with Monolayer MoS2. Nano Lett. 2013 , 13 (2), 668 –673. 
+
+https://doi.org/10.1021/nl3043079. 
+
+(17) Wang, Y.; Zhao, C.; Gao, X.; Zheng, L.; Qian, J.; Gao, X.; Li, J.; Tang, J.; Tan, C.; Wang, 
+
+J.; Zhu, X.; Guo, J.; Liu, Z.; Ding, F.; Peng, H. Ultraflat Single -Crystal Hexagonal Boron 
+
+Nitride for Wafer -Scale Integration of a 2D -Compatible High -κ Metal Gate. Nat. Mater. 
+
+2024 , 23 (11), 1495 –1501. https://doi.org/10.1038/s415 63 -024 -01968 -z. 
+
+(18) Park, H.; Kim, T. K.; Cho, S. W.; Jang, H. S.; Lee, S. I.; Choi, S. Y. Large -Scale 
+
+Synthesis of Uniform Hexagonal Boron Nitride Films by Plasma -Enhanced Atomic Layer 
+
+Deposition. Sci. Rep. 2017 , 7. https://doi.org/10.1038/srep40091. 
+
+(19 ) Zhan, K.; Chen, Y.; Xiong, Z.; Zhang, Y.; Ding, S.; Zhen, F.; Liu, Z.; Wei, Q.; Liu, M.; 
+
+Sun, B.; Cheng, H. M.; Qiu, L. Low Thermal Contact Resistance Boron Nitride 
+
+Nanosheets Composites Enabled by Interfacial Arc -like Phonon Bridge. Nat. Commun. 
+
+2024 , 15 (1). https://doi.org/10.1038/s41467 -024 -47147 -1. 
+
+(20) Choi, S. H.; Yun, S. J.; Won, Y. S.; Oh, C. S.; Kim, S. M.; Kim, K. K.; Lee, Y. H. Large -
+
+Scale Synthesis of Graphene and Other 2D Materials towards Industrialization. Nature 
+
+Communications . Nature Research December 1, 2022. https://doi.org/10.1038/s41467 -
+
+022 -29182 -y. 
+
+(21) Zhai, W.; Li, Z.; Zhai, L.; Yao, Y.; Li, S.; Wang, Y.; Ren, Y.; Chi, B.; Ge, Y.; Zhang, H. 
+
+Epitaxial Growth of Wafer -Scale Single -Crystal Transition Metal Dichalcogenide 
+
+Monolayers for Future Electronics. Matter . Cell Press August 3, 2022, pp 2405 –2408. 
+
+https://doi.org/10.1016/j.matt.2022.05.008. 
+
+(22) Fu, J. -H.; Min, J.; Chang, C. -K.; Tseng, C. -C.; Wang, Q.; Sugisaki, H.; Li, C.; Chang, Y. -
+
+M.; Alnami, I.; Syong, W. -R.; Lin, C.; Fang , F.; Zhao, L.; Lo, T. -H.; Lai, C. -S.; Chiu, W. -
+
+S.; Jian, Z. -S.; Chang, W. -H.; Lu, Y. -J.; Shih, K.; Li, L. -J.; Wan, Y.; Shi, Y.; Tung, V. 
+
+Oriented Lateral Growth of Two -Dimensional Materials on c -Plane Sapphire. Nat. 
+
+Nanotechnol. 2023 , 18 (11), 1289 –1294. https://doi.org/10.1038/s41565 -023 -01445 -9. 
+
+(23) Sakuma, Y.; Atsumi, K.; Hiroto, T.; Nara, J.; Ohtake, A.; Ono, Y.; Matsumoto, T.; Muta, 
+
+Y.; Takeda, K.; Kano, E.; Yasuno, T.; Yang, X.; Ikarashi, N.; Suzuki, A.; Ikezawa, M.; Li, 
+
+S.; Nishimura, T.; Kanahashi , K.; Nagashio, K. Self -Aligned and Self -Limiting van Der 
+
+Waals Epitaxy of Monolayer MoS2 for Scalable 2D Electronics. Nat. Commun. 2026 , 17 
+
+(1), 602. https://doi.org/10.1038/s41467 -026 -68320 -8. 
+
+(24) Zhang, J.; Zhai, T.; Yan, Y.; Fang, Q.; Liu, Y.; Zhu, Y. ; Tu, W.; Lin, C. -Y.; Wang, Y.; 
+
+Lou, J. Scalable Mechanical Exfoliation of Two -Dimensional Nanosheets by Polymer -
+
+Assisted Dry Ball -Mill of Layered Materials and Insights from Machine Learning. Mater. 28 
+
+Today Nano 2025 , 30 , 100604. 
+
+https://doi.org/https://doi .org/10.1016/j.mtnano.2025.100604. 
+
+(25) Bai, Y.; Xu, Y.; Sun, L.; Ward, Z.; Wang, H.; Ratnayake, G.; Wang, C.; Zhao, M.; He, H.; 
+
+Gao, J.; Wu, M.; Lu, S.; Bepete, G.; Peng, D.; Liu, B.; Kang, F.; Terrones, H.; Terrones, 
+
+M.; Lei, Y. Two -Dimensional Nanosheet s by Liquid Metal Exfoliation. Advanced 
+
+Materials 2025 , 37 (8). https://doi.org/10.1002/adma.202416375. 
+
+(26) Li, Z.; Young, R. J.; Backes, C.; Zhao, W.; Zhang, X.; Zhukov, A. A.; Tillotson, E.; 
+
+Conlan, A. P.; Ding, F.; Haigh, S. J.; Novoselov, K. S.; Colem an, J. N. Mechanisms of 
+
+Liquid -Phase Exfoliation for the Production of Graphene. ACS Nano 2020 , 14 (9), 10976 –
+
+10985. https://doi.org/10.1021/acsnano.0c03916. 
+
+(27) Huang, Y.; Pan, Y. H.; Yang, R.; Bao, L. H.; Meng, L.; Luo, H. L.; Cai, Y. Q.; Liu, G. D.; 
+
+Zh ao, W. J.; Zhou, Z.; Wu, L. M.; Zhu, Z. L.; Huang, M.; Liu, L. W.; Liu, L.; Cheng, P.; 
+
+Wu, K. H.; Tian, S. B.; Gu, C. Z.; Shi, Y. G.; Guo, Y. F.; Cheng, Z. G.; Hu, J. P.; Zhao, 
+
+L.; Yang, G. H.; Sutter, E.; Sutter, P.; Wang, Y. L.; Ji, W.; Zhou, X. J.; Gao, H. J. 
+
+Universal Mechanical Exfoliation of Large -Area 2D Crystals. Nat. Commun. 2020 , 11 (1). 
+
+https://doi.org/10.1038/s41467 -020 -16266 -w. 
+
+(28) Polsen, E. S.; McNerny , D. Q.; Viswanath, B.; Pattinson, S. W.; John Hart, A. High -Speed 
+
+Roll -to -Roll Manufacturing of Graphene Using a Concentric Tube CVD Reactor. Sci. Rep. 
+
+2015 , 5. https://doi.org/10.1038/srep10257. 
+
+(29) Dumcenco, D.; Ovchinnikov, D.; Marinov, K.; Lazi ć, P.; Gibertini, M.; Marzari, N.; 
+
+Sanchez, O. L.; Kung, Y. C.; Krasnozhon, D.; Chen, M. W.; Bertolazzi, S.; Gillet, P.; 
+
+Fontcuberta I Morral, A.; Radenovic, A.; Kis, A. Large -Area Epitaxial Monolayer MoS2. 
+
+ACS Nano 2015 , 9 (4), 4611 –4620. https://doi.org/10.102 1/acsnano.5b01281. 
+
+(30) Shi, Z.; Wang, X.; Li, Q.; Yang, P.; Lu, G.; Jiang, R.; Wang, H.; Zhang, C.; Cong, C.; Liu, 
+
+Z.; Wu, T.; Wang, H.; Yu, Q.; Xie, X. Vapor –Liquid –Solid Growth of Large -Area 
+
+Multilayer Hexagonal Boron Nitride on Dielectric Substrates. Nat. Commun. 2020 , 11 (1). 
+
+https://doi.org/10.1038/s41467 -020 -14596 -3. 
+
+(31) Lee, Y. H.; Zhang, X. Q.; Zhang, W.; Chang, M. T.; Lin, C. Te; Chang, K. Di; Yu, Y. C.; 
+
+Wang, J. T. W.; Chang, C. S.; Li, L. J.; Lin, T. W. Synthesis of Large -Area MoS 2 Atomic 
+
+Laye rs with Chemical Vapor Deposition. Advanced Materials 2012 , 24 (17), 2320 –2325. 
+
+https://doi.org/10.1002/adma.201104798. 
+
+(32) Zhang, J.; Wang, F.; Shenoy, V. B.; Tang, M.; Lou, J. Towards Controlled Synthesis of 
+
+2D Crystals by Chemical Vapor Deposition (CVD). Materials Today . Elsevier B.V. 
+
+November 1, 2020, pp 132 –139. https://doi.org/10.1016/j.mattod.2020.06.012. 
+
+(33) Xue, H.; W u, G.; Zhao, B.; Wang, D.; Wu, X.; Hu, Z. High -Temperature in Situ 
+
+Investigation of Chemical Vapor Deposition to Reveal Growth Mechanisms of Monolayer 
+
+Molybdenum Disulfide. ACS Appl. Electron. Mater. 2020 , 2 (7), 1925 –1933. 
+
+https://doi.org/10.1021/acsaelm. 0c00231. 
+
+(34) Wang, L.; Ding, Y.; Wang, X.; Lai, R.; Zeng, M.; Fu, L. In Situ Investigation of the 
+
+Motion Behavior of Graphene on Liquid Copper. Advanced Science 2021 , 8 (17). 
+
+https://doi.org/10.1002/advs.202100334. 
+
+(35) Zhang, K.; Ding, C.; Pan, B.; Wu, Z .; Marga, A.; Zhang, L.; Zeng, H.; Huang, S. 
+
+Visualizing Van Der Waals Epitaxial Growth of 2D Heterostructures. Advanced Materials 
+
+2021 , 33 (45). https://doi.org/10.1002/adma.202105079. 29 
+
+(36) Ling, X.; Lee, Y. -H.; Lin, Y.; Fang, W.; Yu, L.; Dresselhaus, M. S.; Kong, J. Role of the 
+
+Seeding Promoter in MoS2 Growth by Chemical Vapor Deposition. Nano Lett. 2014 , 14 
+
+(2), 464 –472. https://doi.org/10.1021/nl4033704. 
+
+(37) Cain, J. D.; Shi, F.; Wu, J.; Dravid, V. P. Growth Mechanism of Transition Metal 
+
+Dichalcogenide Monolayers: The Role of Self -Seeding Fullerene Nuclei. ACS Nano 2016 ,
+
+10 (5), 5440 –5445. https://doi.org/10.1021/acsnano.6b01705. 
+
+(38) Li, Y.; Wang, S.; Lv, Z.; Wang, Z.; Zhao, Y.; Xie, Y.; Xu, Y.; Qian, L.; Yang, Y.; Zhao, 
+
+Z.; Zhang, J. Transforming the Synthesis of Carbon Nanotubes with Machine Learning 
+
+Models and Automation. Matter 2025 , 8 (1). https://doi.org/10.1016/j.matt.2024.11.007. 
+
+(39) Huang, M.; Hua, Z.; Guzman, R.; Ren, Z.; Gu, P.; Yang, S.; Chen, H.; Zhang, D.; Ding, 
+
+Y.; Ye, Y.; Li, C.; Huang, Y.; Shao, R.; Zhou, W.; Xu, X.; Wang, Y. Stoichiometry -
+
+Engineered Phase Transition in a Two -Dimensional Binary Compound. Nature 
+
+Communications 2025 , 16 (1). https://doi.org/10.1038/s41467 -025 -59429 -3. 
+
+(40) Jiang, D.; Tang, Y. N.; Wang, D.; Xu, X.; Sun, J. ; Ma, R.; Li, W.; Han, Z.; Liu, Y.; Wei, 
+
+D. Self -Anchored Van -Der -Waals Stacking Growth of Transition -Metal Dichalcogenide 
+
+Nanoplates. Advanced Materials 2024 , 36 (39). https://doi.org/10.1002/adma.202407586. 
+
+(41) Jiang, H.; Zhang, X.; Chen, K.; He, X.; Li u, Y.; Yu, H.; Gao, L.; Hong, M.; Wang, Y.; 
+
+Zhang, Z.; Zhang, Y. Two -Dimensional Czochralski Growth of Single -Crystal MoS2. Nat. 
+
+Mater. 2025 , 24 (2), 188 –196. https://doi.org/10.1038/s41563 -024 -02069 -7. 
+
+(42) Yoshida, H.; Takeda, S.; Uchiyama, T.; Kohno, H. ; Homma, Y. Atomic -Scale In -Situ 
+
+Observation of Carbon Nanotube Growth from Solid State Iron Carbide Nanoparticles. 
+
+Nano Lett. 2008 , 8 (7), 2082 –2086. https://doi.org/10.1021/nl080452q. 
+
+(43) Saedi, M.; de Voogd, J. M.; Sjardin, A.; Manikas, A.; Galiotis , C.; Jankowski, M.; 
+
+Renaud, G.; La Porta, F.; Konovalov, O.; van Baarle, G. J. C.; Groot, I. M. N. 
+
+Development of a Reactor for the in Situ Monitoring of 2D Materials Growth on Liquid 
+
+Metal Catalysts, Using Synchrotron x -Ray Scattering, Raman Spectroscopy , and Optical 
+
+Microscopy. Review of Scientific Instruments 2020 , 91 (1), 13907. 
+
+https://doi.org/10.1063/1.5110656. 
+
+(44) Costine, A.; Delsa , P.; Li, T.; Reinke, P.; Balachandran, P. V. Data -Driven Assessment of 
+
+Chemical Vapor Deposition Grown MoS2 Monolayer Thin Films. J. Appl. Phys. 2020 .
+
+(45) Mao, Y.; Dong, N.; Wang, L.; Chen, X.; Wang, H.; Wang, Z.; Kislyakov, I. M.; Wang, J. 
+
+Machine Learn ing Analysis of Raman Spectra of MoS2. Nanomaterials 2020 , 10 (11), 1 –
+
+13. https://doi.org/10.3390/nano10112223. 
+
+(46) Tang, B.; Lu, Y.; Zhou, J.; Chouhan, T.; Wang, H.; Golani, P.; Xu, M.; Xu, Q.; Guan, C.; 
+
+Liu, Z. Machine Learning -Guided Synthesis of Advan ced Inorganic Materials. Materials 
+
+Today 2020 , 41 , 72 –80. https://doi.org/https://doi.org/10.1016/j.mattod.2020.06.010. 
+
+(47) Weatherup, R. S.; Shahani, A. J.; Wang, Z. -J.; Mingard, K.; Pollard, A. J.; Willinger, M. -
+
+G.; Schloegl, R.; Voorhees, P. W.; Hofman n, S. In Situ Graphene Growth Dynamics on 
+
+Polycrystalline Catalyst Foils. Nano Lett. 2016 , 16 (10), 6196 –6206. 
+
+https://doi.org/10.1021/acs.nanolett.6b02459. 
+
+(48) Meca, E.; Shenoy, V. B.; Lowengrub, J. H2 -Dependent Attachment Kinetics and Shape 
+
+Evolution in Chemical Vapor Deposition Graphene Growth. 2d Mater. 2017 , 4 (3). 
+
+https://doi.org/10.1088/2053 -1583/aa74f1. 
+
+(49) Balluffi, R. W.; Allen, S. M.; Carter, W. C.; Kemper, R. A. KINETICS OF MATERIALS 
+
+WILEY -INTERSCIENCE . www.copyright.com. 30 
+
+(50) Lei, J.; Xie, Y. ; Yakobson, B. I. Gas -Phase “Prehistory” and Molecular Precursors in 
+
+Monolayer Metal Dichalcogenides Synthesis: The Case of MoS2. ACS Nano 2021 , 15 (6), 
+
+10525 –10531. https://doi.org/10.1021/acsnano.1c03103. 
+
+(51) Yuan, J.; Wang, F.; Patel, S.; Hu, Z. -L.; Ta ng, M.; Lou, J. Minimizing the Water Effect in 
+
+Synthesis of High -Quality Monolayer MoS2 Nanosheets: Implications for Electronic and 
+
+Optoelectronic Devices. ACS Appl. Nano Mater. 2021 , 4 (8), 8094 –8100. 
+
+https://doi.org/10.1021/acsanm.1c01361. 
+
+(52) Momeni, K .; Ji, Y.; Chen, L. Q. Computational Synthesis of 2D Materials Grown by 
+
+Chemical Vapor Deposition. J. Mater. Res. 2022 , 37 (1), 114 –123. 
+
+https://doi.org/10.1557/s43578 -021 -00384 -2. 
+
+(53) Govind Rajan, A.; Warner, J. H.; Blankschtein, D.; Strano, M. S. Gener alized Mechanistic 
+
+Model for the Chemical Vapor Deposition of 2D Transition Metal Dichalcogenide 
+
+Monolayers. ACS Nano 2016 , 10 (4), 4330 –4344. 
+
+https://doi.org/10.1021/acsnano.5b07916. 
+
+(54) Artyukhov, V. I.; Hu, Z.; Zhang, Z.; Yakobson, B. I. Topochemistry of Bowtie - and Star -
+
+Shaped Metal Dichalcogenide Nanoisland Formation. Nano Lett. 2016 , 16 (6), 3696 –
+
+3702. https://doi.org/10.1021/acs.nanolett.6b00986. 
+
+(55) Avrami, M. Granulation, Phase Change, and Microstructure Kinetics of Phase Change. III. 
+
+1941 , 9 (2) , 177 –184. https://doi.org/10.1063/1.1750872. 
+
+(56) Avrami, M. Kinetics of Phase Change. I General Theory. 1939 , 7 (12), 1103 –1112. 
+
+https://doi.org/10.1063/1.1750380. 
+
+(57) Johnson, W. A. Reaction Kinetics in Processes of Nucleation and Growth; 1939. 
+
+(58) Suenaga, K.; Ji, H. G.; Lin, Y. -C.; Vincent, T.; Maruyama, M.; Aji, A. S.; Shiratsuchi, Y.; 
+
+Ding, D.; Kawahara, K.; Okada, S.; Panchal, V.; Kazakova, O.; Hibino, H.; Suenaga, K.; 
+
+Ago, H. Surface -Mediated Aligned Growth of Monolayer MoS2 and In -Plane 
+
+Hetero structures with Graphene on Sapphire. ACS Nano 2018 , 12 (10), 10032 –10044. 
+
+https://doi.org/10.1021/acsnano.8b04612. 
+
+(59) Li, T.; Guo, W.; Ma, L.; Li, W.; Yu, Z.; Han, Z.; Gao, S.; Liu, L.; Fan, D.; Wang, Z.; 
+
+Yang, Y.; Lin, W.; Luo, Z.; Chen, X.; Dai, N.; Tu, X.; Pan, D.; Yao, Y.; Wang, P.; Nie, 
+
+Y.; Wang, J.; Shi, Y.; Wang, X. Epitaxial Growth of Wafer -Scale Molybdenum Disulf ide 
+
+Semiconductor Single Crystals on Sapphire. Nat. Nanotechnol. 2021 , 16 (11), 1201 –1207. 
+
+https://doi.org/10.1038/s41565 -021 -00963 -8. 
+
+(60) Poodt, P. W. G.; Heijna, M. C. R.; Christianen, P. C. M.; van Enckevort, W. J. P.; de Grip, 
+
+W. J.; Tsukamoto, K.; Ma an, J. C.; Vlieg, E. Using Gradient Magnetic Fields to Suppress 
+
+Convection during Crystal Growth. Cryst. Growth Des. 2006 , 6 (10), 2275 –2280. 
+
+https://doi.org/10.1021/cg0600546. 
+
+(61) Wiesel, I.; Arbel, H.; Albu -Yaron, A.; Popovitz -Biro, R.; Gordon, J. M.; F euermann, D.; 
+
+Tenne, R. Synthesis of WS2 and MoS2 Fullerene -like Nanoparticles from Solid 
+
+Precursors. Nano Res. 2009 , 2 (5), 416 –424. https://doi.org/10.1007/s12274 -009 -9034 -7. 
+
+(62) Ji, Q.; Zheng, Y.; Zhang, Y.; Liu, Z. Chemical Vapour Deposition of Group -VIB Metal 
+
+Dichalcogenide Monolayers: Engineered Substrates from Amorphous to Single 
+
+Crystalline. Chemical Society Reviews . Royal Society of Chemistry May 7, 2015, pp 
+
+2587 –2602. https://doi.org/10.1039/c4cs00258j. 
+
+(63) Zhou, D.; Shu, H.; Hu, C.; Jiang, L.; Liang, P.; Chen, X. Unveiling the Growth 
+
+Mechanism of MoS2 with Chemical Vapor Deposition: From Two -Dimensional Planar 31 
+
+Nucleation to Self -Seeding Nucleation. Cryst. Growth Des. 2018 , 18 (2), 1012 –1019. 
+
+https://doi.org/10.1021/acs.cgd.7b01486. 
+
+(64) Zhu, J.; Hu, Z.; Guo, S.; Luo, R.; Yu, M.; Li, A.; Pang, J.; Xue, M.; Pennycook, S. J.; Liu, 
+
+Z.; Zhang, Z.; Zhou, W. Non -Epitaxial Growth of Highly Oriented Transition Metal 
+
+Dichalcogenides with Density -Controlled Twin Boundaries. Innovation 2023 , 4 (6). 
+
+https://d oi.org/10.1016/j.xinn.2023.100502. 
+
+(65) Ehrlich, G.; Hudda, F. G. Atomic View of Surface Self -Diffusion: Tungsten on Tungsten. 
+
+J. Chem. Phys. 1966 , 44 (3), 1039 –1049. https://doi.org/10.1063/1.1726787. 
+
+(66) Schwoebel, R. L.; Shipsey, E. J. Step Motion on C rystal Surfaces. J. Appl. Phys. 1966 , 37 
+
+(10), 3682 –3686. https://doi.org/10.1063/1.1707904. Supplementary Information for 
+
+Revealing the MoS 2 Growth Mechanism in Chemical Vapor Deposition: Real -Time Imaging and 
+
+Statistical Analysis 
+
+Faizal Arifurrahman 1,2 †, Tianshu Zhai 1† , Yuguo Wang 1, Jing Zhang 1, Andrew L. Hitt 1, Jun 
+
+Lou 1, 3*, Ming Tang 1, 3*
+
+1. Department of Materials Science and Nanoengineering, Rice University, Houston, TX 
+
+2. Faculty of Mechanical and Aerospace Engineering, Institut Teknologi Bandung, Jalan 
+
+Ganesha 10, Bandung, 40132, Indonesia 
+
+3. Rice Advanced Materials Institute, Rice Univers ity, Houston, TX 77005, USA  
+
+> †
+
+These authors contributed equally.  
+
+> *
+
+Corresponding author emails: jlou@rice.edu , mingtang@rice.edu Figure S1. Snapshots of video footage from in -situ optical microscopy at t = 0, 30, 60 and 150 s 
+
+after MoS 2 crystals were first detected on the substrate. Scale bar is 20 0 μm. Figure S2. Raman and Photoluminescence (PL) spectra of monolayer MoS2 grown on the sapphire 
+
+substrate in the miniature CVD system. (a) Raman and (b) PL spectra. Figure S 3. AFM height image of monolayer MoS 2 grown on sapphire, superimposed with the 
+
+height profile across a flake edge .Figure S 4. Instantaneous MoS 2 growth rate !" /!$ versus crystal area at a) 25, b) 30, c) 35, and 
+
+d) 40 s after the first MoS 2 was detected. Figure S 5. Spatial distribution of MoS 2 crystals with different orientations: blue – 0°, red – 60°, 
+
+and tan – other. A 15° tolerance is used when assigning crystals to the 0° or 60° orientation group. Figure S6. Instantaneous crystal growth rate vs a) number and b) area coverage of neighbor 
+
+crystals at 30, 40, 60, and 70 s after the first MoS 2 crystal was detected .Figure S7. a-c) MoS 2 crystal pairs with different orientation relations selected from the in -situ 
+
+video footage. d-e) Centroid distance of the crystal pair as a function of time. g -i) Gap distance of 
+
+the crystal pair as a function of time. Figure S 8. Substrate was intentionally scratched to help focusing the optical microscope on the 
+
+substrate surface. Figure S 9. Structure of the crystal t racking algorithm. Figure S 10. Image pre -processing: a pplication of the CLAHE algorithm to enhance MoS 2 /
+
+substrate contrast. Compared to global histogram equalization (left) , CLAHE reduces illumination 
+
+variation across the images and enables more effective separation of crystals from the substrate in 
+
+subsequent steps. Figure S 11. Image pre -processing : remove pre -existing artifact s (e.g. stain, dirt, etc .) by 
+
+subtracting an early frame containing only the bare substrate from all subsequent frames. This 
+
+operation prevents artifacts from being mis -identified as MoS 2 crystals. Figure S 12. Random forest model for segmenting crystals (white) and substrate ( black) in video 
+
+frames. Figure S 13. Example of a b inary image (bottom) segmented from the grayscale image (top) by 
+
+the random forest model. Figure S 14. Example of a crystal cluster that touches the image border being excluded from 
+
+analysis in the crystal tracking module. Figure S 15. (a) Confusion matrix of kNN, SVM and Random Forest classifiers when applied to 
+
+detect whether a crystal cluster is a single crystal or polycrystal. (b) Polycrystalline and single -
+
+crystalline MoS 2 flakes present in a frame are classified and analyzed separately in the tracking 
+
+process. Figure S1 6. a) Fitting a) a MoS 2 single crystal, and b) a MoS 2 polycrystal with r egular triangle(s) 
+
+using the differential evolution algorithm.

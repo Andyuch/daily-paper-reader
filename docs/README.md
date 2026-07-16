@@ -6,35 +6,35 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-07-15
-- 运行时间：2026-07-15 21:18:33 UTC
+- 最新运行日期：2026-07-16
+- 运行时间：2026-07-16 21:24:45 UTC
 - 运行状态：成功
 - 本次总论文数：4
 - 精读区：0
 - 速读区：4
 
 ### 今日简报（AI）
-今日速览 4 篇前沿论文，聚焦实验室原位 X 射线反射率测量与原子级光谱成像技术的最新突破。
-重点关注温控原位蒸汽给药 XRR 系统及 CaNb2O6 的价电子能量损失谱研究，揭示了微观结构与电子态的演变规律。
-建议对原位表征工具创新及纳米间隙分子行为感兴趣的读者深入了解相关实验装置的设计思路。
-- 详情：[/202607/15/README](/202607/15/README)
+今日聚焦纳米材料的生长与表征，通过实时成像与深度热成像技术揭示微观演化机制。
+重点关注 CVD 生长 MoS2 的实时统计分析，以及利用瞬态深度热成像直接测量法向热导率的新突破。
+建议关注先进表征技术在二维材料制备与热管理领域的应用，提升对微观物理过程的直观理解。
+- 详情：[/202607/16/README](/202607/16/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Enabling temperature controlled in-situ vapor dosing for lab source X-ray reflectivity measurements](/202607/15/2607.10339v1-enabling-temperature-controlled-in-situ-vapor-dosing-for-lab-source-x-ray-reflectivity-measurements)  
-   标签：评分：7.5/10、query:iscat
-   evidence：用于薄膜和电池应用的 operando 和原位反射池
-2. [Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6](/202607/15/2607.09466v1-unraveling-atomic-resolution-valence-electron-energy-loss-spectroscopic-imaging-in-a-single-crystal-canb2o6)  
+1. [Revealing the MoS2 Growth Mechanism in Chemical Vapor Deposition: Real-Time Imaging and Statistical Analysis](/202607/16/2607.13893v1-revealing-the-mos2-growth-mechanism-in-chemical-vapor-deposition-real-time-imaging-and-statistical-analysis)  
    标签：评分：7.0/10、query:iscat
-   evidence：单晶 CaNb2O6 的原子分辨率光谱成像
-3. [Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption](/202607/15/2607.08922v1-seeing-inside-a-plasmonic-nanogap-few-molecule-orientation-and-preferential-adsorption)  
+   evidence：CVD中MoS2生长机制的实时成像
+2. [Direct Measurement of Out-of-Plane Thermal Conductivity via Transient Depth Thermography](/202607/16/2607.13262v1-direct-measurement-of-out-of-plane-thermal-conductivity-via-transient-depth-thermography)  
+   标签：评分：6.5/10、query:iscat
+   evidence：用于内部热传输动力学的时间分辨热辐射
+3. [Seeing inside a Plasmonic Nanogap: Few-molecule Orientation and Preferential Adsorption](/202607/16/2607.08922v1-seeing-inside-a-plasmonic-nanogap-few-molecule-orientation-and-preferential-adsorption)  
    标签：评分：6.0/10、query:iscat
-   evidence：监测间隙内的侧向特定相互作用和相对分子取向
-4. [PLANCK: super-multiplex optical imaging without labeling](/202607/15/biorxiv-10-64898-2026-07-02-736216-v1-planck-super-multiplex-optical-imaging-without-labeling)  
+   evidence：表征金属纳米间隙中的分子-表面相互作用
+4. [Quantitative Analysis of Exciton Composition and Dynamics in Y6 Films for Single-Component Solar Cells](/202607/16/2607.10009v1-quantitative-analysis-of-exciton-composition-and-dynamics-in-y6-films-for-single-component-solar-cells)  
    标签：评分：6.0/10、query:iscat
-   evidence：具有分子特异性的无标记光学成像
+   evidence：用于太阳能电池薄膜激子动力学的超快瞬态吸收
 
 
 <div class="dpr-home-promo-card">
