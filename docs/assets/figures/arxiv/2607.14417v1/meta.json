@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.14417v1/fig-001.webp",
+      "caption": "FIG. 2. Short-time Fourier transform of the backgroundsubtracted reflectivity signal ∆R/Rsub. The color scale represents the normalized square root of the magnitude |S(f, t)| of the short-time Fourier transform. (a) nc-Si 650, (b) nc-Si 950, (c) nc-Si 1050, and (d) c-Si. The fundamental (n = 1), third and fifth modes are clearly resolved in the crystalline sample, while a strong suppression of the higher-order mode is observed in the nanocrystalline membranes, where the fifth mode is hardly observed.",
+      "page": 3,
+      "index": 1,
+      "width": 508,
+      "height": 521
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14417v1/fig-002.webp",
+      "caption": "FIG. 3. Decay curves with fitting for modes n = 1 and n = 3 for the three nc-Si samples. (a) nc-Si 650. (b) nc-Si 950. (c) nc-Si 1050.",
+      "page": 3,
+      "index": 2,
+      "width": 508,
+      "height": 1014
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14417v1/fig-003.webp",
+      "caption": "TABLE I. Summary of the extracted acoustic and transport parameters for nanocrystalline and crystalline silicon membranes. The first and third mode frequencies (f1, f3), longitudinal sound velocity (vL), phonon lifetimes (τ1, τ3), and corresponding mean free paths (Λ1, Λ3) are reported. The parameters B and p characterize the frequency-dependent grain-boundary scattering rate obtained from fits to Eq. (5). The exponent m is obtained from the fit of the intrinsic lifetime of the c-Si reference using Eq. (4).",
+      "page": 4,
+      "index": 3,
+      "width": 1062,
+      "height": 288
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14417v1/fig-004.webp",
+      "caption": "FIG. 4. Phonon lifetimes as a function of frequency for crystalline and nanocrystalline silicon membranes. Symbols correspond to experimental data, while solid lines represent the total fitted model τ(f) = [τ−1 int (f)+Bfp]−1. The black circles denote the crystalline Si reference, and the solid black line corresponds to the intrinsic lifetime τint(f) given by Eq. (4).",
+      "page": 5,
+      "index": 4,
+      "width": 508,
+      "height": 431
+    }
+  ]
+}

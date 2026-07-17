@@ -1,0 +1,86 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-001.webp",
+      "caption": "FIG. 3. Descriptor correlation hierarchy. (a) Autocorrelation functions C(r) for the mixed regime with fitted correlation lengths; the dashed line is the 1/e level. (b) Correlation-length hierarchy across the four regimes. The ordering ξ(Ecent) ≥ ξ(Edom) is robust within the present smooth-plus-trap model across the regimes studied here, while its magnitude is regime-specific; the dotted line marks the optical-resolution scale σopt, below which correlation lengths are interpreted cautiously.",
+      "page": 6,
+      "index": 1,
+      "width": 1050,
+      "height": 452
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-002.webp",
+      "caption": "FIG. 8. Descriptor robustness versus multi-Gaussian peak fitting. (a) One synthetic spectrum with n = 2, 3, 4 Gaussian fits. (b) All fitted component centers across peak numbers and random initializations (points; marker size ∝ fitted amplitude), compared with the deterministic descriptors Edom (solid) and Ecent (dotted): only the dominant component is consistently recovered near Edom, while the others scatter. (c) Worst-case standard deviation of a sorted fitted-component center across initializations for each n; the descriptors have zero spread by construction.",
+      "page": 11,
+      "index": 2,
+      "width": 1043,
+      "height": 297
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-003.webp",
+      "caption": "FIG. 4. Inverse fitting and synthetic recovery. (a–d) Posterior-mean inferred coordinate versus true value over canonical regimes (squares) and random test points (circles); error bars are posterior standard deviations and the dashed line is the identity. (e) Recovery of the combined trap-activity proxy Λt = Wtnt, which clusters along the identity more coherently than Wt or nt individually [(c),(d)]—the strength–density degeneracy is an intrinsic identifiability limit, not a deficiency of the inverse. (f) Observed versus best-fit summary statistics for the mixed regime (each component normalized by the observed magnitude). (g) Pairwise posterior P (Wt, nt) for the mixed regime, showing the trap strength–density degeneracy. The dashed curve is the iso-activity line Wtnt =const through the true value (star), shown as a representative—not unique—trap-activity direction (the exponent is regime dependent; Appendix D).",
+      "page": 7,
+      "index": 3,
+      "width": 1052,
+      "height": 578
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-004.webp",
+      "caption": "FIG. 7. The HyperPL-Diag analysis workflow. A hyperspectral cube plus metadata enters at the top; each stage is a package function, and the pipeline returns descriptor maps, the correlation hierarchy {ξα}, the descriptor covariance, the effective disorder coordinates Θeff with uncertainty, and a summary report.",
+      "page": 10,
+      "index": 4,
+      "width": 406,
+      "height": 354
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-005.webp",
+      "caption": "FIG. 1. Concept and workflow of peak-decomposition-free inverse disorder metrology. (a) The input is a hyperspectral PL cube I(x, y, E), with two spatial axes (x, y) and a photon-energy axis E. The volume rendering shows the spatially varying, multipeaked emission, color-coded by PL intensity, together with its projection onto the spatial plane. The same pipeline accepts a synthetic cube (validation, this work) or an experimental cube (application). (b) Peak-decomposition-free descriptor maps Dα(x, y) are computed directly from each spectrum. (c) Spatial autocorrelation and cross-correlation functions Cαβ(r) yield a descriptor correlation hierarchy. (d) A minimal smooth-plus-trap generative model with coordinates Θeff = {Ws, ξs,Wt, nt} is the inverse engine. (e) Samples or regions are placed on a disorder-coordinate diagram. No step requires multi-peak decomposition.",
+      "page": 3,
+      "index": 5,
+      "width": 1047,
+      "height": 357
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-006.webp",
+      "caption": "FIG. 9. Sensitivity to analysis choices across the four regimes. (a) ρ(∆Edc, RLH) for three RLH split points: the strong positive co-variation is specific to the local-Edom split (blue); a fixed global split (grey) gives a near-uncorrelated descriptor. (b) The correlation-length gap ∆ξ = ξ(Ecent)−ξ(Edom) stays positive under all five ξ definitions, largest for the trap-dominated regime. (c) ξ(Ecent), ξ(Edom) and ρ(∆Edc, RLH) versus random pixel dropout (trap-dominated regime): the hierarchy and correlation are preserved.",
+      "page": 12,
+      "index": 6,
+      "width": 1043,
+      "height": 299
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-007.webp",
+      "caption": "FIG. 10. Sensitivity of the inferred coordinates to the summary-vector choice. (a–d) Inferred-versus-true recovery for each coordinate, overlaying four summary subsets (full, no-ρ, ξ-only, no-Var) on the four canonical regimes; the dashed line is the identity. The smooth coordinates are recovered consistently; the “full” and “no-ρ” markers nearly coincide everywhere, and only the hierarchy-only subset degrades, in the blurred dense-trap regime.",
+      "page": 12,
+      "index": 7,
+      "width": 1045,
+      "height": 238
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-008.webp",
+      "caption": "FIG. 5. Disorder-coordinate diagnostics. (a,b) Inferred effective coordinates of the four regimes in the (Ws,Wt) and (ξs, nt) planes; circles with error bars are posterior mean ± standard deviation and stars are the true values. (c) Model-free diagnostic diagram using X1 = ξ(Ecent)/ξ(Edom) and X2 = Var(Ecent) (shown on a logarithmic vertical scale), which separates the regimes without any inverse model.",
+      "page": 9,
+      "index": 8,
+      "width": 1053,
+      "height": 417
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-009.webp",
+      "caption": "FIG. 6. Robustness of the descriptor statistics for the mixed regime. (a) Hierarchy ratio X1 = ξ(Ecent)/ξ(Edom) and correlation magnitude |ρ(∆Edc, RLH)| versus peak shot-noise SNR. (b) Versus energy-window span. (c) ξ(Ecent) and Var(Ecent) versus optical FWHM. (d) X1 and |ρ(∆Edc, RLH)| versus measurement pixel pitch.",
+      "page": 9,
+      "index": 9,
+      "width": 1043,
+      "height": 233
+    },
+    {
+      "url": "assets/figures/arxiv/2607.12325v1/fig-010.webp",
+      "caption": "FIG. 2. Descriptor maps from a single synthetic PL cube in the mixed regime (Ws = 12 meV, ξs = 2 µm, Wt = 12 meV, nt = 6 µm−2). (a,b) The true smooth and trap potentials. (c–h) The peak-decomposition-free descriptor maps and their fitted correlation lengths. The smooth-disorder-filtered descriptor Ecent (c) varies on long scales and tracks Vs, whereas the trap-sensitive Edom (d), RLH (f), and ∆Edc (g) reveal short-scale structure; the spectral width σE (e) and integrated intensity Iint (h) highlight trap-rich regions. Different descriptors expose different spatial structure from the same cube. Iint is shown for diagnostic completeness but is excluded from the baseline inverse (it is sensitive to excitation and collection efficiency).",
+      "page": 5,
+      "index": 10,
+      "width": 1052,
+      "height": 542
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-10-737858-v1/fig-001.webp",
+      "caption": "Fig 5. Integrated DENSS fitting and MD simulations elucidate ultrafast rhodopsin dynamics. (A) Rhodopsin minus opsin experimental scattering profiles are fit to the calculated difference-scattering profiles (black) obtained from dark and light-activated coordinates for representative time points from a single trajectory (out of 8000 MD trajectories) using DENSS 31. (B and C) Time sequence of optimized fitting parameters (in e/Å3) obtained from DENSS fits of rhodopsin light activate scattering profiles, namely, excluded volume density (bulk solvent) (panel B), and hydration shell contrast (panel C). For visualization purposes, a low-pass filter was applied to the data (solid line). Left insets: schematics of excluded volume (panel B, red) and hydration shell (panel C, blue). The red surface is made using CHIMERAX 53.(D) Averaged difference (dark–light) electron densities from MD simulations overlaid on dark retinal structure (red, negative; blue, positive difference electron density). Top left: difference at 1 ps and bottom left: 10-ps timescales. (E) Difference electron densities overlaid on the retinal from inactive dark-state TR-SFX crystal structure (PDB code: 7ZBE). Top right: panel is calculated from 1-ps crystal structure (PDB code: 8A6C) and bottom",
+      "page": 11,
+      "index": 1,
+      "width": 610,
+      "height": 1056
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-10-737858-v1/fig-002.webp",
+      "caption": "Fig 3. Time-resolved X-ray scattering analysis of ultrafast structural changes of rhodopsin compared to ligandfree opsin. (A) Histogram showing the number of scattering patterns versus the intensity per shot (photons/pixel) in the scattering vector range q > 0.3 Å–1 for opsin and rhodopsin. (B, C) Number of shots available for rhodopsin and opsin apoprotein experiments (blue) corresponding to each time delay (ps) with 100-fs binning plotted alongside number of shots actually averaged (orange) for analysis. (D) Heatmap shows rhodopsin-minus-opsin doubledifference profiles at 100-fs binning. (E) Expansion of panel D between the scattering vectors q = 0.06 Å–1 and 0.22 Å–1. (F) The SVD components obtained when scattering profiles are binned at 30 fs. The first ten right-singular vectors (r-SVs) show only two components with significant structure. Inset: first five left-singular vectors (l-SVs) versus time delay, showing only two vectors with scattering features. (G) Expansion of data for first two left-singular vectors (l-SVs) from –2 to +10 ps. (H) Expansion of data for first l-SV is shown for –2 to +2 ps time delays.",
+      "page": 7,
+      "index": 2,
+      "width": 939,
+      "height": 848
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-10-737858-v1/fig-003.webp",
+      "caption": "Fig. 1. Exploring ultrafast photochemistry of visual rhodopsin with femtosecond X-ray scattering. (A) Sample delivery and laser excitation scheme for time-resolved pump-probe studies of rhodopsin solubilized in CHAPS detergent micelles at Linac Coherent Light Source (LCLS). (B) Sequence of rhodopsin photointermediates from optical spectroscopy ranging from fs to ms due to photolysis of the bound retinal chromophore. (C) Electronic energy states of visual rhodopsin (PDB accession code: 1U19) 13 described by potential surfaces of retinal cofactor. Absorption of a green incident photon yields vertical excitation to an excited state, which relaxes to the conical intersection (CI) with the ground-state S0 potential surface 23. The protein environment channels the excited-state energy through the CI yielding the biologically relevant pathway. Note the extracellular side (e-side) of rhodopsin is at top and the cytoplasmic side (c-side) at bottom.",
+      "page": 4,
+      "index": 3,
+      "width": 943,
+      "height": 660
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-10-737858-v1/fig-004.webp",
+      "caption": "Fig 4. Timeline of X-ray scattering analysis of rhodopsin structural changes compared to photointermediates. (A) Light-minus-dark scattering profiles (left panels) showing evolution of averaged difference electron densities (right panels) from ~8000 paired MD simulations superimposed on retinal, Tyr268, and Trp265 of dark-state rhodopsin from a random single trajectory. Positive difference density is shown by blue-colored mesh and negative by the red mesh around Tyr268 and Trp265 residues. The retinal isomerization was revealed by negative density at the 11-cis bond and positive density for the trans conformation. Density maps are contoured at 40 σ. By 500 fs evolution of the difference density around the Tyr268 residue is completed. (B) Complementary view of structures from time-resolved serial femtosecond crystallography. PDB codes: 7ZBE (dark), 8A6C (1 ps), 8A6D (10 ps), and 8A6E (100 ps) 15.",
+      "page": 9,
+      "index": 4,
+      "width": 897,
+      "height": 1056
+    },
+    {
+      "url": "assets/figures/biorxiv/biorxiv-10-64898-2026-07-10-737858-v1/fig-005.webp",
+      "caption": "Fig. 2. Femtosecond time-resolved X-ray scattering analysis of light-induced rhodopsin structural changes. (A) Experimental TR-XSS difference profiles (light–dark; λ=527 nm) for rhodopsin (10 mg mL–1 in 30 mM CHAPS detergent) at pH 7.4 and ambient temperature. The TR-XSS profiles are shown as a stack of 1D profiles, colored as a heatmap. Each horizontal line corresponds to a single scattering profile at a particular time delay (blue, positive; red, negative). (B) Corresponding data for retinal-free opsin apoprotein; the color-bar shows difference-scattering intensity in units of photons per pixel. (C) Examples of rhodopsin-minus-opsin double-difference profiles for representative times from –2 to +10 ps. (D) Singular-value decomposition (SVD) of double-difference profiles reveals two significant states. Amplitudes of the first two left-singular vectors (l-SV) versus time are fitted with a sum of exponentials. (E) Closeup for dominant left-singular vector during first two ps shows the most significant state rises within the first time point coinciding with 11-cis to all-trans isomerization of retinal.",
+      "page": 5,
+      "index": 5,
+      "width": 947,
+      "height": 639
+    }
+  ]
+}

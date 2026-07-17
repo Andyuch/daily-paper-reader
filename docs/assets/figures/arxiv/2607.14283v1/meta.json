@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.14283v1/fig-001.webp",
+      "caption": "Figure 1. Interferometric signal, sources of uncertainty, and principle of averaging-based mass resolution improvement. (a) Principle of optical interference mass measurement. Light scattered from a molecule (𝐸() interferes with the reference field (𝐸)). (b) Visualization of interferometric contrast images for molecules of increasing mass. Optical contrast scales proportionally with molecular mass. (c) Spatial heterogeneity of the reference field amplitude and phase leads to position-dependent variations in molecular contrast. Scattering of anisotropic particles leads to orientation-dependent variations in molecular contrast. (d) Representative time trace of detected intensity at a fixed position in MP. Fluctuations arise from intensity noise, whereas the abrupt intensity drop corresponds to a molecular landing event. Inset: Schematic dependence of the contrast standard deviation arising from light-dependent intensity noise on integration time. Photon shot noise decreases with increasing integration time, whereas instrumental drifts typically increase. (e) Schematic of NSM detection. A biomolecule is transported through an illuminated nanofluidic channel. (f) Representative time trace of detected intensity at three fixed positions in NSM. Fluctuations arise from intensity noise, whereas transient drops in intensity correspond to passing molecules. (g) Visualization of interferometric contrast images showing two molecules passing through the nanochannel at different times. (h) Expected dependence of single-molecule mass precision in NSM on observation time. Each dot represents the trajectory-averaged mass of an individual molecule. Longer observation times reduce the spread around the nominal mass value, leading to narrower mass distributions and decreased FWHM (red).",
+      "page": 5,
+      "index": 1,
+      "width": 976,
+      "height": 1014
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14283v1/fig-002.webp",
+      "caption": "Figure 2. Megadalton regime benchmarking with DNA origami. (a, b) Representative NSM kymographs (left) of individual molecules tracked for 0.3 s and 2.2 s, respectively. Corresponding molecular mass histograms (right), in which each molecule contributes N counts according to the number of frames in the tracked trajectory. Black lines show Gaussian fits. (c) Representative MP differential image (left) of transient molecular adsorption events and the corresponding molecular mass distribution (right). For each of the histograms in (a-c), bin sizes were selected using Scott’s rule (Methods). The black line shows a Gaussian fit. (d, e) Dependence of FWHM and mass resolution, respectively, on observation time for NSM, shown for both the experimental values and the calculated theoretical limit (Methods). (f) Dependence of FWHM on molecular mass. Literature values for NSM and MP 5–7 are plotted alongside the experimentally determined NSM and MP values from this work, highlighting the improved performance of NSM in the megadalton regime.",
+      "page": 7,
+      "index": 2,
+      "width": 976,
+      "height": 1098
+    }
+  ]
+}

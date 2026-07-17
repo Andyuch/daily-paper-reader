@@ -1,0 +1,316 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-17T21:25:18.232569+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2607.14283v1",
+      "source": "arxiv",
+      "title": "High-resolution single-molecule mass measurement of megadalton assemblies in solution",
+      "abstract": "Resolving heterogeneity in megadalton assemblies requires precise single-molecule mass measurements in solution. Mass photometry infers mass from individual molecular surface-landing events, and event-to-event measurement variability limits precision. Nanofluidic scattering microscopy overcomes this limitation by continuously tracking molecules in motion, enabling repeated sampling and temporal averaging of these fluctuations. Benchmarking with 4.5 MDa DNA origami demonstrates up to a fourfold improved resolution, approaching the performance of ensemble-averaged native mass spectrometry.",
+      "authors": [
+        "Tereza Roesel",
+        "Evangelos Efraimidis",
+        "Niklas Hansen",
+        "Yulia Yancheva",
+        "Miroslav Hekrdla",
+        "Katarzyna M. Tych",
+        "Vladimira Petrakova",
+        "Barbora Spackova"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-15T18:45:54+00:00",
+      "link": "https://arxiv.org/pdf/2607.14283v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "nanofluidic scattering microscopy for single-molecule mass measurement",
+      "llm_evidence_cn": "用于单分子质量测量的纳米流体散射显微镜",
+      "llm_evidence": "用于单分子质量测量的纳米流体散射显微镜",
+      "canonical_evidence": "用于单分子质量测量的纳米流体散射显微镜",
+      "llm_tldr_en": "Develops nanofluidic scattering microscopy for high-resolution single-molecule mass measurements.",
+      "llm_tldr_cn": "开发了用于高分辨率单分子质量测量的纳米流体散射显微镜。",
+      "llm_tldr": "开发了用于高分辨率单分子质量测量的纳米流体散射显微镜。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14678v1",
+      "source": "arxiv",
+      "title": "Vortex-Beam Transient Absorption Microspectroscopy Resolves Ultrafast Free-Exciton and Polaron Diffusion in 2D Perovskites",
+      "abstract": "Two-dimensional (2D) Ruddlesden Popper perovskites are promising optoelectronic materials with strongly confined excitonic properties; however, probing their ultrafast carrier transport dynamics, particularly the initial nonequilibrium diffusion regime, remains challenging because conventional transient absorption microscopy requires complex spatial imaging and lacks sufficient temporal sensitivity to resolve early time diffusion dynamics. Here, we demonstrate a vortex beam based transient absorption microspectroscopy platform (VTAM) enabling imaging free measurement of carrier transport by encoding spatial diffusion information into the mode dependent pump probe signal. By employing vortex probes with different topological charges, VTAM provides mode selective spatial sensitivity to excitonic dynamics with subpicosecond temporal resolution. Using VTAM, we resolved rapid free exciton (FE) diffusion followed by relaxation toward a slower steady state transport regime. A theoretically derived time dependent diffusion model separated transient and steady state transport contributions, yielding a transient diffusion enhancement (68.84 cm2 per s) and a steady state diffusion coefficient (1.85 cm2 per s), thus providing an initial diffusion coefficient (70.69 cm2 per s), and a cooling time of 0.35 ps. Measurements at the exciton-polaron (EP) resonance revealed strongly suppressed diffusion with nearly time independent signal ratios, indicating lattice-coupled EP transport. These parameters were extracted without spatial scanning or image reconstruction, establishing V-TAM as a powerful imaging free platform for investigating carrier transport in perovskites and other semiconductor systems.",
+      "authors": [
+        "Ju-Young Kim",
+        "Anirban Mondal",
+        "Gi Rim Han",
+        "Kwang Jin Lee",
+        "Jong Min Lim",
+        "Myeongsam Jen",
+        "Minhaeng Cho"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-16T07:42:39+00:00",
+      "link": "https://arxiv.org/pdf/2607.14678v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "resolves ultrafast carrier transport and diffusion in 2D perovskites using transient absorption",
+      "llm_evidence_cn": "利用瞬态吸收技术解析二维钙钛矿中的超快载流子传输与扩散",
+      "llm_evidence": "利用瞬态吸收技术解析二维钙钛矿中的超快载流子传输与扩散",
+      "canonical_evidence": "利用瞬态吸收技术解析二维钙钛矿中的超快载流子传输与扩散",
+      "llm_tldr_en": "Introduces vortex-beam transient absorption to resolve ultrafast carrier transport in 2D perovskites.",
+      "llm_tldr_cn": "引入涡旋光束瞬态吸收技术，以解析二维钙钛矿中的超快载流子传输动力学。",
+      "llm_tldr": "引入涡旋光束瞬态吸收技术，以解析二维钙钛矿中的超快载流子传输动力学。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2607.14761v1",
+      "source": "arxiv",
+      "title": "Motion-Based Beamshape Recovery Enables Precision Nanoparticle Sizing",
+      "abstract": "Label-free all-optical nanosizing approaches based on interferometric or darkfield-imaging infer size, composition, or shape from single-particle scattering signals, but these signals are inseparably coupled to the spatially non-uniform illumination profile of the imaging system. Existing normalisation strategies require directly measuring this illumination field, an approach that fails for background-free geometries, such as lightsheet-type illumination, where the field cannot be detected. Here we introduce a self-normalisation method that reconstructs the illumination profile directly from the scattering signals of many freely diffusing nanoparticles, requiring no additional hardware, calibration samples, or direct field measurement. Critically, our approach eliminates the particle-heterogeneity bias that otherwise corrupts such reconstructions, by normalising single-particle trajectories against each other in regions of spatial overlap, where distinct particles necessarily sample identical illumination and detection conditions. We validate this method for gold nanoparticles of various size in two- and three-dimensional geometries, including a 90° side-illumination configuration in which the illumination field is entirely undetectable by conventional means, and show that reconstructed profiles closely match ground-truth measurements, thus drastically reducing signal variability. Relying solely on the scattering signal already acquired for sizing, our approach is immediately compatible with existing interferometric and darkfield nanoscopy platforms and broadly extendable to other scattering or fluorescent modalities, including light-sheet microscopy.",
+      "authors": [
+        "D-Dré K. J. M. J. Braam",
+        "Daan Wolters",
+        "Matz Liebel"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-16T09:46:00+00:00",
+      "link": "https://arxiv.org/pdf/2607.14761v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "interferometric scattering signals for nanoparticle sizing",
+      "llm_evidence_cn": "用于纳米颗粒测量的干涉散射信号",
+      "llm_evidence": "用于纳米颗粒测量的干涉散射信号",
+      "canonical_evidence": "用于纳米颗粒测量的干涉散射信号",
+      "llm_tldr_en": "Introduces a self-normalization method for precision nanoparticle sizing using interferometric scattering signals.",
+      "llm_tldr_cn": "介绍了一种利用干涉散射信号进行精确纳米颗粒测量的自归一化方法。",
+      "llm_tldr": "介绍了一种利用干涉散射信号进行精确纳米颗粒测量的自归一化方法。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.14417v1",
+      "source": "arxiv",
+      "title": "Confined acoustic phonon mode filtering in free-standing nanocrystalline silicon membranes",
+      "abstract": "We report the femtosecond time-resolved measurements of confined acoustic phonons in free-standing nanocrystalline silicon membranes and compare them directly with the crystalline silicon counterpart. While the latter exhibit well-resolved higher-order modes, a strong suppression of these modes is observed in nanocrystalline samples with grain size distribution controlled by thermal annealing. The suppression is strongly frequency dependent and becomes more pronounced as the phonon wavelength approaches the characteristic grain size. By separating intrinsic and extrinsic contributions to the phonon lifetime, we identify an additional frequency-dependent decay channel associated with grain boundaries, with scattering rates following a power-law dependence close to $f^{2}$, where $f$ is the frequency. The measured sound velocity is consistent with previous reports for nanocrystalline silicon and indicates an effective elastic response arising from multiple crystallographic orientations. These results establish coherent phonons as a sensitive probe of microstructure-dependent scattering in nanocrystalline materials and indicate that grain boundaries act as an effective spectral filter for high-frequency acoustic phonons.",
+      "authors": [
+        "Tiago E. C. Magalhães",
+        "Tânia M. Ribeiro",
+        "Oili Ylivaara",
+        "Jouni Ahopelto",
+        "Clivia M. Sotomayor Torres"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-15T23:10:37+00:00",
+      "link": "https://arxiv.org/pdf/2607.14417v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "femtosecond time-resolved measurements of phonons in silicon membranes",
+      "llm_evidence_cn": "硅膜中声子的飞秒时间分辨测量",
+      "llm_evidence": "硅膜中声子的飞秒时间分辨测量",
+      "canonical_evidence": "硅膜中声子的飞秒时间分辨测量",
+      "llm_tldr_en": "Investigates phonon mode filtering in silicon membranes using femtosecond time-resolved techniques.",
+      "llm_tldr_cn": "利用飞秒时间分辨技术研究硅膜中的声子模式过滤。",
+      "llm_tldr": "利用飞秒时间分辨技术研究硅膜中的声子模式过滤。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.12325v1",
+      "source": "arxiv",
+      "title": "Peak-Decomposition-Free Inverse Metrology of Hyperspectral Moiré Photoluminescence",
+      "abstract": "Hyperspectral photoluminescence (PL) of moiré transition-metal dichalcogenide heterobilayers encodes spatially varying exciton landscapes, but extracting that information is hampered by the ambiguity of multi-peak spectral decomposition. Here we develop a peak-decomposition-free inverse framework for quantitative optical metrology of effective disorder coordinates. From the raw cube $I(x,y,E)$ we construct physically motivated descriptor maps -- centroid energy, dominant emission energy, spectral width, low/high spectral-weight ratio, and dominant--centroid offset. Their spatial autocorrelation hierarchy and covariance structure form a robust descriptor fingerprint of multi-scale disorder-sensitive spectral statistics. By matching these descriptor summary statistics to a minimal smooth-plus-trap generative model through a grid-Bayesian inverse, we infer effective disorder coordinates $\\Thetaeff=\\{\\Ws,\\xis,\\Wt,\\nt\\}$ with explicit uncertainties. Using synthetic PL cubes generated from controlled multi-scale landscapes, we recover the well-identified smooth-disorder coordinates and constrain the trap sector up to a strength--density degeneracy. We report this degeneracy explicitly as an intrinsic identifiability limit rather than a deficiency of the method, and map four canonical disorder regimes onto a disorder-coordinate diagram. The descriptor statistics are stable against shot noise and pixel pitch, and behave predictably under optical-resolution and energy-window changes. The same pipeline ingests experimental cubes without modification, making it directly applicable to two-dimensional and moiré materials. Our results establish descriptor-based hyperspectral PL as a practical, minimal-assumption route to optical disorder diagnostics and provide the validated core of a reusable analysis workflow (\\texttt{HyperPL-Diag}) for moiré exciton systems.",
+      "authors": [
+        "Katsunori Wakabayashi"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-14T04:11:27+00:00",
+      "link": "https://arxiv.org/pdf/2607.12325v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "quantitative optical metrology of exciton landscapes in moire heterobilayers",
+      "llm_evidence_cn": "莫尔异质双层中激子景观的定量光学计量",
+      "llm_evidence": "莫尔异质双层中激子景观的定量光学计量",
+      "canonical_evidence": "莫尔异质双层中激子景观的定量光学计量",
+      "llm_tldr_en": "Presents a peak-decomposition-free framework for characterizing disorder in moire semiconductor materials.",
+      "llm_tldr_cn": "提出了一种无需峰分解的框架，用于表征莫尔半导体材料中的多尺度无序。",
+      "llm_tldr": "提出了一种无需峰分解的框架，用于表征莫尔半导体材料中的多尺度无序。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.13779v1",
+      "source": "arxiv",
+      "title": "Mapping recrystallization trajectories in GaAs using latent space diffraction analysis",
+      "abstract": "Recrystallization in disordered solids proceeds through a sequence of local structural rearrangements that are difficult to resolve using conventional diffraction analysis. In amorphous and partially ordered materials, subtle variations in diffuse scattering, short-range order, and defect-mediated symmetry emergence encode the pathways through which ordering initiates and propagates. Here, we introduce a latent space framework for mapping these pathways directly from \\textit{in situ} 4D-STEM diffraction data. A convolutional autoencoder provides a compact representation of structural motifs, and unsupervised clustering identifies recurring microstructural states, including amorphous, paracrystalline, crystalline, twinned, and hybrid intermediates. By tracking these states across temperature, we construct phase trajectory models that reveal the topology of the recrystallization landscape, including metastable basins, branching pathways, hybrid states, and temperature-dependent reorganizations of accessible states.   Applied to ion irradiated GaAs, this approach uncovers two distinct recrystallization regimes separated by a transition near 250\\textdegree{}C. At low temperature, recrystallization is growth-dominated and dominated by the persistence of amorphous and crystalline states. At high temperature, the transformation landscape reorganizes: hybrid and faulted states become metastable precursors to twinning, polycrystalline regions stabilize, and twinned structures emerge as dominant end states. The latent space representation also identifies amorphous patterns with weak symmetry signatures that precede recrystallization. This reveals structural precursors to ordering that are not captured by conventional descriptors give new insights into how recrystallization is initiated.",
+      "authors": [
+        "Ellis Rae Kennedy",
+        "Kwanghwi Je",
+        "Erik Thiede"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-15T12:37:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.13779v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "in situ mapping of structural rearrangements in GaAs using diffraction analysis",
+      "llm_evidence_cn": "利用衍射分析原位映射砷化镓中的结构重排",
+      "llm_evidence": "利用衍射分析原位映射砷化镓中的结构重排",
+      "canonical_evidence": "利用衍射分析原位映射砷化镓中的结构重排",
+      "llm_tldr_en": "Introduces a latent space framework for in situ mapping of recrystallization trajectories in GaAs.",
+      "llm_tldr_cn": "引入了一种潜空间框架，用于原位映射砷化镓中的再结晶轨迹。",
+      "llm_tldr": "引入了一种潜空间框架，用于原位映射砷化镓中的再结晶轨迹。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "biorxiv-10-64898-2026-07-10-737858-v1",
+      "source": "biorxiv",
+      "title": "Ultrafast X-Rays Capture Retinal Traversing Conical Intersection in Rhodopsin",
+      "abstract": "G-protein-coupled receptors of the Rhodopsin family are crucial medicinal targets, transmitting signals across biomembranes. While light absorption by visual rhodopsin is well studied, its activation via retinal cofactor dynamics remains unclear. Here we use a free-electron laser to show that time-resolved X-ray solution scattering captures the retinal cis-trans isomerization as it passes the conical intersection of excited and ground-state photoproduct energy surfaces. Femtosecond-scale nuclear changes occur due to resonant photon absorption, with all-atom simulations revealing ultrafast amino acid movements that initiate transmembrane helix shifts. Ligand-free opsin measurements confirm that light activation is unaffected by non-resonant processes, showing the photonic energy is directly transmitted within the protein. Our method unveils how cofactor dynamics activate rhodopsin, free of constraints from crystal lattice packing or cryotrapping photointermediates.",
+      "authors": [
+        "Grant, T. D.",
+        "Perera, S. M. D. C.",
+        "Salas-Estrada, L. A.",
+        "Menon, C. S. K.",
+        "Struts, A. V.",
+        "Xu, X.",
+        "Fried, S. D. E.",
+        "Weerasinghe, N.",
+        "Chawla, U.",
+        "Alvarez, R.",
+        "Hu, H.",
+        "Karpos, K.",
+        "Lisova, S.",
+        "Nazari, R.",
+        "Zaare, S.",
+        "Coe, J.",
+        "Fromme, R.",
+        "Meza, D.",
+        "Singharoy, A.",
+        "Chamberlain, S. R.",
+        "Moore, S.",
+        "Zatsepin, N. A.",
+        "Perakis, F.",
+        "Carbajo, S.",
+        "Hunter, M. S.",
+        "Liang, M.",
+        "Seaberg, M. D.",
+        "Boutet, S.",
+        "Mendez, D.",
+        "Grossfield, A.",
+        "Fromme, P.",
+        "Kirian, R. A.",
+        "Brown, M. F."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-07-16T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.07.10.737858v1.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved X-ray solution scattering for ultrafast dynamics",
+      "llm_evidence_cn": "用于超快动力学的时间分辨X射线溶液散射",
+      "llm_evidence": "用于超快动力学的时间分辨X射线溶液散射",
+      "canonical_evidence": "用于超快动力学的时间分辨X射线溶液散射",
+      "llm_tldr_en": "Uses time-resolved X-ray scattering to capture ultrafast retinal isomerization in rhodopsin.",
+      "llm_tldr_cn": "利用时间分辨X射线散射技术捕捉视紫红质中超快的视黄醛异构化过程。",
+      "llm_tldr": "利用时间分辨X射线散射技术捕捉视紫红质中超快的视黄醛异构化过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

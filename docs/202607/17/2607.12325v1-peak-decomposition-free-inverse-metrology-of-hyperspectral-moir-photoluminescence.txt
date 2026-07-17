@@ -1,0 +1,1030 @@
+Title: Peak-Decomposition-Free Inverse Metrology of Hyperspectral Moiré Photoluminescence
+
+URL Source: https://arxiv.org/pdf/2607.12325v1
+
+Published Time: Wed, 15 Jul 2026 11:59:32 GMT
+
+Number of Pages: 14
+
+Markdown Content:
+## Peak-Decomposition-Free Inverse Metrology of Hyperspectral Moir´ e Photoluminescence 
+
+Katsunori Wakabayashi ∗
+
+Research Center for Materials Nanoarchitectonics (MANA), National Institute for Materials Science (NIMS), Namiki 1-1, Tsukuba 305-0044, Japan 
+
+(Dated: July 15, 2026) Hyperspectral photoluminescence (PL) of moir´ e transition-metal dichalcogenide heterobilayers encodes spatially varying exciton landscapes, but extracting that information is hampered by the ambiguity of multi-peak spectral decomposition. Here we develop a peak-decomposition-free inverse framework for quantitative optical metrology of effective disorder coordinates. From the raw cube 
+
+I(x, y, E ) we construct physically motivated descriptor maps—centroid energy, dominant emission energy, spectral width, low/high spectral-weight ratio, and dominant–centroid offset. Their spatial autocorrelation hierarchy and covariance structure form a robust descriptor fingerprint of multi-scale disorder-sensitive spectral statistics. By matching these descriptor summary statistics to a minimal smooth-plus-trap generative model through a grid-Bayesian inverse, we infer effective disorder co-ordinates Θ eff = {Ws, ξ s, W t, n t} with explicit uncertainties. Using synthetic PL cubes generated from controlled multi-scale landscapes, we recover the well-identified smooth-disorder coordinates and constrain the trap sector up to a strength–density degeneracy. We report this degeneracy explic-itly as an intrinsic identifiability limit rather than a deficiency of the method, and map four canonical disorder regimes onto a disorder-coordinate diagram. The descriptor statistics are stable against shot noise and pixel pitch, and behave predictably under optical-resolution and energy-window changes. The same pipeline ingests experimental cubes without modification, making it directly applicable to two-dimensional and moir´ e materials. Our results establish descriptor-based hyperspectral PL as a practical, minimal-assumption route to optical disorder diagnostics and provide the validated core of a reusable analysis workflow ( HyperPL-Diag ) for moir´ e exciton systems. 
+
+I. INTRODUCTION 
+
+Moir´ e superlattices in van der Waals heterobilay-ers [1, 2] host strongly correlated [3–5] and optically ac-tive excitons [6–14] whose properties vary on micron and sub-micron scales [15–17]. In MoSe 2/WSe 2 and related heterostructures, interlayer and moir´ e excitons [18–29] probe a landscape that is simultaneously shaped by long-wavelength strain and dielectric inhomogeneity [30–33], electrostatic fluctuations, the moir´ e potential itself [34– 40], and short-range trap-like defects [41–48]. Hyperspectral PL mapping, which records a full emis-sion spectrum I(x, y, E ) at every spatial pixel, has emerged as a powerful probe of this spatial inhomogene-ity [49, 50]. The conventional route to interpreting such data is multi-peak fitting. Each local spectrum is decom-posed into a sum of Gaussian or Lorentzian components that are then assigned to microscopic emission channels. For spatially varying moir´ e PL this approach is fragile. The number of spectral components is not known a pri-ori, varies from pixel to pixel, and the fitted parameters depend sensitively on initialization and on the assumed lineshape. The result is an analysis that is difficult to au-tomate, hard to reproduce, and cumbersome to compare across samples or processing conditions. A companion theoretical paper [51] introduced adescriptor-filter picture for hyperspectral moir´ e PL. Its  
+
+> ∗WAKABAYASHI.Katsunori@nims.go.jp
+
+central idea is that simple, peak-decomposition-free spec-tral descriptors—moments and spectral-weight ratios computed directly from each spectrum—act as filters that project different components of the multi-scale dis-order landscape. Different descriptors therefore exhibit different spatial correlation lengths—a length scale long used to characterize disordered systems broadly [52– 55]—producing a descriptor correlation hierarchy, and their mutual covariances follow from the shape of the local spectra. That work explained why a hierarchy ap-pears. Here we reverse the logic. Given a hyperspectral PL cube and its descriptor statistics, what effective disorder coordinates are being optically observed? We formulate this as an inverse problem and solve it without any multi-peak decomposition. Concretely, we (i) extract descrip-tor maps directly from the cube, (ii) compute their spa-tial autocorrelation hierarchy and covariance, (iii) com-press these into a low-dimensional summary-statistics vector, and (iv) match that vector to a minimal smooth-plus-trap generative disorder model to infer effective dis-order coordinates Θ eff = {Ws, ξ s, W t, n t} with uncertain-ties. The inverse is transparent by design—physically in-terpretable summary statistics matched to a generative model with an explicit posterior, rather than a black-box regression—so that every inferred coordinate carries an auditable uncertainty and its degeneracies are made explicit. The full pipeline, 
+
+I(x, y, E ) → Dα(x, y ) → Cαβ (r) → Sdesc → Θeff ,
+
+(1) is summarized in Fig. 1, which runs from the input arXiv:2607.12325v1 [physics.optics] 14 Jul 2026 2cube (a) through the descriptor maps (b), their correla-tion hierarchy (c), and the generative inverse model (d) to the resulting disorder-coordinate diagram (e). We adopt a synthetic-validation-first strategy. Be-cause the true disorder parameters of a synthetic cube are known by construction, synthetic data let us rigor-ously establish which descriptors respond to smooth ver-sus trap disorder, how optical averaging modifies appar-ent correlation lengths, which parameters are robustly recoverable, and which are intrinsically degenerate. This provides a stronger foundation than applying an unvali-dated inverse model directly to experimental data. The framework is deliberately modular: when raw experi-mental cubes become available, experimental descriptor maps and summary statistics enter the same pipeline un-changed, and the synthetic forward model serves as the inference engine and calibration layer. The contribution of this paper is threefold. First, we show that the descriptor correlation hierarchy and covari-ance constitute a quantitative, model-free descriptor fin-gerprint of disorder-sensitive spectral statistics. Second, we demonstrate that a minimal generative model con-verts this fingerprint into effective optical disorder coor-dinates with explicit uncertainty quantification and iden-tifiability analysis—not a unique microscopic defect re-construction. Third, we establish that the diagnostic de-scriptor statistics are stable against shot noise and pixel pitch and behave predictably under optical-resolution and energy-window changes—the principal experimental nuisances—making the framework suitable as the core of a reusable diagnostic workflow.   
+
+> II. DATA STRUCTURE AND DESCRIPTOR EXTRACTION A. Hyperspectral PL cube and preprocessing
+
+The input is a hyperspectral PL cube, that is, the con-tinuous emission field I(x, y, E ) of the Introduction sam-pled on a discrete grid I(xi, y j , E k), with spatial pixels indexed by i = 1 , . . . , N x and j = 1 , . . . , N y and energy channels by k = 1 , . . . , N E . The descriptors below are written as energy integrals for compactness and evalu-ated as sums over the measured channels. Throughout, energy is measured relative to a fixed reference E0 taken at the exciton band edge, so that E < 0 denotes emission red-shifted below the band edge (e.g. from trap-bound states). In the synthetic validation we set E0 = 0 with-out loss of generality. The absolute descriptors Ecent 
+
+and Edom shift rigidly with E0, but the inference uses only shift-invariant descriptors (∆ Edc , σE , RLH ) and the spatial-fluctuation statistics of the maps (correlation lengths, variances, and cross-correlations), all of which are invariant to the choice of E0. In experimental ap-plications E0 may therefore be chosen as a fixed global spectral reference, since the inference uses only these shift-invariant descriptor combinations and spatial fluc-tuations. The minimal metadata required are the energy cali-bration, the spatial pixel pitch, an estimate of the optical spot size or spatial resolution ℓopt , and the excitation and temperature conditions. Preprocessing is intentionally simple and transparent: dark/background subtraction, energy calibration, selection of an energy window cover-ing the relevant PL band, optional masking of dead or ex-tremely low-signal pixels, and—deliberately—no aggres-sive denoising in the main analysis (denoising is treated as a robustness check in Sec. VIII). Crucially, all descrip-tors below are computed directly from each spectrum, without fitting an assumed sum of peaks.  
+
+> B. Peak-decomposition-free descriptors
+
+For each spatial point r = ( x, y ) with local spectrum 
+
+I(r, E ) we define the primary descriptor set, summarized in Table I. The integrated intensity is 
+
+Iint (r) = 
+
+Z Emax 
+
+> Emin
+
+I(r, E ) dE, (2) sensitive to local radiative efficiency and exciton popula-tion. The centroid (first spectral moment) is 
+
+Ecent (r) = 
+
+R E I (r, E ) dE 
+
+R I(r, E ) dE , (3) expected to track smooth shifts from strain, dielectric, and electrostatic disorder. The dominant energy is 
+
+Edom (r) = arg max  
+
+> E
+
+I(r, E ), (4) sensitive to the strongest local emission channel and hence responsive to traps and spectral fragmentation. In experimental use Edom is stabilized against shot noise and a discrete energy axis by mild spectral smoothing together with a local three-point parabolic interpolation around the maximum. In the synthetic analysis here we apply only the parabolic interpolation (no smoothing). Either way Edom remains peak-decomposition-free. The spectral width is the square root of the second central moment, 
+
+σ2 
+
+> E
+
+(r) = 
+
+R [E − Ecent (r)] 2I(r, E ) dE 
+
+R I(r, E ) dE . (5) With low- and high-energy windows split at Edom , the low/high spectral-weight ratio is 
+
+RLH (r) = 
+
+R 
+
+> E<E dom
+
+I(r, E ) dE 
+
+R 
+
+> E>E dom
+
+I(r, E ) dE , (6) whose name matches its definition. RLH grows as spectral weight shifts to the low-energy side of the dominant peak (a low-energy trap tail). Because the split energy is the local Edom , RLH measures the asymmetry around the 3Low High    
+
+> PL intensity:
+> (a) Hyperspectral cube (b) Descriptor maps (c) Correlation hierarchy
+> 01(d) Inverse model (e) Disorder-coordinate diagram
+> No spectral peak fitting
+
+FIG. 1. Concept and workflow of peak-decomposition-free inverse disorder metrology. (a) The input is a hyperspectral PL cube 
+
+I(x, y, E ), with two spatial axes ( x, y ) and a photon-energy axis E. The volume rendering shows the spatially varying, multi-peaked emission, color-coded by PL intensity, together with its projection onto the spatial plane. The same pipeline accepts a synthetic cube (validation, this work) or an experimental cube (application). (b) Peak-decomposition-free descriptor maps 
+
+Dα(x, y ) are computed directly from each spectrum. (c) Spatial autocorrelation and cross-correlation functions Cαβ (r) yield a descriptor correlation hierarchy. (d) A minimal smooth-plus-trap generative model with coordinates Θ eff = {Ws, ξ s, W t, n t}
+
+is the inverse engine. (e) Samples or regions are placed on a disorder-coordinate diagram. No step requires multi-peak decomposition. 
+
+currently dominant emission channel rather than around a fixed global energy. In experimental applications a fixed reference (e.g. the global spectral maximum or centroid) may be used instead, provided the convention is kept fixed across samples. The split choice does not affect the descriptor maps or their individual spatial correlation lengths. It does, however, set the strength of the ∆ Edc –
+
+RLH co-variation reported below, which is specific to the local-Edom split (Appendix B). Finally, the dominant– centroid offset is ∆Edc (r) = Edom (r) − Ecent (r), (7) a measure of spectral skewness. All descriptors except 
+
+Iint are invariant to the overall intensity scale, so the analysis is insensitive to absolute calibration of the de-tector. We fix the sign and ratio conventions explicitly here— RLH a low/high ratio and ∆ Edc = Edom − Ecent 
+
+(Table I)—because they orient every cross-correlation re-ported below. The companion paper [51] adopts the opposite offset sign ( Ecent − Edom ) and a high/low ra-tio, so the corresponding descriptor signs there are re-versed. Only magnitudes should be compared across the two works. 
+
+III. SPATIAL DESCRIPTOR STATISTICS A. Autocorrelation and correlation hierarchy 
+
+For each descriptor Dα(r) we form the fluctuation 
+
+δD α = Dα − ⟨ Dα⟩ and the normalized spatial autocorre-lation 
+
+Cαα (r) = ⟨δD α(R) δD α(R + r)⟩R,|r|=r
+
+⟨[δD α(R)] 2⟩R
+
+. (8) 
+
+TABLE I. Primary peak-decomposition-free descriptors and their expected physical sensitivity. Descriptor Definition Expected sensitivity 
+
+Iint 
+
+R I dE radiative efficiency 
+
+Ecent 
+
+R EI dE/ R I dE smooth strain/dielectric 
+
+Edom arg max E I local traps 
+
+σE 2nd moment fragmentation, broadening 
+
+RLH low/high ratio low/high weight balance ∆Edc Edom − Ecent skewness, low-E tail 
+
+Under spatial stationarity this autocorrelation is equiva-lent to the empirical semivariogram γ(r) = 12 ⟨[Dα(R) −
+
+Dα(R + r)] 2⟩ by γ(r) = Var( Dα) [1 − Cαα (r)]. We there-fore estimate Cαα (r) = 1 − γ(r)/ Var( Dα) from the var-iogram [56] (2 γ is the structure function familiar from random-media physics), a form that is numerically robust on finite, masked maps because it requires no separate estimate of the spatial mean. The correlation length ξα
+
+is obtained by a Gaussian fit Cαα (r) ≃ exp[ −r2/(2 ξ2
+
+> α
+
+)], with a 1 /e -crossing fallback. The hierarchy of correlation lengths, 
+
+{ξ(Ecent ), ξ (Edom ), ξ (σE ), ξ (RLH ), ξ (∆ Edc )}, (9) is the central spatial observable. 
+
+B. Cross-correlation and covariance 
+
+For two descriptors the normalized cross-correlation 
+
+Cαβ (r) has the zero-distance value ραβ = Cαβ (0), the Pearson correlation coefficient between descriptor maps. 4The most diagnostic pair is (∆ Edc , R LH ). For a uni-modal spectrum dominated by a low-energy trap peak, the centroid lies above the dominant energy, so ∆ Edc =
+
+Edom − Ecent < 0. Most weight then sits on the high-energy side, so RLH (the low/high weight ratio) is small, i.e. below unity. As the dominant peak shifts back to-ward the spectral center, both quantities increase to-gether. The two descriptors therefore co-vary, giving a strongly positive ρ(∆ Edc , R LH ). This provides a robust spectral-shape correlation within the present descriptor convention—tied to the spectrum’s shape rather than to any particular sample—and its sign is fixed by that con-vention.   
+
+> IV. MINIMAL GENERATIVE DISORDER MODEL A. Effective potential
+
+We model the effective exciton landscape as 
+
+Veff (r) = Vs(r) + Vt(r), (10) a smooth field plus a trap field. The smooth disorder is a Gaussian random field with 
+
+⟨Vs(r)Vs(0)⟩ = W 2 
+
+> s
+
+exp 
+
+
+
+− r2
+
+2ξ2
+
+> s
+
+
+
+, (11) where Ws is the amplitude and ξs the correlation length. Physically it represents the optically coarse-grained vari-ation of the exciton energy from strain, dielectric in-homogeneity [31], smooth electrostatic fluctuations, and moir´ e/reconstruction-induced modulation [57, 58]—not the microscopic moir´ e potential, which lies below the op-tical resolution. The trap field is a Poisson set of attrac-tive Gaussian wells, 
+
+Vt(r) = X
+
+> i
+
+ui exp 
+
+
+
+− |r − Ri|2
+
+2a2
+
+> t
+
+
+
+, (12) with positions Ri drawn from a homogeneous Pois-son process of areal density nt, a common Gaussian width at (the spatial extent of each well), and depths 
+
+ui = −|N (0 , W 2 
+
+> t
+
+)|, where N (0 , W 2 
+
+> t
+
+) denotes a zero-mean Gaussian (normal) variate of variance W 2 
+
+> t
+
+, so Wt sets the characteristic trap depth. These attractive wells phe-nomenologically represent the localized, deeply trapping sites that give rise to quantum-dot-like and single-photon emission in transition-metal dichalcogenide (TMD) sys-tems [59–63]. The trap radius at is fixed to a physically plausible value rather than treated as a free parameter in the baseline inverse analysis.  
+
+> B. Optical resolution
+
+The measured signal is spatially averaged by the opti-cal point-spread function (PSF), modeled as a Gaussian                                
+
+> TABLE II. Ground-truth disorder coordinates Θeff =
+> {Ws, ξ s, W t, n t}of the four canonical synthetic regimes used throughout the paper. regime Ws(meV) ξs(μm) Wt(meV) nt(μm−2)smooth-dominated 16 2.5 42trap-dominated 41.0 18 6mixed 12 2.0 12 6blurred dense-trap 41.0 810
+
+whose 1-sigma width relates to its full width at half max-imum (FWHM) by ℓopt = FWHM /(2 √2 ln 2). Observed descriptor maps are therefore optical-resolution-filtered maps, not microscopic disorder maps, and the forward model includes this convolution explicitly so that inferred correlation lengths are interpreted relative to ℓopt . Ex-citon diffusion [64, 65], if appreciable, provides an addi-tional spatial-averaging channel beyond the optical PSF and can be absorbed phenomenologically into an effective resolution length. Separating the two requires indepen-dent calibration.  
+
+> C. Synthetic PL cube generation
+
+Each measurement pixel spectrum is generated as a broad smooth background plus sharp trap peaks, 
+
+I(R, E ) = gΓ
+
+E − ¯Es(R) + At
+
+X
+
+> i∈spot
+
+wi(R) gΓt [E − Et,i ] ,
+
+(13) where g are normalized Gaussian lineshapes, ¯Es(R) is the optical-spot average of Vs (the smooth background energy at pixel R), Et,i = Vs(Ri) + ui is the ground energy of trap i, and wi(R) is the optical-spot weight of trap i at pixel R. This minimal model deliber-ately reproduces descriptor statistics rather than every microscopic peak. The free coordinates are limited to Θeff = {Ws, ξ s, W t, n t}, with at, the broadenings Γ , Γt,and ℓopt fixed or independently estimated.  
+
+> V. SYNTHETIC DISORDER REGIMES AND DESCRIPTOR FINGERPRINTS
+
+To map descriptor statistics onto disorder physics we study four representative regimes that recur through-out the paper: (i) a smooth-dominated regime (large 
+
+Ws, long ξs, weak traps); (ii) a trap-dominated regime (strong traps on a weak smooth background); (iii) a 
+
+mixed regime (comparable smooth and trap effects); and (iv) a blurred dense-trap regime (dense, shallow, sub-resolution traps that mimic effective smoothing). All cubes use experimental-scale acquisition: an 8 × 8 μm2
+
+area sampled on a 40 × 40 grid (pitch 0 .205 μm), an op-tical FWHM of 0 .85 μm, and a 90-meV energy window. 50 2 4 6 8                                                          
+
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (a) Vs(truth)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (b) Vt(truth)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (c) Ecent (ξ=1.22 μm)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (d) Edom (ξ=1.12 μm)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (e) σE(ξ=0.50 μm)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (f) RLH (ξ=0.25 μm)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (g) ∆Edc (ξ=0.24 μm)
+> 02468
+> x(μm)
+> 0
+> 2
+> 4
+> 6
+> 8
+> y (μm)
+> (h) Iint (ξ=0.62 μm)
+> 20
+> 10
+> 0
+> 10
+> 20
+> meV
+> 30
+> 25
+> 20
+> 15
+> 10
+> 5
+> 0
+> meV
+> 20
+> 10
+> 0
+> 10
+> meV
+> 40
+> 30
+> 20
+> 10
+> 0
+> 10
+> 20
+> meV
+> 8
+> 10
+> 12
+> 14
+> 16
+> meV
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> 1.25
+> 1.50
+> 1.75
+> 2.00
+> 2.25
+> 30
+> 25
+> 20
+> 15
+> 10
+> 5
+> 0
+> 5
+> 10
+> meV
+> 1.0
+> 1.5
+> 2.0
+> 2.5
+> 3.0
+> arb.
+
+FIG. 2. Descriptor maps from a single synthetic PL cube in the mixed regime ( Ws = 12 meV, ξs = 2 μm, Wt = 12 meV, 
+
+nt = 6 μm−2). (a,b) The true smooth and trap potentials. (c–h) The peak-decomposition-free descriptor maps and their fitted correlation lengths. The smooth-disorder-filtered descriptor Ecent (c) varies on long scales and tracks Vs, whereas the trap-sensitive Edom (d), RLH (f), and ∆ Edc (g) reveal short-scale structure; the spectral width σE (e) and integrated intensity 
+
+Iint (h) highlight trap-rich regions. Different descriptors expose different spatial structure from the same cube. Iint is shown for diagnostic completeness but is excluded from the baseline inverse (it is sensitive to excitation and collection efficiency). 
+
+Their ground-truth disorder coordinates are listed in Ta-ble II. Figure 2 shows the descriptor maps for the mixed regime, computed from the same cube whose true smooth and trap potentials appear in panels (a) and (b). The centroid Ecent (c) varies smoothly and follows Vs, while 
+
+Edom (d), RLH (f), and ∆ Edc (g) display short-scale, trap-correlated structure, and the spectral width σE (e) and integrated intensity Iint (h) highlight trap-rich re-gions. This is a direct, qualitative confirmation that dis-tinct descriptors filter distinct components of the same landscape. Figure 3(a) shows the descriptor autocorrelation func-tions for the mixed regime. The smooth-filtered Ecent 
+
+has the longest correlation length and the skewness de-scriptor ∆ Edc the shortest. Across all four regimes [Fig. 3(b)] the ordering ξ(Ecent ) ≥ ξ(Edom ) holds, but its magnitude is strongly regime-dependent. The ratio 
+
+ξ(Ecent )/ξ (Edom ) is near unity in the smooth-dominated regime and largest in the trap-dominated regime, where 
+
+Edom switches abruptly between traps while Ecent re-mains tied to the smooth background. The pattern of correlation lengths—not any single value—is the diag-nostic fingerprint. This ordering and its regime dependence persist across five correlation-length definitions and under low-signal and random pixel rejection (Appendix B). We also recover the robust spectral-shape correlation 
+
+ρ(∆ Edc , R LH ) ≈ +0 .88 across regimes; its magnitude is comparable to the companion theory [51] and to the ex-perimental |ρ| ≈ 0.98 [49][66]. 
+
+VI. INFERENCE OF EFFECTIVE DISORDER COORDINATES A. Summary statistics and matching 
+
+We compress the descriptor statistics into a low-dimensional summary vector 
+
+S =  ξEcent , ξ Edom , ξ RLH , ξ ∆Edc ,
+
+Var( Ecent ), Var( RLH ), ρ (∆ Edc , R LH ). (14) This vector is deliberately minimal and interpretable, pairing the correlation-length hierarchy with the few co-variance elements that carry spectral-shape information. We exclude the integrated intensity Iint from the baseline inverse analysis. The overall PL brightness is set largely by experimental factors—local excitation power, collec-tion efficiency, and non-radiative recombination—rather than by the disorder coordinates, whereas the spectral-shape descriptors are invariant to the intensity scale and hence far more robust. Iint can be added as an auxiliary descriptor once these factors are calibrated. The strong cross-correlation ρ(∆ Edc , R LH ) is a conse-quence of the local-Edom split adopted for RLH in Eq. (6). Under that convention RLH and ∆ Edc share the same 60 1 2 3 4 5 6
+
+distance r (μm) 
+
+> 0.4
+> 0.2
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> autocorrelation  C(r)
+> 1/e
+
+(a) Descriptor autocorrelation (mixed regime)         
+
+> Ecent ξ=1.22
+> Edom ξ=1.12
+> σEξ=0.50
+> RLH ξ=0.25
+> ∆Edc ξ=0.24
+> Ecent Edom σE∆Edc
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 1.2
+> 1.4
+> 1.6
+> correlation length  ξα (μm)
+> σopt
+
+(b) Correlation-length hierarchy across regimes 
+
+> Smooth-dominated
+> Trap-dominated
+> Mixed
+> Blurred dense-trap
+
+FIG. 3. Descriptor correlation hierarchy. (a) Autocorrelation functions C(r) for the mixed regime with fitted correlation lengths; the dashed line is the 1 /e level. (b) Correlation-length hierarchy across the four regimes. The ordering ξ(Ecent ) ≥ ξ(Edom ) is robust within the present smooth-plus-trap model across the regimes studied here, while its magnitude is regime-specific; the dotted line marks the optical-resolution scale σopt , below which correlation lengths are interpreted cautiously. 
+
+reference energy Edom and therefore co-vary, whereas a fixed global split would decouple them and weaken ρ
+
+(Appendix B). The inferred coordinates are thus con-ditional on this descriptor convention, and comparisons across samples must adopt the same one. The individ-ual descriptor maps and their autocorrelation lengths are the primary observables. The cross-correlation involv-ing RLH should always be interpreted together with the stated split convention. As a ratio, RLH becomes noise-sensitive when the high-energy weight (its denominator) is small. For experimental data its stability can be im-proved by using log RLH , and by masking or regularizing pixels whose high-energy weight falls below a fixed noise floor. This summary vector was chosen to be minimal and interpretable rather than optimal. Systematic fea-ture selection and latent-summary construction are left to future work. For each parameter set Θ we generate synthetic cubes and compute the same summary vector, averaging it over 
+
+nreal independent disorder realizations (here nreal = 4) to obtain the simulated (forward-model) summary vector 
+
+Ssim (Θ). The scatter of each summary component across these realizations, σi(Θ), provides the per-component noise model. We floor σi at the grid-median scatter to avoid spuriously small denominators. Increasing nreal 
+
+from 4 to 8 (for both the library and the observations) shifts the recovered posterior means by a median of 0 .2σ,and by less than 1 σ for 95% of the coordinates. Hence 
+
+nreal = 4 is sufficient for the present diagnostic valida-tion. Inference minimizes the χ2 loss 
+
+L(Θ) = X
+
+> i
+
+Sobs  
+
+> i
+
+− Ssim  
+
+> i
+
+(Θ) 2
+
+σ2
+
+> i
+
+, (15) where Sobs  
+
+> i
+
+is the ith summary component computed from the single fixed test cube being analyzed—the in-put whose disorder coordinates we treat as unknown, and which in an experimental application is replaced by a measured cube—while Ssim  
+
+> i
+
+(Θ) is the forward-model pre-diction at the candidate Θ, computed from cubes freshly generated for that Θ and distinct from the test cube. In-ference thus searches for the Θ whose simulated summary best matches the fixed observed one. We report a posterior over a precomputed, regular 5 ×
+
+5 × 5 × 5 parameter grid spanning Ws ∈ [4 , 20] meV, 
+
+ξs ∈ [1 , 3] μm, Wt ∈ [4 , 20] meV, and nt ∈ [2 , 10] μm−2
+
+(625 points) [67, 68]. This grid is intended for diagnostic validation and the identifiability analysis below rather than for high-precision parameter estimation, for which it could be refined. Assuming a Gaussian likelihood with a flat prior, the grid-Bayesian posterior is 
+
+P (Θ | Sobs ) ∝ exp − 12 L(Θ)  , (16) from which we obtain posterior means, standard devia-tions, and marginal and pairwise distributions. The loss in Eq. (15) uses a diagonal summary-statistics covariance, so off-diagonal correlations between summary components are neglected. Moreover, σi captures real-ization scatter (sample-to-sample plus shot noise) rather than a separately modeled measurement-noise term, so the reported posterior widths are conditional on this diagonal-Gaussian likelihood and the flat grid prior. This approximation is sufficient for the diagnostic validation performed here, but a full covariance likelihood or a neu-ral or approximate Bayesian computation (ABC) poste-rior estimator can be incorporated in future implementa-tions. This summary-statistics matching against a simu-lated library is a transparent simulation-based Bayesian 70 5 10 15 20                                                 
+
+> true Ws(meV)
+> 0.0
+> 2.5
+> 5.0
+> 7.5
+> 10.0
+> 12.5
+> 15.0
+> 17.5
+> 20.0
+> inferred  Ws (meV)
+> (a) recovery of Ws(meV)
+> random tests
+> canonical regimes
+> 123
+> true ξs(μm)
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> 2.5
+> 3.0
+> 3.5
+> inferred  ξs (μm)
+> (b) recovery of ξs(μm)
+> 0510 15 20
+> true Wt(meV)
+> 0.0
+> 2.5
+> 5.0
+> 7.5
+> 10.0
+> 12.5
+> 15.0
+> 17.5
+> 20.0
+> inferred  Wt (meV)
+> (c) recovery of Wt(meV)
+> 0.0 2.5 5.0 7.5 10.0
+> true nt(μm−2)
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> inferred  nt (μm−2)
+> (d) recovery of nt(μm−2)
+> 050 100
+> true Λt=Wtnt
+> 0
+> 20
+> 40
+> 60
+> 80
+> 100
+> 120
+> 140
+> inferred  Λt = Wtnt
+> (e) recovery of Λt=Wtnt
+> ξ(Ecent )
+> ξ(Edom )
+> ξ(RLH )
+> ξ(∆ Edc )
+> Var( Ecent )
+> Var( RLH )
+> ρ(∆ Edc , R LH )
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> normalized value
+> (f) Summary match (mixed)
+> observed
+> best fit
+> 46810 12 14 16 18 20
+> Wt(meV)
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7
+> 8
+> 9
+> 10
+> nt (μm−2)
+> (g) Posterior P(Wt, n t)(mixed)
+> Wtnt=const
+> true 0.025
+> 0.050
+> 0.075
+> 0.100
+> 0.125
+> 0.150
+> 0.175
+> 0.200
+
+FIG. 4. Inverse fitting and synthetic recovery. (a–d) Posterior-mean inferred coordinate versus true value over canonical regimes (squares) and random test points (circles); error bars are posterior standard deviations and the dashed line is the identity. (e) Recovery of the combined trap-activity proxy Λ t = Wtnt, which clusters along the identity more coherently than Wt or nt
+
+individually [(c),(d)]—the strength–density degeneracy is an intrinsic identifiability limit, not a deficiency of the inverse. (f) Observed versus best-fit summary statistics for the mixed regime (each component normalized by the observed magnitude). (g) Pairwise posterior P (Wt, n t) for the mixed regime, showing the trap strength–density degeneracy. The dashed curve is the iso-activity line Wtnt =const through the true value (star), shown as a representative—not unique—trap-activity direction (the exponent is regime dependent; Appendix D). 
+
+inference scheme, closely related to ABC [69] and to neu-ral simulation-based inference now being applied to spec-tral fitting [70]. It is sufficient for the present diagnostic goal. 
+
+B. Synthetic recovery test 
+
+We test the inversion on the chain Θ true → Isyn →
+
+Dα → S → Θinferred , using test cubes generated from disorder realizations that were held out of the simula-tion library (their random seeds are disjoint from the library’s), so the inference never sees an exact copy of the cube it is asked to invert. Figure 4(a–d) shows the recovery scatter for the four coordinates over the four canonical regimes and ten additional random parame-ter sets (sampled uniformly over the interior of the li-brary parameter ranges, off the library grid nodes). The smooth-disorder coordinates Ws (a) and ξs (b) are recov-ered most robustly. The trap sector is also constrained, but Wt (c) and nt (d) are only partially identifiable on their own. What is well constrained is their combined trap-activity direction Λ t = Wtnt (discussed next), so 
+
+Wt and nt should be read as effective optical trap coordi-nates rather than independently determined microscopic parameters. 
+
+C. Identifiability and degeneracy 
+
+The pairwise posterior P (Wt, n t) in Fig. 4(g) reveals the origin of this uncertainty. A small number of strong traps produces nearly the same descriptor statistics as a larger number of weaker traps. This is why the posterior in Fig. 4(g) stretches along an iso-Wtnt ridge, leaving Wt
+
+and nt partially degenerate along a trap-activity direc-tion. We use the simplest interpretable representative of this direction, the combined coordinate Λt = Wt nt, (17) and in the trap-rich regimes a combined trap-activity co-ordinate is better constrained than either Wt or nt alone [Fig. 4(e)]. The precise exponent of the conserved com-bination is, however, regime dependent and not sharply determined. A dense conditional scan of P (Wt, n t) (Ap-pendix D) yields a clean trade-off degeneracy only in the blurred dense-trap regime, where a disorder-variance-like W 2
+
+t nt is in fact marginally better conserved than 
+
+Wtnt. The trap-dominated posterior is near-isotropic and the mixed posterior is broad. The iso-activity curve 8
+
+Wtnt =const in Fig. 4(g) should therefore be read as an approximate, representative degeneracy direction rather than an exact one. We do not assign Λ t a universal microscopic meaning. It is an empirical descriptor-space trap-activity coordi-nate for the present forward model, and a different com-bination (e.g. a trap variance ∝ W 2 
+
+> t
+
+nt) may be more nat-ural in other regimes. We report this degeneracy explic-itly as an intrinsic identifiability limit of the inverse prob-lem rather than a deficiency of the method. The method yields effective optical disorder coordinates with quanti-fied uncertainty and explicit degeneracies, not a unique microscopic defect reconstruction. Figure 4(f) confirms that the best-fit model reproduces the observed summary vector across all components.  
+
+> VII. DISORDER-COORDINATE DIAGNOSTICS
+
+A practical outcome of the inference is a disorder-coordinate diagnostic map. Figure 5(a,b) places the four regimes in the inferred ( Ws, W t) and ( ξs, n t) planes. The inferred coordinates (circles, with posterior-std error bars) sit close to the true values (stars), and the regimes occupy clearly distinct regions. Such a diagram provides a quantitative and reproducible coordinate system for comparing samples, regions, or processing conditions. Even without the inverse model, a purely descriptor-based diagnostic diagram already separates the regimes. Figure 5(c) plots two coordinates that are read directly from the descriptor maps, with no generative model and no fitting to the simulation library. The first, X1 =
+
+ξ(Ecent )/ξ (Edom ), is the ratio of the spatial correlation lengths of the centroid and dominant-energy maps. The second, X2 = Var( Ecent ), is the spatial variance of the centroid map. Because both follow from the maps alone, we call them model-free. The smooth-dominated regime has X1 ≈ 1 and large X2, the trap-dominated regime has large X1 and small X2, and the mixed and blurred regimes fall in between. This model-free view is a robust first-pass classifier that sorts the regimes but assigns nei-ther physical coordinates nor uncertainties. The genera-tive inverse then supplies those quantitative coordinates with posterior error bars.  
+
+> VIII. ROBUSTNESS AND REUSABLE WORKFLOW
+
+For a method to be useful as a diagnostic it must be stable against experimental nuisances. Figure 6 summa-rizes robustness tests on the mixed regime. The hierarchy ratio X1 and the correlation magnitude |ρ(∆ Edc , R LH )|
+
+are essentially unchanged from a noiseless cube down to a peak signal-to-noise ratio of 10 (the shot-noise SNR pNpeak of the brightest spectral channel of the bright-est pixel) [Fig. 6(a)] and across a factor of ∼3 in mea-surement pixel pitch [Fig. 6(d)]. Quantitatively, X1 and 
+
+|ρ| each change by less than ∼6% across the full tested SNR and pixel-pitch ranges, so the fixed vertical scales in Fig. 6(a,d) reflect genuine stability rather than an axis choice. The energy-window test [Fig. 6(b)] shows the expected failure mode. A window too narrow to contain the low-energy trap tail collapses |ρ|, so the window must span the full PL band. Once it does, the statistics are sta-ble. The optical-resolution test [Fig. 6(c)] behaves as the forward model predicts. Coarser resolution length-ens ξ(Ecent ) and compresses the hierarchy ratio, which is why correlation lengths are always interpreted relative to ℓopt .These analyses are packaged as a reusable command-line/notebook workflow ( HyperPL-Diag ) summarized in Fig. 7, with functions spanning cube loading, prepro-cessing, descriptor computation, spatial autocorrelation and cross-correlation, correlation-length fitting, covari-ance estimation, synthetic cube generation, disorder-model fitting, and report export. The package takes a cube plus metadata and returns descriptor maps, the cor-relation hierarchy {ξα}, the descriptor covariance, the ef-fective coordinates Θ eff with uncertainty, and a summary report.  
+
+> IX. DISCUSSION
+
+a. Relation to peak fitting. We do not argue against peak fitting, which remains valuable when the num-ber and identity of spectral components are well es-tablished. For spatially varying multi-peak moir´ e PL, however, descriptor statistics provide a more robust and less assumption-dependent route to sample-level disor-der diagnostics, and they scale naturally to large hy-perspectral datasets. We make this concrete in Ap-pendix A. On a representative synthetic spectrum, the fitted multi-Gaussian decomposition depends strongly on the assumed number of components and on initialization, whereas the descriptors are single deterministic numbers. 
+
+b. What the method does and does not claim. The descriptor fingerprint itself is model-free. The subsequent conversion into Θ eff is model-assisted. Accordingly, the inferred coordinates are effective optical disorder coordi-nates , not literal microscopic defect densities. The for-ward model is minimal by design. The trap radius and lineshapes are fixed rather than fit, and the Wt–nt de-generacy is reported explicitly. We do not claim that the smooth-plus-trap model is unique. It is the minimal cali-bration model used to test identifiability and to define the effective optical coordinates. Accordingly, the inferred posterior should be read as conditional on the chosen de-scriptor convention, summary vector, and minimal for-ward model. It quantifies identifiability within this cali-brated inverse problem, not a model-independent micro-scopic reconstruction, and the posterior widths do not in-clude systematic model discrepancy. Independent struc-tural or electrostatic probes—atomic force microscopy 90 8 16 24 
+
+Ws (meV)   
+
+> 0
+> 8
+> 16
+> 24
+> Wt (meV)
+> = truth, •= inferred
+
+(a) Inferred ( Ws, Wt)   
+
+> Smooth-dominated
+> Trap-dominated
+> Mixed
+> Blurred dense-trap
+> 0.5 1.5 2.5 3.5
+
+ξs (μm) 
+
+> 0
+> 4
+> 8
+> 12
+> nt (μm−2)
+
+(b) Inferred ( ξs, nt)     
+
+> 1.0 1.2 1.4 1.6 1.8 2.0
+
+X1 = ξ(Ecent )/ξ (Edom )
+
+> 10 2
+> X2 = Var( Ecent ) (meV 2)
+> Smooth
+> Trap
+> Mixed
+> Blurred dense
+
+(c) Model-free diagnostic diagram 
+
+FIG. 5. Disorder-coordinate diagnostics. (a,b) Inferred effective coordinates of the four regimes in the ( Ws, W t) and ( ξs, n t)planes; circles with error bars are posterior mean ± standard deviation and stars are the true values. (c) Model-free diagnostic diagram using X1 = ξ(Ecent )/ξ (Edom ) and X2 = Var( Ecent ) (shown on a logarithmic vertical scale), which separates the regimes without any inverse model. 10 1 10 2 10 3        
+
+> peak SNR ( 10 3=noiseless)
+> 1.00
+> 1.05
+> 1.10
+> 1.15
+> 1.20
+> X1 = ξ(Ecent )/ξ (Edom )
+> (a) shot noise
+> 60 80 100 120
+> energy window (meV)
+> 1.00
+> 1.05
+> 1.10
+> 1.15
+> 1.20
+> X1
+> (b) energy window
+> 0.6 0.9 1.2
+> optical FWHM ( μm)
+> 1.20
+> 1.25
+> 1.30
+> 1.35
+> 1.40
+> ξ(Ecent ) (μm)
+> (c) optical resolution
+> 0.16 0.24 0.32 0.40
+> pixel pitch ( μm)
+> 1.00
+> 1.05
+> 1.10
+> 1.15
+> 1.20
+> X1
+> (d) pixel pitch
+> 0.75
+> 0.80
+> 0.85
+> 0.90
+> 0.95
+> |ρ(∆ Edc , R LH )|
+> 0.00
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> |ρ(∆ Edc , R LH )|
+> 116
+> 118
+> 120
+> 122
+> 124
+> Var( Ecent ) (meV 2)
+> 0.75
+> 0.80
+> 0.85
+> 0.90
+> 0.95
+> |ρ(∆ Edc , R LH )|
+
+FIG. 6. Robustness of the descriptor statistics for the mixed regime. (a) Hierarchy ratio X1 = ξ(Ecent )/ξ (Edom ) and correlation magnitude |ρ(∆ Edc , R LH )| versus peak shot-noise SNR. (b) Versus energy-window span. (c) ξ(Ecent ) and Var( Ecent ) versus optical FWHM. (d) X1 and |ρ(∆ Edc , R LH )| versus measurement pixel pitch. 
+
+(AFM), Kelvin probe force microscopy (KPFM), Raman, or second-harmonic generation (SHG) mapping—would provide external validation of the optical coordinates. 
+
+c. Path to experimental data. The framework is built so that experimental cubes enter the same pipeline, Eq. (1), without conceptual change. Experimental de-scriptor maps replace synthetic ones, the synthetic for-ward model serves as the inference engine, and ex-perimental samples are placed on the same disorder-coordinate diagram. The most informative first datasets are not the cleanest spectra but those with a clear com-parison axis—annealed versus as-transferred, encapsu-lated versus bare, or clean versus bubble/strain-rich re-gions. Populating the disorder-coordinate diagram from experimental cubes to build a disorder atlas of moir´ e PL samples is the subject of a dedicated forthcoming study. The present paper establishes and validates the inverse method that such an application rests on. 
+
+d. Outlook. Natural extensions include gate-, power-, and polarization-resolved descriptors, valley-resolved analysis, and machine-learning-assisted latent descriptors [71] benchmarked against the physically motivated set used here. More broadly, the same descriptor-based inverse strategy applies to hyperspec-tral imaging of other quantum materials, positioning it as a general strategy for optical hidden-disorder diagnostics. 
+
+X. CONCLUSION 
+
+We have developed and validated a peak-decomposition-free inverse framework that converts a hyperspectral moir´ e PL cube into a quantitative optical metrology of effective optical disorder coor-dinates. Physically motivated descriptor maps, their spatial correlation hierarchy, and their covariance form a disorder fingerprint. A minimal smooth-plus-trap generative model turns that fingerprint into effective disorder coordinates with quantified uncertainty and 10 load_cube         
+
+> read cube + metadata
+> preprocess_cube
+> dark subtract, calibrate, window
+> compute_descriptors
+> Iint , E cent , E dom , σ E, R LH ,∆Edc
+> spatial_statistics
+> autocorr. {ξα
+> }, cross-corr., covariance
+> fit_disorder_model
+> grid-Bayesian inverse →Θeff
+> export_report
+> maps, coordinates, uncertainty, PDF
+> input:
+> I(x, y, E )
+> + metadata
+> output:
+> maps, {ξα
+> },
+> Θeff ±σ,
+> report
+> HyperPL -Diag workflow
+
+FIG. 7. The HyperPL-Diag analysis workflow. A hyperspec-tral cube plus metadata enters at the top; each stage is a package function, and the pipeline returns descriptor maps, the correlation hierarchy {ξα}, the descriptor covariance, the effective disorder coordinates Θ eff with uncertainty, and a summary report. 
+
+explicit identifiability. On synthetic cubes with known ground truth the method recovers the smooth-disorder amplitude and correlation length robustly, constrains the trap sector up to a strength–density degeneracy cap-tured by a combined trap-activity coordinate, separates four canonical disorder regimes on a disorder-coordinate diagram, and remains stable against the principal experimental nuisances. The validated core is the foundation of a reusable anal-ysis workflow ( HyperPL-Diag ), and it is structured so that experimental hyperspectral data can be incorpo-rated without changing the conceptual pipeline. The cen-tral shift in perspective is that a hyperspectral PL cube is not merely a collection of local spectra but a spatial sta-tistical measurement of the exciton disorder landscape. 
+
+ACKNOWLEDGMENTS 
+
+We thank R. Kitaura, S. Urano, and N. F. Ahmad for stimulating discussions on hyperspectral PL organization in moir´ e heterobilayers. 
+
+FUNDING 
+
+This work was supported by JSPS KAKENHI (Grants No. JP25K01609 and No. JP22H05473). 
+
+CONFLICT OF INTEREST 
+
+The authors declare no conflict of interest. 
+
+ETHICS STATEMENT 
+
+This research did not involve human participants, hu-man data, human tissue, or animals, and therefore did not require ethical approval. 
+
+DATA AVAILABILITY 
+
+This paper is a methods study validated entirely on synthetic data. No experimental datasets were gener-ated or analyzed. The synthetic hyperspectral cubes, simulation library, and inference results are reproducibly generated with fixed random seeds by the HyperPL-Diag 
+
+workflow and accompanying scripts. These scripts repro-duce all figures in this paper and will be made available upon publication. 
+
+Appendix A: Comparison with multi-Gaussian peak fitting 
+
+To illustrate concretely why descriptor statistics are more robust than multi-peak fitting for large, spatially varying datasets, we take one representative synthetic spectrum (the most spectrally structured pixel of the mixed-regime cube, with realistic shot noise) and fit it with sums of n = 2 , 3, 4 Gaussians from many random initializations. Figure 8(a) shows that several peak num-bers fit the spectrum comparably well, so n cannot be chosen unambiguously from the fit quality alone. Fig-ure 8(b) shows that the number and positions of the fitted components vary with the assumed peak number and with the initialization. Only the dominant (reddest) component is consistently recovered near Edom , while the remaining fitted centers scatter over tens of meV. Panel (c) quantifies this as the worst-case scatter of a sorted fitted-component center across initializations. By con-trast, the peak-decomposition-free descriptors Ecent and 
+
+Edom are single deterministic values. This is not an argument that peak fitting is wrong when the component structure is independently known. It is the reason a descriptor-based pipeline is prefer-able for automated, reproducible sample-level diagnos-tics. We do not claim that this example exhausts all sophisticated peak-fitting strategies (e.g. information-criterion model selection, global or regularized fitting). Rather, it illustrates the practical ambiguity faced by automated pixel-by-pixel decomposition when the num-ber and identity of components are not independently known. 11 60 40 20 0 20          
+
+> E−E0(meV)
+> 0.000
+> 0.001
+> 0.002
+> 0.003
+> 0.004
+> 0.005
+> PL (norm.)
+> (a) Multi-Gaussian fits of one spectrum
+> spectrum
+> 2-Gaussian fit
+> 3-Gaussian fit
+> 4-Gaussian fit
+> 234
+> assumed number of peaks
+> 40
+> 20
+> 0
+> 20
+> fitted component centers (meV)
+> (b) Peak-fit ambiguity vs. stable descriptors
+> Edom (descriptor)
+> Ecent (descriptor)
+> n=2 n=3 n=4
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> 14
+> 16
+> worst component-center std (meV)  fitted peak positions scatter by
+> several--tens of meV; descriptors
+> have zero spread (deterministic)
+> (c) Initialization/peak-number sensitivity
+
+FIG. 8. Descriptor robustness versus multi-Gaussian peak fitting. (a) One synthetic spectrum with n = 2 , 3, 4 Gaussian fits. (b) All fitted component centers across peak numbers and random initializations (points; marker size ∝ fitted amplitude), compared with the deterministic descriptors Edom (solid) and Ecent (dotted): only the dominant component is consistently recovered near Edom , while the others scatter. (c) Worst-case standard deviation of a sorted fitted-component center across initializations for each n; the descriptors have zero spread by construction. 
+
+Appendix B: Sensitivity to analysis choices 
+
+We verify that the conclusions do not hinge on three discretionary analysis choices, using the four canonical synthetic regimes with known ground truth (Fig. 9). 
+
+(a) RLH split point. Splitting RLH at the per-pixel lo-cal Edom [Eq. (6)] yields a strong positive ρ(∆ Edc , R LH )in every regime (+0 .78 to +0 .93) [Fig. 9(a)]. This co-variation is a property of the local-Edom convention. Here RLH and ∆ Edc share the same dominant energy, so both respond to the position of the dominant chan-nel. Splitting at a fixed global energy instead (the map-averaged spectral maximum or centroid) defines a dis-tinct descriptor—the absolute spectral-weight balance about a sample-wide reference—which is nearly uncorre-lated with ∆ Edc (|ρ| ≲ 0.14). The descriptor maps and their individual correlation lengths are unchanged by the split. Only the cross-correlation is convention-specific, and we report it under the stated local-Edom convention. 
+
+(b) Correlation-length definition. Extracting ξ from the autocorrelation by a Gaussian fit, an exponential fit, a stretched exponential, the 1 /e crossing, or the integral correlation length all preserve the ξ(Ecent ) ≥ ξ(Edom )hierarchy, with the gap largest in the trap-dominated regime and vanishing in the smooth-dominated regime— the same ordering as the main text [Figs. 3 and 9(b)]. The pattern of correlation lengths, not the absolute val-ues returned by any one estimator, is the diagnostic. 
+
+(c) Pixel rejection. Rejecting low-signal pixels below a fraction of the median integrated intensity, or randomly dropping up to 30% of pixels, leaves the hierarchy and 
+
+ρ(∆ Edc , R LH ) essentially unchanged [Fig. 9(c)]. Absolute correlation lengths drift only mildly as the variogram is estimated from fewer pairs. 
+
+Appendix C: Sensitivity to the summary-vector choice 
+
+The baseline summary vector [Eq. (14)] is one choice among many. To verify that the inference does not hinge on it, we re-infer Θ eff for the four canonical regimes us-ing subsets of the seven components, formed by mask-ing summary columns in the χ2 against the same library (Fig. 10): the full seven-component vector; dropping the convention-defined cross-correlation ρ(∆ Edc , R LH ) (“no-
+
+ρ”); the correlation-length hierarchy alone (“ ξ-only”); and hierarchy plus cross-correlation without the vari-ances (“no-Var”). Two results stand out. The smooth-disorder coor-dinates Ws and ξs are recovered consistently across all subsets [Fig. 10(a),(b)]. And dropping ρ leaves the inference essentially unchanged—the “full” and “no-
+
+ρ” points coincide to within marker size for every regime and coordinate—so the result does not hinge on the convention-defined cross-correlation analyzed in Ap-pendix B. The correlation-length hierarchy alone already constrains most coordinates but degrades in the blurred dense-trap regime, where the variances carry the distin-guishing information. The covariance components thus contribute most when traps are dense and sub-resolution. The trap sector retains the strength–density degeneracy under every subset [Fig. 10(c),(d)]. The present vec-tor was chosen to be minimal and interpretable rather than optimal; systematic feature selection is left to fu-ture work. 
+
+Appendix D: Trap-sector degeneracy direction 
+
+The Wt–nt degeneracy direction is not sharply defined on the five-point inference grid, which is too coarse to fit the elongation of P (Wt, n t). To probe it reliably we 12 Smooth Trap Mixed Blurred                   
+
+> 0.2
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 1.2
+> ρ(∆ Edc , R LH )
+> (a) RLH split point
+> RLH split at
+> local Edom global Emax global Ecent
+> Gauss exp stretch 1/e integral
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> ∆ξ = ξ(Ecent ) − ξ(Edom ) (μm)
+> (b) correlation-length fit
+> Smooth-dominated
+> Trap-dominated
+> Mixed
+> Blurred dense-trap
+> 0510 15 20 25 30
+> random pixel dropout (%)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> ξ (μm)
+> (c) masking robustness (trap)
+> ξ(Ecent )
+> ξ(Edom )
+> ρ(∆ Edc , R LH )
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> ρ
+
+FIG. 9. Sensitivity to analysis choices across the four regimes. (a) ρ(∆ Edc , R LH ) for three RLH split points: the strong positive co-variation is specific to the local-Edom split (blue); a fixed global split (grey) gives a near-uncorrelated descriptor. (b) The correlation-length gap ∆ ξ = ξ(Ecent ) − ξ(Edom ) stays positive under all five ξ definitions, largest for the trap-dominated regime. (c) ξ(Ecent ), ξ(Edom ) and ρ(∆ Edc , R LH ) versus random pixel dropout (trap-dominated regime): the hierarchy and correlation are preserved. 0 5 10 15 20                                 
+
+> true Ws(meV)
+> 0.0
+> 2.5
+> 5.0
+> 7.5
+> 10.0
+> 12.5
+> 15.0
+> 17.5
+> 20.0
+> inferred  Ws (meV)
+> (a) Ws(meV)
+> summary subset
+> full
+> no-rho
+> xi-only
+> no-Var
+> 0.5 1.0 1.5 2.0 2.5 3.0 3.5
+> true ξs(μm)
+> 0.5
+> 1.0
+> 1.5
+> 2.0
+> 2.5
+> 3.0
+> 3.5
+> inferred  ξs (μm)
+> (b) ξs(μm)
+> 0510 15 20
+> true Wt(meV)
+> 0
+> 5
+> 10
+> 15
+> 20
+> inferred  Wt (meV)
+> (c) Wt(meV)
+> 0246810 12
+> true nt(μm−2)
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> inferred  nt (μm−2)
+> (d) nt(μm−2)
+
+FIG. 10. Sensitivity of the inferred coordinates to the summary-vector choice. (a–d) Inferred-versus-true recovery for each coordinate, overlaying four summary subsets (full, no-ρ, ξ-only, no-Var) on the four canonical regimes; the dashed line is the identity. The smooth coordinates are recovered consistently; the “full” and “no-ρ” markers nearly coincide everywhere, and only the hierarchy-only subset degrades, in the blurred dense-trap regime. 
+
+build a dense conditional posterior P (Wt, n t | W ∗
+
+s , ξ ∗
+
+s ) for each trap-rich regime, fixing the smooth coordinates at their true values and simulating the summary vector on a 17 ×17 ( Wt, n t) grid, then matching the held-out obser-vation with the same diagonal-χ2 likelihood used in the main inference. For a candidate conserved combination 
+
+W at nt we measure the unit-normalized posterior vari-ance of v(a) · (log Wt, log nt) with v(a) = ( a, 1) /∥(a, 1) ∥
+
+(smaller means better conserved). Here a = 1 is Wtnt
+
+and a = 2 the variance-like W 2
+
+t nt.Table III shows that the degeneracy is regime depen-dent. A clean trade-off ridge (negative posterior corre-lation ρlog between log Wt and log nt) appears only for the blurred dense-trap regime, where W 2
+
+t nt is marginally better conserved than Wtnt. The trap-dominated poste-rior is near-isotropic (weak degeneracy) and the mixed conditional posterior is broad and weakly positively cor-related. Thus Λ t = Wtnt is used in the main text only as the simplest interpretable representative of trap activity, not as a uniquely optimal coordinate. The data do not single out a universal exponent, and a variance-like com-
+
+TABLE III. Trap-sector degeneracy direction from the dense conditional posterior P (Wt, n t | W ∗ 
+
+> s
+
+, ξ ∗ 
+
+> s
+
+). ρlog is the posterior correlation of (log Wt, log nt); nv( a) is the unit-normalized posterior log-variance of W at nt (smaller = better conserved). A clean trade-off degeneracy ( ρlog < 0) comparable to the iso-activity picture appears only for the blurred dense-trap regime, where W 2 
+
+> t
+
+nt is marginally favored. regime (Wt, n t) ρlog nv( Wtnt) nv( W 2 
+
+> t
+
+nt)trap-dominated (18 , 6) −0.19 0.013 0.008 mixed (12 , 6) +0 .56 0.365 0.342 blurred dense-trap (8 , 10) −0.63 0.009 0.005 
+
+bination is equally or more natural where the degeneracy is sharpest. The qualitative conclusion—that a combined trap-activity coordinate is better constrained than Wt or 
+
+nt individually—is independent of this exponent. 13 
+
+[1] A. K. Geim and I. V. Grigorieva, Nature 499 , 419 (2013). [2] K. S. Novoselov, A. Mishchenko, A. Carvalho, and A. H. Castro Neto, Science 353 , aac9439 (2016). [3] F. Wu, T. Lovorn, E. Tutuc, and A. H. MacDonald, Phys. Rev. Lett. 121 , 026402 (2018). [4] E. C. Regan, D. Wang, C. Jin, M. I. B. Utama, B. Gao, X. Wei, S. Zhao, W. Zhao, Z. Zhang, K. Yumigeta, M. Blei, J. D. Carlstr¨ om, K. Watanabe, T. Taniguchi, S. Tongay, M. Crommie, A. Zettl, and F. Wang, Nature 
+
+579 , 359 (2020). [5] Y. Shimazaki, I. Schwartz, K. Watanabe, T. Taniguchi, M. Kroner, and A. Imamoglu, Nature 580 , 472 (2020). [6] K. F. Mak, C. Lee, J. Hone, J. Shan, and T. F. Heinz, Phys. Rev. Lett. 105 , 136805 (2010). [7] A. Splendiani, L. Sun, Y. Zhang, T. Li, J. Kim, C.-Y. Chim, G. Galli, and F. Wang, Nano Lett. 10 , 1271 (2010). [8] G. Eda, H. Yamaguchi, D. Voiry, T. Fujita, M. Chen, and M. Chhowalla, Nano Lett. 11 , 5111 (2011). [9] A. Chernikov, T. C. Berkelbach, H. M. Hill, A. Rigosi, Y. Li, O. B. Aslan, D. R. Reichman, M. S. Hybertsen, and T. F. Heinz, Phys. Rev. Lett. 113 , 076802 (2014). [10] T. C. Berkelbach, M. S. Hybertsen, and D. R. Reichman, Phys. Rev. B 88 , 045318 (2013). [11] D. Xiao, G.-B. Liu, W. Feng, X. Xu, and W. Yao, Phys. Rev. Lett. 108 , 196802 (2012). [12] K. F. Mak and J. Shan, Nat. Photonics 10 , 216 (2016). [13] J. R. Schaibley, H. Yu, G. Clark, P. Rivera, J. S. Ross, K. L. Seyler, W. Yao, and X. Xu, Nat. Rev. Mater. 1,16055 (2016). [14] E. C. Regan, D. Wang, E. Y. Paik, Y. Zeng, L. Zhang, J. Zhu, A. H. MacDonald, H. Deng, and F. Wang, Nat. Rev. Mater. 7, 778 (2022). [15] E. Y. Andrei, D. K. Efetov, P. Jarillo-Herrero, A. H. MacDonald, K. F. Mak, T. Senthil, E. Tutuc, A. Yazdani, and A. F. Young, Nat. Rev. Mater. 6, 201 (2021). [16] K. F. Mak and J. Shan, Nat. Nanotechnol. 17 , 686 (2022). [17] G. Wang, A. Chernikov, M. M. Glazov, T. F. Heinz, X. Marie, T. Amand, and B. Urbaszek, Rev. Mod. Phys. 
+
+90 , 021001 (2018). [18] P. Rivera, K. L. Seyler, H. Yu, J. R. Schaibley, J. Yan, D. G. Mandrus, W. Yao, and X. Xu, Science 351 , 688 (2016). [19] P. Nagler, G. Plechinger, M. V. Ballottin, A. Mitioglu, S. Meier, N. Paradiso, C. Strunk, A. Chernikov, P. C. M. Christianen, C. Sch¨ uller, and T. Korn, 2D Mater. 4,025112 (2017). [20] B. Miller, A. Steinhoff, B. Pano, J. Klein, F. Jahnke, A. Holleitner, and U. Wurstbauer, Nano Lett. 17 , 5229 (2017). [21] J. Lindlau, M. Selig, A. Neumann, L. Colombier, J. F¨ orste, V. Funk, M. F¨ org, J. Kim, G. Bergh¨ auser, T. Taniguchi, K. Watanabe, F. Wang, E. Malic, and A. H¨ ogele, Nat. Commun. 9, 2586 (2018). [22] M. Okada, A. Kutana, Y. Kureishi, Y. Kobayashi, Y. Saito, T. Saito, K. Watanabe, T. Taniguchi, S. Gupta, Y. Miyata, B. I. Yakobson, H. Shinohara, and R. Kitaura, ACS Nano 12 , 2498 (2018). [23] E. M. Alexeev, D. A. Ruiz-Tijerina, M. Danovich, M. J. Hamer, D. J. Terry, P. K. Nayak, S. Ahn, S. Pak, J. Lee, J. I. Sohn, M. R. Molas, M. Koperski, K. Watanabe, T. Taniguchi, K. S. Novoselov, R. V. Gorbachev, H. S. Shin, V. I. Fal’ko, and A. I. Tartakovskii, Nature 567 , 81 (2019). [24] S. Brem, C. Linder¨ alv, P. Erhart, and E. Malic, Nano Lett. 20 , 8534 (2020). [25] Y. Bai, L. Zhou, J. Wang, W. Wu, L. J. McGilly, D. Hal-bertal, C. F. B. Lo, F. Liu, J. Ardelean, P. Rivera, N. R. Finney, X.-C. Yang, D. N. Basov, W. Yao, X. Xu, J. Hone, A. N. Pasupathy, and X.-Y. Zhu, Nat. Mater. 
+
+19 , 1068 (2020). [26] K. Shinokita, K. Watanabe, T. Taniguchi, and K. Mat-suda, ACS Nano 16 , 16862 (2022). [27] H. Fang, Q. Lin, Y. Zhang, J. Thompson, S. Xiao, Z. Sun, E. Malic, S. P. Dash, and W. Wieczorek, Nat. Commun. 
+
+14 , 6910 (2023). [28] E. Blundo, F. Tuzi, S. Cianci, M. Cuccu, K. Olkowska-Pucko, L. Kipczak, G. Contestabile, A. Miriametro, M. Felici, G. Pettinari, T. Taniguchi, K. Watanabe, A. Babi´ nski, M. R. Molas, and A. Polimeni, Nat. Com-mun. 15 , 1057 (2024). [29] M. Brotons-Gisbert, B. D. Gerardot, A. W. Holleitner, and U. Wurstbauer, MRS Bull. 49 , 914 (2024). [30] H. J. Conley, B. Wang, J. I. Ziegler, R. F. Haglund, S. T. Pantelides, and K. I. Bolotin, Nano Lett. 13 , 3626 (2013). [31] A. Raja, L. Waldecker, J. Zipfel, Y. Cho, S. Brem, J. D. Ziegler, M. Kulig, T. Taniguchi, K. Watanabe, E. Malic, T. F. Heinz, T. C. Berkelbach, and A. Chernikov, Nat. Nanotechnol. 14 , 832 (2019). [32] F. Cadiz, E. Courtade, C. Robert, G. Wang, Y. Shen, H. Cai, T. Taniguchi, K. Watanabe, H. Carrere, D. La-garde, M. Manca, T. Amand, P. Renucci, S. Tongay, X. Marie, and B. Urbaszek, Phys. Rev. X 7, 021026 (2017). [33] G. Moody, C. K. Dass, K. Hao, C.-H. Chen, L.-J. Li, A. Singh, K. Tran, G. Clark, X. Xu, G. Bergh¨ auser, E. Malic, A. Knorr, and X. Li, Nat. Commun. 6, 8315 (2015). [34] H. Yu, G.-B. Liu, and W. Yao, 2D Mater. 5, 035021 (2018). [35] F. Wu, T. Lovorn, and A. H. MacDonald, Phys. Rev. Lett. 118 , 147401 (2017). [36] M. H. Naik and M. Jain, Phys. Rev. Lett. 121 , 266401 (2018). [37] Y. Tang, L. Li, T. Li, Y. Xu, S. Liu, K. Barmak, K. Watanabe, T. Taniguchi, A. H. MacDonald, J. Shan, and K. F. Mak, Nature 579 , 353 (2020). [38] S. Shabani, D. Halbertal, W. Wu, M. Chen, S. Liu, J. Hone, W. Yao, D. N. Basov, X. Zhu, and A. N. Pasu-pathy, Nat. Phys. 17 , 720 (2021). [39] D. M. Kennes, M. Claassen, L. Xian, A. Georges, A. J. Millis, J. Hone, C. R. Dean, D. N. Basov, A. N. Pasupa-thy, and A. Rubio, Nat. Phys. 17 , 155 (2021). [40] H. Yu, M. Chen, and W. Yao, Natl. Sci. Rev. 7, 12 (2020). [41] H.-P. Komsa and A. V. Krasheninnikov, Phys. Rev. B 
+
+91 , 125304 (2015). [42] K. Parto, S. I. Azzam, K. Banerjee, and G. Moody, Nat. Commun. 12 , 3585 (2021). [43] F. Mahdikhanysarvejahany, D. N. Shanks, M. Klein, Q. Wang, M. R. Koehler, D. G. Mandrus, T. Taniguchi, K. Watanabe, O. L. A. Monti, B. J. LeRoy, and J. R. Schaibley, Nat. Commun. 13 , 5354 (2022). 14 
+
+[44] K. L. Seyler, P. Rivera, H. Yu, N. P. Wilson, E. L. Ray, D. G. Mandrus, J. Yan, W. Yao, and X. Xu, Nature 567 ,66 (2019). [45] K. Tran, G. Moody, F. Wu, X. Lu, J. Choi, K. Kim, A. Rai, D. A. Sanchez, J. Quan, A. Singh, J. Emb-ley, A. Zepeda, M. Campbell, T. Autry, T. Taniguchi, K. Watanabe, N. Lu, S. K. Banerjee, K. L. Silverman, S. Kim, E. Tutuc, L. Yang, A. H. MacDonald, and X. Li, Nature 567 , 71 (2019). [46] C. Jin, E. C. Regan, A. Yan, M. I. B. Utama, D. Wang, S. Zhao, Y. Qin, S. Yang, Z. Zheng, S. Shi, K. Watanabe, T. Taniguchi, S. Tongay, A. Zettl, and F. Wang, Nature 
+
+567 , 76 (2019). [47] P. Rivera, J. R. Schaibley, A. M. Jones, J. S. Ross, S. Wu, G. Aivazian, P. Klement, K. Seyler, G. Clark, N. J. Ghimire, J. Yan, D. G. Mandrus, W. Yao, and X. Xu, Nat. Commun. 6, 6242 (2015). [48] A. Ciarrocchi, F. Tagarelli, A. Avsar, and A. Kis, Nat. Rev. Mater. 7, 449 (2022). [49] N. F. Ahmad, Y. Urano, K. Watanabe, T. Taniguchi, D. Kozawa, and R. Kitaura, Appl. Phys. Lett. 128 ,231901 (2026). [50] A. Alfrey, C. Tait, T. Taniguchi, K. Watanabe, and S. T. Cundiff, Revealing Strain and Disorder in Transition-Metal Dichalcogenides Using Hyperspectral Photolumi-nescence Imaging (2026), arXiv:2604.01412. [51] K. Wakabayashi, Descriptor Covariance and Correlation Hierarchy in Moir´ e Exciton Photoluminescence (2026), arXiv:2606.06780. [52] P. W. Anderson, Phys. Rev. 109 , 1492 (1958). [53] E. Abrahams, P. W. Anderson, D. C. Licciardello, and T. V. Ramakrishnan, Phys. Rev. Lett. 42 , 673 (1979). [54] P. A. Lee and T. V. Ramakrishnan, Rev. Mod. Phys. 57 ,287 (1985). [55] B. Kramer and A. MacKinnon, Rep. Prog. Phys. 56 , 1469 (1993). [56] N. A. C. Cressie, Statistics for Spatial Data (Wiley, New York, 1993). [57] A. Weston, Y. Zou, V. Enaldiev, A. Summerfield, N. Clark, V. Z´ olyomi, A. Graham, C. Yelgel, S. Magor-rian, M. Zhou, J. Zultak, D. Hopkinson, A. Barinov, T. H. Bointon, A. Kretinin, N. R. Wilson, P. H. Be-ton, V. I. Fal’ko, S. J. Haigh, and R. Gorbachev, Nat. Nanotechnol. 15 , 592 (2020). [58] L. J. McGilly, A. Kerelsky, N. R. Finney, K. Shapovalov, E.-M. Shih, A. Ghiotto, Y. Zeng, S. L. Moore, W. Wu, Y. Bai, K. Watanabe, T. Taniguchi, M. Stengel, L. Zhou, J. Hone, X. Zhu, D. N. Basov, C. Dean, C. E. Dreyer, and A. N. Pasupathy, Nat. Nanotechnol. 15 , 580 (2020). [59] M. Koperski, K. Nogajewski, A. Arora, V. Cherkez, P. Mallet, J.-Y. Veuillen, J. Marcus, P. Kossacki, and M. Potemski, Nat. Nanotechnol. 10 , 503 (2015). [60] A. Srivastava, M. Sidler, A. V. Allain, D. S. Lembke, A. Kis, and A. Imamoglu, Nat. Nanotechnol. 10 , 491 (2015). [61] Y.-M. He, G. Clark, J. R. Schaibley, Y. He, M.-C. Chen, Y.-J. Wei, X. Ding, Q. Zhang, W. Yao, X. Xu, C.-Y. Lu, and J.-W. Pan, Nat. Nanotechnol. 10 , 497 (2015). [62] P. Tonndorf, R. Schmidt, R. Schneider, J. Kern, M. Buscema, G. A. Steele, A. Castellanos-Gomez, H. S. J. van der Zant, S. Michaelis de Vasconcellos, and R. Brats-chitsch, Optica 2, 347 (2015). [63] A. Branny, S. Kumar, R. Proux, and B. D. Gerardot, Nat. Commun. 8, 15053 (2017). [64] M. Kulig, J. Zipfel, P. Nagler, S. Blanter, C. Sch¨ uller, T. Korn, N. Paradiso, M. M. Glazov, and A. Chernikov, Phys. Rev. Lett. 120 , 207401 (2018). [65] J. Zipfel, M. Kulig, R. Perea-Caus´ ın, S. Brem, J. D. Ziegler, R. Rosati, T. Taniguchi, K. Watanabe, M. M. Glazov, E. Malic, and A. Chernikov, Phys. Rev. B 101 ,115430 (2020). [66] Only the magnitude should be compared across works. The sign of ρ(∆ Edc , R LH ) is fixed by the descriptor conventions of Sec. II ( RLH a low/high ratio, ∆ Edc =
+
+Edom −Ecent ), which may differ from those used in the ex-perimental and companion analyses. Appendix B quan-tifies how the RLH split convention sets this correlation. [67] A. Tarantola, Inverse Problem Theory and Methods for Model Parameter Estimation (Society for Industrial and Applied Mathematics, Philadelphia, 2005). [68] M. A. Beaumont, W. Zhang, and D. J. Balding, Genetics 
+
+162 , 2025 (2002). [69] S. A. Sisson, Y. Fan, and M. A. Beaumont, in Handbook of Approximate Bayesian Computation (Chapman and Hall/CRC, 2018) pp. 3–54. [70] D. Barret and S. Dupourqu´ e, Astron. Astrophys. 686 ,A133 (2024). [71] I. Goodfellow, Y. Bengio, and A. Courville, Deep Learn-ing (MIT Press, Cambridge, MA, 2016).

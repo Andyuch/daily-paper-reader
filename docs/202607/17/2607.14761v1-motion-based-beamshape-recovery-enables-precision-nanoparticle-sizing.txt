@@ -1,0 +1,733 @@
+Title: 2607.14761v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.14761v1
+
+Published Time: Fri, 17 Jul 2026 00:56:22 GMT
+
+Number of Pages: 11
+
+Markdown Content:
+Motion -Based Beamshape Recovery Enables Precision Nanoparticle Sizing 
+
+D-Dré K.J.M.J . Braam 1,2 , Daan Wolters 1, Matz Liebel 1,*       
+
+> 1Department of Physics and Astronomy, Vrije Universiteit Amsterdam, De Boelelaan 1100 , Amsterdam, 1081
+> HZ, The Netherlands
+> 2Present address: Faculty of Medical Sciences, Radboud University, Geert Grooteplein Noord 21, Nijmegen,
+> 6525 EZ, The Netherlands
+> * email: m.liebel@vu.nl
+
+Abstract 
+
+Label -free all -optical nanosizing approaches based on i nterferometric or darkfield -imaging infer size, 
+
+composition, or shape from single -particle scattering signals, but these signals are inseparably coupled 
+
+to the spatially non -uniform illumination profile of the imaging system. Existing normalisation 
+
+strategies require directly measuring this illumination field , an approach that fails for background -free 
+
+geometries, such as lightsheet -type illumination, where the field cannot be detected. Here we 
+
+introduce a self -normalisation method that reconstructs the illumination profile directly from the 
+
+scattering signals o f many freely diffusing nanoparticles, requiring no additional hardware, calibration 
+
+samples, or direct field measurement. Critically, our approach eliminates the particle -heterogeneity 
+
+bias that otherwise corrupts such reconstructions, by normalising sing le -particle trajectories against 
+
+each other in regions of spatial overlap, where distinct particles necessarily sample identical 
+
+illumination and detection conditions. We validate this method for gold nanoparticles of various size 
+
+in two - and three -dimensional geometries, including a 90° side -illumination configuration in which the 
+
+illumination field is entirely undetectable by conventional means, and show that reconstructed profiles 
+
+closely match ground -truth measurements, thus drastically reducing signal variability. Relying solely 
+
+on the scattering signal already acquired for sizing, our approach is immediately compatible with 
+
+existing interferometric and darkfield nanoscopy platforms and broadly extendable to other scattering 
+
+or fluorescen t modalities, including light -sheet microscopy. INTRODUCTION 
+
+Methods for the label -free sizing and characterisation of nanomaterials are highly relevant across 
+
+many disciplines. High -tech solutions such as cryo electron microscopy or analytical ultracentrifugation 
+
+provide impressive results but come at a considerable price tag combined with low -throughput 1.
+
+Optical alternatives such as dynamic light scattering or nanoparticle (NP) tracking analysis are much 
+
+cheaper and compatible with high -throughput screening but compromise on characterisation accuracy 
+
+and precision 2,3 . All -optical interferometric , or holographic, single particle microscopes, such as 
+
+interferometric scattering microscopy , sometimes referred to as mass photometry ,4 or off -axis 
+
+holograph y5–7 promise better solutions by retaining the cost and throughput advantage while 
+
+improving accuracy and precision. Several solutions have already entered the nanosizing market 
+
+targeting surface based ultrasensitive single -protein characterisation ( Refeyn TwoMP ) and free -flow 
+
+nanocharacterisation ( Bruker iNTApharma ). In the context of nanosizing, a crucial metric is sizing 
+
+precision. A highly precise instrument could be used to in -situ study antigen -antibody interactions or 
+
+distinguish accurately loaded viral delivery systems from those with partially damaged nucleic a cid 
+
+load. Achieving this ambitious goal requires high -quality signal normalisation and correction schemes, 
+
+an area of intense ongoing research. Illumination geometries, experimental noise, optical transfer 
+
+functions and aberrations are some of the parameters that impact the acquired signals 8–10 . An often 
+
+overlooked parameter is the impact of the spatially non -uniform illumination intensity which is often 
+
+estimated through median backgrounds or differential imaging schemes . These provide good 
+
+approximations as long as straylight that does not originate from the sample plane can be excluded. 
+
+Figure 1a schematically outlines the illumination intensity normalisation challenge that we will be 
+
+addressing in this manuscript by depicting a simplified, minimal -complexity, experiment. Particles of 
+
+interest are illuminated with an illumination field, Eillu . Upon light -matter interaction, the particles 
+
+scatter light , Es, which is then collected and imaged on to a camera. For holographic technologies a 
+
+reference field, Er, interferes with Es at the camera resulting in an image , Iholo , that can be described as 
+
+follows: 
+
+𝐼 ℎ𝑜𝑙𝑜 = 𝐴 𝑠  
+
+> 2
+
++ 𝐴 𝑟  
+
+> 2
+
++ 2𝐴 𝑠 𝐴 𝑟 cos [𝛥𝜑 ] (1) 
+
+With As being the amplitude of the scattered electric field, Ar that of the reference field and Δφ the 
+
+phase difference between the two fields. A key challenge is that Eillu exhibits a spatially non -uniform 
+
+amplitude, Aillu . Furthermore, position dependent optical transfer function s (OTF s)11 might impact how 
+
+Es is mapped onto the detector plane. In simple terms, even if all the particles in Figure 1a were 
+
+identical, the signals recorded would differ dramatically. The challenge is thus to recover the correct 
+
+signals by normalising for the spatially dependent Aillu and the OTF. 
+
+For some approaches, such as inline holographies, it is possible to estimate Aillu by, for example, 
+
+acquiring a median background and assuming that parasitic back -reflections are absent. OTF s are often 
+
+assumed to be spatially independent, an assumption that can be justified for small field s of view. In 
+
+the context of ultimate sizing precising, both assumptions become increasingly difficult to meet . Other 
+
+schemes relying on off -axis holograph ic or darkfield imaging bring additional challenges as they allow 
+
+arbitrary illumination geometries . Figure 1b shows the example of a background -free side -illumination 
+
+configuration that we favour in off -axis implementations. In such a case, estimating Aillu is highly non -trivial as the illumination light is not entering the detection , the main reason why this approach yields 
+
+excellent background suppression .
+
+Ultimately, sizing accuracy and precision are directly correlated with the normalisation quality ( Figure 
+
+1c ). A n approach that intrinsically accounts for the spatially dependent OTF and Aillu , irrespective of 
+
+parasitic back -reflections and illumination geometries would be highly desirable. In this manuscript, 
+
+we propose a n easy to implement self -normalisation scheme that uses the same quantity that is of 
+
+central interest in nanosizing: light scattering by single NPs which makes our approach highly 
+
+compatible with all existing implementations of interferometric and darkfield -based nanoscopy .
+
+The manuscript is organised as follows. We will first provide a thorough discussion of the normalisation 
+
+problem and then describe our normalisation approach using an intuitive sample geometry comprising 
+
+immobilised NPs in transmission illumination . We will then demonstrate that intrinsic particle size 
+
+heterogeneity needs to be eliminated to allow satisfactory normalisation . We will explain how this can 
+
+be achieved even though nanomaterials are essentially always heterogeneous . We will then extend 
+
+our approach to freely moving particles in 3D volumes. Finally, we will provide several validation 
+
+experiments to showcase our approach , explicitly highlighting its performance in cases where it is 
+
+impossible to directly measure the illumination field.                         
+
+> Figure 1, The signal normalisation challenge in interferometric nanoscopy .a) A simplified holographic sizing
+> experiment assuming identical NPs .Even though the sample is monodisperse, the collected scattering signals ,
+> Es,exhibit significant variability. This is due to two factors: the spatially non -uniform illumination ,Eillu ,and the
+> system's spatially dependent o ptical transfer function (OTF) .b) Example of an illumination geometry that makes
+> retrieving Eillu highly non -trivial. c) Achieving the best -possible normalisation is key to solving contemporary and
+> future nanosizing challenges.
+> RESULTS
+
+The challenge of any scattering -based nanosizing technology is to extract As from the measurement 
+
+and convert it into a quantity that directly reports on the size or mass of the analytes of interest. 
+
+Consulting the general signal ( Equation 1 ) we first need to eliminate  𝐴 𝑟  
+
+> 2
+
+which can be achieved by, for 
+
+example, acquiring a median background: 
+
+𝐼 ℎ𝑜𝑙𝑜𝑐𝑙𝑒𝑎𝑛 = 𝐴 𝑠  
+
+> 2
+
++ 2𝐴 𝑠 𝐴 𝑟 cos [𝛥𝜑 ] (2)
+
+Off -axis holography directly extracts  𝐴 𝑠 𝐴 𝑟 𝑒𝑥𝑝 [−𝑖𝛥𝜑 ] via standard hologram processing, thus 
+
+eliminating  𝐴 𝑠  
+
+> 2
+
+and  𝐴 𝑟 
+
+> 2
+
+.7 For i nline holography we assume operation in the  𝐴 𝑠  
+
+> 2
+
+≪ 𝐴 𝑠 𝐴 𝑟  range , a regime that is met during most biological or biomedical applications 12 –14 , to simplify the discussion . We are 
+
+thus left with :
+
+𝐼 𝑂𝐴 _𝑓𝑖𝑛𝑎𝑙 = 𝐴 𝑠 𝐴 𝑟 𝑒𝑥𝑝 [−𝑖𝛥𝜑 ] (3) 
+
+for off -axis holography and, 
+
+𝐼 𝐼𝐿 _𝑓𝑖𝑛𝑎𝑙 ≈ 𝐴 𝑠 𝐴 𝑟 𝑐𝑜𝑠 [𝛥𝜑 ] (4) 
+
+for inline holograph ies 7. Irrespective of the approach AsAr can be extracted either from the complex 
+
+field or by strict focus -control and assuming the absence of field curvature to eliminate the impact of 
+
+𝑐𝑜𝑠 [𝛥𝜑 ] from Equation 4 . If necessary, Ar can be recovered as the square -root of the measured  𝐴 𝑟 
+
+> 2
+
+through the median -background approach mentioned above. 
+
+In mathematical form, w e express As as a function of particle, illumination and system properties by 
+
+using the spatially dependent OTF and Aillu as well as the particle’s scattering cross section , 𝜎 𝑁𝑃 :
+
+𝐴 𝑠 ~𝐴 𝑖𝑙𝑙𝑢 (𝑥 , 𝑦 , 𝑧 )𝑂𝑇𝐹 (𝑥 , 𝑦 , 𝑧 )𝜎 𝑁𝑃  (5) 
+
+Assuming Rayleigh scattering in vacuum we can express Equation 5 as a function of particle diameter, 
+
+d, and the particle refractive index , nNP :
+
+𝐴 𝑠 = 𝑎𝐴 𝑖𝑙𝑙𝑢 (𝑥 , 𝑦 , 𝑧 )𝑂𝑇𝐹 (𝑥 , 𝑦 , 𝑧 ) (𝑛 𝑁𝑃   
+
+> 2−1
+> 𝑛 𝑁𝑃
+> 2+2
+
+) 𝑑 3 (6)
+
+The constant a describes sample position independent system parameters such as, for example, 
+
+quantum efficiencies or reflection losses . To accurately and precisely size a NP it is thus necessary to 
+
+separate the parameters of interest from the nominally unknown variables: 
+
+(𝑛 𝑁𝑃   
+
+> 2−1
+> 𝑛 𝑁𝑃
+> 2+2
+
+) 𝑑 3 = 𝐼 𝑓𝑖𝑛𝑎𝑙  
+
+> 𝑎𝐴 𝑟 (𝑥 ,𝑦 ,𝑧 )𝐴 𝑖𝑙𝑙𝑢 (𝑥 ,𝑦 ,𝑧 )𝑂𝑇𝐹 (𝑥 ,𝑦 ,𝑧 )
+
+(7) 
+
+With  𝐼 𝑓𝑖𝑛𝑎𝑙  being either  𝐼 𝑂𝐴 _𝑓𝑖𝑛𝑎𝑙  or  𝐼 𝐼𝐿 _𝑓𝑖𝑛𝑎𝑙 .
+
+Equation 7 suggests a conceptually straight -forward normalisation route. Systematically moving NPs 
+
+of known size and refractive index , such as reference materials composed of Au, SiO 2 or polystyrene, 
+
+across the image and then using their spatially depending signal to eliminate all unknown parameters. 
+
+The difficulty associated with implementing this strategy is the fact that NPs are generally not all of 
+
+equal size . The mean size of a particle suspension might be known but it is often impossible to know 
+
+the size of an individual particle under observation . Using spatially dependent scattering signals, from 
+
+many different single particles, to infer an illumination profile is thus problematic. To demonstrate this 
+
+problem, we recorded multiple images of 80 nm Au NPs on glass using an off -axis holographic 
+
+microscope operated in darkfield configuration ( Methods ). Figure 2a shows the summed image 
+
+including colour -coded scattering signals. The scattering signals suggest a near -random illumination 
+
+profile even though we used near -Gaussian illumination centred in the image , as measured 
+
+independently by removing the darkfield stop (Methods ). Figure 2, Scattering signals can be used for self -normalisation, if implemented correctly. a) Experimentally                  
+
+> obtained scattering amplitudes of many individual Au NPs with a mean diameter of 80 nm. Approximately 100
+> individual holograms are summed (grayscale), the coloured circles show the recovered particle signal. b) To
+> overcome problems with particle heterogeneity, one could envision systematically scanning a single particle
+> across the entire fie ld of view .c) As a) but obtained by systematically scanning a single 60 nm Au NP across the
+> image .d)Histogram sof the signal recorded for the single NP shown in c) comparing unnormalised , raw, signals
+> (yellow) to those obtained by normalising the single NP raw signal sto an illumination profile obtained by fitting
+> the scatter plots shown in a,c) to the sum of a Gaussian and a square Gaussian. Only the illumination profile
+> obtained by fitting the single -particle measurement yields satisfactory normalisation results (blue).
+
+To eliminate the problem of particle heterogeneity, we implemented a method relyi ng on observing 
+
+the same single 60 nm diameter NP multiple times while systematically scanning it across the field of 
+
+observation ( Figure 2b ). Following this approach, we recover ed a signal distribution reminiscent of a 
+
+Gaussian illumination beam ( Figure 2c ). To gauge how well signal normalisations based on the two 
+
+distinct approaches perform , we fitted the spatially dependent scattering signals (Figure 2a, c ) to the 
+
+sum of a Gaussian and a square Gaussian . We then divided the scattering signals of the single NP by 
+
+the respective amplitude profiles in an attempt to eliminate scattering signal uncertainty associated 
+
+with particle heterogeneity. Figure 2d shows that the normalisation profile obtained via the single -
+
+particle approach yields much better signal normalisation as compared to the ensemble -
+
+measurement -based estimate even though the underlying data of all three histograms stems from the 
+
+same single NP measurements. 
+
+In other words, even in its simplified implementation where we approximated the product of OTF , Ar
+
+and Aillu as the sum of a Gaussian and a square Gaussian , we were able to demonstrate that successful 
+
+normalisation is possible but requires an approach that eliminates NP heterogeneity . An additional 
+
+aspect is that we were re quire d to systematically scan a single particle across the image which is 
+
+impractical and cumbersome. The method also implicitly relies on immobilised particles , but many 
+
+experimental implementations of modern particle sizing target freely diffusing particles to 
+
+simultaneously measure scattering amplitudes and hydrodynamic radii 15 –17 . For these experiments, 
+
+systematic particle scanning is simply not feasible . Additionally, many particles are typically 
+
+simultaneously present in a given field of view. Figure 3, Implementation of m otion -based beamshape recovery . a) The trajectories of 60 nm Au NPs (coloured   
+
+> dots) show particle -specific mean scattering amplitudes but the position -dependent scattering resembles the
+> separately measured beam profile (grayscale image). Individual trajectories are highlighted by area -illustrations
+> (dotted lines). b) Schematic of the proposed approach for scattering cross -section heterogeneity immune self -
+> normalisation based on spatial overlap of single -particle trajectories . c) 26 randomly chosen trajectories (left)
+> recorded for a suspension containing 40 nm and 60 nm diameter Au NPs can be self -normalised into a continuous
+> scattering profile (centre). Selecting a larger number (N=433) of trajectories recovers the nominal il lumination
+> profile as the product of illumination and reference field amplitude.
+
+To overcome these limitations we propose an extension of the scanning method which is conceptually 
+
+outlined in Figure 3 . Rather than scanning a particle, we follow the trajectories of many single NPs as 
+
+they diffuse through the field of observation. Particle -dependent differences in scattering amplitudes 
+
+are apparent , as indicated by the strongly scattering trajectory overlaying with the we akly scattering 
+
+trajectory in the centre of the same illumination area (Figure 3a ). However, on a trajectory -by -
+
+trajectory basis , the single -particle signals report on the independently measured product of 
+
+illumination and reference wave ( Figure 3a , grayscale ). In other words, a single trajectory could be 
+
+used for normalisation , conceptually very similar to manual particle scanning. However, random 
+
+motion is unlikely to adequately sample the entire field of observation. What is needed is a 
+
+normalisation approach that uses multiple trajectories of different NPs , to cover the entire area, but is 
+
+simultaneously insensitive to particle heterogeneity. Toward this goal, we propose a scheme that self -
+
+normalises the scattering amplitudes of single particles within their respective 3D spatial trajectories 
+
+with respect to each other using spatial overlaps as regions where both particles report on identical 
+
+illumination intensities .
+
+Figure 3b schematically explains the idea, using a simulation of three particles diffusing across a one -
+
+dimensional Gaussian beam profile. The particles exhibit different scattering amplitudes which means 
+
+that a direct signal -mean would fail to recover the beam profile ( Figure 3b, left ), the experimental 
+
+heterogeneity problem already observed in Figure 2 . To eliminate this issue, we propose to normalise 
+
+the signals of the individual particles with respect to each other, using mean scattering signals 
+
+computed in areas of spatial overlap. The rationale is simple : in the absence of heterogeneity , position -
+
+dependent signals would be solely a function of Aillu Ar and the OTF. If two particles are in close spatial 
+
+proximity they sample identical Aillu Ar and the OTF and a self -normalisation of the particles ’ entire trajectory based on this overlapping region therefore eliminates size and composition differences. 
+
+Figure 3b shows that this approach is indeed able to recover the simulated beam profile. 
+
+Figure 3c implements the same normalisation in two dimensions, using experimentally measured 
+
+trajectories for a mixture of 40 nm and 60 nm diameter Au NPs (Methods ). A set of 26 randomly chosen 
+
+trajectories shows widely varying scattering signals albeit slightly increased amplitudes towards the 
+
+centre of the image. We then attempted self -normalisation following a simple strategy ( Methods ): We 
+
+first quantise d the particle positions onto a 1x1 μm two -dimensional grid and identified the two 
+
+trajectories with the maximum number of position overlaps. We then normalise d the se two 
+
+trajectories using the mean of their respective scattering signals in the overlapping region followed by 
+
+combin ing them into a new, longer, trajectory. We then repeat ed this process until all trajectories were 
+
+combined into one single spatial network covering the entire area of observation. As can be seen, even 
+
+26 trajectories already deliver a scattering signal reminiscent of an illumination profile , a marked 
+
+improvement over the near -random signals ( Figure 3c ). After incorporating the entire dataset , we 
+
+indeed recover ed a profile that closely resembles an expected illumination profile multiplied with a 
+
+uniform reference wave (Figure 3c ).               
+
+> Figure 4, Benchmarking and application. a) Hydrodynamic diameter vs cube -root of scattering amplitude plots
+> for individually measured 40 nm (yellow) and 60 nm (blue) diameter Au NPs. Comparisons of results obtained
+> for unnormali sed (left) ,normalised to directly measured (centre) or trajectory -based reconstructed (right)
+> illumination beam profiles are shown .b) Quantification of signal variations within individual trajectories of
+> diameter 60 nm Au NPs as a measure of normalisation -quality. The histogram shows deviations from the mean
+> value of individual 800 -point trajectories. 80 adjacent trajectory points are av eraged to eliminate shot -noise
+> contributions thus yielding 10 histogram bins per trajectory . c) Representative single -particle amplitudes
+> obtained for individual trajectories comparing as recorded and beamshape -normalised results of trajectories
+> sampling beam -areas of minor variation (left) and drastic changes (right). d) 3D beamshape normalisation
+> applied to an “invisible” illumination beam based on 90 °side -illumination showing the reconstructed xyz -
+> projections (top) as well as trajectory mean normalised scattering amplitudes without (centre) and with (bottom)
+> illumination amplitude normalisation at varying z -distances from the image plane. 8 adjacent trajectory time -
+> poi nts were averaged to reduce shot -noise induced distribution broadening.
+
+At this point, the key question is whether the recovered normalisation profile correct ly reflects reality .
+
+Answering this question is non -trivial as the intrinsic p article heterogeneity makes it difficult to provide 
+
+a ground -truth measurement. Toward this goal, w e attempted various strategies, as outlined in Figure 
+
+4. Initially, we compared scattering -based recovery with direct measurements of Aillu Ar, by using a 
+
+transmission -based darkfield setup where removing the mask allowed a direct measurement of the latter (Methods ). This approach yields a somewhat accurate ground -truth estimation even though we 
+
+noted that OTF -contributions lead to minor discrepancies 11 , an aspect we attribute to the fact that an 
+
+illumination field measurement only reports on the low -k contributions to the OTF, and the difficulties 
+
+associated with perfectly positioning a darkfield mask in the Fourier plane .
+
+Figure 4 summarises the validation attempts which provide strong supporting evidence for the broad 
+
+applicability and robustness of our method . Figure 4a compare s the hydrodynamic radi i and scattering 
+
+amplitude s of measurements conducted on 40 nm and 60 nm diameter Au nanoparticles ( Methods ). 
+
+The unnormali sed data shows a considerable signal spread which is reduced when normalising to 
+
+either the directly measured or recovered illumination profile. Importantly, the two approaches yield 
+
+near -identical results , and the normalisation profiles closely resemble each other even though they 
+
+were obtained following distinctly different routes. In simple terms, the experimentally measured 
+
+illumination beam shape is near -identical to the beam shape reconstructed via merged particle 
+
+trajectories. In a second approach, we evaluate d the spatially dependent mean scattering amplitude 
+
+for single particles based on a trajectory -by -trajectory analysis for 60 nm Au nanoparticles ( Figure 4b, 
+
+Methods ). Our underlying assumption is that the scattering signal of a single particle should be 
+
+constant, if correctly normalised, and that normalisation artefacts are likely to manifest themselves as 
+
+spatially distinct patterns. Figure 4b compares single -particle scattering signals, normalised to the 
+
+mean signal of the ir corresponding trajectory, for illumination -profile -normalised and as -recorded 
+
+signals. The dramatic reduction in histogram -spread suggests successful normalisation . To support this 
+
+conclusion, Figure 4c shows a few representative single -particle scattering signals over a total of 800 
+
+trajectory points. For particles that remain spatially localised within somewhat uniform illumination 
+
+areas ( Figure 4c ) we observe near -identical normalised and raw signals. When moving towards 
+
+particles that explore areas of dramatically changing illumination amplitudes, our normalisation 
+
+procedure recovers normalised signal -fluctuations reminiscent of uniform illumination amplitudes ,
+
+thus further underlining the high -quality normalisation achieved. 
+
+Thus far, we have focused on normalisations in 2D space, employing an experimental configuration 
+
+that allowed physically inspecting the illumination field. To demonstrate the broad applicability of our 
+
+methods, we conclude with an experiment conducted under 90 ° illumination where the illumination 
+
+field is undetected ( Methods ), as outlined in Figure 1b . Figure 4d shows xyz -projections of the 
+
+reconstructed illumination field , which indicates that scattering -based 3D reconstruction might be 
+
+feasible. To test this hypothesis, we relied on single particle observations, justified by the same 
+
+assumption that individual particles exhibit constant , position independent, scattering cross sections. 
+
+Comparing the trajectory -mean normalised scattering amplitudes with and without illumination 
+
+amplitude normalisation (Figure 4d ) highlights that it is, indeed, possible to accurately reconstruct the 
+
+illumination profile based on many individually recorded single -particle trajectories despite the 
+
+intrinsic particle heterogeneity. The minor deviations in the -20 to -10 μm z -range are likely due to the 
+
+very low particle counts that negatively impacted the reconstruction quality. 
+
+SUMMARY AND CONCLUSION 
+
+To summarise, we proposed, implemented and validated a methodology that accurately and precisely 
+
+reconstructs an illumination profile by relying on many single -particle trajectories enabled by 
+
+stochastic sampling via Brownian motion. At its core, the method eliminates the intrinsic self -
+
+normalisation bias, due to particle heterogeneity, through the simple realisation that enforcing 
+
+identical scattering signals for distinct particles in spatially overlapping regions essentially makes th eparticles identical. Repeating this self -normalisation procedure over many overlapping regions and 
+
+many single particle trajectories then covers a large 3D volume that would be, otherwise, impossible 
+
+to sample with a single particle. 
+
+We demonstrated our strategy and the problem of particle heterogeneity through serial singl e- and 
+
+multiple -particle measurements by manually scanning a 2D surface ( Figure 2 ) before showcasing how 
+
+the intrinsic motion of freely diffusing particles enables the same strategy ( Figure 3 ). We then validate d
+
+our approach through intrinsically more complex scenarios covering beamshape recovery, trajectory 
+
+self -normalisation and, ultimately, 3D illumination field recovery of an unobserved beam as well as 
+
+scattering -signal normalisation (Figure 4 ). Our results provide a much -needed signal normalisation 
+
+framework that is broadly applicable and highly relevant for nanosizing applications and readily 
+
+translatable to other modalities, such as light -sheet microscopy, if quantitative signals are of interest. 
+
+Beyond normalisation, our approach enables accurate and precise spatially -dependent imaging system 
+
+characterisation, including OTF contributions, based on optical signals that are equivalent to potential 
+
+analytes of interest. The framework introduced here represents a crucial step towards realising 
+
+ultrasensitive flow -cytometry based on interferometric imaging rather than darkfield -type point 
+
+observations .
+
+METHODS 
+
+Microscope , holographic imaging and data processing 
+
+Data was acquired using a conventional off -axis real -space holographic microscope 15 based on either 
+
+a 520 nm ( PD -01298 , Lasertack GmbH ; all diffusion measurements ) or a 635 nm single -mode diode 
+
+laser (PD -01287, Lasertack GmbH ; static particles ), using numerical aperture 0.5 ( RMS20X -PF , Nikon )
+
+or 0.75 ( RMS40X -PF , Nikon ) Nikon Plan Fluor objectives in combination with a 200 mm tube lens and 
+
+a Basler dart daA1440 -220um camera as detector . The probe -to -reference time -delay was adjusted 
+
+based on a manual translation stage by maximising the amplitude of the interferometric signal. All data 
+
+pre -processing was conducted as discussed in detail elsewhere 15,16 . Depending on the experiment, the 
+
+sample was either illuminated in a transmission geometry , with a removable darkfield stop positioned 
+
+in the centre of the objective’s back -focal -plane, or in a side -illumination configuration, under a 90 °
+
+angle with respect to the collection objective. 
+
+Sample preparation 
+
+#1.5H cover glass was sonicated for 10 min in acetone and 10 min in miliQ followed by drying under a 
+
+stream of nitrogen and then used for the assembly of sample chambers. 
+
+The transmission -chambers consisted of two cover glasses separated by ~400 μm with double -sided 
+
+sticky tape that were filled with the analyte of interest: 40 nm, 60 nm and 80 nm Au NPs ( BBI Solutions )
+
+diluted to imaging -appropriate concentrations (100 -10000 fold dilution of the original OD = 1 
+
+suspensions, depending on the experiment ).
+
+The side -illumination cells consisted of a single cover glass with two polished fused silica pieces (1x1x8 
+
+mm, Hylasercutting ), separated by approximately 4 mm, acting as in -coupling and out -coupling 
+
+windows into the NP suspensions contained between the windows . The pieces were attach ed to the 
+
+cover glass using an oxygen -plasma activated 50 μm silicone film that had a hole punched into the centre to ensure that the collected signal directly propagated from the liquid environment into the 
+
+cover glass without passing the silicone layer .
+
+For the experiments with static particles, we relied on binding via PLL -gPEG , as outlined previously 18 ,
+
+or the addition of NaCl to induce particle aggregation. 
+
+Data processing 
+
+The extracted interference terms were expanded into a coarse z -stack using the angular spectrum 
+
+method followed by particle detection based on a YOLOv8 model trained on a full -physics simulation 
+
+of the holographic image formation process. Based on the size of the YOLOv8 boxes we inferred a first, 
+
+coarse, z -position which was then used to obtain near in -focus NPs from the original interference 
+
+information. The NPs were extracted, cropping an area of approximately 10 -times the optical 
+
+diffraction limited followed by multiple rounds of fine -propagation to focus the particle. The 
+
+numerically obtained z -position yielding the maximum signal -amplitude was used as the true z -
+
+position of the particle. The xy -positions were coarsel y estimated using an established radial symmetry 
+
+approach 19 . The particle amplitude was extracted as the maximum of a dramatically resolution -
+
+enhanced (k -space padding) particle image . Trajectory linking was based on the Python trackpy v0.7 
+
+package 20 .
+
+Beamshape recovery 
+
+To recover the illumination profile from the single -particle trajectories discussed in Figure 3 we relied 
+
+on 2D position -projections to computationally simplify the retrieval process. We quantised the 
+
+xy/xz/yz -positions using a 1 μm spatial grid and then computed the number of overlapping trajectory 
+
+points for arbitrar il y selected trajectories. If two trajectories overlapped by more than 70 positions ,
+
+we merged all positions of the two trajectories into a new “trajectory”. The amplitudes of both initial 
+
+trajectories were normalised with respect to each other using amplitude means obtained from the 
+
+overlapping data points. This process was repeated until all trajectories were merged into one 
+
+trajectory or until a certain number of iterations was exceeded to account for non -overlapping 
+
+trajectories that were discarded. We repeated the steps outlined above multiple times to ensure 
+
+consistent reconstruction despite the arbitrary selection of trajectories. The 3D beamshape recovery 
+
+discussed in Figure 4 followed the same, 2D projection -based, strategy which was extended by a 3D 
+
+interpolation procedure to reconstruct the final volumetric representation. 
+
+REFERENCES                          
+
+> 1. Werle, A. K. et al. Comparison of analytical techniques to quantitate the capsid content of adeno -associated
+> viral vectors. Mol. Ther. -Methods Clin. Dev. 23 , 254 –262 (2021).
+> 2. Bachurski, D. et al. Extracellular vesicle measurements with nanoparticle tracking analysis –An accuracy and
+> repeatability comparison between NanoSight NS300 and ZetaView. J. Extracell. Vesicles 8, 1596016 (2019).
+> 3. Hoo, C. M., Starostin, N., West, P. & Mecartney, M. L. A comparison of atomic force microscopy (AFM) and
+> dynamic light scattering (DLS) methods to characterize nanoparticle size distributions. J. Nanoparticle Res. 10 ,
+> 89 –96 (2008).
+> 4. Ginsberg, N. S., Hsieh, C. -L., Kukura, P., Piliarik, M. & Sandoghdar, V. Interferometric scattering microscopy.
+> Nat. Rev. Methods Primer 5, 23 (2025).
+> 5. Kreis, T. Digital holographic interference -phase measurement using the Fourier -transform method. J Opt Soc
+> Am A 3, 847 –588 (1986).
+> 6. Schnars, U. & Jüptner, W. Direct recording of holograms by a CCD target and numerical reconstruction. Appl.
+> Opt. 33 , 179 –181 (1994).
+
+7. Cuche, E., Marquet, P. & Depeursinge, C. Spatial filtering for zero -order and twin -image elimination in digital 
+
+off -axis holography. Appl. Opt. 39 , 4070 –4075 (2000). 
+
+8. Brooks, N. J., Liu, C. -C., Chen, Y. -H. & Hsieh, C. -L. Point Spread Function Engineering for Spiral Phase 
+
+Interferometric Scattering Microscopy Enables Robust 3D Single -Particle Tracking and Characterization. ACS 
+
+Photonics 11 , 5239 –5250 (2024). 
+
+9. Lombardo, C. et al. Leveraging Partial Coherence to Enhance Nanoparticle Detection Sensitivity and 
+
+Throughput in Interferometric Scattering Microscopy. ACS Photonics 12 , 4376 –4387 (2025). 
+
+10. Mazaheri, M. et al. iSCAT microscopy and particle tracking with tailored spatial coherence. Optica 11 , 1030 
+
+(2024). 
+
+11. Juvells, I., Vallmitjana, S., Ros, D. & Moneo, J. R. de F. Numerical evaluation of the two -dimensional modulation 
+
+transfer function by means of spot diagram. Comparison with experimental measurements. J. Opt. 14 , 293 
+
+(1983). 
+
+12. Piliarik, M. & Sandoghdar, V. Direct optical sensing of single unlabelled proteins and super -resolution imaging 
+
+of their binding sites. Nat. Commun. 5, 4495 (2014). 
+
+13. Young, G. et al. Quantitative mass imaging of single biological macromolecules. Science 360 , 423 –427 (2018). 
+
+14. Liebel, M., Hugall, J. T. & van Hulst, N. F. Ultrasensitive Label -Free Nanosensing and High -Speed Tracking of 
+
+Single Proteins. Nano Lett. 17 , 1277 –1281 (2017). 
+
+15. Ortega Arroyo, J. & Liebel, M. The Next Dimension: Digital Holography for 3D Interferometric Scattering. ACS 
+
+Nano 19 , 38630 –38640 (2025). 
+
+16. Ortiz -Orruño, U., Quidant, R., van Hulst, N. F., Liebel, M. & Ortega Arroyo, J. Simultaneous Sizing and Refractive 
+
+Index Analysis of Heterogeneous Nanoparticle Suspensions. ACS Nano 17 , 221 –229 (2023). 
+
+17. Kashkanova, A. D., Blessing, M., Gemeinhardt, A., Soulat, D. & Sandoghdar, V. Precision size and refractive 
+
+index analysis of weakly scattering nanoparticles in polydispersions. Nat. Methods 19 , 586 –593 (2022). 
+
+18. Ortiz -Orruño, U., Jo, A., Lee, H., van Hulst, N. F. & Liebel, M. Precise Nanosizing with High Dynamic Range 
+
+Holography. Nano Lett. 21 , 317 –322 (2021). 
+
+19. Parthasarathy, R. Rapid, accurate particle tracking by calculation of radial symmetry centers. Nat. Methods 9,
+
+724 –726 (2012). 
+
+20. trackpy v0.7. https://doi.org/10.5281/zenodo.16089574.

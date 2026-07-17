@@ -1,0 +1,1852 @@
+Title: 2607.14678v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.14678v1
+
+Published Time: Fri, 17 Jul 2026 00:44:27 GMT
+
+Number of Pages: 42
+
+Markdown Content:
+1
+
+# Vortex -Beam Transient Absorption Microspectroscopy Resolves 
+
+# Ultrafast Free -Exciton and Polaron Diffusion in 2D Perovskites 
+
+# Ju -Young Kim 1†, Anirban Mondal 1† and Gi Rim Han 1
+
+> 1
+
+# Center for Molecular Spectroscopy and Dynamics, Institute for Basic Science 
+
+# (IBS), Seoul 02841, Republic of Korea 
+
+> †J. -Y.K. and A.M. contributed equally.
+
+# Kwang Jin Lee 2,3 
+
+> 2
+
+# Division of Semiconductor Physics, Korea University, Sejong 30019, Republic 
+
+# of Korea 
+
+> 3
+
+# Department of Applied Physics, Graduate School, Korea University, Sejong 
+
+# 30019, Republic of Korea 
+
+# Jong Min Lim 4 and M yeongsam Jen 4
+
+> 4
+
+# Department of Chemistry and Green -Nano Materials Research Center, 
+
+# Kyungpook National University, Daegu 41566, Republic of Korea. 
+
+# Minhaeng Cho 1,5 *
+
+> 5
+
+# Department of Chemistry, Korea University, Seoul 02841, Republic of Korea 
+
+# * mcho@korea.ac.kr 2
+
+# Abstract 
+
+Two -dimensional (2D) Ruddlesden –Popper perovskites are promising optoelectronic materials 
+
+with strongly confined excitonic properties; however,  probing  their ultrafast carrier  transport 
+
+dynamics —particularly the initial nonequilibrium diffusion regime —remains challenging 
+
+because conventional transient absorption microscopy requires complex spatial imaging and 
+
+lacks sufficient temporal sensitivity to resolve early -time  diffusion  dynamics . Here, we 
+
+demonstrate a vortex -beam -based transient absorption  microspectroscopy platform  (V-TAM )
+
+enabling  imaging -free measurement of carrier transport by encoding spatial diffusion 
+
+information  into the mode -dependent pump –probe signal. By employing  vortex probes  with 
+
+different  topological charge s, V-TAM provides mode -selective  spatial sensitivity  to  excitonic 
+
+dynamics  with sub -picosecond temporal resolution.  Using V -TAM, we resolved rapid  free -
+
+exciton (FE) diffusion followed by relaxation toward a slower steady -state transport regime.  A
+
+theoretically derived time -dependent diffusion model separate d transient and steady -state 
+
+transport  contributions , yielding  a transient  diffusion  enhancement  (68.84  cm 2/s ) and  a steady -
+
+state  diffusion coefficient  (1 .85 cm 2/s ), thus providing a n initial  diffusion coefficient  (70.69 
+
+cm 2/s ), and a cooling time  of  0.3 5 ps . Measurements  at the  exciton -polaron (EP) resonance 
+
+revealed strongly suppressed diffusion with nearly time -independent signal ratios,  indicating 
+
+lattice -coupled EP transport.  These  parameters were  extracted  without spatial scanning or 
+
+image reconstruction , establish ing  V-TAM as a powerful imaging -free platform for 
+
+investigating  carrier  transport  in perovskites and other semiconductor systems. 
+
+Keywords:  2D Perovskites, Vortex -beam transient absorption microspectroscopy (V -TAM), 
+
+Ultrafast exciton transport, Hot -carrier diffusion, Imaging -free measurements 3
+
+1.  Introduction 
+
+Two -dimensional (2D)  halide perovskites, particularly  Ruddlesden –Popper (RP)  structures, 
+
+have recently emerged as a promising class of semiconductors  due  to their reduced 
+
+dimensionality  and highly  tunable  excitonic and  optoelectronic properties. 1-4 These materials 
+
+consist of inorganic  octahedral  layers separated by bulky organic spacer cations, forming a 
+
+natural quantum well (QW) structure that enables strong dielectric confinement. 5 Compared to 
+
+their three -dimensional counterparts, 2D RP perovskites exhibit enhanced environmental 
+
+stability, bandgap tunability, and pronounced excitonic effects, characterized by increased 
+
+exciton binding energies and reduced dielectric screening, makin g them  promising for next -
+
+generation optoelectronic  applications , including  light -emitting  diodes , lasers, and 
+
+photovoltaics. 6-8 In  these systems, strong exciton -phonon coupling leads to the formation of 
+
+free excitons  (FEs) and  lattice -coupled  exciton -polarons (EPs) , which  critically influence 
+
+carrier relaxation and transport dynamics. 9 Despite  extensive efforts to characterize excitonic 
+
+properties, a comprehensive understanding of the ir dynamic s remains elusive. In particular,  the 
+
+ability to disentangle and directly probe the diffusion of  FEs and EPs is still limited, hindering 
+
+a complete description of carrier transport mechanisms in 2D perovskites. 
+
+To investigate exciton transport in low -dimensional perovskites, several time -resolved optical 
+
+microscopy techniques have been widely employed, among which time -resolved 
+
+photoluminescence microscopy (TRPLM) and transient absorption microscopy (TAM) are the 
+
+most commonly used. 10 -13  Both techniques typically measure the variance of the exciton spatial 
+
+distribution,  𝜎 2(𝑡 ), as a function of time, rather than relying solely on temporal signals. The 
+
+diffusion constant  D is then extracted using the relation  𝜎 2(𝑡 ) = 𝜎 0 
+
+> 2
+
++ 2𝑛𝐷𝑡 , where  𝑛  is the 
+
+dimensionality of the diffusion (usually  𝑛  = 1 or 2 depending on the material). 4
+
+TRPLM measures the spatial distribution of emissive excitons through photons emitted via 
+
+radiative recombination, providing high sensitivity due to its background -free detection 
+
+scheme.  This approach offers intrinsic s pecificity  to  radiative state s, which  are  directly relevant 
+
+to light -emitting applications and  solar cells. However,  TRPLM  is inherently limited to 
+
+radiative (bright)  excitons  and is therefore blind to  non -emissive species, including non -
+
+radiative  excitons,  triplet states , or trapped carriers. In addition, its temporal resolution is  often 
+
+limited  by time -correlated single -photon counting  (TCSPC)  electronics to  the  tens of 
+
+picoseconds  regime , making it  difficult  to  detect the early -stage  ultrafast carrier transport.  In 
+
+contrast, TAM, a pump –probe -based technique, probes the photoinduced change in absorption 
+
+(Δ𝐴 ) and  allows  tracking  of  the full population of photoexcited species, including both bright 
+
+and dark  exciton s, polarons,  and hot carriers .14  Its temporal resolution, limited only by the laser 
+
+pulse duration  (typically 10 –100 fs) , provides  access to ultrafast dynamics on the femtosecond 
+
+timescale .15  This capability enables the observation of nonequilibrium, or even ballistic, 
+
+transport regimes prior to the onset of classical diffusion. By capturing both emissive and non -
+
+emissive states, TAM offers a more comprehensive picture of carrier dynamics that  are  not 
+
+accessible through photoluminescence -based techniques (Table 1).  Consequently, in the 
+
+ultrafast time window of interest (0 –1 ps), where transport deviates from classical diffusion, 
+
+TAM is especially well suited —and among optical probes the most directly capable —for 
+
+resolving early -stage carrier dynamics, owing to its fe mtosecond temporal resolution. 
+
+Table 1. Comparison of TRPLM and TAM for investigating excitonic species in 2D 
+
+perovskites.         
+
+> Feature TRPLM TAM
+> Species de tected Radiative ( bright) excitons All ( bright, dark, charges, etc.)
+
+5                   
+
+> Time resolution ~20 –50 ps (TCSPC limited) ~10 –100 fs ( pulse limited)
+> Sensitivity Very high ( background -free) Moderate ( differential signal)
+> Primary limitation Missing dark (non -emissive state)
+> dynamics High experimental complexity
+> Typical use case Long -range slow diffusion in organic
+> films
+> Ultrafast transport in QDs or 2D
+> materials 12, 14
+
+Yet, despite its advantages, conventional TAM still suffers from several inherent limitations. 
+
+As a differential measurement of a small photoinduced signal on a large optical background, 
+
+TAM requires sophisticated modulation techniques , such as lock -in detection, and is more 
+
+susceptible to laser noise than  photoluminescence -based approaches.  In particular , the signal 
+
+at early delay times ( 𝑡  ≈ 0) can be affected by pump –probe overlap, leading to coherent artifacts 
+
+that require careful calibration and data interpretation.  Furthermore, although TAM is the 
+
+preferred technique for probing ultrafast dynamics in the 0 –1 ps time window —where early -
+
+stage diffusion dynamics are established —it measures the total photoexcited population. As a 
+
+result, it is necessary to disentangle po pulation  decay  from spatial  expansion  (diffusion)  when 
+
+extracting diffusion dynamics from two -dimensional distributions. 13  This is particularly 
+
+important in 2D perovskite  QW s, where photoexcitation generates FEs  (10 –100 fs)  that can 
+
+undergo lattice dressing to form EPs  (sub -ps timescale) , as  these species  show  distinct transport 
+
+behaviors  (Figure 1 A). In conventional TAM, which employs Gaussian pump and probe beams, 
+
+the reconstruction of spatial distributions requires the acquisition of time -resolved microscopy 
+
+images, a process that is both time -consuming and experimentally  demanding . Moreover, 
+
+accurate extraction of the spatial variance relies on determining the center of the Gaussian 
+
+profile in each frame, making the analysis highly sensitive to laser or stage drift  and thereby 
+
+compromising the reliability of the  𝜔 2(𝑡 ) evaluation (where  𝜔  denotes the beam waist). 16 6
+
+To overcome these limitations,  we introduce a vortex -beam -based transient absorption 
+
+micro spectro scopy (V -TAM) technique that combines structured (vortex) light with  TAM . A 
+
+vortex beam is a n optical field  with a helical phase structure, characterized by a phase 
+
+singularity at its center, giving  rise to a  doughnut -shaped intensity profile with a central 
+
+intensity null. 17 -19  The orbital angular momentum (OAM) carried by the vortex beam is 
+
+quantified by its topological charge (TC,  l); as the TC increases, the diameter of the doughnut 
+
+profile, both its inner and outer radii, correspondingly expands (Figure 1 B). 20 -23 
+
+The  V-TAM  platform  utilizes a Gaussian pump and a  vortex ( doughnut -shaped ) probe . In 
+
+contrast to  conventional  Gaussian probe s that  yield spatially averaged signals, the vortex probe 
+
+enables spatially selective detection , distinguishing different excitonic species  by tuning the 
+
+vortex beam radius to probe their evolving spatial distribution  (Figure 1 C, D). When  excitons 
+
+remain localized near the excitation center —within the central intensity null of the vortex probe 
+
+(TC  > 0) —the signal remains minimal due to low spatial overlap.  As diffusion proceeds, the 
+
+expanding  exciton population spreads outward and increasingly overlaps with  the doughnut -
+
+shaped probe ’s high -intensity  regions,  resulting in a time -dependent  increase  in the signal . This 
+
+scheme functions as a spatial autocorrelation probe, significantly enhancing signal robustness 
+
+and  measurement efficiency  by simplifying the detection architecture.  By encoding spatial 
+
+information directly into the beam geometry, V -TAM eliminates the need for complex, time -
+
+consuming imaging procedures or extensive spatial mapping typically required to resolve 
+
+distinct excitonic species. 7
+
+Fig. 1. Vortex  beam -assisted TA measurements of exciton diffusion in  2D  perovskites.  (A)
+
+Diagram of exciton pathways in 2D perovskites.  Photoexcited  free excitons rapidly form 
+
+exciton -polarons  (10 –100 fs)  and predominantly  decay  via radiative recombination or trapping, 
+
+with  minimal  dissociat ion  into free carriers.  (B) Helical wavefront, phase, and intensity profiles 
+
+of vortex beams. ( C) Exciton detection schemes using conventional Gaussian (left) and vortex 
+
+(right) probe  beams . Photoexcited e xciton distribution broadens over time. 
+
+In this work, we implement V -TAM to probe ultrafast exciton transport in  2D  RP perovskites 
+
+at sub -picosecond time scales . Using (PEA) 2PbI 4 (PEA = phenethylammonium, 
+
+C6H5C2H4NH 3+) perovskite QWs, we provide a detailed investigation of early -stage dynamics, 
+
+specifically resolving the transition from FEs to EPs. Supported by a  robust  theoretical 
+
+framework , our results  demonstrate  that V -TAM direct ly  captures  the distinct transport 
+
+signatures of these excitonic species  that  govern  overall  in -plane diffusion. By  shift ing from a 
+
+scanning -based imaging requirement to a mode -overlap -based detection, we effectively 8
+
+transform a  “microscopy  problem”  into a  “spectroscopy solution ”. This  approach allows  a clear 
+
+separation of population decay from spatial transport without  time -consuming image 
+
+reconstruction,  establishing V -TAM as an efficient and powerful platform for investigating 
+
+ultrafast transport phenomena in low -dimensional quantum materials. 
+
+2.  Results 
+
+Time -dependent diffusion  equation . As derived  from  our previous work, 24  the  spatial 
+
+diffusion contribution to the  V-TAM signal, expressed as the ratio of the vortex ( l ≠ 0) to 
+
+Gaussian ( l = 0) probe signals, can be written as follows when the pump is a Gaussian , and the 
+
+probe is a vortex beam with TC  = lpr :
+
+𝑆 (0, 𝑙 pr ; 𝑇 ) = 2
+
+𝜋 
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 8𝐷𝑇 )|𝑙 pr |
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 𝑤 𝑝𝑟  
+
+> 2
+
++ 8𝐷𝑇 )|𝑙 pr |+1 . (1)
+
+Here,  D denotes the diffusion coefficient,  𝑇  is time, and  𝑤  represents the beam waist;  𝑤 𝑝𝑢 
+
+and  𝑤 𝑝𝑟  correspond to the pump and probe, respectively. The beam waist is given by  𝑤  =
+
+𝜆 /(π ∙ 𝑁𝐴 ), where  λ is  the wavelength  and the  𝑁𝐴  is  the  numerical  aperture of the excitation 
+
+lens . Parameters  used in our work are as follows:  λ𝑝𝑢  = 400  nm,  λ𝑝𝑟  = 520 /530  nm,  and 
+
+𝑁𝐴  = 0.65.  Assuming a diffraction -limited Gaussian 1/e 2 waist at focus,  𝑤 0 ≈ 𝜆  𝜋  NA ⁄ .
+
+Accordingly, the  Gaussian waists at focus  are  𝑤 𝑝𝑢  = 0.196  𝜇𝑚  and  𝑤 𝑝𝑟  = 0.255  𝜇𝑚 . Since 
+
+the vortex probe is an LG₀,ₗ mode, its intensity maximum lies on a bright ring  with  diameter 
+
+𝑑 𝑙  = 2𝑟 𝑙  = 𝑤 𝑝𝑟 √|𝑙 | 2⁄ . Therefore,  the focused doughnut diameters are  0.36  μm  for TC = 1  and 9
+
+0.51  μm  for TC = 2 . Here,  𝑤 𝑝𝑟  denotes the Gaussian waist parameter of the vortex mode used 
+
+in Eq. (1), not the doughnut diameter. 
+
+Notably, for the special case of  𝑙 𝑝𝑟  = 0 (a Gaussian probe), Eq. (1) reduces to the well -known 
+
+signal expression employed in fluorescence (intensity) correlation spectroscopy  (FCS)  for a 
+
+Gaussian focal volume, 25  in which the temporal decay of the signal directly reflects the 
+
+diffusion of fluorescent species through a Gaussian observation volume. Eq . (1) generalizes 
+
+this expression to the case of a vortex probe ( 𝑙 𝑝𝑟  ≠ 0), where the time -dependent spatial 
+
+overlap between the Gaussian pump and the donut -shaped vortex probe is exploited to encode 
+
+the diffusion -driven population spread into the temporal evolution of the mode -resolved V -
+
+TAM signal. 
+
+Starting from th is  expression  for a constant diffusion coefficient, we  now  extend the model to 
+
+account for hot -carrier transport by introducing a time -dependent diffusion  coefficient  𝐷 (𝑡 ).
+
+Hot carriers with high kinetic energy,  generated by a pump laser tuned well above the bandgap, 
+
+can exhibit substantially enhanced diffusion compared with thermalized carriers; the diffusion 
+
+coefficient must therefore be treated as time -dependent,  𝐷 (𝑡 ), evolving as the carriers lose 
+
+kinetic energy and relax toward the band edge. The corresponding diffusion equation  ∂𝑛  ∂𝑡 ⁄ =
+
+𝐷 (𝑡 )∇2𝑛  can be solved  analytically  by  reducing it to the standard diffusion form through a 
+
+change of the time variable  (full derivation in  Supplementary Note 1 ). 
+
+We model the instantaneous diffusion rate as  𝐷 (𝑡 ) = 𝐷 𝑏𝑢𝑙𝑘  + 𝛿𝐷  ⋅ 𝑒 −𝑡 /𝑡 𝑐𝑜𝑜𝑙  , where  𝑡 𝑐𝑜𝑜𝑙 
+
+represents the characteristic cooling time of hot carriers relaxing toward the band edge. 
+
+Accordingly, t he  diffusion  rate  starts  from a large diffusion coefficient of  𝐷 𝑏𝑢𝑙𝑘  + 𝛿𝐷  at  𝑡  =
+
+0 and decays exponentially to the steady -state  bulk value  𝐷 𝑏𝑢𝑙𝑘  . The relevant quantity 10 
+
+entering the V -TAM signal  is the  accumulated diffusion  over the pump –probe delay  𝑇  ,
+
+obtained by integrating  𝐷 (𝑡 ):
+
+Λ(𝑇 ) = ∫ 𝐷 (𝑡 )𝑑𝑡 
+
+> 𝑇
+> 0
+
+= 𝐷 𝑏𝑢𝑙𝑘  ⋅ 𝑇  + δ𝐷  ⋅ 𝑡 𝑐𝑜𝑜𝑙  ⋅ (1 − 𝑒 −𝑇 /𝑡 𝑐𝑜𝑜𝑙  ) (2)
+
+This quantity directly governs the time -dependent broadening of the carrier distribution and is 
+
+proportional to the mean -squared displacement,  〈𝑟 2〉 = 2𝑚  ∙ Λ(𝑇 ) , where  m is the 
+
+dimensionality of diffusion. Initially, the large excess kinetic energy of hot carriers drives a 
+
+high diffusion flux; as carriers couple to the lattice via phonon emission, this driving force 
+
+vanishes , and the system relaxes into the bulk diffusion regime. 
+
+The spatial diffusion contribution to the V -TAM signal under time -dependent diffusion is then 
+
+obtained by replacing  𝐷  ∙ 𝑇  in Eq. (1) with  Λ(𝑇 ) (Supplementary Note 1). The complete V -
+
+TAM signal further includes a mode -dependent amplitude  prefactor  𝑎 𝑙 𝑝𝑟  (accounting for 
+
+differences in intensity normalization and detection efficiency across vortex modes) and a 
+
+population -decay term  𝑒 −𝑇 /𝑡 𝑒𝑥  describing exciton relaxation; the full expression is given in 
+
+Supplementary Note 1  (Eq. (S16) ). To eliminate the dependence on amplitude calibration and 
+
+on the excitation lifetime, we analyze the signal ratio with respect to the Gaussian (TC = 0) 
+
+probe, 
+
+𝑅 𝑙 𝑝𝑟 0(𝑙 𝑝𝑟 , 𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟 , 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 ), (3)
+
+in which the population -decay term  𝑒 −𝑇 /𝑡 𝑒𝑥  cancels exactly between numerator and 
+
+denominator.  Specifically, we denote  𝑅 10 (𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 1, 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 )
+
+and  𝑅 20 (𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 2, 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 ) for the  TC  of 1 and  2 vortex probes, 
+
+respectively.  As a result, the extracted diffusion parameters are independent of the exciton 11 
+
+lifetime, even for large  𝑡 𝑒𝑥  (e.g.,  𝑡 𝑒𝑥  >100 ps) , and the analysis is determined entirely by the 
+
+diffusion -driven temporal evolution encoded in  Λ(𝑇 ).
+
+2D perovskites.  (PEA) 2PbI 4 were synthesized as  a quantum -well structure (see Materials and 
+
+methods section), where inorganic slabs are confined between organic spacer layers (Figure 
+
+2A). The morphology of the as -prepared films was characterized by scanning electron 
+
+microscopy (SEM) and atomic force micro scopy (AFM), as shown in  Figure S1 . The relevant 
+
+photoexcitation pathways are illustrated in Figure 2 B, where hot carriers relax to form FEs, 
+
+which subsequently undergo lattice dressing to form EPs before decaying via radiative 
+
+recombination or trapping/dissociation. The formation of these excitonic species was examined 
+
+using steady -state abso rption  and photoluminescence (PL) spectroscopy for (PEA)₂PbI₄ 
+
+(Figure 2 C). Under 400 -nm excitation, the sample exhibits strong PL emission centered a t 535 
+
+nm. Gaussian decomposition of the PL spectrum identifies two spectral components tentatively 
+
+attributed to FE and EP contributions, consistent with prior assignments in (PEA)₂PbI₄ .1, 8, 26 12 
+
+Fig.  2. Structural and optical characterization of 2D  perovskites.  (A) Crystal structures of 
+
+(PEA) 2PbI 4. Inset : SEM image of a perovskite layer,  with a scale bar of 500 nm. (B) Energy 
+
+diagram of exciton species. Radiative decay pathways ( 𝑘 𝑟𝑎𝑑 ) from these states give rise to PL. 
+
+(C) Steady -state absorption and PL spectra of (PEA) 2PbI 4. Gaussian convolutions  show 
+
+averaged exciton species, FEs and EPs . (D) V -TAM measurements: a Gaussian pump generates 
+
+a localized exciton  population  that diffuses out over time (left), and a vortex probe monitors its 13 
+
+spatial evolution (right). (E) Schematic of the V -TAM setup.  Vortex probe beams are generated 
+
+by a vortex retarder and combined with a Gaussian pump via a dichroic mirror (DM ).  After 
+
+interaction with the perovskite sample, the V -TAM signal is detected using a spectrometer. 
+
+Insets show the intensity profiles of the Gaussian pump and vortex probes (scale bar, 10  μm). 
+
+(F) Delay time -dependent TA maps and (G) representative wavelength traces extracted from 
+
+the TA maps. 
+
+V-TAM measurements.  To  elucidate  the spatial transport  dynamics  of the identified excitonic 
+
+species, we  employed  a vortex beam as a probe of the TA measurements. As illustrated in 
+
+Figure  2D, photoexcited excitons undergo spatial diffusion and subsequent lattice dressing . A
+
+doughnut -shaped vortex beam is used to selectively monitor the spatial spread of the exciton 
+
+population. Figure  2E provides the schematic of our custom -built V -TAM platform based on 
+
+imaging -free vortex probe measurements. A vortex retarder converts a Gaussian probe into a 
+
+vortex beam by introducing helical  phase  profile. The vortex probe diameter is controlled by 
+
+the TC of the retarder, such that TC  = 1 and TC = 2 correspond to  increasingly  larger  spatial 
+
+regions . Consequently, the  V-TAM  signal reflects the time -dependent spatial overlap between 
+
+the diffusing exciton population and the vortex probe, providing direct sensitivity to exciton 
+
+transport dynamics.  A detailed description of the optical setup is provided in the Experimental 
+
+Section. 
+
+To identify the spectral signatures of these excitonic species,  conventional TA measurements 
+
+using a Gaussian probe (TC = 0) were first performed for both perovskites ( Figure 2 F),
+
+revealing distinct spectral features corresponding to FEs (520  + 5 nm) and EPs (530  + 3 nm). 
+
+The temporal evolution of these features is further illustrated in Figure 2G, where 
+
+representative wavelength traces highlight their distinct dynamics.  The identified FE and EP 14 
+
+resonances were subsequently used as probe wavelengths in the V -TAM measurements, 
+
+allowing the transport dynamics of each excitonic species to be selectively monitored. 
+
+Figure  3. Time -dependent diffusion fitting of the  V-TAM signal ratios.  (A)  Experimentally 
+
+measured  V-TA M spectra  using Gaussian and vortex probes with TC of 1 and 2  at the 520 nm 
+
+free -exciton  resonance . (B)  Signal ratios , 𝑅 10  and  𝑅 20 , with the corresponding fits using a 
+
+time -dependent diffusion model.  (C)  V-TAM spectra measured at the  530 nm exciton -polaron 
+
+resonance.  Expanded view of the early -state diffusion regime, highlighting the rapid initial 
+
+increase in the signal ratios associated with hot -carrier diffusion.  (D)  Signal ratios,  𝑅 10  and 
+
+𝑅 20 , with the corresponding linear fits. 15 
+
+Analysis of transport dynamics.  Using the FE and EP resonance wavelengths identified 
+
+above, V -TAM measurements were performed with Gaussian and vortex probes to track the 
+
+spatial evolution of each excitonic species.  To quantitatively analyze  the time -dependent 
+
+excitonic transport dynamics,  we applied the time -dependent diffusion model to the 
+
+experimentally measured signal ratios.  Figure  3A shows the  deconvolved  V-TA M spectra 
+
+measured using Gaussian and vortex probes with  TC  of 1 and 2.  The deconvolution procedure 
+
+using the instrument response function is described in Figure S2.  For the transport analysis, the 
+
+time origin ( T = 0) was  set after the initial signal build -up, when the carrier distribution is 
+
+spatially established , and the subsequent dynamics  are dominated by diffusion.  Periodic 
+
+oscillations originating from coherent phonon modes of the (PEA)₂PbI₄ lattice  are 
+
+superimposed on the signal  curves and  were isolated via F ourier -based filtering . The three 
+
+dominant frequencies extracted from this procedure  — 70,  83,  and  103 cm⁻¹, assigned to Pb –I
+
+bending (scissoring)  and  stretching  — are in good agreement with literature values reported 
+
+for Pb –I vibrations, confirming their lattice -vibrational origin.  Details  of the FFT filtering 
+
+process and mode  assignment  are provided  in  Figure S3 .
+
+Following Eq. ( 3), the  signal ratios , 𝑅 10  and  𝑅 20 , with the corresponding fits using a time -
+
+dependent diffusion model  are presented in Figure  3B. A rapid rise in both ratios is shown in 
+
+the early -time regime , reflecting  the hot -carrier -enhanced diffusion that decays as the carriers 
+
+cool toward the steady -state regime.  The  experimental signal ratios were fitted  using the full 
+
+time -dependent diffusion model,  which resolves  the transient evolution  of the diffusion 
+
+dynamics from  the initial nonequilibrium regime to the late -time steady -state  regime  and 
+
+enables  the explicit extraction of  the key transport parameters:  δ𝐷 , 𝐷 𝑏𝑢𝑙𝑘 , and  𝑡 𝑐𝑜𝑜𝑙 . Note 
+
+that t he two signal ratios  𝑅 10  and  𝑅 20  were fitted with a single shared set of parameters 16 
+
+(Supplementary Note 1).  The optimized fitting results reveal  a cooling time,  𝑡 𝑐𝑜𝑜𝑙 ∼0.3 5 ps, 
+
+which accounts for the rapid initial curvature observed within the first picosecond, reflecting 
+
+the relaxation of the initially nonequilibrium carrier population. This analysis further indicates 
+
+an enhanced initial diffusion contribution of  δ𝐷 ∼68.84  cm 2/s,  corresponding to  substantially 
+
+faster carrier transport during the early nonequilibrium regime.  After the hot -carrier cooling 
+
+process,  the transport dynamics evolve toward a steady -state diffusion regime governed by a 
+
+bulk diffusion coefficient of  𝐷 𝑏𝑢𝑙𝑘  ~1.85 cm 2/s,  as determined  from the  recovery phase 
+
+between 2  and  10 ps . See Table S1 for the list of fitting parameters. 
+
+We  then  extended our V -TAM measurements to the EP  resonance  at 530 nm using vortex 
+
+beams of TC = 1 and 2, as shown in Figure  3C. The corresponding deconvolution  and  Fourier 
+
+filtering  procedure using the  instrument response function  are shown  in  Figure s S4 and S5 .
+
+Following the same analysis procedure described above, the experimentally measured signal 
+
+ratios  𝑅 10  and  𝑅 20  were extracted  (Figure  3D). Linear fitting of the signal ratios  provided 
+
+nearly zero  slope  (𝑚 𝑅  = 0.01  ps −1 and  𝑚 𝐹  = −0.001  ps −1), respectively. In contrast to the 
+
+conspicuous  time -dependent evolution observed at the 520 nm  measurements , the nearly time -
+
+independent behavior of the 530 nm signal ratios indicates strongly suppressed diffusion 
+
+dynamics. This behavior is consistent with the formation of  EP , in which  lattice -coupled 
+
+quasiparticles with enhanced effective masses exhibit substantially reduced diffusion  relative 
+
+to  FE  transport. 
+
+3.  Discussion  and conclusion 
+
+The V -TAM measurements , combined with structured -light (vortex) signal -ratio analysis, 
+
+provided direct access to  ultrafast excitonic transport dynamics in  the  (PEA) 2PbI 4 2D 17 
+
+perovskite . Direct fitting of  𝑅 10  and  𝑅 20  with  the  theoretically derived time -dependent 
+
+diffusion model  resolves the distinct nonequilibrium and steady -state regimes,  yield ing  an 
+
+enhanced initial diffusion contribution of  δ𝐷  ∼68.84 cm 2/s  with a cooling time of  𝑡 cool  ∼0.35 
+
+ps, alongside a  late -time steady -state coefficient  of  𝐷 bulk  ∼1.85 cm 2/s . Therefore,  the  total 
+
+initial diffusion coefficient  amounts to  𝐷 (0) = 𝐷 𝑏𝑢𝑙𝑘  + 𝛿𝐷  ~70.69 cm 2/s. 
+
+These results are consistent with previous ly  reported ultrafast TAM studies, in which hot 
+
+carriers exhibit substantially enhanced diffusion during the first few hundred femtoseconds 
+
+after photoexcitation, before cooling into slower, steady -state regimes.  First,  𝐷 bulk  falls 
+
+squarely  within the  range of fast  FE  transport regimes  reported for  high -quality  2D  perovskites ,
+
+well above  the slow baseline diffusion  (< 1 cm 2/s)  typically observed in conventional RP 
+
+films. 27, 28  Recent studies on surface -engineered and highly crystalline 2D perovskite flakes 
+
+have reported fast -diffusion coefficients  of  1.2 –1.9  cm 2/s ,11, 29, 30  consistent in magnitude with 
+
+our  result . As for the initial hot -carrier enhancement,  the relatively lower  𝛿𝐷 , compared with 
+
+3D perovskites and graphene systems  that show  exceptionally large hot -carrier coefficients, 13,  
+
+> 31, 32
+
+is physically reasonable , given the strong er  exciton confinement and enhanced carrier -
+
+phonon interactions  of  the 2D  quantum -well  perovskite structure. A comparison between the 
+
+constant and transient diffusion coefficients obtained in this work and  those reported in 
+
+previous  ultrafast transport studies is summarized in Table 2.  Importantly, unlike conventional 
+
+ultrafast diffusion measurements that  rely on  spatial mapping or microscopy -based imaging, 
+
+the present V -TAM approach  extracts  transient diffusion dynamics  directly from  spectroscopic 
+
+mode -overlap analysis alone. 
+
+Table  2. Comparison between measured and reported excitonic diffusion coefficients.    
+
+> Ref Materials D (cm 2/s) Method
+
+18                                   
+
+> [13] Guo et al.,
+> Science 2017 3D perovskite :MAPbI 3450 +10 (hot 1 ps) →0.7 (eq.)
+> Ultrafast TA
+> microscopy *
+> [31 ]Tan et al.,
+> APL 2024 3D perovskite :CsSnBr 3
+> 257.8 +1.8 (initial)
+> →12.7 -16.5 (cooled)
+> [32 ]Ruzicka et al.
+> Phys Rev B 2010 Graphene 5500 -11000 (sub -ps hot)
+> [2 9]Xiao et al.,
+> Adv Mater 2020
+> 2D perovskite :
+> (mF -PEA) 2PbBr 4
+> 1.91
+> TRPLM [30 ]
+> Terres et al.,
+> Adv Opt Mater
+> 2025
+> 2D perovskite :
+> (MBA) 2PbI 4
+> 1.2 -1.4
+> [11] Gong et al.,
+> Nat Comm 2024
+> 2D perovskite :
+> (BA) 2(MA) n−1 Pb nI3 n+1
+> 7.65 (fast) →1.88 (slow)
+> Our work 2D perovskite:
+> (PEA) 2PbI 4
+> 70.69 ( initial, = 𝐷 bulk +𝛿𝐷 ;
+> 𝛿𝐷 =68.84 )→1.85 ( 𝐷 bulk )
+> V-TAM :
+> no need imaging
+> *Highlighted are reported 𝛿𝐷 values, while others are 𝐷 bulk .
+
+Physically, the substantially enhanced initial diffusion  coefficients,  𝐷 𝑖𝑛𝑖𝑡𝑖𝑎𝑙  (= 𝐷 𝑏𝑢𝑙𝑘  + δ𝐷  ≈
+
+70.69 cm 2/s ), can be  rationalized by two  complementary  physical arguments. First, according 
+
+to the Einstein relation,  𝐷  = 𝜇 𝑘 𝐵 𝑇 𝑐  𝑒 ⁄ , the diffusion coefficient  scales  with  the  carrier 
+
+temperature  (𝑇 𝑐 ).  Immediately  after  photo excitation,  𝑇 𝑐  can transiently reach several  thousand 
+
+Kelvin , producing a large  transient enhancement in  𝐷 . Taking  𝐷 bulk  to represent  the  room -
+
+temperature  regime , the observed ratio  𝐷 ℎ𝑜𝑡  𝐷 𝑏𝑢𝑙𝑘 ⁄ ~38 would  impl y an effective initial  𝑇 𝑐 
+
+on the order of  10 4 K if attributed to temperature alone . However, an independent estimate of 
+
+𝑇 𝑐  from the excess energy  of the pump  gives a lower value:  with a 3.10 eV pump and the 
+
+(PEA) 2PbI 4 FE resonance at ~2.38 eV, the  per -carrier  excess energy is  ~ 0.36 eV, 
+
+corresponding to  𝑇 𝑐 ~2800 –4200 K depending on whether 3D or in -plane 2D equipartition is 
+
+assumed (S upplementary Note  2 provides the detailed calculation ).  This indicates that the 
+
+elevated carrier temperature accounts for only part of the enhancement.  Second,  the remainder 
+
+is attributed to a  transient  increase in carrier mobility  𝜇 : at  elevated carrier energies, hot 
+
+carriers are less susceptible to acoustic -phonon and ionized -impurity scattering, raising the 
+
+effective mobility  𝜇  (𝐷  ∝ 𝜇 𝑇 𝑐 ). Together , these arguments strongly support the interpretation 19 
+
+that the rapid early -time evolution observed in V -TAM  originated  from  transient  hot -carrier 
+
+excitonic transport prior to thermal equilibrium . The estimated  𝑇 𝑐  values  and  corresponding 
+
+ultrafast -transport  studies  are  summarized  in Table 3 .
+
+Table  3. Comparison of experimental conditions and reported hot -carrier  diffusion 
+
+coefficients  across representative ultrafast TAM  studies .                                         
+
+> Ref Materials Pump E Probe E Bandgap Excess E
+> (eV) Tc (K) Dinitial (cm 2/s)
+> [13] MAPbI3 3.14 eV 1.58 eV -1.49 eV -450 +10
+> [31 ]CsSnBr3 515 nm 650 nm 1.75 eV 0.66 eV* ~1,500 257.8 +1.8
+> [32 ]Graphene 750 nm 810 nm (gapless) > 0.8 eV ~3,600 11,000
+> Our work (PEA) 2PbI 4400 nm 520 nm 2.38 eV 0.71 ~10 470.69
+> *derived from the values
+
+In addition to  probing the highly mobile FE regime at 520 nm, V -TAM measurements at the 
+
+530 nm resonance , associated with the EP regime , exhibited nearly time -independent signal 
+
+ratios with near -zero slopes (Figure  3), indicating strongly suppressed diffusion dynamics. This 
+
+behavior is consistent with EP formation, in which excitonic quasiparticles  are dressed by 
+
+lattice distortions in the highly polarizable Pb –X framework, leading to a n enhanced effective 
+
+mass and reduced diffusion. The relatively stable but weak transport observed at 530 nm further 
+
+suggests lattice -coupled excitonic transport characteristic of low -dimensional  (2D)  perovskites 
+
+with strong electron –phonon coupling.  Collectively, t hese results demonstrate that V -TAM 
+
+successfully  resolves  the highly mobile nonequilibrium FE regime from the stabilized EP 
+
+regime —without spatial imaging or scanning -based microscopy. 
+
+Because  the FE and EP probe windows at 520 and 530 nm are spectrally  close (10 nm 
+
+bandwidth) , partial spectral overlap  between the two species  may contribute  to the measured 
+
+signals . In addition, the extracted diffusion coefficient  is  sensitive  to  the probe spectral range, 
+
+as wavelength -integrated analysis mix es  distinct carrier populations and yield s substantially 20 
+
+different diffusion values compared with the single -wavelength probing used in this work 
+
+(Supplementary Note  3).  Nevertheless,  the  pronounced contrast  between the  strongly  time -
+
+dependent FE signals and nearly  flat  EP response  confirms  that the two transport regimes 
+
+remain well resolved under the band -pass -filtered V -TAM measurement. 
+
+In conclusion, we have proposed and experimentally demonstrated the V -TAM platform as a 
+
+powerful approach for probing ultrafast excitonic transport dynamics in low -dimensional 
+
+perovskites. By combining structured -light mode -overlap spectroscopy with time -dependent 
+
+diffusion analysis, V -TAM directly accesses the transient branching between highly mobile 
+
+nonequilibrium  FE  transport and stabilized  EP  states  with sub -picosecond temporal sensitivity. 
+
+Unlike conventional ultrafast spatial microscopy techniques, the present approach  extracts 
+
+diffusion dynamics without requiring spatial imaging or scanning -based reconstruction.  These 
+
+results  establish  V-TAM as a promising platform for probing nonequilibrium carrier transport 
+
+and quasiparticle formation in (PEA)₂PbI₄, with  broad  applicability to  other  semiconductor 
+
+systems  pending validation. 
+
+4.  Experimental S ection 
+
+2D perovskite thin films  synthesis.  Lead iodide (PbI 2),  phenylethyl ammonium iodide (PEAI), 
+
+and N, N -dimethylformamide (DMF) were purchased from Sigma -Aldrich  and  used as 
+
+received. T o prepare t he (PEA) 2PbI 4 precursor solution , PEAI and PbI 2 were dissolved  in 1  mL
+
+of  DMF  (0.8 and 0.4 M, respectively), followed by  magnetic stirr ing  for 30 min to  obtain  a
+
+homogeneous solution.  Quartz substrate s were  cleaned by  sequential  sonicating in detergent, 
+
+acetone, and isopropyl alcohol , followed by a 20 -min oxygen  plasma treatment.  The precursor 21 
+
+solution was then spin -coated  on to  the plasma -treated  substrate s at 3000 rpm  for 30 s, followed 
+
+by annealing at 100 °C for 10 min. 
+
+Optical Absorption and Photoluminescence Spectroscopy.  UV –Vis absorption  and 
+
+photoluminescence (PL)  spectra of the  2D perovskite  thin -films were  acquired  at room 
+
+temperature using a Duetta system (Horiba Scientific) equipped with a xenon lamp as the 
+
+excitation source. 
+
+V-TAM optical  setup . A custom -built  V-TAM system was employed to probe ultrafast 
+
+exciton dynamics. To generate the vortex probe beam, the Gaussian probe was passed through 
+
+an optical vortex retarder ( Thorlabs, TC  = 1 or 2)  before being focused onto the sample. Single -
+
+color probe wavelengths centered at 520 and 530 nm were used to selectively monitor free -
+
+exciton and exciton -polaron dynamics, respectively. The experimental setup and measurement 
+
+procedures are schematically il lustrated and described in Figure S 6.
+
+Acknowledgements 
+
+This work was supported by the Institute for Basic Science (IBS) under Grant No. IBS -R023 -
+
+D1.  SEM and AFM image analyses were carried out at the Korea Advanced Nano Fab Center 
+
+(KANC). 22 
+
+References 
+
+(1) Mondal, A.; Lee, K. J.; Lee, S.; Oh, O. J.; Jen, M.; Noh, J. H.; Lim, J. M.; Cho, M. Ultrafast exciton 
+
+polaron dynamics in 2D Ruddlesden Popper lead halide perovskites.  in press , 2026; p arXiv:2510.13547. 
+
+(2) Qin, C.; Xu, L.; Zhou, Z.; Song, J.; Ma, S.; Jiao, Z.; Jiang, Y. Carrier dynamics in two -dimensional 
+
+perovskites: Dion –Jacobson vs. Ruddlesden –Popper thin films.  Journal of Materials Chemistry A  2022 ,
+
+10  (6), 3069 –3076. DOI: 10.1039/D1TA09549H. 
+
+(3) Guo, S.; Mihalyi -Koch, W.; Mao, Y.; Li, X.; Bu, K.; Hong, H.; Hautzinger, M. P.; Luo, H.; Wang, 
+
+D.; Gu, J. Exciton engineering of 2D Ruddlesden –Popper perovskites by synergistically tuning the intra 
+
+and interlayer structures.  Nat. Commun.  2024 , 15  (1), 3001. DOI: 10.1038/s41467 -024 -47225 -4. 
+
+(4) Li, X.; Hoffman, J. M.; Kanatzidis, M. G. The 2D halide perovskite rulebook: how the spacer 
+
+influences everything from the structure to optoelectronic device efficiency.  Chemical reviews  2021 ,
+
+121  (4), 2230 –2291. DOI: 10.1021/acs.chemrev.0c01006. 
+
+(5) Zhang, Y.; Liu, Y.; Xu, Z.; Ye, H.; Li, Q.; Hu, M.; Yang, Z.; Liu, S. Two -dimensional (PEA)2PbBr4 
+
+perovskite single crystals for a high performance UV -detector.  Journal of Materials Chemistry C  2019 ,
+
+7 (6), 1584 –1591. DOI: 10.1039/C8TC06129G. 
+
+(6) Makarov, N. S.; Guo, S.; Isaienko, O.; Liu, W.; Robel, I.; Klimov, V. I. Spectral and Dynamical 
+
+Properties of Single Excitons, Biexcitons, and Trions in Cesium –Lead -Halide Perovskite Quantum Dots. 
+
+Nano Lett.  2016 , 16  (4), 2349 –2362. DOI: 10.1021/acs.nanolett.5b05077. 
+
+(7) Liu, Y.; Ono, L. K.; Tong, G.; Zhang, H.; Qi, Y. Two -dimensional Dion –Jacobson structure 
+
+perovskites for efficient sky -blue light -emitting diodes.  ACS Energy Letters  2021 , 6 (3), 908 –914. DOI: 
+
+10.1021/acsenergylett.1c00129. 23 
+
+(8) Sun, Q.; Zhao, C.; Yin, Z.; Wang, S.; Leng, J.; Tian, W.; Jin, S. Ultrafast and High -Yield Polaronic 
+
+Exciton Dissociation in Two -Dimensional Perovskites.  Journal of the American Chemical Society  2021 ,
+
+143  (45), 19128 –19136. DOI: 10.1021/jacs.1c08900. 
+
+(9) Pasanen, H. P.; Vivo, P.; Canil, L.; Hempel, H.; Unold, T.; Abate, A.; Tkachenko, N. V. Monitoring 
+
+Charge Carrier Diffusion across a Perovskite Film with Transient Absorption Spectroscopy.  The 
+
+Journal of Physical Chemistry Letters  2020 , 11  (2), 445 –450. DOI: 10.1021/acs.jpclett.9b03427. 
+
+(10) Nagaya Wong, N.; Ha, S. K.; Williams, K.; Shcherbakov -Wu, W.; Swan, J. W.; Tisdale, W. A. 
+
+Robust estimation of charge carrier diffusivity using transient photoluminescence microscopy.  J. Chem. 
+
+Phys.  2022 , 157  (10). DOI: 10.1063/5.0100075. 
+
+(11) Gong, Y.; Yue, S.; Liang, Y.; Du, W.; Bian, T.; Jiang, C.; Bao, X.; Zhang, S.; Long, M.; Zhou, G. 
+
+Boosting exciton mobility approaching Mott -Ioffe -Regel limit in Ruddlesden− Popper perovskites by 
+
+anchoring the organic cation.  Nat. Commun.  2024 , 15  (1), 1893. DOI: 10.1038/s41467 -024 -45740 -y. 
+
+(12) Sung, J.; Schnedermann, C.; Ni, L.; Sadhanala, A.; Chen, R. Y. S.; Cho, C.; Priest, L.; Lim, J. M.; 
+
+Kim, H. -K.; Monserrat, B.; et al. Long -range ballistic propagation of carriers in methylammonium lead 
+
+iodide perovskite thin films.  Nature Physics  2020 , 16  (2), 171 –176. DOI: 10.1038/s41567 -019 -0730 -2. 
+
+(13) Guo, Z.; Wan, Y.; Yang, M.; Snaider, J.; Zhu, K.; Huang, L. Long -range hot -carrier transport in 
+
+hybrid perovskites visualized by ultrafast microscopy.  Science  2017 , 356  (6333), 59 –62. DOI: 
+
+10.1126/science.aam7744. 
+
+(14) Zhang, Z.; Sung, J.; Toolan, D. T. W.; Han, S.; Pandya, R.; Weir, M. P.; Xiao, J.; Dowland, S.; 
+
+Liu, M.; Ryan, A. J.; et al. Ultrafast exciton transport at early times in quantum dot solids.  Nature 
+
+Materials  2022 , 21  (5), 533 –539. DOI: 10.1038/s41563 -022 -01204 -6. 
+
+(15) Donaldson, P. M.; Greetham, G. M.; Middleton, C. T.; Luther, B. M.; Zanni, M. T.; Hamm, P.; 
+
+Krummel, A. T. Breaking Barriers in Ultrafast Spectroscopy and Imaging Using 100 kHz Amplified 24 
+
+Yb -Laser Systems.  Accounts of Chemical Research  2023 , 56  (15), 2062 –2071. DOI: 
+
+10.1021/acs.accounts.3c00152. 
+
+(16) Baiz, C. R.; Schach, D.; Tokmakoff, A. Ultrafast 2D IR microscopy.  Opt. Express  2014 , 22  (15), 
+
+18724 –18735. DOI: 10.1364/OE.22.018724. 
+
+(17) Allen, L.; Beijersbergen, M. W.; Spreeuw, R. J.; Woerdman, J. P. Orbital angular momentum of 
+
+light and the transformation of Laguerre -Gaussian laser modes.  Phys. Rev. A  1992 , 45  (11), 8185 –8189. 
+
+DOI: 10.1103/physreva.45.8185. 
+
+(18) Torres, J. P.; Torner, L.  Twisted Photons: Applications of Light with Orbital Angular Momentum ;
+
+John Wiley & Sons, 2011. 
+
+(19) Forbes, K. A.; Andrews, D. L. Optical orbital angular momentum: twisted light and chirality.  Opt. 
+
+Lett.  2018 , 43  (3), 435 –438. DOI: 10.1364/OL.43.000435. 
+
+(20) Kim, J. -Y.; Cho, M. Nonlinear optical detection of the orbital angular momentum of light.  Opt. 
+
+Lett.  2025 , 50  (5), 1605 –1608. DOI: 10.1364/OL.544021. 
+
+(21) Kim, J. -Y.; Cho, M. Nondestructive Graphene Raman Detection of Optical Vortices.  ACS 
+
+Photonics  2025 , 12  (11), 5948 –5957. DOI: 10.1021/acsphotonics.5c01312. 
+
+(22) Kim, J. -Y.; Cho, M. Optical Orbital Angular Momentum Detection Using Second -Order Nonlinear 
+
+Optical Processes.  ACS Photonics  2026 , 13  (4), 1020 –1029. DOI: 10.1021/acsphotonics.5c02389. 
+
+(23) Cho, M. Stimulated Raman scattering with optical vortex beams.  Adv. Photonics Res.  2025 , 2025 ,
+
+2400202. DOI: 10.1002/adpr.202400202. 
+
+(24) Cho, M. Time -resolved nonlinear microspectroscopy with Gaussian beams.  J. Chem. Phys.  2025 ,
+
+162  (12), 124201. DOI: 10.1063/5.0256032. 25 
+
+(25) Magde, D.; Elson, E.; Webb, W. W. Thermodynamic fluctuations in a reacting system —
+
+measurement by fluorescence correlation spectroscopy.  Phys. Rev. Lett.  1972 , 29  (11), 705. DOI: 
+
+10.1103/PhysRevLett.29.705. 
+
+(26) Cao, D. H.; Stoumpos, C. C.; Farha, O. K.; Hupp, J. T.; Kanatzidis, M. G. 2D Homologous 
+
+Perovskites as Light -Absorbing Materials for Solar Cell Applications.  Journal of the American 
+
+Chemical Society  2015 , 137  (24), 7843 –7850. DOI: 10.1021/jacs.5b03796. 
+
+(27) Seitz, M.; Magdaleno, A. J.; Alcázar -Cano, N.; Meléndez, M.; Lubbers, T. J.; Walraven, S. W.; 
+
+Pakdel, S.; Prada, E.; Delgado -Buscalioni, R.; Prins, F. Exciton diffusion in two -dimensional metal -
+
+halide perovskites.  Nat. Commun.  2020 , 11  (1), 2035. DOI: 10.1038/s41467 -020 -15882 -w. 
+
+(28) Deng, S.; Shi, E.; Yuan, L.; Jin, L.; Dou, L.; Huang, L. Long -range exciton transport and slow 
+
+annihilation in two -dimensional hybrid perovskites.  Nat. Commun.  2020 , 11  (1), 664. DOI: 
+
+10.1038/s41467 -020 -14403 -z. 
+
+(29) Xiao, X.; Wu, M.; Ni, Z.; Xu, S.; Chen, S.; Hu, J.; Rudd, P. N.; You, W.; Huang, J. Ultrafast 
+
+Exciton Transport with a Long Diffusion Length in Layered Perovskites with Organic Cation 
+
+Functionalization.  Adv Mater  2020 , 32  (46), e2004080. DOI: 10.1002/adma.202004080. 
+
+(30) Terres, S.; Scalon, L.; Brunner, J.; Horneber, D.; Düreth, J.; Huang, S.; Taniguchi, T.; Watanabe, 
+
+K.; Nogueira, A. F.; Höfling, S.; et al. Exciton Diffusion in Two -dimensional Chiral Perovskites. 
+
+Advanced Optical Materials  2025 , 13  (11), 2402606. DOI: 10.1002/adom.202402606. 
+
+(31) Tan, J.; Zhou, Y.; Feng, X.; Cao, X.; Xi, Y.; Wu, Y.; Lu, D.; Han, T.; Huang, Y.; Xu, X. Long -
+
+range hot carrier transport in lead -free cesium tin halide perovskite microplates.  Applied Physics Letters 
+
+2024 , 125  (25). DOI: 10.1063/5.0243080. 
+
+(32) Ruzicka, B. A.; Wang, S.; Werake, L. K.; Weintrub, B.; Loh, K. P.; Zhao, H. Hot carrier diffusion 
+
+in graphene.  Physical Review B  2010 , 82  (19), 195414. DOI: 10.1103/PhysRevB.82.195414. S1
+
+# Supplementary Information  for 
+
+# Vortex -Beam Transient Absorption Microspectroscopy  Resolves 
+
+# Ultrafast Free -Exciton and Polaron Diffusion in 2D Perovskites 
+
+Ju-Young  Kim 1
+
+> †
+
+, Anirban Mondal 1
+
+> †
+
+, Gi Rim Han 1, Kwang Jin Lee 2,3 , Jong Min Lim 4, Myeongsam Jen 4,
+
+and  Minhaeng Cho 1,5* 
+
+> 1
+
+Center for Molecular Spectroscopy and Dynamics, Institute for Basic Science (IBS), Seoul 02841, 
+
+Republic of Korea. 
+
+> 2
+
+Division of Semiconductor Physics, Korea University, Sejong 30019, Republic of Korea 
+
+> 3
+
+Department of Applied Physics, Graduate School, Korea University, Sejong 30019, Republic of Korea 
+
+> 4
+
+Department of Chemistry and Green -Nano Materials Research Center, Kyungpook National University, 
+
+Daegu 41566, Republic of Korea. 
+
+> 5
+
+Department of Chemistry, Korea University, Seoul 02841, Republic of Korea. 
+
+* mcho@korea.ac.kr 
+
+> †
+
+J. -Y.  K. and A.M. contributed equally. 
+
+Table of contents 
+
+Figure S1.  SEM and AFM images of the perovskite film  ................................ .................... S2 
+
+Supplementary Note 1.  Solution  of the time -dependent diffusion model  .......................... S3
+
+Figure  S2. IRF -based  deconvolution of  V-TA M spectra  (520 nm ) ................................ ..... S7
+
+Figure  S3. Frequency -domain  filtering of  coherent  oscillations and  phonon -mode  assignment 
+
+(520 nm probe)  ................................ ................................ ................................ .................. S8
+
+Table  S1 . Optimized fitting parameters obtained from the time -dependent diffusion model 
+
+analysis of the V -TAM signal ratios  ................................ ................................ ...................... S1 0
+
+Figure S 4. IRF -ba sed  deconv olution of  V-TA M spectra  (530 nm ) ................................ ...... S1 1
+
+Figure  S5. Frequency -domain  filtering of  coherent  oscillations and  phonon -mode  assignment 
+
+(530 nm probe)  ................................ ................................ ................................ .................. S12
+
+Supplementary Note  2. Increase in carrier temperature from the excess pump energy  ..... S1 4
+
+Supplementary Note  3. Diffusion coefficient derived from wavelength -integrated V -TAM 
+
+signal  ................................ ................................ ................................ ................................ .S15
+
+Figure S 6. Schematic illustration of V -TAM optical setup  ................................ .................. S16 
+
+Supplementary  references  ................................ ................................ ................................ .. S17 S2
+
+Figure S1 . SEM and AFM images of the perovskite film 
+
+(A) Cross -sectional SEM image of the (PEA) 2PbI 4 film showing  PEA spacer -induced upper 
+
+surface morphology with uniform film thickness.  Scale bar: 1 μm.  (B) AFM image and 
+
+corresponding height profile of the  perovskite . The film thickness was estimated to be 
+
+approximately 59.7 nm from the height difference between the maximum and minimum values. 
+
+Scan area: 5×5 μm 2 with 256×256 pixels. S3
+
+Supplementary Note  1. Solution  of the time -dependent diffusion model 
+
+In the main text, the spatial diffusion contribution to the V -TAM signal is modeled using a 
+
+time -dependent diffusion coefficient  𝐷 (𝑡 ), and the accumulated diffusion  Λ(𝑇 ) is introduced 
+
+as the quantity that enters the signal expression. Here , we provide the complete mathematical 
+
+derivation of how the time -dependent diffusion equation reduces to the standard diffusion form, 
+
+and  derive the explicit Gaussian solutions used to relate  Λ(𝑇 ) to the V -TAM signal, and write 
+
+out the full V -TAM signal expression used in  the  fitting. 
+
+1) Reduce it to the standard diffusion equation with a time change 
+
+Hot carriers with excess kinetic energy can exhibit transiently enhanced diffusion before 
+
+cooling toward the band edge, motivating the use of a time -dependent diffusion coefficient 
+
+𝐷 (𝑡 ).1 As such,  the  governing partial differential equation for the carrier density is given by 
+
+∂𝑛 (𝐫 , 𝑡 )
+
+∂𝑡  = 𝐷 (𝑡 ) ∇2𝑛 (𝐫 , 𝑡 ) (S1)
+
+This time -dependent equation  can be solved  as long as  𝐷 (𝑡 ) depends  only  on time  t (not on 
+
+𝐫 ).  We define the integrated (accumulated) diffusivity :
+
+Λ(𝑡 ) ≡ ∫ 𝐷 (𝑠 ) 𝑑𝑠 
+
+> 𝑡
+> 0
+
+(Λ ≥ 0 if  𝐷  ≥ 0). (S2)
+
+Treat  𝑛 (𝐫 , 𝑡 ) = 𝑛 (𝐫 , Λ(𝑡 )). By the chain rule, 
+
+∂𝑛 
+
+∂𝑡  = 𝑑 Λ
+
+𝑑𝑡 
+
+∂𝑛 
+
+∂Λ = 𝐷 (𝑡 ) ∂𝑛 
+
+∂Λ .
+
+Substituting  into the PDE ,
+
+𝐷 (𝑡 ) ∂𝑛 
+
+∂Λ = 𝐷 (𝑡 )∇2𝑛  ⇒ ∂𝑛 
+
+∂Λ = ∇2𝑛 . (S3)
+
+This reduces  the time -dependent problem  to the standard heat/diffusion equation with  a unit 
+
+diffusion  coefficient,  in which  the effective  time  variable  is  Λ. The variable  Λ corresponds 
+
+directly to the accumulated diffusion introduced in the main text , Eq. ( 2). 
+
+2) Solution in Fourier space (works in any dimension) 
+
+Tak ing  a spatial Fourier transform: 
+
+𝑛 ̂ (𝐤 , 𝑡 ) = ∫ 𝑑 𝑑 𝐫  𝑒 −𝑖 k⋅r𝑛 (𝐫 , 𝑡 ). (S4)
+
+where superscript  d denotes the  spatial dimensionality of the system , so that  𝑑 𝑑 𝐫  is the  𝑑 -
+
+dimensional volume element. 
+
+Then  ∇2→ −𝐤 2, yielding  the ordinary diff erential  equation  (ODE ):
+
+𝑑 𝑛 ̂
+
+𝑑𝑡  = −𝐷 (𝑡 ) 𝐤 2 𝑛 ̂ . (S5)S4
+
+So 
+
+𝑛 ̂ (𝐤 , 𝑡 ) = 𝑛 ̂ (𝐤 , 0) exp  (−𝐤 2Λ(𝑡 )). (S6)
+
+Inverse Fourier transforming gives  𝑛 (𝐫 , 𝑡 ).
+
+3) Green’s function (free space,  ℝ𝑑 )
+
+The fundamental solution (point source initial condition) is the  standard  Gaussian  kernel  with 
+
+𝑡  → Λ(𝑡 ):
+
+𝐺 (𝐫 , 𝑡 ) = 1
+
+(4𝜋 Λ(𝑡 ))𝑑 
+
+> 2
+
+exp  (− ∣ r ∣2
+
+4Λ(𝑡 )) (S7)
+
+For a general initial condition  𝑛 (𝐫 , 0) = 𝑛 0(𝐫 ),
+
+𝑛 (𝐫 , 𝑡 ) = ∫ 𝑑 𝑑 𝐫 ′ 𝐺 (𝐫  − 𝐫 ′, 𝑡 ) 𝑛 0(𝐫 ′).
+
+For the  2D special case (often used for excitons in layered perovskites) , the Green function is 
+
+𝐺 (𝐫 , 𝑡 ) = 1
+
+(4𝜋 Λ(𝑡 )) exp  (− ∣ 𝐫  ∣2
+
+4Λ(𝑡 )). (S8)
+
+4)  Mean -square displacement 
+
+If the total population is conserved and the distribution is localized, 
+
+⟨𝐫 2⟩ = 2𝑑  Λ(𝑡 ) (S9)
+
+Thus , in 2D:  ⟨𝐫 2⟩ = 4Λ(𝑡 ) , and in 3D:  ⟨𝐫 2⟩ = 6Λ(𝑡 ) . This corresponds to the same 
+
+substitution rule,  𝐷𝑡  → Λ(𝑡 ), used throughout the main text  (and to the relation  𝑤 2(𝑡 ) =
+
+𝑤 2(0) + 8Λ(𝑡 ) under the common  optics  1/e 2 waist convention ; see Subsection 6 below ). 
+
+5) E xplicit  Λ(𝑇 ) for the hot -carrier  diffusion model 
+
+For the hot -carrier  diffusion coefficient  𝐷 (𝑡 ),
+
+𝐷 (𝑡 ) = 𝐷 𝑏𝑢𝑙𝑘  + δ𝐷  𝑒 −𝑡 /𝑡 cool  , (S10 )
+
+Then 
+
+Λ(𝑡 ) = 𝐷 𝑏𝑢𝑙𝑘  𝑡  + 𝛿 𝐷  𝑡 cool  (1−𝑒  
+
+> −𝑡
+> 𝑡 cool
+
+) (S11 )
+
+reproducing Eq. (2) in the main text.  Thus,  any  constant -diffusion solution  can be transformed 
+
+into  a time -dependent  diffusion  solution by substituting  𝐷𝑡  ↦ Λ(𝑡 ).
+
+6) Gaussian initial profile in pump –probe  measurements S5
+
+For an  initial  Gaussian  exciton density  profile  in 2D , using  the  standard  “1/e² waist” convention: 
+
+𝑛 (𝐫 , 0) = 𝑛 0 exp  (− 2𝐫 2
+
+𝑤 0 
+
+> 2
+
+), (S12 )
+
+the solution remains  Gaussian 
+
+𝑤 2(𝑡 ) = 𝑤 0 
+
+> 2
+
++ 8Λ(𝑡 ) (S13 )
+
+𝑛 (𝐫 , 𝑡 ) = 𝑛 0 ( 𝑤 0
+
+> 2
+
+𝑤 0 
+
+> 2
+
++ 8Λ(𝑡 )) exp  (− 2𝐫 2
+
+𝑤 0 
+
+> 2
+
++ 8Λ(𝑡 )) (S14 )
+
+up to  an  overall normalization  constant . This Gaussian expansion underlies the spatial overlap 
+
+integrals between the Gaussian pump and the vortex probe beams that define the V -TAM signal .
+
+7)  Full V -TAM signal expression used for model fitting 
+
+Combining the time -dependent Gaussian solution derived above with the static expression for 
+
+the V -TAM signal (Eq. (1) of the main text) by the substitution  D·T → Λ( T), the spatial -overlap 
+
+contribution to the V -TAM signal becomes 
+
+𝑆 (𝑙 
+
+> pr
+
+, Λ(𝑇 ), 𝑇 ) = 2
+
+𝜋 
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 8Λ(𝑇 ))|𝑙 pr |
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 𝑤 𝑝𝑟  
+
+> 2
+
++ 8Λ(𝑇 ))|𝑙 pr |+1
+
+= 2
+
+𝜋 
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 8(𝐷 𝑏𝑢𝑙𝑘  ⋅ 𝑇  + δ𝐷  ⋅ 𝑡 𝑐𝑜𝑜𝑙  ⋅ (1 − 𝑒 −𝑇 /𝑡 𝑐𝑜𝑜𝑙  )))|𝑙 pr |
+
+(𝑤 𝑝𝑢  
+
+> 2
+
++ 𝑤 𝑝𝑟  
+
+> 2
+
++ 8(𝐷 𝑏𝑢𝑙𝑘  ⋅ 𝑇  + δ𝐷  ⋅ 𝑡 𝑐𝑜𝑜𝑙  ⋅ (1 − 𝑒 −𝑇 /𝑡 𝑐𝑜𝑜𝑙  )))|𝑙 pr |+1
+
+(S15)
+
+with  Λ(𝑇 ) given by Eq. ( 2) of the main text. 
+
+The complete V -TAM signal additionally includes a mode -dependent amplitude prefactor  𝑎 𝑙 𝑝𝑟  ,
+
+which accounts for differences in intensity normalization and detection efficiency across vortex 
+
+modes, and an exciton population -decay term modeled as a single exponential,  𝑒 −𝑇 /𝑡 𝑒𝑥  :
+
+𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟 , 𝑇 ) = 𝑎 𝑙 𝑝𝑟  ⋅ 𝑆 (𝑙 𝑝𝑟 , Λ(𝑇 ), 𝑇 ) ⋅ 𝑒 −𝑇 /𝑡 𝑒𝑥  (S16 )
+
+The signal ratio with respect to the Gaussian probe is therefore 
+
+𝑅 𝑙 𝑝𝑟 0(𝑙 𝑝𝑟 , 𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟 , 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 )
+
+= (𝑎 𝑙 𝑝𝑟  𝑎 0⁄ ) ∙ 𝑆 (𝑙 
+
+> pr
+
+, Λ(𝑇 ), 𝑇 ) 𝑆 (0, Λ(𝑇 ), 𝑇 )⁄
+
+(S17 )
+
+in which the population -decay factor  𝑒 −𝑇 /𝑡 𝑒𝑥  cancels exactly between numerator and 
+
+denominator. The signal ratios analyzed in the main text correspond to 
+
+𝑅 10 (𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 1, 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 ) 𝑤 ℎ𝑒𝑛  𝑇𝐶  = 1 (S18 )
+
+𝑅 20 (𝑇 ) ≡ 𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 2, 𝑇 )/𝑆 𝑉 −𝑇𝐴𝑀 (𝑙 𝑝𝑟  = 0, 𝑇 ) 𝑤 ℎ𝑒𝑛  𝑇𝐶  = 2 (S19 )S6
+
+and these are the experimentally measured quantities used to extract  𝐷 𝑏𝑢𝑙𝑘 , δ𝐷 , and  𝑡 𝑐𝑜𝑜𝑙 
+
+from the fitting procedure described in the main text. S7
+
+Figure  S2. IRF -based  deconvolution of  V-TA M spectra  (520 nm )
+
+(A) The IRF was experimentally obtained from the transient signal of a quartz reference. (B) 
+
+A Gaussian function was fitted to the measured IRF and recentered such that the peak position 
+
+corresponds to t=0 ps, which was subsequently used as the deconvoluti on kernel. (C) Original 
+
+V-TA M spectra measured using a Gaussian probe (blue) and vortex probes  (520 nm)  with 
+
+topological charges (TC) of 1 (red) and 2 (green). (D)  V-TA M spectra after deconvolution 
+
+using the fitted Gaussian IRF kernel. As discussed in the  main text, the time origin for the 
+
+diffusion analysis was defined at the onset of the diffusion -dominated regime, excluding the 
+
+initial signal build -up region. S8
+
+Figure S3. Frequency -domain  filtering of  coherent  oscillations and  phonon -mode 
+
+assignment  (520 nm probe) 
+
+Filtered phonon modes: 
+
+Frequency * Mode assignment  Ref. 
+
+70 cm -1 Pb –I bending / Pb –I–Pb scissoring  [6, 7 ]
+
+83 cm -1 Pb –I stretching  [4]
+
+103 cm -1 Pb –I stre tching  [5] 
+
+*Spectral  resolution  Δν̃ = 1/( cT ) ≈ 3.3 cm⁻¹ for the T ≈ 10 ps analysis window. S9
+
+A. Filter ing the oscillations . Measured V -TAM signals contain periodic oscillations originating 
+
+from coherent phonon modes of the (PEA)₂PbI₄ lattice. To isolate the underlying carrier 
+
+transport dynamics from these coherent vibrational contributions, we applied an  iterative 
+
+Fourier -based bandstop  filter to  all three V -TAM channels (Gaussian, TC  = 1 and  2). At each 
+
+iteration, the dominant frequency in the Pb –I phonon band (25 –150 cm⁻¹, i.e. , 0.75 –4.5 THz) 
+
+was identified from the polynomial -detrended Fourier s pectrum of the Gaussian -probe 
+
+transient  signal  and notched out  using  a 4th -order Butterworth bandstop with a 0.30 THz  full 
+
+width . Zero -phase  forward –backward filtering  was used to  suppress edge transients (Gibbs 
+
+ringing)  at  the t > 9 ps endpoint of the signal. 2, 3  The identical notch set was applied to all three 
+
+channels, ensuring that any common -mode oscillation cancels in the ratios  R₁₀ and  R₂₀. No 
+
+additional smoothing of the ratios, residuals, or fits was performed.  We also  compare the 
+
+resulting  R₁₀ and  R₂₀ residuals before (faint markers) and after (solid markers) filtering  (right 
+
+panel) , showing that the oscillatory contributions are cleanly suppressed without altering the 
+
+underlying decay envelope. 
+
+B. Optimal  iteration  count (scree analysis).  The optimal number of iterations was determined 
+
+by the scree analysis. The  left  panel  shows  the root -mean -square (RMS) amplitude of the 
+
+oscillat ory components  as a function of  filtering iteration number  k for each probe channel . The 
+
+Gaussian RMS decreases monotonically and exhibits a clear elbow at  k = 3 , beyond which 
+
+additional iteration s result  in only  marginal  suppression of the  oscillation  amplitude.  The  right 
+
+panel  show s the  peak -to -peak amplitude of the normalized  R₁₀ and  R₂₀ residuals  in  the  early -
+
+time  diffusion regime . The  R₁₀  amplitude  is minimized  at  k = 2 –3 (0.106 and 0.109, respectively) 
+
+and then  jumps  sharply at  k = 4, indicating that  excessive  filtering  re introduces  more  artificial 
+
+oscillatory features that  ha ve the risk of distorting  the  intrinsic  diffusion  dynamics . Based on 
+
+these two  criteria , k = 3 was selected as the optimal filtering condition. 
+
+C. Phonon mode assignment.  The frequencies  filtered from the V -TAM signal  fall  within the 
+
+well -known Pb –I lattice  vibrational range (60 –180 cm⁻¹) and  can be assigned based on previous 
+
+Raman and DFT studies.  Panel C shows the  Fourier -filtered  spectrum of the Gaussian channel 
+
+as a representative example, since it has the highest signal -to -noise ratio and most clearly 
+
+resolves the Pb –I phonon peaks; the identical filter (at the same three frequencies) was applied 
+
+to TC  1 and TC  2 channels as described in section A . The 83 cm⁻¹ peak corresponds to a  Pb –I
+
+stretching  mode, in close agreement with the  calculated  mode s at  78.5 and 84.9 cm⁻¹  reported 
+
+for  (PEA)₂PbI₄ by Chen et al. 4 The 103 cm⁻¹ peak is  also  assigned to the  Pb –I stretching mode ,
+
+consistent with the Raman analysis of a  layered hybrid perovskite  by Spirito et al. 5 The 70 cm⁻¹ 
+
+peak lies within the Pb –I–Pb  bending  region , characterized as the bending -related lattice modes 
+
+by  Pérez -Osorio et al. 6, 7  The agreement of all extracted frequencies with established lattice 
+
+modes verifies that the  filtered oscillatory  components  originate from  coherent Pb –I phonons 
+
+rather than detector noise or numerical artifacts,  supporting the physical validity of our filtering 
+
+procedure. 
+
+The T ≈ 10 ps analysis window yields a  spectral  resolution  of  Δν̃ = 1/( cT) ≈ 3.3 cm⁻¹. Since the 
+
+three modes are separated by 13 –20 cm⁻¹ (~4 –6 bins) , which is  well above the  discrimination 
+
+limit , they are clearly resolved as distinct spectral components .S10 
+
+Table S1.  Optimized fitting parameters obtained from the time -dependent diffusion 
+
+model analysis of the V -TAM signal ratios 
+
+Parameter  Value  Description 
+
+𝑤 𝑝𝑢  0.196  𝜇𝑚  (Gaussian) beam waist of a pump (400 nm) 
+
+𝑤 𝑝𝑟  0.255  𝜇𝑚  (Gaussian) beam waist of a probe (520 nm) 
+
+𝐷 𝑏𝑢𝑙𝑘  1.8 49 cm 2/s  Steady -state (cooled) diffusion coefficient 
+
+𝐷 𝑖𝑛𝑖𝑡𝑖𝑎𝑙  (= δ𝐷 ) 68.83 7 cm 2/s  Initial h ot -carrier diffusion enhancement 
+
+𝑡 𝑐𝑜𝑜𝑙  0.34 7 ps  Cooling timescale 
+
+𝑎 1 𝑎 0⁄ 1.79 6 Relative amplitude factor for TC  = 1
+
+𝑎 2 𝑎 0⁄ 2.0 73 Relative amplitude factor for TC  = 2
+
+𝑅 10  0.66 6 Model initial intensity ( T = 0) 
+
+𝑅 20  0.36 6 Model initial intensity ( T = 0) 
+
+τ𝑅 10  0.250  Cooling time from  R10* 
+
+τ𝑅 20  0.460  Cooling time from  R20* 
+
+* Cooling times from independent single -ratio fits .S11 
+
+Figure  S4. IRF -based  deconvolution of  V-TA M spectra  (530 nm )
+
+(A) The IRF was experimentally obtained from the transient signal of a quartz reference. (B) 
+
+A Gaussian function was fitted to the measured IRF and recentered such that the peak position 
+
+corresponds to  𝑡  = 0 ps, which was subsequently used as the deconvolution kernel. (C) 
+
+Original  V-TA M spectra measured using a Gaussian probe (blue) and vortex probes (530 nm) 
+
+with topological charges (TC) of 1 (red) and 2 (green). (D)  V-TA M spectra after deconvolution 
+
+using the fitted Gaussian IRF kernel. As discussed in the main text, the time origin for the 
+
+diffusion analysis was defined at the onset of the diffusion -dominated regime, excluding the 
+
+initial signal build -up region. S12 
+
+Figure S5. Frequency -domain  filtering of  coherent  oscillations and  phonon -mode 
+
+assignment  (530 nm probe) 
+
+Filtered phonon modes: 
+
+Frequency * Mode assignment  Ref. 
+
+27 cm -1 Zone -folded  acoustic -like mode /interlayer rocking  [5]
+
+33 cm -1 In -plane octahedral twist + Pb –I–Pb bending  [7]
+
+40 cm -1 Pb –I–Pb bending (Pb -I octahedral tilt)  [5, 6 ]   
+
+> *Spectral resolution Δν̃ =1/( cT ) ≈ 3.3 cm⁻¹ for the T ≈ 10 ps analysis window.
+
+S13 
+
+A. Filtering the oscillations . The 530 nm probe  V-TAM signals  are also isolated from 
+
+superimposed  periodic oscillations  due to  coherent phonon modes of the  perovskite  lattice.  The 
+
+filtering procedure is identical to that used for the 520 nm probe data (Figure S3). Fourier -
+
+filtered V -TAM signals of all three channels (Gaussian, TC = 1 and 2) and  the  resulting ratio s
+
+R₁₀ and  R₂₀  before (faint markers) and after (solid markers) filtering are presented in the left 
+
+and right panel s, respectively. 
+
+B. Optimal  iteration  count (scree analysis).  The optimal number of iterations  for the 530 nm -
+
+probed data was also  determined  using  the  same  scree analysis  criteria described for the 520 -
+
+nm probed data (Figure S3). The Gaussian RMS and the normalized  R₁₀ and  R₂₀ residual 
+
+amplitudes simultaneously show the minimum values at  k = 3 iterations. Additional filtering ( k
+
+≥ 4 ) can reintroduce  artificial  oscillations , potentially distorting  the  intrinsic  transport dynamics. 
+
+Therefore , k = 3  was selected as the optimal filtering condition. 
+
+C. Phonon mode assignment.  The frequencies  filtered from the  530 nm  V-TAM signal  (27, 33, 
+
+and 40 cm -1) fall  within the  characteristic low -frequency  Pb –I lattice  vibrational range ( 20–60
+
+cm⁻¹) and  can be assigned based on previous studies.  Panel C shows the  Fourier -filtered 
+
+spectrum of the Gaussian channel as a representative example,  while  the  same  filter was applied 
+
+to TC  1 and TC  2 channels , as described in section A .
+
+The  33 cm⁻¹ peak  coincides with the in -plane octahedral -twist /Pb –I–Pb bending mode 
+
+previously identified in (PEA)₂PbI₄ at  near  35 cm⁻¹ by Rojas -Gatjens et al. , one of the dominant 
+
+low -energy polaronic dressing modes in this material. 7 The 40 cm⁻¹ peak lies within the Pb –I–
+
+Pb bending region  reported  for lead -iodide perovskites by Pérez -Osorio et al. 6 and Spirito et 
+
+al. 5 The  27 cm⁻¹  is attributed to a low -frequency  interlayer rocking mode  or  zone -folded 
+
+acoustic -like lattice vibration. 5 The agreement of all extracted frequencies with established 
+
+low -frequency  lattice modes  supports  the physical validity of our filtering procedure ,
+
+confirming  that the removed oscillatory components originate from  coherent Pb –I phonons .
+
+Similar to  Figure S3, t he T ≈ 10 ps analysis window yields a  spectral  resolution  of  Δν̃ = 1/( cT )
+
+≈ 3.3 cm⁻¹. Since the three modes are separated by 13 –20 cm⁻¹ (~4 –6 bins) —well above the 
+
+discrimination  limit —they are clearly resolved as distinct spectral components .S14 
+
+Supplementary  Note  2. Increase in  carrier  temperature from the excess  pump  energy 
+
+Given our experimental conditions: 
+
+Pump  photon energy : 400 nm = 3.10 eV 
+
+(PEA)2PbI4 FE bandgap: 2.38 eV 
+
+The e xcess energy  is therefore  𝛿𝐸  = 3.10  - 2.38 = 0.72 eV. 
+
+Assuming the excess energy  is  equally partitioned between the  electron and hole, each carrier 
+
+acquires  0.36 eV of kinetic energy. 
+
+(a)  3D equipartition 
+
+𝑇 𝑐  
+
+> 3𝐷
+
+= 2〈𝐸 𝑘𝑖𝑛 〉
+
+3𝑘 𝐵 
+
+= 2 × 0.36  eV 
+
+3 × 8.617  × 10 −5eV /K ≈ 2,780  K
+
+(b)  2D equipartition 
+
+𝑇 𝑐  
+
+> 2𝐷
+
+= 〈𝐸 𝑘𝑖𝑛 〉
+
+𝑘 𝐵 
+
+= 0.36  eV 
+
+8.617  × 10 −5eV /K ≈ 4,180  K
+
+where  𝑘 𝐵  = 8.617  × 10 −5eV /K is the Boltzmann constant expressed in eV/K. 
+
+Therefore, based on the  estimated  excess energy from the pump in our setup, the  carrier 
+
+temperature  𝑇 𝑐  can increase to approximately 2800 –4200 K. 
+
+The enhancement in the diffusion coefficient ratio, 
+
+𝐷 ℎ𝑜𝑡  𝐷 𝑏𝑢𝑙𝑘 ⁄ = (𝐷 𝑏𝑢𝑙𝑘  + δ𝐷 ) 𝐷 𝑏𝑢𝑙𝑘 ⁄ = 68 .84 +1.85  
+
+> 1.85
+
+= 38 .21 ,
+
+is attributed to the increase in  𝑇 𝑐 , along with the  enhanced  effective mobility  𝜇 .S15 
+
+Supplementary Note  3. Diffusion coefficient derived from wavelength -integrated V -TAM 
+
+signal 
+
+In the  main research,  the  V-TAM signal was analyzed using a single probe wavelength selected 
+
+with a 520 nm -centered band -pass filter, yielding an initial diffusion coefficient  𝐷 𝑖𝑛𝑖𝑡𝑖𝑎𝑙  =
+
+68.84 cm 2/s. 
+
+Instead, if a wavelength -integrated signal over  the  500 –580 nm range is used for the V -TAM 
+
+analysis, the extracted  𝐷 𝑖𝑛𝑖𝑡𝑖𝑎𝑙  value changes significantly. 
+
+The l eft panel  shows the V -TAM signal integrated over  the  500 –580 nm spectral range. By 
+
+fitting the signal using the spatial diffusion model (Eq. (1) in the main text) with a Gaussian 
+
+probe ( 𝑙 𝑝𝑟  = 0) (right panel), the extracted diffusion coefficient is  𝐷  = 15 .4 ± 22 .7cm 2/s,
+
+which is approximately 4 -5 times smaller than the value obtained from the  single -wavelength 
+
+probe measurement. 
+
+This result demonstrates that the extracted diffusion coefficient is highly sensitive to the 
+
+spectral range of the prob e used in the analysis. When a broad wavelength -integrated signal is 
+
+employed, contributions from carriers with different spectral and dynamical characteristics are 
+
+averaged , leading to a substantially underestimated diffusion coefficient and  large fitting 
+
+uncertainty. In contrast, the single -wavelength (narrow -band) probe selectively tracks a well -
+
+defined carrier population, enabling more  reliable extraction of the intrinsic ultrafast diffusion 
+
+dynamics. These results highlight the importance of spectrally selective probing for accurately 
+
+resolving nonequilibrium carrier transport in ultrafast TAM measurements. S16 
+
+Figure S 6. Schematic illustration of V -TAM optical setup 
+
+To investigate the ultrafast diffusion dynamics of free excitons and exciton -polarons, a custom -
+
+built TAM system was developed for transmission -mode operation. Fundamental seed pulses 
+
+(100 -fs pulse width, 1030 -nm wavelength) were generated using a Light Co nversion Yb:KGW 
+
+laser system (PHAROS), delivering a repetition rate of 50 kHz and an average output power 
+
+of 6 W. The laser output was split into two arms for pump and probe pulse generation. 
+
+In the pump arm, the beam was directed into an optical parametric amplifier (OPA ; Orpheus) 
+
+to  generate  800 nm pulses. After passing through a mechanical chopper, the beam was 
+
+frequency -doubled in a beta -barium borate (BBO) crystal , generat ing  400 nm pulses. A 400 nm 
+
+bandpass filter was used to isolate the pump beam while suppressing residual 800 nm light. In 
+
+the probe arm, a portion of the fundamental beam was focused into a YAG crystal to generate 
+
+a white -light continuum. The continuum probe  was spectrally filtered using a bandpass filter 
+
+centered at 520 or 530 nm with a 10 nm spectral width (Edmund Optics ), enabling single -color 
+
+pump -probe measurements of free -exciton or exciton -polaron dynamics, respectively. The 
+
+filtered probe beam was then passed through an optical vortex plate (TC =1 and 2, Thorlabs) 
+
+to generate a donut -shaped probe beam. The laser int ensity is controlled by a half -wave plate 
+
+(λ/2)  and a polarizing beam splitter (PBS), followed by beam expansion using a two -lens 
+
+system (focal lengths of 100 and 50 mm). The pump and probe beams were collinearly 
+
+combined and focused onto the sample using  an objective lens (numerical aperture, NA = 0.65), 
+
+yielding tightly focused beams with diameters of 0.1959 μm for the pump, and 0.2546 μm and 
+
+0.2596 μm for the 520 and 530 nm probe, respectively. The transmitted probe signal was 
+
+collected using an optical  fiber and analyzed with an Ocean Insight spectrometer (OCEAN FX). 
+
+To suppress intense pump scattering, a 455 nm long -pass filter was placed before the optical 
+
+fiber.  The spatial overlap between the pump and probe beams was verified using a CMOS 
+
+camera (Tho rlabs). The instrumental response function of the TAM setup was determined using 
+
+a quartz plate with an intense pump pulse. S17 
+
+Supplementary  references 
+
+(1) Liu, Q.; Wei, K.; Tang, Y.; Xu, Z.; Cheng, X. a.; Jiang, T. Visualizing Hot‐Carrier Expansion and 
+
+Cascaded Transport in WS2 by Ultrafast Transient Absorption Microscopy.  Advanced Science  2022 , 9
+
+(10), 2105746. DOI: 10.1002/advs.202105746. 
+
+(2) Gustafsson, F. Determining the initial states in forward -backward filtering.  IEEE Transactions on 
+
+Signal Processing  1996 , 44  (4), 988 -992. DOI: 10.1109/78.492552. 
+
+(3) Selesnick, I. W.; Burrus, C. S. Generalized digital Butterworth filter design.  IEEE Transactions on 
+
+Signal Processing  1998 , 46  (6), 1688 -1694. DOI: 10.1109/78.678493. 
+
+(4) Chen, Y. -F.; Mahata, A.; Lubio, A. D.; Cinquino, M.; Coriolano, A.; Skokan, L.; Jeong, Y. -G.; 
+
+Razzari, L.; De Marco, L.; Ruediger, A.; et al. Phonon Analysis of 2D Organic -Halide Perovskites in 
+
+the Low - and Mid -IR Region.  Advanced Optical Materials  2022 , 10  (16), 2100439. DOI: 
+
+10.1002/adom.202100439. 
+
+(5) Spirito, D.; Asensio, Y.; Hueso, L. E.; Martín -García, B. Raman spectroscopy in layered hybrid 
+
+organic -inorganic metal halide perovskites.  Journal of Physics: Materials  2022 , 5 (3), 034004. DOI: 
+
+10.1088/2515 -7639/ac7977. 
+
+(6) Pérez -Osorio, M. A.; Lin, Q.; Phillips, R. T.; Milot, R. L.; Herz, L. M.; Johnston, M. B.; Giustino, 
+
+F. Raman Spectrum of the Organic –Inorganic Halide Perovskite CH3NH3PbI3 from First Principles 
+
+and High -Resolution Low -Temperature Raman Measurements.  J. Phys. Chem. C  2018 , 122  (38), 
+
+21703 -21717. DOI: 10.1021/acs.jpcc.8b04669. 
+
+(7) Rojas -Gatjens, E.; Silva -Acuña, C.; Kandada, A. R. S. Peculiar anharmonicity of Ruddlesden Popper 
+
+metal halides: temperature -dependent phonon dephasing.  Materials Horizons  2022 , 9 (1), 492 -499. DOI: 
+
+10.1039/D1MH01010G.

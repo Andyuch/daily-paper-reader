@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "extractor": "pdffigures2",
+  "figures": [
+    {
+      "url": "assets/figures/arxiv/2607.14761v1/fig-001.webp",
+      "caption": "Figure 1, The signal normalisation challenge in interferometric nanoscopy. a) A simplified holographic sizing experiment assuming identical NPs. Even though the sample is monodisperse, the collected scattering signals, Es, exhibit significant variability. This is due to two factors: the spatially non-uniform illumination, Eillu, and the system's spatially dependent optical transfer function (OTF). b) Example of an illumination geometry that makes retrieving Eillu highly non-trivial. c) Achieving the best-possible normalisation is key to solving contemporary and future nanosizing challenges.",
+      "page": 3,
+      "index": 1,
+      "width": 491,
+      "height": 358
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14761v1/fig-002.webp",
+      "caption": "Figure 2, Scattering signals can be used for self-normalisation, if implemented correctly. a) Experimentally obtained scattering amplitudes of many individual Au NPs with a mean diameter of 80 nm. Approximately 100 individual holograms are summed (grayscale), the coloured circles show the recovered particle signal. b) To overcome problems with particle heterogeneity, one could envision systematically scanning a single particle across the entire field of view. c) As a) but obtained by systematically scanning a single 60 nm Au NP across the image. d) Histograms of the signal recorded for the single NP shown in c) comparing unnormalised, raw, signals (yellow) to those obtained by normalising the single NP raw signals to an illumination profile obtained by fitting the scatter plots shown in a,c) to the sum of a Gaussian and a square Gaussian. Only the illumination profile obtained by fitting the single-particle measurement yields satisfactory normalisation results (blue).",
+      "page": 5,
+      "index": 2,
+      "width": 896,
+      "height": 188
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14761v1/fig-003.webp",
+      "caption": "Figure 3, Implementation of motion-based beamshape recovery. a) The trajectories of 60 nm Au NPs (coloured dots) show particle-specific mean scattering amplitudes but the position-dependent scattering resembles the separately measured beam profile (grayscale image). Individual trajectories are highlighted by area-illustrations (dotted lines). b) Schematic of the proposed approach for scattering cross-section heterogeneity immune selfnormalisation based on spatial overlap of single-particle trajectories. c) 26 randomly chosen trajectories (left) recorded for a suspension containing 40 nm and 60 nm diameter Au NPs can be self-normalised into a continuous scattering profile (centre). Selecting a larger number (N=433) of trajectories recovers the nominal illumination profile as the product of illumination and reference field amplitude.",
+      "page": 6,
+      "index": 3,
+      "width": 600,
+      "height": 463
+    },
+    {
+      "url": "assets/figures/arxiv/2607.14761v1/fig-004.webp",
+      "caption": "Figure 4, Benchmarking and application. a) Hydrodynamic diameter vs cube-root of scattering amplitude plots for individually measured 40 nm (yellow) and 60 nm (blue) diameter Au NPs. Comparisons of results obtained for unnormalised (left), normalised to directly measured (centre) or trajectory-based reconstructed (right) illumination beam profiles are shown. b) Quantification of signal variations within individual trajectories of diameter 60 nm Au NPs as a measure of normalisation-quality. The histogram shows deviations from the mean value of individual 800-point trajectories. 80 adjacent trajectory points are averaged to eliminate shot-noise contributions thus yielding 10 histogram bins per trajectory. c) Representative single-particle amplitudes obtained for individual trajectories comparing as recorded and beamshape-normalised results of trajectories sampling beam-areas of minor variation (left) and drastic changes (right). d) 3D beamshape normalisation applied to an “invisible” illumination beam based on 90° side-illumination showing the reconstructed xyzprojections (top) as well as trajectory mean normalised scattering amplitudes without (centre) and with (bottom) illumination amplitude normalisation at varying z-distances from the image plane. 8 adjacent trajectory timepoints were averaged to reduce shot-noise induced distribution broadening.",
+      "page": 7,
+      "index": 4,
+      "width": 917,
+      "height": 416
+    }
+  ]
+}
