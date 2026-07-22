@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-22T21:35:45.325465+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2607.19157v1",
+      "source": "arxiv",
+      "title": "Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices",
+      "abstract": "Understanding charge carrier dynamics within electronic devices is crucial, as it governs both the internal evolution of signals and the externally measurable current. Yet, direct imaging of these dynamics remains elusive: existing approaches are often indirect or inherently perturbative. Here, we introduce Carrier Dynamics by Pockels Imaging (CDPI), a sensitive, quantitative, and non-invasive method that enables direct access to internal charge dynamics. By probing the local electric field, CDPI visualizes photogenerated electron clouds in real space while simultaneously correlating their evolution with both conduction and displacement currents, thereby establishing a unified picture of carrier transport. The technique provides direct insight into fundamental mechanisms \\textemdash including drift, diffusion, carrier-carrier interactions, trapping and detrapping \\textemdash as well as the spatiotemporal evolution of carrier cloud morphology. Demonstrated in CdTe radiation detectors with micrometre-scale spatial resolution and nanosecond temporal resolution, CDPI is broadly applicable to systems exhibiting appreciable electro-optic responses. Beyond conventional semiconductors, the approach extends to organic, perovskite, and two-dimensional optoelectronic materials, offering a new paradigm for directly linking internal carrier dynamics to device-level functionality.",
+      "authors": [
+        "Adriano Cola",
+        "Antonio Valletta",
+        "Isabella Farella",
+        "Vaclav Dědič",
+        "Lorenzo Dominici"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall",
+        "physics.app-ph"
+      ],
+      "published": "2026-07-21T14:57:28+00:00",
+      "link": "https://arxiv.org/pdf/2607.19157v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "direct spatiotemporal imaging of charge carrier dynamics in semiconductor devices",
+      "llm_evidence_cn": "半导体器件中电荷载流子动力学的直接时空成像",
+      "llm_evidence": "半导体器件中电荷载流子动力学的直接时空成像",
+      "canonical_evidence": "半导体器件中电荷载流子动力学的直接时空成像",
+      "llm_tldr_en": "Introduces Carrier Dynamics by Pockels Imaging (CDPI), a non-invasive method that directly visualizes photogenerated electron clouds and correlates their evolution with conduction and displacement currents in operative semiconductor devices.",
+      "llm_tldr_cn": "针对现有方法无法直接、非侵入地成像工作器件内部电荷载流子动力学的问题，本文提出了基于Pockels效应的载流子动力学成像技术（CDPI）。该方法通过探测局域电场，实时可视化光生电子云的空间分布及其与传导电流和位移电流的关联。实验结果展示了其在半导体器件中直接获取载流子输运图像的能力。",
+      "llm_tldr": "针对现有方法无法直接、非侵入地成像工作器件内部电荷载流子动力学的问题，本文提出了基于Pockels效应的载流子动力学成像技术（CDPI）。该方法通过探测局域电场，实时可视化光生电子云的空间分布及其与传导电流和位移电流的关联。实验结果展示了其在半导体器件中直接获取载流子输运图像的能力。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2607.17919v1",
+      "source": "arxiv",
+      "title": "Femtosecond-to-millisecond holographic imaging of laser ablation dynamics",
+      "abstract": "Femtosecond laser ablation redistributes optically deposited energy across electronic, structural, mechanical, and thermal degrees of freedom over timescales from femtoseconds to milliseconds. However, these coupled processes are usually measured in separate temporal ranges and through different observables, limiting quantitative comparison between early transient dynamics, residual heating, and final morphology. Here we introduce pump-probe holographic imaging that reconstructs amplitude- and phase-resolved optical fields across this full temporal range under matched imaging conditions. Applied to deep-ultraviolet femtosecond ablation of BK7 glass, the method captures the transition from early excitation and removal-stage dynamics to residual substrate heating and permanent modification. Differential phase analysis isolates sub-nanosecond evolution of the transient ablating layer and microsecond residual heating after material removal. Above the ablation threshold, crater depth increases with fluence, whereas the residual thermal signal saturates, indicating that additional absorbed energy is preferentially partitioned into material removal and ablation-related processes rather than retained as substrate heat. These results identify fluence-dependent energy partitioning as a dynamical basis of low-heat-affected femtosecond processing and establish holographic imaging as a route to tracking laser-driven nonequilibrium material transformations.",
+      "authors": [
+        "Shotaro Kawano",
+        "Keiichiro Toda",
+        "Miu Tamamitsu",
+        "Haruyuki Sakurai",
+        "Kuniaki Konishi",
+        "Takuro Ideguchi"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-07-20T13:16:04+00:00",
+      "link": "https://arxiv.org/pdf/2607.17919v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "femtosecond-to-millisecond holographic imaging with time resolution",
+      "llm_evidence_cn": "飞秒到毫秒时间分辨全息成像",
+      "llm_evidence": "飞秒到毫秒时间分辨全息成像",
+      "canonical_evidence": "飞秒到毫秒时间分辨全息成像",
+      "llm_tldr_en": "Presents pump-probe holographic imaging that reconstructs amplitude and phase over femtosecond to millisecond timescales, capturing laser ablation dynamics from early excitation to residual structure in a single modality.",
+      "llm_tldr_cn": "针对飞秒激光烧蚀过程中多时间尺度动力学难以统一测量的问题，本文提出了泵浦探测全息成像技术。该方法可以在相同成像条件下重建从飞秒到毫秒时间范围内的振幅和相位光学场，应用于BK7玻璃深紫外飞秒烧蚀，完整捕捉了从早期激发到残余结构的过渡过程。",
+      "llm_tldr": "针对飞秒激光烧蚀过程中多时间尺度动力学难以统一测量的问题，本文提出了泵浦探测全息成像技术。该方法可以在相同成像条件下重建从飞秒到毫秒时间范围内的振幅和相位光学场，应用于BK7玻璃深紫外飞秒烧蚀，完整捕捉了从早期激发到残余结构的过渡过程。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

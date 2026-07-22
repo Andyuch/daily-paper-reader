@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-22",
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T21:38:21",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/22/2607.19157v1-direct-spatiotemporal-imaging-of-charge-carrier-dynamics-in-operative-semiconductor-devices",
+      "section": "deep",
+      "title_en": "Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices",
+      "authors": "Adriano Cola, Antonio Valletta, Isabella Farella, Vaclav Dědič, Lorenzo Dominici",
+      "date": "2026-07-21",
+      "pdf": "https://arxiv.org/pdf/2607.19157v1",
+      "score": "8.0",
+      "evidence": "半导体器件中电荷载流子动力学的直接时空成像",
+      "tldr": "载流子动力学对器件性能至关重要，但直接成像困难。本文提出基于Pockels效应的载流子动力学成像（CDPI）方法，通过探测局域电场，非侵入式地实时可视化光生电子云，并关联传导与位移电流。在碲化镉辐射探测器中实现了微米空间分辨率和纳秒时间分辨率，解析了漂移、扩散、捕获等机制。该方法可推广到有机、钙钛矿等材料，为理解器件内部载流子行为提供新范式。",
+      "tags": "query:iscat",
+      "abstract_en": "Understanding charge carrier dynamics within electronic devices is crucial, as it governs both the internal evolution of signals and the externally measurable current. Yet, direct imaging of these dynamics remains elusive: existing approaches are often indirect or inherently perturbative. Here, we introduce Carrier Dynamics by Pockels Imaging (CDPI), a sensitive, quantitative, and non-invasive method that enables direct access to internal charge dynamics. By probing the local electric field, CDPI visualizes photogenerated electron clouds in real space while simultaneously correlating their evolution with both conduction and displacement currents, thereby establishing a unified picture of carrier transport. The technique provides direct insight into fundamental mechanisms \\textemdash including drift, diffusion, carrier-carrier interactions, trapping and detrapping \\textemdash as well as the spatiotemporal evolution of carrier cloud morphology. Demonstrated in CdTe radiation detectors with micrometre-scale spatial resolution and nanosecond temporal resolution, CDPI is broadly applicable to systems exhibiting appreciable electro-optic responses. Beyond conventional semiconductors, the approach extends to organic, perovskite, and two-dimensional optoelectronic materials, offering a new paradigm for directly linking internal carrier dynamics to device-level functionality.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/22/2607.17919v1-femtosecond-to-millisecond-holographic-imaging-of-laser-ablation-dynamics",
+      "section": "quick",
+      "title_en": "Femtosecond-to-millisecond holographic imaging of laser ablation dynamics",
+      "authors": "Shotaro Kawano, Keiichiro Toda, Miu Tamamitsu, Haruyuki Sakurai, Kuniaki Konishi, Takuro Ideguchi",
+      "date": "2026-07-20",
+      "pdf": "https://arxiv.org/pdf/2607.17919v1",
+      "score": "6.0",
+      "evidence": "飞秒到毫秒时间分辨全息成像",
+      "tldr": "飞秒激光烧蚀涉及电子、结构、热等多自由度耦合，传统方法难以在一致条件下测量从飞秒到毫秒的完整动力学。本文提出泵浦探测全息成像，在匹配成像条件下重建振幅与相位，覆盖全时间范围。应用于BK7玻璃，通过差分相位分析分离了亚纳秒瞬态烧蚀层和微秒残余加热，发现高于阈值时坑深随通量增加而残余热信号饱和，表明额外能量优先用于材料去除。该工作揭示了通量依赖的能量分配是低热影响加工的动力学基础，并建立了全息成像追踪非平衡材料转变的通用方法。",
+      "tags": "query:iscat",
+      "abstract_en": "Femtosecond laser ablation redistributes optically deposited energy across electronic, structural, mechanical, and thermal degrees of freedom over timescales from femtoseconds to milliseconds. However, these coupled processes are usually measured in separate temporal ranges and through different observables, limiting quantitative comparison between early transient dynamics, residual heating, and final morphology. Here we introduce pump-probe holographic imaging that reconstructs amplitude- and phase-resolved optical fields across this full temporal range under matched imaging conditions. Applied to deep-ultraviolet femtosecond ablation of BK7 glass, the method captures the transition from early excitation and removal-stage dynamics to residual substrate heating and permanent modification. Differential phase analysis isolates sub-nanosecond evolution of the transient ablating layer and microsecond residual heating after material removal. Above the ablation threshold, crater depth increases with fluence, whereas the residual thermal signal saturates, indicating that additional absorbed energy is preferentially partitioned into material removal and ablation-related processes rather than retained as substrate heat. These results identify fluence-dependent energy partitioning as a dynamical basis of low-heat-affected femtosecond processing and establish holographic imaging as a route to tracking laser-driven nonequilibrium material transformations.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

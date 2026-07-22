@@ -1,0 +1,3324 @@
+Title: bbb manuscript reformat_Unisci
+
+URL Source: https://arxiv.org/pdf/2607.19157v1
+
+Published Time: Wed, 22 Jul 2026 01:08:15 GMT
+
+Number of Pages: 24
+
+Markdown Content:
+Direct Spatiotemporal Imaging of Charge Carrier Dynamics in  Operative 
+
+# Semiconductor Devices 
+
+Adriano Cola 1, *, Antonio Valletta 2, Isabella Farella 1, Vaclav Dědič 3, Lorenzo Dominici 4, * 
+
+> 1
+
+CNR IMM, Institute for Microelectronics and Microsystems, Via Monteroni, 73100 Lecce, Italy  
+
+> 2
+
+CNR IMM, Institute for Microelectronics and Microsystems, Via Del Fosso Del Cavaliere, 100, 
+
+00133 Roma, Italy  
+
+> 3
+
+Institute of Physics, Charles University, Ke Karlovu 5, 121 16 Prague, Czech Republic  
+
+> 4
+
+CNR NANOTEC, Institute of Nanotechnology, Via Monteroni, 73100 Lecce, Italy 
+
+*adriano.cola@cnr.it, lorenzo.dominici@nanotec.cnr.it 
+
+Understanding charge carrier dynamics within electronic devices is crucial, as it governs both the 
+
+internal evolution of signals and the externally measurable current. Yet, direct imaging of these 
+
+dynamics remains elusive: existing approaches are often ind irect or inherently perturbative. Here, 
+
+we introduce Carrier Dynamics by Pockels Imaging (CDPI), a sensitive, quantitative, and non -
+
+invasive method that enables direct access to internal charge dynamics. By probing the local 
+
+electric field, CDPI visualizes  photogenerated electron clouds in real space while simultaneously 
+
+correlating their evolution with both conduction and displacement currents, thereby establishing 
+
+a unified picture of carrier transport. The technique provides direct insight into fundament al 
+
+mechanisms —including drift, diffusion, carrier –carrier interactions, trapping and  detrapping —as 
+
+well as the spatiotemporal evolution of carrier cloud morphology. Demonstrated in CdTe 
+
+radiation detectors with micrometre -scale spatial resolution and nanosecond temporal 
+
+resolution, CDPI is broadly applicable to systems exhibiting appreciab le electro -optic responses. 
+
+Beyond conventional semiconductors, the approach extends to organic, perovskite, and two -
+
+dimensional optoelectronic materials, offering a new paradigm for directly linking internal carrier 
+
+dynamics to device -level functionality. 
+
+_______________________________________________________________________________________ 
+
+Electronic and, to some extent, optoelectronic devices 
+
+rely on charge transport, in which the flow of free 
+
+charge carriers along electric field paths plays a key role 
+
+in enabling and controlling their functionality. Typically, 
+
+both external and built -in el ectric fields define these 
+
+paths. At the same time, an excess of carriers 
+
+dynamically affect s the instantaneous electric field 
+
+distribution through their own charge, in a similar 
+
+fashion to how heavy marbles deform a soft slipway. 
+
+This  fundamental  concept  based on Maxwell's 
+
+equations enables us, by developing a method to image 
+
+the instantaneous electric field, to access the dynamics 
+
+of charge clouds and to correlate the electric field to the 
+
+currents flowing in the external circuit. The electric field 
+
+induc ed modulation of optical properties, such as of the 
+
+real part of the refractive index  n, is a convenient and 
+
+widely used method to study local electric fields without 
+
+perturbing them. As a matter of fact, a large class of 
+
+materials, the crystals lacking inversion symmetry, 
+
+exhibit a directionally dependent linear variation of  n in 
+
+response to the application of an electric field, the 
+
+Pockels effect. One asset of the Pockels effect is the 
+
+intrinsically fast speed, limited only by the polarizability 
+
+of the medium, as demonstrated by its wide use for 
+
+optoelectronic applications. Hi gh -bandwidth optical 
+
+modulators based on the Pockels effect have been 
+
+demonstrated in various systems (semiconductors, 
+
+organic films, graphene and other 2D materials), with a 
+
+recent trend towards nano -photonics 1,2  and integrated 
+
+photonics 3,4 . It has been  used for probing the field from 
+
+outside, sampling fast electrical signals by placing 
+
+external  EO  crystals over devices, such as integrated 
+
+circuits 5, photoconductive switches 6,7  or photodiodes 8,9 .
+
+The use of the Pockels effect  has become  common to 
+
+(compiled on July 21 2026) Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 1/17 Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 1/17 probe the electric field’s distribution with good spatial 
+
+resolution in the bulk  of radiation detectors , but only 
+
+recently in more than one dimension 10,11  and so far, 
+
+limited to stationary or slowly varying conditions 
+
+despite its high speed’s potentialities. 
+
+Besides the Pockels effect, other nonlinear optical 
+
+effects based on third order susceptibility such as Kerr 12 
+
+and Second Harmonic Generation 13 –17  (SHG) have been 
+
+exploited to probe the electric field distribution with 
+
+high spatial and temporal resolution , but limited to 
+
+cases of high  electric fields . The dynamics of charge 
+
+carriers can be also accessed by using approaches which 
+
+are not directly based on the electric field, like transient 
+
+absorption, ultrafast microscopy, photoluminescence. 
+
+Numerous papers have been published 6,7,12 –28  [for a 
+
+comprehensive review see  29 Wang], that differ 
+
+significantly in the physical effect at the basis of 
+
+detection, the system under investigation and the 
+
+complexity of the experimental approach.  Despite 
+
+reported  spatiotemporal resolutions can be extremely 
+
+high, the approaches involve a strong perturbation, are 
+
+limited  to the effect they are based  on  (mainly 
+
+recombination, diffusion, excitation) and they  usually 
+
+do not follow carrier clouds along electric field paths .
+
+For a n extended summary of  studies on both  free carrier 
+
+and/or  electric field imaging see t he  Table  S1.
+
+In this work, we implement direct and sensitive imaging 
+
+of the electric field and its dynamics, probing key carrier 
+
+transport quantities  and mechanisms  involved in 
+
+detecting optical radiation.  The novelty of our approach 
+
+is represented by using the Pockels effect in a  pump -
+
+probe electro -optical imaging configuration, which we 
+
+call Carrier Dynamics by Pockels Imaging (CDPI) 
+
+technique. This approach offers a different perspective 
+
+to study free carrier dynamics, as it allows a direct 
+
+visualization of the optically generated ele ctron cloud 
+
+and of the associated  conduction and  displacement 
+
+current,  this last being  distributed in the whole device. 
+
+The corresponding flowing currents are evaluated, 
+
+which allows us to achieve what we believe to be 
+
+another striking objective of this work: to unveil the 
+
+correspondence between the internal electric field 
+
+reshaping and the  charges  supplied  by  the external 
+
+circuit, i.e., the independently measured current. 
+
+We validate our approach by applying CDPI on bulky 
+
+CdTe radiation detectors, focusing on the electrons’ 
+
+dynamics  with nanosecond and few  m resolutions, 
+
+investigating the effect  of applied voltage and  impinging 
+
+optical power. Upon increasing the amount of 
+
+photogenerated charge we explore highly perturbative 
+
+regimes, which in the past have been investigated 
+
+almost exclusively from the perspective of externally 
+
+flowing currents.  To corroborate our findings, n umerical 
+
+simulations are carried out  by closely  mimicking  the 
+
+experimental protocol  making use of  a well -established 
+
+device model .
+
+Carrier Dynamics by Pockels Imaging (CDPI) 
+
+The initial outcome of the CDPI experiments is a series 
+
+of  transmittance  Pockels images  T(x,y,t) , each one 
+
+corresponding to a progressive delay of the probing 
+
+pulse with respect to the excitation pulse (see  Fig. 1a  for 
+
+the experimental scheme and Methods for details). 
+
+The excitation pulse creates a  thin sheet  of electron -
+
+hole pairs just below the irradiated semi -transparent 
+
+contact, which moves under the applied electric field. In 
+
+the present configuration, the irradiated contact is the 
+
+cathode which implies that holes are quickly collected 
+
+while electrons move  towards the bottom anode. 
+
+Hence, the dynamics which we address here refer to 
+
+electrons , but the  following analysis can also be applied 
+
+to holes in case of anode irradiation. 
+
+A preliminary visualization of the photogenerated 
+
+electron  sheet  is appreciated in  Fig. 1b . The panel 
+
+contains  differential transmittance images  T(x,y,t + dt)  -
+
+T(x,y,t) at  specific  instants, where we can appreciate 
+
+transmission  variations  in the order of few percent. The 
+
+movement of the  electrons  is in fact revealed by  the 
+
+intensity strip  (red color) moving downward to the 
+
+collecting electrode  (Video S1 ). Given the planar 
+
+geometry in the present case, we will focus on the 1D 
+
+profiles  (along the y -direction) and their  dynamics , by 
+
+averaging along the x -direction. 
+
+Upon pump excitation , there is always a  propagating 
+
+(usually  sigmoid -like ) wave in the electric field 
+
+associated  with  the moving (usually Gaussian) carrier 
+
+cloud  of concentration  𝛿𝑛 (𝑦 , 𝑡 ), as schematically shown 
+
+in  Fig. 1c  (left panel). This propagating wave 
+
+superimposes to the background electric field, the pre -
+
+existent field profile E(t=0) under dark which is assumed 
+
+as constant in the scheme. I n general,  such a field wave 
+
+can be a small or large perturbation on a non -uniform 
+
+spatial field profile.  CPDI technique offers a large 
+
+operative dynamic range and in particular the capability 
+
+to unveil minimal field perturbations  𝛥𝐸  of the order of 
+
+few V cm -1.Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 2/17 Fig. 1  Experimental setup and working principles.  (a) Scheme of the working configuration. Two independent laser pulses are     
+
+> temporally shifted by means of an electronic delay and sent on the device to work as a probe and a pump beam. The device is
+> kept at a given voltage V and placed between two crossed lin ear polarizers (Pol1 and Pol2). The probe beam crossing the sample
+> and polarizers is imaged on a CCD camera. ( b) Sequence of processed real -space images with the absolute transmittance
+> variations at different time frames (t 1, t 2, … t j). ( c) Representative profiles of electric field and charge cloud (left subpanel) and
+> conduction, displacement and total current (right subpanel). The cathode and anode are placed at y = 0 and y = 1000 μm,
+> respectively. ( d) Experimental time -space chart of the electric field difference with respect to initial (just before the pump pulse)
+> time. The applied voltage is 50 V and the time range is 280 ns.
+
+In terms of currents, the conduction current is localized 
+
+as a peak on  𝛿𝑛 (𝑦 , 𝑡 ), while the displacement current is 
+
+characterized by a positive baseline and an opposite 
+
+peak, again corresponding to the moving carrier cloud 
+
+𝛿𝑛 (𝑦 , 𝑡 ). This behavior is depicted in  Fig. 1c  (right 
+
+panel),  where  the two peaked contributions (red and 
+
+blue solid lines)  represent the individual currents  and 
+
+the flat  sum  is  the total current  J(t) (dashed black line). 
+
+The chart in  Fig. 1d  shows how the CDPI technique can 
+
+provide powerful insights. It illustrates the full time -
+
+space dynamics of field variation  E( y, t)  – E(y, t = 0)  at a 
+
+glance. Such a chart is at the basis for deriving the other 
+
+involved quantities, including the displacement current 
+
+𝜀  𝜕𝐸 (𝑦 , 𝑡 ) 𝜕𝑡 ⁄ .
+
+Hereafter we provide the main equations underlying 
+
+CDPI. More details are reported in Methods.  The 
+
+electron cloud  𝛿𝑛 (𝑡 , 𝑦 ) can be written in terms of the 
+
+electric field spatial derivatives at the given and initial 
+
+time, in this form: 
+
+𝛿𝑛 (𝑡 , 𝑦 ) = 𝜀  
+
+> 𝑞
+
+[𝜕𝐸 (𝑦 ,𝑡 ) 
+
+> 𝜕𝑦
+
+− 𝜕𝐸 (𝑦 ,𝑡 =0) 
+
+> 𝜕𝑦
+
+] , (1) 
+
+where the last term represents the initial space charge. 
+
+Assuming diffusion is negligible, t he total current 
+
+J(t) ,
+
+sum of  conduction  and displacement terms , can be  thus 
+
+expressed as: 
+
+(2) 
+
+where we note that 
+
+J(t)  can be  written  only in terms of 
+
+the electric field, with the  conduction and the 
+
+displacement current s connected to the spatial and 
+
+temporal derivative of the electric field, respectively. 
+
+Hence  Eq.  (2)  highlights  the  framework of our approach: 
+
+CDPI measures the electric field,  which encompasses 
+
+the  charge  carriers inside the device and  relates them to 
+
+those measured  in the external circuit. On the contrary, 
+
+it is the externally accessed current that is normally used 
+
+as a quantity to infer the internal transport mechanisms, 
+
+upon auxiliary conditions.  Eq uation  (2) contains both 
+
+temporal and spatial information and it provides a 
+
+useful asset to extract the spatiotemporal distribution 
+
+of the carrier cloud: it can be calculated either directly, Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 3/17 from the spatial derivative of the electric field  [Eq.  (1)] 
+
+or, indirectly, from the complementary displacement 
+
+current, i.e. from the temporal derivative of the electric 
+
+field , according to: 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 , 𝑡 ) = − 𝜀𝜕𝐸 (𝑦 ,𝑡 ) 𝜕𝑡  − 𝐽 (𝑡 )⁄ 
+
+> 𝜇𝐸 (𝑦 ,𝑡 )
+
+(3) 
+
+An even more direct relationship current vs  electric  field 
+
+emerges from the spatial integration of  Eq . (2), which 
+
+results in the approximate expression  for the total 
+
+curre nt 30,31 :
+
+𝐽 𝑎𝑝𝑝𝑟𝑜𝑥 (𝑡 ) = (𝜀𝜇  2𝐿 ⁄ )[𝐸 2(𝐿 , 𝑡 ) − 𝐸 2(0, 𝑡 )] (4)
+
+where the only dependence on the electric field is 
+
+through  its  values  (not derivative s) at the electrodes ,
+
+which is very convenient  for CDPI.  We highlight  a subtle 
+
+yet fundamental outcome of the CDPI technique: the 
+
+ability to accurately  reveal  the direct correspondence 
+
+between the local carriers flowing inside the device and 
+
+those induced in the external circuit, i.e. the total 
+
+current  𝐽 (𝑡 ). On the contrary, it is the externally 
+
+accessed current that is normally used as a quantity to 
+
+infer the internal transport mechanisms, upon auxiliary 
+
+conditions. 
+
+Electron clouds at different voltages under low optical 
+
+perturbation 
+
+We first  analyse  the case of low optical perturbation, 
+
+where the electric field is only slightly perturbed by 
+
+optical excitation impinging on the cathode side of  the 
+
+device, biased at different voltages . Due to the short 
+
+penetration length  (Fig. S1 ), holes are quickly collected 
+
+while the electron cloud drifts towards the anode. The 
+
+clear motion of the electron cloud under different 
+
+applied voltages can be directly imaged. This is achieved 
+
+by applying the spatial and temporal derivative to the 
+
+relevan t time -space charts of the electric field retrieved 
+
+from EO experiments, like that of  Fig. 1d . The two 
+
+associated quantities, the conduction and displacement 
+
+currents, are reported in  Fig. 2a  and  Fig. 2b ,
+
+respectively.  The ir well -matched  overlap  confirms  that 
+
+they have been correctly resolved  and  offer a good 
+
+representation  of the  charge carriers  drift ing  from the 
+
+cathode (y = 0), where they are photogenerated, to the 
+
+anode (y = 1000  μm).  It is possible to  observe a sharp 
+
+localization of the electrons’ cloud, moving  with 
+
+increasing speed at larger applied voltages , while at the 
+
+smallest voltage there is  also  an appreciable spreading 
+
+during the transit .
+
+Looking in detail at the spatial features is possible, by 
+
+reporting the electric field at one given instant (V = 200 
+
+V, t = 30 ns), as shown in  Fig. 2c  (black solid line).  The 
+
+profile  appears to be  in  very  good agreement with the 
+
+stationary ones measured on similar devices in previous 
+
+studies 32,33 . Altogether, we report the relative variation 
+
+of the electric field (orange solid line) at that instant 
+
+with respect to the initial time (i.e. before the carrier 
+
+cloud was photogenerated). An approximate variation 
+
+of less than 5% can be noticed between the  front and 
+
+the back of the cloud. This is a low perturbation 
+
+condition, and the electric field profile  during the 
+
+dynamics  remains  in fact not very different from the one 
+
+preceding  the optical pulse  (Video S2 ). The  associated 
+
+displacement current  𝐽 𝑑𝑖𝑠𝑝𝑙 (𝑦 ) profiles  are shown in  Fig. 
+
+2d  at time intervals of 5 ns.  The moving peak at any time 
+
+is smooth, symmetric and is well fitted by a Gaussian 
+
+profile ( Video S3 ).  We point out that these profiles can 
+
+be assumed to coincide almost exactly with the  carriers’ 
+
+cloud. This association stems from Eq. (3)  due to the  thin 
+
+cloud's extension and  has been  thoroughly verified.  As a 
+
+result,  Fig s. 2e  and  2f  show the temporal evolution of 
+
+the  center y 0 and width   of the electron clouds 
+
+extracted from the fit at different  V. Consistently , the 
+
+collection time decreases as the voltage increases. 
+
+Furthermore, the slope of the y 0(t) trajectories in  Fig. 2e 
+
+is not linear, as it would be in a uniform electric field. 
+
+Instead, depending on the degree of non -uniformity of 
+
+the field, it exhibits either accelerating (V = 50 V) or 
+
+decelerating concavity (V > 100 V). The cloud slowdown 
+
+near the anode, for example, i s due to the electric field 
+
+drop in that region (see  Fig. 2c  at 200 V). 
+
+Apart from speed, a  more  detailed analysis allows also 
+
+to reveal that the cloud  dynamically  changes its size at 
+
+any of the applied voltages, not only  at the lowest one .
+
+In fact, w hile  at V = 50 V the  carrier  cloud  continues to 
+
+expand  until  the collection time  hence getting  very 
+
+large , as visible in the relative time -space chart,  at 
+
+higher voltages  it just slightly expands and then shrinks 
+
+back . Moreover, the time  of maximum expansion  is 
+
+reached  earlier  at higher voltage  (Fig. 2f ). It should also 
+
+be noted  that  this happens regardless  of  the fact that 
+
+the  electron cloud starts out with an initial width  (t = 
+
+0)  that  is larger for higher voltage. Th is latter  is just a 
+
+featur ing  detail, that  can be considered a real effect due 
+
+to the  interplay of  pump pulse width  with a larger 
+
+speed , partially augmented by a blurry artefact due to 
+
+the probe width (see Methods).  The cloud -size dynamics 
+
+are worth their deepening, even here in a linear (i.e., not 
+
+repulsive ) regime.  The Gaussian shape of the cloud is in 
+
+agreement with basic models which include both 
+
+thermal diffusion and Coulombic repulsion 34,35  to 
+
+describe the charge dynamics in semiconductor 
+
+detectors.  Such  models provide a Gaussian peak with a 
+
+moving  centre  and an increasing width proportional to 
+
+diffusion and repulsion, under a uniform electric field. In 
+
+the  present  case of low -power experiments, repulsion 
+
+should be ruled out, and the only mechanism for the Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 4/17 cloud size’s growing should be carrier diffusion, which 
+
+predicts a size increase following a square root with 
+
+time   = (2Dt) 1/2  (with D the diffusion coefficient). In any 
+
+case, no dynamic reduction of the size is predicted. We 
+
+have hence to observe that the observed non -
+
+uniformity of the electric field is effective. In a
+
+decreasing field, the front tends to decelerate before 
+
+with respect to the tail. Hence, the apparent quasi -
+
+parabolic evolution of  (t) comes from the competition 
+
+between the diffusion and the decreasing electric field. 
+
+Fig. 2  CDPI experiments at low power and different voltages.  (a) Time -space charts of the conduction current evaluated using 
+
+the spatial derivative of the electric field. The charts refer to the applied voltages of 50 V, 100 V, 150 V, 200 V and 250 V  , going 
+
+left to right, respectively. The inner top and bottom horizon tal solid lines represent the cathode (y = 0) and anode (y = 1000  m) 
+
+position, respectively. The minimum on the colorbar  has been kept fixed at minus the maximum value for the clarity and 
+
+symmetry of representation (white areas correspond to a zero current). ( b) Time -space charts of the displacement current 
+
+evaluated from the temporal derivative of the electric field, for the same voltages of the previous charts. Here the maximum  of 
+
+the colorbar  has been kept fixed at minus half of the minimum value (white still corresponds to zero current). The time ranges 
+
+are 240, 120, 80, 60 and 48 ns, going left to right, respectively, in a,b. The time step is either 1 ns or 0.5 ns, and the ti  me and 
+
+space sca lebars are the same through all the charts in panels a,b. ( c) Electric field spatial profile (black solid line) and its relative 
+
+variation with respect to the initial time (orange solid line). The profiles are taken at fixed time into the dynamics  (t = 30 ns) . ( d)
+
+Spatial profiles of the displacement current  𝐽 𝑑𝑖𝑠 (𝑦 ) at time steps of 5 ns during the transit. Both panels c,d refer to the 200 V 
+
+applied voltage. ( e,f ) Peak position y 0 (e) and cloud width   (f) of the  𝐽 𝑑𝑖𝑠 (𝑦 ) clouds extracted from their Gaussian fit during time. 
+
+The solid lines in f are a guide to the eye. Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 5/17 CDPI provides full access to basic transport properties 
+
+without the need for spatial averaging and the 
+
+approximations implicit in any other experimental 
+
+evaluation. As a  harsh -sounding  example , the carrier 
+
+mobility is  typically  evaluated  using  time of flight 
+
+measurements  and the following relation:  𝜇 𝑎𝑣𝑒  =
+
+𝐿 2 𝑡 𝑐 𝑉 ⁄ . The  collection time  tc is extracted  from the 
+
+decaying currents  with a certain degree of arbitrariness ,
+
+while a uniform electric field  V/L  is assumed.  CDPI 
+
+provides trajectories and thus an accurate estimation of 
+
+local velocity at the local electric field. However, from 
+
+the non -approximated expression  𝜇  =
+
+𝐿  ∫ 𝐸 (𝑦 0, 𝑡 )𝑑𝑡 
+
+> 𝑡 𝑐
+> 0
+
+⁄ , we have extracted values  averaged 
+
+over all different voltages  around 
+
+ = (1076 ±73 ) cm 2 V-1
+
+s-1, very similar to those calculated assuming a constant 
+
+electric field , i.e. 
+
+ = (1074 ±43 ) cm 2 V-1 s-1, these values 
+
+being in good agreement with the literature 36 .
+
+Electron clouds at large optical irradiation 
+
+We study now the field and charge carriers’ dynamics 
+
+observed under larger levels of optical irradiation. Here 
+
+the pump beam power density  P varied along more than 
+
+three orders of magnitude (P1-P8 going from 
+
+approximately  1 μW cm -2 to 3900  μW cm -2), while the 
+
+applied bias voltage is always V = 200 V. 
+
+First, it is to be noted that  a prolonged exposition to 
+
+optical irradiation  has been used  (around  20 min ) to 
+
+achieve a steady state  (Fig.  S2) before starting the 
+
+Pockels acquisitions. This was necessary because, under 
+
+high optical irradiation, the electric field perturbation 
+
+remains  much longer than the transit time, and even 
+
+longer than the time interval associated with the 
+
+repetition rate of 25 kHz. This effect is analogous to the 
+
+flux -dependent polarization, critical in CdTe detectors 
+
+under high X -Ray fluxes and it basically depend s on the 
+
+modification of deep trap occupation 37 . The 
+
+modification is visible in the E -field profiles at t = 0 
+
+shown in  Fig. 3a , where the electric field undergoes a 
+
+progressive bending. In particular, the field reduces 
+
+under the irradiated cathode while increases close to 
+
+the anode, upon increasing the incident optical power. 
+
+Hence the meaning of these profiles is that they 
+
+represent the initial electric field that will both guide 
+
+and be perturbed by the moving electron cloud. 
+
+A significant quantity to the extent of evaluating the 
+
+induced dynamics and operational features is the 
+
+collected charge,  which can be simply obtained from the 
+
+electric field step associated to the localized drifting 
+
+electron cloud, according to  𝛥𝐸  = 𝑞  
+
+> 𝜀
+
+𝑁 𝑆 , where  Ns is 
+
+the areal charge density . The value  𝛥𝐸  (taken at t =  35
+
+ns into the dynamics) is reported in  Fig. 3b  as a function 
+
+of the incident optical power, highlighting a reasonable 
+
+linear relation under low to moderate optical powers. 
+
+However , it saturates to a value around 500 V cm -1 at 
+
+the larger powers.  This value is substantially lower than 
+
+the value of the electric field at the cathode, of the order 
+
+of 2000 V cm -1 (see  Fig.  3a ), which means that even 
+
+under high optical power the electric field under the 
+
+irradiated electrode does not drop to zero at the time 
+
+the electron cloud is photogenerated. The relation 
+
+between carrier dynamics, electric field, trapping, 
+
+contact properties an d how these all affect the currents, 
+
+has been deeply investigated in the past 30,31,38 –40 ,
+
+especially in the frame of strong carrier injection. For 
+
+ohmic contacts, it is predicted the space charge limited 
+
+(SCL) regime can be eventually achieved, i.e., the 
+
+electric field is nulled at the electrode where strong 
+
+photogeneration or high carrier in jection occurs. The 
+
+limit case of full absence of electron injection, i.e., a 
+
+blocking contact, results in a limited electric field 
+
+reduction near the blocking contact where carriers are 
+
+optically generated. This case  is referred 41  as space -
+
+charge perturbed (SCP). We argue that the limited 
+
+electric field reduction that we observe under optical 
+
+pulsed excitation can be attributed to the upward 
+
+energy band bending at the Pt/CdTe interface, which 
+
+makes such contact slightly hole injecti ng 42  thus 
+
+impeding full electron injection from the cathode and 
+
+the  nulling  of  electric field nearby. On the side of the low 
+
+optical power in  Fig. 3b , it is quite remarkable that we 
+
+can appreciate electrical field changes down to  2 V cm -1
+
+over a baseline of the order of few thousand V cm -1. This 
+
+corresponds to detecting electron clouds with sheet 
+
+density down to 7 x 10 6 cm -2. Such a concentration 
+
+translates , for a typical cloud width of 40  μm, to the 
+
+extremely low volumetric density of 3.5 x 10 9 cm -3 of 
+
+photogenerated carriers, just above the intrinsic  carrier 
+
+concentration. 
+
+The time -space dynamics of the carrier  appears in the 
+
+charts in  Fig. 3c,d,e  for three different values of optical 
+
+power density (respectively,  P4 = 57  μW cm -2, P6 = 520 
+
+μW cm -2 and  P8 = 3900  μW cm -2). These panels evidence 
+
+both a distortion of the trajectory (linear in the low 
+
+power case) and a strong enlargement of the cloud size, 
+
+the last one been predicted in literature by numerical 
+
+simulations 36,43 . The wider size of the cloud also  implies 
+
+that the associated  Jdis  is not conformally mapped to the 
+
+charge cloud, for such reason we recur here to the 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 ) visualization. It can be appreciated from the 
+
+charts that the moving cloud starts out at a lower speed 
+
+with increasing optical power , despite  it accelerates at 
+
+later times. This trend is in a qualitative agreement with 
+
+the electric  field  profile across the device ( Fig. 3a ). A 
+
+better look at its position and shape is offered by the 
+
+vertical crosscuts of the charts at fixed time (t =  35 ns  of 
+
+the dynamics ), shown in  Fig. 3f . The peak has evidently Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 6/17 Fig. 3  CDPI experiments at increasing optical power.  (a) Electric field profiles at initial time for different optical pump power 
+
+density (from  P1 = 1  μW cm -2 to  P8 = 3900  μW cm -2, over the 1 cm 2 area of the device). ( b) Estimated travelling charge (filled blue 
+
+circles) for the eight values of increasing power. The charge is evaluated in terms of the electric field difference  ΔE at the two 
+
+side of the clouds (at intermediate time). The collected charge is retrieved instead by time integrating the approximated cur rent 
+
+(empty red squares). ( c,d,e ) Time -space charts of the carriers’ cloud  𝛿𝑛 𝑑𝑖𝑠𝑝𝑙  (𝑦 ) at three optical powers ( P4, P6 and  P8,
+
+respectively). They are retrieved by applying Eq. (6) to the electric field charts. The time range is 72 ns, and the time ste p is 1 ns. 
+
+The inner top and bottom horizontal solid lines represent the cathode and anode position, respectively. ( f) Spatial profiles of 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 ) for the same optical powers (yellow, blue and red for  P4, P6 and  P8, respectively) taken at t = 3 5 ns, corresponding to 
+
+the vertical dashed line in the panels c,d,e. The bi -Gaussian fits are superimposed (solid black lines). ( g) Peak position y 0 extracted 
+
+from the bi -Gaussian fits during time (the data is empty dots; solid lines are a guide for the eye). ( h) The extracted front and tail 
+
+widths (solid and dashed lines, respectively) as a function of time. 
+
+slowed down, and its spatial distribution enlarges with 
+
+increasing optical power  (Video S4 ). Furthermore, at 
+
+low optical power (up to  P4) the spatial distribution is 
+
+symmetric and, as we have already seen, well described 
+
+by a Gaussian function (superimposed fit, solid black 
+
+line). On the contrary, under high optical powers ( P6 and 
+
+P8) a bi -Gaussian function is needed to follow the data, 
+
+bearing different widths for the front ( f) and for the 
+
+back ( b) of the cloud.  The  bi -Gaussian fits carried out 
+
+during the drift of the electron cloud allow us to 
+
+visualize the trajectory change by looking at the position 
+
+of the peak y 0 in time, as reported in  Fig. 3g . The Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 7/17 trajectory starts to change at powers larger than  P4, with 
+
+an appreciable slowing d own during the initial instants .
+
+It should be warned  though  that the large extension and 
+
+deformation of the electron cloud limit the meaning of 
+
+trajectory. Concerning the spatial shape of the cloud, we 
+
+report in  Fig. 3h  the evolutions of  f and  b in time (solid 
+
+and dashed line, respectively). A systematic trend can 
+
+be identified. At low optical power the two widths are 
+
+basically overlapping each other during motion, 
+
+meaning of a Gaussian shape and negligible asymmetry. 
+
+Their value grows just sligh tly before decreasing (as also 
+
+seen in  Fig. 2f ). At larger powers the cloud gets wider 
+
+and growing till longer times, with a maximum frontal 
+
+width reaching 80  μm (at 20 ns) and 160  μm (at 32 ns), 
+
+for  P6 and  P8, respectively. More strikingly, the tail width 
+
+gets even larger and at increasingly later time, up to 240 
+
+μm (at 33 ns) and 400  μm (at 38 ns), for  P6 and  P8,
+
+respectively. In summary, it is evident that increasing 
+
+the optical excitation power causes the cloud of 
+
+electrons to spread out over large part of the sample in 
+
+agreement with previous simulations 36,43 , becoming 
+
+increasingly asymmetric with a tail that is larger than the 
+
+front. 
+
+When increasing the incident optical power, Coulombic 
+
+repulsion plays a dominant role. Compared to thermal 
+
+diffusion, Coulombic repulsion predicts again a Gaussian 
+
+distribution in 3D configurations but with a width 
+
+proportional to (Nt) 1/3 , where N is the total number of 
+
+photogenerated carriers per pulse. Calculations 34,35  are 
+
+for a spherical/ellipsoidal carrier cloud shape, while in 
+
+our case the carrier cloud is a 2D sheet moving in one 
+
+direction. This is still expected to expand with a (Nt) 1/3 
+
+dependence in such a direction, but  with  a higher 
+
+multiplicative factor to account for enhanced repulsion 
+
+due to parallel lines of force. The cloud broadening 
+
+effect of repulsion is clear from  Fig. 3h , where both  f
+
+and  b exhibit a net increase with time and the incident 
+
+optical power. In any case, diffusion and repulsion alone 
+
+cannot account for the large asymmetry of the cloud: 
+
+trapping is another mechanism that can directly affect 
+
+both the carrier concentration and the  shape of their 
+
+cloud. The tail observed in the electron cloud is 
+
+indicative that trapping becomes effective under high 
+
+optical power. Generally, at operative E -fields (> 600 V 
+
+cm -1) electron trapping is considered negligible because 
+
+the associated lifetime is of the order of 1  μs , which is 
+
+much longer than the transit time. Yet, under large 
+
+optical irradiations, nonlinear trapping -related effects 
+
+have been reported in CdTe and related 
+
+compounds 36,44,45 . Further confirmation is provided in 
+
+Fig. 3b: as the optical power increases, the charge  Ns
+
+evaluated during drift (blue points) becomes smaller 
+
+than that obtained from integrating the total current 
+
+transient over long times (Eq. (4), red open squares). 
+
+This discrepancy arises because the former neglects 
+
+trapped electrons, while the latter accounts for them 
+
+through detrapping processes, as discussed in the 
+
+following paragraph.  As an interesting feature, there is 
+
+also a secondary peak in  Fig. 3e  (curve  P8) very close to 
+
+the cathode. Such a peak lasts there for times longer 
+
+than collection time and can be ascribed to  a 𝑛 𝑡 (𝑦 , 𝑡 )
+
+fixed charge due to traps localized  near the optically 
+
+irradiated cathode. In this regard, it is known that the 
+
+fabrication process of detectors introduces a defective 
+
+region, about 2 μm thick, under the contact called the 
+
+'dead layer', which prevents charge collection 46 . We will 
+
+see how both a distributed and localized defect will 
+
+modify the observed charge profiles in the case of 
+
+numerical simulations. As a matter of fact, the 
+
+opportunity to independently access both free and fixed 
+
+charges contributions is another uniqu e feature offered 
+
+by CDPI.  Regarding the carrier cloud, t o our knowledge, 
+
+the spatiotemporal evolution and its  asymmetry ha ve 
+
+not been so clearly identified so far in a device under 
+
+operative conditions. 
+
+Current transients 
+
+Albeit  approximate , Eq. ( 4) provides a  straightforward 
+
+and  compact  expression for the current transient, 
+
+avoiding the use of noisy electric field derivative  of Eq. 
+
+(2) , but only relying on their values at the electrodes. 
+
+Figure 4  shows a comparison of the current  transients 
+
+for  different optical powers. These are  either  calculated 
+
+from the CDPI experiments by using Eq. ( 4) ( Fig. 4a ) or 
+
+taken from independent CT (current transient) 
+
+experiments (Fig. 4b ) measured by means of an 
+
+oscilloscope, see also Methods. While the transient 
+
+edges generally align  well  (at around 50 ns, 
+
+corresponding to the transit time at 200 V), the peak 
+
+occurs  slightly  earlier  in the CT experiments conducted 
+
+at the highest optical powers. The SCP 30  and SCL 38 
+
+models predict a peak occurring at approximately 0.8 of 
+
+transit time, which is consistent with the observations 
+
+made in the CT experiments. The  slope of the transient 
+
+(the part before the edge at 50 ns) changes in both  kinds 
+
+of  experiments from negative to positive when 
+
+increasing the optical power.  Th ese time slopes are  a
+
+footprint of either decelerating or accelerating carrier 
+
+clouds,  consistent with the  shape of the spatial profiles 
+
+in the  background  electric field as seen in  Fig. 3a . After 
+
+the edge, a  decay  happens  in both  experiments , that is 
+
+longer  with increasing optical power.  The development 
+
+of such a  temporal  tail  in the current  is concomitant with 
+
+the  electron clouds becoming asymmetric  in space  and 
+
+thus  ascribed  to  detrapping  as well . We should  in fact 
+
+remember that trapping/detrapping events can delay 
+
+the arrival of the carriers at the collecting electrode far 
+
+beyond the regular transit time. Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 8/17 At the start of the transients and for few ns, CT 
+
+experiments show a fast initial peak (even though 
+
+affected by some  instrumental  signal ringing ). Such a 
+
+component is missing in the CDPI transients and is 
+
+induced , as will be confirmed by numerical simulations, 
+
+by  the photogenerated holes.  Since  holes are 
+
+photogenerated near the cathode and rapidly collected, 
+
+they provide a fast initial current contribution  but also 
+
+affect the electric field at the cathode with a sign 
+
+opposite to that of electrons.  The  apparent  initial 
+
+current deficit  observed in  the CDPI transients  is hence 
+
+due to  applying  the single -carrier approximated Eq.  (4)
+
+on top of the EO  analyses .          
+
+> Fig. 4 Current dynamics. (a) Experimental current versus time
+> at different powers calculated from the CDPI experiments
+> using Eq. (4). (b)Independent current transients (CT)
+> measurements by means of an external oscilloscope. The
+> insets in the two panels show the currents on a semi -log scale.
+
+In summary, within its limits, the approximate current 
+
+of Eq. ( 4) enables us to validate the CDPI's key findings, 
+
+which correlate the dynamics of the electric field  —
+
+typically inaccessible to experiments  — with the primary 
+
+observable quantity of electronic devices: the external 
+
+current. Remarkably, an all -optical expe riment enables 
+
+us to infer the dynamics of the internal electric field and 
+
+the associated currents flowing outside the device 
+
+directly. Thus, CDPI exploits the Pockels effect to map 
+
+electrical and optical signals onto a common 
+
+information space, extending  conventional 
+
+optoelectronic functionalities beyond standard 
+
+conversion schemes. 
+
+Numerical simulations 
+
+To improve our understanding of experimental 
+
+phenomenology, we performed numerical simulations 
+
+that captured most of its features and results. The time -
+
+dependent drift -diffusion equations were solved by 
+
+starting from an established  model 11,33  for the bulk of 
+
+the CdTe and the contacts , here updated for transient 
+
+conditions (see Methods and  Table  S2 for details) .
+
+In order to mimic the  experiments (see protocol in  Fig. 
+
+S2), preliminary and prolonged (15 -20 min) optical 
+
+expositions to prepare the system are simulated, 
+
+assuming an effective, time averaged intensity for the 
+
+optical pump.  After such conditioning, a balance 
+
+between the long trapping and de -trapping times of the 
+
+deep level  occurs which  can modify the  internal space 
+
+charge distribution, and thus the  electric field profile 
+
+with  respect to  dark . Like in  Fig. 3a  for the experiments ,
+
+simulation s in  Fig . 5a  show that the profiles are not 
+
+affected in case of low irradiation while, for high pulse 
+
+levels, the electric field is  increasingly  damped on the 
+
+cathode side.  Also in simulations, such  profiles 
+
+represent the initial electric field  before the dynamics .
+
+The simulations confirm that, under low optical 
+
+irradiation, the electron cloud retains a well -defined 
+
+Gaussian spatial distribution at any instant and for the 
+
+entire drift of the cloud, when different applied voltages 
+
+are applied. We have performed simula tions 
+
+corresponding to the experiments of  Fig. 2 and 
+
+subsequently applied Gaussian fits on the retrieved 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑥 , 𝑡 ) clouds during motion. The widths  (t) as a 
+
+function of time are reported in  Fig. 5b  for different 
+
+voltages,  showing a good agreement  with the 
+
+corresponding CDPI results of  Fig. 2f . While at the 
+
+lowest voltage the cloud size increases along all the 
+
+transit, for larger voltages V (> 50 V) it shows a 
+
+maximum   in the order of 50 -60  μm before getting 
+
+reduced. The maximum width is reached  earlier  for 
+
+larger cloud speeds, i.e., for higher applied voltages. This 
+
+confirms the interplay between electron diffusion and a 
+
+decreasing electric field,  where the latter  tends  to 
+
+squeeze the electron cloud.  It is important to note that 
+
+also in the case of numerical simulations, the optical 
+
+pump width (1 ns) working together with the cloud 
+
+speed plays a role in the charge cloud broadening. This 
+
+is evident from the voltage -dependent size of the cloud 
+
+at  the beginning of the dynamics  shown in  Fig. 5b , which 
+
+can also be seen in the CDPI result ( Fig. 2f ). Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 9/17 Fig. 5  Numerical simulations.  (a) Initial field profiles prepared at different optical pump powers.  The two labelled profiles 
+
+correspond to the  P4 and  P8 power densities of the experiments.  (b) Evolution of the cloud size extracted from the Gaussian fit of 
+
+the simulations at different bias voltages and low power optical irradiation. ( c,d ) Complete time -space charts of the carrier cloud 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 , 𝑡 ) in a low -power case (c) and high -power case (d), under an applied voltage of 200 V. ( e,f ) Time -space charts of the 
+
+carrier cloud using the same high optical pump power of panel d but adding a trapping level. The two cases refer to a shallow 
+
+level homogeneous in the bulk depth (e) and a surface defect level localized in the first few  μm from the cathode (f). The insets 
+
+in panels c -f show the  normalized profiles at fixed time (t = 35 ns into the dynamics, dashed vertical line in the charts), highlighting 
+
+the correspondence in shape of the charge  [𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 ), solid blue lines ] and the displacement current itself [ 𝐽 𝑑𝑖𝑠𝑝𝑙  (𝑦 ), dashed 
+
+black lines].  The spatial and time ranges of the dynamics are 1000  μm and 72 ns, respectively, in all the four charts. ( g) Total 
+
+current transients  𝐽 𝑡𝑜𝑡 (𝑡 ) for simulations of panels c,d,f,g. ( h) Comparison of  𝐽 𝑡𝑜𝑡 (𝑡 ) (solid blue line) and  𝐽 𝑎𝑝𝑝𝑟𝑜𝑥 (𝑡 ) (dashed black 
+
+line) in the same high -power case as panel d. The panel also shows their difference (dash -dot red line) , evidencing the initial hole 
+
+contribution .
+
+In  Fig. 5c  and  Fig. 5d  we report the time -space charts of 
+
+the charge cloud corresponding to low and high optical 
+
+irradiation cases, respectively. The charts should be 
+
+compared with the CDPI results of  Fig. 3c  (low) and  Fig. 
+
+3e  (high power).  Similarly to CDPI experiments, t he two 
+
+different power regimes feature an opposite trajectory Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 10/17 bending, decelerating in the low optical irradiation case 
+
+and accelerating in the high -power case. In the latter it 
+
+is also evident a strong cloud broadening. While the 
+
+change of motion agrees with the field profiles inversion 
+
+shown in  Fig. 5a , the widening can be ascribed to 
+
+Coulomb repulsions, intrinsically considered by the 
+
+model.  Cross -cut profiles of the  𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑥 , 𝑡 ) timecharts 
+
+in  Fig. 5c  and  Fig. 5d  are  reported in their inset, allow ing 
+
+to evaluate the electron cloud shape at a fixed time.  At
+
+low optical power ( Fig. 5c ) the simulations confirm the 
+
+symmetric Gaussian shape  seen  in the experiments. For 
+
+high optical power ( Fig. 5d ), they feature asymmetric 
+
+reshaping. Strikingly, such  induced  asymmetry  is 
+
+opposite  than in the  experiments ( see profiles for  P6 and 
+
+P8 in  Fig. 3f ), with the front of the cloud being  now 
+
+slightly  longer than the back one.  The experimental 
+
+asymmetry  is  hence  a notable feature that cannot be 
+
+captured by the basic modelling implemented so far ,
+
+which excluded appreciable trapping. Therefore, we 
+
+must  recall  that  the  CDPI  results  indicate  that trapping 
+
+and  detrapping phenomena  take place . To tackle this 
+
+issue, we have introduced an additional electron 
+
+trapping level in cases of high optical irradiation. These 
+
+improved simulations consider  either  a spatially uniform 
+
+or  a localized trap distribution near the electrode, 
+
+respectively shown in  Figs. 5 e,f , both under the same 
+
+high level of optical irradiation as the simulations of  Fig. 
+
+5d . In th ese cases, a further cloud broadening is clear, 
+
+mainly in the rear of the cloud,  now in agreement with 
+
+CDPI  experimental profiles . The longer tail can be 
+
+resolved  in the profiles shown in the inset s and  has  an 
+
+approximated bi -Gaussian  shape  in the case of uniform 
+
+trap distribution ( Fig.  5e). A n even longer tail in space  is 
+
+seen for  the localized trap  case  (Fig.  5f), that is now 
+
+featuring  an almost flat  plateau on the rear of the cloud .
+
+These simulations confirm, under high optical 
+
+irradiation, the role of a shallow level in the electron 
+
+trapping and detrapping  by adding a tail in the moving 
+
+carriers’ cloud. Naturally, it is also expected that such a 
+
+spatial  tail results in a delayed flux of electrons with 
+
+respect to the unmodified transit time of untrapped 
+
+electrons. In essence, the spatial tail  also  implies a 
+
+temporal tail in the total current transient. Indeed, this 
+
+is what we can see in  Fig. 5 g, where we report the total 
+
+current as a function of time for the simulations of  Fig s.
+
+5c,d, e,f. In  the  absence of trapping (case c,d), the  whole 
+
+current transient is relatively sharp in time (<70 ns).  On 
+
+the contrary, a  temporal  tail appears in the  current for 
+
+the case of a  shallow level  uniform  in the bulk (case  e).
+
+The dynamics  become even longer for the localized trap 
+
+(case  f),  with the main peak followed by a successive 
+
+bounce  for the overall duration of  up to 350 ns. 
+
+The  appropriate explanation of the  observed 
+
+phenomenology  could  involve  a combination of the two 
+
+discussed modeling , to be further refined. Yet this 
+
+represents a good demonstration of the powerful 
+
+access and insight granted by the CDPI technique. For 
+
+example, in CdTe detectors under intense optical 
+
+irradiations, different trapping effects on the electron 
+
+clouds have be en simulated 36  and inferred starting from 
+
+externally assessed experimental current transients, 
+
+which integrate  the spatial contributions  into a single 
+
+quantity. 
+
+We want to point out that numerical model ling allows 
+
+us to validate a fundamental statement in  the CDPI 
+
+technique  presented before. The fact that the electron 
+
+cloud  𝛿𝑛 (𝑥 , 𝑡 ) can be evaluated starting from the 
+
+displacement current, by means of the equivalent 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑥 , 𝑡 ) as retrieved in Eq. ( 3), has been thoroughly 
+
+assessed  and verified in  all  the different conditions 
+
+discussed here.  Furthermore, w e also show in  the inset 
+
+of  Fig s. 5c ,d,e, f the  difference in  the  moving charge 
+
+[𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑥 ), solid lines] and displacement current  itself 
+
+(𝐽 𝑑𝑖𝑠𝑝𝑙 (𝑥 ), dashed lines). While  only  a slight  deviation  is 
+
+noted  for  high -power cases , the perfect  overlap  in the 
+
+low power case  confirms  that the displacement current 
+
+can be used  directly  in  localized -cloud  conditions , as a 
+
+good match to the charge cloud shape and dynamics. 
+
+Finally,  we analyze  the role of the photogenerated 
+
+holes , whose presence was inferred from CT 
+
+experiments in  Fig.  4b . In terms of conduction currents 
+
+and their spatial distribution , simulations highlight that 
+
+holes  become  relevant, and even  dominant  when  very 
+
+close to the cathode ( Fig.  S3).  Looking at the  current 
+
+transients,  such holes  result in an additional 
+
+contribution at the  very  beginning  of the dynamics.  They 
+
+can  eventually  manifest in  a peak,  which can be  barely 
+
+perceived in  Fig.  5g . The ir presence  is more appreciable 
+
+when  zooming  the time range and  compar ing the 
+
+retrieved  Jtot (t) and  Japrox (t) transients in  Fig.  5h (solid 
+
+blue and dashed black, respectively , for case of panel d ).
+
+In fact,  the  Japrox (t) expression has be en  obtained  from 
+
+simulations  by assuming no photogenerated holes.  The 
+
+difference  between  Jtot (t) and  Japrox (t)  (dash -dot red 
+
+curve) is  showing an appreciable initial peak  that is 
+
+precisely  due to the hole s’  contribution. The difference 
+
+also points out an extended  but very weak  later  bump. 
+
+This  is due to other approximations involved when 
+
+deriving Eq.  (4). 
+
+A last consideration  is worth  about  the simultaneous 
+
+presence and movement of electrons and holes  in CDPI ,
+
+that  can be  resolved  when  are  in  spatially separated 
+
+regions and  can be identified  from  the  opposite  drifting .
+
+On the other hand, when the two  kinds  of carriers are 
+
+spatially close (as at the very beginning of the 
+
+photogeneration , or when crossing if separately 
+
+injected by the two electrodes ), their  contributions Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 11/17 subtract each other according to Gauss’s  law ,
+
+momentarily reducing their neat visualization  by  the 
+
+CDPI  technique .
+
+Conclusions 
+
+We have implemented Carrier Dynamics by Pockels 
+
+Imaging, an immediate, sensitive and fast pump -probe 
+
+imaging of the electric field for optoelectronic devices 
+
+exhibiting Pockels effect. CDPI, here applied to CdTe 
+
+radiation detectors, is based on the fundamental 
+
+principle that any carrier excess dynamically affects the 
+
+internal electric field. As such, the method enables a 
+
+direct and quantitative visualization of an optically 
+
+generated electron cloud and of the ass ociated 
+
+conduction and  displacement currents in the whole 
+
+volume of operative devices.  Since  Pockels effect is 
+
+related to the medium polarizability, the modulation is 
+
+extremely fast and thus CDPI takes in principle an 
+
+instantaneous picture of the carrier cloud. Moreover, 
+
+since the effect is probed by a not -absorbed optical 
+
+beam, CDPI is not invasi ve. 
+
+Besides the applicative interest, fundamental carrier 
+
+transport properties, like drift, diffusion , repulsion ,
+
+trapping /detrapping , and  electrode injection  can be 
+
+thus directly accessed without limitations such as 
+
+auxiliary  hypothesis, approximations or spatial 
+
+averages.  Pre sent results refer to electrons , but  CDPI is 
+
+also suitable to investigate hole clouds,  this depending 
+
+on which of the two electrodes is irradiated . We have 
+
+found that under different applied voltages and low 
+
+optical intensity, the Gaussian shape of the electron 
+
+cloud is well maintained  during drift, with  a width  first 
+
+increasing due to diffusion and then  shrinking  due to 
+
+decreasing electric field  profiles.  On the front of 
+
+sensitivity, we have detected electric fields differences 
+
+of about 2 V cm -1 associated to the drift of  low -
+
+concentration  electron clouds , just above the intrinsic 
+
+level. 
+
+Conversely, high optical excitation intensities allow us to 
+
+investigate perturbed space charge regimes, which until 
+
+now have only been  inferred  by measuring  externally 
+
+flowing currents. Notably, in addition to  significant 
+
+expansion of the electron cloud due to  Coulomb 
+
+repulsion, we have observed pronounced tails in the 
+
+moving clouds due to detrapping processes, as 
+
+confirmed by independent current measurements. We 
+
+have  deduced  that trapping in CdTe detectors  is 
+
+enhanced by optical intensity and  mostly  associated 
+
+with a defective layer  possibly  close to the surface. This 
+
+leads us to another crucial point that we have 
+
+independently verified: our all -optical approach 
+
+correlates the dynamics of internal charges with the 
+
+current flowing in an external circuit. This correlation 
+
+between internal and external charges, achieved by 
+
+modulating the refractive index, has implications that 
+
+extend well beyond the specific case reported here. In 
+
+our opinion, it  represents  a breakthrough in 
+
+optoelectronics, enabling novel functionalities that have 
+
+an impact on various areas of fundamental physics, 
+
+photonics, electronics and materials science. 
+
+A standard drift -diffusion simulator, equippe d with a 
+
+well -established model,  can capture all the observed 
+
+CDPI features. Besides validating our approach, this 
+
+substantially improves control of present CdTe devices 
+
+from a microscopic point of view to the level of device 
+
+performance. Furthermore, given that CDPI can easily 
+
+be extende d to two dimensions, it paves the way for 
+
+novel or improved designs in devices where charge 
+
+collection is critical, such as detector matrices. 
+
+Finally, CDPI shows potentialities along several 
+
+directions . 1) Materials.  Beyond non -centrosymmetric 
+
+semiconductors , it applies to perovskites, graphene, 
+
+organic materials, standard electro -optic platforms such 
+
+as LNO, LTO, and BTO, and, more generally, to any 
+
+material exhibiting a Pockels response or other 
+
+appreciable electro -optic effect (e.g., Kerr ,
+
+photorefractive, plasma dispersion ).  2) Time resolution. 
+
+This can be further advanced, being  here mainly  limited 
+
+by pump –probe laser parameters such as pulse energy, 
+
+pulse  duration, and timing jitter.  3) Spatial 
+
+dimensionality and resolution.  CDPI can be adapted to 
+
+probe microscopic devices, operated in reflection as 
+
+well as transmission, and extended from the current 
+
+implementation to fully two -dimensional  distributions .
+
+4) Devices.  The technique is broadly suited to 
+
+investigating any device in which  is involved  the 
+
+propagation of either  electrically or optically generated 
+
+excess carriers. 
+
+METHODS 
+
+Experimental setup.  The radiation detectors (Acrorad 
+
+Co., Ltd., Okinawa, Japan)  used in the experiments are 
+
+based on CdTe:Cl semi -insulating crystals (resistivity   =
+
+6-7 x 10 9 Ohm cm) 33 , slightly p -type of size 10x10x1mm 3.
+
+The nominal drift electrons and holes mobilities are  e=
+
+1050 cm 2V-1s-1 and  h= 80 cm 2V-1s-1, respectively. The Pt 
+
+contacts, partially transparent, cover the whole upper 
+
+and lower square surfaces, parallel to the (111) crystal 
+
+planes. Bias  voltage  is applied by a B2987B  Keysight 
+
+Electrometer. Four nominally equal detectors were 
+
+used in this work, and the results were highly 
+
+comparable. The sample is placed on a thermal stage 
+
+whose position is carefully controlled along six degrees Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 12/17 of freedom by multiple translational and angular stages. 
+
+Measurements have been carried out in air at room 
+
+temperature. 
+
+Two optical beams are impinging on the sample, in a 
+
+pump and probe configuration, coming from two 
+
+independent pulsed lasers both of measured width 
+
+around 1.0 ns. The pump beam impinges vertically on 
+
+the top semi -transparent contact, while the probe beam 
+
+is  perpendicular to the pump and it impinges on the 
+
+lateral side of the sample. The probe beam is electrically 
+
+triggered by the pump one through a pulsed delay 
+
+generator  (Highland Technology T564) . The jitter 
+
+between the two optical pulses is less than 100  ps, thus 
+
+resulting in an overall temporal resolution mainly 
+
+limited by  the probe pulse  width  (1 ns) .
+
+The pump beam is produced by a supercontinuum white 
+
+laser (Leukos, Samba), repetition rate 25 kHz, which is 
+
+spectrally selected by a band -pass filter (780 nm  - 830 
+
+nm) to be immediately above the  energy  bandgap (E g =
+
+1.43 eV, corresponding to λ g = 840 nm) for a penetration 
+
+length short (≈1  m) with respect to the sample 
+
+thickness of 1 mm  (Fig.  S1). The resulting optical power 
+
+density is varied by mean of neutral filters in the 1  - 3900 
+
+μW cm -2 range.  The wavelength of the laser probe beam 
+
+(customized  by  Eikonal Optics) is 980 nm , well  below  the 
+
+energy  bandgap and is thus not absorbed by the sample. 
+
+Its power is also small enough (tens of  μW) not to induce 
+
+additional electro -optic effects. This allows  us  to probe 
+
+the internal electric field by means of the Pockels effect 
+
+in a transmission configuration. The probe pulse is 
+
+linearly polarized at 45 ° with respect to the vertical y -
+
+direction and experiences the electric field induced 
+
+birefringence when crossing the sample. The effect is 
+
+detected due to a second polarizer (analyzer) oriented 
+
+at −45 °, placed behind the device (cross -polarizers 
+
+configuration). A half -wave plate is placed before the 
+
+first polarizer to maximize the optical intensity at 
+
+disposal. The images P(x,y) of the transmitted intensity 
+
+are recorded by  a cooled high -sensitivity monochrome 
+
+camera (Q Imaging, EXi  Blue) equipped with a 1× –6× 
+
+zoom lens (Edmund Optics, VZM ™ 600i Zoom Imaging 
+
+Lens). The system is suitable to image the 1 mm 
+
+detector thickness onto a 1392 × 1040 -pixel area. The 
+
+camera pixel size is 6.45 μm, and the integration time 
+
+ranges from 3  s to 5 s. The spatial resolution of the setup 
+
+in the used experimental configuration is limited by 
+
+different factors: the numerical aperture  NA  of the 
+
+optical zoom lens at the employed magnification ( 5x 
+
+magnification, object -space NA ≈ 0.05, corresponding to 
+
+a diffraction -limited resolution of ≈ 6.7 μm), the 
+
+horizontal optical probe alignment relative to the 
+
+detector, the vertical electric field uniformity inside the 
+
+detector, and most significantly, the  1 cm total device 
+
+length  in transmission mode. This  length  degrades 
+
+resolution through beam divergence, refraction, and 
+
+scattering, effectively increasing the minimum 
+
+resolvable feature size . Combining these contributions 
+
+in quadrature,  the overall spatial resolution is 
+
+conservatively estimated to be in the  range of 10 –
+
+15 μm, which  remains lower than the minimum 
+
+measured widths of the electron clouds (σ ≈ 20 μm, 
+
+FWHM ≈ 45 μm).  The sample has been conditioned 
+
+each time before a given experimental sequence by 
+
+keeping it under the selected applied voltage and pump 
+
+beam power for  15 –20  minutes. This allowed it to reach 
+
+a quasi -stationary condition before starting the CDPI 
+
+acquisition  (Fig.  S2).
+
+In the sequence, a set of images is registered upon 
+
+changing the delay between pump and probe by fixed 
+
+time intervals. Usually, the time step is either 0.5 ns or 
+
+1.0 ns in the short -time range case (up to a total 200 ns) 
+
+or  either  10  ns or 20  ns in the long -time range (up to  2
+
+μs). Before and after the CDPI acquisitions with the 
+
+pulsed probe, a continuous LED filtered at 980  nm and 
+
+impinging on the sample using a beam -splitter, was 
+
+instead used as check and reference probe beam.  For 
+
+the whole protocol procedure see  Fig.  S2. The 
+
+experimental setup and the sequence of different 
+
+instruments operations have been coordinated by 
+
+means of a custom program in the NI Labview graphical 
+
+language. The external current transients have been 
+
+taken under similar conditions adopted for the  Pockels 
+
+experiments, with corresponding applied voltages and 
+
+pump beam power. The sample has been connected to 
+
+an amplifier (Mini -Circuit, bandwidth 1 GHz) and the 
+
+output signal fed to a 1 GHz oscilloscope ( Lecroy), 
+
+triggered by the pump laser output. The detector 
+
+voltage bias is applied on the same electrode, isolated 
+
+from the amplifier input by a capacitor. 
+
+Electro -optic imaging.  The intensity transmitted 
+
+throughout cross -polarizers is zero, in the case of the 
+
+probe passing unaffected through the unbiased sample. 
+
+This changes in the presence of internal birefringence 
+
+(intrinsic or induced by an applied electric field), 
+
+according t o a modulation formula 47 , and the scheme 
+
+can convert any phase difference (here between the x 
+
+and y linear polarizations) into an intensity signal.  With 
+
+the present orientation of the  polarizers and of  sample 
+
+crystal planes, the intensity is sensitive only to the y 
+
+component of the externally applied electric field.  Such 
+
+Ey is effectively the only present field component due to 
+
+full -surface planar electrodes  geometry  and wide 
+
+pumping beam,  inducing  a vertical gradient  of the 
+
+electric potential inside the device.  The  raw  P(x,y ,t )
+
+images  depend on  the  Ey(x, y,t ) electric field distribution ,
+
+and they  can be  normalized  with respect to  Ppara (x,y)  as :
+
+𝑇 (𝑥 , 𝑦 , 𝑡 ) = 𝑃 (𝑥 ,𝑦 ,𝑡 ) 
+
+> 𝑃 𝑝𝑎𝑟𝑎 (𝑥 ,𝑦 )
+
+= 𝑠𝑖𝑛 2 [𝜋 
+
+> 2
+> 𝐸 𝑦 (𝑥 ,𝑦 ,𝑡 )
+> 𝐸 𝑜
+
+] (M1) Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 13/17 Here  Ppara (x,y)  is the image at the maximum transmitted 
+
+intensity of the probe, taken in the parallel -polarizers 
+
+configuration (both aligned at 45° and in the absence of 
+
+any induced birefringence, i.e., with no applied voltage). 
+
+The use  of normalization in  Eq. (M 1) is crucial in the 
+
+analysis because  beside enabling quantitative 
+
+evaluation,  it can  partially  account for  reflection loss ,
+
+not homogeneous  distribution of impinging  intensity 
+
+and other device defects imaging. The constant  Eo is 
+
+given by: 
+
+𝐸 𝑜  = 𝜆  
+
+> √3𝑛 0
+> 3𝑟 41 𝐿
+
+(M2) 
+
+where  no is the field free refractive index in CdTe,  r41  its 
+
+linear electro -optic coefficient,  L = 10 mm is the physical 
+
+path length through the crystal, i.e., the detector z -
+
+depth, and λ the wavelength of the incident probe light. 
+
+Considering  n0 = 2.8 and  r41  = 5.5 × 10 -12  mV −1 48  results 
+
+in  Eo = 4.68  kV cm -1. The meaning of  Eo is that it 
+
+represents the local electric field value that allows a 
+
+complete polarization inversion of the crossing probe 
+
+beam, hence the Pockels image bears maxima (equal to 
+
+Ppara ) and minima (zero) intensity values at the 
+
+transverse xy positions where the internal electric field 
+
+is equal to odd and even multiples of  Eo , respectively. 
+
+When in the presence of local electric field values 
+
+greater than  Eo, multiple fringes appear in the Pockels 
+
+T(x,y)  images and an unwrapping -phase reconstruction 
+
+is needed to achieve the  E(x,y)  profile. In the present 
+
+work electric fields do not exceed  Eo, and a simple 
+
+inversion of the square sinusoidal dependence in Eq. 
+
+(M1 ) allows to obtain the  Ey(x,y)  image from the 
+
+normalized  EO  images. From the  Ey(x,y)  images, average 
+
+Ey(y)  profiles are obtained  and smoothed .
+
+Carrier transport in CDPI experiments.  The  Gauss’s law ,
+
+at any given time, relates the electric field to the mobile 
+
+and fixed charge inside the device 30,31 : 
+
+> 𝜕𝐸 (𝑦 ,𝑡 )
+> 𝜕𝑦
+
+= 𝑞  
+
+> 𝜀
+
+(𝑛 𝑡 (𝑦 , 𝑡 ) + 𝛿𝑛 (𝑦 , 𝑡 )) . (M3 )
+
+Here  𝛿𝑛 (𝑦 , 𝑡 ) represents the free electron cloud density 
+
+and  𝑛 𝑡 (𝑡 , 𝑦 ) the fixed space charge density.  In general, 
+
+electron trapping time in CdTe is about 1  s, which is 
+
+greater than the transit time under operative electric 
+
+fields (>600 V  cm -1 in Pt/CdTe/Pt detectors) and thus not 
+
+effective. Under  these  conditions,  𝑛 𝑡 (𝑡 , 𝑦 ) remains 
+
+stationary during the cloud drifting and equals the 
+
+values prior photogeneration at t = 0,  𝑛 𝑡 (𝑦 , 𝑡 ) ≈
+
+𝑛 𝑡 (𝑦 , 𝑡  = 0). This means that there is a stationary 
+
+electric field distribution on which a perturbation is 
+
+transiently superimposed due to the flowing charge. 
+
+Depending on the ratio between the free and fixed 
+
+charges, the perturbation can be small or very 
+
+important, up  to becoming comparable or greater than 
+
+the background.  Under high optical excitation levels, 
+
+electron trapping is enhanced by specific shallow levels 
+
+thus directly affecting both charge terms in Eq. (1) ,
+
+namely the  mobile  carrier density  𝛿𝑛 (𝑦 , 𝑡 ), and  the 
+
+fixed  charge density  𝑛 𝑡 (𝑡 , 𝑦 ).
+
+In the ideal case of uniform electric field and negligible 
+
+trapping,  because  of  Gauss’s law , the electric field is 
+
+reduced in the regions behind its position and enhanced 
+
+in front of it by a total difference of 
+
+𝛥𝐸  = 𝑞  
+
+> 𝜀
+
+𝑁 𝑆  , (M4 )
+
+where 
+
+𝑁 𝑆  = ∫ 𝛿𝑛 (𝑦 , 𝑡 )𝑑𝑦  (M5 )
+
+is the  areal charge density .
+
+By assuming a constant carrier mobility  𝜇  and that the 
+
+diffusion component is negligible, the conduction 
+
+current can be written as  only due to the drift term 
+
+𝐽 𝑐 (𝑦 , 𝑡 ) = 𝑞𝜇𝐸 (𝑦 , 𝑡 )𝛿𝑛 (𝑦 , 𝑡 ) (M6 )
+
+at any given point (and time) inside the device.  The 
+
+diffusion term can be ignored  in the present range of 
+
+electric fields and we further verified this by means of 
+
+numerical simulations. 
+
+The  total current  𝐽 (𝑡 ) is due to the sum of two terms, 
+
+the conduction current  𝐽 𝑐 (𝑦 , 𝑡 ) and the displacement 
+
+current  𝐽 𝑑 (𝑦 , 𝑡 ), and is given by: 
+
+𝐽 (𝑡 ) = 𝑞𝜇𝐸 (𝑦 , 𝑡 )𝛿𝑛 (𝑦 , 𝑡 ) + 𝜀  𝜕𝐸 (𝑦 , 𝑡 ) 𝜕𝑡 ⁄ .
+
+(M7 )
+
+By  assuming a negligible trapping on the scale of transit 
+
+time,  𝑛 𝑡 (𝑦 , 𝑡 ) = 𝜕𝐸 (𝑦 ,𝑡 =0) 
+
+> 𝜕𝑦
+
+and by inserting  Eq. (M3 ) into 
+
+Eq.  (M7 ), we can express the total current  only in terms 
+
+of the electric field: 
+
+𝐽 (𝑡 ) = 𝜇𝜀𝐸 (𝑦 , 𝑡 ) [𝜕𝐸 (𝑦 ,𝑡 ) 
+
+> 𝜕𝑦
+
+− 𝜕𝐸 (𝑦 ,𝑡 =0) 
+
+> 𝜕𝑦
+
+] + 𝜀  𝜕𝐸 (𝑦 , 𝑡 ) 𝜕𝑡 ⁄
+
+. (M8 )
+
+Operatively, the spatiotemporal distribution of the 
+
+carrier cloud can be calculated either directly, from the 
+
+spatial derivative of the electric field (Eq.  M3) or, 
+
+indirectly, from the complementary displacement 
+
+current  (Eq. M8) , according to: 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 , 𝑡 ) = − 𝜀𝜕𝐸 (𝑦 ,𝑡 ) 𝜕𝑡  − 𝐽 (𝑡 )⁄ 
+
+> 𝜇𝐸 (𝑦 ,𝑡 )
+
+, (M9 )Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 14/17 where the  𝛿𝑛 𝑑𝑖𝑠𝑝𝑙  notation  makes explicit the 
+
+derivation of this quantity based on the displacement 
+
+current .
+
+The displacement current method  represents  a
+
+significant technical advantage in terms of data analysis, 
+
+as it allows us to infer the carrier cloud from the 
+
+temporal derivative of the electric field , far less noisy 
+
+than the spatial derivative . The total J(t) contribution in 
+
+Eq. (M9 ) is in general small with respect to the 
+
+displacement term in the region of the electron cloud. 
+
+Therefore, when focusing on the (non -quantitative) 
+
+spatial distribution of the electron cloud, the total 
+
+current can be reasonably neglected , and: 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 , 𝑡 )~ − 𝜀𝜕𝐸 (𝑦 ,𝑡 ) 𝜕𝑡 ⁄ 
+
+> 𝜇𝐸 (𝑦 ,𝑡 )
+
+. (M10 )
+
+A further s implification in case of relatively uniform 
+
+electric field (or very thin electron cloud) would be to 
+
+neglect  the field  spatial dependence,  which results in a 
+
+direct correspondence between  the shapes of 
+
+𝛿𝑛 𝑑𝑖𝑠𝑝𝑙 (𝑦 , 𝑡 ) and  of  the displacement current.  This is 
+
+suitable in the case of low optical photogeneration. 
+
+According to Eq. ( M8 ), the CDPI technique offers, in 
+
+principle, the remarkable opportunity to extract the 
+
+transient current flowing in the external circuit from the 
+
+sum, at any arbitrary point in the detector, of the 
+
+conduction current, related to the spatial derivative of 
+
+th e electric field (and the electric field itself), and the 
+
+displacement current, related to the temporal 
+
+derivative of the electric field. 
+
+As shown in literature 30,31 , a more direct relationship 
+
+current vs  electric  field emerges from the spatial 
+
+integration of  Eq.  (M8 ), taking into account that  J(t) is 
+
+independent on y, that the integral of the displacement 
+
+current term is zero and under the following 
+
+assumptions: 
+
+- Uniform Electric field in absence of carrier 
+
+excess ( 𝜕𝐸 (𝑦 ,𝑡 =0) 
+
+> 𝜕𝑦
+
+=0) 
+
+- Trapping is neglected 
+
+Another implicit assumption is that only  one type of 
+
+carrier is considered. This considered, we obtain: 
+
+𝐽 𝑎𝑝𝑝𝑟𝑜𝑥 (𝑡 ) = (𝜀𝜇  2𝐿 ⁄ )[𝐸 2(𝐿 , 𝑡 ) − 𝐸 2(0, 𝑡 )]
+
+(M11 )
+
+where , as anticipated,  the dependence on the electric 
+
+field  rather than its derivative and only  in  two  fixed 
+
+points  at the electrodes, is very  useful when feeding this 
+
+into  the  CDPI  technique . With respect to the  above -
+
+mentioned  approximations, we can only partially 
+
+circumvent the first one: the electric field is not  uniform 
+
+due to the presence of a fixed space charge. We add a 
+
+constant baseline to Eq. ( M11 ) to ensure  𝐽 (𝑡  = 0) = 0.
+
+It should be noted  though that  when integrating Eq. 
+
+(M8 ) the presence of a space charge affects the entire 
+
+transient. 
+
+Numerical methods.  1D numerical simulations were 
+
+performed using the semiconductor device simulator 
+
+“Sentaurus”, part of the Technology CAD software 
+
+package provided by Synopsys, Inc. 49 . The basic 
+
+elements of a model that is able to describe the CdTe 
+
+device under applied bias and light in quasi -stationary 
+
+conditions have been previously presented 50  and are 
+
+reported here in full ( Table  S2). In this work, the model 
+
+has been extended to reproduce the experimental 
+
+transients on the electron transit timescale, and, to this 
+
+end, we have included the presence of shallow traps, 
+
+according to the different experimental conditions 
+
+reported in the te xt. We simulated the whole 
+
+experimental flow in the time domain, starting from 
+
+applying bias voltage under dark (according to the 
+
+protocol in  Fig.  S2) and by considering optical pulses 1 
+
+ns long at a frequency of 25  kHz when illumination is 
+
+active. Simulations are performed using the Backward -
+
+Euler method using an adaptive time step for ensuring 
+
+convergence and controlling numerical errors. Data has 
+
+been recorded at 0.5 ns or 1 ns interval, matching the 
+
+experimental resolution to facilitate a direct 
+
+comparison.                     
+
+> Acknowledgments .A.C. is grateful to Massimiliano Zanichelli
+> for the initial motivation and inspiration. L.D. wishes to thank
+> Francesco Michelotti for the initial inspiration in experimental
+> physics, optical nonlinearities and the Teng -Man technique .
+> A.C. and L.D. thank Paolo Cazzato for technical support and
+> Carlo Giansante for scientific advising . We acknowledge the
+> ELPHO laboratory at CNR NANOTEC where all the
+> experiments were performed.
+> Authors contributions .A.C. and L.D. conceived the idea and
+> experimental procedure. A.C. designed and implemented the
+> CDPI set -up. L.D. wrote software for experiments control and
+> analysis. A.C. conducted the experiments. I.F. helped with the
+> set -up. A.C. and L.D. analysed the re sults. A.V. conducted
+> numerical simulations. V.D. provided important expertise on
+> the electro -optic effect. A.C. and L.D. wrote the manuscript.
+> All authors contributed to the discussion and interpretation
+> of the data and revised the manuscript.
+
+Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 15/17 References 
+
+1.  Abel, S.  et al.  Large Pockels effect in micro - and nanostructured barium titanate integrated on silicon.  Nat. Mater.  18 , 42 –47 
+
+(2019). 
+
+2.  Alexander, K.  et al.  Nanophotonic Pockels modulators on a silicon nitride platform.  Nat. Commun.  9, 3444 (2018). 
+
+3.  Powell, K.  et al.  Integrated silicon carbide electro -optic modulator.  Nat. Commun.  13 , 1851 (2022). 
+
+4.  Thomaschewski, M. & Bozhevolnyi, S. I. Pockels modulation in integrated nanophotonics.  Appl. Phys. Rev.  9, 021311 (2022). 
+
+5.  Kolner, B. & Bloom, D. Electrooptic sampling in GaAs integrated circuits.  IEEE J. Quantum Electron.  22 , 79 –93 (1986). 
+
+6.  Donaldson, W. R., Kingsley, L., Weiner, M., Kim, A. & Zeto, R. Electro -optic imaging of the internal fields in a GaAs 
+
+photoconductive switch.  J. Appl. Phys.  68 , 6453 –6457 (1990). 
+
+7.  Peterkin, F. E., Block, R. & Schoenbach, K. H. Electric field mapping system with nanosecond temporal resolution.  Rev. Sci. 
+
+Instrum.  66 , 2960 –2966 (1995). 
+
+8.  Ito, H.  et al.  High -Speed and High -Output InP –InGaAs Unitraveling -Carrier Photodiodes.  IEEE J. Sel. Top. Quantum Electron. 
+
+10 , 709 –727 (2004). 
+
+9.  Currie, M.  et al.  Performance Enhancement of a GaAs Detector with a Vertical Field and an Embedded Thin Low -
+
+Temperature Grown Layer.  Sensors  13 , 2475 –2483 (2013). 
+
+10.  Dědič, V.  et al.  Mapping of inhomogeneous quasi -3D electrostatic field in electro -optic materials.  Sci. Rep.  11 , 2154 (2021). 
+
+11.  Cola, A., Dominici, L. & Valletta, A. Optical Writing and Electro -Optic Imaging of Reversible Space Charges in Semi -Insulating 
+
+CdTe Diodes.  Sensors  22 , 1579 (2022). 
+
+12.  Sima, W.  et al.  Time -continuous Kerr electro -optic field mapping measurement under impulse voltage using array 
+
+photodetector.  Appl. Phys. Lett.  107 , 082901 (2015). 
+
+13.  Bhattacharya, P., Yu, P. & Guha, S. Nonlinear Optical Imaging of Carrier Transport at the Semiconductor -Insulator Interface 
+
+in Organic Field -Effect Transistors.  Phys. Rev. Appl.  19 , 044059 (2023). 
+
+14.  Shyam, R., Manaka, T. & Prakash, R. Direct Visualization of Carrier Motion in DPP -TTT/C 3 N5 Blended Organic Thin -Film 
+
+Transistors by Optical Second -Harmonic Generation.  ACS Appl. Nano Mater.  8, 10754 –10764 (2025). 
+
+15.  Cao, Y., Pomeroy, J. W., Uren, M. J., Yang, F. & Kuball, M. Electric field mapping of wide -bandgap semiconductor devices at a 
+
+submicrometre resolution.  Nat. Electron.  4, 478 –485 (2021). 
+
+16.  Yin Win, L. L., Taguchi, D. & Manaka, T. Transient carrier visualization of organic -inorganic hybrid perovskite thin films by 
+
+using time -resolved microscopic second -harmonic generation (TRM -SHG).  Org. Electron.  75 , 105416 (2019). 
+
+17.  Manaka, T., Lim, E., Tamura, R. & Iwamoto, M. Direct imaging of carrier motion in organic transistors by optical second -
+
+harmonic generation.  Nat. Photonics  1, 581 –584 (2007). 
+
+18.  Man, M. K. L.  et al.  Imaging the motion of electrons across semiconductor heterojunctions.  Nat. Nanotechnol.  12 , 36 –40 
+
+(2017). 
+
+19.  Terada, Y., Yoshida, S., Takeuchi, O. & Shigekawa, H. Real -space imaging of transient carrier dynamics by nanoscale pump –
+
+probe microscopy.  Nat. Photonics  4, 869 –874 (2010). 
+
+20.  Son, B. H.  et al.  Imaging Ultrafast Carrier Transport in Nanoscale Field -Effect Transistors.  ACS Nano  8, 11361 –11368 (2014). 
+
+21.  Gabriel, M. M.  et al.  Direct Imaging of Free Carrier and Trap Carrier Motion in Silicon Nanowires by Spatially -Separated 
+
+Femtosecond Pump –Probe Microscopy.  Nano Lett.  13 , 1336 –1340 (2013). 
+
+22.  Sirotin, M. A.  et al.  Direct ultrafast carrier imaging in a perovskite microlaser with optical coherence microscopy.  Optica  10 ,
+
+1322 (2023). 
+
+23.  Simeni, M. S., Zheng, Y., Barnat, E. V. & Bruggeman, P. J. Townsend to glow discharge transition for a nanosecond pulse 
+
+plasma in helium: space charge formation and resulting electric field dynamics.  Plasma Sources Sci. Technol.  30 , 055004 
+
+(2021). 
+
+24.  Jian Shi  et al.  Space charge dynamics investigation based on Kerr electro -optic measurements and processing of CCD 
+
+images.  IEEE Trans. Dielectr. Electr. Insul.  20 , 601 –611 (2013). 
+
+25.  Horng, J.  et al.  Imaging electric field dynamics with graphene optoelectronics.  Nat. Commun.  7, 13704 (2016). 
+
+26.  Sridharan, A.  et al.  Time -resolved imaging of carrier transport in halide perovskite thin films and evidence for nondiffusive 
+
+transport.  Phys. Rev. Mater.  3, 125403 (2019). 
+
+27.  Li, J.  et al.  Ultrafast Optical Nanoscopy of Carrier Dynamics in Silicon Nanowires.  Nano Lett.  23 , 1445 –1450 (2023). 
+
+28.  Sun, J., Adhikari, A., Shaheen, B. S., Yang, H. & Mohammed, O. F. Mapping Carrier Dynamics on Material Surfaces in Space 
+
+and Time using Scanning Ultrafast Electron Microscopy.  J. Phys. Chem. Lett.  7, 985 –994 (2016). 
+
+29.  Wang, L., Nughays, R. & Mohammed, O. F. Spatiotemporal imaging of photogenerated charge carriers in optoelectronic 
+
+materials.  Matter  8, 102423 (2025). 
+
+30.  Weisz, S. Z., Cobas, A., Trester, S. & Many, A. Electrode -Limited and Space -Charge -Limited Transient Currents in Insulators. 
+
+J. Appl. Phys.  39 , 2296 –2302 (1968). 
+
+31.  Batra, I. P. & Seki, H. Photocurrents Due to Pulse Illumination in the Presence of Trapping.  J. Appl. Phys.  41 , 3409 –3415 
+
+(1970). 
+
+32.  Cola, A. & Farella, I. CdTe X -ray detectors under strong optical irradiation.  Appl. Phys. Lett.  105 , 203501 (2014). 
+
+33.  Cola, A., Farella, I., Pousset, J. & Valletta, A. On the relation between deep level compensation, resistivity and electric f ield 
+
+in semi -insulating CdTe:Cl radiation detectors.  Semicond. Sci. Technol.  31 , 12LT01 (2016). 
+
+34.  Gatti, E., Longoni, A., Rehak, P. & Sampietro, M. Dynamics of electrons in drift detectors.  Nucl. Instrum. Methods Phys. Res. 
+
+Sect. Accel. Spectrometers Detect. Assoc. Equip.  253 , 393 –399 (1987). Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 16/17 35.  Benoit, M. & Hamel, L. A. Simulation of charge collection processes in semiconductor CdZnTe γ  -ray detectors.  Nucl. 
+
+Instrum. Methods Phys. Res. Sect. Accel. Spectrometers Detect. Assoc. Equip.  606 , 508 –516 (2009). 
+
+36.  Suzuki, K., Ichinohe, Y. & Seto, S. Effect of Intense Optical Excitation on Internal Electric Field Evolution in CdTe Gamma -Ray 
+
+Detectors.  J. Electron. Mater.  47 , 4332 –4337 (2018). 
+
+37.  Bale, D. S. & Szeles, C. Nature of polarization in wide -bandgap semiconductor detectors under high -flux irradiation: 
+
+Application to semi -insulating Cd 1 − x Zn x Te.  Phys. Rev. B  77 , 035205 (2008). 
+
+38.  Many, A. & Rakavy, G. Theory of Transient Space -Charge -Limited Currents in Solids in the Presence of Trapping.  Phys. Rev. 
+
+126 , 1980 –1988 (1962). 
+
+39.  Gibbons, D. J. & Papadakis, A. C. Transient space -charge perturbed currents in orthorhombic sulphur.  J. Phys. Chem. Solids 
+
+29 , 115 –121 (1968). 
+
+40.  Christen, T. The effect of injection properties of contacts on the dynamics of unipolar space -charge limited currents.  IEEE 
+
+Trans. Dielectr. Electr. Insul.  23 , 3712 –3724 (2016). 
+
+41.  Papadakis, A. C. Theory of transient space -charge perturbed currents in insulators.  J. Phys. Chem. Solids  28 , 641 –647 (1967). 
+
+42.  Farella, I., Montagna, G., Mancini, A. M. & Cola, A. Study on Instability Phenomena in CdTe Diode -Like Detectors.  IEEE Trans. 
+
+Nucl. Sci.  56 , 1736 –1742 (2009). 
+
+43.  A. Castoldi, P. Zambon. Simulation of the 3 -D Coulomb explosion of the electron -hole distribution at high injection levels in 
+
+2-D semiconductor detectors. in  2013 IEEE Nuclear Science Symposium and Medical Imaging Conference (2013 NSS/MIC)  1–
+
+6 (IEEE, Seoul, Korea (South), 2013). doi:10.1109/NSSMIC.2013.6829567. 
+
+44.  Wurm, P., Hage -Ali, M., Koebel, J. M. & Siffert, P. Study of the photodecay in CdTe X -ray detectors.  Mater. Sci. Eng. B  28 ,
+
+47 –50 (1994). 
+
+45.  Kamieniecki, E. Effect of charge trapping on effective carrier lifetime in compound semiconductors: High resistivity CdZnTe. 
+
+J. Appl. Phys.  116 , 193702 (2014). 
+
+46.  Zahraman, K.  et al.  Study of the thickness of the dead Layer below electrodes, deposited by electroless technique, in CdTe 
+
+nuclear detectors.  IEEE Trans. Nucl. Sci.  53 , 378 –382 (2006). 
+
+47.  Yariv, A.  Optical Electronics . (Saunders College Publ, Fort Worth, 1991). 
+
+48.  Bylsma, R. B., Bridenbaugh, P. M., Olson, D. H. & Glass, A. M. Photorefractive properties of doped cadmium telluride.  Appl. 
+
+Phys. Lett.  51 , 889 –891 (1987). 
+
+49.  Sentaurus Device —An Advanced Multidimensional (1D/2D/3D) Device Simulator. Available online: https://www.synopsys. 
+
+com/silicon/tcad/device -simulation/sentaurus -device.html (accessed on ... February 2026). 
+
+50.  Cola, A., Dominici, L. & Valletta, A. Electric -Field Mapping of Optically Perturbed CdTe Radiation Detectors.  Sensors  23 , 4795 
+
+(2023). Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices 17/17 Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 1/7 
+
+# SUPPLEMENTA L INFORMATION 
+
+# Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative 
+
+# Semiconductor Devices 
+
+Adriano Cola 1, *, Antonio Valletta 2, Isabella Farella 1, Vaclav Dědič 3, Lorenzo Dominici 4, * 
+
+> 1
+
+CNR IMM, Institute for Microelectronics and Microsystems, Via Monteroni, 73100 Lecce, Italy  
+
+> 2
+
+CNR IMM, Institute for Microelectronics and Microsystems, Via Del Fosso Del Cavaliere, 100, 
+
+00133 Roma, Italy  
+
+> 3
+
+Institute of Physics, Charles University, Ke Karlovu 5, 121 16 Prague, Czech Republic  
+
+> 4
+
+CNR NANOTEC, Institute of Nanotechnology, Via Monteroni, 73100 Lecce, Italy 
+
+*adriano.cola@cnr.it, lorenzo.dominici@nanotec.cnr.it 
+
+# __________________________________________________________________ 
+
+# Content :
+
+# Table  S1,  S2
+
+# Figures  S1-S3
+
+# Caption to  Video s S1 -S4 
+
+# References Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 2/7 
+
+Free carrier 
+
+imaging 
+
+1D/2D 
+
+Electric field 
+
+Imaging 
+
+1D/2D 
+
+> Electrical
+> / Optical
+> induced
+> transient
+> Time step or
+> resolution
+
+Time 
+
+range 
+
+Spatial 
+
+step or 
+
+resolution 
+
+Spatial 
+
+range 
+
+approach  Physical effect  System 
+
+(Nanostructure/ Film / 
+
+Bulk) 
+
+Reference 
+
+Year 
+
+2D 
+
+(1D symmetry) 
+
+2D 
+
+(quantitative) 
+
+O 1 ns  10  μs 10  μm 1 cm  Pump/probe 
+
+imaging 
+
+Pockels effect  CdTe Radiation 
+
+detector (B) 
+
+Present 
+
+work 
+
+2D 
+
+(quantitative) 
+
+O 200  ps  1 ns  3 μm 1 cm  Pump/probe 
+
+imaging 
+
+Pockels effect  Surface of Photo -
+
+conductive GaAs switch 
+
+(F) 
+
+[1]  1990 
+
+1D 
+
+(quantitative) 
+
+E 0.2  ns  500  ns  70  μm 50  mm  Single shot streak 
+
+camera 
+
+Pockels effect  Surface Electrical 
+
+discharge in BGO 
+
+crystal (B) 
+
+[2]  2002 
+
+2D 
+
+(quantitative) 
+
+E min  = 80  μs 300  μs N.A.  3 mm  Pulse/delay 
+
+imaging 
+
+Kerr effect  Liquid insulator (B)  [3]  2013 
+
+1D 
+
+(quantitative) 
+
+E 100  μs 2 ms  N.A.  3 mm  Single shot 
+
+imaging 
+
+Kerr effect  Liquid dielectric 
+
+(propylene carbonate) 
+
+[4]  2015 
+
+1D*  1D  E 1 μs 70  μs N.A.  80  μm Pump/probe 
+
+imaging 
+
+Second harmonic 
+
+generation 
+
+Perovskite FET (F)  [5]  2019 
+
+2D*  1D  E 500  ns  3 μs N.A.  50  μm Pump/probe 
+
+imaging 
+
+Second harmonic 
+
+generation 
+
+Pentacene TFT (F)  [6]  2023 
+
+2D  E 100  ns  400  ns  N.A.  40  μm Pump/probe 
+
+imaging 
+
+Second harmonic 
+
+generation 
+
+Pentacene TFT (F)  [7]  2007 
+
+2D  E 100  ns  500  ns  ≈ μm ≈ mm  Pump/probe 
+
+imaging 
+
+Second harmonic 
+
+generation 
+
+Organic blend TFT (F)  [8]  2025 
+
+2D 
+
+(quantitative) 
+
+E
+
+(Steady) 
+
+N.A.  N.A.  0.8  μm 20  μm Scanning 
+
+Microscopy 
+
+Second harmonic 
+
+generation 
+
+GaN HEMT (F)  [9]  2021 
+
+2D  O ≈ 200 fs  100  ps  0.25  μm tens of  μm Pump/probe 
+
+imaging 
+
+Photoemission 
+
+electron microscopy 
+
+(spectral) 
+
+Semiconductor 
+
+heterojunction (F) 
+
+[10]  2017 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O ≈ 140  fs  1 μs < nm 
+
+(resolution 
+
+of STM) 
+
+20  nm  Pump/probe 
+
+microscopy 
+
+Scanning tunneling 
+
+current 
+
+Cobalt nanoparticle 
+
+/GaAs structure (N) 
+
+[11]  2010 
+
+1D  O 2 ps  600  ps  Diffraction 
+
+limited 
+
+4 μm Pump/probe 
+
+microscopy 
+
+Photo -Current 
+
+transient 
+
+Nanowire FET (N)  [12]  2014 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O 0.5  ps  12.5  ns  Diffraction 
+
+limited 
+
+10  μm Scanning 
+
+Pump/probe 
+
+microscopy 
+
+Transient Absorption  Nanowire (N)  [13]  2013 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O 2 fs  100  fs  10  nm  several 
+
+μm
+
+Pump/probe 
+
+mapping 
+
+Transient Absorption  Perovskite (F)  [14]  2020 
+
+2D  E 2.5  ps  40  ns  5 μm 1.9  mm  pulse/delay 
+
+imaging 
+
+Franz -Keldish effect  Photoconductive GaAs 
+
+switch (B) 
+
+[15]  1995 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O 1 ps  500  ps  0.5  μm 5 μm Optical coherence 
+
+and Pump/probe 
+
+microscopy 
+
+e-h+ plasma induced 
+
+n modulation 
+
+Perovskite Laser (F)  [16]  2023 
+
+2D 
+
+(quantitative) 
+
+O 3 ns  300  ns  22  μm 3.5  mm  Gated camera  Stark polarization 
+
+spectroscopy 
+
+Helium Gas  [17]  2021 
+
+2D  E 5 ms  200  ms  tens of  μm ≈ 250  μm Single shot 
+
+microscopy 
+
+absorption 
+
+modulation in 
+
+graphene 
+
+Liquid Solution  [18]  2016 
+
+1D 
+
+(recombination 
+
+dynamics) 
+
+O 50  ps  7 μs Diffraction 
+
+limited 
+
+4 μm Streak camera 
+
+imaging 
+
+photoluminescence  Perovskite (F)  [19]  2019 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O ≈ ps  1 ns  35  nm  ≈ 10  μm Pump/probe 
+
+scanning near field 
+
+optical microscopy 
+
+photoluminescence  Silicon Nanowire (N)  [20]  2023 
+
+2D 
+
+(recombination 
+
+dynamics) 
+
+O 650  fs  6 ns  5 nm  ≈ 200  μm Pump/probe 
+
+imaging 
+
+Secondary electron 
+
+Microscopy 
+
+Semiconductor surface 
+
+(B, N) 
+
+[21]  2016 
+
+2D 
+
+(diffusion 
+
+dynamics) 
+
+O 1.2  ps  2 ns  5 nm  ≈ 150  μm Pump/probe 
+
+imaging 
+
+Secondary electron 
+
+Microscopy 
+
+Perovskite surface (F)  [22]  2025 
+
+*The authors report 2D maps which refer to 1D distribution. 
+
+Table  S1. A review of  papers addressing the dynamics of free carrier and/or Electric Field imaging . The first 
+
+three columns indicate: if the papers report  free carrier imaging  (and if 1D or 2D), electric field  imaging  (if 
+
+1D,  2D and if quantitative) and if the transient is induced electrically or optically.  Remaining columns address 
+
+characterizing features like spatial and temporal resolution, the approach , the experimental method  as well 
+
+as the investigated system. Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 3/7 
+
+Table  S2. List of main parameters used in the numerical simulations. The set of shallow and deep levels used 
+
+for the different cases simulated are highlighted by colored boxes. 
+
+CdTe material 
+
+Fixed Charge 
+
+> Fig.  5c  (low optical power) and  Fig.  5d  (high optical power)
+> Fig.  5f  (high optical power)
+> Fig.  5g  (high optical power)
+
+Fully ionized  shallow donor level  Concentration N d 2. 8x10 13  cm -3
+
+Acceptor deep level 
+
+(low and high optical excitation) 
+
+Energy E c-Ea 0.725  eV
+
+Concentration N a 5.8x10 13  cm-3
+
+Electr. capture cross section  σea  1x10 -18  cm2
+
+Hole capture cross section  σha  1.5x10 -19  cm2
+
+Electron Trapping time  1.7  ms
+
+Electron Detrapping time  7x10 3 s
+
+Hole Trapping time  11  ms 
+
+Hole Detrapping time  5x10 4 s
+
+Shallow electron trap 
+
+(low and high optical excitation) 
+
+Energy E c-Et 0.020  eV 
+
+Concentration N t 1.0x10 16  cm-3
+
+Electr. capture cross section  σea  1x10 -17  cm2
+
+Electron  Trapping time  1000  ns
+
+Electron  Detrapping time  1 ns 
+
+Shallow hole trap 
+
+(low and high optical excitation) 
+
+Energy E t-Ev 0.100  eV 
+
+Concentration N t 1.0x10 15  cm-3
+
+Electr. capture cross section  σea  1x10 -16  cm2
+
+Hole  Trapping time  1000  ns 
+
+Hole  Detrapping time  2.2  ns
+
+Electron trap 
+
+(high optical excitation) 
+
+Energy E v-Et 0.336  eV 
+
+Concentration N t 1.0x10 12  cm-3
+
+Electr. capture cross section  σea  2x10 -12  cm2
+
+Electron  Trapping time  50  ns 
+
+Electron  Detrapping time  1 ns 
+
+> Fig.  5g  (high optical power)
+
+Electron trap at the electrodes 
+
+(high optical excitation) 
+
+Energy E c-Et 0.150  eV 
+
+Gaussian concentration peak 
+
+(at the electrode) N t
+
+1.0x10 18 cm -3
+
+Width of Gaussian distribution  t 5m
+
+Electr. capture cross section  σet  1x10 -14 cm 2
+
+Electron  Trapping time  0.01ns 
+
+Electron  Detrapping time  0.15ns 
+
+Other material parameters 
+
+Electron mobility  1050 cm 2/(Vs) 
+
+Hole mobility  80 cm 2 /(Vs) 
+
+Absorption coefficient  Ref.  [23] 
+
+Radiative recombination coefficient  2.5x10 -10 cm 3s-1
+
+Pt/CdTe/Pt ohmic detector 
+
+Pt/CdTe  electron barrier  ΦIn  0.8  eV 
+
+Other parameters 
+
+Temperature  300  KDirect Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 4/7 
+
+Fig.  S1 Normalized  optical generation rate into CdTe  as a function of the distance from the irradiated cathode 
+
+for the incident radiation of present experiments (range 780 -830  nm). The curve is calculated according to 
+
+the CdTe absorption coefficient  [23] .
+
+Fig.  S2 a)  Illustration of the  typical  protocol  for CDPI experiments . In the  panel it  is reported the e volution of 
+
+electric field at  both  cathode  (black circles)  and anode  (red squares)  during  the  voltage sweep  and 
+
+conditioning  under  dark, optical irradiation, dark and voltage sweep back to 0  V. The experimental p oints 
+
+here  refer  to  acquisitions  carried out with a continuous LED probe source ( plus a  narrowband filter at 980 
+
+nm) . The  CDPI acquisitions are carried out after 20  min  of  conditioning under  light.  b) Electric  field profiles 
+
+under dark  from the same set of measurements , just before optical irradiation ( t1) and under optical 
+
+irradiation, just before CDPI acquisitions ( t2).0 5 10 15 20 
+
+> 0,0
+> 0,2
+> 0,4
+> 0,6
+> 0,8
+> 1,0
+> Optical Generation Rate (a.u.)
+> Distance from Cathode ( m)
+
+Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 5/7 
+
+a)  b) c) 
+
+Fig.  S3 Simulations of electron, hole and  total  (sum of the  previous  two) conduction  currents at three selected 
+
+positions inside the device  near  the cathode:  0.5  m (a), 1  m (b), and  10  m (c). When very close to cathode, 
+
+hole contribution becomes comparable or greater than  the  electron  one  and results in a steeper  total 
+
+conduction  current increase.  At more than  few  m away from cathode holes are less effective, but their 
+
+contribution last longer than electrons because of their lower mobility. 
+
+Caption to Videos S1 -S4 
+
+Video S1 . Temporal evolution of the transmittance difference maps T(x,y,t + dt)  - T(x,y,t ) similarly to Fig. 1b, 
+
+over 80 ns time range and with a step of 1 ns (the interval for differences is taken as dt = 2 ns). The moving 
+
+strip is representative of the drifting electron cloud. The three cases refer to increasing optical irradiation 
+
+powers, l eft to right, corresponding respectively to P 4, P 6, and P 8 discussed in Fig. 3. The applied voltage is 
+
+200 V. The colour -scale is set between  -0.02 and +0.02 among all the maps to allow visual comparison and 
+
+to optimize the strip contrast. The two horizontal solid black lines represent the cathode (top) and anode 
+
+(bottom) electrodes. 
+
+Video S2 . Electric field profile (black line) and its relative variation [E(y, t) -E(y, t=0) ] / E( y, t=0) (orange line) 
+
+as in Fig. 2, time evolution over 60 ns (time step 0.5 ns). The y -profiles (from cathode to anode) have been 
+
+calculated by averaging on the x -direction, along which the field is uniform. Data refer to the low optical 
+
+irradiation case  (same as  Fig. 2c and P 4 in Fig. 3). 
+
+Video S3 . Temporal evolution of displacement currents moving from cathode to anode over 125 ns (time 
+
+step 1  ns) at different applied voltages: 50 V (green),  100 V (yellow),  150 V (red), and 200 V (blu ) in the case 
+
+of low optical irradiation (Fig. 2 d and P 4 in Fig. 3). In this low power case, the  displacement  current peak is 
+
+Gaussian and representative of the electron cloud  position and shape .
+
+Video S4 . Temporal evolution of carrier cloud profiles over a 72 ns time range (time step 1 ns) under 
+
+different optical irradiation levels as in Fig.  3f. The excitation optical density is increasing from low to high 
+
+perturbation as P 2 (brown), P 4 (yellow), P 6 (blue), P 8 (red). The applied bias is 200 V. By increasing optical 
+
+irradiation level, the carrier clouds reshape from purely Gaussian to bi -Gaussian with more extended tail 
+
+than front. 0 10 20 30 40         
+
+> 0,00
+> 0,05
+> 0,10
+> 0,15
+> 0,20
+> current (A)
+> time (ns)
+> I_e @0.5um I_h @0.5um I_cond @0.5um 010 20 30 40
+> 0,00
+> 0,05
+> 0,10
+> 0,15
+> 0,20
+> current (A)
+> time (ns)
+> I_e @1um I_h @1um I_cond @1um 010 20 30 40
+> 0,00
+> 0,05
+> 0,10
+> 0,15
+> 0,20
+> current (A)
+> time (ns)
+> I_e @10um I_h @10um I_cond @10um
+
+Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 6/7 
+
+REFERENCES 
+
+[1]  W. R. Donaldson, L. Kingsley, M. Weiner, A. Kim, e R. Zeto, «Electro -optic imaging of the internal fields 
+
+in a GaAs photoconductive switch»,  J. Appl. Phys. , vol. 68, fasc. 12, pp. 6453 –6457, dic. 1990, doi: 
+
+10.1063/1.346843. 
+
+[2]  A. Kumada, T. Sugihara, M. Chiba, e K. Hidaka, «Two -dimensional potential distribution measurement 
+
+of surface discharge with subnanosecond resolution»,  Rev. Sci. Instrum. , vol. 73, fasc. 4, pp. 1939 –
+
+1944, apr. 2002, doi: 10.1063/1.1458042. 
+
+[3]  Jian Shi, Qing Yang, Wenxia Sima, Lei Liao, Sisi Huang, e M. Zahn, «Space charge dynamics 
+
+investigation based on Kerr electro -optic measurements and processing of CCD images»,  IEEE Trans. 
+
+Dielectr. Electr. Insul. , vol. 20, fasc. 2, pp. 601 –611, apr. 2013, doi: 10.1109/TDEI.2013.6508764. 
+
+[4]  W. Sima, H. Song, Q. Yang, H. Guo, M. Zahn, e M. Yang, «Time -continuous Kerr electro -optic field 
+
+mapping measurement under impulse voltage using array photodetector»,  Appl. Phys. Lett. , vol. 107, 
+
+fasc. 8, p. 082901, ago. 2015, doi: 10.1063/1.4929504. 
+
+[5]  L. L. Yin Win, D. Taguchi, e T. Manaka, «Transient carrier visualization of organic -inorganic hybrid 
+
+perovskite thin films by using time -resolved microscopic second -harmonic generation (TRM -SHG)», 
+
+Org. Electron. , vol. 75, p. 105416, dic. 2019, doi: 10.1016/j.orgel.2019.105416. 
+
+[6]  P. Bhattacharya, P. Yu, e S. Guha, «Nonlinear Optical Imaging of Carrier Transport at the 
+
+Semiconductor -Insulator Interface in Organic Field -Effect Transistors»,  Phys. Rev. Appl. , vol. 19, fasc. 
+
+4, p. 044059, apr. 2023, doi: 10.1103/PhysRevApplied.19.044059. 
+
+[7]  T. Manaka, E. Lim, R. Tamura, e M. Iwamoto, «Direct imaging of carrier motion in organic transistors 
+
+by optical second -harmonic generation»,  Nat. Photonics , vol. 1, fasc. 10, pp. 581 –584, ott. 2007, doi: 
+
+10.1038/nphoton.2007.172. 
+
+[8]  R. Shyam, T. Manaka, e R. Prakash, «Direct Visualization of Carrier Motion in DPP -TTT/C 3 N5 Blended 
+
+Organic Thin -Film Transistors by Optical Second -Harmonic Generation»,  ACS Appl. Nano Mater. , vol. 
+
+8, fasc. 20, pp. 10754 –10764, mag. 2025, doi: 10.1021/acsanm.4c06896. 
+
+[9]  Y. Cao, J. W. Pomeroy, M. J. Uren, F. Yang, e M. Kuball, «Electric field mapping of wide -bandgap 
+
+semiconductor devices at a submicrometre resolution»,  Nat. Electron. , vol. 4, fasc. 7, pp. 478 –485, 
+
+giu. 2021, doi: 10.1038/s41928 -021 -00599 -5. 
+
+[10]  M. K. L. Man  et al. , «Imaging the motion of electrons across semiconductor heterojunctions»,  Nat. 
+
+Nanotechnol. , vol. 12, fasc. 1, pp. 36 –40, gen. 2017, doi: 10.1038/nnano.2016.183. 
+
+[11]  Y. Terada, S. Yoshida, O. Takeuchi, e H. Shigekawa, «Real -space imaging of transient carrier dynamics 
+
+by nanoscale pump –probe microscopy»,  Nat. Photonics , vol. 4, fasc. 12, pp. 869 –874, dic. 2010, doi: 
+
+10.1038/nphoton.2010.235. 
+
+[12]  B. H. Son, J. -K. Park, J. T. Hong, J. -Y. Park, S. Lee, e Y. H. Ahn, «Imaging Ultrafast Carrier Transport in 
+
+Nanoscale Field -Effect Transistors»,  ACS Nano , vol. 8, fasc. 11, pp. 11361 –11368, nov. 2014, doi: 
+
+10.1021/nn5042619. 
+
+[13]  M. M. Gabriel  et al. , «Direct Imaging of Free Carrier and Trap Carrier Motion in Silicon Nanowires by 
+
+Spatially -Separated Femtosecond Pump –Probe Microscopy»,  Nano Lett. , vol. 13, fasc. 3, pp. 1336 –
+
+1340, mar. 2013, doi: 10.1021/nl400265b. 
+
+[14]  J. Sung, S. Macpherson, e A. Rao, «Enhanced Ballistic Transport of Charge Carriers in Alloyed and K -
+
+Passivated Alloyed Perovskites Thin Films». 
+
+[15]  F. E. Peterkin, R. Block, e K. H. Schoenbach, «Electric field mapping system with nanosecond temporal 
+
+resolution»,  Rev. Sci. Instrum. , vol. 66, fasc. 4, pp. 2960 –2966, apr. 1995, doi: 10.1063/1.1145583. 
+
+[16]  M. A. Sirotin  et al. , «Direct ultrafast carrier imaging in a perovskite microlaser with optical coherence 
+
+microscopy»,  Optica , vol. 10, fasc. 10, p. 1322, ott. 2023, doi: 10.1364/OPTICA.498746. 
+
+[17]  M. S. Simeni, Y. Zheng, E. V. Barnat, e P. J. Bruggeman, «Townsend to glow discharge transition for a 
+
+nanosecond pulse plasma in helium: space charge formation and resulting electric field dynamics», 
+
+Plasma Sources Sci. Technol. , vol. 30, fasc. 5, p. 055004, mag. 2021, doi: 10.1088/1361 -6595/abf320. 
+
+[18]  J. Horng  et al. , «Imaging electric field dynamics with graphene optoelectronics»,  Nat. Commun. , vol. 7, 
+
+fasc. 1, p. 13704, dic. 2016, doi: 10.1038/ncomms13704. Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices - SI 7/7 
+
+[19]  A. Sridharan, N. K. Noel, H. Hwang, S. Hafezian, B. P. Rand, e S. Kéna -Cohen, «Time -resolved imaging 
+
+of carrier transport in halide perovskite thin films and evidence for nondiffusive transport»,  Phys. Rev. 
+
+Mater. , vol. 3, fasc. 12, p. 125403, dic. 2019, doi: 10.1103/PhysRevMaterials.3.125403. 
+
+[20]  J. Li  et al. , «Ultrafast Optical Nanoscopy of Carrier Dynamics in Silicon Nanowires»,  Nano Lett. , vol. 23, 
+
+fasc. 4, pp. 1445 –1450, feb. 2023, doi: 10.1021/acs.nanolett.2c04790. 
+
+[21]  J. Sun, A. Adhikari, B. S. Shaheen, H. Yang, e O. F. Mohammed, «Mapping Carrier Dynamics on 
+
+Material Surfaces in Space and Time using Scanning Ultrafast Electron Microscopy»,  J. Phys. Chem. 
+
+Lett. , vol. 7, fasc. 6, pp. 985 –994, mar. 2016, doi: 10.1021/acs.jpclett.5b02908. 
+
+[22]  L. Wang  et al. , «Real -space imaging of photo -generated surface carrier transport in 2D perovskites», 
+
+Light Sci. Appl. , vol. 14, fasc. 1, p. 124, mar. 2025, doi: 10.1038/s41377 -025 -01758 -5. 
+
+[23]  A. Cola, I. Farella, M. Anni, e M. C. Martucci, «Charge Transients by Variable Wavelength Optical 
+
+Pulses in CdTe Nuclear Detectors»,  IEEE Trans. Nucl. Sci. , vol. 59, fasc. 4, pp. 1569 –1574, ago. 2012, 
+
+doi: 10.1109/TNS.2012.2194509.
