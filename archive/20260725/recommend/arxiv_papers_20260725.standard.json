@@ -1,0 +1,91 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-25T21:12:43.741406+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.16867v1",
+      "source": "arxiv",
+      "title": "Operando observation of strain relaxation in fatigued pearlitic steel",
+      "abstract": "Pearlitic steels are the material of choice for railway wheels and rails, where their lamellar ferrite-cementite structure balances cost, strength, and wear resistance. However, in use, cyclic loading combined with frictional heat softens the steel, promoting fatigue and eventual failure. Here we use Dark-Field X-ray Microscopy (DFXM) to follow, operando, the grain-scale response of a fatigued pearlitic colony during annealing up to 550 °C. Orientation maps reveal negligible lattice rotation and no sub-cell formation, indicating that the cementite lamellae suppress long-range dislocation motion. Strain maps nonetheless show pronounced relaxation: the elastic strain spread narrows by nearly 40%, with recovery starting below 250 °C, within the operating temperatures of railway wheels. We attribute this relaxation to short-range annihilation of dislocations confined between lamellae, linking grain-scale strain recovery to the macroscopic softening of pearlitic railway steels in service.",
+      "authors": [
+        "Louis Lesage",
+        "Johan Ahlström",
+        "Yubin Zhang",
+        "Can Yıldırım"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-18T16:10:45+00:00",
+      "link": "https://arxiv.org/pdf/2607.16867v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "operando observation of strain relaxation",
+      "llm_evidence_cn": "原位观察应变松弛",
+      "llm_evidence": "原位观察应变松弛",
+      "canonical_evidence": "原位观察应变松弛",
+      "llm_tldr_en": "This paper uses operando Dark-Field X-ray Microscopy to observe strain relaxation in fatigued pearlitic steel during annealing up to 550 °C, revealing that cementite lamellae suppress long-range dislocation motion but elastic strain narrows by 40%.",
+      "llm_tldr_cn": "针对疲劳珠光体钢在退火过程中的应变松弛问题，本文采用原位暗场X射线显微镜（DFXM）进行观测。结果显示渗碳体片层抑制了长程位错运动，但弹性应变范围仍缩小近40%，且恢复在250°C以下开始。该工作展示了原位观察材料微结构演化的能力，为理解疲劳失效机制提供了实验依据。",
+      "llm_tldr": "针对疲劳珠光体钢在退火过程中的应变松弛问题，本文采用原位暗场X射线显微镜（DFXM）进行观测。结果显示渗碳体片层抑制了长程位错运动，但弹性应变范围仍缩小近40%，且恢复在250°C以下开始。该工作展示了原位观察材料微结构演化的能力，为理解疲劳失效机制提供了实验依据。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.18895v1",
+      "source": "arxiv",
+      "title": "Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS$_2$",
+      "abstract": "Two-dimensional semiconductors, such as monolayer MoS$_2$, combine a technologically useful band gap with an all-surface geometry, making them attractive both as field-effect-transistor channels and as chemically sensitive devices. Predictive device design requires a transport model that is (i) physically grounded rather than empirical, (ii) validated against experiments, and (iii) able to span the scales from electron-phonon coupling to terminal current and sensor response. We present a self-consistent ensemble Monte Carlo (EMC) framework for monolayer MoS$_2$ built on the ViennaEMC solver, comprising a Boltzmann-transport kernel with a full intrinsic and extrinsic scattering stack (deformation-potential acoustic and intervalley phonons, polar-optical Fröhlich and piezoelectric coupling, remote substrate phonons, screened charged-impurity and surface-roughness scattering), degenerate free-carrier statistics, and a self-consistent Poisson coupling. The intrinsic transport parameters are verified against first-principles density-functional perturbation theory (DFPT), and seven quantities (lattice constant, conduction-band effective mass, band gap, Born effective charges, the longitudinal-optical phonon energy, and both in-plane sound velocities) agree with the reference parametrization. In a multiscale coupling, the EMC velocity-field characteristic feeds a one-dimensional velocity-saturation channel model, which captures the velocity-saturated field dependence and reproduces the measured transfer characteristics of a CVD monolayer device in air and vacuum. Finally, an ambient/adsorbate extension reproduces the measured conductivity response to oxygen partial pressure and the concentration dependence of NO$_2$ and NH$_3$ sensing measured in several independent devices.",
+      "authors": [
+        "Lado Filipovic"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-21T09:28:03+00:00",
+      "link": "https://arxiv.org/pdf/2607.18895v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Monte Carlo simulation of charge transport in MoS2",
+      "llm_evidence_cn": "MoS2中电荷传输的蒙特卡罗模拟",
+      "llm_evidence": "MoS2中电荷传输的蒙特卡罗模拟",
+      "canonical_evidence": "MoS2中电荷传输的蒙特卡罗模拟",
+      "llm_tldr_en": "Develops a self-consistent ensemble Monte Carlo framework for monolayer MoS2, incorporating full scattering physics to model transport and gas sensing, validated against experiments.",
+      "llm_tldr_cn": "二维半导体如单层MoS2的器件设计需要物理基础的传输模型。本文基于ViennaEMC求解器构建了自洽的系综蒙特卡罗框架，包含形变势声子散射等完整物理，能跨尺度模拟从电子-声子耦合到终端电流和气体传感响应，并经过实验验证。该方法为MoS2场效应晶体管和化学传感器的预测性设计提供了有力工具。",
+      "llm_tldr": "二维半导体如单层MoS2的器件设计需要物理基础的传输模型。本文基于ViennaEMC求解器构建了自洽的系综蒙特卡罗框架，包含形变势声子散射等完整物理，能跨尺度模拟从电子-声子耦合到终端电流和气体传感响应，并经过实验验证。该方法为MoS2场效应晶体管和化学传感器的预测性设计提供了有力工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

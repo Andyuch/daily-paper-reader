@@ -1,0 +1,647 @@
+Title: Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS_2
+
+URL Source: https://arxiv.org/pdf/2607.18895v1
+
+Published Time: Wed, 22 Jul 2026 00:45:51 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+> PAPER
+
+# Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS 2
+
+Lado Filipovic   
+
+> Institute for Microelectronics, TU Wien, Vienna, Austria
+> E-mail: filipovic@iue.tuwien.ac.at
+> Keywords: ensemble Monte Carlo, transition-metal dichalcogenide, MoS 2, electron transport, gas sensing, multiscale modelling, density-functional perturbation theory
+
+Abstract 
+
+Two-dimensional semiconductors, such as monolayer MoS 2, combine a technologically useful band gap with an all-surface geometry, making them attractive both as field-effect-transistor channels and as chemically sensitive devices. Predictive device design requires a transport model that is (i) physically grounded rather than empirical, (ii) validated against experiments, and (iii) able to span the scales from electron-phonon coupling to terminal current and sensor response. We present a self-consistent ensemble Monte Carlo (EMC) framework for monolayer MoS 2 built on the ViennaEMC solver, comprising a Boltzmann-transport kernel with a full intrinsic and extrinsic scattering stack (deformation-potential acoustic and intervalley phonons, polar-optical Fr¨ ohlich and piezoelectric coupling, remote substrate phonons, screened charged-impurity and surface-roughness scattering), degenerate free-carrier statistics, and a self-consistent Poisson coupling. The intrinsic transport parameters are verified against first-principles density-functional perturbation theory (DFPT), and seven quantities (lattice constant, conduction-band effective mass, band gap, Born effective charges, the longitudinal-optical phonon energy, and both in-plane sound velocities) agree with the reference parametrization. In a multiscale coupling, the EMC velocity-field characteristic feeds a one-dimensional velocity-saturation channel model, which captures the velocity-saturated field dependence and reproduces the measured transfer characteristics of a CVD monolayer device in air and vacuum. Finally, an ambient/adsorbate extension reproduces the measured conductivity response to oxygen partial pressure and the concentration dependence of NO 2 and NH 3 sensing measured in several independent devices. 
+
+1 Introduction 
+
+Monolayer molybdenum disulfide (MoS 2) is a direct-bandgap ( ∼1.8 eV) two-dimensional (2D) semiconductor that has emerged as a leading channel material for post-silicon field-effect transistors (FETs) and a highly sensitive platform for gas and chemical sensing [1, 2]. Its atomic thinness is a double-edged property that grants excellent electrostatic control and exposes the entire carrier population to the surface, but it also makes transport acutely sensitive to phonons, the supporting dielectric, charged impurities, roughness, and adsorbed species. A model that aims to predict device behaviour must therefore treat these mechanisms on the same physical footing rather than lumping them into empirical mobilities. The ensemble Monte Carlo (EMC) method solves the semiclassical Boltzmann transport equation (BTE) stochastically by following a statistical ensemble of carriers through field-driven free flights and scattering events, self-consistently coupled to Poisson’s equation. Since its introduction for hot-electron problems [3, 4, 5] and the development of the self-scattering technique, which makes it computationally practical [6], the method has matured over five decades into a standard framework for semiconductor transport and device simulation [7, 8, 9, 10, 11, 12, 13, 14], with full-band and technology-oriented device implementations [15, 16]. It is the natural framework for a predictive 2D model because every scattering mechanism enters through its own microscopic rate, and hot-carrier and non-equilibrium effects are captured without additional approximation. For monolayer MoS 2, the intrinsic phonon-limited mobility and the underlying electron-phonon couplings were established from first principles by Kaasbjerg et al. [17], and the role of the substrate and of charged impurities was clarified by Ma and Jena [18]. Experimentally, intrinsic transport was probed by Baugher et al. [19] 1arXiv:2607.18895v1 [cond-mat.mes-hall] 21 Jul 2026 and Radisavljevi´ c and Kis [20], and the strong influence of the ambient by Ahn et al. [21] and Li et al. [22]. In parallel, first-principles methods have matured for computing carrier mobilities in 2D materials directly from electron-phonon coupling [23, 24, 25, 26], including the subtle role of flexural (out-of-plane) phonons enabled by the broken horizontal mirror symmetry [27]. These supply both the microscopic parameters and an independent benchmark for a transport kernel. In addition to its role as a transistor channel, the same all-surface geometry makes monolayer MoS 2 an exceptionally sensitive chemical transducer. This idea traces the detection of individual gas molecules on graphene [28], but the finite band gap of semiconducting transition-metal dichalcogenides removes graphene’s zero-gap limitation, yielding a much larger relative conductance response and true field-effect operation [29, 30]. Transduction proceeds through two coupled microscopic channels: charge transfer between an adsorbed molecule and the channel (a donor such as NH 3 raises the electron density while an acceptor such as NO 2 depletes it), and the additional Coulomb scattering from the resulting ionised adsorbates, which lowers the mobility [31, 2]. Because every carrier resides at the surface, both effects are pronounced, and room-temperature detection of NO 2 into the ppb range and reversible responses to NH 3, humidity and volatile organics have been demonstrated [29, 2]. The FET geometry supplies a lever absent in passive chemiresistors, since a gate bias tunes the operating carrier density and hence the selectivity and gain of the response [2]. The same platform also extends to label-free biosensing [32]. This physics also sets the ambient baseline, as continuously adsorbed O 2 and H 2Odope and scatter the channel, so that vacuum annealing recovers much of the intrinsic mobility [21, 22]. Nevertheless, quantitative sensing studies remain overwhelmingly empirical. A transport-level description that links the microscopic adsorbate-channel coupling to the measured device response, and that treats sensing and intrinsic transport on a common footing, is largely absent. The present work addresses this gap. Here we assemble these ingredients into a single, open, multiscale EMC framework for monolayer MoS 2 and validate it end to end. Our contributions are: (i) a complete self-consistent EMC transport kernel with an intrinsic and extrinsic scattering stack specialised to the 2D limit (Sec. 2); (ii) a first-principles verification of the model’s electronic-structure and phonon inputs by density-functional perturbation theory (DFPT), with seven quantities matching the reference parametrization (Sec. 3, Sec. 5.3); (iii) a multiscale coupling to a 1D velocity-saturation channel model that reproduces a measured device Id-Vg in air and vacuum (Sec. 4.1, Sec. 5.4); and (iv) an ambient/adsorbate extension reproducing measured ambient- and gas-sensing responses against independent recent experiments (Sec. 4.2, Sec. 5.5). Throughout, we keep an explicit account of which quantities are predicted and which are fitted (Sec. 5.6). 
+
+2 The ensemble Monte Carlo transport kernel 
+
+2.1 Semiclassical transport 
+
+The framework solves the steady-state BTE for the carrier distribution f (r, k, t ) [33], 
+
+∂f ∂t + v(k) · ∇ rf + F
+
+ℏ · ∇ kf =
+
+ ∂f ∂t 
+
+
+
+> coll
+
+, (1) by propagating an ensemble of N superparticles. Between collisions each carrier undergoes a field-driven free flight governed by Newton’s law, ℏ ˙k = F = −qE, so that k(t) = k(0) − qE t/ ℏ,with the group velocity obtained from a non-parabolic k·p valley dispersion 
+
+E(1 + αE ) = ℏ2k2
+
+2m∗ , v(k) = 1
+
+ℏ ∇kE = ℏk
+
+m∗ [1 + 2 αE ] , (2) where m∗ is the valley effective mass and α the non-parabolicity. The stochastic free-flight duration is generated with the self-scattering (constant-Γ) technique [6, 7, 9]. For each valley/region a constant total rate Γ 0 is chosen to bound the sum of all real rates λi(E). A free flight of duration 
+
+tf = − 1Γ0
+
+ln( r), r ∈ (0 , 1] uniform , (3) is drawn, after which a mechanism is selected by comparing a second uniform deviate against the normalised cumulative rate P 
+
+> j≤i
+
+λj (E)/Γ0. The residual defines a null (self-) scattering that leaves the state unchanged. Selected mechanisms update the carrier energy and redistribute its momentum according to their differential cross-section (isotropic, polar-angle-weighted, or intervalley as appropriate). Rates are pre-tabulated per valley/region for efficiency, and the 2Table 1. Scattering mechanisms in the monolayer MoS 2 EMC kernel. Mechanism Type Origin Acoustic deformation potential intrinsic, elastic [17] Zero-/first-order intervalley (K-K ′, K-Q) intrinsic, inelastic [17] Polar-optical (Fr¨ ohlich, LO) intrinsic, inelastic [17, 35] Piezoelectric intrinsic [17] Remote surface-optical phonon extrinsic (substrate) [18] Screened charged impurity (2D) extrinsic [18, 34] Interface roughness (Prange-Nee) extrinsic [18] Adsorbate Coulomb / charge transfer extrinsic (ambient) this work 
+
+ensemble is advanced over fixed time steps ∆ t during which each particle may scatter several times (Fig. 1). The loop is parallelised over particles with OpenMP. The macroscopic observables follow as ensemble averages over the non-transient part of the trajectory. The drift mobility is 
+
+μ = ⟨vx⟩
+
+Ex
+
+, ⟨vx⟩ = 1
+
+N N t
+
+X
+
+> tN
+
+X
+
+> n=1
+
+vx,n (t), (4) with Nt the number of averaging steps. 
+
+2.2 Scattering mechanisms 
+
+Table 1 lists the mechanisms included. The intrinsic set follows the first-principles parametrization of Kaasbjerg et al. [17]. The extrinsic set follows Ma and Jena [18] and Ridley [34]. We give the 2D forms used for the dominant channels. 
+
+Acoustic deformation potential (elastic, equipartition). Long-wavelength acoustic phonons scatter elastically with a rate proportional to the 2D density of states, 
+
+λac (E) = D2ac md kB T
+
+ℏ3ρ v 2 
+
+> s
+
+w
+
+1 + 2 αE , (5) where Dac is the acoustic deformation potential, md the density-of-states mass, ρ the mass density, 
+
+vs the sound velocity, and w the effective layer width ( ρ w being the areal mass density). 
+
+Polar-optical (Fr¨ ohlich) coupling. The longitudinal-optical (LO) phonon couples through the 2D Fr¨ ohlich matrix element. The rate for absorption (+) and emission ( −) carries the Bose occupation NLO = [exp( ℏωLO /k B T ) − 1] −1,
+
+λ±
+
+> pop
+
+(E) ∝  NLO + 12 ∓ 12
+
+Z |MF(q)|2
+
+q S(q, q s) d ψ, E′ = E ± ℏωLO , (6) with q = |k′ − k|, the free-carrier screening factor S(q, q s), and |MF|2 ∝ ℏωLO (ε−1 
+
+> ∞
+
+− ε−10 ). Zero- and first-order intervalley phonons (K-K ′ and K-Q) and piezoelectric coupling are treated analogously. 
+
+Screened charged impurities and remote phonons (extrinsic). Charged impurities at the interface scatter through a Thomas-Fermi- and Rytova-Keldysh-screened 2D Coulomb potential, 
+
+V (q) = Ze 2
+
+2ε0εavg 
+
+e−qd 
+
+qs + q + r0q2 , q = 2 k sin( θ/ 2) , (7) where qs is the free-carrier screening wavevector, r0 the Rytova-Keldysh length and d the impurity setback. The polar substrate contributes remote surface-optical (SO) phonon scattering, whose coupling scales with the dielectric discontinuity 12 [( εsub  
+
+> ∞
+
++ εenv )−1 − (εsub 0 + εenv )−1] split between the substrate SO modes [18]. Interface-roughness scattering is included in the Prange-Nee form. 
+
+2.3 Self-consistent electrostatics and degenerate statistics 
+
+Charge is assigned to the mesh with a cloud-in-cell particle-mesh scheme [36], driving Poisson’s equation, 
+
+∇·  ε ∇ϕ = −q (p − n + N + 
+
+> D
+
+− N − 
+
+> A
+
+), (8) 3time step ∆t (repeat Nsteps )
+
+Inputs. Device geometry, doping ND /N A;band structure ( m∗, valleys α); scattering pa-rameters (deformation potentials, Fr¨ ohlich coupling, Born charges Z∗, ℏωLO , vs), Sec. 3 
+
+Initialisation. Solve equilibrium nonlin-ear Poisson [Eq. (8), degenerate closure Eq. (9)] → ϕeq ; sample the carrier ensemble from neq (ϕ); pre-tabulate scatter rates λi(E)
+
+Solve Poisson ⇒ E = −∇ ϕ
+
+(frozen-field sub-cycling optional) 
+
+For each particle (OpenMP): while t < ∆t, free-flight drift ℏ ˙k = −qE for tf = −Γ−10 ln r [Eq. (3)]; select mechanism from the cumulative rate (self-scattering technique); update ( k, valley) 
+
+Assign charge to grid; inject / absorb carriers at ohmic & reservoir contacts 
+
+If past transient, accumulate ⟨vx⟩,current, energy statistics [Eq. (4)] 
+
+Outputs. μ(ns, T ), vd(E), σ → multiscale FET (Sec. 4.1) & ambient/sensor model (Sec. 4.2)  
+
+> Figure 1. Self-consistent ensemble Monte Carlo cycle of the ViennaEMC framework [37]. DFPT-verified material and scattering parameters enter at the top. The dashed block is repeated each time step, alternating a Poisson solve with a free-flight/self-scattering update of the carrier ensemble.
+
+solved by successive over-relaxation on the device grid in the established device-simulation manner [10]. Because accumulation-mode 2D channels reach degeneracy, the equilibrium closure uses Fermi-Dirac rather than Boltzmann statistics. We implement a degenerate 2D closure in which the local density and its derivative are 
+
+n(ϕ) = 1
+
+β ln  1 + β e φ, ∂n ∂φ = e φ
+
+1 + β e φ , φ = qϕ − Ec + EF
+
+kB T , (9) with the degeneracy parameter β set by the 2D band-edge density, and β → 0 recovers the Boltzmann limit exactly, preserving byte-identical behaviour for non-degenerate materials. Figure 1 summarises the complete self-consistent cycle. 
+
+3 First-principles calculations 
+
+The intrinsic parameters that enter the EMC kernel (the K-valley effective mass, the phonon energies, the Fr¨ ohlich coupling via the Born charges and dielectric response, and the acoustic sound velocities) are computed from first principles to verify the reference parametrization at a consistent level of theory. We use density-functional theory and density-functional perturbation theory (DFPT) as implemented in Quantum ESPRESSO [38] with the PBE functional [39] and norm-conserving pseudopotentials [40, 41]. The monolayer is treated with an in-plane-only relaxed cell and a 2D Coulomb cutoff for the electronic and dielectric response. Spin-orbit coupling is omitted, being negligible ( ∼3 meV) for the conduction band that governs n-type transport. Sound velocities are obtained from the acoustic-branch slopes of a 6 × 6 phonon dispersion interpolated to Γ. Because the reference electron-phonon parameters are themselves PBE/DFPT quantities, this 4PBE-level comparison is the internally consistent one. A hybrid- or GW -level refinement of the valley separation and of the scattering couplings is discussed in Sec. 5.6. 
+
+4 Device and adsorbate extensions 
+
+4.1 Multiscale device model 
+
+The self-consistent EMC of an accumulation-mode monolayer channel does not yield a clean terminal Id-Vg directly. Extracting the terminal current from the drift velocity in the gated channel (a Ramo-Shockley tally) gives an erratic, non-monotonic result, because in a short Schottky-contacted device most of the drain bias drops across the contacts and the ungated access regions, leaving a small net channel drift that is buried under thermal-velocity fluctuations. Refining the grid, the statistics and the drain bias did not remove this. We therefore adopt a multiscale coupling in which the EMC supplies the velocity-field characteristic v(E), computed from the bulk kernel by sweeping the driving field at the channel density (Fig. 5a). It is well described by the Caughey-Thomas form 
+
+v(E) = μ0E
+
+1 + ( μ0E/v sat )β 1/β , (10) with a low-field mobility μ0 and a saturation velocity vsat set by optical-phonon emission (μ0 = 184 cm 2/Vs, vsat = 1 .1 × 10 7 cm/s, β = 1 .45). This v(E) feeds a one-dimensional gradual-channel model. The local sheet charge follows a smooth turn-on with ideality η (from the subthreshold swing SS ), giving an effective overdrive 
+
+Vov (Vg ) = η kB Tq ln 
+
+h
+
+1 + exp 
+
+ q(Vg −Vth ) 
+
+> ηk BT
+
+i 
+
+, η = SS 
+
+(kB T /q ) ln 10 , (11) and integrating the current-continuity condition Id = W C ox Vov v(E) along the channel yields the drain current with a proper linear-to-saturation transition, 
+
+Id = WL μ0Cox 
+
+Vov Vd − 12 V 2
+
+> d
+
+1 + Vd/(EcL) , Vd = min( Vds , V dsat ), (12) where Ec = vsat /μ 0 is the critical field and Vdsat = Vov EcL/ (Vov + EcL), and a series contact resistance 2 Rc is applied self-consistently. Unlike a lumped compact model, this resolves the channel and captures the linear-to-saturation transition of the drain current. The EMC contributes the full v(E) (both μ0 and vsat ), while Vth , SS and Rc remain device parameters (Sec. 5.6). 
+
+4.2 Ambient and adsorbate model 
+
+An all-surface channel responds to adsorbates through two coupled channels: charge transfer, which shifts the carrier density, and additional Coulomb scattering from the ionised adsorbates, which lowers the mobility. Both enter the EMC conductivity σ = q n s μ at each fractional adsorbate coverage θ,
+
+ns(θ) = n0 ∓ ∆N θ, μ(θ) = μns(θ), N c(θ), S(θ) = σ0
+
+σ(θ) − 1, (13) where the upper (lower) sign is an acceptor (donor), ∆ N is the transferred charge at saturation, and Nc(θ) = N max  
+
+> c
+
+θ is the areal density of adsorbate Coulomb centres, entering μ through Eq. (7). The transduction S(θ) is thus an EMC output. A Langmuir isotherm θ(C) = KC/ (1 + KC ) maps coverage to gas concentration, with K the only per-device adsorption parameter. Oxygen partial pressure is mapped analogously. 
+
+5 Results and discussion 
+
+5.1 Intrinsic transport and the mobility limit 
+
+Figure 2 shows the computed temperature-dependent mobility for several substrates. Each insulator follows a power law μ ∝ T −γ with its own exponent. The suspended (intrinsic) film has the shallowest slope ( γ = 1 .49), set by the intrinsic acoustic and optical phonons. Every supporting dielectric adds a thermally activated remote surface-optical phonon channel that steepens the falloff, from hBN ( γ = 1 .52) and SiO 2 (γ = 1 .63) to the soft, polar high-κ HfO 2 (γ = 1 .79). The exponents bracket the impurity-free phonon limit of Kaasbjerg [17] ( γ = 1 .69), and the room-temperature mobilities ( ∼135 to 195 cm 2/Vs) are consistent with the best measured monolayer devices [19, 20]. Figure 3 recasts this as a benchmark in which the EMC sets the intrinsic upper bound and measured devices fall below it by an amount that quantifies their extrinsic (contact/defect/substrate) limitation. The cleanest exfoliated device approaches this bound, while CVD and contact-limited devices lie one to two decades lower. 52 × 10 2 3 × 10 2 4 × 10 2 
+
+> temperature T (K)
+> 10 2
+> 10 3
+> electron mobility  μ (cm 2/Vs)
+
+Temperature-dependent mobility by substrate                    
+
+> suspended, γ=1.49
+> hBN, γ=1.52
+> SiO 2,γ=1.63
+> HfO 2,γ=1.79
+> Kaasbjerg limit, γ=1.69 Figure 2. Temperature-dependent mobility μ(T) for different substrates. Each insulator has its own power-law exponent γ(μ∝T−γ). The suspended (intrinsic) film has the shallowest slope ( γ= 1 .49). Every supporting dielectric adds a thermally activated remote surface-optical phonon channel whose scattering grows with temperature and steepens the falloff, most strongly for the soft, polar high-κHfO 2(γ= 1 .79). The exponents bracket the Kaasbjerg impurity-free phonon limit ( γ= 1 .69, dashed), shown for reference.
+
+5.2 Substrate and dielectric dependence 
+
+Figure 4(a) resolves the remote-SO-phonon-limited mobility for different substrates at fixed density. The ordering suspended > hBN ≈ SiO 2 > Al 2O3 ≈ CaF 2 > HfO 2 is governed by a competition between the dielectric discontinuity and the phonon stiffness. High-κ HfO 2 suffers from soft (∼12 meV) modes that are strongly thermally occupied, whereas the crystalline fluoride CaF 2,despite the largest dielectric step, retains a high mobility because its single surface-optical mode is stiff ( ∼51 meV) and weakly populated at room temperature, consistent with the promise of CaF 2
+
+as a 2D-FET insulator [42]. Figure 4(b) shows the non-monotonic density dependence, rising as free carriers screen charged impurities and falling as interface roughness takes over, with the peak near ns = 10 13 cm −2.
+
+5.3 Validation of the inputs 
+
+Table 2 compares the DFPT-computed parameters with the reference. Seven quantities (the lattice constant, K-valley effective mass, band gap, the LO phonon energy, the Born effective charges, and both in-plane sound velocities) match to within the expected PBE accuracy. Two quantities carry caveats. The K-Q valley separation is functional-sensitive and lies within the known PBE spread, and the in-plane dielectric constant is a slab-in-a-box value requiring 2D unfolding. The acoustic deformation potential is discussed in Sec. 5.6. This establishes that the electronic-structure and polar-phonon inputs to the transport kernel are first-principles-validated at the level of theory of the reference parametrization. 
+
+5.4 Device characteristics 
+
+Figure 5(a) shows the EMC velocity-field characteristic v(E) at the channel density. It rises linearly at low field ( μ0 = 184 cm 2/Vs) and rolls over to a saturation velocity vsat = 1 .1 × 10 7 cm/s as optical-phonon emission sets in, a field dependence that a lumped compact model cannot capture. Fed into the 1D channel model (Eqs. (10) through (12)), it reproduces the transfer characteristic of Fig. 5(b) against a CVD monolayer device [21] in vacuum and air. The model reproduces both branches, and the air →vacuum change is the EMC-predicted ambient response (∼ 4× mobility recovery plus a threshold shift). 610 1 10 2
+
+electron mobility μ (cm 2/Vs) 
+
+> Baugher 2013 (exfoliated 1L)
+> Mamun 2025 (multilayer)
+> Kumar 2025 (1L, Si 3N4)
+> Li 2023 (1L CVD, vacuum)
+> Ahn 2017 (1L CVD, vacuum)
+> 160
+> 27
+> 21.5
+> 4.2
+> 4
+> EMC intrinsic
+> (this work) 194
+> Kaasbjerg
+> phonon limit 410
+
+Intrinsic-mobility limit and measured devices 
+
+> measured, monolayer
+> measured, multilayer
+
+Figure 3. The EMC intrinsic phonon-limited mobility sets an upper bound below the Kaasbjerg phonon limit, against which the measured monolayer and multilayer device mobilities are benchmarked, each falling below the bound by an amount that quantifies its extrinsic (contact, defect and substrate) limitation. 
+
+Table 2. DFPT-computed EMC inputs (monolayer MoS 2, PBE) compared against the reference parametrization [17] / experiment. Quantity This work Reference Status Lattice constant a0 3.181 ˚ A 3.16 ˚ A match (+0.7%) Effective mass m∗ 
+
+> K
+
+0.48 m0 0.48 m0 match Band gap (direct, K) 1.71 eV 1.6-1.7 eV match LO phonon ℏω(E′) 45.8 meV ∼48 meV match Born charge Z∗(Mo) /Z ∗(S) −0.99 /+0 .50 −1.0/+0 .5 match Sound velocity vLA 6615 m/s ∼6600 match Sound velocity vTA 4101 m/s ∼4200 match Valley gap E(Q) − E(K) 129 meV ∼70 (PBE-var.) in range In-plane ε∞ 5.33 (slab) needs 2D unfold caveat 
+
+5.5 Ambient and gas sensing 
+
+Figure 6 shows the ambient conductivity response. The EMC σ(θ) curve is populated with device measurements from Ahn et al. (seven pressures) [21] and Li et al. [22], alongside the mechanism decomposition into charge-transfer depletion and adsorbate scattering. Figure 7 shows the gas response. The same EMC transduction σ(θ) reproduces the NO 2 concentration dependence of a single-layer device [43] (the monolayer reference) and of a 2-layer device [2], with only the adsorption constant K differing between devices. Figure 8 extends the validation to the device level. Two recent back-gated FETs of opposite charge-transfer polarity, a melamine donor (multilayer) [44] and an NO 2 acceptor (single-layer) [43], are reproduced by the charge-transfer model, the former as a left-shifted Id-Vg and the latter as a Langmuir-saturating threshold shift. 
+
+5.6 Scope and limitations 
+
+Table 3 states, per result, which quantities are EMC-predicted and which are fitted. The transport backbone is essentially parameter-free, resting on a single global deformation-potential calibration, after which the temperature exponent, the density peak and the substrate ordering are predictions. The device panels use standard compact-model parameters ( Vth , SS , Rc), while the EMC supplies only μ. The fitting burden is concentrated in the sensor transduction, where the per-gas charge-transfer amplitude and one adsorption constant per dataset are fitted while the shape S(θ)is an EMC output. A note on scope is warranted. The framework is developed for the monolayer, and the quantitative comparisons (the DFPT verification in Table 2, the transport and device results in Figs. 2 through 5, and the single-layer NO 2 sensor) are monolayer. Where independent monolayer data are unavailable we include few-layer and multilayer devices (Late et al., 2-layer [2]; Mamun et 7suspended hBN SiO 2 Al 2O3 CaF 2 HfO 2   
+
+> 0
+> 25
+> 50
+> 75
+> 100
+> 125
+> 150
+> 175
+> 200
+> mobility  μ (cm 2/Vs)
+> 194 187 185
+> 157 152
+> 134
+
+a Substrate-limited mobility (n s=10 12 cm −2)    
+
+> 10 12 10 13 10 14
+> sheet density ns(cm −2)
+> 20
+> 40
+> 60
+> 80
+> 100
+> 120
+> mobility  μ (cm 2/Vs)
+
+b Density-dependent mobility Figure 4. The mobility is limited both by the supporting dielectric, resolved in (a) as the remote-surface-optical-phonon-limited mobility for the different substrates, and by the carrier density, shown in (b) as a non-monotonic dependence μ(ns) that is low at small sheet density where too few free carriers screen the charged impurities, rises as the added carriers progressively screen them, and falls again at high density as the stronger vertical field presses the carriers into the rough dielectric interface, so that the balance of the two opposing trends sets the peak near ns = 10 13 cm −2.10 5 10 6 10 7  
+
+> electric fi eld E (V/m)
+> 10 3
+> 10 4
+> 10 5
+> drift velocity  v (m/s)
+> vsat
+
+a EMC velocity-fi eld characteristic            
+
+> EMC (this work)
+> fit: μ0=184 cm 2/Vs,
+> vsat =1.1×10 7cm/s
+> −40 −20 020 40 60 80 100
+> gate voltage Vg(V)
+> 10 −4
+> 10 −3
+> 10 −2
+> 10 −1
+> 10 0
+> drain current  Id (μA)
+
+b Transfer characteristic vs Ahn 2017 
+
+> Ahn 2017, vacuum
+> EMC+1D model, vacuum
+> Ahn 2017, air
+> EMC+1D model + ambient
+
+Figure 5. One-dimensional velocity-saturation channel model fed by the EMC v(E). (a) EMC velocity-field characteristic and Caughey-Thomas fit ( μ0, vsat ). (b) Transfer Id-Vg versus the measured monolayer FET of Ahn et al. [21] in air and vacuum. 
+
+al., multilayer [44]) as directional and mechanistic corroboration only, labelled as such in the figures. Their absolute magnitudes are not claimed as monolayer validation. In particular, the gate-tunable sensing selectivity reported for few-layer devices is an inter-layer effect (the back-gate and the adsorbate act on different layers) that a strictly monolayer transport model does not capture, and lies outside the present scope. Two limitations follow from the present level of theory. First, the frozen-strain deformation potential is the absolute (vacuum-referenced) band-alignment deformation potential ( ≈ 13 eV), a different quantity from the effective scattering deformation potential that enters the mobility (referenced to the average potential via the acoustic sum rule). The two are not directly comparable, so the DFPT comparison confirms the electronic-structure and polar-phonon inputs but not the acoustic scattering coupling. Second, the macroscopic 2D dielectric requires unfolding beyond the slab-in-a-box value. Obtaining both from first principles requires a full electron-phonon (Wannier/EPW) treatment [45, 46] beyond the scope of this work. 
+
+6 Conclusion 
+
+We have presented an open, self-consistent, multiscale ensemble Monte Carlo framework for monolayer MoS 2 that spans first-principles-verified transport, compact device characteristics, and ambient and gas-sensing response. A single Boltzmann-transport kernel, with its full intrinsic and extrinsic scattering stack and a degenerate self-consistent Poisson closure, feeds a one-dimensional 80.0 0.2 0.4 0.6 0.8 1.0     
+
+> adsorbate coverage θ(vacuum →air)
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> σ/σ0
+
+a Ambient conductivity response      
+
+> EMC σ(coverage) [this work]
+> Ahn et al. 2017 (7 pressures)
+> Li et al. 2023 ( μair /μvac =1/4.2)
+> 10 310 410 510 6
+> O2partial pressure (Pa)
+> 0.4
+> 0.5
+> 0.6
+> 0.7
+> 0.8
+> 0.9
+> relative to vacuum
+
+b Mechanism decomposition   
+
+> n/n 0(charge-transfer depletion)
+> μ/μ0(adsorbate scattering)
+
+Figure 6. The ambient conductivity response of the channel is shown in (a) as the EMC σ(θ) versus adsorbate coverage, overlaid with measured device data from Ahn et al. (2017) and Li et al. (2023), and is decomposed in (b) into the charge-transfer carrier-depletion and adsorbate-scattering contributions. 200 400 600 800 1000 1200  
+
+> NH 3concentration (ppm)
+> −80
+> −70
+> −60
+> −50
+> −40
+> −30
+> −20
+> −10
+> 0
+> sensitivity  S (%)
+
+a NH 3 donor response     
+
+> EMC transduction, K=6.3e-04 ppm −1
+> Late et al. 2013 (2-layer)
+> 10 010 110 210 3
+> NO 2concentration (ppm)
+> 10 1
+> 10 2
+> 10 3
+> response  σ0/σ −  1 (%)
+
+b NO 2 acceptor response 
+
+> EMC transduction (monolayer, K=1.9e-02)
+> Kumar 2025 (single-layer)
+> EMC transduction (2-layer, K=1.6e-03)
+> Late et al. 2013 (2-layer)
+
+Figure 7. The same EMC transduction σ(θ) reproduces the measured gas response of two devices, shown in (a) as the NH 3 donor response of a 2-layer device and in (b) as the NO 2 acceptor response referenced to a single-layer device [43] with a 2-layer device [2] as a secondary reference, each fitted with a single per-device adsorption constant. 
+
+velocity-saturation channel model and an adsorbate charge-transfer extension, so that the same microscopic physics carries through from electron-phonon coupling to terminal current and sensor transduction. The framework reproduces a broad set of independent measurements. The temperature-dependent mobility follows a substrate-specific power law whose exponent rises from 
+
+γ = 1 .49 for the suspended film to γ = 1 .79 on HfO 2, as the thermally activated remote surface-optical phonons steepen the falloff, bracketing the Kaasbjerg phonon limit [17]. The room-temperature mobility of ∼135 to 195 cm 2/Vs and the non-monotonic density dependence agree with the best measured monolayer devices, and recasting the intrinsic value as an upper bound quantifies the extrinsic limitation of each measured device. The electronic-structure and polar-phonon inputs are confirmed by DFPT through seven independently matching quantities. The multiscale coupling reproduces the measured transfer characteristic of a CVD monolayer device in both air and vacuum, and the adsorbate extension reproduces the ambient conductivity, the oxygen-pressure response, and the NO 2 and NH 3 sensing of several independent devices of both charge-transfer polarities. A transparent separation of predicted and fitted quantities shows the transport backbone to rest on a single global calibration, with the remaining fitting confined to the sensor transduction. These results establish a physically grounded and reusable basis for the modelling of 2D-material field-effect transistors and chemical sensors. The main outstanding approximation is the analytic treatment of the deformation-potential and dielectric couplings, whose first-principles determination through a full electron-phonon (Wannier/EPW) calculation is the natural next step. 9−30 −20 −10 0 10 20 30   
+
+> gate voltage Vg(V)
+> 10 −6
+> 10 −5
+> 10 −4
+> 10 −3
+> 10 −2
+> 10 −1
+> 10 0
+> drain current  Id (μA)
+
+a Melamine donor doping (multilayer)    
+
+> Mamun 2025, pristine
+> model, pristine
+> Mamun 2025, doped
+> model + donor
+> 10 010 110 2
+> NO 2concentration (ppm)
+> −2.5
+> −2.0
+> −1.5
+> −1.0
+> −0.5
+> threshold voltage  Vth  (V)
+
+b NO 2 acceptor threshold shift  
+
+> charge-transfer model
+> (K=8.6e-03 ppm −1,ΔVth, max =2.1V)
+> Kumar 2025 (single-layer)
+
+Figure 8. Device-level charge transfer across two recent (2025) FETs of opposite polarity. (a) Melamine donor 
+
+Id-Vg (multilayer) [44], reproduced by the multiscale model as a donor left shift of ∆ Vth ≈ − 21 V. (b) NO 2 acceptor 
+
+Vth versus concentration (single-layer) [43]. 
+
+Table 3. Summary of predicted versus fitted quantities. Result EMC-predicted (no fit) Fitted / external 
+
+μ(T ) (Figs. 2,3) γ, absolute μ 1 global calibration Substrate, μ(ns) (Fig. 4) ordering, non-monotonic peak none (literature constants) DFPT inputs (Table 2) all none Device I-V (Fig. 5) v(E): μ0, vsat ; ×4 ratio Vth , SS, R c (device) Ambient (Fig. 6) σ(θ), decomposition pressure →coverage isotherm Gas (Figs. 7,8) transduction shape S(θ) ∆N , K per device 
+
+Funding 
+
+This research was funded in whole, or in part, by the Austrian Science Fund (FWF) 10.55776/P35318 and 10.55776/DOC142. 
+
+Author contributions 
+
+L.F. conceived the study, developed the ViennaEMC extensions and simulation drivers, performed the transport, device, sensor and first-principles calculations, analysed the results, and wrote the manuscript. 
+
+Data availability 
+
+The simulation data supporting this study (ensemble Monte Carlo outputs, the input decks, and the first-principles DFPT inputs) are openly available in the TU Wien Research Data repository at 10.48436/87zq1-28246 [47]. The ViennaEMC framework [37] is available in the project repository. 
+
+Ethics statement 
+
+This work is a computational and theoretical study based on simulation and first-principles calculation. It involved no research on human participants, no human data or tissue, and no animals, and therefore required no ethics approval. 
+
+Conflict of interest 
+
+The authors declare no competing interests. 
+
+References 
+
+[1] Radisavljevic B, Radenovic A, Brivio J, Giacometti V and Kis A 2011 Nature Nanotechnology 
+
+6 147–150 https://doi.org/10.1038/nnano.2010.279 
+
+[2] Late D J, Huang Y K, Liu B, Acharya J, Shirodkar S N, Luo J, Yan A, Charles D, Waghmare U V, Dravid V P and Rao C N R 2013 ACS Nano 7 4879–4891 
+
+https://doi.org/10.1021/nn400026u 
+
+10 [3] Kurosawa T 1966 Monte Carlo calculation of hot electron problems Proceedings of the International Conference on the Physics of Semiconductors (Journal of the Physical Society of Japan, Supplement vol 21) (Kyoto, Japan) pp 424–426 URL 
+
+https://www.jps.or.jp/books/jpsjs/21/jpsj.21s.424.pdf 
+
+[4] Fawcett W, Boardman A D and Swain S 1970 Journal of Physics and Chemistry of Solids 31 
+
+1963–1990 https://doi.org/10.1016/0022-3697(70)90001-6 
+
+[5] Kurosawa T and Maeda H 1971 Journal of the Physical Society of Japan 31 668–678 ISSN 1347-4073 https://doi.org/10.1143/jpsj.31.668 
+
+[6] Rees H D 1969 Journal of Physics and Chemistry of Solids 30 643–655 
+
+https://doi.org/10.1016/0022-3697(69)90018-3 
+
+[7] Jacoboni C and Reggiani L 1983 Reviews of Modern Physics 55 645–705 
+
+https://doi.org/10.1103/RevModPhys.55.645 
+
+[8] Price P J 1979 Monte Carlo calculation of electron transport in solids Lasers, Junctions, Transport ed Willardson R K and Beer A C (New York: Elsevier) chap 4, pp 249–308 
+
+https://doi.org/10.1016/s0080-8784(08)60267-7 
+
+[9] Jacoboni C and Lugli P 1989 The Monte Carlo Method for Semiconductor Device Simulation 
+
+(Wien: Springer-Verlag) https://doi.org/10.1007/978-3-7091-6963-6 
+
+[10] Selberherr S 1984 Analysis and Simulation of Semiconductor Devices (Wien: Springer-Verlag) 
+
+https://doi.org/10.1007/978-3-7091-8752-4 
+
+[11] Hess K (ed) 1991 Monte Carlo Device Simulation: Full Band and Beyond (Boston: Kluwer Academic) https://doi.org/10.1007/978-1-4615-4026-7 
+
+[12] Moglestue C 1993 Monte Carlo Simulation of Semiconductor Devices (London: Chapman & Hall) https://doi.org/10.1007/978-94-015-8133-2 
+
+[13] Tomizawa K 1993 Numerical Simulation of Submicron Semiconductor Devices (Boston: Artech House) ISBN 978-0890066201 URL 
+
+https://api.semanticscholar.org/CorpusID:116364667 
+
+[14] Jungemann C and Meinerzhagen B 2003 Hierarchical Device Simulation: The Monte-Carlo Perspective (Wien: Springer-Verlag) https://doi.org/10.1007/978-3-7091-6086-2 
+
+[15] Fischetti M V and Laux S E 1988 Physical Review B 38 9721–9745 
+
+https://doi.org/10.1103/PhysRevB.38.9721 
+
+[16] Fischetti M V 1991 IEEE Transactions on Electron Devices 38 634–649 
+
+https://doi.org/10.1109/16.75176 
+
+[17] Kaasbjerg K, Thygesen K S and Jacobsen K W 2012 Physical Review B 85 115317 
+
+https://doi.org/10.1103/PhysRevB.85.115317 
+
+[18] Ma N and Jena D 2014 Physical Review X 4 011043 
+
+https://doi.org/10.1103/PhysRevX.4.011043 
+
+[19] Baugher B W H, Churchill H O H, Yang Y and Jarillo-Herrero P 2013 Nano Letters 13 
+
+4212–4216 https://doi.org/10.1021/nl401916s 
+
+[20] Radisavljevic B and Kis A 2013 Nature Materials 12 815–820 
+
+https://doi.org/10.1038/nmat3687 
+
+[21] Ahn J H, Parkin W M, Naylor C H, Johnson A T C and Drndi´ c M 2017 Scientific Reports 7
+
+4075 https://doi.org/10.1038/s41598-017-04350-z 
+
+[22] Li J, Peng S, Jin Z, Tian H, Wang T and Peng X 2023 Crystals 13 1501 
+
+https://doi.org/10.3390/cryst13101501 
+
+[23] Li X, Mullen J T, Jin Z, Borysenko K M, Buongiorno Nardelli M and Kim K W 2013 Physical Review B 87 115418 https://doi.org/10.1103/PhysRevB.87.115418 
+
+11 [24] Restrepo O D, Krymowski K E, Goldberger J and Windl W 2014 New Journal of Physics 16 
+
+105009 https://doi.org/10.1088/1367-2630/16/10/105009 
+
+[25] Gunst T, Markussen T, Palsgaard M L N, Stokbro K and Brandbyge M 2017 Physical Review B 96 161404 https://doi.org/10.1103/PhysRevB.96.161404 
+
+[26] Ponc´ e S, Li W, Reichardt S and Giustino F 2020 Reports on Progress in Physics 83 036501 
+
+https://doi.org/10.1088/1361-6633/ab6a43 
+
+[27] Fischetti M V and Vandenberghe W G 2016 Physical Review B 93 155413 
+
+https://doi.org/10.1103/PhysRevB.93.155413 
+
+[28] Schedin F, Geim A K, Morozov S V, Hill E W, Blake P, Katsnelson M I and Novoselov K S 2007 Nature Materials 6 652–655 https://doi.org/10.1038/nmat1967 
+
+[29] Perkins F K, Friedman A L, Cobas E, Campbell P M, Jernigan G G and Jonker B T 2013 
+
+Nano Letters 13 668–673 https://doi.org/10.1021/nl3043079 
+
+[30] Donarelli M and Ottaviano L 2018 Sensors 18 3638 https://doi.org/10.3390/s18113638 
+
+[31] Cho B, Hahm M G, Choi M, Yoon J, Kim A R, Lee Y J, Park S G, Kwon J D, Kim C S, Song M, Jeong Y, Nam K S, Lee S, Yoo T J, Kang C G, Lee B H, Ko H C, Ajayan P M and Kim D H 2015 Scientific Reports 5 8052 https://doi.org/10.1038/srep08052 
+
+[32] Sarkar D, Liu W, Xie X, Anselmo A C, Mitragotri S and Banerjee K 2014 ACS Nano 8
+
+3992–4003 https://doi.org/10.1021/nn5009148 
+
+[33] Lundstrom M 2000 Fundamentals of Carrier Transport 2nd ed (Cambridge, UK: Cambridge University Press) ISBN 978-0511618611 https://doi.org/10.1017/CBO9780511618611 
+
+[34] Ridley B K 1982 Journal of Physics C: Solid State Physics 15 5899–5917 
+
+https://doi.org/10.1088/0022-3719/15/28/021 
+
+[35] Sohier T, Calandra M and Mauri F 2016 Physical Review B 94 085415 
+
+https://doi.org/10.1103/PhysRevB.94.085415 
+
+[36] Hockney R W and Eastwood J W 1988 Computer Simulation Using Particles 1st ed (Boca Raton: CRC Press) ISBN 9780367806934 https://doi.org/10.1201/9780367806934 
+
+[37] Filipovic L et al. 2026 ViennaEMC: Ensemble Monte Carlo framework for semiconductors and metals institute for Microelectronics, TU Wien. URL 
+
+https://github.com/ViennaTools/ViennaEMC 
+
+[38] Giannozzi P, Andreussi O, Brumme T, Bunau O, Buongiorno Nardelli M, Calandra M, Car R, Cavazzoni C, Ceresoli D, Cococcioni M, Colonna N, Carnimeo I, Dal Corso A, de Gironcoli S, Delugas P, DiStasio Jr R A, Ferretti A, Floris A, Fratesi G, Fugallo G, Gebauer R, Gerstmann U, Giustino F, Gorni T, Jia J, Kawamura M, Ko H Y, Kokalj A, K¨ u¸ c¨ ukbenli E, Lazzeri M, Marsili M, Marzari N, Mauri F, Nguyen N L, Nguyen H V, Otero-de-la Roza A, Paulatto L, Ponc´ e S, Rocca D, Sabatini R, Santra B, Schlipf M, Seitsonen A P, Smogunov A, Timrov I, Thonhauser T, Umari P, Vast N, Wu X and Baroni S 2017 Journal of Physics: Condensed Matter 29 465901 https://doi.org/10.1088/1361-648X/aa8f79 
+
+[39] Perdew J P, Burke K and Ernzerhof M 1996 Physical Review Letters 77 3865–3868 
+
+https://doi.org/10.1103/PhysRevLett.77.3865 
+
+[40] Hamann D R 2013 Physical Review B 88 085117 
+
+https://doi.org/10.1103/PhysRevB.88.085117 
+
+[41] van Setten M J, Giantomassi M, Bousquet E, Verstraete M J, Hamann D R, Gonze X and Rignanese G M 2018 Computer Physics Communications 226 39–54 
+
+https://doi.org/10.1016/j.cpc.2018.01.012 
+
+[42] Illarionov Y Y, Banshchikov A G, Polyushkin D K, Wachter S, Knobloch T, Thesberg M, Mennel L, Paur M, St¨ oger-Pollach M, Steiger-Thirsfeld A, Vexler M I, Waltl M, Sokolov N S, Mueller T and Grasser T 2019 Nature Electronics 2 230–235 
+
+https://doi.org/10.1038/s41928-019-0256-8 
+
+12 [43] Kumar S, Sharma A, Sao A K, Singh J P, Chowdhuri A and Tomar M 2025 Chemical Physics Impact 10 100847 https://doi.org/10.1016/j.chphi.2025.100847 
+
+[44] Al Mamun M S, Takaoka T, Wang Z and Komeda T 2025 ChemistrySelect 10 e202403982 
+
+https://doi.org/10.1002/slct.202403982 
+
+[45] Giustino F 2017 Reviews of Modern Physics 89 015003 
+
+https://doi.org/10.1103/RevModPhys.89.015003 
+
+[46] Ponc´ e S, Margine E R, Verdi C and Giustino F 2016 Computer Physics Communications 209 
+
+116–133 https://doi.org/10.1016/j.cpc.2016.07.028 
+
+[47] Filipovic L 2026 Ensemble Monte Carlo and DFPT simulation data for charge transport and gas sensing in monolayer MoS 2 dataset URL https://doi.org/10.48436/87zq1-28246 https://doi.org/10.48436/87zq1-28246 
+
+13

@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-25",
+  "date": "2026-07-25",
+  "generated_at": "2026-07-25T21:13:49",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/25/2607.16867v1-operando-observation-of-strain-relaxation-in-fatigued-pearlitic-steel",
+      "section": "quick",
+      "title_en": "Operando observation of strain relaxation in fatigued pearlitic steel",
+      "authors": "Louis Lesage, Johan Ahlström, Yubin Zhang, Can Yıldırım",
+      "date": "2026-07-18",
+      "pdf": "https://arxiv.org/pdf/2607.16867v1",
+      "score": "7.0",
+      "evidence": "原位观察应变松弛",
+      "tldr": "珠光体钢因层状铁素体-渗碳体结构广泛应用于铁路轮轨，但在循环载荷和摩擦热下会软化导致疲劳失效。本研究利用暗场X射线显微镜原位观察疲劳珠光体晶粒在退火至550°C时的响应。结果表明渗碳体片层抑制晶格旋转和亚晶形成，但弹性应变展宽减少近40%，恢复始于250°C以下。该松弛归因于片层间位错的短程湮灭，揭示了铁路用钢宏观软化的晶粒尺度机制。",
+      "tags": "query:iscat",
+      "abstract_en": "Pearlitic steels are the material of choice for railway wheels and rails, where their lamellar ferrite-cementite structure balances cost, strength, and wear resistance. However, in use, cyclic loading combined with frictional heat softens the steel, promoting fatigue and eventual failure. Here we use Dark-Field X-ray Microscopy (DFXM) to follow, operando, the grain-scale response of a fatigued pearlitic colony during annealing up to 550 °C. Orientation maps reveal negligible lattice rotation and no sub-cell formation, indicating that the cementite lamellae suppress long-range dislocation motion. Strain maps nonetheless show pronounced relaxation: the elastic strain spread narrows by nearly 40%, with recovery starting below 250 °C, within the operating temperatures of railway wheels. We attribute this relaxation to short-range annihilation of dislocations confined between lamellae, linking grain-scale strain recovery to the macroscopic softening of pearlitic railway steels in service.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/25/2607.18895v1-multiscale-ensemble-monte-carlo-of-transport-and-gas-sensing-in-monolayer-mos2",
+      "section": "quick",
+      "title_en": "Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS$_2$",
+      "authors": "Lado Filipovic",
+      "date": "2026-07-21",
+      "pdf": "https://arxiv.org/pdf/2607.18895v1",
+      "score": "6.0",
+      "evidence": "MoS2中电荷传输的蒙特卡罗模拟",
+      "tldr": "单层MoS₂兼具带隙与全表面结构，适用于场效应晶体管和气体传感，但缺乏物理基础的输运模型。本文基于ViennaEMC构建自洽系综蒙特卡洛框架，纳入完整散射机制并通过DFPT验证参数。该模型复现了实验转移特性和气体传感响应。工作实现了从微观散射到器件性能的多尺度物理预测。",
+      "tags": "query:iscat",
+      "abstract_en": "Two-dimensional semiconductors, such as monolayer MoS$_2$, combine a technologically useful band gap with an all-surface geometry, making them attractive both as field-effect-transistor channels and as chemically sensitive devices. Predictive device design requires a transport model that is (i) physically grounded rather than empirical, (ii) validated against experiments, and (iii) able to span the scales from electron-phonon coupling to terminal current and sensor response. We present a self-consistent ensemble Monte Carlo (EMC) framework for monolayer MoS$_2$ built on the ViennaEMC solver, comprising a Boltzmann-transport kernel with a full intrinsic and extrinsic scattering stack (deformation-potential acoustic and intervalley phonons, polar-optical Fröhlich and piezoelectric coupling, remote substrate phonons, screened charged-impurity and surface-roughness scattering), degenerate free-carrier statistics, and a self-consistent Poisson coupling. The intrinsic transport parameters are verified against first-principles density-functional perturbation theory (DFPT), and seven quantities (lattice constant, conduction-band effective mass, band gap, Born effective charges, the longitudinal-optical phonon energy, and both in-plane sound velocities) agree with the reference parametrization. In a multiscale coupling, the EMC velocity-field characteristic feeds a one-dimensional velocity-saturation channel model, which captures the velocity-saturated field dependence and reproduces the measured transfer characteristics of a CVD monolayer device in air and vacuum. Finally, an ambient/adsorbate extension reproduces the measured conductivity response to oxygen partial pressure and the concentration dependence of NO$_2$ and NH$_3$ sensing measured in several independent devices.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
