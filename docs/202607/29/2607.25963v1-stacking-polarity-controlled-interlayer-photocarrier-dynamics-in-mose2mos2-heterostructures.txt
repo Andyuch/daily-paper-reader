@@ -1,0 +1,212 @@
+Title: Stacking Polarity-Controlled Interlayer Photocarrier Dynamics in MoSe2/MoS2 Heterostructures
+
+URL Source: https://arxiv.org/pdf/2607.25963v1
+
+Published Time: Wed, 29 Jul 2026 01:16:07 GMT
+
+Number of Pages: 18
+
+Markdown Content:
+# Stacking Polarity–Controlled Interlayer Photocarrier Dynamics in MoSe 2/MoS 2
+
+# Heterostructures 
+
+Gbenga S. Agunbiade, Ting Zheng, and Hui Zhao ∗
+
+Department of Physics and Astronomy, The University of Kansas, Lawrence, Kansas 66045, United States 
+
+E-mail: huizhao@ku.edu 
+
+Abstract 
+
+Control of interlayer photocarrier dynamics is central to optoelectronic applica-tions of van der Waals heterostructures, yet deterministic and spatially uniform tuning strategies remain limited. Here we show that stacking polarity provides a global con-trol parameter for photocarrier dynamics in MoSe 2/MoS 2 heterostructures. By com-paring hexagonal (2H) and rhombohedral (3R) MoS 2 bilayers and engineering opposite interface terminations in 3R stacking, we resolve stacking-dependent interlayer charge-transfer dynamics using ultrafast pump–probe spectroscopy. While charge transfer in the 2H heterostructure occurs faster than the experimental resolution, the 3R het-erostructures show time-resolvable charge transfer that slows from 0 .25 to 0 .37 ps depending on stacking polarity. Furthermore, the interlayer exciton lifetime is tuned from ∼40 to ∼170 ps. These effects arise from stacking-induced layer polarization in 3R MoS 2, which modulates interfacial wavefunction overlap. 
+
+1arXiv:2607.25963v1 [cond-mat.mtrl-sci] 28 Jul 2026 Keywords 
+
+transition metal dichalcogenide, carrier dynamics, rhombohedral stacking, van der Waals heterostructure, transient absorption The ability to control photocarrier generation, transport, and recombination dynam-ics is central to optoelectronic technologies, including photodetectors, photovoltaics, and light-emitting devices. In conventional semiconductors, these processes are largely intrinsic material properties dictated by chemical composition and crystal symmetry, offering limited post-synthesis tunability. Chemical alloying and heteroatomic substitution provide routes to modify electronic structure and carrier lifetimes; however, such approaches inevitably alter multiple material parameters simultaneously and may introduce disorder or inhomogeneity. More recently, van der Waals heterostructures based on two-dimensional (2D) materials have opened new opportunities for engineering charge transport and recombination. 1–5 In particular, moir´ e superlattices in twisted heterobilayers have demonstrated spatially modu-lated interlayer coupling and emergent correlated phenomena. 6–8 However, moir´ e engineering intrinsically produces in-plane variations of electronic properties and requires precise angu-lar control, which may limit scalability and uniform device implementation. A critical need therefore remains for deterministic and globally uniform strategies to tailor interlayer pho-tocarrier dynamics without introducing chemical disorder or spatial inhomogeneity. Layered transition metal dichalcogenides (TMDs) provide a versatile platform for stacking-engineered functionality because multiple polytypes with distinct stacking sequences can exist within the same chemical composition. While most previous studies have focused on the hexagonal (2H) phase, rhombohedral (3R) TMDs have recently attracted attention due to their broken inversion symmetry and stacking-induced electronic asymmetry. 9–11 Unlike 2H bilayers, which preserve inversion symmetry and yield layer-symmetric electronic states, 3R stacking generates inequivalent layers and can produce layer-polarized conduction and valence band states. 9,12–18 This intrinsic layer selectivity introduces a new degree of freedom: 2the electronic wavefunction distribution can be controlled by stacking sequence without alter-ing chemical composition or twist angle. Such stacking-dependent wavefunction localization suggests that interfacial coupling to an adjacent semiconductor layer may depend sensitively on which atomic plane forms the interface. Therefore, TMD bilayers offer a promising route to engineer interlayer charge transfer and recombination dynamics through deterministic stacking orientation. Here we demonstrate that stacking polarity in monolayer/bilayer TMD heterostructures enables deterministic control of interlayer photocarrier dynamics. By comparing 2H and 3R MoS 2 bilayers interfaced with monolayer MoSe 2, we show that both the interlayer charge transfer time and the interlayer exciton recombination lifetime depend sensitively on stacking sequence and interface termination. In particular, the asymmetric layer polarization unique to 3R stacking enables interface-selective carrier transfer and recombination. These results establish vertical stacking orientation as a global and chemically invariant control parameter for tailoring nonequilibrium carrier processes in van der Waals heterostructures. Figure 1 illustrates the heterostructures investigated to probe stacking-order-dependent photocarrier dynamics in systems composed of monolayer (1L) MoSe 2 and bilayer (2L) MoS 2.Panel (a) shows a representative heterostructure formed by a MoSe 2 monolayer and a 2H MoS 2 bilayer, hereafter denoted as 1L/2H. The corresponding schematic band alignment is shown in panel (c). In monolayer MoSe 2, both the conduction band minimum (CBM) and valence band maximum (VBM) reside at the K point. For 2H MoS 2 bilayers, the CBM remains at the K valley and lies energetically below that of MoSe 2, while the VBM shifts to the Γ point and remains lower than that of MoSe 2. This type-II band alignment favors electron transfer from photoexcited MoSe 2 into MoS 2, while holes remain confined in MoSe 2.In the 2H bilayer, the two MoS 2 layers are electronically equivalent due to inversion symmetry. The two layers are rotated by π such that the Mo (S) atoms in one layer are aligned with the S (Mo) atoms in the other layer, as indicated by the dotted lines. As a result of this symmetry, the electron wavefunction is distributed symmetrically across the 3MoS 2         
+
+> K
+> +
+> MX
+> K
+> MoSe 2
+> SiO 2/Si Substrate
+> M Layer
+> X Layer
+> 3R MoS 2
+> MoSe 2
+> MoSe 2
+> Pump
+> CT
+> Probe
+> MoS 2
+> K
+> +
+> MX
+> K
+> MoSe 2
+> Pump
+> CT
+> Probe
+> (b)
+> (d) (e)
+> 1L/M/X 1L/X/M
+> 1L/M/X 1L/X/M
+> 2H MoS 2
+> MoSe 2
+> MoS 2
+> K
+> +
+> MoSe 2
+> _
+> Pump
+> CT
+> Probe
+> (c) 1L/2H
+> SiO 2/Si Substrate
+> (a)
+> _
+> _
+> _
+> _
+> _
+> _+
+> _
+> _+
+> _
+> _+
+> _
+
+Figure 1: Illustrations of the lattice structure, band alignment, and stacking-dependent photocarrier dynamics in the investigated heterostructures. (a) Heterostructure composed of a monolayer MoSe 2 and a bilayer 2H MoS 2, denoted as 1L/2H. (b) Two heterostructures fabricated on the same 3R MoS 2 bilayer flake, where monolayer MoSe 2 interfaces with either the metal (M) layer or the chalcogen (X) layer of MoS 2. These configurations are labeled as 1L/M/X and 1L/X/M, respectively, highlighting the distinct interfacial MoS 2 layers. (c)–(e) Schematic band alignment and expected photocarrier dynamics in these heterostructures following optical excitation of the MoSe 2 layer, including interlayer charge transfer (CT, solid arrows) and electron (e)–hole (+) recombination (dashed arrows). two layers. Following interlayer charge transfer (CT), the transferred electron in MoS 2 forms an interlayer exciton with the hole remaining in MoSe 2, and recombination of this spatially indirect exciton determines the carrier lifetime. We fabricated devices with either MoS 2
+
+placed on top of MoSe 2 or vice versa. Owing to the inversion symmetry of 2H MoS 2, these two configurations are structurally equivalent apart from their orientation relative to the SiO 2/Si substrate and are therefore expected to exhibit identical interlayer carrier dynamics. In contrast, the situation differs qualitatively for heterostructures incorporating 3R-stacked MoS 2 bilayers, as illustrated in Figure 1(b). In 3R MoS 2, the two layers are not rotated, and the S atoms in one layer (denoted as the X layer) align with the Mo atoms in the adjacent layer (denoted as the M layer), as indicated by the dotted lines. In contrast, the Mo atoms in that layer do not align with atoms in the neighboring layer. As a result, the 4M and X layers are nonequivalent, breaking inversion symmetry and generating an intrinsic out-of-plane polarization. This stacking-induced asymmetry lifts the layer degeneracy of the electronic states at the K valley: the conduction band splits into two branches predominantly localized in the M and X layers, respectively, with the M-layer branch lower in energy, as schematically shown in panels (d) and (e). 9,12–16 Although a similar splitting occurs in the valence band, its influence is less significant here because the VBM of bilayer MoS 2 lies at the Γ point. When a 3R MoS 2 bilayer forms a heterostructure with monolayer MoSe 2, the interface can occur at either the M layer or the X layer, as indicated in panel (b). Because the two surfaces of a 3R bilayer cannot be optically distinguished prior to stacking, we employed a single large MoS 2 bilayer flake to construct both configurations. The MoS 2 bilayer was first transferred onto a MoSe 2 monolayer to form one heterostructure region. Subsequently, a second MoSe 2 monolayer was transferred onto a different region of the same MoS 2 flake. This fabrication strategy ensures that the two resulting heterostructures, labeled 1L/M/X and 1L/X/M, possess opposite stacking polarities while sharing identical MoS 2 thickness and crystal quality. Panels (d) and (e) schematically illustrate the hypothesized stacking-dependent carrier dynamics. In the 1L/M/X configuration, the lower-energy conduction-band branch localized in the M layer directly interfaces with MoSe 2. Electron transfer from MoSe 2 into MoS 2 there-fore involves minimal spatial separation, leading to stronger interlayer coupling and faster CT. The close proximity between electrons in the interfacial M layer and holes in MoSe 2 is also expected to enhance interlayer recombination, shortening the carrier lifetime. In con-trast, for the 1L/X/M configuration, the M layer hosting the CBM is positioned farther from the interface. The increased spatial separation reduces interlayer wavefunction overlap, which is expected to slow down the CT process and prolong the interlayer recombination lifetime. Both 3R-based heterostructures are therefore anticipated to exhibit carrier dynam-ics distinct from the 1L/2H case. Together, this set of heterostructures provides a controlled 51.2 1.4 1.6 1.8 2.0 2.2 0.1 110 100 PL (Counts per Second) Photon Energy (eV) 1L MoSe 22L 2H MoS 22H on 1L 1L on 2H        
+
+> 1L/M/X
+> 1L on 2H 2H on 1L 1.2 1.4 1.6 1.8 2.0 2.2 0.1 110 100 PL (Counts per Second) Photon Energy (eV) 1L MoSe 22L 3R MoS 21L/M/X 1L/X/M 1L/X/M 5 μm 5 μm (a) (b) (c) (d)
+
+Figure 2: Sample characterization by optical microscopy and photoluminescence (PL) spec-troscopy. (a) Optical microscopy image of the heterostructure composed of a monolayer (1L) MoSe 2 and a bilayer (2L) 2H MoS 2, containing regions of 1L-on-2H and 2H-on-1L stacking configurations. (b) Room-temperature PL spectra measured from different regions of the sample shown in (a). (c) Optical microscopy image of the heterostructure formed with a 3R MoS 2 bilayer. (d) Corresponding room-temperature PL spectra measured from selected regions of the 3R-based heterostructure. platform to systematically investigate stacking-order-tuned photocarrier dynamics in TMD systems. The heterostructure samples were fabricated using standard mechanical exfoliation and dry-transfer techniques (see Supporting Information). Figure 2(a) shows an optical mi-croscopy image of the heterostructures based on a 2H MoS 2 bilayer, 1L/2H, containing re-gions with two equivalent stacking configurations: 2H-on-1L and 1L-on-2H. Room-temperature photoluminescence (PL) spectroscopy was performed to characterize the samples. Under continuous-wave excitation at 3.06 eV with a power of 1 μW, a strong PL peak centered at approximately 1.59 eV is observed from the MoSe 2 monolayer, whereas the 2H MoS 2 bilayer exhibits weaker peaks due to its indirect band structure. In the overlapping heterostructure regions, the MoSe 2 PL intensity is quenched by approximately two orders of magnitude, indicating efficient interlayer charge transfer which is consistent with high interfacial quality. 6Similarly, Figure 2(c) shows an optical image of the heterostructures incorporating a 3R MoS 2 bilayer with different interfaces, 1L/M/X and 1L/X/M. Pronounced PL quenching is also observed in the corresponding overlapping regions, as shown in Figure 2(d), confirming strong interlayer coupling in the 3R-based heterostructures. The interlayer CT process in these heterostructures was investigated using the pump– probe configuration illustrated in Figure 1. A 1.59 eV pump pulse selectively excites in-tralayer excitons in MoSe 2, as it is resonant with its optical bandgap. The photoexcited electrons are expected to transfer to MoS 2, and their dynamics are time-resolved using a 1.82 eV probe pulse tuned to the direct optical transition of MoS 2 at the K valley. The carrier population in MoS 2 is monitored via differential reflectance of the probe, defined as ∆R/R 0 = ( R − R0)/R 0, where R and R0 denote the reflectance of the sample with and without the pump, respectively (see Supporting Information). 19 Because MoS 2 is not di-rectly photoexcited at 1.59 eV, the signal can be attributed to electrons transferred from MoSe 2. Although the K-valley transitions of the M and X layers are degenerate, and the probe therefore senses carrier populations in both layers, the signal can be primarily asso-ciated with electrons in the M layer. This is because the M layer hosts the lower-energy conduction-band state, such that electrons preferentially relax into and accumulate in this layer once quasi-equilibrium is established. Figure 3 summarizes the time-resolved differential reflectance measured from the three heterostructures at room temperature and under identical experimental conditions. In the 1L/2H heterostructure [orange symbols in Figure 3(a)], the rising edge of the signal is well described by the integral of a Gaussian function with a full width at half maximum (FWHM) of 0.30 ps (dashed line), corresponding to the convolution of the 0.20 ps pump and probe pulses (the solid line). This indicates that the interlayer CT occurs on a time scale shorter than the experimental temporal resolution. Such ultrafast CT is commonly observed in monolayer/monolayer TMD heterostructures with type-II band alignment. 20–27 
+
+To exclude possible substrate effects on carrier dynamics, 28–30 we also measured a 1L/2H 7-0.5 0.0 0.5 1.0 1.5 0.0 0.5 1.0 1.5 2.0         
+
+> CT = 0.22 ps 1L/M/X
+> R/R0 (10 -2 )Probe Delay (ps) 0100 200 300 400 500 0.0 0.5 1.0 1.5 2.0
+> 1=11 ps;
+> 2=41 ps
+> R/R0 (10  -2 )Probe Delay (ps)
+
+(a) -0.5 0.0 0.5 1.0 1.5 0.0 0.5 1.0 1.5 1L/2H FWHM=0.30 ps              
+
+> R/R0 (10  -2 )Probe Delay (ps) 2H on 1L 1L on 2H 0100 200 300 400 500 0.0 0.5 1.0 1.5
+> 1=10 ps;
+> 2=130 ps
+> 1=15 ps,
+> 2=132 ps
+> R/R0 (10  -2 )Probe Delay (ps) -0.5 0.0 0.5 1.0 1.5 0.0 0.5 1.0 1.5
+> CT = 0.38 ps 1L/X/M
+> R/R0 (10 -2 )Probe Delay (ps)
+
+(b) (c) (d) (e) (f) 0 100 200 300 400 500 0.0 0.5 1.0 1.5    
+
+> 1=11 ps, 2=169 ps
+> R/R0 (10  -2 )Probe Delay (ps) 0.0 0.5 01Normalized  R/R0Probe Delay (ps)
+
+Figure 3: Photocarrier dynamics measured in heterostructures composed of monolayer MoSe 2
+
+and bilayer MoS 2. A 1.59 eV pump selectively excites the MoSe 2 layer, while a 1.82 eV probe monitors the transient response of MoS 2. Panels (a), (c), and (e) show results from the 1L/2H, 1L/M/X, and 1L/X/M heterostructures, respectively, over a short probe-delay range. Panels (b), (d), and (f) show the corresponding datasets over a longer delay-time range. The inset in (e) provides a direct comparison of the normalized rising edges of the signals. heterostructure with the stacking sequence inverted. As shown by the green symbols in Figure 3(a,b), the dynamics are indistinguishable from those of the original configuration. Because the two layers of the inversion-symmetric 2H MoS 2 bilayer are electronically equiv-alent, identical dynamics are expected. This agreement confirms that the observed carrier behavior is intrinsic to the heterostructure and not significantly influenced by the substrate. We next examined heterostructures incorporating 3R-stacked MoS 2 bilayers. In contrast to the 1L/2H case, the interlayer CT becomes clearly time-resolvable. For the 1L/M/X heterostructure, the transient signal exhibits a rising edge slower than the instrumental response [Figure 3(c)]. Fitting the rise with a CT model obtained by convolving a single-8exponential response, ∆ R/R 0 ∝ 1−exp[ −(t−t0)/τ CT ], with a Gaussian instrument response function (FWHM = 0.30 ps), as indicated by the solid line in Figure 3(c), yields τCT =0.22 ps. In the 1L/X/M heterostructure, the CT time further increases to τCT = 0 .38 ps [Figure 3(e)]. Because CT in the 1L/2H heterostructure is faster than the temporal resolution, these results demonstrate that stacking order tunes the CT time by several-fold. Such variation can influence CT efficiency, as interlayer CT competes with ultrafast carrier cooling and intralayer recombination. Moreover, stacking-controlled CT directly impacts the temporal response of optoelectronic devices. The stacking dependence of CT originates from symmetry-controlled wavefunction local-ization. In the inversion-symmetric 2H bilayer, the electron wavefunction at the K valley extends across both layers, 12 resulting in strong interfacial electronic coupling and ultra-fast CT, similar to monolayer/monolayer heterostructures. 20–27 In contrast, broken inversion symmetry in 3R MoS 2 lifts the layer degeneracy and produces layer-polarized conduction-band states, in which the two branches are predominantly localized in different layers, with the lower-energy branch residing primarily in the M layer. 11–13 The energy splitting between these branches is on the order of tens of meV, 11,12 which can significantly influence exciton dynamics at room temperature. 17 When forming heterostructures, the layer-selective elec-tronic structure in 3R MoS 2 reduces the effective interfacial coupling with MoSe 2, thereby slowing CT. The further reduction of the CT rate in 1L/X/M compared to 1L/M/X arises from the increased spatial separation between the electron-localized M layer and the inter-face, as illustrated in Figure 1(d,e), due to the conduction-band splitting. The stacking-dependent CT time observed here represents a rare case in which interlayer CT becomes directly time-resolvable, providing a new platform to investigate CT dynam-ics in TMD heterostructures. In general, factors such as strain, interfacial disorder, and twist-angle variations are expected to influence the CT time. However, in previously stud-ied monolayer/monolayer heterostructures, CT is ultrafast and often occurs faster than the 9experimental temporal resolution, remaining effectively unresolvable across a wide range of twist angles, temperatures, dielectric environments, and excitation conditions. 22,26,31–33 In contrast, the systematic and reproducible differences observed here demonstrate that stack-ing polarity provides a unique and effective means to tune and directly resolve interlayer CT processes. This capability could enable further investigations of how these factors influence the CT time. The decay dynamics, shown in the right column of Figure 3, reveal pronounced stacking-dependent tuning of the interlayer exciton lifetime. The decay traces are well fitted by a biexponential function. For the two 1L/2H heterostructure, the extracted time constants are comparable. The longer component τ2 of about 130 ps is attributed to recombination of interlayer excitons formed by transferred electrons in MoS 2 and holes in MoSe 2. In the 1L/M/X heterostructure, the interlayer exciton lifetime decreases to 41 ps, consistent with enhanced electron–hole wavefunction overlap at the interface. In contrast, the 1L/X/M het-erostructure exhibits a prolonged lifetime of 169 ps, corresponding to increased electron–hole separation. These results demonstrate that stacking order tunes the interlayer exciton life-time by several-fold, paralleling the systematic control observed for the CT dynamics. An additional decay channel ( τ1) in the range of 10–15 ps is observed in all heterostruc-tures. This component is attributed to intralayer dynamics in MoSe 2, arising from regions with reduced interlayer coupling. In TMD heterostructures fabricated by exfoliation and transfer techniques, similar dynamics have been reported and are commonly associated with areas of imperfect interfacial contact. 21,34,35 In such regions, photoexcited carriers do not effi-ciently undergo interlayer charge transfer and instead relax as in isolated monolayers. These regions are typically attributed to trapped residues or interfacial contamination introduced during fabrication. Thermal annealing can cause such residues to migrate and aggregate, leading to the formation of regions with strong interlayer coupling as well as regions with reduced coupling that behave more like isolated monolayers. 36,37 The similar time constants observed across all heterostructures further support this assignment. 10 -0.5 0.0 0.5 1.0 0.0 0.5 1.0 1.5 2.0 1L/M/X                                                              
+
+> R/R0 (10 -2 )Probe Delay (ps) CT Time: 0.25 0.04 ps 050 100 150 200 0.0 0.5 1.0 1.5 2.0 1L/M/X Pump Fluence ( J cm -2 ): 612 18 24 30 36
+> R/R0 (10 -2 )Probe Delay (ps)
+> 1=10 2 ps,
+> 2=40 5 ps 0510 15 20 25 30 35 40 0.0 0.5 1.0 1.5 2.0 1L/M/X Peak  R/R0 (10 -2 )Pump Fluence ( J cm -2 )-0.5 0.0 0.5 1.0 0.0 0.5 1.0 1.5 CT Time: 0.37 0.05 ps 1L/X/M
+> R/R0 (10 -2 )Probe Delay (ps) 0100 200 300 400 500 0.0 0.5 1.0 1.5 1L/X/M Pump Fluence ( J cm -2 ): 612 18 24 30 36
+> R/R0 (10 -2 )Probe Delay (ps)
+> 1= 11 2 ps,
+> 2=160 10 ps 0510 15 20 25 30 35 40 0.0 0.5 1.0 1.5 1L/X/M Peak  R/R0 (10 -2 )Pump Fluence ( J cm -2 )
+
+(a) (b) (c) (d) (e) (f) Figure 4: Pump-fluence dependence of the photocarrier dynamics measured in heterostruc-tures incorporating 3R MoS 2 bilayers using a 1.59 eV pump and a 1.82 eV probe. (a) Peak differential reflectance near zero probe delay as a function of pump fluence for the 1L/M/X heterostructure, demonstrating a linear fluence dependence. (b) and (c) Time-resolved differ-ential reflectance with various pump fluence and fits (see text), showing minimal dependence of the dynamics on pump fluence. (d)–(f) Corresponding measurements for the 1L/X/M het-erostructure. To validate our interpretation of the time-resolvable CT process in 3R MoS 2–based het-erostructures and to exclude possible effects arising from different injected carrier densities associated with stacking order, we performed measurements on the 1L/M/X and 1L/X/M samples over a range of pump fluences. The results are summarized in Figure 4. The peak differential reflectance near zero delay scales linearly with pump fluence for both heterostruc-tures [Figure 4(a,d)], confirming that the signal is proportional to the carrier density. The rising edge of the signal, modeled using the CT model convolved with the instrument response function, remains unchanged with fluence. The extracted CT times [Figure 4(b,e)] show no systematic fluence dependence, yielding average values of 0 .25 ± 0.04 ps and 0 .37 ± 0.05 ps for the 1L/M/X and 1L/X/M heterostructures, respectively. Likewise, the interlayer exci-ton recombination lifetimes exhibit no observable dependence on pump fluence, as shown in Figure 4(c,f). These results confirm that the stacking-dependent CT and recombination 11 dynamics arise from structural differences rather than carrier-density effects. In summary, we demonstrate that vertical stacking order provides a deterministic and chemically invariant means to control interlayer photocarrier dynamics in TMD heterostruc-tures. By comparing 2H and 3R MoS 2 bilayers interfaced with monolayer MoSe 2, we show that both the interlayer charge transfer time and the interlayer exciton recombination life-time can be tuned by several-fold through stacking polarity. The broken inversion symmetry and resulting layer-polarized electronic states in 3R MoS 2 enable interface-selective inter-layer coupling, enabling systematic control of electron transfer and recombination without modifying chemical composition or introducing twist-angle–induced spatial inhomogeneity. These findings establish stacking order as a global control parameter for nonequilibrium car-rier dynamics and provide a practical pathway for engineering ultrafast charge separation, carrier lifetime, and device response time in van der Waals optoelectronic systems. 
+
+# Acknowledgement 
+
+Research supported by the U.S. Department of Energy, Office of Basic Energy Sciences, Division of Materials Sciences and Engineering under Award DE-SC0020995. 
+
+# Supporting Information Available 
+
+Additional experimental details, including sample fabrication, photoluminescence, and ul-trafast pump–probe techniques. 
+
+# References 
+
+(1) Wang, Q. H.; Kalantar-Zadeh, K.; Kis, A.; Coleman, J. N.; Strano, M. S. Electron-ics and Optoelectronics of Two-Dimensional Transition Metal Dichalcogenides. Nat. Nanotechnol. 2012 , 7, 699–712. 12 (2) Lin, Z.; McCreary, A.; Briggs, N.; Subramanian, S.; Zhang, K. H.; Sun, Y. F.; Li, X. F.; Borys, N. J.; Yuan, H. T.; Fullerton-Shirey, S. K.; Chernikov, A.; Zhao, H.; McDon-nell, S.; Lindenberg, A. M.; Xiao, K.; LeRoy, B. J.; Drndic, M.; Hwang, J. C. M.; Park, J.; Chhowalla, M.; Schaak, R. E.; Javey, A.; Hersam, M. C.; Robinson, J.; Ter-rones, M. 2D Materials Advances: From Large Scale Synthesis and Controlled Het-erostructures to Improved Characterization Techniques, Defects and Applications. 2D Mater. 2016 , 3, 042001. (3) Geim, A. K.; Grigorieva, I. V. Van der Waals Heterostructures. Nature 2013 , 499 ,419–425. (4) Liu, Y.; Weiss, N. O.; Duan, X.; Cheng, H.-C.; Huang, Y.; Duan, X. Van der Waals Heterostructures and Devices. Nat. Rev. Mater. 2016 , 1, 16042. (5) Novoselov, K. S.; Mishchenko, A.; Carvalho, A.; Neto, A. H. C. 2D Materials and van der Waals Heterostructures. Science 2016 , 353 , aac9439. (6) Seyler, K. L.; Rivera, P.; Yu, H. Y.; Wilson, N. P.; Ray, E. L.; Mandrus, D. G.; Yan, J. Q.; Yao, W.; Xu, X. D. Signatures of Moir´ e-Trapped Valley Excitons in MoSe 2/WSe 2 Heterobilayers. Nature 2019 , 567 , 66. (7) Tran, K.; Moody, G.; Wu, F. C.; Lu, X. B.; Choi, J.; Kim, K.; Rai, A.; Sanchez, D. A.; Quan, J. M.; Singh, A.; Embley, J.; Zepeda, A.; Campbell, M.; Autry, T.; Taniguchi, T.; Watanabe, K.; Lu, N. S.; Banerjee, S. K.; Silverman, K. L.; Kim, S.; Tutuc, E.; Yang, L.; MacDonald, A. H.; Li, X. Q. Evidence for Moir´ e Excitons in van der Waals Heterostruc-tures. Nature 2019 , 567 , 71–75. (8) Jin, C. H.; Regan, E. C.; Yan, A. M.; Utama, M. I. B.; Wang, D. Q.; Zhao, S. H.; Qin, Y.; Yang, S. J.; Zheng, Z. R.; Shi, S. Y.; Watanabe, K.; Taniguchi, T.; Tongay, S.; Zettl, A.; Wang, F. Observation of Moir´ e Excitons in WSe 2/WS 2 Heterostructure Superlattices. 
+
+Nature 2019 , 567 , 76–80. 13 (9) Paradisanos, I.; Shree, S.; George, A.; Leisgang, N.; Robert, C.; Watanabe, K.; Taniguchi, T.; Warburton, R. J.; Turchanin, A.; Marie, X.; Gerber, I. C.; Urbaszek, B. Controlling Interlayer Excitons in MoS 2 Layers Grown by Chemical Vapor Deposition. 
+
+Nat. Commun. 2020 , 11 , 2391. (10) Chen, J.; Zhao, X.; Grinblat, G.; Chen, Z.; Tan, S. J. R.; Fu, W.; Ding, Z.; Abdelwa-hab, I.; Li, Y.; Geng, D.; Liu, Y.; Leng, K.; Liu, B.; Liu, W.; Tang, W.; Maier, S. A.; Pennycook, S. J.; Loh, K. P. Homoepitaxial Growth of Large-Scale Highly Organized Transition Metal Dichalcogenide Patterns. Adv. Mater. 2018 , 30 , 1704674. (11) Liang, J.; Yang, D.; Wu, J.; Dadap, J. I.; Watanabe, K.; Taniguchi, T.; Ye, Z. Optically Probing the Asymmetric Interlayer Coupling in Rhombohedral-Stacked MoS 2 Bilayer. 
+
+Phys. Rev. X 2022 , 12 , 041005. (12) He, J. G.; Hummer, K.; Franchini, C. Stacking Effects on the Electronic and Optical Properties of Bilayer Transition Metal Dichalcogenides MoS 2, MoSe 2, WS 2, and WSe 2.
+
+Phys. Rev. B 2014 , 89 , 075409. (13) Suzuki, R.; Sakano, M.; Zhang, Y. J.; Akashi, R.; Morikawa, D.; Harasawa, A.; Yaji, K.; Kuroda, K.; Miyamoto, K.; Okuda, T.; Ishizaka, K.; Arita, R.; Iwasa, Y. Valley-dependent spin polarization in bulk MoS 2 with broken inversion symmetry. Nat. Nan-otechnol. 2014 , 9, 611–617. (14) Yang, D.; Wu, J.; Zhou, B. T.; Liang, J.; Ideue, T.; Siu, T.; Awan, K. M.; Watan-abe, K.; Taniguchi, T.; Iwasa, Y.; Franz, M.; Ye, Z. Spontaneous-Polarization-Induced Photovoltaic Effect in Rhombohedrally Stacked MoS 2. Nat. Photonics 2022 , 16 , 469– 474. (15) Wu, J.; Yang, D.; Liang, J.; Werner, M.; Ostroumov, E.; Xiao, Y.; Watanabe, K.; Taniguchi, T.; Dadap, J. I.; Jones, D.; Ye, Z. Ultrafast Response of Spontaneous Pho-tovoltaic Effect in 3R-MoS 2-Based Heterostructures. Sci. Adv. 2022 , 8, eade3759. 14 (16) Dong, Y.; Yang, M. M.; Yoshii, M.; Matsuoka, S.; Kitamura, S.; Hasegawa, T.; Ogawa, N.; Morimoto, T.; Ideue, T.; Iwasa, Y. Giant Bulk Piezophotovoltaic Effect in 3R-MoS 2. Nat. Nanotechnol. 2023 , 18 , 36–41. (17) Agunbiade, G.; Rafizadeh, N.; Scott, R.; Zhao, H. Transient Absorption Measurements of Excitonic Dynamics in 3R-MoS 2. Phys. Rev. B 2024 , 109 , 035410. (18) Agunbiade, G. S.; Rafizadeh, N.; Zheng, T.; Zhao, H. Fast Superdiffusive Transport of Dipolar Excitons in 3R-Stacked MoS 2 Bilayers. ACS Nano 2025 , 19 , 41244–41251. (19) Ceballos, F.; Zhao, H. Ultrafast Laser Spectroscopy of Two-Dimensional Materials be-yond Graphene. Adv. Funct. Mater. 2017 , 27 , 1604509. (20) Hong, X.; Kim, J.; Shi, S. F.; Zhang, Y.; Jin, C.; Sun, Y.; Tongay, S.; Wu, J.; Zhang, Y.; Wang, F. Ultrafast Charge Transfer in Atomically Thin MoS 2/WS 2 Heterostructures. 
+
+Nat. Nanotechnol. 2014 , 9, 682–686. (21) Ceballos, F.; Bellus, M. Z.; Chiu, H. Y.; Zhao, H. Ultrafast Charge Separation and Indirect Exciton Formation in a MoS 2-MoSe 2 van der Waals Heterostructure. ACS Nano 2014 , 8, 12717–12724. (22) Zhu, H. M.; Wang, J.; Gong, Z. Z.; Kim, Y. D.; Hone, J.; Zhu, X. Y. Interfacial Charge Transfer Circumventing Momentum Mismatch at Two-Dimensional van der Waals Heterojunctions. Nano Lett. 2017 , 17 , 3591–3598. (23) Wu, L. L.; Chen, Y. Z.; Zhou, H. Z.; Zhu, H. M. Ultrafast Energy Transfer of Both Bright and Dark Excitons in 2D van der Waals Heterostructures Beyond Dipolar Cou-pling. ACS Nano 2019 , 13 , 2341–2348. (24) Policht, V. R.; Russo, M.; Liu, F.; Trovatello, C.; Maiuri, M.; Bai, Y.; Zhu, X.; Conte, S. D.; Cerullo, G. Dissecting Interlayer Hole and Electron Transfer in Transition 15 Metal Dichalcogenide Heterostructures via Two-Dimensional Electronic Spectroscopy. 
+
+Nano Lett. 2021 , 21 , 4738–4743. (25) Rigos, A. F.; Hill, H. M.; Li, Y. L.; Chernikov, A.; Heinz, T. F. Probing Interlayer Inter-actions in Transition Metal Dichalcogenide Heterostructures by Optical Spectroscopy: MoS 2/WS 2 and MoSe 2/WSe 2. Nano Lett. 2015 , 15 , 5033–5038. (26) Ji, Z. H.; Hong, H.; Zhang, J.; Zhang, Q.; Huang, W.; Cao, T.; Qiao, R. X.; Liu, C.; Liang, J.; Jin, C. H.; Jiao, L. Y.; Shi, K. B.; Meng, S.; Liu, K. H. Robust Stacking-Independent Ultrafast Charge Transfer in MoS 2/WS 2 Bilayers. ACS Nano 2017 , 11 ,12020–12026. (27) Pan, S.; Ceballos, F.; Bellus, B. Z.; Zhao, H. Ultrafast Charge Transfer between MoTe 2
+
+and MoS 2 Monolayers. 2D Mater. 2017 , 4, 015033. (28) Mak, K. F.; Lee, C.; Hone, J.; Shan, J.; Heinz, T. F. Atomically Thin MoS 2: A New Direct-Gap Semiconductor. Phys. Rev. Lett. 2010 , 105 , 136805. (29) Korn, T.; Heydrich, S.; Hirmer, M.; Schmutzler, J.; Schueller, C. Low-Temperature Photocarrier Dynamics in Monolayer MoS 2. Appl. Phys. Lett. 2011 , 99 , 102109. (30) Fu, Y.; He, D.; He, J.; Bian, A.; Zhang, L.; Liu, S.; Wang, Y.; ; Zhao, H. Effect of Di-electric Environment on Excitonic Dynamics in Monolayer WS 2. Adv. Mater. Interfaces 
+
+2019 , 6, 1901307. (31) Wang, K.; Huang, B.; Tian, M.; Ceballos, F.; Lin, M.-W.; Mahjouri-Samani, M.; Boulesbaa, A.; Puretzky, A. A.; Rouleau, C. M.; Yoon, M.; Zhao, H.; Xiao, K.; Duscher, G.; Geohegan, D. B. Interlayer Coupling in Twisted WSe 2/WS 2 Bilayer Het-erostructures Revealed by Optical Spectroscopy. ACS Nano 2016 , 10 , 6612–6622. (32) Zhou, H. Z.; Zhao, Y. D.; Zhu, H. M. Dielectric Environment-Robust Ultrafast Charge Transfer between Two Atomic Layers. J. Phys. Chem. Lett. 2019 , 10 , 150–155. 16 (33) Ma, E. Y.; Guzelturk, B.; Li, G. Q.; Cao, L. Y.; Shen, Z. X.; Lindenberg, A. M.; Heinz, T. F. Recording Interfacial Currents on the Subnanometer Length and Fem-tosecond Time Scale by Terahertz Emission. Sci. Adv. 2019 , 5, eaau0073. (34) Zheng, T.; Low, E.; Rafizadeh, N.; Burch, K. S.; Zhao, H. Ultrafast and Highly Mobile Photocarriers in Monolayer WSe 2 Doped by α-RuCl 3. Nano Lett. 
+
+(35) Pan, S.; Valencia-Acuna, P.; Kong, W.; Liu, J.; Ge, X.; Xie, W.; Zhao, H. Efficient interlayer electron transfer in a MoTe 2/WS 2/MoS 2 trilayer heterostructure. Appl. Phys. Lett. 2021 , 118 , 253106. (36) Purdie, D. G.; Pugno, N. M.; Taniguchi, T.; Watanabe, K.; Ferrari, A. C.; Lombardo, A. Cleaning Interfaces in Layered Materials Heterostructures. Nat. Commun. 2018 , 9,5387. (37) Kim, Y.; Herlinger, P.; Taniguchi, T.; Watanabe, K.; Smet, J. H. Reliable Postprocess-ing Improvement of van der Waals Heterostructures. ACS Nano 2019 , 13 , 14182–14190. 17 TOC Graphic MoSe 2
+
+2H Bilayer 
+
+_ +
+
+_MoS 20.0 0.2 0.4 
+
+> Picosecond
+
+3R Bilayer 0.0 0.2 0.4 
+
+> Picosecond
+
+0.0 0.2 0.4 
+
+> Picosecond
+
+0100 200 
+
+> Picosecond
+
+0100 200 
+
+> Picosecond
+
+0100 200 
+
+> Picosecond
+
+< 0.1 ps 
+
+0.2 5 ps 
+
+Charge Transfer Time  0.3 7 ps 
+
+Exciton Lifetime 
+
+130 ps 
+
+40 ps 
+
+160 ps 
+
+3R MoS 2
+
+MoSe 2
+
+_ +
+
+_
+
+_ +
+
+_
+
+18

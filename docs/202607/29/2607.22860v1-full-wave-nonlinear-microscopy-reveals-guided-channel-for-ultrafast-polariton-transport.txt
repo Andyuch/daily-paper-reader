@@ -1,0 +1,1659 @@
+Title: Full-wave nonlinear microscopy reveals guided channel for ultrafast polariton transport
+
+URL Source: https://arxiv.org/pdf/2607.22860v1
+
+Published Time: Tue, 28 Jul 2026 00:20:05 GMT
+
+Number of Pages: 27
+
+Markdown Content:
+# Full-wave nonlinear microscopy reveals guided channel for ultrafast polariton transport 
+
+Qingyi Zhou, 1 Piper Fowler-Wright, 2 Zongfu Yu, 1 Joel Yuen-Zhou, 2 and Michael Reitz 2
+
+> 1
+
+Department of Electrical and Computer Engineering, University of Wisconsin-Madison, Madison, WI 53706, USA 
+
+> 2
+
+Department of Chemistry and Biochemistry, University of California San Diego, La Jolla, CA 92093, USA 
+
+(Dated: July 28, 2026) We show how finite-difference time-domain (FDTD) simulations can be extended to model ul-trafast nonlinear microscopy, enabling the prediction of spatially-resolved pump–probe signals in arbitrary electromagnetic environments. Focusing on polariton transport in strongly coupled light–matter systems, we develop a perturbative framework to study the ultrafast propagation of hybrid light–matter excitations in nanophotonic structures. We first apply the framework to a standard distributed Bragg reflector (DBR) cavity, reproducing established results for polariton transport from a multimode Tavis–Cummings model. We then consider the full modal landscape of the same cavity, including guided modes below the light line that are typically neglected in single-mode-family descriptions. Exploiting these modes, we design compact mode converters that transfer radiative cavity polaritons into photon-like guided polaritons and back, utilizing the guided modes for low-loss propagation. Despite molecular dephasing, this enables transport of molecular excita-tion over a millimeter, an order of magnitude beyond current transport experiments. We further compute the pump–probe differential transmission signal, providing an experimental signature of the mechanism. Our results show that the modal landscape of a photonic cavity can be engineered to bypass limitations commonly assumed to be intrinsic to the transport of molecular polaritons. 
+
+I. Introduction 
+
+Exciton polaritons are hybrid light-matter quasipar-ticles formed through strong coupling of confined elec-tromagnetic modes with electronic excitations. They have gained significant attention over the past decade, due to their potential applications in areas such as po-lariton chemistry [1], condensation [2–4] and lasing [5], as well as charge [6, 7] and energy transport [8–12], where the latter may enable novel optoelectronic plat-forms [9, 13, 14]. Specifically, a central bottleneck in traditional organic optoelectronic platforms is the short-range transport of molecular excitations, typically lim-ited to a few tens of nm [15, 16]. Exciton polaritons are predicted to overcome this and allow for fast and long-range excitation transport [8, 9, 13, 14, 17]. Further, recent advances in ultrafast nonlinear microscopy have enabled the imaging of molecular polariton transport on picosecond timescales, revealing unexpected sub-group-velocity transport as well as a crossover from ballistic to diffusive propagation behavior [18–24]. Theoretical studies have identified scattering of polaritons into “dark excitonic states” (i.e., the molecular absorption band) as a key mechanism responsible for slowing down polari-ton transport and altering the propagation characteris-tics [25–34]. These studies reveal a trade-off in polariton transport: photon-like polaritons propagate efficiently but carry less molecular excitation, whereas exciton-like polaritons are vulnerable to dephasing [25–34]. In this work, we show that this trade-off is not fundamental but may be over-come by separating the polariton channels used for exci-tation or readout from those used for propagation. This strategy is naturally enabled by realistic photonic struc-tures, which typically support many families of optical modes. In particular, the distributed Bragg reflector (DBR) structures commonly used in polariton experi-ments support not only radiative cavity modes, but also guided modes below the light cone, which can serve as low-loss transport channels [9, 14, 17]. By assigning injection and readout to externally addressable cavity modes, and long-range propagation to radiatively pro-tected guided modes, the trade-off can be circumvented. Verifying a multimode transport mechanism requires connecting it to experimentally accessible pump–probe microscopy signals. While the perturbative formalism of nonlinear spectroscopy is well established in free-space [35], the computation and interpretation of pump–probe signals in confined photonic environments poses a sig-nificant challenge, since the molecular polarization feeds back onto, and thereby reshapes, the electromagnetic field itself [36]. Recent works have provided perturba-tive theories of polariton spectroscopy for single-mode [37, 38] and multimode planar cavities [34], yet they rely on simplified cavity descriptions that do not gen-eralize directly to realistic and complex environments, such as the multiple mode families supported by DBR cavities. Conversely, full-wave approaches based on Maxwell–Liouville equations naturally handle arbitrary geometries [39–46], yet do not disentangle the nonlinear response into spectroscopically meaningful orders. What is needed, therefore, is a unified framework that preserves the full electrodynamic complexity of Maxwell-based sim-ulations while allowing nonlinear observables such as dif-ferential pump–probe spectra to be computed and de-composed into their underlying pathways. In this work, we address the above challenges by in-troducing a framework for modeling ultrafast nonlin-arXiv:2607.22860v1 [quant-ph] 24 Jul 2026 2Molecule  
+
+> Input
+> pulse
+> Signal
+> Free -space spectroscopy
+> Polarization EM fields
+> Complex photonic
+> environment
+> Full -wave nonlinear
+> spectroscopy
+> Molecule
+> Input
+> pulse
+> Signal
+> Polarization
+
+(a) (b) 
+
+(c) …Pump ηp Probe ηp’
+
+FIG. 1. Full-wave nonlinear spectroscopy. (a) Prototypical setup for spatially resolved pump–probe spectroscopy with light-matter back-action: an ensemble of molecules is placed inside an optical cavity formed by DBR mirrors, which is driven by input pulses with amplitudes ηp (pump) and ηp′ (probe). (b) Schematic comparison between the proposed “full-wave nonlinear spectroscopy” and conventional “free-space spectroscopy”. In the conventional framework, molecules are driven by a prescribed incident field. In contrast, our framework accounts for the feedback of the molecular response onto the optical field, enabling a self-consistent treatment of coupled light–matter dynamics in complex and structured electromagnetic environments. (c) Hierarchy of the perturbative expansion. The nonlinear electromagnetic fields and molecular density matrices are constructed iteratively from the lower-order light–matter dynamics. 
+
+ear microscopy in arbitrary photonic environments. To this end, we combine perturbative nonlinear spectroscopy with semiclassical Maxwell–Liouville equations that can be solved efficiently using full-wave finite-difference time-domain (FDTD) simulations [47], thereby extending ear-lier approaches [34, 37] to complex nanophotonic struc-tures. We first apply the framework to a standard DBR cavity, reproducing established behavior including bal-listic polariton transport and dephasing-induced veloc-ity renormalization. We then uncover the full modal landscape of the same DBR structure, identifying guided modes below the light cone that are nearly lossless and largely immune to molecular dephasing. We show how to access these modes by inversely designing mode convert-ers that transform between radiative and guided mode families [48, 49]. By assigning complementary roles to distinct mode families, we demonstrate molecular exci-tation transport over 1 mm in the presence of molecular dephasing, an order of magnitude beyond state-of-the-art results [9, 14, 17–21, 24, 50–52]. Finally, we calculate the pump–probe differential transmission signal at the re-mote port, providing a spectroscopic prediction directly applicable to experiment. 
+
+II. Perturbative Maxwell-Liouville approach 
+
+We start by considering N molecules located at po-sitions rj (j ∈ { 1, . . . , N }) inside an arbitrary photonic environment. The molecules are treated as identical two-level systems (TLSs) with transition frequency ω0 and dipole operator ˆμj = μ ˆσ− 
+
+> j
+
++ ˆ σ+
+
+> j
+
+. Note that we use 
+
+ˆσ± 
+
+> j
+
+and ˆσzj to denote the standard Pauli raising/lowering and inversion operators, respectively. While more elab-orate emitter models can be incorporated, including ad-ditional internal states, vibronic structure, energetic dis-order, or non-Markovian vibronic dynamics [53–55], such effects can also modify polariton velocity renormaliza-tion [18, 30, 32]. Here, we adopt a minimal two-level description that keeps the formalism transparent while capturing the essential light-mediated interactions and transport physics. A typical pump-probe setup involv-ing multiple molecules inside an optical cavity is shown schematically in Fig. 1(a). The mean-field Hamiltonian of such TLSs coupled to the electromagnetic fields can be written as 
+
+HMF (t) = H0 + Hint (t) = 
+
+> N
+
+X
+
+> j=1
+
+Hj 
+
+> 0
+
++
+
+> N
+
+X
+
+> j=1
+
+Hj
+
+> int
+
+(t)=
+
+> N
+
+X
+
+> j=1
+
+ℏω0
+
+2 ˆσzj −
+
+> N
+
+X
+
+> j=1
+
+μ · E(rj , t )  ˆσ− 
+
+> j
+
++ ˆ σ+
+
+> j
+
+, (1) where Hj 
+
+> 0
+
+describes the free molecular Hamiltonian and Hj 
+
+> int
+
+accounts for the dipole coupling between the molecules and the local electric field E(rj ). Here, “mean-field” refers to the factorization between light and matter degrees of freedom that allows for the electromagnetic field to be treated classically, while the molecules remain quantum degrees of freedom. The density matrix ρj of the j-th molecule evolves according to the quantum mas-ter equation 
+
+dρ j
+
+dt = − i
+
+ℏ
+
+Hj (t), ρ j
+
+ + D[ρj ], (2) where Hj (t) = Hj 
+
+> 0
+
++ Hj
+
+> int
+
+(t) denotes the single-molecule Hamiltonian, and the dissipator D[ρj ] represents the 3Lindbladian terms that incorporate additional loss chan-nels of the molecule; below we consider pure dephasing at rate γϕ [34]. To model the spectroscopic experiment, we start by as-suming a single input field with amplitude ηp [37]. The evolution of the classical electromagnetic fields is gov-erned by Maxwell’s equations: 
+
+∇ × E = −μ0∂tH − ηpMin ,
+
+∇ × H = εr ε0∂tE + Jmol + ηpJin , (3) where Jin and Min correspond to the normalized spa-tiotemporal profiles of the external current sources used to generate the input pulse, while the parameter ηp con-trols the amplitude and serves as the expansion param-eter below. The molecular polarization is Pmol (r, t ) = P 
+
+> j
+
+Tr  ˆμj ρj (t)δ(r − rj ), and the corresponding current 
+
+Jmol = ∂tPmol describes the feedback onto the classi-cal electromagnetic field, with δ(r) being the Dirac δ-function. A detailed derivation can be found in the Supplemental Material (SM) [56]. The above cou-pled Eqs. (2) and (3) form the self-consistent Maxwell– Liouville framework, which can be time-evolved via FDTD [40]. By contrast, the previous works Refs. [34, 37, 38] assumed a simplified evolution of Eqs. (3) in which the photonic modes are already prescribed. Fig. 1(b) compares our approach, which we refer to as “full-wave nonlinear spectroscopy”, with conventional free-space spectroscopy. Our framework treats the cou-pling between electromagnetic fields and matter in a self-consistent manner by taking into account the backaction of the molecular polarization onto the electromagnetic field. Although the above set of mean-field equations can be solved numerically [40, 42, 57, 58], this does not, by itself, provide transparent insight into the structure of the nonlinear response. To understand the nonlinear response in a systematic way, we follow the standard ap-proach of nonlinear spectroscopy [35] and expand both the electromagnetic fields and the matter density matrix perturbatively in powers of the input-field amplitude ηp
+
+[34, 37]: 
+
+{E, H} =
+
+> ∞
+
+X
+
+> n=0
+
+η np · { E(n), H(n)},ρj =
+
+> ∞
+
+X
+
+> n=0
+
+η np · ρ(n) 
+
+> j
+
+,
+
+(4) which lead to 
+
+∇ × E(n) = −μ0∂tH(n) − δ1nMin ,
+
+∇ × H(n) = εr ε0∂tE(n) + J(n)mol + δ1nJin , (5) 
+
+dρ (n)
+
+> j
+
+dt = − i
+
+ℏ
+
+n
+
+[Hj 
+
+> 0
+
+, ρ (n) 
+
+> j
+
+]
+
+−
+
+> n
+
+X
+
+> i=0
+
+ ˆμj · E(n−i)(rj , t ), ρ (i)
+
+> j
+
+o
+
++ D[ρ(n) 
+
+> j
+
+].
+
+(6) The above equations can be viewed as a perturbative de-composition of the well-known Maxwell-Liouville equa-tions. The term  ˆμj · E(n−i), ρ (i)
+
+> j
+
+ couples ρ(n) 
+
+> j
+
+to lower-order quantities, so that the response at each perturba-tive order is driven by the dynamics obtained at preced-ing orders. Equations at different order n can therefore be viewed as a set of coupled PDEs which are solved by running multiple FDTDs concurrently. A simplified per-turbation hierarchy showing the iterative construction of the nonlinear response is shown in Fig. 1(c).  
+
+> III. Polariton transport in DBR cavity
+
+Having established the perturbative Maxwell–Liouville framework, we begin by examining polariton transport in a standard DBR cavity. This regime has been studied extensively [26, 27, 30, 34, 37] and provides the baseline for the long-range transport we demonstrate later. The setup is shown in Fig. 2(a), where we consider a layered structure with bare cavity frequency ωc = 0 .9 eV (further details are provided in the SM [56]). A molecular layer is placed at the center of the cavity and couples strongly to the cavity mode which has a photon loss rate of κ ≈ 0.01 
+
+eV. By calculating the linear transmission of this sys-tem using the transfer-matrix method (TMM), the dis-persion relations of the two bright eigenstates, namely the lower polariton (LP) and the upper polariton (UP), can be extracted, as shown in Fig. 2(b). Here we con-sider a resonant excitation scheme, matching the one used in Ref. [34]: a pump pulse ( p) resonantly excites a cer-tain mode on the LP branch (red dot in Fig. 2(b)) with 
+
+kp > 0, while a probe pulse ( p′) with kp′ < 0 is injected and counter-propagates. The temporal dependence of the input fields are proportional to ηj fj (t − τj )e−iω j t for 
+
+j ∈ { p, p ′}, where ηj , fj , ωj and τj denote the amplitude, normalized envelope, carrier frequency, and arrival time of the pump and probe pulses, respectively. In the fol-lowing, we assume the pulses to have Gaussian temporal and spatial profiles with temporal width σt = 25 fs and spatial width σr = 5 μm. Before analyzing the pump-probe experiments, we ex-amine the pump-only dynamics by setting ηp′ = 0 . Apump pulse resonantly excites the LP branch at kp =
+
+π/ 2 μm−1. Fig. 2(c) displays the spatio-temporal evolu-tion of both the molecular population ρ11 (x, t ) and co-herence ρ10 (x, t ), for molecular dephasing γϕ = 0 and 
+
+γϕ = κ/ 2. In the absence of dephasing, both ρ11 and 
+
+ρ10 propagate at the same group velocity, revealing bal-listic excitation transport. Introducing dephasing sig-nificantly alters the dynamics: while the coherence ρ10 
+
+simply decays more rapidly, the population ρ11 develops a “dragged” trail from the passing polariton wave packet. This behavior arises because pure dephasing γϕ > 0
+
+transfers population from the coherent bright state into incoherent, immobile dark states. Local incoherent ex-citons are created but remain stationary, which makes the excitation transport much slower than the idealized 4v grp       
+
+> kp[μm -1]
+> Velocity [μm/ps]
+> vpeak
+> vrms
+> ∈{0,κ/4 ,κ/2 }=
+
+-0.3 ps      
+
+> = 0 ps
+> = 0.3 ps
+> 20 0
+> x [μm]
+> -20
+> ΔT max -max
+> 20 0-20
+> 20 0-20 x [μm]
+> t [ps]  t [ps]
+> x [μm]
+> ρ11
+> 0
+> 310 -5
+> |ρ10 |
+> 0
+> 610 -3k [μm -1]
+> Freq [eV]
+> T
+> 0
+> 1
+> UP
+> LP Pump Probe
+> ΔT(x) (a) (c)
+> (b)
+> (e) (d)
+
+FIG. 2. Full-wave pump-probe microscopy results for molecules inside a DBR cavity. (a) Schematics of the pump-probe experiment, where a planar DBR cavity (gray) containing a molecular layer (orange) is driven by counter-propagating pump (p) and probe ( p′) pulses. Information about pump-induced transport is retrieved through the differential signal ∆T (x),detected along the probe direction. (b) TMM results of the dispersion relation, revealing the UP and LP branches. The red (green) dot indicates the in-plane wave vector of the incident pump (probe) pulse, centered at kp = −kp′ = π/ 2 μm−1. The molecules’ transition frequency is fixed as ω0 = 1 eV. The dashed lines indicate the molecular transition frequency, the bare cavity dispersion, and the light line. (c) Pump-only dynamics for both molecular population ρ11 and coherence |ρ10 |. In the absence of dephasing, both ρ11 and |ρ10 | show ballistic transport; with dephasing γϕ = κ/ 2 a static population emerges since bright states are transferred into immobile dark states. (d) Spatiotemporal pump-probe spectra ∆T (x, ω ) for different time delays τ ∈ {− 0.3, 0, 0.3} ps . In the top panel, arrows indicate the spatial positions of the pump (red) and probe (green) injection positions. (e) Transport velocity of the circular feature ( vpeak  
+
+> kp
+
+) and rms displacement ( vrms  
+
+> kp
+
+) for various pump wave vectors kp.Larger γϕ leads to stronger group velocity renormalization. 
+
+ballistic transport [25, 26, 30, 34]. We next include both pump p and probe p′. The pump–probe delay is defined from the pulse injection times as τ = τp′ − τp. Following the framework pro-posed in [34, 37], we expand all field quantities in pump amplitude ηp and probe amplitude ηp′ :
+
+{E, H} =
+
+> ∞
+
+X
+
+> n=0
+> ∞
+
+X
+
+> n′=0
+
+η np η n′ 
+
+> p′
+
+· { E(n)( n′), H(n)( n′)},ρj =
+
+> ∞
+
+X
+
+> n=0
+> ∞
+
+X
+
+> n′=0
+
+η np η n′ 
+
+> p′
+
+· ρ(n)( n′) 
+
+> j
+
+,
+
+(7) where the indices n and n′ refer to the orders in the pump and probe fields, respectively. By substituting the above expressions into the mean-field equations, a hier-archical system of equations describing the pump-probe spectroscopy can be derived [56]. Representative signals from different (n)( n′) orders are provided alongside the full pump-probe equations in the SM [56]. In pump-probe experiments, the observable related to nonlinear effects typically comes from the differen-tial signal between pump-on and pump-off conditions. Here we consider the differential transmission measured at the output monitor plane, ∆T (ω) = T pump on  
+
+> p′
+
+(ω) −
+
+T pump off  
+
+> p′
+
+(ω). Similar to the definition in Ref. [34], the lowest-order contribution to the position-dependent dif-ferential transmission can be derived as 
+
+∆T (r, ω ) ∝ − η2
+
+> p
+
+2 Re 
+
+n
+
+E(0)(1)  
+
+> x
+
+(r, ω ) H(2)(1) ∗ 
+
+> z
+
+(r, ω )+ E(2)(1)  
+
+> x
+
+(r, ω ) H(0)(1) ∗ 
+
+> z
+
+(r, ω )
+
+o
+
+,
+
+(8) scaling with the intensity of the pump field. Note that, in addition, a k-space filtering is carried out along the probe direction, which helps to separate the pump–probe re-sponse from undesired double-quantum coherence contri-butions [56, 59]. In Fig. 2(d), we visualize the calculated signal ∆T (r, ω ) following pump and probe pulses with opposite in-plane wave vectors kp = −kp′ = π/ 2 μm−1.Here the dephasing is fixed as γϕ = κ/ 2. Three different probe delays τ ∈ {− 0.3, 0, 0.3} ps are examined. Nega-tive delays are included since the probe pulse must first propagate inside the structure before reaching the region where it spatially overlaps with the pump pulse. The leading circular feature in ∆T (r, ω ) shows red-blue lobes, resulting from Rabi contraction following blue shift of the LP [37, 60]. In addition, due to γϕ > 0, a trailing feature emerges in ∆T (r, ω ), corresponding to the population of static dark excitonic states. Finally, based on the simulated nonlinear microscopy results, we obtain the peak and root-mean-square (rms) displacement of the |∆T (r, ω )| profile, then extract the corresponding velocities vpeak and vrms through linear fit-ting (see SM [56] for details). We repeat the procedure for different in-plane wave vectors |kp| = |kp′ |. The ex-521Radiative mode Guided mode          
+
+> Hzk [μm -1]
+> Freq [eV]
+> logT
+> -2
+> 2
+> 1
+> -1Hz[a.u.] (a) (c)
+> (b)
+> FIG. 3. Co-existence of radiative and nonradiative channels inside a DBR cavity. (a) Transmission heatmap of the DBR cavity with molecular layer inside, obtained via TMM. The black dashed lines indicate the molecular transition frequency at 1.0 eV , the bare cavity dispersion, and the light line. The blue dashed line marks the operating frequency at 0.9 eV , cor-responding to the carrier frequency of the input pulse. The red and blue dots identify the cavity polariton mode and the guided polariton mode, respectively. The results are visual-ized in log scale to reveal the dispersion of the guided modes below the light cone. (b) Hzfield distribution of the radiative cavity mode and the nonradiative guided mode. (c) Inverse-designed mode converter that transforms the cavity polariton to the guided polariton (top panel), and vice versa (bottom panel). The mode converters’ grating structures are indicated by the black lines.
+
+tracted group velocities vpeak and vrms are displayed in Fig. 2(e). It can be concluded that with increasing γϕ,more stationary dark excitons are created, which leads to stronger group-velocity renormalization. This is con-sistent with theoretical explanations [25, 26, 30, 34] for the observed sub-group-velocity transport.  
+
+> IV. Low-loss excitation transport via guided polariton channels
+
+In the previous part, we have reproduced known re-sults related to polariton transport: though the LP wave packet travels ballistically, the molecular dephasing transfers energy into stationary dark state populations, leading to sub-group-velocity transport. The resulting velocity renormalization increases with higher exciton fraction [18, 19, 23, 30, 34, 61]. This limitation appears difficult to overcome, since as long as the excitonic frac-tion remains nonzero, excitation transport is constrained by the dephasing rate γϕ. Such an effect is significant at room temperature and has hindered the construction of polaritonic devices based on organic molecules. In this section, we demonstrate that this challenge can be cir-cumvented through structural engineering.  
+
+> A. Mode families in DBR cavity
+
+The trade-off between retaining substantial molecular character and achieving low-loss propagation is not fun-damental, but arises when excitation, propagation, and readout are constrained to a single mode family (cavity modes described by P 
+
+> k
+
+ωk ˆa† 
+
+> k
+
+ˆak in the Tavis–Cummings model). Within this single mode family, both molecular dephasing and radiative loss impede transport. However, such a single-mode-family description does not capture the full electromagnetic environment. For example, a standard DBR structure supports not only the radiative cavity modes, but also guided modes below the light line [9, 14]. The dispersion curves of these modes can be ex-tracted from TMM results. As shown in Fig. 3(a), this system supports two types of modes: the cavity polari-ton (red dot) as well as the guided polariton (blue dot). Analysis of the field profiles of these two modes at 0.9 eV ,obtained using an eigenmode solver [56], shows that the cavity polariton experiences strong radiative loss as it lies above the light cone ω = c0k, where c0 denotes the speed of light in vacuum. In contrast, the guided polari-ton lies below the light cone and is therefore protected from radiative loss. The corresponding field distributions are visualized in Fig. 3(b), which show how these eigen-modes propagate: without radiative decay, the guided mode decays much slower. Furthermore, the guided po-lariton carries only a small excitonic fraction, and is therefore weakly affected by molecular dephasing, mak-ing this channel ideal for low-loss transport. Therefore, to take advantage of these low-loss guided modes, a pos-sible strategy is to transfer the excitation into a photon-like guided mode for long-range propagation. The cav-ity polariton is still used for readout since it provides strong optical nonlinearity. In this scheme, the guided mode can travel over extended distances with minimal radiative loss before being converted back into a cavity polariton at the final destination for readout. To realize this strategy, we design two mode converters using topol-ogy optimization, as shown in Fig. 3(c), with details pro-vided in the SM [56]. The top panel, denoted converter 1, converts the lossy cavity polariton into a guided mode, whereas converter 2 (the bottom panel), designed inde-pendently, performs the reverse conversion from guided to cavity polariton. These mode converters compensate for the momentum mismatch between the two modes. Although for the results presented here, molecules are re-tained throughout the cavity in Fig. 4, transport between the two converters is carried mainly by the photon-like guided mode, so the intermediate region could in princi-ple be molecule-free.  
+
+> B. Long-range transport over millimeter scales
+
+To demonstrate how these two converters facilitate ex-citation transport, we resonantly excite a polariton wave packet using a pump pulse, and examine how the wave 6packet travels when passing through the two converters. The simulation setup is shown schematically in Fig. 4(a): a pump pulse enters at x = −68 μm, while the probe pulse enters at x = 68 μm, with kp = −kp′ = 1 .41 μm−1.The pump–probe delay is set to τ = 1 .04 ps, so that the probe pulse overlaps the polariton wave packet at the exit of converter 2. The two converters are separated by 75 μm. We start by turning off dephasing ( γϕ = 0 ). The results are shown in Fig. 4(b). The top panel shows the heatmap of population ρ11 (x, t ). After hitting con-verter 1, ρ11 becomes much smaller, since the energy has been mostly transformed into guided mode, which only couples weakly to the molecules. After traveling 75 μmand hitting the second converter, the ρ11 reappears as a bright spot, since the energy inside the guided mode has been transformed back to molecular excitation. Corre-sponding coherence dynamics for |ρ10 | are provided in the SM [56]. The bottom panel shows the corresponding dif-ferential transmission signal ∆T (x, ω ) obtained through pump-probe microscopy, similar to Fig. 2(d). The spec-tral features reveal Rabi contraction as expected. In be-tween the two converters, ∆T ≈ 0 since the probe pulse does not leak out when traveling as a guided mode. Once the probe travels to the left of converter 1, ∆T becomes nonzero again, producing the two-blob pattern. Field snapshots illustrating the radiative and guided propaga-tion pathways are provided in the SM [56]. The mecha-nism works well even when γϕ̸ = 0 , since the guided mode is only weakly affected by the molecular dephasing. The results are shown in Fig. 4(c). Notably, the ∆T pattern shows a trailing feature on the left side of converter 1, since in this region ρ11 > 0 due to the dark state popu-lation excited by the pump pulse. The associated bright and dark state population dynamics are analyzed in the SM [56]. Finally, to demonstrate an ultralong-range excitation transport, we increase the distance between the two con-verters to 1 mm. To demonstrate how the guided mode enables efficient excitation transport, Fig. 4(d) shows the maximum received excitation, max t ρ11 (x, t ), as a func-tion of position x. Without mode converters, the excita-tion decays exponentially with distance, as shown by the red curves. In contrast, when the converters are included, the excitation is restored after converter 2, demonstrat-ing the recovery of molecular excitation following long-range guided-mode propagation. By exploiting multiple transport channels supported by the DBR structure, we anticipate that excitation transport can be extended be-yond the millimeter length scale, more than an order of magnitude longer than state-of-the-art exciton-polariton transport distances reported to date [9, 14, 17–21, 24, 50– 52]. This result shows that the constraints inherent to single-mode-family polariton transport are not funda-mental, but can be circumvented by assigning comple-mentary roles to the different mode families naturally hosted by the same structure, thereby enabling injection, long-range transport, and readout within a single planar device. x [μm] (d)
+
+(b) x [μm]   
+
+> max t ρ11 (t)
+> w/ converter
+> w/o converter
+> -500 -450 500 450
+> 10 -7
+> 10 -6
+> 10 -5
+> 10 -4
+> 10 -3
+
+(a) Pump Probe x [μm] 1e -9
+
+> 1e -7
+> 1e -5
+> 1e -3
+> ρ11
+> 0.2
+> 1
+> -0.2
+> -1
+> ΔT
+> 0
+
+(c)                        
+
+> FIG. 4. Leveraging the guided mode in a DBR cavity for long-range excitation transport. (a) Simulation setup. The cavity polariton excited by the pump is first converted into a guided polariton by the first converter, propagates through the low-loss guided mode, and is then transformed back into a cavity polariton by the second converter. (b) Results with-out dephasing ( γϕ= 0 ). Top: population heatmap ρ11 (x, t ).Bottom: the corresponding pump–probe microscopy signal
+> ∆T(x, ω ), which is separated into two regions by the mode converters; in the region between them, no radiation escapes the structure, so ∆T≈0.(c) The same two quantities for γϕ=κ/ 2, which leads to static dark population. Top:
+> ρ11 (x, t ); bottom: ∆T(x, ω ), which shows a trailing feature associated with dephasing. (d) Maximum received molecu-lar excitation max tρ11 (x, t )over time. With mode converters (blue curves) the excitation drops after converter 1, then rises again after converter 2. For comparison, without mode con-verters the excitation decays exponentially (red curves). Here the converter separation is 1 mm .
+> V. Discussion and conclusions
+
+The formation of exciton-polaritons in the strong-coupling regime enables enhanced excitation transport between molecules. While such transport suffers from de-phasing, we have shown that this difficulty is not solely a material limitation, but stems from the single mode fam-ily assumption, which can be circumvented in realistic structures. By considering multiple dispersion branches supported by a standard DBR cavity, energy transport can instead be carried by low-loss, photon-like modes. To verify the above idea, we have developed a pertur-bative Maxwell–Liouville framework for ultrafast nonlin-ear microscopy. By accounting for the feedback of the molecular polarization onto the electromagnetic field in 7a self-consistent manner, our framework naturally han-dles multiple mode families and predicts spectroscopic observables in realistic photonic structures. With this simulation framework, we have designed grating structures that serve as mode converters, trans-forming between cavity polaritons and guided polaritons. The proposed scheme should be experimentally achiev-able: DBR cavities are standard platforms for polari-ton experiments, and the mode converters require grating structures that can be realized with existing nanofabrica-tion techniques [62, 63]. A direct experimental signature of the mechanism is the spatial profile of the pump–probe differential transmission: ∆T should vanish between the two converters, where excitation propagates as a non-radiative guided mode, and reappear beyond the sec-ond converter, signaling the recovery of molecular excita-tion. Our simulations demonstrate excitation transport beyond 1 mm even in the presence of molecular dephas-ing. The formalism offers potential for generalization via multiple avenues. First, the FDTD treatment is not re-stricted to DBR cavities. The same principle can be gen-eralized to more complex photonic structures, such as photonic crystals [50, 64] and plasmonic nanoparticles [23, 24, 65, 66], which support even richer mode families. Second, while we include pure dephasing by introducing 
+
+γϕ phenomenologically, a more accurate description of vibronic coupling and non-Markovian dynamics may be essential to understand a richer class of polariton phe-nomena [54]. Furthermore, while we have focused on pump-probe microscopy involving two pulses, the per-turbative framework itself generalizes naturally to multi-dimensional coherent spectroscopy, where different non-linear pathways can be disentangled [38, 67]. The multi-modal design principle demonstrated here opens a route toward on-chip polaritonic circuit elements [14, 68], as well as reconfigurable polaritonic devices [69–71].  
+
+> VI. Acknowledgments
+
+P. F.-W., J. Y. Z. and M. R. were primarily supported by the Air Force Office of Scientific Research (AFOSR) through the Multi-University Research Initiative (MURI) program no. FA9550-22-1-0317. Q. Z. and Z. Y. were supported by National Science Foundation Grant No. 2016136 for the QLCI center Hybrid Quantum Architec-tures and Networks. Q. Z. would also like to thank Dr. Ming Zhou for helpful discussions.  
+
+> VII. Data availability
+
+All code used in this study will be made publicly avail-able in a public repository upon acceptance. The nu-merical data supporting the findings of this study are available from the corresponding author upon reasonable request.                                                
+
+> [1] R. F. Ribeiro, L. A. Martínez-Martínez, M. Du, J. Campos-Gonzalez-Angulo, and J. Yuen-Zhou, Chem. Sci. 9, 6325 (2018). [2] J. Keeling and S. Kéna-Cohen, Annu. Rev. Phys. Chem.
+> 71 , 435 (2020). [3] T. Byrnes, N. Y. Kim, and Y. Yamamoto, Nature Physics
+> 10 , 803 (2014). [4] G. Lerario, A. Fieramosca, F. Barachati, D. Ballarini, K. S. Daskalakis, L. Dominici, M. De Giorgi, S. A. Maier, G. Gigli, S. Kéna-Cohen, and D. Sanvitto, Na-ture Physics 13 , 837 (2017). [5] A. Strashko, P. Kirton, and J. Keeling, Phys. Rev. Lett.
+> 121 , 193601 (2018). [6] E. Orgiu, J. George, J. A. Hutchison, E. Devaux, J. F. Dayen, B. Doudin, F. Stellacci, C. Genet, J. Schachen-mayer, C. Genes, G. Pupillo, P. Samorì, and T. W. Ebbe-sen, Nature Materials 14 , 1123 (2015). [7] D. Hagenmüller, J. Schachenmayer, S. Schütz, C. Genes, and G. Pupillo, Phys. Rev. Lett. 119 , 223601 (2017). [8] G. Sandik, J. Feist, F. J. García-Vidal, and T. Schwartz, Nat. Mater. 10.1038/s41563-024-01962-5 (2024). [9] S. Hou, M. Khatoniar, K. Ding, Y. Qu, A. Napolov, V. M. Menon, and S. R. Forrest, Adv. Mater. 32 , 2002127 (2020). [10] D. M. Myers, S. Mukherjee, J. Beaumariage, D. W. Snoke, M. Steger, L. N. Pfeiffer, and K. West, Phys. Rev. B98 , 235302 (2018). [11] J. Schachenmayer, C. Genes, E. Tignone, and G. Pupillo, Phys. Rev. Lett. 114 , 196403 (2015). [12] J. Feist and F. J. Garcia-Vidal, Phys. Rev. Lett. 114 ,196402 (2015). [13] G. Lerario, D. Ballarini, A. Fieramosca, A. Cannavale, A. Genco, F. Mangione, S. Gambino, L. Dominici, M. De Giorgi, G. Gigli, and D. Sanvitto, Light Sci. Appl.
+> 6, e16212 (2016). [14] B. Liu, J. Horowitz, and S. R. Forrest, ACS Photonics
+> 10 , 4476 (2023). [15] O. V. Mikhnenko, P. W. M. Blom, and T.-Q. Nguyen, Energy Environ. Sci. 8, 1867 (2015). [16] A. Köhler and H. Bässler, Electronic Processes in Organic Semiconductors: An Introduction (Wiley, 2015). [17] B. Liu, J. Lynch, H. Zhao, B. R. Conran, C. McAleese, D. Jariwala, and S. R. Forrest, ACS Nano 17 , 14442 (2023). [18] D. Xu, A. Mandal, J. M. Baxter, S.-W. Cheng, I. Lee, H. Su, S. Liu, D. R. Reichman, and M. Delor, Nat. Com-mun. 14 , 3881 (2023). [19] M. Balasubrahmaniyam, A. Simkhovich, A. Golombek, G. Sandik, G. Ankonina, and T. Schwartz, Nat. Mater.
+> 22 , 338 (2023). [20] G. G. Rozenman, K. Akulov, A. Golombek, and T. Schwartz, ACS Photonics 5, 105 (2018). [21] R. Pandya, R. Y. S. Chen, Q. Gu, J. Sung, C. Schne-dermann, O. S. Ojambati, R. Chikkaraddy, J. Gorman,
+
+8
+
+G. Jacucci, O. D. Onelli, T. Willhammar, D. N. John-stone, S. M. Collins, P. A. Midgley, F. Auras, T. Baikie, R. Jayaprakash, F. Mathevet, R. Soucek, M. Du, A. M. Alvertis, A. Ashoka, S. Vignolini, D. G. Lidzey, J. J. Baumberg, R. H. Friend, T. Barisien, L. Legrand, A. W. Chin, J. Yuen-Zhou, S. K. Saikin, P. Kukura, A. J. Musser, and A. Rao, Nat. Commun. 12 , 6519 (2021). [22] R. Pandya, A. Ashoka, K. Georgiou, J. Sung, R. Jayaprakash, S. Renken, L. Gai, Z. Shen, A. Rao, and A. J. Musser, Adv. Sci. 9, 2105569 (2022). [23] L. Jin, A. D. Sample, D. Sun, Y. Gao, S. Deng, R. Li, L. Dou, T. W. Odom, and L. Huang, ACS Photonics 10 ,1983 (2023). [24] A. M. Berghuis, R. H. Tichauer, L. M. A. Jong, I. Sokolovskii, P. Bai, M. Ramezani, S. Murai, G. Groen-hof, and J. Gómez Rivas, ACS Photonics 9, 2263 (2022). [25] G. Groenhof, C. Climent, J. Feist, D. Morozov, and J. J. Toppari, J. Phys. Chem. Lett. 10 , 5476 (2019). [26] I. Sokolovskii, R. H. Tichauer, D. Morozov, J. Feist, and G. Groenhof, Nat. Commun. 14 , 6613 (2023). [27] R. H. Tichauer, I. Sokolovskii, and G. Groenhof, Adv. Sci. 10 , 2302650 (2023). [28] E. Suyabatmaz and R. F. Ribeiro, The Journal of Chem-ical Physics 159 , 034701 (2023). [29] G. Engelhardt and J. Cao, Phys. Rev. Lett. 130 , 213602 (2023). [30] W. Ying, B. X. K. Chng, M. Delor, and P. Huo, Nat. Commun. 16 , 6950 (2025). [31] B. X. K. Chng, M. E. Mondal, W. Ying, and P. Huo, Nano Lett. 25 , 1617 (2025). [32] N. Krupp, G. Groenhof, and O. Vendrell, Nat. Commun. 
+
+16 , 5431 (2025). [33] T. Khazanov, S. Gunasekaran, A. George, R. Lomlu, S. Mukherjee, and A. J. Musser, Chem. Phys. Rev. 4,041305 (2023). [34] P. Fowler-Wright, M. Reitz, and J. Yuen-Zhou, Nano Let-ters 26 , 6334 (2026). [35] S. Mukamel, Principles of Nonlinear Optical Spec-troscopy , Oxford Series in Optical and Imaging Sciences (Oxford University Press, New York, 1995). [36] R. F. Ribeiro, A. D. Dunkelberger, B. Xiang, W. Xiong, B. S. Simpkins, J. C. Owrutsky, and J. Yuen-Zhou, J. Phys. Chem. Lett. 9, 3766 (2018). [37] M. Reitz, A. Koner, and J. Yuen-Zhou, Phys. Rev. Lett. 
+
+134 , 193803 (2025). [38] M. Reitz, H. Bhakta, W. Xiong, and J. Yuen-Zhou, Mul-tidimensional semiclassical single- and double-quantum spectroscopy of anharmonic molecular polaritons (2026), arXiv:2604.21158 [quant-ph]. [39] R. W. Ziolkowski, J. M. Arnold, and D. M. Gogny, Phys. Rev. A 52 , 3082 (1995). [40] Z. Zhou, H.-T. Chen, M. Sukharev, J. E. Subotnik, and A. Nitzan, Phys. Rev. A 109 , 033717 (2024). [41] Q. Zhou, S. A. H. Gangaraj, M. Zhou, and Z. Yu, Sim-ulating quantum emitters in arbitrary photonic envi-ronments using fdtd: beyond the semi-classical regime (2025), arXiv:2410.16118 [quant-ph]. [42] K. Dini, H. Sigurðsson, N. W. E. Seet, P. M. Walker, and T. C. H. Liew, Phys. Rev. B 110 , 214303 (2024). [43] H.-T. Chen, T. E. Li, M. Sukharev, A. Nitzan, and J. E. Subotnik, J. Chem. Phys. 150 , 044102 (2019). [44] C. M. Bustamante, F. P. Bonafé, M. Sukharev, M. Ruggenthaler, A. Nitzan, and A. Rubio, Journal of Chemical Theory and Computation 21 , 9823 (2025). [45] D. Sidler, C. M. Bustamante, F. P. Bonafé, M. Ruggen-thaler, M. Sukharev, and A. Rubio, Nanophotonics 14 ,4941 (2025). [46] X. Ji, A. F. Bocanegra Vargas, G. Meng, and T. E. Li, Journal of Chemical Theory and Computation 22 , 2725 (2026). [47] A. Taflove, S. C. Hagness, and M. Piket-May, The Elec-trical Engineering Handbook 3, 15 (2005). [48] S. Molesky, Z. Lin, A. Y. Piggott, W. Jin, J. Vucković, and A. W. Rodriguez, Nature Photonics 12 , 659 (2018). [49] C. M. Lalau-Keraly, S. Bhargava, O. D. Miller, and E. Yablonovitch, Opt. Express 21 , 21693 (2013). [50] X. Xie, Q. Li, C. Liu, Y. Liu, C. Lee, K. Sun, and H. Deng, Science Advances 11 , 10.1126/sciadv.ads0231 (2025). [51] N. H. M. Dang, S. Zanotti, E. Drouard, C. Chevalier, G. Trippé-Allard, E. Deleporte, C. Seassal, D. Gerace, and H. S. Nguyen, Nano Letters 24 , 11839 (2024). [52] M. Wurdack, E. Estrecho, S. Todd, T. Yun, M. Pieczarka, S. K. Earl, J. A. Davis, C. Schneider, A. G. Truscott, and E. A. Ostrovskaya, Nature Communications 12 , 5366 (2021). [53] J. del Pino, F. A. Y. N. Schröder, A. W. Chin, J. Feist, and F. J. Garcia-Vidal, Phys. Rev. Lett. 121 , 227401 (2018). [54] P. Fowler-Wright, B. W. Lovett, and J. Keeling, Phys. Rev. Lett. 129 , 173001 (2022). [55] K. Schwennicke, N. C. Giebink, and J. Yuen-Zhou, Nanophotonics 13 , 2469 (2024). [56] See Supplemental Material at [URL] for the deriva-tion of the Maxwell–Liouville equations, the numerical scheme, the DBR cavity, the pump–probe perturbative expansion, the per-order differential transmission, the transport-velocity extraction, the waveguide eigenmode solver, and the inverse design of the mode converters. [57] M. Sukharev and A. Nitzan, Phys. Rev. A 84 , 043802 (2011). [58] F. Carollo and I. Lesanovsky, Phys. Rev. Lett. 126 ,230601 (2021). [59] P. Hamm and M. Zanni, Concepts and Methods of 2D In-frared Spectroscopy (Cambridge University Press, 2011). [60] C. A. DelPo, B. Kudisch, K. H. Park, S.-U.-Z. Khan, F. Fassioli, D. Fausti, B. P. Rand, and G. D. Scholes, J. Phys. Chem. Lett. 11 , 2667 (2020). [61] Y. Hong, D. Xu, and M. Delor, Exciton delocalization suppresses polariton scattering (2025), arXiv:2506.08770 [physics.optics]. [62] T. Phan, D. Sell, E. W. Wang, S. Doshay, K. Edee, J. Yang, and J. A. Fan, Light: Science & Applications 
+
+8, 48 (2019). [63] A. Y. Piggott, J. Lu, K. G. Lagoudakis, J. Petykiewicz, T. M. Babinec, and J. Vučković, Nature Photonics 9, 374 (2015). [64] V. Ardizzone, F. Riminucci, S. Zanotti, A. Gianfrate, M. Efthymiou-Tsironi, D. G. Suàrez-Forero, F. Todisco, M. De Giorgi, D. Trypogeorgos, G. Gigli, K. Baldwin, L. Pfeiffer, D. Ballarini, H. S. Nguyen, D. Gerace, and D. Sanvitto, Nature 605 , 447 (2022). [65] M. Reitz, S. van den Wildenberg, A. Koner, G. C. Schatz, and J. Yuen-Zhou, Nanophotonics 15 , e70008 (2026). [66] C. Gonzalez-Ballestero, J. Feist, E. Gonzalo Badía, E. Moreno, and F. J. Garcia-Vidal, Phys. Rev. Lett. 117 ,156402 (2016). 9
+
+[67] S. T. Cundiff and S. Mukamel, Physics Today 66 , 44 (2013). [68] P. C. Adak, S. Yu, J. Abad-Arredondo, B. Datta, A. Cruz, S. Fischer, K. Mosina, Z. Sofer, A. I. Fernández-Domínguez, F. J. García-Vidal, and V. M. Menon, Di-rectional flow of confined polaritons in CrSBr (2025), arXiv:2507.04367 [physics.optics]. [69] B. Xiang, R. F. Ribeiro, Y. Li, A. D. Dunkelberger, B. B. Simpkins, J. Yuen-Zhou, and W. Xiong, Science Advances 5, eaax5196 (2019). [70] D. Liran, K. Baldwin, L. Pfeiffer, H. Deng, and R. Ra-paport, Nano Letters 25 , 12503 (2025). [71] C. Antón, T. C. H. Liew, G. Tosi, M. D. Martín, T. Gao, Z. Hatzopoulos, P. S. Eldridge, P. G. Savvidis, and L. Viña, Applied Physics Letters 101 , 261116 (2012). 10 
+
+# Supplemental Material (SM) for 
+
+# “Full-wave nonlinear microscopy reveals guided channel for ultrafast polariton transport”  
+
+> S1. Derivation of Maxwell–Liouville equations
+
+We consider an ensemble of molecules modeled as two-level systems (TLSs) embedded in an electromagnetic envi-ronment with arbitrary spatially-dependent permittivity εr (r). The electromagnetic fields are treated classically, while the molecular degrees of freedom are described quantum mechanically by density matrices ρj for molecules located at positions rj . Within the coarse-graining, each grid point contains many molecules whose states are assumed to be identical and can therefore be represented by a single density matrix. This provides an efficient way of computing the spatially-resolved dynamics with large numbers of molecules. The coupled Maxwell–Liouville equations used in the main text follow from Maxwell’s equations with the molecular polarization included as a source term, together with the quantum master equation for each molecule. We start from the curl equations 
+
+∇ × E = −μ0∂tH − Min ,
+
+∇ × H = εr ε0∂tE + Jmol + Jin . (S1) Here Jin and Min are externally imposed electric and magnetic current sources used to launch the incident optical pulse. The molecular current density is obtained from the time derivative of the molecular polarization, 
+
+Jmol (r, t ) = ∂tPmol (r, t ), (S2) where 
+
+Pmol (r, t ) = X
+
+> j
+
+Tr[ ˆ μj ρj (t)] δ(r − rj ). (S3) For the two-dimensional simulations considered in this work, the system is invariant along the z direction and we use the transverse-magnetic (TM) polarization, for which the nonzero field components are (Ex, E y , H z ). Equation (S1) is then written componentwise as 
+
+∂H z
+
+∂t = 1
+
+μ0
+
+ ∂E x
+
+∂y − ∂E y
+
+∂x − Min ,z 
+
+
+
+,∂E y
+
+∂t = 1
+
+εr ε0
+
+
+
+− ∂H z
+
+∂x − Jmol ,y − Jin ,y 
+
+
+
+,∂E x
+
+∂t = 1
+
+εr ε0
+
+ ∂H z
+
+∂y − Jmol ,x − Jin ,x 
+
+
+
+.
+
+(S4) When a single incident pulse with amplitude ηp is used, the external sources are written as Jin → ηpJin and Min →
+
+ηpMin , as in the main text. The Hamiltonian of molecule j is 
+
+Hj (t) = Hj 
+
+> 0
+
++ Hj
+
+> int
+
+(t), (S5) with the free and interaction terms 
+
+Hj 
+
+> 0
+
+= ℏω0
+
+2 ˆσzj , Hj
+
+> int
+
+(t) = − ˆμj · E(rj , t ). (S6) The molecular dipole operator is 
+
+ˆμj = μ  ˆσ− 
+
+> j
+
++ ˆ σ+
+
+> j
+
+ , (S7) where the dipole moment μ is taken to be real. The density matrix evolves according to the quantum master equation 
+
+dρ j
+
+dt = − i
+
+ℏ [Hj (t), ρ j ] + D[ρj ]. (S8) 11 Equations (S1) and (S8), together with Eq. (S2), constitute the self-consistent Maxwell–Liouville system. For completeness, we also give the explicit equations for the two-level density-matrix elements. In the basis {| 0⟩ , |1⟩} ,with transition frequency ω0 and real transition dipole moment μ, the interaction Hamiltonian may be written as 
+
+Hj
+
+> int
+
+(t) = −μ · E(rj , t )
+
+
+
+|0⟩j ⟨1| + |1⟩j ⟨0|
+
+
+
+. (S9) The dissipator D[ρj ] is taken to include pure dephasing at rate γϕ. This gives 
+
+dρ 11 ,j 
+
+dt = 2 μ · E(rj , t )
+
+ℏ Im [ ρ10 ,j ] ,dρ 10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ10 ,j + i μ · E(rj , t )
+
+ℏ (ρ00 ,j − ρ11 ,j ) ,
+
+(S10) Finally, the coupling between the molecular and electromagnetic equations is closed through the current source 
+
+Jmol (r, t ) = X
+
+> j
+
+∂t [2 μ Re ρ10 ,j (t)] δ(r − rj ), (S11) where Eq. (S7) has been used. This source term describes the back-action of the molecular polarization on the electromagnetic field. 12  
+
+> S2. Details of numerical simulation
+
+Here we summarize the time-domain numerical scheme used to evolve the Maxwell–Liouville equations derived in Sec. S1. This section focuses on the Maxwell–Liouville equations used for the pump-only transport simulations. The perturbative expansion used for pump–probe spectroscopy is described separately in Sec. S4. The electromagnetic fields are discretized on a uniform Yee-type Cartesian grid. While our code supports three-dimensional simulation with all six field components (Ex, E y , E z , H x, H y , H z ), all simulations displayed in the paper are two-dimensional, thus only (Ex, E y , H z ) components are nonzero. Following the usual leapfrog convention [47], at the beginning of the n-th time step, we start with the electric field En− 12 at time (n − 12 )∆ t, and the magnetic field Hn at time n∆t. For all grid points filled with molecules, the corresponding density matrix variables, namely 
+
+ρn 
+
+> 11
+
+and ρn 
+
+> 10
+
+are also recorded. For the transport simulations, the spatial resolution is ∆x = 17 nm . The time step is ∆t = 0 .56 ∆ x/c 0 so that the Courant–Friedrichs–Lewy condition can be satisfied [47]. The simulated time window for the pump-only transport data in Fig. 2 is 0.5 ps. We impose perfectly matched layers (PMLs) in both x and y
+
+directions.    
+
+> FIG. S1. The Yee lattice used in the 3D FDTD simulations. Here only the (i, j, k )grid point is plotted.
+> A. Updating the electromagnetic fields
+
+The finite-difference update follows the same componentwise form as a standard Yee scheme. The current sources 
+
+Jx, Jy , and Mz contain both the externally injected sources and the molecular polarization current. The electric field is advanced from n − 12 to n + 12 :
+
+En+ 12 
+
+> x
+
+(i, j, k ) = En− 12 
+
+> x
+
+(i, j, k ) + ∆tϵr (i, j, k )ϵ0
+
+ Hnz (i, j, k ) − Hnz (i, j − 1, k )∆x − Jnx (i, j, k )
+
+
+
+, (S12) 
+
+En+ 12 
+
+> y
+
+(i, j, k ) = En− 12 
+
+> y
+
+(i, j, k ) + ∆tϵr (i, j, k )ϵ0
+
+
+
+− Hnz (i, j, k ) − Hnz (i − 1, j, k )∆x − Jny (i, j, k )
+
+
+
+. (S13) The magnetic field is then advanced from n to n + 1 using the updated electric field: 
+
+Hn+1  
+
+> z
+
+(i, j, k ) = Hnz (i, j, k ) + ∆tμ0
+
+"
+
+En+ 12 
+
+> x
+
+(i, j + 1 , k ) − En+ 12 
+
+> x
+
+(i, j, k )∆x
+
+− En+ 12 
+
+> y
+
+(i + 1 , j, k ) − En+ 12 
+
+> y
+
+(i, j, k )∆x − M n+ 12 
+
+> z
+
+(i, j, k )
+
+#
+
+.
+
+(S14) Note that the above expressions are simplified compared to the most general form [47] since we have assumed that the DBR cavity consists of lossless, non-magnetic dielectric materials. 13 
+
+B. TLS update and molecular current 
+
+At each molecular grid cell, the matter degree of freedom is represented by the two density matrix elements ρ11 
+
+and ρ10 . For any given location rj , the time-evolution of the density matrix follows 
+
+dρ 11 ,j 
+
+dt = 2 μ · E(rj , t )
+
+ℏ Im [ ρ10 ,j ] ,dρ 10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ10 ,j + i μ · E(rj , t )
+
+ℏ (ρ00 ,j − ρ11 ,j ) ,
+
+(S15) where E(rj ) denotes the local electric field, which serves as a driving term. The TLS equations are integrated with a 4th-order Runge–Kutta method. Specifically, for a state vector y = ( ρ11 , ρ 10 ), we denote the right-hand side as 
+
+f (y, E), then define 
+
+k1 = f (yn, E), k2 = f (yn + ∆t 
+
+> 2
+
+k1, E), k3 = f (yn + ∆t 
+
+> 2
+
+k2, E), k4 = f (yn + ∆ t k3, E), (S16) which leads to the update rule 
+
+yn+1 = yn + ∆t
+
+6 (k1 + 2 k2 + 2 k3 + k4) . (S17) Within a single Runge–Kutta call, the electric field E is held fixed. The induced molecular polarization on the grid can be calculated as 
+
+Pmol = 2 μ Re ρ10 · 1(∆ x)2 , (S18) where the factor 1/(∆ x)2 is introduced as a discretized version of the Dirac-δ function. The spatial resolution is fixed as ∆x = 17 nm . The current source that couples back into Maxwell’s equations can thus be calculated based on the following finite difference equation: 
+
+Jn 
+
+> mol
+
+= P n+1 mol − P n−1mol 
+
+2∆ t . (S19) 
+
+C. One Maxwell–Liouville time step 
+
+At the n-th time step, suppose that En− 12 , Hn, and the TLS state ρn are known. One full update consists of the following steps: 
+
+• Set all current sources to zero. 
+
+• Predict the TLS state from ρn to ρn+1 pred using En− 12 .
+
+• Convert the predicted coherence to P n+1 pred , then calculate the corresponding current source Jn 
+
+> TLS
+
+using Eq. (S19). 
+
+• Add the external optical source currents Jn 
+
+> in
+
+and M n+ 12 
+
+> in
+
+to the same current source arrays. 
+
+• Update the electric field from En− 12 to En+ 12 using Eqs. (S12) and (S13). 
+
+• Update the magnetic field from Hn to Hn+1 using Eq. (S14). 
+
+• Correct the TLS state by evolving ρn to ρn+1 using the newly updated electric field En+ 12 .Note that here we apply a predictor–corrector scheme when updating ρ, which ensures numerical stability. We implement the above scheme using CUDA C so that it can run in parallel on GPU. 14  
+
+> S3. Details of the DBR cavity used
+
+This section specifies the DBR cavity and molecular layer used for the transport simulations in Fig. 2 and the mode-family analysis in Fig. 3. The cavity consists of two symmetric DBR mirrors. Each DBR is a quarter-wave stack of alternating vacuum ( n1 = 1 ) and dielectric ( n2 = 2 ) layers. The central frequency is designed as ωc = 0 .9 eV (λc = 1377 .6 nm), which gives quarter-wave thicknesses t1 = λc/(4 n1) = 344 .4 nm and t2 = λc/(4 n2) = 172 .2 nm. We use NDBR = 3 periods on each side of the cavity. The cavity shows a photon loss rate of κ ≈ 0.0102 eV, extracted from the transmission spectrum at normal incidence. The molecular layer is represented by a single layer of two-level systems placed at the cavity center. The transition frequency is fixed as ω0 = 1 .0 eV ( λ0 = 1239 .8 nm). While each grid point contains many molecules, the states of all molecules inside a grid point are assumed to be identical, leading to a spatial coarse-graining. The dipole moments of molecules are aligned along the x-axis. The dispersion relation of the modes supported by the DBR cavity can be obtained using the transfer-matrix method (TMM). Specifically, we vary the in-plane wave vector of an incident plane wave and measure the transmission. The result for the bare cavity is shown in Fig. S2(b). With the molecular layer inside, the transmission spectrum reveals the upper and lower polariton branches, as shown in Fig. S2(c). (a) (b) (c) DBR Molecule k [μm -1]
+
+> Freq  [eV]
+
+T
+
+0
+
+1
+
+w/o molecules k [μm -1]
+
+> Freq  [eV]
+
+T
+
+0
+
+1
+
+w/ molecules 
+
+UP
+
+LP
+
+> FIG. S2. TMM results. (a) Schematic illustration of the DBR cavity. (b) Transmission spectrum of bare cavity. (c) Transmission spectrum of cavity, with molecular layer inside. The heatmap reveals the upper polariton (UP) and the lower polariton (LP). Both spectra have been calculated using TMM.
+
+15 
+
+S4. Derivation of perturbation expansion: pump–probe 
+
+Here we derive the perturbative Maxwell–Liouville hierarchy used for the computation of the pump–probe response. We consider two incident fields, a pump p and a probe p′, with amplitudes ηp and ηp′ , respectively. The self-consistent Maxwell’s equations with the two input pulses are 
+
+∇ × E = −μ0∂tH − ηpM p 
+
+> in
+
+− ηp′ M p′ 
+
+> in
+
+,
+
+∇ × H = εr ε0∂tE + Jmol + ηpJp 
+
+> in
+
++ ηp′ Jp′ 
+
+> in
+
+.
+
+(S20) The molecular current is generated by the dipole polarization, 
+
+Jmol (r, t ) = X
+
+> j
+
+∂t Tr[ ˆ μj ρj (t)] δ(r − rj ). (S21) The density matrix of molecule j evolves according to 
+
+dρ j
+
+dt = − i
+
+ℏ
+
+h
+
+Hj 
+
+> 0
+
+− ˆμj · E(rj , t ), ρ j
+
+i
+
++ D[ρj ]. (S22) We expand both the electromagnetic fields and the molecular density matrix in powers of the pump and probe amplitudes, 
+
+{E, H} =
+
+> ∞
+
+X
+
+> n=0
+> ∞
+
+X
+
+> n′=0
+
+η np η n′ 
+
+> p′
+
+{E(n)( n′), H(n)( n′)},ρj =
+
+> ∞
+
+X
+
+> n=0
+> ∞
+
+X
+
+> n′=0
+
+η np η n′ 
+
+> p′
+
+ρ(n)( n′) 
+
+> j
+
+.
+
+(S23) Substitution into Eq. (S20) gives the Maxwell’s equations at fixed perturbative order, 
+
+∇ × E(n)( n′) = −μ0∂tH(n)( n′) − δ1nδ0n′ M p 
+
+> in
+
+− δ0nδ1n′ M p′ 
+
+> in
+
+,
+
+∇ × H(n)( n′) = εr ε0∂tE(n)( n′) + J(n)( n′)mol + δ1nδ0n′ Jp 
+
+> in
+
++ δ0nδ1n′ Jp′ 
+
+> in
+
+.
+
+(S24) Here 
+
+J(n)( n′)mol (r, t ) = X
+
+> j
+
+∂t Tr 
+
+h
+
+ˆμj ρ(n)( n′) 
+
+> j
+
+(t)
+
+i
+
+δ(r − rj ). (S25) Thus, the incident pump and probe appear only at orders (1)(0) and (0)(1) , while all higher-order electromagnetic fields are generated by the molecular polarization. Since for a TLS, at even orders only population and no polarization is created, all even-order electromagnetic fields are vanishing. The density-matrix equation at order (n)( n′) is 
+
+dρ (n)( n′)
+
+> j
+
+dt = − i
+
+ℏ [Hj 
+
+> 0
+
+, ρ (n)( n′) 
+
+> j
+
+] + D[ρ(n)( n′) 
+
+> j
+
+]+ i
+
+ℏ
+
+> n
+
+X
+
+> m=0
+> n′
+
+X
+
+> m′=0
+
+h
+
+ˆμj · E(n−m)( n′−m′)(rj , t ), ρ (m)( m′)
+
+> j
+
+i
+
+.
+
+(S26) This equation makes explicit the hierarchical structure of the perturbation expansion: the density matrix at order 
+
+(n)( n′) is driven by products of fields and density matrices whose total order is (n)( n′).For the TLS used in the simulations, we write the density-matrix elements as ρ(n)( n′) 
+
+> αβ,j
+
+, with α, β ∈ { 0, 1}. Including pure dephasing at rate γϕ, Eq. (S26) becomes 
+
+dρ (n)( n′)11 ,j 
+
+dt =
+
+> n
+
+X
+
+> m=0
+> n′
+
+X
+
+> m′=0
+
+2 μ · E(n−m)( n′−m′)(rj , t )
+
+ℏ Im 
+
+h
+
+ρ(m)( m′)10 ,j 
+
+i
+
+,dρ (n)( n′)10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ(n)( n′)10 ,j 
+
++
+
+> n
+
+X
+
+> m=0
+> n′
+
+X
+
+> m′=0
+
+i μ · E(n−m)( n′−m′)(rj , t )
+
+ℏ
+
+h
+
+ρ(m)( m′)00 ,j − ρ(m)( m′)11 ,j 
+
+i
+
+.
+
+(S27) 16 𝜌 (0)(0)
+
+𝜌 (1)(0) 𝜌 (0)(1)
+
+𝜌 (2)(1) 𝜌 (1)(2)
+
+𝐸 (2)(1)
+
+𝜌 (2)(0) 𝜌 (1)(1) 𝜌 (0)(2)
+
+𝐸 (1)(0) 𝐸 (0)(1)
+
+𝐸 (1)(0) 𝐸 (0)(1)
+
+𝐸 (0)(1)
+
+𝐸 (1)(0)
+
+𝐸 (0)(1) 𝐸 (1)(0)
+
+𝐸 (1)(0)𝐸 (0)(1)
+
+𝐸 (1)(2)
+
+𝑛 + 𝑛 ′ = 0
+
+𝑛 + 𝑛 ′ = 1
+
+𝑛 + 𝑛 ′ = 2
+
+𝑛 + 𝑛 ′ = 3
+
+# …
+
+Probe -induced linear field  𝐸 (0)(1)
+
+Pump -induced  linear field  𝐸 (1)(0)
+
+Third -order fields  𝐸 (2)(1), 𝐸 (1)(2)
+
+FIG. S3. “Subway map” for full-wave nonlinear microscopy showing the perturbative hierarchy of higher-order density matrices constructed from lower-order density matrices via linear and nonlinear electromagnetic fields. Different pathways are marked with different colors. Note that only nonzero terms are visualized, while vanishing even-order fields (such as E(2)(0) , E (1)(1) , . . . )are omitted. Higher-order terms not used in this paper are also neglected. 
+
+We now list the equations involved in this work for specific (n)( n′) orders. The construction of higher-order density matrices from lower-order density matrices is illustrated in Fig. S3. We start from the zeroth-order quantities, which are fixed by the initial state of the system. In particular, 
+
+ρ(0)(0)  
+
+> αβ,j
+
+(0) = ραβ,j (0) , E(0)(0) (r, 0) = E(r, 0) , H(0)(0) (r, 0) = H(r, 0) , (S28) while all higher-order components are initialized to zero. For the simulations considered here, the molecules are initially in the ground state and no electromagnetic field is present, so that 
+
+ρ(0)(0) 00 ,j (0) = 1 , ρ(0)(0) 11 ,j (0) = ρ(0)(0) 10 ,j (0) = 0 , E(0)(0) (r, 0) = H(0)(0) (r, 0) = 0 . (S29) The orders relevant to the lowest-order pump–probe signal are obtained sequentially. The linear probe and pump coherences obey 
+
+dρ (0)(1) 10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ(0)(1) 10 ,j + i μ · E(0)(1) (rj , t )
+
+ℏ , (S30) and 
+
+dρ (1)(0) 10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ(1)(0) 10 ,j + i μ · E(1)(0) (rj , t )
+
+ℏ . (S31) The pump-induced population at order (2)(0) is 
+
+dρ (2)(0) 11 ,j 
+
+dt = 2 μ · E(1)(0) (rj , t )
+
+ℏ Im 
+
+h
+
+ρ(1)(0) 10 ,j 
+
+i
+
+. (S32) Similarly, the mixed pump–probe population at order (1)(1) is 
+
+dρ (1)(1) 11 ,j 
+
+dt = 2 μ · E(1)(0) (rj , t )
+
+ℏ Im 
+
+h
+
+ρ(0)(1) 10 ,j 
+
+i
+
++ 2 μ · E(0)(1) (rj , t )
+
+ℏ Im 
+
+h
+
+ρ(1)(0) 10 ,j 
+
+i
+
+.
+
+(S33) 17 The leading pump-induced correction to the probe transmission is the field at order (2)(1) . Its molecular source is determined by 
+
+dρ (2)(1) 10 ,j 
+
+dt = ( −iω 0 − γϕ) ρ(2)(1) 10 ,j + i μ · E(2)(1) (rj , t )
+
+ℏ
+
++ i μ · E(1)(0) (rj , t )
+
+ℏ
+
+h
+
+ρ(1)(1) 00 ,j − ρ(1)(1) 11 ,j 
+
+i
+
++ i μ · E(0)(1) (rj , t )
+
+ℏ
+
+h
+
+ρ(2)(0) 00 ,j − ρ(2)(0) 11 ,j 
+
+i
+
+.
+
+(S34) Eqs. (S24) and (S34) determine E(2)(1) and H(2)(1) , which enter the leading pump–probe differential transmission discussed in the main text. In the FDTD implementation, the required orders are propagated concurrently, with each order receiving its electromagnetic source from J(n)( n′)mol and its nonlinear molecular driving from lower-order fields and density matrices. 18      
+
+> S5. Details for calculating ∆Tat different (n, n ′)order
+
+The pump–probe signal is defined as the difference between the probe transmission with and without the pump, 
+
+∆Tp′ (r, ω ) = T pump on  
+
+> p′
+
+(r, ω ) − T pump off  
+
+> p′
+
+(r, ω ). (S35) For the TM fields used here, the transmitted flux through a plane normal to y is proportional to the y component of the Poynting vector, 
+
+Sy (r, ω ) = 12 Re[ E(r, ω ) × H∗(r, ω )] y = − 12 Re [ Ex(r, ω )H∗ 
+
+> z
+
+(r, ω )] . (S36) The probe-direction fields without the pump are, to lowest order, 
+
+Epump off  
+
+> x
+
+= ηp′ E(0)(1)  
+
+> x
+
+, Hpump off  
+
+> z
+
+= ηp′ H(0)(1)  
+
+> z
+
+. (S37) With the pump present, the leading pump-induced correction to the probe field appears at order (2)(1) :
+
+Epump on  
+
+> x
+
+= ηp′ E(0)(1)  
+
+> x
+
++ η2 
+
+> p
+
+ηp′ E(2)(1)  
+
+> x
+
+, Hpump on  
+
+> z
+
+= ηp′ H(0)(1)  
+
+> z
+
++ η2 
+
+> p
+
+ηp′ H(2)(1)  
+
+> z
+
+. (S38) Substituting these fields into the Poynting flux and subtracting the pump-off contribution gives, after normalization by the incident probe intensity ∝ η2 
+
+> p′
+
+,
+
+∆T (r, ω ) ∝ − η2
+
+> p
+
+2 Re 
+
+h
+
+E(0)(1)  
+
+> x
+
+(r, ω )H(2)(1) ∗ 
+
+> z
+
+(r, ω )+ E(2)(1)  
+
+> x
+
+(r, ω )H(0)(1) ∗ 
+
+> z
+
+(r, ω )
+
+i
+
+.
+
+(S39) Thus, the leading differential transmission comes from the interference between the linear probe field (0)(1) (the local oscillator) and the pump-induced correction to the probe field (2)(1) . Higher-order terms, such as E(2)(1)  
+
+> x
+
+H(2)(1) ∗ 
+
+> z
+
+,scale as η4 
+
+> p
+
+and are neglected. The fields are recorded at the monitor plane, as shown schematically in Fig. S4(a). The ∆T (r, ω ) above is not yet the differential transmission signal displayed in the main text. In a typical pump– probe microscopy setup, detectors collect only the light emitted into a finite angular range around a given direction. This angular range is set by the numerical aperture (NA) of the objective lens, as shown in Fig. S4(b). We therefore Fourier transform the monitored fields along the propagation direction x and keep only the components co-propagating with the probe. Specifically, in our setup where the pump and probe are launched from opposite sides, the linear probe field at order (0)(1) is centered at kx = kp′ = −kp. The third-order field at order (2)(1) , generated by two pump interactions and one probe interaction, contains two independent positive-frequency phase-matched components, together with their complex-conjugate counterparts [35]. One component corresponds to the ordinary pump–probe pathway, with in-plane momentum combinations ±kp ∓ kp + kp′ = kp′ = −kp, and is therefore co-propagating with the probe. Additional phase components arise from the so-called double-quantum-coherence pathways 2kp − kp′ = 3 kp,which propagate in a different direction and produce the rapidly oscillating spatial pattern shown in Fig. S4(c). Thus, the k-space filter isolates the desired probe-direction signal while removing contributions emitted into other phase-matched directions [34, 37]. We implement this selection by introducing a per-frequency Gaussian window in kx. For each frequency, the electromagnetic field is first transformed into k-space as ˜f (kx, ω ) = Fx[f (x, ω )] , then filtered by a Gaussian kernel 
+
+M (kx) = exp 
+
+"
+
+− 12
+
+ kx − kc
+
+∆k
+
+2#
+
+, kc = kp′ , ∆k = 0 .6 k∥, (S40) and transformed back to real space. The same filtering is applied to E(0)(1)  
+
+> x
+
+, H (0)(1)  
+
+> z
+
+and E(2)(1)  
+
+> x
+
+, H (2)(1)  
+
+> z
+
+, before they are used to calculate ∆T (x, ω ). Fig. S4(c) illustrates the effect of the k-space filtering used to select the probe-direction phase-matched component [35, 59]. Displayed are the differential transmission results ∆T (x, ω ) obtained using a similar setup as that used in Fig. 2(d), only with γϕ = 0 . Without the filtering, ∆T (x, ω ) includes a rapidly oscillating term arising from interference between the double-quantum-coherence component at kx = 3 kp and the linear probe field. In a realistic experiment, this off-axis component lies outside the finite collection range of the objective lens. 19 Detector   
+
+> Imaging
+> Sample
+> Probe
+> Pump Freq [eV]
+> x [μm]
+> w/o k -filtering
+> ΔT x[μm]
+> Freq [eV]
+> w/k-filtering
+> ΔT
+
+(a) 
+
+(c) Monitor Source 
+
+> Pump
+> Probe
+
+(b) 
+
+FIG. S4. k-space filtering before calculating the differential transmission. (a) The simulation setup. The source plane and the monitor plane are marked. (b) Schematic illustration of a realistic experimental setup. An objective lens with finite NA is used to collect the signal, which justifies the k-space filtering. (c) Effect of the k-space filtering: the fast-oscillating pattern arising from the double-quantum-coherence contribution at kx = 3 kp is removed, thereby isolating the pump–probe signal along the probe direction kp′ .
+
+S6. Extraction of transport velocity from ∆T
+
+Here we describe how the velocity data points in Fig. 2(e) are extracted from the simulated differential-transmission maps. In the previous Sec. S5, we have already explained how ∆T (r, ω ) can be calculated. Note that the ∆T (r, ω )
+
+profile is only calculated at the output plane, which is located at y = 5 .67 μm. Thus, for a given pump–probe time delay τ , we simplify the notation as ∆T (x, ω ; τ ).For each (kp, γ ϕ) case, the simulation is repeated for five delays τ ∈ {− 0.30 , −0.15 , 0, 0.15 , 0.30 } ps . For each delay 
+
+τ , the differential-transmission map ∆T (x, ω ; τ ) is first reduced to a one-dimensional spatial envelope by summing over the monitored frequencies: 
+
+S(x; τ ) = X
+
+> m
+
+|∆T (x, ω m; τ )| . (S41) The peak position can then be extracted by looking for the maximum value: 
+
+xpeak (τ ) = arg max 
+
+> x
+
+S(x; τ ). (S42) This metric directly tracks the most intense feature in the ∆T map. We also compute a root-mean-square (rms) displacement relative to a fixed reference position x0 = −25 μm. The rms coordinate can be calculated as 
+
+xrms (τ ) = 
+
+" P  
+
+> j
+
+S(xj ; τ ) · (xj − x0)2
+
+P 
+
+> j
+
+S(xj ; τ )
+
+#1/2
+
+. (S43) 20 For each fixed (kp, γ ϕ) and for each position metric α ∈ { peak , rms }, the delay-dependent position is fitted to a straight line, 
+
+xα(τi) ≃ kα · τi + bα. (S44) The velocity reported in Fig. 2(e) is vα = 2 kα. The factor of two comes from the symmetric pump–probe geometry used in Fig. 2: pump and probe pulses are launched with opposite in-plane momenta and travel towards each other. Repeating the above procedure for kp = 1 .0, 1.2, . . . , 2.6 μm−1 and γϕ ∈ { 0, κ/ 4, κ/ 2} yields the data shown in Fig. 2(e). 21  
+
+> S7. Waveguide eigenmode solver
+
+Here we describe how the mode profiles shown in Fig. 3(b) are calculated. The DBR structure is invariant along the propagation direction x, while the multilayer stack is arranged along the y-axis. We solve for the TM eigenmodes that propagate along the x-axis, with nonzero field components (Ex, E y , H z ). At any given optical frequency ω, a propagating eigenmode can be described as 
+
+Hz (x, y, t ) = ψ(y) · exp( iβx − iωt ), (S45) where exp( iβx ) and ψ(y) describe the spatial dependence in x and y direction, respectively. In frequency domain, Maxwell’s equations can be simplified as 
+
+∂2
+
+∂x 2 Hz + εyy 
+
+∂∂y 
+
+
+
+ε−1
+
+> xx
+
+∂H z
+
+∂y 
+
+
+
++ εyy k20 Hz = 0 , (S46) where k0 = ω/c 0 denotes the wave vector inside vacuum. The anisotropic permittivity of the molecules is calculated based on the following equations: 
+
+εxx = 1 − 2μ2
+
+ℏε0(∆ x)2 · 1(ω − ω0) + iγ ϕ
+
+,εyy = 1 ,
+
+(S47) since the dipole moments are all aligned with the x-axis in our case. We set ω0 = 1 .0 eV . The proposed methodology is, however, general, and is not restricted by this assumption. The molecular layer is placed inside the DBR cavity at 
+
+y = 0 .By substituting Eq. (S45) into Eq. (S46), we arrive at a one-dimensional eigenvalue problem 
+
+
+
+εyy 
+
+∂∂y 
+
+
+
+ε−1
+
+> xx
+
+∂∂y 
+
+
+
++ εyy k20
+
+
+
+ψ(y) = n2eff k20 ψ(y), (S48) where neff = β/k 0 denotes the effective refractive index. The above Eq. (S48) is then discretized and treated as an eigenvalue problem at ω = ωc = 0 .9 eV to obtain the mode profiles in Fig. 3(b). We introduce stretched-coordinate PMLs in y direction as a boundary condition. Note that solving for the above eigenvalue problem leads to spurious modes that are localized inside the PML. These spurious modes are rejected and are not included in our analysis. We also reject strongly decaying modes with Im( neff ) > 1/(2 π). The remaining solutions, as shown in Fig. S5, are classified into two categories: modes with Re( neff ) < 1 are above the light line and can couple to the radiative channels in free-space, while modes with Re( neff ) > 1 lie below the light line and do not couple to the radiative channels. 22 Hz
+
+Mode 1  Mode  2 Mode  3 Mode  4 Mode  5
+
+neff =0.324  neff =1.018  neff =1.061  neff =1.138  neff =1.151 
+
+Guided modes         
+
+> FIG. S5. Eigenmodes supported by our emitter-cavity system. In the top panel, each obtained eigenmode is represented by a dot. The bottom panels visualize the Hzfield distributions of five modes located at ω=ωc= 0 .9eV.
+> S8. Inverse design of the mode converters
+
+Here we describe the procedure used to design the two mode converters shown in Fig. 3(c). The calculation of mode profiles has already been displayed in Sec. S7. The goal is to construct compact grating-like structures inside the DBR cavity that transform between the radiative mode (mode 1 in Fig. S5) and the low-loss guided mode (mode 2 in Fig. S5). Two converters are designed independently: converter 1 transforms the radiative mode into the guided mode, while converter 2 does the opposite. The optimization is performed with the help of a finite-difference frequency-domain (FDFD) solver, which solves for the magnetic field Hz . Specifically, after discretization the field vector h satisfies a linear equation Ah = b0, where 
+
+A denotes the following linear operator 
+
+A = Dbx diag  ε−1
+
+> yy
+
+ Dfx + Dby diag  ε−1
+
+> xx
+
+ Dfy + k20 I, (S49) and b0 stands for the injected mode source. Here Dfx,y and Dbx,y are the matrices corresponding to the forward and backward finite-difference operators. Stretched-coordinate PMLs are introduced in both x and y directions, and Dirichlet boundary conditions are imposed on the outermost grid points. We now denote the targeted mode profile at the output plane as hout . The figure-of-merit (FoM) that we try to maximize is defined as 
+
+FoM = |h†
+
+> out
+
+h|2 = X
+
+> y
+
+H∗
+
+> out
+
+(xout , y ) Hz (xout , y )
+
+> 2
+
+, (S50) which quantifies the overlap between the actual field h and the desired mode.  
+
+> A. Parameterization of permittivity distribution
+
+The background structure is the same DBR cavity described in Sec. S3. Note that the high-index dielectric layers, as well as the molecular sheet, remain fixed and cannot be modified during the optimization process. Only the low-index layers are designable. In the l-th designable layer, we start from a one-dimensional pattern pl(x), which controls the permittivity distribution along the x direction. This pattern is tiled along the y direction, so the final structure is a fabricable layered grating rather than a free-form 2D pattern. At each iteration, the latent variable pl(x) has to be mapped to a permittivity distribution. A sigmoid function is first applied: 
+
+ρraw (x, l ) = 11 + exp[ −pl(x)] . (S51) 23 A conic filter along x is then applied, which helps control the minimum feature size: 
+
+˜ρ(x, l ) = [K ⊛ ρraw ]( x, l )[K ⊛ 1]( x, l ) , K(r) = max(0 , r filter − | r|), (S52) here ⊛ represents 1D convolution. The filtered density ˜ρ(x, l ) is then projected toward a binary value using 
+
+ρ(x, l ) = tanh( βη ) + tanh[ β(˜ ρ(x, l ) − η)] tanh( βη ) + tanh[ β(1 − η)] , (S53) where β denotes the projection parameter which controls the binarization. The threshold is fixed as η = 0 .5. Finally, the material permittivity can be obtained through interpolation: 
+
+ε−1 = 1
+
+ε2
+
++
+
+ 1
+
+ε1
+
+− 1
+
+ε2
+
+
+
+ρ, (S54) here ε1 = n21 and ε2 = n22. ρ = 0 means that the gap is filled with high-index material.  
+
+> B. Calculating gradient using adjoint method
+
+For the linear system Ah = b0, the Wirtinger derivative of the FoM with respect to the conjugate field is 
+
+∂FoM 
+
+∂h∗ = hout (h†
+
+> out
+
+h). (S55) The adjoint field is therefore obtained from one additional linear solve, 
+
+A†hadj = −hout (h†
+
+> out
+
+h). (S56) Each optimization iteration therefore requires one forward solve and one adjoint solve. The sensitivity with respect to inverse permittivity ε−1 can be derived as 
+
+∂FoM 
+
+∂ε −1 = 2 Re v∗
+
+> x
+
+ux + v∗ 
+
+> y
+
+uy
+
+ , (S57) where 
+
+ux = Dfx h, uy = Dfy h, vx = ( Dbx)†hadj , vy = ( Dby )†hadj . (S58) Finally, the gradient is propagated back through the parameterization in reverse order. The resulting gradient with respect to pl(x) is passed to the optimizer for gradient descent. The objective J we try to optimize includes both the FoM and a binarization penalty term: 
+
+J = FoM − λbin 
+
+X
+
+> cells
+
+ρ(1 − ρ), (S59) where λbin is increased during the optimization. The penalty term pushes ρ towards 0 or 1. 
+
+> C. Numerical settings
+
+We carry out the inverse design focusing on a single wavelength λc = 1377 .6 nm. The grid resolution is fixed as 
+
+∆x = 17 nm. The design region is 8 μm long in x direction. During the optimization process, we run gradient descent (based on Adam optimizer) for 600 steps. The learning rate starts from 0.1 and is decayed by a factor 0.9958 per iteration. To control the minimum feature size, the radius of the applied conic filter is chosen as rfilter = 400 nm. The projection parameter is ramped from β = 1 to β = 150 , to ensure that the resulting permittivity profile is binary. The binarization weight λbin is kept at zero for the first 90 steps, and then increased linearly to 0.15 . During the final 
+
+150 steps, the best-performing device is recorded. The final device is obtained by thresholding the profile at ρ = 0 .5,before being tested using FDTD. The thresholded grating structures are the shaded regions shown in Fig. 3(c). The same exported binary permittiv-ity, after decomposition into rectangular features, is used in the long-distance propagation simulations of Fig. 4. Thus the inverse-design calculation supplies only the passive photonic converters; the subsequent nonlinear pump–probe dynamics are evaluated with the full Maxwell–Liouville FDTD framework described in the main text. 24 Step  10 0 Step  200  Step  300  Step  400  Step  500 
+
+FIG. S6. Optimization of the mode converter. The top row shows how the permittivity distribution evolves as the number of steps increases. The bottom row shows the corresponding |Hz | field distributions. 1e -6
+
+> 1e -5
+> 1e -4
+> 1e -3
+
+𝛾 𝜙 = 0
+
+> 1e -6
+> 1e -5
+> 1e -4
+> 1e -3
+
+𝛾 𝜙 = 𝜅 /2 1e -3
+
+> 1e -2
+> 1e -1
+> 1e -3
+> 1e -2
+> 1e -1
+
+Population  ρ11  Coherence  |ρ10 |
+
+Pump 
+
+Converter 2 Converter 1 
+
+𝛾 𝜙 = 0
+
+𝛾 𝜙 = 𝜅 /2
+
+(a) 
+
+(b) (c)
+
+FIG. S7. Long-range excitation transport enabled by the mode converters. (a) Simulation setup. The distance between the two mode converters is set to 200 μm. (b) Heatmap of the population ρ11 (x, t ). When γϕ = κ/ 2, the heatmap shows the creation of static dark state population. (c) Heatmap of the coherence |ρ10 (x, t )|. The coherence is only slightly affected by γϕ.25 (a) 
+
+(b) Cavity 64 fs 190 fs 318 fs 445 fs 572 fs 699 fs 826 fs  
+
+> 120 μm
+> Incidence
+> Time -evolution: H zfield
+
+Cavity + converter 64 fs 190 fs 318 fs 445 fs 572 fs 699 fs 826 fs  
+
+> 120 μm
+> Incidence
+> Time -evolution: H zfield
+
+FIG. S8. Visualization of magnetic field snapshots to illustrate how the mode converter enables long-range energy transport. All the field snapshots are obtained through FDTD simulation. (a) Without the mode converter, the excited cavity polariton mode is radiative and decays quickly. (b) With the mode converter, the polariton mode is converted into a guided mode which is protected from radiative losses. 26 100 μm 
+
+Incidence 
+
+Cavity 
+
+w/o converters 100 μm 
+
+Incidence 
+
+Cavity + converter 
+
+w/ converters (a) 
+
+(b) 
+
+FIG. S9. Visualization of bright and dark state populations. Following Ref. [34], we calculate the bright state population 
+
+nB (t) = P 
+
+> j
+
+|ρ10 ,j (t)|2 and the dark state population nD (t) = P 
+
+> j
+
+[ρ11 ,j (t) − | ρ10 ,j (t)|2]. For both cases the pure dephasing rate is γϕ = κ/ 10 . (a) Without mode converter, nB (t) decays monotonically. Part of nB is transferred into static dark state population nD due to γϕ > 0. (b) With mode converters, nB (t) first decays, then rises and exhibits a recurrence peak at 
+
+t = 0 .57 ps. This is because the energy of the injected polariton mode is transferred to the photon-like guided mode, then transferred back by the second converter. 27 ρ11 ρ10 Hzx [μm] x [μm] x [μm] 
+
+FIG. S10. Recorded signals for different (n)( n′) orders. The signals are obtained via FDTD simulation, using the simple cavity structure introduced in Fig. 2. The red (green) arrow shows the center of the incident pump (probe) pulse. The corresponding in-plane wave vectors are kp = −kp′ = π/ 2 μm−1. All fields are recorded at the y = 0 central plane inside the DBR cavity. The profiles are consistent with the equations introduced in Sec. S4: if n + n′ is even, both the electromagnetic fields and the coherence ρ(n)( n′)10 remain zero; if n + n′ is odd, the population ρ(n)( n′)11 remains zero.

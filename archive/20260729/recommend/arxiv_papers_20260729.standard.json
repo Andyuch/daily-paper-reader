@@ -1,0 +1,95 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-07-29T21:42:05.418092+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.22860v1",
+      "source": "arxiv",
+      "title": "Full-wave nonlinear microscopy reveals guided channel for ultrafast polariton transport",
+      "abstract": "We show how finite-difference time-domain (FDTD) simulations can be extended to model ultrafast nonlinear microscopy, enabling the prediction of spatially-resolved pump--probe signals in arbitrary electromagnetic environments. Focusing on polariton transport in strongly coupled light--matter systems, we develop a perturbative framework to study the ultrafast propagation of hybrid light--matter excitations in nanophotonic structures. We first apply the framework to a standard distributed Bragg reflector (DBR) cavity, reproducing established results for polariton transport from a multimode Tavis--Cummings model. We then consider the full modal landscape of the same cavity, including guided modes below the light line that are typically neglected in single-mode-family descriptions. Exploiting these modes, we design compact mode converters that transfer radiative cavity polaritons into photon-like guided polaritons and back, utilizing the guided modes for low-loss propagation. Despite molecular dephasing, this enables transport of molecular excitation over a millimeter, an order of magnitude beyond current transport experiments. We further compute the pump--probe differential transmission signal, providing an experimental signature of the mechanism. Our results show that the modal landscape of a photonic cavity can be engineered to bypass limitations commonly assumed to be intrinsic to the transport of molecular polaritons.",
+      "authors": [
+        "Qingyi Zhou",
+        "Piper Fowler-Wright",
+        "Zongfu Yu",
+        "Joel Yuen-Zhou",
+        "Michael Reitz"
+      ],
+      "primary_category": "quant-ph",
+      "categories": [
+        "quant-ph",
+        "physics.chem-ph",
+        "physics.optics"
+      ],
+      "published": "2026-07-24T19:03:13+00:00",
+      "link": "https://arxiv.org/pdf/2607.22860v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "simulation of ultrafast polariton transport relevant to stroboSCAT imaging for semiconductor carrier transport",
+      "llm_evidence_cn": "超快极化子传输模拟，与stroboSCAT半导体载流子成像相关",
+      "llm_evidence": "超快极化子传输模拟，与stroboSCAT半导体载流子成像相关",
+      "canonical_evidence": "超快极化子传输模拟，与stroboSCAT半导体载流子成像相关",
+      "llm_tldr_en": "This paper extends FDTD simulations to model ultrafast nonlinear microscopy, predicting pump-probe signals for polariton transport in nanophotonic structures, revealing guided modes that enable fast transport.",
+      "llm_tldr_cn": "当前超快显微镜模型难以预测复杂电磁环境中的信号。本文提出全波非线性显微镜模拟框架，将FDTD扩展至泵浦-探测信号预测，并应用于极化子传输研究。通过标准DBR腔验证后，发现导模通道支持超快极化子传输。该工作为设计基于极化子的超快光电器件提供了理论工具。",
+      "llm_tldr": "当前超快显微镜模型难以预测复杂电磁环境中的信号。本文提出全波非线性显微镜模拟框架，将FDTD扩展至泵浦-探测信号预测，并应用于极化子传输研究。通过标准DBR腔验证后，发现导模通道支持超快极化子传输。该工作为设计基于极化子的超快光电器件提供了理论工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25963v1",
+      "source": "arxiv",
+      "title": "Stacking Polarity-Controlled Interlayer Photocarrier Dynamics in MoSe2/MoS2 Heterostructures",
+      "abstract": "Control of interlayer photocarrier dynamics is central to optoelectronic applications of van der Waals heterostructures, yet deterministic and spatially uniform tuning strategies remain limited. Here we show that stacking polarity provides a global control parameter for photocarrier dynamics in MoSe$_2$/MoS$_2$ heterostructures. By comparing hexagonal (2H) and rhombohedral (3R) MoS$_2$ bilayers and engineering opposite interface terminations in 3R stacking, we resolve stacking-dependent interlayer charge-transfer dynamics using ultrafast pump--probe spectroscopy. While charge transfer in the 2H heterostructure occurs faster than the experimental resolution, the 3R heterostructures show time-resolvable charge transfer that slows from $0.25$ to $0.37$~ps depending on stacking polarity. Furthermore, the interlayer exciton lifetime is tuned from $\\sim$$40$ to $\\sim$$170$~ps. These effects arise from stacking-induced layer polarization in 3R MoS$_2$, which modulates interfacial wavefunction overlap.",
+      "authors": [
+        "Gbenga S. Agunbiade",
+        "Ting Zheng",
+        "Hui Zhao"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-07-28T16:45:55+00:00",
+      "link": "https://arxiv.org/pdf/2607.25963v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved pump-probe study of photocarrier dynamics in 2D heterostructures",
+      "llm_evidence_cn": "二维异质结中光载流子动力学的瞬态泵浦探测研究",
+      "llm_evidence": "二维异质结中光载流子动力学的瞬态泵浦探测研究",
+      "canonical_evidence": "二维异质结中光载流子动力学的瞬态泵浦探测研究",
+      "llm_tldr_en": "This paper uses ultrafast pump-probe spectroscopy to resolve stacking-dependent interlayer charge-transfer dynamics in MoSe2/MoS2 heterostructures, showing that 3R stacking slows charge transfer.",
+      "llm_tldr_cn": "二维异质结中层间电荷转移快慢对光电子应用至关重要。本文利用超快泵浦探测光谱，研究了MoSe2/MoS2异质结中不同堆叠极性对光载流子动力学的影响。发现3R堆叠的电荷转移速度较慢，可被时间分辨，而2H则极快。结果为通过堆叠设计调控载流子动力学提供了新思路。",
+      "llm_tldr": "二维异质结中层间电荷转移快慢对光电子应用至关重要。本文利用超快泵浦探测光谱，研究了MoSe2/MoS2异质结中不同堆叠极性对光载流子动力学的影响。发现3R堆叠的电荷转移速度较慢，可被时间分辨，而2H则极快。结果为通过堆叠设计调控载流子动力学提供了新思路。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

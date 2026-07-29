@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-29",
+  "date": "2026-07-29",
+  "generated_at": "2026-07-29T21:43:40",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/29/2607.22860v1-full-wave-nonlinear-microscopy-reveals-guided-channel-for-ultrafast-polariton-transport",
+      "section": "quick",
+      "title_en": "Full-wave nonlinear microscopy reveals guided channel for ultrafast polariton transport",
+      "authors": "Qingyi Zhou, Piper Fowler-Wright, Zongfu Yu, Joel Yuen-Zhou, Michael Reitz",
+      "date": "2026-07-24",
+      "pdf": "https://arxiv.org/pdf/2607.22860v1",
+      "score": "7.0",
+      "evidence": "超快极化子传输模拟，与stroboSCAT半导体载流子成像相关",
+      "tldr": "将FDTD模拟扩展至超快非线性显微术，研究强耦合光物质系统中极化激元的输运。首先在DBR腔中验证了多模Tavis-Cummings模型的结果。进而考虑包括导模在内的全模态景观，利用导模设计紧凑模式转换器，使辐射腔极化激元转换为光子状导模极化激元，实现低损耗传播。尽管存在分子退相，仍将分子激发传输距离提升至毫米量级，远超现有实验。通过泵浦探测差分透射信号为机制提供了实验特征，证明可工程化腔模态景观突破极化激元输运的固有局限。",
+      "tags": "query:iscat",
+      "abstract_en": "We show how finite-difference time-domain (FDTD) simulations can be extended to model ultrafast nonlinear microscopy, enabling the prediction of spatially-resolved pump--probe signals in arbitrary electromagnetic environments. Focusing on polariton transport in strongly coupled light--matter systems, we develop a perturbative framework to study the ultrafast propagation of hybrid light--matter excitations in nanophotonic structures. We first apply the framework to a standard distributed Bragg reflector (DBR) cavity, reproducing established results for polariton transport from a multimode Tavis--Cummings model. We then consider the full modal landscape of the same cavity, including guided modes below the light line that are typically neglected in single-mode-family descriptions. Exploiting these modes, we design compact mode converters that transfer radiative cavity polaritons into photon-like guided polaritons and back, utilizing the guided modes for low-loss propagation. Despite molecular dephasing, this enables transport of molecular excitation over a millimeter, an order of magnitude beyond current transport experiments. We further compute the pump--probe differential transmission signal, providing an experimental signature of the mechanism. Our results show that the modal landscape of a photonic cavity can be engineered to bypass limitations commonly assumed to be intrinsic to the transport of molecular polaritons.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/29/2607.25963v1-stacking-polarity-controlled-interlayer-photocarrier-dynamics-in-mose2mos2-heterostructures",
+      "section": "quick",
+      "title_en": "Stacking Polarity-Controlled Interlayer Photocarrier Dynamics in MoSe2/MoS2 Heterostructures",
+      "authors": "Gbenga S. Agunbiade, Ting Zheng, Hui Zhao",
+      "date": "2026-07-28",
+      "pdf": "https://arxiv.org/pdf/2607.25963v1",
+      "score": "6.0",
+      "evidence": "二维异质结中光载流子动力学的瞬态泵浦探测研究",
+      "tldr": "范德华异质结中层间光载流子动力学对光电器件至关重要，但全局调控策略有限。本文对比2H和3R堆叠的MoSe2/MoS2异质结，利用超快光谱发现堆叠极性可调控层间电荷转移速率和激子寿命。3R堆叠中电荷转移时间从0.25ps到0.37ps变化，激子寿命从40ps调谐至170ps。该工作揭示了堆叠诱导层极化对界面波函数重叠的调制作用，为异质结光电器件设计提供新自由度。",
+      "tags": "query:iscat",
+      "abstract_en": "Control of interlayer photocarrier dynamics is central to optoelectronic applications of van der Waals heterostructures, yet deterministic and spatially uniform tuning strategies remain limited. Here we show that stacking polarity provides a global control parameter for photocarrier dynamics in MoSe$_2$/MoS$_2$ heterostructures. By comparing hexagonal (2H) and rhombohedral (3R) MoS$_2$ bilayers and engineering opposite interface terminations in 3R stacking, we resolve stacking-dependent interlayer charge-transfer dynamics using ultrafast pump--probe spectroscopy. While charge transfer in the 2H heterostructure occurs faster than the experimental resolution, the 3R heterostructures show time-resolvable charge transfer that slows from $0.25$ to $0.37$~ps depending on stacking polarity. Furthermore, the interlayer exciton lifetime is tuned from $\\sim$$40$ to $\\sim$$170$~ps. These effects arise from stacking-induced layer polarization in 3R MoS$_2$, which modulates interfacial wavefunction overlap.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
