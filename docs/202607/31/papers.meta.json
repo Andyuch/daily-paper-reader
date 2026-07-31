@@ -1,0 +1,39 @@
+{
+  "label": "2026-07-31",
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T20:37:18",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202607/31/2607.20904v1-visualizing-microwave-driven-dynamics-of-antiskyrmions-and-surface-skyrmions",
+      "section": "quick",
+      "title_en": "Visualizing Microwave-Driven Dynamics of Antiskyrmions and Surface Skyrmions",
+      "authors": "Zhuolin Li, Daisuke Nakamura, Spencer Reisbick, Chuhang Liu, Myung-Geun Han, Kosuke Karube, Wataru Koshibae, Naoto Nagaosa, Yasujiro Taguchi, Yimei Zhu, Yoshinori Tokura, Xiuzhen Yu",
+      "date": "2026-07-23",
+      "pdf": "https://arxiv.org/pdf/2607.20904v1",
+      "score": "6.0",
+      "evidence": "时间分辨洛伦兹透射电镜用于皮秒自旋动力学成像",
+      "tldr": "微波驱动拓扑自旋织构可产生丰富非线性响应，但超快实空间观测仍然缺乏。本文采用时间分辨洛伦兹透射电子显微镜研究由中心反斯格明子与表面斯格明子构成的混合结构，可视化皮秒级面积与二次谐波演化，揭示非线性响应；发现两类斯格明子核心轨迹旋转方向一致而路径各异。微磁模拟表明动态模式源于厚度方向核剖面调制，确立了超快电镜探测高频拓扑磁孤子动力学的实空间方法。",
+      "tags": "query:iscat",
+      "abstract_en": "Microwaves provide coherent access to low-energy excitations and serve as effective probes of high-frequency spin dynamics in quantum and magnetic systems. For topological spin textures, microwave excitation is expected to generate rich collective responses, yet direct real-space observation of ultrafast dynamics remains limited. Here we use time-resolved Lorentz transmission electron microscopy to visualize microwave-driven dynamics in a hybrid antiskyrmion structure composed of a central antiskyrmion and surface skyrmions. We resolve the picosecond evolution of antiskyrmion area and second-harmonic signals, evidencing nonlinear responses of spin textures under microwave excitations. We track the core motions of the antiskyrmion and surface skyrmions, which follow distinct trajectories while sharing the same rotational sense. Micromagnetic simulations reproduce the key observations and associate the dynamic modes with the spatial modulation of the core profile along the thickness. These achievements establish ultrafast electron microscopy as a powerful real-space approach for probing high-frequency microwave-driven dynamics of topological magnetic solitons.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202607/31/2607.27486v1-dynamics-of-null-and-electrostatic-blind-spots-for-quantitative-pfm",
+      "section": "quick",
+      "title_en": "Dynamics of Null and Electrostatic Blind Spots for Quantitative PFM",
+      "authors": "Marti Checa, Holland Swicegood, Ruben Millan-Solsona, Ralph Bulanadi, Jerry Zhao, Jack Lasseter, Stephen Jesse, Liam Collins",
+      "date": "2026-07-29",
+      "pdf": "https://arxiv.org/pdf/2607.27486v1",
+      "score": "6.0",
+      "evidence": "利用干涉测量实现定量纳米材料表征",
+      "tldr": "定量压电力显微镜（PFM）的测量常被寄生静电力和悬臂动力学扰动，零点（NS）和静电盲点（ESBS）被用作抑制伪影的工作条件，但两者是否等价及随环境如何演化一直不明。本文结合解析梁模型、几何真实有限元模拟与自动干涉测量，证明NS是接触共振处的模态零点，对所有激励的灵敏度均消失；ESBS则为准静态位置，仅抑制分布式静电力。实验表明两者随针尖-样品边界条件变化但始终保持空间分离，且梁模型只能再现主导力学，定量近尖端行为必须依赖三维探针模型。这些发现将NS和ESBS确立为动态工作条件，为定量机电计量提供了实用框架。",
+      "tags": "query:iscat",
+      "abstract_en": "Piezoresponse force microscopy is a cornerstone technique for probing nanoscale electromechanical phenomena, yet quantitative and in some cases qualitative interpretation remains hindered by parasitic electrostatic forces coupled through cantilever dynamics. Recent approaches aim to suppress these artifacts by operating at resonance defined null spots or electrostatic blind spots, but whether these conditions are equivalent and how they evolve under realistic measurement conditions has remained unclear. Here, combining analytical beam models, geometrically faithful finite-element simulations, and automated interferometric measurements, we show that NS and ESBS are fundamentally different operating conditions. The NS is a modal zero at contact resonance where sensitivity to all excitations vanishes, whereas the ESBS is a quasistatic position where only the distributed electrostatic response is suppressed. Automated measurements reveal that both conditions evolve with the tip sample boundary condition yet remain spatially separated under realistic experimental conditions. While beam models capture the dominant cantilever mechanics, finite-element simulations and experiment show that quantitative prediction of near tip behavior requires realistic three dimensional probe electrostatics and mechanics. These findings establish NS and ESBS as dynamic operating conditions and provide a practical framework for advancing interferometric PFM toward truly quantitative electromechanical metrology.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
