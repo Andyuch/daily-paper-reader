@@ -1,0 +1,556 @@
+Title: Size characterization of neutral rare-gas clusters based on time-resolved polarization anisotropy measurements
+
+URL Source: https://arxiv.org/pdf/2607.23064v2
+
+Published Time: Fri, 31 Jul 2026 00:49:37 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+# Size characterization of neutral rare-gas clusters based on time-resolved polarization anisotropy measurements 
+
+Arne Morlok, ∗ Yilin Li, Ulrich Bangert, Frank Stienkemeier, and Lukas Bruder †
+
+Institute of Physics, Universitiy of Freiburg 
+
+Grzegorz Kowzan ∗
+
+Institute of Physics, Nicolaus Copernicus University in Toru´ n
+
+(Dated: July 31, 2026) The size determination of neutral clusters is experimentally challenging. In particular, weakly-bound rare-gas clusters tend to fragment upon ionization, resulting in systematic errors in cluster size studies. In contrast, characterization of the temporal polarization anisotropy dephasing provides a soft detection scheme for cluster size estimation, which avoids fragmentation of the clusters. Here, we present a systematic experimental study of argon and neon clusters in the size range of 50 to 10.000 atoms using this technique. In order to extract the mean cluster sizes from the data, we present an efficient analytical model of the polarization anisotropy dephasing of an ensemble of doped clusters. The approach shows remarkable sensitivity to small changes in the mean cluster size of just a few tens of atoms and allows us to refine the widely used Hagena scaling law for the estimation of rare-gas cluster sizes. 
+
+I. INTRODUCTION 
+
+Van der Waals-bound rare-gas clusters are a unique and widely employed sample environment to study funda-mental properties of isolated atoms and molecules[1–6]. In a variety of experiments the control and precise knowl-edge of the mean cluster size is critical [6–11]. One exam-ple is cluster-isolated chemical reactions (CICR) [1, 6, 12]. Here, rare-gas clusters serve as inert and cold nanore-actor for the study of isolated chemical reactions [6–8]. Furthermore, cluster size is key to controlling and tuning collective inter-molecular processes of adsorbates on the cluster surface such as singlet fission or superradiance[9– 11]. Despite its importance, experimentally measuring the cluster size remains challenging, in particular for neu-tral rare-gas and other neutral cluster species [13–15]. Seminal studies to determine scaling laws for the mean cluster size of rare-gas clusters prepared by supersonic ex-pansion have been conducted by Hagena and coworkers employing mass spectrometry based on electron impact ionization [16–19]. Their work showed that the expansion conditions can be combined into a single semi-empirical parameter Γ with which the mean cluster size can be predicted. Γ is given by Γ = p0
+
+kB
+
+dq T 0.25 q−2.50 , (1) where p0 is the expansion pressure, T0 is the expansion temperature, d is the effective nozzle opening diameter and q is an empirical parameter for which Ref. [20] sug-gests a value of q = 0 .85 for argon clusters. In order to account for the interaction potential of different gases, Γ   
+
+> ∗These two authors contributed equally
+> †lukas.bruder@physik.uni-freiburg.de
+
+is normalized with a gas-characteristic constant Γ ch . This leads to a dimensionless quantity Γ ∗ = Γ /Γch with which the mean cluster size ⟨n⟩ can be determined according to [19] 
+
+⟨n⟩ = 33 ·
+
+ Γ∗
+
+1000 
+
+2.35 
+
+. (2) It should be noted that these scaling relations are valid for continuous jet expansion of rare gases except for he-lium, which forms superfluid helium nanodroplets upon supersonic expansion [21]. Because of their exceptional properties, helium nanodroplets are not considered in this study. Likewise, pulsed gas expansion is not con-sidered here. Although further research confirmed the general clus-ter size scaling behavior found by Hagena and coworkers [15, 22–24], deviations have been reported when mea-suring the mean cluster size with different methods, in-cluding electron scattering and diffractive He atom scat-tering [22, 24], Rayleigh scattering [13] as well as mass spectrometry with laser-based ionization [15]. Buck and Krohne, for example, suggested an adjustment to the Ha-gena model for small clusters [24]. In case of 350 ≤ Γ∗ ≤
+
+1800, the mean cluster size is more accurately obtained with 
+
+⟨n⟩ = 38 .4 ·
+
+ Γ∗
+
+1000 
+
+1.64 
+
+. (3) Eqs. 2 and 3 are widely used for the size estimation of rare-gas clusters which we term Hagena scaling laws in the remainder of the paper. The reason for the devia-tions between Eq. 2 and Eq. 3 is most likely systematic errors in the determination of cluster size distributions. In the Hagena experiments, this can be caused by cluster fragmentation upon electron impact ionization, which is common for rare-gas clusters [25, 26] Hence, soft mea-surement techniques where little energy is transferred to arXiv:2607.23064v2 [physics.atm-clus] 30 Jul 2026 2                                                 
+
+> TABLE I. Expansion conditions indicating nozzle tempera-ture T0and stagnation pressure p0(compare Eq. 1. In case of neon, a nozzle with an opening diameter of 5 μm was used, and in the case of argon, a nozzle with an opening diameter of 10 μm. The mean cluster sizes ⟨nHag ⟩are calculated ac-cording to the Hagena scaling laws. Species T0(K) p0(bar) ⟨nHag ⟩
+> Ar 296 50 59 Ar 296 70 136 Ar 296 90 246 Ar 232 70 499 Ar 217 70 729 Ar 207 75 1091 Ar 190 70 1470 Ar 191 80 1984 Ne 85 50 67 Ne 65 50 307 Ne 58 60 870
+
+the clusters should be preferred for cluster-size determi-nation. In this context, Yao and coworkers recently pre-sented a facile soft ionization approach where rare-gas clusters are doped with aromatic molecules that are se-lectively photoionized[15]. Fragmentation is prevented in this approach, as the cluster is neither directly excited nor ionized. Although their results generally reproduced the results of the Hagena model, they found an unex-pected deviation regarding the scaling behavior of clus-ter size with temperature and pressure, highlighting the necessity for further work on improving the precision of the Hagena scaling laws. Here, we present a novel ionization-free approach to measure the mean cluster size of neutral rare-gas cluster beams. To this end, we surface-dope the clusters with molecular chromophores and characterize the cluster size distribution by measuring the transient alignment and ensemble dephasing of the molecular transition dipoles. The approach is related to rotational coherence spec-troscopy (RCS) introduced by Hochstrasser et al. [27] and by Zewail et al. [28–30]. A similar approach to ours has been recently demonstrated in a study of solvation dynamics in doped Ar clusters [31]. We extend on this by providing an improved, physically justified theoretical model and a systematic study of cluster size distributions and cluster species.   
+
+> II. METHODS A. Experiment
+
+Supersonic beams of Ne and Ar clusters of varying size are prepared in a continuous gas expansion. The vacuum apparatus has been described elsewhere [32]. The expansion conditions are given in Tab. I. The clus-ters are doped with free-base phthalocyanine (H 2Pc, see Fig. 1b) molecules of which the S 1←S0 transition is ex-E
+
+ω 0 𝛾 ~Ω
+
+|S 1|S 0
+
+TDM 
+
+a) b) c) d) Detector 
+
+> T
+
+T
+
+> zyx
+
+I ∥
+
+I ⟂
+
+e) 
+
+T
+
+probe pump 
+
+Ω21 Ω43                 
+
+> FIG. 1. Experimental scheme. aDoped rare-gas clusters. Orange arrows indicate the direction of the dopant’s transi-tion dipole moment (TDM), black arrows the cluster rotation.
+> bH2Pc molecule. cRelevant electronic levels of H 2Pc and fluorescence yield modulated at Ω (see dand main text). d
+> Pump-probe modulation scheme. Pump and probe pulses are amplitude-modulated at frequencies Ω 21 ,43 , respectively. T
+> denotes the pump-probe delay. eExcitation geometry for ex-citation either with parallel ( I∥, green) or perpendicular ( I⊥,red) pump-probe pulse polarization, from which the polariza-tion anisotropy parameter r(T) is determined. θ′refers to the opening angle of the detector.
+
+cited (Fig. 1c). The optical resonances are at λAr =674 nm on Ar clusters and λNe = 665 nm on Ne clus-ters. Hence, dipole transitions in the visible domain can be probed which avoids the need for vacuum ultraviolet radiation to directly interact with the rare-gas species. We use a femtosecond pump-probe scheme (Fig. 1d,e) to excite a polarization in the ensemble and record the anisotropy dephasing of this polarization as a function of the pump-probe delay T . In two consecutive measure-ments, the fluorescence yield from the doped clusters is detected either for parallel polarization of the pump and probe pulses yielding the signal intensity I∥(T ) and per-pendicular polarization yielding I⊥(T ). The polarization anisotropy parameter r(T ) is calculated according to 
+
+r(T ) = I∥(T ) − I⊥(T )
+
+I∥(T ) + CI ⊥(T ) . (4) The parameter C accounts for the normalization of the anisotropy signal with respect to the excitation and de-tection geometry, particularly the detector opening angle 
+
+θ. The value of C is determined analogously to the pro-cedure in Ref. [33], yielding a value of C = 2 .23 for an opening angle of θ = 49 .5 ◦. Details about the calcula-tions can be found in the Supp. Info. 3The experiment requires discrimination between the weak non-linear pump-probe signal from the much stronger linear fluorescence induced upon interaction with either pump or probe pulse only. This becomes particularly important in light of the low target densities in doped cluster beams (typ. ∼ 10 8 cm −3). The selective detection is achieved by rapid amplitude modulation of the pump and probe pulses combined with lock-in ampli-fication. To this end, we employ a collinear pulse train of four laser pulses of which the delay between pulse 1 and 2 as well as 3 and 4 is kept at zero. Hence, the pulse train effectively consists of two pulses (pump and probe, Fig. 1d). The carrier-envelope phase of each of the four pulses is modulated with acousto-optical mod-ulators driven each at a different modulation frequency (details about the setup can be found in Ref. [32]). The interference between the temporally overlapping pulses 1,2 and 3,4 results in a rapid amplitude modulation con-trolled by the relative frequency Ω 21 and Ω 43 between the acousto-optical modulators. The lock-in amplifier is tuned to the sum and difference frequency signal at Ω = Ω 21 + Ω 43 = 13 kHz or Ω = Ω 21 − Ω43 = 3 kHz. This ensures, that only the nonlinear pump-probe sig-nal is amplified and linear background is removed from the signal. We note that amplitude modulation of the pump and probe pulses could be also achieved with other, simpler approaches. We exploited here an existing opti-cal setup for coherent two-dimensional spectroscopy [32], where this type of amplitude modulation was readily im-plemented. The quality of the polarization conditions were inves-tigated by determining the ratio between the intensity at the prepared polarization axis and the intensity at an angle of 90 ◦ to it. For the I∥ geometry a ratio of at least 100:1 could be obtained and for the I⊥ geometry a ratio as high as 10:1 was obtained. The reduced contrast for the I⊥ geometry is due to the beam splitters employed in the optical interferometers of our setup. We correct for the resulting polarization ellipticity in the data analysis, as described below.  
+
+> B. Theory
+
+In order to link the experimentally deduced anisotropy parameter r (Eq. 4) to the cluster size, we derive a the-oretical model for the polarization anisotropy of an en-semble of doped, rotating clusters. The optical excitation with a femtosecond pump pulse creates a superposition of rotational states in the upper electronic state and fixes their phase. Since the pulse is spectrally broad, it trans-fers the equilibrium rotational state distribution from the ground state without reshaping it. In the subsequent free evolution, rotational quantum beats oscillate in a broad range of frequencies and rapidly go out of phase. These rotational beat frequencies correspond to classical spin rates. In fact, because the distribution of beat frequen-cies is wholly determined by thermal occupation of en-ergy levels in the ground state, it matches the classical equilibrium distribution of angular velocities of a rigid rotor. Our method exploits the dependence of the angular velocity spectrum on cluster size to characterize the size distributions. Note that RCS [27–30] usually studied dis-tinct molecular species instead of broad distributions of similarly-shaped clusters. In the former case, r(T ) con-tains sharp rotational revivals, from which one can de-duce molecular structures and rotational constants. As we will see, in the latter case this approach is not avail-able. Nevertheless, for known rotational temperature of the ensemble, the mean cluster size can be determined from the initial anisotropy dephasing. This is because the angular velocity spectrum narrows with increasing cluster size, which implies that larger clusters stay in phase longer after initial excitation. The polarization anisotropy parameter is defined as: 
+
+r(T ; Trot , ⟨n⟩) = 25 ⟨P2[ˆ μ(0) · ˆμ(T )] ⟩, (5) which is the ensemble-averaged two-time correlation function of the transition dipole directions. It describes time evolution of cluster orientation independent of any vibrational or electronic dynamics. We are explicitly in-terested in the dependence of r on time, T , rotational temperature, Trot , and average cluster size, ⟨n⟩, but we will omit the latter two variables for brevity.           
+
+> FIG. 2. Relations between vectors relevant in rigid body ro-tations. ˆx-ˆ y-ˆ zis the laboratory-fixed frame; ⃗Jis the total angular momentum vector; ˆKdefines the figure axis, which coincides with the transition dipole ˆ μin our model. For clar-ity, we additionally plot the ˆ x- ˆKaxial section, the transverse section, and a spherical triangle spanned between ˆK, ˆ zand ⃗J
+> vectors.
+
+We start by describing rn(T ) for a single H 2Pc-Ar n
+
+(or H 2Pc-Ne n) cluster. We summarize the motion of lin-ear rotors, symmetric tops and spherical tops [34–36] to explain the difference between our results and those of Awali et al. [31]. Figure 2 illustrates the relations be-tween key quantities in rigid body kinematics. The dipole 4autocorrelation function in Eq. (5), ˆ μ(0) · ˆμ(T ), is deter-mined by torque-free dynamics of the cluster. For sim-plicity, we treat doped and undoped clusters as spherical tops. The effect of surface-doping is limited to equipping the cluster with a transition dipole ⃗μ and increasing the moment of inertia, see Supp. Info. Sec. X A. For a spher-ical top, the moment of inertia around any axis going through the center of mass is equal, therefore figure axis ˆK can be picked arbitrarily relative to the space-fixed total angular momentum axis ⃗ J. The motion of a cluster treated as a spherical top is particularly simple, because it rotates at a constant rate about ⃗ J. This corresponds to quantum energy level degeneracy with respect to K.On the other hand, in symmetric tops the choice is not arbitrary, degeneracy is lifted and the body additionally rotates around the figure axis. Note that the high sym-metry of motion and increased degeneracy of spherical tops relative to symmetric tops does not reduce dimen-sionality of the problem. This is in contrast to linear rotors, in which the projection of total angular momen-tum onto the figure axis is fixed at zero ( K = 0), which limits ˆK to a plane perpendicular to ⃗ J. This constraint is reflected in quantum and classical partition functions and in the frequency content of the anisotropy signal. We identify the figure axis with the transition dipole axis (of the dopant) and assume it remains fixed after ex-citation. In this case dynamics of the transition dipole in symmetric and spherical tops are the same, because the additional rotation of symmetric top around figure axis has no effect on ˆ μ(0) · ˆμ(T ) [37]. Within RCS theory these are known as parallel-parallel transitions and we can di-rectly use previously derived formulas for anisotropy [29]: 
+
+rK,J (T ) = 110 
+
+
+
+3 K2
+
+J2 − 1
+
+2
+
++ 610 
+
+
+
+1 − K2
+
+J2
+
+ K2
+
+J2 (cos Jω n0T + cos( J + 1) ωn0T )+ 310 
+
+
+
+1 − K2
+
+J2
+
+2
+
+cos(2 J + 1) ωn0T, 
+
+(6) where ωn0 = 2 Bn/ℏ, Bn is the rotational constant of Ar n
+
+cluster, which assumes zero-order expressions for rota-tional energy levels, e.g. no centrifugal distortion in sym-metric tops or Coriolis coupling in spherical tops. Note that the signal consists of a constant term and terms at 
+
+Jω n0 and 2 Jω n0. Here we deviate from the model by Awali et al. [31], Eqs. (3) and (4) therein, which contain only constant and 2 Jω n0 terms. We believe this differ-ence arises from their use of Eq. (20) of Ref. [30], which is appropriate for linear rotors but not for spherical tops. In the fully quantum case, the relative amplitude of terms in Eq. (6) depends not only on the orientation of the figure axis relative to the laboratory axis ( K/J ), but also on absolute J and K values. This dependence is only relevant for highly accurate, J-resolved amplitude measurements at low J values, therefore it was omitted in Eq. (6). We further approximate the signal by combining 
+
+J and J + 1 terms and approximating 2 J with 2 J + 1, which yields: 
+
+rK,J (T ) = 110 
+
+
+
+3 K2
+
+J2 − 1
+
+2
+
++ 12 10 
+
+
+
+1 − K2
+
+J2
+
+ K2
+
+J2 cos Jω n0T
+
++ 310 
+
+
+
+1 − K2
+
+J2
+
+2
+
+cos 2 Jω n0T. 
+
+(7) We obtain the total anisotropy signal for a specific cluster size n by averaging over the rotational state distribution: 
+
+rn(T ) = Q−1
+
+> n
+
+X
+
+> K,J
+
+(2 J + 1) exp [ −EJ,K /kT rot ] rK,J (T ),
+
+(8) where Qn is the rotational partition function, k is the Boltzmann constant. For spherical tops in the zeroth order, rotational energies EJ,K are independent of K,therefore by summing over K the equation simplifies even further: 
+
+rn(T ) = 225 + 425 Q−1
+
+> n
+
+X
+
+> J
+
+2J(2 J + 1) exp [ −BnJ(J + 1) /kT rot ] (cos Jω n0T + cos 2 Jω n0T ). (9) The experimental signal is an average of Eq. (9) over the size distribution of doped argon clusters P (n): 
+
+r(T ) = X
+
+> n
+
+P (n)rn(T ). (10) Cluster size distributions of various species have been found to follow the log-normal distribution [38, 39]. The log-normal distribution is consistent with the Hagena model, which assumes that clustering is dominated by growth due to sequential cluster-atom collisions and uni-molecular decay due to single-atom evaporation [20]. Moreover, the structural similarity between Ar n clusters of different sizes [40–42] suggests an unimodal size distri-bution. The log-normal distribution was also used previ-5ously to model Ar n size distribution by Awali et al. [31]. It is given by: 
+
+PAr (n) = 1
+
+n
+
+1
+
+σ√2π exp 
+
+
+
+− (ln n − μ)2
+
+2σ2
+
+
+
+. (11) The distribution is characterized by parameters μ and σ,which are non-trivially related to the mean and variance of the cluster size: 
+
+⟨n⟩ = eμ+σ2/2, (12a) Var( n) = (eσ2
+
+− 1) e2μ+σ2
+
+. (12b) The size distribution of doped clusters is shifted towards larger n by the pick-up of H 2Pc molecules, since larger clusters are more likely to encounter the dopant. Assum-ing a simple hard-sphere collision kernel, PAr (n) needs to be scaled by the geometrical factor n2/3, from which we obtain: 
+
+P (n) = exp 
+
+
+
+− 23
+
+
+
+μ + 13 σ2
+
+ 
+
+n2/3PAr (n), (13) as the distribution of doped clusters. This allows us to evaluate Eq. (10). A naive calculation of the experimental signal involves a nested sum over all experimental delay times, all clus-ter sizes with appreciable population, and all rotational states with non-negligible occupation. Despite simplic-ity of the model, this calculation can be time-consuming. The computation time can be reduced by orders of mag-nitude if one notices that Eq. (9) is a sum of two inverse discrete cosine transforms from the frequency domain in units of Jω n0 and 2 Jω n0 to the time domain. We exploit this fact by first calculating the full signal spectrum for the whole cluster distribution and only then perform an inverse transform with an optimized FFT code [43–45]. We further speed up the calculations by exploiting an-other feature of the signal. The comb-like structure of ro-tational anisotropy spectrum, Eq. (9), with J numbering individual comb lines, implies a pulse train in the time domain. After initial dephasing, the transition dipoles rephase every Tr = 1 /(4 B). For Ar n clusters, this period scales with size as: 
+
+T (n) 
+
+> r
+
+≈ 0.0341 ns × n5/3, (14) hence for n > = 13 revivals occur beyond our maximum experimental signal length of Tmax = 2 .5 ns. Moreover, since the signal is produced by a broad distribution of cluster sizes, it spans many octaves of the revival time constant, therefore even for longer observation times ro-tational revivals would largely average out. As a con-sequence, the quantum nature of the signal is lost and the discrete sum over J numbers can be replaced by an integral without any loss of fidelity. Therefore, it is suf-ficient to sample the semi-classical signal spectrum, see Sec. X B, in frequency steps of 1 /T max up to 1 /(2∆ T ), where ∆ T is the experimental step size. With both im-provements, we reduce the computation time by 10 5 com-pared to a naive sum.  
+
+> III. RESULTS
+
+Fig. 3a,b show the anisotropy parameter r(T ) recon-structed from the experimental data for different Ar and Ne mean cluster sizes. Clearly, the anisotropy dephasing time decreases with decreasing mean cluster size. Re-markably, even small differences of a few tens of atoms in mean cluster size can be distinguished. The observed trend can be rationalized by the fact that smaller clus-ters rotate faster leading to faster rotational decoher-ence. Likewise, the faster anisotropy dephasing for Ar compared to Ne clusters is in accordance with the lower temperature of Ne compared to Ar clusters [46]. In Fig. 4 the data are compared to the model discussed in Sec. II B. The model is scaled to the contrast between maximum and minimum of the experimental data and a least-square fit is performed using the mean cluster size and width of the size distribution as fit parameters. The initial scaling step is necessary to account for residual ellipticity in the laser polarization [29] (see SI Fig. 6 for details) and does not influence the anisotropy dephasing time which determines the mass of the clusters. The comparison between experiment and theory shows excellent agreement, confirming the validity of the the-oretical model and the ability to deduce mean cluster sizes from the data. An exception applies for the small-est Ar clusters corresponding to a Hagena size estimate of ⟨nHag ⟩ = 59. Here, the data and model exhibit a mismatch at early decay times below 500 ps, which is attributed to a mismatch in the rotational temperature between experiment and theory. For small cluster masses 
+
+⟨n⟩ < 100, the doping with the relatively heavy molecules may transfer significant angular momentum during the doping process, which effectively increases the rotational temperature of the clusters [31]. This effect is neglected in our theoretical model for simplicity. Conversely, for larger clusters, angular momentum transfer can be well neglected due to the large cluster/dopant mass ratio. Note, that this issue is not observed for the Ne clusters, which is due to the fact, that these clusters are much larger than predicted by the Hagena scaling laws (see below). The cluster sizes obtained from the comparison be-tween the data and the model are shown in Fig. 5. These results have been obtained for σAr = 1 .0 and σNe = 0 .8 as widths for the cluster size distribution of the Ar and Ne cluster beams, which agree well with previously recorded broad cluster size distributions [26]. In the case of Ar, it can be clearly seen in Fig. 5a that our results agree with the Hagena scaling laws for small mean cluster sizes. However, with increasing cluster size, the Hagena scaling laws underestimates the mean cluster size by a factor of two to four, which matches with other studies [13, 22, 47]. In the case of Ne, an even greater deviation by almost an order of magnitude is observed (Fig. 5a). This will be discussed further below and the following discussion will focus on the Ar clusters. Fig. 5b shows our data as a function of the Hagena 6  
+
+> FIG. 3. Experimental data of the temporal anisotropy dephasing for different argon (a) and neon (b) clusters sizes. ⟨nHag ⟩
+> labels indicate the mean cluster size predicted by the Hagena scaling laws. Shaded areas indicate the standard deviation of the measurement. The data are scaled to match the theoretically expected asymptotic behavior [29].
+
+parameter Γ ∗ along with the Hagena scaling law based on Eq. 2 and Eq. 3. Excellent agreement between our study and the Hagena scaling law is obtained for the first three data points, while for Γ ∗ > 3000 the Hagena model starts to underestimate our measurements as pre-viously observed. In order to explain these data better, an equation in the form of the Hagena scaling law 
+
+⟨n⟩ = a ×
+
+ Γ∗
+
+1000 
+
+b
+
+(15) is fitted to the data with Γ ∗ > 3000. The resulting curve with a = 22 ± 5 and b = 3 .5 ± 0.3 is shown in Fig. 4b and agrees well with the data. We propose this as a new scaling regime to predict the cluster size of larger clusters more accurately. The combined scaling curve based on Eq. 2, Eq. 3 and Eq. 15 using a = 22 , b = 3 .5 is shown in Fig. 5c. We note, that we used here for the empirical parameter q of the Hagena scaling law (see Eq. 1) a value of 0.85, in accordance with the suggestion in Ref.[20] for Ar clusters. While this procedure works well for the Ar clusters, we observe still a significant systematic discrepancy for Ne clusters. We therefore propose an adjustment of q. The theoretical limits for q are 0 .5 < q ≤ 1 [20]. Experiments with Ar cluster beams yielded values in the range from 
+
+q = 0 .8 [16, 17] up to q = 0 .93 [48], based on which 
+
+q = 0 .85 for Ar clusters was suggested [20]. It is sensible that other rare gases such as Ne should have a similar value for q, albeit not necessarily the same. Using a value of qNe = 0 .9 for Ne, for example, gives a much better agreement between the measured Ne mean cluster size and the adjusted scaling, as shown in Fig. 5c. The strong sensitivity to the exact value of q is most likely a result of different expansion conditions between the Ar and Ne experiments. In Ref. [20] it is argued that the exact value of q should not affect the compari-son between different gases as long as the effective nozzle opening and the expansion temperature are on the same order of magnitude. In the experiments conducted in this work, the product of nozzle diameter and expansion temperature d · Tcl is larger by a factor of six to ten for the Ar experiments compared to Ne (Tab. I). Thus, it is plausible that the exact value of q affects our results significantly.  
+
+> IV. DISCUSSION
+
+While characterizing the temporal polarization anisotropy dephasing of an ensemble of doped clusters omits ionization and thus possible fragmentation of the clusters, other factors may lead to systematic errors in the cluster size determination using this approach. Our theoretical model assumes full thermalization be-tween the rotational and vibrational degrees of freedom of the clusters and hence equal rotational and vibra-tional cluster temperatures. The vibrational cluster tem-peratures were previously determined as TAr = 37 K and TNe = 10 K for Ar and Ne clusters, respectively [46]. The vibrational temperature is efficiently reduced by the binding energy of each evaporated rare-gas atom, 7    
+
+> FIG. 4. aExperimental data that was shown in Fig. 3a (dots) compared to the model presented in Sec. II B (solid lines) for Ar clusters. Experimental uncertainties are not shown for better visibility. bSame for Ne cluster data shown in Fig. 3b. Labels indicate the cluster sizes predicted by the Hagena scaling laws.
+
+whereas the change in angular momentum on average is small due to the isotropic evaporation of rare-gas atoms. Hence, it is likely that during formation of the rare-gas clusters and subsequent evaporative cooling their rota-tional temperature relaxes more slowly towards equilib-rium than the vibrational temperature[49]. Likewise, our model neglects the possible angular momentum transfer during the doping process (see discussion above). While this is well justified for large cluster/dopant mass ratios, we observed for smaller clusters a mismatch between the data and model which we attribute to this effect (Fig. 4a). Both effects, the lacking equilibration between rota-tional and vibrational temperatures and the neglection of angular momentum transfer in the doping of small clus-ters, can result in an underestimation of the rotational cluster temperature underlying our theoretical model. This would result in a systematic error in the deter-mined cluster sizes. The anisotropy dephasing time scales 
+
+∝ pm/T rot , where m denotes the mass of the rotor [28]. Hence, an underestimate of the rotational temperature results in an underestimate of the mean cluster size. For these reasons, we conclude that our results may exhibit a small systematic uncertainty and the real cluster sizes might be higher than the size determined in our work. We note, that the evaporation of rare-gas atoms from the clusters due to doping with the hot H 2Pc molecules leads to a shrinking of the initial cluster size distribu-tion. In principle, this might add another systematic error source for the cluster size estimation. However, we calculated that about 40 Ne and 10 Ar atoms are evap-orated, respectively, upon doping of one H 2Pc molecule. This seems negligible for most cluster sizes investigated in this work, which is why we have not included this con-tribution in our model. However, for the smallest inves-tigated Ar cluster size, this effect may also contribute to the discrepancy between the experiment and the model.  
+
+> V. CONCLUSION
+
+We presented a systematic study of an ionization-free method to determine the size of rare-gas clusters based on measuring the temporal polarization anisotropy de-phasing of an ensemble of surface-doped clusters. We de-veloped an efficient analytical model to describe the po-larization anisotropy signal with which we extracted the experimental mean cluster sizes. Our approach shows a remarkable sensitivity to small changes in the mean clus-ter size and the good agreement between experiment and theory validates our approach. In particular, for larger clusters containing more than ≈ 500 atoms, we find a significant systematic deviation from the Hagena scaling law and provide a correction based on our experimen-tal data. We also show the importance of the empirical 
+
+q-parameter in the Hagena scaling law and provide ade-quate numbers for q for Ar and Ne clusters. Our proposed correction of the Hagena scaling law is general and may be used for more accurate size estimates of rare-gas clusters produced in continuous-wave jet ex-pansion experiments. The demonstrated approach may be also used to further refine the Hagena scaling law for even larger clusters than the ones studied here. Likewise, 8          
+
+> FIG. 5. aCluster size determined by rotational coherence spectroscopy (y-axis) compared to the Hagena scaling law (x-axis). Blue squares and green triangles show the experimen-tally determined cluster sizes. bCluster size as a function of the Hagena parameter Γ ∗: Hagena scaling law (beige line), our study (blue squares, green triangles). The Ar cluster data for Γ ∗>3000 is fitted with the model in Eq. 15 (red), empir-ical confidence interval (red shaded area). cSame as bbut with an adjusted Hagena model as discussed in the main text.
+
+clusters of other rare-gas species may be analyzed using our approach to gain more accurate estimates of the q-parameter. Further experiments would be needed for size estimates of clusters produced in pulsed jet expansion. The same applies for the size characterization of super-fluid helium nanodroplets constituting a special class of rare-gas clusters. However, due to the superfluid nature of these clusters, the here presented approach cannot be applied and other methods are needed.  
+
+> VI. FUNDING
+
+Funding from Deutsche Forschungsgemeinschaft RTG 2717. This work is also based upon the work of COST Action CA21101 ”Confined molecular systems: from a new generation of materials to the stars” (COSY) sup-ported by COST (European Cooperation in Science and Technology).  
+
+> VII. ACKNOWLEDGMENT
+
+We acknowledge fruitful discussions with Bernd von Issendorff.  
+
+> VIII. DISCLOSURES
+
+The authors declare no conflicts of interest.  
+
+> IX. DATA AVAILABILITY STATEMENT
+
+The experimental and simulation data included in this work are available on the open repository: Accession codes will be available before publication .  
+
+> X. SUPPORTING INFORMATION A. Cluster moments of inertia
+
+Following Awali et al. [31], we model Ar n and He n as homogeneous spheres. The moment of inertia is given by 
+
+I(at)  
+
+> n
+
+= 25 nM at R2
+
+> n
+
+, where Mat is the atomic weight of the element. Rn = Rat 
+
+  nc
+
+1/3 is the cluster radius, where 
+
+c = 0 .74 is the atomic packing factor for face-centered cubic lattice and Rat is the hard-sphere radius of the element. In this work, we used: 
+
+• MAr = 39 .95, RAr = 188 pm, 
+
+• MNe = 20 .1797, RNe = 154 pm, 
+
+• MH2Pc = 514 .552. The mass of H 2Pc is assumed to be uniformly dis-tributed over the cluster surface, such that the moment of inertia of a doped cluster is given by: 
+
+In = ( 25 nM at + 23 MH2Pc )R2
+
+> n
+
+. (16)  
+
+> B. Frequency-domain anisotropy signal in the classical limit
+
+Fast calculation of anisotropy signals is facilitated by changing sums over quantum numbers into integrals that 9can be sampled at arbitrary points in f -domain. We rewrite Eq. (9) as: 
+
+rn(T ) = 225 +
+
+Z ∞−∞ 
+
+df [A1(f ) + A2(f )] e2πf T , (17) 
+
+i.e. an inverse Fourier transform between T -f Fourier pair. A1(f ) and A2(f ) correspond to Jω n0 and 2 Jω n0
+
+terms and can be expressed as: 
+
+A1(f ) = 16 C1(Trot B)−3/2f 2 exp 
+
+
+
+− f 2
+
+C2BT rot 
+
+
+
+,(18a) 
+
+A2(f ) = C1(Trot B)−3/2f 2 exp 
+
+
+
+− f 2
+
+4C2BT rot 
+
+
+
+,(18b) where C1 = 1200  
+
+> h3
+> √πk 3/2
+
+, C2 = 4 k/h 2. 
+
+> C. Derivation of corrections to the rotational-coherence-spectroscopy signal
+
+When recording an anisotropy signal from fluorescence, the excitation and detection geometry need to be ac-counted for. In the following, the derivation of the cor-rections are presented that need to be employed for the geometry in this work (see Fig. 1c). They are based on the work of Refs. [30, 33], where more details can be found. In the following, it will be assumed that the doped rare-gas clusters can be described as spherical symmetric tops. Based on this, a signal Ssig ,i that is emitted by the excited sample in the direction i (i ∈ { x, y, z }) is given by 
+
+Ssig,i (τ ) = ⟨⟨⟨ (ϵ1d(τ = 0)) 2 (ϵ2d(τ )) 2 ⟨(ϵsig,i d(τ + t′)) 2⟩t′ ⟩ψ0 ⟩(θ,ϕ )4π ⟩(θp,ϕ p)4π . (19) Here, the excitation pulse is polarized along ϵ1, the probe pulse is polarized along ϵ2 and afterwards light is emit-ted in the direction ϵsig,i (i = {x, y, z }). The interaction of the pump, the probe pulse, and the emission direction of the excited molecule are averaged over the lifetime of the emitter t′, the initial orientation of the molecules ψ0,over the solid angles ( θ, ϕ ) and over the rotation angles (ϕp, θ p) between the frame of reference for polarization and angular momentum. If the lifetime is long compared to the rotational period, which is the case in the exper-iment, averaging over t′ can be appodized to only one rotational period. The initial rotation ψ0 is averaged over 2 π and ( θ, ϕ ) as well as ( ϕp, θp ) are averaged over 4π.The excitation pulses interact with the transition dipole moment d(t) of the dopant molecules, which is given by 
+
+ˆexd(t) = sin ϕp sin θ cos θp cos ψ(t) (20) + sin ϕp sin θp cos θ + sin θ sin ψ(t) cos ϕp
+
+ˆey d(t) = sin ϕp sin θ sin ψ(t) (21) 
+
+− sin θ cos ϕp cos θp cos ψ(t) − sin θp cos ϕp cos θ
+
+ˆez d(t) = − sin θ sin θp cos ψ(t) + cos θ cos θp. (22) Here, ψ(t) describes the time evolution of the orientation of the dipole moment, which is given by 
+
+ψ(t) = ωt + ψ0, (23) for a constant angular frequency ω and an initial orien-tation ψ0 at time t = 0. Eq. 22 is different than what is typically derived in literature, for example, in Ref. [30]. This is due to the fact that rotations of spherical sym-metric tops are considered in this work, where literature typically deals with linear rotors. With all of this established, Eq. 19 can be solved and yields in the case of excitation pulses with the same polar-ization, i.e. signal I∥ with ϵ1 = (0 , 0, 1) and ϵ2 = (0 , 0, 1): 
+
+S(∥) 
+
+> x
+
+(τ ) = S(∥) 
+
+> y
+
+(τ ) = 403 + 129 cos( ωτ ) + 120 cos(2 ωτ )11025 (24) 
+
+S(∥) 
+
+> z
+
+(τ ) = 615 + 136 cos( ωτ ) + 152 cos(2 ωτ )11025 .
+
+(25) For the geometry of I⊥, where ϵ1 = 1√2 (1 , 0, 1) and ϵ2 = 
+
+> 1√2
+
+(1 , 0, −1), Eq. 19 yields 
+
+S(⊥) 
+
+> x
+
+(τ ) = S(⊥) 
+
+> z
+
+(τ ) = 403 − 68 cos( ωτ ) − 76 cos(2 ωτ )11025 (26) 
+
+S(⊥) 
+
+> y
+
+(τ ) = 321 − 60 cos( ωτ ) − 44 cos(2 ωτ )11025 .
+
+(27) Due to the limited solid angle mapped by the detector, only a portion of the above-calculated signals is acquired. For example, in case of a point-like detector placed in ˆex
+
+direction from the sample, the resulting signal would be 
+
+I(∥/⊥) = S(∥/⊥) 
+
+> y
+
+(τ ) + S(∥/⊥) 
+
+> z
+
+(τ ). (28) This is, however, not the case for the experiments pre-sented in this study, where the fluorescence is mapped 10 on to a photomultiplier with a numerical aperture of 
+
+NA = 0.76. This translates into an opening angle 
+
+θ′ = 49 .46 ◦ using sin θ′ = NA. Based on this opening an-gle, the portion of the light emitted in the x-direction can be calculated from the overlap between the opening angle of the detector with the radiation P (θ) from a dipole in the direction θ, which is given by P ∝ sin 2(θ). Thus, the fraction of the signal in x-direction in dependence of the opening angle θ is obtained from 
+
+F (θ) = 
+
+Z θ
+
+> 0
+
+dθ ′ sin 3 θ′
+
+= 43 (2 + cos θ) sin 4
+
+ θ
+
+2
+
+
+
+. (29) With θ′ = 49 .46, this yields that ≈10 % of the fluores-cence emitted in x-direction is collected by the employed detection geometry. With this result, the total signal collected by the de-tector can be calculated from 
+
+I(∥/⊥) = 0 .1 · S(∥/⊥) 
+
+> x
+
+(τ ) + S(∥/⊥) 
+
+> y
+
+(τ ) + S(∥/⊥) 
+
+> z
+
+(τ ), (30) which, expressed with S(∥/⊥) 
+
+> i
+
+, is given by 
+
+I∥ = 7743 + 2768 cos( ωτ ) + 5680 cos 2(ωτ )110250 (31) and 
+
+I⊥ = 8919 − 1348 cos( ωτ ) − 2552 cos 2(ωτ )110250 . (32) Here, the cos(2 ωτ ) terms were transformed into cos 2(ωτ )with the relation 2 cos 2(ωτ ) = 1 + cos(2 ωτ ). Based on this, the anisotropy signal r(t) can be calculated from 
+
+r(t) = I∥ − I⊥
+
+Iiso 
+
+, (33) where Iiso denotes the total isotropic signal to which the signal is normalized. Typically, it is given by 
+
+Iiso = I∥ + 2 I⊥. (34) However, due to the imbalanced detection of the dif-ferent polarization contributions, Eq. 34 does not yield the correct isotropic contribution for normalization. The authors in Ref. [33] argue that this can be easily seen through the fact that plugging the intensities from Eqs. 31,32 into Eq. 34 does not lead to a cancellation of all cos 2-terms with “rotational” content. Only if these terms cancel out, the “pure” isotropic contribution is ob-tained. Thus, according to Ref. [33] the correct formula-tion of Eq. 34 can be simply found by 
+
+Iiso = I∥ + AI ⊥, (35) with an appropriate choice of the factor A. For the geom-etry of this work, A = 2 .23 satisfies the above-discussed conditions. It should be noted, that this treatment neglects the contribution of the cos-terms. This is done because they do not contribute for t → ∞ and their contribution is close to zero for A = 2 .23 (exact cancellation would be achieved with A2 = 2 .05). Considering all these aspects, it can be concluded that 
+
+r(t) = I∥ − I⊥
+
+I∥ + 2 .23 · I⊥
+
+(36) gives the correct anisotropy value for the signals obtained with the excitation and detection geometry employed in this work. An interesting implication of Eqs. 31,32,36 is that the anisotropy value at t = 0 and t = ∞ differ from what is typically given in the literature. With Eq. 34, values of rlit (t = 0) = 0 .4 and rlit (t = ∞) = 0 .1 are obtained [30, 50, 51]. For the geometry of this work, however, values of 
+
+r(0) = 0 .41 (37) 
+
+r(∞) = 0 .11 , (38) are obtained. This changes the scaling of the data, which is shown in Fig. 6. Here, the contrast of the model dis-cussed in this study was scaled to the anisotropy contrast of the experiment to account for residual ellipticity in the experiment similar to Ref. [29]. 11 
+
+FIG. 6. a Experimental anisotropy signal of H 2Pc on argon clusters (dots) compared to fits (solid lines) based on the model presented in the main text in Sec. II. b Same as a but with the model’s contrast scaled to the experimental contrast to account for residual ellipticity in the beam. 12 
+
+[1] J. Mestdagh, M. Gaveau, C. Gee, O. Sublemontier, and J. Visticot, Cluster isolated chemical reactions, Interna-tional Reviews in Physical Chemistry 16 , 215 (1997), https://doi.org/10.1080/014423597230280. [2] J. P. Toennies and A. F. Vilesov, Superfluid he-lium droplets: A uniquely cold nanomatrix for molecules and molecular complexes, Angewandte Chemie International Edition 43 , 2622 (2004), https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.200300611. [3] M. Y. Choi, G. E. Douberly, T. M. Falconer, W. K. Lewis, C. M. Lindsay, J. M. Merritt, P. L. Stiles, and R. E. Miller, Infrared spectroscopy of helium nan-odroplets: novel methods for physics and chemistry, In-ternational Reviews in Physical Chemistry 25 , 15 (2006), https://doi.org/10.1080/01442350600625092. [4] J. K¨ upper and J. M. Merritt, Spectroscopy of free radicals and radical containing entrance-channel com-plexes in superfluid helium nanodroplets, Interna-tional Reviews in Physical Chemistry 26 , 249 (2007), https://doi.org/10.1080/01442350601087664. [5] F. Stienkemeier and K. K. Lehmann, Spectroscopy and dynamics in helium nanodroplets, Journal of Physics B: Atomic, Molecular and Optical Physics 39 , R127 (2006). [6] M. Briant, J.-M. Mestdagh, M.-A. Gaveau, and L. Pois-son, Reaction dynamics within a cluster environment, Phys. Chem. Chem. Phys. 24 , 9807 (2022). [7] A. Lallement, J. Cuvellier, J. Mestdagh, P. Meynadier, P. de Pujo, O. Sublemontier, J. Visticot, J. Berlande, and X. Biquard, Reaction between (n2o, ar) binary clusters and barium atoms, Chem. Phys. Lett. 189 , 182 (1992). [8] A. Lallement, O. Sublemontier, J.-P. Visticot, A. Bell, J. Berlande, J. Cuvellier, J. Mestdagh, and P. Meynadier, Quenching of ba(2p1) by ch4 molecules within argon clus-ters, Chem. Phys. Lett. 204 , 440 (1993). [9] M. M¨ uller, S. Izadnia, S. M. Vlaming, t. Eisfeld, A. LaForge, and F. Stienkemeier, Cooperative lifetime reduction of single acene molecules attached to the sur-face of neon clusters, Phys. Rev. B 92 , 121408 (2015). [10] S. Izadnia, D. W. Sch¨ onleber, A. Eisfeld, A. Ruf, A. C. LaForge, and F. Stienkemeier, Singlet fission in weakly interacting acene molecules, J. Phys. Chem. Lett. 8, 2068 (2017), pMID: 28421765, https://doi.org/10.1021/acs.jpclett.7b00319. [11] M. Bohlen, R. Michiels, M. Michelbach, S. Fer-chane, M. Walter, A. Eisfeld, and F. Stienke-meier, Excitation dynamics in polyacene molecules on rare-gas clusters, J. Chem. Phys. 156 ,034305 (2022), https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/5.0073503/16533358/034305 1 online.pdf. [12] M. F´ arn´ ık, J. Fedor, J. Koˇ ciˇ sek, J. Lengyel, E. Pluhaˇ rov´ a, V. Poterya, and A. Pysanenko, Pickup and reactions of molecules on clusters relevant for atmospheric and in-terstellar processes, Phys. Chem. Chem. Phys. 23 , 3195 (2021). [13] B. R. Lee, P. K. Singh, Y. J. Rhee, and C. H. Nam, Spatiotemporal characteristics of high-density gas jet and absolute determination of size and density of gas clusters, Sci. Rep. 10 , 12973 (2020). [14] R. Pandey, S. Tran, J. Zhang, Y. Yao, and W. Kong, Bimodal velocity and size distri-butions of pulsed superfluid helium droplet beams, The Journal of Chemical Physics 154 ,134303 (2021), https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/5.0047158/15588144/134303 1 online.pdf. [15] Y. Yao, J. Zhang, W. M. Freund, S. Tran, and W. Kong, The scaling law of cluster sizes revisited: Clusters formed via coexpansion of a molecular and a rare gas species, Chem. Phys. Lett. 813 , 140312 (2023). [16] O. F. Hagena and W. Obert, Cluster formation in expanding supersonic jets: Effect of pressure, tem-perature, nozzle size, and test gas, J. Chem. Phys. 
+
+56 , 1793 (1972), https://pubs.aip.org/aip/jcp/article-pdf/56/5/1793/18879085/1793 1 online.pdf. [17] O. F. Hagena, Scaling laws for condensa-tion in nozzle flows, Phys. Fluids 17 , 894 (1974), https://pubs.aip.org/aip/pfl/article-pdf/17/5/894/12276979/894 1 online.pdf. [18] O. F. Hagena, Nucleation and growth of clusters in ex-panding nozzle flows, Surf. Sci. 106 , 101 (1981). [19] O. F. Hagena, Cluster ion sources (in-vited), Rev. Sci. Instrum. 63 , 2374 (1992), https://pubs.aip.org/aip/rsi/article-pdf/63/4/2374/19324482/2374 1 online.pdf. [20] O. F. Hagena, Condensation in free jets: Comparison of rare gases and metals, Z. Phys. D - Atoms Molec. Clusters 
+
+4, 291 (1987). [21] J. P. T. Alkwin Slenczka, Molecules in Superfluid He-lium Nanodroplets , 1st ed., Topics in Applied Physics (Springer Cham, 2022). [22] J. Farges, M. F. de Feraudy, B. Raoult, and G. Torchet, Noncrystalline structure of ar-gon clusters. ii. multilayer icosahedral structure of Arn clusters 50¡n¡750, J. Chem. Phys. 84 ,3491 (1986), https://pubs.aip.org/aip/jcp/article-pdf/84/6/3491/18957903/3491 1 online.pdf. [23] R. Karnbach, M. Joppien, J. Stapelfeldt, J. W¨ ormer, and T. M¨ oller, CLULU : An experimental setup for luminescence measurements on van der waals clus-ters with synchrotron radiation, Rev. Sci. Instrum. 
+
+64 , 2838 (1993), https://pubs.aip.org/aip/rsi/article-pdf/64/10/2838/19247845/2838 1 online.pdf. [24] U. Buck and R. Krohne, Cluster size determination from diffractive he atom scattering, J. Chem. Phys. 
+
+105 , 5408 (1996), https://pubs.aip.org/aip/jcp/article-pdf/105/13/5408/19275805/5408 1 online.pdf. [25] U. Buck and H. Meyer, Electron bombard-ment fragmentation of ar van der waals clus-ters by scattering analysis, J. Chem. Phys. 84 ,4854 (1986), https://pubs.aip.org/aip/jcp/article-pdf/84/9/4854/18958653/4854 1 online.pdf. [26] S. Sch¨ utte and U. Buck, Strong fragmentation of large rare gas clusters by high energy electron impact, Int. J. Mass Spectrom. 220 , 183 (2002), van der Waals Clusters and Their Ions. [27] A. B. Myers and R. M. Hochstrasser, Time-resolved flu-orescence polarization and four-wave mixing from an en-semble of free symmetric rotors, The Journal of Chemical Physics 85 , 6301 (1986). [28] P. M. Felker and A. H. Zewail, Purely rotational coher-ence effect and time -resolved sub -doppler spectroscopy of large molecules. I. Theoretical, J. Chem. Phys. 
+
+86 , 2460 (1987), https://pubs.aip.org/aip/jcp/article-13 
+
+pdf/86/5/2460/18963568/2460 1 online.pdf. [29] J. S. Baskin, P. M. Felker, and A. H. Zewail, Purely rotational coherence effect and time-resolved sub-doppler spectroscopy of large molecules. ii. ex-perimental, The Journal of Chemical Physics 86 ,2483 (1987), https://pubs.aip.org/aip/jcp/article-pdf/86/5/2483/18963453/2483 1 online.pdf. [30] J. S. Baskin and A. H. Zewail, Femtosecond real-time probing of reactions. 15. time-dependent coherent align-ment, J. Phys. Chem. 98 , 3337 (1994). [31] S. Awali, J.-M. Mestdagh, M.-A. Gaveau, M. Bri-ant, B. Soep, V. Mazet, and L. Poisson, Time-
+
+Resolved Observation of the Solvation Dynamics of a Rydberg Excited Molecule Deposited on an Argon 
+
+Cluster. II . DABCO at Long Time Delays, J. Phys. Chem. A 125 , 4341 (2021), pMID: 34003648, https://doi.org/10.1021/acs.jpca.1c01942. [32] L. Bruder, U. Bangert, M. Binz, D. Uhl, and F. Stienke-meier, Coherent multidimensional spectroscopy in the gas phase, J. Phys. B 52 , 183501 (2019). [33] E. J. Brown, I. Pastirk, and M. Dantus, Ultrafast ro-tational anisotropy measurements: unidirectional detec-tion, J. Phys. Chem. A 103 , 2912 (1999). [34] G. Herzberg, Molecular Spectra and Molecular Structure. II. Infrared and Raman Spectra of Polyatomic Molecules 
+
+(D. Van Nostrand Company, Princeton, New York, 1945). [35] J. R. Taylor, Classical Mechanics , nachdr. ed. (University Science Books, Sausalito, Calif, 2005). [36] H. Goldstein, C. P. Poole, and J. L. Safko, Classical Me-chanics , 3rd ed. (Addison Wesley, San Francisco Munich, 2008). [37] Note that if we were to treat clusters as symmetric or asymmetric tops, then we would not be able identify the transition dipole axis with the figure axis, since the chro-mophore can attach to an arbitrary spot on the cluster. [38] C.-R. Wang, R.-B. Huang, Z.-Y. Liu, and L.-S. Zheng, Lognormal size distributions of elemental clusters, Chem-ical Physics Letters 227 , 103 (1994). [39] M. Lewerenz, B. Schilling, and J. P. Toennies, A new scattering deflection method for determining and select-ing the sizes of large liquid clusters of 4He, Chemical Physics Letters 206 , 381 (1993). [40] R. A. Aziz, A highly accurate interatomic potential for argon, The Journal of Chemical Physics 99 , 4518 (1993). [41] F. Y. NAUMKIN and D. J. WALES, Rydberg excitations in rare gas clusters: Structure and electronic spectra of Ar* n (3 ≤ n ≤ 25), Molecular Physics 96 , 1295 (1999). [42] H. Bergersen, M. Abu-samha, J. Harnes, O. Bj¨ orneholm, S. Svensson, L. J. Sæthre, and K. J. Børve, Size of neu-tral argon clusters from core-level photoelectron spec-troscopy, Physical Chemistry Chemical Physics 8, 1891 (2006). [43] M. Frigo and S. Johnson, The Design and Implementa-tion of FFTW3, Proceedings of the IEEE 93 , 216 (2005). [44] C. R. Harris, K. J. Millman, S. J. van der Walt, R. Gom-mers, P. Virtanen, D. Cournapeau, E. Wieser, J. Tay-lor, S. Berg, N. J. Smith, R. Kern, M. Picus, S. Hoyer, M. H. van Kerkwijk, M. Brett, A. Haldane, J. F. del R´ ıo, M. Wiebe, P. Peterson, P. G´ erard-Marchant, K. Shep-pard, T. Reddy, W. Weckesser, H. Abbasi, C. Gohlke, and T. E. Oliphant, Array programming with NumPy, Nature 585 , 357 (2020). [45] P. Virtanen, R. Gommers, T. E. Oliphant, M. Haber-land, T. Reddy, D. Cournapeau, E. Burovski, P. Pe-terson, W. Weckesser, J. Bright, S. J. van der Walt, M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, ˙I. Po-lat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero, C. R. Harris, A. M. Archibald, A. H. Ribeiro, F. Pe-dregosa, and P. van Mulbregt, SciPy 1.0: Fundamen-tal algorithms for scientific computing in Python, Nature Methods 17 , 261 (2020). [46] J. Farges, M. F. de Feraudy, B. Raoult, and G. Torchet, Structure and temperature of rare gas clusters in a su-personic expansion, Surf. Sci. 106 , 95 (1980). [47] J. W¨ ormer, V. Guzielski, J. Stapelfeldt, and T. M¨ oller, Fluorescence excitation spectroscopy of xenon clusters in the VUV , Chem. Phys. Lett. 159 , 321 (1989). [48] A. H. M. Habets, Supersonic expansion of argon into vacuum , Ph.D. thesis, Technische Hogeschool Eindhoven, Eindhoven, Netherlands (1977). [49] H. Pauly, Atom, Molecule, and Cluster Beams I , 1st ed., Springer Series on Atomic, Optical, and Plasma Physics 28 (Springer, 2000). [50] J. R. Lakowicz, Principles of Fluorescence Spectroscopy ,3rd ed. (Springer, 2006) pp. 353–382. [51] B. Valeur and M. N. Berberan-Santos, Molecular 
+
+Fluorescence: Principles and Applications , 2nd ed. (Wiley-VCH, 2012) pp. 181–212.

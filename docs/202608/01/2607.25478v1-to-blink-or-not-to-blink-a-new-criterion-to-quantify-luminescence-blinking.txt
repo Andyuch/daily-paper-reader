@@ -1,0 +1,1118 @@
+Title: To Blink or Not to Blink? A New Criterion to Quantify Luminescence Blinking
+
+URL Source: https://arxiv.org/pdf/2607.25478v1
+
+Published Time: Wed, 29 Jul 2026 00:51:01 GMT
+
+Number of Pages: 35
+
+Markdown Content:
+# To Blink or not to Blink? A new criterion to quantify luminescence blinking. 
+
+## Eduard A. Podshivaylov and Pavel A. Frantsuzov ∗
+
+## Voevodsky Institute of Chemical Kinetics and Combustion SB RAS, 630090, Novosibirsk, Russia 
+
+Abstract 
+
+Colloidal semiconductor quantum dots are promising materials for nu-merous applications due to their tunable emission and high quantum yields. However, emission instability in the form of luminescence blinking remains a significant obstacle to their practical implementation. While recent advances in synthesis and surface engineering have demonstrated partial or complete blinking suppression, the quantitative assessment of the ”quality” of this suppression remains challenging. Existing criteria typically rely on threshold-based classification into ON and OFF states, which becomes inherently ambiguous owing to the continuous distribu-tion of emission intensities in single quantum dots. Here, we propose a threshold-free two-dimensional quantitative criterion based on the vari-ance of the recombination rate and the relative quantum yield, both of which can be extracted from standard time-correlated single-photon counting measurements. We validate the criterion using simulated blink-ing trajectories covering all major blinking mechanisms and demonstrate that it cleanly separates them into distinct regions of the two-dimensional parameter space while providing a quantitative measure of the degree of suppression. This approach directly quantifies the temporal stability of emission without requiring arbitrary state definitions, thereby providing a robust metric for comparing different blinking suppression strategies. 
+
+# Introduction 
+
+Colloidal semiconductor quantum dots (QDs) and nanocrystals (NCs) are promis-ing materials for a wide range of applications, including lasers 1–3 , detectors 4–7 ,single-photon sources 8–11 , photovoltaic cells 12–17 , fluorescent markers 18–22 , sen-sors 23–26 , super-radiant light sources 27,28 and LEDs 29–31 . This broad applica-bility stems from their high quantum yield, ease of synthesis, tunable emission 
+
+> ∗
+
+Corresponding author. E-mail: frantsuzov@kinetics.nsc.ru 
+
+1arXiv:2607.25478v1 [cond-mat.mes-hall] 28 Jul 2026 wavelength, and narrow spectral width (see, e.g. , reviews in Refs. 32–34 and references therein). However, single nanocrystals and quantum dots are known to suffer from radiation instability, including blinking 35–41 , spectral diffusion 42–46 , and pho-todegradation 47–50 . These effects significantly limit their practical applica-tions 51 . Consequently, a major research challenge lies in finding methods to suppress fluctuations in the photophysical response and enhance the stability of the emission yield of single QDs and NCs. A number of recent works claim sup-pression of luminescence blinking and/or photodegradation (see, e.g. , reviews in Refs. 20 and 36). A diverse set of strategies is being explored to suppress these effects. They range from advanced synthetic approaches that precisely control crystalline phase purity 52 , core/shell structure 53–56 , and surface morphology 57 ,to surface engineering techniques such as passivation 58–60 , annealing 61 , ligand exchange 50,62–68 , or the filling of surface trap states 69 , and to the use of other nanoparticles in the environment 70 .Some studies claim that blinking is completely suppressed, while others show that it persists but the total duration of the OFF states is significantly reduced. In most cases, to analyze the ”quality” of blinking suppression, authors pro-pose using threshold-based procedures, such as determining the relative ON state fraction, as well as analyzing the ON- and OFF-time distributions. This approach can suffer from several issues, the most important being the very definition of ON/OFF states and the threshold dependence of the extracted parameters. The first issue stems from the physics of blinking itself. The cause of blinking in single nanocrystals is fluctuations in the rate of nonradiative recombination of the excited state. The blinking mechanisms differ in the pathways of non-radiative recombination. It is widely established in the literature that the dom-inant mechanism of blinking is the so-called band-edge carrier (BC) or trapping mechanism (TM), proposed by Frantsuzov and Marcus in Ref. 71. However, other pathways can also contribute, such as Auger-blinking 72 (also known as A-type blinking) and hot carrier (HC) blinking 73 . A detailed overview of the underlying mechanisms can be found in Ref. 36. This implies that the distribu-tion of detected emission intensity is continuous, making it generally difficult to define precise ON and OFF states. Consequently, threshold selection appears to be rather arbitrary and is likely performed manually in most cases. Second, it is well known that the procedure for constructing ON- and OFF-time distributions is highly threshold-dependent and therefore unreliable. That is, even a slight shift in the threshold position can yield different values for the characteristic times and the power-law exponent of the distribution 74 . More-over, the resulting distributions also depend on the bin size 75–77 .Another option is to estimate the power spectral density (PSD) of the blink-ing process. As first shown by Pelton et al. in Ref. 78, the characteristic PSD shape follows a power law of the form 1/f 37,38,74,79 . It was shown by Praneeth 
+
+et al. in Ref. 65 that complete suppression of blinking is accompanied by a change in the shape of the PSD from a 1/f dependence to an almost constant value across the studied frequency range. This provides strong evidence that 2blinking is completely suppressed. However, such a situation is not observed when blinking persists, even with greatly reduced OFF-time durations, which is a far more commonly reported scenario. This work is devoted to developing a quantitative criterion for evaluating the suppression of luminescence blinking, specifically in cases where OFF-state durations are reduced but not fully eliminated. To test the proposed criterion, we use simulated blinking data, based on A- and TM-type blinking mechanisms. 
+
+# Theoretical background 
+
+Let us consider an experiment on pulsed excitation of a single NC with repetition period Tr . The power of each pulse is P [Jcm −2]. The mean number of photons absorbed by the nanocrystal per pulse is 
+
+Na = P σ a
+
+ℏω
+
+where σa is the nanocrystal absorption cross-section and ℏω is the excitation photon energy. We suppose that Na ≪ 1, so the probability of a double excita-tion is very low. From a theoretical point of view, the PL emission can be characterized by an instant quantum yield Y (t). This quantity is defined as the probability that a nanocrystal excited at time t will emit a photon. Another characteristic of the PL is the instant relaxation rate Γ( t) which determines the probability distribution of the delay time δt of the photon emitted by a nanocrystal excited at time t:
+
+p(δt |t) = Γ( t) exp( −Γ( t)δt )
+
+It should be noted that some nanocrystals exhibit biexponential decay caused by the presence of delayed emission. We identify Γ( t) with the short exponential component. The estimators of Y (t) and Γ( t) can be extracted from the time-tagged single photon counting data: the absolute arrival times of photons ti, the delay times of detected photons relative to the excitation pulse δt i, and/or the detector number in the case of a Hanbury Brown and Twiss setup. After preliminary processing, the arrival time data are binned to obtain the dependence of the number of photons detected per bin on time, i.e. , the intensity trace. Thus, for each bin of size ∆t with index j, started at time tj , a number of detected photons nj
+
+(intensity) can be assigned. The mean number of the detected photons within the j-th bin is 
+
+Nj = αN a
+
+∆tTr
+
+⟨Y (t)⟩j
+
+where α is the efficiency of the optical system and ⟨Y (t)⟩j is the averaged quan-tum yield per the j-th bin 
+
+⟨Y (t)⟩j = 1∆t 
+
+> tj+∆ t
+
+∫
+
+> tj
+
+Y (t) dt 
+
+3The measured intensity nj is a random number from a Poisson distribution with mean Nj . Thus, the estimated mean number is ˆNj = nj and the estimated quantum yield value is 
+
+ˆYj = nj Tr
+
+αN a∆t (1) The estimation of Γ( t) requires a more involved procedure. The already obtained blinking trajectory is divided into several intensity levels. For each level, all photons falling into that level are extracted, and the resulting set is then subdivided into subsets with a certain number of photons. In some cases, no subdivision by photon number is performed, and all photons belonging to the level are taken together. Subsequently, using the delay times δt i corresponding to the photon indices within a given level, the estimate is extracted using fitting methods such as weighted least squares or maximum likelihood. The fitting function is 
+
+pK (δi) = Γ K e−ΓK δi (2) where ΓK is the luminescence decay rate for the K-th set. As a result of the fitting, an estimate of the parameter is obtained, which we denote as ˆΓK . For simplicity, we will assume that each bin j included in the set K is assigned 
+
+ˆΓj = ˆΓK , thus forming the set {ˆΓj }.All mechanisms of luminescence blinking proposed to date, from a formal standpoint, imply that blinking leads to variations in Y (t) and Γ( t) on macro-scopic time scales. A standard way to distinguish mechanisms of blinking is the estimation of the luminescence lifetime for photons belonging to a given inten-sity level, i.e., the construction of fluorescence lifetime-intensity distributions (FLID). A-type blinking implies that both Γ and Y switch between several discrete states. In the simplest case it is switching between a neutral and a negatively charged nanocrystal. The corresponding quantum yields and relaxation rates of the neutral exciton X and charged exciton (trion) X− are given by the following expressions: 
+
+ΓX = kr + knr ; YX = krΓ−1 
+
+> X
+
+;ΓX− = 2 kr + k′ 
+
+> nr
+
++ kA; YX− = 2 krΓ−1 
+
+> X−
+
+; (3) where kr is the radiative recombination rate of the exciton, knr is the nonra-diative recombination rate of the exciton, k′ 
+
+> nr
+
+is the nonradiative recombination rate of the trion, and kA is the Auger recombination rate of the trion. The FLID for dots blinking via this mechanism appears as two or three spots, often connected by a nonlinear ridge. If 2kr ≫ kA, one of the limiting cases may be observed - the intensity remains nearly unchanged over time, while the recombination rate varies by a factor of several times. Such behavior has been experimentally observed in Ref. 80. In the TM blinking mechanism it is assumed that the primary process af-fecting the intensity is the variation of the nonradiative trapping rate kt, i.e. :
+
+Γ( t) = kr + kt(t); Y (t) = kr
+
+kr + kt(t) = kr/Γ( t) = krτ (t); (4) 4Due to the latter relation, dots blinking via this mechanism appear as a linear ridge in the FLID. The least common mechanism is the hot carrier blinking mechanism (HC-blinking). In this mechanism, it is assumed that carriers can be captured into a metastable trap during the cooling process. If the rate of this capture varies, the emission intensity also changes. However, the luminescence decay rate remains unaffected, since trapping occurs before the carrier relaxes to the band edge: 
+
+Γ( t) = const ; (5) Thus, the FLID for this mechanism appears as a straight line independent of the lifetime/decay rate. 
+
+# Criteria 
+
+FLID allows us to determine the blinking mechanism in a particular case. This, however, is a qualitative criterion. To characterize the suppression of blinking, quantitative criteria have to be used. Since blinking is described by variations in two quantities, Y (t) and Γ( t), two distinct criteria can be formulated. 
+
+## Criterion I 
+
+The first criterion characterizes fluctuations of the quantum yield. In practice, determining the absorption cross-section of a specific nanocrystal is an extremely challenging task, as is estimating the absolute quantum yield via Eq.(1). Re-searchers therefore typically rely on the relative quantum yield, defined as 
+
+Q(t) = Y (t)
+
+Ymax 
+
+where Ymax is the maximum PL quantum yield observed during blinking. The average value of the relative quantum yield is 
+
+⟨Q⟩ = ⟨Y ⟩
+
+Ymax 
+
+≡ ⟨Nj ⟩
+
+Nmax 
+
+where Nmax is the maximum mean number of detected photons per bin. Since 
+
+⟨Nj ⟩ = ⟨nj ⟩, this quantity can be estimated as 
+
+⟨ ˆQ⟩ = ⟨nj ⟩
+
+ˆNmax 
+
+(6) where ˆNmax is an estimate of Nmax . The simplest possible estimate of this value is ˆN (0)  
+
+> max
+
+= nmax ≡ max  
+
+> j
+
+nj (7) which yields the naive estimate of the relative quantum yield: 
+
+⟨ ˆQ⟩(0) = ⟨nj ⟩
+
+nmax 
+
+(8) 5Unfortunately, this naive estimate is biased towards smaller values, since 
+
+nmax ≥ Nmax . To address this issue, we propose a new estimate of Nmax based on extreme value theory 81–83 . If the number of bins with Nj = Nmax is Mmax ,the mean value of nmax is 
+
+E [nmax ] = Nmax + K(Mmax )√Nmax (9) where 
+
+K(Mmax ) ≈ √2 ln Mmax (10) is a correction factor. The approximate expression K(Mmax ) ≈ √2 ln Mmax 
+
+is sufficient for most practical purposes; a more precise formula is provided in Supplementary Note 1. Assuming that nmax is equal to E [nmax ], we obtain the following self-consistent estimate for Nmax :
+
+ˆN (s) 
+
+> max
+
+= 14
+
+(√ K2 + 4 nmax − K
+
+)2
+
+(11) and, accordingly, the corrected estimate of the relative quantum yield: 
+
+⟨Q⟩(s) = ⟨nj ⟩
+
+ˆN (s)
+
+> max
+
+(12) By examining the bias of the naive estimate, the following expression can be obtained (see Supplementary Note 1 for details): Bias 
+
+[
+
+⟨Q⟩(0) ]
+
+= −⟨ Q⟩K
+
+√Nmax 
+
+Nmax 
+
+(13) It follows that the estimate is always biased downward, i.e. :
+
+E
+
+[
+
+⟨Q⟩(0) 
+
+> est
+
+]
+
+≤ ⟨ Q⟩
+
+The bias of the self-consistent estimate is far smaller. It can be shown (see Supplementary Note 1) that Bias 
+
+[
+
+⟨Q⟩(s)]
+
+= π2⟨Q⟩
+
+12 Nmax ln Mmax 
+
+≪ ⟨ Q⟩ (14) and therefore ∣∣∣∣∣
+
+Bias [⟨Q⟩(s)]
+
+Bias [⟨Q⟩(0) ]∣∣∣∣∣ = π2
+
+12 ln Mmax K N 1/2
+
+> max
+
+≪ 1 (15) Supplementary Note 1 further demonstrates that the mean-squared error of the self-consistent estimate is much smaller than that of the naive estimate whenever 
+
+Mmax > 10 .6Criterion II 
+
+The second criterion concerns fluctuations of the luminescence decay rate. Since we are not interested in the absolute value of the rate itself, the most natural measure of its spread is the variance σ2Γ. Given the estimated values ˆΓj for each bin, the variance can be estimated in the conventional way: 
+
+ˆσ2Γ = 1
+
+J − 1
+
+> J
+
+∑
+
+> j=1
+
+(ˆΓj −
+
+〈ˆΓ
+
+〉) 2
+
+(16) where J is the total number of bins. Because the absolute magnitude of this spread may vary from one quantum dot to another, a properly normalized criterion is required. A suitable normalization is provided by the Bhatia– Davis inequality 84 , which bounds the variance of any distribution supported on [Γ min , Γmax ]:
+
+σ2Γ ≤ (Γ max − ⟨ Γ⟩) ( ⟨Γ⟩ − Γmin ) (17) Equality holds in exactly two limiting cases: the variance is zero, which implies 
+
+Γmax = ⟨Γ⟩ = Γ min , i.e., the decay rate is constant and its distribution is a single delta function, or the distribution consists of two delta functions, corresponding to switching between two discrete decay-rate states. Accordingly, we define the following quantity: 
+
+ˆξ = 1 − ˆσ2Γ(ˆΓmax −
+
+〈ˆΓ
+
+〉) (〈 ˆΓ
+
+〉
+
+− ˆΓmin 
+
+) (18) This criterion possesses the following properties. When the decay rate is strictly constant (a single delta-function distribution), ˆξ = 1 . When the decay rate switches sharply between two discrete states (a bimodal distribution of two delta functions), the Bhatia–Davis bound is saturated and ˆξ = 0 . If the distribution is broadened but remains centered near a single value, ˆξ is close to 1; if it consists of two narrow but finite-width peaks, ˆξ is close to 0. For a complex, broadly distributed Γ( t), the criterion takes an intermediate value between 0 and 1, reflecting the presence of significant but non-two-state fluctuations. 
+
+## Classification of the blinking modes 
+
+Summarizing the estimates proposed above, we introduce a two-dimensional criterion for blinking suppression, represented by the pair ( ˆξ, ⟨ ˆQ⟩(s)). Each quantum dot is thus mapped onto a point in the plane of decay-rate fluctua-tions ˆξ versus relative quantum yield ⟨ ˆQ⟩(s). The resulting diagram, shown in 
+
+Figure 1 , provides a unified classification of blinking behavior and its degree of suppression. The left side of the diagram, shaded in blue, corresponds to two-state blink-ing mechanisms. For both A-type blinking and two-state TM blinking, the decay rate switches between two discrete values. In the ideal limit this yields 7Figure 1: Two-dimensional blinking suppression criterion proposed in this work. The colored regions indicate characteristic areas corresponding to different lu-minescence blinking mechanisms. Blue (left): two-state blinking (A-type or two-state TM). White (center): sophisticated blinking: multilevel TM blinking and hybrid mechanisms. Green (right): hot-carrier (HC) blinking. Violet-pink (upper left): two-state ”stealth” blinking. Red (upper center): ”stealth” blinking- high relative quantum yield with persistent, non-two-state decay-rate fluctuations. Yellow-orange (upper right): complete non-blinking mode - the case of complete blinking suppression. 
+
+ˆξ = 0 ; in practice, owing to finite sample sizes and experimental noise, the estimates form a gradient that fades rapidly towards the center of the plot. Quantum dots blinking via these mechanisms are therefore concentrated near the left edge, with their vertical position determined by their average relative quantum yield. The central white region of the diagram corresponds to the sophisticated blinking mode: multilevel TM-blinking mechanism, as well as to hybrid sce-narios involving contributions from all three mechanisms. It is in this region that the proposed criterion is most informative: rather than merely indicating the presence or absence of blinking, the coordinates ( ˆξ, ⟨ ˆQ⟩(s)) provide a quan-titative measure of the degree of suppression of both intensity and decay-rate fluctuations. The right side of the diagram, shaded in green, is associated with the hot-carrier blinking mechanism. Since HC-blinking affects only the emission inten-sity while the decay rate remains constant, ˆξ is close to 1, and the points are 8clustered near the right edge. Again, experimental uncertainties broaden this cluster into a gradient that decays towards the center. The upper part of the diagram, where the relative quantum yield is high, contains three distinct regions of particular interest, corresponding to different modes of intensity stability. In the upper-left corner, the red gradient of high quantum yield overlaps with the blue gradient of two-state decay-rate switching, producing a violet-pink shade. This corresponds to two-state ”stealth” blinking mode, reported by Galland et al. in Ref. 80, where nearly constant intensity was accompanied by two-level switching of the recombination rate. Here, blinking in intensity is completely suppressed ( ⟨ ˆQ⟩(s) ≈ 1), yet the decay rate continues to fluctuate between two discrete values ( ˆξ ≈ 0). The upper-central part of the diagram, shaded in red, represents a broader and, in practice, more common mode: the relative quantum yield is high, in-dicating strong suppression of intensity fluctuations, while the decay rate still exhibits significant variations that are not necessarily confined to two discrete states. We term this mode ”stealth blinking”: the nanocrystal appears stable in intensity but its excited-state lifetime continues to fluctuate. Finally, the top right corner, shaded in yellow-orange, corresponds to the complete non-blinking mode, which is equivalent to complete blinking suppres-sion. Here the green gradient of HC-blinking overlaps with the red gradient of high quantum yield, indicating that both intensity and decay-rate fluctuations are negligible ( ˆξ ≈ 1, ⟨ ˆQ⟩(s) ≈ 1). In the following section, we perform simulations of the luminescence blinking process for the cases discussed above, accounting for realistic experimental un-certainties, and examine how reliably the proposed criterion and the associated estimates capture the blinking suppression process. 
+
+# Simulation and results 
+
+We carried out simulations for three mechanisms of blinking. The blinking within the Auger mechanism is simulated using a model with two states: ON (neutral) and OFF (negatively charged) characterized by the pairs ΓON , NON and ΓOFF , NOFF , chosen to satisfy Eq. (3). The switching between states is governed by two characteristic times, T + (OFF → ON) and T −
+
+(ON → OFF), drawn from exponential distributions, i.e. , a stochastic two-level system (TLS). The resulting telegraph process yields a sequence of switching points; between these points, the intensity and decay rate are assumed constant. The signal is then binned in time. If one or more switching events fall within a single bin, the bin intensity is taken as the time-averaged value over that bin. The corresponding decay rate for the bin is obtained by weighting the ON-and OFF-state rates by their respective intensity contributions within the bin, ensuring that the brighter state contributes proportionally more to the effective 
+
+Γj , as would be the case in a real FLID-based analysis. Finally, Poisson noise is added to the binned intensities to mimic photon-counting statistics, producing 9the simulated trace nj .To account for the uncertainty inherent in estimating the decay rate from finite photon numbers, we proceed as follows. For each Γj , we draw a ran-dom sample ε from the standard normal distribution N (0 , 1) , multiply it by 
+
+Γj /√Nfit , and apply the resulting shift to the true value. Here Nfit is the typ-ical number of photons used in a maximum-likelihood fit; we set Nfit = 1000 
+
+throughout. We note that the ±1/√Nfit scaling was originally derived for the variance of lifetime estimates in Ref. 37; the analogous form for the decay rate follows directly and is applied here. This procedure broadens the Γj distribu-tion in a manner that mimics experimental data, yielding the estimated values 
+
+ˆΓj . The HC mechanism is simulated using the same TLS framework, with the simplification that the decay rate remains unchanged upon switching; only the intensity fluctuates, while the same Γ-broadening is retained. Further details of all simulations can be found in Supplementary Note 2. A typical simulated trace for A-type blinking is shown in Figure 2 . Each simulation was run for up to 10 4 switching events; for clarity, only the first 30 s of the trace are displayed in the figure. Panel (a) displays the intensity trace and its distribution; panel (b) shows the corresponding lifetime trace and its distribution. The intermediate intensity and lifetime values in these traces are due to the contribution of the bins during which the switching occurs. This also leads to the appearance of a low ridge on the FLID graph, connecting the two peaks corresponding to the neutral and charged states of the NC in panel (c). The ridge line shown as a solid red curve in panel (c) matches the well-known behavior for A-type blinking (see, e.g. , Ref. 40). For the simulation shown here, symmetric switching times were used ( T + =
+
+T − = 30 ms), with a bin size of 10 ms. We note that a more rigorous approach would draw switching times from power-law distributions, as implemented by Palstra et al. in Ref. 85. How-ever, since the present work focuses on the distributions of intensity and decay rate across bins rather than on the temporal statistics of blinking, the simpler exponential model is sufficient for our purposes. For the simulations for the trapping mechanism we used the model re-cently proposed in Ref. 37. The model assumes that the quantum dot structure evolves over time due to a discrete set of independent stochastic two-level sys-tems. The switching of each TLS modifies the Huang-Rhys parameter S for the nonradiative transition as 
+
+S(t) = s0 + ∑
+
+> i
+
+σi(t)si, (19) where σi(t) ∈ { 0, 1} describes the state of the i-th TLS, s0 is the baseline Huang-Rhys parameter with all TLSs off, and si is the contribution of the i-th TLS when active. According to Marcus-Jortner theory, the nonradiative capture rate depends on S(t) as 
+
+knr (t) = k0Sα(t), (20) where k0 is a pre-exponential factor and α is the effective number of phonons involved in the transition. The switching times of individual TLSs are assumed 10 (a) 
+
+> (b)
+> (c)
+
+Figure 2: Simulated trajectories of (a) intensity and (b) lifetime for A-type blinking with corresponding distributions. (c) FLID extracted from the simu-lation. The solid red curve represents the theoretical ridge line. Note that the color scale is displayed on a logarithmic scale. Additionally, for contrast, points with fewer than 5 events have been removed. The simulation was run for up to 
+
+10 4 switching events with T + = T − = 30 ms and a bin size of 10 ms; only the first 30 s are shown. to be broadly distributed (log-uniform), which naturally reproduces the char-acteristic features of single-QD blinking. Given the time sequence S(t), both the decay rate Γ( t) and the mean bin intensity Nj follow from Eq. (4). Pois-son noise and the Γ-broadening procedure described above are then applied to obtain the simulated trajectories nj and ˆΓj . A detailed description of the sim-ulation algorithm and the choice of parameters is provided in Supplementary Note 2. To illustrate this approach, we use experimental data for a single CdSeS/ZnS core/shell quantum dot (QD 3.2 in Ref. 37). Figure 3(a) shows the experi-mental blinking trace together with the photon distribution function (PDF); the red curve is the fit obtained from the model. Figure 3(b) displays a simulated trace generated using the model with the parameters extracted from that fit, along with the resulting photon distribution and the corresponding theoretical curve (red line). Figure 3(c) presents the FLID extracted from the simula-tion, which exhibits the linear dependence characteristic of TM blinking. The simulation preserves the known properties of all these quantities: the PDF, the FLID, the ON/OFF time distributions, the long-time autocorrelation function, and the power spectral density all exhibit the expected behavior characteristic of TM blinking. Representative examples are provided in Supplementary Note 2. Before applying the proposed criterion to the full two-dimensional classifi-cation, we first assess the performance of the self-consistent estimator of the relative quantum yield. The two simulation approaches described above allow us to compare ⟨ ˆQ⟩(s) with the naive estimator ⟨ ˆQ⟩(0) across a range of blinking 11 (a) 
+
+> (b)
+> (c)
+
+Figure 3: TM blinking simulated using the model of Ref. 37. (a) Experimental blinking trace and photon-number distribution for a single CdSeS/ZnS quantum dot (QD 3.2 in Ref. 37); the red curve is the model fit. (b) Simulated trace and photon-number distribution generated with the parameters extracted from the fit; the red curve shows the theoretical expectation. (c) FLID extracted from the simulation, demonstrating the linear dependence characteristic of TM blinking. Simulation parameters and additional diagnostics are given in Supplementary Note 2. scenarios, using a level of accuracy that closely mimics experimental conditions. 
+
+Figure 4 presents a systematic comparison of the two estimators for both blinking mechanisms. Panel (a) shows the results for A-type blinking. The hor-izontal axis corresponds to the OFF-state fraction pOFF = TOFF /(TON + TOFF ),varied from 0.1 to 0.9. The blue dashed curve indicates the true theoretical quantum yield. Blue circles with error bars represent the mean and standard deviation of the simulated quantum yield before applying Poisson noise, aver-aged over 10 independent simulations at each value of pOFF ; only simulations whose quantum yield deviated from the theoretical value by less than 2% were retained. These points lie almost exactly on the theoretical curve, confirming the fidelity of the simulation. Red squares show the self-consistent estimate ⟨ ˆQ⟩(s);it agrees well with the true value, although a slight underestimation is visible at the highest quantum yields. Black squares show the naive estimate ⟨ ˆQ⟩(0) ;it is systematically and significantly biased downward. Panel (b) presents the analogous comparison for TM blinking, using the model parameters of QD 3.2 from Ref. 37. Here the pre-exponential factor k0 is varied over several orders of magnitude to sweep the relative quantum yield. The same qualitative behavior is observed: the self-consistent estimate tracks the true value closely, while the naive estimate consistently underestimates it. All simulation parameters are provided in Supplementary Note 3. We note that throughout this work we use the practical estimate Mmax ≈
+
+Mtot /10 , where Mtot is the total number of time bins in the trace. As argued in Section II, the logarithmic dependence of the correction factor K(Mmax ) makes 12 (a) (b) Figure 4: Comparison of the naive and self-consistent estimators of the relative quantum yield. (a) A-type blinking with the OFF-state fraction pOFF varied from 0.1 to 0.9. Blue dashed curve: true theoretical quantum yield. Blue circles: mean of 10 simulations before Poisson noise (error bars: ±1 standard deviation). Red squares: self-consistent estimate ⟨ ˆQ⟩(s). Black squares: naive estimate ⟨ ˆQ⟩(0) . (b) TM blinking with k0 varied over several orders of magnitude (parameters from QD 3.2 of Ref. 37). Symbols have the same meaning as in panel (a). Simulation parameters are listed in Supplementary Note 3. the criterion insensitive to the precise value of Mmax , and this simple order-of-magnitude estimate is sufficient for all cases considered here. The simulations presented above confirm that this choice yields reliable results across the full range of blinking scenarios. Having validated the self-consistent estimator, we now turn to the full two-dimensional criterion. Figure 5 presents the results of simulations for all three blinking mechanisms, with each data point representing the mean of 10 inde-pendent simulation runs. We begin with A-type blinking (colored circles). Five sets of simulations were performed, corresponding to five fixed values of the Auger rate kA (0.1, 1, 5, 10, and 20; see legend). For each kA, the OFF-state fraction pOFF was varied from 0.1 to 0.9. The points lie predominantly in the left part of the diagram ( ˆξ ≲ 0.3), consistent with the two-state nature of this mechanism. For large 
+
+kA/k r (5, 10, 20), the expected behavior is observed: ˆξ remains close to zero and the quantum yield decreases with increasing pOFF . For small kA (0.1 and 1), however, the points do not reach the extreme upper-left corner but instead remain at intermediate ˆξ values. This is a consequence of the intensity-weighted averaging of the decay rate within individual time bins. When kA is small, the ON and OFF states have nearly equal intensities (see Eq. 3), so that bins containing switching events acquire intermediate Γj values lying between ΓON 
+
+and ΓOFF . The resulting distribution of ˆΓj is no longer bimodal but nearly continuous, shifting ˆξ away from zero. TM blinking was simulated using the model parameters of two quantum dots 13 Figure 5: Two-dimensional criterion ( ˆξ, ⟨ ˆQ⟩(s)) evaluated from simulations of A-type blinking (circles), TM blinking (upward triangles: QD 3.2; downward triangles: QD 4.4 from Ref. 37), and HC blinking (green squares). For A-type blinking, five values of kA/k r are used (0.1, 1, 5, 10, 20; see legend); for each, 
+
+pOFF varies from 0.1 to 0.9. For TM blinking, k0 is varied at fixed α = 10 
+
+(red and green) and α is varied at fixed k0 (orange and cyan). Each point is the mean of 10 independent simulations. Simulation parameters are listed in Supplementary Note 3. from Ref. 37: QD 3.2 (upward triangles) and QD 4.4 (downward triangles). For each dot, two series of simulations were carried out. In the first series, the pre-exponential factor k0 was varied over several orders of magnitude while keeping 
+
+α = 10 fixed (red and green triangles). In the second series, k0 was held at the value reported in Ref. 37 while α was varied from 8 to 12 (orange and cyan triangles). The resulting points occupy the central region of the diagram, as expected for the multilevel TM mechanism. In contrast to A-type blinking, the scatter in ˆξ is substantial, reflecting the inherently broad distribution of decay rates produced by the multilevel TLS model. The relative quantum yield varies systematically with both k0 and α, correctly capturing the expected trends: 
+
+⟨ ˆQ⟩(s) decreases as nonradiative recombination becomes more effective. 
+
+HC blinking was simulated using the same TLS framework as A-type blink-ing, but with the decay rate kept constant; only the intensity switches between two levels. The results are shown as green squares. The points lie on a nearly vertical line at ˆξ ≈ 0.9, with minimal scatter. The deviation from the ideal value 
+
+ˆξ = 1 is due to the Γ-broadening procedure, which introduces a small but finite variance. The horizontal spread reflects the variation of pOFF , which controls the relative quantum yield. Overall, the simulation results are in excellent agreement with the theoretical 14 expectations outlined in Section II. All limiting cases identified there-two-state blinking on the left, HC blinking on the right, multilevel TM blinking in the center, and the approach to the ideal point (1 , 1) -are clearly reproduced. The criterion thus provides a quantitative and physically transparent mapping of the degree of blinking suppression across all major mechanisms. The simulation parameters are summarized in Supplementary Note 3. 
+
+# Discussion 
+
+In the preceding sections, we have proposed and tested on simulated data a new quantitative criterion for evaluating the suppression of luminescence blinking in single quantum dots. Unlike widely used threshold-based procedures, the present criterion does not rely on an arbitrary definition of ON and OFF states and, moreover, provides a physically transparent classification of the underlying blinking mechanism. The criterion is straightforward to compute. The complete procedure consists of the following steps. 1. Estimation of the relative quantum yield. The mean intensity ⟨nj ⟩
+
+and the maximum intensity nmax are computed from the binned blinking trace. The self-consistent correction derived in Section II is applied to obtain ⟨ ˆQ⟩(s). As demonstrated in the previous section, the practical choice Mmax ≈ Mtot /10 yields reliable results across all blinking modes considered. 2. Estimation of the decay rate and its variance. The intensity trace is divided into a set of levels. For each level, the luminescence decay rate ˆΓk is estimated from the delay-time data (using, e.g. , a maximum-likelihood fit). The estimated rate is assigned to every time bin belonging to that level, producing a set {ˆΓj }. The mean ⟨ˆΓ⟩, the variance ˆσ2Γ, and the minimum and maximum values are computed. From these, ˆξ is constructed using the Bhatia-Davis normalization [Eq. (18)]. For bins with very low intensity, several adjacent bins may need to be combined to accumulate sufficient photon statistics; the resulting ˆΓk is then assigned to all constituent bins. 3. Mapping onto the ( ˆξ, ⟨ ˆQ⟩(s)) plane. The obtained values for all QDs in the ensemble are plotted on a single diagram. If the majority of points fall into one of the characteristic regions identified in Section II (left: two-state blinking; right: HC blinking; center: multilevel TM blinking; upper regions: stealth blinking or ideal suppression), the dominant blink-ing mechanism can be inferred directly. If the points lie in the central region, additional FLID analysis is advisable to clarify the mechanism. 4. Quantification of the degree of suppression. The positions of dif-ferent ensembles are compared on the diagram. Ensembles with stronger blinking suppression shift toward the upper-right corner, approaching the ideal point (1 , 1) . This allows a fully quantitative, threshold-free compar-ison of the efficacy of different suppression strategies. 15 A comment is in order regarding our choice to formulate the criterion in terms of the decay rate Γ rather than the more commonly used lifetime τ . In all major blinking mechanisms, it is the nonradiative recombination rate that fluctuates - whether via direct trapping (TM), Auger recombination (A-type), or hot-carrier capture (HC). Since Γ = kr + knr , the differences Γmax − ⟨ Γ⟩ and 
+
+⟨Γ⟩ − Γmin that enter the Bhatia-Davis bound depend only on the fluctuating part knr , with the radiative rate kr canceling out. The same applies to the variance σ2Γ. In contrast, the lifetime τ = 1 /Γ mixes radiative and nonradiative contributions in a nonlinear fashion, which can introduce a bias. The criterion can, in principle, be formulated using lifetimes as well, provided this bias is properly accounted for. The present study has been limited to the three established blinking mech-anisms and their multilevel TM extension. A hybrid mechanism combining, 
+
+e.g. , Auger and TM mechanisms would require a more sophisticated simulation framework merging both approaches. The development of such a framework, and the corresponding extension of the criterion, is left for future work. We believe that the proposed criterion offers a practical and physically grounded tool for the quantitative comparison of blinking suppression strate-gies, an area of intense current activity. As a next step, we intend to apply the criterion to experimental data sets, both with and without blinking suppression, to validate its performance on real nanocrystal ensembles. 
+
+# Conclusion 
+
+We have proposed a new two-dimensional criterion for evaluating the suppres-sion of luminescence blinking in single colloidal quantum dots. The criterion combines two quantities: the self-consistent estimate of the relative quantum yield ⟨ ˆQ⟩(s) and the normalized decay-rate fluctuation measure ˆξ, both ex-tracted directly from standard time-tagged single-photon counting data. The self-consistent estimator corrects a systematic bias inherent in the commonly used naive estimate by means of extreme-value theory, while ˆξ employs the Bhatia-Davis inequality to provide a bounded, normalized measure of decay-rate variations. The performance of both estimators and of the full two-dimensional cri-terion has been tested on simulated blinking trajectories representing A-type, TM, and HC mechanisms, with realistic experimental noise. The self-consistent estimator consistently recovers the true relative quantum yield, whereas the naive estimator significantly underestimates it. The two-dimensional diagram 
+
+( ˆξ, ⟨ ˆQ⟩(s)) cleanly separates the three blinking mechanisms into distinct regions - left, center, and right - and identifies the modes of stealth blinking and com-plete blinking suppression at the top of the diagram. The criterion thus enables not only a quantitative assessment of the degree of blinking suppression but also a preliminary identification of the dominant blinking mechanism. The proposed approach is threshold-free, computationally simple, and based solely on quantities routinely extracted from single-QD measurements. We ex-16 pect it to become a useful tool for the growing community working on the stabilization of single-nanocrystal emission. 
+
+# Acknowledgments 
+
+Authors acknowledge the core funding from the Russian Federal Ministry of Science and Higher Education (FWGF-2026-0007). 
+
+# References 
+
+[1] Q. Zhang, Q. Shang, R. Su, T. T. H. Do and Q. Xiong, Nano Letters , 2021, 
+
+21 , 1903–1914. [2] Y.-S. Park, J. Roh, B. T. Diroll, R. D. Schaller and V. I. Klimov, Nature Reviews Materials , 2021, 6, 382–401. [3] A. Zhukov, N. Kryzhanovskaya, E. Moiseev and M. Maximov, Light: Sci-ence & Applications , 2021, 10 , 80. [4] C. Livache, B. Martinez, N. Goubet, C. Gréboval, J. Qu, A. Chu, S. Royer, S. Ithurria, M. G. Silly, B. Dubertret et al. , Nature communications , 2019, 
+
+10 , 2125. [5] J. H. Heo, D. H. Shin, J. K. Park, D. H. Kim, S. J. Lee and S. H. Im, 
+
+Advanced Materials , 2018, 30 , 1801743. [6] O. Balitskii, M. Sytnyk and W. Heiss, Advanced Materials Technologies ,2024, 9, 2400150. [7] H. Yann Heng, S. M. Mohammad, D. Alwani Zainuri, M. Mustaqim Rosli, A. Razak Ibrahim and M. Abdullah, Journal of Physics: Conference Series ,2025, 2974 , 012026. [8] M. Rakhlin, A. Galimov, I. Dyakonov, N. Skryabin, G. Klimko, M. Kulag-ina, Y. M. Zadiranov, S. Sorokin, I. Sedova, Y. A. Guseva et al. , Journal of Luminescence , 2023, 253 , 119496. [9] Y. Arakawa and M. J. Holmes, Applied Physics Reviews , 2020, 7, 021309. [10] P. Senellart, G. Solomon and A. White, Nature nanotechnology , 2017, 12 ,1026–1039. [11] J. Ryu, V. Krivenkov, A. Olejniczak, A. Y. Nikitin and Y. Rakovich, Ap-plied Physics Reviews , 2025, 12 , 041323. [12] O. E. Semonin, J. M. Luther and M. C. Beard, Materials Today , 2012, 15 ,508–515. [13] M. V. Kovalenko, Nature Nanotechnology , 2015, 10 , 994–997. 17 [14] G. H. Carey, A. L. Abdelhady, Z. Ning, S. M. Thon, O. M. Bakr and E. H. Sargent, Chemical Reviews , 2015, 115 , 12732–12763. [15] L. Duan, L. Hu, X. Guan, C.-H. Lin, D. Chu, S. Huang, X. Liu, J. Yuan and T. Wu, Advanced Energy Materials , 2021, 11 , 2100354. [16] L. Liu, A. Najar, K. Wang, M. Du and S. F. Liu, Advanced Science , 2022, 
+
+9, 2104577. [17] M. Hao, S. Ding, S. Gaznaghi, H. Cheng and L. Wang, ACS Energy Letters ,2024, 9, 308–322. [18] E. Tholouli, E. Sweeney, E. Barrow, V. Clay, J. Hoyland and R. Byers, The Journal of Pathology , 2008, 216 , 275–285. [19] S. Jin, Y. Hu, Z. Gu, L. Liu and H.-C. Wu, Journal of Nanomaterials ,2011, 2011 , 834139. [20] I. Ahmad, A. Khan, A. Rehman, M. Zahid, J. Khalid, S. Saleem, U. Majeed, Q. Khan and M. Maqbool, AVS Quantum Science , 2025, 7,. [21] A. S. do Nascimento, P. E. Cabral Filho, A. Fontes, B. S. Santos, F. R. de Carvalho, L. Stragevitch and E. S. Leite, Fuel , 2019, 239 , 1055–1060. [22] S. Huang and G. Huang, RSC Adv. , 2024, 14 , 20884–20897. [23] M. F. Frasco and N. Chaniotakis, Sensors , 2009, 9, 7266–7286. [24] M. Chern, J. C. Kays, S. Bhuckory and A. M. Dennis, Methods and Appli-cations in Fluorescence , 2019, 7, 012005. [25] A. Lesiak, K. Drzozga, J. Cabaj, M. Bański, K. Malecha and A. Pod-horodecki, Nanomaterials , 2019, 9,. [26] V. Galstyan, Analytica Chimica Acta , 2021, 1152 , 238192. [27] F. Krieg, P. C. Sercel, M. Burian, H. Andrusiv, M. I. Bodnarchuk, T. Stöferle, R. F. Mahrt, D. Naumenko, H. Amenitsch, G. Rainò and M. V. Kovalenko, ACS Central Science , 2021, 7, 135–144. [28] G. Rainò, M. A. Becker, M. I. Bodnarchuk, R. F. Mahrt, M. V. Kovalenko and T. Stöferle, Nature , 2018, 563 , 671–675. [29] Y.-K. Wang, F. Yuan, Y. Dong, J.-Y. Li, A. Johnston, B. Chen, M. I. Saidaminov, C. Zhou, X. Zheng, Y. Hou, K. Bertens, H. Ebe, D. Ma, Z. Deng, S. Yuan, R. Chen, L. K. Sagar, J. Liu, J. Fan, P. Li, X. Li, Y. Gao, M.-K. Fung, Z.-H. Lu, O. M. Bakr, L.-S. Liao and E. H. Sargent, 
+
+Angewandte Chemie International Edition , 2021, 60 , 16164–16170. [30] H. Moon, C. Lee, W. Lee, J. Kim and H. Chae, Advanced Materials , 2019, 
+
+31 , 1804294. 18 [31] E. Jang and H. Jang, Chemical Reviews , 2023, 123 , 4663–4692. [32] K. Agarwal, H. Rai and S. Mondal, Materials Research Express , 2023, 10 ,062001. [33] A. A. Rempel, O. V. Ovchinnikov, I. A. Weinstein, S. V. Rempel, Y. V. Kuznetsova, A. V. Naumov, M. S. Smirnov, I. Y. Eremchev, A. S. Vokhmintsev and S. S. Savchenko, Russian Chemical Reviews , 2024, 93 ,RCR5114. [34] J. W. Kim, J. Kim, J. Y. Woo and Y. Kim, J. Mater. Chem. A , 2025, 13 ,29706–29735. [35] P. A. Frantsuzov, M. Kuno, B. Jankó and R. A. Marcus, Nat. Phys. , 2008, 
+
+4, 519–522. [36] C. Yang, G. Zhang, J. Li, R. Chen, C. Qin, J. Hu, Z. Yang, L. Xiao and S. Jia, Laser & Photonics Reviews , 2025, 19 , 2402269. [37] E. A. Podshivaylov, M. A. Kniazeva, A. O. Tarasevich, I. Y. Eremchev, A. V. Naumov and P. A. Frantsuzov, J. Mater. Chem. C , 2023, 11 , 8570– 8576. [38] E. A. Podshivaylov, A. M. Shekhin, M. A. Kniazeva, A. O. Tarasevich, E. V. Sapozhnikova, A. P. Pushkarev, I. Y. Eremchev, A. V. Naumov and P. A. Frantsuzov, J. Mater. Chem. C , 2026, –. [39] A. L. Efros and D. J. Nesbitt, Nature nanotechnology , 2016, 11 , 661–671. [40] G. Yuan, D. E. Gómez, N. Kirkwood, K. Boldt and P. Mulvaney, ACS Nano , 2018, 12 , 3397–3405. [41] F. T. Rabouw, F. V. Antolinez, R. Brechbühler and D. J. Norris, The Journal of Physical Chemistry Letters , 2019, 10 , 3732–3738. [42] K. Gao, H. Springbett, T. Zhu, R. A. Oliver, Y. Arakawa and M. J. Holmes, 
+
+Applied Physics Letters , 2019, 114 , 112109. [43] E. A. Podshivaylov, M. A. Kniazeva, A. A. Gorshelev, I. Y. Eremchev, A. V. Naumov and P. A. Frantsuzov, The Journal of Chemical Physics ,2019, 151 , 174710. [44] S. O. M. Hinterding, M. J. J. Mangnus, P. T. Prins, H. J. Jöbsis, S. Busatto, D. Vanmaekelbergh, C. de Mello Donega and F. T. Rabouw, Nano Letters ,2021, 21 , 658–665. [45] M. J. J. Mangnus, J. W. de Wit, S. J. W. Vonk, J. J. Geuchies, W. Albrecht, S. Bals, A. J. Houtepen and F. T. Rabouw, ACS Photonics , 2023, 10 , 2688– 2698. 19 [46] F. Conradt, V. Bezold, V. Wiechert, S. Huber, S. Mecking, A. Leitenstorfer and R. Tenne, Nano Letters , 2023, 23 , 9753–9759. [47] R. An, F. Zhang, X. Zou, Y. Tang, M. Liang, I. Oshchapovskyy, Y. Liu, A. Honarfar, Y. Zhong, C. Li, H. Geng, J. Chen, S. E. Canton, T. Pullerits and K. Zheng, ACS Applied Materials & Interfaces , 2018, 10 , 39222–39227. [48] V. A. Baitova, M. A. Knyazeva, I. Mukanov, A. O. Tarasevich, A. V. Naumov, A. G. Son, S. A. Kozyukhin and I. Y. Eremchev, JETP Letters ,2023, 118 , 560–567. [49] L. Liu, L. Deng, S. Huang, P. Zhang, J. Linnros, H. Zhong and I. Sychugov, 
+
+The Journal of Physical Chemistry Letters , 2019, 10 , 864–869. [50] J. Wahl, P. Haizmann, C. Kirsch, R. Frecot, N. Mukharamova, D. As-salauova, Y. Y. Kim, I. Zaluzhnyy, T. Chassé, I. A. Vartanyants, H. Peisert and M. Scheele, Phys. Chem. Chem. Phys. , 2022, 24 , 10944–10951. [51] G. C. Gee, C. Mi, M. P. LaSala, W. T. Yip and Y. Dong, MRS communi-cations , 2025, 1–7. [52] S. Paul and A. Samanta, The Journal of Physical Chemistry Letters , 2022, 
+
+13 , 5742–5750. [53] A. M. Dennis, B. D. Mangum, A. Piryatinski, Y.-S. Park, D. C. Han-nah, J. L. Casson, D. J. Williams, R. D. Schaller, H. Htoon and J. A. Hollingsworth, Nano Letters , 2012, 12 , 5545–5551. [54] L. A. Lane, A. M. Smith, T. Lian and S. Nie, The Journal of Physical Chemistry B , 2014, 118 , 14140–14147. [55] C.-L. Tao, J. Ma, C. Wei, D. Xu, Z. Xie, Z. Jiang, F. Ge, H. Zhang, M. Xie, Z. Ye, F. Cheng, B. Xu, Y. Tian and X.-J. Wu, Advanced Optical Materials ,2023, 11 , 2300533. [56] R. Singh, N. Praneeth, S. Biswas, M. Palabathuni, A. Muralidharan, N. Mishra and S. Khatua, Advanced Optical Materials , 2024, 12 , 2401132. [57] M. K. Panda, D. Acharjee, A. B. Mahato and S. Ghosh, Small , 2024, 20 ,2311559. [58] S. Hohng and T. Ha, Journal of the American Chemical Society , 2004, 126 ,1324–1325. [59] S. Biswas, M. K. Panda, S. Chatterjee, J. Satra, S. K. Sharma, J. Rath, A. Dutta, D. Acharjee, S. Chakraborty, S. Ghosh and N. Mishra, Advanced Functional Materials , 2025, 35 , 2505506. [60] R. Murali, M. K. Panda, R. K. Challa, D. Acharjee, V. R. Soma, S. Ghosh and S. S. K. Raavi, Small , 2026, 22 , e05011. 20 [61] D. Wang, J. Chen, D. Zhang, D. M. Niedzwiedzki, R. A. Loomis and B. Sadtler, Nano Research , 2024, 17 , 10363–10375. [62] C. Yang, G. Zhang, L. Feng, B. Li, Z. Li, R. Chen, C. Qin, Y. Gao, L. Xiao and S. Jia, Opt. Express , 2018, 26 , 11889–11902. [63] C. Yang, R. Xiao, S. Zhou, Y. Yang, G. Zhang, B. Li, W. Guo, X. Han, D. Wang, X. Bai et al. , ACS Photonics , 2021, 8, 2538–2547. [64] T. Takagi, S. Omagari and M. Vacha, Phys. Chem. Chem. Phys. , 2023, 25 ,19004–19012. [65] N. V. S. Praneeth, S. Akhil, A. Mukherjee, S. Seth, S. Khatua and N. Mishra, Advanced Optical Materials , 2024, 12 , 2303222. [66] H. You, Z. Liu, K. Zhu, Q. Wang, Z. Liu, P. Li, X. Hu, J. Duan, Y. Li, N. Dai and X. Hou, Nano Letters , 2025, 25 , 12446–12454. [67] C. Mi, G. C. Gee, C. W. Lander, D. Shin, M. L. Atteberry, N. G. Akhme-dov, L. Hidayatova, J. D. DiCenso, W. T. Yip, B. Chen et al. , Nature communications , 2025, 16 , 204. [68] S. Gallagher, J. Kline, F. Jahanbakhshi, J. C. Sadighian, I. Lyons, G. Shen, B. F. Hammel, S. Yazdi, G. Dukovic, A. M. Rappe and D. S. Ginger, ACS Nano , 2024, 18 , 19208–19219. [69] L. Chouhan, S. Ito, E. M. Thomas, Y. Takano, S. Ghimire, H. Miyasaka and V. Biju, ACS Nano , 2021, 15 , 2831–2838. [70] M. Hamada, S. Nakanishi, T. Itoh, M. Ishikawa and V. Biju, ACS Nano ,2010, 4, 4445–4454. [71] P. A. Frantsuzov and R. A. Marcus, Phys. Rev. B. , 2005, 72 , 155321. [72] A. L. Efros and M. Rosen, Phys. Rev. Lett. , 1997, 78 , 1110–1113. [73] C. Galland, Y. Ghosh, A. Steinbrück, M. Sykora, J. A. Hollingsworth, V. I. Klimov and H. Htoon, Nature , 2011, 479 , 203–208. [74] P. A. Frantsuzov, S. Volkán-Kacsó and B. Jankó, Phys. Rev. Lett. , 2009, 
+
+103 , 207402. [75] N. Amecke, A. Heber and F. Cichos, The Journal of Chemical Physics ,2014, 140 , 114306. [76] Y. J. Bae, N. A. Gibson, T. X. Ding, A. P. Alivisatos and S. R. Leone, The Journal of Physical Chemistry C , 2016, 120 , 29484–29490. [77] S. Seth, E. A. Podshivaylov, J. Li, M. Gerhard, A. Kiligaridis, P. A. Frantsuzov and I. G. Scheblykin, Advanced Energy Materials , 2021, 11 ,2102449. 21 [78] M. Pelton, D. G. Grier and P. Guyot-Sionnest, Applied Physics Letters ,2004, 85 , 819–821. [79] P. A. Frantsuzov, S. Volkán-Kacsó and B. Jankó, Nano Letters , 2013, 13 ,402–408. [80] C. Galland, Y. Ghosh, A. Steinbrück, J. A. Hollingsworth, H. Htoon and V. I. Klimov, Nature communications , 2012, 3, 908. [81] B. Gnedenko, in Breakthroughs in Statistics: Foundations and Basic The-ory , Springer, 1992, pp. 195–225. [82] L. De Haan and A. Ferreira, Extreme value theory: an introduction ,Springer, 2006. [83] M. R. Leadbetter, G. Lindgren and H. Rootzén, Extremes and Related Properties of Random Sequences and Processes , Springer, New York, NY, 1st edn., 1983. [84] R. Bhatia and C. Davis, The american mathematical monthly , 2000, 107 ,353–357. [85] I. M. Palstra and A. F. Koenderink, The Journal of Physical Chemistry C ,2021, 125 , 12050–12060. 22 To Blink or Not to Blink? A New Criterion to Quantify Luminescence Blinking. Supplementary Notes 
+
+## Eduard A. Podshivaylov and Pavel A. Frantsuzov Voevodsky Institute of Chemical Kinetics and Combustion SB RAS, 630090, Novosibirsk, Russia 
+
+# Supplementary Note 1: Statistical properties of the relative quantum yield estimators 
+
+## S1.1. Distribution of the maximum of binned photon counts 
+
+Consider a blinking trajectory consisting of Mtot time bins. The number of photons detected in bin j, denoted nj , is a Poisson-distributed random variable with mean Nj . The observed maximum intensity is 
+
+nmax = max  
+
+> j
+
+nj . (1) We are interested in the case where the true maximum mean intensity Nmax =max j Nj is attained in Mmax bins. We assume that throughout the trajectory, 
+
+Nmax is sufficiently large so that the Poisson distribution is well approximated by a normal distribution with mean Nmax and variance Nmax . The problem then reduces to finding the distribution of the maximum of Mmax independent normal random variables. According to the Fisher-Tippett-Gnedenko theorem (see, e.g. , Refs. 1–3), the maximum of M independent standard normal random variables converges, as 
+
+M → ∞ , to the Gumbel distribution with the cumulative distribution function 
+
+FG(g) = exp( −e−g ). The mean and variance of a Gumbel random variable G
+
+are 
+
+E[G] = γ, Var [G] = π2
+
+6 , (2) where γ is the Euler-Mascheroni constant. The maximum of M standard normal variables Zi can be expressed in terms of G as 
+
+max  
+
+> i=1 ,...,M
+
+Zi ≈ aM + bM G, (3) 1with the scaling constants 2
+
+aM = √2 ln M − ln(4 π ln M )2√2 ln M , bM = 1
+
+√2 ln M . (4) Taking the expectation yields 
+
+E
+
+[
+
+max  
+
+> i
+
+Zi
+
+]
+
+= aM + γ b M = √2 ln M + γ
+
+√2 ln M − ln(4 π ln M )2√2 ln M + o
+
+( 1
+
+√ln M
+
+)
+
+.
+
+(5) Thus, for a general normal variable with mean μ and variance σ2, the expected maximum is μ + σ E[max i Zi], and we identify 
+
+K(M ) = √2 ln M + γ
+
+√2 ln M − ln(4 π ln M )2√2 ln M + o
+
+( 1
+
+√ln M
+
+)
+
+. (6) The leading-order approximation K(M ) ≈ √2 ln M is sufficient for most prac-tical purposes, the higher-order terms are given here for completeness. In all simulations and numerical calculations presented in this work, the full expres-sion(6) was used. Applying this result to our case with μ = Nmax and σ = √Nmax , we obtain 
+
+E[nmax ] = Nmax + K(Mmax )√Nmax ≡ N max . (7) The variance of the maximum follows from Var [G] = π2/6 and the scaling 
+
+bM = 1 /√2 ln M :
+
+Var [nmax ] = σ2 b2 
+
+> M
+
+Var [G] = Nmax · 12 ln Mmax 
+
+· π2
+
+6 = Nmax π2
+
+12 ln Mmax 
+
+. (8) 
+
+## S1.2. The naive estimator and its bias 
+
+The naive estimator of the relative quantum yield is defined in the main text as 
+
+⟨ ˆQ⟩(0) = ⟨n⟩
+
+nmax 
+
+, (9) where ⟨n⟩ = M −1
+
+> tot
+
+∑ 
+
+> j
+
+nj is the mean photon count per bin. The true relative quantum yield, which this estimator aims to recover, is 
+
+⟨Q⟩true = ⟨N ⟩
+
+Nmax 
+
+, (10) where ⟨N ⟩ = M −1
+
+> tot
+
+∑ 
+
+> j
+
+Nj is the true mean intensity and Nmax = max j Nj is the true maximum mean intensity. Both the numerator and the denominator in Eq. (9) are random variables. We evaluate the expectation by expanding the ratio around (⟨N ⟩, Nmax ). To second order in the fluctuations, 
+
+E
+
+[ ⟨n⟩
+
+nmax 
+
+]
+
+≈ ⟨N ⟩Nmax 
+
++ ⟨N ⟩N 3
+
+> max
+
+Var [nmax ] − 1
+
+N 2
+
+> max
+
+Cov [⟨n⟩, n max ] . (11) 2The linear terms vanish because E[⟨n⟩ − ⟨ N ⟩] = 0 and E[nmax − N max ] = 0 .The covariance term can be evaluated explicitly. Writing ⟨n⟩ = M −1
+
+> tot
+
+∑ 
+
+> i
+
+ni,we have 
+
+Cov [⟨n⟩, n max ] = 1
+
+Mtot 
+
+> Mtot
+
+∑
+
+> i=1
+
+Cov [ni, n max ] . (12) The covariance Cov [ni, n max ] is non-negligible only for those bins where ni is close to nmax , i.e. , for bins belonging to the set of Mmax bins with the high-est true mean intensity Nmax . For all other bins, ni and nmax are essentially independent, and their covariance vanishes. Therefore, 
+
+> Mtot
+
+∑
+
+> i=1
+
+Cov [ni, n max ] ≈ Mmax · Cov [ni∗ , n max ] ≈ Mmax · Var [nmax ], (13) where i∗ denotes a bin attaining the maximum, and we used the fact that for such bins ni∗ and nmax are strongly correlated, with Cov [ni∗ , n max ] ≈ Var [nmax ].It follows that 
+
+Cov [⟨n⟩, n max ] ≈ Mmax 
+
+Mtot 
+
+Var [nmax ] ≪ Var [nmax ], (14) since Mmax ≪ Mtot in any realistic blinking trajectory. The covariance term in the expansion is therefore suppressed by the factor Mmax /M tot and can be safely neglected. Dropping the covariance term and using the definitions (7) and (10), we obtain 
+
+E
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+≈ ⟨N ⟩
+
+Nmax + K√Nmax 
+
++ ⟨N ⟩N 3
+
+> max
+
+Var [nmax ]
+
+≈ ⟨ Q⟩true 
+
+(
+
+1 − K
+
+√Nmax 
+
+Nmax 
+
+)
+
++ O
+
+( 1
+
+Nmax ln Mmax 
+
+)
+
+,
+
+(15) where we expanded 1/(Nmax + K√Nmax ) to leading order in K/ √Nmax . The bias is therefore Bias 
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+= E
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+− ⟨ Q⟩true ≈ −⟨ Q⟩true K(Mmax )
+
+√Nmax 
+
+Nmax 
+
+. (16) The bias is negative: the naive estimator systematically underestimates the true relative quantum yield. 
+
+## S1.3. The self-consistent estimator and its bias 
+
+To correct the bias of the naive estimator, we introduce the self-consistent esti-mate of Nmax . Setting nmax = E[nmax ] in Eq. (7) and solving for Nmax yields 
+
+ˆN (s) 
+
+> max
+
+= 14
+
+(√ K2 + 4 nmax − K
+
+)2
+
+, (17) 3with K = K(Mmax ). The self-consistent estimator of the relative quantum yield is then 
+
+⟨ ˆQ⟩(s) = ⟨n⟩
+
+ˆN (s)
+
+> max
+
+. (18) As before, both the numerator and the denominator are random variables. We evaluate the expectation by expanding the ratio around (⟨N ⟩, Nmax ). It is convenient to define the function f (x) = 14 (√K2 + 4 x − K)2, so that ˆN (s) 
+
+> max
+
+=
+
+f (nmax ) and Nmax = f (Nmax ). Expanding the ratio ⟨n⟩/f (nmax ) to second order in the fluctuations gives 
+
+E
+
+[ ⟨n⟩
+
+f (nmax )
+
+]
+
+≈ ⟨N ⟩
+
+Nmax 
+
++ ⟨N ⟩
+
+2 g′′ (Nmax ) Var [nmax ] − f ′(Nmax )
+
+N 2
+
+> max
+
+Cov [⟨n⟩, n max ] ,
+
+(19) where g(x) = 1 /f (x) and we used g(Nmax ) = 1 /N max . The linear terms vanish because E[⟨n⟩ − ⟨ N ⟩] = 0 and E[nmax − N max ] = 0 .The covariance term is the same as that evaluated in the previous subsection. Writing ⟨n⟩ = M −1
+
+> tot
+
+∑ 
+
+> i
+
+ni, we have 
+
+Cov [⟨n⟩, n max ] = 1
+
+Mtot 
+
+> Mtot
+
+∑
+
+> i=1
+
+Cov [ni, n max ] . (20) The sum receives non-negligible contributions only from the Mmax bins with the highest true mean intensity, where ni is strongly correlated with nmax . For these bins, Cov [ni∗ , n max ] ≈ Var [nmax ], yielding 
+
+Cov [⟨n⟩, n max ] ≈ Mmax 
+
+Mtot 
+
+Var [nmax ] ≪ Var [nmax ], (21) since Mmax ≪ Mtot . The covariance term in Eq. (19) is therefore suppressed by Mmax /M tot and can be dropped. The remaining second-order term requires the derivatives of f (x). A straight-forward calculation gives 
+
+f ′(Nmax ) = 11 + K/ (2 √Nmax ) , f ′′ (Nmax ) = 2K
+
+(K + 2 √Nmax )3 , (22) and 
+
+g′′ (Nmax ) = 2[ f ′(Nmax )] 2 − f ′′ (Nmax )Nmax 
+
+N 3
+
+> max
+
+. (23) Substituting the expressions for f ′ and f ′′ and using Var [nmax ] from Eq. (8), one obtains, after straightforward algebra, 
+
+E
+
+[
+
+⟨ ˆQ⟩(s)]
+
+≈ ⟨ Q⟩true + π2⟨Q⟩true 
+
+12 Nmax ln Mmax 
+
+. (24) The absolute value of the bias, 
+
+∣∣∣Bias 
+
+[
+
+⟨ ˆQ⟩(s)]∣ ∣∣ ≈ π2⟨Q⟩true 
+
+12 Nmax ln Mmax 
+
+, (25) 4is much smaller than ⟨Q⟩true for all realistic parameters. Comparing with Eq. (16), we obtain the ratio of biases: 
+
+∣∣∣∣∣∣
+
+Bias 
+
+[
+
+⟨ ˆQ⟩(s)
+
+]
+
+Bias 
+
+[
+
+⟨ ˆQ⟩(0) 
+
+]∣∣∣∣∣∣ = π2
+
+12 ln Mmax K(Mmax ) N 1/2
+
+> max
+
+≪ 1. (26) 
+
+## S1.4. Variance and mean-squared error 
+
+We now evaluate the variances of the two estimators. For the naive estimator 
+
+⟨ ˆQ⟩(0) = ⟨n⟩/n max , we again expand the ratio around (⟨N ⟩, Nmax ). To leading order in the fluctuations, 
+
+⟨ ˆQ⟩(0) − ⟨ Q⟩true ≈ 1
+
+Nmax 
+
+(⟨n⟩ − ⟨ N ⟩) − ⟨N ⟩N 2
+
+> max
+
+(nmax − N max ). (27) Squaring and taking the expectation yields 
+
+Var 
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+≈ 1
+
+N 2
+
+> max
+
+Var [⟨n⟩] + ⟨N ⟩2
+
+N 4
+
+> max
+
+Var [nmax ] − 2 ⟨N ⟩N 3
+
+> max
+
+Cov [⟨n⟩, n max ] . (28) The first term involves Var [⟨n⟩] = M −1 
+
+> tot
+
+Var [nj ] ∼ M −1 
+
+> tot
+
+Nmax , which is negligible for large Mtot . The covariance term, as shown in the previous subsections, is suppressed by Mmax /M tot and can also be dropped. The dominant contribution comes from the variance of nmax . Using Var [nmax ] from Eq. (8) and ⟨N ⟩ =
+
+⟨Q⟩true Nmax , we obtain 
+
+Var 
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+≈ ⟨Q⟩2
+
+> true
+
+N 2
+
+> max
+
+N 4
+
+> max
+
+· Nmax π2
+
+12 ln Mmax 
+
+= ⟨Q⟩2
+
+> true
+
+π2
+
+12 ln Mmax 
+
+· N 3
+
+> max
+
+N 4
+
+> max
+
+. (29) For the self-consistent estimator ⟨ ˆQ⟩(s) = ⟨n⟩/f (nmax ), the same leading-order expansion gives 
+
+⟨ ˆQ⟩(s) − ⟨ Q⟩true ≈ 1
+
+Nmax 
+
+(⟨n⟩ − ⟨ N ⟩) − ⟨N ⟩f ′(Nmax )
+
+N 2
+
+> max
+
+(nmax − N max ). (30) Squaring, taking the expectation, and dropping the terms involving Var [⟨n⟩]
+
+and the covariance (both negligible for the same reasons as above), we obtain 
+
+Var 
+
+[
+
+⟨ ˆQ⟩(s)]
+
+≈ ⟨N ⟩2[f ′(Nmax )] 2
+
+N 4
+
+> max
+
+Var [nmax ]. (31) For typical experimental parameters, Nmax ≫ K, so that f ′(Nmax ) ≈ 1 [see Eq. (17) and the expression for f ′]. Substituting Var [nmax ] and ⟨N ⟩ = ⟨Q⟩true Nmax 
+
+yields 
+
+Var 
+
+[
+
+⟨ ˆQ⟩(s)]
+
+≈ ⟨Q⟩2
+
+> true
+
+π2
+
+12 Nmax ln Mmax 
+
+. (32) 5The mean-squared error (MSE) of an estimator is the sum of its variance and the square of its bias. From the results above, the following ordering holds for all Mmax > 10 :
+
+(
+
+Bias 
+
+[
+
+⟨ ˆQ⟩(s)]) 2
+
+≪ Var 
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+< Var 
+
+[
+
+⟨ ˆQ⟩(s)]
+
+≪
+
+(
+
+Bias 
+
+[
+
+⟨ ˆQ⟩(0) ]) 2
+
+. (33) Consequently, MSE 
+
+[
+
+⟨ ˆQ⟩(0) ]
+
+≈
+
+(
+
+Bias 
+
+[
+
+⟨ ˆQ⟩(0) ]) 2
+
+≫ MSE 
+
+[
+
+⟨ ˆQ⟩(s)]
+
+≈ Var 
+
+[
+
+⟨ ˆQ⟩(s)]
+
+. (34) Thus, the naive estimator is dominated by its systematic bias, whereas the error of the self-consistent estimator is governed by its variance. For Mmax > 10 , the self-consistent estimator yields a substantially smaller mean-squared error and is therefore the preferred choice. The condition Mmax > 10 for the dominance of the self-consistent estimator follows from a simple order-of-magnitude estimate. For a well-resolved blinking trajectory, Nmax is typically several tens of counts per bin (we use Nmax ≈ 50 
+
+as a representative value). When Nmax is too low, the normal approximation to the Poisson distribution and the extreme-value asymptotics become less reliable. With Nmax ≈ 50 , the factor K(Mmax ) = √2 ln Mmax is of order 2-3 for Mmax 
+
+in the range 10 -10 2, and the bias ratio in Eq. (26) is already below 3 × 10 −2.The mean-squared error of the self-consistent estimator is then over an order of magnitude smaller than that of the naive estimator. For smaller Mmax , the extreme-value approximation itself becomes unreliable, as the Fisher-Tippett-Gnedenko limit requires a sufficiently large number of samples. In practice, 
+
+Mmax > 10 and Nmax of several tens of counts are typical for blinking tra-jectories longer than a few hundred bins, making the self-consistent estimator applicable to virtually all realistic experimental data sets. 
+
+# Supplementary Note 2: Details of the blinking simulations 
+
+## S2.1. Two-state blinking: telegraph process algorithm 
+
+The first simulation method models two-state A-type blinking as a stochastic telegraph process. The algorithm proceeds as follows. The ON and OFF states are characterized by the pairs ΓON , NON and ΓOFF ,
+
+NOFF , chosen to satisfy Eq. 3 of the main text. The fraction of time spent in the OFF state is set by the parameter pOFF = TOFF /(TON + TOFF ). The characteristic switching time between states, Tswitch , is taken to be the same for both directions. Starting from the ON state, a sequence of switching points is generated. The time to the next switching point is drawn from an exponential distribution with mean Tswitch :
+
+δt = −Tswitch ln X, (35) 6where X is a random variable uniformly distributed on [0 , 1] . At each switching point, a new state is assigned by the following rule. If the current state is ON, the state switches to OFF with probability pOFF and remains ON with probability 
+
+1 − pOFF . If the current state is OFF, the state switches to ON with probability 
+
+1 − pOFF and remains OFF with probability pOFF . This procedure ensures that the trajectory spends a stationary fraction pOFF of time in the OFF state, while the times between successive switching points are exponentially distributed with mean Tswitch .Between switching points, the intensity and decay rate are assumed constant at their respective ON or OFF values. The continuous-time signal is then binned with a chosen bin size ∆t. If one or more switching events fall within a single bin, the bin intensity is taken as the time-averaged value over that bin. The corresponding decay rate for the bin is obtained by weighting the ON- and OFF-state rates by their respective intensity contributions within the bin: 
+
+Γj = NON tON ΓON + NOFF tOFF ΓOFF 
+
+NON tON + NOFF tOFF 
+
+, (36) where tON and tOFF are the total dwell times of the respective states within the bin. This ensures that the brighter state contributes proportionally more to the effective Γj , as would be the case in a real FLID-based analysis. If no switching occurs within a bin, both quantities are taken from the current state. After constructing the noise-free trajectories Nj and Γj , experimental un-certainties are introduced. Poisson noise is added to the binned intensities: 
+
+nj ∼ Pois (Nj ). (37) For the decay rate, we account for the estimation uncertainty arising from finite photon statistics. For each Γj , a random sample ε is drawn from the standard normal distribution N (0 , 1) , multiplied by Γj /√Nfit , and added to the true value: 
+
+ˆΓj = Γ j + ε Γj
+
+√Nfit 
+
+, ε ∼ N (0 , 1) . (38) Here Nfit is the typical number of photons used in a maximum-likelihood fit, we set Nfit = 1000 throughout. We note that the 1/√Nfit scaling was originally derived for the variance of lifetime estimates in Ref. 4. The analogous form for the decay rate follows directly. This procedure yields the simulated experimental trajectories {nj } and {ˆΓj }.The HC mechanism is simulated using the same framework, with the simpli-fication that the decay rate remains unchanged upon switching ( ΓON = Γ OFF =Γ). Only the intensity fluctuates between NON and NOFF . The same Poisson noise and Γ-broadening are applied. 
+
+## S2.2. Multilevel TM blinking: TLS-based model 
+
+The second simulation method implements the multilevel TM blinking model proposed in Ref. 4. The model assumes that the quantum dot structure evolves 7over time due to a discrete set of independent stochastic two-level systems (TLSs). The switching of each TLS modifies the Huang-Rhys parameter S
+
+for the nonradiative transition as 
+
+S(t) = s0 + ∑
+
+> i
+
+σi(t)si, (39) where σi(t) ∈ { 0, 1} describes the state of the i-th TLS, s0 is the baseline Huang-Rhys parameter with all TLSs off, and si is the contribution of the i-th TLS when active. According to Marcus-Jortner theory, the nonradiative capture rate depends on S(t) as 
+
+knr (t) = k0Sα(t), (40) where k0 is a pre-exponential factor and α is the effective number of phonons involved in the transition. The switching times of individual TLSs are drawn from a log-uniform distribution spanning a broad range of time scales. Given the time sequence S(t), the decay rate Γ( t) and the mean bin intensity Nj follow from the relations for TM blinking [Eq. 4 of the main text]. The simulation proceeds by generating a switching time for each TLS from its exponential distribution, in analogy with Eq. (35). The smallest of the obtained times is selected as the next switching event. The state of the corresponding TLS is flipped, and its next switching time is regenerated. For the remaining TLSs, instead of regenerating all switching times anew, the chosen switching time is subtracted from their previously generated times: 
+
+Ti ← Ti − Tswitch , i̸ = i∗, (41) where i∗ is the index of the TLS that switched. This procedure is repeated until the required number of switching events is reached. For each switching event, the Huang-Rhys parameter S is updated according to Eq. (39), and the corresponding knr , Γ, and N are computed. Poisson noise and Γ-broadening are then applied as described in previous subsection. This approach ensures that even TLSs with the longest switching times even-tually switch, allowing fully developed blinking to be observed. The simulated trajectories reproduce all characteristic features of TM blinking: the photon-number distribution, the linear FLID, the ON/OFF time distributions, the long-time autocorrelation function, and the 1/f -shaped power spectral density. 
+
+## S2.3. Simulation parameters for Figure 2 
+
+Figure 2 of the main text shows a simulated trajectory for A-type blinking. The parameters used are as follows. The radiative recombination rate is kr =1/30 ns −1, and all nonradiative rates are set to zero: knr = 0 , k′ 
+
+> nr
+
+= 0 . The Auger rate is kA = 10 kr. The switching times in both directions are equal: 
+
+T + = T − = 0 .03 s, corresponding to pOFF = 0 .5. The maximum mean intensity is Nmax = 120 counts per bin. The simulation was run for 10 4 switching events with a bin size of 0.01 s. 8S2.4. Simulation parameters for Figure 3 
+
+Figure 3 of the main text presents a simulated TM blinking trajectory based on the model of Ref. 4, using parameters obtained from a fit to experimental data of a single CdSeS/ZnS core/shell quantum dot (QD 3.2 in that reference). The radiative recombination rate is kr = 1 /30 ns −1 ≈ 3.33 × 10 7s−1. The nonradia-tive rate is given by knr (t) = k0Sα(t), with k0/k r = 6 .17 × 10 7 and α = 10 . The Huang–Rhys parameter S(t) is modulated by seven independent two-level sys-tems, S(t) = s0 + ∑7 
+
+> i=1
+
+σi(t)si, with the baseline and individual contributions given in Table 1. TLS index i si pi Γi (s −1)– s0 = 0 .0756 – –1 0.0083 0.397 1.99 × 10 −2
+
+2 0.134 0.237 7.84 × 10 −2
+
+3 0.0349 0.149 3.08 × 10 −1
+
+4 0.0180 0.347 1.21 
+
+5 0.0590 0.834 4.76 
+
+6 0.0169 0.305 7.36 × 10 1
+
+7 0.0700 0.0125 1.14 × 10 3
+
+Table 1: Parameters of the two-level systems modulating the Huang–Rhys pa-rameter for QD 3.2 from Ref. 4.In Table 1, pi denotes the stationary probability that the i-th TLS is in the active state ( σi = 1 ), and Γi is the switching rate of that TLS (the inverse of its characteristic switching time). The mean intensity is Nmed = 88 .2 counts per bin. The simulation was run for 5 × 10 4 switching events with a bin size of 10 
+
+ms. 
+
+## S2.5. Reproduced blinking characteristics 
+
+The simulations based on the multilevel TM model quantitatively preserve the known properties of all characteristic blinking observables. Representative ex-amples obtained from the simulation of Fig. 3 are shown in Figure S1. Panel (a) displays the ON-time (left) and OFF-time (right) probability dis-tributions, both of which follow power-law decays over several decades. The red lines are guides to the eye indicating the power-law behaviour. Superimposed across both distributions is the intensity trajectory with a threshold (solid line) used to define the ON and OFF states. Panel (b) displays the long-time au-tocorrelation function g(2) (t) of the intensity trajectory. Panel (c) shows the power spectral density computed using modified Welch’s method, following the procedure described in Ref. 5. The PSD exhibits a 1/f 1.3 dependence (red guide to the eye), consistent with the power-law expectation. Together, these diagnos-tics confirm that the simulation faithfully reproduces all established statistical fingerprints of TM blinking. 9(a) 
+
+(b) (c) Figure 1: Statistical diagnostics of the simulated TM blinking trajectory from Fig. 3. (a) Probability distributions of ON times (left) and OFF times (right), with red lines indicating power-law behaviour. The intensity trajectory with a threshold (solid line) defining ON and OFF states is superimposed across both panels. (b) Autocorrelation function g(2) (τ ). (c) Power spectral density computed via modified Welch’s method, with a red line showing a 1/f 1.3 guide to the eye. 
+
+# Supplementary Note 3: Simulation parameters for the estimator comparison and the 2D criterion 
+
+## S3.1. Parameters for Figure 4: comparison of estimators 
+
+Figure 4 of the main text presents a systematic comparison of the naive esti-mator ⟨ ˆQ⟩(0) and the self-consistent estimator ⟨ ˆQ⟩(s) for both A-type and TM blinking. 
+
+A-type blinking [Fig. 4(a)] 
+
+The simulation setup for A-type blinking in Fig. 4(a) is identical to that de-scribed in S2.3, with the following modifications. The Auger rate is fixed at 
+
+kA = 20 kr. The OFF-state fraction pOFF is varied from 0.1 to 0.9 in steps of 0.2 (five values). For each value of pOFF , 10 independent simulations were performed, each run for 10 4 switching events. Only simulations whose quantum yield deviated from the theoretical value by less than 2% were retained. All 10 other parameters ( kr = 1 /30 ns −1, knr = k′ 
+
+> nr
+
+= 0 , Tswitch = 0 .03 s, bin size 0.01 
+
+s, Nmax = 120 counts per bin, Nfit = 1000 , Mmax = Mtot /10 ) are as given in S2.3. 
+
+TM blinking [Fig. 4(b)] 
+
+The simulation setup for TM blinking in Fig. 4(b) uses the model parameters of QD 3.2 from Ref. 4, as detailed in S2.4. The pre-exponential factor k0
+
+is varied over five values drawn from a log-uniform distribution in the range 
+
+10 7.2 ≤ k0/k r ≤ 10 8.8. The exponent α = 10 and all TLS parameters ( s0, si, pi,
+
+Γi) are held fixed at their fitted values from Table S1. For each value of k0, 10 
+
+independent simulations were performed, each run for 5 × 10 4 switching events. Only simulations whose quantum yield deviated from the theoretical value by less than 2% were retained. All other parameters (bin size 10 ms, Nfit = 1000 ,
+
+Mmax = Mtot /10 ) are as given in S2.4. 
+
+## S3.2. Parameters for Figure 5: two-dimensional criterion 
+
+Figure 5 of the main text presents the two-dimensional criterion ( ˆξ, ⟨ ˆQ⟩(s)) eval-uated for A-type, TM, and HC blinking. 
+
+A-type blinking (colored circles) 
+
+The simulation setup for A-type blinking in Fig. 5 is identical to that described in S2.3, with the following modifications. The Auger rate is set to five fixed values: kA/k r = 0 .1, 1, 5, 10 , and 20 (see legend of Fig. 5). For each value of kA, the OFF-state fraction pOFF is varied from 0.1 to 0.9 in steps of 0.2
+
+(five values), yielding a total of 25 distinct parameter sets. For each set, 10 
+
+independent simulations were performed, each run for 10 4 switching events. All other parameters ( kr = 1 /30 ns −1, knr = k′ 
+
+> nr
+
+= 0 , Tswitch = 0 .03 s, bin size 0.01 
+
+s, Nmax = 120 counts per bin, Nfit = 1000 , Mmax = Mtot /10 ) are as given in S2.3. 
+
+TM blinking (triangles) 
+
+The TM blinking data in Fig. 5 were obtained using the multilevel TLS model with parameters taken from two quantum dots reported in Ref. 4: QD 3.2 (upward triangles) and QD 4.4 (downward triangles). 
+
+QD 3.2 (upward triangles). The model parameters are as detailed in S2.4 and Table S1. Two series of simulations were performed: • k0 varied: the pre-exponential factor is set to five values uniformly spaced on a logarithmic scale between 10 7.2 and 10 8.8, with α = 10 fixed (red triangles). • α varied: the exponent is varied from 8 to 12 in steps of 1, with k0/k r =6.17 × 10 7 fixed at its fitted value (orange triangles). 11 All other parameters ( s0, si, pi, Γi, kr, Nmed , bin size, Nfit , Mmax ) are as given in S2.4. For each parameter set, 10 independent simulations were performed, each run for 5 × 10 4 switching events. 
+
+QD 4.4 (downward triangles). This quantum dot has a lower emission intensity and a non-zero background noise level. The radiative recombination rate is again kr = 1 /30 ns −1. The nonradiative rate is knr (t) = k0Sα(t), with the fitted ratio k0/k r = 7 .91 × 10 5 and α = 10 . The Huang–Rhys parameter is modulated by ten independent two-level systems, S(t) = s0 +∑10  
+
+> i=1
+
+σi(t)si, with the parameters listed in Table S2. The mean intensity is Nmed = 40 .6 counts per bin, and the background noise level is 0.53 counts per bin. Two series of simulations were performed: • k0 varied: the pre-exponential factor is set to five values uniformly spaced on a logarithmic scale between 10 4.2 and 10 6.8, with α = 10 fixed (green triangles). • α varied: α from 8 to 12 in steps of 1, with k0/k r = 7 .91 × 10 5 fixed (cyan triangles). For each parameter set, 10 independent simulations were performed, each run for 5 × 10 4 switching events. All other simulation parameters (bin size 10 ms, 
+
+Nfit = 1000 , Mmax = Mtot /10 ) are identical to those used for QD 3.2. TLS index i si pi Γi (s −1)– s0 = 0 .0726 – –1 0.0614 0.318 5.62 × 10 −3
+
+2 0.137 0.239 3.00 × 10 −2
+
+3 0.0244 0.458 1.61 × 10 −1
+
+4 0.274 0.436 8.58 × 10 −1
+
+5 0.0473 0.860 4.58 
+
+6 0.0369 0.428 2.45 × 10 1
+
+7 0.0278 0.485 1.31 × 10 2
+
+8 0.0316 0.704 6.99 × 10 2
+
+9 0.0163 0.371 3.73 × 10 3
+
+10 0.0682 0.950 2.00 × 10 4
+
+Table 2: Parameters of the two-level systems modulating the Huang–Rhys pa-rameter for QD 4.4 from Ref. 4. 
+
+HC blinking (green squares) 
+
+The simulation setup for HC blinking in Fig. 5 is identical to that for A-type blinking described in S2.3, with the following modifications. The decay rate is kept constant at Γ = 1 /30 ns −1 (the same as ΓON for A-type). Only the intensity switches between NON = 120 and NOFF = 12 counts per bin. The OFF-state fraction pOFF is varied from 0.1 to 0.9 in steps of 0.2. All other parameters 12 (Tswitch = 0 .03 s, bin size 0.01 s, Nfit = 1000 , Mmax = Mtot /10 , 10 4 switching events, 10 simulations per parameter set) are as given in S2.3. 
+
+# References 
+
+[1] B. Gnedenko, in Breakthroughs in Statistics: Foundations and Basic Theory ,Springer, 1992, pp. 195–225. [2] M. R. Leadbetter, G. Lindgren and H. Rootzén, Extremes and Related Prop-erties of Random Sequences and Processes , Springer, New York, NY, 1st edn., 1983. [3] L. De Haan and A. Ferreira, Extreme value theory: an introduction , Springer, 2006. [4] E. A. Podshivaylov, M. A. Kniazeva, A. O. Tarasevich, I. Y. Eremchev, A. V. Naumov and P. A. Frantsuzov, J. Mater. Chem. C , 2023, 11 , 8570–8576. [5] S. Seth, E. A. Podshivaylov, J. Li, M. Gerhard, A. Kiligaridis, P. A. Frantsu-zov and I. G. Scheblykin, Advanced Energy Materials , 2021, 11 , 2102449. 13

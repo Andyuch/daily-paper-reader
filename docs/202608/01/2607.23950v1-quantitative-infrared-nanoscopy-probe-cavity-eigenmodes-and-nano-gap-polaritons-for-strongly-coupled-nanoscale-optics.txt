@@ -1,0 +1,2158 @@
+Title: Quantitative infrared nanoscopy: Probe-cavity eigenmodes and nano-gap polaritons for strongly coupled nanoscale optics
+
+URL Source: https://arxiv.org/pdf/2607.23950v1
+
+Published Time: Tue, 28 Jul 2026 01:27:39 GMT
+
+Number of Pages: 50
+
+Markdown Content:
+# Quantitative infrared nanoscopy: Probe-cavity eigenmodes and nano-gap polaritons for strongly coupled nanoscale optics 
+
+Benjamin Allen, Brayden Lukaskawcez, Alyssa Bragg, and Nitzan Hirshberg 
+
+School of Physics and Astronomy, University of Minnesota Twin Cities 
+
+Leo Fan Bowen Lo 
+
+Dept. of Physics, Harvard University 
+
+Michael Fogler 
+
+Dept. of Physics, University of California San Diego 
+
+Stephanie Gilbert-Corder and Hans Bechtel 
+
+Advanced Light Source, Lawrence Berkeley National Laboratory 
+
+Dimitri N. Basov 
+
+Dept. of Physics, Columbia University 
+
+Alexander S. McLeod ∗
+
+School of Physics and Astronomy, University of Minnesota Twin Cities 
+
+(Dated: July 28, 2026) 
+
+1arXiv:2607.23950v1 [physics.optics] 27 Jul 2026 Abstract 
+
+> TODO
+> CONTENTS
+
+List of Figures 3I. Introduction 4II. Fundamentals of the two-system response function 4A. An emergent response function for active microscopy 4B. Configurational resonance and formation of an optical cavity 6C. Strong-coupling within a nano-gap optical cavity 9III. EigenProbe: The probe-cavity eigenmode expansion 11 A. From formal response function to multi-modal scattering matrix 11 B. Probe-cavity eigenmodes as a sparse basis for optical nanoscopy 12 C. Properties of the probe-cavity eigenmodes 14 IV. Quantitative scattering from realistic probe geometries 18 A. Eigenfields as a basis for complex near-field interactions 18 B. Field confinement and scattering efficiency of realistic probe-cavity eigenmodes 19 C. Formation of scattering contrasts with actively coupled nanoscopy 23 V. Position-resolved contrast from a scanning optical probe 26 A. Distance control of a nano-gap cavity polariton over SiC 26 B. Generalized photonic density of states and heterogeneous imaging 26 VI. Towards quantitative nano-spectroscopy: Rationalized complications and refined interpretations 30 A. The influence of probe cavity eigenvalues: probe calibration and energy dependence 30 B. Quantitative and technical resolution to the “far-field conundrum”. 30 C. High-throughput extraction of causal optical constants from probe-calibrated spectra. 30 VII. Strong coupling and probe-polariton hybridization 30 A. Strong coupling of an antenna-polariton system 30 B. Cavity-control over quantum emitters 35 VIII. Discussion 35 Acknowledgments 35 A. Reciprocity relations, Poynting’s theorem, and far-field radiation 35  
+
+> ∗mcleoda@umn.edu
+
+2B. Composite response functions 38 C. Strong coupling in the composite Green’s function 38 D. Conditions for strong coupling of an emitter to a Fabry-P´ erot or probe-surface optical cavity. 40 E. Sommerfeld integrals for self- and mirror-interaction kernels of an axisymmetric nanoscopy probe 43 F. Properties of the probe-cavity eigenmodes 46 References 50 
+
+> LIST OF FIGURES
+
+1 Probe nano-gap as an optical cavity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72 Eigenmodes in real- and momentum-space. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 3 Energy dependence of probe-cavity eigenmodes. . . . . . . . . . . . . . . . . . . . . . . . . . 21 4 Gap-dependent probe-sample coupling. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25 5 Excitation of nano-gap polaritons over SiC. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 6 Prediction of image contrasts from eigenmode reflectivities. . . . . . . . . . . . . . . . . 29 7 Standardized scattering contrast as probe calibrator . . . . . . . . . . . . . . . . . . . . . . 31 8 Nano-spectroscopy with near-, far-, and self-normalization . . . . . . . . . . . . . . . . . 32 9 Eigenmode inversion - from scattered contrast to optical constants . . . . . . . . . 32 10 Nano-gap strong coupling with an antenna probe . . . . . . . . . . . . . . . . . . . . . . . . 33 3I. INTRODUCTION 
+
+Front matter: Problems that exist with prior formulations, addressed here: - We have simple analytic models, but we don’t know when they should work versus not. - We can’t yet reliably “invert” optical constants in a way that we know what we’re doing physically. - We don’t know how to predict entire images from a known sample response function. - We don’t understand how to parametrize coupling between probe+sample to realize a composite response function, nonlinear phenomena, local photonic density of states and emitter control. Experiment proposals: - Strong coupling with probe antenna resonance - Tuning optical environment of an emitter using eigenmodes - Others?   
+
+> II. FUNDAMENTALS OF THE TWO-SYSTEM RESPONSE FUNCTION A. An emergent response function for active microscopy
+
+Scattering-type near-field microscopy is unique among microscopies not only for the novel spatial resolution afforded, but also for its principle of operation, which makes the microscope probe itself an active participant in the optical scattering process of the analyte (or sample / environment; we will utilize these terms interchangeably). The mandate of such ”active microscopy” can be described as follows. Suppose we have some control over the scattering properties of the “probe”, including for instance its size, shape, optical permittivity, and most importantly, position. We place this probe into an environment treated as our analyte and thus perturb the scattering properties of the combined system. Heuristically, our goal in measuring these modified scattering properties is to infer the response function of the original analyte and, in turn, its optical properties, where these are otherwise inaddressible through “passive microscopies” like e.g. optical reflectance that do not invoke active participation of a probe object. To refine our distinction between “active” and “passive” microscopies and to rationalize the former requires establishing a general but formal framework to articulate both the “known” response function of the isolated probe, the response from the analyte, and the composite response emerging from the interaction. We will formalize the scenario of active microscopy in the language of a composite Green’s function for the probe-analyte system. Dyadic Green’s functions provide a helpful way to describe the complete scattering properties of a system by supplying the scattered field in response to arbitrary sources of free current “external” to that system. To be concrete, in linear media described by inhomogeneous permittivity ε(r), Maxwell’s equations prescribe that electric fields E sourced by external “drive” currents jext satisfy the wave equation: 
+
+jext (r) = ˆM E(r) (1) where ˆM ≡ 14πiω 
+
+(∇ × ∇× ) − ω2ε(r)
+
+is often termed the Maxwell operator . Up to a homogeneous solution E0 for which ˆM E0 = 0, a particular solution to Eq. 1 is formally expressed by E(r) = ˆM−1 jext (r) ≡ ˆG jext (r), 4where ˆG is the Green (dyadic) function associated with ε(r) and the formal inverse of the Maxwell operator. A bra-ket notation is also convenient in cases where ˆG can be ob-tained through expansion in some set of orthonormal basis functions for the electric field, as provided for instance in frameworks like the quasi-normal mode (QNM) or generalized orthogonal mode expansions (GENOME) 1,2 :
+
+|E) = ˆG| jext ) with ˆG ≡ X
+
+> ν
+
+gν (. . . )|Eν )( Eν | (2) = ˆG|Eext ) with ˆG ≡ X
+
+> ν
+
+gν (. . . )|Eν )( jν |. (3) Here |Eν ) denote members of the relevant (quasi-)orthonormal set, and gν (. . . ) denote asso-ciated coefficients depending variously on the light frequency 1, the scatterer permittivity 2,or other “adjustable” parameters of the scatterer for which the “quasi-normal modes” |Eν )are otherwise a fixture of its configuration. The inner product is defined by ( Eν |jμ) ≡R dV Eν · jμ ≡ (jμ|Eν ), where jμ is the current sourcing the field Eμ. Defining |Eext ) as the field “sourced” by |jext ) in free space, Eq. 3 follows from Lorentz reciprocity for modes satisfying outgoing radiation conditions (Appendix A), generating a complimentary Green’s function ˆG that is more convenient to our application. Whereas ˆG| jext ) describes the to-tal field, 
+
+ ˆG − 1
+
+
+
+|Eext ) generates the scattered field in response to the external one. We henceforth rewrite 
+
+ ˆG − 1
+
+
+
+as ˆG, where Eqs. 2-3 formally connect it to the Green dyadic function. Field modes are selected in particular to satisfy a useful orthonormality condition (Eμ| ˆO|Eν ) = δμν with ˆO a framework-specific metric operator. For instance, in the QNM expansion ˆO ≡ ωμ ε(ωμ, r) − ων ε(ων , r) describes the permittivity-weighted difference in mode frequencies, whereas in GENOME ˆO ≡ ˆθΩS is a projector restricting to the scatterer volume Ω S . In such a modal basis, ˆG is simply a diagonal matrix acting on the vector of elements ( Eν |jext ). On the other hand, to describe the response of a composite system poses a challenge even when response functions of its constituents are known. This is the scenario encoun-tered by an optical nanoscopy experiment, in which the (nominally “known”) response function of a probe interfaces with that (“unknown”) of its environment, and the composite response (scattered field) is measured. The following formalism handles all bookkeeping of this scenario: Consider an N -part system of subsystems indexed by n, together spec-ifying ε = P 
+
+> n
+
+εn. We are interested in the composite Green’s operator ˆG+ defined by 
+
+|Escat ) = PNn |En) ≡ ˆG+|Eext ). For the N = 2 composite system of a probe interacting with its environment (each described by “bare” response functions ˆGP,E , respectively), self consistency supplies the composite response function as (see Appendix B): ˆG+ = ˆGE +
+
+ ˆGE + 1 
+
+ ˆGP
+
+1 − ˆGP ˆGE
+
+
+
+1 + ˆGE
+
+
+
+. (4) As we will show, this seemingly formal expression in fact provides a practical route to concrete expressions for the composite response function. Although interchanging labels 
+
+P, E necessarily yields a mathematically equivalent response function, the present form of Eq. 4 brings focus to ˆGP , whereby its operator quotient should be regarded as the probe’s “dressed” response function. In the case of a near-field probe over a semi-infinite half-space 5environment as sketched in Fig. 1a, ˆGE denotes reflection from the half-space, ˆGP denotes scattering by the probe, and the composite terms signify multiple scattering processes. In section [TODO FFF] we will contend with consequences of the leading and trailing factors of (1 + ˆGE ) for optical nanoscopy experiments. For now, we focus on the operator quotient in which ˆGP ˆGE “enhances” scattering from the region of the environment where characteristic fields from the probe and environment overlap. We distinguish two regimes of probe-sample coupling: i) active coupling , in which the amplitude of probe-coupled response exceeds that of the probe alone ( | ˆGP ˆGE | > | ˆGP |, whose meaning depends on the nature of excitation), and ii) non-perturbative coupling in which the probe and environment becomes “inseparable” and a perturbative treatment of Eq. 4 will fail ( | ˆGP ˆGE | > 1). In the latter case, “circulation” of scattered fields within the probe-sample gap will dominate the response function; we denote this phenomenon a nano-gap polariton . The present work obtains an explicit form for Eq. 4 that is both conceptually simple and broadly applicable to quantitative predictions in near-field microscopy. But first, we recapitulate some general consequences of a composite response function that emerge mutually in two of its simplest realizations – the Fabry-P´ erot interferometer (or etalon ), and a polarizable dipole over a dielectric surface. Whereas the latter (the “point-dipole model”) supplies an elementary understanding of near-field microscopy, its formal similarity to the etalon will demonstrate also how the probe-sample system forms a functional cavity. Two essential features of bipartite optical cavities generally follow from Eq. 4: i) configurational resonance and ii) opportunities for strong coupling to (and thus control over) optical emitters positioned within the cavity. As we will show, these features are inherited and quantified entirely by our realistic treatment of Eq. 4 for optical nanoscopy, which affords a definitive description of the probe-sample gap as functional cavity.  
+
+> B. Configurational resonance and formation of an optical cavity
+
+Since Eq. 4 is fundamental to the linear response of any pair of interacting systems, we can anticipate resonant phenomena that are generic to pairs of interacting oscillators. Here we define configurational resonance of a response function as that whose resonant energy ω0 and oscillator strength f (defined as in Eq. C1) are both modifiable through the geometric configuration of the bipartite system. To see how a composite response function produces this phenomenon, here we apply the “machinery” of Eq. 4 establish familiar response functions for 1) the simple Fabry-P´ erot cavity (etalon) and for 2) a polarizable point dipole over a dielectric surface, shown in Fig. 1b-c, respectively. First, the etalon comprises two parallel infinitesimally thin partial reflectors separated by vacuum over a gap distance d. For simplicity we consider only p-polarized (with respect to the reflectors) drive and response fields of in-plane momentum q within the gap; general-ization to arbitrary field modes is a formal exercise. Numbering bottom and top reflectors with index α = 1 , 2, we construct ˆG1 ˆG2 from: ˆGα = |Eqα)gα(jqα|. (5) Here the scalars gα = r1,2 denote the respective interior reflectivities, |Eqα) denote plane waves with in-plane momentum q and longitudinal momenta ±kz = pk2 − q2 “emit-ted” by (reflected from) the respective reflectors ( k ≡ ω/c ), and |jqα) are modal cur-rents defined by ( jq 
+
+> 1
+
+|Eq 
+
+> 2
+
+) = ( jq 
+
+> 2
+
+|Eq 
+
+> 1
+
+) = eik z d, which describe retardance of the two modes 6FIG. 1. Probe nano-gap as an optical cavity. a) Conceptual scenario of two optical subsys-tems (“probe” and “environment”) interacting to transform distinct response functions GP and GE
+
+into a composite response G+ (Eq. 4), which fully describes scattering ( Escat ) of an external exci-tation ( Eext ) even when both systems strongly couple. Symbols are defined in text. b-c) Optical cavities where G+ ∼ δ(ω)−1 ≡ GC produces a configurational resonance, and possibility of strong coupling to an emitter is contingent on minimum distance δ(ω0) to a pole in the lower complex plane (inset axes). c) Etalon cavity and d) nano-gap cavity formed between a near-field probe and resonantly reflective surface. d) Emergence of fundamentally new poles ω± in the composite emitter-cavity response G+ is the hallmark of strong coupling, which underlies emitter control through Purcell-enhanced emission or electromagnetically-induced transparency. e) Discrete nano-gap polariton modes fully describe the composite response function of the nano-gap cavity and quantify proximity to configurational resonance. Shown: z-polarized electric field and associated probe surface charge Qν for the four most physically realizable (smallest eigenvalue ρν ) polaritons. f) A superposition of these polaritons describes excitations within the nanogap even over dispersive environments (as described by reflectivity rp(q)) such as e.g. surface plasmon-resonant graphene. 
+
+7|E1,2) counter-propagating from each surface to the other (we hence suppress the ex-traneous mode label q). These ingredients are enough to identify that the product ˆG1 ˆG2 ˆG1 = r1r2|E1)( j1|E2)( j2|E1)r1(j1| “trades off” between the two counter-propagating modes, whence [FB refs]: 
+
+Fabry-P´ erot: (1 − ˆG1 ˆG2)−1 ˆG1 = |E1)r1A(ω)( j1| where A(ω) ≡  1 − r1r2e2ik z d−1 (6) is the familiar Airy distribution. It is also a formal exercise with Eq. 4 to consider an external “drive” |Eext ) = |E1) launched towards reflector 2 (and not 1), whence we recover the more familiar result |E) ≡ | Escat ) + |Eext ) = (1 + ˆG+)|E1) = A(ω)|E1). As elaborated in Appendix D, A(ω) ∝ δ(ω)−1 describes resonance, where δ(ω) as sketched in [Fig. 1b] quantifies the dimensionless “distance” to the nearest simple pole, and the cavity finesse controls its minimum value. The resonance frequencies ωFP and oscillator strength fFP 
+
+that describe A(ω) are further derived in Appendix D (in accord with standard texts [ref Hecht,Pedrotti]. All depend sensitivity on the cavity’s geometric configuration through both 
+
+d (owing to spatial structure of the cavity mode) and r1r2; thus δ(ω) for the etalon evidently describes a configurational resonance that is famously tunable and would be lost were its subsystems “broken apart”. Second, the polarizable point dipole over a dielectric half-space of provides a celebrated minimal model (the “point dipole model”) for optical nanoscopy experiments. Here we con-sider the dipole with polarizability α0 positioned a height d over the surface with reflectivity 
+
+β(ω). Resemblance of the point dipole model to an optical cavity remains underappreciated, and its configurational resonance remains poorly quantified, especially in experimentally re-alistic extensions of the model [ref McLeod PRB, spheroid, finite dipole]. We can first obtain its familiar composite response function [PD refs] by taking ˆGP,E (Eq. 4) to describe the polarizable dipole and dielectric surface, respectively. Following manipulations like those leading to Eq. 6 (see Appendix D) we obtain: 
+
+Point dipole model: (1 − ˆGP ˆGE )−1 ˆGP = |Epd )gpd (jpd | (7) where gpd (ω) ≡ α0
+
+1 − β(ω)χ0(2 d) with χ0(2 d) ≡ α0 · 2/ (2 d)3 .
+
+As elaborated in Appendix D, here |jpd ) is a localized z-unit vector, whereby ( jpd |Eext )“samples” the external field at the polarizable dipole. Meanwhile, χ0 is a susceptibility not unlike r1,2 in the etalon, and encodes the spatial (distance d) dependence of the modal field 
+
+|Epd ) from a z-oriented point dipole. Unlike the etalon, the point-dipole model miniaturizes d
+
+to spatial scale much smaller than the free-space light wavelength; thus, without retardation, another source of ω-dispersion is necessary to generate configurational resonance in gpd (ω) ∝
+
+δ(ω)−1. We can consider the familiar case [Keilmann & Hillenbrand 2004 etc.] of a substrate with surface ( e.g. optical phonon, exciton) resonance approximated by a single pole β ≈
+
+fβ ωβ /(ωβ − ω − iγ ), where ωβ denotes the surface resonance energy with quality factor 
+
+Qβ = ωβ /γ . The inset of [Fig. 1c] provides graphical representation of evolution in β with increasing energy. As shown in Appendix D, the minimum proximity δ0 = χ−10 − β(ωpd )describes the configurational resonance with emergent frequency and oscillator strength given by: 
+
+ωpd 
+
+ωβ
+
+= 1 − fβ χ0(2 d) and fpd 
+
+fβ
+
+= χ0(d)χ0(2 d)1 − fβ χ0(2 d). (8) 8Here fpd /f β measures the dipole-emitted field in the gap d on the dielectric surface; it can vastly exceed unity at d where χ0(d) ∼ f −1 
+
+> β
+
+. Notably, gpd (ω) now obtains a Fano lineshape described by negative Fano parameter q:
+
+|gpd (ω)|2 = γ2 
+
+> β
+
++ ( ω − ωpd + qγ β )2
+
+γ2 
+
+> β
+
++ ( ω − ωpd )2 α20. with q = −χ0(2 d)fβ Qβ . (9) We can trace this behavior to interaction between the “discrete” β-resonance and the con-tinuum susceptibility χ0 of the probe. As we will show also in later results, this asymmetric Fano lineshape red-shifted relative to ωβ is indeed characteristically observed in near-field optical spectroscopies of e.g. surface optical phonons detected by nonresonance probes [ref Hillenbrand, Taubner, McLeod]. Since, as we will show, our sophisticated treatment of probe-sample interactions in realizable optical nanoscopy experiments preserves the struc-ture of Eq. 7, the “optical cavity enhancement” (Eq. 8) and its Fano resonance (Eq. 9) are both genuine. This prospect compels us to refine the notion of χ0(d) from a single mode towards a quantitative description of all cavity modes conceivably sustained within the gap between a realistic probe and material surface (the “probe gap cavity”).  
+
+> C. Strong-coupling within a nano-gap optical cavity
+
+We have established a configurational resonance generically emerges from the compos-ite response function of adjustibly coupled elements, including the system of an optical nanoscopy probe over a surface. Notably, controllable resonance is also a key tool for estab-lishing the celebrated phenomenon of “strong coupling” to an additional (tertiary) system, like an optical emitter [refs]. Strong coupling can be regarded as a tool to re-engineer the excited states of a coupled system, with applications spanning enhanced sensing [refs], ma-nipulation of single-photon emitters [refs], and even proposed stabilization of unique ground states in quantum materials [refs]. Our analysis in Sec. II B quantified resonance frequency and oscillator strength emerging from configurational cavities, including the gap between a nanoscopy probe and resonant sample. For brevity, we now denote the bipartite system described by Eq. 4 in the former section as the “optical cavity” and a tertiary system with response function Ge as the “emitter”. To quantify the necessary ingredients for strong coupling between reconfigurable optical cavity and emitter, we envision iterating Eq. 4 once more, now taking the cavity as our “probe” with composite response denoted by GC , whereas for the “environment” response 
+
+GE we substitute the emitter response Ge. We address the question: When both GC and 
+
+Ge are each reasonably described by a single-pole oscillator (Eq. C1; with resonant fre-quencies ωC,e , oscillator strengths fC,e , and linewidths γC,e ), under what conditions does (1 − ˆGe ˆGC )−1 generate fundamentally new resonant poles ω±? Strong coupling is defined where the renormalized mode energies differ from the “bare” ones by substantially more than their net linewidth: (∆ ω)2 > ¯γ2 + ( δω )2 (10) where ∆ω ≡ ω+ − ω−, ¯γ ≡ (γC + γe)/2, and δω = ωC − ωe.
+
+Eq. 4 shows us that modes ω± emerge where 1 − ˆGe ˆGC has vanishing determinant (whereby ˆG+ is singular). Clearly this coincides with the regime where | ˆGC ˆGe| ≳ 1 and a perturbative 9Born series in gP ge(ω) fails utterly to describe the dressed response function of cavity and emitter. To identify ω± it suffices still to consider a single “cavity mode” |EC ) scattered by ˆGC , and a single e.g. electric point dipole field |Ee) scattered by ˆGe, whence ˆGα=C,e 
+
+can be expressed as in Eq. 5 with gα(ω) encoding their respective resonances. Defining the emitter’s Lorenz-reciprocal current by ( Ee|je) allows writing the condition for ω± as: (je|1 − ˆGe ˆGC |Ee) = 1 − (je|EC )( jC |Ee) · ge(ω±)gC (ω±) = 0 . (11) Appendix C shows that Eq. 11 is equivalent to identifying normal modes of the cavity-emitter system [ref Dolfo]. The form factors ϵ ≡ (je|EC ) = ( jC |Ee) equate by reciprocity and evaluate the cavity mode at the emitter location. With these ingredients, Appendix C (Eq. C10) prescribes the oscillator strengths fC and fe necessary to establish strong coupling between a cavity and emitter, respectively, when brought into mutual resonance at ω:
+
+ϵ2fC fe ω2 = (∆ ω)2 − (δω )2 ≡ Ω2 ≳ ⟨γ2⟩. (12) Here Ω denotes the Rabi frequency of the coupled system (the rate of energy exchange between Cavity and emitter), δω is the relative detuning of the resonances in isolation, and ⟨γ2⟩ denotes the average squared linewidth of the bipartite system. Most importantly, as shown in Appendix C, applying this condition to our simplified probe-sample “optical cavity” and predicts that configurational resonance in the oscillator strength fpd enhances strong coupling to an emitter. With the latter placed a distance de from the probe, d should be chosen so that: 2χ0(de)2 · fβ χ0(2 d)1 − fβ χ0(2 d)
+
+ωpd 
+
+γβ
+
+2
+
+> f −1 
+
+> e
+
+. (13) Note that these criteria apply symmetrically to the case where the probe presents resonance in χ0(ω) and the sample showcases non-resonant β, in which case Eq. 13 requires simply interchanging fβ with an oscillator strength fχ and χ0 with β.When can Eq. 13 be realistically satisfied? Considering the probable case of a uni-form material surface with fβ ∼ 1 or smaller, the strong-coupling threshold is practically unattainable without sufficiently high probe susceptibility χ0, which saturates e.g. near 1 for the point dipole system at the minimum physically achievable gap dimension d = a
+
+(Appendix D). An actionable answer must proceed beyond this pedagogical but crude point dipole model towards a realistic and quantitative description of near-field optical probes and the probe-cavity. This task raises important questions: Is Eq. 7 a salvageable description of the composite response that ultimately generates observables of optical nanoscopy ex-periments? If so, how should we understand and quantify the probe response χ, and can such knowledge allow inference (“inversion”) of the unknown sample response function or its optical constants [refs near-field ellipsometry]? How are the conditions of strong coupling to an emitter (Eq. D8) sensitive to experimentally controllable properties of the probe and the gap size d? To answer these questions requires a robust treatment of the non-perturbative regime of the composite response function (Eq. 4) where | ˆGP ˆGE | ≳ 1 is the precondition for both i) probe-enhanced sensitivity to the analyte and ii) sufficient configurational reso-nance within the probe-cavity to manipulate a small emitter (Eq. D8). Motivated by these concerns, the present work generalizes the simple scalars χ0 and β that describe a single “cavity mode” towards a rigorous “multi-mode” two-system response function in the non-perturbative regime of optical nanoscopy. The formalism of “probe cavity eigenmodes” (or “eigenprobe” formalism, for short) we now present will reveal added degrees of freedom with 10 enhanced opportunities for probe-sample interaction and manipulation of optical excitations 
+
+e.g. in emitters.   
+
+> III. EIGENPROBE: THE PROBE-CAVITY EIGENMODE EXPANSION A. From formal response function to multi-modal scattering matrix
+
+Since the point-dipole model is at best a rudimentary treatment of probe-sample interac-tions, the foregoing discussion supplies at most a qualitative understanding of the composite response function. We now rigorously apply Eq. 4 to the problem of an optical nanoscopy probe interacting with a half-space optical environment. In this framework the preceding concepts still apply directly, but across a discrete set of “cavity eigenmodes” variably local-ized to the probing volume. For simplicity, we approximate the probe as a perfect electrical conductor (PEC) defined by a closed 3D surface denoted ∂ΩP . The probe response function ˆGP follows from the PEC boundary condition: ˆEP |jP ) + ˆθ∂P |Eext ) = 0 where ˆEP ≡ ˆθ∂P ˆG0 (14) Eq. 14 holds for the isolated probe in presence of an external drive field |Eext ) describing e.g. 
+
+the illumination of the probe by a coherent light source. Here |EP ) = ˆG0|jP ) = ˆGP |Eext ) is the counter-field generated by currents |jp) flowing along and tangent to the probe surface 
+
+∂ΩP , ˆG0 is the free-space Green dyadic function 3, and ˆθ∂P is a projector that evaluates fields only at points along and tangent to the surface ∂ΩP . For later convenience we have defined ˆEP that generates the probe-scattered field and evaluates strictly along its surface. As described in Appendix E, Eq. 14 can be solved by assembling matrix elements of ˆEP
+
+and vector elements of |Eext ) in a basis of local current elements along the probe. This “method of moments” renders an “impedance matrix” for the probe and an “excitation vector”, respectively, from which |jP ) is obtained by a linear solver ref Gibson. Next, we expand |jP ) ≡ P 
+
+> ν
+
+αν |jν ) by a complete basis of current distributions |jν )defined exclusively on the probe surface and chosen to satisfy an orthogonality relation (jν |Eμ) ≡ (jν | ˆG0|jμ) ≡ ρν δμν with ρν a dimensionless normalization factor. (Here δμν is the Kronecker delta.) Applying this orthogonality relation to the boundary condition reveals that αν = −χν (jν |Eext ), where χν ≡ ρ−1 
+
+> ν
+
+and the inner product is evaluated only on ∂P 
+
+where |jν ) has support. The resulting scattered field supplies the sought Green’s function ˆGP = − P 
+
+> ν
+
+χν |Eν )( jν | where |Eν ) ≡ ˆG0|jν ). The choice of |jν ) is not unique, since eigen-functions of the operator ˆEP can be chosen ˆEP -orthonormal, and any orthogonal combination thereof remain ˆEP -orthonormal. However, the novelty of our approach lies in a unique se-lection that also nearly diagonalizes ˆGS . The field from such a set of |jν ) might be said to “circulate” within the probe gap cavity with minimal distortion. Clearly, these sought “cavity eigenmodes” will depend manifestly on the probe geometry ( viz. ∂ΩP ). Previous work has described these modes as “eigenoscillations”, explored their analytic forms suited to simple probe geometries ∂ΩP like the spheroid, and combined them in a “generalized spectral” description of the probe-sample response function ref Jiang. Next we rearticulate the needed formalism before extending it towards realistic probe geometries. For the first time, this will allow us to quantitatively compare predictions of this “eigenprobe” formalism against new experimental results. 11 As noted in previous work refs?, the probe-environment scattering operator ˆGP E ≡
+
+(1 − ˆGP ˆGE )−1 ˆGP in Eq. 4 heuristically represents an infinite sequence of scattering events beginning and ending at the probe that may or may not converge in a perturbation series, but we seek a solution operable in the non-perturbative regime. Our set |Eν ) spans the image of this operator, which together with the orthogonality relations ( jμ|Eν ) = ρν δμν and (jμ| ˆGP |Eν ) = −δμν allows to expand its action on |Ein ) in a combination of eigenmodes as ˆGP E |Ein ) ≡ P 
+
+> ν
+
+eν |Eν ). Under excitation |Eext ), the amplitudes eν satisfy: (jμ| X
+
+> ν
+
+eν (1 − ˆGP ˆGE )|Eν ) = ( jμ| ˆGP |Eext )
+
+ρν eν δμν + X
+
+> ν
+
+(jμ| ˆGE |Eν )eν = −(jμ|Eext ),
+
+thus ˆGP E |Ein ) = − X
+
+> ν
+
+|Eν )
+
+"X
+
+> μ
+
+ 1
+
+ρ + gE
+
+
+
+> νμ
+
+(jμ|Eext )
+
+#
+
+. (15) Here ρ denotes a diagonal matrix of all ρν , gE denotes the matrix of elements ( jμ| ˆGE |Eν ), and eν is given within the square brackets. Eq. 15 thus describes probe-sample interaction with a multi-modal scattering matrix ( ρ + gE )−1 set in an orthogonal basis set of currents 
+
+|jν ) along the probe. With our basis tending in size towards infinity, the inverse matrix in Eq. 15 is well defined provided that ρν increases sufficiently more rapidly with ν than the matrix elements ( jν |Ein ), and our choice will satisfy this criterion. Most importantly, a basis in which the scattering matrix is sparse or diagonal will reduce Eq. 15 to a convergent analytic (Laurent) series that might be truncated to a finite number of terms with little loss of accuracy. Together with a protocol for realistically accurate calculation of the needed eigenmodes, this prescription comprises the eigenprobe expansion.  
+
+> B. Probe-cavity eigenmodes as a sparse basis for optical nanoscopy
+
+To generate an eigenmode basis where the scattering matrix is sparse would seem to demand specific knowledge not only of the probe response (via ρ), but also the response function of the environment ( gE ) which seems a priori unavailable. Nevertheless, layered environments with in-plane translational and rotational invariance form a class of common analytes for optical nanoscopy inclusive of dielectric half-spaces, 2D materials, and hetero-layers of van der Waals materials even with uniaxial anisotropy. Their optical response ˆGE
+
+is well described by momentum-(and frequency-)resolved Fresnel coefficients rs,p (ω, q ) for incident s- and p−polarized fields, respectively. Hereafter we approximate the environment ˆGE by such a surface ˆGS .Although strongly q−dependent ( spatially dispersive or nonlocal ) reflectivities signify propagating polariton modes cite pol panorama, reflectivities at q ≫ k ≡ ω/c tends toward a local ( q-independent) quasi-electrostatic (QS) limit often dubbed β. Taking z = 0 as the surface plane with the most proximal point on the probe at z = d > 0, in this limit (jμ| ˆGS |Eν ) ≈ (jμ|δ ˆGS,q |Eν )−β(jμ| ˜E QS  
+
+> ν
+
+), where the reflected field | ˜E QS  
+
+> ν
+
+) = ˆMz |E QS  
+
+> ν
+
+) denotes a version of |E QS  
+
+> ν
+
+) simply mirrored across the z = 0 plane (in both its spatial profile and the 
+
+z-component of polarization) by an inversion operator ˆMz , |E QS  
+
+> ν
+
+) is the quasi-electrostatic field generated by the QS part of ˆG0|jν ), and δ ˆGS,q denotes the nonlocal part of the sample 12 surface response. When the nonlocal response vanishes, |ES ) ≈ − β| ˜EQS  
+
+> ν
+
+) scattered by the sample is that described by the “method of images” for quasi-electrostatic problems, as generated from a “mirror probe” as sketched in Fig. 1a. Considering that nonlocal reflectance should be in principle ever more weakly excited by fields from nanoscopy probes with ever smaller (sharper apex) dimension, we choose |jν ) such that ( jν | ˜E QS  
+
+> μ
+
+) = δνμ whereby the matrix elements ( ρ + gS )−1 
+
+> μν
+
+tend asymptotically to ( ρν − β)−1 δνμ = χν /(1 − βχ ν )δνμ .Together with the earlier ˆEP -orthogonality, this selection identifies |jν ) as solutions to the generalized eigenvalue problem: 1
+
+iω 
+
+ ˆEP − ρν ˆEQS S
+
+
+
+|jν ) = 0 with ˆEQS S ≡ ˆθ∂P ˆMz ˆGQS 0 (16) in which ρν and |jν ) are eigenpairs, ˆG0 is again the free-space Green’s function at finite ω,and ˆG QS 0 is its quasi-electrostatic counterpart obtained in the limit ω → 0. As shown in Appendix E, since ˆEQS S /iω ≡ ˆθ∂P ˆMz ˆG QS 0 /iω is positive-definite, solutions |jν ) can be chosen simultaneously ˆEP - and ˆEQS S -orthogonal with ( jμ| ˆEP |jν ) = ρν (jμ| ˆEQS S |jν ) = δμν , where the last equality signifies our choice of normalization. Just as Eq. 14 is solved by a method of moments after casting ˆEP as a probe impedance matrix, we similarly cast ˆEQS S as a “surface impedance matrix” (see Appendix E for details), whence we solve Eq. 16 by a generalized eigenvalue solver ref scipy, EigenProbe. This eigenvalue problem describes a scenario where the surface scatters fields |Eν ) qua-sistatically with a reflectivity ρν sufficiently large that re-scattering from the PEC probe will reproduce the same field. In this hypothetical case ρν signify the discrete “eigenreflectivites” whereby fields |E tot  
+
+> ν
+
+) = (1 + ˆGS )|Eν ) ≈ | Eν ) − ρν | ˜Eν ) are self-sustaining in the open cavity of the probe-sample gap and zero along the probe surface; ˆθ∂P |E tot  
+
+> ν
+
+) = 0. Sec. III C ad-dresses the numerical and physical significance of the eigenvalues ρν . Most critically, these self-sustaining modes convey their resonant character to ˆGP E (hereafter denoted ˆGP S , where 
+
+S emphasizes a surface-dominated environment), which as we will show can dominate the probe response, even where nonlocal surface response is important. The latter case is fully accounted by including a nonlocal reflectivity matrix with elements [ δgS,q ]μν ≡ (jμ|δ ˆGS,q |jν ): General solution: ˆGP S = − X
+
+> μν
+
+|Eμ)
+
+ 1
+
+ρ − β(ω) + δgS,q 
+
+
+
+> μν
+
+(jν | (general) (17) Local reflectance β: ≈ − X
+
+> ν
+
+|Eν )( jν |
+
+ρν − β(ω) = − X
+
+> ν
+
+|Eν ) χν
+
+1 − βχ ν
+
+(jν | (18) Perturbative, local β: ≈ ˆGP
+
+> ∞
+
+X
+
+> n=0
+
+X
+
+> ν
+
+−χν |Eν )( jν | ˆGS
+
+!n
+
+≈ ˆGP
+
+> ∞
+
+X
+
+> n=0
+
+X
+
+> ν
+
+(βχ ν )n (19) These expressions form a central result of our work (and are formally equivalent to Eq. (3) of ref Jiang). We observe that for each eigenmode contribution to Eq. 18, the analogy with the point-dipole model formulation Eq. 7 is complete. In particular, we observe that configurational resonance owing to a single eigenmode is possible wherever β ≈ χ−1 
+
+> ν
+
+, with characteristics given identically by Eq. 8. Because this case describes a surface optical resonance (polariton) dressed by the probe-cavity, we denote such phenomenon a nano-gap polariton . Sec. V A will compare realistic predictions to an experimental realization of configurational resonance in the nano-gap cavity formed between an optical nanoscopy probe and the phonon-resonant surface of SiC. 13 Regarding ˆGS as an integral operator, Eq. 19 presents a conventional Born series ex-pansion sometimes considered a model for optical nanoscopy experiments ref Vogelsang, Govyadinov whose criterion for convergence is evidently | ˆGS | ≈ | β| ≤ min |ρν |, where | ˆGS | is measured by its largest eigenvalue in the eigenmode basis. Bounded rigorously by the small-est “eigenreflectivity” of the probe-sample geometry, this condition delineates the regime of “passive” (perturbative) probe-sample coupling from that where probe and analyte become indivisible participants in the response function. Eq. 18 further highlights the manifest de-pendence of eigenpairs on the probe-sample separation distance z even with otherwise fixed probe geometry. Finally, we close this section by addressing whether the eigenmode expan-sion provided by Eqs. 16 & 17 is ad hoc or generalizable. Notably, our particular (hereafter dubbed EigenProbe ) expansion is in fact generated from the “closest” definite ( e.g. pro-portional to positive definite, with respect to functions on ˆθP ) operator to the family of ˆGS
+
+that might be anticipated from analytes of optical nanoscopy experiments. The EigenProbe 
+
+solution may converge more slowly ( viz. may demand more terms ν in Eq. 17) for ever more nonlocal ˆGS for which ˆθ∂P ˆGS̸ ∝ ˆEQS  
+
+> S
+
+(or for those “distant” from the quasi-electrostatic operator ˆEQS  
+
+> S
+
+). In such cases an alternative but analogous eigenfield expansion (a variation on Eq. 16) could be better suited to those applications of active microscopy. While we defer details to Sec. IV, Fig. 1e presents exemplary (four lowest order ν)eigenmodes calculated by Eq. 16 for a realistic conical probe geometry that is later revisited in Fig. 3. Here the probe gap d is chosen equal to the apex radius of curvature a. Surface charge density Qν along the probe is shown along with the z-component of the associated nano-gap polariton field that a superposition of that sourced by Qν as well as that reflected from a surface at z = 0 with reflectivity β = ρν . The total field satisfies the boundary condition of Eq. 14 even without an external drive field, substantiating these polaritons as self-sustaining modes, albeit demanding a particular (as we will see, nonphysical) choice of 
+
+β. Appropriate composition of these eigenmodes will solve any particular scattering problem like that shown in Fig. 1f, where an environment with strongly nonlocal reflectivity ( ˆGE ∼
+
+rp(q)) sustains propagating surface plasmons. Here, the resulting localized surface plasmon excitation is itself a particular superposition of probe-cavity eigenmodes described precisely by Eq. 15. It remains to be shown how such nonlocal surface scattering is practically evaluated in the basis of eigenmodes via; Sec. III C next addresses this question.  
+
+> C. Properties of the probe-cavity eigenmodes
+
+Although the probe-cavity eigenmodes described here have been previously explored in the context of quasistatic probe-sample interactions 4, our treatment shows they remain well defined and can be obtained from Eq. 16 even when ˆGP is treated without approximation in the electrodynamic context, with rich implications for far-field scattering by a near-field probe. Before exploring the implications of specific eigenmodes |jν ) corresponding to realistic probe geometries and their potential to accurately describe optical nanoscopy experiments, we summarize some formal properties required for their physical interpretation. The following properties are derived in Appendix F. First, since a local reflectance is often a poor description of the environmental response ˆGE around a nanoscopy probe, it is essential to generalize the surface reflectivity factor 
+
+β appearing in Eq. 17 to a full modal reflectivity matrix β described by elements βμν ≡−(jμ| ˆGE |jν ). As shown in Appendices E-F, these elements are remarkably given by integrals 14 FIG. 2. Eigenmodes in real- and momentum-space. a) Cross-sectional view of the scalar potential Φ ν associated with the first ten eigenmodes (colored red-to-blue while incrementing ν =0−9) of the conical probe pictured in Fig. 3b when positioned one tip radius ( a) above the material half-space. Curves are offset for clarity; dashed curves indicate Φ = 0. b) Hankel transform (from Φν (r) to) Φ ν (q). c) Real-space cross-sectional view of the plasmonic Green function for graphene with plasmon wavelength λp = 200 nm and a quality factor Q = 100; position axis is shared with a) (but in expanded view) depicting the case of a “sharp” probe radius a = 20 nm. d) The momentum space Green function (1 − qp/q )−1 shows overlap with higher order eigenmodes that is key to describing the modal reflectivity of graphene (Eq. 20). 
+
+over the electromagnetic 4-potential field (Φ ν , Aν,x , Aν,y , Aν,z ) generated by |jν ). Among the explicit expressions obtained for β, the following two within the QS-approximation are most useful: 
+
+βμν ≈
+
+Z ∞
+
+> 0
+
+dq q 2 · rp(q) Φ μ(q) Φ ν (q) (20) 
+
+≈ 14π
+
+Z
+
+> z=0
+
+dA 
+
+
+
+Φμ(r)∂z ˜Φν (r) − ∂z Φμ(r) ˜Φν (r)
+
+
+
+(21) = β δ μν when rp(q) = β. (22) These expressions can be visualized with aid of the representative eigenfields shown in Fig. 2. Here Φ ν (r) denotes the scalar potential emitted from eigencurrent |jν ) evaluated in the 
+
+z = 0 plane, and Φ ν (q) denotes its Hankel transform. Eq. 20 describes the momentum decomposition of each eigenfield ν and its scattering via Fresnel coefficient rp(q) into al-ternate modes μ. Eq. 21 evaluates the spatial overlap between Φ μ and surface-reflected ˜Φν̸ = Φ ν scalar potentials evaluated for r in the z = 0 plane, where ∂z evaluates the as-sociated surface-normal electric field. This form is convenient for real-space descriptions of probe-sample interactions, essential to predictions introduced in Sec. V B. A form of Eq. 21 has been used (with μ = ν describing a single dipolar field mode) in former work to 15 predict real-space optical nanoscopy contrasts with the point-dipole model refs. Jing, Rizzo, Suheng Xu, in which case β(r) was shown equal to the photonic density of states at z = d
+
+over a heterogeneous surface. More generally, Eq. 21 composites this photonic density of states over the available probe-cavity eigenmodes for a probe positioned at d. Meanwhile, Eq. 22 follows from the ˆEQS  
+
+> S
+
+-orthonormality of |jν ), recovering a scalar (diagonal) descrip-tion of scattering when the surface reflectivity is local. Hereafter, for simplicity we adopt an approximately axisymmetric description of the probe-sample interaction and the sur-face modal reflectivity, whence the probe and all |jν ) are considered dependent only on the surface-normal and radial coordinates r and z, respectively. Second, the spatial confinement of an eigenmode |Eν ) ≡ ˆG0|jν ) is well quantified by the ratio of i) interaction energy between probe and surface when β = 1 and a single eigenmode is excited, and ii) the electrostatic energy of the eigenmode when the probe is brought into isolation. This ratio is given by 1 /Re ρν , whence increasing Re ρν | signifies a decreasing proportion of the quasi-static fields emitted by the “mirror probe” (pursuant to the electrostatic method of images) is capable of interacting with the physical probe. This scenario would demand a proportionally increasing hypothetical surface reflectivity 
+
+β ∼ ρν to sustain the associated nano-gap polariton. Conversely, when reducing the probe-sample gap d we expect Re ρν (d) to reduce in proportion to increasing confinement of d-dependent eigenfields. Intuitively, a pointed metallic probe with apex brought sufficiently close to d = 0 is locally indistinguishable from a uniform mirror of unit reflectance, whence lim d→0 χν (d) = 1 and Eq. 18 (akin to Eq. 7) is indistinguishable from a multi-mode Etalon (without retardance). This limit is proven in ref Jiang and consistent with realistic calculations introduced in Sec. IV. Third, the integrated radiant flux from an eigenmode |jν ) excited on the probe when isolated in free space (disregarding for now scattering by ˆGE ) is proportional to −Im ρν > 0. Consequently, energy outflow by radiation limits the achievable amplitude ( ∼ | ρν − β|−1)of nano-gap polaritons excited by a probe in the same way as absorption ( ∼ Im β) by the local surface. This finding confirms a proposal proffered in Jiang et al. 4 that the poles of Eq. 18 are addressable in real optical nanoscopy experiments only to the extent that 
+
+|ρν −β| is rendered small; thus configurational resonance is ultimately hindered by cumulative losses of the probe-sample system proportional to Im( β − ρν ). The consequential inclusion of realistic loss in our EigenProbe expansion ( viz. realistic probe-cavity eigenmodes |jν )) ensures the predicted response function Eq. 18 remains unconditionally finite. We later demonstrate and discuss the minimum achievable value of Im( β(ω) − ρν (z)), variable in both frequency ω and probe-sample gap separation d. A key physical realization is the case of near-field spectroscopy over polar crystals where β(ω) ≡ (ε(ω) − 1) /(ε(ω) + 1) is dominated by optical phonons at mid-infrared energies. After presenting ρν (d) for a realistic probe geometry in Sec. IV, Sec. V A compares this predicted regime with nano-gap polaritons experimentally observed over the surface of bulk silicon carbide which supports a strong surface optical phonon resonance. Having established that any eigenmode can only be excited finitely, its lifetime is thus limited before its energy is radiated by the probe. As shown in Appendix F, the ratio of eigenmode energy to its integrated radiant flux provides its lifetime as τν, rad = −2πω −1Re ρν /Im ρν which, as Sec. IV will bear out, grows shorter for more delocalized (greater ν) modes. Fourth, since the probe response function ˆGP combines its geometric structure with the free-space Green dyadic function, it encodes explicit ω-dependence and, for slender geome-tries, even pronounced antenna resonances, such as have been observed in purpose-built 16 nanoscopy experiments ref Hillenbrand antenna. When the probe is isolated ( ˆGE = 0), Eq. 17 describes the bare probe response, whence ˆGP = P 
+
+> ν
+
+|Eν )gν (ω)( jν | with gν (ω) = 
+
+−ρν (ω)−1. Since for any independent component gν (ω) describes the spectral density of a causal response, ρν (ω)−1 is necessarily a Kramers-Kronig-compatible function, which in principle allows recovery of e.g. Im ρν (ω) from knowledge of Re ρν (ω) ref Kuzmenko. Stated conversely, antenna-enhanced radiance from eigenmodes at particular ω that is encoded on Im ρν (ω) will necessarily influence both the confinement and excitation capacity of the cor-responding nano-gap polariton through its connection to Re ρν (ω). Sec. IV will show this phenomenon can be highly pronounced for slenderized probe geometries, and Sec. VII A pro-poses how it might be harnessed to mediate strong-coupling between an antenna-enhanced resonant nano-gap polariton and the surface of a quantum material. Lastly, the EigenProbe expansion predicts both excitation of an optical nanoscopy probe and capacity for detection of probe-scattered fields. Both are necessary processes for most s-SNOM experiments. We consider an experimental geometry relevant to numerous s-SNOM experiments refs?, where a single aperture A (shown schematically in 1a) both delivers excitation |Eext ) and recovers back-scattered radiation |EP ) ∼ ˆGP S |Eext ) to a detector. As shown in Appendix A, the amplitude of probe-radiated electric fields recovered at a point on the aperture is proportional to the matrix element ( jP |EPW ), where |EPW ) denotes a plane wave field propagating from an aperture point at polar angle θ to the probe. When the probe is likewise illuminated by such a plane wave, the scattered far-field amplitude Escat (θ)is given simply by 
+
+Escat (θ) ∝ − X
+
+> ν
+
+Bν (θ)2
+
+ρν − β with Bν (θ)2 ≡ (jν |EPW ,θ )2. (23) Here for brevity we have used Eq. 18, and θ labels the polar angle of the aperture on a unit sphere. (We suppress azimuthal dependence by again assuming cylindrical symmetry about the z-axis.) We define by Bν (θ) the relative “angular brightness” of |jν ) whose orientation dependence uniquely defines the emitted radiation pattern (see Appendix A). Notably, Eq. 23 well describes a practical near-field microscopy experiment utilizing an il-lumination/collection aperture A only when Bν (θ) is replaced by R 
+
+> A
+
+dθB ν (θ), which emulates excitation by a ( e.g. Gaussian) focused beam of radiation. Even when the aperture A encom-passes the entire sphere of solid angles, the integrated far-field brightness ( viz. amplitude) is bounded by R 
+
+> A
+
+dθ (Bν (θ)) 2 ≤ R 
+
+> A
+
+dθ |Bν (θ)|2. The latter is proportional to the integrated radiant flux described by −Im ρν , as elaborated in Appendix F. Thus the numerator of Eq. 23 might be approximately replaced by −Im ρν only when explicitly computed eigenmodes 
+
+|jν ) are unavailable. However, since typical s-SNOM experiments utilize a restricted nu-merical aperture ( ≲ 0.6) for probe illumination, our forthcoming predictions dispense with this approximation and instead integrate Bν (θ) across an (axisymmetric) aperture span-ning 90 ◦ < θ < 45 ◦ relative to the z-axis. Our approach thus approximates the excitation field by a Gaussian focus (in z) comprised by a superposition of cylindrical Bessel beams 
+
+Ez ∼ J0(qr )eik z z defined by cylindrical ( q) and longitudinal ( kz ) momenta corresponding to tan θq = kz /q with kz = pω2/c 2 − q2. While not essential, such field profile is likewise economical to quantify “detection” of the integrated far-field amplitude within the same aperture. Focusing primarily on s-SNOM optical nanoscopy, we find that our forthcoming predictions are only weakly effected by these choices of Bν , which affect all eigenmodes in similar (while not identical) fashion. 17 IV. QUANTITATIVE SCATTERING FROM REALISTIC PROBE GEOMETRIES A. Eigenfields as a basis for complex near-field interactions 
+
+To motivate our further exploration of probe-cavity eigenfields as a physical concept and calculation tool, we pause to demonstrate application of this framework to obtain a compos-ite response function relevant to a realistic probe-sample coupled system. Consider the case of an optical nanoscopy probe interacting with a quasi-infinite conductive sheet endowed with a plasma response that supports propagating plasmon polaritons as its fundamental optical excitations [refs graphene plasmons theory]. Like other van der Waals materials, few-layer graphene is a rich target of near-field microscopy investigation that falls into this category. The 2D optical response function ( viz. ˆGS ) of such media follows from the Fresnel coefficient rp(q, ω ) = q/ (q − qp(ω)) describing TM modes at momenta q ≈ Re qp, where 
+
+qp = iω/ 2πσ 2D is the complex-valued plasmon momentum prescribed by the ( ω-dependent) sheet conductivity σ2D refs for qp. It is straightforward to construct this Fresnel function with a characteristic plasmon wavelength of Re(2 π/q p) ≈ 200 nm ≈ 10 a, where a = 20 nm will describe the apex curvature radius of the near-field probe ( cf. Fig. 1a) – a regime matching many plasmonic studies of monolayer graphene refs graphene plasmons. Now we discuss parameters of the near-field probe. For simplicity, in this work we consider exclusively PEC probes with axisymmetric (about the z-axis) geometry and response func-tions ˆGP , although solutions to Eq. 16 by our method of moments can also accommodate describing a non-axisymmetric response. Conical probes are characterized by an opening half-angle θ (identified in Fig. 1b) which we presently take as θ = 10 o. To obtain probe-cavity eigenfields, we treat Eq. 16 as an electric field integral equation (EFIE) and compute the eigenpairs ρν and |jν ) for a prescribed probe geometry ∂P and probe-sample distance z.This computation first applies a Galerkin method to evaluate self-impedance and quasistatic mirror-impedance matrices corresponding to ˆEP and ˆEQS S , respectively, then solves their as-sociated generalized matrix eigenvalue problem. The probe-scattered fields |Eν ) = ˆG0|jν )are then computed through convolution with the free-space Green’s dyadic 3. For z = a, Fig. 2a presents these eigenfields (namely the z-polarized component of |Etot  
+
+> ν
+
+) = |Eν ) − ρν | ˜EQS ν )) in false color corresponding to the four eigenvalues ρν of lowest magnitude ( viz. highest field confinement). The charge density associated with ν (q ∝ ˆn · EP along ∂P ) is plot-ted in vertical projection along the probe surface with a symmetric-log scale (to suppress the presentation of singularities). We observe the eigenfields abide the PEC boundary con-dition ( E = 0 on ∂P ) expressed by Eq. 16, and also that the order ν of the eigenfield characterizes the number of “nodes” in the probe surface charge density. This feature is inherited in turn by the eigenfield itself, and is a natural consequence of the orthogonality among eigencurrents, as previously reported 4. These eigenfield nodes are accompanied by field deconfinement as |ρν | grows exponentially with ν.Standard eigenvalue solvers allow us to obtain up to N = 50 of these modes (not shown) that showcase increasingly intricate spatial character, affording a capable basis for real-space fields involved in the probe-sample interactions. Evidencing this utility, we apply Eq. 17 to compute the field scattered by the probe-sample system following “standard” illumination by a plane wave at mid-infrared energy (free-space wavelength λIR ≡ 2πc/ω ≈ 10 microns) at oblique incidence (45 o to the surface-normal). Since dispersion is indispensable to the graphene response, we discard scalar reflectance β and explicitly compute matrix elements of the modal reflectivity (Eq. 20) in momentum space up to μ, ν = 10. This Sommerfeld 18 integral is readily evaluated by numerical quadrature, provided that poles of rp(q) ( e.g. 
+
+presently, the plasmon polariton) are adequately sampled. As described in Appendix F, when rp ≈ β, nonzero values of Eq. 20 are β only when μ = ν owing to the orthonormality property imposed among eigencurrents. Fig. 2a-b help reveal this orthogonality among eigenfields from Fig. 1e, visualized in both real-space and momentum space, respectively. Proliferating nodes in the real- and momentum-space eigenfield distributions sustain their orthogonality. Fig. 2b shows the broad momentum content of eigenmodes peaked below the inverse gap size q a −1. That peak momenta of Φ ν (q) shift lower with increasing ν indicates the increasing deconfinement of higher order modes. On the other hand, to localize a gap field at scales below a requires marshaling a superposition of probe-cavity eigenmodes up to higher order ν, akin to a Nyquist criterion. For comparison, Fig. 2c-d display the Fresnel coefficient rp(q) of our plasmonic membrane as well as its inverse Hankel transform (the 2D plasmonic Green’s function Gp(r). The latter displays a logarithmic singularity near 
+
+r = 0 responsible for the screening behavior of a metallic membrane. Meanwhile, outwards-propagating plasma oscillations comprise the distant fields where Gp(r) ∼ H(1) 0 (qpr), with 
+
+H(1) 0 an outward Hankel function. The generalized reflection coefficients can be viewed as momentum integrals between pairs of traces in Fig. 2b and the Fresnel coefficient (Fig. 2d), or alternatively ( cf. Eq. 21) as spatial integrals over pairs of Φ μ(r) (Fig. 2a) with the reflected field supplied by the plasmonic Green’s function (Fig. 2c) as ˜Φν (r) ≡ Gp(r)∗Φν (r). Here ∗ denotes spatial convolution in the z = 0 plane. Finally, Fig. 1f presents the resulting scattered field so computed with Eq. 17, which simultaneously satisfies the PEC boundary condition of the probe together with that of the graphene sheet, leading to propagating plasmon polaritons that are especially evident in (shown) Im Er. This example demonstrates that probe-cavity eigenfields provide a recipe to construct the composite Green’s function for arbitrary probe-analyte combinations. The EigenProbe framework non-perturbatively admixes the probe’s response function with that of its environment to faithfully describe the composite response of “active” optical nanoscopy.  
+
+> B. Field confinement and scattering efficiency of realistic probe-cavity eigenmodes
+
+In contrast to previous studies of eigenfields for simple probe geometries in the qua-sistatic limit 4, the demonstration in Fig. 1e-f leverages an eigenfield expansion computed for a conically shaped (precisely, hyperboloidal) near-field optical probe of mesoscopic length comparable to the free-space wavelength of mid-infrared light ( L = 20 μm ∼ λIR ), charac-teristic of widely used nanoscopy probes cite Xiaoji Xi, others?. These physical dimensions relative to the wavelength of external excitation places such probes unambiguously in the electrodynamic regime of active optical microscopy. We emphasize that although probe-sample interactions may be treated reasonably with the quasistatic approximation, there should be no expense spared in accurate dynamic treatment of the probe response func-tion, since ˆGP provides the only solid “anchor” for interpretation of the composite response function and inferences about ˆGS . Our treatment satisfies this criterion. Ref. 5 considered the implications of electrodynamics for naturally attenuating the severity of long-range elec-trostatic interactions encountered in the response of large ( L ≥ λIR ) quasistatic probes 4.However, any precise implications for the emergent response function that owe to the probe size and overall shape remain underexplored except by large-scale simulations ref Xiaoji, Rainer. Here we address these implications concretely with the EigenProbe formalism. 19 20 FIG. 3. Energy dependence of probe-cavity eigenmodes. a) Slender and b) widely ta-pered probe geometries considered in panels c-d) and in e), respectively. Shown is the z-polarized electric field of the lowest order eigenfield for varied probe lengths L relative to the free-space light wavelength λ = 2 πc/ω , revealing that eigenmodes show standing wave character along the probe at energies of “antenna resonance”, although the field is enhanced 100-fold within the probe nano-gap. c-d) and e-f) associate with the slender and wide probe geometries, respectively. c) The imaginary and real parts of the modal eigenvalues quantify their brightness and deconfinement, respectively, and both increase exponentially with ν (coded increasing red-to-blue). Antenna-like resonances of eigenmodes are reflected in their oscillating brightness with energy; this resonance similarly modulates their confinement through a causality constraint (see text). d) Polar angle (ϕ)-resolved brightness Bν (pink curve) quantifies the field amplitude radiated into ϕ by each eigenmode; ν = 0 is shown at ω = 30 THz. The real part of the ϕ-polarized field Escat is shown with symmetric negative-positive (blue-red) color scale, revealing “antenna lobes” of radiation. e) Same as c) but for the wide probe. f) Cross-sectional view of an eigenmode at the probe apex. g) Comparison of inverse lifetime (see text) and confinement for the first eigenmode between the two probe geometries; lifetime depends strongly on ω owing to narrow antenna resonances for the slender probe, whereas broadband brightness of the wide probe lends uniformity in ω. h) In the complex plane of surface reflectance β, the non-perturbative regime onsets where |β/ρ ν | > 1, de-termined by minimum eigenvalue ρν=0 . The regime of active coupling is where the probe response is numerically enhanced through coupling to β; colored zones identify which eigenvalue (marked by dots) dominates the coupling. The upper half plane of β represents physically meaningful lossy materials; large lossless reflectances most enhance the probe-sample coupling. 
+
+Fig. 3a-b present the lowest order eigenfields computed at 2 distinct light frequencies corresponding to λ = 2 L and 2 L/ 3 for two probe geometries: a) a slender needle-like probe with θ = 7 o, and b) a stout conical probe at θ = 25 o, both with L = 20 μm and an apex curvature radius of a = 20 nm matching the probe-sample distance ( z = a). Notably, these eigenmodes are constructed strictly for near-field interaction with the nearby surface. Thus their far-field reflection from the surface is excluded here but in principal follows according to the surface θ-resolved reflectivity via leading and trailing factors of (1 + ˆGE )appearing in Eq. 4; Sec. VI B addresses the practical impact of these “far-field factors” on nanoscopy experiments. It is evident for both probes that eigenfields globally conform to the corresponding wavelength, and that these selections are compatible with an antenna resonance condition L/λ = ( 12 + n) for integer n. Fig. 3c&e present the ω-dependent eigenreflectivities from ν = 0 (lowest order, by convention) up to ν = 6 (increasing for curves from red to blue) computed for these geometries, illustrating two fundamental concepts. As described in Sec. III C, −Im ρν measures (for uν ∼ 1) the radiant flux from scattered eigenfields, provides an upper bound on the eigenmode brightness, and correspondingly estimates its contribution to the ω-resolved probe scattering cross section. The slender probe exhibits sharp peaks in −Im ρν precisely at the antenna resonance conditions (arrows mark the energies associated with Fig. 3a-b). Fig. 3d presents the intermediate- and far-eigenfield associated with one such resonance compared with the mode’s polar angle( θ)-resolved brightness |Bν (θ)| (pink curve) in polar format, showing distinct antenna-enhanced radiation lobes directed favorably above the analyte. Meanwhile, for the stout probe these resonances are attenuated at least three-fold, owing presumably to destructive interference 21 from surface currents across the large probe radius ( R ∼ λ). On the other hand, Re ρν gauges the eigenfield energy density and its deconfinement as indicated schematically by Fig. 3f. These metrics are both manifestly lower by a similar factor as compared to the slender probe. The higher order eigenreflectivities ( ν ≥ 1) essentially replicate these behaviors at much larger scale, with the exception of a notable blue-shift in their resonance frequencies as compared with the lower orders. Since these eigenmodes satisfy the self-consistency condition of Eq. 16, we surmise that the resonance of extensively deconfined modes is increasingly perturbed by the hypothetically quasi-static reflectivity ρν in a way that is unrealizable by any physical system. Although becoming seemingly ad hoc in this regime, the high order eigenmodes remain physically sound members of an orthogonal basis, and such resonance shifts moreover will not experimentally manifest owing to the enormous values of ρν that exclude strong excitation by physically realizable analytes. As shown by Fig. 3g, the deconfinement for both probe geometries exhibits a dispersive lineshape near the antenna resonance frequencies that emerges due to the Kramers-Kronig compatibility of susceptibilities ρν (ω)−1 already discussed in Sec. III C. We can draw a clear conclusion about the impacts of global probe geometry: a stout probe geometry (large 
+
+θ) will help to confine fields near the sample surface, and by virtue of Eq. 18 will afford higher scattering “contrast” ( viz. relative sensitivity) to analytes of lower reflectivity ( viz. 
+
+β). On the other hand, the scattering efficiency of such probes can be several factors lower than that afforded by a slender probe shape, which should come at the expense of reduced scattering contrast for analytes of all but the highest reflectivities. Fig. 3h presents the exemplary coupling regimes associated with eigenmodes of the stout probe at a close probe-sample separation of z/a = 0 .1 ( ω = 30 THz). Values of local surface reflectivity are distinguished across the complex-β plane based on whether they trigger non-perturbative (gray) or active (colored) probe-sample coupling, where both are simultaneously possible, and simultaneously necessary for conceivable strong-coupling to an emitter within the nano-gap ( cf. Eq. 13 with χ0 ≤ ρ−1
+
+> ν=0
+
+). Lossy materials occupy Im β(ω) > 0 where nano-gap polaritons can be only finitely excited ( cf. Eq. 18). Owing to the minimum achievable values of ρν ∼ 1, the range of β is quite small for which a perturbative description (Eq. 19) is adequate. Moreover, colored points identify the location of eigenvalues ρν and each centers over a zone of active coupling. Namely, the color of each zone indicates which eigenmode is most quantitatively responsible (via its excited eigenmode amplitude) for the coupled probe-sample response. Clearly β values with ever increasing “quality factor” Re β/ Im β (ever decreasing relative absorption) are necessary to significantly excite eigenmodes of increasing deconfinement (Re ρν ) and “brightness” ( −Im ρν ). Consequently, material media falling into this regime of active coupling require an increasingly large number of eigenmodes to adequately describe the resulting composite probe-sample response function (Eq. 4). We conclude this section by remarking on the complex behavior of ρν for ωL/c ≪ 1. Suf-ficiently low frequencies show −Im ρν ∝ ω4 characteristic of Raleigh scattering of a “small” probe, whereas Re ρν tends to a quasistatic limit dictated exclusively by probe geometry 4.At such low energies, the scattering efficiency of a probe is so comparatively reduced as to render ˆGP E a potentially ineffective apparatus for active microscopy, at least when excita-tion and detection both still occur in the far-field. At frequencies approaching and exceeding the first antenna resonance of the slender probe, curves describing Re ρν evolve rapidly – this behavior is bona fide within our framework, and physical implications may demand further scrutiny. It is worth noting for both probes that Re ρν is minimized over frequency just be-low the first antenna resonance, signifying the energy of highest possible scattering contrast 22 towards analytes with low-reflectivity. Such ω-dependent scattering contrast (by way of field deconfinement) is the underlying origin for imprecise spectroscopic “normalization” in this energy range, as alluded in ref. 5. On the other hand, the attenuated antenna resonances and comparitive ω-independent scattering efficiency (especially for ω above the first) should endow large-θ probes with more reliable broadband performance, especially for near-field spectroscopy. Since commercially available near-field probes offer such a fortuitous geome-try, many broadband nano-spectroscopy studies likely leverage this feature unknowingly ref Huth nanoFTIR, SINS-ALS, Xiaoji, Mengkun.  
+
+> C. Formation of scattering contrasts with actively coupled nanoscopy
+
+Having clarified the physical behavior of eigenreflectivities ρi, we can now further scru-tinize their quantitative implications for spetroscpopic scattering contrast. For conceptual simplicity, we consider the class of “bulk media” whose Fresnel reflectivity is large chiefly in the quasi-electrostatic regime, justifying an approximation rp(q) → β under illumination from a near-field probe. For demonstration, Fig. 5a presents the quasistatic reflectivity of three representative polar materials: silicon carbide (SiC), silicon oxide (SiO 2), and hexag-onal boron nitride (hBN), all presenting one or more optically active phonon resonances in the mid-infrared range from ω = 700 − 1800 cm −1. Here ωSO < ω TO < ω LO denote the surface optical, transverse optical, and longitudinal optical phonon frequencies, respectively, associated with the polar surface. Associated with the conditions that εSO ,TO ,LO = −1, 0, +1, respectively, we have that βSO is locally maximized whereas βTO ,LO = 1 , 0, respectively. This phenomenology is essentially replicated among the optical phonons of materials considered here, modulated only by the strength, damping rate, and deviations from Lorentzian char-acter among the oscillators. (We note also that owing to the hyperbolic uniaxial character of hBN, εab /ε c ≲ 1 so that max |β| = βSO ∼ 1. ref Dai) This phenomenology further generalizes among oscillator permittivities in proximity to wherever the condition ε(ω) ≲ 0 produces a surface optical phonon. The essential implication of this phenomenology for scattering in active microscopy is considered in Fig. 5b, where the representative β(ω) are now rendered with respect to frequency as canonically counterclockwise curves in the complex plane. The radius for each circulation (of which hBN executes two between its lower and upper Restrahlen bands) serves as a measure of oscillator strength for the surface optical phonon, which varies appriably enough among these materials to merit a double-log scale. The eigenreflectivities of the “standard” probe considered in Fig. 4 are likewise plotted for comparison, each presented as a curve ( ν again increasing from 0 to 9 with color from red to blue) that spans a range of complex values corresponding to its evolution of ρν (z) with the gap distance 0 < z < 4a
+
+between the probe and the analyte surface. As previously mentioned and later highlighted further by Fig. 6b, these eigenvalues drop dramatically in proportion with the confinement of fields in the probe-sample gap, falling superlinearly with z asymptotically towards ρν = 0 at z = 0 4. This z-evolution manifest in Fig. 5b indicates that proximity to probe-cavity eigenmode resonance for given reflectivity β depends strongly on the size of the probe-sample gap. The simultaneously ω- and z-dependent resonance proximity is scrutinized in Fig. 5c, where we can observe ν ≥ 1 is virtually inaddressible by SiO 2 and hBN mid-IR reflectivities, whereas up to ν = 2 is proximate to the reflectivity of SiC at frequencies where β is positive and mostly real. We can draw two conclusions from this comparison: First, probe-sample coupling is strongly non-perturbative, “active”, and potentially resonant 23 where β ≳ 1, and this threshold for non-perturbative coupling is achieved most readily for small probe-sample distances. Second, in perhaps the majority of cases where this criterion is not satisfied (Re β < 1), only the lowest order eigenmodes can be expected to interact appreciably with the analyte. To gauge this selectivity, we predict the scattered field amplitude from a probe realisti-cally executing tapping mode over a SiC surface as shown schematically in Fig. 5d. Tapping the probe is not only a means to maintain mechanical feedback in near-field microscopy, but an enormous volume of findings demonstrates demodulating the scattered field at higher har-monics of the tapping frequency effectively improves spatial resolution of the measurement even below the scale of a ref originals, Govyadinov. In our eigenmode context, it is readily apparent that ρν (z) varies far more dramatically with z at higher orders ν, so oscillating 
+
+z at amplitudes A > a can more substantially modulate their contribution to scattering relative to lower order modes. These are precisely the modes conferring spatial resolving power owing to their Fourier bandwidth (Fig. 3b). We therefore adapt Eqs. 17 and 23 for prediction of the scattering amplitude sn demodulated at the nth harmonic of the (angular) frequency Ω at which the probe is dithered. The harmonics of a function evaluated at an oscillating abscissa are no more than the coefficients of expansion for that function in a series of Chebyshev polynomials Tn(x). Provided then a function s(z) of z = A(1 + cos Ω t), our task in computing demodulated sn up to n = N then is to evaluate the first N expansion coefficients describing s(z) ≈ PNn sn Tn(z/A − 1). Applied to our scattering problem, we have: 
+
+sn = 12π
+
+Z 2π/ Ω0
+
+dt cos( nΩt)Escat (z(t), ω ) (24) 
+
+≈
+
+> N
+
+X
+
+> k
+
+wkMX
+
+> μ,ν =0
+
+Bμ(zk)
+
+"
+
+1
+
+ρ(zk) − β(ω) + δg S,q 
+
+#
+
+> μν
+
+Bν (zk) (25) Here the summation over k denotes sampling of the scattering amplitude at N different 
+
+z-positions selected such that −1 < x k = zk/A − 1 < +1 are extrema of the N th or-der Chebyshev polynomial, and where wk are node weights associated with the Chebyshev coefficient. Note that z-dispersion of the eigenvalue matrix ρP (z) and eigenmode bright-ness Bi(z) appear explicitly, and the lowest M eigenmodes are retained. Requiring only 
+
+N × M < 100 individual computations per value of β owing to its optimally sparse basis, Eq. 25 offers far more computational efficiency than previous solution methods including the lightning rod model 5; it thus forms another central result of this work. Considering β(ω) as well as the entire q-dispersion of the SiC phonon 5, we apply Eq. 25 to predict s3(ω) throughout the active coupling regime of the SiC phonon. Fig. 5e compares s3(ω) computed with M = 20 modes against that computed only with the lowest order eigenmode ( ν = 1) which primarily effects the active coupling regime. The complex-valued β(ω) is also shown for comparison. It is evident even at ν = 0 that a scattering peak emerges at ω < ω SO where β is dominantly real and positive. Inclusion of higher order modes superimpose “additional” peaks at nearby frequencies to form a continuum that quantitatively matches measured nano-infrared spectra of the SiC phonon 5. Notably, progression of the complex spectrum through a δϕ 3 = 4 π phase increment across ωSO 5
+
+signifies that β(ω) traverses very near to two “effective” resonances formed by the ρν (z)continuum. To rationalize the possibility of effective “poles” emerging from the demodulated con-tinuum, we leverage Eq. 25 to rapidly compute s3 at all β coordinates shown in the map 24 FIG. 4. Gap-dependent probe-sample coupling. a) Several canonical phonon-resonant materials targeted by near-field infrared microscopy feature quasi-electrostatic surface reflectivities 
+
+β(ω) with magnitudes exceeding unity at their surface optical phonon frequency ωSO ; ωT O,LO 
+
+denote the transverse and longitudinal optical phonon frequencies, respectively. b) The energy ( ω)dependence of surface reflectivity traces one or more complete circuits in the upper half complex 
+
+β plane, whereas the eigenvalues ρν corresponding eigenfields of a conical probe of apex radius 
+
+a disperse with gap size z into the lower half plane. Proximity of β(ω) to each ρν determines excitation amplitudes of a corresponding nano-gap polariton. c) View of the complex β plane in linear scale shows lower order ν modes are most dominantly excited over surfaces with modest 
+
+β. d) Experimental configuration corresponding to b-c), in which momentum-dispersive surface reflectivity rp(q) can be approximated by β, and tapping of the probe with amplitude A allows sampling the scattered field in a Fourier series sn corresponding to harmonics n of the tapping frequency. e) Prediction of the demodulated scattered field s3 (real and imaginary parts, and absolute value) from reflectivity β becomes more accurate as the d-modulated scattered field from further excited eigenmodes ν are summed. Several modes contribute significantly for surfaces like SiC with |β| ≫ 10. The amplitude and brightness of each nano-gap polariton is complex, result-ing in partial interference and a rich measurable spectra sn(ω). Spectra are shown relative to s3
+
+predicted from a medium with β = 1 (e.g. gold, Au) f) Demodulated scattered field s3 predicted across the complex β plane by summing the contribution from a finite number of eigenmodes. The overall and demodulated fields are greatest for low-loss β in the upper right quadrant; hypothetical gainful media can offset radiative loss of nano-gap polaritons to achieve diverging amplitude. Since each such polariton contributes a simple pole “swept” with gap size d, sn sums a continuum of simple poles but can be approximated by a finite number. Dots show the position of poles in a rational approximation for s3 with disks sized to denote the relative amplitude of corresponding residues. All concentrate along the overlapping “ d-trajectories” of eigenvalues shown in b). 
+
+25 of Fig. 4f. Resonant “hot spots” predictably appear in the lower right quadrant along the trajectories of ρν (z), but with unexpectedly discrete character. We opt to approximate the demodulated scattering amplitude by s3(β) ≈ s3,0 + PMν=0   
+
+> Rν
+> Pν−β
+
+(so-called barycentric ra-tional approximation ref) up to M = 19, which we found to provide impeccable agreement with genuine calculations from Eq. 25 across the entire range of β. (The factor s3,0 ensures that sn = 0 at β = 0.) The poles Pν so obtained are plotted as black data points surrounded by pink disks whose sizes (radii) are used to show (relatively) the respective residue ampli-tudes |Rν |. (In Appendix TODO we report the parameters resulting from our barycentric rational approximations of s2,3,4(β) from the standard probe geometry.) All poles of any consequence reside at |Pν | < 100 largely in a continuum, although the smallest ones arrayed near |Pν | = 1 .2 remain somewhat distinct in correspondence with their “parent” modes at 
+
+ν = 0 , 1, . . . . The lowest two of these reside close enough to the trajectory of β(ω) for SiC to resolve the origin of the δϕ 3 = 2 × 2π phase increment and to confirm that resonances associated to distinct probe-cavity eigenmodes are experimentally addressable. The next section further discusses insights afforded by eigenfield interaction with the strong polar phonon of SiC.   
+
+> V. POSITION-RESOLVED CONTRAST FROM A SCANNING OPTICAL PROBE A. Distance control of a nano-gap cavity polariton over SiC
+
+Figure 6. Approach curves in SiC as evidence for the active coupling regime, where probe and sample are indistinguishable in the response function. The onset of discrete resonances is observable by a steep onset of s3 / p3 contrast at a critical height that disperses with frequency, in agreement with eigenmode simulations.  
+
+> B. Generalized photonic density of states and heterogeneous imaging
+
+The defining feature of near-field microscopy is the probe’s ability to nano-focus light to target regions of the analyte and so, by scanning the probe, to enable nano-resolved imaging. As highlighted earlier, this “focusing” feature is conceptually tied to recurring products 
+
+GP GE in the composite response function, which in our cavity eigenmode basis are described by the matrix ρ−1β, with β the modal reflectance matrix of generalized reflection coefficients expressed earlier by Eqs. 20 -21. Our foregoing attention has focused on momentum-resolved reflectances associated with Fresnel coefficients of homogeneous, semi-infinite, or layered environments. On the other hand, Eq. ?? also soundly defines a matrix of “nano-resolved” generalized reflectances with manifest dependence on the probe position, or equivalently on the “origin” for the real-space eigenfields Φ ν (r) ( e.g. Fig. 2a). Consider the point dipole model, in which case the only relevant “eigenfield” corresponds to the dipole field Φ dp (r). In this case Eq. 21 provides a familiar expression for the field reflected back to the point dipole ref Jing, Suheng, Rizzo, a quantity otherwise known as the “photonic density of states” ([ref Novotny]) ρ(r) in which r denotes the dipole coordinate. For a dipolar emitter of susceptibility χe placed into an optical environment, χeρ(r) comprises the leading term in a perturbative expansion for their composite response function G+, and governs such phenomena as spontaneous emission, quenching, and strong-coupling to a cavity resonance 26 FIG. 5. Excitation of nano-gap polaritons over SiC. a) Experimental configuration; inset: SiC surface reflectivity is most enhanced at ωSO . b) Explicit probe-gap d-dependence of probe eigenvalues ρν (ν increasing left to right; values same as Fig. 4b); these converge to unity for    
+
+> z≪a, the probe radius. c-d) The portion of scattered field δE scat
+
+(Sec. II C). Of course, a physical near-field probe is no a dipole, although the eigencurrents 
+
+|jν ) so far discussed can be conceptually regarded as weighted distributions of dipoles over the probe surface. To this extent, the probe position-resolved modal reflectances βμν comprise a generalization of photonic density of states to spatially extended emitters, of which an extended optical nanoscopy probe forms one example. In a perturbative treatment of Eq. 23, radiative emission from our probe is modified through proximity to the sample environment by an amount δE scat =⃗ BT ρ−2β⃗ B, with ⃗ B the column vector of eigenmode brightnesses. By analogy to Purcell enhancement of radiative emission, we denote this the multi-modal Purcell effect . Clearly at a location of the probe where the modal reflectivity β(rprobe ) is sufficiently large, the non-perturbative regime applies: 
+
+Escat (rprobe ) = ⃗ BT [ρ − β(rprobe )] −1⃗ B (26) Eq. 26 highlights the manifest ease of generalizing the probe-scattered field in our eigenfield framework to the case of variable probe position within an optical environment where the local modal reflectivity β mediates inhomogeneous coupling. Here we show Eq. 26 is a concrete route to quantitatively predict imaging results from near-field microscopy of heterogeneous media. Shown schematically in Fig. 7a, we focus on the characteristic case of an inhomogeneous 2D material (with conductivity σ2D) residing on a semi-infinite (conceivably layered) substrate. Nano-imaging of mono- to few-layer graphene and transition metal dichalcogenides [refs], and even conducting thin films [ref McLeod(s)], are all subsumed in this category. For such applications we have implemented a compact means to combine the laws of Gauss and Ohm to rapidly compute the (quasi-electrostatic) 27 optical response of such inhomogeneous material systems, as described in detail by Appendix EigenProbe. Briefly, for a given location of the probe, a reflected eigenfield ˜Φν (r) can be computed by projecting Φ ν (r) into a basis of orthogonal functions defined along the sample surface ( z = 0) for which the sample reflectance is easily represented by a matrix R given by: 
+
+R = βsubs − V L 2/(2 πκq p)1 − V L 2/(2 πκq p) (27) where qp ≡ iω/ (2 πσ 2D) and κ ≡ (εsubs + 1) /2.
+
+Considering a homogeneous substrate for simplicity, here βsubs and εsubs denote the sub-strate reflectivity and permittivity, respectively. Maintaining bold fonts for matrix-valued operators, L denotes the Laplace operator ( ∇2) acting over the spatial region of the 2D material with plasmon wavevector qp, and V denotes the Coulomb operator (spatial con-volution by kernel 1 /r ). Both are projected into matrices by operating on our basis func-tions in the plane z = 0. It is convenient to select a basis where L is diagonal – namely, eigenmodes of the 2D Helmholtz (wave) equation within the 2D material. In this basis Φν (rprobe ) expresses a single eigenfield from the probe at ( rprobe ) as a vector, ˜Φν = −RΦν
+
+is such a vector describing the reflected field, and the modal reflectivity (Eq. 21) is simply 
+
+βμν (rprobe ) = −(2 π)−1Φμ(rprobe )T Q R Φν (rprobe ), with Q the matrix projection of the oper-ator ∂z . This approach straightforwardly extends to the case where multiple 2D materials (overlapping or otherwise) are supported on a substrate described by complex Fresnel coef-ficient rsubs (q). When all conducting media are homogeneous, plane (or cylindrical) waves form a suitable function basis for Eq. 27 and V L 2 = 2 πq, with q a diagonal matrix of plane (or cylindrical) wave momenta. This basis reduces the reflectance to a Fresnel coefficient, and the vectors Φ ν to Hankel transforms of the eigenfields, thus recovering Eq. 20. We now demonstrate application of Eq. 27 to predict imaging results from a near-field probe (of “standard” geometry) rastered over a triangular nano-taper of monolayer graphene with (screened) plasmon wavelength λp = 200 nm supported on a dielectric sub-strate ( βsubs = 0 .5). We select this case to replicate in theory several experimentally reported features of plasmon propagation near graphene edges and constrictions, including boundary reflection, plasmonic nano-focusing, and edge-propagating plasmons [Fei, Chen, Raschke, Rizzo]. First, we select a probe gap d = a at which to define our eigenfields (Fig. 1e) and compute βμν over a grid of probe positions in a chosen field of view over the conduct-ing nano-taper (FIg. 6a). We then apply Eq. 26 to compute the probe-scattered field 
+
+Escat (rprobe ). To replicate the experimental process of harmonic demodulation in principle requires identical such computation for eigenfields defined at all probe-sample distances z
+
+spanning a tapping cycle of the probe, which would be burdensome. Instead, we utilize the completeness of any set of eigenfields chosen from d = d0 to reproduce those at d according to Φ dμ = P 
+
+> ν
+
+Ψ( d)μν Φd0 
+
+> ν
+
+, where the matrix Ψ(d) is a property of the probe geometry and is be easily precomputed, provided that a sufficient quantity of eigenfields are pre-calculated at 
+
+d0 as to composite those ( ν ≤ 20) needed at d < d 0 . In this way, the generalized reflectance transforms as β(d, rprobe ) = Ψ(d)T β(d0, rprobe )Ψ(d), and Eq. 26 can be quickly re-applied to recover Escat (d, rprobe ) at all d, with only a single explicit calculation of β. (Fig. 6b presents the result, where sn denotes the demodulated field at harmonic n whereas βν de-notes the modal reflectance βνν (d0), and Fig. 6c analogously presents the associated complex phase. Whereas the zeroth-harmonic (time-averaged) scattered field s0 is several orders of magnitude larger than s3, as expected, it also provides a blurry view of the graphene flake. 28 FIG. 6. Prediction of image contrasts from eigenmode reflectivities. [TODO] 
+
+On the other hand, s3 showcases several features evocative of experimental demonstrations [refs], including i) plasmon fringe patterns near graphene edges with characteristic period-icity λp/2, ii) nano-focusing of the plasmon field at the tapered end, and iii) so-called “edge plasmons” propagating with wavelength less than λp manifesting as bright-dark dots close to the graphene apex. While this example demonstrates the achievement of rapid ab initio calculation of com-plex near-field images using our eigenfield formalism, it also brings conceptual insights. Despite the overall formal complexity of this computation, the evident resemblance e.g. of 
+
+s3 to the foundational reflectance quantity β3 is noteworthy, and originates in part from the harmonic content of the eigenfields themselves. We anticipate the resemblance of sn
+
+to βν=n for ν ≤ 3 to be a general result, as explored in Fig. 6d. To first order in small scalar βν , the d-dependent scattered field from eigenmode ν is perturbatively proportional to βν Bν (d)2/ρ ν (d)2. Fig. 6d presents the demodulated amplitude (absolute value) of this quantity versus eigenmode index nu and harmonic n, showing that radiated fields contribut-ing to sn are dominated by eigenfields near ν = n. At higher harmonics n > 3, higher order eigenmodes fail to sustain the trend, since the tapping amplitude A selected for simulation 29 is already comparable to the probe apex radius a, so that even higher order eigenmodes are modulated only at lower harmonics. Therefore, one can generally understand near-field imaging contrasts at tapping harmonic n by considering the generalized reflectance associ-ated with eigenmode ν = n.Finally, Fig. 6e-f examine line-cuts across graphene edge along the colored arrows shown in Fig. 6a, presenting how the plasmon reflection profile in sn evolves with plasmon wave-length. The transition from dark contrast to bright within the graphene (relative to the reflective substrate, at left) with increasing λp owes to the fact that the plasmon momentum (cf . Fig. 2d) “sweeps” to lower q where the angular spectrum of all eigenfields ( cf . Fig. 2b, bounded by the probe radius a) is appreciable, leading to an enhanced local reflectance from the graphene surface. Fig. 6f presents representative linecuts from λp = 200 nm, revealing that despite all formal complexities, β3 and even the demodulated scattering signal s3 are still well described by a simple Hankel function with wavevector 2 qp, as anticipated for cylin-drical plasmons reflected from a hard wall [ref Fei? Woessner]. That this simple description does not account for the “edge plasmon” fringe visible precisely at the graphene edge is its chief failure. Notably, these profile are not well described by a decaying exponential, which grossly underestimates amplitude of the first primary fringe of reflected polaritons relative to those that follow.       
+
+> VI. TOWARDS QUANTITATIVE NANO-SPECTROSCOPY: RATIONALIZED COMPLICATIONS AND REFINED INTERPRETATIONS A. The influence of probe cavity eigenvalues: probe calibration and energy de-pendence
+
+[TODO]  
+
+> B. Quantitative and technical resolution to the “far-field conundrum”.
+
+[TODO]  
+
+> C. High-throughput extraction of causal optical constants from probe-calibrated spectra.
+
+[TODO]   
+
+> VII. STRONG COUPLING AND PROBE-POLARITON HYBRIDIZATION A. Strong coupling of an antenna-polariton system
+
+[TODO, delete content already in appendix] Strong coupling between resonant subsystems can enable manipulation of the combined system response without any modification to its constituent elements, making this phe-nomenon an appealing tool for engineering modified states of matter [refs]. As the simplest 30 FIG. 7. Standardized scattering contrast as probe calibrator. 
+
+> [TODO]
+
+possible solution to a self-consistent scattering problem, the point dipole model affords a con-ceptually satisfying separation of those variables that influence the probe-sample near-field interaction. We can cast our spectral description into a similar form, yielding conceptual insights into the resonant and non-resonant contributions to probe-sample coupling, reveal-ing the circumstances that accomplish “strong coupling” between the probe and polariton modes of the environment. To this end, we first revisit concepts leading to the point dipole model: restricting our attention to p-polarized fields in the quasi-static approximation, a dipole with polarizability α and polarization P = αE = α (Eext + EP ) responds to both the external field as well as to its own field EP = ρ/ 2π (2 zp)−3 P reflected from the nearby planar environment. Regarding the dipole as our probe, here zp is the dipole-surface separation and 1/2π (2 zp)−3 is a form factor for the reflected dipole field readily discernible by the method of images. Taking χ for our purposes as a dimensionless susceptibility, the widely reported 31 FIG. 8. Nano-spectroscopy with near-, far-, and self-normalization. [TODO] 
+
+FIG. 9. Eigenmode inversion - from scattered contrast to optical constants. [TODO] 
+
+32 FIG. 10. Nano-gap strong coupling with an antenna probe. [TODO] 
+
+solution for the resulting polarization may be written: 
+
+P = α
+
+1 − χ(zp)ρEinc with χ ≡ α/ (16 πz 3 
+
+> p
+
+). (28) Meanwhile, we recast Eq. 23 to describe the scattered far-field amplitude in terms of the eignmode susceptibilities: 
+
+Escat = X
+
+> i
+
+Bi(zp)1 − χi(zp)ρEinc (29) with χi(zp) ≡ 1/ρ i(zp) and αi(zp) ≡ − χn(zp) ui Im ρi(zp). (30) Our intended analogy with Eq. 28 becomes more complete when we note that Eq. 29, taken in absence of a planar environment ( ρ = 0), conforms to an effective polarizability for our arbitrary probe that is both frequency- ( ω-)dependent and manifestly zp-independent after summation: 
+
+Escat (ω)/E inc (ω) ≡ αeff (ω) = X
+
+> i
+
+−χi(ω) ui Im ρi(ω). (31) The susceptibilities in summation are weighted by their brightness. Eq. 31 defines a causal response function in general only if the elements under summation are themselves causal, implying that functions χn(ω, z p) satisfy the Kramers-Kr¨ onig (KK) relations for any zp.Such response functions are formally expressible as a sum of KK-compatible oscillators [ref Kuzmenko], and Fig. [xxx] demonstrates that such a compact description ( viz. a sum of Lorentzian oscillators) is highly effective for slender probes of length L that present discrete antenna resonances at frequencies ωk ∼ 2k/L for positive integers k.33 Returning to Eq. 29 and restricting our attention to the lowest order gap cavity mode, parametrizing the probe susceptibility χP ≡ χn=1 (ω) by a single oscillator will already yield remarkable implications: 
+
+χP (ω) ≈ χ0(zP ) + χres (zP ) ω2
+
+> P
+
+ω2 
+
+> P
+
+− iγ P ω − ω2 . (32) Here χ0 < 1 denotes an impulsive ( ω-independent) contribution to the mode susceptibility whereas χres is the resonant contribution at the lowest order antenna resonance frequency 
+
+ωP with quality factor QP = ωP /2γP . An evident symmetry emerges when we note that the causal response of the planar environment admits an analogous parametrization of ρ(ω), in terms of an impulsive reflectance ρ0 together with its dominant polariton response with am-plitude ρres and Qρ = ωρ/2γρ. Inserting into Eq. 29 reveals a spectrum resonant frequencies 
+
+ω± satisfying: 
+
+¯ω2 
+
+> ρ
+
+(zP ) − iγ ρω± − ω2
+
+> ±
+
+  ¯ω2 
+
+> P
+
+− iγ P ω± − ω2
+
+> ±
+
+ − κ2(zP ) = 0 (33) with ¯ωP ≡ p1 − ρ0 ωP , ¯ωρ(zP ) ≡ p1 − χ0(zP ) ωρ, (34) and κ2(zP ) ≡ χres (zP ) ρres 
+
+1 − χ0(zP ) ρ0
+
+ω2 
+
+> ρ
+
+ω2 
+
+> P
+
+.
+
+Here ¯ ωρ represents the polariton resonance frequency nonresonantly screened by the gap cav-ity susceptibility, and similarly ¯ ωP is the probe resonance frequency nonresonantly screened by the environment. Eq. C2 represents a system of coupled oscillators under coupling strength κ(zP ) whereby ω± will show strong hybridization (deviation from ¯ ωρ,P ) when 
+
+κ2 ≫ κ2crit ≡ (γP − γρ)2/4 [ref Dolfo]. This condition signifies the onset of strong probe-polariton coupling characterized by resonant energy exchange between the two sub-systems at frequency ∆ ω = ω+ − ω− when ∆ ω > (γP + γρ)/2. The occurrence of finite Rabi fre-quency ∆ ω ≡ Ω = ¯ ωP
+
+pκ2 − κ2crit even when ¯ ωρ ≈ ¯ωP signifies an “avoided crossing” that in optical contexts can generate electromagnetically-induced transparency (EIT). The relevant oscillator degrees of freedom entering Eq. C2 can be identified from the linear system whose normal modes comprise ω±:
+
+¯ω2 
+
+> P
+
+− iγ P ω − ω2 − ¯χres ω2
+
+> P
+
+−¯ρres ω2 
+
+> ρ
+
+¯ω2 
+
+> ρ
+
+− iγ ρω − ω2
+
+  σP
+
+σρ
+
+
+
+=
+
+ω2 
+
+> P
+
+EP
+
+ω2 
+
+> ρ
+
+Eρ
+
+
+
+. (35) Here EP,ρ (ω) heuristically denote frequency-resolved drive fields acting on the probe and environment, respectively, whereas ¯ χres , ¯ρres denote their original quantities screened by a factor (1 − χ0(zP ) ρ0)−1/2. In the case of weak nonresonant reflectance ρ0 ≈ 0, we observe that the normal mode amplitudes will satisfy σ± 
+
+> ρ
+
+/σ ± 
+
+> P
+
+= ρres (ω±), with ρres the resonant response of the environment. In similar fashion, bound charge densities σρ,P at the surface of the planar environment and at the probe apex respectively are proportional to the local discontinuities in z-polarized field given by 4πσ ρ = E+ 
+
+> z
+
+− E− 
+
+> z
+
+= 2ρ χ P
+
+1 − ρ χ P
+
+ψz (z = 0) (36) and 4πσ P = χP
+
+1 − ρ χ P
+
+ψz (z = zP ) (37) 34 with ψz the z-polarized cavity mode field emitted by the probe. Therefore σ± 
+
+> ρ,P
+
+describe amplitudes of resonant polarization ( viz. induced charge density) on the environment and probe, respectively, due to hybridized cavity modes. To demonstrate how strong coupling may arise in practice between an antenna-like near-field probe and a confined polariton, we consider the experimentally realizable case of a slender THz-resonant probe (as that considered in Figs. [xxx]) coupled to the remarkable polariton emerging from the “soft mode” optical phonon of SrTiO 3 (STO) [refs]. This soft mode has been targeted by recent efforts to condense a ferroelectric phase from the “quantum paraelectric” of unstrained crystalline STO, whether through direct high-field THz excitation of the soft mode into an anharmonic regime [ref Nelson] or by triggering a metastable “optically strained” lattice [ref Cavalleri]. More details... the main point is that if the lower polariton is pushed to zero frequency (or close enough to it) through strong enough coupling, a phase transition (spontaneous polarization) will result. Other ideas beyond STO? Orders in superconductors / excitonic insulators? Figure 6. Experimental proposal: We “engineer” a polariton in STO that we can couple to with the tip. The tip has a strong antenna resonance that we engineer (via length) to match that of STO. At a critical coupling (= at and below a critical tip-sample distance) mode splitting will result; we want to optimize the Rabi splitting.  
+
+> B. Cavity-control over quantum emitters
+
+Use the response function to compute as a real Green’s function, evaluate at an emitter location to obtain photonic density of states. Predict e.g. Purcell enhancement and fore-seeable coupling strengths to an emitter, depending e.g. on sample substrate (which is indispensable to the coupled probe-sample system).  
+
+> VIII. DISCUSSION
+
+TODO: conclusion 
+
+> ACKNOWLEDGMENTS
+
+The author acknowledges instructive discussions with Prof. M. Fogler, and software support from M. Berkowitz, W. Z.-C. Zheng, and L. Lo. 
+
+> Appendix A: Reciprocity relations, Poynting’s theorem, and far-field radiation
+
+While results of this section are presented in any standard text for classical electromag-netism [ref Jackson E&M], we state them here for ease of reference. We begin by stating Maxwell’s equations for the time-harmonic electric field En, driven in a space defined by permittivity ε(ω, r) by a current density jn at frequency ω, as an inhomogeneous ordinary 35 differential equation with implied boundary conditions of outgoing radiation at infinite dis-tance: 4πiω c2 jn = −
+
+ω2
+
+c2 ε(ω, r) − ∇ × ∇× 
+
+
+
+En. (A1) Below we suppress the ω- and r-dependence of the permittivity. We thus obtain reciprocity relations for the field En with a secondary field Em through their product in a volume Ω: 4πiω c2
+
+Z
+
+> Ω
+
+dV jn · Em = −
+
+Z
+
+> Ω
+
+dV Em ·
+
+ω2
+
+c2 ε − ∇ × ∇× 
+
+
+
+En (A2) = − ω2
+
+c2
+
+Z
+
+> Ω
+
+dV ε En · Em −
+
+Z
+
+> ∂Ω
+
+dA · (Em × ∇ × En) (A3) +
+
+Z
+
+> Ω
+
+dV (∇ × En) · (∇ × Em) (A4) = − ω2
+
+c2
+
+Z
+
+> Ω
+
+dV (εEn · Em + Bn · Bm) − iω c
+
+Z
+
+> ∂Ω
+
+dA · (Em × Bn) (A5) Here we have applied Eq. A1 together with Faraday’s law of induction ∇ × En = iω/c Bn,and integration by parts, yielding our first reciprocity relation: 
+
+−12
+
+Z
+
+> Ω
+
+dV jn · Em = − iω 
+
+8π
+
+Z
+
+> Ω
+
+dV (εEn · Em + Bn · Bm) + c
+
+8π
+
+Z
+
+> ∂Ω
+
+dA · (Em × Bn) (A6) Repeating the preceding steps with the complex-conjugated form of Eq. A1, conjugated Faraday’s law, and the conjugated trio j∗
+
+> n
+
+, E∗
+
+> n
+
+, B∗
+
+> n
+
+, then yields a second reciprocity relation: 
+
+−12
+
+Z
+
+> Ω
+
+dV j∗ 
+
+> n
+
+· Em = iω 
+
+8π
+
+Z
+
+> Ω
+
+dV (ε∗E∗ 
+
+> n
+
+· Em − B∗ 
+
+> n
+
+· Bm) + c
+
+8π
+
+Z
+
+> ∂Ω
+
+dA · (Em × B∗
+
+> n
+
+) (A7) If we take m = n, then we should understand jn as the “source current” for fields En, Bn
+
+appearing in the equality. Taking the real part Eq. A7, we can associate terms with contributions to the total time derivative ∂tU(= 0 in steady state) of electromagnetic energy 
+
+U in volume Ω. From left to right, respectively, terms identify in the most typical case with energy ( ∂tU)curr > 0 added injected into the volume by source currents, the energy absorbed 
+
+−(∂tU)abs > 0 by media (typically with Im ε > 0), and the rate of energy loss −(∂tU)rad > 0due to radiation through the surface ∂Ω ( viz. the Poynting vector). (Scenarios are possible where any terms in Eq. A7 are positive or negative, although equality maintains energy balance.) Importantly, applying the “bra-ket” notation introduced in the main text, Eq. A7 indicates the total energy radiated by a current |jn) (into its “scattered field” |En)) is calculated simply (taking Ω to enclose the current and exclude its environment) by 
+
+−12(j∗
+
+> n
+
+|En) = −(∂tUn)rad . (A8) Another instructive scenario is where ε is taken as real and all conduction currents induced in media are accounted in the left-most volume integral of Eq. A7 through j = jext + σE,with jext external (driving) currents and σ the complex conductivity of material media. In 36 this case the volume integral over ε is pure imaginary and the remaining real parts of Eq. A7 express the energy balance of Poynting’s theorem, with Re σ mediating Ohmic loss: 
+
+−12 Re 
+
+Z
+
+> Ω
+
+dV j∗
+
+> ext
+
+E = 12
+
+Z
+
+> Ω
+
+dV Re σ|E|2 + c
+
+4π Re 
+
+Z
+
+> ∂Ω
+
+dA · (E × B∗) . (A9) Next, interchanging indices m and n in Eqs. A6 and A7 provides two equally valid reciprocity relations; subtracting these from the original relations after complex-conjugating Eq. A7 results in: 
+
+Z
+
+> Ω
+
+dV (jn · Em − jm · En) = c
+
+4π
+
+Z
+
+> ∂Ω
+
+dA · (En × Bm − Em × Bn) (A10) 
+
+Z
+
+> Ω
+
+dV (j∗ 
+
+> n
+
+· Em − j∗ 
+
+> m
+
+· En) = c
+
+4π
+
+Z
+
+> ∂Ω
+
+dA · (E∗ 
+
+> n
+
+× Bm − E∗ 
+
+> m
+
+× Bn) . (A11) A particular application of Eq. A10 enables calculating the radiation pattern from a source distribution jP , as from an optical nanoscopy probe serving as an antenna. Firstly, we high-light a result from geometric optics stating that the far-field E∞(r0) measured at location 
+
+r0 distant (in comparison to to the light wavelength) from its source current distribution at the origin is determined solely by the Fourier ( viz. plane wave) component ˜E(k0) of the field directed with wave-vector k0 ∥ r0 according to 3:˜E(k0) = ir 0e−ikr 0
+
+2πk E∞(r0) (A12) This expression applies when the direction of k0 is expressed with polar angles φ, θ whereby the radiated power emitted into a solid angle ∆Ω is proportional to k2 R 
+
+> ∆Ω
+
+dφdθ sin θ | ˜E(φ, θ )|2
+
+and the total field collected (and perhaps later focused) by an aperture over the same solid angle is proportional to k R 
+
+> ∆Ω
+
+dφdθ sin θ ˜E(φ, θ ). In either case, E∞(r0) can be evaluated with Eq. A10 taking jn = jP and jm = iω ˆp δ(r0), whereby 
+
+iω ˆp · E∞(r0) = 
+
+Z
+
+dV jP · Em. (A13) Here we have taken the surface integral of Eq. A10 to such distances from the current distributions that it vanishes due to the equality of electric and magnetic far-fields: Bm,n =
+
+Em,n . Meanwhile ˆ p denotes the orientation of our choosing for a distant point dipole. Field polarizations are constrained to ˆθ when jP is axisymmetric about the z-axis, and accordingly in this case we select ˆ p = ˆθ. Then for r0 a great distance from evaluation points r near the origin, Em matches the usual expressions for far-fields radiated by the point dipole: 
+
+Em ≈ k2 eik0·(r0−r)
+
+r0
+
+(sin θ ˆz − cos θ ˆρ) ≡ k2
+
+r0
+
+EPW ,θ (r) (A14) Here EPW ,θ denotes the corresponding plane wave of unit amplitude with wave vector −k0,and the vector in parentheses is simply ˆθ transported to the origin. Summarizing Eqs. A12, A13, and A14, the average field radiated into an aperture with solid angle ∆Ω can be determined by: 
+
+⟨E∞⟩∆Ω =
+
+Z
+
+> ∆Ω
+
+dφdθ 
+
+∆Ω sin θ
+
+
+
+− ˆθ iω r0c2
+
+Z
+
+dV jP · EPW ,θ 
+
+
+
+(A15) 37 The θ-dependent term in parentheses has units of electric field and can be denoted the “brightness” Bj (θ) of the current distribution and is apparently determined by its spatial overlap with a plane wave propagating from the observation point at r0. Results in the main text utilize Eq. A15 to predict the brightness Bν (θ) ∝ (jν |EPW ,θ ) of a nanoscopy probe’s eigenmode currents |jν ). Unsurprisingly, Eq. A15 is formally equivalent to the volume integral of (the far-field component of) the Green dyadic function in vacuum with 
+
+jP , but the present form makes explicit the reciprocity between emission and excitation from a corresponding plane wave. 
+
+Appendix B: Composite response functions 
+
+The response function ˆG+ for a composite of N interacting sub-systems described by response functions ˆGn can be deduced from the following N self-consistency relations: ˆGnEext = En − ˆGnNX
+
+> m̸=n
+
+Em (B1) We can systematize Eqs. B1 as a linear system defined in matrix form, e.g. with rank N = 2 for the probe-analyte system of active microscopy. Denoting by ˆGP,E the two “bare” Green’s functions associated with a “probe” and “environment”, respectively, ˆG+ ≡ ˆG+ 
+
+> P
+
++ ˆG+ 
+
+> E
+
+emerges as a sum of “dressed” Green’s functions for which EP,E ≡ ˆG+ 
+
+> P,E
+
+Eext and Escat = EP + EE:
+
+Escat =
+
+ ˆI
+
+ˆI
+
+T  ˆI − ˆGP
+
+− ˆGE ˆI
+
+−1  ˆGP
+
+ˆGE
+
+
+
+Eext (B2) = ˆGP (1 + ˆGE )1 − ˆGP ˆGE
+
++ ˆGE (1 + ˆGP )1 − ˆGE ˆGP
+
+!
+
+Eext (B3) where (1 − ˆGP ˆGE )EP = ˆGP (1 + ˆGE )Eext (B4) and (1 − ˆGE ˆGP )EE = ˆGE (1 + ˆGP )Eext (B5) Eqs. B4 and B5 define the denominators of Eq. B3 in the sense of inverse operators. The composite response function evidently combines the elementary response functions in a nontrivial way. While this abstract approach clearly generalizes beyond N = 2, it does so at the expense rapidly proliferating terms, since we must carefully preserve orderings where operators like ˆGP,S need not commute. However, we can bring focus to ˆGP by noting that (1 − ˆGE ˆGP )−1 ˆGE = ˆGE (1 − ˆGP ˆGS )−1 which allows rewriting Eq. B3 as: ˆG+ = ˆGE +
+
+ ˆGE + 1 
+
+ ˆGP
+
+1 − ˆGP ˆGE
+
+
+
+1 + ˆGE
+
+
+
+. (B6) Eq. B6 is the central result of this appendix. 
+
+Appendix C: Strong coupling in the composite Green’s function 
+
+Here we present the conditions by which the interacting response functions ˆGA and ˆGB ,each presenting a resonant character in energy ω, endow their composite response function 38 ˆG+ with entirely new resonant characteristics. In the scenario denoted ”strong coupling”, the combined response function ˆG+ is described by new poles that did not originally comprise ˆGA,B . For a most pedagogical case, consider where ˆGA,B both act in a single “scattering channel”, which might describe, e.g. 1) the amplitude of specular reflection for a particular plane wave (specified e.g. by in-plane wavenumber q) from a pair ( A and B) of stacked and strongly interacting planar media, or 2) the electric field polarized along the polarizable axis of a point dipole ( A) over a dielectric surface ( B), both discussed in the main text Sec. 
+
+?? . The probe eigenmode description presented in the main text is also a modal expansion for the dressed probe response in such “independent” scattering channels. In such cases, employing the notation of Eq. 3, ˆGα ≈ | Eα)gα(ω)( jα| (with α = A, B denoting either of the interacting subsystems) and gα(α) describe scalar scattering susceptibilities which in the simplest nontrivial case might be described by a non-resonant “background” plus a resonant response with Lorentzian lineshape at energy ωα:
+
+gα(ω) ≈ χ0 
+
+> α
+
++ fα/δ α(ω) and δα(ω)−1 ≡ ω2
+
+> α
+
+ω2 
+
+> α
+
+− iγ αω − ω2 with α ≡ A, B. (C1) Here χ0 
+
+> α
+
+denotes an impulsive ( ω-independent) contribution to the susceptibility, while fα
+
+describes the oscillator strength at resonance with quality factor Qα ≡ ωα/γ α (which differs by 2 from the conventional definition, for our notational ease), and δα quantifies “distance from resonance”. Inserting Eq. C1 into the dressed probe response function ( viz . Eq. 4) reveals a spectrum of dressed resonance frequencies ω± satisfying: 
+
+ ¯ω2 
+
+> A
+
+− iγ Aω± − ω2
+
+> ±
+
+   ¯ω2 
+
+> B
+
+− iγ B ω± − ω2
+
+> ±
+
+ − g2 = 0 (C2) with ¯ωA ≡ p1 − N fAχB ωA, ¯ωB ≡ p1 − N fB χA ωB , (C3) and g2 ≡ N fAfB · ω2
+
+> A
+
+ω2 
+
+> B
+
+with N ≡ 11 − χAχB
+
+(C4) Here ¯ ωA,B represent the resonance frequencies of each of the two subsystems screened by the nonresonant response of the other, and we should define ¯ ωAB ≡ (¯ ωA + ¯ ωB )/2 as their average. Eq. C2 represents a system of coupled oscillators under coupling strength g whereby ω±
+
+will show strong hybridization (deviation from ¯ ωA,B ) when g2 > g 2crit ≡ (γA − γB )2 ¯ω2 
+
+> AB
+
+/4 [ref Dolfo,many others]. This condition signifies the onset of strong coupling characterized by resonant energy exchange between the subsystems A and B at frequency ∆ ω = ω+ −ω− when ∆ω > (γA + γB )/2. The occurrence of finite Rabi frequency ∆ ω ≡ Ω = pg2 − g2crit /¯ωAB 
+
+even when ¯ ωA ≈ ¯ωB signifies an “avoided crossing” that in optical contexts is denoted electromagnetically-induced transparency (EIT) [refs]. The relevant oscillator degrees of freedom internally responsible for Eq. C2 are identifiable from the linear system of interacting subsystems A, B whose normal modes comprise ω±.Consider an external “drive” field |Eext ) together with the fields |E A,B ) generated by the subsystems’ response functions. Together these are: 
+
+|Etot ) = |Eext ) + |E A) + |E B ) (C5) with |E A) = |EA)gA(ω)( jA|
+
+
+
+|Eext + |E B )
+
+
+
+(C6) and |E B ) = |EB )gB (ω)( jB |
+
+
+
+|Eext + |E A)
+
+
+
+(C7) 39 The scalar products σA ≡ (jA|E B ) and σB ≡ (jB |E A) are sufficient to reconstruct the total field |Etot ) from Eq. C5 only once determined from the linear system defined by Eqs. C6-C7: 
+
+ 1 −(jB |EA)gA(ω)
+
+−(jA|EB )gB (ω) 1
+
+  σA
+
+σB
+
+
+
+=
+
+(jB |EA)gA(ω)( jB |Eext )(jA|EB )gB (ω)( jA|Eext )
+
+
+
+(C8) Normal modes correspond to the case |Eext ) = |0) and, after subsuming the inner prod-ucts ( jB |EA) and ( jA|EB ) into numeric definitions of χ0
+
+> A
+
+, f A and χ0 
+
+> B
+
+, f B (c.f. Eq. C1), respectively, the linear system becomes: 
+
+ 1 − (χ0 
+
+> A
+
++ fA/δ A(ω)) 
+
+− (χ0 
+
+> B
+
++ fA/δ B (ω)) 1
+
+  σA
+
+σB
+
+
+
+= 0 . (C9) A solution requires vanishing determinant of the matrix at left, leading immediately to Eq. C2. We interpret σA,B as self-consistent “polarizations” of subsystems A and B that self-sustain indefinitely only at frequencies ω = ω± and which “source” the self-consistent field (i.e. cavity resonance) given by |E) = |E A) + |E B ). Provided that ¯ ωA ∼ ¯ωB , see immediately that the conditions for observing the mode-splitting characteristic of strong-coupling of a probe with its environment (or generically within any pair of interacting systems) requires that the Rabi splitting exceed the mode-split linewidth [refs Autore,Bylinkin,others], which demands sufficient oscillator strength: 
+
+r
+
+g2/¯ω2 
+
+> AB
+
+− 14 γA − γB 
+
+> 2
+
+> (γA + γB ) /2
+
+∴ fAfB ≳ 12
+
+ Q−2 
+
+> A
+
++ Q−2
+
+> B
+
+ (1 − χAχB ) . (C10) Eq. C10 holds when fAfB ≪ 1; otherwise, g2 scales sub-linearly in the product of oscillator strengths, which makes strong coupling more difficult to attain when simultaneously χA,B 
+
+are nonzero and quality factors are small. In the case that χAχB ≪ 1, the right-hand side is evidently the reciprocal “average” quality factor squared, Q−2 
+
+> AB
+
+. Thus, the condition 
+
+fAfB Q2 
+
+> AB
+
+= max ω GAGB > 1 coincides with the non-perturbative regime defined by those energies ω where |GP GE | > 1. Eqs. C2, C4, C10, and the accompanying expression for Ω are the central results of this appendix. 
+
+> Appendix D: Conditions for strong coupling of an emitter to a Fabry-P´ erot or probe-surface optical cavity.
+
+Sec. C identified conditions for strong coupling between two subsystems. Here we demon-strate application of those conditions to the two practical examples shown in Fig. 1 and discussed in Sec. II B: 1) the two-mirror Fabry-P´ erot cavity (“FP”), and 2) a polarizable point-dipole over a resonantly reflective surface (“PD”, corresponding e.g. the point-dipole model of probe-sample near-field interaction), each coupled to a point-like optical emitter. We model the latter by its own resonant response function Ge of the form shown in Eq. C1, denoted by α = e, with oscillator strength fe, emission energy ωe, and narrow linewidth 
+
+γe ∼ 0, with χe = 0 for simplicity. This demonstration requires to first identify resonant response functions GFP and GPD for 1) and 2), respectively (as composited from their con-stituent elements by Eq. B3), then to identify their important parameters (the poles, their linewidths, and oscillator strengths), and finally to identify the conditions where “optical 40 cavities” 1) and 2) enable manipulation of the emitter. The latter conditions coincide with those for (ideally controllably) “strong coupling” and thus also emergent characteristics from the emitter-cavity response function G+ that composites GFP and GPD (Eq. B3). We will consider an emitter with resonant response We begin with 1), the Fabry-P´ erot cavity, comprising two parallel mirrors with reflectiv-ities r1,2 separated by a distance d as shown in Fig. 1. To describe the response function ˆGFP with a scalar, we consider only the amplitude of only a single plane wave “mode” |Epw )with transverse (in-plane) momentum q and longitudinal momentum kz = p(ω/c )2 − q2.Application of Eq. B3 composites the reflectance of both mirrors and the wave retarda-tion between them to obtain a familiar result for this scalar response function of the cavity [FB refs?], which we denote gFP (ω), as defined by ˆG+ ≡ ˆGFP = |Epw )gFP (ω)( jpw |, Here (jpw |Epw ) = 1 defines a modal current localized to one of the two mirrors. 
+
+gFP = ϵ
+
+1 − r1r2e2ik z d ≡ ϵδ(ω) ≈ −ϵ/∂ ωδ
+
+−δ0/∂ ωδ + ( ω0 − ω). (D1) Here scalar ϵ ≡ eiϕ through phase ϕ depends only on the longitudinal position where the response field is evaluated within the cavity, and scalar δ describes “distance” from resonance (mathematically, proximity to the nearest pole). The approximation expands δ ≈ δ0 + ∂ωδ ·
+
+(ω0 − ω) about (one such) ω0 where |δ| is minimized. Eq. D1 has the form of Eq. C1 when we identify: 
+
+γFP = −i δ0
+
+∂ωδ and fFP = − ϵω0∂ωδ . (D2) Expressions in Eq. D2 are quite general to a “single pole” (and ”single channel”) cavity response function, whence the condition of cavity strong coupling to the emitter follows Eq. C10 as: 
+
+fefF P > 12ω20
+
+γ2 
+
+> F P
+
+, implying − iϵf e > −i δ0
+
+ω0∂ωδ = Q−1. (D3) Here quantities on either side of the inequalities are assumed real-valued, and Q ≡ ω0/γ FP 
+
+denotes the cavity finesse. Resonance at ω0 demands kz (ω0) = πn/d for integer n, whence 
+
+ω0 = πnc/d when q = 0 (for simplicity). Near resonance then we have ∂ωδ = −2idR/c where 
+
+R ≡ r1r2 = (1 − δ0). The cavity finesse is then ω0/γ FP = 2 πR/ (1 − R) and the resonance oscillator strength is fFP = −iϵ/ (2 πR ). The Fabry-P´ erot cavity is unique in the sense that oscillator strength and linewidth are mutually determined by R. After placing the emitter at a position where ϵ = + i and tuning the cavity to ω0 ≈ ωe, cavity strong coupling to the emitter following Eq. D3 then demands a “proximity to resonance” smaller than: 
+
+δ0 = 1 − R < 2πf e
+
+1 + 2 πf e
+
+. (D4) For an emitter with weak oscillator strength ( e.g. supposing when polarized it emits weakly into the q-mode considered here), strong coupling simply demands ever smaller δ0 and ever larger finesse Q > f −1 
+
+> e
+
+.We next consider 2), the cavity formed by a (non-resonantly) polarizable point dipole (“pd”) over a resonantly reflective surface as shown in Fig. 1, which grossly approximates a near-field probe over surface with resonant reflectivity β(ω). To render ˆGpd a scalar 41 response, we consider only a single “mode”, a dipolar field |Epd ) generated by a z-oriented polarization of a point-like sphere with polarizability α0 and radius a << d , where d is the height of the sphere above the surface. The importance part of Eq. B6 is the quotient ˆGP /(1 − ˆGP ˆGE ) ≡ | Epd )gpd (ω)( jpd |, and ( jpd |E) essentially measures the amplitude of the 
+
+z-polarized component of a field |E) at the sphere’s center, with ( jpd |Epd ) ≡ 1. The well-known result [point dipole refs.] is: 
+
+gpd (ω) = α0
+
+1 − β(ω)χ0(2 d) with χ0(2 d) ≡ α0 · 2/ (2 d)3 . (D5) Here χ0(2 d) ≡ (jpd |EM
+
+> pd
+
+), where |EM
+
+> pd
+
+) denotes the field from an equivalent “mirror dipole” positioned distance d below the surface. Unlike in former literature, we utilize a Gaussian unit system for which a perfectly conducting sphere of radius a has polarizability α0 = a3.As in the main text we consider the case where β(ω) ≈ fβ ωβ /(ωβ − ω − iγ β ) is resonant at energy ωβ with quality factor Qβ = ωβ /γ β . As described in the main text, Eq. D5 in this case produces a Fano resonant lineshape. We can analyze the conditions for strong-coupling to a ( z−oriented) emitter on the ma-terial surface a vertical distance d below the polarizable point dipole (the “probe”) again using the approximation introduced in Eq. D1 together with definitions Eq. D2 and the conditions of Eq. D3. To uniformize our treatment of the point diple with that of the Fabry-P´ erot cavity, we can rewrite Eq. D5 as (je|Epd )2gpd (ω) = ϵδ(ω) with ϵ ≡ χ0(d)2/χ 0(2 d) and δ(ω) ≡ χ−10 (2 d) − β(ω). (D6) Here |je) signifies the position (a distance de from the point dipole) and orientation of the point-like emitter, and we subsume the dimensionless form factor ( je|Epd )2 = χ0(de)2 into the oscillator strength according to the prescription of Eq. C9. We first identify the resonant frequency ωpd and linewidth γdp of the combined “optical cavity” system that minimizes δ(ω)and then identify its effective oscillator strength by Eq. D2 as follows: 
+
+ωpd = (1 − fβ χ0(2 d)) ωβ , γdp = γβ , and fpd = χ0(de)2 fβ χ0(2 d)1 − fβ χ0(2 d) (D7) The Fano lineshape accompanying fpd is discussed in the main text. As with the Fabry-P´ erot cavity, we next consider how the “optical cavity” formed by Eq. D7 accentuates strong coupling to an emitter over the case where the emitter is placed directly into inter-action over the surface with β(ω). Assuming this cavity ( ωpd ) is brought into resonance with the emitter, the enhancement is identifiable from Eq. C10 as ( fpd /f β ) ( Qpd /Q β )2 =
+
+χ0(d)χ0(2 d) (1 − fβ χ0(2 d)). Although increasing fβ leads to reduction of cavity quality fac-tor through ωpd , the factor χ0(d)χ0(2 d) represents enhancement of the electric field within the gap between the polarizable dipole and surface. In summary then, the strong coupling condition for the simplified “point dipole probe-surface cavity” is: 2χ0(de)2 · fβ χ0(2 d)1 − fβ χ0(2 d)
+
+ωpd 
+
+γβ
+
+2
+
+> f −1 
+
+> e
+
+. (D8) Here we have assumed that configurational resonance was leveraged to bring ωpd (d) (Eq. D7) into resonance with the emitter. Moreover, strong coupling clearly depends on maximizing oscillator strength of the probe-sample cavity by bringing fβ χ0(2 d) as close to unity as 42 possible. Comparison to Eq. D4 for the Fabry-P´ erot cavity allows identifying the left hand side of Eq. D8 as an effective “cavity finesse” for the “probe-surface” configuration, when a single probe-cavity eigenmode is considered. These equations are the central results of this appendix. The realistic d-dependent value of χ0 is thus an essential parameter towards forming a practical probe-cavity capable of strong coupling to an emitter with oscillator strength fe on the material surface. 
+
+Appendix E: Sommerfeld integrals for self- and mirror-interaction kernels of an axisymmetric nanoscopy probe 
+
+In this work, we use semi-analytic real-space expressions to evaluate self-interaction ker-nels Φ S (z, z ′) and AS (z, z ′) with high fidelity adaptive numerical quadrature. These kernels follow a standard method of moments that implements the electric field integral equations for perfectly conducting bodies of revolution as elaborated in [ref. Gibson]. Here we detail the (non-standard) explicit momentum-resolved form of interaction kernels used through-out the work to describe fields reflected from a half-space a distance zp below the apex of the axisymmetric probe. Meanwhile, here we present a non-standard angular spectrum representation for these interactions suitable for separately addressing their “near-field” and “far-field” components. Working in cylindrical coordinates where r is specified by ρ, ϕ, z and using the Lorenz gauge for the electromagnetic four-potential, we consider first the scalar potential generated at coordinate r by a ring of radius ρ′ and charge Q centered above the origin at coordinate z′:Φz′ (r) = Q
+
+Z 2π
+
+> 0
+
+dϕ ′
+
+2π g0 (r|ρ′, ϕ ′, z ′) with 14π
+
+ k2 − ∇ 2 g0(r|r′) = δ(r − r′). (E1) Here k2 ≡ ω2/c 2 is the squared free-space wave-vector of light and g0 is the Green function for the Helmholtz equation, which we decompose by the Weyl identity as 3:Φz′ (r) = Q
+
+Z 2π
+
+> 0
+
+dϕ ′
+
+2π
+
+Z ∞
+
+> 0
+
+dq iq kz
+
+eik z |z−z′|
+
+Z 2π
+
+> 0
+
+dϕ q
+
+2π eiq (ρ cos ϕq −ρ′ cos( ϕq −ϕ′)) . (E2) Here q is the magnitude of in-plane momentum associated with a plane wave propagating along k = kz ˆz + q, where kz ≡ pk2 − q2 and angle ϕq denotes the orientation of q relative to that of the observation point r. Evaluating both angular integrals, Φ z′ can be written in two parts: Φz′ (r) = Φ FF  
+
+> z′
+
+(r) + Φ NF  
+
+> z′
+
+(r) (E3) =
+
+h Z k
+
+> 0
+
+dq iq kz
+
+J0(qρ )J0(qρ ′)eik z |z−z′| (E4) +
+
+Z ∞
+
+> 0
+
+dκ J 0(√κ2 + k2 ρ)J0(√κ2 + k2 ρ′)e−κ|z−z′|
+
+i
+
+Q (E5) Here κ ≡ pq2 − k2 is the propagation constant along z associated with a rotationally symmetric evanescent “Bessel beam” field, and Jn denotes a Bessel function of the first kind of order n. Now, equating Q with the charge dz ′λ(z′) on an annular element of the scattering probe and evaluating at ρ′ = R(z′) ≡ R z′ and ρ = R(z) ≡ R z , we see that Eqs. 43 E5 and E4 identify the near-field q > ω/c and far-field q < ω/c parts, respectively, of the self-interaction kernel Φ S (z, z ′). However, it is most convenient to describe eigenmodes by eigencurrents |jν ) rather than by eigencharges |Qν ). To this end the total current I(z′) flowing on an annulus of the probe at coordinate z′ possessing localized charge Q(z′) is described by the continuity relation 
+
+∂z′ I = iωQ (z′). Integration by parts then allows expressing the scalar potential in Eqs. E4-E5 as: Φz′ (r) = Φ FF  
+
+> z′
+
+(r) + Φ NF  
+
+> z′
+
+(r) (E6) = ( iω )−1 h Z k
+
+> 0
+
+dq q J 0(qρ )J0(qρ ′)eik z |z−z′| (E7) +
+
+Z ∞
+
+> 0
+
+dκ κ J 0(√κ2 + k2 ρ)J0(√κ2 + k2 ρ′)e−κ|z−z′|
+
+i
+
+I(z′) (E8) Our primary purpose is to apply these Sommerfeld integrals to evaluate the interaction kernel Φ R(z, z ′) for fields emitted from the probe at z′ and reflected from the sample back to 
+
+z. This reflected kernel follows from suitable modification of that direct kernel comprising (iω )−1 [. . . ] in Eqs. E7-E8. The reflectivity for a sample with translational invariance is given by the Fresnel coefficient for p-polarized light rp(q), whereupon Φ R(z, z ′) is easily obtained from Eqs. E7 and E8 by first taking z = 0 to be the bottom-most coordinate of the probe, by sending z′ → − z′ − 2zP , pre-multiplying the integrands by rp(q), and finally inverting the sign of the charged “mirror” probe: ΦR(z, z ′) = −(iω )−1
+
+h Z k
+
+> 0
+
+dq r p(q)q J 0(qRz )J0(qRz′ )eik z |z+z′+2 zp| (E9) +
+
+Z ∞
+
+> 0
+
+dκ r p(qκ)κ J 0(√κ2 + k2 Rz )J0(√κ2 + k2 Rz′ )e−κ|z+z′+2 zp|
+
+i
+
+(E10) We now turn our attention to the vector potential. Let us consider an axisymmetric cur-rent element which flows parallel to the unit vector ˆξ(ϕ′) = (ˆ z + ∂z′ R ˆρ(ϕ′)) /p1 + ( ∂z′ R)2
+
+uniformly along circumferential points of the same annular ring. The current element asso-ciated with an area element dS ′ on the annular ring given by: 
+
+dj′ ≡ dS ′ ˆξ(ϕ′)I(z′)/2π with dS ′ = dz ′dϕ ′Rz′
+
+p1 + ( ∂z′ R)2 (E11) Here I(z′) denotes the integrated tangential current entering the ring, which will be related to the surface charge density by charge continuity. We proceed to identify the vector potential 
+
+A sourced by the annular ring current using again the Green function for the Helmholtz equation and its decomposition by the Weyl identity: 
+
+Az′ (r) = 1
+
+c
+
+Z 2π
+
+> 0
+
+dϕ ′g0(r|r′)dj′(ϕ′) (E12) = dz ′ I(z′)
+
+c
+
+Z 2π
+
+> 0
+
+dϕ ′
+
+2π g0 (r|R z′ , ϕ ′, z ′) ( ˆ z + ∂z′ R ˆρ(ϕ′)) (E13) The z-component of Az′ is evidently the same as given by Eqs. E4 and E5 but with Q
+
+substituted by dz ′I(z′). Meanwhile, the radially polarized field is given by: 
+
+Az′ ρ(r) = dz ′∂z′ RI(z′)
+
+c
+
+Z 2π
+
+> 0
+
+dϕ ′
+
+2π
+
+Z ∞
+
+> 0
+
+dq iq kz
+
+eik z |z−z′|
+
+Z 2π
+
+> 0
+
+dϕ q
+
+2π ˆρ · ˆρ′(ϕ′) eiq (ρ cos ϕq −R z′ cos( ϕq −ϕ′)) 
+
+(E14) 44 Introducing a change of variables ϕ′ 
+
+> q
+
+≡ ϕq − ϕ′ implies ˆ ρ · ˆρ′ = cos ϕ′ = cos( ϕq − ϕ′
+
+> q
+
+), and preserving only terms even in ϕq and ϕ′ 
+
+> q
+
+makes the angular integral separable: 
+
+−
+
+Z 2π
+
+> 0
+
+dϕ ′
+
+> q
+
+2π
+
+Z 2π
+
+> 0
+
+dϕ q
+
+2π cos ϕ′ 
+
+> q
+
+cos ϕq eiq (ρ cos ϕq −R z′ cos ϕ′ 
+
+> q
+
+) = −(−i)2J1(qρ )J1(qRz′ ). (E15) Combining these results, the vector potential Az′ = AFF  
+
+> z′
+
++ ANF  
+
+> z′
+
+can be expressed as a sum of “far-field” and “near-field” contributions given by: 
+
+AFF  
+
+> z′
+
+(r) = dz ′ I(z′)
+
+c
+
+Z k
+
+> 0
+
+dq iq kz
+
+h
+
+J0(qρ )J0(qRz′ ) ˆ z + ∂z′ R · J1(qρ )J1(qRz′ ) ˆ ρ
+
+i
+
+eik z |z−z′| (E16) 
+
+ANF  
+
+> z′
+
+(r) = dz ′ I(z′)
+
+c
+
+Z ∞
+
+> 0
+
+dκ 
+
+h
+
+J0(qκρ)J0(qκRz′ ) ˆ z + ∂z′ R · J1(qκρ)J1(qκRz′ ) ˆ ρ
+
+i
+
+e−κ|z−z′| (E17) Here we use the shorthand qκ = √κ2 + k2.In the case that we only have knowledge of the charge distribution λ(z′) on the scatterer, we can leverage the continuity relation ∂z′ I(z′) = iωλ (z′) and integration by parts with respect to z′ to also compute Az′ sourced by λ(z′) up to a physically irrelevant constant A0:
+
+AFF  
+
+> z′
+
+(r) = dz ′λ(z′) · − ik 
+
+Z z′
+
+> 0
+
+dz′
+
+Z k
+
+> 0
+
+dq iq kz
+
+h
+
+J0(qρ )J0(qRz′ ) ˆ z − ∂z′ R · J1(qρ )J1(qRz′ ) ˆ ρ
+
+i
+
+eik z |z−z′|
+
+(E18) 
+
+ANF  
+
+> z′
+
+(r) = dz ′λ(z′) · − ik 
+
+Z z′
+
+> 0
+
+dz′
+
+Z k
+
+> 0
+
+dq 
+
+h
+
+J0(qκρ)J0(qκRz′ ) ˆ z − ∂z′ R · J1(qκρ)J1(qκRz′ ) ˆ ρ
+
+i
+
+e−κ|z−z′|
+
+(E19) Recalling that the symmetric self-interaction kernel AS follows from Az′ (viz. evaluating 
+
+−ik ˆξ(r) · Az′ and integrating on ∂ΩS along ˆξ), we finally obtain: 
+
+AS (z, z ′) = −k2
+
+Z z
+
+> 0
+
+dz
+
+Z z′
+
+> 0
+
+dz′
+
+" Z k
+
+> 0
+
+dq iq kz
+
+
+
+J0(qRz)J0(qRz′ ) (E20) 
+
+− ∂z′ R∂zR · J1(qRz)J1(qRz′ )
+
+
+
+eik z |z−z′|
+
++
+
+Z ∞
+
+> 0
+
+dκ 
+
+
+
+J0(qκRz)J0(qκRz′ )
+
+− ∂z′ R∂zRz · J1(qκRz)J1(qκRz′ )
+
+
+
+e−κ|z−z′|
+
+#
+
+.
+
+As noted in 5, for a scatter of dimension L, the magnitude of this interaction kernel com-pared with that for the scalar potential scales with ( L/λ )2 with λ = 2 πc/ω the free-space wavelength of light. With regard to the vector potential, we lastly consider its interaction kernel for reflected fields from the sample AR(z, z ′). With the reflectance of a translationally invariant sample 45 again given by rp(q), we obtain AR(z, z ′) from Eq. E20 by first sending z′ → − z′ − 2zp, pre-multiplying the integrands by rp(q), and finally inverting the sign of the term associated with transverse (radial) currents – these actions correspond to charge, parity, and time reversal: 
+
+AR(z, z ′) = −k2
+
+Z z
+
+> 0
+
+dz
+
+Z z′
+
+> 0
+
+dz′
+
+" Z k
+
+> 0
+
+dq r p(q) iq kz
+
+
+
+J0(qRz)J0(qRz′ ) (E21) + ∂z′ R∂zR · J1(qRz)J1(qRz′ )
+
+
+
+eik z |z+z′+2 zp|
+
++
+
+Z ∞
+
+> 0
+
+dκ r p(qκ)
+
+
+
+J0(qκRz)J0(qκRz′ )+ ∂z′ R∂zRz · J1(qκRz)J1(qκRz′ )
+
+
+
+e−κ|z+z′+2 zp|
+
+#
+
+Finally, drawing from Eqs. E10 and E21 and bringing rp(q ≫ ω/c ) ≈ β outside the integrals, we can define the kernel for the near-field propagator ˆΨNF  
+
+> R, 0
+
+in the probe-sample gap: ΨNF 
+
+> R, 0
+
+(z, z ′) = −β
+
+Z ∞
+
+> 0
+
+dκ 
+
+h
+
+J0(qκRz )J0(qκRz′ )e−κ|z+z′+2 zp| (E22) + k2
+
+Z z
+
+> 0
+
+dz
+
+Z z′
+
+> 0
+
+dz′
+
+
+
+J0(qκRz)J0(qκRz′ )+ ∂z′ R∂zRz · J1(qκRz)J1(qκRz′ )
+
+
+
+e−κ|z+z′+2 zp|
+
+i
+
+For a prescribed axisymmetric scatterer profile R(z) and an N -node quadrature grid 
+
+{zi}, these expressions are suitable to build matrix representations for the operators ˆΨS,R =ˆΦS,R + ˆAS,R , whereby state vectors |λ) are approximated by their evaluations {λ(zi)} at the quadrature nodes. 
+
+Appendix F: Properties of the probe-cavity eigenmodes 
+
+In this appendix we address the following topics: i) We derive the expression for elements of the eigenmode scattering matrix which describe the response of a material surface at z = 0 below the probe. ii) We relate the integrated energy flux SP radiated by an eigenmode excited on the probe to the imaginary part of its corresponding eigenvalue ρν . iii) We related the electromagnetic energy density associated with a single eigenmode excited on an isolated probe to the real part of its corresponding eigenvalue ρν . iv) We show that Ohmic losses on reasonably metallic probes are practically negligible compared to radiative ones and quantitatively unimportant for the predictions in this work. v) In the case of a local surface reflectivity, we quantify how β controls the rate of Ohmic absorption by the surface associated to a single eigenmode |Eν ). This determination is essential to predicting the “lineshape” of optical nanoscopy experiments that utilize e.g. spectroscopically resolved photothermal expansion as a measure of surface composition. 
+
+i) Probe-cavity eigenmodes provide an orthogonal basis of fields in the plane of the sample to fully describe probe-sample interactions mediated by p-polarized fields. Except when surface reflection is entirely local ( i.e. rp(q) ≈ β), reflection from the sample surface generally induces “mixing” between eigenmodes described by a reflectivity matrix βμν . Here 46 ˆGS will denote the Green dyadic response function of the material surface below the probe, whence ˆGS |jν ) supplies the surface-scattered field in response to eigenmode |jν ). We find four equivalent expressions for βμν evaluated in the z = 0 + plane of the sample: 
+
+βμν ≡ − (jμ| ˆGS |jν ) = 14π
+
+Z
+
+> z=0
+
+dA 
+
+> 4
+
+X
+
+> α=1
+
+sα
+
+
+
+Φαμ ∂z ˜Φαν − Φαν ∂z ˜Φαμ
+
+
+
+(F1) = −i
+
+Z ∞
+
+> 0
+
+dq q · kz rp(q)
+
+> 4
+
+X
+
+> α=1
+
+sα Φαμ (q) Φ αν (q) (F2) 
+
+≈
+
+Z ∞
+
+> 0
+
+dq q 2 · rp(q) Φ μ(q) Φ ν (q) (F3) 
+
+≈ 14π
+
+Z
+
+> z=0
+
+dA 
+
+
+
+Φμ(r)∂z ˜Φν (r) − Φν (r)∂z ˜Φμ(r)
+
+
+
+(F4) Here {sα} = (+1 , −1, −1, −1) is a 4-potential summation signature, ˜Φαν is the component of the potential scattered by the sample, kz = pω2/c 2 − q2, and Φ αν (q) is the angular spectrum representation (Hankel transform) of the potential Φ αν (r) evaluated at z = 0, with r the in-plane radial coordinate. Eq. F3 adopts the quasistatic approximation for the probe-sample interaction and discards the vector potential, whereas Eq. 21 is its real-space counterpart. These expressions are used, respectively, to predict spectra and imaging results showcased in the main text. The scattering matrix β with elements βμν together with the diagonal matrix ρ with entries ρν determine the excited eigenmode amplitudes through ( β − ρ)−1.
+
+ii) Eigenvalues ρν associated to the eigenmodes describe not only their excitation in proximity to a surface, but also the flow of radiant energy from the probe. For instance, let us consider the energy radiated by current distributions on the probe proportional to the first eigencurrent |jP ) = |jν )( jν |Eext ), where the trailing matrix element describes the eigenmode excitation amplitude. According to Poynting’s theorem (Appendix A) the energy flux SP radiated by such a current is given by: 
+
+SP ≡ c
+
+8π
+
+Z
+
+> r→∞
+
+dA · EP × B∗ 
+
+> P
+
+= −12Re( j∗ 
+
+> P
+
+|EP ) = −12Re( j∗ 
+
+> ν
+
+| ˆG0|jν ) · (jν |Eext ) 2
+
+= −uν
+
+2 Im ρν · (jν |Eext ) 2 (F5) Here ˆG0 is the free-space Green dyadic function, and we have used the fact that ( jν | ˆG0|jν ) ≡
+
+(jν |ρν ˆEQS S |jν ) and defined a dimensionless constant uν ≡ − i (j∗ 
+
+> ν
+
+| ˜EQS  
+
+> ν
+
+) which is uncondition-ally positive, owing to the fact that ˆEQS S /iω is positive definite (see Appendix E). The energy factor uν appearing here is of order unity, and although it could be removed through suitable normalization of |jν ), our choice of normalization for eigenmodes presented in the main text instead opts to avoid analogous factors in Eqs. 17 & 18; this choice though ad hoc prioritizes simplicity in the probe-sample response function. Eq. F5 implies that Im ρν < 0, which Eq. 16 in fact guarantees owing to the structure of ˆEP .The cumulative brightness of each eigenmodes is therefore also related to the imaginary elements of ρν as follows. Consider an aperture of solid angle A large enough to collect most scattered radiation from each excited eigenmode; in this case the aperture-averaged 47 amplitude ⟨Escat ,ν ⟩A associated with eigencurrent |jν ) is bounded by: 
+
+|⟨ Escat ,ν ⟩A| ∝ ⟨Bν (θ)⟩2
+
+> A
+
+ρν − β ≤ −uν · Im ρν
+
+|ρν − β| , (F6) since |⟨ Bν (θ)⟩2
+
+> A
+
+| ∝ |⟨ (jν |EPW ,θ )2⟩A|≤ ⟨| (jν |EPW ,θ )|2⟩A = ⟨| Eν (θ)|2⟩A = −uν · Im ρν .
+
+The ultimate proportionality invokes BP ≈ EP at distant aperture points and thus identifies the integrated Poynting flux from |jν ) per unit eigenmode amplitude. Eq. F6 assumes that illumination and detection of modes with complicated ( e.g. quadrupole and higher order) radiation patterns are subject to aperture-cancellation. Therefore Eq. F6 nevertheless establishes relative bounds on the “detectability” of eigencurrents induced through probe-sample scattering. Supposing that |jν ) are ordered by increasing |ρν |, then while |ρν | < |β|
+
+their contribution increases with ν up to a maximum where ρν ∼ β, whereas eigencurrents for which ρν ≫ β will provide ever decreasing contributions due to aperture cancellation of their complex radiation patterns Bν (θ). While rapidity of this cancellation may be known only through explicit calculation of ⟨Bν ⟩A, the main text shows that Bν for increasing ν
+
+describe radiation from increasingly multipolar eigenmodes |jν ), which supports the present argument. 
+
+iii) By an analogous calculation to Eq. F5, we find the electromagnetic energy stored in the associated eigenfield as 
+
+UP = −Im 12ω (j∗ 
+
+> P
+
+|EP )= + uν
+
+2ω Re ρν · (jν |Eext ) 2. (F7) Similarly, this result enables description of the confinement of eigenmode fields. The energy of interaction between the probe and its “mirror image” ( e.g. when the sample surface below presents the reflectivity β = 1 of a perfect mirror) is proportional to ( j∗ 
+
+> P
+
+|ES ) ≈ (j∗ 
+
+> P
+
+| ˆEQS  
+
+> S
+
+|jP ). Using the fact that |jν ) solve the generalized eigenvalue problem Eq. 16, the ratio of this energy scale and that given in Eq. F7 is precisely 1 /Re ρν . Therefore, as discussed in the main text, this factor therefore provides an acceptable quantitative measure of the confinement of eigenmode energy into the probe-sample gap. Furthermore, combining Eq. F7 with Eq. F5 implies that the ratio SP /UP = ω × − Im ρν /Re ρν ≡ ω tan( −φν ) describes the “radiance” of the eigenfield analogous to the “loss tangent” of dielectrics refs?, except that here −φν describes the complex angle of ρ∗ 
+
+> ν
+
+and only radiative loss of energy is considered from the (assumed perfectly conducting) probe considered. 
+
+iv) We now consider whether the assumption of a perfect electrically conducting probe is quantitatively relevant to the case of a realistic nanoscopy experiment. The answer can be evaluated with Eq. A9 by calculating Ohmic loss associated with excited eigenmodes when the probe conductivity σ is finite, and comparing the result to radiative losses that are assumed the only contribution to Im ρν . In the hypothetical case where only a single eigenmode is excited on the probe, Ohmic absorption associated with |jν ) is proportional to Re( j∗ 
+
+> ν
+
+|E), where the contributing part of |E) = (1 + ˆGS )|Eν ) is the total field “transmitted” into the probe volume and ˆGS is the response function of the sample. On the probe, this field differs from the “incident” one ˆθ∂P ˆGS |Eν ) ≈ − βEQS S |jν ) by approximately the surface impedance ZP ≡ p ω 
+
+> 4πσ
+
+≪ 1 of the probe conductivity σ. Approximating the material 48 surface reflectivity in the quasistatic limit by constant β, Ohmic loss is then approximately: +12ZP Re( j∗ 
+
+> ν
+
+|βEQS S |jν ) = 12ZP Re 
+
+ βρν
+
+(j∗ 
+
+> ν
+
+|E QS P |jν )
+
+
+
+= 12ZP Re 
+
+
+
+−i βρν
+
+uν
+
+
+
+= ZP
+
+uν
+
+2 Im βρν
+
+. (F8) This result should be compared with Eq. F5 for unit eigenmode amplitude. For realizable values of β of order unity and a metallic probe conductivity with plasma frequency ωp and scattering rate γ, Ohmic losses are greatest at frequencies ω < γ but still smaller than radiative ones by approximately ZP ∼ qωγ ω2
+
+> p
+
+. For metallic probes with γ < ω p utilized at infrared frequencies ω ≪ ωp, we see that Ohmic losses are orders of magnitude less relevant to the “actual” total eigenmode loss encoded in (the imaginary part of) ρν than the radiative ones we have fully included in their calculation. 
+
+v) Finally, we quantify the rate of Ohmic absorption by a material surface described by local reflectivity β(ω) when excited by a single eigenmode |Eν ) from a nanoscopy probe. We are motivated by the suggested mechanism of so-called photothermal expansion nanoscopy, whereby a nanoprobe mechanically detects optical absorption by the proximate sample sur-face through thermal expansion, which exerts a (transient) force on the probe ref PTIR. We note that in a practical experiment, the amplitude of the eigenmode |jν ) on the probe is given by eν in square brackets in Eq. 15. We omit this amplitude below and restore it only in the final result. An elegant means of computing power dissipated by the surface reflectivity β replaces physical currents within the medium ( z < 0) with equivalent ones on a “mirror probe” ( cf. Fig. 1a) that, after inverting the z-axis, occupies now the same physical space previously occupied by the physical probe. In this case, an eigencurrent on the physical probe Mz |jν ) associates with a current |jMP ) = −β|jν ) on the mirror probe. Here the operator ˆMz inverts the vector z−component and the position of |jν ) across z = 0. Aside from their relative spatial inversion, currents on the physical probe differ in magnitude from those on the mirror probe by a factor 1 /β . Eq. A7 now describes the rate of Ohmic loss as: +12Re( j∗
+
+> MP
+
+|Etot ) = 12Re( j∗
+
+> MP
+
+|
+
+
+
+|EMP ) + |EP )
+
+
+
+= 12Re 
+
+
+
+(j∗
+
+> MP
+
+| ˆEP |jMP ) − 1
+
+β (j∗
+
+> MP
+
+| ˆEQS  
+
+> S
+
+|jMP )
+
+
+
+= 12|β|2Re 
+
+
+
+(j∗ 
+
+> ν
+
+|ρν ˆEQS  
+
+> S
+
+|jν ) − 1
+
+β (j∗ 
+
+> ν
+
+| ˆEQS  
+
+> S
+
+|jν )
+
+
+
+= uν
+
+2 |β|2
+
+
+
+−Im ρν − Re iβ
+
+
+
+= uν
+
+2
+
+ Im β − | β|2Im ρν
+
+ (F9) Above we have used the previously defined energy factor uν , the previously defined inverting and non-inverting “field generators” ˆEP and ˆEQS S , and their relation to the eigencurrents |jν )given by Eq. 16. Restoring the β-dependent excitation amplitude eν of eigenmodes, we arrive at an ex-49 pression for probe-induced absorption by the material surface: 
+
+∂tUabs . ≈
+
+> ∞
+
+X
+
+> ν
+
+uν
+
+2
+
+ Im β − | β|2Im ρν
+
+ ∞X
+
+> μ
+
+ 1
+
+ρ − β
+
+
+
+> νμ
+
+(jμ|Eext )
+
+> 2
+
+(F10) This result combines Eq. F9 with the ˆEQS  
+
+> S
+
+-orthogonality of excited eigenmodes |jν ). Eq. F10 presents a striking observation: although absorption nanoscopy methods like photother-mal expansion microscopy might be assumed to probe strictly the lossy part of the surface response Im β, it is clear that photothermal spectroscopies remain subject to the “Fano reso-nant” lineshape inherited from the eigenmode excitation amplitudes. Furthermore, recalling that lim d→0 Im ρν (d) = 0, the term proportional to |β|2 may or may not be important, de-pending on the probe-sample proximity d, which is typically brought to zero (contact) in photothermal absorption nanoscopies. (Although the coordinate d = 0 is strictly “singular” for the EigenProbe expansion, predictions for d ≳ 0 evolve smoothly to that limit and allow practical calculation with a finite number of modes ν ≲ 20.) This result (Eq. F10) thus sug-gests that the spectral lineshape of photothermal nanoscopies around absorptive modes of a sample surface is not a reliable indicator to distinguish between so-called “photo-induced force” and photothermal expansion mechanisms for mechanical signals induced on a nano-probe ref. Raschke. Future work should explore alternate means of distinguishing these physically distinct mechanisms of nano-optical contrast in forthcoming nanoscopy experi-ments. 
+
+[1] P. Lalanne, W. Yan, K. Vynck, C. Sauvan, and J.-P. Hugonin, Light interaction with photonic and plasmonic resonances, Laser & Photonics Reviews 12 , 1700113 (2018), https://onlinelibrary.wiley.com/doi/pdf/10.1002/lpor.201700113. [2] F. Alpeggiani, N. Parappurath, E. Verhagen, and L. Kuipers, Quasinormal-mode expansion of the scattering matrix, Phys. Rev. X 7, 021035 (2017). [3] L. Novotny and B. Hecht, Principles of Nano-Optics , Vol. 9781107005 (Cambridge University Press, Cambridge, UK, 2009) pp. 1–564. [4] B. Y. Jiang, L. M. Zhang, A. H. Castro Neto, D. N. Basov, and M. M. Fogler, Gener-alized spectral method for near-field optical microscopy, Journal of Applied Physics 119 ,10.1063/1.4941343 (2016). [5] A. McLeod, P. Kelly, M. Goldflam, Z. Gainsforth, A. Westphal, G. Dominguez, M. Thiemens, M. Fogler, and D. Basov, Model for quantitative tip-enhanced spectroscopy and the extraction of nanoscale-resolved optical constants, Physical Review B - Condensed Matter and Materials Physics 90 , 10.1103/PhysRevB.90.085136 (2014). 
+
+50

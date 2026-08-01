@@ -1,0 +1,257 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-01T21:25:36.246195+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 6,
+    "quick_skim_target": 11,
+    "quick_selected": 6
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2607.23064v2",
+      "source": "arxiv",
+      "title": "Size characterization of neutral rare-gas clusters based on time-resolved polarization anisotropy measurements",
+      "abstract": "The size determination of neutral clusters is experimentally challenging. In particular, weakly-bound rare-gas clusters tend to fragment upon ionization, resulting in systematic errors in cluster size studies. In contrast, characterization of the temporal polarization anisotropy dephasing provides a soft detection scheme for cluster size estimation, which avoids fragmentation of the clusters. Here, we present a systematic experimental study of argon and neon clusters in the size range of 50 to 10.000 atoms using this technique. In order to extract the mean cluster sizes from the data, we present an efficient analytical model of the polarization anisotropy dephasing of an ensemble of doped clusters. The approach shows remarkable sensitivity to small changes in the mean cluster size of just a few tens of atoms and allows us to refine the widely used Hagena scaling law for the estimation of rare-gas cluster sizes.",
+      "authors": [
+        "Arne Morlok",
+        "Grzegorz Kowzan",
+        "Yilin Li",
+        "Ulrich Bangert",
+        "Frank Stienkemeier",
+        "Lukas Bruder"
+      ],
+      "primary_category": "physics.atm-clus",
+      "categories": [
+        "physics.atm-clus"
+      ],
+      "published": "2026-07-25T06:13:06+00:00",
+      "link": "https://arxiv.org/pdf/2607.23064v2",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Time-resolved polarization anisotropy for nanocluster size characterization",
+      "llm_evidence_cn": "时间分辨偏振各向异性用于纳米团簇尺寸表征",
+      "llm_evidence": "时间分辨偏振各向异性用于纳米团簇尺寸表征",
+      "canonical_evidence": "时间分辨偏振各向异性用于纳米团簇尺寸表征",
+      "llm_tldr_en": "This paper presents time-resolved polarization anisotropy measurements to determine neutral rare-gas cluster sizes without fragmentation, an approach useful for time-resolved nanomaterial characterization.",
+      "llm_tldr_cn": "针对中性稀有气体团簇电离碎片化导致尺寸测量不准的问题，本文采用时间分辨偏振各向异性退相过程作为软探测方案，避免团簇碎裂。作者系统测量了氩和氖团簇（50–10000个原子），并提出解析模型提取平均团簇尺寸。该方法为时间分辨的纳米颗粒表征提供了非破坏性手段，与iSCAT等时间分辨散射技术互补。",
+      "llm_tldr": "针对中性稀有气体团簇电离碎片化导致尺寸测量不准的问题，本文采用时间分辨偏振各向异性退相过程作为软探测方案，避免团簇碎裂。作者系统测量了氩和氖团簇（50–10000个原子），并提出解析模型提取平均团簇尺寸。该方法为时间分辨的纳米颗粒表征提供了非破坏性手段，与iSCAT等时间分辨散射技术互补。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.22867v1",
+      "source": "arxiv",
+      "title": "AI-interpreted Optical Scattering for Robust and Focal Depth-Aware Imaging",
+      "abstract": "Optical scattering has conventionally been regarded as an impediment in imaging research due to the degradation of image quality during reconstruction. Nevertheless, this study explores two cases in which optical scattering may serve a beneficial role in image reconstruction tasks. We compared the No Scattering MNIST dataset with three Scattering MNIST datasets, each generated under distinct scattering conditions. To assess the information content of the resulting speckle patterns, we employed a Variational Autoencoder (VAE) approach which achieves accuracy comparable to state-of-the-art deep learning approaches, but has an interpretable latent space. We find that scattering can enhance data robustness against spatial pixel loss by effectively distributing information. We also demonstrate that scattering can enable distinctions of focal depth information. We anticipate that these findings will contribute to more efficient imaging techniques, particularly in the presence of obstacles and three-dimensional signals.",
+      "authors": [
+        "Eunji Ko",
+        "Patrick Ross",
+        "Corey Hart",
+        "Wolfgang Losert"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2026-07-24T19:14:24+00:00",
+      "link": "https://arxiv.org/pdf/2607.22867v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "optical scattering imaging with AI interpretation, relevant to scattering-based microscopy like iSCAT",
+      "llm_evidence_cn": "利用人工智能解读光学散射信号，与iSCAT等散射显微技术相关",
+      "llm_evidence": "利用人工智能解读光学散射信号，与iSCAT等散射显微技术相关",
+      "canonical_evidence": "利用人工智能解读光学散射信号，与iSCAT等散射显微技术相关",
+      "llm_tldr_en": "Optical scattering, usually seen as detrimental, can improve image robustness: a VAE with interpretable latent space analyzes scattering MNIST speckle patterns, achieving accuracy comparable to deep learning while revealing how scattering encodes information.",
+      "llm_tldr_cn": "光学散射通常被视为成像中的干扰因素，但本文发现其可在图像重建中发挥积极作用。作者构建了不同散射条件下的MNIST数据集，并采用具有可解释隐空间的变分自编码器（VAE）分析散斑图样的信息内容。结果表明散射可增强图像对像素缺失的鲁棒性，同时通过隐空间解释了散射对信息编码的影响，为散射型显微成像技术（如iSCAT）的图像处理提供了新思路。",
+      "llm_tldr": "光学散射通常被视为成像中的干扰因素，但本文发现其可在图像重建中发挥积极作用。作者构建了不同散射条件下的MNIST数据集，并采用具有可解释隐空间的变分自编码器（VAE）分析散斑图样的信息内容。结果表明散射可增强图像对像素缺失的鲁棒性，同时通过隐空间解释了散射对信息编码的影响，为散射型显微成像技术（如iSCAT）的图像处理提供了新思路。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.25128v1",
+      "source": "arxiv",
+      "title": "Field-Induced Dissociation Reveals Excitonic Long-Range Photocarrier Transport in Bulk-Insulating Bi2Se3 Nanoribbons",
+      "abstract": "Photoexcited charge carriers in topological insulators display anomalously long-range transport at cryogenic temperatures, but the underlying mechanism remains under debate. Here we use a transverse electric field as a discriminating probe of photocarrier dynamics in bulk-insulating Sb-doped Bi2Se3 nanoribbons, combining scanning photocurrent microscopy (SPCM) with ultrafast transient photovoltage (TPV) measurements. SPCM shows that suppression of the photocurrent requires a transverse electric field nearly 50 times larger than that needed to deflect free carriers, yet comparable to the expected exciton dissociation field. TPV measurements at 12 K and low excitation fluence reveal that the photocarrier diffusivity exceeds the value implied by the Einstein relation and the measured drift mobility by more than an order of magnitude, a bound that holds even at the lower end of the fitting uncertainty. Together, these observations indicate that the long-range photoresponse is not carried by free charge carriers but by a charge-neutral correlated state.",
+      "authors": [
+        "Rodrigo Becerra Silva",
+        "Xiang Yi",
+        "Ziyi Song",
+        "Dong Yu"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.str-el"
+      ],
+      "published": "2026-07-27T22:46:42+00:00",
+      "link": "https://arxiv.org/pdf/2607.25128v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved photocarrier transport study comparable to stroboSCAT",
+      "llm_evidence_cn": "时间分辨光载流子输运研究，与stroboSCAT成像目标可比",
+      "llm_evidence": "时间分辨光载流子输运研究，与stroboSCAT成像目标可比",
+      "canonical_evidence": "时间分辨光载流子输运研究，与stroboSCAT成像目标可比",
+      "llm_tldr_en": "Using SPCM and ultrafast TPV, this paper shows photocarrier transport in Bi2Se3 nanoribbons is excitonic, requiring ~50x larger field to suppress photocurrent; key for interpreting semiconductor carrier-transport imaging like stroboSCAT.",
+      "llm_tldr_cn": "拓扑绝缘体纳米带在低温下表现出反常的长程光载流子输运，但其机制存在争议。本文将扫描光电流显微术与超快瞬态光电压结合，利用横向电场区分自由载流子与激子输运，发现抑制光电流所需场强约为自由载流子偏转的50倍。结果表明输运由激子解离主导，为理解半导体纳米结构中的光载流子动力学提供了关键证据，也与stroboSCAT载流子成像的研究动机相呼应。",
+      "llm_tldr": "拓扑绝缘体纳米带在低温下表现出反常的长程光载流子输运，但其机制存在争议。本文将扫描光电流显微术与超快瞬态光电压结合，利用横向电场区分自由载流子与激子输运，发现抑制光电流所需场强约为自由载流子偏转的50倍。结果表明输运由激子解离主导，为理解半导体纳米结构中的光载流子动力学提供了关键证据，也与stroboSCAT载流子成像的研究动机相呼应。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.23950v1",
+      "source": "arxiv",
+      "title": "Quantitative infrared nanoscopy: Probe-cavity eigenmodes and nano-gap polaritons for strongly coupled nanoscale optics",
+      "abstract": "Optical nanoscopies including near-field optical microscopy and spectroscopy circumvent the diffraction limit of conventional optics thanks to the nanoscale light focus emerging at the apex of a sharp irradiated probe. However, while strong optical coupling between the apex and its dielectric environment affords both enhanced nanoscopic measurement sensitivity and potentially ultra-strong fields within a nano-gap cavity, the conditions for this coupling remain poorly quantified by prevailing analytic models. Here we present a robust formalism of probe-cavity eigenmodes that fully describes how mutual near-field interactions between probe and environment produce a composite response to external fields qualitatively distinct from that of its distinct components. This \"EigenProbe\" model identifies the fundamental excitations of realistic optical nanoscopies as nano-gap polaritons, which provide an elegant basis to accurately predict near-field microscopy and spectroscopy experiments especially when probe-sample interactions are non-perturbative. Through comparison to carefully controlled nanoscopies of polar phonons and molecular vibrations alike, we show how nano-gap polaritons are both realized and utilized for reliable and rapid \"inversion\" of local optical constants. This advance demands both a careful understanding of the probe response through quantitative calibration, and our efficient semi-analytic description of cavity eigenmode scattering at the probe apex. Our EigenProbe formalism sets the stage for maturing diverse and proliferating optical nanoscopies into precision metrologies of nano-scale optical environments, and guides future use of nano-gap cavities to manipulate local excitations of quantum materials and to achieve strong coupling over photonic emitters.",
+      "authors": [
+        "Benjamin Allen",
+        "Brayden Lukaskawcez",
+        "Alyssa Bragg",
+        "Nitzan Hirshberg",
+        "Leo Fan Bowen Lo",
+        "Michael Fogler",
+        "Dimitri N. Basov",
+        "Stephanie Gilbert-Corder",
+        "Hans Bechtel",
+        "Alexander S. McLeod"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-27T02:54:12+00:00",
+      "link": "https://arxiv.org/pdf/2607.23950v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "optical nanoscopy probe-cavity formalism relevant to iSCAT",
+      "llm_evidence_cn": "光学纳米显微术的探针-腔本征模式与iSCAT相关",
+      "llm_evidence": "光学纳米显微术的探针-腔本征模式与iSCAT相关",
+      "canonical_evidence": "光学纳米显微术的探针-腔本征模式与iSCAT相关",
+      "llm_tldr_en": "Presents a robust probe-cavity eigenmode formalism for quantitative infrared nanoscopy, revealing how near-field probe-environment coupling shapes nanoscale optical response; directly transferable to understanding iSCAT contrast mechanisms.",
+      "llm_tldr_cn": "近场光学纳米显微术中，探针与环境的强耦合同时带来高灵敏度与难以量化的响应机制。本文提出探针-腔本征模式的统一形式，完整描述相互近场作用如何产生复合外场响应，为定量红外纳米显微术奠定理论基础。该框架对理解iSCAT等散射型纳米显微术的成像衬度具有借鉴意义。",
+      "llm_tldr": "近场光学纳米显微术中，探针与环境的强耦合同时带来高灵敏度与难以量化的响应机制。本文提出探针-腔本征模式的统一形式，完整描述相互近场作用如何产生复合外场响应，为定量红外纳米显微术奠定理论基础。该框架对理解iSCAT等散射型纳米显微术的成像衬度具有借鉴意义。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2607.27347v1",
+      "source": "arxiv",
+      "title": "New techniques for high-resolution imaging and high-precision wavefront sensing via masked-aperture interferometry",
+      "abstract": "Achieving high-angular-resolution imaging on subarcsecond scales is fundamentally limited by wavefront aberrations imparted by the propagation medium and by optical elements along the light path. Accurate recovery of source structure at these fine angular scales therefore relies on precise, real-time sensing and correction of wavefront aberrations. Drawing inspiration from radio interferometry, we have developed different approaches using masked apertures that directly measure both the amplitude and phase of the distortions to the electromagnetic wavefront while simultaneously reconstructing the underlying source structure. First is radio interferometry style self-calibration which can recover the complex electric field aberrations across the aperture with subarcsecond phase accuracy, equivalent to nanometer-level precision in optical pathlength, and simultaneously reconstruct the source structure with milliarcsecond (sub-micron) accuracy. Second is closure invariant-based source reconstruction which allows to bypass self-calibration and errors therein entirely while achieving comparable fidelity in the recovered source structure. These methods have been validated on the ALBA synchrotron beamline. Together, these methods provide a reliable framework for nanometre-scale high-precision wavefront sensing and subarcsecond-scale high angular resolution imaging, enabling new possibilities for masked-aperture interferometry. Potential applications span laboratory and synchrotron facilities to astronomy, including beam diagnostics in the Large Hadron Collider and masked-aperture interferometry on space telescopes such as the James Webb Space Telescope.",
+      "authors": [
+        "Nithyanandan Thyagarajan",
+        "Bojan Nikolic",
+        "Chris Carilli",
+        "Laura Torino",
+        "Ubaldo Iriso"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "astro-ph.IM",
+        "physics.acc-ph"
+      ],
+      "published": "2026-07-29T18:02:29+00:00",
+      "link": "https://arxiv.org/pdf/2607.27347v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Interferometric imaging and wavefront sensing via masked-aperture interferometry",
+      "llm_evidence_cn": "利用掩模孔径干涉测量进行干涉成像与波前传感",
+      "llm_evidence": "利用掩模孔径干涉测量进行干涉成像与波前传感",
+      "canonical_evidence": "利用掩模孔径干涉测量进行干涉成像与波前传感",
+      "llm_tldr_en": "This paper develops masked-aperture interferometry for high-resolution imaging and wavefront sensing, offering transferable methods for interferometric scattering microscopy.",
+      "llm_tldr_cn": "针对高角分辨率成像受波前畸变限制的问题，本文借鉴射电干涉测量思路，发展了掩模孔径干涉方法，可直接测量波前畸变的振幅和相位并重构源结构。该方法包含射电式自校准等技术，可同时实现高分辨率成像和高精度波前传感。其干涉测量框架对iSCAT等干涉散射显微镜的波前校正与图像重构具有借鉴价值。",
+      "llm_tldr": "针对高角分辨率成像受波前畸变限制的问题，本文借鉴射电干涉测量思路，发展了掩模孔径干涉方法，可直接测量波前畸变的振幅和相位并重构源结构。该方法包含射电式自校准等技术，可同时实现高分辨率成像和高精度波前传感。其干涉测量框架对iSCAT等干涉散射显微镜的波前校正与图像重构具有借鉴价值。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2607.25478v1",
+      "source": "arxiv",
+      "title": "To Blink or Not to Blink? A New Criterion to Quantify Luminescence Blinking",
+      "abstract": "Colloidal semiconductor quantum dots are promising materials for numerous applications due to their tunable emission and high quantum yields. However, emission instability in the form of luminescence blinking remains a significant obstacle to their practical implementation. While recent advances in synthesis and surface engineering have demonstrated partial or complete blinking suppression, the quantitative assessment of the \"quality\" of this suppression remains challenging. Existing criteria typically rely on threshold-based classification into ON and OFF states, which becomes inherently ambiguous owing to the continuous distribution of emission intensities in single quantum dots. Here, we propose a threshold-free two-dimensional quantitative criterion based on the variance of the recombination rate and the relative quantum yield, both of which can be extracted from standard time-correlated single-photon counting measurements. We validate the criterion using simulated blinking trajectories covering all major blinking mechanisms and demonstrate that it cleanly separates them into distinct regions of the two-dimensional parameter space while providing a quantitative measure of the degree of suppression. This approach directly quantifies the temporal stability of emission without requiring arbitrary state definitions, thereby providing a robust metric for comparing different blinking suppression strategies.",
+      "authors": [
+        "Eduard A. Podshivaylov",
+        "Pavel A. Frantsuzov"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-07-28T09:11:50+00:00",
+      "link": "https://arxiv.org/pdf/2607.25478v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "threshold-free analysis method for time-resolved single-particle signals",
+      "llm_evidence_cn": "面向时间分辨单粒子信号的无阈值分析方法",
+      "llm_evidence": "面向时间分辨单粒子信号的无阈值分析方法",
+      "canonical_evidence": "面向时间分辨单粒子信号的无阈值分析方法",
+      "llm_tldr_en": "Proposes a threshold-free two-dimensional criterion to quantify luminescence blinking in quantum dots, overcoming the ambiguity of ON/OFF classification in continuous emission distributions. The methodology is transferable to analyzing time-resolved iSCAT signals.",
+      "llm_tldr_cn": "胶体量子点的发光闪烁严重阻碍应用，但现有量化方法依赖阈值划分ON/OFF态，在连续分布中难免模糊。本文提出无阈值的二维定量判据，直接反映闪烁抑制的质量。该方法可推广到其他单粒子时间分辨信号分析，对于iSCAT这类散射信号的时间序列分析同样具有方法论价值。",
+      "llm_tldr": "胶体量子点的发光闪烁严重阻碍应用，但现有量化方法依赖阈值划分ON/OFF态，在连续分布中难免模糊。本文提出无阈值的二维定量判据，直接反映闪烁抑制的质量。该方法可推广到其他单粒子时间分辨信号分析，对于iSCAT这类散射信号的时间序列分析同样具有方法论价值。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

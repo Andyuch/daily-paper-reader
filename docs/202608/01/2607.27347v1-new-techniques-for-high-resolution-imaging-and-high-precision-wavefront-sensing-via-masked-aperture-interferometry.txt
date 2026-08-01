@@ -1,0 +1,187 @@
+Title: New techniques for high-resolution imaging and high-precision wavefront sensing via masked-aperture interferometry
+
+URL Source: https://arxiv.org/pdf/2607.27347v1
+
+Published Time: Fri, 31 Jul 2026 00:05:49 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# New techniques for high-resolution imaging and high-precision wavefront sensing via masked-aperture interferometry 
+
+## Nithyanandan Thyagarajan a, Bojan Nikolic b, Chris Carilli c, Laura Torino d, and Ubaldo Iriso daSpace & Astronomy, Commonwealth Scientific and Industrial Research Organisation (CSIRO), P. O. Box 1130, Bentley, WA 6102, Australia 
+
+> b
+
+## Astrophysics Group, Cavendish Laboratory, University ofCambridge, Cambridge CB3 0HE,UK 
+
+> c
+
+## National Radio AstronomyObservatory, P.O. Box O, 1011 Lopezville Road, Socorro, New Mexico 87801, USA 
+
+> d
+
+## ALBA-CELLS Synchrotron Radiation Facility, Carrerde la Llum 2-26, Cerdanyola del Vall` es, 08290 Barcelona, Spain 
+
+ABSTRACT 
+
+Achieving high–angular-resolution imaging on subarcsecond scales is fundamentally limited by wavefront aber-rations imparted by the propagation medium and by optical elements along the light path. Accurate recovery of source structure at these fine angular scales therefore relies on precise, real-time sensing and correction of wave-front aberrations. Drawing inspiration from radio interferometry, we have developed different approaches using masked apertures that directly measure both the amplitude and phase of the distortions to the electromagnetic wavefront while simultaneously reconstructing the underlying source structure. First is radio interferometry style self-calibration which can recover the complex electric field aberrations across the aperture with subarcsecond phase accuracy, equivalent to nanometer-level precision in optical pathlength, and simultaneously reconstruct the source structure with milliarcsecond (sub-micron) accuracy. Second is closure invariant-based source recon-struction which allows to bypass self-calibration and errors therein entirely while achieving comparable fidelity in the recovered source structure. These methods have been validated on the ALBA synchrotron beamline. Together, these methods provide a reliable framework for nanometre-scale high-precision wavefront sensing and subarcsecond-scale high angular resolution imaging, enabling new possibilities for masked-aperture interferome-try. Potential applications span laboratory and synchrotron facilities to astronomy, including beam diagnostics in the Large Hadron Collider and masked-aperture interferometry on space telescopes such as the James Webb Space Telescope. 
+
+Keywords: interferometry, high-spatial resolution imaging, wavefront sensing, masked aperture, synchrotron radiation interferometry, optical interferometry, radio interferometry 
+
+1. INTRODUCTION 
+
+Optical and radio interferometry share a common theoretical foundation in Fourier optics and the van Cit-tert–Zernike theorem, 1 which establishes the relationship between the mutual coherence function measured across an aperture and the brightness distribution of the source. Despite this common basis, the two fields have evolved largely independently because of fundamental differences in how electromagnetic radiation is detected and pro-cessed. Recent developments in computational imaging and optical interferometry have begun to narrow this gap by borrowing concepts from radio astronomy. The mathematical equivalence of the underlying interferometric 
+
+Further author information: (Send correspondence to N.T.) N.T.: E-mail: Nithyanandan.Thyagarajan@csiro.au, Telephone: +61 8 6436 8626 
+
+1arXiv:2607.27347v1 [physics.optics] 29 Jul 2026 measurement equations suggests that many of the calibration and imaging techniques developed for radio arrays can be adapted to optical systems, provided appropriate measurement strategies are employed. In this work, we adapt several powerful radio interferometric techniques to masked-aperture optical inter-ferometry. Specifically, we investigate radio-style self-calibration for direct estimation of complex wavefront aberrations, the use of calibration-independent closure invariants for robust image reconstruction, and a gen-eralized self-calibration framework applicable to both non-redundant and redundant aperture masks. These approaches enable simultaneous high-precision wavefront sensing and high-angular-resolution imaging, providing improved characterization of optical beams in synchrotron facilities while offering a pathway toward applica-tions in astronomical instrumentation, including sparse-aperture interferometry and wavefront sensing for future space- and ground-based telescopes. The paper is organised as follows. Section 2 introduces interferometry contrasting its application in radio and optical wavelengths. Section 4 describes the methods we have adapted from radio interferometry to aperture masking at optical wavelengths. The results and ongoing work are described in section 5. We summarise the work in section 6. 
+
+2. INTERFEROMETRY IN RADIO AND OPTICAL WAVELENGTHS 
+
+The van Cittert-Zernike theorem 1 states that the spatial coherence of the complex electric fields in the aperture plane is related to the intensity distribution in the image plane, which under certain approximations reduces to a Fourier transform relationship. 2 The relationship can be mathematically expressed as 
+
+Vab (λ) ≡ ⟨ Ea(λ)E∗ 
+
+> b
+
+(λ)⟩ =
+
+Z
+
+> Ω
+
+Pab (ˆ s, λ ) I(ˆ s, λ )e−i2πuab ·ˆs dΩ , (1) where, I(ˆ s, λ ) denotes the intensity distribution on source plane, Ω, at location ˆ s and wavelength, λ. a and b
+
+denote two elements in the aperture, whose effective directional sensitivity is given by Pab (ˆ s, λ ). Ea(λ) denotes the electric field if it could be sampled at the aperture element a. Finally, Vab (λ) ≡ ⟨ Ea(λ)E∗ 
+
+> b
+
+(λ)⟩ denotes the spatial coherence of the electric fields at aperture elements a and b, and is also referred to as visibility . It is evident that Equation 1 closely resembles a spatial Fourier transform. Optical interferometry, in most cases, measures only the intensity of the electromagnetic field in the image or focal plane because optical frequencies are too high for direct electronic measurement of the electric field. Recovering phase information, therefore, requires indirect approaches based on interference, phase retrieval, or wavefront sensing. While remarkable advances have been made in adaptive optics, aperture masking, and optical interferometry, calibration of wavefront distortions and recovery of high-fidelity source structure remain challenging, particularly in photon-limited observations or when optical aberrations vary rapidly. Contrastingly, in radio interferometry, 2 the electric field represented by complex voltages, consisting of both amplitude and phase, from individual antennas sampling the aperture can be coherently amplified, digitised, and cross-correlated to estimate the complex visibility function in the aperture (Fourier) plane. This capability has enabled the development of sophisticated calibration and imaging techniques that jointly estimate instrumental and propagation-induced corruptions while reconstructing the source brightness distribution. In particular, self-calibration, 2 closure invariants 3, 4 like closure phases, 5, 6 and closure amplitudes 7 have become indispensable tools for high-fidelity imaging, allowing radio interferometers to produce diffraction-limited images even in the presence of significant instrumental and atmospheric errors. 
+
+3. APPLICATION: SYNCHROTRON FROM PARTICLE ACCELERATORS 
+
+In this paper, we describe recent efforts that have adapted radio interferometric techniques to the optical interfer-ometry context found specifically in particle accelerator facilities used in the production of synchroton radiation. Accurate characterization of charged particle beams is a fundamental diagnostic requirement in modern par-ticle accelerators and synchrotron light sources. 8 The transverse beam profile directly influences the quality, brightness, and stability of the emitted synchrotron radiation, making precise beam monitoring essential for ac-celerator tuning, beam optimisation, and reliable facility operation. Beam dimensions must be controlled at the 2micrometre scale, often requiring optical wavefront aberrations to be measured and corrected with nanometre-level precision to ensure efficient beam transport and delivery. Smaller and more stable beams produce tighter optical focusing, higher photon flux densities, and improved experimental performance across a broad range of scientific applications. A particularly valuable approach for beam diagnostics is synchrotron radiation interfer-ometry (SRI), which provides a non-invasive means of characterising the electron beam by analysing the spatial coherence of the emitted synchrotron radiation. 9
+
+Until recently, common SRI implementations employed a dual-mask aperture, similar to Young’s double-slit interferometer. The measured fringe visibility provides information about the beam size along the direction per-pendicular to the slit separation through the van Cittert–Zernike theorem. 1 Two-dimensional beam profiles are typically obtained by mechanically rotating the aperture or repeating measurements with different slit orienta-tions. 10 This approach is inherently sequential, primarily because of the use of a two-hole aperture, which in turn is necessitated because of wavefront distortions and loss of coherence that are inherent when using a multi-mask aperture. Thus, such approaches provide only indirect reconstruction of the transverse beam distribution, and offers limited capability for characterising optical aberrations introduced by the beamline. These limitations motivated the development of a more general interferometric framework capable of simul-taneously reconstructing the two-dimensional beam profile while estimating the wavefront distortions across the optical aperture. Such a capability would enable instantaneous beam characterisation, eliminate the need for mechanical aperture rotation, and provide direct information about both the source structure and the optical system. Radio interferometry has long addressed analogous challenges in the presence of not just two but even hun-dreds of aperture elements through sophisticated calibration and imaging techniques, including self-calibration and closure invariants, which enable high-fidelity image reconstruction despite significant instrumental and propagation-induced errors. 2 The mathematical basis shared between radio and optical interferometry suggests that these methods can be translated to synchrotron radiation interferometry to provide robust, calibration-based as well as calibration-immune beam diagnostics. The objective of this work is therefore to develop and experimentally demonstrate a unified interferometric framework that adapts these radio interferometric techniques to optical SRI. Our approach simultaneously re-constructs the transverse beam profile while estimating the complex amplitude and phase distribution across the aperture, enabling robust beam characterisation and precision wavefront sensing from a single interferometric measurement. 
+
+4. METHODS 
+
+The experimental setup used in the Xanadu optical bench at the ALBA synchrotron facility is illustrated in Fig-ure 1. At the aperture, we employ non-redundant aperture (NRA) masks, in which every pair of aperture masks forms a unique baseline. Consequently, each interference fringe corresponds to a distinct spatial frequency in the Fourier plane, ensuring that the measured Fourier components are uniquely associated with individual aperture pairs. Unlike redundant aperture configurations, where multiple aperture pairs may or may not contribute coher-ently to the same Fourier mode and complicate the interpretation of the measured interferogram, non-redundant masks provide a direct and unambiguous mapping between the measured visibilities and the sampling locations in the Fourier plane. In this work, five-hole and seven-hole NRA masks were designed to simultaneously sample multiple spatial frequencies while maintaining this one-to-one correspondence. This unique mapping allows the interferometric measurements to be interpreted in exactly the same way as the pairwise visibility measurements obtained by a radio interferometer. Each aperture samples the incident electromagnetic wavefront, and the interference between every pair of apertures yields a complex visibility that represents one Fourier component of the source brightness distribution. However, these measured visibilities are corrupted by variations in the complex electric field across the aperture arising from non-uniform illumination and wavefront aberrations. This relationship can be expressed in the same form as the radio interferometric measurement equation, 
+
+V obs  
+
+> ab
+
+= GaG∗ 
+
+> b
+
+Vab , (2) 3Figure 1. Experimental setup at the Xanadu optical bench at the ALBA synchrotron facility (reproduced with permission from Carilli et al. (2025) 11 ). 
+
+where, V obs  
+
+> ab
+
+denotes the measured visibility between aperture elements a and b, Vab is the true source visibility, and Ga is the complex gain associated with aperture element a. The complex gain encapsulates both the amplitude illumination and the phase distortion of the wavefront at that aperture location. While these complex gains are traditionally interpreted as instrumental and atmospheric corruptions in radio astronomy, they do not occur naturally in optical measurements because photon phases are not measured. However, the squared amplitudes of the gains, |Ga|2, naturally represent illumination at the aperture masks and the gain phases represent optical aberrations in masked-aperture interferometry. This formulation enables direct adaptation of radio interferometric calibration techniques to optical interfer-ometry. In recent works, we designed both five-hole and seven-hole non-redundant aperture (NRA) masks to sample multiple spatial frequencies simultaneously. These measurements are used to reconstruct the transverse beam profile while simultaneously estimating the complex aperture gains. In addition, calibration-independent closure quantities are employed both to validate the recovered solutions and to reconstruct the source without explicit gain estimation. Figure 2 shows the complex visibilities measured using the NRA mask on the Fourier plane using a Fourier transform of the interferogram images recorded on the CCD. The wavelength of light was 538 nm. The top left panel in Figure 2 illustrates the illumination pattern across the aperture that is represented by |Ga|2 at the mask locations. The phase aberrations across the aperture, while certainly present, are not shown here. 
+
+4.1 Self-calibration for simultaneous beam reconstruction and wavefront sensing 
+
+Our first approach adapts the self-calibration framework developed for radio interferometric imaging. Rather than treating the aperture gains as nuisance parameters, the algorithm jointly estimates the source brightness distribution together with the complex gain associated with every aperture element by minimising 
+
+χ2 = X
+
+> a
+
+X
+
+> b
+
+|GaG∗ 
+
+> b
+
+Vab − V m 
+
+> ab
+
+|2 (3) with respect to Ga and the source model parameters in V m 
+
+> ab
+
+. Traditionally, the optimisation has alternated between estimating the source structure from the current gain estimate and updating the complex gains using the reconstructed source model. This iterative process converges to a mutually consistent solution that simul-taneously explains the measured interferograms and the observed fringe visibilities. More recent optimisation alternatives offer simultaneous estimation of the gain and source model parameters, particularly when the number of measurements exceed the number of estimated parameters. The recovered complex gains provide direct physical information about the optical system. Their squared amplitudes represent the illumination pattern across the aperture, while their phases correspond to the optical wavefront distortion sampled at each aperture location. Consequently, a single self-calibration procedure yields 4Figure 2. (Top left): A 7-hole non-redundant aperture mask. A non-uniform illumination across the aperture is visible signifying amplitude corruptions on the incident wavefront. Phase corruptions are also present but not shown. (Top right): One frame of interferogram image recorded on the CCD. (Bottom left): Amplitude of the Fourier transform in the Fourier plane of the interferogram. Each distinct blob is a visibility corresponding to a unique hole pair as annotated. The central blob denoted by “0-0” represents the sum of intensities through all the holes. (Bottom right): Phase of the Fourier transform in the Fourier plane of the interferogram. (reproduced with permission from Carilli et al. (2025) 11 ). 
+
+the two-dimensional transverse beam intensity distribution, the aperture illumination function, and the wave-front phase distribution, thereby combining beam diagnostics and precision wavefront sensing within a unified reconstruction framework. 11, 12 
+
+If the beam has a Gaussian cross-section, as is the case with the ALBA synchrotron beam, the gain phases do not constrain the Gaussian source parameters and only the amplitudes of the gains (one for each hole in the mask) and the Gaussian source parameters (major and minor axes, and orientation angle of the ellipse) need to be estimated in the optimisation process, 13 which reduces to amplitude self-calibration . However, knowledge of wavefront errors can still be obtained from estimating the gain phases. 
+
+4.2 Source reconstruction from calibration-independent closure invariants 
+
+Although self-calibration estimates the complex aperture gains directly, radio interferometry has long recognised that certain combinations of visibilities are inherently independent of these gains. These calibration-independent observables, known as closure invariants, 3, 4 provide robust constraints on the source structure even when the individual aperture gains are unknown. The popular variants of closure invariants have been known as closure phases 5, 6 and closure amplitudes. 7
+
+5In recent work, 14 we employed closure amplitudes formed from products and ratios of measured visibility amplitudes, 
+
+Aobs  
+
+> mnpq
+
+= |V obs  
+
+> mn
+
+| | V obs  
+
+> pq
+
+||V obs  
+
+> mp
+
+| | V obs  
+
+> nq
+
+| (4) Because the complex aperture gains cancel algebraically, these quantities depend only on the intrinsic source structure and are, therefore, insensitive to variations in aperture illumination or wavefront errors. Only closure amplitudes were employed because the synchrotron beam cross-section was known to be a Gaussian. For re-constructing more complex source structures, the above process can be generalised to include a combination of closure phases and closure amplitudes. The use of closure amplitudes serves two complementary purposes. First, they provide an independent reconstruction pathway that does not require self-calibration, allowing the beam profile to be recovered directly from calibration-independent observables. Second, they provide an important validation of the amplitude self-calibration results by verifying that the recovered beam structure is consistent with observables that are immune to gain errors. 
+
+5. RESULTS 
+
+The proposed framework was evaluated using interferometric measurements acquired with both five-hole and seven-hole non-redundant aperture (NRA) masks on the ALBA synchrotron beamline. In both configurations, the unique Fourier-plane sampling provided by the NRA masks enabled simultaneous measurement of multiple spatial frequencies from a single interferogram, allowing instantaneous two-dimensional characterization of the synchrotron beam. The self-calibration framework successfully reconstructed the transverse beam intensity distribution while simultaneously estimating the complex aperture gains. The recovered beam profiles agreed closely with indepen-dent reference measurements, achieving an accuracy of approximately 1%, corresponding to a spatial accuracy of roughly 1 μm in the reconstructed beam dimensions, that corresponds to subarcsecond accuracy in angular dimensions. In addition to recovering the beam structure, the estimated gain amplitudes provided the incident illumination pattern across the aperture. An independent reconstruction using calibration-independent closure amplitudes produced beam profiles con-sistent with those obtained from self-calibration, demonstrating comparable reconstruction accuracy. The agree-ment between these two fundamentally different approaches validates both the robustness of the self-calibration algorithm and the utility of closure invariants for optical interferometry. The above results are illustrated in Figure 3. To estimate the recovery of wavefront errors in the 7-hole measurements, a rotating flat mirror was used in the photon path whose angle of rotation can be controlled at set increments. This allowed us to introduce known levels of tip-tilt wavefront errors in the measurements. In this case, we used light at 400 nm. The recovered complex gain phases from the self-calibration procedure correspond directly to the wavefront distortions sampled at each aperture location. These phase estimates enabled reconstruction of the optical wavefront with nanometre-scale optical path-length precision, providing information on both wavefront aberrations and surface errors within the optical system. The results of wavefront sensing from the estimated gain phases are shown in Figure 4. Although a tip-tilt effect is well fit by a plane as demonstrated, the procedure is applicable without any loss of generality to more complex wavefront shapes. Further work of fitting more complex wavefronts using Zernike polynomial basis is underway. The simultaneous recovery of aperture illumination, wavefront phase, and beam structure demonstrates that the complex gains represent physically meaningful properties of the optical system. The agreement between the closure-based and self-calibrated reconstructions demonstrates both the robustness of the proposed framework and the applicability of radio interferometric techniques to optical masked-aperture interferometry. Overall, these results demonstrate that radio interferometric calibration and closure techniques can be suc-cessfully translated to masked-aperture optical interferometry. A single interferometric measurement provides 660 40 20 0 20 40 60             
+
+> [m]
+> 20
+> 0
+> 20
+> m [ m]  log(Clos.Amp.)
+> NLASC
+> Rot. Mask
+> LOCO 0510 15 20 25 30
+> Time Record
+> 7.5
+> 8.0
+> 8.5
+> 9.0
+> 9.5
+> Hole gain amplitudes, | Gk|
+> k= 0
+> k= 1
+> k= 2
+> k= 3
+> k= 4
+
+Figure 3. (Left): Independent estimates of Gaussian synchrotron beams with the amplitude self-calibration 13 (“NLASC” in legend) and closure amplitude 14 (“log(Clos.Amp.)”) methods. Also included are other standard methods for compari-son, namely, the rotated two-hole mask 10 (“Rot. Mask” in legend) and beam simulation (“LOCO”) not part of this study. 
+
+(Right:) Amplitudes of the gains at the five holes for 30 frames determined using linear (plus symbols) and logarithmic (diamond symbols) variants of the amplitude self-calibration method 13, 14 (reproduced with permission from Thyagarajan et al. (2025) 14 ). 
+
+simultaneous high-accuracy beam diagnostics and precision wavefront sensing, eliminating the need for sequential measurements or independent wavefront metrology while providing a robust framework for radio-style calibration of the effects of the optics and interferometric imaging at optical wavelengths. 
+
+6. SUMMARY 
+
+We have demonstrated that calibration and imaging techniques developed for radio interferometry can be suc-cessfully translated to high signal-to-noise optical interferometry through masked-aperture measurements. By exploiting the mathematical equivalence between radio and optical interferometric observables, self-calibration and closure-based methods can be adapted to simultaneously recover source structure and estimate the complex wavefront across the aperture. The use of non-redundant aperture masks enables unique sampling of the Fourier plane, allowing instan-taneous reconstruction of the two-dimensional beam profile while simultaneously recovering the aperture il-lumination pattern and optical wavefront aberrations. Self-calibration provides a unified framework for es-timating both the beam structure and the complex aperture gains, whereas closure amplitudes and closure phases offer calibration-independent observables that enable robust image reconstruction and independent val-idation. Together, these techniques achieve micron-scale high-resolution beam imaging and wavefront sensing with nanometre-scale optical pathlength precision from a single interferometric measurement. The proposed framework is entirely non-invasive and is well suited to near real-time beam diagnostics, making it attractive for next-generation accelerator facilities where precise control of beam quality is essential. Beyond synchrotron radiation interferometry, the methodology is readily generalisable to other optical sources, including plasma-based light sources, X-ray free-electron lasers (XFELs), and optical interferometry on the James Webb Space Telescope (JWST), where simultaneous source characterization and wavefront sensing are of growing importance. The techniques are currently being evaluated for beam diagnostics at the Large Hadron Collider (LHC), including applications to proton and heavy-ion beams where accurate characterization of beam halo and core structure is critical. 15 Looking ahead, future work will extend the framework to redundant aperture designs, which offer substantially higher photon throughput. This will require joint estimation of beam structure and wavefront errors in the presence of redundant Fourier measurements, bringing the full power of radio interfero-metric calibration techniques to more photon-limited optical interferometric systems. 7Figure 4. Tip-tilt pathlengths of the photon wavefront through the optical system for four different mirror rotations (1 ′′ ,2′′ , 3 ′′ , and 4 ′′ ), as derived from the self-calibration gain phases and converted to pathlengths from a 7-hole mask aperture measurement. The wavefront deviations at the hole locations are well fit by a plane as expected for a tip-tilt caused by the mirror rotation (reproduced with permission from Carilli et al. (2025) 11 ). 
+
+ACKNOWLEDGMENTS 
+
+The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc. Related patents and patent applications: Patent No. US 12,104,901 B2; Provisional Patent No. 63/355,174 (US Patent application No. 18/878,488); Provisional Patent No. 63/648,303 (US Patent application No. 19/079,876). 
+
+REFERENCES 
+
+[1] Zernike, F., “The concept of degree of coherence and its application to optical problems,” Physica 5(8), 785–795 (1938). [2] Thompson, A. R., Moran, J. M., and Swenson, George W., J., [ Interferometry and Synthesis in Radio Astronomy, 3rd Edition ], Astronomy & Astrophysics Library (2017). [3] Thyagarajan, N., Nityananda, R., and Samuel, J., “Invariants in copolar interferometry: An Abelian gauge theory,” Physical Review D 105 , 043019 (Feb. 2022). [4] Samuel, J., Nityananda, R., and Thyagarajan, N., “Invariants in Polarimetric Interferometry: A Non-Abelian Gauge Theory,” Physical Review Letters 128 , 091101 (Mar. 2022). [5] Jennison, R. C., “A phase sensitive interferometer technique for the measurement of the Fourier transforms of spatial brightness distributions of small angular extent,” Monthly Notices of the Royal Astronomical Society 118 , 276 (1958). [6] Thyagarajan, N. and Carilli, C. L., “A geometric view of closure phases in interferometry,” Publications of the Astronomical Society of Australia 39 , e014 (Apr. 2022). 8[7] Twiss, R. Q., Carter, A. W. L., and Little, A. G., “Brightness distribution over some strong radio sources at 1427 Mc/s,” The Observatory 80 , 153–159 (Aug. 1960). [8] Wiedemann, H., [ Particle Accelerator Physics ], Springer, Cham (2015). [9] Kube, G., “Review of Synchrotron Radiation Based Diagnostics for Transverse Profile Measurements,” in [Proceedings of DIPAC07, Venice (Italy) ], (2007). [10] Torino, L. and Iriso, U., “Transverse beam profile reconstruction using synchrotron radiation interferome-try,” Phys. Rev. Accel. Beams 19 , 122801 (Dec 2016). [11] Carilli, C. L., Torino, L., Nikolic, B., Thyagarajan, N., and Iriso, U., “A new method for wavefront sens-ing using optical masking interferometry,” in [ Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series ], Dolne, J. J., Bose-Pillai, S. R., and Kalensky, M., eds., Society of Photo-Optical Instru-mentation Engineers (SPIE) Conference Series 13619 , 136190V (Sept. 2025). [12] Carilli, C. L., Nikolic, B., Torino, L., Thyagarajan, N., and Iriso, U., “Aperture masking interferometric imaging with self-calibration: demonstration with the JWST,” Optical Engineering 65 (8), 081808 (2026). [13] Nikolic, B., Carilli, C. L., Thyagarajan, N., Torino, L., and Iriso, U., “Two-dimensional synchrotron beam characterization from a single interferogram,” Physical Review Accelerators and Beams 27 , 112802 (Nov. 2024). [14] Thyagarajan, N., Nikolic, B., Carilli, C. L., Torino, L., and Iriso, U., “Two-dimensional light beam shape characterization using interferometric closure amplitudes,” Journal of the Optical Society of America A 42 ,1261 (Sept. 2025). [15] Torino, L., Nikolic, B., Carilli, C. L., Thyagarajan, N., and Iriso, U., “Exploiting non redundant aperture interferometry as a diagnostics tool for synchrotron light characterization,” in [ Proc. IBIC 2025 ], IBIC2025 - 14th International Beam Instrumentation Conference , 475–478, JACoW Publishing, Geneva, Switzerland (09 2025). 9
