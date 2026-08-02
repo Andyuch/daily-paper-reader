@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-02",
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T20:54:31",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/02/2607.25768v1-synergistic-role-of-electron-and-photon-dose-in-stepwise-laser-induced-complete-deoxygenation-of-graphene-oxide-revealed-by-in-situ-tem",
+      "section": "deep",
+      "title_en": "Synergistic Role of Electron and Photon Dose in Stepwise Laser-Induced Complete Deoxygenation of Graphene Oxide Revealed by In-situ TEM",
+      "authors": "Israt Ali, Kenneth R. Beyerlein",
+      "date": "2026-07-28",
+      "pdf": "https://arxiv.org/pdf/2607.25768v1",
+      "score": "8.0",
+      "evidence": "利用原位动态透射电镜实时监测激光诱导脱氧过程，属于operando材料研究",
+      "tldr": "激光还原氧化石墨烯具有空间选择性和绿色环保优势，但完全脱氧与保持薄膜完整性难以兼得。本文提出532 nm脉冲激光步进还原策略，借助原位动态透射电镜实时监测，系统调控光子与电子累积剂量。最佳条件下实现完全脱氧，电子能量损失谱证实sp²网络恢复，π*-σ*能隙为7.0 eV，接近石墨的7.1 eV。电子束剂量贡献约5 at%的初始氧移除，并协同降低激光脱氧能垒，但过量曝光会致裂纹。该多参数协同策略为可控石墨烯合成提供了新范式。",
+      "tags": "query:iscat",
+      "abstract_en": "Laser-induced reduction of graphene oxide (GO) represents a highly promising route to graphene synthesis, offering spatially localized processing, elimination of hazardous chemical reagents, and compatibility with ambient conditions. Here, we introduce a stepwise laser reduction strategy employing a 532 nm pulsed laser, monitored in real-time by in situ dynamic transmission electron microscopy (DTEM). By systematically varying the pulse sequence and the cumulative photon and electron dose, complete deoxygenation of GO is achieved while preserving film integrity. Core-loss EELS confirms full removal of oxygen functional groups and restoration of the sp$^2$ graphitic network, evidenced by a $π^*-σ^*$ energy separation of 7.0 eV, in close agreement with graphite (7.1 eV). Crucially, the cumulative electron dose is identified as an active parameter governing the reduction mechanism: electron beam exposure accounts for approximately 5 at. % of the initial oxygen removal and synergistically lowers the energy barrier for subsequent laser-driven deoxygenation, while excessive electron exposure compromises film integrity through crack formation. The optimal configuration achieves complete deoxygenation at a cumulative photon dose of 2.5 x 10$^3$ mJ/cm$^2$ with superior in-plane crystallographic order and minimal beam-induced thinning. This work establishes a versatile multi-parameter strategy for controlled scalable graphene synthesis via combined electron beam and laser irradiation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/02/2607.23051v1-ferroelastic-exciton-splitting-in-hybrid-perovskite-nanowalls",
+      "section": "quick",
+      "title_en": "Ferroelastic exciton splitting in hybrid perovskite nanowalls",
+      "authors": "Afreen, J. Delgado-Alvarez, H. Krishna Mishra, J. Castillo-Seoane, Koustav Maiti, Pravrati Taank, A. Borras, A. Barranco, Surajit Saha, Priya Mahadevan, J. R. Sanchez-Valencia, K. V. Adarsh",
+      "date": "2026-07-25",
+      "pdf": "https://arxiv.org/pdf/2607.23051v1",
+      "score": "6.0",
+      "evidence": "利用时间分辨超快光谱研究钙钛矿激子动力学",
+      "tldr": "杂化钙钛矿软半导体中，铁弹对称性破缺对激子态的影响尚存疑问。利用掠射角沉积制备高度取向的MAPbI3纳米墙，结合变温光致发光、X射线衍射和偏振分辨超快瞬态吸收光谱，在5K正交相观察到偏振选择性激子分裂（45 meV），在160K相共存时出现低能晶格耦合激发（58 meV），并随温度演化。结果表明铁弹织构和相共存可调控激子-晶格耦合，为软极性半导体中对称选择性光学响应提供新途径。",
+      "tags": "query:iscat",
+      "abstract_en": "Hybrid metal-halide perovskites are soft semiconductors in which electronic excitations are strongly influenced by lattice distortions and structural phase transitions. An important open question is whether ferroelastic symmetry breaking merely broadens optical resonances or instead modifies excitonic states through exciton-lattice coupling. Here, we address this question using highly aligned MAPbI3 nanowalls fabricated by glancing-angle deposition, enabling symmetry-selective coupling between ferroelastic texture, structural anisotropy, and a well-defined optical axis. Combining temperature-dependent photoluminescence, X-ray diffraction and polarization-resolved ultrafast transient absorption spectroscopy, we observe a polarization-selective excitonic splitting in the orthorhombic phase at 5 K, characterized by orthogonal optical selection rules and a 45 meV energy separation. Near 160 K, where orthorhombic and tetragonal phases coexist, a lower-energy lattice-coupled excitation emerges 58 meV below the centre of the anisotropically split excitonic structure, consistent with coupling between excitonic and lattice-dressed states. At higher temperatures, these excitations progressively acquire lattice-dressed character accompanied by reduced optical anisotropy. A symmetry-guided effective Hamiltonian captures the evolution from anisotropically split excitons to coupled excitonic and lattice-dressed states across the structural transition. Our results show that ferroelastic texture and phase coexistence can modify exciton-lattice coupling, providing a route to symmetry-selective optical responses in soft polar semiconductors.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
