@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-03",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T20:32:25",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/03/2607.23807v1-nanoscale-photo-thermal-interaction-theory",
+      "section": "quick",
+      "title_en": "Nanoscale Photo-Thermal Interaction Theory",
+      "authors": "Pavel Shafirin, Pengli Feng, Huanbo Jiang, Teri Odom, Artur Davoyan",
+      "date": "2026-07-26",
+      "pdf": "https://arxiv.org/pdf/2607.23807v1",
+      "score": "7.0",
+      "evidence": "针对纳米体系瞬态光热相互作用发展了耦合模理论，与时分辨iSCAT相关。",
+      "tldr": "纳米尺度光热相互作用应用广泛，但以往缺乏瞬态理论，尤其是当光激发时长与热输运时间尺度相当时。为此，我们发展了一套耦合模理论，能够描述光吸收与热致光学响应变化之间的相互耦合。我们揭示了最优能量沉积与加热条件，并据此设计了高对比度超表面，实现40ns内的快速冷却与高效光热切换。该理论为纳米光热调控提供了物理基础，可应用于医疗、主动光子学与制造等领域。",
+      "tags": "query:iscat",
+      "abstract_en": "Photothermal interaction in nanoscale systems has emerged as a versatile tool for selective heat deposition and robust tuning of optical responses with a myriad of applications from hyperthermal medical treatment to switching and routing of optical signals. However, to date a comprehensive theory of transient photothermal interaction is missing. Development of such a theory is particularly challenged when optical excitation duration is comparable to the timescale related of heat transport, an emergent regime with a mutually interconnected transient interplay of light abortion and heat-induced change of optical responses. Here, we develop a coupled mode theory that captures intricate transient photothermal phenomena in a wide range of nanoscale systems. We further reveal conditions for optimal energy deposition and heating. As an example scenario we apply our model to design metasurfaces with high contrast and efficient temperature and optical switching, demonstrating fast cooling to the rest state (within 40 ns). Beyond exquisite control of both transient temperature profiles and optical responses, our theory offers deep physical insights onto photo-thermal interaction at the nanoscale which can find use in variety of fields from medical treatment to active photonics and manufacturing.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/03/2607.28985v1-asymptotic-efficiency-of-the-global-maximum-likelihood-estimator-in-multi-emitter-localization-microscopy",
+      "section": "quick",
+      "title_en": "Asymptotic Efficiency of the Global Maximum-Likelihood Estimator in Multi-Emitter Localization Microscopy",
+      "authors": "Yi Sun",
+      "date": "2026-07-31",
+      "pdf": "https://arxiv.org/pdf/2607.28985v1",
+      "score": "6.0",
+      "evidence": "多发射器定位中的全局最大似然估计，可用于iSCAT超分辨粒子追踪。",
+      "tldr": "多发射源定位显微镜中，全局最大似然估计（GML）理论上具有渐近效率，但实际实现与验证困难。本文采用期望最大化（EM）算法实现GML估计，并将初始化设置在真实位置附近以确保收敛。通过仿真实验，验证了该估计器在渐近意义下达到理论效率。工作为GML估计的实际应用提供了可靠实现途径，并确认了其理论性能。",
+      "tags": "query:iscat",
+      "abstract_en": "We realize the GML estimator by an expectation-maximization algorithm initialized near the true positions and verify the theory by simulation.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

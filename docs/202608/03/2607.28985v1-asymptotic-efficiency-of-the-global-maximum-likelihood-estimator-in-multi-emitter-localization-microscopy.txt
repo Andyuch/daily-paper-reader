@@ -1,0 +1,1088 @@
+Title: Markov Chain Model of Emitter Activations in SMLM
+
+URL Source: https://arxiv.org/pdf/2607.28985v1
+
+Published Time: Mon, 03 Aug 2026 00:22:40 GMT
+
+Number of Pages: 22
+
+Markdown Content:
+1
+
+# Asymptotic Efficiency of the Global Maximum-Likelihood Estimator in Multi-Emitter Localization Microscopy 
+
+## Y I S UN * 
+
+> Electrical Engineering Department
+> The City College of City University of New York New York, NY 10031, USA
+> *Email: ysun@ccny.cuny.edu
+> ORCID: 0000-0002-2527-8311
+
+Abstract: In single-molecule localization microscopy (SMLM), a super-resolution image is built by estimating the positions of densely packed emitters from many noisy frames. We study the global maximum-likelihood (GML) estimator of the emitter positions for the multi-emitter SMLM imaging model with Poisson signal and mixed Poisson–Gaussian noise. We prove that, for any fixed configuration of resolvable emitters in 2D or 3D, the GML estimator is consistent, asymptotically normal, asymptotically unbiased, and asymptotically efficient, attaining the Cramér–Rao bound (CRB) as the number of frames grows in Theorem 1 or the average emitter intensity grows in Theorem 2. A corollary shows that in this limit the GML estimator and the unbiased Gaussian information-achieving estimator for a frame (UGIA-F) share the same limiting distribution, while their finite-information gap is the high-density advantage of a biased estimator. We realize the GML estimator by an expectation-maximization algorithm initialized near the true positions (EM-GML) and verify the theory by simulation, Theorem 1 with a 2D Gaussian point spread function and Theorem 2 with a 3D astigmatic one. In the finite-photon regime the biased EM-GML attains an error below the unbiased CRB, which motivates EM-GML as a benchmark and the design of learned localization algorithms for dense emitters. 
+
+> © 2026
+
+1. Introduction 
+
+Single-molecule localization microscopy (SMLM) achieves spatial resolution far below the diffraction limit by recording many frames in which only a sparse, photoswitchable subset of emitters is active, estimating the position of each active emitter, and accumulating the positions into a super-resolution image [ 1-4]. The temporal resolution improves as more emitters are active per frame, but a higher density makes the point spread functions (PSFs) overlap, so the central estimation problem is the joint localization of several closely spaced emitters from a single noisy frame. 
+
+The accuracy of localization is limited by the Fisher information of the frame and the Cramér–Rao bound (CRB) it induces. For the SMLM imaging model with Poisson signal and mixed Poisson–Gaussian noise, Ref. [ 5] derived the closed-form Fisher information matrix for multiple emitters with arbitrary positions and the resulting CRB on the position estimates, Ref. [6] extended the analysis to unknown emitter intensities, and Ref. [ 7] introduced the root-mean-square minimum distance (RMSMD) metric together with the unbiased Gaussian information-achieving estimator for a frame (UGIA-F), which attains the per-frame Fisher information and serves as an unbiased benchmark [ 8-11 ]. 
+
+The asymptotic behavior of the maximum-likelihood (ML) estimator is classical. The global maximum-likelihood (GML) estimator is consistent [ 12 ], asymptotically normal, and locally asymptotically efficient [ 13 -15 ], as presented in modern form by Refs. [ 16 , 17 ]. Its application to the multi-emitter SMLM model has not been made precise. Doing so would be significant 2
+
+since it would place the widely used ML localization on a rigorous estimation-theoretic footing, identify the exact accuracy limit, and establish when that limit is attained. 
+
+This paper makes that application precise. We define the GML estimator of the emitter positions for the SMLM Poisson working model and prove its asymptotic properties by verifying the regularity conditions of the model, in particular the strict positivity of the Fisher information for any fixed configuration of resolvable emitters, and then invoking the classical theory. Theorem 1 states that the GML estimator is consistent, asymptotically normal with covariance (𝑁𝑁𝐅𝐅 )−1 , asymptotically unbiased, and asymptotically efficient as the number of frames 𝑁𝑁 grows, attaining the CRB where 𝐅𝐅 is the Fisher information matrix of one frame. Theorem 2 states that for a single frame the GML estimator attains 𝐅𝐅 (𝐼𝐼 )−1 as the average emitter intensity 𝐼𝐼 grows, again the CRB. A corollary shows that in either limit the GML estimator and the UGIA-F benchmark converge to the same distribution, so their finite-information gap is the high-density advantage studied as Hypothesis 1. The conditions are stated for a general PSF, so the results apply to the 2D Gaussian PSF [ 18 ], the 3D astigmatic PSF [ 19 ], the double-helix PSF [ 20 ], and other engineered or experimentally measured PSFs [21 , 22 ]. 
+
+We verify the theory with the expectation-maximization (EM) algorithm [ 23 ]. The EM algorithm decomposes the joint 𝑀𝑀 -emitter localization into 𝑀𝑀 noise-free single-emitter ML problems, each solved by Newton iteration or gradient ascent [ 24 ]. Initialized near the true positions, the EM iterates converge to the global maximum; so this estimator, EM-GML, is a computable approximation of the GML estimator, the analogue of the UGIA-F benchmark drawing from the true positions. The UGIA-F estimator is realized by drawing position errors from the Gaussian distribution that achieves the inverse Fisher information matrix of the frame. 
+
+Three simulation studies follow. The first verifies Theorem 1 with a 2D Gaussian PSF, where summing 𝑁𝑁 frames grows the information and the GML estimator and UGIA-F both approach the CRB. The second verifies Theorem 2 with a 3D astigmatic PSF where the average intensity is swept and the same coincidence holds. The third examines the finite-photon regime, where the EM-GML estimator is necessarily biased, and shows that it attains an error below the unbiased CRB and below UGIA-F, indicating a gap between the GML estimate and the CRB that widens as the emitter density increases. 
+
+These results have two implications. First, EM-GML, used together with UGIA-F, provides a benchmark for practical localization algorithms, including neural networks that do not know the system parameters generating the frames. Second, the gap between the biased GML estimator and the unbiased CRB at high emitter density motivates the development of advanced localization algorithms, including neural networks that exploit this gap to achieve super spatiotemporal resolution. 
+
+Notation. Following Ref. [ 6], scalars are italic, e.g., 𝐼𝐼 , 𝑣𝑣 (𝒌𝒌 ), 𝜃𝜃 𝑚𝑚𝑚𝑚 ; vectors are bold italic, e.g., 𝜽𝜽 , 𝜽𝜽 𝑚𝑚 , 𝒖𝒖 , 𝑰𝑰 , and the pixel index 𝒌𝒌 ; matrices are bold upright capitals, e.g., 𝐅𝐅 , 𝐈𝐈 𝑑𝑑𝑑𝑑 ; the pixel index set Ω is not bold, and the inverse Fisher information matrix is written 𝐅𝐅 −1 . A subscripted 
+
+𝒌𝒌 , e.g., 𝑏𝑏 𝒌𝒌 , denotes a spatiotemporal density in photons/s/nm², and the argument form (𝒌𝒌 ), e.g., 
+
+𝑏𝑏 (𝒌𝒌 ), denotes the corresponding photon count in pixel 𝒌𝒌 , that is, the density integrated over Δ𝑡𝑡 ,
+
+Δ𝑥𝑥 , Δ𝑦𝑦 .
+
+2. Imaging and noise model 
+
+Camera and pixels. A camera images 𝑀𝑀 point emitters on a pixel set Ω of 𝐾𝐾 = 𝐾𝐾 𝑥𝑥 × 𝐾𝐾 𝑦𝑦 pixels with pixel index 𝒌𝒌 = �𝑘𝑘 𝑥𝑥 , 𝑘𝑘 𝑦𝑦 � ∈ Ω ≡ {0, 1, … , 𝐾𝐾 𝑥𝑥 − 1} × �0, 1, … , 𝐾𝐾 𝑦𝑦 − 1�, pixel size Δ𝑥𝑥 × Δ𝑦𝑦 
+
+in nm 2, lateral field extents 𝐿𝐿 𝑥𝑥 = 𝐾𝐾 𝑥𝑥 Δ𝑥𝑥 and 𝐿𝐿 𝑦𝑦 = 𝐾𝐾 𝑦𝑦 Δ𝑦𝑦 in nm, and exposure time Δ𝑡𝑡 in seconds. 
+
+Positions, field of view, and parameter space. Let 𝑑𝑑 ∈ {2, 3} be the spatial dimension. Emitter 𝑚𝑚 has position vector 𝜽𝜽 𝑚𝑚 = ( 𝜃𝜃 𝑚𝑚1 , … , 𝜃𝜃 𝑚𝑚 𝑑𝑑  ) ∈ ℝ 𝑑𝑑 , that is, (𝑥𝑥 𝑚𝑚 , 𝑦𝑦 𝑚𝑚 ) in 2D and 
+
+(𝑥𝑥 𝑚𝑚 , 𝑦𝑦 𝑚𝑚 , 𝑧𝑧 𝑚𝑚 ) in 3D, and all positions are stacked into 3
+
+𝜽𝜽 = ( 𝜽𝜽 1⊤, … , 𝜽𝜽 𝑑𝑑  
+
+> ⊤
+
+)⊤ = ( 𝜃𝜃 11 , … , 𝜃𝜃 1𝑑𝑑 , … , 𝜃𝜃 𝑑𝑑 1, … , 𝜃𝜃 𝑑𝑑𝑑𝑑  )⊤ ∈ ℝ 𝑑𝑑𝑑𝑑 . (1) 
+
+Let ℱ ⊂ ℝ 𝑑𝑑 denote the field of view (FOV) , the region a single emitter can occupy, ℱ =[0, 𝐿𝐿 𝑥𝑥 ] × �0, 𝐿𝐿 𝑦𝑦 � in 2D and ℱ = [0, 𝐿𝐿 𝑥𝑥 ] × �0, 𝐿𝐿 𝑦𝑦 � × [ −𝐿𝐿 𝑧𝑧 , 𝐿𝐿 𝑧𝑧 ] in 3D where 2𝐿𝐿 𝑧𝑧 is the axial range set by the PSF calibration. The parameter space is the set of 𝛿𝛿 -separated configurations with every emitter in the FOV, 
+
+Θ = �𝜽𝜽 ∈ ℱ 𝑑𝑑  : min  
+
+> 𝑚𝑚≠𝑚𝑚′
+
+‖𝜽𝜽 𝑚𝑚 − 𝜽𝜽 𝑚𝑚′ ‖ ≥ 𝛿𝛿� ⊂ ℝ 𝑑𝑑𝑑𝑑 . (2) 
+
+The FOV ℱ lives in ℝ𝑑𝑑 , where one emitter sits; the parameter space Θ is the higher-dimensional set of full 𝑀𝑀 -emitter configurations built from it. 
+
+PSF and its pixel average. Let 𝑞𝑞 𝑚𝑚 (𝒖𝒖 ) be the point spread function (PSF) of emitter 𝑚𝑚 , the probability density that one of its detected photons lands at the camera-plane point 𝒖𝒖 = ( 𝑥𝑥 , 𝑦𝑦 ),normalized to ∫ 𝑞𝑞 𝑚𝑚 (𝒖𝒖 ) d𝒖𝒖 = 1 , assuming a photon reaching the camera is detected with probability 1. The PSF is determined by the emitter position 𝜽𝜽 𝑚𝑚 ; in 3D the depth 𝑧𝑧 𝑚𝑚 shapes it. The PSF may differ between emitters and be spatially variant. The detector integrates the PSF over each pixel; writing 𝑝𝑝 (𝒌𝒌 ) = [ Δ𝑥𝑥 𝑘𝑘 𝑥𝑥 , Δ𝑥𝑥 (𝑘𝑘 𝑥𝑥 + 1)] × �Δ 𝑦𝑦 𝑘𝑘 𝑦𝑦 , Δ𝑦𝑦 �𝑘𝑘 𝑦𝑦 + 1 �� for the area of pixel 𝒌𝒌 and reusing the symbol 𝑞𝑞 𝑚𝑚 by a mild abuse of notation, the pixel-averaged PSF is 
+
+𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) = 1
+
+Δ𝑥𝑥 Δ𝑦𝑦 
+
+� 𝑞𝑞 𝑚𝑚 𝑝𝑝 (𝒌𝒌 )(𝒖𝒖 ) d𝒖𝒖 . (3) 
+
+A working example for a 2D Gaussian PSF, its density and pixel-averaged form, is given in Appendix C where each 𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) is 𝐶𝐶 ∞ in 𝜽𝜽 . 𝐶𝐶 𝑘𝑘 denotes differentiability up to order 𝑘𝑘 
+
+throughout. The development below holds for a general PSF and is illustrated with the 2D Gaussian example. 
+
+Signal photons. The known emitter intensities are 𝐼𝐼 1, … , 𝐼𝐼 𝑑𝑑  in photons/s, stacked as 𝑰𝑰 =(𝐼𝐼 1, … , 𝐼𝐼 𝑑𝑑  )⊤ . Following Ref. [ 6], the average emitter intensity is 𝐼𝐼 = 𝑀𝑀 −1 ∑ 𝐼𝐼 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+and the fixed intensity weights are 𝛽𝛽 𝑚𝑚 = 𝐼𝐼 𝑚𝑚 /𝐼𝐼 with 𝑀𝑀 −1 ∑ 𝛽𝛽 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+= 1 ; set 𝑄𝑄 (𝒌𝒌 ) = ∑ 𝛽𝛽 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+𝑞𝑞 𝑚𝑚 (𝒌𝒌 )
+
+and 𝑄𝑄 (𝒖𝒖 ) = ∑ 𝛽𝛽 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+𝑞𝑞 𝑚𝑚 (𝒖𝒖 ). The mean signal-photon density at camera-plane point 𝒖𝒖 over the exposure is 𝑠𝑠 (𝒖𝒖 ) = Δ𝑡𝑡 𝐼𝐼 𝑄𝑄 (𝒖𝒖 ) in photons/nm 2. In pixel 𝒌𝒌 , the mean signal photon count is its integral over the pixel, 
+
+𝑠𝑠 (𝒌𝒌 ) = � 𝑠𝑠 𝑝𝑝 (𝒌𝒌 )(𝒖𝒖 ) d𝒖𝒖 = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑄𝑄 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 � 𝐼𝐼 𝑚𝑚 
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) (4) 
+
+and the photon count in photons is 𝑆𝑆 (𝒌𝒌 ) ∼ Poisson �𝑠𝑠 (𝒌𝒌 )� independent across pixels where the pixel size Δ𝑥𝑥 Δ𝑦𝑦 enters explicitly. The scale 𝐼𝐼 is the quantity sent to infinity in the high-intensity regime of Theorem 2 while the weights 𝛽𝛽 𝑚𝑚 , the PSF, and the noise parameters are held fixed. 
+
+Background Poisson noise. In pixel 𝒌𝒌 , let 𝑏𝑏 𝒌𝒌 > 0 , in photons/s/nm², be the spatiotemporal density of the background Poisson noise. The effect of spatially non-uniform background is denoted by the subscript 𝒌𝒌 . Its integral over the exposure and pixel area, 𝑏𝑏 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝑏𝑏 𝒌𝒌 in photons, is the mean background count, and 𝐵𝐵 (𝒌𝒌 ) ∼ Poisson �𝑏𝑏 (𝒌𝒌 )� is the background Poisson noise sample. 
+
+Gaussian readout noise. Let 𝜇𝜇 𝒌𝒌 and 𝐺𝐺 𝒌𝒌 , in photons/s/nm², be the spatiotemporal density mean and variance of the readout in pixel 𝒌𝒌 . The effect of pixel-variant readout noise in an sCMOS camera [ 25 ] is denoted by the subscript 𝒌𝒌 . The corresponding photon-count mean and variance are 𝜇𝜇 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝜇𝜇 𝒌𝒌 and 𝐺𝐺 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐺𝐺 𝒌𝒌 in photons, and the readout Gaussian noise sample is 𝑊𝑊 (𝒌𝒌 ) ∼ 𝒩𝒩�𝜇𝜇 (𝒌𝒌 ), 𝐺𝐺 (𝒌𝒌 )�, independent of the signal and background. The spatially invariant model in Refs. [ 5, 6] is the special case for 𝑏𝑏 𝒌𝒌 = 𝑏𝑏 , 𝜇𝜇 𝒌𝒌 = 𝜇𝜇 , 𝐺𝐺 𝒌𝒌 = 𝐺𝐺 .4
+
+Mixed Poisson–Gaussian noise and its Poisson approximation. Adjust the readout mean to equal its variance, 𝜇𝜇 (𝒌𝒌 ) = 𝐺𝐺 (𝒌𝒌 ), equivalently 𝜇𝜇 𝒌𝒌 = 𝐺𝐺 𝒌𝒌 ; in practice the known readout offset is subtracted from the recorded frame and its variance added back. The combined background-plus-readout noise then has equal mean and variance , and when the per-pixel photon count is not small (e.g., 𝑏𝑏 (𝒌𝒌 ) ≥ 10 photons), is well approximated by a Poisson variable [ 5, 6]. With a mild abuse of notation we retain the symbols 𝑏𝑏 𝒌𝒌 , 𝑏𝑏 (𝒌𝒌 ), 𝐵𝐵 (𝒌𝒌 ) for this mixed noise, whose spatiotemporal density mean becomes 𝑏𝑏 𝒌𝒌 + 𝐺𝐺 𝒌𝒌 , written again as 𝑏𝑏 𝒌𝒌 , so the mixed-noise mean count is 𝑏𝑏 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝑏𝑏 𝒌𝒌 , that is, the original background count plus 𝐺𝐺 (𝒌𝒌 ), and the mixed-noise sample is 𝐵𝐵 (𝒌𝒌 ) ∼ Poisson �𝑏𝑏 (𝒌𝒌 )� in photons. 
+
+Total frame (working model). The pixel value is the signal plus the mixed noise, 
+
+𝑉𝑉 (𝒌𝒌 ) = 𝑆𝑆 (𝒌𝒌 ) + 𝐵𝐵 (𝒌𝒌 ) ∼ Poisson �𝑣𝑣 (𝒌𝒌 )� (5) 
+
+with 𝑣𝑣 (𝒌𝒌 ) = 𝑠𝑠 (𝒌𝒌 ) + 𝑏𝑏 (𝒌𝒌 ), independent across pixels. No correction symbol is needed since 
+
+𝑣𝑣 (𝒌𝒌 ) and 𝑉𝑉 (𝒌𝒌 ) already denote the signal-plus-noise mean and sample. This Poisson model is the one the estimator maximizes and under which the Fisher information 𝐅𝐅 is derived; Section 
+
+3.5  quantifies the vanishing error relative to the true Poisson–Gaussian frame. 
+
+Per-frame log-likelihood, score, and Fisher information. By the pixel independence of Eq.  (5) , the frame 𝑉𝑉 has probability mass function 
+
+𝑓𝑓 𝑉𝑉 (𝑉𝑉 ; 𝜽𝜽 ) = � 𝑣𝑣 (𝒌𝒌 )𝑉𝑉 (𝒌𝒌 ) 𝑒𝑒 −𝑣𝑣 (𝒌𝒌 )
+
+𝑉𝑉 (𝒌𝒌 )! 
+
+> 𝒌𝒌∈Ω
+
+, (6) 
+
+which is also the likelihood function of 𝜽𝜽 . Dropping the 𝜽𝜽 -independent constant as in all log-likelihood functions henceforth, the per-frame log-likelihood, score, and Fisher information are 
+
+ℓ1(𝜽𝜽 ) = �[𝑉𝑉 (𝒌𝒌 ) ln 𝑣𝑣 (𝒌𝒌 ) − 𝑣𝑣 (𝒌𝒌 )] 
+
+> 𝒌𝒌∈Ω
+
+, (7) 
+
+𝒔𝒔 1(𝜽𝜽 ) = 𝛻𝛻 𝜽𝜽 ℓ1(𝜽𝜽 ) = � � 𝑉𝑉 (𝒌𝒌 )
+
+𝑣𝑣 (𝒌𝒌 ) − 1�𝒌𝒌∈Ω 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 , (8) 
+
+𝐅𝐅 (𝜽𝜽 ) = 𝔼𝔼 𝜽𝜽 [𝒔𝒔 1 𝒔𝒔 1⊤] = � 1
+
+𝑣𝑣 (𝒌𝒌 )
+
+> 𝒌𝒌∈Ω
+
+𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 ⊤∈ ℝ 𝑑𝑑𝑑𝑑 ×𝑑𝑑𝑑𝑑 , (9) 
+
+using 𝔼𝔼 [𝑉𝑉 (𝒌𝒌 )] = Var[ 𝑉𝑉 (𝒌𝒌 )] = 𝑣𝑣 (𝒌𝒌 ) , pixel independence, and 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )/ 𝜕𝜕𝜽𝜽 = 𝜕𝜕 𝑠𝑠 (𝒌𝒌 )/ 𝜕𝜕𝜽𝜽 =
+
+Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 ∑ 𝐼𝐼 𝑚𝑚 𝑚𝑚 𝜕𝜕𝑞𝑞 𝑚𝑚 (𝒌𝒌 )/ 𝜕𝜕𝜽𝜽 since the noise mean 𝑏𝑏 (𝒌𝒌 ) is constant in 𝜽𝜽 . Eq.  (9)  is the closed-form Fisher information matrix (FIM) 𝐅𝐅 derived for SMLM in Ref. [ 5]. Because the intensities are known, it is case (i) of Ref. [ 6] where the full FIM reduces to its position block, 𝐅𝐅 = 𝐅𝐅 11 ,and the per-pixel weight 1/ 𝑣𝑣 (𝒌𝒌 ) coincides with its Corollary 2 where the mixed-noise mean 
+
+𝑏𝑏 (𝒌𝒌 ) is in the role of background-plus-readout. 
+
+Cramér–Rao bound and lower bound on RMSE. We use the following objects. The 
+
+Cramér–Rao bound (CRB) [13 , 14 ] is the matrix 𝐅𝐅 (𝜽𝜽 )−1 , so the covariance matrix of any unbiased estimator 𝜽𝜽 ˆ is bounded below in the Loewner ordering, Cov �𝜽𝜽 ˆ � ⪰ 𝐅𝐅 −1 . The Cramér– Rao lower bound (CRLB) of a single coordinate 𝜃𝜃 𝑚𝑚𝑚𝑚 is the standard deviation 
+
+Δ�𝜃𝜃 𝑚𝑚𝑚𝑚 � = �[𝐅𝐅 −1 ]𝑚𝑚𝑚𝑚 , 𝑚𝑚𝑚𝑚 �1/2, (10) 
+
+the square root of the corresponding diagonal element of 𝐅𝐅 −1 , which already accounts for coupling to the other coordinates and is in general far larger than [𝐅𝐅 ]𝑚𝑚𝑚𝑚 ,𝑚𝑚𝑚𝑚 −1 /2 .
+
+Because the emitter indices 𝑚𝑚 of the estimated position 𝜽𝜽 ˆ 𝑚𝑚 and the true position 𝜽𝜽 𝑚𝑚 are known one-to-one for all the estimators to be investigated, the accuracy of an estimator 𝜽𝜽 ˆ is 5
+
+scored by the root-mean-square error (RMSE) 𝑅𝑅 in nm, defined by 𝑅𝑅 2 = 𝔼𝔼 �𝑀𝑀 −1 ∑ �𝜽𝜽 ˆ 𝑚𝑚 −𝑑𝑑 
+
+> 𝑚𝑚=1
+
+𝜽𝜽 0,𝑚𝑚 � 2 �. The mean 𝔼𝔼 over the photon count of signal and noise is obtained by a Monte-Carlo average over frames in practice. 
+
+For any unbiased estimator each coordinate variance is bounded below by its CRLB, 
+
+Var �𝜃𝜃 ˆ𝑚𝑚𝑚𝑚 � ≥ Δ�𝜃𝜃 𝑚𝑚𝑚𝑚 �2, giving the lower bound on the RMSE 
+
+𝑅𝑅 2 = 1
+
+𝑀𝑀 � � Var �𝜃𝜃 ˆ𝑚𝑚𝑚𝑚 �𝑑𝑑 
+
+> 𝑚𝑚 =1
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+≥ 1
+
+𝑀𝑀 � � Δ 𝑑𝑑 
+
+> 𝑚𝑚 =1
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+�𝜃𝜃 𝑚𝑚𝑚𝑚 � 2 = 1
+
+𝑀𝑀 tr ( 𝐅𝐅 −1 ) (11) 
+
+with equality for an efficient estimator. UGIA-F attains it by construction, so 𝑅𝑅 UGIA-F  
+
+> 2
+
+=
+
+𝑀𝑀 −1 tr( 𝐅𝐅 −1 ) is the information-achieving lower benchmark for unbiased estimators. The matrix CRB 𝐅𝐅 (𝜽𝜽 )−1 is the fundamental object since it carries the inter-emitter correlations that the diagonal CRLB and the trace omit. The efficiency statements below refer to it. 
+
+Total Fisher information. For 𝑁𝑁 independent frames at the same 𝜽𝜽 , the total log-likelihood is ℓ𝑁𝑁 (𝜽𝜽 ) = ∑ ℓ1 
+
+> (𝑛𝑛 )𝑁𝑁 𝑛𝑛=1
+
+(𝜽𝜽 ), the total score is 𝒔𝒔 𝑁𝑁 (𝜽𝜽 ) = 𝛻𝛻 𝜽𝜽 ℓ 𝑁𝑁 (𝜽𝜽 ) = ∑ 𝒔𝒔 1 
+
+> (𝑛𝑛 )𝑁𝑁 𝑛𝑛=1
+
+(𝜽𝜽 ), and the Fisher informations add. That is, the total Fisher information is 𝐅𝐅 total = 𝑁𝑁 𝐅𝐅 (𝜽𝜽 ) , more generally 
+
+𝑁𝑁 𝐅𝐅 (𝐼𝐼 ) at average intensity 𝐼𝐼 as in Section  3.3 . Throughout, “ the information grows ” means the minimum eigenvalue 𝜆𝜆 min (𝐅𝐅 total ) → ∞ , equivalently the CRB vanishes, 𝐅𝐅 total  
+
+> −1
+
+→ 𝟎𝟎 , driven by 
+
+𝑁𝑁 → ∞ and/or 𝐼𝐼 → ∞ .
+
+3. Theory 
+
+3.1 Estimators 
+
+The following estimators are considered. 
+
+GML (global maximum likelihood): 𝜽𝜽 ˆ 𝑁𝑁 GML ∈ arg max  
+
+> 𝜽𝜽∈Θ
+
+ℓ 𝑁𝑁 (𝜽𝜽 ), the global maximizer. 
+
+LML (local maximum likelihood): any stationary point reached by an iterative maximizer from a generic initialization, which is unnecessary to be global. 
+
+UGIA-F (unbiased Gaussian information-achieving estimator for a frame): by construction 
+
+𝜽𝜽 ˆ 𝐹𝐹 = 𝜽𝜽 0 + 𝐅𝐅 (𝜽𝜽 0)−1 /2 𝒛𝒛 (12) 
+
+where 𝒛𝒛 ∼ 𝒩𝒩 (𝟎𝟎 , 𝐈𝐈 𝑑𝑑𝑑𝑑 ), hence 𝜽𝜽 ˆ 𝐹𝐹 ∼ 𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝜽𝜽 0)−1 ), an unbiased estimator whose covariance equals the per-frame CRB. It was introduced in Ref. [ 7], where it is constructed from the singular value decomposition (SVD) of the FIM, and is a theoretical benchmark and not deployable as it uses 𝜽𝜽 0.
+
+3.2 Regularity conditions 
+
+Fix the true positions 𝜽𝜽 0. The following conditions are assumed at 𝜽𝜽 0.
+
+C1. Parameter space. Θ, defined in Section  2, is compact and 𝜽𝜽 0 ∈ int Θ, i.e., every emitter is strictly inside the FOV ℱ and all pairwise separations strictly exceed 𝛿𝛿 .
+
+C2. Positivity and smoothness. There exists 𝑣𝑣 min > 0 with 𝑣𝑣 (𝒌𝒌 ) ≥ 𝑣𝑣 min for all 𝒌𝒌 and all 
+
+𝜽𝜽 ∈ Θ ; and 𝑣𝑣 (𝒌𝒌 ) ∈ 𝐶𝐶 3(Θ), or more weakly the model is differentiable in quadratic mean (DQM), which suffices for the asymptotics and admits 𝐶𝐶 2 spline PSFs, see Section  3.4 .
+
+C3. Information. 𝐅𝐅 (𝜽𝜽 0) ≻ 𝟎𝟎 , positive definite. 
+
+C4. Uniform regularity. The third-order partial derivatives of ℓ1(𝜽𝜽 ) are bounded by an integrable envelope uniformly on a neighborhood of 𝜽𝜽 0.
+
+Section  3.4  verifies that C1–C4 hold for the SMLM Poisson model. 
+
+3.3 Main results 
+
+The main results of this paper are as follows. 6
+
+Theorem 1 (Asymptotic efficiency, 𝑁𝑁 → ∞ , multiple frames): Under (C1)–(C4), given 𝑁𝑁 
+
+i.i.d. frames from the Poisson working model at 𝜽𝜽 0, the GML estimator 𝜽𝜽 ˆ 𝑁𝑁 GML satisfies as 𝑁𝑁 → ∞,
+
+(i) 𝜽𝜽 ˆ 𝑁𝑁 GML 𝑝𝑝 �� 𝜽𝜽 0;
+
+(ii) √𝑁𝑁 �𝜽𝜽 ˆ 𝑁𝑁 GML − 𝜽𝜽 0 � 𝑑𝑑 �� 𝒩𝒩 (𝟎𝟎 , 𝐅𝐅 (𝜽𝜽 0)−1 );
+
+(iii) 𝔼𝔼�𝜽𝜽 ˆ 𝑁𝑁 GML � → 𝜽𝜽 0 and bias = 𝑂𝑂 (𝑁𝑁 −1 ).
+
+Equivalently, for large 𝑁𝑁 
+
+𝜽𝜽 ˆ 𝑁𝑁 GML ≈ 𝒩𝒩 �𝜽𝜽 0, �𝑁𝑁𝐅𝐅 (𝜽𝜽 0)�−1 � , (13) 
+
+which is asymptotically Gaussian and unbiased, attaining the CRB 𝐅𝐅 total  
+
+> −1
+
+= ( 𝑁𝑁𝐅𝐅 )−1 .  
+
+The three GML properties (i)-(iii) are consistency, asymptotic normality and efficiency, and asymptotic unbiasedness, respectively. 
+
+Theorem 2 (Asymptotic efficiency, 𝐼𝐼 → ∞ , single frame): Let 𝐼𝐼 → ∞ with the weights 𝛽𝛽 𝑚𝑚 
+
+fixed. Then 𝐅𝐅 (𝐼𝐼 ) ≻ 𝟎𝟎 with 𝜆𝜆 min �𝐅𝐅 (𝐼𝐼 )� → ∞ , equivalently 𝐅𝐅 (𝐼𝐼 )−1 → 𝟎𝟎 , and the single-frame GML estimator satisfies 
+
+𝐅𝐅 (𝐼𝐼 )1/2 �𝜽𝜽 ˆ GML − 𝜽𝜽 0 � 𝑑𝑑 �� 𝒩𝒩 (𝟎𝟎 , 𝐈𝐈 𝑑𝑑𝑑𝑑 ), (14) 
+
+i.e., 𝜽𝜽 ˆ GML ≈ 𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝐼𝐼 )−1 ), attaining the CRB.  
+
+Combining the two limits of Theorems 1 and 2, the total information is 𝑁𝑁𝐅𝐅 (𝐼𝐼 ) with 𝑁𝑁 
+
+frames at average intensity 𝐼𝐼 . The proofs of Theorems 1 and 2 are given in Appendix A. 
+
+UGIA-F is a draw from 𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝜽𝜽 0)−1 ) by construction of Eq.  (12) . By Theorem 1 (ii) and Theorem 2, the GML estimator converges in distribution to the same law. Therefore, the following corollary is obtained. 
+
+Corollary 1 : As 𝑁𝑁 → ∞ and/or 𝐼𝐼 → ∞ ,
+
+𝜽𝜽 ˆ GML ⟶𝑑𝑑 
+
+𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 −1 ) =  
+
+> 𝑑𝑑
+
+𝜽𝜽 ˆ 𝐹𝐹 , (15) 
+
+the GML estimator and the UGIA-F estimator converge to the identical distribution.  
+
+3.4 Verification of conditions C1–C4 
+
+The four conditions are verified for the SMLM Poisson model. 
+
+C1. Parameter space. Imposed by construction, restricting to the interior and 𝛿𝛿 -separated configurations. Compactness and the interior truth follow. 
+
+C2. Positivity and smoothness. Because the mixed-noise mean is strictly positive, the total mean is bounded below, 
+
+𝑣𝑣 (𝒌𝒌 ) = 𝑠𝑠 (𝒌𝒌 ) + 𝑏𝑏 (𝒌𝒌 ) ≥ 𝑏𝑏 (𝒌𝒌 ) ≥ 𝑣𝑣 min > 0 (16) 
+
+for all 𝜽𝜽 , 𝒌𝒌 with 𝑣𝑣 min = min 𝒌𝒌∈Ω 𝑏𝑏 (𝒌𝒌 ) > 0 , a minimum over the finite pixel set Ω of strictly positive mixed-noise means, each 𝑏𝑏 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝑏𝑏 𝒌𝒌 > 0 . So, the Poisson mean never approaches zero, thereby eliminating the degeneracy that would otherwise spoil regularity at low counts. Regarding smoothness, for an analytic PSF such as Gaussian, scalar-diffraction/Airy [ 26 ], Gibson–Lanni [ 27 ], vectorial [ 28 ], astigmatic [ 19 ], double-helix [ 20 ], or tetrapod [ 21 ], each 𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) and hence 𝑣𝑣 (𝒌𝒌 ) is 𝐶𝐶 ∞ in 𝜽𝜽 , so C2 and C4 hold with room to spare. A cubic-spline experimental PSF [22 ] gives only 𝑣𝑣 (𝒌𝒌 ) ∈ 𝐶𝐶 2; this is still covered because the asymptotics require only differentiability in quadratic mean by following Refs. [ 15 , 17 ], which is weaker than the classical 𝐶𝐶 3 condition of Ref. [ 14 ]. Therefore, smoothness is available for these PSFs. 
+
+C3. Information. From the closed-form FIM in Eq.  (9) ,7
+
+𝐅𝐅 (𝜽𝜽 0) = � 1
+
+𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 ⊤𝒌𝒌∈Ω ≻ 𝟎𝟎 ⟺ � 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 (𝜃𝜃 0)�𝒌𝒌∈Ω 
+
+span ℝ 𝑑𝑑𝑑𝑑 . (17) 
+
+For 𝛿𝛿 -separated emitters the 𝑑𝑑 𝑀𝑀  position-gradient fields have distinct, essentially disjoint supports and are linearly independent as 𝐾𝐾 -vectors, so 𝐅𝐅 ≻ 𝟎𝟎 . This is directly checkable numerically from the coded FIM with the smallest eigenvalue greater than zero; 𝜆𝜆 min (𝐅𝐅 ) → 0
+
+and the CRB 𝐅𝐅 −1 blows up as 𝛿𝛿 → 0, a loss of resolution. In 3D , where 𝑑𝑑 = 3 , the condition additionally requires the PSF to be axially informative , that is, 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )/ 𝜕𝜕𝑧𝑧 𝑚𝑚 is nonzero and linearly independent of the lateral gradients, which holds only for 𝑧𝑧 -encoding PSFs such as astigmatic, double-helix, or tetrapod. Note that an axially symmetric PSF at focus carries no axial information, so 𝐅𝐅 is singular in 𝑧𝑧 and efficiency fails for the axial coordinate while lateral efficiency is unaffected. 
+
+C4. Uniform regularity. It follows from Eq.  (7)  that the third derivative 𝛻𝛻 3 ℓ1 is a finite sum of terms built from 𝑉𝑉 (𝒌𝒌 )/ 𝑣𝑣 (𝒌𝒌 ) 𝑚𝑚 , 𝑗𝑗 ≤ 3, and the derivatives of 𝑣𝑣 (𝒌𝒌 ) up to the third order. With 𝑣𝑣 (𝒌𝒌 ) ≥ 𝑣𝑣 min (C2), bounded PSF derivatives on compact Θ, and 𝔼𝔼 [𝑉𝑉 (𝒌𝒌 )] = 𝑣𝑣 (𝒌𝒌 ) < ∞,these are dominated by an integrable envelope, giving the required control of the Taylor remainder. 
+
+3.5 Remark: the Gaussian-to-Poisson approximation 
+
+Theorems 1 and 2 are exact under the Poisson working model. When the data are generated from the true Poisson–Gaussian frame of signal plus Poisson background plus Gaussian readout but estimated with the Poisson likelihood, the GML estimator is a quasi-MLE [29 ], which converges to the pseudo-true value 𝜽𝜽 ∗ minimizing the KL divergence, i.e., the relative entropy, from the true law where the sandwich covariance is 𝐀𝐀 −1 𝐁𝐁 𝐀𝐀 −1 with 𝐀𝐀 = −𝔼𝔼 (𝛻𝛻 2 ℓ1) and 𝐁𝐁 =Cov( 𝒔𝒔 1). The mean-adjustment 𝜇𝜇 (𝒌𝒌 ) = 𝐺𝐺 (𝒌𝒌 ) makes the first two moments of 𝑉𝑉 (𝒌𝒌 ) match the Poisson working model at 𝜽𝜽 0, i.e., both mean and variance 𝑣𝑣 (𝒌𝒌 ); hence 𝜽𝜽 ∗ = 𝜽𝜽 0 and 𝐀𝐀 = 𝐁𝐁 =
+
+𝐅𝐅 to this order, so the sandwich collapses to the CRB 𝐅𝐅 −1 and the theorem holds. The residual mismatch enters only through third and higher moments and is 𝑂𝑂 (1/ 𝐼𝐼 ), which vanishes as 𝐼𝐼 → ∞ in the signal-dominated regime. Consequently, (i) on data simulated from the Poisson working model the theorem holds exactly , recommended for the clean verification; (ii) on the true Poisson–Gaussian frame it holds up to 𝑂𝑂 (1/ 𝐼𝐼 ), which the simulation can quantify. 
+
+3.6 The gap between GML and UGIA-F with finite information 
+
+While Theorems 1 and 2 and Corollary 1 present the asymptotic properties of GML and UGIA-F and their relationship in the infinite-photon regime, it is interesting in practice to know the gap between GML and UGIA in the finite-photon regime. We hypothesize below. 
+
+Hypothesis 1 : In the finite-information regime where 𝑁𝑁 and 𝐼𝐼 are finite, the GML estimator is biased and attains a smaller RMSE than the unbiased UGIA-F estimator. Their deviation grows with the overlap severity of PSFs.  
+
+As indicated by Hypothesis 1, the finite-information regime is where GML and UGIA-F differ. There 𝜽𝜽 ˆ GML is biased , and because the CRB constrains only unbiased estimators, the biased GML can attain a smaller error than the unbiased 𝜽𝜽 ˆ 𝐹𝐹 , increasingly so as the CRB inflates with growing overlap of PSFs, tr( 𝐅𝐅 −1 ) → ∞ , equivalently 𝜆𝜆 min (𝐅𝐅 ) → 0 . Since 𝑅𝑅 UGIA-F  
+
+> 2
+
+=tr( 𝐅𝐅 −1 ) 𝑀𝑀 ⁄ in Eq.  (11) , this is the blow-up of the unbiased UGIA-F. This deviation from the common asymptotic limit, which grows with density, is exactly Hypothesis 1 that GML outperforms UGIA-F at high density. It is proved to shrink to zero as the total Fisher information grows, 𝜆𝜆 min �𝑁𝑁 𝐅𝐅 (𝐼𝐼 )� → ∞ , by Theorems 1 and 2. 
+
+4. The EM algorithm 8
+
+We shall numerically verify Theorems 1 and 2, Corollary 1, and Hypothesis 1. The GML estimator of Section  3.1  maximizes the frame log-likelihood ℓ1(𝜽𝜽 ) of Eq.  (7)  jointly over the 
+
+𝑑𝑑 𝑀𝑀  position coordinates, which is computationally difficult at high emitter density. The expectation-maximization (EM) algorithm [ 23 , 24 ] exploits the Poisson properties and the mutual independence of the per-emitter photon emissions in the frame model of Section  2,which replaces this joint maximization by a sequence of single-emitter localizations with monotone likelihood ascent. 
+
+Write the mean per-emitter signal count 𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑚𝑚 𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) so that 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) ∼
+
+Poisson �𝑠𝑠 𝑚𝑚 (𝒌𝒌 )� is the image of emitter 𝑚𝑚 alone, 𝑠𝑠 (𝒌𝒌 ) = ∑ 𝑠𝑠 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝒌𝒌 ) , and the frame is 
+
+𝑉𝑉 (𝒌𝒌 ) = ∑ 𝑆𝑆 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝒌𝒌 ) + 𝐵𝐵 (𝒌𝒌 ) with 𝐵𝐵 (𝒌𝒌 ) ∼ Poisson �𝑏𝑏 (𝒌𝒌 )� the mixed noise of Section 1. The variables 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) and 𝐵𝐵 (𝒌𝒌 ) are mutually independent across emitters and pixels. 
+
+4.1 Decomposition and ascent 
+
+Since the per-emitter images 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) are mutually independent, their joint probability distribution can be written as 
+
+� 𝑓𝑓 𝑆𝑆 𝑚𝑚 
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) = � 𝑓𝑓 𝑆𝑆 𝑚𝑚 ∣𝑉𝑉 
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) 𝑓𝑓 𝑉𝑉 (𝑉𝑉 ; 𝜽𝜽 ) (18) 
+
+where 𝑓𝑓 𝑆𝑆 𝑚𝑚 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) = ∏ 𝑠𝑠 𝑚𝑚 (𝒌𝒌 )𝑆𝑆 𝑚𝑚 (𝒌𝒌 )𝑒𝑒 −𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) 𝑆𝑆 𝑚𝑚 (𝒌𝒌 )! ⁄𝒌𝒌∈Ω is the probability mass function of the single-emitter noise-free image 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) and 𝑓𝑓 𝑆𝑆 𝑚𝑚 ∣𝑉𝑉 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) is its probability mass function conditioned on the frame 𝑉𝑉 (𝒌𝒌 ), 𝒌𝒌 ∈ Ω . Taking the logarithm of both sides and rearranging, with ℓ1(𝜽𝜽 ) = ln 𝑓𝑓 𝑉𝑉 (𝑉𝑉 ; 𝜽𝜽 ), yields the frame log-likelihood decomposition 
+
+ℓ1(𝜽𝜽 ) = � ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) − � ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 ∣𝑉𝑉 
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ). (19) 
+
+Taking the conditional expectation of both sides given the frame and the current estimate 𝜽𝜽 (𝑙𝑙 ),and using that ℓ1(𝜽𝜽 ) is fixed given the frame, yields 
+
+ℓ1(𝜽𝜽 ) = 𝒬𝒬�𝜽𝜽 ; 𝜽𝜽 (𝑙𝑙 )� − � 𝔼𝔼� ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 ∣𝑉𝑉 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) �𝑉𝑉 , 𝜽𝜽 (𝑙𝑙 )�
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(20) 
+
+where 
+
+𝒬𝒬�𝜽𝜽 ; 𝜽𝜽 (𝑙𝑙 )� = � 𝔼𝔼� ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 )�𝑉𝑉 , 𝜽𝜽 (𝑙𝑙 )�
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+(21) 
+
+is the EM auxiliary function. By Jensen's inequality the second sum is maximized over 𝜽𝜽 at 
+
+𝜽𝜽 = 𝜽𝜽 (𝑙𝑙 ), so any 𝜽𝜽 (𝑙𝑙+1 ) that increases 𝒬𝒬 does not decrease ℓ1, that is, ℓ1 �𝜽𝜽 (𝑙𝑙+1 )� ≥ ℓ 1 �𝜽𝜽 (𝑙𝑙 )�.The auxiliary function separates across emitters, so its maximization reduces to 𝑀𝑀 independent single-emitter problems for 𝑚𝑚 = 1, … , 𝑀𝑀 ,
+
+𝜽𝜽 ˆ 𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+= arg max 
+
+> 𝜽𝜽 𝑚𝑚
+
+𝔼𝔼� ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 )�𝑉𝑉 , 𝜽𝜽 (𝑙𝑙 )� . (22) 
+
+4.2 E-step and M-step 
+
+The E-step evaluates the conditional expectation. Since 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) and 𝐵𝐵 (𝒌𝒌 ) are mutually independent Poisson variables whose sum is 𝑉𝑉 (𝒌𝒌 ), by a Poisson property [ 30 ] the conditional mean of 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) given the frame is, 9
+
+𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ) = 𝔼𝔼�𝑆𝑆 𝑚𝑚 (𝒌𝒌 )| 𝑉𝑉 , 𝜽𝜽 (𝑙𝑙 )� = 𝑠𝑠 𝑚𝑚  
+
+> (𝑙𝑙 )
+
+(𝒌𝒌 )
+
+𝑣𝑣 (𝑙𝑙 ) (𝒌𝒌 ) 𝑉𝑉 (𝒌𝒌 ) = 𝐼𝐼 𝑚𝑚 𝑞𝑞 𝑚𝑚  
+
+> (𝑙𝑙 )
+
+(𝒌𝒌 )
+
+∑ 𝐼𝐼 𝑖𝑖  
+
+> 𝑑𝑑
+> 𝑖𝑖=1
+
+𝑞𝑞 𝑖𝑖  
+
+> (𝑙𝑙 )
+
+(𝒌𝒌 ) + 𝑏𝑏 𝒌𝒌 𝑉𝑉 (𝒌𝒌 ) (23) 
+
+where the superscript (𝑙𝑙 ) denotes evaluation at 𝜽𝜽 (𝑙𝑙 ), 𝑣𝑣 (𝑙𝑙 ) (𝒌𝒌 ) = ∑ 𝑠𝑠 𝑖𝑖  
+
+> (𝑙𝑙 )𝑑𝑑
+> 𝑖𝑖=1
+
+(𝒌𝒌 ) + 𝑏𝑏 (𝒌𝒌 ), and 𝑏𝑏 𝒌𝒌 is the spatiotemporal density mean of mixed noise in Section 1. The fraction is the share of the frame count attributed to emitter 𝑚𝑚 , so the E-step assigns to each emitter a noise-free estimated image. 
+
+Since ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 (𝑆𝑆 𝑚𝑚 ; 𝜽𝜽 𝑚𝑚 ) is linear in 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ), its conditional expectation replaces 𝑆𝑆 𝑚𝑚 (𝒌𝒌 ) by 
+
+𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ). The M-step then maximizes the single-emitter likelihood of the estimated image, which gives the noise-free single-emitter ML estimate 
+
+𝜽𝜽 ˆ 𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+= arg max 
+
+> 𝜽𝜽 𝑚𝑚
+
+��𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ) ln 𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) − 𝑠𝑠 𝑚𝑚 (𝒌𝒌 )�𝒌𝒌∈Ω 
+
+. (24) 
+
+The two single-emitter ML solvers by the gradient ascent and Newton are given in Appendix B. 
+
+4.3 Algorithm 
+
+Given an initial estimate 𝜽𝜽 (0), repeat two steps. The E-step computes 𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ) for all 𝑚𝑚 and 
+
+𝒌𝒌 ∈ Ω by Eq.  (23)  from the frame 𝑉𝑉 (𝒌𝒌 ) and the current 𝜽𝜽 (𝑙𝑙 ). The M-step computes 𝜽𝜽 ˆ 𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+for all 𝑚𝑚 by Eq.  (24)  from the 𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ) . Terminate when �𝜽𝜽 (𝑙𝑙+1 ) − 𝜽𝜽 (𝑙𝑙 )� < 𝜀𝜀 or 𝑙𝑙 ≥ 𝑙𝑙 ∗ for prespecified 𝜀𝜀 > 0 and 𝑙𝑙 ∗ > 0 .
+
+4.4 Properties 
+
+The EM algorithm has three properties of interest here. First, as a likelihood-ascent search it converges in general to an LML estimate called EM-LML; but if the initial estimate 𝜽𝜽 (0) is close to the true positions 𝜽𝜽 0, it converges to the GML estimate, called EM-GML, in the high-information regime, which is the regime verified in Section  5. Second, the likelihood is monotonically non-decreasing along the iterates by Eq.  (22) , which improves the localization from step to step and guarantees convergence. Third, the EM algorithm is computationally simple and fast, since Eqs.  (23)  and  (24)  decompose the joint 𝑀𝑀 -emitter localization into 𝑀𝑀 
+
+single-emitter localizations consisting of the E-step a pixelwise fraction and the M-step a noise-free single-emitter ML. The compute for all emitters can be run in parallel as a batch and be efficiently implementable on a GPU. 
+
+By targeting the global maximum, EM-GML is the operational realization of the asymptotically efficient estimator of Theorems 1 and 2 and provides the general accuracy bound against biased, unbiased, and learned estimators. From an arbitrary initialization the EM converges in general to a local maximum, EM-LML, which is biased and does not carry the efficiency guarantee, so the near-true initialization is used throughout Section  5.
+
+5. Simulation verification 
+
+5.1 Properties to be verified 
+
+Fix a high-density configuration, e.g., 𝑀𝑀 = 80 near the resolution limit. Sweep the information, i.e., raise 𝜆𝜆 min (𝐅𝐅 total ) by increasing the number of frames 𝑁𝑁 or the average intensity 𝐼𝐼 . For each setting, draw 𝐿𝐿 Monte-Carlo replicates and estimate positions with EM initialized near the truth, so the global maximum is found by EM-GML. The following five properties shall be verified by simulations. 
+
+1. Consistency and unbiasedness. The RMSE → 0 and the bias �𝜽𝜽 ˆ − 𝜽𝜽 0 � stays at or below the Monte-Carlo floor RMSE/ √𝐿𝐿 , so it is negligible relative to the standard deviation. The 10 
+
+𝑂𝑂 (1/ 𝑁𝑁 ) bias rate, below the resolution of 𝐿𝐿 replicates, is a property of the GML by Theorem 1. 
+
+2. Efficiency. The ratio of the empirical per-coordinate variance to the squared CRLB 
+
+Δ(𝜃𝜃 𝑚𝑚𝑚𝑚 )2, Eq.  (10) , tends to 1, equivalently the whitened residual of property 3 has unit per-coordinate variance. The full covariance equality Cov �𝜽𝜽 ˆ � → (𝑁𝑁𝐅𝐅 )−1 follows from Theorem 1 and is not separately estimated, since the full 𝑑𝑑 𝑀𝑀  × 𝑑𝑑 𝑀𝑀  covariance is beyond the Monte-Carlo replicate count, while 𝐅𝐅 is near block-diagonal for resolvable emitters so the per-coordinate variance is the informative part. 
+
+3. Normality. A QQ-plot tests the normality of the whitened residuals 𝐳𝐳 = 𝐅𝐅 1/2 �𝜽𝜽 ˆ − 𝜽𝜽 0 �,pooled over the emitters and the 𝐿𝐿 replicates, which are 𝒩𝒩 (𝟎𝟎 , 𝐈𝐈 ) under Theorems 1 and 2. The same residual verifies both the normality here and the per-coordinate efficiency of property 2. 
+
+4. GML ≡ UGIA-F. 𝑅𝑅�𝜽𝜽 ˆ GML � and 𝑅𝑅�𝜽𝜽 ˆ 𝐹𝐹 � converge as the information grows, the coincidence of the biased GML and the unbiased benchmark in the high-information limit by Corollary 1. 
+
+5. GML outperforms UGIA-F at high density. In the finite-information regime of finite 𝑁𝑁 
+
+and 𝐼𝐼 the biased EM-GML attains a smaller RMSE than the unbiased UGIA-F, so 
+
+𝑅𝑅�𝜽𝜽 ˆ GML � < 𝑅𝑅�𝜽𝜽 ˆ 𝐹𝐹 � by Hypothesis 1, and the gap widens as the emitter density increases. 
+
+EM-GML with near-true initialization is the appropriate global-maximum finder for this verification, since efficiency is a property of the global maximizer only; EM from random initialization converges to a local maximum, i.e., EM-LML, and is not used. 
+
+The gap of Hypothesis 1 is measured by the RMSE under the known one-to-one correspondence between the estimated and true positions, so each estimator is compared to the CRB on the same footing. Each configuration is summarized by its signal-to-noise ratio (SNR), computed from the system parameters following the information-sufficient SNR of Ref. [ 31 ]for the 2D PSF and its 3D astigmatic extension by Ref. [ 32 ]. 
+
+5.2 Approach 
+
+EM-GML. The EM-GML estimator is the EM algorithm initialized with a small jitter around the true positions, each emitter initially placed within 𝛿𝛿 /2 nm of its own true position, so the global maximum is found. The EM algorithm can also be initialized by an emitter index-agnostic estimator such as successive interference cancellation (SIC) of Ref. [ 24 ] to reach the global maximum in practice; so this near-true initialization stands in for an achievable one that is the EM-GML analogue of UGIA-F drawing from the true positions. 
+
+UGIA-F. The UGIA-F estimator generates the sample according to 𝜽𝜽 ˆ 𝐹𝐹 ∼ 𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝜽𝜽 0)−1 )
+
+where 𝐅𝐅 (𝜽𝜽 0) is the FIM of a frame. 
+
+RMSE. The estimated and true positions are in known one-to-one correspondence, so the accuracy of an estimator is scored by the RMSE 
+
+RMSE �𝜽𝜽 ˆ , 𝜽𝜽 0 �2 = 1
+
+𝑀𝑀 � �𝜽𝜽 ˆ 𝑚𝑚 − 𝜽𝜽 0,𝑚𝑚 � 2
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+, (25) 
+
+and the reported value is the root mean of Eq.  (25)  over the 𝐿𝐿 Monte-Carlo replicates. 
+
+Information-sufficient SNR. The information-sufficient SNR is proposed and derived for the 2D Gaussian PSF [ 31 ] and the 3D astigmatic PSF [ 32 ] for the uniform noise and the equal emitter intensity. We extend the SNR to the non-uniform noise and emitter-dependent intensity of this model. The signal quality of each configuration is quantified by a per-emitter information-sufficient SNR. 
+
+The Poisson background and Gaussian readout enter through their summed variance density 
+
+𝑏𝑏 𝒌𝒌 + 𝐺𝐺 𝒌𝒌 , and the local noise density seen by emitter 𝑚𝑚 is the PSF-weighted mean 11 
+
+𝑛𝑛 � 𝑚𝑚 = ∑ 𝑞𝑞 𝑚𝑚 𝒌𝒌∈Ω (𝒌𝒌 ) (𝑏𝑏 𝒌𝒌 + 𝐺𝐺 𝒌𝒌 )
+
+∑ 𝑞𝑞 𝑚𝑚 𝒌𝒌∈Ω (𝒌𝒌 ) . (26) 
+
+The per-emitter intensity-to-noise ratio is 𝛾𝛾 𝑚𝑚 = 𝐼𝐼 𝑚𝑚 /𝑛𝑛 � 𝑚𝑚 , the figure of merit of the PSF at the emitter is 𝜂𝜂 𝑚𝑚 , and the per-emitter information-sufficient SNR is defined as 𝑣𝑣 𝑚𝑚 = 𝜂𝜂 𝑚𝑚 𝛾𝛾 𝑚𝑚 with 
+
+SNR 𝑚𝑚 = 10 log 10 𝑣𝑣 𝑚𝑚 in dB. 
+
+For the 2D Gaussian PSF of Appendix C with width 𝜎𝜎 the figure of merit [ 31 ] is 
+
+𝜂𝜂 𝑚𝑚 = 𝜂𝜂 𝑠𝑠 𝜎𝜎 2 (27) 
+
+where 𝜂𝜂 𝑠𝑠 = −𝜌𝜌 /[2 𝜋𝜋 ln(1 − 𝜌𝜌 )] = 0.0791 is the figure of merit of the unit-variance Gaussian at the information-sufficient level 𝜌𝜌 = 0.80 [31 , 32 ]. Then the per-emitter SNR in dB is 
+
+SNR 𝑚𝑚 = 10 log 10 𝛾𝛾 𝑚𝑚 − 20 log 10 𝜎𝜎 − 11.02, (28) 
+
+which is Eq. (11) of Ref. [ 32 ] with 𝛾𝛾 replaced by 𝛾𝛾 𝑚𝑚 .
+
+For the 3D astigmatic PSF with depth-dependent widths 𝜎𝜎 𝑥𝑥 (𝑧𝑧 ) and 𝜎𝜎 𝑦𝑦 (𝑧𝑧 ) of Appendix C, following Ref. [ 32 ], the figure of merit is 
+
+𝜂𝜂 𝑚𝑚 = 𝜂𝜂 𝑠𝑠 𝜎𝜎 𝑥𝑥 (𝑧𝑧 𝑚𝑚 ) 𝜎𝜎 𝑦𝑦 (𝑧𝑧 𝑚𝑚 ) , (29) 
+
+then the per-emitter SNR in dB is 
+
+SNR 𝑚𝑚 = 10 log 10 𝛾𝛾 𝑚𝑚 − 10 log 10 �𝜎𝜎 𝑥𝑥 (𝑧𝑧 𝑚𝑚 ) 𝜎𝜎 𝑦𝑦 (𝑧𝑧 𝑚𝑚 )� − 11.02, (30) 
+
+which is Eq. (9) of Ref. [ 32 ] with 𝛾𝛾 replaced by 𝛾𝛾 𝑚𝑚 .
+
+Under uniform noise and a common intensity, 𝑛𝑛 � 𝑚𝑚 reduces to 𝑏𝑏 + 𝐺𝐺 , and Eqs.  (28)  and  (30) 
+
+reduce to the SNR of those two papers. Each frame is reported by the range and mean of SNR 𝑚𝑚 
+
+over the emitters. 
+
+In all simulations, the EM-GML that employs Newton or gradient ascent achieves the same numerical results, so only the results using Newton are reported below. 
+
+5.3 Asymptotic in multiple frames 
+
+FOV and camera. The FOV is 𝑑𝑑 = 2 dimensional with size 𝐿𝐿 𝑥𝑥 = 𝐿𝐿 𝑦𝑦 = 2400 nm. The camera has frame size 𝐾𝐾 𝑥𝑥 = 𝐾𝐾 𝑦𝑦 = 24 , that is, 576 pixels, with pixel size Δ𝑥𝑥 = Δ𝑦𝑦 = 100 nm and exposure time Δ𝑡𝑡 = 0.01 s. 
+
+Emitters. 𝑀𝑀 = 80 emitters are placed uniformly at random in the rectangle [200, 2200] × [200, 2200] of area 4 μm 2, i.e., the central block of 20 × 20 pixels. The emitters are under a minimum-separation constraint, any candidate within 𝛿𝛿 = 120 nm of an already accepted position being rejected and redrawn, so the configuration is 𝛿𝛿 -separated and resolvable while remaining dense with emitter density 80/4 = 20 emitters/μm 2 very high in SMLM. The positions are generated with a fixed Python seed for reproducibility. The emitter intensities 𝐼𝐼 𝑚𝑚 
+
+are drawn uniformly in [250000, 350000] photons/s. 
+
+PSF. Given in Appendix C, the PSF is the 2D Gaussian of width 𝜎𝜎 = 108.81 nm, equal to the approximated standard deviation of an Airy PSF with emitter Alexa 700 and numerical aperture 𝑛𝑛 𝑎𝑎 = 1.4 [33 ]. 
+
+Noise. The spatiotemporal density mean of the background Poisson noise 𝑏𝑏 𝒌𝒌 ∈ [4, 6] 
+
+photons/s/nm 2 is drawn uniformly. The spatiotemporal density mean and variance of the Gaussian readout noise 𝜇𝜇 𝒌𝒌 = 𝐺𝐺 𝒌𝒌 ∈ [2, 4] photons/s/nm 2 are drawn uniformly and set equal so that the Poisson approximation of Section  2 applies. 
+
+SNR. Under these settings the per-emitter information-sufficient SNR is computed by Eq. 
+
+(28)  and reported as the range and mean over the emitters. It is fixed across the frame sweep 12 
+
+since summing frames raises the total information without changing the per-frame SNR. The number of frames 𝑁𝑁 is swept from 1 to 1000. 
+
+EM-GML and UGIA-F for 𝑵𝑵 frames. Because the 𝑁𝑁 frames share the same mean 𝑣𝑣 (𝒌𝒌 ),their sum 𝑉𝑉 +(𝒌𝒌 ) = ∑ 𝑉𝑉 (𝑛𝑛 )𝑁𝑁 𝑛𝑛=1 (𝒌𝒌 ) ∼ Poisson �𝑁𝑁 𝑣𝑣 (𝒌𝒌 )� is a sufficient statistic, so the 𝑁𝑁 -frame GML is obtained by running the EM algorithm once on 𝑉𝑉 + rather than on each frame separately. Summing drives the per-pixel count to 𝑁𝑁 𝑣𝑣 (𝒌𝒌 ), so the noise relative to the signal falls as 1/ √𝑁𝑁 
+
+and the estimate concentrates at 𝜽𝜽 0 , the same information-growth mechanism as the high-intensity limit. In the E-step the splitting fraction is unchanged, 𝑆𝑆 ˆ𝑚𝑚 (𝒌𝒌 ) = ( 𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) 𝑣𝑣 (𝒌𝒌 )⁄ )𝑉𝑉 +(𝒌𝒌 ),and in the M-step the single-emitter likelihood is maximized with mean scaled by 𝑁𝑁 ,
+
+𝜽𝜽 ˆ 𝑚𝑚 = arg max 
+
+> 𝜽𝜽 𝑚𝑚
+
+��𝑆𝑆 ˆ𝑚𝑚 (𝒌𝒌 ) ln 𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) − 𝑁𝑁𝑠𝑠 𝑚𝑚 (𝒌𝒌 )�𝒌𝒌∈Ω 
+
+. (31) 
+
+The EM-GML uses the small-jitter initialization of Section  5.2 . The UGIA-F estimator is also performed on the summed frame. Because 𝑉𝑉 + carries 𝑁𝑁 times the information of one frame, its FIM is 𝑁𝑁𝐅𝐅 (𝜽𝜽 0), and the UGIA-F sample is drawn as 𝜽𝜽 ˆ 𝐹𝐹 ∼ 𝒩𝒩 �𝜽𝜽 0, �𝑁𝑁𝐅𝐅 (𝜽𝜽 0)�−1 �.
+
+RMSE. The estimated positions of EM-GML are in known one-to-one correspondence with the true positions through the near-true initialization, and the indices of the UGIA-F sample are known by construction, so no assignment by a partition algorithm [ 33 ] is needed. The RMSE for the two estimators is then computed by Eq.  (25) .                
+
+> Fig. 1. Dense but resolvable 2D configuration of 𝑀𝑀 = 80 emitters at density 20 emitters/μm 2and minimum separation 𝛿𝛿 = 120 nm. Top row: a pure-noise frame, that is, background and readout only, and the summed frames at 𝑁𝑁 = 1, 10, 100 . Bottom row: the summed frame at 𝑁𝑁 =1000 and the estimated positions of EM-GML and UGIA-F at 𝑁𝑁 = 1, 10, 1000 . The red dots are the true positions shown in every panel. Each frame is autoscaled, so the noise washes out as 𝑁𝑁 grows while the overlapped pattern stays visually unresolved. The scale bar in the noise frame is 500 nm.
+
+13 
+
+Fig. 2. RMSE, bias, and normality of EM-GML versus the number of frames 𝑁𝑁 . (a) RMSE versus 𝑁𝑁 on log-log axes for EM-GML and UGIA-F with the 𝑁𝑁 -frame CRB (tr( 𝐅𝐅 −1 ) 𝑁𝑁 𝑀𝑀 ⁄ )1/214                                 
+
+> where 𝐅𝐅 is the one-frame FIM. The three curves coincide and fall as 1/ √𝑁𝑁 , so EM-GML attains the bound and matches UGIA-F across the sweep. (b) Bias �𝜽𝜽 ˆ− 𝜽𝜽 0�versus 𝑁𝑁 with the EM-GML RMSE of (a) and the Monte-Carlo floor RMSE/ √𝐿𝐿 where 𝐿𝐿 = 20 is the number of Monte-Carlo replicates. The measured bias rides the floor, so the true bias is below it and the RMSE is variance-dominated. (c) QQ-plot of the pooled whitened residuals 𝐳𝐳 = ( 𝑁𝑁𝐅𝐅 )1/2�𝜽𝜽 ˆ− 𝜽𝜽 0�against the standard normal at 𝑁𝑁 = 1000 where the EM-GML RMSE meets the CRB. The points follow the ideal 𝒩𝒩 (0,1) line. Moreover, the per-coordinate ratio of the empirical variance to the squared CRLB of Eq. (10) are 0.944 and 0.983 for 𝑥𝑥 and 𝑦𝑦 , respectively, both near 1, which confirms asymptotic normality and per-coordinate efficiency.
+
+Figures. Fig.  1 shows qualitatively that the summed frame stays an overlapped blur at every 
+
+𝑁𝑁 while both estimators converge onto the true positions as 𝑁𝑁 grows, that is, the consistency and the EM-GML and UGIA-F coincidence in position space. Fig.  2 (a) verifies the consistency, the trace efficiency, and the coincidence of EM-GML and UGIA-F in the RMSE as 𝑁𝑁 grows. Fig.  2 (b) verifies the asymptotic unbiasedness, the bias staying at or below the Monte-Carlo floor RMSE/ √𝐿𝐿  and hence negligible relative to the standard deviation. Fig.  2 (c) verifies the asymptotic normality and the per-coordinate efficiency as the variance ratios approach 1, and since UGIA-F is by construction the draw 𝒩𝒩 (𝜽𝜽 0, ( 𝑁𝑁𝐅𝐅 )−1 ), the normality of the whitened residual raises the EM-GML and UGIA-F coincidence from equal RMSE to equal distribution. Together Figs.  1 and  2 verify properties 1-4 of Section  5.1  as 𝑁𝑁 grows. 
+
+5.4 Asymptotic in emitter intensity 
+
+FOV and camera. This simulation verifies Theorem 2 in 3D as the average intensity 𝐼𝐼 grows with a single frame 𝑁𝑁 = 1 . The FOV is 𝑑𝑑 = 3 dimensional with lateral size 𝐿𝐿 𝑥𝑥 = 𝐿𝐿 𝑦𝑦 = 2400 
+
+nm and axial size 𝐿𝐿 𝑧𝑧 = 400 nm or depth 2𝐿𝐿 𝑧𝑧 = 800 nm. The camera, pixel size, and exposure are as in Section  5.3 .
+
+Emitters. 𝑀𝑀 = 40 emitters are placed randomly in the cuboid [200, 2200] × [200, 2200] × [ −400, 400] by rejection sampling with 3D minimum separation 𝛿𝛿 = 250 nm, dense yet resolvable, so the lateral density is 10 emitters/μm 2, generated with a fixed Python seed. The intensity weights 𝛽𝛽 𝑚𝑚 are fixed by drawing 𝑀𝑀 values uniformly in [250000, 350000] 
+
+photons/s and normalizing to 𝑀𝑀 −1 ∑ 𝛽𝛽 𝑚𝑚  
+
+> 𝑑𝑑
+> 𝑚𝑚=1
+
+= 1 , and the average intensity 𝐼𝐼 is then swept so that 𝐼𝐼 𝑚𝑚 = 𝛽𝛽 𝑚𝑚 𝐼𝐼 .
+
+PSF. The PSF is the 3D astigmatic Gaussian PSF of Refs. [ 19 , 5] as given in Appendix C and implemented in SMLM_Lib [ 34 ], whose lateral widths 𝜎𝜎 𝑥𝑥 (𝑧𝑧 ) and 𝜎𝜎 𝑦𝑦 (𝑧𝑧 ) vary with depth so that the axial gradient 𝜕𝜕 𝑣𝑣 (𝒌𝒌 )/ 𝜕𝜕𝑧𝑧 𝑚𝑚 is nonzero and linearly independent of the lateral gradients, by which C3 holds in 𝑧𝑧 . Its calibration parameters are 𝑐𝑐 = 205 nm, 𝑎𝑎 = 290 nm, 
+
+𝜎𝜎 𝑥𝑥0 = 140 nm, 𝐴𝐴 𝑥𝑥 = 0.05 , 𝐵𝐵 𝑥𝑥 = 0.03 , 𝜎𝜎 𝑦𝑦0 = 135 nm, 𝐴𝐴 𝑦𝑦 = −0.01 , and 𝐵𝐵 𝑦𝑦 = 0.02 as usually used in practice [ 19 , 5]. 
+
+Noise. The background and readout noise are as in Section  5.3 . The average intensity 𝐼𝐼 is swept from 10 5 to 10 10 photons/s, equivalently the per-emitter photon budget 𝐼𝐼Δ 𝑡𝑡 grows, realizing the 𝐼𝐼 → ∞ regime. The per-emitter information-sufficient SNR is computed by Eq. 
+
+(30)  and reported as the range and mean over the emitters, increasing with 𝐼𝐼 .
+
+EM-GML and UGIA-F. For each 𝐼𝐼 , one frame is generated. The EM-GML is run with the small-jitter initialization of Section  5.2 , now jittering all three coordinates; and the UGIA-F sample is drawn as 𝜽𝜽 ˆ 𝐹𝐹 ∼ 𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝐼𝐼 )−1 ) where 𝐅𝐅 (𝐼𝐼 ) is the one-frame FIM at intensity 𝐼𝐼 in Eq. 
+
+(36) . The correspondence of estimated and true positions is known for both estimators, so the RMSE is computed by Eq.  (25)  now over the three coordinates of each position. 15                     
+
+> Fig. 3. Dense but resolvable 3D astigmatic configuration of 𝑀𝑀 = 40 emitters at lateral density 10 emitters/μm 2and 3D minimum separation 𝛿𝛿 = 250 nm. Rows are 𝐼𝐼 = 10 5, 10 8, 10 10
+> photons/s. The first column is the data frame, the second the 𝑥𝑥 -𝑦𝑦 reconstruction, and the third the 𝑥𝑥 -𝑧𝑧 reconstruction, with EM-GML and UGIA-F estimates over the true red dots shown in every panel. Each frame is autoscaled, so eventually the noise washes out and the astigmatic spots sharpen as 𝐼𝐼 grows. The scale bar in the 𝐼𝐼 = 10 5frame is 500 nm. The axial range is
+> [−400, 400] nm.
+
+Figures. Fig.  3 shows qualitatively that the data frame stays an overlapped astigmatic pattern while both estimators converge onto the true positions in 𝑥𝑥 , 𝑦𝑦 , and 𝑧𝑧 as 𝐼𝐼 grows, that is, the consistency and the EM-GML and UGIA-F coincidence in 3D position space. Fig.  4 (a) verifies the single-frame trace efficiency and the RMSE coincidence of EM-GML and UGIA-F, lateral and axial alike, EM-GML rising from below the unbiased bound onto the CRB as 𝐼𝐼 → ∞. Fig.  4 (b) verifies the asymptotic unbiasedness, the bias staying at or below the Monte-Carlo floor RMSE/ √𝐿𝐿  and hence negligible relative to the standard deviation. Fig.  4 (c) verifies the asymptotic normality and the per-coordinate efficiency in 3D, the variance ratios near 0.85 at the highest intensity. The small shortfall is the residual bias of Hypothesis 1 not yet vanished. With the normality the EM-GML and UGIA-F coincidence rises from equal RMSE to equal distribution. Together Figs.  3 and  4 verify properties 1-4 of Section  5.1  in 3D as 𝐼𝐼 → ∞ .16 
+
+Fig. 4. RMSE, bias, and normality of EM-GML versus the average intensity 𝐼𝐼 . The top axis of (a) and (b) maps 𝐼𝐼 to the mean SNR. (a) Total RMSE in 𝑥𝑥 , 𝑦𝑦 , and 𝑧𝑧 for EM-GML and UGIA-F 17 
+
+against the CRB. The lateral RMSE in 𝑥𝑥 , 𝑦𝑦 and the axial RMSE in 𝑧𝑧 are nearly equal, so only the total is shown. The EM-GML descends from well below the unbiased bound at low 𝐼𝐼 , which is the advantage of Hypothesis 1, and rises onto the CRB and UGIA-F as 𝐼𝐼 grows, which shows the Theorem 2 efficiency. (b) Bias �𝜽𝜽 ˆ − 𝜽𝜽 0 � versus 𝐼𝐼 on log-log axes with the EM-GML RMSE of (a) and the Monte-Carlo floor RMSE/ √𝐿𝐿  where 𝐿𝐿 = 20 is the number of Monte-Carlo replicates. The measured bias rides the floor, so the true bias is below it and the RMSE is variance-dominated. (c) QQ-plot of the pooled whitened residuals 𝐳𝐳 = 𝐅𝐅 (𝐼𝐼 )1/2 �𝜽𝜽 ˆ − 𝜽𝜽 0 � against the standard normal at 𝐼𝐼 = 10 10 where the EM-GML RMSE meets the CRB. The points follow the ideal 𝒩𝒩 (0,1) line, and the per-coordinate variance ratios are 0.888, 0.792 and 0.857 for 𝑥𝑥 ,
+
+𝑦𝑦 , and 𝑧𝑧 , respectively, all near 0.85, which confirms asymptotic normality and the approach to per-coordinate efficiency. 
+
+5.5 EM-GML outperformance over CRB in the finite-photon regime 
+
+Setup. The configuration is that of Section  5.3  with a single frame 𝑁𝑁 = 1 and the 2D Gaussian PSF in Appendix C. The number of emitters 𝑀𝑀 is swept from 1 to 200 inside the fixed central block of Section  5.3 , so the emitter density rises up to 200/4 = 50 emitters/μm 2, very high in SMLM. For each 𝑀𝑀 the positions are 𝛿𝛿 -separated by rejection sampling with 𝛿𝛿 = 100 nm and a fixed Python seed, the intensities are drawn uniformly in [250000, 350000] photons/s, and the background and readout noises are as in Section  5.3 .
+
+EM-GML and UGIA-F. For each 𝑀𝑀 one frame is generated. The EM-GML is run with the small-jitter initialization of Section  5.2  and the UGIA-F sample is drawn as 𝜽𝜽 ˆ 𝐹𝐹 ∼𝒩𝒩 (𝜽𝜽 0, 𝐅𝐅 (𝜽𝜽 0)−1 ). The correspondence between the estimated and true positions is known for both estimators, so the RMSE is computed by Eq.  (25) .
+
+Fig. 5. On a semi-logarithmic axis, computed with 𝐿𝐿 = 20 Monte-Carlo replicates, RMSE versus emitter density 𝐷𝐷 for EM-GML and UGIA-F with the frame CRB reference 
+
+(tr( 𝐅𝐅 −1 ) 𝑀𝑀 ⁄ )1/2 at a single frame 𝑁𝑁 = 1 . The emitter density 𝐷𝐷 is swept over 𝑀𝑀 ∈ 
+
+{1, 4, 8, 16, 32, 48, 80, 120, 160, 200} inside the fixed central block. EM-GML is the filled blue circles, UGIA-F the green plus signs, and the single-frame CRB the open black triangles. As 𝐷𝐷 
+
+grows the CRB and the UGIA-F benchmark increase exponentially, well fit by 8.14 × 1.104 𝐷𝐷 
+
+nm, while the EM-GML RMSE increases only roughly linearly, well fit by 0.72 𝐷𝐷 + 10.46 nm. The biased EM-GML therefore falls increasingly far below the unbiased benchmark as the density rises. 
+
+Figures. As shown in Fig.  5, the linear-versus-exponential separation is the gap of Hypothesis 1 in Section  3.6 , here exposed by raising the density at a single frame rather than by lowering the photon count. It reproduces the finite-photon behavior of Ref. [ 24 ] where the biased EM-GML estimator outperforms the unbiased CRB once the emitters are dense enough that the Fisher information becomes ill-conditioned. Because UGIA-F tracks the CRB 18 
+
+throughout, the gap is not an artifact of the benchmark but the genuine advantage of the biased GML in the finite-information regime. The substantial gap between the EM-GML and UIGA-F/CRB in the high-density regime implies a great potential to develop advanced localization algorithms for high-throughput super spatiotemporal resolution SMLM. 
+
+6. Conclusions 
+
+This paper established the asymptotic efficiency of the GML estimator for the multi-emitter SMLM imaging model. For any fixed configuration of resolvable emitters in 2D or 3D, the GML estimator of the emitter positions is consistent, asymptotically normal, asymptotically unbiased, and asymptotically efficient, attaining the Cramér–Rao bound as the number of frames grows in Theorem 1 and as the average emitter intensity grows in Theorem 2. Corollary 1 states that in either limit the GML estimator and the unbiased UGIA-F benchmark converge to the same distribution, so the two coincide wherever the information is large. 
+
+The asymptotic machinery is classical, so the contribution is its precise application to the SMLM Poisson model. This required defining the GML estimator for the model, verifying the regularity conditions, in particular the strict positivity of the Fisher information that keeps the model cleanly regular for resolvable emitters, and then invoking the classical theory. The theory was verified by simulation with the expectation-maximization realization EM-GML, Theorem 1 with a 2D Gaussian point spread function and Theorem 2 with a 3D astigmatic one, in both of which EM-GML and UGIA-F approach the Cramér–Rao bound together. 
+
+The results are restricted to fixed, resolvable configurations. As the separation 𝛿𝛿 tends to zero the Fisher information becomes singular, its inverse diverges, and asymptotic efficiency ceases to be informative, which is the high-density regime where a biased estimator can do better. There, in the finite-photon regime, the biased EM-GML attains an error below the unbiased Cramér–Rao bound and below UGIA-F, a gap that widens with emitter density, the high-density advantage studied as Hypothesis 1. This gap has two consequences for practice. First, EM-GML together with UGIA-F provides a benchmark for localization algorithms that do not know the system parameters, including neural networks. Second, the gap motivates the design of advanced localization algorithms, including neural networks, that exploit it at high emitter density to achieve high-throughput super spatiotemporal resolution SMLM. 
+
+Appendix A: Proof of Theorems 1 and 2 
+
+A.1 Theorem 1 (i): Consistency 
+
+The frames are i.i.d. with continuous, identifiable likelihood on the compact set Θ. Define the Kullback–Leibler contrast 
+
+𝕂𝕂 (𝜽𝜽 0, 𝜽𝜽 ) = 𝔼𝔼 𝜽𝜽 0 [ℓ1(𝜽𝜽 0) − ℓ 1(𝜽𝜽 )] = � �𝑣𝑣 (𝒌𝒌 ) − 𝑣𝑣 0(𝒌𝒌 ) − 𝑣𝑣 0(𝒌𝒌 ) ln 𝑣𝑣 (𝒌𝒌 )
+
+𝑣𝑣 0(𝒌𝒌 )�𝒌𝒌∈Ω ≥ 0, (32) 
+
+where 𝑣𝑣 0(𝒌𝒌 ) = 𝑣𝑣 (𝒌𝒌 )| 𝜽𝜽 0 . Each summand is the Kullback-Leibler divergence between the Poisson laws of means 𝑣𝑣 0(𝒌𝒌 ) and 𝑣𝑣 (𝒌𝒌 ), so 𝕂𝕂 (𝜽𝜽 0, 𝜽𝜽 ) is nonnegative and continuous (C2), and zero only at 𝜽𝜽 = 𝜽𝜽 0 up to emitter relabeling since 𝑣𝑣 (𝒌𝒌 ) ≥ 𝑣𝑣 min > 0 ; the local identifiability from C3 singles out 𝜽𝜽 0 in a neighborhood. By the uniform law of large numbers, from compactness C1 and domination from C2, 
+
+sup 
+
+> 𝜽𝜽∈Θ
+
+�1
+
+𝑁𝑁  ℓ 𝑁𝑁 (𝜽𝜽 ) − 𝔼𝔼 𝜽𝜽 0 [ℓ1(𝜽𝜽 )] � 𝑎𝑎 .𝑠𝑠 .
+
+�⎯� 0. (33) 
+
+The maximizer of a uniformly convergent sequence of objectives converges to the maximizer of the limit, i.e., 𝜽𝜽 ˆ 𝑁𝑁 GML → 𝜽𝜽 0 [12 ]. Because the global maximizer is used, spurious local 
+
+maxima, which have strictly smaller expected log-likelihood, are excluded in the limit. 
+
+A.2 Theorem 1 (ii): Asymptotic normality and efficiency 19 
+
+Since 𝜽𝜽 0 ∈ int Θ and 𝜽𝜽 ˆ 𝑁𝑁 GML → 𝜽𝜽 0 , eventually the total score 𝒔𝒔 𝑁𝑁 �𝜽𝜽 ˆ 𝑁𝑁 GML � = 𝟎𝟎 . A first-order Taylor expansion of the score of Eq.  (8)  about 𝜽𝜽 0 gives for some 𝜽𝜽 � on the segment to 𝜽𝜽 0,
+
+1
+
+√𝑁𝑁  𝒔𝒔 𝑁𝑁 (𝜽𝜽 0) + �1
+
+𝑁𝑁  𝛻𝛻 𝜽𝜽 𝒔𝒔 𝑁𝑁 (𝜽𝜽 �)� √𝑁𝑁 �𝜽𝜽 ˆ 𝑁𝑁 GML − 𝜽𝜽 0 � = 𝟎𝟎 . (34) 
+
+We have two limits. 
+
+• Score central limit theorem. 𝒔𝒔 1(𝜽𝜽 0) has mean 𝟎𝟎 and covariance 𝐅𝐅 (𝜽𝜽 0), so by the central limit theorem 𝒔𝒔 𝑁𝑁 (𝜽𝜽 0) √𝑁𝑁 ⁄ 𝑑𝑑 → 𝒩𝒩�𝟎𝟎 , 𝐅𝐅 (𝜽𝜽 0)�.
+
+• Observed information. By the law of large numbers and C4, which controls the remainder via the third derivative, −𝑁𝑁 −1 𝛻𝛻 𝜽𝜽 𝒔𝒔 𝑁𝑁 (𝜽𝜽 �) 𝑝𝑝 → 𝐅𝐅 (𝜽𝜽 0).
+
+Slutsky's theorem yields 
+
+√𝑁𝑁 �𝜽𝜽 ˆ 𝑁𝑁 GML − 𝜽𝜽 0 � 𝑑𝑑 → 𝐅𝐅 (𝜽𝜽 0)−1 𝒩𝒩�𝟎𝟎 , 𝐅𝐅 (𝜽𝜽 0)� = 𝒩𝒩 (𝟎𝟎 , 𝐅𝐅 (𝜽𝜽 0)−1 ). (35) 
+
+The asymptotic covariance equals the CRB 𝐅𝐅 −1 , which is the definition of asymptotic efficiency 
+
+[14 , 17 , 16 ]. 
+
+A.3 Theorem 1 (iii): Asymptotic unbiasedness 
+
+𝜽𝜽 ˆ 𝑁𝑁 GML lies in the compact set Θ, hence is bounded and uniformly integrable; the convergence in probability of A.1 therefore upgrades to convergence in mean, 𝔼𝔼��𝜽𝜽 ˆ 𝑁𝑁 GML − 𝜽𝜽 0 �� → 0. The standard higher-order stochastic expansion of the MLE [ 17 ] gives bias = 𝑂𝑂 (𝑁𝑁 −1 ), dominated by the 𝑂𝑂�𝑁𝑁 −1 /2 � standard deviation; the estimator is thus asymptotically unbiased and efficient. 
+
+A.4 Theorem 2: 𝐼𝐼 → ∞ regime 
+
+Let 𝐼𝐼 → ∞ with the weights 𝛽𝛽 𝑚𝑚 fixed and so 𝐼𝐼 𝑚𝑚 = 𝐼𝐼𝛽𝛽 𝑚𝑚 . Then 𝑣𝑣 (𝒌𝒌 ) = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑄𝑄 (𝒌𝒌 ) + 𝑏𝑏 (𝒌𝒌 ),the signal grows with 𝐼𝐼 while the mixed-noise mean 𝑏𝑏 (𝒌𝒌 ) stays fixed, and the FIM is an explicit function of 𝐼𝐼 from Eq.  (9) ,
+
+𝐅𝐅 (𝐼𝐼 ) = � �Δ 𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼� 2Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑄𝑄 (𝒌𝒌 ) + 𝑏𝑏 (𝒌𝒌 )
+
+> 𝒌𝒌∈Ω
+
+𝜕𝜕 𝑄𝑄 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 𝜕𝜕 𝑄𝑄 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 ⊤ 𝐼𝐼→∞ �⎯� 𝐼𝐼 𝐂𝐂 (36) 
+
+where 
+
+𝐂𝐂 = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 � 1
+
+𝑄𝑄 (𝒌𝒌 ) 
+
+> 𝒌𝒌 :𝑄𝑄 (𝒌𝒌 )>0
+
+𝜕𝜕 𝑄𝑄 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 𝜕𝜕 𝑄𝑄 (𝒌𝒌 )
+
+𝜕𝜕𝜽𝜽 ⊤≻ 𝟎𝟎 (37) 
+
+because the fixed background 𝑏𝑏 (𝒌𝒌 ) is negligible beside the growing signal. Then every eigenvalue grows like 𝐼𝐼 and in particular 𝜆𝜆 min �𝐅𝐅 (𝐼𝐼 )� → ∞ , equivalently 𝐅𝐅 (𝐼𝐼 )−1 → 𝟎𝟎 ; the CRB shrinks as 1/ 𝐼𝐼 , recovering the familiar photon-limited 𝑅𝑅 ∝ 1/ √𝐼𝐼  scaling. Write 𝐹𝐹 𝑉𝑉 𝐼𝐼 (𝜽𝜽 ) for the law (i.e., probability distribution) and 𝑓𝑓 𝑉𝑉 𝐼𝐼 (𝜽𝜽 ) for the density of the frame 𝑉𝑉 under parameter 𝜽𝜽 
+
+at average intensity 𝐼𝐼 . The single-frame family {𝐹𝐹 𝑉𝑉 𝐼𝐼 (𝜽𝜽 ): 𝜽𝜽 ∈ Θ } is then locally asymptotically normal at 𝜽𝜽 0 with norming matrix 𝐅𝐅 (𝐼𝐼 )1/2. For a local parameter 𝒉𝒉 ∈ ℝ 𝑑𝑑𝑑𝑑 , the log-likelihood ratio of measures in terms of the Radon-Nikodym derivative is 
+
+ln 𝑑𝑑𝐹𝐹 𝑉𝑉 𝐼𝐼 �𝜽𝜽 0 + 𝐅𝐅 (𝐼𝐼 )−1 /2 𝒉𝒉� 𝑑𝑑𝐹𝐹 𝑉𝑉 𝐼𝐼 (𝜽𝜽 0) = ln 𝑓𝑓 𝑉𝑉 𝐼𝐼 �𝜽𝜽 0 + 𝐅𝐅 (𝐼𝐼 )−1 /2 𝒉𝒉� 𝑓𝑓 𝑉𝑉 𝐼𝐼 (𝜽𝜽 0) = 𝒉𝒉 ⊤ 𝐅𝐅 (𝐼𝐼 )−1 /2 ℓ̇ 𝐼𝐼 (𝜽𝜽 0)����������� 
+
+> 𝒁𝒁 𝐼𝐼
+
++ 12 𝒉𝒉 ⊤ �𝐅𝐅 (𝐼𝐼 )−1 /2 ℓ̈ 𝐼𝐼 (𝜽𝜽 0) 𝐅𝐅 (𝐼𝐼 )−1 /2 �𝒉𝒉 + 𝑅𝑅 𝐼𝐼 = 𝒉𝒉 ⊤ 𝒁𝒁 𝐼𝐼 − 12 ‖𝒉𝒉‖ 2 + 𝑜𝑜 𝑝𝑝 (1). (38) 20 
+
+Here ℓ̇ 𝐼𝐼 (𝜽𝜽 0) is the score 𝒔𝒔 1(𝜽𝜽 0) of Eq.  (8) , ℓ̈ 𝐼𝐼 (𝜽𝜽 0) its Hessian, and 𝑅𝑅 𝐼𝐼 the third-order Taylor remainder, all at average intensity 𝐼𝐼 . The normalized score 𝒁𝒁 𝐼𝐼 𝑑𝑑 → 𝒩𝒩 (𝟎𝟎 , 𝐈𝐈 𝑑𝑑𝑑𝑑 ) because the Poisson log-likelihood is smooth with mean bounded below (C2) and the third-order remainder is controlled by 𝐅𝐅 (𝐼𝐼 )−1 /2 (C4). Le Cam's theory [ 15 , 17 ] then gives efficiency of the GML, namely 𝐅𝐅 (𝐼𝐼 )1/2 �𝜽𝜽 ˆ GML − 𝜽𝜽 0 � 𝑑𝑑 → 𝒩𝒩 (𝟎𝟎 , 𝐈𝐈 𝑑𝑑𝑑𝑑 ).
+
+Appendix B: Noise-free single-emitter ML estimator 
+
+In the M-step of Eq.  (24) , the position of emitter 𝑚𝑚 is estimated from the noise-free estimated image 𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 ). Two iterative solvers are used, gradient ascent and Newton. Both run on an inner index 𝑛𝑛 from the initial 𝜽𝜽 𝑚𝑚 (0) = 𝜽𝜽 𝑚𝑚  
+
+> (𝑙𝑙 )
+
+and return 𝜽𝜽 ˆ 𝑚𝑚 
+
+> (𝑙𝑙+1 )
+
+.
+
+Gradient ascent. The gradient 𝑳𝑳 𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝜽𝜽 𝑚𝑚 ) of the noise-free single-emitter log-likelihood 
+
+ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 �𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+; 𝜽𝜽 𝑚𝑚 � has the components for 𝑗𝑗 = 1, … , 𝑑𝑑 ,
+
+�𝑳𝑳 𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝜽𝜽 𝑚𝑚 )�𝑚𝑚  = 𝜕𝜕 𝜕𝜕𝜃𝜃 𝑚𝑚𝑚𝑚 
+
+ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 �𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+; 𝜽𝜽 𝑚𝑚 � = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑚𝑚 � � 𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+(𝒌𝒌 )
+
+𝑠𝑠 𝑚𝑚 (𝒌𝒌 ) − 1�𝒌𝒌∈Ω 𝜕𝜕𝑞𝑞 𝑚𝑚 (𝒌𝒌 )
+
+𝜕𝜕𝜃𝜃 𝑚𝑚𝑚𝑚 
+
+. (39) 
+
+The position is updated along the gradient, 
+
+𝜽𝜽 𝑚𝑚 (𝑛𝑛 + 1) = 𝜽𝜽 𝑚𝑚 (𝑛𝑛 ) + 𝛼𝛼 𝑳𝑳 𝑚𝑚 
+
+> (𝑙𝑙+1 )
+
+�𝜽𝜽 𝑚𝑚 (𝑛𝑛 )�, (40) 
+
+with a constant step 𝛼𝛼 > 0 , terminating when ‖𝜽𝜽 𝑚𝑚 (𝑛𝑛 + 1) − 𝜽𝜽 𝑚𝑚 (𝑛𝑛 )‖ < 𝜀𝜀 . With the iteration count fixed, all 𝑀𝑀 emitters are updated in parallel as a GPU batch, which speeds the compute by about a factor of 𝑀𝑀 over a serial sweep. 
+
+Newton. The Newton algorithm uses the Hessian 𝐇𝐇 (𝜽𝜽 𝑚𝑚 ) of the noise-free single-emitter log-likelihood with elements for 𝑖𝑖 , 𝑗𝑗 = 1, … , 𝑑𝑑 ,
+
+[𝐇𝐇 (𝜽𝜽 𝑚𝑚 )] 𝑖𝑖 𝑚𝑚  = 𝜕𝜕 2𝜕𝜕𝜃𝜃 𝑚𝑚 𝑖𝑖  𝜕𝜕𝜃𝜃 𝑚𝑚𝑚𝑚 
+
+ln 𝑓𝑓 𝑆𝑆 𝑚𝑚 �𝑆𝑆 ˆ𝑚𝑚  
+
+> (𝑙𝑙+1 )
+
+; 𝜽𝜽 𝑚𝑚 �, (41) 
+
+and updates 
+
+𝜽𝜽 𝑚𝑚 (𝑛𝑛 + 1) = 𝜽𝜽 𝑚𝑚 (𝑛𝑛 ) − 𝐇𝐇 −1 �𝜽𝜽 𝑚𝑚 (𝑛𝑛 )� 𝑳𝑳 𝑚𝑚 
+
+> (𝑙𝑙+1 )
+
+�𝜽𝜽 𝑚𝑚 (𝑛𝑛 )�. (42) 
+
+The Hessian in Eq.  (41)  can be replaced by its expectation, 𝐸𝐸 [𝐇𝐇 (𝜽𝜽 𝑚𝑚 )] = −𝐅𝐅 (𝜽𝜽 𝑚𝑚 ), the 𝑑𝑑 × 𝑑𝑑 
+
+noise-free single-emitter FIM with elements for 𝑖𝑖 , 𝑗𝑗 = 1, … , 𝑑𝑑 ,
+
+[𝐅𝐅 (𝜽𝜽 𝑚𝑚 )] 𝑖𝑖 𝑚𝑚  = Δ𝑡𝑡 Δ𝑥𝑥 Δ𝑦𝑦 𝐼𝐼 𝑚𝑚 � 1
+
+𝑞𝑞 𝑚𝑚 (𝒌𝒌 )
+
+> 𝒌𝒌∈Ω
+
+𝜕𝜕𝑞𝑞 𝑚𝑚 (𝒌𝒌 )
+
+𝜕𝜕𝜃𝜃 𝑚𝑚 𝑖𝑖 
+
+𝜕𝜕𝑞𝑞 𝑚𝑚 (𝒌𝒌 )
+
+𝜕𝜕𝜃𝜃 𝑚𝑚𝑚𝑚 
+
+, (43) 
+
+evaluated at the current estimate. The resulting update is 
+
+𝜽𝜽 𝑚𝑚 (𝑛𝑛 + 1) = 𝜽𝜽 𝑚𝑚 (𝑛𝑛 ) + 𝛼𝛼 𝐅𝐅 −1 �𝜽𝜽 𝑚𝑚 (𝑛𝑛 )� 𝑳𝑳 𝑚𝑚 
+
+> (𝑙𝑙+1 )
+
+�𝜽𝜽 𝑚𝑚 (𝑛𝑛 )� (44) 
+
+with 𝛼𝛼 = 1 . Near an LML point the Newton algorithm converges quadratically in the estimation error whereas the gradient ascent converges geometrically with a rate limited by the spread of the eigenvalues of the Hessian, which constrains the step 𝛼𝛼 .
+
+Appendix C: The 2D Gaussian and 3D astigmatic PSFs 
+
+The 2D simulations of Sections  5.3  and  5.5  use the 2D Gaussian PSF, and the 3D simulation of Section  5.4  uses the 3D astigmatic Gaussian PSF. Both are given here. 
+
+2D Gaussian PSF. For a 2D Gaussian PSF of width 𝜎𝜎 [18 , 5], the PSF density at the camera-plane point 𝒖𝒖 = ( 𝑥𝑥 , 𝑦𝑦 ) is 21 
+
+𝑞𝑞 𝑚𝑚 (𝒖𝒖 ) = 12𝜋𝜋𝜎𝜎 2 exp �− (𝑥𝑥 − 𝑥𝑥 𝑚𝑚 )2 + ( 𝑦𝑦 − 𝑦𝑦 𝑚𝑚 )2
+
+2𝜎𝜎 2 � , (45) 
+
+whose pixel average by Eq.  (3)  is 
+
+𝑞𝑞 𝑚𝑚 (𝒌𝒌 ) = 1
+
+Δ𝑥𝑥 Δ𝑦𝑦 
+
+�Φ � Δ𝑥𝑥 (𝑘𝑘 𝑥𝑥 + 1) − 𝑥𝑥 𝑚𝑚 𝜎𝜎  � − Φ � Δ𝑥𝑥 𝑘𝑘 𝑥𝑥 − 𝑥𝑥 𝑚𝑚 𝜎𝜎  �� 
+
+× �Φ � Δ𝑦𝑦 �𝑘𝑘 𝑦𝑦 + 1 � − 𝑦𝑦 𝑚𝑚 𝜎𝜎  � − Φ � Δ𝑦𝑦 𝑘𝑘 𝑦𝑦 − 𝑦𝑦 𝑚𝑚 𝜎𝜎  �� , (46) 
+
+with Φ the standard normal CDF. 
+
+3D astigmatic PSF. The 3D astigmatic Gaussian PSF of Refs. [ 19 , 5] has the density for 
+
+𝒖𝒖 = ( 𝑥𝑥 , 𝑦𝑦 )
+
+𝑞𝑞 𝑚𝑚 (𝒖𝒖 ) = 12𝜋𝜋𝜎𝜎 𝑥𝑥 (𝑧𝑧 𝑚𝑚 )𝜎𝜎 𝑦𝑦 (𝑧𝑧 𝑚𝑚 ) exp �− (𝑥𝑥 − 𝑥𝑥 𝑚𝑚 )2
+
+2𝜎𝜎 𝑥𝑥 2(𝑧𝑧 𝑚𝑚 ) − (𝑦𝑦 − 𝑦𝑦 𝑚𝑚 )2
+
+2𝜎𝜎 𝑦𝑦 2(𝑧𝑧 𝑚𝑚 ) � , (47) 
+
+where 𝜎𝜎 𝑥𝑥 2(𝑧𝑧 ) = 𝜎𝜎 𝑥𝑥0 2 (1 + ( 𝑧𝑧 + 𝑐𝑐 )2 𝑎𝑎 2⁄ + 𝐴𝐴 𝑥𝑥 (𝑧𝑧 + 𝑐𝑐 )3 𝑎𝑎 3⁄ + 𝐵𝐵 𝑥𝑥 (𝑧𝑧 + 𝑐𝑐 )4 𝑎𝑎 4⁄ ) and 𝜎𝜎 𝑦𝑦 2(𝑧𝑧 ) = 
+
+𝜎𝜎 𝑦𝑦0 2 �1 + ( 𝑧𝑧 − 𝑐𝑐 )2 𝑎𝑎 2⁄ + 𝐴𝐴 𝑦𝑦 (𝑧𝑧 − 𝑐𝑐 )3 𝑎𝑎 3⁄ + 𝐵𝐵 𝑦𝑦 (𝑧𝑧 − 𝑐𝑐 )4 𝑎𝑎 4⁄ � with focal offset 𝑐𝑐 , depth parameter 𝑎𝑎 , in-focus widths 𝜎𝜎 𝑥𝑥0 and 𝜎𝜎 𝑦𝑦0 , and shape coefficients 𝐴𝐴 𝑥𝑥 , 𝐵𝐵 𝑥𝑥 , 𝐴𝐴 𝑦𝑦 , 𝐵𝐵 𝑦𝑦 . The astigmatism makes 𝜎𝜎 𝑥𝑥 and 𝜎𝜎 𝑦𝑦 vary oppositely with depth, so the frame encodes the depth 𝑧𝑧 𝑚𝑚 .The pixel average by Eq.  (3)  replaces 𝜎𝜎 in Eq.  (46)  by 𝜎𝜎 𝑥𝑥 (𝑧𝑧 𝑚𝑚 ) along 𝑥𝑥 and 𝜎𝜎 𝑦𝑦 (𝑧𝑧 𝑚𝑚 ) along 𝑦𝑦 .
+
+Funding 
+
+Acknowledgements 
+
+Disclosures 
+
+The author declares no conflicts of interest. 
+
+Data Availability 
+
+Data underlying the results presented in this paper are available in Ref. [ 35 ]. 
+
+References 
+
+1. E. Betzig, G. H. Patterson, R. Sougrat, O. W. Lindwasser, S. Olenych, J. S. Bonifacino, M. W. Davidson, J. Lippincott-Schwartz, and H. F. Hess, “Imaging intracellular fluorescent proteins at nanometer resolution,” Science, 313 (5793), 1642–1645(2006). 
+
+2. M. J. Rust, M. Bates, and X. Zhuang, “Sub-diffraction-limit imaging by stochastic optical reconstruction microscopy (STORM),” Nat. Methods, 3(10), 793-796(2006). 
+
+3. S. T. Hess, T. P. Girirajan, and M. D. Mason, “Ultra-high resolution imaging by fluorescence photoactivation localization microscopy,” Biophys. J., 91 (11), 4258–4272(2006). 
+
+4. M. Heilemann , S. v. Linde , M. Schüttpelz , R. Kasper, B. Seefeldt, A. Mukherjee, P. Tinnefeld, and M. Sauer, “Subdiffraction ‐resolution fluorescence imaging with conventional fluorescent probes,” Angew. Chem. Int. Ed., 47 (33), 6172 –6176(2008). 
+
+5. Y. Sun, “Localization precision of stochastic optical localization nanoscopy using single frames,” J. Biomed. Optics, 18 (11), 111418-14(2013). 
+
+6. Y. Sun, and Y. Guan, “Effect of unknown emitter intensities on localization accuracy in stochastic optical localization nanoscopy using single frames,” JOSA A, 38 (12), 1830-1840(2021). 
+
+7. Y. Sun, “Root mean square minimum distance as a quality metric for stochastic optical localization nanoscopy images,” Sci. Reports, 8(1), 17211(2018). 
+
+8. R. J. Ober, S. Ram and E. S. Ward, “Localization accuracy in single-molecule microscopy,” Biophys. J., 86 (2), 1185-1200(2004). 
+
+9. I. K. Mortensen, L. S. Churchman, J. A. Spudich and H. Flyvbjerg, “Optimized localization analysis for single-molecule tracking and super-resolution microscopy,” Nat. Methods, 7(5), 377-381(2010). 22 
+
+10. B. Rieger and S. Stallinga, “The Lateral and Axial Localization Uncertainty in Super ‐Resolution Light Microscopy,” ChemPhysChem, 15 (4), 664-670(2014). 
+
+11. J. Chao, E. S. Ward and R. J. Ober, “Fisher information theory for parameter estimation in single molecule microscopy: tutorial,” JOSA A, 33 (7), B36-B57(2016). 
+
+12. A. Wald, “Note on the consistency of the maximum likelihood estimate,” Ann. Math. Statist., 20 (4), 595-601(1949). 
+
+13. C. R. Rao, “Information and the accuracy attainable in the estimation of statistical parameters,” Bull. Calcutta Math. Soc., 37 (3), 81-91(1945). 
+
+14. H. Cramér, Mathematical methods of statistics. Vol. 9, Princeton, NJ: Princeton University Press (1999). 
+
+15. L. Cam, “Locally asymptotically normal families of distributions,” Univ. California Publ. Statist., 3, 37-98(1960). 
+
+16. E. L. Lehmann and G. Casella, Theory of point estimation, New York, NY: Springer (1998). 
+
+17. A. W. Van der Vaart, Asymptotic statistics, Cambridge, UK: Cambridge University Press (2000). 
+
+18. S. Stallinga and B. Rieger, “Accuracy of the Gaussian point spread function model in 2D localization microscopy,” Opt. Express, 18 (24), 24461-24476(2010). 
+
+19. B. Huang, W. Wang, M. Bates and X. Zhuang, “Three-dimensional super-resolution imaging by stochastic optical reconstruction microscopy,” Science, 319 (5864), 810-813(2008). 
+
+20. S. R. P. Pavani, M. A. Thompson, J. S. Biteen, S. J. Lord, N. Liu, R. J. Twieg, R. Piestun and W. E. Moerner, “Three-dimensional, single-molecule fluorescence imaging beyond the diffraction limit by using a double-helix point spread function,” Proc. Natl. Acad. Sci. USA, 106 (9), 2995-2999(2009). 
+
+21. Y. Shechtman, S. J. Sahl and A. S. Backer, “Optimal point spread function design for 3D imaging,” Phys. Rev. Lett., 113 (13), 133902(2014). 
+
+22. Y. Li, M. Mund, P. Hoess, J. Deschamps, U. Matti, B. Nijmeijer, V. J. Sabinina, J. Ellenberg, I. Schoen and J. Ries, “Real-time 3D single-molecule localization using experimental point spread functions," Nat. Methods, 
+
+15 (5), 367-369(2018). 
+
+23. A. P. Dempster, N. M. Laird and D. B. Rubin, “Maximum likelihood from incomplete data via the EM algorithm,” J. R. Stat. Soc. Ser. B, 39 (1), 1-22(1977). 
+
+24. Y. Sun, Y. Zeng, W. Yen, J. M. Tarbell and B. M. Fu, “Expectation maximization can outperform Cramer-Rao lower bound in stochastic optical localization nanoscopy,” Quantitative Bioimaging Conf. (QBI2014) (2014). 
+
+25. F. Huang, T. M. Hartwich, F. E. Rivera-Molina, Y. Lin, W. C. Duim, J. J. Long, P. D. Uchil, J. R. Myers, M. A. Baird, W. Mothes, M. W. Davidson, D. Toomre and J. Bewersdorf, “Video-rate nanoscopy using sCMOS camera–specific single-molecule localization algorithms,” Nat. Methods, 10 (7), 653-658(2013). 
+
+26. M. Born and E. Wolf, Principles of Optics, 7th Ed ed., Cambridge, UK: Cambridge University Press (1999). 
+
+27. S. F. Gibson and F. Lanni, “Experimental test of an analytical model of aberration in an oil-immersion objective lens used in three-dimensional light microscopy,” J. Opt. Soc. Am. A, 8(10), 1601-1613(1999). 
+
+28. B. Richards and E. Wolf, “Electromagnetic diffraction in optical systems, II. Structure of the image field in an aplanatic system,” Proc. R. Soc. A, 253 (1274), 358-379(1959). 
+
+29. H. White, “Maximum likelihood estimation of misspecified models,” Econometrica, 1-25(1982). 
+
+30. S. M. Ross, Stochastic Processes, 2nd Ed. ed., New York: John Wiley and Sons (1996). 
+
+31. Y. Sun, “Information sufficient segmentation and signal-to-noise ratio in stochastic optical localization nanoscopy,” Opt. Lett., 45 (21), 6102-6105(2020). 
+
+32. M. Sun and Y. Sun, “Information sufficient segmentation and signal ‐to ‐noise ratio for 3D astigmatism stochastic optical localization nanoscopy,” Electron. Lett., 58 (2), 58-60(2022). 
+
+33. Y. Sun, “Partition of estimated locations: an approach to accurate quality metrics for stochastic optical localization Nanoscopy,” J. Opt. Soc. Am. A, 39 (12), 2307-2315(2022). 
+
+34. Y. Sun, SMLM_Lib. [Online] Available: https://github.com/SunCCNY/Nanoscopy/tree/main/SMLM_Lib. [Accessed July 5, 2026]. 
+
+35. Y. Sun, GML-EM. [Online] Available: https://github.com/SunCCNY/Nanoscopy/tree/main/2026-JOSAA-GML-EM. [Accessed July 16, 2026].

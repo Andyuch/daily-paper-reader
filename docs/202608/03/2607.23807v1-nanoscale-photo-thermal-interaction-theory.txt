@@ -1,0 +1,2654 @@
+Title: Template for Electronic Submission to ACS Journals
+
+URL Source: https://arxiv.org/pdf/2607.23807v1
+
+Published Time: Tue, 28 Jul 2026 01:17:45 GMT
+
+Number of Pages: 30
+
+Markdown Content:
+Nanoscale Photo -Thermal Interaction Theory 
+
+Pavel Shafirin 1, Pengli Feng 1, Huanbo Jiang 2, Teri Odom 2, Artur Davoyan 1
+
+> 1Mechanical and Aerospace Engineering Department, University of California, Los Angeles, Los Angeles, CA 90095, USA
+> 2Department of Chemistry, Northwestern University, Evanston, IL 60208, USA
+> Keywords: nanophotonics, photo -thermal, transient diffusion
+
+ABSTRACT: Photothermal interaction in nanoscale systems has emerged as a versatile tool for selective 
+
+heat deposition and robust tuning of optical responses with a myriad of applications from hyperthermal 
+
+medical treatment to switching and routing of optical signals . However, to date a comprehensive theory 
+
+of transient photothermal interaction is missing. Development of such a theory is particularly challenged 
+
+when optical excitation duration is comparable to the timescale related of heat transport – an emergent 
+
+regime with a mutually interconnected transient interplay of light abortion and heat -induced change of 
+
+optical responses. Here, we develop a coupled mode theory that captures intricate transient photothermal 
+
+phenomena in a wide range of nanoscale systems. We further reveal conditions for optimal energy depo-
+
+sition and heating. As an example scenario we apply our model to design metasurfaces with high -contrast 
+
+and efficient temperature and optical switching, demonstrating fast cooling to the rest state (<40 ns). Be-
+
+yond exquisite control of both transient temperature profiles and optical responses, our theory offers deep 
+
+physical insights onto photo -thermal interaction at the nanoscale which can find use in variety of fields 
+
+fr om medical treatment to active photonics and manufacturing. 
+
+INTRODUCTION 
+
+Optically induced heating at the nanoscale plays an important role in a wide range of applications from 
+
+nanomedicine [ 1–3] to photocatalysis [4–8] to energy harvesting [ 9,10 ]. Nanostructures not only enhance 
+
+light —mat ter interaction [ 11 –13 ], but also enable highly localized deposition of energy , resulting in steep 
+
+temperature gradients across extremely short spatial and temporal scales [ 1,6,14 –17 ]. Importantly, heating 
+
+and heat diffusion strongly depend on temporal profile s of exciting optical field s [14,15,18,19 ]. In parallel, 
+
+thermo -optic nonlinearities alter the refractive indices of the materials involved [ 20 –22 ], changing both 
+
+light absorption and the resulting heat generation. As s uch a complex time -dependent interplay and evo-
+
+lution of both the optical and temperature fields is expected [22 –25 ].
+
+Intertwined coupling between optical fields and transient heating is particularly pronounced when the 
+
+excitation pulse duration,  𝜏 𝑒𝑥 , is comparable to that of thermal diffusion to the surrounding medium. Th e
+
+timescale of such “thermalization ” to the surrounding s is on the order of  𝜏 𝑠𝑢𝑟𝑟 ~𝑙 2/𝐷 𝑠𝑢𝑟𝑟 , where  𝑙  is a 
+
+characteristic size of the structure and  𝐷 𝑠𝑢𝑟𝑟  is the thermal diffusivity of surrounding material . As an 
+
+example, for a silicon nanostructure with  𝑙 = 200 𝑛𝑚  placed atop a fused silica substrate ( 𝐷 𝑆𝑖𝑂 2 = 8.3 ∗
+
+10 −7 𝑚 2 
+
+> 𝑠
+
+),  𝜏 𝑠𝑢𝑟𝑟 ≃ 45 𝑛𝑠 . Additionally, transient dynamics is 2
+
+amplified in resonant systems , where sharp spectral features become very sensitive to small refractive 
+
+index variation s [20,21,26 –28 ]. To the best of our knowledge, there is no closed -form analytical theor y
+
+that predict s such transient effects of photo -thermal interaction in nanoscale systems. Nonetheless, photo -
+
+thermal phenomena are important and directly affect the performance of various systems, including reso-
+
+nant absorbers [29 –31 ], optical filters [ 32 –34 ], tunable metasurfaces [ 21,26,28,35 –38 ], and integrated 
+
+photonics components [ 20,39 –41 ], among others. 
+
+Current macroscopic theories of photo -thermal interaction largely focus on two limiting scenarios. The 
+
+first is a short -excitation regime ( 𝜏 𝑒𝑥 ≪ 𝜏 𝑠𝑢𝑟𝑟 , see also Fig. 1 a), such as excite by ultrafast laser pulses . In 
+
+this case light interacts with nanostructures before any substantial thermal diffusion occurs. For sub -pico-
+
+second excitation (≤1 ps), the response is dominated by intricate excitation of non -equilibrium carriers 
+
+that typically thermalize within ~1 –10 ps [ 42 –44 ]. The s hort lifetime of excited carrier s and their related 
+
+small diffusion length, make optical heating effectively local [45 –48 ], resulting in an initial heat distribu-
+
+tion localized near optical absorption hot spots (Fig. 1(a)) . In this scenario the resulting thermo -optic in-
+
+teraction is determined by the amount of total absorbed energy  𝑈 𝑎𝑏𝑠  [49 ].
+
+The second limiting scenario is the long -excitation regime ( 𝜏 𝑒𝑥 ≫ 𝜏 𝑠𝑢𝑟𝑟 , Fig. 1c) , which is governed by 
+
+a quasi -steady -state temperature distribution established through a balance between thermal diffusion and 
+
+heat deposition due to light absorption [ 50 ]. Such a quasi -steady -state approximation is widely used to 
+
+model thermo -optic perturbations [ 51 ], as well as for predicting self -induced heating [ 52 ] and bistability 
+
+[53,54 ] in temperature -sensitive nanoresonators under continuous -wave (CW) illumination. 
+
+The intermediate regime ( 𝜏 𝑒𝑥 ∼ 𝜏 𝑠𝑢𝑟𝑟 , Fig. 1c ), however, has received relatively little attention. In this 
+
+case, neither thermal diffusion can be ignored, nor can a steady -state temperature profile be assumed [ 22 –
+
+24 ]; a fully transient model that couples light -matter interaction with heat transfer is needed. We note that 
+
+Figure 1. Transient photo -thermal interaction at the nanoscale. (a) In a short -pulse excitation regime, 
+
+when pulse duration  𝜏 𝑒𝑥 ≪ 𝜏 𝑠𝑢𝑟𝑟 , light is absorbed before substantial thermal transport occurs. As 
+
+such , temperature  𝑇  and optical mode properties, e.g., resonance frequency  𝜔 0, are functions of ab-
+
+sorbed energy  𝑈 𝑎𝑏𝑠 . ( b) When duration of excitation is comparable to a characteristic time of thermal 
+
+diffusion to surroundings,  𝜏 𝑒𝑥 ≃ 𝜏 𝑠𝑢𝑟𝑟 , a complex nonequilibrium nonlinear transient interplay is ex-
+
+pected. ( c) A long -pulse excitation scenario with  𝜏 𝑒𝑥 ≫ 𝜏 𝑠𝑢𝑟𝑟  results in a quazi -static state evolution of 
+
+heat, in which temperature and optical properties are slow functions of the incident power. 3
+
+several prior works have examined this intermediate regime assuming optical fields are unaffected by 
+
+temperature changes [55 –57 ]. In this case optical absorption becomes decoupled from heat transfer and 
+
+does not capture intricate nonlinear interplay that is anticipated in resonant nanostructures. More recently, 
+
+finite element models have been employed to study transient photo -ther mal effects [ 22 –24 ]. However, 
+
+because a fully numerical approach offers little understanding of the underlying mechanisms, it provides 
+
+limited guidance for designing and optimizing devices of interest . A full self -consistent transient analytical 
+
+theory of photo -thermal interaction at the nanoscale is yet to be developed. 
+
+Here, we derive a coupled -mode theory for transient photothermal interaction s in resonant nanophotonic 
+
+structures. Starting from first principles we capture complex interplay between optical heating and heat 
+
+driven change of optical properties. We show that optimal heating and light absorption occur at initially 
+
+detuned resonance frequency. Our generic study is applicable to a diverse range of nanophotonic platforms 
+
+and accurately captur es evolution of heat flow in systems with distinctly different dimensions . Finally, we 
+
+demonstrate that such a coupled mode theory is well suited for optimizing thermo -optic tuning in metasur-
+
+faces. Specifically, we show high contrast and fast control of both metasurface temperature and transmis-
+
+sion . Beyond offer ing a deeper insight into photothermal interaction , our work paves the way for a range 
+
+of applications , such as optical energy limiters , thermal medical treatment, and pulse forming .
+
+RESULTS AND DISCUSSION 
+
+Theory of transient photo -thermal interaction . We begin our study by developing a time -domain cou-
+
+pled -mode theory of photo -thermal interaction in resonant nanoscale structures. Consider a nanostructure 
+
+resonantly excited by an incident optical pulse of duration  𝜏 𝑒𝑥  and field  𝑬 𝑖𝑛𝑐 . Excitation and subsequent 
+
+absorption of optical modes inside the nanostructure leads to a temperature rise, which, in turn, stimulates 
+
+thermo -optic shift of the material’s permittivity:  𝜀 (𝑇 ) = 𝜀 (𝑇 0) + 𝛿𝜀 (𝑇 ) , here  𝜀 (𝑇 0) is the unperturbed 
+
+permittivity at room temperature,  𝑇 0, 𝛿𝜀 (𝑇 ) ≃ 2√𝜀 (𝑇 0)𝛼 Δ𝑇  is a temperature induced permittivity shift, 
+
+𝛼  is the thermo -optic coefficient, and  𝑇  is local temperature [58 ]. Since, in general, optical excitation and 
+
+absorption are governed by permittivity, its temperature dependence results in a nonlinear interplay . As 
+
+such, p redicting the resulting temporal evolution of intertwined temperature and optical fields requires 
+
+solving a mutually coupled system of Maxwell and heat transfer equations. For this purpose , given na-
+
+noscale dimensions and slow variation of temperatur e, we develop an analytical framework based on tem-
+
+poral coupled mode theory (CMT) that predicts photo -thermal responses in a wide range of nanoscale 
+
+structures. 
+
+For the sake of brevity, we provide a detailed first -principles derivation in Supp orting Information ; here 
+
+we present only a brief summary of the approach. Assuming a slow variation of optical intensity and 
+
+temperature fields (as compared to optical oscillation period ), we solve Maxwell equations by appl ying 
+
+principles of time -domain perturbation theory. In turn, to describe transient temperature evolution we 4
+
+make use of Green’s function formalism . After a set of derivations, we obtain the following system of 
+
+coupled equations (see Supp orting Information): 
+
+𝜕𝑎 (𝑡 )
+
+𝜕𝑡 + 𝑖𝑎 (𝑡 )(𝜔 0(1 − 𝛽 Δ𝑇 𝑒𝑓𝑓 ) − 𝑖 𝛾 0) = −𝜅 0
+
+𝜕 𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 (1)
+
+Δ𝑇 𝑒𝑓𝑓 (𝑡 ) = ∫ 𝐺 𝑒𝑓𝑓 (𝑡 , 𝑡 ′)|𝑎 (𝑡 ′)|2𝑑 𝑡 ′
+
+> 𝑡
+> 0
+
+(2)
+
+Eq uation (1) describes evolution of a single optical mode resonantly excited within a nanostructure with 
+
+a field  𝑬 𝑒𝑥 = 𝑎 (𝑡 )𝑬 0 
+
+> ′
+
+, where  𝑎 (𝑡 ) = 𝐴 (𝑡 )𝑒 −𝑖 𝜔 0𝑡 −𝛾 0𝑡  is a complex amplitude,  𝐴 (𝑡 ) is a slowly varying 
+
+envelope,  𝜔 0 is the unperturbed resonance frequency,  𝛾 0 = 𝛾 𝑅  
+
+> 0
+
++ 𝛾 𝑁𝑅  
+
+> 0
+
+is the decay rate, composed of radi-
+
+ative , 𝛾 𝑅 
+
+> 0
+
+, and nonradiative , 𝛾 𝑁𝑅  
+
+> 0
+
+, losses , 𝑬 0 
+
+> ′
+
+corresponds to spatial mode profile , 𝛽  is a coefficient connect-
+
+ing the mode’s frequency perturbation to temperature:  𝛽 = 𝜀 0 
+
+> 𝑊
+
+∫ 𝛼 √𝜀 (𝑇 0)|𝑬 ′0|2𝑑𝑉 𝑉  , 𝑊 = 
+
+> 1
+> 2
+
+[∫ 𝜀 0𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉 + ∫ 𝜇 0|𝑯 0 
+
+> ′
+
+|2𝑑𝑉 𝑉 ] with  𝑉  being the resonator volume that encloses excited optical 
+
+fields.  𝐴 𝑖𝑛𝑐  is the slowly -varying amplitude of the incident field : 𝑬 𝑖𝑛𝑐 = 𝑬 𝑖𝑛𝑐  
+
+> ′
+
+𝐴 𝑖𝑛𝑐 (𝑡 )𝑒 −𝑖 𝜔 𝑖 𝑡 , where  𝑬 𝑖𝑛𝑐 
+
+> ′
+
+is the spatial profile of the incident field and  𝜔 𝑖  is its carrier frequency and  𝜅 0 is the coupling coefficient. 
+
+Note that t he terms  𝜔 0, 𝛾 0 and  𝜅 0 correspond to the unperturbed , room temperature , mode properties. In 
+
+Eq. (2)  Δ𝑇 𝑒𝑓𝑓  is an effective temperature increase , which we define as  Δ𝑇 𝑒𝑓𝑓 = 𝜀 0 
+
+> 𝛽𝑊
+
+∫ √𝜀 ′𝛼 Δ𝑇 |𝑬 ′0|2𝑑 𝒓 𝑉 
+
+and  𝐺 𝑒𝑓𝑓 (𝑡 , 𝑡 ′) is an effective Green’s function [ 59 ]. Here, for the sake of concept demonstration and 
+
+without loss of generality, we consider only a single optical mode. The discussion can be extended to a 
+
+multimode scenario via standard coupled mode formalism [60 ]. Note that  𝐺 𝑒𝑓𝑓  can be calculated with just 
+
+a single numerical heat transfer simulation by assuming an impulse optical heat source (see Sup porting 
+
+Information for details). As such , Eq s. (1) and (2) provide a simple, yet computa tionally efficient and 
+
+powerful tool to predict arbitrary time -domain photo -thermal interaction and evolution inside resonant 
+
+nanostructures .
+
+For a wide range of nanostructures Eqs.  (1) and (2) can be further simplified , so as no numerical simula-
+
+tions are needed beyond standard calculation s of the optical mode profile. Specifically, for many 
+
+nanostructures characteristic time of thermal diffusion across the structure volume,  𝜏 𝑉 = 𝑙 2
+
+> 𝐷 𝑉
+
+, is rather short 
+
+as compared to excitation pulse , 𝜏 𝑉 ≪ 𝜏 𝑒𝑥  (here  𝐷 𝑉  is the effective thermal diffusivity of the nanostruc-
+
+ture ). In this case the temperature profile across the resonator volume  with a good approximation can be 
+
+taken to be the solution to a steady state heat equation. If the thermal boundary layer surrounding  𝑉  is 
+
+sufficiently large (see Supporting Information for details), the internal temperature and the dynamics of 
+
+the system is well described by an  average temperature increase : Δ𝑇 𝑎𝑣 = 1 
+
+> 𝑉
+
+∫ Δ𝑇𝑑 𝒓 𝑉  . The  heat transfer 
+
+equation therefore reduces to  (see Su pporting Information): 5
+
+𝑑 Δ𝑇 𝑎𝑣 
+
+𝑑𝑡 = 1
+
+𝑉 𝜌 𝑉 𝑐 𝑝 ,𝑉 
+
+(𝑊 |𝑎 (𝑡 )|2𝛾 𝑁𝑅  
+
+> 0
+
+− Δ𝑇 𝑎𝑣 − Δ𝑇 𝑏 
+
+𝑅 𝑖𝑛 
+
+) (3)
+
+here  𝜌  and  𝑐 𝑝  are resonator density and specific heat capacity , 𝑅 𝑖𝑛  is a thermal boundary resistance at the 
+
+surface of a volume  𝑉  containing an optical mode , Δ𝑇 𝑏 (𝑡 ) = ∫ 𝑇 𝑎𝑣 −𝑇 𝑏 
+
+> 𝑅 𝑖𝑛
+
+𝐺 𝑠𝑢𝑟𝑟 (𝒓 0, 𝑡 |𝒓 0, 𝑡 ′)𝑑 𝑡 ′𝑡  
+
+> 0
+
+is the bound-
+
+ary temperature increase , where  𝒓 0 sweeps across the volume  𝑉  (See Supporting information).  𝐺 𝑠𝑢𝑟𝑟  is 
+
+the Green’s function of the heat equation in the surrounding unbounded medium . For a wide range of 
+
+nanostructures, owing to their small dimensions and corresponding ly quick thermalization across the 
+
+structure volume , the function  𝐺 𝑠𝑢𝑟𝑟  can be well approximated by well -known analytical expressions [59 ].
+
+In turn , the solution to Eq. ( 1) is drastically simplified when the lifetime of the excited optical mode (i.e., 
+
+1/𝛾 0) is much shorter than the duration of optical pulse and characteristic time of temperature var ia tion 
+
+(|𝑑 𝐴 𝑖𝑛𝑐  
+
+> 𝑑𝑡
+
+| ≪ 𝛾 0|𝐴 𝑖𝑛𝑐 | and  𝑑 Δ𝑇 𝑎𝑣  
+
+> 𝑑𝑡
+
+≪ 𝛾 0Δ𝑇 𝑎𝑣 ) – a condition that is typically satisfied for nanoscale structures. 
+
+In this case quasi -steady -state approximation can be used to find a solution of Eq. (1): 
+
+𝑎 (𝑡 ) = 𝜔 𝑖 𝜅 0
+
+𝜔 0 − 𝜔 𝑖 − 𝛽 Δ𝑇 𝑒𝑓𝑓 − 𝑖 𝛾 0
+
+𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 . (4)
+
+Eq uations (3) and (4) depend solely on optical mode profile , with all other parameters determined analyt-
+
+ically. As such the coupled system of Eqs. (3) and (4) provide s a closed -form analytical framework for 
+
+studying and predicting photo -thermal interaction without a need for complex transient finite element 
+
+simulations [22 –24 ].
+
+Photo -thermal interaction in n anophotonic structures . To demonstrate generic nature of our model, 
+
+we study three conceptually different nanophotonic structures: a resonant Si metasurface (Fig. 2a), a sus-
+
+pended Si photonic crystal cavity (Fig. 2b), and a Si nanopillar (Fig. 2c) (dimensions of the studied 
+
+nanostructures can be found in the Supp orting Information) . We further assume that the metasurface is 
+
+placed atop SiO 2 substrate, the photonic crystal cavity is suspended in air, and the nanopillar is embedded 
+
+into SiO 2 host medium . We consider excitation by a Gaussian laser pulse with a wavelength of  𝜆 𝑖𝑛𝑐 =
+
+1200 𝑛𝑚 , and amplitude  |𝐴 𝑖𝑛𝑐 |2 = 𝑈 𝑝𝑢𝑙𝑠𝑒 
+
+> √2𝜋 𝜏 𝑒𝑥
+
+exp (−(𝑡 −𝑡 0)2 
+
+> 2𝜏 𝑒𝑥
+> 2
+
+) where  𝑡 0 is the time at which peak power is 
+
+reached and  𝑈 𝑝𝑢𝑙𝑠𝑒  is the pulse energy.  We choose  𝑡 0 = 75 𝑛𝑠 , 𝜏 𝑒𝑥 = 50 𝑛𝑠  𝑈 𝑝𝑢𝑙𝑠𝑒 =
+
+0.18 , 12 .6 and  0.51 𝐽𝑐 𝑚 −1 for the cases of metasurface, photonic crystal and nanopillar , respectively .
+
+We first calculate the optical modes using numerical finite difference time domain (FDTD) simulations. 
+
+The resulting electric field cross -sections for the three structures are shown in the bottom left corners of 6
+
+Fig s. 2a, 2b, and 2 c, respectively . Each of these example structures can be described by a heat transfer 
+
+problem of a distinct dimensionality. In particular, for a uniformly illuminated metasurface heat diffusion 
+
+predominantly occurs along the surface normal direction (i.e., effectively 1D heat transfer problem) , for a 
+
+photonic crystal cavity in -plane heat transport plays a dominant role (i.e., effectively 2D heat transfer 
+
+problem) , whereas for a nanopillar heat is transferred in all 3 directions into the surrounding host medium 
+
+(i.e., 3D heat transfer problem) . Nanoscale size of these structures allow s approximating Green’s function 
+
+in Eq . (3) by respective analytical expressions for simple objects [ 59 ]: thin film, infinitely long cylinder, 
+
+and a sphere, respectively (see Supp orting Information). 
+
+Figures 2a, 2b, and 2c show respective analytical solutions for the evolution of the average resonator 
+
+temperature  𝑇 𝑎𝑣  as a function of time for the three aforementioned structures. The observed dynamics for 
+
+the studied structures share similarities. Once illuminated , light absorption inside the nanostrutures causes 
+
+the temperature to rise quickly, reach ing a maximum value at a time slightly after the incident laser pulse 
+
+reaches its peak intensity (i.e., a small lag due to heat diffusion is observed between optical pulse profile 
+
+and temperature profile) . As time passes , heat diffusion causes the temperature to gradually reduce back 
+
+to initial room temperature value of  300 𝐾 .
+
+Figure 2. Transient heating inside resonant nanostructures. (a) Temporal evolution of temperature for 
+
+a Si metasurface atop SiO 2 substrate. ( b) Temporal evolution of temperature inside a resonant cavity 
+
+formed inside photonic crystal defect. ( c) Temporal evolution of temperature inside a silicon nanopillar 
+
+embedded into a silicon dioxide host medium. In all three panels solid blue curve denotes temperature 
+
+predicted by our analytical model, whereas dashed orange curve corresponds to an average 
+
+temperatures found by rigorous transient FEM simulation. Optical pulse profile is also shown for 
+
+comparison (shaded area). Top insets indicted schematics of the geometries studied and their 
+
+corresponding dimensionality for heat transfer. The bottom left ins ets show the E -field of the excited 
+
+mode. Bottom right insets show the temperature distribution at t = 100 ns. 7
+
+To validate our analytical model, we perform direct spatio -temporal finite element calculations of transient 
+
+heat equation without any geometry simplifications (similar to [22 –24 ]). The resulting temperature pro-
+
+file s as a function of time are also plotted in Figs. 2a, 2b, and 2c (dashed lines) . We also plot c ross -sections 
+
+of the calculated temperature distribution s at  𝑡 = 100 𝑛𝑠  (see right bottom insets in Figs. 2a, 2b, and 2c, 
+
+respectively). For the metasurface and the photonic crystal , the numerical calculations show that the tem-
+
+perature is nearly uniform across the nanocavity volume , where optical mode is localized . This justifies 
+
+our assumptions and the use of Eq. (3). 
+
+Figure 3. Parametric studies of absorbed optical power. (a) A colormap of the fraction of absorbed la-
+
+ser pulse energy as a function of pulse duration and resonant wavelength detuning calculated for a thin 
+
+film (1D heat transfer problem). ( b) A colormap of the fraction of absorbed laser energy as a function of 
+
+pulse duration and resonant wavelength detuning calculated for a cyl inder (2D heat transfer problem ). 
+
+Markers denote regimes studied in panels (d -f). ( c) A colormap of the fraction of absorbed laser energy 
+
+as a function of pulse duration and resonant wavelength detuning calculated for a sphere (3D heat 
+
+transfer problem). ( d) Transient evolution of absorptivity (dashed red curve) and normalized absorbed 
+
+power (solid green curve) for zero wavelength detuning and 100 ns pulse duration for a 2D heat transfer 
+
+problem. ( e) Same as in panel (d) but for -2.3 nm wavelength detuning. ( f) Same as in panel (d) but for 
+
+−4 𝑛𝑚  wavelength detuning. In panels (d -f) shaded region indicates the profile of the incident laser 
+
+pulse. 8
+
+We further observe an excellent match between our analytical theory and numerical solution s. A slightly 
+
+different picture is seen for the case of a nanopillar (Fig. 2c) . Owing to its larger size , the electric fi eld 
+
+distribution of the excited mode across the pillar volume is notably nonuniform , which results in a nonu-
+
+niform temperature profile across the structure volume . Such nonuniformity leads to a small deviation 
+
+between our analytical model and numerical solution s. Nonetheless, the analytical solution provide s a
+
+very good approximation to an exact solution . We note that t he solution can be further improved by treat-
+
+ing the thermal boundary resistance  𝑅 𝑖𝑛  as a fitting parameter to better describe the heat outflow from the 
+
+nanopillar. Overall, a good agreement between our analytical model and the finite element method (FEM) 
+
+simulations suggest that complex photo -thermal processes inside a variety of nanophotonic systems are 
+
+well described and understood by simplified models. 
+
+Efficient energy deposition and heating . To further elucidate the influence of dimensionality on photo -
+
+thermal interaction, we perform a set of parametric stud ies and explore transient light absorption as a 
+
+function of resonance detuning and laser pulse duration . We consider a set of simple geometries , such as 
+
+a thin film, infinite cylinder, and a sphere – which represent 1D, 2D, and 3D space heat transfer problems 
+
+respectively (these simple structures are well described by respective analytic al Green’s functions , see 
+
+Supporting Information ). For the sake of concept demonstration , we set the following parameters of the 
+
+structures fixed : volume  𝑉 = 10 −19 𝑚 3 , room temperature resonance  𝜆 0 = 1000 nm, and optical decay 
+
+coefficients  𝛾 𝑅  
+
+> 0
+
+= 𝛾 𝑁𝑅  
+
+> 0
+
+= 𝜋𝑐 
+
+> 600 𝜆 0
+
+, where  𝑐  is the speed of light. In Fig s. 3a, 3b, and 3c we plot the fraction 
+
+of the laser energy absorbed by a nanostructure (i.e.,  𝑈 𝑎𝑏𝑠 /𝑈 𝑝𝑢𝑙𝑠𝑒  ) as a function of pulse duration ( 𝜏 𝑝𝑢𝑙𝑠𝑒 )
+
+and laser detuning from its resonance frequency (Δ𝜆 = 𝜆 − 𝜆 0, where  𝜆  is the laser carrier wavelength). 
+
+Here, Gaussian pulses with an energy of  𝑈 𝑝𝑢𝑙𝑠𝑒 = 4 𝑛𝐽  are assumed. 
+
+For all three configurations, we observe a maximum in the total absorbed energy at a negative wavelength 
+
+detuning (i.e., when  𝜆 < 𝜆 0). We attribute this effect to the shift of the structures’ resonan ce with temper-
+
+ature increase (see also derivation of Eq. ( 1), SI section 1.1 ). To further explore the dynamics at play, we 
+
+examine temporal evolution of the instantaneous absorption coefficient for several different laser wave-
+
+length detuning v alues. Taking as reference the cylindrical (2D) case, in Fig. 3 d we plot the absorption 
+
+coefficient and respective normalized absorbed laser power for the case of an optimal detuning (i.e., at 
+
+which laser absorption inside a nanostructure is maximized). We observe that at initial instances of time 
+
+the absorption coeffi cient is low. However, as the structure is heated the resonance shifts, causing the 
+
+absorption coefficient to peak at around the same time as the incident laser pulse reaches its maximum 
+
+intensity. A good overlap between the laser peak power and maximum ab sorption coefficient results in the 
+
+optimal absorption of incident laser energy by the nanostructure. Conversely, if no laser wavelength de-
+
+tuning ( 𝛥𝜆 ) is applied (Fig. 3 e), the absorption coefficient is initially high but rapidly decreases as the 
+
+structure heats up and gets detuned from the laser wavelength , leading to suboptimal power absorption. 
+
+Similarly, if the detuning is too large (Fig. 3 f), the structure does not heat sufficiently to compensate for 
+
+the mismatch, resulting in a consistently low absorbed power. 9
+
+Further, c omparing the fraction of laser power absorbed for the three different dimensions (Figs.  3a, 3b, 
+
+and 3c , respectively ), we observe that as the dimensionality increases the required detuning reduces, while 
+
+the fraction of power absorbed increases. We attribute this phenomenon to a stronger outgoing heat flux 
+
+and more efficient cooling as more degrees of freedom are introduced into the heat equation . In a dd ition, 
+
+for all studied structures we observe that at shorter laser pulse durations a higher initial wavelength de-
+
+tuning is required to reach optimal absorption . Indeed, shorter pulses feature higher peak intensity leading 
+
+to a much faster heating of the resonator and consequently to higher instantaneous temperature s and res-
+
+onance shifts. 
+
+Fast thermal control and switching . As a final step of our discussion, we explore thermo -optic metasur-
+
+fac e tuning [21,22,26,37,38,46 ]. While thermo -optic tuning offers a robust mechanism for switch ing op-
+
+tical responses, it is typically limited by a slow response time of thermal diffusion and heat dissipation ,
+
+which in many traditional systems could reach 10s of microseconds to milliseconds [26,61 ]. Recently, 
+
+faster and more efficient tuning has been shown in nanostructures excited by short pulses [22,24,55 ]. In 
+
+these systems, shorter pulse duration and small volume of interaction allow for a fast heating of the active 
+
+volume , while at the same time avoid ing parasitic heating of the substrate . A more directed, optimization 
+
+of transient photo -thermal dynamics can provide additional gains in speed, control precision and energy 
+
+efficiency of such devices . Additionally, in many applications, such as photo -thermal therapy [1–3] , it 
+
+may be desirable to achieve a specific constant temperature over a predefined period of time. As we show 
+
+below, o ur model is ideally suited for optimizing such transient photo -thermal interactions for controlling 
+
+both temperature and optical temporal responses .
+
+As an example system , consider again a Si metasurface examined earlier in Fig. 2a. Th is metasu rface 
+
+structure is of interest as it has low transmission (~ 7%) when excited at the resonance and is almost entirely 
+
+transparent when excited far off resonance. As the metasurface resonance depends on temperature, the 
+
+Figure 4. Ultrafast thermo -optic tuning and temperature control. (a) Schematic illustration of a silicon 
+
+metasurace atop a SiO 2 substrate. Insets show idealistic scenario of a desired metasurface switching: 
+
+when excited metasurface instantaneously reaches desired target operation temperature and stays at 
+
+that temperature for a desired period of time, as a result, due to the resona nce frequency detuning, 
+
+metasurface transmission switches from near -unity to near -zero. ( b) Metasurface temperature as a 
+
+function of time under optimized Gaussian excitation. ( c) Metasurface temperature as a function of time 
+
+excited by an optimal -shaped laser pulse. In panels (b) and (c) shaded region indicates the incident 
+
+beam profile. ( d) Temporal evolution of metasurface transmission for the two pulses shown in (b) and 
+
+(c), respectively. Dashed lines indicted target transmission profile. 10 
+
+structure could be easily switched low and high transmission states by heating or cooling. In Fig. 4a we 
+
+illustrate an ideal scenario of operation. Here, the structure is instantaneously heated from a room -temper-
+
+ature state to a hot state, maintained at this heated level with a constant temperature profile over a prede-
+
+termined amount of time, an d then again instantaneously cooled back to its original room temperature 
+
+value. In this case, at a specific wavelength the metasurface will switch from a highly transparent one (at 
+
+room temperature) to mostly opaque (when heated). We aim to find operation condi tions that would yield 
+
+temperature and transmission profiles as close to ideal ones as possible, while using the least amount of 
+
+laser energy. For this purpose we define a figure of merit as:  𝐹𝑂 𝑀 = 𝑒𝑥𝑝 (𝑈 𝑝𝑢𝑙𝑠𝑒 
+
+> 𝑈 𝑟𝑒𝑓
+
+) +
+
+> 1
+> 𝑡 𝑚𝑎𝑥
+
+∫ (|𝑇 𝑟 𝑡𝑟𝑎𝑔𝑒𝑡 (𝑡 ) − 𝑇𝑟 (𝑡 )|)𝑑𝑡  
+
+> 𝑡 𝑚𝑎𝑥
+> 0
+
+. Here the first term creates minimizes cost function for lower pulse 
+
+energies  𝑈 𝑝𝑢𝑙𝑠𝑒  with  𝑈 𝑟𝑒𝑓 = 1 𝑛𝐽  being a reference value. The second term measures the difference be-
+
+tween the target transmission  𝑇 𝑟 𝑡𝑎𝑟𝑔𝑒𝑡 (𝑡 ) shown on Fig. 4(a) and the profile created by our metasurface. 
+
+Our optimization parameter is the excitation profile  𝐴 𝑖 (𝑡 ) as well as the resonator frequency  𝜔 0 (which 
+
+varies slightly around the excitation frequency ). By varying the pulse and resonator frequency we tune the 
+
+temporal thermal dynamics and switching behavior .
+
+In Fig s. 4b and 4d we plot metasurface operation when excited by an optimized Gaussian pulse with a 
+
+duration of  11 .4 𝑛𝑠 , peak time of  17 .8 𝑛𝑠  and a fluence of  27 .5 𝑚𝐽 /𝑐 𝑚 2. The optimal resonant frequency 
+
+is found to be  𝜔 0 = 2𝜋 ∗ 250 .44 𝑟𝑎𝑑 /𝑠  which corresponds to an initial detuning of roughly  Δ𝜆 = −3 𝑛𝑚 
+
+in relation to our probe wavelength of  𝜆 𝑝𝑟𝑜𝑏𝑒 = 1200 𝑛𝑚 . Figure 4b shows respective profile s of temper-
+
+ature and laser pulse, whereas Fig . 4d shows a corresponding transmission as a function of time. Initially ,
+
+the metasurface resonan ce is detuned from the incident laser wavelength ( Δ𝜆 = 2.3 𝑛𝑚 ), resulting in a
+
+90% transmission . 8 𝑛𝑠  after the peak of the pulse , the metasurface temperature peaks at a pproximately 
+
+380 K . Consequently , the resonance wavelength shifts and the metasurface only transmits 7% of the light .
+
+As the incident laser power decreases , the metasurface cools down and the transmission gradually goes 
+
+back to its original state. Evidently, even for an optimal Gaussian pulse maintaining a constant temperature 
+
+profile in a heated state o ver a prescribed period of time is not possible. Additionally, use of a Gaussian 
+
+profile leads to a sub -optimal (i.e., slow er ) cooling at the trailing edge of the pulse . This is where pulses 
+
+with optimized temporal profile can be used to further boost performance and efficiency. Our theoretical 
+
+model is well suited for this purpose. 
+
+In Fig. 4c we plot temperature evolution inside a nanostructure for structure illuminated by an pulse with 
+
+an optimized temporal profile. For a more direct comparison we constrain the energy of this pulse to the 
+
+same fluence as that of the optimized Gaussian pulse ( i.e.,  27 .5 𝑚𝐽 /𝑐 𝑚 2). In this case the optimal resonant 
+
+frequency is found to be  𝜔 0 = 2𝜋 ∗ 250 .62 𝑟𝑎𝑑 /𝑠  which corresponds to an initial detuning of roughly 
+
+Δ𝜆 = −3 𝑛𝑚 . The detuning is slightly lager compared to the Gaussian pulse case , which helps achieve a 
+
+higher switch contrast. Unlike the Gaussian pulse, the optimal -shape d pulse delivers a stronger burst of 
+
+power on the initial instant of time , which causes rapid heating of the structure to the desired temperature. 
+
+Laser power is then gradually reduced to balance between light absorption and thermal out flow to sur-
+
+roundings so as to dynamically sustain a near constant temperature (see Eq. (3) ). This allows keeping the 11 
+
+metasurface heated at  ≃ 385 𝐾  over the target  16 .6 𝑛𝑠  time window. Finally, the pulse shape creates a
+
+more favorable condition for faster cooling and return to the original cold state . As a result, the recovery 
+
+to a transmission of 80% happens within ~40 ns after heating is turned off. We note that h ere we only 
+
+optimize the temporal profile of the incident laser pulse, assuming a common metasurface design . A more 
+
+rigorous co -optimization of the laser shape and of the structure, including its geometry, materials, thermal 
+
+and optical properties could yield further enhancement of performance. In particular the SiO 2 substrate, 
+
+being a low thermal conductivity material , significantly slows down the thermal recovery. Nonetheless ,
+
+compared to other thermo -optically tunable devices our model suggests that systems with orders of mag-
+
+nitude improvement in operation speed [22, 26, 61 ] and switching energies can be designed .
+
+CONCLUSION 
+
+In summary, we have developed a coupled -mode theory of photo -thermal interaction in nanoscale struc-
+
+tures. The model provides deep insights into the mechanisms of transient coupling between optical heating 
+
+and associated heat driven change of optical properties, demonstrating the balance between heat diffusion ,
+
+light abs or ption and nanostructure excitation. With the use of our theory structures that maximize laser 
+
+absorption, maintain near -constant temperature and exhibit fast thermo -optic swithcing can be designed. 
+
+Our study is applicable to a wide range of systems and will find use in variety of fields from medical 
+
+treatment to active photonics to manufacturing. 
+
+METHODS 
+
+Semi analytical model solution process. To solve the semi -analytical model, we develop a Python code 
+
+that iteratively calculates the resonator temperature from Eq s. (3) and (4). The initial resonator temperature 
+
+is 𝑇 0 = 300 𝐾 , Eq. (3) is then used to produce a temperature at a given time step with a given previous 
+
+temperature. To obtain the heat flux out of  𝑉  (𝑞 𝑆 𝑉 = (𝑇 𝑉 − 𝑇 𝑏 )/𝑅 𝑖𝑛 ) at each step we apply the Newton -
+
+Raphson method to find  𝑇 𝑏  from Eq. (3) together with the analytical Green’s function solution (see SI for 
+
+details). 
+
+FEM solutions. The optical simulations are conducted using Lumerical FDTD solutions. The thermal 
+
+FEM calculations are performed using the Ansys transient thermal solver . In our analytical solutions for 
+
+the Green’s function we assume the following parameters: the metasurface is approximated by a thin film 
+
+(thickness:  ℎ = 118 nm, resonator volume : 𝑉  = 3 .18 ∗ 10 −20 m3), t he nanopillar is approximated as sphere 
+
+(radius:  𝑟  = 667 nm, resonator volume:  𝑉  = 1 .23 ∗ 10 −18 m3), t he photonic crystal cavity is replaced by a
+
+cylinder (radius:  𝑟  = 226 nm, volume:  𝑉  = 4 .01 ∗ 10 −20 m3), here we treat the periodic structure around the 
+
+cavity as an effective medium to account for lowered heat conduction around the holes . The effective 12 
+
+material is calculated by normalizing to the missing volume, which gives the following thermal properties: 
+
+𝜌 𝑒𝑓𝑓  = 1350 .2 𝑘 𝑔 1𝑚 −3, 𝑘 𝑒𝑓𝑓 = 82 .91 𝑊 1𝑚 −1𝐾 −1, 𝑐 𝑝 = 398 .8 𝐽 1𝑘 𝑔 −1𝐾 −1.
+
+Optimization. The optimization routine is implemented in Python. The optimize.minimize function from 
+
+the ScyPi library is used to find optimal solutions. When optimizing the pulse shape , we split the relevant 
+
+time span into 50 points and treat the power at each point as an optimization variable 
+
+Material properties . The refractive index of silicon at 1200 nm is taken to be  𝑛 𝑆𝑖 (𝑇 = 300 𝐾 ) = 3.522 
+
+[62 ], the thermo -optic coefficient is  𝛼 = 2 ∗ 10 −4𝐾 −1[62 ], t he thermo -optic coefficient of SiO 2 is on the 
+
+order of  10 −5𝐾 −1 [63 ], due to this difference the thermo -optic response of SiO 2 is neglected in our anal-
+
+ysis . Si licon extinction coefficient is assumed to be  𝜅 = 10 −3, which in practice can be controlled 
+
+through material doping [64 ]. Constant thermal properties were assumed for both Si and SiO 2: conductiv-
+
+ity:  𝑘 𝑆𝑖 = 148 𝑊 /𝑚𝐾 , 𝑘 𝑆𝑖 𝑂 2 = 10 .4 𝑊 /𝑚𝐾 ; density:  𝜌 𝑆𝑖 = 2330 𝑘𝑔 /𝑚 3, 𝜌 𝑆𝑖 𝑂 2 = 2650 𝑘𝑔 /𝑚 3; heat 
+
+capacity:  𝑐 𝑝 ,𝑆𝑖 = 712 𝐽 /𝑘𝑔 , 𝑐 𝑝 ,𝑆𝑖 𝑂 2 = 745 𝐽 /𝑘𝑔 .
+
+ASSOCIATED CONTENT 
+
+Supporting Informatio n. 
+
+The Supporting Information is available free of charge at: …
+
+AUTHOR INFORMATION 
+
+Corresponding Author 
+
+Artur Davoyan - Mechanical and Aerospace Engineering Department, University of California, Los An-
+
+geles, Los Angeles, CA 90095, USA; Email: davoyan@ucla.edu 
+
+AUTHOR CONTRIBUTIONS 
+
+P.S., T.O. and A.R.D initiated the project. P.S. and A.R.D developed the coupled -mode theory. P.S. per-
+
+formed optical and thermal simulations, wrote codes and optimization strategies. P.F. assisted with the 
+
+thermal models and simulations. All authors contri buted to analyzing results and manuscript writing. 13 
+
+REFERENCES 
+
+(1) Vines, J. B.; Yoon, J. -H.; Ryu, N. -E.; Lim, D. -J.; Park, H. Gold Nanoparticles for Photothermal 
+
+Cancer Therapy. Front. Chem. 2019 , 7. https://doi.org/10.3389/fchem.2019.00167. 
+
+(2) Hirsch, L. R.; Stafford, R. J.; Bankson, J. A.; Sershen, S. R.; Rivera, B.; Price, R. E.; Hazle, J. D.; 
+
+Halas, N. J.; West, J. L. Nanoshell -Mediated near -Infrared Thermal Therapy of Tumors under Mag-
+
+netic Resonance Guidance. Proc. Natl. Acad. Sci. U.S.A. 2003 , 100 (23), 13549 –13554. 
+
+https://doi.org/10.1073/pnas.2232479100. 
+
+(3) Arami, H.; Kananian, S.; Khalifehzadeh, L.; Patel, C. B.; Chang, E.; Tanabe, Y.; Zeng, Y.; Madsen, 
+
+S. J.; Mandella, M. J.; Natarajan, A.; Peterson, E. E.; Sinclair, R.; Poon, A. S. Y.; Gambhir, S. S. 
+
+Remotely Controlled Near -Infrared -Triggered Phototherma l Treatment of Brain Tumours in Freely 
+
+Behaving Mice Using Gold Nanostar s. Nat. Nanotechnol. 2022 , 17 (9), 1015 –1022. 
+
+https://doi.org/10.1038/s41565 -022 -01189 -y. 
+
+(4) Mukherjee, S.; Libisch, F.; Large, N.; Neumann, O.; Brown, L. V.; Cheng, J.; Lassiter, J. B.; Carter, 
+
+E. A.; Nordlander, P.; Halas, N. J. Hot Electrons Do the Impossible: Plasmon -Induced Dissociation 
+
+of H 2 on Au. Nano Lett. 2013 , 13 (1), 240 –247. https://doi.org/10.1021/nl303940z. 
+
+(5) Linic, S.; Christopher, P.; Ingram, D. B. Plasmonic -Metal Nanostructures for Efficient Conversion 
+
+of Solar to Chemical Energy. Nature Mater 2011 , 10 (12), 911 –921. 
+
+https://doi.org/10.1038/nmat3151. 
+
+(6) Mertens, J. C. J.; Spitzbarth, B.; Eelkema, R.; Hunger, J.; van der Veen, M. A. Predicting and Probing 
+
+the Local Temperature Rise Around Plasmonic Core –Shell Nanoparticles to Study Thermally Acti-
+
+vated Processes. ChemPlusChem 2024 , 89 (9), e202400134. 
+
+https://doi.org/10.1002/cplu.202400134. 
+
+(7) Song, C.; Wang, Z.; Yin, Z.; Xiao, D.; Ma, D. Principles and Applications of Photothermal Catalysis. 
+
+Chem Catalysis 2022 , 2 (1), 52 –83. https://doi.org/10.1016/j.checat.2021.10.005. 
+
+(8) Christopher, P.; Xin, H.; Linic, S. Visible -Light -Enhanced Catalytic Oxidation Reactions on Plas-
+
+monic Silver Nanostructures. Nature Chem 2011 , 3 (6), 467 –472. 
+
+https://doi.org/10.1038/nchem.1032. 
+
+(9) Cui, X.; Ruan, Q.; Zhuo, X.; Xia, X.; Hu, J.; Fu, R.; Li, Y.; Wang, J.; Xu, H. Photothermal Nano-
+
+materials: A Powerful Light -to -Heat Converter. Chem. Rev. 2023 , 123 (11), 6891 –6952. 
+
+https://doi.org/10.1021/acs.chemrev.3c00159. 
+
+(10) Li, W.; Fan, S. Nanophotonic Control of Thermal Radiation for Energy Applications [Invited]. Opt. 
+
+Express 2018 , 26 (12), 15995. https://doi.org/10.1364/OE.26.015995. 
+
+(11) Schuller, J. A.; Barnard, E. S.; Cai, W.; Jun, Y. C.; White, J. S.; Brongersma, M. L. Plasmonics for 
+
+Extreme Light Concentration and Manipulation. Nature Mater 2010 , 9 (3), 193 –204. 
+
+https://doi.org/10.1038/nmat2630. 
+
+(12) Pelton, M. Modified Spontaneous Emission in Nanophotonic Structures. Nature Photon 2015 , 9 (7), 
+
+427 –435. https://doi.org/10.1038/nphoton.2015.103. 
+
+(13) Shcherbakov, M. R.; Neshev, D. N.; Hopkins, B.; Shorokhov, A. S.; Staude, I.; Melik -Gaykazyan, 
+
+E. V.; Decker, M.; Ezhov, A. A.; Miroshnichenko, A. E.; Brener, I.; Fedyanin, A. A.; Kivshar, Y. S. 14 
+
+Enhanced Third -Harmonic Generation in Silicon Nanoparticles Driven by Magnetic Response. Nano 
+
+Lett. 2014 , 14 (11), 6488 –6492. https://doi.org/10.1021/nl503029j. 
+
+(14) Romeo, C.; Baldi, A.; Askes, S. H. C. Engineering Light -Driven Thermal Landscapes at the Na-
+
+noscale. APL Materials 2025 , 13 (8), 080601. https://doi.org/10.1063/5.0283336. 
+
+(15) Askes, S. H. C.; Garnett, E. C. Ultrafast Thermal Imprinting of Plasmonic Hotspots. Advanced Ma-
+
+terials 2021 , 33 (49), 2105192. https://doi.org/10.1002/adma.202105192. 
+
+(16) Cunha, J.; Guo, T. -L.; Koya, A. N.; Toma, A.; Prato, M.; Della Valle, G.; Alabastri, A.; Proietti 
+
+Zaccaria, R. Photoinduced Temperature Gradients in Sub -Wavelength Plasmonic Structures: The 
+
+Thermoplasmonics of Nanocones. Advanced Optical Materials 2020 , 8 (18), 2000568. 
+
+https://doi.org/10.1002/adom.202000568. 
+
+(17) O’Neill, D. B.; Frehan, S. K.; Zhu, K.; Zoethout, E.; Mul, G.; Garnett, E. C.; Huijser, A.; Askes, S. 
+
+H. C. Ultrafast Photoinduced Heat Generation by Plasmonic HfN Nanoparticles. Advanced Optical 
+
+Materials 2021 , 9 (19), 2100510. https://doi.org/10.1002/adom.202100510. 
+
+(18) Lukianova -Hleb, E. Y.; Volkov, A. N.; Lapotko, D. O. Laser Pulse Duration Is Critical For the Gen-
+
+eration of Plasmonic Nanobubbles. Langmuir 2014 , 30 (25), 7425 –7434. 
+
+https://doi.org/10.1021/la5015362. 
+
+(19) Bolduc, M.; Trudeau, C.; Beaupré, P.; Cloutier, S. G.; Galarneau, P. Thermal Dynamics Effects Us-
+
+ing Pulse -Shaping Laser Sintering of Printed Silver Inks. Sci Rep 2018 , 8 (1), 1418. 
+
+https://doi.org/10.1038/s41598 -018 -19801 -4. 
+
+(20) Padmaraju, K.; Chan, J.; Chen, L.; Lipson, M.; Bergman, K. Thermal Stabilization of a Microring 
+
+Modulator Using Feedback Control. Opt. Express, OE 2012 , 20 (27), 27999 –28008. 
+
+https://doi.org/10.1364/OE.20.027999. 
+
+(21) Che, Y.; Zhang, T.; Shi, T.; Deng, Z. -L.; Cao, Y.; Guan, B. -O.; Li, X. Ultrasensitive Photothermal 
+
+Switching with Resonant Silicon Metasurfaces at Visible Bands. Nano Lett. 2024 , 24 (2), 576 –583. 
+
+https://doi.org/10.1021/acs.nanolett.3c03288. 
+
+(22) Karaman, O. C.; Naidu, G. N.; Bowman, A. R.; Dayi, E. N.; Tagliabue, G. Decoupling Optical and 
+
+Thermal Responses: Thermo -Optical Nonlinearities Unlock MHz Transmission Modulation in Die-
+
+lectric Metasurfaces. arXiv December 1, 2024. https://doi.org/10.48550 /arXiv.2412.00996. 
+
+(23) Tang, Y. -L.; Yen, T. -H.; Nishida, K.; Takahara, J.; Zhang, T.; Li, X.; Fujita, K.; Chu, S. -W. Mie -
+
+Enhanced Photothermal/Thermo -Optical Nonlinearity and Applications on All -Optical Switch and 
+
+Super -Resolution Imaging [Invited]. Opt. Mater. Express 2021 , 11 (11), 3608. 
+
+https://doi.org/10.1364/OME.431533. 
+
+(24) Rouxel, R.; Diego, M.; Medeghini, F.; Maioli, P.; Rossella, F.; Vallée, F.; Banfi, F.; Crut, A.; Del 
+
+Fatti, N. Ultrafast Thermo -Optical Dynamics of a Single Metal Nano -Object. J. Phys. Chem. C 2020 ,
+
+124 (28), 15625 –15633. https://doi.org/10.1021/acs.jpcc.0c04709. 
+
+(25) Baffou, G.; Quidant, R.; García de Abajo, F. J. Nanoscale Control of Optical Heating in Complex 
+
+Plasmonic Systems. ACS Nano 2010 , 4 (2), 709 –716. https://doi.org/10.1021/nn901144d. 
+
+(26) Jiang, H.; Maqbool, E.; Cai, Y.; Han, Z. Efficient Thermo -Optic Switching and Modulating in Non-
+
+local Metasurfaces. Nano Lett. 2024 , 24 (46), 14671 –14677. https://doi.org/10.1021/acs.nano-
+
+lett.4c03801. 15 
+
+(27) Duh, Y. -S.; Nagasaki, Y.; Tang, Y. -L.; Wu, P. -H.; Cheng, H. -Y.; Yen, T. -H.; Ding, H. -X.; Nishida, 
+
+K.; Hotta, I.; Yang, J. -H.; Lo, Y. -P.; Chen, K. -P.; Fujita, K.; Chang, C. -W.; Lin, K. -H.; Takahara, J.; 
+
+Chu, S. -W. Giant Photothermal Nonlinearity in a Single Silicon Nanostructure. Nat Commun 2020 ,
+
+11 (1), 4101. https://doi.org/10.1038/s41467 -020 -17846 -6. 
+
+(28) Malek, S. C.; Tsai, C. -C.; Yu, N. Thermally -Switchable Metalenses Based on Quasi -Bound States 
+
+in the Continuum. Laser & Photonics Reviews 2025 , 19 (3), 2300618. 
+
+https://doi.org/10.1002/lpor.202300618. 
+
+(29) Abdulkarim, Y. I.; Mohanty, A.; Acharya, O. P.; Appasani, B.; Khan, M. S.; Mohapatra, S. K.; Mu-
+
+hammadsharif, F. F.; Dong, J. A Review on Metamaterial Absorbers: Microwave to Optical. Front. 
+
+Phys. 2022 , 10 . https://doi.org/10.3389/fphy.2022.893791. 
+
+(30) Yu, J.; Ma, B.; Qin, R.; Ghosh, P.; Qiu, M.; Li, Q. High -Q Absorption in All -Dielectric Photonics 
+
+Assisted by Metamirrors. ACS Photonics 2022 , 9 (10), 3391 –3397. https://doi.org/10.1021/acspho-
+
+tonics.2c00901. 
+
+(31) Yang, F.; Liang, Z.; Meng, D.; Shi, X.; Qin, Z.; Dai, R.; Sun, C.; Ren, Y.; Feng, J.; Liu, W. High -
+
+Quality Factor Mid -Infrared Absorber Based on All -Dielectric Metasurfaces. Opt. Express, OE 2023 ,
+
+31 (4), 5747 –5756. https://doi.org/10.1364/OE.482987. 
+
+(32) Yan, C.; Yang, K. -Y.; Martin, O. J. F. Fano -Resonance -Assisted Metasurface for Color Routing. 
+
+Light Sci Appl 2017 , 6 (7), e17017 –e17017. https://doi.org/10.1038/lsa.2017.17. 
+
+(33) Liu, J. -N.; Schulmerich, M. V.; Bhargava, R.; Cunningham, B. T. Sculpting Narrowband Fano Res-
+
+onances Inherent in the Large -Area Mid -Infrared Photonic Crystal Microresonators for Spectro-
+
+scopic Imaging. Opt. Express, OE 2014 , 22 (15), 18142 –18158. 
+
+https://doi.org/10.1364/OE.22.018142. 
+
+(34) Zheng, Z.; Komar, A.; Zangeneh Kamali, K.; Noble, J.; Whichello, L.; Miroshnichenko, A. E.; Rah-
+
+mani, M.; Neshev, D. N.; Xu, L. Planar Narrow Bandpass Filter Based on Si Resonant Metasurface. 
+
+J. Appl. Phys. 2021 , 130 (5), 053105. https://doi.org/10.1063/5.0058768. 
+
+(35) Archetti, A.; Lin, R. -J.; Restori, N.; Kiani, F.; Tsoulos, T. V.; Tagliabue, G. Thermally Reconfigu-
+
+rable Metalens. Nanophotonics 2022 , 11 (17), 3969 –3980. https://doi.org/10.1515/nanoph -2022 -
+
+0147. 
+
+(36) Rahmani, M.; Xu, L.; Miroshnichenko, A. E.; Komar, A.; Camacho -Morales, R.; Chen, H.; Zárate, 
+
+Y.; Kruk, S.; Zhang, G.; Neshev, D. N.; Kivshar, Y. S. Reversible Thermal Tuning of All -Dielectric 
+
+Metasurfaces. Advanced Functional Materials 2017 , 27 (31), 1700580. 
+
+https://doi.org/10.1002/adfm.201700580. 
+
+(37) Lewi, T.; Butakov, N. A.; Schuller, J. A. Thermal Tuning Capabilities of Semiconductor Metasurface 
+
+Resonators. Nanophotonics 2019 , 8 (2), 331 –338. https://doi.org/10.1515/nanoph -2018 -0178. 
+
+(38) Klopfer, E.; Delgado, H. C.; Dagli, S.; Lawrence, M.; Dionne, J. A. A Thermally Controlled High -
+
+Q Metasurface Lens. Appl. Phys. Lett. 2023 , 122 (22), 221701. https://doi.org/10.1063/5.0152535. 
+
+(39) Parsons, R.; Jang, K.; Wang, Y.; Novick, A.; Smith, A. M.; Tison, C. C.; Gebregiorgis, Y.; Deena-
+
+dayalan, V.; Niekerk, M. van; Carpenter, L.; Ngai, T.; Leake, G.; Coleman, D.; Meng, X.; Preble, 
+
+S.; Fanto, M. L.; Bergman, K.; Rizzo, A. Highly Uniform Thermal ly Undercut Silicon Photonic 16 
+
+Devices in a 300 Mm CMOS Foundry Process. Sci Rep 2025 , 15 (1), 29906. 
+
+https://doi.org/10.1038/s41598 -025 -14480 -4. 
+
+(40) Ong, J. R.; Kumar, R.; Mookherjea, S. Ultra -High -Contrast and Tunable -Bandwidth Filter Using 
+
+Cascaded High -Order Silicon Microring Filters. IEEE Photonics Technology Letters 2013 , 25 (16), 
+
+1543 –1546. https://doi.org/10.1109/LPT.2013.2267539. 
+
+(41) Adya, U.; Singhal, S.; Chen, R.; Chen, I. -T.; Joshi, S.; Majumdar, A.; Li, M.; Moazeni, S. Non -
+
+Volatile Tuning of Cryogenic Silicon Photonic Micro -Ring Modulators. Nat Commun 2025 , 16 (1), 
+
+9290. https://doi.org/10.1038/s41467 -025 -64126 -2. 
+
+(42) Brongersma, M. L.; Halas, N. J.; Nordlander, P. Plasmon -Induced Hot Carrier Science and Technol-
+
+ogy. Nature Nanotech 2015 , 10 (1), 25 –34. https://doi.org/10.1038/nnano.2014.311. 
+
+(43) Sundararaman, R.; Narang, P.; Jermyn, A. S.; Goddard III, W. A.; Atwater, H. A. Theoretical Pre-
+
+dictions for Hot -Carrier Generation from Surface Plasmon Decay. Nat Commun 2014 , 5 (1), 5788. 
+
+https://doi.org/10.1038/ncomms6788. 
+
+(44) Yabana, K.; Sugiyama, T.; Shinohara, Y.; Otobe, T.; Bertsch, G. F. Time -Dependent Density Func-
+
+tional Theory for Strong Electromagnetic Fields in Crystalline Solids. Phys. Rev. B 2012 , 85 (4), 
+
+045134. https://doi.org/10.1103/PhysRevB.85.045134. 
+
+(45) Shcherbakov, M. R.; Liu, S.; Zubyuk, V. V.; Vaskin, A.; Vabishchevich, P. P.; Keeler, G.; Pertsch, 
+
+T.; Dolgova, T. V.; Staude, I.; Brener, I.; Fedyanin, A. A. Ultrafast All -Optical Tuning of Direct -
+
+Gap Semiconductor Metasurfaces. Nat Commun 2017 , 8 (1), 17. https://doi.org/10.1038/s41467 -
+
+017 -00019 -3. 
+
+(46) Tognazzi, A.; Franceschini, P.; Sergaeva, O.; Carletti, L.; Alessandri, I.; Finco, G.; Takayama, O.; 
+
+Malureanu, R.; Lavrinenko, A. V.; Cino, A. C.; Ceglia, D. de; Angelis, C. D. Giant Photoinduced 
+
+Reflectivity Modulation of Nonlocal Resonances in Silicon Metasurfaces. AP 2023 , 5 (6), 066006. 
+
+https://doi.org/10.1117/1.AP.5.6.066006. 
+
+(47) Brown, A. M.; Sundararaman, R.; Narang, P.; Schwartzberg, A. M.; Goddard, W. A.; Atwater, H. 
+
+A. Experimental and Ab Initio Ultrafast Carrier Dynamics in Plasmonic Nanoparticles. Phys. Rev. 
+
+Lett. 2017 , 118 (8), 087401. https://doi.org/10.1103/PhysRevLett.118.087401. 
+
+(48) Harutyunyan, H.; Martinson, A. B. F.; Rosenmann, D.; Khorashad, L. K.; Besteiro, L. V.; Govorov, 
+
+A. O.; Wiederrecht, G. P. Anomalous Ultrafast Dynamics of Hot Plasmonic Electrons in Nanostruc-
+
+tures with Hot Spots. Nature Nanotech 2015 , 10 (9), 770 –774. 
+
+https://doi.org/10.1038/nnano.2015.165. 
+
+(49) Boyd, R. W. In Nonlinear optics ; Elsevier, AP Academic Press: London, 2020; pp 231 –234. 
+
+https://doi.org/10.1016/C2015 -0-05510 -1. 
+
+(50) Baffou, G.; Quidant, R.; Girard, C. Thermoplasmonics Modeling: A Green’s Function Approach. 
+
+Phys. Rev. B 2010 , 82 (16), 165424. https://doi.org/10.1103/PhysRevB.82.165424. 
+
+(51) Pant, B.; Zhang, W.; Ebert, M.; Yan, X.; Du, H.; Banakar, M.; Tran, D. T.; Qi, Y.; Rowe, D.; Jey-
+
+aselvan, V.; Littlejohns, C. G.; Reed, G. T.; Thomson, D. J. Study into the Spread of Heat from 
+
+Thermo -Optic Silicon Photonic Elements. Opt. Express, OE 2021 , 29 (22), 36461 –36468. 
+
+https://doi.org/10.1364/OE.426748. 17 
+
+(52) Tsoulos, T. V.; Tagliabue, G. Self -Induced Thermo -Optical Effects in Silicon and Germanium Die-
+
+lectric Nanoresonators. Nanophotonics 2020 , 9 (12), 3849 –3861. https://doi.org/10.1515/nanoph -
+
+2019 -0534. 
+
+(53) Ryabov, D.; Pashina, O.; Zograf, G.; Makarov, S.; Petrov, M. Nonlinear Optical Heating of All -
+
+Dielectric Super -Cavity: Efficient Light -to -Heat Conversion through Giant Thermorefractive Bista-
+
+bility. Nanophotonics 2022 , 11 (17), 3981 –3991. https://doi.org/10.1515/nanoph -2022 -0074. 
+
+(54) Carmon, T.; Yang, L.; Vahala, K. J. Dynamical Thermal Behavior and Thermal Self -Stability of 
+
+Microcavities. Opt. Express, OE 2004 , 12 (20), 4742 –4750. 
+
+https://doi.org/10.1364/OPEX.12.004742. 
+
+(55) Chen, X.; Chen, Y.; Yan, M.; Qiu, M. Nanosecond Photothermal Effects in Plasmonic Nanostruc-
+
+tures. ACS Nano 2012 , 6 (3), 2550 –2557. https://doi.org/10.1021/nn2050032. 
+
+(56) Wan, T.; Guo, Y.; Tang, B. Photothermal Modeling and Characterization of Graphene Plasmonic 
+
+Waveguides for Optical Interconnect. Opt. Express, OE 2019 , 27 (23), 33268 –33281. 
+
+https://doi.org/10.1364/OE.27.033268. 
+
+(57) Berto, P.; Mohamed, M. S. A.; Rigneault, H.; Baffou, G. Time -Harmonic Optical Heating of Plas-
+
+monic Nanoparticles. Phys. Rev. B 2014 , 90 (3), 035439. 
+
+https://doi.org/10.1103/PhysRevB.90.035439. 
+
+(58) Handbook of Optical Constants of Solids . ScienceDirect. https://www.sciencedirect.com/book/ed-
+
+ited -volume/9780125444156/handbook -of -optical -constants -of -solids (accessed 2025 -12 -18). 
+
+(59) Cole, K.; Beck, J.; Haji -Sheikh, A.; Litkouhi, B. Heat Conduction Using Greens Functions , 2nd ed.; 
+
+CRC Press: Boca Raton, 2010. https://doi.org/10.1201/9781439895214. 
+
+(60) Suh, W.; Wang, Z.; Fan, S. Temporal Coupled -Mode Theory and the Presence of Non -Orthogonal 
+
+Modes in Lossless Multimode Cavities. IEEE Journal of Quantum Electronics 2004 , 40 (10), 1511 –
+
+1518. https://doi.org/10.1109/JQE.2004.834773. 
+
+(61) Pradip, R.; Varri, V. S. A.; McRae, L.; Brückerhoff -Plückelmann, F.; Wendland, D.; Ovvyan, A. P.; 
+
+Taheriniya, S.; Pernice, W.; Ferrari, S. Fast Thermo -Optic Switching on Silicon Nitride Platform 
+
+through Parity -Time Symmetry Breaking. arXiv August 28, 2024. 
+
+https://doi.org/10.48550/arXiv.2408.15139. 
+
+(62) Frey, B. J.; Leviton, D. B.; Madison, T. J. Temperature -Dependent Refractive Index of Silicon and 
+
+Germanium. In Optomechanical Technologies for Astronomy ; SPIE, 2006; Vol. 6273, pp 790 –799. 
+
+https://doi.org/10.1117/12.672850. 
+
+(63) Temperature Dependence of the Thermo -Optic Coefficient of SiO2 Glass .
+
+https://www.mdpi.com/1424 -8220/23/13/6023 (accessed 2025 -12 -19). 
+
+(64) McIntosh, K. R.; Yan, D.; Fong, K. C.; Kho, T. C. Near -Infrared Free Carrier Absorption in Heavily 
+
+Doped Silicon. Journal of Applied Physics 2014 , 116 (6). https://doi.org/10.1063/1.4893176. 18 
+
+Nanoscale Photo -Thermal Interaction Theory 
+
+Supporting information 
+
+Pavel Shafirin 1, Pengli Feng 1, Huanbo Jiang 2, Teri Odom 2, Artur Davoyan 1
+
+> 1
+
+Mechanical and Aerospace Engineering Department, University of California, Los Angeles, Los Ange-
+
+les, CA 90095, USA 
+
+> 2
+
+Department of Chemistry, Northwestern University, Evanston, IL 60208, USA 
+
+I. Analytical formalism of photo -thermal interaction 
+
+The overall photo -thermal interaction is described by a coupled system of Maxwell’s equations and heat 
+
+diffusion equation, which can be written as follows: 
+
+∇ × 𝑬 = −𝜇 0
+
+𝜕 𝑯 
+
+𝜕𝑡 ,
+
+∇ × 𝑯 = 𝜀 0
+
+𝜕𝜀 𝑬 
+
+𝜕𝑡 + 𝑱 ,
+
+(1)
+
+𝜌 𝑐 𝑝 
+
+𝜕𝑇 
+
+𝜕𝑡 = ∇(𝑘 ∇𝑇 ) + 𝑅𝑒 (𝑬 )𝜀 0
+
+𝜕𝑅𝑒 (𝜀 )
+
+𝜕𝑡 
+
+(2)
+
+where  𝜀 0 and  𝜇 0 are vacuum permittivity and permeability, respectively,  𝜌  is materials density,  𝑐 𝑝  stands 
+
+for heat capacity, and  𝑘  denotes thermal conductivity. In Eq. (1)  𝑱  is the source current that excites an 
+
+incident wave with electric and magnetic fields  𝑬 𝑖𝑛𝑐  and  𝑯 𝑖𝑛𝑐 , respectively (e.g., a current at a plane far 
+
+from the structure of interest that excites an incident plane wave). Fields  𝑬  and  𝑯  are total electric and 
+
+magnetic fields, respectively, which can be represented in the framework of the scattering field formalism 
+
+as:  𝑬 = 𝑬 𝑖𝑛𝑐 + 𝑬 𝑒𝑥  and  𝑯 = 𝑯 𝑖𝑛𝑐 + 𝑯 𝑒𝑥 , where  𝑬 𝑒𝑥  and  𝑯 𝑒𝑥  are electric and magnetic fields excited 
+
+inside the structure, respectively. Note that here we use a complex field notation. The excited fields,  𝑬 𝑒𝑥 
+
+and  𝑯 𝑒𝑥 , generally depend on temperature,  𝑇 , through a temperature -dependent dielectric permittivity, 
+
+𝜀 = 𝜀 (𝑇 ). The term  𝑅𝑒 (𝑬 )𝜀 0 
+
+> 𝜕𝑅𝑒 (𝜀 𝑬 )
+> 𝜕𝑡
+
+in Eq. (2) is a Joule heating term due to light absorption in the 
+
+structure [1]. For an optically resonant structure | 𝑬 𝑒𝑥 | ≫ |𝑬 𝑖𝑛𝑐 |, the heating term can therefore be replaced 
+
+with  𝑅𝑒 (𝑬 𝒆𝒙 )𝜀 0 
+
+> 𝜕𝑅𝑒 (𝜀 𝑬 𝒆𝒙 )
+> 𝜕𝑡
+
+. Both optical fields,  𝑬 𝑒𝑥  and  𝑯 𝑒𝑥 , and temperature field,  𝑇 , are functions of 
+
+space and time. Finding a closed form relation between temperature and excited fields is the main objec-
+
+tive of this work. 
+
+As mentioned, incident fields  𝑬 𝑖𝑛𝑐  and  𝑯 𝑖𝑛𝑐  are solutions of the empty space Maxwell equations with a 
+
+source current  𝑱 :19 
+
+∇ × 𝑬 𝑖𝑛𝑐 = −𝜇 0
+
+𝜕 𝑯 𝑖𝑛𝑐 
+
+𝜕𝑡 ,
+
+∇ × 𝑯 𝑖𝑛𝑐 = 𝜀 0
+
+𝜕 𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 + 𝑱 ,
+
+(3)
+
+Using Eq. (3) together with scattered field formalism, the Eq. (1) can be written as follows: 
+
+∇ × 𝑬 𝑒𝑥 = −𝜇 0
+
+𝜕 𝑯 𝑒𝑥 
+
+𝜕𝑡 ,
+
+∇ × 𝑯 𝑒𝑥 = 𝜀 0
+
+𝜕𝜀 𝑬 𝑒𝑥 
+
+𝜕𝑡 + 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 ,
+
+(4) 
+
+The permittivity,  𝜀 , generally has real and imaginary parts:  𝜀 = 𝜀 ′ + 𝑖𝜀 ′′ , where the imaginary part is 
+
+responsible for light absorption and heating. For a wide range of materials and problems of interest the 
+
+imaginary part of the permittivity is much smaller than the real one, i.e.,  𝜀 ′′ ≪ |𝜀 ′|, which allows treating 
+
+losses perturbatively. We then present Eq. (4) as follows: 
+
+∇ × 𝑬 𝑒𝑥 = −𝜇 0
+
+𝜕 𝑯 𝑒𝑥 
+
+𝜕𝑡 ,
+
+∇ × 𝑯 𝑒𝑥 = 𝜀 0
+
+𝜕𝜀 ′𝑬 𝑒𝑥 
+
+𝜕𝑡 + 𝑖 𝜀 0
+
+𝜕𝜀 ′′ 𝑬 𝑒𝑥 
+
+𝜕𝑡 + 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 ,
+
+(5) 
+
+As such photo -thermal interaction problem in photonic nanostructures reduces to solving a coupled system 
+
+of equations Eq. (2) and Eq. (5). 
+
+I.1. Coupled mode formalism. 
+
+Assuming slow variation of temperature as compared to optical oscillation period (i.e.,  𝑑𝑇  
+
+> 𝑑𝑡
+
+≪ 𝜔𝑇 , or equiv-
+
+alently  𝑑𝜀  
+
+> 𝑑𝑡
+
+≪ 𝜔𝜀 , where  𝜔  is a characteristic optical frequency) and assuming that changes in the thermo -
+
+optic permittivity are small (i.e., |𝜀 (𝑇 ) − 𝜀 (𝑇 0)| ≪ 1, where  𝑇 0 is the room temperature), we search for 
+
+the solutions of Eq. (5) in the framework of the time -dependent perturbation theory. In the scope of this 
+
+framework the excited fields can be represented as: 20 
+
+(𝑬 𝑒𝑥 
+
+𝑯 𝑒𝑥 
+
+) = ∑ ( 𝑬 𝑛  
+
+> ′
+
++ 𝛿 𝑬 ′𝑛 
+
+𝑯 𝑛  
+
+> ′
+
++ 𝛿 𝑯 ′𝑛 
+
+)
+
+> 𝑛
+
+𝐴 𝑛 (𝑡 )𝑒 −𝑖 𝜔 ̃ 𝑛 𝑡  (6) 
+
+here (𝑬 𝑛  
+
+> ′
+> 𝑯 𝑛
+> ′
+
+) are time independent spatial electric and magnetic eigenmode field profiles of the lossless un-
+
+perturbed problem: 
+
+∇ × 𝑬 ′𝑛 = 𝑖 𝜔 ̃𝑛 𝜇 0𝑯 ′𝑛 ,
+
+∇ × 𝑯 ′𝑛 = −𝑖 𝜔 ̃𝑛 𝜀 0𝜀 ′(𝑇 0)𝑬 ′𝑛 ,
+
+(7) 
+
+index  𝑛  enumerates eigenmodes ( 𝑛 = 0, 1, 2, …),  𝜔 ̃𝑛 = 𝜔 𝑛 − 𝑖 𝛾 𝑅  
+
+> 𝑛
+
+is a complex eigen -frequency with  𝛾 𝑅 
+
+> 𝑛
+
+being radiative decay rate of the  𝑛 -th eigenmode (i.e., eigen -frequency is complex for an open problem), 
+
+𝐴 𝑛 (𝑡 ) are corresponding slowly varying amplitudes (i.e.,  𝑑 𝐴 𝑛  
+
+> 𝑑𝑡
+
+≪ 𝜔 𝑛 𝐴 𝑛 ),  𝛿 𝑬 ′𝑛  and  𝛿 𝑯 ′𝑛  are small spatial 
+
+field corrections induced by the photo -thermal perturbations in permittivity, and  𝛿𝜀 (𝑇 ) = 𝜀 (𝑇 ) − 𝜀 (𝑇 0).
+
+Below, for the sake of simplicity and for the purpose of demonstration, we consider a single mode struc-
+
+ture. In this case we assume that only  𝑛 = 0 mode is resonantly excited in the nanostructure and write it’s 
+
+complex frequency as  𝜔 ̃𝑛 = 𝜔 0 − 𝑖 𝛾 𝑅 . We note, however, that the analysis below can be easily extended 
+
+to a multimode case via standard framework of time -domain perturbation theory [ 2]. 
+
+For  𝑛 = 0, system of Eqs. (6) and (7) simplify to: 
+
+(𝑬 𝑒𝑥 
+
+𝑯 𝑒𝑥 
+
+) = ( 𝑬 0 
+
+> ′
+
++ 𝛿 𝑬 0
+
+> ′
+
+𝑯 0 
+
+> ′
+
++ 𝛿 𝑯 0 
+
+> ′
+
+) 𝐴 0(𝑡 )𝑒 −𝑖 𝜔 ̃ 0𝑡  (8) 
+
+−∇ × 𝑬 0 
+
+> ′
+
+= −𝑖 𝜔 ̃ 0𝜇 0𝑯 0 
+
+> ′
+
+,
+
+∇ × 𝑯 0 
+
+> ′
+
+= −𝑖 𝜔 ̃ 0𝜀 0𝜀 ′(𝑇 0)𝑬 0 
+
+> ′
+
+,
+
+(9) 
+
+Substituting Eqs. (8) and (9) into Eq. (5) and accounting for slow variations in the first order approxima-
+
+tion we obtain the following system of equations: 
+
+−𝐴 0(𝑡 )∇ × 𝛿 𝑬 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 ̃ 0𝑡 = −𝑖 𝜇 0𝜔 0𝛿 𝑯 0 
+
+> ′
+
+𝐴 0(𝑡 )𝑒 −𝑖 𝜔 ̃ 0𝑡 + 𝜇 0
+
+𝜕 𝐴 0(𝑡 )
+
+𝜕𝑡 𝑯 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 ̃ 0𝑡 , (10) 21 
+
+𝐴 0(𝑡 )∇ × 𝛿 𝑯 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 ̃ 0𝑡 
+
+= −𝑖𝜀 0𝜀 ′𝜔 0𝛿 𝑬 0 
+
+> ′
+
+𝐴 0(𝑡 )𝑒 −𝑖 𝜔 ̃ 0𝑡 −𝑖𝜀 0𝛿𝜀 ′𝜔 0𝑬 0 
+
+> ′
+
+𝐴 0(𝑡 )𝑒 −𝑖 𝜔 ̃ 0𝑡 +𝜀 0𝜀 ′𝑬 0 
+
+> ′
+
+𝜕 𝐴 0(𝑡 )
+
+𝜕𝑡 𝑒 −𝑖 𝜔 ̃ 0𝑡 
+
++ 𝜀 0𝜀 ′′ 𝜔 0𝑬 0 
+
+> ′
+
+𝐴 0(𝑡 )𝑒 −𝑖 𝜔 ̃ 0𝑡 + 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 ,
+
+In Eq. (10) and subsequent derivations for brevity of notations by  𝜀 ′ and  𝜀 ′′  we denote  𝜀 ′(𝑇 0) and  𝜀 ′′ (𝑇 0),
+
+respectively, i.e., one should assume unperturbed permittivity values here. 
+
+It is convenient to make a variable substitution  𝐴 0(𝑡 ) = 𝐵 0(𝑡 )𝑒 𝛾 𝑅 𝑡 . In this case the Eq. (10) can be rewrit-
+
+ten as: 
+
+−𝐵 0(𝑡 )∇ × 𝛿 𝑬 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 0𝑡 
+
+= −𝑖 𝜇 0𝜔 0𝛿 𝑯 0 
+
+> ′
+
+𝐵 0(𝑡 )𝑒 −𝑖 𝜔 0𝑡 + 𝜇 0
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 𝑯 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 0𝑡 
+
++ 𝜇 0𝛾 𝑅 𝐵 0(𝑡 )𝑯 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 0𝑡 ,
+
+𝐵 0(𝑡 )∇ × 𝛿 𝑯 0 
+
+> ′
+
+𝑒 −𝑖 𝜔 0𝑡 
+
+= −𝑖𝜀 0𝜀 ′𝜔 0𝛿 𝑬 0 
+
+> ′
+
+𝐵 0(𝑡 )𝑒 −𝑖 𝜔 0𝑡 −𝑖𝜀 0𝛿𝜀 ′𝜔 0𝑬 0 
+
+> ′
+
+𝐵 0(𝑡 )𝑒 −𝑖 𝜔 0𝑡 +𝜀 0𝜀 ′𝑬 0 
+
+> ′
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 𝑒 −𝑖 𝜔 0𝑡 
+
++𝜀 0𝜀 ′𝑬 0 
+
+> ′
+
+𝛾 𝑅 𝐵 0 𝑒 −𝑖 𝜔 0𝑡 + 𝜀 0𝜀 ′′ 𝜔 0𝑬 0 
+
+> ′
+
+𝐵 0(𝑡 )𝑒 −𝑖 𝜔 0𝑡 + 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 ,
+
+(11) 
+
+Rewriting Eq. (11) as an operator  ℒ0 = (𝑖 𝜔 0𝜀 0𝜀 ′ ∇ ×
+
+−∇ × 𝑖 𝜔 0𝜇 0
+
+) acting on the field perturbation  |𝛿 𝝍 0⟩ =
+
+(𝛿 𝑬 0 
+
+> ′
+> 𝛿 𝑯 0
+> ′
+
+) we obtain: 
+
+𝐵 0(𝑡 )𝑒 −𝑖 𝜔 0𝑡 ℒ0|𝛿 𝝍 0⟩ = ℱ̿ 𝑒 −𝑖 𝜔 0𝑡  (12) 
+
+where the matrix  ℱ̿ is given by: 22 
+
+ℱ̿ =
+
+(
+
+𝜀 0𝜀 ′ 𝑬 0 
+
+> ′
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 +𝜀 0𝜀 ′𝑬 0 
+
+> ′
+
+𝛾 𝑅 𝐵 0 +
+
++𝜀 0𝜀 ′′ 𝜔 0𝑬 0 
+
+> ′
+
+𝐵 0(𝑡 ) + 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 𝑒 𝑖 𝜔 0𝑡 −
+
+−𝑖𝜀 0𝛿𝜀 ′𝜔 0𝑬 0 
+
+> ′
+
+𝐵 0(𝑡 )
+
+0
+
+0 𝜇 0
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 𝑯 0 
+
+> ′
+
++ 𝜇 0𝛾 𝑅 𝐵 0(𝑡 )𝑯 0
+
+> ′
+
+)
+
+Per Fredholm alternative theorem, the inhomogeneous equation Eq. (12) has nontrivial solutions only 
+
+when the adjoint homogeneous problem has a nontrivial solution, i.e.,  ℒ0
+
+> †
+
+|𝝍 ⟩ = 0. The adjoint operator to 
+
+the lossless Maxwell operator  ℒ0 is: 
+
+ℒ0 
+
+> †
+
+= (𝑖 𝜔 0𝜀 0𝜀 ′ −∇ ×
+
+∇ × 𝑖 𝜔 0𝜇 0
+
+).
+
+In the limit of  𝛾 𝑅 ≪ 𝜔 0 the adjoint problem solution is then  |𝝍 ⟩ ≃ (𝑬 0 
+
+> ′
+> 𝑯 0
+> ′
+
+)∗
+
+, where * denotes complex con-
+
+jugation. By using definition of Hermitian adjoint operators (i.e., ⟨𝝍 |ℒ0|𝛿 𝝍 0⟩ = ⟨𝛿 𝝍 0|ℒ0
+
+> †
+
+|𝝍 ⟩) from Eq. 
+
+(11) we obtain: 
+
+∫ (𝑬 0
+
+> ′
+
+𝑯 0 
+
+> ′
+
+)
+
+> ∗
+
+⋅ ℱ̿ 𝑑𝑉 
+
+> 𝑉
+
+= 0,
+
+which can be finally expressed as: 
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 [∫ 𝜀 0𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
++ ∫ 𝜇 0|𝑯 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
+] − 𝑖 𝜔 0𝜀 0𝐵 0(𝑡 ) ∫ 𝛿𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
++ 𝛾 𝑅 
+
+> 0
+
+𝐵 0(𝑡 ) [∫ 𝜀 0𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
++ ∫ 𝜇 0|𝑯 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
+] + 𝜔 0𝐵 0(𝑡 ) ∫ 𝜀 0𝜀 ′′ |𝑬 0 
+
+> ′
+
+|2𝑑𝑉 
+
+> 𝑉
+
++ 𝑒 𝑖 𝜔 0𝑡 ∫ 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 (𝑬 0 
+
+> ′
+
+)∗𝑑𝑉 
+
+> 𝑉
+
+= 0.
+
+We further denote  𝑊 = 1 
+
+> 2
+
+[∫ 𝜀 0𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉 + ∫ 𝜇 0|𝑯 0 
+
+> ′
+
+|2𝑑𝑉 𝑉 ], 𝛾 𝑁𝑅  
+
+> 0
+
+= 1 
+
+> 𝑊
+> 1
+> 2
+
+𝜔 0𝜀 0 ∫ 𝜀 ′′ |𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉  , and 
+
+Δ𝜔 0 = 1 
+
+> 2
+> 𝜔 0
+> 𝑊
+
+∫ 𝜀 0𝛿𝜀 ′|𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉  . With these new notations we obtain: 23 
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 − 𝑖 Δ𝜔 0𝐵 0(𝑡 ) + 𝛾 𝑅 
+
+> 0
+
+𝐵 0(𝑡 ) + 𝛾 𝑁𝑅  
+
+> 0
+
+𝐵 0(𝑡 )
+
++ 𝑒 𝑖 𝜔 0𝑡 1
+
+𝑊 
+
+1
+
+2 ∫ 𝜀 0
+
+𝜕 (𝜀 − 1)𝑬 𝑖𝑛𝑐 
+
+𝜕𝑡 (𝑬 0 
+
+> ′
+
+)∗ 𝑑𝑉 
+
+> 𝑉
+
+= 0.
+
+(13) 
+
+To further simplify the expression obtained, we represent the incident field in the form of a slowly varying 
+
+amplitude  𝑬 𝑖𝑛𝑐 = 𝐴 𝑖𝑛𝑐 (𝑡 )𝑬 𝑖𝑛𝑐  
+
+> ′
+
+𝑒 −𝑖 𝜔 𝑖 𝑡 , here  𝜔 𝑖  is the carrier frequency,  𝐴 𝑖𝑛𝑐 (𝑡 ) is the slowly varying am-
+
+plitude of the incident field, and  𝑬 𝑖𝑛𝑐  
+
+> ′
+
+is the spatial profile of the incident field. In this case Eq. (13) obtains 
+
+the following form: 
+
+𝜕 𝐵 0(𝑡 )
+
+𝜕𝑡 − 𝑖 Δ𝜔 0𝐵 0(𝑡 ) + 𝛾 𝑅 
+
+> 0
+
+𝐵 0(𝑡 ) + 𝛾 𝑁𝑅  
+
+> 0
+
+𝐵 0(𝑡 )
+
++ 1
+
+2
+
+1
+
+𝑊 ∫ 𝜀 0
+
+𝜕 (𝜀 − 1)𝐴 𝑖𝑛𝑐 𝑒 −𝑖 (𝜔 𝑖 −𝜔 0)𝑡 
+
+𝜕𝑡 𝑬 𝑖𝑛𝑐 (𝑬 0 
+
+> ′
+
+)∗ 𝑑𝑉 
+
+> 𝑉
+
+= 0.
+
+(14) 
+
+Next, by writing  𝐵 0(𝑡 ) = 𝑎 (𝑡 )𝑒 𝑖 𝜔 0𝑡 , we obtain: 
+
+𝜕𝑎 (𝑡 )
+
+𝜕𝑡 + 𝑖𝑎 (𝑡 )(𝜔 0 − Δ𝜔 0) + 𝑎 (𝑡 )(𝛾 𝑅  
+
+> 0
+
++ 𝛾 𝑁𝑅  
+
+> 0
+
+) + 1
+
+2
+
+1
+
+𝑊 ∫ 𝜀 0
+
+𝜕 (𝜀 − 1)𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 𝑬 𝑖𝑛𝑐  
+
+> ′
+
+(𝑬 0 
+
+> ′
+
+)∗ 𝑑𝑉 
+
+> 𝑉
+
+= 0
+
+which with the use of slow variation of the fields reduces to: 
+
+𝜕𝑎 (𝑡 )
+
+𝜕𝑡 + 𝑖𝑎 (𝑡 )(𝜔 0 − Δ𝜔 0) + 𝑎 (𝑡 )(𝛾 𝑅  
+
+> 0
+
++ 𝛾 𝑁𝑅  
+
+> 0
+
+) + 1
+
+2
+
+𝜕 𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 
+
+1
+
+𝑊 ∫ 𝜀 0(𝜀 − 1)𝑬 𝑖𝑛𝑐  
+
+> ′
+
+(𝑬 0 
+
+> ′
+
+)∗ 𝑑𝑉 
+
+> 𝑉
+
+= 0
+
+Denoting  𝜅 0 = 1 
+
+> 2
+> 1
+> 𝑊
+
+∫ 𝜀 0(𝜀 − 1)𝑬 𝑖𝑛𝑐  
+
+> ′
+
+(𝑬 0 
+
+> ′
+
+)∗ 𝑑𝑉 𝑉  we finally obtain: 
+
+𝜕𝑎 (𝑡 )
+
+𝜕𝑡 + 𝑖𝑎 (𝑡 )(𝜔 0 − Δ𝜔 0 − 𝑖 𝛾 0) = − 𝜕 𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 𝜅 0
+
+(15) 
+
+where  𝛾 0 = 𝛾 𝑁𝑅  
+
+> 0
+
++ 𝛾 𝑅  
+
+> 0
+
+is the total loss in the system,  Δ𝜔 0 corresponds to the shift of the resonance fre-
+
+quency due to photo -thermal interaction, and  𝜅 0 is a coupling coefficient of the excitation wave to the 0 th 
+
+order mode. 
+
+The solution to equation (15) can be found using the integrating factor method [ 3]: 24 
+
+𝑎 (𝑡 ) = + 1
+
+𝜁 (𝑡 ) ∫ 𝜁 (𝑡 ) 𝜕 𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 𝜅 0𝑑𝑡 + 𝐶 ; 𝜁 (𝑡 ) = 𝑒 ∫ 𝑖 (𝜔 0−Δ𝜔 0−𝑖 𝛾 0)𝑑𝑡  (16) 
+
+Assuming that the excitation wave amplitude and the temperature timescales are much larger than the 
+
+mode lifetime:  𝜏 𝑒𝑥 ≫ 𝛾 0 
+
+> −1
+
+and |𝑑 𝑇 𝑒𝑓𝑓  
+
+> 𝑑𝑡
+
+| ≪ 𝛾 0|𝑇 𝑒𝑓𝑓 |. This is typically the case for nanosecond pulses inter-
+
+acting with moderate quality factor resonators ( 𝑄 ~ 10 2 − 10 4) at optical frequencies. The solution re-
+
+duces to a quasi -static case: 
+
+𝑎 (𝑡 ) = 𝜔 𝑖 𝜅 0𝐴 𝑖𝑛𝑐 
+
+𝜔 0 − 𝜔 𝑖 − Δ𝜔 0 − 𝑖 𝛾 0
+
+𝑒 −𝑖 𝜔 𝑖 𝑡  (17) 
+
+Expression (17) corresponds to optical field evolution in the near -steady -state case. Finally, assuming a 
+
+constant thermo -optic coefficient  𝛼 , we can express the permittivity perturbation through a temperature 
+
+increase  ΔT = T − T0 as:  𝛿 𝜀 ′ = 2√𝜀 ′(𝑇 0)𝛼 Δ𝑇 , making the frequency detuning:  Δ𝜔 0 = 
+
+> 𝜔 0
+> 𝑊
+
+∫ 𝜀 0√𝜀 ′(𝑇 0)𝛼 Δ𝑇 |𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉  .
+
+I.2. Heat equation 
+
+A generic solution of the heat equation, Eq. (2), can be found with the use of Green’s function formalism 
+
+[4]: 
+
+𝑇 (𝒓 , 𝑡 ) = 𝑇 0 + ∫ ∫ 𝐺 (𝒓 , 𝑡 , |𝒓 ′, 𝑡 ′) 𝜔 𝑖 
+
+2 𝜀 0𝜀 ′′ |𝑬 ′0(𝒓 ′)|2|𝑎 (𝑡 ′)|2𝑑 𝒓 ′𝑑𝑡 ′
+
+> 𝑉
+> 𝑡
+> 0
+
+(18) 
+
+where  𝜔 0 
+
+> 2
+
+𝜀 0𝜀 ′′ |𝑬 ′0(𝒓 ′)|2|𝑎 (𝑡 ′)|2 is a volumetric heat source due to the light absorption (i.e., 
+
+𝑅𝑒 (𝑬 )𝜀 0 
+
+> 𝜕𝑅𝑒 (𝜀 𝑬 )
+> 𝜕𝑡
+
+→ 𝜔 0 
+
+> 2
+
+𝜀 0𝜀 ′′ |𝑬 ′0(𝒓 ′)|2|𝑎 (𝑡 ′)|2 when averaged over an optical period with  𝜔 0 ≈ 𝜔 𝑖 ), and 
+
+𝐺 (𝒓 , 𝑡 , |𝒓 ′, 𝑡 ′) is the Green’s function of the corresponding heat diffusion problem. 
+
+It is convenient to introduce an effective temperature  Δ𝑇 𝑒𝑓𝑓 = 1
+
+> 𝐶 𝐸
+
+∫ √𝜀 ′𝛼 Δ𝑇 |𝑬 ′0|2𝑑 𝒓 𝑉  , which plays a role 
+
+of a weighted average temperature across the structure and allows rewriting the frequency shift as  Δ𝜔 0 =
+
+𝜔 0𝛽 Δ𝑇 𝑒𝑓𝑓 ; here  𝐶 𝐸 = ∫ √𝜀 ′𝛼 |𝑬 ′0|2𝑑 𝒓 𝑉  and  𝛽 = 𝜀 0 
+
+> 𝑊
+
+𝐶 𝐸  . By integrating the solution for temperature given 
+
+in Eq. (18), we can represent effective temperature as: 25 
+
+Δ𝑇 𝑒𝑓𝑓 = 1
+
+𝐶 𝐸 
+
+∫ √𝜀 ′𝛼 [∫ ∫ 𝐺 (𝒓 , 𝑡 , |𝒓 ′, 𝑡 ′) 𝜔 0
+
+2 𝜀 0𝜀 ′′ |𝑬 𝟎 |2(𝒓 ′, 𝑡 ′)𝑑 𝒓 ′𝑑𝑡 ′
+
+> 𝑉
+> 𝑡
+> 0
+
+] |𝑬 ′0|2𝑑 𝒓 
+
+> 𝑉
+
+= 1
+
+𝐶 𝐸 
+
+∫ √𝜀 ′𝛼 |𝑬 ′0(𝑟 )|2 ∫ ∫ 𝐺 (𝒓 , 𝑡 , |𝒓 ′, 𝑡 ′) 𝜔 0
+
+2 𝜀 0𝜀 ′′ |𝑬 ′0(𝒓 ′)|2|𝑎 (𝑡 ′)|2𝑑 𝒓 ′𝑑𝑡 
+
+> 𝑉
+
+′
+
+> 𝑡
+> 0
+
+𝑑 𝒓 
+
+> 𝑉
+
+= ∫ |𝑎 (𝑡 ′)|2 [ 1
+
+𝐶 𝐸 
+
+∫ √𝜀 ′𝛼 |𝑬 ′0(𝑟 )|2 ∫ 𝐺 (𝒓 , 𝑡 , |𝒓 ′, 𝑡 ′) 𝜔 0
+
+2 𝜀 0𝜀 ′′ |𝑬 ′0(𝒓 ′)|2𝑑 𝒓 ′
+
+> 𝑉
+
+𝑑 𝒓 
+
+> 𝑉
+
+] 𝑑𝑡 ′
+
+> 𝑡
+> 0
+
+The expression in the square brackets can be viewed as an effective Green’s function  𝐺 𝑒𝑓𝑓 (𝑡 |𝑡 ′) that de-
+
+termines temporal evolution of effective temperature,  Δ𝑇 𝑒𝑓𝑓 , driven by the optical mode amplitude  𝑎 :
+
+Δ𝑇 𝑒𝑓𝑓 (𝑡 ) = ∫ 𝐺 𝑒𝑓𝑓 (𝑡 |𝑡 ′)|𝑎 (𝑡 ′)|2𝑑𝑡 ′
+
+> 𝑡
+> 0
+
+(19) 
+
+In complex geometries, Green’s function,  𝐺 , does not have a closed form easy -to -use analytical expres-
+
+sion, and needs to be computed numerically . At the same time, function  𝐺 𝑒𝑓𝑓  can be obtained from a single 
+
+numerical simulation. In particular,  𝐺 𝑒𝑓𝑓 (𝑡 |𝑡 ′) is the thermal response to a delta function excitation at time 
+
+𝑡 ′ with |𝑎 |2 = 𝛿 (𝑡 − 𝑡 ′). Therefore, numerically simulating an arbitrary geometry with a volumetric 
+
+source term given by  𝑞 ′′′ = 𝛿 (𝑡 − 𝑡 ′) 𝜔 0 
+
+> 2
+
+𝜀 0𝜀 ′′ |𝑬 0 
+
+> ′
+
+(𝒓 ′)|2, where  𝑬 0 
+
+> ′
+
+(𝒓 ′) is a known eigen -mode profile, and 
+
+calculating  Δ𝑇 𝑒𝑓𝑓  from the resulting temperature filed yields  𝐺 𝑒𝑓𝑓 . Such an approach drastically simplifies 
+
+computations, as any arbitrarily shaped excitation can then be solved for using the Eq. ( Error! Reference 
+
+source not found. 9). 
+
+With the help of  Δ𝑇 𝑒𝑓𝑓 (𝑡 ) the frequency shift  Δ𝜔 0 can be expressed as: 
+
+Δ𝜔 0 = 𝜔 0𝛽 Δ𝑇 𝑒𝑓𝑓 (20 )
+
+where  𝛽 = 𝜀 0 
+
+> 𝑊
+
+𝐶 𝐸 . As such, our final system of equations is: 
+
+𝜕𝑎 (𝑡 )
+
+𝜕𝑡 + 𝑖𝑎 (𝑡 )(𝜔 0(1 − 𝛽 Δ𝑇 𝑒𝑓𝑓 ) − 𝑖 𝛾 0) = −𝜅 0
+
+𝜕 𝐴 𝑖𝑛𝑐 𝑒 −𝑖 𝜔 𝑖 𝑡 
+
+𝜕𝑡 
+
+(21) 
+
+Δ𝑇 𝑒𝑓𝑓 (𝑡 ) = 𝑇 0 + 1
+
+𝐶 𝐸 
+
+∫ 𝐺 𝑒𝑓𝑓 (𝑡 |𝑡 ′)|𝑎 (𝑡 ′)|2𝑑𝑡 ′
+
+> 𝑡
+> 0
+
+(22) 26 
+
+Figure S 1. (Left) Schematic illustration of the thermal profile induced by the optical field. Dashed lines 
+
+indicate two domains, one with volumetric heating (internal) and one without (external). (Right) A thermal 
+
+resistance analog of the system at a short time scal e. Here the internal heat is close to a steady state, 
+
+whereas the external heat is described as an expanding boundary layer. 
+
+For many practical calculations, with the use of additional simplifying assumptions the solutions can be 
+
+searched for in the framework of a lumped model [ 5]. Consider a volume  𝑉  (Fig. S1, left) that contains 
+
+both the excited optical mode and the associated heat source. A characteristic time for the temperature 
+
+inside  𝑉  to reach a near steady -state distribution is: 
+
+𝜏 𝑉 = 𝑙 𝑉 
+
+> 2
+
+𝐷 𝑉 
+
+where  𝑙 𝑉  is the characteristic size of  𝑉 , and  𝐷 𝑉 = 𝑘 𝑉 
+
+> 𝜌 𝑉 𝑐 𝑝 ,𝑉
+
+is the effective thermal diffusivity inside the 
+
+volume  𝑉 . For many nanostructures with high thermal diffusivity, this time is very short (e.g.,  𝜏 𝑉 ≈
+
+0.5 ns  for a 200 nm silicon structure). 
+
+If the excitation pulse duration satisfies  𝜏 ex ≫ 𝜏 𝑉 , the temperature inside  𝑉  is approximately quasi -static. 
+
+In this case, heat flow can be described using a thermal resistance model. We express the heat flux leaving 
+
+the volume through an average temperature increase  Δ𝑇 av :
+
+𝑞 out = Δ𝑇 av − Δ𝑇 𝑏 
+
+𝑅 in 
+
+; Δ𝑇 av (𝑡 ) = 1
+
+𝑉 ∫ Δ𝑇 (𝐫 , 𝑡 ) 𝑑𝑉 ,
+
+> 𝑉
+
+(23 )
+
+where  Δ𝑇 𝑏  is the increase of the boundary temperature above the ambient  𝑇 0, and  𝑅 in  is the internal thermal 
+
+resistance [ 5] between the bulk and the boundary. While  𝑅 in  depends on geometry and heat source distri-
+
+bution, its scale can be estimated assuming uniform 1D heating, resulting in  𝑅 in = 𝑙 𝑉 
+
+> 6𝑘 𝑉 𝜎 𝑉
+
+, where  𝜎 𝑉  is the 
+
+surface area of  𝑉 . We note that variations in source shape introduce only order -unity corrections. For 
+
+example, if the heat source is an infinitely small point in the center of V,  𝑅 in  
+
+> (point )
+
+≈ 1.5𝑅 in .27 
+
+Outside the volume, heat transport is transient and cannot be treated as steady state. However, for times 
+
+𝑡 ≪ 𝜏 ex , the temperature field can be approximated as an expanding thermal boundary layer with thickness 
+
+𝛿 surr = √𝜋 𝐷 surr 𝑡 , where  𝐷 surr  is the diffusivity of the surrounding material. The corresponding external 
+
+thermal resistance is  𝑅 surr = 𝛿 surr 
+
+> 𝑘 surr 𝜎 𝑉
+
+. The system can therefore be modeled as two resistances in series (Fig. 
+
+S1, right). A key simplification occurs when  𝑅 surr ≫ 𝑅 in , so that most of the temperature drop occurs in 
+
+the surrounding medium, and the internal temperature is nearly uniform ( Δ𝑇 av ≈ Δ𝑇 𝑏 ). 
+
+This condition is reached for excitation times  𝜏 ex ≫ 𝑘 surr   
+
+> 2𝑙 𝑉
+> 2
+> 36 𝑘 𝑉
+> 2𝜋 𝐷 surr
+
+. It is easily satisfied for highly conductive 
+
+structures embedded in low -conductivity environments and is similar to the diffusion timescale for mate-
+
+rials of the same conductivity. For example, a 200 nm silicon resonator on a SiO 2 substrate yields a char-
+
+acteristic timescale below 1 ps. 
+
+Under these conditions, the effective temperature can be replaced with the average temperature  Δ𝑇 eff =
+
+Δ𝑇 av , and it’s dynamics can be obtained by integrating the heat equation over  𝑉 :
+
+𝑑 Δ𝑇 av 
+
+𝑑𝑡 = 1
+
+𝑉 𝜌 𝑉 𝑐 𝑝 ,𝑉 
+
+(∫ (
+
+> 𝜎 𝑉
+
+𝑘 ∇𝑇 ⋅ 𝐧 𝑉 ) 𝑑 𝜎 𝑉 + ∫ 𝜔 0
+
+2𝑉 
+
+𝜀 0𝜀 ′′ ∣ 𝐄 0 
+
+> ′
+
+∣2 𝑑𝑉 ) . (24) 
+
+Here, the first term represents heat flux through the boundary and can be approximated as  (Δ𝑇 av −
+
+Δ𝑇 𝑏 )/𝑅 in . The second term corresponds to optical absorption, which can be written as  𝑊 |𝑎 (𝑡 )|2𝛾 𝑁𝑅  
+
+> 0
+
+,
+
+where  𝛾 𝑁𝑅  
+
+> 0
+
+= 1 
+
+> 2𝑊
+
+𝜔 0𝜀 0 ∫ 𝜀 ′′ |𝑬 0 
+
+> ′
+
+|2𝑑𝑉 𝑉 .
+
+The resulting temperature evolution equation becomes: 
+
+𝑑 𝑇 av 
+
+𝑑𝑡 = 1
+
+𝑉 𝜌 𝑉 𝑐 𝑝 ,𝑉 
+
+(𝑊 |𝑎 (𝑡 )|2𝛾 NR  
+
+> 0
+
+− 𝑇 av − 𝑇 𝑏 
+
+𝑅 in 
+
+) . (25) 
+
+To close the system, we determine the boundary temperature using a Green’s function formulation [ 4]. 
+
+The surrounding temperature field is: 
+
+𝑇 surr = 𝑇 0 + ∫ ∫ 𝑞 ′′ 
+
+> 𝜎 𝑉
+> 𝑡
+> 0
+
+(𝐫 𝜎 𝑉 , 𝑡 ′) 𝐺 out (𝐫 , 𝑡 ∣ 𝐫 𝜎 𝑉 , 𝑡 ′) 𝑑 𝜎 𝑉 𝑑 𝑡 ′. (26) 
+
+Where  𝑞 ′′  is the heat flux through the surface of  𝑉  and  𝐺 out  is the Green’s function of the heat equation 
+
+for the surrounding volume. Unlike Eq. (18), Eq. (26) involves only the surface heat flux  𝑞 ′′ . If we can 
+
+then choose a symmetric  𝑉  such that the flux is uniform along the boundary, the surface integral over  𝑞 ′′ 28 
+
+in Eq. (26) becomes trivial and is equal to the total heat flux leaving  𝑉 , which we have already estimated 
+
+in Eq. (23). Evaluating Eq. (26) at the boundary ( 𝒓 = 𝒓 𝜎 𝑉  ) then yields an expression for the boundary 
+
+temperature: 
+
+𝑇 𝑏 = 𝑇 0 + ∫ 𝑇 av − 𝑇 𝑏 
+
+𝑅 in 
+
+> 𝑡
+> 0
+
+𝐺 out (𝐫 𝜎 𝑉 , 𝑡 ∣ 𝐫 𝜎 𝑉 , 𝑡 ′) 𝑑 𝑡 ′. (27) 
+
+We note that since under these approximations the majority of the thermal resistance is in the outside 
+
+region  𝑉 , the specific choice of  𝑅 𝑖𝑛  does not meaningfully impact the solution. Therefore, even a very 
+
+rough estimate of  𝑅 𝑖𝑛  is sufficient to produce reliable results. 
+
+In this work the temperature dynamics is calculated using Eqs. (17), (25) and (27). The systems we analyze 
+
+in this work can be effectively reduced to three geometries with known analytical Green’s functions [ 4]: 
+
+1D (a planar surface): 
+
+𝐺 1𝐷 (0, 𝑡 ∣ 0, 𝑡 ′) = 2
+
+√4𝜋𝐷 (𝑡 − 𝑡 ′)
+
+2D (a cylinder of radius  𝑟 0): 
+
+𝐺 2𝐷 (𝑟 0, 𝑡 ∣ 𝑟 0, 𝑡 ′) = 2
+
+𝜋 2𝑟 0 
+
+> 2
+
+∫ 𝑒 −𝜉𝐷 (𝑡 −𝑡 ′)/𝑟 0
+
+> 2
+
+𝜉 [𝐽 1
+
+> 2
+
+(𝜉 ) + 𝑌 1
+
+> 2
+
+(𝜉 )]
+
+> ∞
+> 0
+
+𝑑𝜉 
+
+3D (a sphere of radius  𝑟 0): 
+
+𝐺 3𝐷 (𝑟 0, 𝑡 ∣ 𝑟 0, 𝑡 ′) = 1
+
+2𝜋 𝑟 0 
+
+> 2
+
+[4𝜋𝐷 (𝑡 − 𝑡 ′)]−1/2 − 1
+
+4𝜋 𝑟 0 
+
+> 3
+
+𝑒 −𝐷 𝑡 ′/𝑟 0
+
+> 2
+
+erf (√𝐷 (𝑡 − 𝑡 ′)
+
+𝑟 0
+
+)
+
+These correspond to planar, cylindrical, and spherical geometries, respectively. As shown in Fig. 3 of the 
+
+main text, this simplified framework accurately captures temperature dynamics across a wide range of 
+
+nanophotonic systems on nanosecond timescales. 29 
+
+II. Test Resonant Structures 
+
+We apply our model to three conceptually different resonant nanophotonic structures. The first structure 
+
+(Fig. S2 a) is a metasurface consisting of periodically arranged Si rectangles on top of a SiO 2 substrate. 
+
+The periods are  𝑃 𝑥 = 563 𝑛𝑚  and  𝑃 𝑦 = 480 𝑛𝑚 , the rectangle dimensions are  𝑑𝑥 = 501 𝑛𝑚 , 𝑑𝑦 =
+
+320 𝑛𝑚 , ℎ = 200 𝑛𝑚 . The metasurface has a resonance at  𝜆 𝑟𝑒𝑠 (T = 300K) = 1196nm with a quality factor 
+
+of Q = 500. 
+
+The second structure (Fig. S2 b) is a suspended Si photonic crystal. The hexagonal array period is  𝐿 =
+
+345 𝑛𝑚 , the hole diameter  𝐷 = 240 𝑛𝑚  and the height  ℎ = 250 𝑛𝑚 . The resonance occurs at  𝜆 𝑟𝑒𝑠 (T =
+
+300K) = 1192nm and has a quality factor of Q = 157. 
+
+The last structure is a Silicon nanopillar embedded into SiO 2. The diameter is  𝐷 = 1266 𝑛𝑚  and the 
+
+height  ℎ = 980 𝑛𝑚 . The room temperature resonance frequency is  𝜆 𝑟𝑒𝑠 (T = 300K) = 1195nm, and the 
+
+quality factor is Q = 233. 
+
+The fast switching optimization discussed in the main 
+
+text is performed for the 1D metasurface system (Fig. 
+
+S2(a)). Since the performance is strongly affected by the 
+
+initial resonator frequency  𝜔 0 we treat is as another op-
+
+timization parameter alongside the excitation pulse 
+
+shape  𝐴 𝑖𝑛𝑐 . In practice the resonant frequency can be 
+
+tuned by slightly adjusting the period of the metasurface 
+
+array. We use coupled mode theory to calculate the trans-
+
+mission and absorption of the probe beam at any point in 
+
+the optimization with calculated loss val ues of  𝛾 𝑅 =
+
+1.16 THz  and  𝛾 𝑁𝑅 = 0.39 𝑇𝐻𝑧 . Figure S3 shows the nu-
+
+merically calculated transmission, reflection and absorp-
+
+tion spectra of the metasurface together with the corre-
+
+sponding coupled mode theory values. We consider a 
+
+probe wavelength of  𝜆 𝑝𝑟𝑜𝑏𝑒 = 1200 𝑛𝑚 , consequently at room temperature the metasurface reflects over 
+
+Figure S3. Numerically calculated transmis-
+
+sion and absorption spectra of the metasurface 
+
+(solid) and the CMT approximation used 
+
+(dashed). 
+
+Figure S 5. Illustrations of the modelled optical resonators with dimensions. (a) The periodic metasu-
+
+face. (b) Photonic crystal cavity. (c) Individual nanopillar scatterer. 30 
+
+90% on incident light. When heated the resonant peak shifts to longer wavelengths, decreasing transmis-
+
+sion. 
+
+References 
+
+(1) Novotny, L.; Hecht, B. Principles of Nano -Optics , 2nd ed.; Cambridge University Press: Cambridge, 
+
+2012. https://doi.org/10.1017/CBO9780511794193. 
+
+(2) Suh, W.; Wang, Z.; Fan, S. Temporal Coupled -Mode Theory and the Presence of Non -Orthogonal 
+
+Modes in Lossless Multimode Cavities. IEEE J. Quantum Electron. 2004 , 40 (10), 1511 –1518. 
+
+https://doi.org/10.1109/JQE.2004.834773. 
+
+(3) Hartman, P. Ordinary Differential Equations: Second Edition ; SIAM, 1982. 
+
+(4) Cole, K.; Beck, J.; Haji -Sheikh, A.; Litkouhi, B. Heat Conduction Using Greens Functions , 2nd ed.; 
+
+CRC Press: Boca Raton, 2010. https://doi.org/10.1201/9781439895214. 
+
+(5) Bergman, T. L. Fundamentals of Heat and Mass Transfer ; John Wiley & Sons, 2011.
