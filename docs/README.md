@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-03</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 2 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-03 20:32:21 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 21:14:59 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读2篇论文，分别聚焦纳米光热理论与单分子定位成像算法。</p>
-<p>最值得关注的是《Nanoscale Photo-Thermal Interaction Theory》（7.0分），为纳米尺度光热机制提供定量框架；另可留意多发射器定位中全局最大似然估计的效率分析（6.0分）。</p>
-<p>建议普通读者优先精读光热理论篇，后续可结合实验数据验证其适用性。</p>
+<p>今日精读0篇、速读2篇，聚焦光学显微粒子/纤维表征与超宽带动态光散射研究。最值得关注的是AI辅助光学显微表征（7.0分）用于颗粒/纤维分析，以及超宽带去偏振动态光散射探测玻璃态分子动力学（6.0分）。建议普通读者优先了解AI在显微图像分析中的自动化潜力，可关注其实际应用案例。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -89,7 +87,7 @@
     <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Nanoscale Photo-Thermal Interaction Theory">Nanoscale Photo-Thermal Interaction Theory</span></li><li><span class="dpr-home-dashboard-paper-title" title="Asymptotic Efficiency of the Global Maximum-Likelihood Estimator in Multi-Emitter Localization Microscopy">Asymptotic Efficiency of the Global Maximum-Likelihood Estimator in Multi-Emitter Localization Microscopy</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Artificial Intelligence for the Characterization of Particles and Fibers by Optical Microscopy">Artificial Intelligence for the Characterization of Particles and Fibers by Optical Microscopy</span></li><li><span class="dpr-home-dashboard-paper-title" title="Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses">Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>2</strong></span></div>
 </section>

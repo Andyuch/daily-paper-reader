@@ -1,0 +1,675 @@
+Title: Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses
+
+URL Source: https://arxiv.org/pdf/2607.25506v1
+
+Published Time: Wed, 29 Jul 2026 00:45:57 GMT
+
+Number of Pages: 20
+
+Markdown Content:
+# Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses 
+
+Till B¨ ohmer, 1, ∗ Rolf Zeißler, 2, † Robin Schw¨ ach, 2 Jan P. Gabriel, 1 Florian Pabst, 3 and Thomas Blochowicz 2, ‡
+
+> 1
+
+Institute of Frontier Materials on Earth and in Space, German Aerospace Center, D-51147 Cologne, Germany 
+
+> 2
+
+Institute for Condensed Matter Physics, Technical University of Darmstadt, D-64289 Darmstadt, Germany 
+
+> 3
+
+International Centre for Theoretical Physics (ICTP), 34151 Trieste, Italy 
+
+(Dated: July 29, 2026) Dynamic light scattering (DLS) is a versatile technique for probing microscopic dynamics in soft condensed matter. However, applying DLS to supercooled molecular liquids and glasses demands exceptional experimental performance due to weak depolarized scattering, slow relaxation near the glass transition, and the need for quantitative comparison with complementary spectroscopic tech-niques. In this tutorial we discuss, how a depolarized dynamic light scattering (DDLS) setup can be tailored to meet these challenges. By combining conventional fiber-optical photon correlation spectroscopy, and multispeckle photon correlation imaging with high-frequency DDLS, such a setup allows to capture rotational dynamics across more than 20 orders of magnitude in time. We detail the experimental design required for high signal-to-noise ratios and long-term optical stability, along-side the treatment of coherence and partial heterodyning effects. As we demonstrate, after proper treatment the different detection schemes yield the same electric-field autocorrelation function, en-abling the construction of continuous, ultra-broadband DDLS datasets. Furthermore, multispeckle detection enables time-resolved correlation measurements without temporal averaging, extending DDLS to non-equilibrium systems such as aging molecular glasses. This methodology establishes a unified experimental framework for quantitative investigations of equilibrium and non-equilibrium molecular reorientation dynamics over an exceptionally broad time range. 
+
+I. INTRODUCTION 
+
+In dynamic light scattering (DLS), fluctuations of visible light scattered from a medium are analyzed to extract information about the microscopic motion of scattering centers [1]. DLS is highly versatile because the nature of the scattering centers can vary widely, allowing the study of a broad range of materials, including molecular (supercooled) liquids and glasses [2–9], colloidal suspensions or emulsions [10, 11], macromolecules such as polymers both in bulk [12– 14] and in solution [14, 15], proteins [16], granular materials [17–19], gels [20–23], foams [24, 25] and many other soft condensed matter systems. While the underlying principle of the technique remains the same across these systems, specific experimental implementations are often tailored to the properties of the particular materials under study. This article reports on DLS experiments tailored for the study of rotational dynamics in molecular (supercooled) liquids and glasses covering more than 20 orders of magnitude in time, from femtoseconds to hundred thousands of seconds. This can be achieved by combining data from four different DLS techniques, namely photon-correlation spectroscopy (PCS) employing both fiber-optic and multispeckle detection schemes, as well as tandem Fabry-Perot interferometry and double monochromator-based spectroscopy. The focus of this work lies on the prior two techniques, including the steps that need to be taken to maximize resolution and signal to noise ratio, achieve sufficient long term stability and accurate and stable sample temperature, allowing for the study of rotational dynamics of weakly scattering molecular glass formers at cryogenic temperatures. We begin by giving a brief introduction to the principle of a typical DLS experiment and an overview of the key research questions that motivated the design and optimization of the experimental setup. Subsequently, the technical foundations of the setup are discussed, followed by an explanation of data acquisition and analysis. Finally, we present and discuss data from two distinct applications, namely time-resolved dynamics during the aging of molecular glasses, and the temperature dependence of molecular dynamics in (supercooled) liquids from the boiling point to the glass transition, as probed by broadband DLS.    
+
+> ∗till.boehmer@dlr.de; These authors contributed equally to this work.
+> †rolf.zeissler@pkm.tu-darmstadt.de; These authors contributed equally to this work.
+> ‡thomas.blochowicz@physik.tu-darmstadt.de arXiv:2607.25506v1 [cond-mat.soft] 28 Jul 2026
+
+2 
+
+> A. Brief introduction to DLS
+
+When a disordered medium is illuminated by a coherent light source, the scattered light forms a characteristic speckle pattern, i.e. a granular pattern of spatial intensity fluctuations perpendicular to the propagation direction of the scattered light. Light and dark speckles arise from constructive or destructive interference of light scattered from different locations within the medium. If the microscopic configuration of the medium evolves in time, the speckle pattern fluctuates, and the temporal variation of the intensity in each speckle reflects the microscopic dynamics. This is the underlying principle of DLS, where the temporal fluctuations of the scattered intensity are probed in order to extract information about the microscopic dynamics of the medium, e.g. the translation of colloidal particles or the rotational dynamics of molecules in (supercooled) liquids and glasses. In the prototypical PCS experiment, light scattered from a sample is captured by an optical fiber, and the temporal intensity fluctuations I(t) are recorded. The corresponding normalized time-autocorrelation function 
+
+g2(∆ t) = I(t) I(t + ∆ t) t
+
+⟨I(t)⟩2
+
+> t
+
+(1) is used to quantify these intensity fluctuations, where ⟨... ⟩t indicates a temporal average, so that g2(∆ t) only depends on the lag time ∆ t. However, the microscopic dynamics is directly encoded in the electric field time-autocorrelation function 
+
+g1(∆ t) = E⋆(t) · E(t + ∆ t) t
+
+⟨| E(t)|2⟩t
+
+, (2) which includes phase information of the scattered light. Assuming the electric field is a complex-valued Gaussian random variable, the Siegert relation [26] relates g1(∆ t)and g2(∆ t), which in the simplest case reads as 
+
+g2(∆ t) = 1 + Λ g1(∆ t)2. (3) Here, Λ is the coherence factor, which is unity if the scattered light probed by the detector originates from a single coherence area (single speckle) and satisfies 0 < Λ < 1 otherwise. More involved versions of Eq. (3) are discussed below, to account for partial heterodyne contributions, i.e. when the light scattered from the sample is mixed with coherent light from another source, e.g. light reflected from the sample environment. Depending on the experimental conditions, the decay of g1 reflects different aspects of the dynamics within the sample. A detailed derivation is given, e.g, in the book by Berne and Pecora [27]. To summarize briefly, DLS experiments can be performed in different polarization geometries, with the most common ones being vertical-vertical (VV) and vertical-horizontal (VH) geometry. In both geometries the incident light is polarized vertically with respect to the scattering plane, while only a certain polarization component of the scattered light is analyzed, i.e., the vertically polarized one in VV and the horizontally polarized one in VH. The respective microscopic interpretations of the electric field autocorrelation functions read 
+
+gVV 1 (q, ∆t) = A F (q, ∆t) + B F (q, ∆t) C2(∆ t) (4) and 
+
+gVH 1 (q, ∆t) = D F (q, ∆t) C2(∆ t). (5) Here 
+
+F (q, ∆t) = 
+
+ NX
+
+> j=1
+> N
+
+X
+
+> k=1
+
+exp ( iq · [rj (t + ∆ t) − rk(t)]) 
+
+
+
+> t
+
+(6) is the intermediate scattering function, with the scattering vector q and the position of scattering centers ri.
+
+C2(∆ t) = 
+
+D
+
+P2
+
+ cos θ(t, t + ∆ t) E
+
+> t
+
+(7) is the orientational correlation function where P2 is the Legendre polynomial of rank ℓ = 2, θ(t, t + ∆ t) the change in orientation of the optical polarizability tensor between times t and t + ∆ t. A,B and D are constants determined by the components of the polarizability tensor of the scattering centers, for detailed expressions see Ref. 27. 3For spherical particles such as colloids, the constants B and D are small compared to A due to their optically isotropic nature. Thus, VV geometry can be used to investigate their translational dynamics. In the case of optically anisotropic molecules, the constants B and D are of similar order as A, such that VV and VH geometry both contain contributions from translational and rotational dynamics. However, F (q, ∆t) is sensitive to translations on the length scale associated with q, which is orders of magnitude larger than the size of typical molecules. Therefore, F (q, ∆t)decays on time scales much longer than those associated with molecular rotations and can be approximated as being unity, which yields 
+
+gVV 1 (q, ∆t) = A + B C 2(∆ t), (8) 
+
+gVH 1 (q, ∆t) = D C 2(∆ t) (9) Thus, both geometries give access to the rotational dynamics, while gVV 1 contains a plateau that decays only at very long times. Therefore, to study rotational dynamics in molecular liquids the VH (depolarized) geometry is typically preferred. Such experiments are referred to as depolarized dynamic light-scattering (DDLS) and are the focus of the present work. Besides PCS, other experimental DDLS approaches directly probe the spectral density of the fluctuations of the scattered electric field, i.e., the scattered intensity I(ν) at different frequency shifts ν with respect to the frequency of the incident light. Such experiments employ an interferometer or spectrometer to select different spectral components of the scattered light and are usually tunable to scan a specific frequency range. Typical instrumentation involves multipass tandem Fabry-Perot interferometers [28] or different Raman spectrometers [29]. The spectral density of fluctuations of the scattered electric field is related to its autocorrelation function via Fourier-Laplace transform 
+
+I(ν) = 
+
+Z ∞
+
+> 0
+
+g1(∆ t) e−i2πν ∆td∆t . (10) Therefore, both g1(∆ t) and I(ν) contain equivalent information, however, the corresponding experiments differ in their accessible time- and respective frequency window. While modern PCS experiments can access timescales slower than ∼ 4 ns (corresponding to ν < 40 MHz), frequency-domain techniques cover the range from several hundred MHz to the THz regime (corresponding to 1 ns > ∆t > 0.01 ps). By combining these complementary techniques, it is possible to span the entire dynamic range of supercooled liquids, from slow structural relaxation to fast vibrational dynamics. Such a broadband approach to DDLS will be discussed in more detail below. However, we do not provide a detailed description of the high-frequency experimental implementations, as these are well-established techniques. Instead we refer to the works of Cummins et al. [30, 31], R¨ ossler et al.[32, 33] and Sokolov et al. [34, 35]. We note that the combination of different DDLS techniques has already been pioneered by R¨ ossler et al. [3, 8, 36, 37].  
+
+> B. Motivation and scope of the experimental approach
+
+The optimization of the DDLS experiments presented in this work was motivated in part by the need to quan-titatively compare results for molecular glass formers, for instance monohydroxy or polyhydric alcohols, with other spectroscopic techniques, especially broadband dielectric spectroscopy (BDS). Many of those systems exhibit very weak depolarized scattering due to their low polarizability anisotropy. In addition, a detailed quantitative comparison of spectral features requires transformation of time-domain DDLS data into the frequency domain via Fourier-Laplace transform, which further increases the demands on data quality. Furthermore, due to the low glass transition temperature of many of these systems (e.g., Tg ∼ 100 K for 1-propanol) and the strong sensitivity of structural relaxation times to temperature changes, the experiment requires accurate and highly stable temperature control. Finally, a comprehensive analysis of the temperature-dependence of relaxation dynamics in supercooled liquids requires the possibility of probing slow dynamics up to correlation times of thousands of seconds, i.e., measurement durations of several days. This requires a very high long-time stability of all involved components, such that the intensity autocorrelation functions decay only due to fluctuations in the sample, and not due to changes of the experimental conditions. This is especially difficult considering the requirement to operate at cryogenic temperatures, as most conventional cryostats introduce mechanical vibrations due to vacuum pumps or refrigerators. The optimized setup described in this work allows for such high-quality measurements over a broad dynamic range and at low temperatures. This enables detailed comparison with BDS and has contributed to disentangling different relaxation processes in dielectric loss spectra, including Debye, structural and secondary relaxations [7, 9, 38–47]. 4A second objective has been to enable the study of out-of-equilibrium systems by implementing multi-speckle photon correlation spectroscopy. Analyzing intensity fluctuations within a single speckle, as in conventional DLS experiments, requires extensive time-averaging [compare Eq. (1)]. This requirement imposes significant limitations in order for g1(∆ t) to correctly reflect the dynamics of the sample: (i) The dynamics needs to be stationary. Any time-dependence is not considered due to the temporal averaging. (ii) The sample has to be ergodic on the time-scale of the experiment. Ergodicity ensures that temporal averages [Eqs. (1) and (2)] correspond to the ensemble averages. Many systems in soft-matter physics do not fulfill one or both of these requirements. Molecular and colloidal glasses as well as gels are off-equilibrium systems, thus are subject to physical or chemical aging. The dynamics of aging samples is explicitly time-dependent, thus the analysis requires proper two-time correlation functions, i.e., g1(t, t + ∆ t). In addition, these systems display dynamics on timescales exceeding hours, days or even weeks. Exploring the entire phase space by monitoring a single speckle would require a multiple of this time, implying that, within feasible experimental timescales, glasses and gels usually appear non-ergodic when a single speckle is probed. Multispeckle DLS solves these issues by monitoring many speckles simultaneously using a camera instead of an optical fiber, thereby replacing the temporal average ⟨... ⟩t by a speckle average ⟨... ⟩sp and giving access to the two-time intensity autocorrelation function [48–50] 
+
+g2(t, t + ∆ t) = I(t) I(t + ∆ t) sp 
+
+⟨I(t)⟩sp ⟨I(t + ∆ t)⟩sp 
+
+. (11) . In previous works, multispeckle DLS has been employed to study the time-evolution of the dynamics, e.g., in aging gels [49, 51–53] and coarsening foams [54–57]. In this work, we discuss the implementation of a multispeckle approach for probing time-resolved dynamics in molecular glasses. Previously, the setup has been employed to study time-resolved autocorrelation functions of aging molecular and colloidal glasses, providing insight into how aging dynamics is governed by ”internal clocks” of the material [58]. Multispeckle DDLS can also be applied to stationary systems to probe ultra-slow dynamics. By combining temporal and speckle averaging, a significantly extended time window can be accessed. While fiber-optical DLS provides high temporal resolution at short times, it is limited at long correlation times by the finite correlation window of hardware correlators and the impractically long measurement durations required to access such timescales. In contrast, multispeckle techniques enable reliable measurements at long timescales exceeding hundred thousand seconds [48, 50, 59], corresponding to very low frequencies ( μHz).  
+
+> II. TECHNICAL FUNDAMENTALS OF THE EXPERIMENTAL SETUP
+
+This section describes the experimental setup and its individual components, with emphasis on the design principle that enables high-quality DLS measurements, especially at long correlation times. We start by giving an overview of all components, followed by a specific and detailed description of the laser light source, the cryogenic- and sample environment, and the optics employed for multispeckle detection. As outlined in the previous section, the design of the experiment was governed by three key requirements: (i) High signal-to-noise ratio, enabling measurements on weakly scattering samples and reliable transformation of time domain data into the frequency domain using Fourier-Laplace transformation. (ii) Long-time stability of intensity autocorrelation functions, requiring the suppression of setup-induced scattering-intensity variations due to any me-chanical or optical instabilities. (iii) Temperature stability and accuracy to enable the comparison to data of different spectroscopic techniques close to the glass transition temperature, where dynamics is extremely sensitive to small temperature changes. The basic requirements for conventional fiber-optical DLS setups are well established and described in the literature, e.g. by Pecora [1]. However, their implementation requires particular care for the study of molecular glass formers, where weak scattering signals, long relaxation times, and low temperatures impose constraints. In contrast, the design considerations for multispeckle DLS are less standardized, as the technique is comparatively recent and the applications pursued in this work differ from typical implementations [48, 50, 51, 59, 60].  
+
+> A. General description of the experimental setup
+
+Fig. 1a, b and c show a schematic overview of the entire PCS setup. The laser beam (L), after passing through an external variable attenuator (A), is guided towards the sample using an adjustable mirror (M), which ensures that 5     
+
+> FIG. 1. a) Schematic overview of the experimental setup. b) Horizontal cross section of the setup. c) Vertical cross section of the setup. d) Cross section of the multispeckle imaging optics. L: Laser, A: Attenuator, M: Mirror, H: Housing, P1 and P2: Polarizers, CL1 and CL2: Converging lenses, F: Fiber-optics, C: Camera, O: Camera objective, V: Vacuum chamber, G: Goniometer, CF: Cold finger, S1 and S2: Slit apertures, B: Bandpass filter, Z: Sample cell.
+
+the beam propagates parallel to the scattering plane. The laser beam is contained in a housing (H) for most of its optical path to reduce the amount of airborne dust particles moving through the beam. A Glan-Laser polarizer (P1) by B. Halle with an extinction ratio of r = 10 −7 ensures vertical polarization of the incident beam with respect to the scattering plane. The beam is then focused into the sample using a converging lens (CL1) with a focal length 300 mm. The home-built sample cell is mounted on a coldfinger cryostat (CF) inside a vacuum chamber (V). Both, the fiber-optical (F) and the multispeckle detection unit (C) are installed on the goniometer (G), allowing measurements at a scattering angle of 90 ◦, respectively. In addition, scattering angles between 20 ◦ − 160 ◦ are accessible, which is advantageous for the investigation of various soft-matter systems. In both detection schemes, the scattered light passes a Glan-Thompson polarizer (P2) by B. Halle ( r = 10 −7 for the fiber detection, r = 10 −6 with a large aperture of 11 .5 × 9.8 mm 2 for multispeckle detection) and a 2 nm bandpass filter (B), before entering the respective detection optics. Precise alignment of the beam is achieved using a needle mounted on a high-precision translation stage at a central position on the goniometer arm. When rotating the goniometer from 0 ◦ to 180 ◦, the needle translates along the optical axis. For a properly aligned beam, the diffraction pattern formed by the beam irradiating the needle remains symmetric and unchanged between both positions, which can be ensured by adjusting M. To ensure an optimal alignment of the depolarized polarization geometry, the laser beam is directly coupled into the detector by rotating the goniometer to 180 ◦. The beam intensity is strongly attenuated to prevent detector damage. Depolarized geometry is then optimized by minimizing the detected signal through precise rotation of P2 using a high-precision rotation mount. In case of the fiber detection (F), scattered light is coupled into a single-mode optical fiber with an integrated beam 6splitter. The transmitted light at both output ports is detected by Count T single-photon counting modules (Laser Components) with low dark-count rate. The use of the beam splitter and two photon counting modules in pseudo-cross detection is standard practice and necessary to reduce afterpulsing, i.e., detection of multiple pulses due to reabsorption of photoelectrons [1]. The intensity autocorrelation function is calculated using an ALV-7004/USB-fast hardware correlator, featuring an initial sampling time of 3.125 ns and a lag time range of 0 to 54 976 s. To suppress vibrations transmitted through the ground, the entire setup sits on top of a passively damped optical table supported by S2000 laminar flow vibration isolators (Newport). The following sections discuss in detail several aspects of the setup that require particular attention in order to optimize performance. These include the generation of a highly stable incident beam, the cryogenic sample environment and sample cells, and the multispeckle detection unit.  
+
+> B. High-stability incident beam
+
+The choice of a suitable light source is crucial for DLS experiments, as it directly determines the signal intensity and any fluctuations of the incident light introduce artifacts in the measured intensity autocorrelation functions, thereby limiting long-time stability. The key requirements are therefore high optical power, low noise, and high mode stability. The setup employs a Cobolt Samba 05-01 continuous-wave diode pumped frequency doubled Nd:YAG laser (H¨ ubner Photonics) operating at a wavelength of 532 nm with a maximum output power of 500 mW. The beam has a diameter of approximately 700 μm at the output aperture and a divergence of < 1.2 mrad. After focusing with lens CL1, this results in a beam waist of a few hundred microns at the sample position, providing sufficient optical power density for weakly scattering samples such as LiCl-water solutions or alcohols [38, 44, 47]. According to the manufacturer, the laser operates in a singe TEM 00 mode with a linewidth below 1 MHz, laser-power noise (at 20 Hz - 20 MHz) below 0 .1 % rms, and long-term power stability better than 2 % over ±2 K temperature variation. In practice, optimal stability is achieved by operating the laser at its maximum output power and controlling the incident intensity via the external variable attenuator. In addition, the power stability is strongly increased by ensuring a high temperature stability of the laser. This is achieved by using a Cobolt thermoelectric cooling (TEC) plate (H¨ ubner Photonics) and by minimizing temperature fluctuations in the laboratory by optimized air-conditioning control. Otherwise, temperature changes in the room can induce laser power fluctuations and respective artifacts in the intensity autocorrelation functions on timescales of minutes up to several hours. Finally, airborne dust particles interfering with the beam can introduce additional intensity fluctuations. These lead to artifacts in the autocorrelation functions at frequencies around 1-30 Hz, which become visible after Fourier-Laplace transformation. To suppress these effects, the beam path is enclosed in tubes (H), and the laboratory air is filtered using an air purification system.[61]  
+
+> C. Cryogenic sample environment and sample cells
+
+Accurate and stable temperature control is essential for studying rotational dynamics in molecular liquids near and below the glass transition, where relaxation times are extremely sensitive to temperature variations. Depending on the fragility of the liquid, a temperature of 1 K can lead to a change of the structural relaxation time by up to one order of magnitude [62]. Thus, performing measurements in this temperature regime requires special cryogenic environments with high thermal stability. The sample is contained in a home-built light scattering cell (Z) (see Fig. 2), attached directly to the cold finger of a Konti Spectro A cryostat (Cryovac). The cryostat provides access to temperatures between 4 K and 450 K using liquid or gaseous nitrogen or helium. During measurements, gaseous nitrogen is used to maintain the cold finger temperature via a specially designed nitrogen transfer device (Cryovac). Liquid nitrogen is employed only when high cooling rates are required, as its vaporization within the cryostat induces vibrations. The cold finger is located inside a vacuum chamber (V), which is essential for minimizing thermal gradients and improving temperature accuracy. For optical access, the vacuum chamber is equipped with three anti-reflection coated windows, with a diameter of 3 cm for beam entry and exit, and of 10 cm at 90 °to access different scattering angles. To reduce potential contributions of surface reflected light, all aluminum surfaces inside the vacuum chamber are covered by black aluminum foil and the beam dump is located outside of the vacuum chamber. The cryostat allows for external three-axis translation and one-axis rotation of the cold finger (CF) by a vacuum manipulator, enabling precise control of the position of the scattering volume within the sample. This is convenient for minimizing parasitic heterodyne contributions in the detected light arising from impurities contained in the sample or from reflections of the sample cell. 7Z1 Z2 O-rings glass tube glass tube aluminium Peltier body element Pt100     
+
+> FIG. 2. Schematic overview and cross sections of the sample cells. Z1: standard cell for equilibrium measurements at fixed temperatures. Z2: down-scaled version of the standard sample cell equipped with a Peltier element for rapid temperature changes during physical aging experiments.
+
+In contrast to flow cryostats, no exchange gas is used, therefore, insufficient vacuum conditions directly lead to temperature inhomogeneities within the sample cell. To ensure proper vacuum, the vacuum chamber is first evacu-ated using a turbo-molecular pump. After reaching pressures below 10 −5 mbar, the turbo-molecular pump (Agilent TwisTorr 74 FS) is isolated from the cryostat to minimize mechanical vibrations. A vibration-free ion-getter pump (Agilent VacIon Plus 75) is used to maintain a vacuum of 10 −6 mbar and below. Minimizing vibrations is essential for achieving sufficiently high signal-to-noise ratios in the intensity autocorrelation functions to obtain a satisfactory quality of Fourier-Laplace transformed data. We use two types of sample cells shown in Fig. 2, the standard cell for equilibrium measurements at fixed tempera-tures (Z1) and a down-scaled version equipped with a Peltier element for rapid temperature changes during physical aging experiments (Z2). The standard cell consists of a quartz-glass tube (outer diameter 20 mm, wall thickness of 2 mm) mounted in an aluminum frame. Vacuum sealing is achieved by Viton O-rings pressed on the two polished edges of the glass tube. The middle part of the aluminum body is a tube with four cavities for optical access to ensure the laser to pass trough the sample and the scattered light at 90 °scattering angle to reach the detector. The design ensures that the sample, and especially the scattering volume, is in close contact to the aluminum frame, which improves heat coupling to the cold finger. This reduces temperature gradients and allows for larger cooling rates, which is beneficial for supercooling liquids with a tendency to crystallize. To avoid temperature instabilities due to thermal radiation, the sample cell is enclosed in a gold-plated heat shield, which is directly coupled to the cold finger. To reduce parasitic stray light, all aluminum parts of the sample cell are anodized in matte black. Temperature calibration with respect to absolute temperature units was performed with a Pt-100 temperature sensor placed inside the liquid close to the scattering volume. Temperature stability of the cell is ±0.01 K, while temperature accuracy with respect to other cryostats in our lab is better than ±0.5 K The Peltier-driven cell used for rapid temperature changes was inspired by a design originally created by the Roskilde Glass-and-Time group for use in dielectric experiments [63]. The concept of the standard cell was scaled down to contain a glass tube with 10 mm diameter and 1 mm wall thickness, which is close to the smallest feasible design to not introduce significant additional heterodyne contributions to the detected light. The reduction ensures a lower heat capacity to achieve faster temperature changes. For temperature control, the sample cell introduces a sub-cryostat controlled by a Peltier element (CP402533 by CUI Devices, 25 × 25 mm 2). It operates at a fixed cold finger temperature Tout , while the Peltier element controls a temperature offset ∆ T with respect to Tout , leading to a sample temperature Tin = Tout − ∆T . ∆ T can be changed much quicker than Tout , therefore the Peltier element allows for more rapid and precise changes in sample temperature. The Peltier element is glued to the cell using a thin layer of thermally conductive epoxy glue (EP29LPSPAO-1 by Masterbond) and is controlled via the ±10 V analog output of a Lakeshore 335 temperature controller combined with a Huginn Peltier driver provided by the Roskilde Glass-and-Time group in Denmark [64]. Temperature is monitored by a 1.2 mm ×1.6 mm Pt-100 temperature sensor (IST Innovative Sensor Technology) glued to the cell with thermally conductive epoxy, while a second identical Pt-100 sits at the bottom of the sample cell to probe temperature gradients within the sample cell. 8 
+
+> D. Multi-speckle optics
+
+Multispeckle light-scattering experiments were introduced in the early nineties [65] and have continuously evolved alongside advances in imaging technology. Two principal approaches are commonly employed. In one approach, the camera is positioned in transmission geometry, allowing simultaneous access to a broad range of scattering vectors 
+
+q.[53, 59] In the second approach, pursued in this work, a large number of speckles are detected at approximately constant q. Averaging over all detected speckles then allows to obtain time-resolved correlation functions [Eq. (11)] [48, 50, 60]. Several imaging geometries can be employed for multispeckle DLS experiments. In the simplest far-field config-uration, a single aperture is sufficient to produce a speckle pattern on the camera chip, with light from the entire scattering volume contributing to each detected speckle [66]. Alternatively, an imaging lens can be used to introduce spatial resolution, such that light detected in a specific region of the speckle pattern originates predominantly from a corresponding subregion of the sample. Such approaches are commonly referred to as photon correlation imaging 
+
+and have been employed, e.g., to detect long-range dynamic heterogeneity in foams and gels [67]. In recent years, the concept of photon correlation imaging has been adapted and developed for various applications, e.g. to investigate material failure [68], local displacements [69] or the yielding transition [70, 71] in materials under mechanical strain or shear. In the present work, however, photon-correlation-imaging optics are primarily employed not for spatially resolving heterogeneous dynamics, but to optimize speckle size and detection efficiency. The corresponding design considerations and optical components are discussed in the following. Considering the goal to probe slow dynamics in deeply supercooled liquids and the aging of molecular glasses, two key requirements can be identified for the multispeckle experiment. First, high temporal resolution is required. In aging molecular glasses, the evolution of the dynamics with waiting time t occurs on timescales comparable to the decay time of the correlation functions with lag time ∆ t. Consequently, time-resolved autocorrelation functions must be obtained with minimal temporal averaging, which requires the simultaneous detection of a large number of statistically independent speckles. Second, the setup must allow stable measurements over durations ranging from several hours up to days without producing impractically large datasets. These requirements define the central design constraints of the experiment: the speckle size should be sufficiently small to allow many speckles to be recorded within a comparatively small image area, while remaining comparable to or larger than the pixel size of the detector. Otherwise, multiple speckles contribute to a single pixel, reducing the speckle contrast and thus the coherence factor Λ. For this reason, we employ photon-correlation-imaging optics, which allow controlled adjustment of the speckle size through the positioning of an imaging lens. A schematic illustration of the optical setup used for the multi-speckle experiment is shown in Fig. 1 (d). The scattered light first passes two adjustable slit apertures (S1 and S2), separated by an imaging lens (CL2). The use of slit apertures is motivated by the anisotropic shape of the scattering volume, which corresponds to an elongated cylinder due to the laser beam being observed perpendicular to its propagation direction. The convex lens with focal length f =70 mm is positioned such that the two apertures are located in its focal planes. Adjusting the distance of the lens with respect to the sample and the camera chip allows to control the speckle size at the detector plane. Subsequently, light passes a horizontally oriented Glan-Thompson polarizer from B. Halle (P2) with extinction ratio 10 −6 and an aperture diameter of 12 mm, sufficiently large to avoid vignetting. In addition, a 2 nm bandpass filter (B) is employed to suppress parasitic light from external sources. Finally, the speckle pattern is recorded using a Hamamatsu ORCA-Flash 4.0 V2 SCMOS camera equipped with a 2048 px x 2048 px image sensor and individual pixel dimensions of 6.5 μm × 6.5 μm. At full resolution, the camera allows frame rates up to 100 fps. By restricting to smaller regions of interest, higher frame rates and correspondingly shorter accessible timescales can be achieved. The static and dynamic properties of the recorded speckle patterns are discussed in the following sections.  
+
+> III. MULTI-SPECKLE CORRELATION ANALYSIS AND DATA TREATMENT
+
+The multispeckle detection scheme introduces additional statistical and optical considerations compared to conven-tional fiber-optical DLS experiments. In the following, we first characterize the static and dynamic properties of the recorded speckle patterns before discussing the treatment of coherence effects and heterodyne contributions required for reliable extraction of electric-field autocorrelation functions.  
+
+> A. Static structure of speckle patterns
+
+The following analysis characterizes the static properties of the recorded speckle patterns and demonstrates that the chosen imaging geometry yields sufficiently small and statistically well-defined speckles for efficient multispeckle 90 200 400 600 800 1000 1200                 
+
+> pixels x-direction
+> 0
+> 100
+> 200
+> pixels y-direction
+> 500 1000
+> intensity
+> 0
+> 100
+> 200
+> b
+> 10 2
+> 10 3
+> 10 4
+> intensity
+> a
+> 01000 2000 3000 4000 5000
+> intensity
+> 10 6
+> 10 5
+> 10 4
+> 10 3
+> P(intensity)
+> c
+> 10 010
+> x
+> 0.00
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> C(x, x + x)
+> w= 4.4 px
+> d
+> 10 010
+> y
+> 0.00
+> 0.25
+> 0.50
+> 0.75
+> 1.00
+> C(y, y + y)
+> w= 1.6 px
+> e
+
+FIG. 3. Analysis of the static structure of speckle patterns. a) Example of an intensity speckle pattern of the depolarized scattered light from a supercooled molecular liquid (1-phenyl-1-propanol) slightly above Tg. b) The average intensity profile along the y-direction approximately follows a Gaussian shape (black line), reflecting the Gaussian profile of the laser beam, while the average intensity is constant along the x-direction. c) Probability distribution of speckle intensities. The experimentally observed distribution corresponds well to Eq. (12) (dashed line), the theoretical description for a speckle pattern probed using a finite detector resolution. The description via the dashed line includes the effect of the Gaussian intensity profile in the y-direction of the image, which yields an additional broadening of the distribution. d) and e) Average spatial intensity autocorrelation function between pixels of distance ∆ x and ∆ y. The width of the observed peak is a measure for the speckle size. 
+
+detection. As an example, a speckle pattern obtained for the horizontally polarized light scattered from the supercooled molecular liquid 1-phenyl-1-propanol slightly above Tg is shown in Fig. 3a. Due to the chosen imaging geometry, the camera records a real-space image of the elongated scattering volume produced by the laser beam, resulting in a horizontal stripe with a Gaussian intensity profile along the y-direction, as shown in Fig. 3b. Consequently, only 
+
+∼ 6% of the full 2048 ×2048 pixel sensor area is utilized, resulting in comparatively small data volumes even for long-duration measurements. To analyze the speckle size on the camera chip, the average spatial intensity autocorrelation functions [48] C(x, x +∆x) and C(y, y + ∆ y) are evaluated in Fig. 3d and e. The spatial autocorrelation functions exhibit maxima at ∆x = 0 and decay over distances corresponding to the speckle size. The observed correlation profiles can empirically be described by a Lorentzian, from which the full width at half maximum w is determined. Different widths are obtained along the x- and y-directions, which is a direct consequence of imaging the elongated scattering volume using a spherical lens. Along the y-direction, the average speckle size corresponds to wy =1.6 pixels, i.e. close to the smallest feasible speckle size before substantial reduction of speckle contrast due to pixel averaging occurs. Along the 
+
+x-direction we observe a larger speckle size of wx =4.4 pixels. Thus, we achieve a near-optimal compromise between maximizing the number of statistically independent speckles and preserving speckle contrast. The probability distribution of pixel intensities is shown in Fig. 3c, revealing an asymmetric distribution with a maximum at I0 > 0. Following the theoretical treatment of speckle statistics by Goodman [72], the probability density can be described by 
+
+P (I) = 
+
+ mI0
+
+m
+
+Im−1 exp 
+
+
+
+− mI I0
+
+
+
+Γ( m) , (12) where the parameter m characterizes the degree of speckle averaging and approaches unity in the limit of fully resolved speckles. The dashed black line in Fig. 3c represents a fit to the data using m = 2, additionally considering the Gaussian envelope shown in panel b. The obtained value of m confirms that on average more than one speckle contributes to each pixel, consistent with the speckle size on the order of the pixel size determined from the spatial autocorrelation analysis. 10 10 −2 10 −1 10 0 10 1 10 2 10 3 10 4 
+
+> Δt/s
+> 0.0
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> g2(t, t + Δ t) − 1
+> Δt/s
+> 0.46
+> 0.47
+> 0.48
+> t-avg.
+> P(g02− 1)
+
+FIG. 4. Time-resolved intensity autocorrelation function g2(t, t + ∆ t) − 1 obtained for a supercooled liquid sample of 1-phenyl-1-propanol as a function of ∆ t. Each color represents a correlation function calculated for a different starting frame at time 
+
+t, while the black dashed line is the average over all starting frames. The inset highlights the slight differences between the different autocorrelation functions at short times and the corresponding distribution P (g02 − 1) of the short-time autocorrelation values (grey dashed line). The small differences are due to statistical fluctuations associated with the finite number of detected speckles. 
+
+B. Speckle dynamics 
+
+The dynamics of the speckle pattern shown in Fig. 3a is analyzed by calculating the normalized time-resolved intensity time-autocorrelation function g2(t, t + ∆ t) according to Eq. 11. Due to the symmetry of the recorded speckle pattern, the average intensity is constant along the x-direction for fixed y. This allows the normalization of the intensity autocorrelations to be performed independently for each row of pixels, yielding 
+
+g2(t, t + ∆ t) = nx
+
+nyny
+
+X
+
+> y=1
+
+Pnx 
+
+> x=1
+
+Ixy (t)Ixy (t + ∆ t)
+
+Pnx 
+
+> x=1
+
+Ixy (t)
+
+ Pnx 
+
+> x=1
+
+Ixy (t + ∆ t)
+
+ , (13) where ( x, y ) denote pixel coordinates shown in Fig. 3a, Ixy (t) is the intensity recorded in pixel ( x, y ) at time t, and 
+
+nx and ny denote the number of pixel columns and rows, respectively. The advantage of utilizing the symmetry of the speckle pattern is that no time average is required for obtaining an accurate normalization. Time-resolved intensity autocorrelation functions g2(t, t +∆ t) are shown in Fig. 4 as a function of lag time ∆ t, where different colors correspond to different t. Each curve is obtained without any temporal averaging, i.e. each point is obtained simply by correlating two images. All curves collapse within statistical accuracy, reflecting the stationarity of the equilibrium dynamics in the supercooled liquid. Consequently, the average over different t, represented by the dashed black line, provides a meaningful description of the equilibrium dynamics. Small deviations between individual time-resolved autocorrelation arise from statistical fluctuations associated with the finite number of detected speckles. These fluctuations primarily affect the short-time limit 
+
+g02 (t) = lim  
+
+> ∆t→0
+
+g2(t, t + ∆ t), (14) which therefore exhibits a finite distribution of values. This is illustrated in the inset of Fig. 4a, showing a magnified view of the short-time regime. The grey line indicates the distribution of g02 values, with standard deviation, ∆ g02 =0.004, corresponding to deviations well below 1% from the mean value of g02 − 1. The small magnitude of these fluctuations demonstrates that the number of statistically independent speckles is sufficiently large to obtain reliable time-resolved autocorrelation functions without the need for additional temporal averaging. Correspondingly, variations of the imaging optics that produce larger average speckle sizes yield larger values of ∆ g02 , consistent with the reduced number of independent speckles contributing to the ensemble average. 11 10 −9 10 −7 10 −5 10 −3 10 −1 10 1 10 3            
+
+> Δt/s
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> g2(Δ t) − 1
+> (a)
+> 10 −4 10 −2 10 0
+> 0.0
+> 0.5
+> 1.0
+> latex spheres
+> fiber
+> camera
+> 10 −9 10 −7 10 −5 10 −3 10 −1 10 110 3
+> Δt/s
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> g1(Δ t)
+> (b)
+> fiber, Λ = 0.98
+> camera, Λ = 0.62
+> FIG. 5. (a) Intensity autocorrelation function as probed by fiber and camera detection for the same sample of supercooled 1-phenyl-1-propanol. Differences occur mainly in the short- and long-time plateau values due to different coherence factors and heterodyning effects. Inset: Corresponding data for latex spheres 5.5, μm polystyrene spheres dispersed in glycerol, the short-time plateau of which gives access to the coherence factors of both techniques, which yields Λ fiber = 0 .98 and Λ camera = 0 .62. (b) Electric field autocorrelation function obtained from the data in (a) by applying the extended Siegert relation [Eq. (15)]. Besides the different coherence factors, heterodying effects were considered using the procedures discussed below. Camera and fiber data display an almost perfect collapse.
+> C. Treatment of coherence and partial heterodyning effects
+
+Both the fiber-optical and the multispeckle DDLS experiments probe the same orientational dynamics and should therefore yield identical electric-field autocorrelation functions. Fig. 5a compares the intensity autocorrelation func-tions g2(∆ t) obtained with the two detection schemes for the same sample of supercooled 1-phenyl-1-propanol. Here and throughout the following discussion, quantities expressed as functions of the lag time ∆ t alone denote t-averaged quantities. The comparison shows that the multispeckle data exhibit both a reduced short-time amplitude and a long-time plateau above unity relative to the fiber-optical data. These differences arise from the different degrees of speckle averaging and from the distinct ways in which heterodyne light contributes to the measured intensity autocorrelation functions in the two detection schemes. Quantitatively, both effects are described by the generalized Siegert relation for partially heterodyne detection [73, 74], 
+
+g2(∆ t) = 1 + Λ C2 g1(∆ t)2 + 2Λ C(C − 1) g1(∆ t), (15) where the coherence factor Λ quantifies the reduction of speckle contrast due to the resolution of the detector and 
+
+C = ⟨Is⟩⟨I⟩ (16) quantifies the degree of heterodyning. Here, ⟨Is⟩ denotes the average intensity scattered from the sample and ⟨I⟩ the total detected intensity. The homodyne limit corresponds to C = 1, whereas 0 < C < 1 indicates partial heterodyning due to static light contributions that do not reflect the sample dynamics. Inspection of Eq. (15) reveals that both Λ and C influence the measured intensity autocorrelation function. The reduced short-time amplitude of the multispeckle data is primarily a consequence of its smaller coherence factor Λ compared to the fiber-optical experiment. Heterodyne contributions, described by the parameter C, affect the two detection schemes differently. In the multispeckle experiment they manifest through an increased long-time plateau, whereas in the fiber-optical experiment they primarily reduce the short-time amplitude while leaving the long-time limit unchanged at unity [75, 76]. These differences are discussed in detail below. Both Λ and C must therefore be determined before the electric-field autocorrelation functions obtained from the two detection schemes can be compared or merged to produce a broadband data set. To determine the coherence factors of the two experiments, measurements were performed on a dilute suspension of 5.5 μm polystyrene spheres dispersed in glycerol in polarized geometry. For such a system, heterodyne contributions 12 can be neglected due to the large scattering intensity from the sample and the generalized Siegert relation reduces to the conventional homodyne form, Eq. (3). Thus, Λ can be determined by extracting the short-time plateau from these data. A corresponding fit yields Λ fiber = 0 .98 and Λ camera = 0 .62 for the fiber-optical and the multispeckle experiment, respectively. The reduced coherence factor of the multispeckle setup is consistent with the static characterization of the speckle pattern discussed above. In particular, the intensity distribution shown in Fig. 3c is described by m ≈ 2, indicating partial spatial averaging. For the Gamma-distributed intensity statistics of Eq. (12), the normalized intensity variance is given by 1 /m , yielding 1 /m ≈ 0.5. Since the coherence factor Λ is directly related to the normalized variance of speckle intensities, a value of Λ of similar magnitude is expected. The reasonable agreement with the independently determined value Λ camera = 0 .62 therefore provides an internal consistency check. Applying Eq. (15) using the experimentally determined coherence factors Λ fiber = 0 .98 and Λ camera = 0 .62 yields the electric-field autocorrelation functions shown in Fig. 5b. For the present sample, heterodyne contributions are weak and only require a minor correction. Nevertheless, they were accounted for using the procedure described in detail below. After correction, the fiber-optical and multispeckle data collapse onto a single curve, demonstrating that both experiments probe the same underlying molecular dynamics. While heterodyne contributions are comparatively small in the example shown here, they become important for even weaker scattering samples. Reliable determination of the heterodyne parameter C is therefore essential. In the following, corresponding approaches for multispeckle and fiber-optical data are discussed separately. The need for separate approaches originates from a fundamental difference between temporal averaging in a single speckle and spatial averaging over many speckles. In conventional fiber-optical DLS, the intensity autocorrelation function is obtained by temporal averaging within a single speckle. Consequently, the intensity of the static heterodyne contributions remains constant throughout the experiment and only affects the short-time amplitude of the correlation function. A procedure for extracting the degree of heterodyning from the short-time amplitude of fiber data is presented below. By contrast, multispeckle DLS relies on averaging over a large number of speckles. Since also the static light contribution forms a spatially varying speckle pattern on the detector, speckle averaging yields a corresponding long-time plateau above unity in the intensity autocorrelation function, from which the degree of heterodyning can be determined directly.  
+
+> 1. Approach for multi-speckle data
+
+To quantitatively relate the long-time plateau of the multispeckle intensity autocorrelation function to the hetero-dyne parameter C, we consider the influence of static heterodyne light on the speckle-averaged intensity correlations. For this purpose, the electric field detected on the camera sensor is decomposed into a fluctuating contribution originating from the sample dynamics Is and a static contribution Ih representing the heterodyne light. We assume that the electric field E(r, t ) detected on the camera chip surface Ω consists of a dynamically fluctuating contribution Es(r, t ), originating from light scattered by the sample, and a static contribution Eh(r, t ), representing the heterodyne light, such that 
+
+E(r, t ) = Es(r, t ) + Eh(r, t ). (17) At a fixed point r ∈ Ω on the camera chip, the intensity Is = |Es · E⋆ 
+
+> s
+
+| fluctuates in time, reflecting the sample dynamics. By contrast, Ih = |Eh · E⋆
+
+> h
+
+| is time-independent at fixed r, but varies across the detector surface, i.e., as a function of r, therefore forming a speckle pattern. As a consequence, the normalized intensity autocorrelation function obtained by averaging over time at fixed r (moving time average), is not identical to the one obtained by averaging over r ∈ Ω (speckle average). The intensity detected at the camera is given by 
+
+I(r, t ) = |E(r, t ) · E⋆(r, t )| = Es(r, t ) + Eh(r, t ) · E⋆ 
+
+> s
+
+(r, t ) + E⋆
+
+> h
+
+(r, ) . (18) The corresponding non-normalized intensity autocorrelation function reads 
+
+G2(t, t + ∆ t) = 
+
+D  Es(t) + Eh(t)  E⋆ 
+
+> s
+
+(t) + E⋆
+
+> h
+
+(t) ·   Es(t + ∆ t) + Eh(t + ∆ t)  E⋆ 
+
+> s
+
+(t + ∆ t) + E⋆
+
+> h
+
+(t + ∆ t) E
+
+, (19) where the spatial coordinate r has been omitted in the last line for readability. Expanding Eq. (19) yields sixteen terms, several of which vanish or can be simplified using the following properties: (i) Es and Eh are statistically independent, such that their products average to zero. Is and Ih are statistically independent and their averages can be factorized. (ii) Only products involving complex-conjugate field pairs yield 13 non-zero ensemble averages. (iii) Ensemble-averaged intensities are stationary. (iv) The static contribution Es is time-independent. Using these relations, the non-normalized autocorrelation function reduces to 
+
+G2(t, ∆t) = Is(t)Is(t + ∆ t) + 2 Is Ih + 2 ⟨Ih⟩ Es(t) · E⋆ 
+
+> s
+
+(t + ∆ t) + I2h . (20) In the long-time limit, ∆ t is much larger than the relaxation time of the sample, such that the scattered fields and intensities at times t and t + ∆ t become uncorrelated. In this limit, the normalized intensity autocorrelation function, therefore, simplifies to lim  
+
+> ∆t→∞
+
+g2(t, t + ∆ t) ≡ g∞ 
+
+> 2
+
+= Is 
+
+> 2
+
++ 2 Is Ih + I2h
+
+⟨Is + Ih⟩2 = 1 + I2h − Ih
+
+> 2
+
+⟨I⟩2 , (21) Eq. (21) highlights the fundamental difference between temporal averaging within a single speckle and spatial averaging over many speckles. For a single speckle, Ih is constant and therefore ⟨I2h ⟩ = ⟨Ih⟩2, yielding g∞ 
+
+> 2
+
+= 1. In contrast, multispeckle experiments average over speckles with different values of Ih. Consequently, the variance of the scattered intensity contributes to the long-time limit and produces a plateau above unity. Assuming, in the spirit of the Siegert relation, that Eh(r, t ) is a complex-valued Gaussian random variable, its fourth moment can be expressed in terms of products of second moments [77]. In addition, finite detector resolution must be considered, since individual pixels probe more than a single speckle, which yields [2] 
+
+I2h = (1 + Λ) ⟨Ih⟩2, (22) where it was assumed that the coherence factor Λ is identical for the scattered and the static electric-field contributions, due to being probed using the same optics. Substituting into Eq. (21) gives 
+
+g∞ 
+
+> 2
+
+= 1 + Λ ⟨Ih⟩2
+
+⟨I⟩2 = 1 + Λ 
+
+
+
+1 − ⟨Is⟩⟨I⟩
+
+2
+
+. (23) This implies that the degree of heterodyning C can be extracted directly from the long-time plateau of speckle-averaged intensity time-autocorrelation functions as 
+
+C = ⟨Is⟩⟨I⟩ = 1 −
+
+r g∞ 
+
+> 2
+
+− 1Λ . (24)  
+
+> 2. Approach for fiber-optical data
+
+For data obtained by monitoring the scattered intensity using an optical fiber, the degree of heterodyning can be determined from the value of the short-time limit g02 of the intensity autocorrelation function, which is reduced compared to the homodyne scenario. However, this procedure requires knowledge of the amplitude Afast of fast relaxation contributions that remain unresolved by the hardware correlator, because they occur on timescales shorter than the smallest accessible correlation time ∆ t0 = 3 .125 ns. In molecular liquids, these unresolved contributions mainly arise from intra- and intermolecular vibrations. Since these contributions are not resolved in the fiber-optical experiment, the maximum short-time value of g1(∆ t)is reduced from unity to 1 − Afast ≡ λ, even in a scenario where C = 1 and Λ = 1. Determining Afast is possible by means of high-frequency DDLS experiments though, such that C for the fiber-optical experiment can be calculated by solving the extended Siegert relation Eq. (15) under the condition g1(t, t + ∆ t0) = λ [73]. This yields a quadratic equation with solutions [78] 
+
+C± = 1 ±
+
+q
+
+1 + g02
+
+ Λ−1 − 2( λΛ) −1
+
+2 − λ . (25) There is no direct way to determine which of the two solutions is the right one. A lower constraint can, however, be estimated via the assumption that the multispeckle experiment will always detect a larger heterodyne contribution than the fiber-optical one due to its larger acceptance angle and, therefore, Cfiber ≥ Ccamera . Hence, if C− < C camera ,by default we use C+.Thus, by combining high-frequency DDLS to determine λ and multispeckle DDLS for choosing the correct solution of Eq. (25), Eq. (15) can be used to obtain the electric field autocorrelation function g1(∆ t) from g2(∆ t) for fiber-optical data. The resulting transformation can be cross-validated by verifying that the electric-field autocorrelation functions obtained from the three DDLS experiments are mutually consistent. This procedure is demonstrated below for the molecular glass former diethyl phthalate. 14   
+
+> D. High frequency DDLS or spectral density measurements
+> FIG. 6. Data transformation procedure for spectral density measurements. a) Raw spectral density data for diethyl phthalate at 340 K obtained by tandem Fabry-Perot interferometry (TFPI) at a mirror spacing of 0.75 mm. b) Susceptibilities obtained by transformation of spectral density data via Eq. 26 at different mirror spacings of the TFPI and from double monochromator (DM) measurements. c) Final susceptibility spectrum from shifting the datasets presented in b) to achieve overlap. d) Field autocorrelation function g1(∆ t) obtained by inverse Fourier-Laplace transformation of the susceptibility data.
+
+Fig. 6 shows the data transformation procedure for high frequency DDLS on the example of diethyl phthalate at 340 K, i.e., spectral density measurements using a multipass tandem Fabry-Perot interferometer (TFPI) by JRS scientific instruments (model TFP-1) and a Jobin Yvon U1000 double monochromator (DM). In both experiments the spectral density, i.e., the scattered intensity at different frequency shifts relative to the laser frequency, is accessed. The depolarized component of the scattered light is again selected by using two polarizers. The imaginary part of the DDLS susceptibility χ′′ (ν) is then calculated via the fluctuation dissipation theorem: 
+
+χ′′ (ν) = I(ν)
+
+n(ν, T ) + 1 (26) where n(ν, T ) = (exp( hν/k BT ) − 1) −1 is the Bose temperature factor. Fig. 6 a) shows the spectral density measured by the TFPI at a mirror spacing of 0.75 mm. The mirror distance determines the resolution of the interferometer and the free spectral range, i.e., the frequency range which can be scanned without contributions from neighbouring transmission maxima of the TFPI. To access a broad frequency range, measurements at several mirror spacings have to be performed, as demonstrated in part b) of the figure. To extend the data to frequencies of THz frequencies the TFPI data is combined with DM data. All datasets are combined by shifting them with constant factors to achieve overlap and then cutting the datasets in favor of the smaller mirror spacings, which usually have a larger signal-to-noise ratio due to loss of intensity in the cavities scaling with mirror spacing. To obtain correct relative values of the susceptibility between measurements of a sample at different temperatures or measurements of different samples, the same mirror spacing (here 0.75 mm) needs to remain unshifted and serves as a reference. Fig. 6 c) shows the combined TFPI/DM dataset. The susceptibility can then be transformed into a field autocorrelation function g1(∆ t)by inverse Fourier-Laplace transformation. As explained above g1(∆ t) obtained by the spectral density measurements 15 can then be used for correct transformation of the fiber-optic and multispeckle photon correlation data. This will be demonstrated below. 
+
+E. Combining data sets from different DDLS experiments 10 14 10 13 10 12 10 11 10 10 10 9
+
+t / s 
+
+0.0 
+
+0.2 
+
+0.4 
+
+0.6 
+
+0.8 
+
+1.0 
+
+> g1( t)
+
+diethyl phthalate 
+
+KWW-fit -- 300 K 
+
+320 K 
+
+340 K 
+
+360 K 
+
+380 K 
+
+400 K 
+
+450 K 
+
+500 K       
+
+> 10 14 10 13 10 12
+> t/ s
+> 0.84
+> 0.86
+> 0.88
+> 0.90
+> g1(t)
+
+FIG. 7. a) Field autocorrelation functions g1(∆ t) from combined tandem Fabry-Perot (TFPI) and double monochromator (DM) measurements of diethyl phthalate covering a large temperature range from slightly above the melting point to close to the boiling point. Dashed curves are fits by the KWW function to the second step in the correlations function, i.e., fit range ∆t > 10 −12 s. The inset shows the short time limit of the KWW functions employing the same color code as the data presented in the main figure. The solid green line displays the average short time plateau value λ of the KWW functions. 10 14 10 11 10 8 10 5 10 2 10 1 10 4
+
+t / s 
+
+0.0 
+
+0.2 
+
+0.4 
+
+0.6 
+
+0.8 
+
+1.0 
+
+1.2 
+
+> g1( t)
+
+a) diethyl phthalate 
+
+T=178 K 
+
+camera 
+
+fiber 
+
+TFPI/Raman 
+
+10 6 10 4 10 2 10 0 10 2
+
+/ Hz 
+
+10 3
+
+10 2
+
+10 1
+
+10 0
+
+> ′′ ( ) / a.u.
+
+b) camera 
+
+fiber 
+
+FIG. 8. Demonstration of the procedure combining the data obtained by the different techniques in a) the time domain and b) the frequency domain. The overlap between camera and fiber data is used to confirm the matching of the two techniques and to check that the raw data were treated correctly. To produce the final combined datasets the fiber data overlapping the camera data are removed. 
+
+Fig. 7 shows electric-field autocorrelation functions g1(∆ t) obtained by combination of TFPI and DM measurements as described in the previous section. The presented data cover a temperature range of 200 K, spanning a large part of the temperature range from the melting point Tm = 270 K to the boiling point Tb = 575 K. The autocorrelation functions show a clearly resolved two step decay, containing both the fast microscopic as well as the slower relaxational decay. Due to its weak temperature dependence, the microscopic correlation decay remains at timescales around ps even when the liquid is strongly supercooled, thus it is unresolved by the PCS techniques discussed above. 16 The high-frequency data shown in Fig. 7 allow to determine the amplitude of the short-time dynamics Afast = 1 − λ.One way to extract this information is to fit g1(∆ t) by a KWW function, while limiting the fit range to the slow decay of the correlation function, as demonstrated in Fig. 7 by the dashed black lines. Here, the KWW function is merely used to extrapolate the intermediate plateau and is not intended as a physical description of the relaxation process. Another possible approach is to fit the full correlation decay by some more elaborate fit model, which, however, relies on assumptions regarding the nature of the microscopic correlation decay. The inset of Fig. 7 shows a zoom to the plateau of the KWW fit functions, confirming that the intermediate plateau of λ = 0 .88(1) is virtually temperature independent over a temperature range of 200 K. It is therefore reasonable to extrapolate this value to lower temperatures and to use it for the transformation and normalization of g1(∆ t) obtained from the fiber-optical experiment. Fig. 8 shows how data from the different DDLS techniques can be combined to form broadband datasets in the a) time domain and b) frequency domain for the example of diethyl phthalate at 178 K. For that purpose, all datasets are first transformed independently into electric-field autocorrelation functions g1(∆ t). For the multispeckle data, evaluation of the long-time plateau according to Eq. (24) yields a degree of heterodyning of Ccamera = 0 .97. Together with the independently determined value λ = 0 .88, only the solution C+ > C camera ,thus ruling out the solution with negative sign C− as a solution of Eq. (25) and resulting in Cfiber ≈ 1. With all parameters of the generalized Siegert relation now determined independently, the fiber-optical and multispeckle intensity autocorrelation functions can be transformed into the corresponding electric-field autocorrelation functions. Looking at the combined data set Fig. 8, we observe a sufficient correspondence between the three data sets, which represents a cross-validation of the discussed procedures of obtaining g1(∆ t). At long lag times, the advantage of the multispeckle setup becomes evident through its substantially improved signal-to-noise ratio compared to the fiber-optical data. Both measurements were taken over approximately one day, which for the fiber-optical DDLS setup is insufficient to produce a smooth correlation function at correlation times ∆ t ≳ 10 3 s. By contrast, the multispeckle experiment only requires measurement times on the order of the desired correlation time to produce reliable values of the correlation function. The combination of the different techniques therefore enables the construction of continuous ultra-broadband DDLS datasets.  
+
+> IV. DISCUSSION AND CONCLUSIONS
+
+Having established the methodology and validated the consistency of the different DDLS techniques, we conclude by highlighting two applications that particularly benefit from the improved capabilities of the setup. 
+
+Ultra-broadband DDLS. The combination of the different DDLS techniques presented above enables the con-struction of ultra-broadband datasets covering an exceptionally large dynamic range in both the time and frequency domains. Fig. 9 shows broadband DDLS datasets for the molecular glass former diethyl phthalate in the (a) time domain and (b) frequency domain. The datasets span temperatures from well above the melting point to below the conventional definition of the glass transition temperature ( τ ≈ 100 s). At the lowest temperature the sample was equilibrated for several days to ensure thermal equilibrium. The presented dynamic range covers timescales shorter than ps up to 2 · 10 5 s, i.e., frequencies of sub-μHz to THz. In fact, the time and frequency range can be further extended at the high frequency side up to 10 14 Hz into the Raman bands, as is demonstrated for the dataset at 300 K, and is limited at the low frequency side only by equilibration time and measurement duration, as shown in Fig. 9. Thus, apart from the small gap around 10 − 100 MHz, it is possible to cover the full range of relaxation dynamics in supercooled liquids, comparable to the one reported for broadband dielectric spectroscopy [79–81]. 
+
+Physical aging. The multispeckle experiment provides direct access to time-resolved intensity autocorrelation functions without the need for temporal averaging, thereby enabling the investigation of non-stationary processes that are inaccessible to conventional single-speckle PCS. Fig. 10 shows data for the physical aging of a glass made from 1-phenyl-1-propanol by exposing the material to a 4 K temperature down-jump. After the down-jump, the time-resolved intensity autocorrelations reveal a continuous slow-down of the dynamics until eventually reaching a new stationary equilibrium state. Beyond providing a direct visualization of the slowing dynamics during aging, these measurements enable a quantitative analysis of non-equilibrium relaxation. In particular, it was recently shown that the time-resolved autocorrelation functions obtained with the present setup allow direct determination of the material time of physical aging [82, 83], thereby establishing a direct connection between equilibrium and non-equilibrium dynamics in molecular glasses [58]. In this tutorial, we have used our experimental setup as a practical example to discuss how depolarized dynamic light-scattering experiments can be optimized for the investigation of molecular supercooled liquids and glasses. The setup combines conventional fiber-optical photon-correlation spectroscopy and multispeckle photon-correlation imaging within a single experiment. Particular emphasis was placed on the measures taken to achieve high signal-to-noise ratios, long-term stability of laser beam and setup and accurate temperature control, which are essential for 17 10 15 10 12 10 9 10 6 10 3 10 0 10 3 10 6
+
+t / s 
+
+0.0 
+
+0.2 
+
+0.4 
+
+0.6 
+
+0.8 
+
+1.0 
+
+1.2 
+
+> g1( t)
+
+a) 
+
+diethyl phthalate 
+
+176 K 
+
+178 K 
+
+180 K 
+
+182 K 
+
+185 K 
+
+188 K 
+
+192 K 
+
+200 K 
+
+210 K 
+
+220 K 
+
+300 K 380 K 
+
+500 K 
+
+10 7 10 4 10 1 10 2 10 5 10 8 10 11 10 14 
+
+/ Hz 
+
+10 3
+
+10 2
+
+10 1
+
+10 0
+
+10 1
+
+> ′′ ( ) / a.u.
+
+b) 176 K 
+
+178 K 
+
+180 K 
+
+182 K 
+
+185 K 
+
+188 K 
+
+192 K 
+
+200 K 
+
+210 K 
+
+220 K 
+
+300 K 380 K 
+
+500 K 
+
+FIG. 9. Ultra-broadband DDLS datasets for diethyl phthalate in the a) time domain and b) frequency domain. The dataset covers temperatures ranging from below the glass transition temperature of Tg ∼180K to far above the melting point Tm = 270 K. 10 0 10 1 10 2 10 3
+
+> t/s
+> 0.0
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> 0.5
+> g2(t, t + t) 1
+> physical aging after 4 K temperature jump
+
+FIG. 10. Time-resolved intensity autocorrelation functions of a non-stationary physically aging sample of 1-phenyl-1-propanol, which was exposed to a 4 K temperature down-jump at t = 0. Different aging times t are indicated by the colors changing from light to dark with increasing t. Each curve is obtained without temporal averaging. 
+
+investigating weakly scattering molecular glass formers over timescales up to several days. Beyond the experimental implementation, we have outlined a consistent framework for the quantitative analysis of fiber-optical and multispeckle DDLS data in combination with high-frequency DDLS techniques. Reliable comparison of the different techniques requires explicit treatment of coherence effects and partial heterodyne contributions. Once these effects are accounted for, the intensity autocorrelation functions obtained with the different detection schemes can be transformed into mutually consistent electric-field autocorrelation functions. Hence, complementary DDLS techniques allow for the construction of ultra-broadband data sets covering the complete range from microscopic vibrational dynamics to structural relaxation at the glass transition over more than 20 orders of magnitude in time and frequency. In addition, multispeckle detection provides direct access to time-resolved autocorrelation functions without temporal averaging, thereby extending DDLS to the investigation of non-stationary systems such as physically aging molecular glasses. The methodology presented here provides a basis for future studies of equilibrium and non-equilibrium dynamics in molecular liquids and other weakly scattering soft-matter systems, where high sensitivity, broad dynamic range, and quantitative consistency between complementary experimental techniques are required. 18 
+
+ACKNOWLEDGMENTS 
+
+Financial support by the Deutsche Forschungsgemeinschaft under grant no. 1192/3 is gratefully acknowledged. We are sincerely grateful to Ernst R¨ ossler, Bayreuth, Germany, for making the Tandem Fabry Perot Interferometer and the double monochromator available to us and for many stimulating discussions. His view on glassy dynamics was inspirational for the experimental developments presented in this paper. Moreover, we are indebted to Tina Hecksher and Jeppe Dyre from the Glass-and-Time group in Roskilde, Denmark, for providing the Huginn peltier controller for the presented experiment. 
+
+CONFLICT OF INTEREST STATEMENT 
+
+The authors have no conflicts to disclose. 
+
+DATA AVAILABILITY STATEMENT 
+
+The data that support the findings of this study are available from the corresponding author upon reasonable request. 
+
+[1] R. Pecora, Dynamic Light Scattering: Applications of Photon Correlation Spectroscopy (Springer Science & Business Media, 1985). [2] B. J. Berne and R. Pecora, Dynamic light scattering: with applications to chemistry, biology, and physics (Courier Corpo-ration, 2000). [3] N. Petzold and E. R¨ ossler, Light scattering study on the glass former o-terphenyl, J. Chem. Phys. 133 (2010). [4] B. Schmidtke, N. Petzold, R. Kahlau, M. Hofmann, and E. R¨ ossler, From boiling point to glass transition temperature: Transport coefficients in molecular liquids follow three-parameter scaling, Phys. Rev. E 86 , 041507 (2012). [5] B. Schmidtke, N. Petzold, R. Kahlau, and E. R¨ ossler, Reorientational dynamics in molecular liquids as revealed by dynamic light scattering: From boiling point to glass transition temperature, J. Chem. Phys. 139 (2013). [6] B. Schmidtke, N. Petzold, B. Potzschner, H. Weingartner, and E. Rossler, Relaxation stretching, fast dynamics, and activation energy: A comparison of molecular and ionic liquids as revealed by depolarized light scattering, J. Phys. Chem. B 118 , 7108 (2014). [7] J. Gabriel, F. Pabst, A. Helbling, T. B¨ ohmer, and T. Blochowicz, Depolarized dynamic light scattering and dielectric spectroscopy: Two perspectives on molecular reorientation in supercooled liquids, in The scaling of relaxation processes 
+
+(Springer, 2018) pp. 203–245. [8] E. A. R¨ ossler and M. Becher, Relaxation spectra of molecular glass formers probed by tandem fabry–perot interferometry and photon correlation spectroscopy: A critical re-assessment, J. Chem. Phys. 163 (2025). [9] T. B¨ ohmer, F. Pabst, J. P. Gabriel, R. Zeißler, and T. Blochowicz, On the spectral shape of the structural relaxation in supercooled liquids, J. Chem. Phys. 162 (2025). [10] R. Pecora, Dynamic light scattering measurement of nanometer particles in liquids, J. Nanopart. Res. 2, 123 (2000). [11] P. A. Hassan, S. Rana, and G. Verma, Making sense of brownian motion: colloid characterization by dynamic light scattering, Langmuir 31 , 3 (2015). [12] G. Patterson, Light scattering from bulk polymers, Annu. Rev. Mater. Sci. 13 , 219 (1983). [13] J. R. Stevens, Dynamic light scattering in solid polymers, Crit. Rev. Solid State Mater. Sci. 12 , 297 (1984). [14] G. Fytas and A. Patkowski, Dynamic light scattering from polymers in solution and in bulk, Dyn. Light Scattering (1993). [15] B. Chu, Light scattering studies of polymer solutions and melts, Polym. J. 17 , 225 (1985). [16] J. Stetefeld, S. A. McKenna, and T. R. Patel, Dynamic light scattering: a practical guide and applications in biomedical sciences, Biophys. Rev. 8, 409 (2016). [17] N. Menon and D. J. Durian, Diffusing-wave spectroscopy of dynamics in a three-dimensional granular flow, Sci 275 , 1920 (1997). [18] C. Mayo, M. Kunzner, M. Sperl, and J. P. Gabriel, Observing the glass and jamming transitions of dense granular material in microgravity, Phys. Rev. Lett. 135 , 178203 (2025). [19] T. Blochowicz, E. Ismajli, and J. P. Gabriel, Jamming and flow in granular matter: A physics lab course experiment, arXiv preprint arXiv:2603.26857 (2026). [20] T. Norisuye, Q. Tran-Cong-Miyata, and M. Shibayama, Dynamic inhomogeneities in polymer gels investigated by dynamic light scattering, Macromolecules 37 , 2944 (2004). [21] E. Geissler, Dynamic light scattering in gels and solutions, Period. Polytech., Chem. Eng. 66 , 525 (2022). 19 
+
+[22] M. C. Blanco, D. Leisner, C. V´ azquez, and M. A. L´ opez-Quintela, Dynamic light scattering in transient reversible gels, Langmuir 16 , 8585 (2000). [23] F. Pabst, J. Kraus, M. Reynolds, J. Mattsson, and T. Blochowicz, Preserving fast ion dynamics while introducing mechan-ical rigidity in gelatin-based ionogels, Soft Matter 19 , 1418 (2023). [24] D. Durian, D. Weitz, and D. Pine, Multiple light-scattering probes of foam structure and dynamics, Sci 252 , 686 (1991). [25] D. Weitz, J. Zhu, D. Durian, H. Gang, and D. Pine, Diffusing-wave spectroscopy: The technique and some applications, Phys. Scripta 1993 , 610 (1993). [26] A. Siegert, On the fluctuations in signals returned by many independently moving scatterers (Radiation Laboratory, Mas-sachusetts Institute of Technology, 1943) p. 12. [27] B. Berne and R. Pecora, Dynamic Light Scattering (Wiley, New York, 1976). [28] R. Mock, B. Hillebrands, and R. Sandercock, Construction and performance of a brillouin scattering set-up using a triple-pass tandem fabry-perot interferometer, Journal of Physics E: Scientific Instruments 20 , 656 (1987). [29] R. R. Jones, D. C. Hooper, L. Zhang, D. Wolverson, and V. K. Valev, Raman techniques: fundamentals and frontiers, Nanoscale Res. Lett. 14 , 231 (2019). [30] a. Li, W. Du, X. Chen, H. Cummins, and N. Tao, Testing mode-coupling predictions for α and β relaxation in ca 0.4 k 0.6 (no 3) 1.4 near the liquid-glass transition by light scattering, Phys. Rev. A 45 , 3867 (1992). [31] H. Cummins, G. Li, W. Du, R. M. Pick, and C. Dreyfus, Origin of depolarized light scattering in supercooled liquids: Orientational fluctuation versus induced scattering mechanisms, Phys. Rev. E 53 , 896 (1996). [32] J. Wiedersich, N. Surovtsev, and E. R¨ ossler, A comprehensive light scattering study of the glass former toluene, J. Chem. Phys. 113 , 1143 (2000). [33] J. Wiedersich, N. Surovtsev, V. Novikov, E. R¨ ossler, and A. Sokolov, Light scattering spectra of fast relaxation in silica and ca 0.4 k 0.6 (no 3) 1.4 glasses, Phys. Rev. B 64 , 064207 (2001). [34] A. Sokolov, J. Hurst, and D. Quitmann, Dynamics of supercooled water: Mode-coupling theory approach, Phys. Rev. B 
+
+51 , 12865 (1995). [35] N. Surovtsev, J. Wiedersich, V. Novikov, E. R¨ ossler, and A. Sokolov, Light-scattering spectra of fast relaxation in glasses, Phys. Rev. B 58 , 14888 (1998). [36] N. Petzold, B. Schmidtke, R. Kahlau, D. Bock, R. Meier, B. Micko, D. Kruk, and E. R¨ ossler, Evolution of the dynamic susceptibility in molecular glass formers: Results from light scattering, dielectric spectroscopy, and nmr, J. Chem. Phys. 
+
+138 (2013). [37] E. A. R¨ ossler and M. Becher, Glass spectrum, excess wing phenomenon, and master curves in molecular glass formers: A multi-method approach, J. Chem. Phys. 160 (2024). [38] J. Gabriel, F. Pabst, and T. Blochowicz, Debye process and β-relaxation in 1-propanol probed by dielectric spectroscopy and depolarized dynamic light scattering, J. Phys. Chem. B 121 , 8847 (2017). [39] T. B¨ ohmer, J. P. Gabriel, T. Richter, F. Pabst, and T. Blochowicz, Influence of molecular architecture on the dynamics of h-bonded supramolecular structures in phenyl-propanols, J. Phys. Chem. B 123 , 10959 (2019). [40] F. Pabst, J. Gabriel, and T. Blochowicz, Mesoscale aggregates and dynamic asymmetry in ionic liquids: Evidence from depolarized dynamic light scattering, J. Phys. Chem. Lett. 10 , 2130 (2019). [41] J. P. Gabriel, P. Zourchang, F. Pabst, A. Helbling, P. Weigl, T. B¨ ohmer, and T. Blochowicz, Intermolecular cross-correlations in the dielectric response of glycerol, Phys. Chem. Chem. Phys. 22 , 11644 (2020). [42] F. Pabst, A. Helbling, J. Gabriel, P. Weigl, and T. Blochowicz, Dipole-dipole correlations and the debye process in the dielectric response of nonassociating glass forming liquids, Phys. Rev. E 102 , 010606 (2020). [43] F. Pabst, J. P. Gabriel, T. B¨ ohmer, P. Weigl, A. Helbling, T. Richter, P. Zourchang, T. Walther, and T. Blochowicz, Generic structural relaxation in supercooled liquids, J. Phys. Chem. Lett. 12 , 3685 (2021). [44] T. B¨ ohmer, J. P. Gabriel, R. Zeißler, T. Richter, and T. Blochowicz, Glassy dynamics in polyalcohols: Intermolecular simplicity vs. intramolecular complexity, Phys. Chem. Chem. Phys. 24 , 18272 (2022). [45] T. B¨ ohmer, T. Richter, J. P. Gabriel, R. Zeißler, P. Weigl, F. Pabst, and T. Blochowicz, Revealing complex relaxation behavior of monohydroxy alcohols in a series of octanol isomers, J. Chem. Phys. 159 (2023). [46] T. B¨ ohmer, F. Pabst, J. P. Gabriel, and T. Blochowicz, Dipolar order controls dielectric response of glass-forming liquids, Phys. Rev. Lett. 132 , 206101 (2024). [47] R. Zeißler, F. Pabst, and T. Blochowicz, A fresh perspective on water dynamics in aqueous lithium chloride solutions, Chem. Phys. Lett. , 142602 (2025). [48] V. Viasnoff, F. Lequeux, and D. Pine, Multispeckle diffusing-wave spectroscopy: A tool to study slow relaxation and time-dependent dynamics, Rev. Sci. Instrum. 73 , 2336 (2002). [49] H. Bissig, S. Romer, L. Cipelletti, V. Trappe, and P. Schurtenberger, Intermittent dynamics and hyper-aging in dense colloidal gels, PhysChemComm 6, 21 (2003). [50] L. Cipelletti, H. Bissig, V. Trappe, P. Ballesta, and S. Mazoyer, Time-resolved correlation: a new tool for studying temporally heterogeneous dynamics, J. Phys.: Condens. Matter 15 , S257 (2003). [51] L. Cipelletti, L. Ramos, S. Manley, E. Pitard, D. A. Weitz, E. E. Pashkovski, and M. Johansson, Universal non-diffusive slow dynamics in aging soft matter, Faraday Discuss. 123 , 237 (2003). [52] L. Ramos and L. Cipelletti, Ultraslow dynamics and stress relaxation in the aging of a soft glassy system, Phys. Rev. Lett. 
+
+87 , 245503 (2001). [53] L. Cipelletti, S. Manley, R. C. Ball, and D. A. Weitz, Universal aging features in the restructuring of fractal colloidal gels, Phys. Rev. Lett. 84 , 2275 (2000). 20 
+
+[54] P. Mayer, H. Bissig, L. Berthier, L. Cipelletti, J. P. Garrahan, P. Sollich, and V. Trappe, Heterogeneous dynamics of coarsening systems, Phys. Rev. Lett. 93 , 115701 (2004). [55] A. Duri, H. Bissig, V. Trappe, and L. Cipelletti, Time-resolved-correlation measurements of temporally heterogeneous dynamics, Phys. Rev. E 72 , 051401 (2005). [56] R. H¨ ohler, S. Cohen-Addad, and D. J. Durian, Multiple light scattering as a probe of foams and emulsions, Curr. Opin. Colloid Interface Sci. 19 , 242 (2014). [57] A. Duri, D. A. Sessoms, V. Trappe, and L. Cipelletti, Resolving long-range spatial correlations in jammed colloidal systems using photon correlation imaging, Phys. Rev. Lett. 102 , 085702 (2009). [58] T. B¨ ohmer, J. P. Gabriel, L. Costigliola, J.-N. Kociok, T. Hecksher, J. C. Dyre, and T. Blochowicz, Time reversibility during the ageing of materials, Nat. Phys. 20 , 637 (2024). [59] L. Cipelletti and D. Weitz, Ultralow-angle dynamic light scattering with a charge coupled device camera based multispeckle, multitau correlator, Rev. Sci. Instrum. 70 , 3214 (1999). [60] H. Bissig, S. Romer, L. Cipelletti, V. Trappe, and P. Schurtenberger, Intermittent dynamics and hyper-aging in dense colloidal gels, PhysChemComm 6, 21 (2003). [61] J. Gabriel, Depolarisierte dynamische Lichtstreuung an Monohydroxy-Alkoholen , Ph.D. thesis, Dissertation, Darmstadt, Technische Universit¨ at Darmstadt, 2018 (2018). [62] A. Cavagna, Supercooled liquids for pedestrians, Phys. Rep. 476 , 51 (2009). [63] T. Hecksher, N. B. Olsen, K. Niss, and J. C. Dyre, Physical aging of molecular glasses studied by a device allowing for rapid thermal equilibration, J. Chem. Phys. 133 , 10.1063/1.3487646 (2010). [64] B. Jakobsen, A. T. Holmes, T. Rasmussen, H. Schneider, A. Pettersson, A. Hiess, and K. Niss, Huginn: A peltier-based sub-cryostat for neutron scattering, J. Neutron Res. 21 , 47 (2019). [65] A. P. Y. Wong and P. Wiltzius, Dynamic light scattering with a CCD camera, Rev. Sci. Instrum. 64 , 2547 (1993). [66] S. Kirsch, V. Frenz, W. Sch¨ artl, E. Bartsch, and H. Sillescu, Multispeckle autocorrelation spectroscopy and its application to the investigation of ultraslow dynamical processes, J. Chem. Phys. 104 , 1758 (1996). [67] A. Duri, D. A. Sessoms, V. Trappe, and L. Cipelletti, Resolving long-range spatial correlations in jammed colloidal systems¡? format?¿ using photon correlation imaging, Phys. Rev. Lett. 102 , 085702 (2009). [68] S. Aime, L. Ramos, and L. Cipelletti, Microscopic dynamics and failure precursors of a gel under mechanical load, Proc. Natl. Acad. Sci. 115 , 3587 (2018). [69] J. Ju, L. Cipelletti, S. Zoellner, T. Narita, and C. Creton, Multispeckle diffusing wave spectroscopy as a tool to study heterogeneous mechanical behavior in soft solids, J. Rheol. 66 , 1269 (2022). [70] S. Aime and L. Cipelletti, Probing shear-induced rearrangements in fourier space. i. dynamic light scattering, Soft Matter 
+
+15 , 200 (2019). [71] S. Aime, D. Truzzolillo, D. J. Pine, L. Ramos, and L. Cipelletti, A unified state diagram for the yielding transition of soft colloids, Nat. Phys. 19 , 1673 (2023). [72] J. W. Goodman, Statistical properties of laser speckle patterns, in Laser speckle and related phenomena (Springer, 1975) pp. 9–75. [73] F. Pabst, J. Gabriel, P. Weigl, and T. Blochowicz, Molecular dynamics of supercooled ionic liquids studied by light scattering and dielectric spectroscopy, Chem. Phys. 494 , 103 (2017). [74] L. G. B. Bremer, L. Deriemaeker, R. Finsy, E. Gelade, and J. G. H. Joosten, Fiber optic dynamic light scattering, neither homodyne nor heterodyne, Langmuir 9, 2008 (1993). [75] J.-Z. Xue, D. J. Pine, S. T. Milner, X.-l. Wu, and P. M. Chaikin, Nonergodicity and light scattering from polymer gels, Phys. Rev. A 46 , 6550 (1992). [76] J. G. Joosten, J. L. McCarthy, and P. N. Pusey, Dynamic and static light scattering by aqueous polyacrylamide gels, Macromolecules 24 , 6690 (1991). [77] L. Isserlis, On a formula for the product-moment coefficient of any order of a normal frequency distribution in any number of variables, Biometrika 12 , 134 (1918). [78] We note that in a prior publication [73], we only discussed C− as a possible solution. [79] P. Lunkenheimer, U. Schneider, R. Brand, and A. Loid, Glassy dynamics, Contemp. Phys. 41 , 15 (2000). [80] F. Kremer and A. Sch¨ onhals, Broadband dielectric spectroscopy (Springer Science & Business Media, 2002). [81] P. Lunkenheimer and A. Loidl, Glassy dynamics: From millihertz to terahertz, in The scaling of relaxation processes 
+
+(Springer, 2018) pp. 23–59. [82] O. S. Narayanaswamy, A model of structural relaxation in glass, J. Am. Ceram. Soc. 54 , 491 (1971). [83] J. C. Dyre, Narayanaswamy’s 1971 aging theory and material time, J. Chem. Phys. 143 , 114507 (2015).
