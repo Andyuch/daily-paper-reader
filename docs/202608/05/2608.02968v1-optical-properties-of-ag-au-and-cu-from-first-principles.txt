@@ -1,0 +1,266 @@
+Title: Optical properties of Ag, Au, and Cu from first principles
+
+URL Source: https://arxiv.org/pdf/2608.02968v1
+
+Published Time: Wed, 05 Aug 2026 00:24:52 GMT
+
+Number of Pages: 28
+
+Markdown Content:
+# Optical properties of Ag, Au, and Cu from first principles 
+
+# Xiao Zhang and Emmanouil Kioupakis ∗
+
+Department of Materials Science and Engineering, University of Michigan, Ann Arbor, MI, 48109, USA 
+
+E-mail: kioup@umich.edu 
+
+Abstract 
+
+We present a comprehensive framework for investigating the optical response of metals from first principles that combines density functional theory, many-body per-turbation theory, and efficient interpolation techniques based on maximally localized Wannier functions, and apply it to analyze the optical properties of silver (Ag), gold (Au), and copper (Cu). We evaluate the optical properties of these metallic materials considering both single-particle direct and phonon-assisted excitations, as well as the resistive Drude contribution. We find an overall excellent agreement with experimen-tal optical measurements for these materials, and show that both single-particle and collective excitations are important in capturing their optical response in the infrared. Our methodology provides fundamental understanding of the optical response of met-als and is generally applicable to investigate the optoelectronic properties of emerging metallic materials. 
+
+1arXiv:2608.02968v1 [cond-mat.mtrl-sci] 4 Aug 2026 1 Introduction 
+
+Understanding optical properties of metallic systems are crucial in understanding their ap-plicability in applications. For example, the high conductivity of metals result in strong plas-mon oscillations due to the negative refractive index, 1 rendering applications of noble metals such as Ag and Au in sensing, waveguide, solar cells, and bio-imaging. 2–9 Gold nanoparticles, for example, have been widely utilized in applications including medical imaging, diagnosis, treatment, 7,10,11 toxic detection, 12,13 and enhanced Raman spectroscopy. 14 
+
+Despite the success of noble metals in applications, consistent first-principles framework for understanding the optical properties of metallic systems is still needed. Modeling optical responses in metals, especially in the infrared region, is challenging due to the presence of free carriers. While techniques for computational characterization of optical response from first principles has been well-established for semiconductors, free carriers play a crucial role in the optical absorption of metals, especially in the infrared region. Previous studies have examined free-carrier absorption in doped semiconducting systems including silicon, 15 ni-trides, 16 and transparent conducting materials. 17,18 The significant difference in electrical conductivity of doped semiconductors and metallic systems renders it valuable to investi-gate absorption in the metallic systems with considering both single-particle excitations as well as the semi-classical resistive contribution. Single-particle contributions arise from the excitation of electrons from occupied to empty states, which can occur via direct transitions (absorption of a photon) or indirect transitions (photon absorption and electron scatter-ing with a phonon). In contrast, resistive contributions result from collective oscillations of electrons near the Fermi level. Many studies have focused on understanding the optical properties in metallic systems, either considering direct absorption or intraband contribu-tions within the semi-classical Drude model,, 19–25 or focusing on a different perspective such as hot-carrier dynamics. 26–30 
+
+In this work, we present a comprehensive framework to study of the optical response of metallic materials, and apply it to compare to experimental data for the elemental noble 2metals gold (Au), silver (Ag), and copper (Cu) considering both single-particle and resis-tive contributions. Using density functional theory 31,32 (DFT) and many-body perturbation theory (MBPT), we achieve excellent agreement with experimentally measured electronic structure of these metallic systems. Using density functional perturbation theory 33 (DFPT) we accurately characterize phonon dispersion relationship of the materials. We compute electrical conductivity using the maximally localized Wannier functions technique 34 to inter-polate to fine Brillouin zone sampling grids, and iteratively solving the Boltzmann transport equation. We then evaluate the optical absorption, with the direct and phonon-assisted contribution obtained through first- and second-order time-dependent perturbation theory, and the resistive contribution obtained using the calculated electrical conductivity. We show that this framework results in accurate quantitative description of the optical response of metals across a broad range of spectral regions. 
+
+# 2 Computational methods 
+
+First-principles calculations for ground-state electronic properties are performed using den-sity functional theory (DFT). 31,32 We used experimentally measured lattice constants for all materials considered: Ag: 4.08 ˚ A, 35 Au: 4.079˚ A, 36 and Cu: 3.61 ˚ A. 37 The ground-state calculations are performed with the Quantum Espresso 38,39 (QE) package. The PBEsol 40 
+
+exchange-correlation functional is used following Ref. 41, and the optimized Vanderbilt norm-conserving pseudopotentials are obtained from PseudoDojo. 42,43 The wave functions are ex-panded into plane waves with a cutoff energy of 100 Ry. Ground-state calculations are performed with a Brillouin zone (BZ) sampling grid of 14 × 14 × 14, displaced by half of a grid spacing to achieve convergence of the total energy within 1 meV/atom. The phonon properties are calculated with DFPT 33 using QE. 38,39 For phonon properties, PBEsol exchange-correlation functional is used for Ag and Au, and the LDA exchange-correlation functional is used for Cu. The choice of LDA exchange-correlation functional for Cu for 3only phonon properties is based on better agreement of the phonon dispersion relationship compared to experimental measurements as illustrated in Figure 2 later in this paper. The electron-phonon matrix elements are calculated with a BZ sampling grid of 6 × 6 × 6. For band-structure calculations, we include quasiparticle corrections with the GW ap-proximation. The calculations are performed with the BerkeleyGW 44,45 package. The ran-dom phase approximation, extended to finite frequencies using the generalized plasmon pole model from Hybertsen and Louie 46 is used to evaluate the dielectric screening. The static remainder approach is used to reduce the number of empty orbitals required. 45 A cutoff of 40 Ry is used for evaluating the screened Coulomb interaction. The GW calculations are performed with BZ-sampling grid of 12 × 12 × 12 for all materials. We used the PBEsol+ U
+
+corrections 47 as a starting point to obtain the correct position of the metal d-states. The U
+
+values used are 1 eV for Au and Ag, and 2 eV for Cu. The values are chosen based on agree-ment between the electronic structure from angle-resolved photoemission experiments 48–51 
+
+and our calculated electronic band structure after quasiparticle corrections are taken into account. We show the justification of the choice of the U values in supplemental information Figure S1. The quasiparticle energies, electron-phonon matrix elements, and velocity matrix ele-ments are subsequently interpolated to fine BZ sampling grids, detailed in next paragraph, via the maximally localized Wannier functions technique. To evaluate the electrical conduc-tivity, we solve the Boltzmann transport equation iteratively, 34,52–54 and test for convergence of the conductivity with respect to the BZ samplings. Optical properties from single-particle contributions are evaluated with second-order per-turbation theory, 15,55 with details of the inclusion of free-carrier contributions reported in Ref. 15. The electron-photon and the electron-phonon interactions are considered as per-turbations, and we obtain transition rates using time-dependent perturbation theory. Adivergence is present in evaluating phonon-assisted optical properties if direct and indirect transition are resonant with each other, 15,26 and the divergence is compensated via the in-4clusion of a numerical broadening parameter. We choose a broadening parameter of 0.1 eV, and demonstrate that the phonon-assisted spectra are insensitive to the value of the broadening parameter in the spectral region where phonon-assisted processes dominate (See supplemental information Figure S2 for an illustration). To evaluate phonon-assisted optical absorption, a BZ sampling grid of 48 × 48 × 48 is used. To evaluate direct and resistive contribution, BZ sampling grids of 100 × 100 × 100 is used. For Au, the grid is increased to 180 × 180 × 180 to ensure a smooth spectrum. 
+
+# 3 Results and discussion 
+
+# 3.1 Electronic structure and phonon dispersion 
+
+Figure 1: Electronic band structure, calculated with PBEsol+U+GW, of (a) Ag, (b) Au, and (c) Cu. Spin-orbit coupling is included for Ag and Au. The black arrows mark the lowest direct transition for Ag (3.69 eV), Au (1.63 eV), and Cu (2.09 eV). The calculated electronic band structures (red solid lines) agree well with experimental measurements, illustrated with marks: (a) Ref. 48 (b) Ref. 49 (c) Circles: Ref. 50, Upper triangles marks: Ref. 51. Figure 1 shows the calculated electronic band structures of Au, Ag, and Cu evaluated with the PBEsol+ U +GW approach. The calculated bands agree well with experimental measurements, 48–51 particularly near the Fermi level, which is crucial for accurately eval-uating the electrical conductivity. In addition, the combination of PBEsol, Hubbard U
+
+corrections and the GW approximation ensure good agreement of both the occupied and the empty states with experimentally measured electron energies, which is essential to correctly evaluate the onset of direct optical absorption. The minimum direct transition for all three 5metals occurs along the Γ → X direction, which is also in good agreement with experimental measurements from ARPES. We next investigate the effects of spin-orbit coupling (SOC) for Ag and Au. A comparison between the band structures with and without SOC is shown in the supplemental information Figure S3. The SOC effect is stronger in Au, due to its higher atomic number. At the L-point, the band splitting due to SOC at the VBM is 0.23 eV for Ag and 0.75 eV for Au, and at the X-point, the splitting is 0.34 eV for Ag and 1.07 eV for Au. These splittings induced by SOC for Au and Ag are necessary for obtaining good agreement with experimental measurements up to 5 eV below the Fermi level. Therefore, the inclusion of SOC is essential to correctly capture optical absorption in the infrared and close to the optical onset of direct absorption. SOC has an insignificant effect for the s-orbital bands near the Fermi level for both Au and Ag, and hence was not considered for the evaluation of electrical conductivity due to the higher computational cost. For Cu, SOC causes a splitting is only around 0.1 eV at the VBM (shown in Figure S3), therefore is not included in our analysis as this splitting is comparable to the broadening parameters in e.g. transport and optical spectra calculations. 
+
+Figure 2: Phonon dispersion relationship calculated with Quantum Espresso using DFPT for (a) Ag, (PBEsol) (b) Au, (PBEsol) and (c) Cu. (red: LDA, grey: PBEsol) Our calculated phonon dispersions (red solid lines) agree well with experimental measurements (open circles) from (a) Ref. 56, (b) Ref. 57, (c)Ref. 58 For Cu, a larger discrepancy in the dispersion is observed when PBEsol is used, therefore LDA is used for phonon-related properties in subsequent calculations. The phonon dispersion relationships of all three materials are shown in Figure 2. The dispersion curves exhibit similar trends across the Brillouin zone, with Au demonstrating the lowest phonon frequencies and Cu the highest, consistent with their respective atomic 6masses. Our calculated frequencies closely align with experimental measurements, showing maximum deviations of 1.2%, 2.8%, and 6.2% for Ag, Au, and Cu, respectively. 
+
+# 3.2 Electrical conductivity 
+
+We evaluate the electrical conductivity of all three materials by iteratively solving the Boltz-mann transport equation. The convergence of the electrical conductivity versus the BZ sampling grid is shown in Figure 3. For all three metals, the calculated electrical conductiv-ity converges within 10% for a grid size of 100 ×100 ×100. Our converged simulated results also agree within 10% comparing to experimentally measured values in Ref. 59. As illus-trated from Ref. 59, a ∼10% variation is also seen in the experimentally measured values. Our previous work 15 has shown that such a variation in electrical conductivity does not strongly affect the evaluation of the resistive contribution to the optical response. 40 3 60 3 80 3 100 3 120 3 140 3
+
+# BZ sampling grid ( k/q)
+
+# 4.0 
+
+# 4.5 
+
+# 5.0 
+
+# 5.5 
+
+# 6.0 
+
+# 6.5 
+
+# 7.0 
+
+# 7.5 
+
+# 8.0 
+
+> Conductivity (  1 m 1) ×10 7
+
+# Ag 
+
+# Cu 
+
+# Au 
+
+Figure 3: Convergence of electrical conductivity calculated with Wannier interpolation for Ag (red), Au (olive), and Cu (blue). Experimentally measured values are shown as horizontal dashed lines, taken from the recommended values of Ref. 59 for Ag, Au, and Cu. For all three materials, the calculated conductivity agrees with experimental measurements within 10% for the most converged sampling. 73.3 Optical properties 
+
+We evaluate the imaginary part of the dielectric function considering direct absorption, phonon-assisted absorption, and resistive contribution. Figure 4 shows the calculated imag-inary part of the dielectric function [Im ε(ω)] for Ag, Au, and Cu in the range of infrared to visible light. The phonon-assisted contribution is not considered for photon energies be-yond the direct-absorption onset, which is 3.69 eV for Ag, 1.63 eV for Au, and 2.09 eV for Cu. This is due to the fact that direct transitions dominate in the spectral range where they are allowed, while the phonon-assisted spectra are affected by the artificial sensitivity of second-order perturbation theory to the broadening parameter. For photon frequencies below the calculated direct-absorption onset, the phonon-assisted contribution, which is a single-particle excitation mechanism, and the resistive contribution, which results from the collective oscillation of the free electrons, are comparable in magnitude. Therefore, both contributions are required to correctly evaluate the optical response. On the other hand, for photon frequencies beyond the direct onset, absorption occurs primarily via interband absorption from the occupied to the empty orbitals, while the other contributions are negligi-ble. The total Im ε(ω) considering both single-particle excitations and resistive contributions is in excellent agreement compared to experimental measurements for all three metals. For silver, the experimentally measured data exhibit a higher variance, and our results agree particularly well with more recent reports such as Ref. 60–62, in which high-quality single-crystalline films were shown to reduce loss and lower the dielectric function in the IR region. This agreement confirms that none of the contributions can be neglected when evaluating optical absorption over the full photon-energy range. The calculated spectra also reveal distinct material-dependent features. Specifically, sil-ver and copper display relatively sharp direct absorption onsets corresponding to interband transitions near the L and X points, whereas gold shows a much broader onset. This broad-ening originates from strong spin–orbit coupling in the Au 5 d states, which lifts degeneracies near the top of the occupied bands and smears the direct onset over a wide energy range. 8Figure 4: Imaginary part of the dielectric function from phonon-assisted contribution (red), direct contribution (blue), resistive contribution (purple), and total contribution (black) of (a) Ag, (b) Au, and (c) Cu. Experimental measurements are shown as marks from (a) Ref. 63 (orange circles), Ref. 60 (green triangles), Ref. 61 (pink crosses), Ref. 62 (cyan squares), and Ref. 64 (brown diamonds). (b) Ref. 63 (orange circles) and Ref. 65 (green triangles). (c) Ref. 63 (orange circles), Ref. 66 (green triangles), Ref. 67 (pink crosses), and Ref. 68 (cyan squares). Excellent agreement can be seen for all three materials. 9As shown in our supplemental information Figure S4 and S5, including spin–orbit coupling is critical to quantitatively predict this behavior in gold and to correctly describe the exper-imentally measured spectra in the NIR–visible range. We further evaluate the complex refractive index of the three metals. The real part of the dielectric function is obtained from the imaginary part via the Kramers-Kronig relation-ship, and the complex refractive index is evaluated via the relationship [ n(ω) + ik (ω)] 2 =Re ε(ω) + iIm ε(ω). We show the calculated complex refractive index for all three materi-als in Figure 5. Compared to recently published experimental measurements from the past decade 61,69–72, our calculated results show excellent agreement. The excellent agreement in the spectral regime below the direct onset further illustrates the importance of including both single-particle and resistive contributions. In the region close to the direct absorption onset, the kinks in the spectra are well-predicted as the main contribution for optical absorp-tion changes from phonon-assisted and resistive to direct absorption. In the spectral region above the direct onset, direct absorption dominates over the other contributions. The correct description of the electronic band structure resulted from the PBEsol+ GW +U approach, and the inclusion of spin-orbit coupling for Ag and Au play an important role in the correct description of optical absorption near and beyond the direct absorption onset. The separation of different mechanisms provides insight into applications in plasmonics. Previous studies have demonstrated potential enhancement in hot-carrier generation due to the interplay between single-particle excitations and plasmonic oscillations. 73 Understanding the contribution from single-particle excitation thus provides valuable information on appli-cations such as photocatalysis, where hot-carrier generation is essential. 73–75 In Figure 6, we plot the ratio of the single-particle contribution to the total imaginary part of the dielectric function for the three noble metal materials as a function of photon energies. Below 0.4 eV, the ratio drops significantly due to the strong resistive contribution, while above this energy, single-particle contributions gradually increase. In the region above 0.4 eV, Au surpasses the other two materials, exhibiting the highest ratio of single-particle contributions. For the 10 Figure 5: Complex refractive index (black curves) evaluated for (a) Ag, (b) Au, and (c) Cu using the total dielectric function including both the single-particle contribution and the resistive contribution. Excellent agreement for both the shape and the magnitude of the spectra is observed compared to experimental measurements in Ref. 69 (blue), Ref. 70 (green), Ref. 71 (light blue), Ref. 61 (light orange), and Ref. 72 (orange). 11 Figure 6: Ratio of single-particle absorption contribution to the total absorption character-ized by the imaginary part of the dielectric function for Ag, Au, and Cu. The fraction of single-particle absorption drops significantly for photon energies below 0.4 eV and remains on the order of 50% in the region of 0.4 eV until the direct onset. The ratio for Au is strongly affected by the inclusion of spin-orbit interactions. spectral region close to the direct absorption onset, the ratio of single-particle contributions significantly increases as first-order direct absorption is enabled. The effect of SOC is par-ticularly evident in gold, for which the onset of strong single-particle contributions shifts from ∼2.2 eV to ∼1.6 eV with the inclusion of SOC. While a comprehensive assessment for practical photocatalysis applications requires considering specific nanoparticle geometries, our method provides a reliable theoretical tool to investigate the different mechanisms of optical absorption in plasmonic materials from a fundamental perspective. 
+
+# 4 Conclusion 
+
+In this work, we report a computational framework of characterizing the optical response of metallic systems from first principles, considering both single-particle direct and indirect processes, as well as the semi-classical resistive contribution. We adopt an approach based on second-order perturbation theory to evaluate the indirect phonon-assisted contribution. We 12 show that our approach provides an accurate description for optical response of noble metals Ag, Au, and Cu, in good agreement with experimental optical measurements. Our study suggests the importance of both single-particle absorption and resistive loss in the optical response of metallic systems. Further, our methodology allows a detailed analysis of the various mechanisms for optical absorption in metallic systems at different photon energies. Our results provide benchmark optical spectra for noble metals and a computational tool for accurately modeling dissipation mechanisms in metals, offering a foundation for future studies of emerging complex metallic systems for applications in fields such as plasmonics and photocatalysis. 
+
+# Acknowledgement 
+
+This work is supported as part of the Computational Materials Sciences Program funded by the U.S. Department of Energy, Office of Science, Basic Energy Sciences, under Award No. DE-SC0020129. The ground state properties and quasiparticle electronic structures, used resources of the Argonne Leadership Computing Facility, which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357. Computational resources for conductivity and optics calculations were provided by the National Energy Research Scien-tific Computing Center, which is supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. 13 5 Supplemental Information 
+
+# 5.1 Effects of U parameter 
+
+In this section, we report the electronic band structure of Ag, Au, and Cu, calculated with PBEsol+ U +GW with various U to show that the U parameters that we chose in the main text are reasonable. The band structures are shown in Figure S1. Spin-orbit interaction is included for Ag and Au. Overall, the choice of U affects the entire set of bands for the 
+
+d-states. The choices of U =1 eV for Ag and Au, and U =2 eV for Cu is based on agreement with ARPES data especially considering the region close to the maximum of occupied states. 14 Figure S1: Calculated electronic band structures of noble metals in comparison to ARPES measurements with the same color scheme as Figure 1 in the main text. The different curves are for (a) Ag, from light to dark: U =0,1,2 eV; (b) Au, from light to dark: U =0,0.5,1 eV; and (c) Cu, from light to dark: U =0,1,2 eV. Black dashed curves are band structures calculated without quasiparticle effects and U. The agreement with experimental data 48–51 close to the top of the occupied states suggests U values of 1 eV for Ag and Au, and 2 eV for Cu. 15 5.2 Divergence of second order perturbation 
+
+In this section, we discuss our corrections to the divergence of the phonon-assisted imaginary part of dielectric function evaluated with second order perturbation theory by the inclusion of an imaginary broadening in the denominator. Due to the energy denominator for the evaluation of the generalized matrix element: 15 
+
+S1 ∝ X
+
+> m
+
+vim (k)gel-ph  
+
+> mj,ν
+
+(k, q)
+
+Emk − Eik − ¯hω + iη (1) and 
+
+S2 ∝ X
+
+> m
+
+gel-ph  
+
+> im,ν
+
+(k, q)vmj (k + q)
+
+Emk+q − Eik ± ¯hω νq + iη , (2) where E represent electronic energies, k, q represent the wave vector of the electronic and phonon, v represent velocity matrix elements and g the excitation energy, i, j, m represent initial, final, and intermediate states, and ωνq is the phonon frequency of phonon mode ν. A divergence is seen when the excitation energy is very close to the energy of the intermedate state. This happens when direct absorption is allowed ( S1) or at very low energy ( S2). In these cases, the result depends strongly on the imaginary broadening parameter η. In Figure S2, we show an example with Ag, where the strong dependence is seen for the spectra below 0.1 eV and above the direct absorption onset (3.69 eV). In our study, we cut off the phonon-assisted spectra at the direct onset due to the expected dominance of the direct contribution 16 0 1 2 3 4
+
+# Energy (eV) 
+
+# 10 -2 
+
+# 10 0
+
+# 10 2
+
+# 10 4
+
+# 10 6
+
+> Im  ε(ω)
+
+# Edir = 3.69 eV Figure S2: Calculated phonon-assisted Im ε(ω) of silver with different values for the imagi-nary broadening parameter η. The black solid line shows the data for η=0.1 eV, while the dashed curves from top to bottom correspond to η=0.001,0.05,0.01,0.05 eV. Strong depen-dence is seen at region beyond the direct onset and very close to zero (below 0.1 eV), but the spectra are independent of η below the direct absorption onset. 17 5.3 Effects of spin-orbit coupling on band structures 
+
+In this section, we show the effects of spin-orbit coupling on the calculated electronic structure of Ag and Au. Figure S3 shows the calculated band structure of Ag and Au with and without spin-orbit coupling. A significant splitting is seen in both materials. At the L-point, the splitting is 0.23 eV for Ag and 0.75 eV for Au, and at the X-point, the splitting is 0.34 eV for Ag and 1.07 eV for Au. The inclusion of SOC is also essential for the agreement between the calculation and ARPES measurements. We note that for Cu, a same evaluation of SOC result in only a 0.11 eV splitting at the L-point and 0.15 eV at the X-point, which is comparable to the typical value of choice for spectral broadening, therefore not included in the electronic structure and subsequent calculations due to the much higher cost of including SOC. X W K L U W L K|U X                 
+
+> 6
+> 5
+> 4
+> 3
+> 2
+> Energy (eV)
+> (a) Ag
+> XWKLUWLK|U X
+> 5
+> 4
+> 3
+> 2
+> 1
+> 0
+> Energy (eV)
+> (b) Au
+> XWKLUWLK|U X
+> 5
+> 4
+> 3
+> 2
+> 1
+> 0
+> Energy (eV)
+> (c) Cu
+
+Figure S3: Electronic band structure evaluated with (orange curves) and without (black curves) spin-orbit coupling for (a) Ag and (b) Au, and (c) Cu. Significant spin-orbit splitting is seen in Ag and Au, and particularly pronounced for the latter due to the higher atomic mass. SOC is weak in Cu with splitting less than 0.15 eV at VBM, therefore not considered for subsequent calculations. 18 5.4 Effects of Spin-orbit coupling on optical properties 
+
+In this section, we show the effects of spin-orbit coupling on the calculated optical properties of Ag and Au. In Figure S4 and Figure S5, we show the effects of SOC on the direct and phonon-assisted spectra for silver and gold, respectively. In both cases, it can be seen clearly that the effect of SOC is rather weak on the phonon-assisted contribution. The major effect of considering SOC is the change of the onset for the direct absorption. While such effects are relatively week for Ag, it becomes crucial for Au, as significantly better agreement from the experimental measurements is achieved after considering SOC, especially in the 1.5 to 2.5 eV region. The influence is expected for Au. It can be seen from the band structure that SOC induces a splitting at e.g. the X-point by an amount of about 2 eV, and the L-point by an amount of about 1 eV. 2.0 2.5 3.0 3.5 4.0 4.5 
+
+Energy (eV) 
+
+10 1
+
+10 0
+
+10 1
+
+> Im  ( )
+
+(a) 
+
+2.0 2.5 3.0 3.5 4.0 4.5 
+
+Energy (eV) 
+
+10 1
+
+10 0
+
+10 1
+
+(b) 
+
+Figure S4: Effects of spin-orbit coupling on the optical spectra of Ag with (a) with SOC (solid) and without SOC (dashed) with the same color scheme as Figure 4 in the main text, breaking down by different contributions. (b) Comparison of the total curve to experimental measurements with the same color scheme as in the main text. 19 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 
+
+Energy (eV) 
+
+10 1
+
+10 0
+
+10 1
+
+> Im  ( )
+
+(a) 
+
+1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 
+
+Energy (eV) 
+
+10 1
+
+10 0
+
+10 1
+
+(b) Figure S5: Effects of spin-orbit coupling on the optical spectra of Au (a) with SOC (solid) and without SOC (dashed) with the same color scheme as Figure 4, analyzed in terms of contributions by different absorption processes. (b) Comparison of the total curve to experimental measurements with the same color scheme as in the main text. SOC is essential for correct description of the absorption onset in Au. 
+
+# References 
+
+(1) West, P.; Ishii, S.; Naik, G.; Emani, N.; Shalaev, V.; Boltasseva, A. Searching for better plasmonic materials. Laser & Photon. Rev. 2010 , 4, 795–808. (2) Novotny, L.; Hecht, B. Principles of Nano-Optics , 2nd ed.; Cambridge University Press: Cambridge, 2012. (3) Kolesov, R.; Grotz, B.; Balasubramanian, G.; St¨ ohr, R. J.; Nicolet, A. A. L.; Hem-mer, P. R.; Jelezko, F.; Wrachtrup, J. Wave–particle duality of single surface plasmon polaritons. Nature Phys 2009 , 5, 470–474. (4) Ozbay, E. Plasmonics: Merging Photonics and Electronics at Nanoscale Dimensions. 
+
+Science 2006 , 311 , 189–193. 20 (5) Maier, S. A.; Brongersma, M. L.; Kik, P. G.; Meltzer, S.; Requicha, A. A. G.; At-water, H. A. Plasmonics—A Route to Nanoscale Optical Devices. Advanced Materials 
+
+2001 , 13 , 1501–1505. (6) Maier, S. A.; Atwater, H. A. Plasmonics: Localization and guiding of electromagnetic energy in metal/dielectric structures. Journal of Applied Physics 2005 , 98 , 011101. (7) Huang, X.; El-Sayed, I. H.; Qian, W.; El-Sayed, M. A. Cancer Cell Imaging and Pho-tothermal Therapy in the Near-Infrared Region by Using Gold Nanorods. J. Am. Chem. Soc. 2006 , 128 , 2115–2120. (8) Schuller, J. A.; Barnard, E. S.; Cai, W.; Jun, Y. C.; White, J. S.; Brongersma, M. L. Plasmonics for extreme light concentration and manipulation. Nature Mater 2010 , 9,193–204. (9) Ferry, V. E.; Munday, J. N.; Atwater, H. A. Design Considerations for Plasmonic Photovoltaics. Adv. Mater. 2010 , 22 , 4794–4808. (10) Kah, J. C. Y.; Kho, K. W.; Lee, C. G. L.; Richard, C. J. Early diagnosis of oral cancer based on the surface plasmon resonance of gold nanoparticles. International Journal of Nanomedicine 
+
+(11) Sharifi, M.; Attar, F.; Saboury, A. A.; Akhtari, K.; Hooshmand, N.; Hasan, A.; El-Sayed, M. A.; Falahati, M. Plasmonic gold nanoparticles: Optical manipulation, imag-ing, drug delivery and therapy. Journal of Controlled Release 2019 , 311-312 , 170–189. (12) Priyadarshini, E.; Pradhan, N. Gold nanoparticles as efficient sensors in colorimetric detection of toxic metal ions: A review. Sensors and Actuators B: Chemical 2017 , 238 ,888–902. (13) Cho, E. S.; Kim, J.; Tejerina, B.; Hermans, T. M.; Jiang, H.; Nakanishi, H.; Yu, M.; Patashinski, A. Z.; Glotzer, S. C.; Stellacci, F.; Grzybowski, B. A. Ultrasensitive detec-21 tion of toxic cations through changes in the tunnelling current across films of striped nanoparticles. Nature Materials 2012 , 11 , 978–985. (14) Schl¨ ucker, S. Surface-Enhanced Raman Spectroscopy: Concepts and Chemical Appli-cations. Angewandte Chemie International Edition 2014 , 53 , 4756–4795. (15) Zhang, X.; Shi, G.; Leveillee, J. A.; Giustino, F.; Kioupakis, E. Ab initio theory of free-carrier absorption in semiconductors. Phys. Rev. B 2022 , 106 , 205203. (16) Peelaers, H.; Kioupakis, E.; Van de Walle, C. G. Free-carrier absorption in transparent conducting oxides: Phonon and impurity scattering in ${\ mathrm {SnO }} { 2}$. Phys. Rev. B 2015 , 92 , 235201. (17) Peelaers, H.; Van de Walle, C. G. Phonon- and charged-impurity-assisted indirect free-carrier absorption in ${\ mathrm {Ga }} { 2}{\ mathrm {O}} { 3}$. Phys. Rev. B 2019 ,
+
+100 , 081202. (18) Peelaers, H.; Kioupakis, E.; Van de Walle, C. G. Fundamental limits on optical trans-parency of transparent conducting oxides: Free-carrier absorption in SnO2. Applied Physics Letters 2012 , 100 , 011914. (19) Maksimov, E. G.; Mazin, I. I.; Rashkeev, S. N.; Uspenski, Y. A. First-principles calcu-lations of the optical properties of metals. J. Phys. F: Met. Phys. 1988 , 18 , 833–849. (20) Li, X.; Cui, H.; Zhang, R. First-principles study of the electronic and optical properties of a new metallic MoAlB. Scientific Reports 2016 , 6, 39790. (21) Kandemir, Z.; D’Amico, P.; Sesti, G.; Cardoso, C.; Miloˇ sevi´ c, M. V.; Sevik, C. Optical properties of metallic MXene multilayers through advanced first-principles calculations. 
+
+Phys. Rev. Mater. 2024 , 8, 075201. (22) Peng, B.; Zhang, H.; Shao, H.; Xu, Y.; Zhang, R.; Zhu, H. The electronic, optical, and 22 thermodynamic properties of borophene from first-principles calculations. J. Mater. Chem. C 2016 , 4, 3592–3598. (23) Prandini, G.; Rignanese, G.-M.; Marzari, N. Photorealistic modelling of metals from first principles. npj Computational Materials 2019 , 5, 129. (24) Stahrenberg, K.; Herrmann, T.; Wilmers, K.; Esser, N.; Richter, W.; Lee, M. J. G. Optical properties of copper and silver in the energy range 2.5–9.0 eV. Phys. Rev. B 
+
+2001 , 64 , 115111. (25) Marini, A.; Del Sole, R. Dynamical Excitonic Effects in Metals and Semiconductors. 
+
+Physical Review Letters 2003 , 91 .(26) Brown, A. M.; Sundararaman, R.; Narang, P.; Goddard, W. A.; Atwater, H. A. Nonra-diative Plasmon Decay and Hot Carrier Dynamics: Effects of Phonons, Surfaces, and Geometry. ACS Nano 2016 , 10 , 957–966. (27) Jin, H.; Kahk, J. M.; Papaconstantopoulos, D. A.; Ferreira, A.; Lischner, J. Plasmon-Induced Hot Carriers from Interband and Intraband Transitions in Large Noble Metal Nanoparticles. PRX Energy 2022 , 1, 013006. (28) Jo˜ ao, S. M.; Jin, H.; Lischner, J. C. Atomistic Theory of Hot-Carrier Relaxation in Large Plasmonic Nanoparticles. The Journal of Physical Chemistry C 2023 , 127 , 23296– 23302. (29) Biswas, S.; Zhao, R.; Alowa, F.; Zacharias, M.; Sharifzadeh, S.; Coker, D. F.; Se-feros, D. S.; Scholes, G. D. Exciton polaron formation and hot-carrier relaxation in rigid Dion–Jacobson-type two-dimensional perovskites. Nature Materials 2024 , 23 , 937–943. (30) Richter, S.; Herrfurth, O.; Espinoza, S.; Rebarz, M.; Kloz, M.; Leveillee, J. A.; Schleife, A.; Zollner, S.; Grundmann, M.; Andreasson, J.; others Ultrafast dynamics 23 of hot charge carriers in an oxide semiconductor probed by femtosecond spectroscopic ellipsometry. New Journal of Physics 2020 , 22 , 083066. (31) Hohenberg, P.; Kohn, W. Inhomogeneous Electron Gas. Phys. Rev. 1964 , 136 , B864– B871. (32) Kohn, W.; Sham, L. J. Self-Consistent Equations Including Exchange and Correlation Effects. Physical Review 1965 , 140 , A1133–A1138. (33) Baroni, S.; de Gironcoli, S.; Dal Corso, A.; Giannozzi, P. Phonons and related crystal properties from density-functional perturbation theory. Rev. Mod. Phys. 2001 , 73 , 515– 562. (34) Marzari, N.; Mostofi, A. A.; Yates, J. R.; Souza, I.; Vanderbilt, D. Maximally localized Wannier functions: Theory and applications. Rev. Mod. Phys. 2012 , 84 , 1419–1475. (35) Davey, W. P. Precision Measurements of the Lattice Constants of Twelve Common Metals. Phys. Rev. 1925 , 25 , 753–761. (36) Maeland, A.; Flanagan, T. B. LATTICE SPACINGS OF GOLD–PALLADIUM AL-LOYS. Can. J. Phys. 1964 , 42 , 2364–2366. (37) Straumanis, M. E.; Yu, L. S. Lattice parameters, densities, expansion coefficients and perfection of structure of Cu and of Cu–In α phase. Acta Crystallographica Section A 
+
+1969 , 25 , 676–682. (38) Giannozzi, P.; Baroni, S.; Bonini, N.; Calandra, M.; Car, R.; Cavazzoni, C.; Ceresoli, D.; Chiarotti, G. L.; Cococcioni, M.; Dabo, I.; others QUANTUM ESPRESSO: a modu-lar and open-source software project for quantum simulations of materials. J. Phys. Condens. Matter. 2009 , 21 , 395502. (39) Giannozzi, P. et al. Advanced capabilities for materials modelling with Quantum ESPRESSO. Journal of Physics: Condensed Matter 2017 , 29 , 465901. 24 (40) Perdew, J. P.; Ruzsinszky, A.; Csonka, G. I.; Vydrov, O. A.; Scuseria, G. E.; Con-stantin, L. A.; Zhou, X.; Burke, K. Restoring the Density-Gradient Expansion for Exchange in Solids and Surfaces. Phys. Rev. Lett. 2008 , 100 , 136406. (41) Sundararaman, R.; Narang, P.; Jermyn, A. S.; Goddard III, W. A.; Atwater, H. A. The-oretical predictions for hot-carrier generation from surface plasmon decay. Nat Commun 
+
+2014 , 5, 5788. (42) Hamann, D. R. Optimized norm-conserving Vanderbilt pseudopotentials. Phys. Rev. B 
+
+2013 , 88 , 085117. (43) van Setten, M.; Giantomassi, M.; Bousquet, E.; Verstraete, M.; Hamann, D.; Gonze, X.; Rignanese, G.-M. The PseudoDojo: Training and grading a 85 element optimized norm-conserving pseudopotential table. Computer Physics Communications 2018 , 226 , 39– 54. (44) Deslippe, J.; Samsonidze, G.; Strubbe, D. A.; Jain, M.; Cohen, M. L.; Louie, S. G. BerkeleyGW: A massively parallel computer package for the calculation of the quasipar-ticle and optical properties of materials and nanostructures. Comput. Phys. Commun 
+
+2012 , 183 , 1269 – 1289. (45) Deslippe, J.; Samsonidze, G.; Jain, M.; Cohen, M. L.; Louie, S. G. Coulomb-hole summations and energies for $GW $ calculations with limited number of empty orbitals: A modified static remainder approach. Phys. Rev. B 2013 , 87 , 165124. (46) Hybertsen, M. S.; Louie, S. G. Electron correlation in semiconductors and insulators: Band gaps and quasiparticle energies. Physical Review B 1986 , 34 , 5390. (47) Liechtenstein, A. I.; Anisimov, V. I.; Zaanen, J. Density-functional theory and strong interactions: Orbital ordering in Mott-Hubbard insulators. Phys. Rev. B 1995 , 52 ,R5467–R5470. 25 (48) Wehner, P. S.; Williams, R. S.; Kevan, S. D.; Denley, D.; Shirley, D. A. Valence-band structure of silver along Λ from angle-resolved photoemission. Phys. Rev. B 1979 , 19 ,6164–6171. (49) Mills, K. A.; Davis, R. F.; Kevan, S. D.; Thornton, G.; Shirley, D. A. Angle-resolved photoemission determination of Λ-line valence bands in Pt and Au using synchrotron radiation. Phys. Rev. B 1980 , 22 , 581–592. (50) Knapp, J. A.; Himpsel, F. J.; Eastman, D. E. Experimental energy band dispersions and lifetimes for valence and conduction bands of copper using angle-resolved photoe-mission. Phys. Rev. B 1979 , 19 , 4952–4964. (51) Courths, R.; Cord, B.; Wern, H.; H¨ ufner, S. Angle-Resolved Photoemission and Band Structure of Copper. Phys. Scr. 1983 , T4 , 144–147. (52) Ponc´ e, S.; Li, W.; Reichardt, S.; Giustino, F. First-principles calculations of charge car-rier mobility and conductivity in bulk semiconductors and two-dimensional materials. 
+
+Rep. Prog. Phys. 2020 , 83 , 036501. (53) Ponc´ e, S.; Margine, E. R.; Giustino, F. Towards predictive many-body calculations of phonon-limited carrier mobilities in semiconductors. Phys. Rev. B 2018 , 97 , 121201. (54) Lee, H. et al. Electron–phonon physics from first principles using the EPW code. npj Computational Materials 2023 , 9, 156. (55) Noffsinger, J.; Kioupakis, E.; Van de Walle, C. G.; Louie, S. G.; Cohen, M. L. Phonon-Assisted Optical Absorption in Silicon from First Principles. Phys. Rev. Lett. 2012 ,
+
+108 , 167402. (56) Kamitakahara, W.; Brockhouse, B. Crystal dynamics of silver. Physics Letters A 1969 ,
+
+29 , 639–640. 26 (57) Lynn, J. W.; Smith, H. G.; Nicklow, R. M. Lattice Dynamics of Gold. Phys. Rev. B 
+
+1973 , 8, 3493–3499. (58) Svensson, E. C.; Brockhouse, B. N.; Rowe, J. M. Crystal Dynamics of Copper. Phys. Rev. 1967 , 155 , 619–632. (59) Matula, R. A. Electrical resistivity of copper, gold, palladium, and silver. Journal of Physical and Chemical Reference Data 1979 , 8, 1147–1298. (60) Choi, J.; Cheng, F.; Cleary, J. W.; Sun, L.; Dass, C. K.; Hendrickson, J. R.; Wang, C.-Y.; Gwo, S.; Shih, C.-K.; Li, X. Optical dielectric constants of single crystalline silver films in the long wavelength range. Opt. Mater. Express 2020 , 10 , 693. (61) McPeak, K. M.; Jayanti, S. V.; Kress, S. J. P.; Meyer, S.; Iotti, S.; Rossinelli, A.; Norris, D. J. Plasmonic Films Can Easily Be Better: Rules and Recipes. ACS Photonics 
+
+2015 , 2, 326–333. (62) Wu, Y.; Zhang, C.; Estakhri, N. M.; Zhao, Y.; Kim, J.; Zhang, M.; Liu, X.-X.; Pri-bil, G. K.; Al` u, A.; Shih, C.-K.; Li, X. Intrinsic Optical Properties and Enhanced Plasmonic Response of Epitaxial Silver. Adv. Mater. 2014 , 26 , 6106–6110. (63) Johnson, P. B.; Christy, R. W. Optical Constants of the Noble Metals. Phys. Rev. B 
+
+1972 , 6, 4370–4379. (64) Raki´ c, A. D.; Djuriˇ si´ c, A. B.; Elazar, J. M.; Majewski, M. L. Optical properties of metallic films for vertical-cavity optoelectronic devices. Appl. Opt. 1998 , 37 , 5271. (65) Olmon, R. L.; Slovick, B.; Johnson, T. W.; Shelton, D.; Oh, S.-H.; Boreman, G. D.; Raschke, M. B. Optical dielectric function of gold. Phys. Rev. B 2012 , 86 , 235147. (66) Lenham, A. P.; Treherne, D. M. Applicability of the Anomalous Skin-Effect Theory to the Optical Constants of Cu, Ag, and Au in the Infrared*. J. Opt. Soc. Am. 1966 , 56 ,683. 27 (67) Dold, B.; Mecke, R. OPTISCHE EIGENSCHAFTEN VON EDELMETALLEN UBER-GANGSMETALLEN UND DEREN LEGIERUNGEN IM INFRAROT. 1965 , 22 , 435. (68) Hagemann, H.-J.; Gudat, W.; Kunz, C. Optical constants from the far infrared to the x-ray region: Mg, Al, Cu, Ag, Au, Bi, C, and Al2O3. J. Opt. Soc. Am. 1975 , 65 ,742–744. (69) Ferrera, M.; Magnozzi, M.; Bisio, F.; Canepa, M. Temperature-dependent permittivity of silver and implications for thermoplasmonics. Phys. Rev. Mater. 2019 , 3, 105201. (70) Jiang, Y.; Pillai, S.; Green, M. A. Realistic Silver Optical Constants for Plasmonics. 
+
+Scientific Reports 2016 , 6, 30605. (71) Yang, H. U.; D’Archangel, J.; Sundheimer, M. L.; Tucker, E.; Boreman, G. D.; Raschke, M. B. Optical dielectric function of silver. Phys. Rev. B 2015 , 91 , 235137. (72) Babar, S.; Weaver, J. H. Optical constants of Cu, Ag, and Au revisited. Appl. Opt. 
+
+2015 , 54 , 477–481. (73) Ma, J.; Wang, Z.; Wang, L.-W. Interplay between plasmon and single-particle excita-tions in a metal nanocluster. Nature Communications 2015 , 6, 10107. (74) Vanzan, M.; Marsili, M. Theoretical approaches for the description of plasmon gener-ated hot carriers phenomena. npj Computational Materials 2024 , 10 , 222. (75) Gieseking, R. L.; Ratner, M. A.; Schatz, G. C. Frontiers of Plasmon Enhanced Spec-troscopy Volume 1 ; ACS Symposium Series 1245; American Chemical Society, 2016; Vol. 1245; pp 1–22, Section: 1. 28

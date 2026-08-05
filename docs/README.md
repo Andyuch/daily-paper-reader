@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-04</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-05</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-04 21:14:59 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-05 22:01:45 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日精读0篇、速读2篇，聚焦光学显微粒子/纤维表征与超宽带动态光散射研究。最值得关注的是AI辅助光学显微表征（7.0分）用于颗粒/纤维分析，以及超宽带去偏振动态光散射探测玻璃态分子动力学（6.0分）。建议普通读者优先了解AI在显微图像分析中的自动化潜力，可关注其实际应用案例。</p>
+<p>今日速读4篇论文，未安排精读，重点关注纳米机械谐振器与金属光学性质方向。</p>
+<p>两篇7.0分论文分别揭示了拉伸应力谐振器的模式依赖光热响应，以及Ag/Au/Cu的第一性原理光学性质，值得延伸阅读。</p>
+<p>下步建议优先精读这两篇高分文章，以掌握具体方法与应用场景。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -84,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Artificial Intelligence for the Characterization of Particles and Fibers by Optical Microscopy">Artificial Intelligence for the Characterization of Particles and Fibers by Optical Microscopy</span></li><li><span class="dpr-home-dashboard-paper-title" title="Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses">Ultra-broadband and time-resolved depolarized dynamic light scattering for probing molecular dynamics in supercooled liquids and glasses</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators">Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators</span></li><li><span class="dpr-home-dashboard-paper-title" title="Optical properties of Ag, Au, and Cu from first principles">Optical properties of Ag, Au, and Cu from first principles</span></li><li><span class="dpr-home-dashboard-paper-title" title="Identifying Contact Barrier Types in Few-Layer MoS2 Devices Using Correlative IV, LBIC, and Bias-Dependent KPFM">Identifying Contact Barrier Types in Few-Layer MoS2 Devices Using Correlative IV, LBIC, and Bias-Dependent KPFM</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>4</strong></span></div>
 </section>
 </div>
 

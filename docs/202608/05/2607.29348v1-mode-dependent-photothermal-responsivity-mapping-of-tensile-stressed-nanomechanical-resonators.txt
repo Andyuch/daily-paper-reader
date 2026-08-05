@@ -1,0 +1,1042 @@
+Title: Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators
+
+URL Source: https://arxiv.org/pdf/2607.29348v1
+
+Published Time: Mon, 03 Aug 2026 00:51:08 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+## Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators 
+
+Thomas M. Tropper ∗ and Silvan Schmid 
+
+Institute of Sensor and Actuator Systems, TU Wien, Gusshausstrasse 27-29, 1040 Vienna, Austria. 
+
+(Dated: July 31, 2026) The photothermal responsivity of a tensioned nanomechanical resonator, the fractional frequency shift per absorbed optical power, depends on which vibrational mode is tracked and where the heat is deposited. We derive a closed-form model of this dependence for square membranes by treating the membrane as a grid of independent tensile fibers, each responding to its mean temperature. The responsivity map splits into a mode-independent conduction envelope and a mode term that peaks on the antinodal rows and columns of the mode, not at the antinodes, because fibers rather than points carry the modal strain energy. Scanning photothermal measurements of the (1 , 1) , (1 , 2) , (2 , 1) , and 
+
+(2 , 2) modes of a square silicon nitride membrane confirm the predicted maps with a correlation 
+
+r ≥ 0.998 , with the envelope amplitude as the only fitted parameter. On trampoline resonators, the tether-limited thermal conductance flattens the envelope, making the mode term directly visible in raw scans. The measured mode-resolved maps provide the design input for dual-mode photothermal sensing with common-mode drift suppression, identifying pairs, such as a membrane’s (1 , 1) /(2 , 2) 
+
+or a trampoline’s torsional modes, as candidates that combine large differential responsivity with a shared thermal and mechanical environment. 
+
+I. INTRODUCTION 
+
+Nanomechanical photothermal sensing exploits a ten-sioned resonator as a mechanical thermometer: ab-sorbed optical power raises the resonator temperature, relaxes the tensile stress, and detunes the resonance fre-quency [1, 2]. This transduction principle has enabled single-molecule absorption microscopy [3], photothermal infrared spectroscopy [4–8], and uncooled infrared and terahertz detection approaching fundamental noise lim-its [9–11]. The central design quantity is the relative power re-sponsivity, the fractional frequency shift per absorbed power. For the fundamental mode, Kanellopulos et al. introduced the mean temperature framework (MTF), showing that the responsivity is governed by the mean 
+
+temperature rise of the resonator rather than by its peak temperature and used it to compare strings, drum-heads, and trampolines [12]. That the response is mode-dependent has been demonstrated and exploited: Mar-tini et al. demonstrated by finite-element simulations the mode-dependence of the (1 , 1) , (2 , 2) , and (3 , 3) of a square SiN membrane resonator for a large IR spot [11], and Sadeghi et al. showed that localizing a phononic-crystal defect mode on top of the photothermally-induced temperature field enhances the responsivity by up to an order of magnitude, directly evidencing the role of the overlap between temperature field and mode shape [13]. What has been missing is a closed-form theory of this position- and mode-dependence together with a mode-by-mode experimental test. A timely application sharpens this question. Brown 
+
+et al. recently reached thermomechanically limited fre- 
+
+> ∗Correspondence email address: thomas.tropper@tuwien.ac.at
+
+quency stability below 5 × 10 −9 fractional Allan devia-tion by tracking two mechanical modes simultaneously and subtracting their fractional frequencies, which can-cels drifts common to both modes [14]. They explic-itly propose extending this dual-mode scheme to ther-mal sensing: a mode pair with a differential response to the localized signal heat but a common response to global drifts would combine high responsivity with intrinsic drift rejection [14, 15]. Designing such a pair requires precisely the quantity derived and measured here: the photother-mal responsivity of individual modes as a function of the heating position. In this work, we derive the responsivity map of a square membrane under point-like heating in closed form (Sec. II; full derivation in the Supplementary Material). The key physical input is a fiber picture of thermoe-lastic stress relaxation: the membrane acts as a dense grid of independent tensile fibers, each of which re-sponds to its mean temperature. The map splits ex-actly into a mode-independent conduction envelope and a closed-form mode term that peaks on the antinodal rows and columns of the mode. We validate the model with position-resolved photothermal measurements of the (1 , 1) , (1 , 2) , (2 , 1) , and (2 , 2) modes of a SiN mem-brane and extend the comparison to trampoline res-onators, where the flat tether-dominated thermal enve-lope makes the mode term directly visible in raw scans (Secs. III, IV). Finally, we discuss resonator geome-tries for common-mode-suppressed photothermal sensing (Sec. IV C). 
+
+II. THEORY 
+
+To interpret spatially resolved photothermal frequency maps, we model the resonator as a square membrane of side length L, thickness h, biaxial tensile prestress σ0,arXiv:2607.29348v1 [physics.app-ph] 31 Jul 2026 2Young’s modulus E, thermal expansion coefficient α, and thermal conductivity κ, clamped at T0 along its bound-ary. Its out-of-plane eigenmodes are 
+
+ϕnm (x, y ) = sin 
+
+ nπx L
+
+
+
+sin 
+
+ mπy L
+
+
+
+,ωnm =
+
+r σ0
+
+ρπL
+
+pn2 + m2.
+
+(1) A focused laser absorbing power Pabs at a point (x0, y 0)
+
+locally heats the membrane and relaxes its tension, shift-ing the eigenfrequency of mode (n, m ). The model rests on two assumptions: (i) negligible thermal conduction to the surrounding gas, i.e. operation in vacuum, and (ii) negligible radiative heat transfer, which becomes signifi-cant for high-aspect-ratio membrane resonators [16, 17]. For the present membranes ( L = 500 μm, h = 50 nm), radiation is a small correction (we retain the conduction-only model throughout the main text); a linearized radia-tive extension of the model, which screens the low-order temperature components and slightly flattens the enve-lope, is derived in the Supplementary Material, Sec. E. Using first-order (Rayleigh) perturbation theory together with the steady-state heat equation, this shift can be written as 
+
+δω nm 
+
+ωnm 
+
+(x0, y 0) = RT
+
+Pabs 
+
+κh Fnm (x0, y 0), (2) with the temperature responsivity [1] 
+
+RT = − E α 
+
+2 σ0
+
+(3) and where Fnm is a dimensionless responsivity map of or-der 10 −1 (full derivation in the Supplementary Material, Sec. S1). The key physical input is that the membrane behaves, to excellent approximation, as a dense grid of indepen-dent tensile fibers along x and y: because tension must be uniform along each fiber in mechanical equilibrium, a fiber’s tension change is set by its mean tempera-ture, not its local temperature (Supplementary Material, Sec. S1 C). This single fact determines which parts of the membrane a given mode is sensitive to when heated. Carrying this through, Fnm decomposes exactly into a smooth background and a closed-form mode term, 
+
+Fnm = Anm + Bnm (Supplementary Material, Sec. S1 E). The background Anm coincides, to leading order, with the mean-temperature (MTF) envelope of the mem-brane [12], 
+
+Anm (x0, y 0) ≈ κh Pabs 
+
+⟨∆T ⟩ (x0, y 0), (4) while the mode term has the closed form 
+
+Bnm (x0, y 0) = 12π2(n2 + m2)
+
+ n2
+
+m2 sin 2 mπy 0
+
+L
+
+
+
+w2m
+
+ πx 0
+
+L
+
+
+
++ m2
+
+n2 sin 2 nπx 0
+
+L
+
+
+
+w2n
+
+ πy 0
+
+L
+
+
+
+,
+
+(5) PBS                   
+
+> laser
+> QPD
+> frequency tracker
+> lens
+> (a) readout unit
+> xyz -controller
+> (b) illumination unit
+> monochromator
+> optical chopper
+> LDLS
+> resonator
+> refl. objective +scanner
+> piezo -
+> shaker
+> QWP HWP
+> Figure 1. Experimental setup for nanomechanical pho-tothermal mode mapping. (a) Readout unit. An optical-lever scheme — laser, half-wave plate (HWP), polarizing beam splitter (PBS), quarter-wave plate (QWP), lens, and quadrant photodetector (QPD) — detects the out-of-plane motion of the resonator. A frequency tracker (PHILL) drives a piezo-shaker in a self-sustaining oscillator loop to keep the resonator on resonance. (b) Illumination unit. A laser-driven light source (LDLS) is spectrally filtered by a monochroma-tor, modulated on/off by an optical chopper, and focused onto the resonator by a reflective objective; an xyz nanopositioner scans the focal spot across the surface.
+
+where wc(θ) is an edge window that equals 1 in the inte-rior and drops to 0 within ∼ L/ (2 πn ) and ∼ L/ (2 πm ),respectively, of the clamped boundary (defined in Sup-plementary Material, Sec. S1 E). Equation (5) captures the essential experimental signature: the mode term is largest on the antinodal rows and columns of the mode, not at the antinodes themselves, because it is fibers, not points, that carry the modal strain energy. The back-ground Anm , by contrast, simply follows the thermal con-ductance profile of the membrane and is independent of 
+
+(n, m ) to leading order.  
+
+> III. METHODS
+
+The experiment comprises two subsystems: a readout unit that detects the mechanical motion, and an illumi-nation unit that deposits a focused, wavelength-selected optical power at a controlled position on the resonator (Fig. 1). All measurements were performed on a square SiN membrane and a trampoline resonator mounted in-side a vacuum chamber maintained below 10 −5 hPa to suppress gas damping and convective heat transfer [18].  
+
+> A. Readout unit
+
+The resonator’s out-of-plane motion was detected via an optical lever using a 785 nm laser (LDM785, Thorlabs, Inc.), chosen for its weak absorption in SiN to minimize photothermal loading by the readout itself. The laser power at the sample was Preadout ≈ 170 μW. The re-flected beam was detected with a quadrant photodetector (QPD) (PD4Q-100k, Koheron). The resonance frequency of the mode under study was tracked in real time with 3a frequency-tracking unit (PHILL, Invisible-Light Labs GmbH) operated as a self-sustaining oscillator (SSO): the detected motion is band-pass filtered, phase-shifted, am-plified, and fed back to a piezoelectric actuator beneath the chip, so that the loop continuously oscillates at the mechanical resonance and the instantaneous frequency is available as the measurement output [19]. Compared to a phase-locked loop, the SSO requires no external reference oscillator and its tracking bandwidth is not limited by a phase-detector or feedback control time constants [19].  
+
+> B. Illumination unit
+
+Local optical excitation was provided by a broad-band light source (XWS-65, ISTEQ) coupled to an in-tegrated monochromator (Hyperchromator II, Mountain Photonics Gmbh) for wavelength selection. The output beam was collimated, intensity-modulated with an opti-cal chopper, and focused onto the resonator surface with a reflective objective (5006-190, Beck Optronic Solutions) of numerical aperture NA = 0 .65 and working distance 
+
+d = 1 .8 mm, which avoids chromatic aberration across the source spectrum, yielding a focal spot size of 30 μmin diameter. The spot size was determined by knife-edge measurement and is etendue limited. The objec-tive was mounted on a xyz piezo nanopositioning stage (PIMars P-56x and E-727, Physik Instrumente (PI)), en-abling deterministic positioning of the focal spot across the resonator surface. The stage provides a travel range of 300 μm. An excitation wavelength of λ = 320 nm was chosen as a compromise between available source power and the strong interband absorption of silicon nitride in the near-UV, which maximizes the absorbed fraction of the in-cident power. The incident power at the sample was 
+
+P0 ≈ 13 μW. As the absorptance of the SiN film at this wavelength is not independently calibrated, all maps are reported per incident power; the (position-independent) absorptance enters only through the overall amplitude k
+
+of the mode-term fit and therefore does not affect the extracted spatial pattern (Sec. F). The optical chopper was operated at 8 Hz, effectively switching the illumina-tion on and off rather than sinusoidally modulating it. The thermal time constant of the membranes was mea-sured to be τth ≈ 13 ms, well below the modulation time constant of τmod = 125 ms, providing full on/off cycles with no low-pass correction required. For each spot posi-tion, several on/off cycles were recorded and the resulting plateau maxima and minima were averaged to obtain the signal difference ∆f . Given the short acquisition time of 0.5 s per measurement, thermal drift is negligible on this timescale, and the signal-to-noise ratio at this wave-length is sufficiently high that this direct min/max esti-mator is adequate; lock-in demodulation, typically em-ployed to recover small signals from noisy or drift-prone backgrounds, was therefore not required.  
+
+> C. Measurement protocol
+
+For each membrane the modes (1 , 1) , (1 , 2) , (2 , 1) and 
+
+(2 , 2) were addressed sequentially by locking the SSO to the respective resonance, and the heating spot was raster-scanned across the surface on a 15 μm grid; the full-membrane maps were assembled from five overlap-ping tiles as described in Sec. F. The mode-specific con-tribution was then obtained by subtracting the mod-elled conduction envelope and normalizing by its peak, 
+
+Bnm /A max , rather than by dividing by a separately mea-sured reference mode; a single overall amplitude is the only fitted quantity (Sec. F). For the trampoline, sin-gle tiles covering the central pad were recorded for the tether-dominated, torsional and pad-localized modes; no stitching or envelope subtraction is required, since the tether-limited conductance renders the envelope nearly position-independent (Sec. IV B).   
+
+> IV. RESULTS & DISCUSSION A. Square membranes
+
+Figure 2 compares the measured photothermal re-sponse of the four lowest modes with the fiber model. We first note a counterintuitive feature of the raw maps [Fig. 2(a)]: all four modes are dominated by the same broad dome peaking at the membrane center, regardless of their mode shape. This is most striking for the (2 , 2) 
+
+mode, whose center is a nodal crossing: the raw response is nonetheless maximal there. The fiber model repro-duces this quantitatively. For the ideal membrane, the global maximum of F22 lies at the center ( F22 = 0 .0704 ), and the mode-specific structure is only a ∼ ± 20% mod-ulation on top of the conduction dome. Physically, the response follows the conduction envelope Aenv , i.e. the mean temperature rise, which peaks for central heating irrespective of the mode; the mode enters only through the smaller term Bnm . The measured raw maxima of all four modes coincide with the membrane center to within one scan pixel, confirming this picture. Subtracting the modeled conduction envelope and nor-malizing by its peak isolates the mode term. Figure 2(b) shows the measured Bnm /A max = ( Fnm − Aenv )/A max 
+
+maps, in close agreement with the fiber-model prediction [Fig. 2(c)]. The distinguishing feature is that the max-ima lie on the antinodal rows and columns of each mode — not at the displacement antinodes. This is made ex-plicit by the line cuts in Fig. 2(d)–(g): along the (2 , 2) 
+
+antinodal row the fiber model tracks the data across the full profile, whereas the naive local model ( ∝ ϕ2
+
+> nm
+
+) pre-dicts sharp peaks at the antinodes that the data do not show; along the (2 , 2) nodal row the data follow the fiber model’s structured, non-zero response, while the naive model is identically zero there. These two cuts alone discriminate decisively between the fiber and naive-local descriptions. 4mode  (1, 1) (1, 2) (2, 1) (2, 2)   
+
+> 0.0 0.5 1.0
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> y0/L
+
+(a)   
+
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> y0/L
+
+(b)   
+
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> y0/L
+
+(c)   
+
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L  
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0 0.5 1.0
+
+x0/L    
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> 0.0
+> 0.1
+> 0.2
+> 0.3
+> 0.4
+> |Δf|/ f0 (%)
+> 0
+> 10
+> 20
+> 30
+> 40
+> 50
+> (F − Aenv )/ Amax  (%)
+> 0
+> 10
+> 20
+> 30
+> 40
+> 50
+> (F − Aenv )/ Amax  (%)
+> 0.00 0.25 0.50 0.75 1.00
+
+x0/L
+
+> 0
+> 2
+> 4
+> 6
+> 8
+> 10
+> 12
+> (F − Aenv )/ Amax  (%)
+
+(d) y0 = 0.76 L    
+
+> 0.00 0.25 0.50 0.75 1.00
+
+x0/L
+
+> −4
+> −2
+> 0
+> 2
+> 4
+> 6
+
+(e) y0 = 0.48 L    
+
+> 0.00 0.25 0.50 0.75 1.00
+
+x0/L
+
+> 0
+> 5
+> 10
+> 15
+> 20
+> 25
+> 30
+
+(f) y0 = 0.24 L
+
+(1,2) 
+
+(2,1)     
+
+> 0.00 0.25 0.50 0.75 1.00
+
+y0/L
+
+> 0
+> 5
+> 10
+> 15
+> 20
+> 25
+> 30
+
+(g) x0 = 0.24 L
+
+(1,2) 
+
+(2,1) 
+
+model data ∝ ϕ2 (scaled) 
+
+Figure 2. Mode-resolved photothermal maps of a square SiN membrane with side length L = 500 μm, thickness 
+
+h = 50 nm and a tensile stress of σ0 = 230 MPa. (a) Raw relative frequency-response maps ( |∆f |/f 0) of a stitched full-membrane scan for the (1 , 1) , (1 , 2) , (2 , 1) and (2 , 2) modes, at resonance frequencies of 325 , 513 , 515 and 650 kHz, respectively. (b) Mode contribution Bnm /A max , obtained by subtracting the conduction-dome envelope Aenv and normalizing by its maximum 
+
+Amax (at the membrane center). (c) Corresponding fiber-model predictions. (d-g) Line cuts through the maps: along an antinodal row (d) and a nodal row (e) of the (2 , 2) mode, and along a common horizontal row ( y0 ≈ 0.25 L) and ( x0 ≈ 0.25 L)through the (1 , 2) and (2 , 1) modes (f) & (g), respectively. Circles: data; solid lines: conduction-only fiber model. 5The doublet (1 , 2) /(2 , 1) behaves like the other modes: panels (f) & (g) show representative line cuts through each, again in agreement with the fiber model. The two maps are related by a reflection across the diagonal, as expected for a transposed mode pair. Across all four modes, the conduction-only fiber model reproduces the raw maps with a correlation r ≥ 0.998 
+
+and a residual of 1.0–1.6% of the peak response. Fol-lowing the fit strategy of the Supplementary Material (Sec. S1 G), only the envelope amplitude is floated — within the Poisson-ratio band of order 30% — while the mode-term shape is fixed and free of adjustable parame-ters. Several small deviations remain, all understood. The dominant one is a reproducible ∼ 1% flattening of the dome relative to the conduction-only prediction, consis-tent in both sign and magnitude with the onset of ra-diative heat transport expected at this membrane size for 50 nm SiN; we do not correct for it here, but a lin-earized radiative extension that reproduces this flatten-ing is derived in the Supplementary Material (Sec. E). Finite laser-spot smoothing affects only the immediate vicinity of the frame and is negligible over the scanned interior. Finally, the doublet (1 , 2) /(2 , 1) is not exactly degenerate on a physical membrane: the small frequency splitting ( 513 vs. 515 kHz) reflects a slight deviation from a perfect square. We therefore assign these two modes from their measured spatial patterns rather than from their frequencies, and the same residual splitting sets the common-mode-rejection floor discussed in Sec. IV C.  
+
+> B. Trampoline
+
+Trampolines provide a clean test of the decomposition 
+
+F = A + B: because the thermal conductance is set by the tethers, the envelope A is nearly independent of the heating position on the pad, so the raw scan directly displays the mode term B. Figure 3 compares four cases: (a) a tether-dominated (fundamental) mode at 40 kHz, (b) and (c) two orthogonal torsional modes at 86 and 
+
+90 kHz, and (d) a pad-localized mode at 138 kHz. The fundamental mode Figure 3(a) shows the pre-dicted flat pad response within a standard deviation of 
+
+σ < 2.3% of the mean response (peak-to-peak 11 .1% ), as the quantitative measure of a featureless pad. The teth-ers constrain and define the thermal conductance, and all absorbed heat must exit through them; since each tether relaxes only in proportion to its mean temperature, the response is insensitive to where on the pad the heat is deposited. The two torsional maps Figure 3(b) and (c) are clearly distinct, with mutually orthogonal symmetry axes. These patterns can be understood by picturing the trampoline as two crossed strings (fibers) connected by a central pad: for each torsional mode one string undergoes a bending motion while the orthogonal string follows in torsion. Within the fiber picture the responsivity is then expected to increase when the bending string is heated and to decrease when the torsional string is heated, con-sistent with the observed sign structure. The pad-localized mode Figure 3(d) shows a single cen-tered, circularly-symmetric feature that is visible directly in the raw scan without any envelope correction. The flat pad response A makes the mode-dependent term B ap-pear without any data processing.  
+
+> C. Differential mode signals
+
+Dual-mode common-mode subtraction cancels corre-lated noise and parameter variations experienced by both tracked modes, while a differential signal survives [14, 15]. An ideal photothermal mode pair, therefore, maximizes the differential responsivity to the localized signal while equally coupling to the same thermal bath, temperature, and environmental fluctuations. Figure 4 shows the dif-ferential maps for membrane and trampoline mode pairs normalized to a common reference, which is the maxi-mal responsivity obtained at the center of the respective fundamental modes. For the square membrane, the maximal differential sig-nal is obtained in the membrane center for the (1,1)/(2,2) mode pair, reaching 20% signal strength compared to the (1,1) mode alone (Fig. 4a). The (1,2)/(2,1) doublet provides a lower differential signal of approximately 10% (Fig. 4c). However, the two mode frequencies typically are close and can overlap in the case of a degeneracy, making simultaneous tracking of both challenging. In trampolines, while the mode pairs consisting of the fundamental mode (common reference) and a torsional or localized pad mode show a differential signal of up to 50% (Fig. 4d&e), the orthogonal torsional mode pair produces a differential signal larger than the common reference (Fig. 4f). The potential drawback of the lat-ter pair is that the two modes live on orthogonal fibers, whose clamping points to the frame are also orthogonal and will likely experience uncorrelated thermomechanical fluctuations.  
+
+> V. CONCLUSION
+
+The paper derives and experimentally validates aclosed-form model for the position- and mode-dependent photothermal responsivity of tensioned nanomechanical resonators. The key physical idea is a fiber picture: asquare membrane behaves as a grid of independent ten-sile fibers, each relaxing in proportion to its mean tem-perature. This yields an exact decomposition of the re-sponsivity map Fnm = Anm + Bnm , where A is a mode-independent conduction envelope (recovering the mean-temperature framework of Kanellopulos et al. [12]) and 
+
+B is a closed-form mode term that peaks on the antin-odal rows and columns rather than at the antinodes, since fibers, not points, carry the modal strain energy. 60 100 200 300 
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+> y (μm)
+
+(a) 40 kHz    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+
+(b) 86 kHz    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+
+(c) 90 kHz    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+
+(d) 138 kHz    
+
+> 0.0 0.1 0.2 0.3
+
+|Δf|/ f0 (%)    
+
+> 0.0 0.1 0.2 0.3
+
+|Δf|/ f0 (%)   
+
+> 0.0 0.2 0.4
+
+|Δf|/ f0 (%)     
+
+> 0.0 0.1 0.2 0.3 0.4
+
+|Δf|/ f0 (%) 
+
+Figure 3. Photothermal maps of trampoline modes of a trampoline with a window length of Lwindow = 1 mm, a tether length of Ltether ≈ 500 μm and a pad side length of Lpad ≈ 300 μm with a nominal tensile stress of 
+
+σ0 ≈ 40 MPa. Raw relative frequency-response maps ( |∆f |/f 0) over the central pad; no envelope correction is applied, since the tether-dominated thermal conductance makes the conduction background nearly position-independent (unlike the membrane, cf. Fig. 2). (a) Tether-dominated fundamental mode ( 40 kHz). (b, c) The two orthogonal torsional modes ( 86 and 
+
+90 kHz). (d) Pad-localized mode ( 138 kHz). 0.0 0.5 1.0 
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+> y0/L
+
+(a) (1, 1) − (2, 2)   
+
+> 0.0 0.5 1.0
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+
+(b) (1, 1) − (1, 2)   
+
+> 0.0 0.5 1.0
+
+x0/L
+
+> 0.0
+> 0.2
+> 0.4
+> 0.6
+> 0.8
+> 1.0
+
+(c) (1, 2) − (2, 1)    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+> y (μm)
+
+(d) 40 kHz − 138 kHz    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+
+(e) 40 kHz − 86 kHz    
+
+> 0100 200 300
+
+x (μm) 
+
+> 0
+> 50
+> 100
+> 150
+> 200
+> 250
+> 300
+
+(f) 86 kHz − 90 kHz 
+
+> −20
+> −10
+> 0
+> 10
+> 20
+> (yA − yB)/ yref  (%)
+> −5
+> 0
+> 5
+> (yA − yB)/ yref  (%)
+> −10
+> 0
+> 10
+> (yA − yB)/ yref  (%)
+> −20
+> 0
+> 20
+> (yA − yB)/ yref  (%)
+> −50
+> 0
+> 50
+> (yA − yB)/ yref  (%)
+> −100
+> 0
+> 100
+> (yA − yB)/ yref  (%)
+
+Figure 4. Normalized differential relative frequency-response maps for selected membrane and trampoline mode pairs. The relative frequency-response maps ( y = |∆f |/f 0) of two modes ( yA, yB ) are subtracted and normalized by a common reference yref . For the membrane pairs (a–c), yref = max(y (1 ,1) ), the peak (central) response of the (1 , 1) mode. For the trampoline pairs (d–f), yref is the central response of the tether-dominated 40 kHz mode. 
+
+Scanning photothermal measurements on a 500 μm SiN membrane confirm the model for the (1,1), (1,2), (2,1), and (2,2) modes with raw-map correlation r ≥ 0.998 and residuals of 1.0–1.6%, with only the envelope amplitude as a fitted parameter; the dominance of the central con-duction dome even for the (2,2) mode (nodal crossing at the center) is reproduced quantitatively. On trampolines, the tether-limited thermal conductance flattens the en-velope on the central pad, so the mode term is directly visible in raw scans: featureless for the tether-dominated fundamental, structured with orthogonal symmetry axes for the torsional pair, and directly displaying the mode shape for the pad-localized mode. The practical payoff is a design tool for dual-mode common-mode-suppressed photothermal sensing [14]: differential maps identify har-monic pairs, in particular (1,1)/(2,2) membrane and 7the trampoline torsional pairs, as the most promising candidates, with differential signals from ∼20% up to exceeding the fundamental-mode reference. The ideal mode pair for common-mode suppression requires fur-ther study, as it depends on the common coupling of both modes to the relevant noise and fluctuation sources. In that sense, the present maps identify candidates rather than a definitive choice; measuring the correlated fre-quency fluctuations of the candidate pairs is the natural next step. 
+
+ACKNOWLEDGMENTS 
+
+We thank Cindy Regal and Sofia C. Brown from the University of Colorado for the discussions that inspired us to pursue this research. We thank Sophia Schneider for her support in the cleanroom and for fabricating the samples. The research received funding from the Novo Nordisk Foundation under grant no. NNF22OC0077964 - MASMONADE. 
+
+DATA AVAILABILITY 
+
+The scan data and the analysis and stitching code (Sec. F) are available from the corresponding author on reasonable request. 
+
+[1] S. Schmid, L. G. Villanueva, and M. L. Roukes, 
+
+Fundamentals of Nanomechanical Resonators , 2nd ed. (Springer International Publishing, 2023). [2] R. G. West, K. Kanellopulos, and S. Schmid, J. Phys. Chem. C 127 , 21915 (2023). [3] M.-H. Chien, M. Brameshuber, B. K. Rossboth, G. J. Schütz, and S. Schmid, Proc. Natl. Acad. Sci. U.S.A. 
+
+115 , 11150 (2018). [4] S. Yamada, S. Schmid, T. Larsen, O. Hansen, and A. Boisen, Anal. Chem. 85 , 10531 (2013). [5] M. Kurek, M. Carnoy, P. E. Larsen, L. H. Nielsen, O. Hansen, T. Rades, S. Schmid, and A. Boisen, Angew. Chem. Int. Ed. 56 , 3901 (2017). [6] N. Luhmann, R. G. West, J. P. Lafleur, and S. Schmid, ACS Sens. 8, 1462 (2023). [7] J. Timarac-Popovic, J. Hiesberger, E. Sesto, N. Luh-mann, A. Giesriegl, H. Bešić, J. P. Lafleur, and S. Schmid, ACS nano 20 , 11193 (2026). [8] M. Surdu, R. Calmer, J. Timarac-Popović, T. Penn, N. Luhmann, J. Hiesberger, V. Vukićević, E. Alvino Dé-molis, L. Favre, B. Dönmez, et al. , Science Advances 12 ,eaeb2254 (2026). [9] M. Piller, J. Hiesberger, E. Wistrela, P. Martini, N. Luh-mann, and S. Schmid, IEEE Sens. J. 23 , 1066 (2023). [10] C. Zhang, E. K. Yalavarthi, M. Giroux, W. Cui, M. Stephan, A. Maleki, A. Weck, J.-M. Ménard, and R. St-Gelais, APL Photonics 9, 126105 (2024). [11] P. Martini, K. Kanellopulos, S. Emminger, N. Luhmann, M. Piller, R. G. West, and S. Schmid, Commun. Phys. 
+
+8, 166 (2025). [12] K. Kanellopulos, F. Ladinig, S. Emminger, P. Martini, R. G. West, and S. Schmid, Microsyst. Nanoeng. 11 , 28 (2025). [13] P. Sadeghi, M. Tanzer, N. Luhmann, M. Piller, M.-H. Chien, and S. Schmid, Phys. Rev. Appl. 14 , 024068 (2020). [14] S. C. Brown, R. Shaniv, R. Zhang, C. Reetz, and C. A. Regal, Nano Lett. 26 , 2052 (2026). [15] E. Gavartin, P. Verlot, and T. J. Kippenberg, Nat. Com-mun. 4, 2860 (2013). [16] C. Zhang, M. Giroux, T. A. Nour, and R. St-Gelais, Physical Review Applied 14 , 024072 (2020). [17] M. Piller, P. Sadeghi, R. G. West, N. Luhmann, P. Mar-tini, O. Hansen, and S. Schmid, Applied Physics Letters 
+
+117 (2020). [18] S. S. Verbridge, R. Ilic, H. G. Craighead, and J. M. Parpia, Appl. Phys. Lett. 93 , 013101 (2008). [19] H. Bešić, A. Demir, J. Steurer, N. Luhmann, and S. Schmid, Phys. Rev. Appl. 20 , 024023 (2023). 8
+
+## Supplementary Material 
+
+Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators  
+
+> S1. DERIVATION OF THE PHOTOTHERMAL RESPONSIVITY MAP
+
+This section gives the complete, step-by-step derivation of Eq. (2) in the main text, in five steps: (i) first-order frequency perturbation theory, (ii) the steady-state temperature field of a point heat source, (iii) the fiber picture of thermoelastic stress relaxation, (iv) assembly into the responsivity map Fnm , and (v) its exact closed-form decompo-sition. This model was derived with the help of Claude Fable 5 from Anthropic.  
+
+> A. First-order frequency perturbation
+
+For a tension-dominated membrane (bending negligible for σ0 ≳ MPa at these dimensions), the eigenfrequency follows the Rayleigh quotient 
+
+ω2 
+
+> nm
+
+=
+
+Z
+
+σij ∂iϕ ∂ j ϕ dA
+
+Z
+
+ρ ϕ 2 dA, i, j ∈ { x, y }. (S1) Because this expression is stationary with respect to variations of ϕ around an eigenmode, a small prestress pertur-bation σij = σ0δij + δσ ij (r) shifts the eigenvalue to first order without requiring the (also perturbed) mode shape: 
+
+δω ω = 12
+
+R δσ ij ∂iϕ ∂ j ϕ dAσ0
+
+R |∇ ϕ|2 dA . (S2) The stress perturbation is sampled by the mode’s strain density ∂iϕ ∂ j ϕ, not by the displacement ϕ2. For the modes of Eq. (1), 
+
+Z L
+
+> 0
+
+Z L
+
+> 0
+
+|∇ ϕ|2 dx dy = ( a2 + b2) L2
+
+4 , a = nπ L , b = mπ L . (S3)  
+
+> B. Temperature field of a point source
+
+In steady state, with the frame held at T0 and radiation neglected (justified in Sec. S1 G), the temperature rise 
+
+∆T = T − T0 obeys 
+
+−κh ∇2∆T = Pabs δ(x − x0) δ(y − y0), ∆T = 0 on the boundary . (S4) Expanding in the Dirichlet basis sin( pπx/L ) sin( qπy/L ) gives the standard 2D Green’s function 
+
+∆T (x, y ) = 4Pabs 
+
+π2κh 
+
+X
+
+> p,q ≥1
+
+sin pπx L sin qπy L sin pπx 0 
+
+> L
+
+sin qπy 0
+
+> L
+
+p2 + q2 . (S5) This diverges logarithmically at the source (the usual spreading resistance), regularized in practice by the finite laser spot size.  
+
+> C. From temperature to stress: the fiber picture
+
+A tempting but incorrect shortcut : Writing δσ ij (r) = −Eα ∆T (r) δij (“hot spots locally lose tension”) is not in mechanical equilibrium ( ∂j δσ ij ̸ = 0 ). Inserted into Eq. (S2), it predicts the strongest response near the clamped edges, contradicting measured maps, which peak in antinodal regions. Elastic redistribution to restore equilibrium changes the answer qualitatively. 9We instead treat the membrane as a dense grid of tensile fibers along x and y, with uniform tension change per fiber: 
+
+δσ xx (x, y ) = δσ x(y), δσ yy (x, y ) = δσ y (x), δσ xy = 0 , (S6) which satisfies ∂j δσ ij = 0 identically. Appendix A shows this reproduces the exact plane-stress thermoelastic solution in the membrane interior. For a single x-fiber at height y (1D elastic line, fixed ends), static equilibrium requires uniform stress along the fiber. Enforcing zero net elongation ( u(L) − u(0) = 0 ) gives 
+
+δσ x(y) = −Eα ∆T x(y), ∆T x(y) ≡ 1
+
+L
+
+Z L
+
+> 0
+
+∆T (x, y ) d x, (S7) and symmetrically for δσ y (x). This is the essential physics of the whole problem : a fiber’s tension responds only to its mean temperature, so heating a point (x0, y 0) relaxes predominantly the one row and one column of fibers passing through it. 
+
+D. Assembly: which fibers does the mode load? 
+
+Inserting Eq. (S6) into the numerator of Eq. (S2) and grouping by fibers gives 
+
+δω ω = a2R L 
+
+> 0
+
+δσ x(y) sin 2(by ) d y + b2R L 
+
+> 0
+
+δσ y (x) sin 2(ax ) d xσ0 (a2 + b2) L . (S8) Here L 
+
+> 2
+
+a2 sin 2(by ) is the modal tensile energy carried by the x-fiber at height y: the fibers running through the displacement antinodes carry the most modal strain energy. Combined with Eq. (S7), the frequency responds most when heat lands on the most-loaded fibers — i.e. on antinodal rows or columns, even though the exact antinode itself is a point of zero local strain. Evaluating the two integrals in Eq. (S8) using Eqs. (S7) and (S5) (elementary trigonometric integrals, given in full in Appendix C) and using a2 + b2 = π2(n2 + m2)/L 2 yields the master result already stated in the main text: 
+
+δω nm 
+
+ωnm 
+
+(x0, y 0) = − EαP abs 
+
+2σ0κh Fnm (x0, y 0), (S9) 
+
+Fnm (x0, y 0) = 64 n2m2
+
+π4 (n2 + m2)
+
+X 
+
+> p,q odd
+
+sin pπx 0 
+
+> L
+
+sin qπy 0
+
+> L
+
+p q (p2 + q2)
+
+ 14m2 − q2 + 14n2 − p2
+
+
+
+. (S10) 
+
+Fnm is dimensionless, symmetric under (n, x 0) ↔ (m, y 0), vanishes on the boundary, and its series converges absolutely (terms decay as p−3q−3, so a 9 × 9 truncation is already accurate to the percent level). Fnm > 0 everywhere: heating always lowers the frequency, as expected for α > 0.
+
+E. Exact decomposition: envelope, mode term, edge windows 
+
+The series in Eq. (S10) hides simple structure, exposed by two Fourier-sum lemmas (proofs in Appendix B): 
+
+Oscillatory sum: X 
+
+> qodd
+
+sin qθ q (4 m2 − q2) = π
+
+8m2 sin 2(mθ ).
+
+Monotone sum: For c > 0: X 
+
+> podd
+
+sin pθ p (p2 + c2) = π
+
+4c2 wc(θ), with window function wc(θ) ≡ 1 − cosh[ c(θ −
+
+π/ 2)] / cosh( cπ/ 2) , which equals 1 in the interior and drops to 0 within a boundary layer of width ∼ 1/c .Using the partial-fraction identity 1(p2+q2)(4 m2−q2) = 1
+
+> p2+4 m2
+
+h 1 
+
+> p2+q2
+
++ 14m2−q2
+
+i
+
+(and its counterpart), Fnm splits 
+
+exactly into a smooth part Anm and a mode part Bnm , Fnm = Anm + Bnm . Lemmas S1 E and S1 E evaluate the mode part in closed form: 
+
+Bnm (x0, y 0) = 12π2(n2 + m2)
+
+ n2
+
+m2 sin 2 mπy 0
+
+L w2m
+
+ πx 0
+
+L
+
+
+
++ m2
+
+n2 sin 2 nπx 0
+
+L w2n
+
+ πy 0
+
+L
+
+
+
+. (S11) 10 In the interior ( w → 1) this is a separable stripe pattern ( not the product ϕ2
+
+> nm
+
+), anisotropically weighted by (n/m )±2,maximal on antinodal rows/columns, with amplitude decreasing as 1/(n2 + m2). The windows switch the pattern off within ∼ L/ 2πm of the edges, enforcing F = 0 on the frame. The remaining smooth part, 
+
+Anm (x0, y 0) = 64 n2m2
+
+π4(n2 + m2)
+
+X 
+
+> p,q odd
+
+sin pπx 0 
+
+> L
+
+sin qπy 0
+
+> L
+
+pq (p2 + q2)
+
+ 1
+
+p2 + 4 m2 + 1
+
+q2 + 4 n2
+
+
+
+, (S12) is compared with the exact mean temperature of the membrane, κh Pabs ⟨∆T ⟩ (x0, y 0) = 16 
+
+> π4
+
+P  
+
+> p,q odd sin( pπx 0/L ) sin( qπy 0/L )
+> pq (p2+q2)
+
+.For the low (p, q ) that dominate both series, the bracket in Eq. (S12) tends to (n2 + m2)/4n2m2, matching the mean-temperature prefactor exactly, so Anm ≈ κh Pabs ⟨∆T ⟩ (x0, y 0) up to a mode-dependent correction that shrinks with mode order (e.g. ≤ 4.5% for (2 , 2) , numerically verified). Physically: the frequency responds to the strain-weighted mean temperature, which approaches the plain mean temperature as the mode order increases relative to the temperature field’s spatial variation. 
+
+Remark: evaluated at the membrane center, the expression for ⟨∆T ⟩ above gives the classical torsion-function value 
+
+0.07367 , i.e. an effective conductance G = Pabs / ⟨∆T ⟩max ≈ 4πκh , consistent with the point-source MTF conductance of a drumhead as in Ref. [K. Kanellopulos, F. Ladinig, S. Emminger, P. Martini, R. G. West, and S. Schmid, Microsyst. Nanoeng. 11 , 28 (2025)]  
+
+> F. The (2,2) map: numerical example
+
+As a concrete example, we evaluate F22 from Eq. (S10) (odd indices up to 399, converged to < 10 −8) at three representative positions; the values and their flat-field ratios are listed in Table S1.                      
+
+> Table S1. Fiber-model responsivity F22 and its flat-field ratio at three representative heating positions on an ideal square membrane. center (0 .5,0.5) antinode (0 .25 ,0.25) saddle (0 .5,0.25)
+> F22 (full) 0.0704 0.0543 0.0605
+> flat-field ratio F22 /A env −1−4.5% +19 .9% —
+
+Three observations: 1. The raw map is dominated by the conduction dome: on an ideal square membrane, the global maximum of F22 
+
+lies at the center — a nodal crossing of the (2 , 2) mode — because the envelope Eq. (S12) peaks there. The mode structure is only a ±20% modulation on top of this dome. 2. Flat-fielding (dividing the raw map by a reference map with no mode structure, e.g. a rigid-pad or torsional mode) reveals the mode term directly and simultaneously cancels the local absorptance a(r0).3. For trampoline resonators, where the thermal envelope is dominated by a position-independent tether conduc-tance, the dome flattens and the mode term is directly visible in the raw scan — the regime relevant to the trampoline measurements in this work.  
+
+> G. Assumptions and limits
+
+Sanity checks: (i) every term of Eq. (S10) vanishes at x0, y 0 ∈ { 0, L } (heating the frame does nothing); (ii) in the 1D (string) limit, the responsivity is ∝ ∆T (x0) with no mode-shape contrast; (iii) averaging Eq. (S10) over (x0, y 0)
+
+reproduces the strain-weighted uniform-heating responsivity, as required by linearity. 
+
+Assumptions and their validity range: 
+
+1. Linearity: requires Eα ∆T ≪ σ0; excludes the buckling-transition regime. 2. Quasi-static scanning: requires dwell time per pixel ≫ thermal time constant; otherwise each Fourier component in Eq. (S5) acquires a low-pass factor γpq /(γpq + iω ).3. Point-like spot: a Gaussian spot of 1/e 2 radius w0 multiplies the (p, q ) term by ≈ exp −π2(p2 + q2)w20 /(8 L2),smoothing the mode term Eq. (S11) on scale w0 — negligible for w0 ≪ L/ 2πm .11 4. No radiation: valid for κh/L 2 ≫ 8εσ SB T 30 ; for 50 nm SiN this begins to fail at millimeter side lengths. 5. Fiber model: exact for the oscillatory (mode) response in the interior (Appendix A), but Poisson coupling is absent from the uniform component, giving the envelope amplitude a systematic O(30%) band for SiN between the ν-free fiber result and the fully constrained biaxial limit. When fitting measured maps, we therefore float the envelope amplitude and fix the mode-term shape , which is ν-free in the exact treatment as well. 
+
+> Appendix A: Exactness of the fiber picture in the interior
+
+For a Fourier component T (r) = Tqeiq·r of the temperature field, plane-stress thermoelasticity with equilibrium 
+
+ˆqj σij = 0 gives 
+
+δσ ij (q) = −Eα T q
+
+ δij − ˆqi ˆqj
+
+. (S1) Each temperature component relieves stress only transverse to its own wavevector — precisely the fiber statement: a temperature variation along x cannot modulate σxx , but fully relieves σyy of the crossing fibers in proportion to the mean over their length. Projecting Eq. (S1) onto the coordinate axes and averaging reproduces Eq. (S7) exactly. Furthermore, the diagonal Fourier components of the mode strain tensor at (±2a, ±2b) — which would generate a term ∝ − ϕ2(x0, y 0) in the naive local model — contract with the projector in Eq. (S1) to exactly zero; only the stripe components at (±2a, 0) and (0 , ±2b) survive, reproducing the separable structure of Eq. (S11). The fiber model and the exact plane-stress solution agree term by term in the interior; they can differ at O(1) only in the boundary layers (the windows wc) and in the uniform component (Sec. S1 G). 
+
+> Appendix B: Proofs of Lemmas 1 and 2
+
+Lemma 1: since ( d2 
+
+> dθ2
+
++ 4 m2) sin qθ = (4 m2 − q2) sin qθ , the sum g(θ) = P  
+
+> qodd
+
+sin( qθ )/[q(4 m2 − q2)] satisfies 
+
+g′′ + 4 m2g = P  
+
+> qodd
+
+sin( qθ )/q = π/ 4 (square-wave series). The general solution consistent with g(0) = 0 and symmetry about θ = π/ 2 is g(θ) = π 
+
+> 8m2
+
+sin 2(mθ ).
+
+Lemma 2: analogously, with (c2 − d2 
+
+> dθ2
+
+), the sum P  
+
+> podd
+
+sin( pθ )/[p(p2 +c2)] satisfies −g′′ +c2g = π/ 4; the symmetric solution vanishing at θ = 0 , π is g(θ) = π
+
+> 4c2
+
+1 − cosh( c(θ − π/ 2)) / cosh( cπ/ 2) .
+
+> Appendix C: Elementary integrals used in the assembly step
+
+Using 1
+
+> L
+
+R L 
+
+> 0
+
+sin( pπx/L ) d x = 2 
+
+> pπ
+
+for odd p (zero for even p), the fiber-mean temperature is 
+
+∆T x(y) = 8Pabs 
+
+π3κh 
+
+X 
+
+> podd
+> q≥1
+
+sin qπy L sin pπx 0 
+
+> L
+
+sin qπy 0
+
+> L
+
+p (p2 + q2) . (S1) Using sin 2(mπy/L ) = 12 [1 − cos(2 mπy/L )] and product-to-sum identities, the overlap integral for odd q (even q
+
+vanishes) is 
+
+Iq ≡
+
+Z L
+
+> 0
+
+sin qπy L sin 2 mπy L dy = Lπ
+
+4m2
+
+q (4 m2 − q2) , (S2) which has no resonant term since q is odd and 2m even, and is largest for small odd q (the slowly varying temperature components couple best to the modal loading). 
+
+> Appendix D: Numerical evaluation
+
+The responsivity maps were produced by direct summation of Eq. (S10) with odd p, q ≤ 399 (vectorized as a matrix product ST 
+
+> p
+
+CS q ; ∼ 0.1 s on a laptop). The decomposition F = A + B using Eqs. (S11) and (S12) was verified to 
+
+4 × 10 −9 (truncation level); the closed form Eq. (S11) matches the series to five digits. A self-contained Python script implementing this evaluation accompanies the Supplementary Material. 12 
+
+> Appendix E: Linearized radiative extension of the model
+
+The main-text model neglects radiative heat loss. Here we show how radiation enters and why it produces only a small, smooth flattening of the response for the membranes studied here. Adding radiative loss from both faces, linearized about the frame temperature T0 (valid for ∆T ≪ T0), the steady-state heat equation Eq. (S4) becomes screened, 
+
+−κh ∇2∆T + 8 εσ SB T 30 ∆T = Pabs δ(x − x0) δ(y − y0), (S1) with ε the emissivity and σSB the Stefan–Boltzmann constant. In the Dirichlet basis this shifts each denominator of the temperature Green’s function Eq. (S5) by a constant, 
+
+1
+
+p2 + q2 −→ 1
+
+p2 + q2 + γ , γ ≡ 8 εσ SB T 30 L2
+
+π2 κh . (S2) Because every downstream step (fiber averaging, strain-overlap integrals) is linear in the temperature field, the same substitution carries through unchanged into Fnm , Anm and Bnm : radiation is implemented by the single replacement Eq. (S2). The effect is hierarchical. The screening suppresses each Fourier component by 1/[1 + γ/ (p2 + q2)] , so it acts most strongly on the lowest, broadest component — the one that dominates the conduction dome — and negligibly on the sharp, high-order components that carry the mode-specific structure. For the present devices ( ε = 0 .05 , T0 = 295 K, 
+
+L = 500 μm, h = 50 nm, κ ≈ 3 W m −1K−1) one finds γ ≈ 0.10 , i.e. a ∼ 5% suppression of the (1 , 1) temperature component and ≲ 1% for higher components. Radiation therefore flattens the envelope A at the few-percent level while leaving the mode term B essentially unchanged; the exact decomposition F = A + B survives, with Lemma 1 unaffected and the window parameter in Lemma 2 shifted from 2m to p4m2 + γ — a sub-percent change. This magnitude and shape match the ∼ 1% dome flattening seen in the data (main text), which is why we retain the conduction-only model in the main text and treat radiation only as this small, understood correction. 
+
+> Appendix F: Data processing: tile stitching and mode-term extraction
+
+The full-membrane maps of Fig. 2 are assembled from five overlapping 300 × 300 μm scan tiles per mode (a central tile, 00, and four corner tiles, 01–04), each a regular 21 × 21 grid at 15 μm pitch. The physical stage offset between tiles is not recorded in the data files, so the tiles are registered against the fiber model itself. 
+
+Tile averaging and artifact rejection. Where a tile was scanned more than once, the repeats are averaged before registration. One scan was excluded: an early 515 kHz corner-04 scan showed a lock-in/mode-hopping artifact (a spurious maximum of ∼8 × 10 5 Hz against a physical signal ceiling of ∼1800 Hz, and a correlation of only 0.42 with the valid repeat of the same tile — inconsistent with measurement noise), and was discarded in favour of the clean scan. 
+
+Center placement. The central tile 00 defines the coordinate frame and is never geometrically adjusted; its own scan window, however, need not be centerd on the membrane. Since the 325 kHz (1 , 1) mode has a single antinode at the geometric center, the membrane center is located by fitting the theoretical (1 , 1) responsivity — the diffusion-weighted shape of Eq. (S10), not a naive ϕ2 profile — to all ∼ 441 points of the tile-00 scan, with the center offset, an overall amplitude and a constant offset as free parameters. This uses the full scan rather than a single-pixel maximum, which would be limited by the 15 μm grid pitch. 
+
+Corner-tile registration. Each corner tile is placed by a translation (δx, δy ) that maximizes agreement with the already-placed tiles in the overlap region; the scan-window size is fixed, so no scaling of coordinates is applied. Asmall multiplicative correction (constrained to ±5% ) is solved in closed form to absorb frequency-calibration drift between scan sessions. Because all four modes were scanned at the same physical stage positions, the translation must be common to all modes: it is fitted independently per mode, the four values are checked for consistency (their spread is a diagnostic for a questionable placement), and each tile is then frozen at the mode-averaged position with only the per-mode amplitude refit. Registration quality is quantified by the Pearson correlation and RMS residual in each overlap region. 
+
+Merging. All five tiles’ points are concatenated into a single point cloud and interpolated onto one regular grid per mode (Delaunay triangulation), so overlapping tiles are blended rather than one selected over another. The map is cropped to the nominal 500 × 500 μm membrane. We use the nominal L = 500 μm throughout the model; the fitted membrane size agrees with this to within ∼2% , and the mode-term shape is insensitive to a change of this order. 
+
+Mode-term extraction. Each stitched raw map is normalized by the resonance frequency to give |δf |/f 0. A single overall amplitude k is fitted against the theoretical mode shape Fnm (least squares over all valid grid points), after 13 which the mode term is displayed as Bnm /A max = ( |δf |/f 0)/(k A max ) − Aenv /A max , i.e. the envelope-subtracted response normalized by the single peak-envelope constant Amax (Sec. II). Only this one amplitude is floated; the spatial shape is parameter-free. Normalizing by the constant Amax rather than pointwise by Aenv avoids the noise amplification of a ratio near the clamped edge, where Aenv → 0, and preserves the true amplitude of the mode contribution across the map. The absorbed-power calibration and any per-pixel absorptance cancel in this construction up to the overall constant k.

@@ -1,0 +1,1704 @@
+Title: 2607.25102v1.pdf
+
+URL Source: https://arxiv.org/pdf/2607.25102v1
+
+Published Time: Wed, 29 Jul 2026 00:17:40 GMT
+
+Number of Pages: 42
+
+Markdown Content:
+1
+
+# Identifying Contact Barrier Types in Few -Layer MoS₂ Devices 
+
+# Using Correlative IV, LBIC, and Bias -Dependent KPFM 
+
+Ariane Ufer 1,2 , Zeinab Eftekhari 3, Benjamin M ay er 1, Hendrik Lambers 1,2 , Hubert J. Krenner 1,
+
+Rebecca Saive 3,* , Ursula Wurstbauer 1,2,*  
+
+> 1
+
+Institute of Physics, University of Münster, Münster, Germany  
+
+> 2
+
+Center for Soft Nanoscience (SoN), University of Münster, Münster, Germany  
+
+> 3
+
+MESA+ Institute for Nanotechnology, University of Twente, Enschede, The Netherlands 
+
+*Corresponding authors: wurstbauer@uni -muenster.de; r.saive@utwente.nl 
+
+Abstract 
+
+Electrical contacts between metals and two -dimensional (2D) semiconductors such as 
+
+molybdenum disulfide (MoS₂) critically govern device performance, yet their microscopic nature 
+
+remains difficult to disentangle using any single characterization technique.  Here we present an 
+
+integrated experimental framework that combines current –voltage (IV) characterization, laser 
+
+beam induced current (LBIC) mapping, and bias -dependent Kelvin probe force microscopy 
+
+(KPFM) to comprehensively resolve the contact properties o f few -layer MoS₂ -based two -terminal 
+
+devices under ambient conditions. IV measurements deliver macroscopic transport characteristics 
+
+as a function of bias voltage and illumination conditions. LBIC maps the local photocurrent 
+
+response with micrometer spatial  resolution, revealing the position and nature of internal electric 
+
+fields at MoS₂ –metal interfaces. KPFM, operated under an applied static bias rather than in the 
+
+conventional work -function mode, provides nanoscale -resolved potential distributions that 
+
+qu antify the relative magnitudes and spatial locations of contact barriers. We apply this framework 2
+
+to three representative devices  — one exhibiting ohmic -like and two exhibiting diode -like contact 
+
+behavior  — and demonstrate that the combined analysis can unambiguously identify whether the 
+
+dominant barrier is of Schottky or tunnel type and determine the  asymmetry between the two 
+
+contacts. We further demonstrate that thermal annealing significantly reduces the total resistance, 
+
+while contact barriers remain the dominant source of resistance. The methodology is directly 
+
+transferable to other 2D semiconducto r–metal systems and provides a practical yet comprehensive 
+
+route toward a quantitative microscopic understanding of 2D device contacts. 
+
+Keywords:  molybdenum disulfide, MoS₂, electrical contacts, Schottky barrier, tunnel barrier, 
+
+Kelvin probe force microscopy, laser beam induced current, photothermoelectric effect, 2D 
+
+semiconductors, transition metal dichalcogenides 3
+
+1. Introduction 
+
+Two -dimensional (2D) semiconductors, and in particular transition metal dichalcogenides 
+
+(TMDCs) such as molybdenum disulfide (MoS₂), have attracted sustained research interest over 
+
+the past  15 years  owing to their exceptional and thickness -tunable electronic and optical properties, 
+
+including direct band gaps in the monolayer limit, strong light –matter coupling, and mechanical 
+
+flexibility that is unattainable in bulk semiconductors. 1–3 These characteristics position MoS₂ and 
+
+related TMDCs as compelling channel materials for next -generation field -effect transistors 
+
+(FETs), photodetectors, and photovoltaic devices. 4,5  Translating these intrinsic material properties 
+
+into high -performance devices, however, critically depends on the quality of the electrical contacts 
+
+between the 2D semiconductor and the metal electrodes  — a challenge that has proven to be more 
+
+complex tha n conventional bulk -semiconductor counterparts. 6–8
+
+Unlike conventional bulk semiconductors, 2D materials are free of surface dangling bonds and 
+
+form van der Waals (vdW ) interfaces with deposited metals, giving rise to a rich and often 
+
+counterintuitive contact phenomenology. 1,6,9,10  Schottky barriers, Fermi -level pinning, and tunnel 
+
+barriers can all be present simultaneously, and their relative contributions depend sensitively on 
+
+parameters such as flake thickness, contact metal work function, interface cleanliness, fabrication 
+
+route , and post -processing treatments. 6,7,11 –16  Fermi -level pinning near the conduction band edge 
+
+of MoS₂, for instance, is now understood to be nearly universal across a wide range of contact 
+
+metals, 11,17  yet the degree of pinning and its consequences for device resistance vary enormously 
+
+between samples. 10,17  This near -universal pinning makes the absolute barrier height difficult to 
+
+predict from metal work functions alone, motivating the need for device -level characterization. 
+
+Layer thickness plays a particularly decisive role: five -layer MoS₂ has been identif ied as an optimal 4
+
+thickness for minimizing contact resistance, 10  while mono - and bilayer devices are dominated by 
+
+substantially larger barriers. 7,10,12 
+
+Extensive experimental effort has been devoted to characterize MoS₂ –metal contacts using a 
+
+variety of individual techniques, including temperature -dependent IV measurements, transfer -
+
+length methods, photoemission spectroscopy, acousto -electric transport me asurements and 
+
+scanning probe approaches. 6–8,11,13 –28  Kelvin probe force microscopy (KPFM) has been employed 
+
+to map work functions and surface potentials at 2D –metal interfaces, providing insight into band 
+
+alignment and Fermi -level pinning. 12,23,24,29  Scanning photocurrent measurements, also known as 
+
+laser beam induced current (LBIC) mapping, have revealed the spatial distribution of internal 
+
+electric fields and identified the dominant photocurrent generation mechanisms (photovoltaic, 
+
+photothermoelec tric (PTE), and photoconductive) at individual junctions. 5,9,30  Despite these 
+
+efforts, a comprehensive picture of the interplay between Schottky barriers, tunnel barriers, and 
+
+Fermi -level pinning at individual MoS₂ –metal junctions remains elusive, in part because no single 
+
+technique captures both the macroscopic trans port behavior and the microscopic spatial 
+
+distribution of barriers within a single device. 5,6,14 
+
+Contact optimization strategies , including the selection of low -work -function metals, edge -contact 
+
+geometries, surface doping, strain engineering, and thermal annealing have yielded significant 
+
+improvements in individual devices, yet a predictive understanding of which barrier type 
+
+domin ates in a given sample, and how it responds to a given treatment, remains largely lacking. 6– 
+
+> 8,16,18,24,28,29,31 –35
+
+This gap is particularly consequential for the rational design of low -resistance 
+
+ohmic contacts, which is widely recognized as one of the key bottlenecks preventing 2D 
+
+semiconductor devices from reaching their theoretical performance limits. 6,14,36,37 5
+
+Addressing this need requires a combination of complementary experimental approaches that 
+
+captures both the macroscopic transport behavior and the microscopic spatial distribution of 
+
+barriers within a single device, without requiring cryogenic conditions,  ultra -high vacuum, or gate 
+
+electrodes. In this work, we present such a framework, combining IV characterization, LBIC 
+
+mapping, and bias -dependent KPFM measurements performed entirely under ambient conditions 
+
+with and without illumination. The key methodolo gical advance over prior work lies in the use of 
+
+KPFM under illumination and an applied static bias voltage 38 , rather than in the conventional zero -
+
+bias work -function mapping mode 5,7,23,24,29 . Under an applied static bias voltage, KPFM directly 
+
+maps the spatially resolved voltage drop across the device and thereby quantifies the relative sizes 
+
+of individual contact barriers without assumptions about the band structure. 
+
+We demonstrate the framework on three few -layer MoS₂ devices: one five -layer sample with 
+
+ohmic -like contact behavior (O1), one bilayer sample with diode -like behavior (D1), and one 
+
+bilayer sample with diode -like behavior studied before and after thermal an nealing (D2). By 
+
+analyzing the results of all three methods in combination, we can (i ) determine whether the 
+
+dominant contact barrier is of Schottky or tunnel type, (ii) identify the relative magnitudes of the 
+
+barriers at the two contacts, and (iii) track how thermal annealing modifies the individual barrier 
+
+contributions. The methodology  is directly applicable to other 2D semiconductor –metal systems, 
+
+offering a practical route toward the quantitative microscopic understanding needed to guide 
+
+rational contact engineering in 2D devices. 
+
+2. MoS₂ Devices and Measurement Methods 
+
+The investigated devices consist of a Si/SiO₂ or glass substrate with two physical vapor -deposited 
+
+Cr/Au contacts. Few -layer MoS₂ flakes, micromechanically exfoliated from bulk crystals, are 
+
+transferred onto the contacts by a dry viscoelastic stamping tech nique. 33  A schematic of the device 6
+
+structure is shown in Figure 1. The layer thickness of the flakes is characterized by Raman 
+
+spectroscopy. 34  Layer thickness strongly influences the contact resistance: five -layer MoS₂ 
+
+provides near -optimal contact resistance, whereas mono - and bilayer flakes exhibit substantially 
+
+larger barriers. 7,10 –12  We therefore fabricated and studied one sample with a five -layer MoS₂ flake 
+
+(ohmic -like behavior, O1) and two bilayer flakes (diode -like behavior, D1 and D2). Figure 1 
+
+summarizes the three complementary measurement methods. The chosen geometry with the Mo S₂ 
+
+flake transferred on top of the contacts allows simultaneous KPFM access to the flake region 
+
+between the contacts and on top of them. 
+
+All measurements are performed under ambient conditions. IV measurements provide a
+
+macroscopic overview of transport properties. IV curves are recorded in the dark and under global 
+
+laser illumination (E Laser  = 2.33 eV, above the MoS₂ band gap) at laser powers of 20, 40, 60, 80, 
+
+and 100  μW. The defocused illumination does not allow for an accurate estimation of the power 
+
+density. Assuming a laser spot size of roughly 50  μm in diameter, the resulting power density for 
+
+100  μW laser power excitation is in the range of  𝐼 
+
+ 5 𝑊  𝑐𝑚 2⁄ . LBIC measurements reveal the 
+
+local photocurrent response on a micrometer scale. A focused laser spot (E Laser  = 2.33 eV, P = 100 
+
+μW, diameter ~1  μm, power density of  𝐼  < 1 × 10 4 𝑊  𝑐𝑚 2⁄ ) is scanned across the sample in 2 
+
+μm steps; the photocurrent and reflected laser intensity are recorded simultaneously at each 
+
+position. 5,35,39  Maps with and without applied bias voltage were recorded; maps at non -zero bias 
+
+are corrected for the dark current. 
+
+KPFM is performed in frequency -modulation sideband mode. The tip scans the sample and records 
+
+the contact potential difference (CPD) at each position. A static bias is applied to the sample with 
+
+one contact set to ground (always the right contact in the pr esented micrographs associated with 
+
+KPFM). Each scan line is measured twice: in the forward direction (with the applied bias) and in 7
+
+the backward direction at 0 V. 38  Subtracting the 0 V CPD data from the biased CPD data yields 
+
+the effective potential distribution induced by the applied voltage, removing contributions from 
+
+the sample work function and surface effects. In this way the bias -induced surface voltage profil e
+
+is recorded. Optionally, the MoS₂ flake can be globally illuminated during KPFM (E Laser  = 1.95 
+
+eV, P = 5 mW ), with photon energy above the direct optical band gap of bilayer MoS₂ (~1.8 –1.9 
+
+eV) given by the electronic band gap reduced by the exciton binding energy. 2 The lateral resolution 
+
+of  sideband  KPFM is ultimately limited by the tip apex radius (~25 nm); we would like to stress 
+
+that beyond the scope of the current work sub -10 nm resolution has been demonstrated under 
+
+optimized UHV conditions. 40,41  An overview of the investigated devices and schemata of the setup 
+
+are provided in the supplemental materials. 
+
+3. Results 
+
+3.1 IV Characteristics 
+
+Figure 2a,b shows the IV curves of samples O1 and D1 in the dark and under illumination. Sample 
+
+O1 exhibits linear, symmetric (ohmic) characteristics independent of illumination, with a 
+
+resistance at U bias  = ±0.2 V of R O1 (±0.2 V) = 0.3 M Ω reflecting highly symmetric, low -resistance 
+
+contacts. Illumination causes only a marginal current increase, consistent with low -barrier, high ly 
+
+transparent contacts. Sample D1, by contrast, shows strongly asymmetric, saturating IV 
+
+characteristics with R D1 (+0.2 V) = 32.8 M Ω and R D1 (−0.2 V) = 57.1 M Ω in the dark. Illumination 
+
+increases the current by more than a factor of 40 at an illumination power of 100  μW and modifies 
+
+the asymmetry ratio, indicating the presence of significant asymmetric contact barriers that are 
+
+sensitive to photogenerated carriers  (see also supplemental materials for further details) .
+
+3.2 LBIC Mapping 8
+
+LBIC maps at 0 V bias are shown in Figure 2c,d. For sample O1, symmetric positive and negative 
+
+local beam induced photocurrent signals appear mainly on the MoS₂ flake above the left and right 
+
+contact directly next to the contact edge. The positions of the  photocurrent signals, located above 
+
+the metallic contact pads rather than in the gap between them, are characteristic of the 
+
+photothermoelectric  (PTE) effect as the dominant photocurrent mechanism. In the PTE effect a 
+
+local temperature gradient at the metal –semiconductor interface under focused illumination drives 
+
+a thermoelectric current via  the  Seebeck effect. This temperature gradient is strongest directly at 
+
+the contact edge, where the high thermal conductivity of the metal creates a significant laser 
+
+induced temperature gradient with the MoS 2 flake. 5,9  A photovoltaic contribution, which would 
+
+arise from a space charge region (SCR) generating an in -plane electric field extending into MoS 2
+
+in the gap, is not observed indicating low Schottky barriers. The overall LBIC results observed for 
+
+sample O1 are consistent with symmetric, low -barrier , in agreement with the KPFM findings 
+
+(Figure 3 a,b) as discussed in detail below .
+
+For sample D1, a negative photocurrent signal is observed predominantly on the flake over the left 
+
+half of the gap. This spatial distribution is a hallmark of the photovoltaic effect driven by an 
+
+internal electric field induced by the SCR  at the left contact , and indicating the presence of a 
+
+Schottky barrier that is presumably in coexistence with a less significant tunnel barrier due  to  a
+
+vdW gap  at the MoS 2 - gold interface .5,9,30  The asymmetry of the LBIC signal with respect to left 
+
+and right contacts mirrors the asymmetry of the IV characteristics  and is consistent with the 
+
+findings in KPFM (Figure 3c,d) as discussed below . It is worth mentioning that the total 
+
+photocurrent magnitudes for sample O1 are notably higher than for D1, consistent with the order -
+
+of -magnitude difference in total resistance deduced from IV measurements. 9
+
+LBIC maps taken at ±0.1 V bias (Figure 3e –h) further demonstrate the polarity -dependence of the 
+
+local  photocurrent  patte rn.  The dominant photo current  contribution  for sample O1  (Figure 3 e,f) 
+
+is under the contact  region and does not change with polarity of the bias voltage  consistent with 
+
+Seebeck -driven  photothermoelectric effect (PTE) .5,9  A weaker polarity dependent contribution 
+
+exist along the whole flake in the channel region between the contact and is assigned to  the 
+
+photoconductive effect due to photo -generated electron -hole pairs effectively enhancing the free 
+
+charge carrier density and consequently enhancing the channel conductivity under illumination. 5
+
+Bias dependent  LBIC  maps taken for s ample D1 ( Figure 3g,h) show a polarity dependent 
+
+maximum of the photocurrent inside the channel region that is closer to the left contact for negative 
+
+bias and rather in the center for positive bias with the right contact grounded. This characteristic 
+
+asymmetric pat tern caused by  internal fields induced by SCR point s towards asymmetric Schottky -
+
+contacts with larger SCR on the left compared to the right contact as already indicated by the diode 
+
+like IV -behavior  (further measurements and schematic of the device structure are provided in the 
+
+supplemental materials ).
+
+We note that LBIC measurements alone cannot unequivocally distinguish between Schottky -type 
+
+barrier and a tunnel barrier an d particularly cannot rule -out the existence of a tunnel barrier 
+
+introduced by the van der Waals gap between the metal contact and MoS₂. However the existence 
+
+of  an  internal field induced by the SCR can be unambiguously identified by the position of the 
+
+maximum of the photocurrent amplitude in the gap together with the polarity dependence of the 
+
+LBIC  maps. The LBIC and IV characteristics together suggest the existence of a Schottky barrier. 
+
+The rather high contact resistance likely point s toward an additional tunnel barrier contributing to 
+
+the overall LBIC and IV signals; their individual contributions are qualitatively resolved by the 
+
+complementary KPFM analysis below. 10 
+
+3.3 Bias -Dependent KPFM 
+
+Bias -induced surface voltage profile lines extracted from KPFM measurements at U bias  = ±0.3 V 
+
+for sample O1 and at U bias  = ±0.5 V for sample D1 are shown in Figure 3a –d. Sample O1 shows a 
+
+nearly linear potential drop across the flake, independent of voltage polarity and illumination, 
+
+confirming symmetric ohmic contacts with negligible barriers. Sample D1 exhibits abrupt, 
+
+as ymmetric potential drops concentrated at the contact edges, strongly dependent on voltage 
+
+polarity. While for positive bi as voltages the drop at the left and right contact have similar 
+
+magnitude, there is a significant polarity dependence. For negative bias voltages, the majority of 
+
+the bias drops at the left contact. This  polarity dependence at the left contact is characteristic of a 
+
+Schottky barrier that is alternately reverse - and forward -biased. 13  The smaller, polarity -
+
+independent component at the right contact is  attributed  to  a tunnel barrier again consistent with 
+
+the absence of a SCR induced photovoltaic photocurrent in LBIC signals for zero bias voltage. 
+
+Under illumination the  relative  voltage drop observed in KPFM at the left contact is consistently 
+
+increased for positive and negative bias while it is reduced for the right contact. In addition, there 
+
+is an increased voltage drop across the MoS 2 channel under illumination compared to the dark 
+
+measurements  for positive voltage (Figure 3 c) and a reduction for negative bias (Figure 3 d) . Light 
+
+exposure modifies the potential distribution , which is experienced differently by electrons and 
+
+holes, resulting in the observed complex, polarity -dependent asymmetric  behavior .
+
+Simultaneously , light exposure impacts  the conductivity due to photo -induced free charge carriers 
+
+reducing the overall resistivity of the material both affecting the transport across the contacts and 
+
+the  MoS 2 channel e.g. by photo -induced activation of carriers (photoconductivity), photodoping 
+
+and photogating effects. 42 11 
+
+We note that for sample O1 and D1 the apparent lateral gap size moderately differs by about 1 μm 
+
+between LBIC and KPFM due to the Cr underlayer of the contacts that is not fully covered by gold 
+
+given the utilized metal evaporation using a shadow mask: Cr i s nearly invisible in optical 
+
+reflectance conducted simultaneously with LBIC to identify the contact edges but detectable by its 
+
+work function in KPFM, leading to a smaller apparent gap and an additional thin feature in the 
+
+KPFM data. The contact pads used  for the preparation of sample D2 ha ve  been prepared by optical 
+
+lithography and lift -off after metal evaporation such that the lateral gap agrees between LBIC and 
+
+KPFM. 
+
+3.4 Combined Analysis: Identifying Barrier Types and Asymmetry 
+
+The three methods provide complementary and mutually consistent information. IV measurements 
+
+yield absolute resistance values and their voltage and illumination dependence. LBIC identifies 
+
+the location and nature of internal electric fields and is therefor e sensitive to photovoltaic 
+
+contributions due to Schottky barrier induced SCR and PTE contributions. KPFM maps the 
+
+relative voltage drops across the two contacts under applied bias, directly quantifying barrier 
+
+asymmetry. The polarity dependence in KPFM  in combination with the  findings  from LBIC and 
+
+IV investigations allow s one to  additionally identify the dominant type of the barrier at the contact 
+
+being either of Schottky - or tunnel -type. Together, for sample O1, all three methods consistently 
+
+indicate symmetric, low -barrier ohmic contacts. For sample D1, the combined analysis rev eals a 
+
+dominant Schottky barrier at the left contact and a comparatively smaller tunnel barrier at the right 
+
+contact as dominant contributions to the total resistance across the two -terminal device. 
+
+Combining the KPFM -derived proportional voltage drops with the absolute resistance from IV 
+
+measurements allows rough estimates of the individual contact resistances  (see schematic for serial 
+
+resistor circuitry provided in the  supplemental materials ). The two -terminal MoS₂ devices are 12 
+
+modeled as a three -element series circuit R total  = R lc  +R sh +R rc  with R l(r)c  the left (right) vertical 
+
+contact resistance that includes also the MoS 2 sheet resistance on top of the contacts and R sh  the 
+
+MoS 2 sheet resistance in the gap (channel). The proportional resistance of each element is R prop  =
+
+α × R total , where  α is the fractional voltage drop at that element read from bias induced surface 
+
+voltage profile from KPFM, and R total  is the total device resistance at the KPFM bias voltage 
+
+deduced from I -V measurements. These estimates, summarized in Table 1, should be treated as 
+
+order -of -magnitude values, as the different measurement conditions (illumination type, power 
+
+density, sweep  vs. static bias) preclude exact quantitative comparison. At this stage we note that 
+
+the applied methodology enables a qualitative identification of the barrier types limiting charge 
+
+injection at the metal –MoS 2 junctions and a proportional decomposition of the individual 
+
+resistance contributions in the two -terminal device also under illumination, which is directly 
+
+relevant for optoelectronic applications. A quantitative extraction of the Schottky barrier height 
+
+could be achieved through thermal activation analysis in temperature -dependent IV 
+
+measurements.²⁰ Fermi -level pinning and mid -gap contributions could be further addressed in 
+
+time -resolved and temperature dependent LBIC investigations under finite bias volt age, which 
+
+provides access to the electric -field dependence of trap -assisted tunnelling through mid -gap 
+
+states. 43,44 
+
+Table 1.  Equivalent circuit model parameters for MoS₂ –metal devices. Summary of proportional 
+
+voltage drops ( α) and proportional resistances (R prop  = α × R total ) derived from combined KPFM 
+
+and IV measurements for sample O1 and D1 dark and under global illumination. 13                        
+
+> Circuit Element Barrier Type
+> O1 (5L MoS₂,
+> dark/bright,
+> ±0.3V)
+> D1 (2L MoS₂,
+> Diode, dark +0.5 V
+> /-0.5V)
+> D1 (2L MoS₂,
+> Diode, bright +0.5
+> V / -0.5V)
+> α (%) Rₚᵣₒₚ
+> (M Ω) α (%) Rₚᵣₒₚ
+> (M Ω) α (%) Rₚᵣₒₚ
+> (M Ω)
+> Rlc (left contact
+> resistance)
+> Schottky /
+> Tunnel ~23 ~0.07 ~38 /
+> ~72
+> ~12.58 /
+> ~80.00
+> ~48 /
+> ~84
+> ~1.8 /
+> ~1.41
+> Rsh (channel
+> resistance)
+> Ohmic (MoS₂
+> gap) ~57 ~0.17 ~8 /
+> ~14
+> ~2.65 /
+> ~15.56
+> ~22 /
+> ~8
+> ~0.83 /
+> ~0.13
+> Rrc (right contact
+> resistance)
+> Schottky/
+> Tunnel ~20 ~0.06 ~54 /
+> ~14
+> ~17.88 /
+> ~15.56
+> ~30 /
+> ~8
+> ~1.13 /
+> ~0.13
+> Rtotal —~0.3 ~33.11 /
+> ~ 111.12
+> ~3.76 /
+> ~1.67
+
+4. Application: Contact Optimization by Thermal Annealing 
+
+To demonstrate the utility of the framework for contact optimization studies, we apply all three 
+
+methods to sample D2, a bilayer MoS₂ device before and after thermal annealing as a widely used 
+
+strategy for improving 2D semiconductor contacts. 5,8,9,12  Device D2 exhibits diode -like contact 
+
+behavior before and after annealing, even though IV characterization (Figure 4a) shows a dramatic 
+
+reduction in total resistance after annealing at a temperature of 200°C for 45 min in vacuum (1.4 
+
+x 10 -3 mbar): from R D2 (+0.2 V) = 40.0 M Ω and R D2 (−0.2 V) = 285.7 M Ω before annealing to 
+
+RD2,ann (+0.2 V) = 2.5 M Ω and R D2,ann (−0.2 V) = 3.5 M Ω after. Despite this improvement, the IV 
+
+curves retain their diode -like shape, and the total resistance remains higher than that of the ohmic 
+
+sample O1, indicating that contact barriers persist  (see also additional data provided in the 
+
+supplemental  materials ).
+
+LBIC maps before annealing (Figure 4b) show photocurrent signals predominantly on the flake 
+
+over both contacts, with a dominant negative signal at the upper -left and a smaller positive signal 
+
+at the lower -right, attributable primarily to the PTE effect wit h minor photovoltaic and presumably 14 
+
+tunnel contribution. After annealing (Figure 4c), the negative signal shifts further onto the left 
+
+contact (bulk region of the flake), while the positive signal shifts into the gap and spreads across 
+
+the full flake width, indicating a transition from PTE -dominated to photovoltaic -dominated 
+
+response at the right contact. We explain the signal shift induced by the annealing process at the 
+
+right contact by a reduction of the tunnel barrier. Prior to annealing, this tunnel barrier limits the 
+
+effective contact a rea and prevents the formation of a well -defined Schottky junction across the 
+
+full flake width. The reduction of the tunnel barrier resistance upon annealing enables an effective 
+
+2D semiconductor -metal junction to form across the entire flake width, result ing in an extended 
+
+SCR. 16,45  This interpretation is consistent with the broader and more uniform positive photocurrent 
+
+signal observed after annealing, which now spans nearly half of the  length  of the flake in the gap 
+
+region. We attribute the shift of the negative photocurrent signal further onto the left contact to an 
+
+improved contact between the bulk part of the MoS 2 flake and the left contact after annealing. This 
+
+improvement enhances the thermal coupling at the metal -MoS 2 interface, strengthening the 
+
+temperature gradient and thus the PTE effect. The signal is now predominantly located on the bulk 
+
+region of the flake, where the higher optical absorption and larger Seebeck coefficient further 
+
+promote the thermoelectric respo nse.  4,5,37 
+
+KPFM measurements after annealing (Figure 5) reveal a potential distribution qualitatively similar 
+
+to that of sample D1, with a dominant, asymmetric potential drop at the contact edges that depends 
+
+on voltage polarity and illumination. This confirms that c ontact barriers remain the dominant 
+
+source of resistance even after annealing. 
+
+By comparing the LBIC and KPFM measurements for sample D2 after annealing, we can conclude 
+
+that a dominant Schottky barrier is present at the right contact, evidenced by the photovoltaic 
+
+photocurrent signal spanning the full flake  length  in the gap. The tunnel barrier at the right contact, 15 
+
+which prior to annealing limited the effective contact area, is reduced by the annealing process, 
+
+enabling the formation of a well -defined Schottky junction across the entire flake width  resulting 
+
+in a n ohmic -like Schottky -contact . At the left contact, the PTE effect  still  dominates, consistent 
+
+with an  overall  improved ohmic -like  contact  behavior  of the flake after annealing. 
+
+5. Conclusion 
+
+We have presented an integrated characterization framework combining IV measurements, LBIC 
+
+mapping, and bias -dependent KPFM for the comprehensive analysis of metal contacts to few -layer 
+
+MoS₂ devices under ambient conditions. Each method contributes essenti al and complementary 
+
+information: IV measurements quantify macroscopic transport and total resistance; LBIC maps the 
+
+spatial distribution and mechanistic origin of internal electric fields; and KPFM under applied bias 
+
+directly visualizes the relative magni tudes and locations of contact barriers with nanoscale 
+
+resolution. 
+
+Applied to devices with ohmic -like and diode -like contact behavior, the framework 
+
+unambiguously identifies whether the dominant barrier is of Schottky or tunnel type and resolves 
+
+the asymmetry between the two contacts in a given device. Applied to a therma lly annealed device, 
+
+it reveals that annealing significantly reduces total resistance and differentially modifies the two 
+
+contact barriers, yet contact barriers remain the dominant source of resistance even after 
+
+optimization. 
+
+The methodology is straightforward to implement, requires no cryogenic or vacuum environment, 
+
+and does not require a gate electrode. It is directly transferable to other 2D semiconductor –metal 
+
+systems and to a broader range of contact optimization strategi es, including surface doping, metal 
+
+selection, and strain engineering. Beyond contact characterization, the framework could be 
+
+extended to investigate heterojunctions, grain boundaries, and other laterally inhomogeneous 16 
+
+structures in 2D materials. We anticipate that the combined IV/LBIC/KPFM approach will serve 
+
+as a practical and broadly applicable diagnostic tool for the rational engineering of low -resistance 
+
+contacts in 2D semiconductor devices. 17 
+
+Figure 1 
+
+Figure 1.  MoS₂ devices and complementary measurement methods. Center: Schematic side view 
+
+of the MoS₂ flake on top of Cr/Au contacts on a Si/SiO₂ or glass substrate. Upper left and right: 
+
+IV characteristics in the dark of sample O1 (ohmic -like) and sample D1 (diode -like). Insets: optical 
+
+micrographs of the MoS₂ flakes. Lower line: Schematic overview of the three complementary 
+
+measurement methods. IV:; current is measured as a function of applied bias; for illuminated IV 
+
+characterization a defocused laser beam global ly excites the MoS₂ flake LBIC: a focused laser 
+
+beam scans the sample in ~2  μm steps; photocurrent and reflected laser intensity are recorded 
+
+simultaneously at each position; a bias voltage can be applied. KPFM: the CPD is measured by 
+
+the tip while scanning the sample in ~100 nm steps; a static bias is applied and the MoS₂ flake ca n
+
+optionally be globally illuminated. 18 
+
+Figure 2 
+
+Figure 2.  IV and LBIC characterization of samples O1 and D1. IV characteristics of (a) sample 
+
+O1 and (b) sample D1 in the dark and under illumination at laser powers of 20, 40, 60, 80, and 100 
+
+μW. Insets: optical micrographs of the MoS₂ flakes. LBIC maps at 0 V bias of (c) sample O1 and 
+
+(d) sample D1. Photocurrent (linear color scale) is overlaid on the reflected -light image 
+
+(grayscale). Dashed black lines mark the contact edges. [Excitation: E Laser  = 2.33 eV ( λ = 532 nm), 
+
+P = 100  μW] 19 
+
+Figure 3 
+
+Figure 3.  Bias -dependent KPFM  surface voltage  profile  lines  and LBIC maps for samples O1 and 
+
+D1.  Bias dependent surface voltage  profile lines ( CPD  corrected by 0 V reference  CPD  scan) 
+
+measured at +0.3 V and −0.3 V for sample O1 (a, b) and at +0.5 V and −0.5 V for sample D1 (c, 
+
+d), in the dark and under illumination. The profile line position is representative of all y -positions 
+
+on the MoS₂ flake. LBIC maps of (e, f) sample O1 and  (g, h) sample D1 at bias voltages of +0.1 
+
+V and −0.1 V. Photocurrent (linear color scale) is overlaid on the reflected -light image (grayscale); 
+
+maps are corrected for the dark current at the corresponding bias. The right contact is set to ground 
+
+potential . [KPFM:  ELaser  = 1.95 eV ( λ = 635 nm), P = 5 mW; LBIC: E Laser  = 2.33 eV ( λ = 532 nm), 
+
+P = 100  μW] 20 
+
+Figure 4 
+
+Figure 4.  Effect of thermal annealing on IV and LBIC characteristics of sample D2. (a) IV 
+
+characteristics before (blue) and after (orange) thermal annealing, in the dark and under 
+
+illumination. Inset: optical microscopy image of the MoS₂ flake. LBIC maps at 0 V bias  (b) before 
+
+and (c) after thermal annealing. Photocurrent (linear color scale) is overlaid on the reflected -light 
+
+image (grayscale). Dashed vertical lines mark the contact edges. Black arrows indicate the 
+
+positions at which the bias induced surface voltage  profile lines in Figure 5 are extracted. [Vacuum 
+
+annealing conditions: T ann  = 200°C, t ann  = 45 min, p ann  = 1.4 x 10 -3 mbar; Excitation: E Laser  = 2.33 
+
+eV ( λ = 532 nm), P = 100  μW] 21 
+
+Figure 5 
+
+Figure 5.  Bias -dependent KPFM surface voltage profile lines  of thermally annealed sample D2. 
+
+Bias induced surface voltage profile lines measured at positive and negative bias voltages, in the 
+
+dark and under  illumination, after thermal annealing. Profile line positions are marked by arrows 
+
+in Figure 4c.  [KPFM: E Laser  = 1.95 eV ( λ = 635 nm), P = 1 mW] 22 
+
+Acknowledgements 
+
+This publication is part of the project Piezo -photomotion: light -driven nano piezo -propulsion and 
+
+agitation with project number VI.Vidi.193.020 of the research programs Vidi and Aspasia, which 
+
+is financed by the Dutch Research Council (NWO). This project h as received funding from the 
+
+European Union’s Horizon Europe research and innovation program under grant agreement No. 
+
+101130224 “JOSEPHINE”. The authors acknowledge funding from the University of Twente  –
+
+University of Münster collaboration fund. 
+
+Data Availability Statement 
+
+The data that support the findings of this study are available from the corresponding author upon 
+
+reasonable request. 
+
+Declaration of Generative AI and AI -Assisted Technologies 
+
+During the preparation of this work, the authors used large language models to refine the 
+
+manuscript regarding grammar, readability, and clarity. After using these tools, the authors 
+
+reviewed and edited the content as needed and take full responsibility fo r the content of the 
+
+publication. No additional use of artificial intelligence was made during data acquisition, analysis, 
+
+interpretation, or other aspects of this study. 
+
+References          
+
+> (1) Chhowalla , M. et al. The chemistry of two -dimensional layered transition metal dichalcogenide nanosheets. Nat.
+> Chem. 2013, 5, 263 –275. DOI: 10.1038/nchem.1589.
+> (2) Wang, Q. H.; Kalantar -Zadeh, K.; Kis, A.; Coleman, J. N.; Strano, M. S. Electronics and optoelectronics of two -
+> dimensional transition metal dichalcogenides. Nat. Nanotechnol. 2012, 7, 699 –712. DOI:
+> 10.1038/nnano.2012.193.
+
+23 
+
+(3) Wang, G. et al. Colloquium: Excitons in atomically thin transition metal dichalcogenides. Rev. Mod. Phys. 2018, 
+
+90, 021001. DOI: 10.1103/RevModPhys.90.021001. 
+
+(4) Bernardi, M.; Palummo, M.; Grossman, J. C. Extraordinary Sunlight Absorption and One Nanometer Thick 
+
+Photovoltaics Using Two -Dimensional Monolayer Materials. Nano Lett. 2013, 13, 3664 –3670. DOI: 
+
+10.1021/nl401544y. 
+
+(5) Parzinger, E.; Hetzl, M.; Wurstbauer, U.; Holleitner , A. W. Contact morphology and revisited photocurrent 
+
+dynamics in monolayer MoS₂. NPJ 2D Materials and Applications 1, 40 (2017). DOI: 10.1038/s41699 -017 -0042 -
+
+2. 
+
+(6) Allain, A.; Kang, J.; Banerjee, K.; Kis, A. Electrical contacts to two -dimensional semiconductors. Nat. Mater. 2015, 
+
+14, 1195 –1205. DOI: 10.1038/nmat4452. 
+
+(7) Tang, J. et al. Contact Engineering for Two -Dimensional van der Waals Semiconductors. Mater. Today Electron. 
+
+2025, 11, 100132. DOI: 10.1016/j.mtelec.2024.100132. 
+
+(8) Ma, L. et al. van der Waals Contact for Two -Dimensional Transition Metal Dichalcogenides. Chem. Rev. 2024, 
+
+124, 5, 2583 –2616. DOI: 10.1021/acs.chemrev.3c00697. 
+
+(9) Buscema, M. et al. Large and Tunable Photothermoelectric Effect in Single -Layer MoS₂. Nano Lett. 2013, 13, 358 –
+
+363. DOI: 10.1021/nl303321g. 
+
+(10) Li, S. -L. et al. Thickness Scaling Effect on Interfacial Barrier and Electrical Contact to Two -Dimensional MoS₂ 
+
+Layers. ACS Nano 2014, 8, 12836 –12842. DOI: 10.1021/nn506138y. 
+
+(11) Kim, C. et al. Fermi Level Pinning at Electrical Metal Contacts of Monolayer Molybdenum Dichalcogenides. 
+
+ACS Nano 2017, 11, 1588 –1596. DOI: 10.1021/acsnano.6b07159. 
+
+(12) Wani, S. -S. et al. Improved Metal –Semiconductor Interface in Monolayer (1L) -MoS₂ via Thermally -Driven Ag 
+
+Filaments. ACS Appl. Mater. Interfaces 2025, 17, 15, 23209 –2322. DOI: 10.1021/acsami.4c20612. 
+
+(13) Tung, R. T. The physics and chemistry of the Schottky barrier height. Appl. Phys. Rev. 2014, 1, 011304. DOI: 
+
+10.1063/1.4858400. 
+
+(14) Markeev, P. A. et al. Energy -Level Alignment at Interfaces between TMD Monolayers and Metal Electrodes 
+
+Studied with KPFM. J. Phys.  Chem. C 2021, 125, 13551 –13559. DOI: 10.1021/acs.jpcc.1c01612. 
+
+(15) Okada, M. et al.  Characterization of band alignment at a metal –MoS₂ interface by KPFM. Jpn. J. Appl. Phys. 
+
+2023, 63, 01SP15. DOI: 10.35848/1347 -4065/ad0f55. 
+
+(16) Liu, Y. et al. Approaching the Schottky –Mott limit in van der Waals metal –semiconductor junctions. Nature 2018, 
+
+557, 696 –700. DOI: 10.1038/s41586 -018 -0129 -8. 
+
+(17) Sotthewes, K. et al. Universal Fermi -Level Pinning in Transition -Metal Dichalcogenides. J. Phys. Chem. C 2019, 
+
+123, 5411 –5420. DOI: 10.1021/acs.jpcc.8b10971. 
+
+(18) Schulman, D. S.; Arnold, A. J.; Das, S. Contact engineering for 2D materials and devices. Chem. Soc. Rev. 2018, 
+
+47, 3037 –3058. DOI: 10.1039/C7CS00828G. 
+
+(19) Lee, S.; Tang, A.; Aloni, S.; Philip Wong, H. -S. Statistical Study on the Schottky Barrier Reduction of Tunneling 
+
+Contacts to CVD Synthesized MoS₂. Nano Lett. 2016, 16, 276 –281. DOI: 10.1021/acs.nanolett.5b03727. 
+
+(20) Subramanian, S. et al. Photophysics and Electronic Structure of Lateral Graphene/MoS₂ and Metal/MoS₂ 
+
+Junctions. ACS Nano 2020, 14, 16663 –16671. DOI: 10.1021/acsnano.0c02527. 24 
+
+(21) Abnavi, A. et al. Flexible High -Performance Photovoltaic Devices based on 2D MoS₂ Diodes. Adv. Funct . Mater. 
+
+2023, 33, 2210619. DOI: 10.1002/adfm.202210619. 
+
+(22) Nowakowski, K.; Zandvliet, H. J. W.; Bampoulis, P. Barrier Inhomogeneities in Atomic Contacts on WS₂. Nano 
+
+Lett. 2019, 19, 1190 –1196. DOI: 10.1021/acs.nanolett.8b04636. 
+
+(23) Bampoulis, P. et al. Defect Dominated Charge Transport and Fermi Level Pinning in MoS₂/Metal Contacts. ACS 
+
+Appl. Mater. Interfaces 2017, 9, 19278 –19286. DOI: 10.1021/acsami.7b02739. 
+
+(24) Vaknin, Y.; Dagan, R.; Rosenwaks , Y. Schottky Barrier Height and Image Force Lowering in Monolayer MoS₂ 
+
+FETs. Nanomaterials 2020, 10, 2346. DOI: 10.3390/nano10122346. 
+
+(25) Dagan, R. et al. Two -dimensional charge carrier distribution in MoS₂ monolayer and multilayers. Appl. Phys. 
+
+Lett. 2019, 114, 101602. DOI: 10.1063/1.5078711. 
+
+(26) Tosun, M. et al. MoS₂ Heterojunctions by Thickness Modulation. Sci. Rep. 2015, 5, 10990. DOI: 
+
+10.1038/srep10990. 
+
+(27) Pak, S. et al. Strain -Engineering of Contact Energy Barriers and Photoresponse  Behaviors in Monolayer MoS₂ 
+
+Flexible Devices. Adv. Funct. Mater. 2020, 30, 2002023. DOI: 10.1002/adfm.202002023. 
+
+(28)Mayer et al. Impact of Electrical Contacts on Transition Metal Dichalcogenide -Based Acousto -Electric and 
+
+Acousto -Photoelectric Devices. ACS Appl. Electron. Mater. 2025, 7, 9717 -9728. DOI:  10.1021/acsaelm.5c01446 
+
+(29) Saive, R.; Scherer, M.; Mueller, C.; Daume, D.; Schinke, J.; Kroeger, M.; Kowalsky, W. Imaging the Electric 
+
+Potential within Organic Solar Cells. Adv. Funct. Mater. 2013, 23, 5854 –5860. DOI: 10.1002/adfm.201301315. 
+
+(30) Long, M.; Wang, P.; Fang, H.; Hu, W. Progress, Challenges, and Opportunities for 2D Material Based 
+
+Photodetectors. Adv. Funct. Mater. 2019, 29, 1803807. DOI: 10.1002/adfm.201803807. 
+
+(31) Fan, W. et al. Multifunction realization in MoS₂/WS₂/h -BN heterojunction. Nano Energy 2024, 128, 109900. DOI: 
+
+10.1016/j.nanoen.2024.109900. 
+
+(32) Popov, I.; Seifert, G.; Tománek, D. Designing Electrical Contacts to MoS₂ Monolayers. Phys. Rev. Lett. 2012, 
+
+108, 156802. DOI: 10.1103/PhysRevLett.108.156802. 
+
+(33) Castellanos -Gomez, A. et al. Deterministic transfer of two -dimensional materials by all -dry viscoelastic stamping. 
+
+2D Mater. 2014, 1, 011002. DOI: 10.1088/2053 -1583/1/1/011002. 
+
+(34) Tonndorf , P. et al. Photoluminescence emission and Raman response of monolayer MoS₂, MoSe₂, and WSe₂. Opt. 
+
+Express 2013, 21, 4908 –4916. DOI: 10.1364/OE.21.004908. 
+
+(35) Nipane, A. et al. Few -Layer MoS₂ p -Type Devices Enabled by Selective Doping Using Low Energy Phosphorus 
+
+Implantation. ACS Nano 2016, 10, 2128 –2137. DOI: 10.1021/acsnano.5b06529. 
+
+(36) Sun, Z. et al. Low Contact Resistance on Monolayer MoS₂ FETs Achieved by CMOS -Compatible Metal Contacts. 
+
+ACS Nano 2024, 18, 33, 22444 –22453. DOI: 10.1021/acsnano.4c07267. 
+
+(37)  Semiconductor Digest. 2D Materials and Contacts: Industry Perspectives. 
+
+https://magazine.semiconductordigest.com/html5/reader/production/default.aspx?pubname=&edid=b0792fcf -
+
+71f7 -417a -bd63 -f55f370c7eb3&pnum=19 
+
+(38) Eftekhari, Z. et al. Synchronized modulation Kelvin probe force microscopy for surface photovoltage studies in 
+
+optoelectronic systems. MRS Commun. 2026, 16, 180 –186. DOI: 10.1557/s43579 -025 -00899 -3. 25 
+
+(39) Seo, J.; Sohn, I.; Kim, H. Contact Engineering in Two -Dimensional Transition Metal Dichalcogenide -Based 
+
+Devices: Industry -Compatible Approaches toward Ultralow Contact Resistance.  ACS Mater. Lett. 2025, 7, 3190 –
+
+3205. DOI: 10.1021/acsmaterialslett.5c01010. 
+
+(40) Sadewasser, S. et al.  Lateral resolution and potential sensitivity in Kelvin probe force microscopy. Phys. Rev. B 
+
+2008, 77, 235427. DOI: 10.1103/PhysRevB.77.235427. 
+
+(41) Zerweck, U.; Loppacher, Ch.; Otto, T.; Grafström, S.; Eng, L. M. Accuracy and resolution limits of Kelvin probe 
+
+force microscopy. Phys. Rev. B 2005, 71, 125424. DOI: 10.1103/PhysRevB.71.125424. 
+
+(42) Miller, B. et al. Photogating of mono - and few -layer MoS 2, Appl. Phys. Lett. 2015 106, 122103. DOI: 
+
+10.1063/1.4916517. 
+
+(43) Yi -Feng C. et al.  Direct Visualization of Metal -Induced Gap State Distribution and Valley Band Evolution at 
+
+Metal Versus Semimetal MoS 2 Interfaces, ACS Nano 2025, 19, 20, 19408 –19416. DOI: 
+
+10.1021/acsnano.5c03676 
+
+(44) Klein, J. et al. Impact of intrinsic and extrinsic imperfections on the electronic and optical properties of MoS2 
+
+layers, Appl. Phys. Lett. 2019 115, 261603. DOI:  10.1063/1.5131270 
+
+(45) Cheng, Z. et al. Distinct Contact Scaling Effects in MoS2 Transistors 
+
+Revealed with Asymmetrical Contact Measurements. Adv.  Mater. 2023, 35, 2210916. DOI: 
+
+10.1002/adma.202210916. 1
+
+# Supplementary Material for the article: 
+
+# Identifying Contact Barrier Types in Few -Layer MoS₂ Devices 
+
+# Using Correlative IV, LBIC, and Bias -Dependent KPFM 
+
+Ariane Ufer 1,2 , Zeinab Eftekhari 3, Benjamin M ayer 1, Hendrik Lambers 1,2 , Hubert J. Krenner 1,
+
+Rebecca Saive 3,* , Ursula Wurstbauer 1,2,*  
+
+> 1
+
+Institute of Physics, University of Münster, Münster, Germany  
+
+> 2
+
+Center for Soft Nanoscience (SoN), University of Münster, Münster, Germany  
+
+> 3
+
+MESA+ Institute for Nanotechnology, University of Twente, Enschede, The Netherlands 
+
+*Corresponding authors: wurstbauer@uni -muenster.de;  r.saive@utwente.nl 
+
+# Content 
+
+1.  Overview of samples  ................................ ................................ ................................ ............... 2
+
+1.1 Optical micrographs  ................................ ................................ ................................ ............... 2
+
+2.  Overview results IV measurements (dark and illuminated)  ................................ ......................... 3
+
+2.1 IV curves of Sample O1  ................................ ................................ ................................ ........... 3
+
+2.2 IV curves of Sample D1  ................................ ................................ ................................ ........... 4
+
+2.3 IV curves of sample D2 before annealing  ................................ ................................ .................. 4
+
+2.4 IV curves of sample D2 after annealing  ................................ ................................ ..................... 5
+
+2.5 Schematic of the energy band structure of the MoS2 flake and the contacts at the source and 
+
+drain electrodes from IV characteristics ................................ ......  Fehler! Textmarke nicht definiert. 
+
+2.6 Summary of the results of the measured IV characteristics of Sample O1 and D1:  ...................... 5
+
+2.7 Summary of the results of the IV measurements of Sample D2:  ................................ ................. 5
+
+3.  Localized laser beam induced current (LBIC) measurements  ................................ ..................... 6
+
+3.1 Photocurrent data of sample O1 and schemata or according bands  ................................ .......... 6
+
+3.2 Photocurrent data of sample D1  ................................ ................................ .............................. 7
+
+3.3 Summary of the results from LBIC measurements of sample O1 and D1:  ................................ ... 8
+
+3.4 Zero bias band model of sample O1 and D1 from LBIC  ..........  Fehler! Textmarke nicht definiert. 
+
+3.5 Local laser beam induced current (LBIC) measurements before and after annealing of sample D2 
+
+................................ ................................ ................................ ................................ ................... 9
+
+4.  KPFM measurements with applied voltage  ................................ ................................ ..............  11 
+
+4.1 KPFM potential data of Sample O1  ................................ ................................ .........................  11 
+
+4.2 KPFM potential data of Sample D1  ................................ ................................ .........................  12 
+
+4.3 Equivalent circuit of the contact system Au -MoS 2-Au  ................................ .............................  13 
+
+4.4 Band model for sample O1 from KPFM  ................................ ..  Fehler! Textmarke nicht definiert. 
+
+4.5 Band model for sample D1 from KPFM  ................................ ..  Fehler! Textmarke nicht definiert. 
+
+4.6 Summary of the results of the KPFM measurements with an applied voltage of Sample O1 and 
+
+D1:  ................................ ................................ ................................ ................................ ............  13 
+
+4.7 KPFM potential data of sample D2 after annealing  ................................ ................................ ..  14 
+
+5.  Measurement methods ................................ ................................ ................................ ..........  16 
+
+5.1 Experimental Setup of electric transport measurements  ................................ .........................  16 
+
+5.2 Experimental Setup of Kelvin Probe Force Microscopy ................................ .............................  17 2
+
+# 1.  Overview of samples 
+
+## 1.1  Optical micro graphs  
+
+> (a)
+
+Sample  O1 (b)  Sample  D1 
+
+> (c)
+
+Sample  D2
+
+Figure  1 Optical microscope image of the samples  O1 in (a),  D1 in (b) and  D2 in (c). In each image the 
+
+gold contacts are shown with the gap in between. On top of the contacts and the gap the individual 
+
+MoS 2 flakes of the samples are located.  The MoS 2 flake s were  fabricated by micromechanical 
+
+exfoliation and transferred to the contacts using the dry viscoelastic  stamping technique.  The different 
+
+layer thicknesses of the thin flake parts are indicated as 1L for a monolayer, 2L for a bilayer and 5L for 
+
+five layers. These layer thicknesses are determined by Ramans spectroscopy. The substrate of the 
+
+samples  O1 and  D2 is Si/Si O2 and the substrate of the sample  D1 is glass. The gold contacts of the 
+
+samples  O1 and  D1 were fabricated using a shadow mask and the gold contacts of the sample  D2 using 
+
+UV  photolithography .3
+
+# 2.  Overview r esults IV  measurements (dark and illuminated) 
+
+## 2.1  IV curves of Sample  O1
+
+Figure  2 IV characteristics of sample  O1 (left) without light exposure and (right) without light exposure in 
+
+comparison with the measurements with light exposure at different laser powers of 20, 40, 60, 80 and 
+
+100 μ W.  The  sample is globally excited  by  laser light  with  a wavelength of  532 nm  and thus  with  an energy 
+
+of  E𝑙𝑎𝑠𝑒𝑟  = 2.33 eV  that is well above the band gap of MoS 2. The current values are presented as a function 
+
+of voltages in the range of −0.3V to 0.3 V.  A linear and symmetric function  with large current values 
+
+compared to the other samples  is observed for all different light exposure settings . The measurements 
+
+are carried out at ambient conditions.  Sample  O1 p resents an ohmic behavior.  Therefore, it can be 
+
+assumed that the junctions from the MoS 2 flake with each of the two gold contacts are ohmic contacts 
+
+with low resistances. 4
+
+## 2.2  IV curves of Sample  D1
+
+## 2.3  IV curves of sample D2 before annealing 
+
+Figure  3 IV characteristics of sample  D1 (left) without light exposure and (right) without light exposure in 
+
+comparison with the measurements with light exposure at different laser powers of 20, 40, 60, 80 and 
+
+100 μ W.  The  sample is globally excited  by laser light with a wavelength of  532 nm  and thus with an energy 
+
+of  E𝑙𝑎𝑠𝑒𝑟  = 2.33 eV  that is well above the band gap of MoS 2. The current values are presented as a function 
+
+of voltages in the range of −0.3V to 0.3 V.  The IV characteristics  for the different light exposure settings 
+
+show a  non -linear and  asymmetric behavior for  positive and negative voltages  with saturations for larger 
+
+voltages . The current values significantly depend on the light exposure  setting but  are  generally  low 
+
+compared to sample  O1.  The measurements are carried out at ambient conditions.  Sample  D1 presents 
+
+a n on -ohmic behavior  with  voltage -dependent  resistances.  Therefore, it can be assumed that the 
+
+junctions from the MoS 2 flake with each of the two gold contacts exhibit  asymmetric  contact barriers 
+
+resulting in large resistances. 
+
+Figure  4 IV characteristics of sample  D2 before annealing (left) without light exposure and (right) 
+
+without light exposure in comparison with the measurements with light exposure at different laser 
+
+powers of 20, 40, 60, 80 and 100  μW.  The  sample is globally excited  by laser light with a wavelength of 
+
+532 nm  and thus with an energy of  E𝑙𝑎𝑠𝑒𝑟  = 2.33 eV  that is well above the band gap of MoS 2. The current 
+
+values are presented as a function of voltages in the range of −0.5V to 0.5 V.  The measurements are 
+
+carried out at ambient conditions.  Asymmetric IV curves with saturation  and small current values 
+
+compared to the measurement after annealing are observed. This leads to the conclusion of 
+
+asymmetric contact barriers similar  to the IV results of s ample  D1.5
+
+## 2.4  IV curves of sample D2 after annealing 
+
+## 2. 5 Summary of the results of the measured IV characteristics of Sample 
+
+## O1 and  D1: 
+
+Sample O1  Sample D1 
+
+Linear IV characteristics  Asymmetric IV curves with saturation (Diode -
+
+like) 
+
+Large currents  → low contact resistances  Small currents  → high contact resistances 
+
+Symmetric and ohmic contact behavior  Asymmetric contacts with contact barriers 
+
+## 2. 6 Summary of the results of the IV measurements of Sample  D2: 
+
+Before annealing  After annealing 
+
+Asymmetric IV curves with saturation  More symmetric IV characteristics with 
+
+reduced non -linearity 
+
+Small currents  → high contact resistances  Large currents  → lower contact resistances 
+
+Asymmetric contact barriers  Indicating improved contact transparency 
+
+Similar results as for IV curves of sample D1 
+
+Figure  5 IV characteristics of sample  D2 after annealing (left) without light exposure and (right) without 
+
+light exposure in comparison with the measurements with light exposure at different laser powers of 
+
+20, 40, 60, 80 and 100  μW.  The  sample is globally excited  by laser light with a wavelength of  532 nm 
+
+and thus with an energy of  E𝑙𝑎𝑠𝑒𝑟  = 2.33 eV  that is well above the band gap of MoS 2. The current values 
+
+are presented as a function of voltages in the range of −0.5V to 0.5 V.  The measurements are carried 
+
+out at ambient conditions.  After annealing the  IV characteristics  are more symmetric  with reduced 
+
+non -linearity  and  larger currents  values compared to the measurement before annealing. This 
+
+indicates a n improved contact s with reduced contact resistances. 6
+
+# 3.  Lo calized laser beam induced current  (LBIC)  measurements 
+
+## 3.1  Photocurrent data of sample O1 and  schemata o f according bands  
+
+> (a)
+
+0 V  (b)  0 V  
+
+> (c)
+
+0.1 V  (d)  0.1 V  
+
+> (e)
+
+-0.1 V  (f)  -0.1 V 
+
+Figure  6 Photocurrent results of sample  O1.  The laser light with a wavelength of 532 nm is focused on 
+
+the sample and scanned  over it in steps of 2  μm. The photocurrent maps are shown on the left side 
+
+and corresponding band models on the right side at voltages of 0V in (a) and (b), 0.1V in (c) and (d) and 
+
+−0.1V in (e) and (f). A blue signal in the heat maps corresponds to a negative current and a red sign al 
+
+to a positive  current . The x - and y -axis shows the lateral spatial dimensions of the sample. In 
+
+transparent grey colors the reflectance image of the contacts and the flake are superimposed. HI and 
+
+LO indicate the connection of the contacts to the outputs (high and low) of the  source meter unit. The 
+
+schemata  show the charge carrier movement that is induced by internal electric fields and local light 
+
+exposure in the VB and CB. The size of the arrows corresponds to the size of the measured currents 
+
+and thus to the size of the electrical field. The dashed arrows  demonstrate the background current at 
+
+an applied voltage.  Sample  O1 shows a n approximately  symmetric photocurrent  signal , which  is 
+
+mainly located on both  contacts . It is concluded that the photocurrent is dominated  by the 
+
+photothermoelctric effect.  The photocurrent values are large compared to sample  D1.  Th e observed 
+
+behavior is  explained by  approximately  symmetric contacts  with no Schottky barriers. 7
+
+## 3.2  Photocurrent data of sample  D1
+
+(a)  0 V  (b)  0 V 
+
+(c)  0.1 V  (d)  0.1 V 
+
+(e)  -0.1 V  (f)  -0.1 V 
+
+Figure  7 Photocurrent results of sample A1.  The laser light with a wavelength of 532 nm is focused on 
+
+the sample and scanned  over it in steps of 2  μm. The photocurrent maps are shown on the left side 
+
+and corresponding band models on the right side at voltages of 0V in (a) and (b), 0.1V in (c) and (d) 
+
+and −0.1V in (e) and (f). A blue signal in the heat maps corresponds to a negative current and a red 
+
+sign al to a positive signal. The x - and y -axis shows the lateral spatial dimensions of the sample. In 
+
+transparent grey colors the reflectance image of the contacts and the flake are superimposed. HI and 
+
+LO indicate the connection of the contacts to the outputs  (high and low) of the source meter unit. The 
+
+schemata  show the charge carrier movement that is induced by internal electric fields and local light 
+
+exposure in the VB and CB. The size of the arrows corresponds to the size of the measured currents 
+
+and thus to the size of the electrical field. The bending of the  bands also depicts the internal electric 
+
+fields.  Sample  D1 exhibits asymmetric photocurrent signals within the gap implying  asymmetric 
+
+contact barriers at the contacts.  The photocurrent signal is dominated by  the photovoltaic effect . The 
+
+photocurrent values are small compared to sample O1. For sample D1 a  Schottky barrier at the left 
+
+contact and a potential  tunnel  barrier at the right contact can be concluded. 8
+
+## 3.3  Summary of the results  from  LBIC  measurements of  sample O1 and D1: 
+
+Sample O1  Sample D1 
+
+Photocurrent signal is mainly located on both 
+
+contacts 
+
+Photocurrent signal is located in the gap 
+
+between the contacts 
+
+Dominated by the PTE effect at the gold -MoS 2
+
+junctions 
+
+Dominated by the photovoltaic effect at the 
+
+left Schottky barrier 
+
+Almost symmetric signal at both contacts  Asymmetric signal that dominated at the left 
+
+contact 
+
+Large photocurrent values  Small photocurrent values 
+
+Indicating small barriers and almost 
+
+symmetric ohmic contacts 
+
+Indicating large and asymmetric contact 
+
+barriers, a Schottky barrier at the left and 
+
+possibly a tunnel barrier at the right contact 9
+
+## 3. 4 Local laser beam induced current  (LBIC)  measurements before and 
+
+## after annealing  of sample D2 
+
+Photocurrent data sample  D2 before annealing 
+
+(a)  0 V  (b)  0 V 
+
+(c)  0 .1 V  (d)  0.1 V 
+
+(e)  -0.1 V  (f)  -0.1 V 
+
+Figure  8 Photocurrent results of sample  D2 before annealing.  The laser light with a wavelength of 532 
+
+nm is focused on the sample and scanned  over it in steps of 2  μm. The photocurrent maps are shown 
+
+on the left side and corresponding band models on the right side at voltages of 0V in (a) and (b), 0.1V 
+
+in (c) and (d) and −0.1V in (e) and (f). A blue signal in the heat maps corresponds to a negative current 
+
+and a red sign al to a positive signal. The x - and y -axis shows the lateral spatial dimensions of the 
+
+sample. In transparent grey colors the reflectance image of the contacts and the flake are 
+
+superimposed. HI and LO indicate the connection of the contacts to the outputs  (high and low) of the 
+
+source meter unit. The  schemata  show the charge carrier movement that is induced by internal 
+
+electric fields and local light exposure in the VB and CB. The size of the arrows corresponds to the size 
+
+of the measured currents and thus to the size of the electrical field. The bending of th e bands also 
+
+depicts the internal electric fields. To present the contribution of the PTE effect on the contacts and 
+
+the photovoltaic effect in the gap close to the contacts in each case two arrows are sketched.  Sample 
+
+D2 before annealing  exhibits asymmetric photocurrent signals  especially regarding the current 
+
+values. T he photocurrent is mainly located on the part of the flake on top of the contacts indicating a 
+
+main  contribution by the PTE effect. A smaller contribution by the photovoltaic effect can be seen on 
+
+the  part of the flake within the gap close to the contacts indicating Schottky barriers and the 
+
+photovoltaic  effect.  The photocurrent values are small compared to sample  O1 but larger  than those 
+
+of sample  D1. The  photocurrent results  are very  different than  those  for  sample  D1.10 
+
+Photocurrent data sample  D2 after annealing 
+
+(a)  0 V  (b)  0 V 
+
+(c)  0.1 V  (d)  0.1 V 
+
+(e)  -0.1 V  (f)  -0.1 V 
+
+Figure  9 Photocurrent results of sample  D2 after annealing. The photocurrent maps are shown on the 
+
+left side and corresponding band models on the right side at voltages of 0V in (a) and (b), 0.1V in (c) 
+
+and (d) and −0.1V in (e) and (f). A blue signal in the heat maps corresponds to a negative cur rent and 
+
+a red signal to a positive signal. The x - and y -axis shows the lateral spatial dimensions of the sample. 
+
+In transparent grey colors the reflectance image of the contacts and the flake are superimposed. HI 
+
+and LO indicate the connection of the cont acts to the outputs (high and low) of the source meter unit. 
+
+The  schemata  show the charge carrier movement that is induced by internal electric fields and local 
+
+light exposure in the VB and CB. The size of the arrows corresponds to the size of the measured 
+
+currents and thus to the size of the electrical field. The bending of th e bands also depicts the internal 
+
+electric fields. To present the contribution of the PTE effect on the contacts and the photovoltaic 
+
+effect in the gap close to the contacts in each case two arrows are sketched.  Sample  D2 after 
+
+annealing  exhibits asymmetric photocurrent signals  regarding the current values and positions. 
+
+Compared to the results before annealing t he negative photocurrent signal shifted a bit further on to 
+
+the left contact, whereas the observed positive photocurrent signal shifted a bit further into the gap. 
+
+This indicates a  dominated PTE effect at the left gold -MoS 2 junctions and  a dominating  photovoltaic 
+
+effect  close to the right contact . After annealing the measured photocurrent values are increased ,
+
+which  implies improved contact transparency.  The measured photocurrent values are  still 
+
+significantly  smaller than those of sample  O1.11 
+
+# 4.  KPFM measurements  with applied voltage 
+
+## 4.1  KPFM potential data of Sample  O1
+
+Figure  10  The results of the KPFM measurements  (in sideband mode  under ambient conditions ) are 
+
+presented for sample  O1. (a ), ( b) and (c) show the results of the measurements at a positive  bias  voltage 
+
+of 0.3V and (d),(e) and (f) show the results of the measurements at a negative  bias  voltage of −0.3V.  The 
+
+right contact is set to ground potential whereby the positive or negative potential is applied to the left 
+
+contact.  The heat maps (a), (d) (without light exposure), (b) and (e) (with light exposure) present the lateral 
+
+spatial dimensions in the x - and y -axis and the color code  present  the measured  surface voltage ( CPD at 
+
+the sample bias voltage corrected by the CPD data ) at a sample bias of 0V.  Thus, the corrected data shows 
+
+the effective potential changes on the sample induced by the applied voltage resulting in a potential 
+
+distribution of the applied voltage in the contact system.  In (c) and (f) the profile lines of the  corrected 
+
+CPD as a function of the x -coordinate are depicted. The black (green) function shows the profile line of 
+
+the measurement without (with) light exposure. The y -coordinate at which the potentials are extracted for 
+
+the profile lines are indicated by an arrow i n the corresponding color (black or green) in the heat maps. 
+
+The dashed lines demonstrate the contact edges.  Under light exposure the sample was excited by laser 
+
+light with an energy of  𝐸 𝑙𝑎𝑠𝑒𝑟  = 1.95 eV, that is above the band gap of MoS 2 . The measurements with and 
+
+without light exposure show no significant differences. A linear decrease of the potential across the flake 
+
+without any abrupt potential drop is observed.  This leads to the conclusion of very small and symmetric 
+
+contact barriers .12 
+
+## 4.2  KPFM potential data of Sample  D1
+
+Figure  11  The results of the KPFM  measurements (in  sideband mode  under ambient conditions ) are 
+
+presented for sample  D1. (a),(b) and (c) show the results of the measurements at a positive  bias  voltage 
+
+of 0.5V and (d),(e) and (f) show the results of the measurements at a negative  bias  voltage of −0.5V.  The 
+
+right contact is set  to ground potential  whereby the positive or negative  potential is applied to the left 
+
+contact.  The heat maps (a), (d) (without light exposure), (b) and (e) (with light exposure) present the lateral 
+
+spatial dimensions in the x - and y -axis and the color code  present  the measured  surface voltage  (CPD at 
+
+the sample bias voltage corrected by the CPD data ) at a sample bias of 0V.  Thus, the corrected data shows 
+
+the effective potential changes on the sample induced  by the applied voltage resulting in a potential 
+
+distribution of the applied voltage in the contact system.  In (c) and (f) the profile lines of the  corrected 
+
+CPD as a function of the x -coordinate are depicted. The black (green) function shows the profile line of 
+
+the measurement without (with) light exposure. The y -coordinate at which the potentials are extracted for 
+
+the profile lines are indicated by an arrow  in the corresponding color (black or green) in the heat maps. 
+
+The dashed lines demonstrate the contact edges.  Under light exposure the sample was excited by laser 
+
+light with an energy of  𝐸 𝑙𝑎𝑠𝑒𝑟  = 1.95 eV, that is above the band gap of MoS 2. A dominating and abrupt 
+
+potential drop is observed  at the contact edges . The potential drop at the two contact edges is  unevenly 
+
+distributed . The potential distribution  depends on  light exposure and  on  the voltage polarity . This leads to 
+
+the conclusion of  large and asymmetric contact barriers  with a behavior like  Schottky contact s.13 
+
+## 4.3  Equivalent circuit of the contact system Au -MoS 2-Au 
+
+## 4. 4 Summary of the results of the KPFM measurements with an applied 
+
+## voltage of Sample  O1 and  D1: 
+
+Sample O1  Sample D1 
+
+Approximately linear potential drops across 
+
+the contact system 
+
+Abrupt potential drop at each contact edge 
+
+Potential distribution is independent of light 
+
+exposure and the voltage polarity 
+
+Potential distribution is dependent on light 
+
+exposure and the voltage polarity 
+
+Main potential drop across the flake within 
+
+the gap 
+
+Main potential drop at the contact barriers 
+
+Very small and symmetric contact barriers  →
+
+ohmic contacts, additional  very small  tunnel 
+
+barriers possible 
+
+Large and asymmetric contact barriers  →
+
+Schottky barriers potentially in combination 
+
+with tunnel barriers 
+
+Figure  12  Equivalent circuit of the contact system Au -MoS 2-Au consisting of three main resistors 
+
+where the applied voltage is dropping relative to their relative resistivity for a given polarity: The 
+
+equivalent resistance describing the left contact, the equivalent resistance of the semiconducting 
+
+MoS 2 in the gap and the equivalent resistance describing the right contact. Since not the resistivity, 
+
+but the relative voltage drop is measured, the circuit elements are marked by  𝑈 𝐶𝑙 , 𝑈 𝑆𝐶  and  𝑈 𝐶𝑟 ,
+
+respectively. It has to be noted that this equivalent circuit is only valid at a static voltage.  The 
+
+resistors are voltage and light  dependent  and can contain contributions of a Schottky diode, a 
+
+tunnel barrier , a p hotothermoelectric voltage  and the  resistance of  the  semiconductor .14 
+
+## 4. 5 KPFM potential data of sample  D2 after annealing 
+
+Figure  13  The results of the KPFM measurements  (in sideband mode  under ambient conditions ) are 
+
+presented for sample  D2. (a),(b) and (c) show the results of the measurements at a positive voltage of 1V 
+
+and (d),(e) and (f) show the results of the measurements at a negative voltage of −1V.  The right contact is 
+
+set  to ground potential  whereby the positive or negative  potential is applied to the left contact.  The heat 
+
+maps (a), (d) (without light exposure), (b) and (e) (with light exposure) present the lateral spatial 
+
+dimensions in the x - and y -axis and the color code  present  the measured  surface voltage ( CPD at the 
+
+sample bias voltage corrected by the CPD data ) at a sample bias of 0V.  Thus, the corrected data shows 
+
+the effective potential changes on the sample induced  by the applied voltage resulting in a potential 
+
+distribution of the applied voltage in the contact system.  In (c) and (f) the profile lines of the  corrected 
+
+CPD as a function of the x -coordinate are depicted. The black (green) function shows the profile line of 
+
+the measurement without (with) light exposure. The y -coordinate at which the potentials are extracted for 
+
+the profile lines are indicated by an arrow  in the corresponding color (black or green) in the heat maps. 
+
+The dashed lines demonstrate the contact edges.  Under light exposure the sample was excited by laser 
+
+light with an energy of  𝐸 𝑙𝑎𝑠𝑒𝑟  = 1.95 eV, that is above the band gap of MoS 2. A dominating and abrupt 
+
+potential drop is observed  at the contact edges . The potential drop at the two contact edges is  unevenly 
+
+distributed . T he potential distribution  depends on  light exposure and  on  the voltage polarity . This leads to 
+
+the conclusion of  large and asymmetric contact barriers  with a behavior like  Schottky contact s similar to 
+
+sample  D1. 15 
+
+KPFM potential profile lines at different positions 
+
+Summary of the results of the KPFM measurements with an applied voltage of Sample  D2
+
+after annealing: 
+
+• Abrupt voltage drop at each contact edge 
+
+• The potential distribution is dependent of light exposure and of the voltage polarity 
+
+• Main voltage drop at the contact barriers 
+
+• Large and asymmetric contact barriers 
+
+o → Schottky barrier potentially in coexistence with a tunnel barrier 
+
+• Very similar KPFM results to those of sample D1 with the exception of the opoosite 
+
+behaviour under light exposure at negative bias voltage 
+
+(a)  1 V without exposure  (b)  1 V with exposure 
+
+(c)  -1 V without exposure  (d)  -1 V with exposure 
+
+Figure  14  Profile lines of the  (corrected relative to 0V)  KPFM potential of Sample  D2 at different 
+
+y-values (a) and (b) at the positive voltage and (c) and (d) at the negative voltage. The profile 
+
+lines are shown with ((a) and (c)) and without ((b) and (d)) light exposure. The y -values 25 and 
+
+28 μ m are in the upper half of the flake and c ross the triangular area of the flake which shows 
+
+a different behavior than the rest of the flake. The profile line a t y=19  μm presents the data in 
+
+the lower half of the flake without influences of the triangular area. These profile lines are the 
+
+same lines that are already shown before.  A shift of the x -position of the potential drop  is 
+
+observed which  depends on the y -position where the profile line is taken . It is concluded, that 
+
+this  observation stems from  a macroscopic distortion in the flake. As this distortion leads to a 
+
+relevant voltage drop, it can be assumed that it represents a (tunnel) barrier at this position. 16 
+
+# 5.  Measurement methods 
+
+## 5.1  Experimental Setup of electric transport measurements 
+
+Figure  15  Sketch of the setup of the IV and the  local beam induced current (LBIC)  measurements. A 
+
+voltage is applied to the  sample and the current is measured. The sample is excited by focused laser 
+
+light  (532 nm ) of a specific laser power. The  laser power is adjusted by the neutral density (nd) filter and 
+
+measured by the powermeter. The z -position of the  sample can be  varied  to adjust the size of the laser 
+
+beam on the sample. For the IV measurements a defocused  (global) excitation and for the photocurrent 
+
+measurements a focused (local) excitation is applied. The sample can  be moved motorized in x -and y -
+
+direction which is used for the scanning photocurrent measurement. The reflected  light of the sample 
+
+is collected by the objective and directed to a photodetector to measure the reflectance map of  the 
+
+sample. The white light source and the camera are used to image and align the laser beam on the 
+
+sample.  The sample is measured under ambient conditions. 17 
+
+## 5.2  Experimental Setup of Kelvin Probe Force Microscopy 
+
+Figure  16  Connection  diagram  of the Sideband -KPFM. A superluminescent diode (SLD) and a position -
+
+sensitive  photodetector  (PSPD) are used to detect the oscillation of the cantilever. An AC -voltage 
+
+induces an oscillation of the tip above the sample. The first lock -in amplifier measures the frequency of 
+
+the oscillation and the feedback -loop ensures a constant tip -sample -distan ce. Thus, the z -height  of the 
+
+sample is detected. Two additional lock -in amplifiers are used to measure the amplitude and phase of 
+
+each sideband. This feedback loop regulates the DC voltage such that the sidebands disappear. The 
+
+resulting DC voltage is the output signal and is  equal to the CPD. A laser  diode with the wavelength of 
+
+635 nm  is used to illuminate the samples during the KPFM measurement.  The sample is measured 
+
+under ambient conditions.
