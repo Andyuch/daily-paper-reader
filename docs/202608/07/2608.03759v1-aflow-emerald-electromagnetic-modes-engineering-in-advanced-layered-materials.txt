@@ -1,0 +1,739 @@
+Title: AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials
+
+URL Source: https://arxiv.org/pdf/2608.03759v1
+
+Published Time: Wed, 05 Aug 2026 01:27:10 GMT
+
+Number of Pages: 16
+
+Markdown Content:
+# AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials 
+
+Stefano Campanaro, 1, 2, ∗ Luca Bursi, 1, 3, † Nicholas H. Anderson, 2, 4, ‡ Stefano Curtarolo, 2, 4, § and Arrigo Calzolari 3, 2, 4, ¶
+
+> 1
+
+Dipartimento di Fisica, Informatica e Matematica, Universit` a di Modena e Reggio Emilia, Via Campi 213A, I-41125 Modena, Italy 
+
+> 2
+
+Department of Mechanical Engineering and Materials Science, Duke University, Durham, NC 27708, USA 
+
+> 3
+
+CNR-NANO Istituto Nanoscienze, Centro S3, Via Campi 213A, 41125 Modena, Italy 
+
+> 4
+
+Center for Extreme Materials, Duke University, Durham, NC 27708, USA 
+
+Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both nu-merically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave ex-pansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML work-flow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material–geometry engineering of dielectric photonic crystals, plasmonic multilay-ers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes. 
+
+I. INTRODUCTION 
+
+Layered metamaterials provide a versatile platform for engineering optical anisotropy, field confinement, disper-sion, and plasmonic response across a broad spectral range [1, 2], enabling the realization of surface and vol-ume polariton modes [3, 4]. A quantitative understand-ing of their electromagnetic (EM) behavior is therefore essential for the design and optimization of advanced op-tical and photonic devices. In realistic architectures, EM propagation is governed by the interplay between ma-terial dispersion, finite stack thickness, and coupling to the external environment through interfaces or patterned layers. Photonic crystals [5], superlattices [6], or hyper-bolic metamaterials (HMMs) [7, 8] exemplify this com-plexity, sustaining EM modes whose excitation critically depends on geometry, boundary conditions, and momen-tum matching mechanisms [9]. Effective medium theory (EMT) [10] offers valuable macroscopic insight into the optical response of ideal, in-finite periodic systems in the deep-subwavelength limit and is widely employed. However, EMT cannot cap-ture finite-size resonances, grating-assisted coupling, or the selective excitation of modes that emerge in realis-     
+
+> ∗stefano.campanaro@unimore.it
+> †luca.bursi@unimore.it
+> ‡nicholas.anderson@duke.edu
+> §stefano@duke.edu
+> ¶arrigo.calzolari@nano.cnr.it
+
+tic multilayer structures with a finite number of periods. Addressing these effects requires EM solvers capable of treating layered media beyond homogenized descriptions, while retaining a direct connection with the underlying material properties. Here we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational tool for the quantitative simulation of EM wave propagation in finite and infinite layered (meta)materials and the analysis of the supported eigenmodes. The code is designed around an object-oriented architecture that promotes flexibility and scalability, while maintaining computational efficiency. Based on a comprehensive EM framework, AFLOW-EMERALD combines a numerically stable scattering-matrix method (SMM) [11, 12] for finite multilayer systems with plane-wave expansion (PWE) tools for photonic bandstructure (PBS) analysis in periodic media [13, 14]. The scattering-matrix formalism [15] enables the accu-rate computation of reflectance, transmittance, absorp-tance, and EM field distributions [12, 16]. When ap-plied to finite stacks, the SMM inherently captures in-terface reflections, grating-assisted momentum matching, and coupling to the external environment, thereby pro-viding a realistic description of wave propagation through layered (meta)materials and a direct framework for com-parison with experimental spectra. By combining the SMM with plane-wave expansions of the EM fields and dielectric functions, this approach naturally extends to laterally periodic structures, forming the basis of rigor-arXiv:2608.03759v1 [physics.optics] 4 Aug 2026 2ous coupled-wave analysis (RCWA) [17]. In parallel, the PWE formalism provides access to the Bloch eigenmodes and PBS of infinite periodic systems [5, 14]. This dual framework establishes a direct link between the prop-agating modes of finite stacks and the dispersion rela-tion of an ideal infinite layered material. Consequently, it allows one to identify which photonic modes can be excited under the boundary conditions dictated by the finite-thickness stack and the coupling medium, serving as a powerful tool for predicting and designing layered structures with tailored optical responses. By integrating these complementary formalisms within a single framework, AFLOW-EMERALD enables quanti-tative simulations of optical and plasmonic properties in complex layered architectures, including dispersive and anisotropic materials. The code has been successfully used for a broad class of systems, ranging from dielectric photonic crystals to plasmonic and hyperbolic multilay-ers, and to the analysis of plasmon-polariton modes in complex metamaterial platforms [18].  
+
+> AFLOW-EMERALD
+
+is released as open-source soft-ware under the GNU General Public License v3.0 or later (GPL-3.0-or-later), ensuring that the code can be used, modified, and redistributed while preserving the same freedoms in distributed derivative versions.  
+
+> AFLOW-EMERALD
+
+is part of the AFLOW ecosystem for computational design and characterization of complex materials and superstructures [19–21]. The source code is publicly available at https://github.com/aflow-org/ emerald . The repository includes the source code, doc-umentation, example input files, and scripts required to reproduce the simulations reported in this work. We fore-see a closer integration of AFLOW-EMERALD into the  
+
+> AFLOW
+
+suite, to perform thermodynamic and kinetic analysis of devices based on ultra-high-temperature plas-monic ceramics [22–24]. The article contains several acronyms. To facilitate reading, we add Table I.                           
+
+> Acronym Definition
+> CSV comma-separated value EM electromagnetic EMT effective medium theory HMM hyperbolic metamaterial PBS photonic bandstructure PWE plane-wave expansion QE quantum ESPRESSO RCWA rigorous coupled-wave analysis RTA reflectance, transmittance, absorptance SMM scattering-matrix method SPP surface plasmon polariton TE transverse electric TM transverse magnetic VPP volume plasmon polariton TABLE I. List of acronyms used in text.
+> FIG. 1. Schematics of stacked planar multilayer struc-tures. (a) Fully periodic, three-dimensional supercrystal. (b)
+> Finite-thickness multilayer stack comprising a finite number of layers, optionally incorporating a grating coupler.
+> II. THEORETICAL FRAMEWORK
+> AFLOW-EMERALD
+
+provides the EM response of lay-ered, periodically structured media by solving Maxwell’s equations in the frequency domain. The implementa-tion is based on the RCWA approach, which exploits the spatial periodicity of the system by expanding both the EM fields and the dielectric permittivity as Fourier se-ries [17, 25, 26]. Within each layer, decomposing the EM fields into a finite set of spatial harmonics (Floquet– Bloch modes), RCWA reduces Maxwell’s equations to a matrix eigenvalue problem. The resulting eigenvectors represent the propagating and evanescent coupled waves that characterize the scattered EM states. By enforc-ing the continuity of the tangential field at each inter-face and propagating these modes through the multilayer stack, the framework yields the complete EM response as a function of wavelength, angle of incidence, and polar-ization. This formulation is particularly suited to pho-tonic crystals and to metamaterial systems incorporating patterned couplers such as gratings, where periodic mod-ulations provide the reciprocal lattice vectors required for momentum matching to free space.  
+
+> A. Maxwell’s equations and conventions
+
+We consider linear, non-magnetic media ( μ = μ0) with a spatially varying, dispersive complex dielectric func-tion ε(r). The model geometry consists of planar layers stacked along z, each periodic in the x–y plane and homo-geneous along the perpendicular direction. Two config-urations are treated (Figure 1): fully periodic multilay-ers, constituting three-dimensional supercrystals (panel a), and finite-thickness multilayer stacks composed of a 3finite number of layers (panel b). The in-plane period-icity allows the dielectric function to be expanded as a Fourier series over reciprocal lattice vectors G,
+
+ε(r) = X
+
+> G
+
+ε(G, z ) eiG·r, (1) where G = 2 π
+
+ nx
+
+Lx
+
+, ny
+
+Ly
+
+
+
+with Lx, Ly being the periodic pitch along x and y, and ( nx, n y ) ∈ Z.According to Bloch’s theorem, the EM fields can be written as 
+
+E(r) = X
+
+> G
+
+E(G, z )eiKG·r, H(r) = X
+
+> G
+
+H(G, z )eiKG·r,
+
+(2) where KG = β − G labels the plane-wave components and β is the Bloch wavevector in the first Brillouin zone. Assuming harmonic time-dependence of the form 
+
+E(r, t ) = ℜ E(r)e−iωt  and H(r, t ) = ℜ H(r)e−iωt  for the EM fields, Maxwell’s curl equations read 
+
+∇ × E(r) = iωμ 0H(r), ∇ × H(r) = −iωε 0ε(r)E(r).
+
+(3) In Fourier space, the product ε(r)E(r) gives rise to a convolution over reciprocal lattice vectors, 
+
+ε(r)E(r) = X
+
+> j
+
+X
+
+> i
+
+ε(Gj − Gi, z )E(Gi, z )
+
+!
+
+eiGj ·r,
+
+(4) that naturally leads to the definition of a permittivity convolution matrix ˆ ε = {ε}ij with εij = ε(Gi − Gj , z, ω )and where the dependence on frequency ω is also made explicit. This representation casts Maxwell’s equations into a linear algebra problem for the Fourier coefficients of the fields, solvable numerically upon truncation of the plane-wave basis set. For the periodic directions, the ∇
+
+operator acting on Bloch-periodic fields reduces to alge-braic multiplications in reciprocal space, while the deriva-tive along the propagation direction must be treated ex-plicitly ∇ → [i(Kx, K y ), ∂ z ]. For fully periodic systems, the z-dependence of Eqs. (1–3) is likewise replaced by the corresponding Fourier components, and the ∇ operator reduces to a fully algebraic form: ∇ → i(Kx, K y , K z ). This formulation constitutes the basis for both the PWE approaches to PBS analysis and the scattering-matrix calculations implemented in AFLOW-EMERALD . 
+
+> B. Photonic bandstructure
+
+We consider a medium that is periodic in the three spatial directions (3D crystal), or in the x–y plane (2D crystal) and homogeneous along the stacking direction 
+
+z in the case of layered systems. The PWE formalism gives direct access to the Bloch eigenmodes of an infi-nite periodic medium and to its PBS, which describes the EM states sustained by the material. The PBS fur-ther enables a straightforward interpretation of resonant features (such as surface and volume plasmon-polariton branches) as Bloch modes selected by momentum match-ing, finite-thickness quantization, and grating-assisted coupling [18]. In dispersive and absorbing media (such as plasmonic and metamaterial systems), the dielectric function is gen-erally complex and frequency dependent, ε = εr (ω) + 
+
+iε i(ω), where εr and εi are the real and imaginary parts, respectively. The frequency dependence of ε turns the algebraic solution of Eqs. (3) into a nonlinear eigen-value problem that cannot be treated within a conven-tional PWE approach [27]. To overcome this limita-tion, AFLOW-EMERALD adopts an inverse-dispersion (or complex-k) formulation [27, 28] that recasts the prob-lem at fixed frequency and treats a component of the Bloch wavevector as the eigenvalue. The PBS is ex-pressed as a map of kz (ω, k x) – or equivalently kz (E, k x)– and EM attenuation is quantified directly through Im( kz ). We start considering a structure that is invariant along 
+
+y (1D periodic grating along x). For incidence, radia-tion in the x–z plane ( βy = 0) one has Ky = 0, and the EM problem reduces to two uncoupled polarization eigenproblems, corresponding to transverse electric (TE, 
+
+Ey̸ = 0) and transverse magnetic (TM, Hy̸ = 0) polar-izations. In the case of TE modes, in the absence of reciprocal-lattice components along the z direction, the algebraic Maxwell’s equation can be rewritten as a linear eigenvalue problem for βz at fixed ω, which remains well defined also in the presence of material dispersion: 
+
+( eGz Hx + i
+
+ eK2 
+
+> x
+
+− ˆε
+
+
+
+Ey = ˜βz Hx
+
+iIHx + eGz Ey = ˜βz Ey . (5) In Eq. (5) we assumed the notation Ki = βiI − Gi, eKi =
+
+Ki/k 0, eGi = Gi/k 0, and ˜βi = βi/k 0, where k0 ≡ ω/c is the wavenumber of the radiation in vacuum. In the general case of a full periodic system, the lat-ter equations for TE polarization can be rewritten as a matrix equation: 
+
+eGz i
+
+ eK2 
+
+> x
+
+− ˆε
+
+
+
+iI eGz
+
+! Hx
+
+Ey
+
+
+
+= ˜βz
+
+Hx
+
+Ey
+
+
+
+; (6) along the same lines, the equations for TM polarization read: 
+
+ eGz i eKx ˆε−1 eKx − I
+
+iˆε eGz
+
+  Ex
+
+Hy
+
+
+
+= ˜βz
+
+Ex
+
+Hy
+
+
+
+. (7) In the particular case of non-dispersive materials (i.e., 
+
+ε = constant ), Eqs. (6-7) reduce to a conventional (i.e., linear) PWE band-structure eigenproblem: 
+
+ K2 
+
+> x
+
++ K2
+
+> z
+
+ Ey = k20 ˆεE y (TE) (8) 
+
+ Kx ˆε−1Kx + Kz ˆε−1Kz
+
+ Hy = k20 Hy (TM) (9) 4where the Bloch wavevector β is fixed along a chosen high-symmetry path in the Brillouin zone, and the eigen-value problem is solved for the frequency ω (or equiva-lently k0 = ω/c ). For a given β, the corresponding plane-wave matri-ces Kx and Kz are constructed from the reciprocal lat-tice vectors, and the eigenvalues k0 are obtained by solving the appropriate polarization-resolved eigenprob-lem. Repeating this procedure along the selected path yields the photonic bandstructure, while the associated eigenvectors provide the Fourier amplitudes of the Bloch modes [5, 29]. 
+
+C. The scattering matrix method 
+
+We first consider the case of a single layer homoge-neous along z and periodic in the x–y plane. This al-lows one to decompose the complex dielectric function in Fourier components as in Eq. (1). The component-wise Maxwell’s equations, Eq. (3), for the single layer read: 
+
+
+
+− ∂ bEy
+
+∂z + iKy Ez = k0Hx
+
+∂ bEx
+
+∂z − iKxEz = k0Hy
+
+−iKy Ex − iKxEy = k0Hz
+
+− ∂ bHx
+
+∂z + iKy Hz = k0 ˆεE x
+
+∂ bHy
+
+∂z − iKxHz = k0 ˆεE y
+
+iKy Hx + iKxHy = k0 ˆεE z
+
+(10) Since the longitudinal components Ez and Hz can be expressed as linear combinations of in-plane field com-ponents, i.e., third and sixth lines in Eq. (10), the EM problem can be recast in terms of the field vectors 
+
+eT ≡ (Ex, E y )T and hT ≡ (Hx, H y )T transverse to the stacking direction. In the case of the electric field vector, Eq. (10) can be reformulated as a compact second-order differential equation for eT :
+
+d2eT
+
+d˜z2 = PQ e T ≡ Ω2 eT , (11) where ˜ z ≡ k0z and P, Q are 2 × 2 block matrices: 
+
+P =
+
+ Kx ˆε−1 Ky I − Kx ˆε−1 Kx
+
+Ky ˆε−1 Ky − I −Ky ˆε−1 Kx
+
+
+
+, (12) 
+
+Q =
+
+ Kx Ky ˆε − Kx Kx
+
+Ky Ky − ˆε −Ky Kx
+
+
+
+.
+
+The matrix Ω2 is decomposed as Ω2 = W Λ 2 W−1,where the diagonal part Λ contains complex-valued prop-agation constants to include evanescent modes, and W is the eigenvector’s matrix. A similar set of equations can 
+
+FIG. 2. Graphical representation of an EM field propagat-ing through a planar multilayer structure aligned along the 
+
+z-axis. εi, μi, are the electrical permittivity and magnetic permeability of the i-th layer. The field within the layer is represented by ψi(k0, ˜z), while c± 
+
+> i
+
+and c′± 
+
+> i
+
+indicate the mode coefficients inside and outside the i-th layer, respectively. 
+
+be written for the transverse magnetic field vector hT .By defining V ≡ QWΛ −1, the transverse fields are: 
+
+eT (˜ z) = W e−Λ˜z c+ + W e+Λ˜z c−,
+
+hT (˜ z) = −V e−Λ˜z c+ + V e+Λ˜z c−, (13) where c+ = W−1e+(0) and c− = W−1e−(0) are the modal amplitude vectors associated with the forward-and backward-propagating EM eigenwaves within a sin-gle layer. The extension from a single layer to a multilayer stack requires tracking the evolution of the EM fields across multiple interfaces. AFLOW-EMERALD addresses the issue by implementing the scattering-matrix formalism, which is well established for its robustness and numerical stability in thick, lossy, or strongly mismatched stacks and in systems comprising many layers [11, 12, 15]. We define a two-port scattering matrix S as: 
+
+c′−
+
+> 1
+
+c′+2
+
+!
+
+= S c′+1
+
+c′−
+
+> 2
+
+!
+
+, S ≡
+
+S11 S12 
+
+S21 S22 
+
+
+
+, (14) where ( c′+1 , c′− 
+
+> 1
+
+) are incoming/outgoing modal ampli-tudes of the EM field, Eq. (13), on the input side, and (c′− 
+
+> 2
+
+, c′+2 ) those on the output side, as shown in Figure 2. Within the i-th layer of thickness Li, we collect the trans-verse fields of Eq. (13) into the state vector: 
+
+ψi(k0, ˜z) = 
+
+eT (˜ z)
+
+hT (˜ z)
+
+
+
+(15) =
+
+ Wi Wi
+
+−Vi Vi
+
+  e−Λi ˜z 00 e+Λi ˜z
+
+  c+
+
+> i
+
+c−
+
+> i
+
+
+
+.
+
+Because of the field continuity at the interface, the scattering matrix of layer i explicitly depends not only on its intrinsic properties (permittivity and thickness), but also on the dielectric functions of the adjacent re-gions. To remove the dependence, we adopted the con-struction approach introduced in Refs. [11, 12], which 5inserts auxiliary zero-thickness free-space gaps between each physical layer. Each layer is thereby assigned a single, self-contained scattering matrix, independent of its position within the multilayer stack, with the added benefit of improved numerical stability and memory ef-ficiency. According to this construction approach, the S-matrix for the i-th layer is: 
+
+
+
+S(i)11 = S(i)22 
+
+=  Ai − XiBiA−1 
+
+> i
+
+XiBi
+
+−1  XiBiA−1 
+
+> i
+
+XiAi − Bi
+
+
+
+S(i)12 = S(i)21 
+
+=  Ai − XiBiA−1 
+
+> i
+
+XiBi
+
+−1 Xi
+
+ Ai − BiA−1 
+
+> i
+
+Bi
+
+
+
+(16) where Xi ≡ eΛik0Li . The auxiliary matrices Ai and Bi
+
+are defined with respect to the virtual zero-thickness gap layers (vacuum, εr = μr = 1) inserted between adjacent physical layers [12]. Denoting the gap eigenvector matri-ces by ( Wg , Vg ), we obtain: 
+
+Ai = W−1 
+
+> i
+
+Wg + V−1 
+
+> i
+
+Vg ,
+
+Bi = W−1 
+
+> i
+
+Wg − V−1 
+
+> i
+
+Vg . (17) This formulation renders the scattering matrix of each layer symmetric and independent of its neighbors, it en-sures continuity of the tangential fields at every interface, and improves numerical robustness. To connect the finite multilayer stack to the external environment, it is interfaced with semi-infinite input/out-put media of permittivities εin and εout (Fig. 2), through the introduction of the input and output interface scat-tering matrices S(in ) and S(out ):
+
+S(in ) =
+
+ −A−1 
+
+> r
+
+Br 2 A−1
+
+> r
+
+(Ar − Dr ) /2 Br A−1
+
+> r
+
+
+
+,
+
+S(out ) =
+
+BtA−1 
+
+> t
+
+(At − Dt) /22 A−1 
+
+> t
+
+−A−1 
+
+> t
+
+Bt
+
+
+
+,
+
+(18) with 
+
+Dα = Bα A−1 
+
+> α
+
+Bα , α ∈ { r, t } ,
+
+Aα = W−1 
+
+> g
+
+Wγ + V−1 
+
+> g
+
+Vγ ,
+
+Bα = W−1 
+
+> g
+
+Wγ − V−1 
+
+> g
+
+Vγ ,
+
+(19) where γ(α = r) = IN and γ(α = t) = OU T . The global scattering matrix is then built by cascading the individ-ual sections through the Redheffer star product [30] (here denoted by ⊗), 
+
+S(global) = S(in ) ⊗ S(device) ⊗ S(out ). (20) Given an incident ( inc ) modal-amplitude vector cinc ,the reflected ( ref ) and transmitted ( trn ) modal coeffi-cients follow directly from Eq. (14): 
+
+cref = S(global )11 cinc ,
+
+ctrn = S(global )21 cinc . (21) The corresponding transverse electric-field Fourier coef-ficients are 
+
+rT = Wref cref ,
+
+tT = Wtrn ctrn , (22) where Wref and Wtrn matrices collect the eigenvectors of the reflected and transmitted EM modes, respectively. The total reflectance R and transmittance T spectra are obtained by summing over all propagating modes: 
+
+R = X
+
+> m,n
+
+ℜ
+
+ Kref 
+
+> z,mn
+
+Kinc 
+
+> z
+
+
+
+|rmn |2
+
+T = X
+
+> m,n
+
+ℜ
+
+ Ktrn 
+
+> z,mn
+
+Kinc 
+
+> z
+
+
+
+|tmn |2 ,
+
+(23) where Kref  
+
+> z,mn
+
+and Ktrn  
+
+> z,mn
+
+are the longitudinal wavevec-tor components of all possible reflected and transmitted modes, respectively, with n, m ∈ Z. The total absorp-tance spectrum A follows from energy conservation as 
+
+A = 1 −R−T . This formalism rigorously describes energy distribution among all diffraction orders, while enforcing energy conservation in lossless systems and naturally ac-counting for absorption in lossy media. 
+
+III. SOFTWARE DESIGN 
+
+AFLOW-EMERALD is implemented in Python 3.9 and MATLAB. The Python layer consists of a single object-oriented class and a collection of supporting func-tions; the key dependencies are listed in Table II. Com-putationally intensive tasks are delegated to vectorized MATLAB routines, which can be compiled for GPU ac-celeration. The Python engine handles input parsing and orchestrates the calls to these core functions. The operational workflow of AFLOW-EMERALD soft-ware is schematized in Figure 3. The software is de-signed to operate within a Jupyter Notebook environ-ment, where multiple simulations can be executed and their outputs analyzed interactively. All functionalities are contained in a single file, multilayer.py , which de-fines a main class of the same name together with several auxiliary functions (see code Snippet III). Initialization is performed in the first notebook cell; the structural prop-erties of the system under analysis are supplied via a ded-icated YAML configuration file. A single YAML file may describe multiple systems, each identified by a unique name. Launching a simulation requires only: Required inputs are the dielectric functions (or static dielectric constants, for non-dispersive materials), to-gether with the structural parameters of the multilayer, e.g., layers thicknesses and number of periods. A full description of the input parameters, code functionalities, and generated outputs is presented in the following sec-tion. AFLOW-EMERALD is distributed as a standard Python package and can be installed in a conventional 6           
+
+> FIG. 3. Schematic workflow of the AFLOW-EMERALD software. Input files specifying the multilayer geometry and dielectric properties are parsed by the Multilayer class and processed by the computational engine. The software calculates optical spectra - namely reflectance, transmittance, and absorptance (RTA) - electromagnetic field distributions, and photonic band-structures using both direct and complex-kformulations.
+> from emerald import multilayer filepath = "systems.yaml" structure = "material1" mat = Multilayer(filepath, structure)
+> Snippet 1. Example of Multilayer class initialization.
+> Python library Version
+> Numpy 2.1 Scipy 1.14 Matplotlib 3.9 PyYAML 1.1 Matlab engine R2024A TABLE II. Python libraries used along with MATLAB engine version.
+
+Python environment. Once installed, no additional con-figuration is required beyond the standard Python de-pendencies listed in Table II. A brief README file with installation and execution instructions is available in the GitHub repository. (https://github.com/aflow-org/ emerald ).   
+
+> IV. CODE DESCRIPTION A. System description
+
+System parameters are provided through a YAML con-figuration file organized into two main sections (Fig-ure 3). The first defines the predefined materials , which serve as the fundamental building blocks of the multi-layer. Each material can be specified in three ways (see code Snippet IV A): i. by assigning a complex dielec-tric constant; ii. by referencing an external file con-taining the full frequency-dependent dielectric function in comma-separated values (CSV) format; or iii. by us-ing the output format of Quantum ESPRESSO (QE) [31]. If the dielectric function data reside in a directory other than that of the active notebook, a base path can be set via the prepath key. Backend-specific base directories are also supported: prepath csv applies exclusively to CSV-based materials, while prepath qe applies to data obtained from the epsilon.x code of the QE suite. Path resolution follows three conventions: an alphanumeric-initial path is interpreted as relative to the correspond-ing prepath ; a ./ -prefixed path is resolved relative to the configuration file directory, ignoring prepath ; and a 
+
+/-prefixed path is treated as absolute. The second section of the YAML file defines the sys-tems used in the simulations. Since the number of peri-ods is passed as a parameter to the simulation functions, the YAML configuration describes only the structure unit cell. Each unit cell comprises an ordered sequence of lay-ers, each defined by its thickness and material compo-sition. Systems are identified by unique keys, with the 7   
+
+> predefined: prepath: data air: 1 Ag: -14.4204+1.064j Au: gold.csv SiO2: csv # Shortcut to SiO2.csv
+> GaAs: qe # Shortcut to GaAs.dat
+> InAs: prefix: InAs folder: InAs-calc1 subfolders: eps1, eps2
+> Snippet 2. Example of YAML configuration file for predefined materials section.
+> grating: 1: d: 10 epsA: Ag epsB: air fg: 0.5 sys1: prepend: grating 1: eps: Au d: 10 2: eps: InAs d: 10 sys2: 1: eps: 5 d: 20 2: eps: GaAs d: 20 sys3: prepend: grating, sys2 1: eps: 9 d: 12
+> Snippet 3. Example of YAML configuration file defining multiple systems.
+
+constituent layers indexed by consecutive integers start-ing from index 1. If a layer is homogeneous, it is described by two pa-rameters: 
+
+• eps : the dielectric function of the layer, which can be specified either as a numerical value (real or complex) or as a reference to a predefined mate-rial key; 
+
+• d: the layer thickness in nanometers, which can equivalently be specified using the alias thickness .If a layer is laterally inhomogeneous and/or composed of two different materials, the parameter eps is replaced by: 
+
+• epsA : dielectric function of material A; 
+
+• epsB : dielectric function of material B (optional; if omitted, it is assumed to be equal to unity); 
+
+• fg : horizontal filling factor of material A. The include key allows a block of layers from one system to be inserted into another’s unit cell. Multiple blocks can be imported by providing a comma-separated list of keys, as shown in code Snippet IV A. Layers posi-tioned outside the unit cell are defined via the prepend 
+
+and append keys. Like include , these keys support mul-tiple comma-separated entries. Importantly, blocks imported through these keys con-tribute only their numerically indexed layers. Any fur-ther nested inclusions are ignored. Specifically, if a block included via the unit cell contains its own prepend or 
+
+append definitions, these external layers are not propa-gated to the final assembled structure.  
+
+> B. Code Functionalities
+
+The Multilayer class provides a suite of four main functionalities - namely rta energy , rta angle ,
+
+fields , and bands (Figure 3) - for the evaluation and analysis of optical response spectra, field distributions, and photonic bandstructures across planar multilayers. For all functionalities, the specific simulation parameters are defined via a Python dictionary. A detailed descrip-tion of these keywords is summarized in Table III. 1) rta energy computes the RTA optical spectra (i.e., reflectance, transmittance, and absorptance) through a multilayer, as a function of energy. The calculation is performed for a fixed angle of incidence, with the energy sampled over a user-defined range. The execution of this functionality requires: i. the definition of the incidence angle of the incoming radiation relative to the optical axis of the stack material aligned along z and perpendicular to the material layers (default: 0 ◦); and ii. a NumPy array containing the energy values at which the calculation is performed. The energy values provided for the calcula-tion need not coincide with the points in the dielectric function dataset. When the input values differ, the soft-ware estimates the corresponding permittivity values via polynomial interpolation. A single energy value can be provided instead of an array; in this case, the method performs the calculation for that specific point. 2) rta angle computes the RTA optical spectra as a function of the angle of incidence. The energy is held constant, while the incidence angles are provided as an input NumPy array. 3) fields evaluates the real-space EM field distribution 8
+
+# Parameter Description RTA EM fields Photonic Mandatory Default spectra analysis 
+
+# periods number of periods X X X Yes -
+
+# energy energy range X X X Yes -
+
+# Lambda in-plane cell width X X X No 100 nm 
+
+# halfnpw (half) number X X X No 0of plane-waves 
+
+# eps in dielectric constant X X Yes -in-layer 
+
+# eps out dielectric constant X X Yes -out-layer 
+
+# extL dist external space X Yes -in field simulation 
+
+# plot plot format X X X No No plot 
+
+# file saving picture X X X No -path 
+
+# kx planar wavevector X Yes -array 
+
+# lines resonance lines X No True in 2D bandplot 
+
+# resonance resonances to plot X No All 
+
+> TABLE III. Description of the parameters contained in the Python simulation dictionary.
+
+9across the multilayer structure. Fields are resolved for a specified system at a fixed energy and either a fixed an-gle of incidence or a fixed in-plane wavevector ( kx). This functionality provides the 1D intensity profile of the EM field across the multilayer along the z-axis, together with the 2D color map of the EM modes in the x − z plane. Depending on the TE or TM polarization of the incom-ing radiation, either the electric or the magnetic field can be evaluated. Execution of this functionality requires: i. 
+
+definition of the energy and incidence angle of the incom-ing radiation relative to the optical axis, aligned along the 
+
+z-axis (default: 0 ◦); ii. definition of the layers external to the multilayer (Figure 2) for evaluation of the incom-ing and outgoing EM fields; iii. definition of the spatial mesh for the EM calculation. 4) bands computes the two-dimensional PBS, yielding an N × M matrix corresponding to N sampled energy points and M in-plane wavevectors ( kx). By returning the complex Bloch wavevector, this method allows for the simultaneous analysis of propagating and evanescent modes. For non-dispersive systems, bands generates standard photonic bandstructure plots representing the 
+
+E(k) dispersion of the EM energy (or frequency) with re-spect to the wavevector, calculated along high-symmetry paths within the first Brillouin zone of the periodic su-perstructure. In this specific case, a specific functionality (bands3D ) allows for the calculation of three-dimensional photonic bandstructure. For dispersive and absorbing layered materials, the bandstructure is instead rendered as a color-scaled two-dimensional map in which the in-tensity encodes the imaginary part of the longitudinal Bloch wavevector Im( kz ). While PBS represents the continuum of EM modes of an infinite periodic medium, finite structures impose spe-cific selection rules. Factors such as layer thickness, a limited number of periods, or the use of a momentum-matching coupler (such as grating) dictate which EM modes can actually be excited. Within the PWE frame-work, the EM resonances in a finite-thickness multilayer occur when the Bloch wavevector satisfies the structural periodicity. For a stack of N layers, the finite geometry discretizes the allowed kz values (Figure 1), restricting the supported Bloch waves to those fulfilling the reso-nance condition: 
+
+kz = ℓ
+
+2N
+
+2π
+
+Λz
+
+, ℓ = 1 , . . . , N, (24) where Λ z is the thickness of the unit cell along z. For fixed N and Λ z , AFLOW-EMERALD displays the al-lowed kz solutions of Eq. (24) as colored isolines super-imposed to the 2D band map. In-plane periodicity im-parts analogous constraints on the transverse wavevector. For example, a linear grating of period Λ x couples the incident field to a discrete set of in-plane momenta, de-composing the transmitted field into multiple diffraction orders. The integer index ˜kx = ( kxΛx)/2π = 0 , 1, ..., n 
+
+labels the first and higher harmonics, respectively. The intensity of each diffracted component decreases with increasing harmonic order. The allowed ˜kx values are marked as vertical colored lines on the 2D bandstructure. In the general case, resonance conditions are located at the intersections of the isolines satisfying Eq. (24) with the vertical lines representing the in-plane momenta in-troduced by the periodic lateral structure.   
+
+> C. Computational performance
+> AFLOW-EMERALD
+
+exhibits competitive computa-tional performance through the combination of a mod-ular Python architecture and vectorized MATLAB ker-nels. For multilayer systems with ∼10–20 periods and a plane-wave basis of ∼50–100 components, optical spectra (reflectance, transmittance, and absorptance) are com-puted in approximately 0.03 s per energy point on a single-core CPU. Two-dimensional PBS maps, sampling 10 2–10 3 points in energy and in-plane wavevector, are obtained in 10–100 minutes depending on the size of the PWE basis and the number of CPU cores employed. The software also enables straightforward deployment on high-performance computing (HPC) clusters, allowing ef-ficient parallel execution of computationally demanding simulations. The scattering-matrix formalism ensures numerical stability for thick or highly dissipative systems, suppress-ing the exponential error growth that afflicts transfer-matrix approaches. GPU acceleration, available through compilation of the MATLAB routines, yields speedups of up to one order of magnitude, particularly for RCWA calculations with large plane-wave bases. Memory re-quirements remain moderate – typically below 1–2 GB for standard simulations – rendering the code suitable for both local workstations and high-performance com-puting environments, with favorable scaling as a function of basis size and system complexity.   
+
+> V. EXAMPLES A. Optical RTA spectra
+
+We applied the rta energy functionality of  
+
+> AFLOW-EMERALD
+
+to calculate the optical reflectance, transmittance, and absorptance (RTA) spectra of aprototypical finite-size photonic crystal composed of alternating TiO 2 and SiO 2 dielectric layers. Each layer was 60 nm thick, and the structure consisted of 5 periods embedded in air ( εin = εout = 1). For the dielectric functions of the two oxide materials, we considered two cases: i. real dielectric constants (i.e., 
+
+ε2 = 0) fixed to their average values in the visible and near-infrared spectral range, where the variations of the dielectric functions are relatively small; ii. complex frequency-dependent dielectric functions (i.e., dispersive materials) extracted from literature datasets [32, 33] 10 and converted into CSV format. The RTA spectra of the TiO 2/SiO 2 stack were computed over an energy range 0–4.5 eV and are displayed in Figure 4. TiO 2
+
+and SiO 2 are wide-bandgap dielectrics with bandgap energies of Eg (TiO 2)=3.2 eV and Eg (SiO 2)=8.9 eV, respectively. When paired, they form a type-I band alignment, where the bandgap of TiO 2 is entirely nested within that of SiO 2. Consequently, for photon energies below Eg (TiO 2), interband transitions are forbidden (i.e., absorption is absent, ε2 = 0), and the incident EM radiation is split solely between the reflected and transmitted components. In this energy range, the reflectance and transmittance spectra obtained with constant (Fig. 4a) and frequency-dependent (Fig. 4b) dielectric functions are almost identical, with minor differences due to the numerical discrepancies in the corresponding permittivity values. For photon energies above Eg (TiO 2), interband transitions are active (i.e., 
+
+ε2̸ = 0), leading to the emergence of a finite absorp-tance signal (black line in Fig. 4b), visible only when considering frequency-dependent permittivities, which progressively becomes the dominant spectral component of the optical response. The same approach can be applied to multilayers com-bining dielectric and metallic layers. In general, the presence of metallic components prevents EM waves from penetrating and propagating through the multi-layer, causing the majority of the incident radiation to be reflected at the surface. However, under specific condi-tions, such as those leading to hyperbolic dispersion [34], extraordinary EM modes – e.g., volume plasmon polari-tons (VPPs) – can propagate along sharp cones across the stack. This gives rise to non-zero transmittance and absorptance contributions (see, e.g., Ref. [18]). By employing the AFLOW-EMERALD software, we calculated the RTA spectra for a HMM consisting of 6 periods of Ag/TiO 2 alternating layers, each with an equal thickness of 25 nm. A silver grating layer with periodicity Λx = 100 nm is included on the top of the stack (Fig-ure 1), to compensate the momentum mismatch between the incident radiation and the VPP [34]. The dielectric functions used as input for Ag and TiO 2 have been ex-tracted from experimental data sets reported in Refs. [35] and [32], respectively. Silver serves as plasmonic mate-rial, characterized by a plasma energy of Ep = 3 .8 eV. The multilayer structure exhibits a hyperbolic charac-ter for E < E p. Specifically, within the energy range [0 −2.6] eV, the system displays type-II behavior, whereas it transitions to a type-I character in the [2 .6 − 3.8] eV range. For E > E p, the system acts as a conventional dielectric. The results are reported in Figure 4c. In the type-II hyperbolic regime, the reflectance is close to unity for E ≲ 1.0 eV, followed by a series of dips of decreasing intensities. The lowest energy minimum at ∼ 1.5 eV corresponds to a surface-bound EM mode, whereas the subsequent minima are associated with the excitation of VPP modes propagating across the stack. Conversely, the transmittance remains negligible over the                       
+
+> FIG. 4. Finite thickness multilayers. Optical reflectance, transmittance, and absorptance (RTA) spectra of aone-dimensional TiO 2/SiO 2photonic crystal consisting of five periods with equal layer thicknesses of 60 nm, calculated using (a) constant real dielectric permittivities and (b)
+> frequency-dependent dielectric functions from reference liter-ature [32, 33]. (c) Optical reflectance and transmittance spec-tra of Ag/TiO 2hyperbolic metamaterial composed of 6 peri-ods with equal layer thicknesses of 25 nm. A 15 nm-thick rect-angular silver grating with lateral periodicity Λ x= 100 nm is added on the stack top. Vertical dashed line identifies the type-I and type-II hyperbolic spectral ranges. Colored circles in panels b and c indicate selected EM modes analyzed in Section V C.
+
+same spectral range. This behavior indicates that, while VPP modes are successfully excited within the bulk of the metamaterial, the boundary conditions at the lower external interface prevent the EM waves from radiating into the outer medium. To enhance transmittance, ap-11 propriate grating coupling conditions could be engineered on the exit surface. A slight increase in transmittance is observed within the type-I energy range, attributed to the enhanced dielectric-like character of the stack. A rig-orous classification of the EM nature of these minima is provided by the field profile analysis discussed below (Section V C).            
+
+> B. Angle-resolved spectroscopy
+> FIG. 5. (a) Reflectance spectrum (R) of the air/Ag inter-face as a function of the photon incidence angle, calculated at a fixed photon energy of E= 2 .5 eV. The pronounced reflectance dip identifies the resonant excitation of a surface plasmon polariton. (b) Energy dependent reflectance spec-trum calculated with AFLOW-EMERALD (solid black line) at an incidence angle θSP P = 46 .4◦, corresponding to the reflectance minimum in panel a. Experimental data from Ref. [36] are shown as red crosses for comparison. Colored circle in panel b indicates the selected EM mode analyzed in Section V C.
+
+As an example of the rta angle functionality, we con-sidered the case of a surface plasmon polariton (SPP) propagating along the interface between a dielectric and a plasmonic material. Because the SPP is bound to the surface and decays in the direction perpendicular to the interface, the transmittance across the multilayer is close to zero. From the spectroscopic standpoint, the exci-tation of an SPP corresponds to a minimum in the re-flectance, due to light absorption and plasmon excitation. The k-matching condition at the interface, on the other hand, selects specific angles of the incoming radiation to excite the SPP mode. The reflectance as a function of an-gle is therefore a suitable tool to identify the presence of SPPs. We address this with the rta angle functionality of AFLOW-EMERALD .We considered the testbed case of an air/Ag interface. We calculated the reflectance spectrum of a 41 nm thick Ag film exposed to air as a function of the angle of inci-dence, spanning from 0 ◦ (normal incidence) to 90 ◦ (graz-ing incidence). The photon energy of the incoming radia-tion was fixed at E = 2 .5 eV, which lies below the upper bound Emax SP P = EAg p /p(1 + εair  
+
+> 1
+
+) = 2 .7 eV, required to excite a SPP at the air/Ag interface. The momentum matching is realized through a UV fused quartz prism with refractive index n = 1 .47 in the Kretschmann con-figuration. The dielectric function of silver used in these simulations is taken from the experimental optical dielec-tric functions reported in Ref. [37]. The results, shown in Figure 5a, indicate a sharp minimum in the reflectance spectrum at θSP P = 46 .4◦
+
+that corresponds to the excitation of the SPP. Notably, this angle exactly matches the experimental value for the same metal/air interface [36]. To further compare our results with literature data, we calculated the re-flectance for the air/Ag interface as a function of en-ergy, for incoming radiation at the angle θSP P corre-sponding to the reflectance minimum in Figure 5a. The results, shown in Figure 5b alongside reference experi-mental data [36], clearly demonstrate the accuracy and the predictive power of the AFLOW-EMERALD code. The characteristic surface-bound behavior of SPP is con-firmed by the magnetic-field profile (see below).  
+
+> C. Electromagnetic fields
+
+The fields functionality reconstructs the complete real-space EM fields. It combines the scattering-matrix solution with the eigenmodes of each layer, yielding one-dimensional field profiles along the stacking direction and two-dimensional field maps in the x − z plane. This ca-pability complements the optical spectra discussed in the previous sections and provides direct visualization of the EM states sustained by different classes of layered ma-terials. To this end, we evaluated the EM field profiles for the three reference systems analyzed in the previ-ous section: a TiO 2/SiO 2 photonic crystal, an Ag/TiO 2
+
+HMM, and an air/Ag interface. For consistency, we re-tained the same structural parameters specified above, including grating. TM polarization was considered for all investigated systems. Specifically, we calculated the spatial distribution of the magnetic field associated with the selected EM resonances marked by open circles in the RTA spectra of Figures 4 and 5, assumed as prototypical examples. The results are summarized in Figure 6. For the photonic crystal (Figure 6a), the selected EM mode corresponds to an extended, traveling wave that is 12 
+
+FIG. 6. Magnetic field intensity (top panels) and corresponding 2D spatial profiles (bottom panels) for selected EM modes: 
+
+(a) photonic resonance at 3.43 eV in a TiO 2/SiO 2 photonic crystal; (b) VPP resonance at 2.23 eV in a Ag/TiO 2 hyperbolic metamaterial.The green layer at the top of the system in the field plot represents the grating coupler; and (c) SPP resonance at 2.5 eV in a air/Ag interface. The respective modes are marked by open circles in the RTA spectra of Figures 4 [for a and b] and 5 [for c]. 
+
+FIG. 7. Infinite periodic multilayers. (a) Photonic bandstructure for TiO 2/SiO 2 photonic crystal with equal layer thicknesses of 60 nm, calculated within the non-dispersive permittivity approximation (i.e., ε1 = constant , ε2 = 0); inset represents the 2D Bruillouin zone. (b) Complex-k bandstructure for a Ag/TiO 2 metamaterial with equal filling factor and period thickness of 50 nm, obtained from complex frequency-dependent dielectric function. Red vertical lines indicate the fundamental ( ˜kx = 0) and the first ( ˜kx = 1) harmonic contributions associated with top grating of periodicity Λ x = 100 nm. Colored curves correspond to the first five kz resonance values ( m = 0 − 4) for N = 6 metal/dielectric bilayers. Filled and open circles denote type-I and type-II VPP modes, respectively. The pink circle corresponds to the specific VPP resonance highlighted in Figure 4c and detailed in Figure 6b. 13 uniformly distributed along the x-direction. This wave successfully penetrates and propagates through the en-tire multilayer stack, in agreement with the prominent transmittance peak observed in Figure 4b. For the Ag/TiO 2 metamaterial (Figure 6b), the se-lected resonance corresponds to a VPP mode that prop-agates throughout the multilayer as a collective polaronic excitation. The zero-intensity value of the magnetic field profile at the exit-surface/air interface confirms that this mode is unable to radiate out of the multilayer stack, which is in agreement with the vanishing transmittance observed in Figure 4b. Furthermore, the number of nodes in the 2D spatial maps of the magnetic field (bottom panels) allows for the classification of VPPs into distinct orders, providing a direct link to the experimental re-flectance analysis. The maximum VPP order is deter-mined by the number and thickness of the layers com-posing the metamaterial, Eq. (24), and sets the upper limit on the total number of VPP modes that can be ex-cited within a fixed stack geometry. Here, the EM state exhibits a single node, identifying it as the first-order (1 st ) VPP mode. The bandstructure tools can be used to design and predict the optimal geometrical parameters governing the EM excitations supported by metamateri-als (see Section V D). Finally, for the air/Ag interface (Figure 6c), the mag-netic field profile exhibits the characteristic behavior of a surface-bound EM mode. The field decays exponentially along the z-direction - vanishing more rapidly within the metallic layer than in the air region - while oscillating in-plane along the x-direction, precisely as expected for a SPP excitation.  
+
+> D. Photonic band analysis
+
+To demonstrate the capabilities of the bands func-tionality of the AFLOW-EMERALD code, we consid-ered two systems belonging to the same class of mate-rials discussed above: a TiO 2/SiO 2 photonic crystal and a Ag/TiO 2 hyperbolic metamaterial. In contrast to the previous finite-stack configurations, we now model infi-nite periodic structures. We thus calculate the PBS of the periodically repeated multilayers, which provides the overall distribution of the EM modes of the system (i.e., Bloch states). First, we calculated the photonic bandstructure for the photonic crystal within the non-dispersive permittivity approximation (i.e., ε1 = constant , ε2 = 0). Figure 7a shows the lowest-energy transverse magnetic (TM) pho-tonic modes as a function of the wavevector k along a closed path in the ky = 0 plane of the Brillouin zone. We identify a complete photonic bandgap of ∼ 0.6 eV at Γ, along with partial gaps at the high-symmetry points. The emergence of the bandgap results from the dielectric contrast between the two constituent materials, which leads to Bragg scattering at the Brillouin zone bound-aries. The red and green bands represent the so-called 
+
+dielectric and air modes which concentrate the EM en-ergy in the regions with higher TiO 2 and lower SiO 2 per-mittivity, respectively. As a second example, we calculated the complex-k pho-tonic bandstructure Ag/TiO 2 hyperbolic metamaterial obtained from complex frequency-dependent dielectric function. In Figure 7b, the pixel colors in the grayscale spectrum represent the magnitude of the imaginary part of the complex Bloch wavevector kz along the stacking direction as a function of the photon energy E and of the in-plane kx component of the wavevector. In this map, lighter regions correspond to low attenuation, where EM waves propagate with minimal loss; darker regions indi-cate strong attenuation associated with large imaginary wavevector components. While the PBS plot provides continuous dispersion re-lations for the EM modes within an infinite multilayer, practical applications typically require identifying which specific modes can be excited in realistic systems. In such finite configurations, both the exact number of layers and the coupling mechanism are uniquely determined dur-ing the fabrication process. To this end, we exploit the boundary matching tools implemented in the bands func-tionality described above. The in-plane periodicity in-duced by the grating selects specific (scaled) ˜kx wavevec-tors, which are defined by diffraction harmonics and rep-resented as vertical red lines in Figure 7b. Concurrently, the finite number of metal/dielectric bilayers restricts the allowed perpendicular kz components to discrete values, as expressed by Eq. (24). The colored curved lines in Fig-ure 7b depict the isolines corresponding to the first five resonance kz values for a multilayer consisting of N=6 bilayers. The mode index m (ranging from 0 to N − 1) indicates the number of nodes in the EM field within the metamaterial, thereby establishing a direct correla-tion between the resonance kz values and the VPP orders discussed previously. The intersections between the ver-tical red lines and the colored isolines correspond to the only physical EM states that can be excited within the metamaterial. Here, filled and open circles denote type-I and type-II VPP modes, respectively, while the pink cir-cle identifies the specific VPP resonance highlighted in Figure 4c and detailed in Figure 6b.   
+
+> VI. CONCLUSION
+> AFLOW-EMERALD
+
+(ElectroMagnetic modes EngineeRing in Advanced LayereD materials) pro-vides a unified, open-source framework for quantitative electromagnetic (EM) simulations of layered and pe-riodically structured (meta)materials, integrating an efficient scattering-matrix implementation for finite stacks with rigorous coupled-wave analysis (RCWA), plane-wave expansion (PWE) tools for Bloch-modes and photonic band-structure (PBS) analysis. By combining these complementary formalisms within asingle, modular and object-oriented workflow, the code 14 bridges realistic device optics—where spectra and near fields are governed by interference, finite thickness, and boundary conditions—with the dispersion properties of the corresponding ideal periodic media.  
+
+> AFLOW-EMERALD
+
+directly connects EM modelling with the underlying materials response. Optical simula-tions are grounded on the electronic and optical proper-ties of the constituent materials, which can be provided from experimental measurements, literature data, or ob-tained from first-principles calculations, enabling pre-dictive studies across dispersive, lossy, and anisotropic platforms. Within the RCWA/PWE formulation, the Fourier-space treatment of Maxwell’s equations provides a systematic route to handle laterally patterned couplers and periodic media, while the scattering-matrix approach ensures robust simulations of multilayers with many pe-riods, strong impedance mismatch, or evanescent compo-nents. Together, these complementary approaches allow for a direct comparison with experimental spectra and a clear physical interpretation of the supported EM modes. Through three prototypical representatives of relevant classes of multilayers, we have shown how the joint use of i. finite-stack optical spectra and field profiles and ii. 
+
+PBS and Bloch modes analyses enables an interpretable and design-oriented characterization of EM resonances and plasmon-polariton modes, in photonic crystals, and metamaterials. Overall, AFLOW-EMERALD supports the material–geometry co-design of advanced photonic and metamaterial devices, offering a practical tool to ra-tionalize experiments, optimize geometry and coupling conditions, and engineer EM modes across dielectric photonic crystals, plasmonic multilayers, and hyperbolic metamaterials. 
+
+> CREDIT AUTHORSHIP CONTRIBUTION STATEMENT
+
+Stefano Campanaro: Writing – review & editing, Writing – original draft, Methodology, Code implemen-tation, Tests and data generation, Conceptualization. 
+
+Luca Bursi: Writing – review & editing, Writing – original draft, Validation, Methodology, Conceptualiza-tion. Nicholas Anderson: Writing – review & edit-ing, Writing – original draft, Validation. Stefano Cur-tarolo: Writing – review & editing, Writing – original draft, Supervision, Funding acquisition. Arrigo Calzo-lari: Writing – review & editing, Writing – original draft, Validation, Supervision, Funding acquisition, Conceptu-alization. 
+
+> DECLARATION OF COMPETING INTEREST
+
+The authors declare that they have no known com-peting financial interests or personal relationships that could have appeared to influence the work reported in this paper. 
+
+> ACKNOWLEDGEMENTS
+
+L.B. acknowledges financial support from PNRR MUR project ECS 00000033 ECOSISTER funded by the Euro-pean Union-NextGenerationEU. A.C. acknowledges the National Centre for HPC, Big Data and Quantum Computing (ICSC), funded under the National Recov-ery and Resilience Plan (NRRP), Mission 04 Compo-nent 2 Investment 1.4, NextGenerationEU, Award Num-ber:CN00000013. S.Cur. acknowledges support by the Office of Naval Research under grants N00014-23-1-2615 and N00014-24-1-2768, and by the DoD High Perfor-mance Computing Modernization Program (Frontier). S.Cur. also thanks Auro Scientific, LLC for computa-tional support. The authors thank Drs. Simon Divilov, Hagen Eckert, Paolo De Angelis, Michael Mehl, Xiomara Campilongo and Douglas E. Wolfe for useful discussions. 
+
+> DATA AND CODE AVAILABILITY
+
+Data and source code of AFLOW-EMERALD are pub-licly available at github.com/aflow-org/emerald.                                           
+
+> [1] S. Shamim, A. S. Mohsin, M. M. Rahman, and M. B. H. Bhuian, Recent advances in the metamaterial and metasurface-based biosensor in the gigahertz, tera-hertz, and optical frequency domains , Heliyon 10 , e33272 (2024). [2] D. Lee, W. W. Chen, L. Wang, Y.-C. Chan, and W. Chen, Data-driven design for metamaterials and mul-tiscale systems: Areview ,Adv. Mater. 36 ,2305254 (2024). [3] A. Moradi, Theory of Electrostatic Waves in Hyper-bolic Metamaterials ,Springer Series in Optical Sciences ,vol. 245 (Springer, Cham, 2023), doi:10.1007/978-3-031-48596-1. [4] S. V. Zhukovsky, O. Kidwai, and J. E. Sipe, Physical nature of volume plasmon polaritons in hyperbolic meta-materials , Opt. Exp. 21 , 14982–14987 (2013). [5] J. D. Joannopoulos, S. G. Johnson, J. N. Winn, and R. D. Meade, Photonic Crystals: Molding the Flow of Light
+> (Princeton University Press, Princeton, NJ, 2008), 2nd edn., doi:10.1515/9781400828241. [6] P. Apell and O. Hunderi, Optical properties of superlat-tices , in Handbook of Optical Constants of Solids , edited by E. D. Palik (Academic Press, Burlington, 1997), pp. 97–124, doi:10.1016/B978-0-08-055630-7.50008-0. [7] I. I. Smolyaninov, Hyperbolic Metamaterials , 2053–2571 (Morgan & Claypool Publishers, IOP Publishing Lim-ited, 2018), doi:10.1088/978-1-6817-4565-7.
+
+15 
+
+[8] A. Poddubny, I. Iorsh, P. Belov, and Y. Kivshar, Hyper-bolic metamaterials , Nat. Photonics 7, 948–957 (2013). [9] K. V. Sreekanth, A. De Luca, and G. Strangi, Excitation of volume plasmon polaritons in metal-dielectric meta-materials using 1D and 2D diffraction gratings , J. Opt. 
+
+16 , 105103 (2014). [10] O. Kidwai, S. V., and J. E. Sipe, Effective-medium approach to planar multilayer hyperbolic metamaterials: Strengths and limitations , Phys. Rev. A 85 , 053842 (2012). [11] N. P. K. Cotter, T. W. Preist, and J. R. Sambles, 
+
+Scattering-matrix approach to multilayer diffraction , J. Opt. Soc. Am. A 12 , 1097–1103 (1995). [12] R. C. Rumpf, Improved formulation of scattering matri-ces for semi-analytical methods that is consistent with convention , Prog. Electromagn. Res. B 35 , 241–261 (2011). [13] Y. De Bruijn and E. O. Hiltunen, Complex band structure for subwavelength evanescent waves , Stud. Appl. Math. 
+
+154 , e70022 (2025). [14] Z.-Y. Li and L.-L. Lin, Photonic band structures solved by a plane-wave-based transfer-matrix method , Phys. Rev. E 
+
+67 , 046607 (2003). [15] M. Born, E. Wolf, A. B. Bhatia, P. C. Clemmow, D. Ga-bor, A. R. Stokes, A. M. Taylor, P. A. Wayman, and W. L. Wilcock, Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light (Cambridge University Press, 1999), 7 edn., doi: 10.1017/CBO9781139644181. [16] D. W. Berreman, Optics in stratified and anisotropic me-dia: 4× 4-matrix formulation , J. Opt. Soc. Am. A 62 ,502–510 (1972). [17] M. G. Moharam and T. K. Gaylord, Rigorous coupled-wave analysis of planar-grating diffraction , J. Opt. Soc. Am. A 71 , 811–818 (1981). [18] S. Campanaro, L. Bursi, S. Curtarolo, and A. Calzo-lari, Terahertz volume plasmon-polariton modulation in all-dielectric hyperbolic metamaterials , Adv. Opt. Mater. 
+
+14 , e02680 (2026). [19] S. Curtarolo, G. L. W. Hart, M. Buongiorno Nardelli, N. Mingo, S. Sanvito, and O. Levy, The high-throughput highway to computational materials design , Nat. Mater. 
+
+12 , 191–201 (2013). [20] S. Divilov, H. Eckert, S. D. Thiel, S. D. Griesemer, R. Friedrich, N. H. Anderson, M. J. Mehl, D. Hicks, M. Esters, N. Hotz, X. Campilongo, A. Calzolari, and S. Curtarolo, AFLOW4: Heading Toward Disorder , High Entropy Alloys Mater. 3, 178–187 (2025). [21] C. Toher, C. Oses, J. J. Plata, D. Hicks, F. Rose, O. Levy, M. de Jong, M. Asta, M. Fornari, M. Buongiorno Nardelli, and S. Curtarolo, Combining the AFLOW GIBBS and elastic libraries to efficiently and robustly screen thermomechanical properties of solids , Phys. Rev. Mater. 1, 015401 (2017). [22] A. Calzolari, C. Oses, C. Toher, M. Esters, X. Campi-longo, S. P. Stepanoff, D. E. Wolfe, and S. Curtarolo, 
+
+Plasmonic high-entropy carbides , Nat. Commun. 13 ,5993 (2022). [23] S. Divilov, S. D. Griesemer, R. C. Koennecker, M. J. Am-mendola, A. C. Zettel, H. Eckert, J. R. Shallenberger, X. Campilongo, W. G. Fahrenholtz, A. Calzolari, D. E. Wolfe, and S. Curtarolo, Variable-temperature plasmonic high-entropy carbides , High Entropy Alloys Mater. 3,273–284 (2025). [24] S. Divilov, H. Eckert, D. Hicks, C. Oses, C. Toher, R. Friedrich, M. Esters, M. J. Mehl, A. C. Zettel, Y. Led-erer, E. Zurek, J.-P. Maria, D. W. Brenner, X. Campi-longo, S. Filipovic, W. G. Fahrenholtz, C. J. Ryan, C. M. DeSalle, R. J. Crealese, D. E. Wolfe, A. Calzolari, and S. Curtarolo, Disordered enthalpy-entropy descriptor for high-entropy ceramics discovery , Nature 625 , 66–73 (2024). [25] M. G. Moharam, E. B. Grann, D. A. Pommet, and T. K. Gaylord, Formulation for stable and efficient implemen-tation of the rigorous coupled-wave analysis of binary gratings , J. Opt. Soc. Am. A 12 , 1068–1076 (1995). [26] L. Li, Use of Fourier series in the analysis of discontin-uous periodic structures , J. Opt. Soc. Am. A 13 , 1870– 1876 (1996). [27] A. Figotin and I. Vitebskiy, Electromagnetic unidirec-tionality in magnetic photonic crystals , Phys. Rev. B 74 ,155128 (2006). [28] M. V. Rybin and M. F. Limonov, Inverse dispersion method for calculation of complex photonic band dia-grams , Phys. Rev. A 96 , 013839 (2017). [29] S. G. Johnson and J. D. Joannopoulos, Block-iterative frequency-domain methods for Maxwell’s equations in a planewave basis , Opt. Express 8, 173–190 (2001). [30] R. Redheffer, Inequalities for a matrix Riccati equation ,Indiana Univ. Math. J. pp. 349–367 (1959). [31] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococ-cioni, I. Dabo, A. D. Corso, S. de Gironcoli, S. Fabris, G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari, F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov, P. Umari, and R. M. Wentz-covitch, QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of mate-rials , J. Phys.: Condens. Matter 21 , 395502 (2009). [32] D. Franta, D. Necas, I. Ohl´ ıdal, and A. Giglia, Dis-persion model for optical thin films applicable in wide spectral range , in Optical Systems Design 2015: Op-tical Fabrication, Testing, and Metrology V , edited by A. Duparr´ e and R. Geyl, International Society for Op-tics and Photonics (SPIE, 2015), vol. 9628, p. 96281U, doi:10.1117/12.2190104. [33] D. Franta, D. Necas, I. Ohl´ ıdal, and A. Giglia, Op-tical characterization of SiO2 thin films using univer-sal dispersion model over wide spectral range , in Opti-cal Micro- and Nanometrology VI , edited by C. Gorecki, A. K. Asundi, and W. Osten, International Society for Optics and Photonics (SPIE, 2016), vol. 9890, p. 989014, doi:10.1117/12.2227580. [34] L. Ferrari, C. Wu, D. Lepage, X. Zhang, and Z. Liu, 
+
+Hyperbolic metamaterials and their applications , Prog. Quantum Electron. 40 , 1–40 (2015). [35] A. Ciesielski, L. Skowronski, M. Trzcinski, and T. Szo-plik, Controlling the optical parameters of self-assembled silver films with wetting layers and annealing , Appl. Surf. Sci. 421 , 349–356 (2017). [36] K. Takagi, S. V. Nair, R. Watanabe, K. Seto, T. Kobayashi, and E. Tokunaga, Surface plasmon polari-ton resonance of gold, silver, and copper studied in the kretschmann geometry: Dependence on wavelength, angle of incidence, and film thickness , J. Phys. Soc. Japan 86 ,124721 (2017). 16 
+
+[37] P. B. Johnson and R. W. Christy, Optical Constants of the Noble Metals , Phys. Rev. B 6, 4370–4379 (1972).

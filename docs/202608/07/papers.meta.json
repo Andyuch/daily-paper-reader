@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-07",
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T01:59:53",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/07/2608.03759v1-aflow-emerald-electromagnetic-modes-engineering-in-advanced-layered-materials",
+      "section": "quick",
+      "title_en": "AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials",
+      "authors": "Stefano Campanaro, Luca Bursi, Nicholas H. Anderson, Stefano Curtarolo, Arrigo Calzolari",
+      "date": "2026-08-04",
+      "pdf": "https://arxiv.org/pdf/2608.03759v1",
+      "score": "7.0",
+      "evidence": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
+      "tldr": "层状超材料的先进光学设计需要既稳健又与材料物理紧密关联的电磁求解器。本文推出的AFLOW-EMERALD开源Python框架，通过散射矩阵法、平面波展开和严格耦合波分析，能计算光学光谱、场分布、光子带结构及损耗/色散介质的复k色散。其YAML工作流支持导入实验或第一性原理介电数据，模块化架构便于集成到材料设计流水线，为介质光子晶体、等离激元多层膜与双曲超材料等提供了可扩展的模拟平台。",
+      "tags": "query:iscat",
+      "abstract_en": "Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both numerically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave expansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML workflow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material-geometry engineering of dielectric photonic crystals, plasmonic multilayers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

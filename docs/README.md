@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-05</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 1 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-05 22:01:45 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 01:59:51 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读4篇论文，未安排精读，重点关注纳米机械谐振器与金属光学性质方向。</p>
-<p>两篇7.0分论文分别揭示了拉伸应力谐振器的模式依赖光热响应，以及Ag/Au/Cu的第一性原理光学性质，值得延伸阅读。</p>
-<p>下步建议优先精读这两篇高分文章，以掌握具体方法与应用场景。</p>
+<p>今日精选1篇速读论文，暂无精读，聚焦层状材料电磁模式工程研究。</p>
+<p>最值得关注的方向是AFLOW-EMERALD工具在先进层状材料中的电磁模式设计与计算应用。</p>
+<p>建议后续速览该论文的方法框架，若感兴趣可深入追踪其在光电或通信器件中的潜在用途。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -86,12 +86,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">4 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators">Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators</span></li><li><span class="dpr-home-dashboard-paper-title" title="Optical properties of Ag, Au, and Cu from first principles">Optical properties of Ag, Au, and Cu from first principles</span></li><li><span class="dpr-home-dashboard-paper-title" title="Identifying Contact Barrier Types in Few-Layer MoS2 Devices Using Correlative IV, LBIC, and Bias-Dependent KPFM">Identifying Contact Barrier Types in Few-Layer MoS2 Devices Using Correlative IV, LBIC, and Bias-Dependent KPFM</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials">AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>4</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>1</strong></span></div>
 </section>
 </div>
 

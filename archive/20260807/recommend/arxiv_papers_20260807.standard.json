@@ -1,0 +1,57 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-07T01:58:43.134845+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.03759v1",
+      "source": "arxiv",
+      "title": "AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials",
+      "abstract": "Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both numerically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave expansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML workflow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material-geometry engineering of dielectric photonic crystals, plasmonic multilayers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes.",
+      "authors": [
+        "Stefano Campanaro",
+        "Luca Bursi",
+        "Nicholas H. Anderson",
+        "Stefano Curtarolo",
+        "Arrigo Calzolari"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.comp-ph"
+      ],
+      "published": "2026-08-04T14:47:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.03759v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "scattering-matrix EM framework for layered materials, directly useful for modeling iSCAT contrast mechanisms",
+      "llm_evidence_cn": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
+      "llm_evidence": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
+      "canonical_evidence": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
+      "llm_tldr_en": "A modular Python EM simulation framework for finite and periodic layered metamaterials using scattering-matrix, plane-wave, and rigorous coupled-wave analysis, enabling robust design of optical/photonic response in advanced layered materials.",
+      "llm_tldr_cn": "先进层状异质结构的理性设计需要稳定且与材料性质紧密关联的电磁求解工具。本文提出AFLOW-EMERALD，一个开源的、基于Python的模块化框架，用于模拟有限和周期层状（超）材料中的电磁波传播。它采用稳定的散射矩阵方法、平面波展开和严格耦合波分析，支持横向图案化结构。该工具将促进光学、光子学和等离激元超材料的高通量计算设计。",
+      "llm_tldr": "先进层状异质结构的理性设计需要稳定且与材料性质紧密关联的电磁求解工具。本文提出AFLOW-EMERALD，一个开源的、基于Python的模块化框架，用于模拟有限和周期层状（超）材料中的电磁波传播。它采用稳定的散射矩阵方法、平面波展开和严格耦合波分析，支持横向图案化结构。该工具将促进光学、光子学和等离激元超材料的高通量计算设计。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}

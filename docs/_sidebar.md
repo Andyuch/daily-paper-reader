@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-07 <!--dpr-date:20260807-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/07/2608.03759v1-aflow-emerald-electromagnetic-modes-engineering-in-advanced-layered-materials" data-sidebar-item="{&quot;title&quot;: &quot;AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.03759v1-aflow-emerald-electromagnetic-modes-engineering-in-advanced-layered-materials&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模&quot;}">AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials</a>
   * 2026-08-05 <!--dpr-date:20260805-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/05/2607.29348v1-mode-dependent-photothermal-responsivity-mapping-of-tensile-stressed-nanomechanical-resonators" data-sidebar-item="{&quot;title&quot;: &quot;Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2607.29348v1-mode-dependent-photothermal-responsivity-mapping-of-tensile-stressed-nanomechanical-resonators&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;纳米机械谐振器的光热响应模式映射与stroboscopic iSCAT模式成像直接相关&quot;}">Mode-dependent photothermal responsivity mapping of tensile-stressed nanomechanical resonators</a>
