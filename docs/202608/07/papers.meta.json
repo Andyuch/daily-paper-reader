@@ -1,8 +1,8 @@
 {
   "label": "2026-08-07",
   "date": "2026-08-07",
-  "generated_at": "2026-08-07T01:59:53",
-  "count": 1,
+  "generated_at": "2026-08-07T21:17:06",
+  "count": 2,
   "papers": [
     {
       "paper_id": "202608/07/2608.03759v1-aflow-emerald-electromagnetic-modes-engineering-in-advanced-layered-materials",
@@ -16,6 +16,21 @@
       "tldr": "层状超材料的先进光学设计需要既稳健又与材料物理紧密关联的电磁求解器。本文推出的AFLOW-EMERALD开源Python框架，通过散射矩阵法、平面波展开和严格耦合波分析，能计算光学光谱、场分布、光子带结构及损耗/色散介质的复k色散。其YAML工作流支持导入实验或第一性原理介电数据，模块化架构便于集成到材料设计流水线，为介质光子晶体、等离激元多层膜与双曲超材料等提供了可扩展的模拟平台。",
       "tags": "query:iscat",
       "abstract_en": "Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both numerically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave expansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML workflow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material-geometry engineering of dielectric photonic crystals, plasmonic multilayers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/07/2608.03343v1-event-based-spatial-carrier-interferometry-for-surface-normal-vibration-waveform-reconstruction",
+      "section": "quick",
+      "title_en": "Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction",
+      "authors": "Ryogo Niwa, Tatsuki Fushimi, Yoichi Ochiai",
+      "date": "2026-08-04",
+      "pdf": "https://arxiv.org/pdf/2608.03343v1",
+      "score": "6.0",
+      "evidence": "基于事件相机的时间分辨干涉成像",
+      "tldr": "传统相机干涉测振受帧率与视场/分辨率权衡制约；事件相机虽仅记录亮度变化以突破该权衡，但表面法向微小振动产生的表观运动过弱，难以恢复波形。本文提出基于事件的空间载波干涉术：利用事件流构建符号事件密度图，经空间载波解调恢复干涉相位，并解决转向点处的运动方向歧义。重建波形在宽驱动频率和振幅范围内与激光多普勒测振一致，限制因素为条纹最大速度和传感器性能。该技术为全视场、空间分辨的事件相机非接触干涉测振提供了经验基础。",
+      "tags": "query:iscat",
+      "abstract_en": "Non-contact measurement of small vibrations perpendicular to a surface supports the evaluation of mechanical structures, but in camera-based interferometry, increasing the frame rate makes a trade-off with the field of view and spatial resolution. By recording only brightness changes, event cameras avoid this trade-off and reach high temporal and spatial resolution; our previously reported event topology-based visual vibrometer recovers vibration from apparent motion. This high-speed, high-resolution sensing is well suited to full-field measurement, yet such vibration produces too little apparent motion to capture its waveform. Here we show that event-based spatial-carrier interferometry reconstructs that waveform from moving interference fringes. That displacement moves the fringes, and signed event-density maps built from the event stream are demodulated at the spatial carrier to recover the interferometric phase and fix the otherwise ambiguous motion direction at turning points. Reconstructed waveforms agree with laser Doppler vibrometry over broad drive-frequency and amplitude ranges, with limits set by the maximum fringe speed and the sensor performance. Reconstruction is limited by a minimum aperture of about two fringe periods along the carrier and one along the fringes, which allows the surface to be mapped region by region. These results provide an empirical basis for full-field, spatially resolved interferometric vibrometry with event cameras as a non-contact measurement technique.",
       "source": "arxiv",
       "selection_source": "fresh_fetch"
     }

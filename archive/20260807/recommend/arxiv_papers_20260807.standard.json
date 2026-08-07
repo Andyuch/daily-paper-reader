@@ -1,6 +1,6 @@
 {
   "mode": "standard",
-  "generated_at": "2026-08-07T01:58:43.134845+00:00",
+  "generated_at": "2026-08-07T21:16:17.469729+00:00",
   "stats": {
     "mode": "standard",
     "tag_count": 1,
@@ -14,44 +14,42 @@
   "deep_dive": [],
   "quick_skim": [
     {
-      "id": "2608.03759v1",
+      "id": "2608.03343v1",
       "source": "arxiv",
-      "title": "AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials",
-      "abstract": "Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both numerically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave expansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML workflow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material-geometry engineering of dielectric photonic crystals, plasmonic multilayers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes.",
+      "title": "Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction",
+      "abstract": "Non-contact measurement of small vibrations perpendicular to a surface supports the evaluation of mechanical structures, but in camera-based interferometry, increasing the frame rate makes a trade-off with the field of view and spatial resolution. By recording only brightness changes, event cameras avoid this trade-off and reach high temporal and spatial resolution; our previously reported event topology-based visual vibrometer recovers vibration from apparent motion. This high-speed, high-resolution sensing is well suited to full-field measurement, yet such vibration produces too little apparent motion to capture its waveform. Here we show that event-based spatial-carrier interferometry reconstructs that waveform from moving interference fringes. That displacement moves the fringes, and signed event-density maps built from the event stream are demodulated at the spatial carrier to recover the interferometric phase and fix the otherwise ambiguous motion direction at turning points. Reconstructed waveforms agree with laser Doppler vibrometry over broad drive-frequency and amplitude ranges, with limits set by the maximum fringe speed and the sensor performance. Reconstruction is limited by a minimum aperture of about two fringe periods along the carrier and one along the fringes, which allows the surface to be mapped region by region. These results provide an empirical basis for full-field, spatially resolved interferometric vibrometry with event cameras as a non-contact measurement technique.",
       "authors": [
-        "Stefano Campanaro",
-        "Luca Bursi",
-        "Nicholas H. Anderson",
-        "Stefano Curtarolo",
-        "Arrigo Calzolari"
+        "Ryogo Niwa",
+        "Tatsuki Fushimi",
+        "Yoichi Ochiai"
       ],
-      "primary_category": "physics.optics",
+      "primary_category": "physics.app-ph",
       "categories": [
-        "physics.optics",
-        "physics.comp-ph"
+        "physics.app-ph",
+        "physics.optics"
       ],
-      "published": "2026-08-04T14:47:47+00:00",
-      "link": "https://arxiv.org/pdf/2608.03759v1",
+      "published": "2026-08-04T08:52:51+00:00",
+      "link": "https://arxiv.org/pdf/2608.03343v1",
       "tags": [
         "keyword:iSCAT",
         "query:iSCAT"
       ],
-      "llm_score": 7.0,
-      "llm_evidence_en": "scattering-matrix EM framework for layered materials, directly useful for modeling iSCAT contrast mechanisms",
-      "llm_evidence_cn": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
-      "llm_evidence": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
-      "canonical_evidence": "面向层状材料的散射矩阵电磁框架，可直接用于iSCAT衬度机制建模",
-      "llm_tldr_en": "A modular Python EM simulation framework for finite and periodic layered metamaterials using scattering-matrix, plane-wave, and rigorous coupled-wave analysis, enabling robust design of optical/photonic response in advanced layered materials.",
-      "llm_tldr_cn": "先进层状异质结构的理性设计需要稳定且与材料性质紧密关联的电磁求解工具。本文提出AFLOW-EMERALD，一个开源的、基于Python的模块化框架，用于模拟有限和周期层状（超）材料中的电磁波传播。它采用稳定的散射矩阵方法、平面波展开和严格耦合波分析，支持横向图案化结构。该工具将促进光学、光子学和等离激元超材料的高通量计算设计。",
-      "llm_tldr": "先进层状异质结构的理性设计需要稳定且与材料性质紧密关联的电磁求解工具。本文提出AFLOW-EMERALD，一个开源的、基于Python的模块化框架，用于模拟有限和周期层状（超）材料中的电磁波传播。它采用稳定的散射矩阵方法、平面波展开和严格耦合波分析，支持横向图案化结构。该工具将促进光学、光子学和等离激元超材料的高通量计算设计。",
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved interferometric imaging with event-based detection",
+      "llm_evidence_cn": "基于事件相机的时间分辨干涉成像",
+      "llm_evidence": "基于事件相机的时间分辨干涉成像",
+      "canonical_evidence": "基于事件相机的时间分辨干涉成像",
+      "llm_tldr_en": "Event-based spatial-carrier interferometry reconstructs surface-normal vibration waveforms with high temporal and spatial resolution, overcoming the frame-rate trade-off of conventional cameras.",
+      "llm_tldr_cn": "针对传统相机在帧率与视场/空间分辨率之间的权衡问题，本文提出基于事件相机的空间载波干涉测量方法。通过仅记录亮度变化，该方法在保持高空间分辨率的同时实现高速测量，并成功重建表面法向振动波形。这一方法为时间分辨干涉测量提供了新思路，可推广至散射干涉显微等应用。",
+      "llm_tldr": "针对传统相机在帧率与视场/空间分辨率之间的权衡问题，本文提出基于事件相机的空间载波干涉测量方法。通过仅记录亮度变化，该方法在保持高空间分辨率的同时实现高速测量，并成功重建表面法向振动波形。这一方法为时间分辨干涉测量提供了新思路，可推广至散射干涉显微等应用。",
       "llm_tags": [
         "query:iscat"
       ],
       "matched_query_tag": "query:iscat",
-      "matched_query_text": "how iSCAT works with material science",
-      "matched_requirement_id": "req-6",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
       "selection_source": "fresh_fetch",
-      "quick_tier": "7"
+      "quick_tier": "6"
     }
   ]
 }

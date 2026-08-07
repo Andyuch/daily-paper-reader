@@ -1,0 +1,341 @@
+Title: Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction
+
+URL Source: https://arxiv.org/pdf/2608.03343v1
+
+Published Time: Wed, 05 Aug 2026 00:55:48 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 5 August 2026 
+
+# Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 
+
+Ryogo Niwa, 1, 2 Tatsuki Fushimi, 2, 3, 4 and Yoichi Ochiai 2, 3, 4, 5 
+
+> 1)
+
+School of Informatics, College of Media Arts, Science and Technology, University of Tsukuba, Kasuga Campus Kasuga 1-2, Tsukuba, Ibaraki, 305-8550, Japan 
+
+> 2)
+
+R&D Center for Digital Nature, University of Tsukuba, Tsukuba, 305-8550, Ibaraki, Japan 
+
+> 3)
+
+Institute of Library, Information and Media Science, University of Tsukuba, Tsukuba, 305-8550, Ibaraki, Japan 
+
+> 4)
+
+Tsukuba Institute for Advanced Research (TIAR), University of Tsukuba, 1-1-1 Tennodai, Tsukuba, 305-8577, Ibaraki, Japan 
+
+> 5)
+
+Pixie Dust Technologies, Inc., Chuo-ku, 104-0028, Tokyo, Japan 
+
+(*Electronic mail: niwa.ryogo@digitalnature.slis.tsukuba.ac.jp) 
+
+Non-contact measurement of small vibrations perpendicular to a surface supports the evaluation of mechanical structures, but in camera-based interferometry, increasing the frame rate makes a trade-off with the field of view and spatial resolution. By recording only brightness changes, event cameras avoid this trade-off and reach high temporal and spatial resolution; our previously reported event topology-based visual vibrometer recovers vibration from apparent motion. This high-speed, high-resolution sensing is well suited to full-field measurement, yet such vibration produces too little apparent motion to capture its waveform. Here we show that event-based spatial-carrier interferometry reconstructs that waveform from moving interference fringes. That displacement moves the fringes, and signed event-density maps built from the event stream are demodulated at the spatial carrier to recover the interferometric phase and fix the otherwise ambiguous motion direction at turning points. Reconstructed waveforms agree with laser Doppler vibrometry over broad drive-frequency and amplitude ranges, with limits set by the maximum fringe speed and the sensor performance. Reconstruction is limited by a minimum aperture of about two fringe periods along the carrier and one along the fringes, which allows the surface to be mapped region by region. These results provide an empirical basis for full-field, spatially resolved interferometric vibrometry with event cameras as a non-contact measurement technique. Non-contact vibration measurements are widely used for evaluating mechanical systems and infrastructure, in-cluding aerospace structures. Laser Doppler vibrome-try (LDV) 1 measures single-point vibration velocity with high sensitivity. However, LDV must scan the measure-ment point across the surface to obtain vibration dis-tributions or mode shapes. This scanning requirement makes it difficult to capture the spatial distribution of out-of-plane vibration, that is, vibration perpendicular to the surface, across the full field of view simultaneously. Camera-based interferometry enables full-field mea-surement of small out-of-plane displacements. These methods recover an interferometric phase from fringe intensity distributions and convert phase changes into optical-path-length changes 2–7 . Phase-shifting meth-ods 8,9 , spatial-carrier methods 4,5,10–13 , and single-shot methods using high-speed polarization cameras 14 have been widely used. In frame-based measurements, how-ever, increasing the frame rate makes a trade-off with the field of view, spatial resolution, and spatial sampling, which keeps fast out-of-plane vibration difficult to mea-sure over a wide field of view 13,15 .Event cameras offer a potential solution for high-temporal-resolution interferometric vibration measure-ment without reducing spatial resolution. An event cam-era asynchronously outputs an event when the log in-tensity change at a pixel exceeds a threshold. Each event contains the pixel position, timestamp, and polar-ity, which indicates whether the log intensity increased or decreased 16–18 . Event cameras have been used for vibra-tion measurement based on apparent object motion 19–24 ,speckle or specular-reflection fluctuations 25,26 , and inter-ferometric measurements such as digital holography and coherence scanning interferometry 27,28 . However, these methods have not combined interferometric sensitivity with out-of-plane waveform reconstruction. Here, we propose event-based spatial-carrier interfer-ometry as an approach to high-temporal-resolution in-terferometric vibrometry that addresses the frame-rate– spatial-resolution trade-off of frame-based cameras. We reconstruct out-of-plane vibration waveforms from asyn-chronous fringe-motion events by demodulating signed event-density maps and recovering the interferometric phase while resolving the motion-direction ambiguity at vibration turning points. Comparisons with independent LDV reference measurements map the operating enve-lope associated with the maximum fringe speed and sen-sor performance, while local-ROI tests empirically esti-mate the carrier/event support needed for spatially re-solved reconstruction. The reconstruction starts from the physical relation between out-of-plane displacement and spatial-carrier arXiv:2608.03343v1 [physics.app-ph] 4 Aug 2026 Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 2He-Ne laser Event camera Spatial-carrier fringe Tilted reference mirror Beam splitter Target mirror out-of-plane vibration Lens negative phase shift positive phase shift reference phase  
+
+> Motion shortens the optical path Motion lengthens the optical path Reference target position Fringe-shift direction is convention-dependent. *
+
+## (a) (b) apparent shift normal to fringes* apparent shift normal to fringes* 
+
+> xyZXYz(t)
+
+FIG. 1. (a) Experimental setup: a spatial-carrier Michelson interferometer with an event camera. A two-lens beam ex-pander enlarges the He–Ne beam to illuminate the entire tar-get mirror. The tilted reference mirror forms spatial-carrier fringes, while the target mirror vibrates along the optical axis. (b) Lateral fringe motion induced by out-of-plane vibration. 
+
+fringe motion on the event-camera sensor. A small tilt of the reference mirror introduces this spatial carrier in the Michelson interferometer, as shown in Figure 1 (a). In the present analysis, we consider a piston-like tar-get whose out-of-plane displacement is spatially uniform within the analysis region of interest (ROI). In this case, the displacement is represented by a single temporal dis-placement z(t) and a spatially uniform interferometric phase change ψ(t). As illustrated in Figure 1(b), out-of-plane motion of the target mirror changes the optical-path-length difference of the interferometer, and this phase change translates the spatial-carrier fringes along the carrier direction, namely normal to the stripe ori-entation. The corresponding spatial-carrier interference intensity on the detector is 
+
+I(r, t ) = a(r) + b(r) cos ( kc · r + ϕ(r) + ψ(t)) , (1) where r = ( x, y ) denotes a position in the detector plane defined in Figure 1, a(r) is the background intensity, b(r)Time xy
+
+> Time y
+> frame-based camera
+> event camera vibration-induced fringe motion
+
+FIG. 2. Frame- and event-based sampling. A frame camera samples discrete x-y-t slices, whereas an event camera records positive (red) and negative (blue) events asynchronously in x-
+
+y-t space. 
+
+is the fringe contrast, kc is the spatial-carrier wave vec-tor, and ϕ(r) is a static spatial phase. In a Michelson interferometer, the out-of-plane displacement and the in-terferometric phase are related by 29 
+
+ψ(t) = 4πλ z(t). (2) Thus, the apparent fringe motion provides a direct ob-servable of ψ(t), and hence of the out-of-plane displace-ment z(t). As schematically shown in Figure 2, the event stream generated by the fringe motion is represented as 
+
+ei = ( xi, y i, t i, p i), (3) where pi ∈ {+1 , −1} denotes the polarity of the logarithmic-intensity change. We use these polarities directly as signed measurements of local fringe-motion-induced brightness changes. The reconstruction problem can therefore be formu-lated as estimating the temporal interferometric phase 
+
+ψ(t) from the event stream. As outlined in Figure 3, we first convert the event stream into signed event-density maps and then demodulate their spatial-carrier compo-nent to obtain a complex signal containing ψ(t). After recovering ψ(t) from this signal, the displacement wave-form follows directly from Equation 2. We first converted the event stream into signed event-density maps, forming each map from a fixed number 
+
+N of consecutive events. Because the event rate scales with fringe speed, fixing the event count makes the tem-poral span of each map adapt to the motion, shortening it during rapid motion and lengthening it near turning points. Thus, N sets the event support per map and the balance between temporal resolution and demodu-lation stability. We index the maps by n. For the nth map, the event polarities were accumulated on the sensor Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 3(c) Squaring D removes the sign ambiguity (b) Apparent π jump in arg D
+
+A(a) Event-window demodulation 
+
+B C 
+
+D
+
+z(t) z(t) t          
+
+> FIG. 3. Event-based spatial-carrier demodulation and phase recovery. (a) Spatial-carrier demodulation of a signed event-density map. (b) Apparent πjump in arg Dcaused by the sign reversal of ˙ψ(t) at a vibration turning point. (c) D2-based phase recovery, which removes the motion-direction sign ambiguity and enables continuous phase unwrapping. An explanatory video of (a)–(c) is provided in the supplementary material.
+
+grid and Gaussian-smoothed with a standard deviation of σ = 1 .5 to suppress pixel-scale sparsity and local fluc-tuations. The resulting smoothed signed event-density map is denoted by Sn(x, y ). The representative time of the nth map was assigned as the midpoint between the boundary-event timestamps, tn = ( tn, start + tn, end )/2. For spatial-carrier demodulation, the carrier wave vec-tor kc was estimated once for each event record. For a stable carrier estimate, we averaged the 2D FFT power spectra of 64 Hann-windowed, unsmoothed event maps evenly spaced over the record, and, after excluding the DC neighborhood, took kc = ( kx, k y ) from the carrier peak. Using this carrier estimate, we demodulated the spatial-carrier component of each Sn, whose complex en-velope carries the desired interferometric phase, as illus-trated in Figure 3(a). Multiplying by the complex conju-gate carrier, exp[ −i(kxx+ky y)], shifts this phase-bearing carrier component toward zero spatial frequency. The subsequent low-pass filtering extracts the shifted base-band component while rejecting the conjugate carrier component, residual non-carrier components, and high-spatial-frequency noise. The complex demodulated field is computed as 
+
+Dn(x, y ) = LPF {Sn(x, y ) exp[ −i(kxx + ky y)] } , (4) where LPF denotes low-pass filtering. Because the recov-ered phase is spatially uniform for piston-like motion, we sampled Dn(x, y ) at the ROI center to minimize filtering boundary effects and obtain D(tn). The demodulated complex time series D(t) carries the desired phase ψ(t), but it also contains a direction-dependent sign associated with the phase velocity ˙ψ(t); it is therefore not simply proportional to exp[ iψ (t)]. Be-cause events record signed temporal changes in log in-tensity, the signed event-density map is approximately proportional to ∂t log I(r, t ). For the fringe pattern in Equation (1), this temporal derivative introduces a fac-tor proportional to ˙ψ(t). Thus, up to a constant complex factor, the demodulated signal can be written as 
+
+D(t) ∝ ˙ψ(t) exp[ iψ (t)] . (5) When the vibration reverses direction at a turning point, ˙ψ(t) changes sign. This sign change appears as an ap-parent π jump in arg D(t), as shown in Figure 3(b). To remove this direction-dependent sign, we square the sig-nal: 
+
+D2(t) ∝ ˙ψ2(t) exp[ i2ψ(t)] . (6) Squaring makes the velocity factor nonnegative, allowing 
+
+ψ(t) to be recovered as one half of the unwrapped phase of D2(t), up to an arbitrary constant phase offset. The displacement waveform was then obtained from Equa-tion 2. The absolute displacement sign depends on the carrier-vector and optical-phase conventions. We there-fore calibrated this sign once by matching the initial mo-tion direction to the LDV reference waveform and then used the same sign convention for all records. We first evaluated the method using an empirically se-lected 360 × 360 px analysis region covering the entire illuminated mirror rather than the full sensor. This ex-periment assessed waveform-reconstruction accuracy and mapped the drive-frequency–displacement-amplitude op-erating envelope. The setup used the spatial-carrier Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 4Michelson interferometer shown in Figure 1 (a). A He– Ne laser ( λ = 632 .8 nm) and an EVK3 event camera were used. A two-lens beam expander before the beam splitter enlarged the beam, keeping it approximately col-limated, to illuminate the entire target mirror. A 20-mm-diameter, 5-mm-thick mirror bonded to a shaker was driven sinusoidally along the optical axis. A scan-ning LDV, Polytec-500-3D-HV-Xtra, confirmed piston-like motion in the observed region. The carrier pitch was not optimized and yielded about six periods across the selected analysis region ( Pc ≈ 51 px) on average. For this analysis, reconstruction used fixed-event-count windows of N = 500 events, which a sensitivity analysis supported as a practical balance between sparse maps and temporal averaging. Each drive condition was specified by the frequency f
+
+and the LDV-measured peak-to-peak displacement Wpp ;the tested conditions covered the accessible (f, W pp )plane broadly and roughly uniformly on logarithmic axes. The drive start time of each record was determined from an external trigger. The middle 60% of the driven interval was treated as the steady-state interval, and the first two cycles in that interval were analyzed. Si-multaneous LDV and interferometric event-camera mea-surements were not possible because both require near-normal optical access and simultaneous operation can disturb the fringe-event stream. The LDV reference was instead measured under the same drive conditions with the shared trigger alone, which makes the frequency, am-plitude, and phase of the two measurements directly com-parable. The integrated LDV displacement was used as the reference waveform for the evaluation below. To evaluate the reconstructed displacement, we used three metrics: the frequency, amplitude, and phase er-rors. The frequency error verifies, independently of the spectral-peak estimate used for the other two metrics, that the reconstructed waveform indeed oscillates at the drive frequency. Each frequency was estimated as the me-dian, over the central cycle of the same two-cycle window, of the ridge frequency of a Morlet continuous wavelet transform ( ω0 = 6), searched within 0.6–1.4 times the drive frequency to exclude harmonics and low-frequency environmental components. The frequency error was de-fined as 
+
+Ef = fevent − fLDV . (7) Each waveform was then linearly interpolated onto a uni-form time grid, and the largest non-dc peak of its FFT was taken as the fundamental. The amplitude and phase were read from the magnitude and argument of this peak, without assuming the drive frequency. The amplitude er-ror was defined as 
+
+EA = 20 log 10 
+
+ Aevent 
+
+ALDV 
+
+
+
+, (8) where Aevent and ALDV denote the fundamental ampli-tudes of the event-based and LDV waveforms. The phase error was defined as 
+
+Eϕ = Arg 
+
+
+
+ej(ϕevent −ϕLDV )
+
+. (9) For the operating-envelope analysis, we used the absolute errors |Ef |, |EA|, and |Eϕ|, the latter in degrees. To interpret the operating envelope in terms of the sensor-side recording limits of the event camera, namely its per-pixel dead time and readout bandwidth, we char-acterized each event record using two diagnostics: the shortest time tπ in which the phase advances by π, and the sensor-performance ratio rd.When the interferometric phase is sampled at discrete times, it can be tracked correctly only if the change be-tween successive samples stays below π, the Nyquist con-dition for phase sampling 30 . This limit corresponds to a fringe shift of half the fringe period; larger shifts make the fringe-motion direction ambiguous. For an event camera, the sampling interval of each pixel is bounded below by the dead time τdead = 11 μs, during which the pixel can-not record another event 31 . For a sinusoidal displacement with drive frequency f and peak-to-peak displacement 
+
+Wpp , the maximum interferometric phase speed is 
+
+| ˙ψ|max = 4π2f W pp 
+
+λ . (10) The time for the phase to advance by π at this maximum speed is 
+
+tπ = π
+
+| ˙ψ|max 
+
+= λ
+
+4πf W pp 
+
+, (11) and thus tπ < τ dead marks a dead-time-limited regime in which the fringe motion is undersampled at every pixel. We therefore overlaid the corresponding tπ = τdead 
+
+boundary on the ( f, W pp ) maps in Figure 4(a)–(d) as a physical reference rather than a sharp success–failure threshold. Based on this a priori sensor-side estimate, drive conditions expected to satisfy tπ < τdead were not targeted for the quantitative operating-envelope mea-surement. A small remaining high-frequency region be-low this boundary was not measured because the required shaker voltage exceeded the available range. When fast fringe motion produces events across many pixels at once, the total event rate can exceed the finite readout bandwidth of the event camera 18,32 , and events can then be lost. The second diagnostic, rd, tests for such bandwidth overloading through the sensor-ROI depen-dence of the recorded event count. Specifically, we com-pared the event count recorded with a reduced hardware-windowed sensor ROI, Nhw (sy ), with the count obtained by software-cropping the same region from the full-sensor record, Nsw (sy ): 
+
+rd(sy ) = Nhw (sy )
+
+Nsw (sy ) . (12) A smaller sensor ROI lowers the total event rate; val-ues close to one therefore indicate weak ROI dependence, Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 5(a) Sensor performance ratio (c) Absolute amplitude error (d) Absolute phase error (e) Successful reconstruction (f) Boundary case 
+
+> Displacement [μm]
+
+(g) Failure case 
+
+> π
+
+# < 11μs t
+
+Dead-time limited region 
+
+> π
+
+# < 11μs t
+
+Dead-time limited region 
+
+> π
+
+# < 11μs t
+
+Dead-time limited region 
+
+> π
+
+# < 11μs t
+
+Dead-time limited region 
+
+## (b) Absolute frequency error 
+
+FIG. 4. Operating envelope and representative reconstructions. Top: maps of (a) sensor-performance ratio rd, max , (b) absolute frequency error |Ef |, (c) amplitude error |EA|, and (d) absolute phase error |Eϕ| over drive frequency f and LDV-measured peak-to-peak displacement Wpp . Blue hatching marks shaker-voltage-limited, unmeasured conditions. Color scales are clipped at 26.37 Hz for |Ef | and 12 dB for |EA|; values above these limits are shown in the darkest red. Bottom: LDV and event-based waveforms for representative (e) successful, (f) boundary, and (g) failure cases at ( f, W pp ) = (10 Hz , 9.9 μm), (100 Hz , 9.9 μm), and (700 Hz , 4.1 μm), respectively. Orange and blue curves denote LDV and the proposed reconstruction, respectively. 
+
+whereas rd > 1 indicates that fewer events were recorded from the same region during full-sensor acquisition. We used the maximum of rd(sy ) over ROI heights sy of 1 /2, 1/3, and 1 /4 of the full sensor height, denoted rd, max , as the representative sensor-performance measure. Using the sensor-performance and waveform-evaluation metrics defined above, we mapped where reconstruction remained accurate or degraded over the explored ( f, W pp ) range. Small frequency, amplitude, and phase errors were obtained over a broad part of this range, largely in the region where rd, max remained close to one in Figure 4(a), as shown in Figure 4(b)–(d). In the representative successful case shown in Figure 4(e), the event-based waveform agreed well with the LDV reference in frequency, amplitude, and phase. The degraded reconstruction region roughly coincided Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 6(a) Analysis ROIs (b) Pass rate (c) Minimum ROI size               
+
+> 2.0 × 1.0 P ( P = 0.94 )
+> P= P ( | E | < 3 dB & | E | < 15°) φApass
+> pass c2.5 × 0.5 P ( P = 0.88 ) pass c
+> Max. analysis ROI
+> Variable analysis ROI
+> P[-] pass
+> FIG. 5. Local-ROI reconstruction performance. (a) Measured signed event map of the spatial-carrier fringe events within the circular field of view, overlaid with the maximum analysis ROI and an example variable analysis ROI. (b) Pass fraction Ppass
+> versus ROI width W∥/P cand height H⊥/P c, with the value annotated in each cell. (c) The same map as (a), overlaid with the minimum ROI size: the 2 .0×1.0PcROI ( Ppass ≥0.94); the map outside this ROI is dimmed.
+
+with the region of large rd, max in Figure 4(a), consis-tent with event loss or suppression under high total event load. In the boundary case shown in Figure 4(f), the reconstructed waveform preserved the vibration period-icity but misestimated the peak-to-peak displacement. This indicates that the fundamental frequency and phase were still tracked, whereas quantitative amplitude recov-ery had become unstable. At still higher event rates, as in Figure 4(g), row-wise spatiotemporal skew was observed in the event stream, as shown in Supplementary. This skew indicates that, under high event load, the recorded stream no longer represents a two-dimensional fringe pat-tern at a single effective time. This behavior is consistent with row-based address-event-representation (AER) ar-bitration in this sensor architecture, which is documented to serialize and delay events when many rows are simul-taneously active 33,34 .The tested conditions nearest to the tπ = τdead bound-ary showed severe degradation, consistent with the ex-pectation that per-pixel recording becomes unreliable when the phase advances by π within the pixel dead time. The tπ = τdead boundary is thus a dead-time-based phys-ical reference, not an empirically fitted threshold; degra-dation in this high-speed region can also involve event loss, suppression, and row-wise timing skew under high total event load. We have reconstructed a single waveform from the se-lected analysis region for a piston-like target with spa-tially uniform motion. For spatially resolved measure-ment such as mode-shape analysis, we empirically exam-ined how small a local ROI can be and still recover the waveform, under the present carrier pitch and process-ing conditions. To separate recording-bandwidth lim-itations from insufficient-ROI-size effects, this analysis used only drive conditions with good sensor performance (rd, max < 1.3; 17 records). Local ROI size was param-eterized by the carrier-direction width W∥/P c and the height H⊥/P c along the fringes, where Pc ≈ 51 px is the reference carrier pitch of the full analysis region, as illus-trated in Figure 5(a). Both parameters were swept from 0.5 to 4.0 in steps of 0.5, yielding 64 ROI-size combina-tions. Each local ROI was processed with the same pipeline as the full analysis region, using only its own events. Only two adjustments were made for the reduced ROI size. For carrier estimation, the FFT was zero-padded fourfold to resolve the carrier peak in the coarsely sampled small-ROI spectrum. For reconstruction, the per-pixel event density was matched to the full-region N = 500 maps by scaling events as N = max(150 , 500 AROI /A full ), where 
+
+AROI and Afull are the ROI and full-region pixel counts, with a floor of 150 events for stable phase demodulation. Because the motion is spatially uniform, the single-point LDV reference remains valid for every local ROI. Each reconstruction was compared with the LDV ref-erence, and the pass fraction Ppass was defined as the fraction of the 17 good-integrity records satisfying both 
+
+|EA| < 3 dB and |Eϕ| < 15 ◦.The map of Ppass in Figure 5(b) shows that the ROI limit was governed by the carrier direction: ROIs 2.5 carrier periods wide reached Ppass = 0.88 even at a height of 0.5 periods, whereas ROIs 0.5 periods wide stayed at Ppass ≤ 0.41 at every height. ROIs at least 2.0 carrier periods wide and 1 .0 period high maintained 
+
+Ppass ≥ 0.94, as illustrated in Figure 5(c). Demodula-tion requires fringe periods within the aperture, whereas the direction along the fringes only needs enough events. The minimum ROI should therefore scale with the fringe period rather than with pixel count; a finer fringe pitch would thus allow proportionally smaller ROIs. We demonstrated event-based spatial-carrier interfer-ometry for reconstructing out-of-plane vibration wave-forms from asynchronous fringe events. The method converts fixed-event-count windows into signed event-density maps and uses spatial-carrier demodulation with 
+
+D2 phase recovery to suppress turning-point ambiguity. Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 7LDV-referenced experiments showed accurate recovery when the event stream was not strongly suppressed and sufficient carrier/event support was available. The ob-served envelope was mainly governed by maximum phase speed, sensor performance, and local support, providing an empirical basis for choosing operating conditions in spatially resolved event-based interferometric vibrome-try. 
+
+SUPPLEMENTARY MATERIAL 
+
+See the supplementary material for a video illustrating the event-based demodulation and the phase evolution and recovery in Figure 3(a)–(c), the fixed-event-count sensitivity analysis, examples of row-wise spatiotempo-ral skew in the event stream, and additional details of the experimental setup and camera settings. 
+
+ACKNOWLEDGMENTS 
+
+This work was supported by Grant-in-Aid for Scientific Research (No. 24KJ0497). 
+
+DATA AVAILABILITY STATEMENT 
+
+The data that supports the findings of this study are openly available in Zenodo at [DOI] and its supplemen-tary material. 
+
+> 1
+
+S. J. Rothberg, M. S. Allen, P. Castellini, D. Di Maio, J. J. J. Dirckx, D. J. Ewins, et al. , “An international review of laser Doppler vibrometry: Making light work of vibration measure-ment,” Optics and Lasers in Engineering 99 , 11–22 (2017). 
+
+> 2
+
+J. A. Leendertz, “Interferometric displacement measurement on scattering surfaces utilising speckle effect,” Journal of Physics E: Scientific Instruments 3, 214–218 (1970). 
+
+> 3
+
+G. Pedrini and H. J. Tiziani, “Double-pulse electronic speckle interferometry for vibration analysis,” Appl. Opt. 33 , 7857–7863 (1994). 
+
+> 4
+
+G. Pedrini, W. Osten, and M. E. Gusev, “High-speed digital holographic interferometry for vibration measurement,” Applied Optics 45 , 3456–3462 (2006). 
+
+> 5
+
+Y. Fu, G. Pedrini, and W. Osten, “Vibration measurement by temporal Fourier analyses of a digital hologram sequence,” Ap-plied Optics 46 , 5719–5727 (2007). 
+
+> 6
+
+Y. Y. Hung and C. E. Taylor, “Speckle-shearing interferometric camera—a tool for measurement of derivatives of surface dis-placements,” in Proc. SPIE , Vol. 41 (1974) pp. 169–176. 
+
+> 7
+
+W. Steinchen and L. Yang, Digital Shearography: Theory and Application of Digital Speckle Pattern Shearing Interferometry 
+
+(SPIE Press, Bellingham, WA, 2003). 
+
+> 8
+
+J. H. Bruning, D. R. Herriott, J. E. Gallagher, D. P. Rosenfeld, A. D. White, and D. J. Brangaccio, “Digital wavefront measuring interferometer for testing optical surfaces and lenses,” Applied Optics 13 , 2693–2703 (1974). 
+
+> 9
+
+J. M. Huntley, G. H. Kaufmann, and D. Kerr, “Phase-shifted dynamic speckle pattern interferometry at 1 kHz,” Appl. Opt. 
+
+38 , 6556–6563 (1999). 
+
+> 10
+
+M. Takeda, H. Ina, and S. Kobayashi, “Fourier-transform method of fringe-pattern analysis for computer-based topography and interferometry,” Journal of the Optical Society of America 
+
+72 , 156–160 (1982). 
+
+> 11
+
+D. J. Bone, H.-A. Bachor, and R. J. Sandeman, “Fringe-pattern analysis using a 2-D Fourier transform,” Applied Optics 25 ,1653–1660 (1986). 
+
+> 12
+
+A. J. Moore, D. P. Hand, J. S. Barton, and J. D. Jones, “Tran-sient deformation measurement with electronic speckle pattern interferometry and a high-speed camera,” Appl. Opt. 38 , 1159– 1162 (1999). 
+
+> 13
+
+Y. Fu, G. Pedrini, and X. Li, “Interferometric dynamic measure-ment: Techniques based on high-speed imaging or a single pho-todetector,” The Scientific World Journal 2014 , 232906 (2014). 
+
+> 14
+
+M. Novak, J. Millerd, N. Brock, M. North-Morris, J. Hayes, and J. Wyant, “Analysis of a micropolarizer array-based simultaneous phase-shifting interferometer,” Appl. Opt. 44 , 6861–6868 (2005). 
+
+> 15
+
+J. M. Huntley, “Suppression of phase errors from vibration in phase-shifting interferometry,” Journal of the Optical Society of America A 15 , 2233–2241 (1998). 
+
+> 16
+
+M. A. Mahowald and C. Mead, “The silicon retina,” Scientific American 264 , 76–82 (1991). 
+
+> 17
+
+P. Lichtsteiner, C. Posch, and T. Delbruck, “A 128 ×128 120 dB 15 μs latency asynchronous temporal contrast vision sensor,” IEEE Journal of Solid-State Circuits 43 , 566–576 (2008). 
+
+> 18
+
+G. Gallego, T. Delbruck, G. Orchard, C. Bartolozzi, B. Taba, A. Censi, S. Leutenegger, A. J. Davison, J. Conradt, K. Dani-ilidis, and D. Scaramuzza, “Event-based vision: A survey,” IEEE Transactions on Pattern Analysis and Machine Intelligence 44 ,154–180 (2022). 
+
+> 19
+
+W.-J. Na, K. H. Sun, B. C. Jeon, J. Lee, and Y.-H. Shin, “Event-based micro vibration measurement using phase corre-lation template matching with event filter optimization,” Mea-surement 215 , 112867 (2023). 
+
+> 20
+
+S. Baldini, R. Bernardini, A. Fusiello, P. Gardonio, and R. Ri-naldo, “Vibration measurement with event cameras,” in Proceed-ings of the International Conference on Noise and Vibration En-gineering (ISMA 2024) (Leuven, Belgium, 2024) pp. 2473–2485. 
+
+> 21
+
+S. Baldini, F. Stazi, R. Bernardini, A. Fusiello, P. Gardonio, and R. Rinaldo, “Vibration measurement with neuromorphic vision sensors,” Mech. Syst. Signal Process. 249 , 114102 (2026). 
+
+> 22
+
+R. Niwa, T. Fushimi, K. Yamamoto, and Y. Ochiai, “Live demonstration: Event-based visual microphone,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops (2023) pp. 4054–4055. 
+
+> 23
+
+X. Zhou, P. Duan, Y. Xiaokaiti, C. Xu, and B. Shi, “Event-based visual vibrometry,” in Proceedings of the IEEE/CVF In-ternational Conference on Computer Vision (ICCV) (2025). 
+
+> 24
+
+R. Niwa, Y. Ochiai, and T. Fushimi, “Event topology-based visual vibrometer,” Appl. Phys. Lett. 128 , 074102 (2026). 
+
+> 25
+
+M. Howard and K. Hirakawa, “Event-based visual microphone,” in ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (2023) pp. 1–5. 
+
+> 26
+
+M. Howard, R. Jones, and K. Hirakawa, “Event-based visual microphone based on specular reflections off angularly deformed surfaces,” IEEE Trans. Pattern Anal. Mach. Intell. 47 , 10396– 10405 (2025). 
+
+> 27
+
+C. Schober, C. Pruss, A. Faulhaber, and A. Herkommer, “Event based coherence scanning interferometry,” Opt. Lett. 46 , 4332– 4335 (2021). 
+
+> 28
+
+I. Uchiyama, C. Tsutake, K. Takahashi, and T. Fujii, “Events meet phase-shifting digital holography: Practical acquisition, theory, and algorithms,” Opt. Express 34 , 4381–4395 (2026). 
+
+> 29
+
+P. Hariharan, Basics of Interferometry , 2nd ed. (Academic Press, Burlington, MA, 2007). 
+
+> 30
+
+J. M. Huntley and H. Saldner, “Temporal phase-unwrapping al-gorithm for automated interferogram analysis,” Appl. Opt. 32 ,3047 (1993). 
+
+> 31
+
+P. N. McMahon-Crabtree, L. Kulesza, B. J. McReynolds, D. S. O’Keefe, A. Puttur, D. Maestas, C. P. Morath, and M. G. McHarg, “Event-based camera refractory period characterization Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction 8
+
+and initial clock drift evaluation,” in Unconventional Imaging, Sensing, and Adaptive Optics 2023 , Vol. 12693, edited by J. J. Dolne, M. F. Spencer, and S. R. Bose-Pillai, International Soci-ety for Optics and Photonics (SPIE, 2023) p. 126930V. 
+
+> 32
+
+T. Finateu, A. Niwa, D. Matolin, K. Tsuchimoto, A. Mascheroni, E. Reynaud, P. Mostafalu, F. Brady, L. Chotard, F. LeGoff, H. Takahashi, H. Wakabayashi, Y. Oike, and C. Posch, “A 1280 ×720 back-illuminated stacked temporal contrast event-based vision sensor with 4.86 μm pixels, 1.066GEPS read-out, programmable event-rate controller and compressive data-formatting pipeline,” in 2020 IEEE International Solid-State Circuits Conference (ISSCC) (2020) pp. 112–114. 
+
+> 33
+
+D. Gehrig and D. Scaramuzza, “Are high-resolution event cam-eras really needed?” arXiv preprint arXiv:2203.14672 (2022). 
+
+> 34
+
+T. Lopes, J. M. Teixeira, T. D. Ferreira, C. S. Monteiro, P. A. S. Jorge, and N. A. Silva, “Characterization of event-based vision sensors for high-speed optical instrumentation,” arXiv preprint arXiv:2607.04741 (2026).
