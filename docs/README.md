@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-07</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-08</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 2 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
-    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>2 次</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-07 21:17:02 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-08 20:08:25 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读2篇论文，聚焦层状材料电磁模式设计与事件相机振动测量。</p>
-<p>最值得看：AFLOW-EMERALD（7.0）提出层状材料电磁模式工程方法，事件基干涉法（6.0）实现表面法向振动波形重建。</p>
-<p>建议优先精读AFLOW-EMERALD，再延伸了解干涉测量技术细节。</p>
+<p>今日速读3篇论文，均获6.0分，聚焦计算成像、电镜漂移校正与材料电磁模式设计。最值得关注的是突破光电子信噪比极限的物理一致计算衍射成像，以及实现原子级分辨的实时漂移校正技术。建议优先精读前两篇，掌握高精度成像与稳定控制的实用方法。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials">AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials</span></li><li><span class="dpr-home-dashboard-paper-title" title="Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction">Event-Based Spatial-Carrier Interferometry for Surface-Normal Vibration-Waveform Reconstruction</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Breaking optoelectronic SNR limitations via physics-consistent computational diffractive imaging">Breaking optoelectronic SNR limitations via physics-consistent computational diffractive imaging</span></li><li><span class="dpr-home-dashboard-paper-title" title="Picometre-scale real-time drift correction in TEM and STEM by dynamic control of the specimen stage for atomic-resolution imaging">Picometre-scale real-time drift correction in TEM and STEM by dynamic control of the specimen stage for atomic-resolution imaging</span></li><li><span class="dpr-home-dashboard-paper-title" title="AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials">AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>3</strong></span></div>
 </section>
 </div>
 

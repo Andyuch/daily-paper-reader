@@ -1,0 +1,139 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-08T20:05:34.343369+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.01757v1",
+      "source": "arxiv",
+      "title": "Breaking optoelectronic SNR limitations via physics-consistent computational diffractive imaging",
+      "abstract": "Ptychography is a powerful lensless imaging technique capable of approaching the diffraction limit, yet its performance is increasingly constrained by non-ideal detection hardware. In photon-limited measurements, weak high-frequency diffraction signals often overlap with spatially heterogeneous detector noise, whereas most reconstruction algorithms still treat the detector as an ideal measurement plane. Here, we introduce detector-informed measurement consistency into ptychographic reconstruction. By calibrating the pixelwise sensor response, the method construct a spatially resolved confidence map and embed it into the iterative amplitude constraint, allowing unreliable detector residuals to be down-weighted while preserving physically meaningful diffraction information. Experiments across transmission, reflection, and weak biological phase imaging show improved diffraction-data quality, an approximately twofold signal-to-noise ratio (SNR) enhancement, and reconstruction approaching the Rayleigh limit with a measured (k)-factor of about 0.65. Compared with previous advanced denoising methods, the proposed framework achieves a better balance between suppressing detector-induced background and preserving structural diffraction information. These results show that detector reliability can be used as an in-loop physical constraint to extend the performance of ptychographic imaging with imperfect sensors.",
+      "authors": [
+        "Yun Xie",
+        "Bianli Zhao",
+        "Han Yue",
+        "Rui Zhang",
+        "Zhiyi Huang",
+        "Weiran Jiang",
+        "Chuangchuang Cheng",
+        "Steve F. Shu"
+      ],
+      "primary_category": "cs.GR",
+      "categories": [
+        "cs.GR"
+      ],
+      "published": "2026-08-03T06:25:12+00:00",
+      "link": "https://arxiv.org/pdf/2608.01757v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Computational coherent imaging approach to suppress detector noise; transferable to iSCAT reconstruction",
+      "llm_evidence_cn": "计算相干成像降噪方法，可迁移至iSCAT重建",
+      "llm_evidence": "计算相干成像降噪方法，可迁移至iSCAT重建",
+      "canonical_evidence": "计算相干成像降噪方法，可迁移至iSCAT重建",
+      "llm_tldr_en": "Introduces detector-informed measurement consistency in ptychographic reconstruction, calibrating pixelwise sensor response to build a confidence map and suppress detector noise, improving SNR in photon-limited coherent imaging.",
+      "llm_tldr_cn": "针对光子受限条件下衍射成像信噪比受限的问题，提出了探测器件感知的重建方法，通过标定像素响应并构建空间置信图，在迭代振幅约束中降低不可靠探测器残差的影响，显著提升重建质量，为相干显微成像带来可迁移的计算降噪策略。",
+      "llm_tldr": "针对光子受限条件下衍射成像信噪比受限的问题，提出了探测器件感知的重建方法，通过标定像素响应并构建空间置信图，在迭代振幅约束中降低不可靠探测器残差的影响，显著提升重建质量，为相干显微成像带来可迁移的计算降噪策略。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.03344v1",
+      "source": "arxiv",
+      "title": "Picometre-scale real-time drift correction in TEM and STEM by dynamic control of the specimen stage for atomic-resolution imaging",
+      "abstract": "In this work, we show how the specimen drift can be actively compensated by controlling the stage with precision down to the picometre scale. We do this by dynamic control, a generic real-time feedback framework designed to actively stabilize electron microscopy experiments by continuously monitoring an experimental variable from the detector data stream and compensating its evolution during acquisition. The framework, applicable to a broad range of controllable experimental instabilities, includes automated calibration procedures, operates in parallel with image acquisition and is implemented as a software plugin without requiring any hardware modification of the microscope. Results for live drift correction are shown for a selection of TEM and STEM instruments using conventional mechanical stages as well as piezoelectric stages. Experimental results are presented for medium resolution TEM, high-resolution TEM, HR-STEM and in situ observations. With piezoelectric stages, specimen stabilization down to the picometre scale was achieved allowing drift-corrected atomic-resolution imaging. Specimen stage-based stabilization significantly improves long-exposure imaging and in situ experiments by increasing the effective exposure time, preserving the field of view, maintaining identical optical conditions and eliminating the need for numerical alignment of large datasets. Beyond the specific application presented here, dynamic control provides a versatile framework for real-time regulation of electron microscopy experiments and opens new perspectives for quantitative imaging, automated in situ studies and multimodal acquisitions.",
+      "authors": [
+        "Christophe Gatel",
+        "Julien Dupuy",
+        "Teresa Hungria",
+        "Martin J. Hytch"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph",
+        "physics.ins-det"
+      ],
+      "published": "2026-08-04T08:54:00+00:00",
+      "link": "https://arxiv.org/pdf/2608.03344v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "real-time drift correction for stable microscopy during acquisition",
+      "llm_evidence_cn": "实时漂移校正确保显微镜采集过程中的稳定性",
+      "llm_evidence": "实时漂移校正确保显微镜采集过程中的稳定性",
+      "canonical_evidence": "实时漂移校正确保显微镜采集过程中的稳定性",
+      "llm_tldr_en": "This paper presents a dynamic control framework that actively compensates specimen drift in TEM/STEM with picometre precision in real time, enabling stable atomic-resolution imaging without hardware modification.",
+      "llm_tldr_cn": "该论文提出一种动态控制框架，通过实时监测探测器数据流中的实验变量并主动补偿样品漂移，在透射电镜和扫描透射电镜中实现了皮米级精度的实时漂移校正。该框架适用于多种可控的实验不稳定性，可在图像采集的同时运行，无需硬件改动。它为高分辨率显微成像中的原位和操作条件测量提供了有效的稳定性保障，有助于长期实时获取原子级结构信息。",
+      "llm_tldr": "该论文提出一种动态控制框架，通过实时监测探测器数据流中的实验变量并主动补偿样品漂移，在透射电镜和扫描透射电镜中实现了皮米级精度的实时漂移校正。该框架适用于多种可控的实验不稳定性，可在图像采集的同时运行，无需硬件改动。它为高分辨率显微成像中的原位和操作条件测量提供了有效的稳定性保障，有助于长期实时获取原子级结构信息。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.03759v2",
+      "source": "arxiv",
+      "title": "AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials",
+      "abstract": "Layered and periodically patterned heterostructures underpin advanced optical, photonic, and plasmonic (meta)materials, whose rational design demands electromagnetic solvers that are both numerically robust and tightly linked to the underlying material properties. Here, we present AFLOW-EMERALD (ElectroMagnetic modes EngineeRing in Advanced LayereD materials), an open-source, modular, Python-based computational framework for simulating electromagnetic wave propagation in finite and periodic layered (meta)materials. Built around a unified object-oriented architecture, AFLOW-EMERALD combines a numerically stable scattering-matrix method with plane-wave expansion and extends to rigorous coupled-wave analysis for laterally patterned structures such as gratings. The software computes optical spectra, spatial field distributions, and photonic band structures, including complex-k dispersion in lossy, dispersive media. A streamlined YAML workflow allows users to seamlessly import dielectric function datasets from experimental, literature, or first-principles sources. Owing to its modular design, AFLOW-EMERALD is readily extensible and suitable for integration into computational materials-design pipelines, providing a practical platform for the coupled material-geometry engineering of dielectric photonic crystals, plasmonic multilayers, hyperbolic metamaterials, and more complex architectures supporting, e.g., surface and volume plasmon-polariton modes.",
+      "authors": [
+        "Stefano Campanaro",
+        "Luca Bursi",
+        "Nicholas H. Anderson",
+        "Stefano Curtarolo",
+        "Arrigo Calzolari"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "physics.comp-ph"
+      ],
+      "published": "2026-08-04T14:47:47+00:00",
+      "link": "https://arxiv.org/pdf/2608.03759v2",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "EM simulation framework for layered materials; transferable to iSCAT modeling",
+      "llm_evidence_cn": "层状材料电磁仿真框架，可迁移至iSCAT建模",
+      "llm_evidence": "层状材料电磁仿真框架，可迁移至iSCAT建模",
+      "canonical_evidence": "层状材料电磁仿真框架，可迁移至iSCAT建模",
+      "llm_tldr_en": "Presents AFLOW-EMERALD, an open-source Python framework for simulating electromagnetic waves in layered materials using stable scattering-matrix and plane-wave methods, enabling design of optical metamaterials.",
+      "llm_tldr_cn": "针对层状异质结构光电磁仿真需求，提出开源框架AFLOW-EMERALD，结合数值稳定的散射矩阵法与平面波展开，支持有限和周期层状材料及侧向周期结构的仿真，为光子学和等离子体学材料设计提供通用工具，也可用于理解散射型显微镜的信号产生。",
+      "llm_tldr": "针对层状异质结构光电磁仿真需求，提出开源框架AFLOW-EMERALD，结合数值稳定的散射矩阵法与平面波展开，支持有限和周期层状材料及侧向周期结构的仿真，为光子学和等离子体学材料设计提供通用工具，也可用于理解散射型显微镜的信号产生。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "how iSCAT works with material science",
+      "matched_requirement_id": "req-6",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
