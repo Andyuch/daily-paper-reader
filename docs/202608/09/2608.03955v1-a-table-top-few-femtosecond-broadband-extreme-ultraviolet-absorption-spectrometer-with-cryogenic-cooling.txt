@@ -1,0 +1,654 @@
+Title: A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling
+
+URL Source: https://arxiv.org/pdf/2608.03955v1
+
+Published Time: Wed, 05 Aug 2026 01:27:35 GMT
+
+Number of Pages: 16
+
+Markdown Content:
+# A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling 
+
+Sheng-Chih Lin †,1, 2 Alfred Zong †,1, 2, 3 Emma Berger, 1, 4 Bailey R. Nebgen, 1, 2 Marcus Hui, 1 Shuaiwei Pan, 1, 2, 4 
+
+Jackson McClellan, 1, 2 and Michael W. Zuerch 1, 2 
+
+> 1)
+
+Department of Chemistry, University of California at Berkeley, Berkeley, CA 94720, USA 
+
+> 2)
+
+Materials Sciences Division, Lawrence Berkeley National Laboratory, Berkeley, California 94720, USA 
+
+> 3)
+
+Departments of Physics and of Applied Physics, Stanford University, Stanford, CA 94305, USA 
+
+> 4)
+
+Department of Physics, University of California at Berkeley, Berkeley, CA 94720, USA 
+
+(*Correspondence to M.W.Z.: mwz@berkeley.edu †These authors contributed equally: S.-C.L. and A.Z.) (Dated: 5 August 2026) 
+
+We present a table-top cryogenic ultrafast broadband XUV absorption spectroscopy (c-UBXAS) beamline designed for temperature-dependent and time-resolved investigations of quantum materials. The instrument combines a broadband high-harmonic generation source spanning 22–73 eV with automated image registration and cryogenic sample control down to 20 K, enabling element-specific measurements under both equilibrium and nonequilibrium conditions. The beamline provides sub-50-meV energy resolution and a sub-10-fs instru-ment response function, while maintaining long-term stability suitable for extended, ultrasensitive measure-ments. Benchmark experiments on NiI 2, a van der Waals multiferroic, reveal temperature-dependent spectral evolution across its magnetic phase transitions, demonstrating the ability to identify element-specific contri-butions to the ground state and its transient response in the femtosecond regime. This instrument introduces the opportunity to unravel the very first response of a solid-state material during light–matter interaction, paving the way for understanding the complex phase space of nonequilibrium dynamics and emergent states in strongly correlated systems where the few-femtosecond electronic response has eluded most other types of time-resolved techniques. 
+
+I. Introduction 
+
+Quantum materials host a rich variety of emer-gent phenomena, such as superconductivity 1,2 ,(multi)ferroicity 3,4 , and charge-density-wave order 5,providing fertile ground for both fundamental scientific discovery and next-generation technologies 6–8 . At the microscopic level, these collective behaviors originate from electronic states shaped by both their constituent atomic orbitals and the geometric configuration of the constituent atoms. By monitoring transitions from localized core states into unoccupied valence states, X-ray absorption spectroscopy (XAS) provides element-and orbital-specific information on the local electronic structure and bonding environment, making it a pow-erful tool for investigating the origins of these emergent material properties 9. Moreover, the recent extension of XAS into the sub- to few-femtosecond (fs) regime has enabled the investigation of transient carrier evolutions with distinct hallmarks for electrons and holes 10–12 , pho-toinduced structural change including coherent atomic motions 13–15 , as well as elementary many-body dynamics such as screening, charge transfer, and electron-electron scattering, which collectively govern the formation and dynamics of emergent quantum phases in solids 16–21 .By combining elemental and orbital specificity with this ultrafast temporal resolution, time-resolved XAS therefore provides a unique window into coupled elec-tronic and structural degrees of freedom by resolving contributions from individual constituent elements that are often difficult to separate in conventional optical spectroscopies. Despite their transformative capabilities, XAS mea-surements remain dependent on large-scale user facil-ities, which motivates the development of laboratory-scale setups that offer greater accessibility and exper-imental flexibility. To this end, high-harmonic gen-eration (HHG) has emerged as a powerful tabletop alternative 22–24 . The resulting broadband extreme-ultraviolet (XUV) pulses possess both ultrashort dura-tions and broad spectral coverage, enabling simultane-ous access to multiple elemental absorption edges within a single measurement. Over the past two decades, HHG-based XUV spectroscopy has been successfully ap-plied to investigate phenomena ranging from strong-field and photochemical dynamics in gaseous 25–28 and liquid systems 29 , to excitonic 30–33 , magnetic 34–37 , and carrier dynamics 10–12,38,39 in condensed-matter systems. While these studies have established ultrafast XUV spec-troscopy as a powerful probe of nonequilibrium phe-nomena, its application to phase-dependent behavior in quantum materials remains relatively underexplored 40,41 .This is in part because many collective phases of interest manifest through subtle temperature-dependent modifi-cations of electronic structure, making precise temper-ature control essential for establishing the relationship between equilibrium electronic structure, emergent or-der, and nonequilibrium dynamics. However, ultrafast XUV spectroscopy platforms capable of temperature-dependent studies are still rare. Here, to address the need for temperature con-trol, we have developed a cryogenic ultrafast broad-band XUV absorption spectroscopy (c-UBXAS) beam-line commissioned at UC Berkeley. The platform en-arXiv:2608.03955v1 [physics.ins-det] 4 Aug 2026 2   
+
+> FIG. 1. Overview of the cryogenic ultrafast broadband XUV absorption (c-UBXAS) beamline. a, Top-view rendering of the beamline showing the optical layout and major components, including the hollow-core-fiber (HCF) compression system, high-harmonic generation (HHG) chamber, beam recombination chamber, cryogenic experimental chamber, and XUV spectrometer. b, Side-view rendering of the complete beamline assembly highlighting the relative arrangement of the major vacuum chambers and optical subsystems.
+
+ables temperature-dependent static and ultrafast XUV measurements of solid-state materials from 20 to 350 K while maintaining broadband spectral coverage and fem-tosecond temporal resolution. We present the design and characterization of the beamline, detailing the func-tionality and implementation of each major subsystem, including the HHG source, beam recombination cham-ber, cryogenic measurement chamber, and XUV spec-trometer. Automated temperature-dependent data ac-quisition further enables efficient characterization of elec-tronic structure across phase transitions. As a repre-sentative demonstration, we perform static and ultra-fast XUV measurements on a van der Waals multiferroic NiI 2, simultaneously probing the I N4,5 and Ni M2,3 ab-sorption edges. The measurements illustrate the ability of the platform to connect temperature-dependent elec-tronic structure across phase transitions with element-specific photoinduced dynamics.   
+
+> II. Technical description A. Overview of instrument
+
+A schematic diagram of the cryogenic broadband XUV beamline is shown in Fig. 1. The instrument is built around a commercial Ti:sapphire amplifier system (Co-herent Legend Elite Duo HE) delivering 35 fs near-infrared (NIR) pulses centered at 790 nm with pulse en-ergies up to 13 mJ at a repetition rate of 1 kHz. Ap-proximately 5 mJ of the amplifier output is utilized for beamline operation. The entire beamline is mounted on a vibration-isolated optical table equipped with au-tomatic re-leveling pneumatic vibration isolators (New-port S-2000A Stabilizer) to minimize mechanical vibra-tions and maintain long-term alignment stability. The beamline consists of five major subsystems: a hollow-core-fiber (HCF) compression system, a HHG chamber, a beam recombination chamber, a cryogenic experimental chamber, and an XUV spectrometer chamber (Fig. 1b). Vacuum throughout the beamline is maintained by a two-stage pumping architecture comprising dry rough-ing pumps (Anest Iwata) backing turbomolecular pumps (Pfeiffer Vacuum), providing operating pressures ranging from high vacuum in the HHG source region to ultrahigh vacuum in the experimental and spectrometer chambers. Each subsystem is described below in the order encoun-tered by the laser pulse as it propagates through the beamline. 3 
+
+> B. HCF compression system
+
+The HCF compression system is used to spectrally broaden the output of the Ti:sapphire amplifier and gen-erate few-cycle pulses for high-harmonic generation and transient experiments. Figure 2 illustrates the optical layout of the compression region. To begin, 5 mJ NIR pulses centered at 790 nm are focused into a gas-filled stretched hollow-core fiber (BGB Analytik, 700 μm in-ner diameter and 6.4 m length) for spectral broadening via self-phase modulation. The fiber is statically filled with ultrahigh purity He at a pressure of 20 psi. The spectrally broadened output pulses exhibit a pulse energy of 3 mJ with a root mean squared (rms) pulse-to-pulse fluctuation of 0.21% . The output beam is subsequently collimated using a spherical silver mirror ( f = 2 .5 m) and temporally compressed by eight pairs of chirped mir-rors (PC1332, Ultrafast Innovations) and a fused-silica wedge pair (d-scan, Sphere Ultrafast Photonics), yield-ing a spectrum spanning approximately 540–1050 nm at 
+
+−20 dB and a typical pulse duration of 3.4 fs (FWHM) 42 .An active beam stabilization (MRC Systems GmbH) is implemented to maintain the beam pointing at the high-harmonic generation gas cell. The feedback signal is de-rived from the very weak residual reflection of a 300-μm-thick broadband-antireflection-coated fused silica win-dow (Lattice Electro Optics, Inc.) right before the d-scan box. The reflected beam is then relayed onto a quadrant detector located at an equivalent propagation distance from the sampling window to the HHG gas cell (Fig. 1a), while beam-pointing corrections are applied through a piezo-actuated steering mirror positioned directly after the fiber exit.      
+
+> FIG. 2. Expanded view of the hollow-core-fiber (HCF) compression system. The spectrally broadened output is compressed using chirped mirrors and a fused-silica wedge pair, while the pulse duration is characterized by the d-scan diagnostic. Active beam-pointing stabilization is imple-mented before delivery of the compressed beam to the high-harmonic generation chamber. Unlabeled reflective optics correspond to protected silver mirrors (PF10-03-P01, Thor-labs Inc.) used for beam steering.
+> C. HHG chamber
+
+Following compression, the beam enters the HHG chamber through a 500-μm-thick antireflection-coated fused-silica window and is subsequently divided into driv-ing and pump arms with a 90:10 intensity ratio us-ing a custom antireflection-coated beamsplitter (Layertec GmbH). As shown in Fig. 3, the pump beam is routed through a vacuum-compatible piezo-actuated linear stage (CLL42, SmarAct Inc.), which controls the relative ar-rival time between the pump and probe pulses with a 3.3-ns delay range. Locating the delay line inside the vacuum chamber minimizes optical path fluctuations in air, thereby improving long-term time-zero stability dur-ing pump-probe measurements. The pump beam is then transported toward the beam recombination chamber. In the probe arm, both the focusing mirror ( f =0.75 m) and the steering mirror immediately upstream of it are mounted on piezo-driven tip/tilt stages (STT-25.4, SmarAct; Fig. 3). These motorized mounts en-able remote optimization of the beam alignment with-out breaking vacuum. The beam is then focused into a custom-machined Macor ceramic gas cell with a 500-μm-diameter circular aperture (Werkzeugbau Simon GmbH) for high harmonic generation. The gas cell is mounted on a motorized three-axis linear stages (Physik Instru-mente), allowing remote optimization of phase-matching conditions for the HHG process. The generation medium is supplied through 1/8 inches stainless steel tubing and regulated by a pressure controller (PC-100PSIA-D, Ali-cat Scientific, Inc.). A mirror mounted adjacent to the gas cell directs the interaction region to an external align-ment camera (Imaging Source), providing real-time vi-sual monitoring of the gas cell position during alignment. To minimize reabsorption of the generated XUV pulses, a differential pumping scheme is implemented. As shown in Fig. 1a, two turbomolecular pumps (HiPace 1200 and HiPace 700, Pfeiffer Vacuum) are arranged in series to efficiently remove gas load and to maintain a pressure gradient. The HHG chamber exhibits a base pressure of approximately 7.9 × 10 −5 Torr during operation. The generated XUV pulses then propagate collinearly with the residual driving field into the downstream beam re-combination chamber.  
+
+> D. Beam recombination chamber
+
+Upon entering the beam recombination chamber, the residual NIR driving field is removed using a metal fil-ter. To accommodate different spectral ranges and exper-imental requirements, two filter assemblies are mounted on independent manual gate valves (VAT), allowing rapid exchange between different filter materials while main-taining vacuum conditions (Fig. 1a). Unless otherwise specified, the measurements presented here were per-formed using a 200-nm-thick Al filter (Lebow, Co.). The chamber operates at a base pressure on the order of 4
+
+FIG. 3. Optical layout of the high-harmonic genera-tion (HHG) chamber. The incoming NIR beam is divided into pump and HHG-driving arms using a custom beam split-ter. The pump arm contains a motorized delay stage, while the driving arm is focused into a motorized gas cell for HHG generation. Active beam stabilization and source imaging are implemented for automated beam alignment. The generated XUV pulse and residual NIR driving field are subsequently delivered to the downstream beamline. Unlabeled reflective optics correspond to protected silver mirrors used for beam steering. 
+
+2.0 × 10 −8 Torr. The transmitted XUV pulses are subse-quently refocused into the downstream cryogenic exper-imental chamber by a Ni-coated toroidal mirror (ARW Optical Corporation) with specified tangential and sagit-tal radii of curvature of 28,656.26 mm and 50.25 mm, respectively. The mirror is operated at 2.4◦ grazing inci-dence in a 2f :2f one-to-one imaging configuration, and is mounted on a motorized four-axis tilt aligner (8071-M, Newport), providing fine optimization of the XUV focus at the sample position. In parallel, the pump beam passes through a mechanical shutter (SH1, Thorlabs) for rapid acquisition of XUV spectra with and without the pump beam. A motorized iris (SID5714, SmarAct) is used for precise control of the pump fluence (Fig. 4). The pump beam is subsequently steered and focused onto the sam-ple position by a concave mirror on a two-axis picomotor-actuated mirror mount (8301-V, Newport), allowing fine adjustment of the pump-probe spatial overlap at the sam-ple position. An MRC beam stabilization system is im-plemented in the pump arm, where the feedback signal is derived from the reflection of a fused-silica window right before the shutter, and the corresponding piezo-actuated mirror is placed in the HHG chamber right after the pump-probe beamsplitter. This beam stabilization maintains long-term pump–probe spatial overlap at the sample position over the entire 3.3 ns delay stage range. To facilitate the beam characterization and alignment, a motorized translation stage (Physik Instrumente) is positioned downstream of both the toroidal mirror and the pump concave mirror, allowing the pump and probe beams to be redirected to an external diagnostic region; as explained below, the residual NIR beam through the HHG gas cell acts as a proxy for the XUV probe with-out metal filter insertion. A pyroelectric energy sen-sor (EnergyMax-RS J-10MB-LE, Coherent) and a beam profiler (S-WCD-UHR, DataRay) positioned at a plane equivalent to the sample position are used to measure the pump pulse energy and beam profile, respectively. This arrangement enables accurate determination of the incident pump fluence. Furthermore, with the metal fil-ter retracted, the NIR driving field can be directed to the diagnostic region. Owing to the shared propagation path and focusing geometry of the NIR driving field and XUV probe, the NIR beam serves as a reliable surrogate for the XUV beam during alignment, facilitating optimization of the pump–probe spatial overlap. beam profiler beam stabilization power meter motorized toroidal mirror NIR pump XUV probe metal filter mechanical shutter motorized iris window motorized focusing mirror motorized pickup mirror 
+
+> diagnostic beam path focusing mirror
+
+FIG. 4. Optical layout of the beam recombination chamber. The NIR pump beam and XUV probe are spa-tially recombined and directed toward the cryogenic exper-imental chamber. A motorized toroidal mirror relays the XUV beam, while a motorized focusing mirror controls the pump beam pointing at the sample position. Metal filters suppress the residual NIR driving field transmitted from the HHG chamber. Auxiliary diagnostics, including a beam pro-filer and a power meter, enable continuous monitoring of the pump beam. A motorized pickup mirror can be inserted into the beam path to redirect the NIR beams on the pump and probe arms to the external diagnostic beam path indicated by the dashed red line for alignment and characterization. A motorized iris and shutter provide remote control of the pump beam delivery. Unlabeled reflective optics correspond to pro-tected silver mirrors used for beam steering. 
+
+E. Cryogenic experimental chamber 
+
+The cryogenic experimental chamber serves as the in-teraction region for both static and time-resolved XUV spectroscopy measurements. The optical layout of the chamber is shown in Fig. 5c. For transient experiments, the XUV probe and NIR pump beams intersect at the sample position with a crossing angle of ∼ 4◦, and the transmitted pump beam is subsequently steered out of the chamber and directed to a beam dump. The XUV probe is focused to an approximately 100 × 100 μm25spot at the sample position, while the NIR pump beam is expanded to ∼ 650 μm to ensure uniform excitation across the probed region. A custom-designed experimen-tal platform mounted on a motorized 3-axis translation stage (Physik Instrumente) accommodates three inter-changeable components: a sample holder, a gas cell, and a knife-edge assembly (see Fig. 5a,b), supporting spec-troscopy measurements as well as beamline calibration and characterization. Solid-state samples are mounted on an oxygen-free high-thermal-conductivity (OFHC) copper holder, which houses a detachable sample cartridge with nine sam-ple slots. This design not only streamlines measure-ments by providing access to multiple samples within a single vacuum cycle, but also enables sample ex-change through a load-lock system without breaking the vacuum of the experimental chamber (Fig. 1a). The OFHC copper holder is mounted on the experimental platform through a thermally insulating Macor exten-sion and is coupled to a vibration-isolated closed-cycle liquid 4He cryostat (SHI-4XG-UHV-2, ColdEdge Inc.) through a custom 1/2-inch OFHC copper braid assem-bly with end fittings. Both the sample holder and the copper braid assembly were fabricated by Werkzeugbau Simon GmbH. Sample temperature is regulated using a PID controller (Model 335, Lake Shore Cryotronics), en-abling temperature-dependent measurements. The cryo-stat provides temperature control from approximately 20 K to 350 K, enabling studies across a wide range of thermodynamic phases. While the cryo-cooler is capable of reaching temperatures near 4 K, the minimum sam-ple temperature is limited to approximately 20 K in the current implementation because the radiation shield does not extend to the sample holder. To prevent condensa-tion during cryogenic operation, the experimental cham-ber is maintained at a base pressure of approximately 
+
+1.1 × 10 −9 Torr. An identical gas cell to that used in the HHG chamber is incorporated into the experimental platform for XUV energy calibration and time-zero determination. The third component on the platform is a knife-edge appa-ratus consisting of commercial scalpel blades (Ted Pella) and an XUV photodiode (AXUV100TF400, Opto Diode Co.) for characterization of the XUV beam size at the sample position. Knife-edge measurements yield the hor-izontal and vertical XUV beam sizes of 97 .4±0.7 μm and 
+
+92 .3 ± 0.4 μm, respectively. A sample-monitoring camera (Imaging Source) is implemented outside of the cham-ber to provide real-time visualization of the interaction region, facilitating sample navigation, beam alignment, and optimization of the pump-beam spatial overlap on the calibration gas cell.  
+
+> F. XUV spectrometer chamber
+
+The transmitted XUV beam through the sample then propagates into a homemade XUV spectrometer for spec-     
+
+> FIG. 5. Configuration of the cryogenic experimental chamber and sample platform. a , Three-dimensional ren-dering of the cryogenic sample platform mounted on the mo-torized sample stage. The sample holder is fabricated from oxygen-free high-conductivity (OFHC) copper and thermally anchored to the cryostat cold finger through a flexible OFHC copper braid. b, Side view of the sample platform showing the OFHC copper cartridge sample holder together with the auxiliary gas cell and knife-edge apparatus used for energy calibration, temporal characterization, and beam-size mea-surements. c, Optical layout of the cryogenic experimental chamber. The NIR pump and XUV probe are focused onto the sample mounted on a motorized stage, while the trans-mitted pump beam is stopped by a beam block.
+
+troscopy measurements. As shown in Fig. 6, the spec-trometer consists of two filter assemblies mounted on in-dependent manual gate valves (VAT), an interchangeable grating assembly, and an XUV CCD detector (ALEX, Greateyes GmbH). The spectrometer operates under ultrahigh-vacuum conditions with a base pressure on the order of 10 −9 Torr. The filter assemblies provide addi-tional suppression of the residual NIR driving field and scattered visible light, while also protecting the CCD detector from overexposure. The grating unit includes two flat-field gratings (001-0437 and 001-0660, Hitachi) mounted on a translation stage (Attocube). The former is optimized for broadband spectral acquisition, while the latter provides enhanced spectral resolution for measure-ments over narrower photon-energy ranges. Unless oth-erwise specified, the spectrometer characterization and benchmark measurements presented here were acquired using the 001-0660 grating. The dispersed XUV light is recorded by the CCD detector, which is cooled to 
+
+−40 ◦C when collecting data. The detector is mounted in a custom-built vacuum enclosure equipped with three-axis translation, enabling optimization of the spectrome-6 
+
+> FIG. 6. Overview of the custom XUV spectrometer.
+> The transmitted XUV beam passes through interchangeable metal filters mounted on independent VAT gate valves before entering the spectrometer chamber and being dispersed by one of two flat-field gratings mounted on a motorized transla-tion stage. The two gratings provide complementary spectral coverage and spectral resolution, allowing the spectrometer configuration to be tailored to different experimental require-ments. The dispersed spectrum is recorded by an XUV CCD detector mounted on a custom three-axis translation stage. Detector motion along the y-axis is used to optimize the spec-trometer focus, while translation along the x-axis enables se-lection of different photon-energy windows. The z-axis is used to optimize the beam position on the detector.
+
+ter focus ( y-axis), adjustment of the photon-energy win-dow projected onto the CCD ( x-axis), and alignment of the dispersed beam on the CCD ( z-axis). Owing to the large compressive (or tensile) stress exerted by the 8-inch bellow connecting the XUV camera and the chamber that houses the gratings, the three-axis transla-tion stage adopts a particularly sturdy design with 1.25-inch-diameter stainless steel axle to maintain mechanical rigidity.  
+
+> III. Data acquisition and measurement protocols
+
+Instrument control and data acquisition are imple-mented through a custom LabVIEW interface that pro-vides centralized control of the beamline and automates common alignment and measurement procedures. To as-sist beamline alignment, live images from cameras mon-itoring the HHG and experimental gas cells (Figs. 3 and 5) are integrated into the control software. The gas-cell positions are scanned along all three spatial coor-dinates. Transverse scans maximize XUV transmission through the gas-cell aperture, whereas scans along the beam propagation direction optimize the HHG yield and phase-matching conditions. Following optimization, the centers of the gas cell are registered as reference markers on the live camera images. These markers provide visual references for beamline alignment and sample navigation.  
+
+> A. Static XUV measurements
+
+For static measurements, XUV transmission spectra are acquired through samples and reference substrates (e.g., silicon nitride TEM windows or copper grids). The corresponding absorption spectra are calculated by Absorption = 1 − Isample (E)
+
+Iblank (E) , (1) where Isample (E) and Iblank (E) denote the transmitted XUV intensities measured through the sample and ref-erence substrate as a function of photon energy, re-spectively. This treatment assumes negligible reflection losses, which is generally justified by the near-zero re-flectivity of XUV light at normal incidence. To improve spectral quality, both the sample and reference regions are scanned in the transverse and longitudinal directions. Transverse scans average over spatial inhomogeneities in the samples and substrates, while longitudinal scans sup-press spectral modulations originating from the intrinsic HHG emission profile through averaging of spectra ac-quired at different positions along the beam propagation direction 43 . 
+
+> B. Time-resolved XUV measurements
+
+Time-resolved XUV measurements are conducted by sequential acquisition of pump-off and pump-on spec-tra at each pump-probe delay. The pump-probe delay is controlled by the 50-cm-long in-vacuum delay stage (Fig. 3), enabling measurements spanning sub-fs to 3.3-ns timescales. For a given delay position, the mechanical shutter is alternately closed and opened to acquire a pair of pump-off and pump-on spectra, respectively. The syn-chronization among the delay stage, mechanical shutter, and XUV CCD camera exposure was controlled through our custom LabVIEW software. A CCD exposure time of 120 ms was used for transient measurements reported here. At each delay time point, a pump-on spectrum and the corresponding pump-off spectrum are acquired consecu-tively. This alternating acquisition sequence is repeated multiple times to improve the signal-to-noise ratio while minimizing the influence of slow experimental drifts. For the measurements presented here, 20 pump-off and 20 pump-on spectra were averaged separately prior to anal-ysis. The transient XUV response is calculated as the normalized transmission change, 
+
+∆I(E, t ) = Ion (E, t ) − Ioff (E)
+
+Ioff (E) , (2) where Ion (E, t ) denotes the averaged transmitted XUV intensity acquired with the pump beam present at delay time t, and Ioff (E) is the transmitted intensity without pump. This interleaved acquisition protocol suppresses 7low-frequency fluctuations, routinely enabling pre-time-zero noise floors of approximately 0.3–0.7 mOD (see be-low). To remove long-timescale offsets (e.g., millisecond cumulative heating effects), the averaged pre-time-zero signals are subtracted from the corresponding transient dataset. Time zero is calibrated using NIR-pump-XUV-probe transient measurements on noble gases, typically Ar, He or Ne. The extracted delay time offset is then used as a time zero reference, and the subsequent tran-sient measurements are shifted accordingly.  
+
+> C. Temperature-dependent measurements
+
+In addition to static and time-resolved mea-surements, the c-UBXAS beamline supports au-tomated temperature-dependent XUV spectroscopy. Temperature-dependent measurements are further as-sisted by a machine-vision-based image registration sys-tem that compensates for sample-position drift arising from thermal contraction and expansion during temper-ature changes. Prior to temperature-dependent measure-ments, a calibration between image displacement and stage motion is established by translating the sample through known transverse displacements while record-ing the corresponding pixel shifts in the live camera im-ages. The pixel shifts are determined with sub-pixel pre-cision using image-registration routines implemented in the scikit-image Python package 44 . During operation, the displacement between the current image and a ref-erence image is calculated and converted into stage cor-rections through the calibration curve, which are sub-sequently applied automatically through the motorized translation stages. Following each correction step, the residual displacement relative to the reference image is evaluated and used as feedback for subsequent adjust-ments until the desired positioning accuracy is achieved. The performance of the image-registration system is illus-trated in Fig. 7, which shows the stage positions applied during a representative temperature cycle on NiI 2. The cooling and warming trajectories closely overlap, demon-strating the reproducibility of the correction procedure and confirming that the same sample region can be reli-ably revisited throughout repeated temperature sweeps. Residual positioning errors after correction are typically below 1 μm, substantially smaller than the ∼ 100 μmXUV probe size. This approach enables automated temperature-dependent measurements while maintaining the XUV probe on the same sample region throughout the temperature sweep.  
+
+> D. Spectral calibration
+
+XUV photon energy calibration is performed using ab-sorption resonances of He, Ne, and Ar measured with the calibration gas cell integrated into the experimental platform. The resonance energies used for calibration 13.20 13.16 13.12 Sample Z position (mm) 200 150 100 50 Temperature (K) 22.84 22.83 22.82 Sample X position (mm)    
+
+> Cooling
+> Warming Cooling
+> Warming
+> FIG. 7. Automated sample tracking during tempera-ture cycling. Sample stage corrections determined by the automated image-registration system during a temperature cycle of NiI 2(see Fig. 13 for XUV spectral trends). The X and Z positions exhibit reproducible cooling and warming trajec-tories with a small hysteresis, demonstrating reliable compen-sation of thermally induced sample drift and consistent posi-tioning throughout temperature-dependent measurements.
+
+are summarized in Table I. In addition, the Al L2,3 ab-sorption edge introduced by the metal filters provides an internal calibration reference. The identified calibration features are fitted with a three-order polynomial function to establish the pixel-to-energy calibration curve, which is then used to convert detector pixel positions into pho-ton energies for all subsequent measurements.    
+
+> IV. Results and discussion A. c-UBXAS beamline characterization
+> 1. XUV flux
+
+Figure 8 shows a representative HHG flux density spec-trum generated in a 50 Torr Ar medium through the gas cell. Calibration is performed using the CCD gain and the wavelength-dependent quantum efficiency pro-vided by the detector manufacturer. The resulting spec-trum provides continuous spectral coverage from 22 to 73 eV, enabling access to multiple elemental absorption edges within a single spectral frame 48 . By integrating the calibrated spectrum recorded on the Greateyes XUV CCD with no sample in the beam path, the photon flux reaching the detector is estimated to be 2 × 10 8 pho-tons per pulse. The resulting flux compares favorably with previously reported HHG-based XUV absorption beamlines 25,36,49 . Independent XUV photodiode mea-surements at the sample interaction region (Fig. 5) indi-cate that the XUV pulse energy delivered to the sample is approximately one-millionth of the 1.22 mJ NIR driving pulse energy. This XUV pulse energy value is estimated using the responsivity of the photodiode and corresponds to the standard beamline operating configuration, includ-ing transmission through the upstream 200 nm aluminum 8
+
+TABLE I. Selected atomic levels used for the calibration of the XUV spectrometer 42 .                    
+
+> Noble gas State Energy (eV) Reference
+> He
+> 24 sp +64.465(7) Lipsky & Russek 45 23 sp +63.654(6)
+> 2s2p60.126(15) Ne
+> 2s12p66p47.9650(30) Schulz et al. 46
+> 2s12p65p47.6952(15)
+> 2s12p64p47.1193(50)
+> 2s12p63p45.5442(50)
+> 2p43s3p44.9817(50) Ar
+> (1S)3 d(2D5/2)4 p34.994(2) Madden et al. 47
+> (1D)3 d(2P3/2)4 p34.412(4)
+> (3P)3 d(2D3/2)4 p31.624(2)
+> (3P)4 s(2P1/2)5 p31.602(2)
+> (1D)4 s(2D5/2)4 p31.249(2)
+
+filter and reflection from the toroidal mirror (Fig. 4). 42Photons / shot / eV / 10 670 60 50 40 30 Photon energy (eV) 
+
+> Ar 50 Torr Cooper minimum
+
+FIG. 8. HHG spectrum. Calibrated HHG photon flux den-sity spectrum generated in 50 Torr Ar, providing continuous spectral coverage from 22 to 73 eV. The calibration accounts for the CCD gain and the wavelength-dependent quantum ef-ficiency provided by the detector manufacturer. The spectral features near 26–30 eV originate from reabsorption by the Ar in the generation medium. The broad minimum near 50 eV is attributed to the Ar Cooper minimum 50 , whereas the sharp cutoff near 73 eV originates from the transmission edge of the 200 nm Al filter. 
+
+2. Spectral resolution 
+
+The spectral performance of the XUV spectrometer is evaluated using well-established spectral features of noble gases. Representative transmission spectra of He, Ne, and Ar are shown in Fig. 9a–c. These spectral fea-tures provide robust references for energy calibration (Ta-ble I) and enable quantitative assessment of the spec-trometer spectral resolution. In particular, the reso-lution is estimated using the He 2s3p doubly-excited states, Ne 2s2p63p autoionizing state, and Ar 3s3p66p
+
+autoionizing state as references, whose inverse lifetimes are 10 meV, 13 meV, and 12.6 meV, respectively. 47,51,52 
+
+The extracted FWHMs were 0.013 nm for He, 0.016 nm for Ne, and 0.042 nm for Ar, corresponding to spec-tral linewidths of 43, 27, and 27 meV, respectively. To isolate the instrumental resolution from the in-trinsic linewidth, we apply the standard deconvolu-tion relation ∆Einstrum = p(∆ Emeas )2 − (∆ Eintrinsic )2,where ∆Einstrum represents the instrumental resolu-tion, ∆Emeas is the measured linewidth (FWHM), and 
+
+∆Eintrinsic is the known inverse lifetime width. After cor-recting for the intrinsic linewidths, the instrumental reso-lution was determined to be 24–42 meV (0.013–0.037 nm) across the investigated spectral range (22–73 eV). 
+
+3. Temporal resolution 
+
+The temporal response of the setup is estimated by performing transient XUV measurement on Ne. Fig-ure 10a shows the transient response of the series of Ne 
+
+2s12p6np autoionizing states, in which the temporal trace integrated over the NIR dressing sideband region (45.8– 46.3 eV) serves as a proxy for the effective temporal re-sponse of the beamline 40 . The resulting trace was fitted using the phenomenological model function 53–55 
+
+∆I(t) = 12
+
+"
+
+1 + Erf 2√ln 2( t − t0)
+
+ω
+
+!# 
+
+·
+
+
+
+I∞ + I0e−(t−t0)/τ 
+
+, (3) where ω represents the width of the error-function rise, 
+
+I0 stands for the maximum intensity change, I∞ is the value of ∆I at long time delays, τ denotes the charac-teristic relaxation time to the quasi-equilibrium, and t0
+
+is associated with the relative arrival time of pump and probe when ∆I = ( I0 +I∞)/2. As shown in Fig. 10b, the fit yields the width of the error function ω = 9 .8 ± 0.7 fs, providing an upper-bound estimate of the instrument re-sponse function 10 .9200 150 100 22 20 Wavelength (nm) 60 40 20 28 26 Wavelength (nm) 15 10 46 44 Wavelength (nm) Trans. int. (×10 3 a.u.) 
+
+# ba c Ar 3 s3p6np n = 3 2p43s3p    
+
+> Exp Fit Exp Fit Exp Fit
+> He 2 snp Ne 2 s12p6np n= 2 34456
+> n= 4 5678
+
+FIG. 9. Characterization of the XUV spectrometer. Transmitted XUV spectrum on the He doubly excited states ( a), the Ne 2s12p6np states ( b), and the Ar 3s3p6np states ( c). Orange curves indicate fits to selected resonances used for resolution analysis. The Ar resonances were fitted using Lorentzian line shapes with a linear background, while the Ne and He resonances were fitted using Fano profiles to account for the asymmetric line shapes arising from continuum coupling. The extracted linewidths were subsequently used to determine the instrumental energy resolution. 
+
+FIG. 10. Characterization of c-UBXAS temporal resolution. a , Transient transmission spectrogram of Ne autoionizing states. The equilibrium transmitted XUV spectrum was plotted against the right axis as a reference for the corresponding states, which are labeled at the top. Positive (negative) time delay means that XUV pulse arrives after (before) the NIR pump pulse. This measurement used 30 Torr of Ne, measured before it exited the gas cell. b, Transient signal of the NIR dressing Ne 2s12p63p side band region (45.8–46.3 eV) extracted from a. Red curve is a fit to Eq. (3). 
+
+4. Long-term stability 
+
+We next evaluate the long-term beam pointing and intensity stability of the XUV spectrometer. For this purpose, we monitored the transmitted XUV intensity through an empty silicon nitride TEM window, a sub-strate commonly used for XUV spectroscopy measure-ments (Fig. 11). The Ar 3s3p66p autoionizing reabsorp-tion feature from the HHG source was used as an internal spectral marker. Over 16 hours of continuous operation, the peak position is found to be stable within an uncer-tainty of 0.2 pixel, corresponding to a spectral shift of approximately 1 meV. In addition, the integrated signal across the entire spectra exhibited an rms fluctuation of 3.6%. These results demonstrate the long-term source stability required for extended XUV spectroscopy mea-surements. 
+
+V. Static and time-resolved benchmark measurements on multiferroic NiI 2
+
+To benchmark the capabilities of the cryogenic beam-line, we performed temperature-dependent XUV spec-troscopy measurements on NiI 2. NiI 2 is a layered tran-sition metal halide consisting of edge-sharing [NiI 6] oc-tahedra separated by van der Waals gaps. The mate-rial undergoes a series of phase transitions upon cool-ing, first transitioning from a paramagnetic to an anti-ferromagnetic (AFM) state below 75 K and subsequently undergoing a rhombohedral-to-monoclinic structural dis-tortion below 59 K. The latter transition is accompanied by the evolution of the AFM order into a proper-screw helical magnetic structure. Given the coupling between its magnetic and lattice degrees of freedom, it is classified as an improper type-II multiferroic. Recent studies have further shown that this multiferroic state persists down to the monolayer limit, highlighting NiI 2 as a promising candidate for low-dimensional spintronic and multifunc-10 0.3 0.2 2000 1800 642Intenisty ( 10 5arb. u.) 2000 1500 1000 500 0Pixel number 
+
+> Lab time Ar 3 s3p66p
+
+a bc
+
+> 160 120 80 Intensity ( 10 6 a.u.) 16 12 84Time (hours)
+> 1780 1776 1772 Pixel number 16 12 84Time (hours)
+
+FIG. 11. Long-term stability of the c-UBXAS beam-line. a, Raw XUV spectra acquired during a 16-hour con-tinuous measurement on an empty silicon nitride membrane. Consecutive spectra are vertically offset for clarity and or-dered according to laboratory acquisition time. The inset highlights the Ar 3s3p66p autoionizing reabsorption feature used as an internal spectral marker. b, Extracted peak posi-tion of the Ar 3s3p66p autoionizing resonance as a function of lab time, showing a positional uncertainty of 0.2 pixel over the measurement period. The shaded region represents 1 s.d. peak fitting uncertainties. c, Integrated XUV intensity as a function of lab time. The shaded region denotes the 1 s.d. variation about the mean intensity. 
+
+tional electronic devices 56–61 . To realize these opportuni-ties, it is essential to understand the electronic structure responsible for multiferroicity and how it evolves across phase transitions and under nonequilibrium conditions 4.In particular, studies have suggested that the multifer-roicity is closely linked to strong hybridization between Ni 3 d and I 5 p states 62–64 . To understand this element-specific orbital characters and their dynamics, ultrafast broadband XUV spectroscopy is uniquely suited to di-rectly visualize such interactions. Figure 12 shows a static XUV absorption spectrum of NiI 2 measured at 300 K using the raster-based acquisi-tion protocol described in Sec. III A. Compared with a simplified two-point measurement, the raster-based ap-proach suppresses HHG source-induced spectral modula-tions while preserving the underlying spectral features. The resulting spectrum spans both iodine and nickel ab-sorption regions in a single spectral frame, providing si-multaneous access to electronic states relevant to the Ni 3d and I 5 p hybridization in the material. In the iodine region, two main absorption peaks, labeled as 1 and 2 , are observed and attributed to I N4,5 transitions from the I 4d spin-orbit split core levels to unoccupied I 5p states near the Fermi level 27 . The assignment is supported by the ∼ 1.7 eV separation between the two features, match-ing the spin-orbit splitting of the I 4d5/2 and 4 d3/2 core levels 65 . On the other hand, a broad absorption feature, labeled 3 , spanning 65–67 eV is assigned to the Ni M2,3
+
+edge, arising from 3p → 3d transitions, consistent with 1.0 0.9 0.8 Absorption 70 60 50 Photon energy (eV)  
+
+> Raster scan
+> 2 point scan
+> I 4 d5/2 → 5 pN5 edge I 4d3/2 → 5p N4 edge
+> Ni 3 p→ 3 dM2,3 edges
+> ①②③
+
+FIG. 12. Static XUV absorption spectrum of NiI 2.
+
+Spectra obtained using a two-point measurement and a raster scan are shown for comparison. Features 1 and 2 correspond to the I N5 (4d5/2 → 5p) and I N4 (4d3/2 → 5p) absorp-tion edges, respectively, while feature 3 originates from the Ni M2,3 (3p → 3d) absorption edges. The raster scan reduces spurious spectral structure and yields a more representative absorption spectrum of the sample. See Sec. III A for details of the measurement protocol. 
+
+previous synchrotron measurements 66 .Having established the spectral assignments, we next investigate their temperature dependence across the phase transitions of NiI 2. Leveraging the combined cryo-genic measurement platform and image-registration pro-cedure, we tracked the evolution of the NiI 2 XUV absorp-tion spectrum during a continuous 200–20–200 K ther-mal cycle, with spectra acquired at temperature inter-vals of approximately 6–8 K. As summarized in Fig. 13, the resulting dataset spans both phase transitions and demonstrates the stability and reproducibility of the setup over extended temperature excursions. To quan-tify the temperature-dependent spectral evolution, the positions and widths of the absorption features were ex-tracted. Both iodine features exhibit gradual energy shifts upon cooling (Fig. 13b,c), while the nickel fea-ture shown in Fig. 13d remains largely unchanged. The linewidths of the iodine peaks also exhibit a systematic temperature dependence, including a subtle change in slope near the reported transition-temperature regime of NiI 2 (Fig. 13e,f). While a detailed interpretation is beyond the scope of the present work, the observation highlights the sensitivity of the cryogenic XUV platform to subtle spectral changes involved in low-energy phase transitions in quantum materials. We next demonstrate the ultrafast capabilities of the cryogenic XUV beamline through pump-probe measure-ments on NiI 2. An NIR pump pulse with incident fluence of 2 mJ/cm 2 excites carriers across the 1.2 eV bandgap of the material 67 , and the resulting electronic dynam-ics are monitored through the iodine and nickel regions. Figure 14a,b shows transient transmission change ac-quired at 300 K and 23 K, corresponding to tempera-tures above and below the magnetic and structural phase transitions. At both temperatures, distinct positive and negative transmission changes are observed within the io-dine region, whereas only a negative change is resolved at 11                 
+
+> FIG. 13. Temperature-dependent XUV absorption spectra of NiI 2. a , Normalized absorption spectra acquired during cooling (blue) and subsequent warming (red) during a 200–20–200 K thermal cycle. Features 1and 2correspond to the I
+> N5and I N4absorption edges, respectively, while feature 3 originates from the Ni M2,3edges. Automated image-registration correction (Fig. 7) was employed throughout the measurement to compensate thermally induced sample drift and maintain the XUV probe on the same sample region. b–d , Temperature dependence of the peak positions of features 1 – 3 during cooling (filled symbols) and warming (open symbols). The peak positions of the iodine features were determined from Lorentzian fits with a constant background, whereas the position of the nickel feature was estimated from the inflection point associated with the shoulder profile. e,f, Temperature dependence of the linewidths extracted from the Lorentzian fits to features 1and 2 . Vertical dashed lines indicate the reported phase transition regime of NiI 2. Error bars represent 1 s.d. fitting uncertainties.
+
+the Ni M2,3 edge within the current signal-to-noise level. The experimental noise floor, estimated from the pre-time-zero regions of both datasets, ranges from 7.8×10 −4
+
+to 1.6 × 10 −3 in normalized transmission change (corre-sponding to 0.3–0.7 mOD). These values are compara-ble to those reported for state-of-the-art XUV transient spectroscopy measurements 68,69 .The temporal evolution of the photoinduced spectral features was further analyzed by integrating over selected spectral windows i–iii corresponding to the negative and positive features of the I N5 edge and the Ni M2,3 edges. At 300 K, the extracted traces at different absorption edges exhibit distinct temporal evolutions. Specifically, the positive and negative iodine features have a very fast initial response, followed by relaxations on the timescales of τred,300 K = 460 ± 40 fs and τblue,300 K = 210 ± 30 fs [see Fig. 14c,d and Eq. (3)]. By contrast, as shown in Fig. 14e, the Ni M2,3 response develops more gradually with a characteristic rise time ωNi,300 K = 240 ± 120 fs. As a result, the iodine signals begin to recover while the nickel feature is still rising, with the two responses crossing at early times. This crossover may indicate a sequential process involving iodine- and nickel-derived electronic states. Upon cooling to 23 K, the charac-teristic timescales change to τred,23 K = 150 ± 10 fs, 
+
+τblue,23 K = 190 ± 20 fs, and ωNi,23 K = 190 ± 90 fs. The most pronounced change is observed for the positive io-dine transient feature (red curves in Fig. 14d), whose relaxation time decreases by approximately a factor of three compared to 300 K. The selective temperature de-pendence of the iodine response is suggestive of changes in ligand-mediated electronic relaxation pathways associ-ated with the strongly covalent Ni-I electronic structure reported for NiI 270,71 , motivating future investigations of the underlying microscopic mechanism. Importantly, these measurements underscore the need for access to cryogenic environments to disentangle element-specific dynamics across phase transitions, a long-standing exper-imental challenge that c-UBXAS is uniquely positioned to address.  
+
+> VI. Conclusion and outlook
+
+We present a cryogenic ultrafast broadband XUV absorption (c-UBXAS) beamline tailored for investi-gations of quantum materials under both equilibrium and nonequilibrium conditions. The beamline com-bines broadband XUV spectroscopy, automated image registration, and cryogenic sample control, enabling temperature-dependent measurements down to 20 K and pump–probe experiments spanning sub-femtosecond to nanosecond timescales. We summarize the key perfor-mance metrics discussed in this article in Table II. Bench-12       
+
+> FIG. 14. Temperature-dependent transient XUV absorption measurements of NiI 2. a ,b, Spectrally resolved tran-sient transmission changes measured at ( a) 300 K and ( b) 23 K following photoexcitation at a fluence of 2.0 mJ/cm 2.The static absorption spectrum shown in gray in ais reproduced from Fig. 12 and plotted against the right-hand axis for reference. Colored bars labeled i–iii on top denote the three spectral integration windows used for the transient analyses shown in c–e
+> corresponding to 48.67–49.23 eV (i), 49.30–49.78 eV (ii), and 64.46–65.55 eV (iii), respectively. c–e, Transient traces obtained by integrating the transient signal within the corresponding spectral windows. Dark and light symbols denote measurements at 300 K and 23 K, respectively, while solid curves show fits to the transient response using the Eq. (3). The transient signals are normalized to their respective extrema to clearly identify the relaxation timescales.
+
+mark measurements on NiI 2 further reveal spectral shifts and linewidth changes across the phase transition regime, together with the distinct ultrafast dynamics at the io-dine and nickel absorption edges. These results demon-strate the capability of the beamline to track subtle spec-tral evolution across phase transitions and to perform element-resolved measurements of ultrafast electronic dy-namics. Looking ahead, an exciting direction is the incorpo-ration of X-ray magnetic circular dichroism (XMCD) capabilities, extending the c-UBXAS platform to spin-resolved measurements 35 . Such measurements would allow direct access to element-resolved spin dynamics, angular momentum transfer, and short range magnetic correlations. These capabilities could provide critical insights into quantum materials where precursor mag-netic states and fluctuating spin correlations are believed to contribute to the emergence of long-range magnetic order 72–74 , while also enabling studies of nonequilibrium angular momentum transfer processes, including ultra-fast manifestations of the Einstein–de Haas effect 75,76 
+
+and light-induced magnetic states in van der Waals magnets 77,78 .Beyond XMCD, polarization control of the XUV probe would also enable X-ray linear dichroism measurements, providing sensitivity to anisotropic electronic, orbital, and ferroic order parameters. With reduced XUV probe sizes through improved focusing or nanofocusing optics 79 ,such capabilities could facilitate spatially resolved studies of ferroic domains and domain-wall dynamics 80 . Look-ing further ahead, nanofocused XUV spectroscopy inte-grated with nonlinear optical excitation schemes, such as XUV second-harmonic generation, may offer enhanced sensitivity to buried interfaces and interfacial symmetry breaking 81 . This sensitivity opens new avenues for inves-tigating emergent superstructures in quantum materials, including perovskite oxide superlattices 82–84 and moiré heterostructures 85,86 , where interfacial interactions play a central role in determining their collective properties. We envision the c-UBXAS to serve as a powerful platform for uncovering the microscopic interactions underlying emergent phases in highly nonequilibrium quantum materials 24 .13 
+
+> TABLE II. Summary of the measured performance metrics of the c-UBXAS beamline. Values are obtained from the charac-terization measurements described in the text and benchmark static and time-resolved experiments on NiI 2.
+
+Metric Value XUV photon flux 2×10 8 photons/pulse XUV probe size 97 .4(7) × 92 .3(4) μm2
+
+Photon energy range 22–73 eV Energy resolution 24–42 meV (0.013–0.037 nm) a
+
+Temporal resolution 9.8 ± 0.7 fs Pump-probe delay range sub-fs to 3.3 ns Temperature range 20–350 K Noise floor 0.3–0.7 mOD Beam pointing stability 0.2 pixel b
+
+Flux stability 3.6% rms b       
+
+> aDetermined from Ar and He reference features at 29 eV (44 nm) and 64 eV ( 19 nm), yielding instrumental resolutions of 24 meV (0.037 nm) and 42 meV (0.013 nm), respectively.
+> bMeasured during 16 hours of continuous operation using the Ar 3s3p66pautoionizing reabsorption feature as an internal spectral marker.
+> VII. Acknowledgments
+
+We thank Dmitry Lebedev, Thomas Wei Song, and Professor Mark C. Hersam at Northwestern University for providing NiI 2 samples used in this work. We thank Holger Oertel, William Windsor, Laurenz Rettig, Ralph Ernstorfer, and Martin Wolf from Fritz Haber In-stitute (FHI) Berlin and technical staff at FHI for sup-port and discussion that enabled the construction of the cryogenic endstation in the c-UBXAS instrument. We thank Doug Scudder of the College of Chemistry Ma-chine Shop at the University of California, Berkeley, for fabricating the custom vacuum enclosure for the XUV CCD camera. We thank Dr. Marcus Goetz at MRC Sys-tems GmbH for providing the STEP file of the piezo-electric steering mirror mount used in the beamline ren-dering. A.Z. acknowledges support from the Miller In-stitute for Basic Research in Science (instrumentation), the National Science Foundation (NSF-DMR 2247363) (data acquisition), and the U.S. Department of Energy, Office of Basic Energy Sciences under award No. DE-SC0026202 (data analysis and manuscript writing). S.-C.L. acknowledges support by the Berkeley-Taiwan Fel-lowship and the National Science Foundation (NSF-DMR 2247363). E.B. and B.R.N. acknowledge support from the National Science Foundation Graduate Research Fel-lowships Program under Grant Nos. DGE 2146752 and 1752814, respectively. M.H. acknowledges funding by the National Science Foundation (NSF-REU EEC-1852537). S.P. acknowledges support from the Rose Hills Foun-dation and the Air Force Office of Scientific Research (AFOSR, FA9550-25-1-0339). J.M. acknowledges sup-port from the Department of Energy (DE-SC0024123). Any opinions, findings, and conclusions or recommen-dations expressed in this material are those of the au-thors and do not necessarily reflect the views of the Na-tional Science Foundation. M.W.Z. acknowledges fund-ing by the W. M. Keck Foundation, Laboratory Directed Research and Development Program at Berkeley Lab (107573 and 108232), the Rose Hills Foundation, the Camille and Henry Dreyfus Foundation, the Max Planck Society, and the Hellman Fellows Fund which enabled the building of the c-UBXAS instrument. M.W.Z. fur-ther acknowledges support by the Department of Energy (DE-SC0024123).   
+
+> VIII. Author declarations A. Conflict of interest
+
+The authors have no conflicts to disclose.  
+
+> B. Author contributions
+
+Sheng-Chih Lin and Alfred Zong contributed equally to this work. 
+
+Sheng-Chih Lin : Methodology (equal); Investigation (lead); Writing - original draft (lead); Data curation (lead); Visualization (lead); Formal analysis (lead); Vali-dation (lead). Writing – review & editing (lead). Alfred Zong : Methodology (lead); Investigation (lead); Writing - original draft (supporting); Data curation (lead); Visu-alization (supporting); Formal analysis (lead); Validation (equal). Writing – review & editing (equal). Emma Berger : Methodology (equal); Writing – review & edit-ing (supporting). Bailey R. Nebgen : Methodology (supporting); Writing – review & editing (supporting). 
+
+Marcus Hui : Methodology (supporting); Visualization (supporting); Writing – review & editing (supporting). 
+
+Shuaiwei Pan : Methodology (supporting); Visualiza-tion (supporting); Writing – review & editing (support-ing). Jackson McClellan : Methodology (supporting); Writing – review & editing (supporting). Michael W. Zuerch : Supervision (lead); Funding acquisition (lead); Conceptualization (lead); Writing – review & editing (equal).  
+
+> IX. Data availability
+
+The data that support the findings of this study will be uploaded to a public repository upon peer-review ac-ceptance. Until then, the data are available from the corresponding author on reasonable request. 14 
+
+X. References 
+
+> 1
+
+J. Orenstein and A. J. Millis, “Advances in the Physics of High-Temperature Superconductivity,” Science 288 , 468–474 (2000). 
+
+> 2
+
+P. Puphal, T. Schäfer, B. Keimer, and M. Hepting, “Supercon-ductivity in infinite-layer and Ruddlesden–Popper nickelates,” Nat. Rev. Phys. 8, 70–85 (2026). 
+
+> 3
+
+G. Catalan, J. Seidel, R. Ramesh, and J. F. Scott, “Domain wall nanoelectronics,” Rev. Mod. Phys. 84 , 119–156 (2012). 
+
+> 4
+
+M. Fiebig, T. Lottermoser, D. Meier, and M. Trassin, “The evo-lution of multiferroics,” Nat. Rev. Mater. 1, 16046 (2016). 
+
+> 5
+
+K. Rossnagel, “On the origin of charge-density waves in select lay-ered transition-metal dichalcogenides,” J. Phys. Condens. Matter 
+
+23 , 213001 (2011). 
+
+> 6
+
+Y. Tokura, M. Kawasaki, and N. Nagaosa, “Emergent functions of quantum materials,” Nat. Phys. 13 , 1056–1068 (2017). 
+
+> 7
+
+J. Bloch, A. Cavalleri, V. Galitski, M. Hafezi, and A. Rubio, “Strongly correlated electron–photon systems,” Nature 606 , 41– 48 (2022). 
+
+> 8
+
+D. N. Basov, R. D. Averitt, and D. Hsieh, “Towards properties on demand in quantum materials,” Nat. Mater. 16 , 1077–1088 (2017). 
+
+> 9
+
+F. de Groot and A. Kotani, Core Level Spectroscopy of Solids ,Advances in Condensed Matter Science (CRC Press, 2008). 
+
+> 10
+
+M. Zürch, H.-T. Chang, L. J. Borja, P. M. Kraus, S. K. Cushing, A. Gandman, C. J. Kaplan, M. H. Oh, J. S. Prell, D. Prendergast, C. D. Pemmaraju, D. M. Neumark, and S. R. Leone, “Direct and simultaneous observation of ultrafast electron and hole dynamics in germanium,” Nat. Commun. 8, 15734 (2017). 
+
+> 11
+
+I. J. P. Molesky, A. Lee, S. K. Cushing, H.-T. Chang, J. C. Ondry, A. P. Alivisatos, and S. R. Leone, “Characterization of Carrier Cooling Bottleneck in Silicon Nanoparticles by Extreme Ultraviolet (XUV) Transient Absorption Spectroscopy,” J. Phys. Chem. C 125 , 9319–9329 (2021). 
+
+> 12
+
+S. K. Cushing, I. J. P. Molesky, B. R. de Roulet, A. Lee, B. M. Marsh, S. Szoke, M. E. Vaida, and S. R. Leone, “Layer-resolved ultrafast extreme ultraviolet measurement of hole transport in a Ni-TiO2-Si photoanode,” Sci. Adv. 6, eaay6650 (2020). 
+
+> 13
+
+R. Géneaux, I. Timrov, C. J. Kaplan, A. D. Ross, P. M. Kraus, and S. R. Leone, “Coherent energy exchange between carriers and phonons in Peierls-distorted bismuth unveiled by broadband XUV pulses,” Phys. Rev. Res. 3, 1–12 (2021). 
+
+> 14
+
+E. W. De Vos, S. Neb, M. Hollm, F. Burri, L. Gallmann, and U. Keller, “Hot-electron-induced substrate response in transient absorption spectroscopy of tantalum,” Opt. Express 33 , 9707 (2025). 
+
+> 15
+
+L. B. Drescher, B. R. de Roulet, Y. S. Phang, and S. R. Leone, “Onset of coherent phonon motion in Peierls-distorted antimony by attosecond transient absorption,” Phys. Rev. B 112 , 104310 (2025). 
+
+> 16
+
+H. Petek and S. Ogawa, “Femtosecond time-resolved two-photon photoemission studies of electron dynamics in metals,” Prog. Surf. Sci. 56 , 239–310 (1997). 
+
+> 17
+
+U. Bovensiepen and P. S. Kirchmann, “Elementary relax-ation processes investigated by femtosecond photoelectron spec-troscopy of two-dimensional materials,” Laser Photonics Rev. 6,589–606 (2012). 
+
+> 18
+
+C. Xu and A. Zong, “Time-domain study of coupled collective excitations in quantum materials,” npj Quantum Mater. 10 , 21 (2025). 
+
+> 19
+
+J. Duris, S. Li, T. Driver, E. G. Champenois, J. P. MacArthur, 
+
+et al. , “Tunable isolated attosecond X-ray pulses with gigawatt peak power from a free-electron laser,” Nat. Photonics 14 , 30–36 (2020). 
+
+> 20
+
+Z. Guo, T. Driver, S. Beauvarlet, D. Cesar, J. Duris, et al. ,“Experimental demonstration of attosecond pump–probe spec-troscopy with an X-ray free-electron laser,” Nat. Photonics 18 ,691–697 (2024). 
+
+> 21
+
+A. M. Summers, S. Severino, M. Reduzzi, T. P. H. Sidiropou-los, D. E. Rivas, N. Di Palo, H.-W. Sun, Y.-H. Chien, I. León, B. Buades, S. L. Cousin, S. M. Teichmann, T. Mey, K. Mann, B. Keitel, E. Plönjes, D. K. Efetov, H. Schwoerer, and J. Biegert, “Realizing Attosecond Core-Level X-ray Spectroscopy for the In-vestigation of Condensed Matter Systems,” Ultrafast Sci. 3, 0004 (2023). 
+
+> 22
+
+F. Krausz and M. Ivanov, “Attosecond physics,” Rev. Mod. Phys. 
+
+81 , 163–234 (2009). 
+
+> 23
+
+J. Lloyd-Hughes, P. M. Oppeneer, T. Pereira dos Santos, A. Schleife, S. Meng, et al. , “The 2021 ultrafast spectroscopic probes of condensed matter roadmap,” J. Phys. Condens. Mat-ter 33 , 353001 (2021). 
+
+> 24
+
+A. Zong, B. R. Nebgen, S.-C. Lin, J. A. Spies, and M. Zuerch, “Emerging ultrafast techniques for studying quantum materials,” Nat. Rev. Mater. 8, 224–240 (2023). 
+
+> 25
+
+Z.-H. Loh, M. Khalil, R. E. Correa, and S. R. Leone, “A tabletop femtosecond time-resolved soft x-ray transient absorption spec-trometer,” Review of Scientific Instruments 79 , 073101 (2008). 
+
+> 26
+
+Y. Kobayashi, M. Reduzzi, K. F. Chang, H. Timmers, D. M. Neu-mark, and S. R. Leone, “Selectivity of electronic coherence and attosecond ionization delays in strong-field double ionization,” Phys. Rev. Lett. 120 , 233201 (2018). 
+
+> 27
+
+Y. Kobayashi, K. F. Chang, T. Zeng, D. M. Neumark, and S. R. Leone, “Direct mapping of curve-crossing dynamics in IBr by attosecond transient absorption spectroscopy,” Science 365 , 79– 83 (2019). 
+
+> 28
+
+L. B. Drescher, N. Mayer, K. Gannan, J. R. Adelman, and S. R. Leone, “Attosecond optical orientation,” Phys. Rev. Lett. 135 ,163201 (2025). 
+
+> 29
+
+A. D. Smith, T. Balciunas, Y.-P. Chang, C. Schmidt, K. Zinchenko, F. B. Nunes, E. Rossi, V. Svoboda, Z. Yin, J.-P. Wolf, and H. J. Worner, “Femtosecond Soft-X-ray Absorption Spectroscopy of Liquids with a Water-Window High-Harmonic Source,” J. Phys. Chem. Lett. 11 , 1981–1988 (2020). 
+
+> 30
+
+H.-T. Chang, A. Guggenmos, C. T. Chen, J. Oh, R. Géneaux, Y.-D. Chuang, A. M. Schwartzberg, S. Aloni, D. M. Neumark, and S. R. Leone, “Coupled valence carrier and core-exciton dynamics in WS 2 probed by few-femtosecond extreme ultraviolet transient absorption spectroscopy,” Phys. Rev. B 104 , 064309 (2021). 
+
+> 31
+
+R. Quintero-Bermudez and S. R. Leone, “Deciphering core-exciton dynamics in CaF 2 with attosecond spectroscopy,” Phys. Rev. B 109 , 024308 (2024). 
+
+> 32
+
+R. Géneaux, C. J. Kaplan, L. Yue, A. D. Ross, J. E. Bækhøj, P. M. Kraus, H.-T. Chang, A. Guggenmos, M.-Y. Huang, M. Zürch, K. J. Schafer, D. M. Neumark, M. B. Gaarde, and S. R. Leone, “Attosecond time-domain measurement of core-level-exciton decay in magnesium oxide,” Phys. Rev. Lett. 124 , 207401 (2020). 
+
+> 33
+
+K. J. Gannan, L. B. Drescher, R. Quintero-Bermudez, N. Rana, C. Huang, K. Schafer, M. B. Gaarde, and S. R. Leone, “Polarization-resolved core exciton dynamics in lif using at-tosecond transient absorption spectroscopy,” Phys. Rev. B 111 ,134306 (2025). 
+
+> 34
+
+C. La-O-Vorakiat, M. Siemens, M. M. Murnane, H. C. Kapteyn, S. Mathias, M. Aeschlimann, P. Grychtol, R. Adam, C. M. Schneider, J. M. Shaw, H. Nembach, and T. J. Silva, “Ultrafast demagnetization dynamics at the m edges of magnetic elements observed using a tabletop high-harmonic soft x-ray source,” Phys. Rev. Lett. 103 , 257402 (2009). 
+
+> 35
+
+F. Siegrist, J. A. Gessner, M. Ossiander, C. Denker, Y.-P. Chang, M. C. Schröder, A. Guggenmos, Y. Cui, J. Walowski, U. Martens, J. K. Dewhurst, U. Kleineberg, M. Münzenberg, S. Sharma, and M. Schultze, “Light-wave dynamic control of magnetism,” Nature 
+
+571 , 240–244 (2019). 
+
+> 36
+
+R. Ash, Z. Abhari, R. Candela, N. Welke, J. Murawski, S. M. Gardezi, N. Venkatasubramanian, M. Munawar, F. Siewert, A. Sokolov, Z. LaDuca, J. Kawasaki, and U. Bergmann, “X-FAST: A versatile, high-throughput, and user-friendly XUV fem-tosecond absorption spectroscopy tabletop instrument,” Review 15 
+
+of Scientific Instruments 94 , 073004 (2023). 
+
+> 37
+
+P. C. Johnsen, S. A. Ryan, C. Gentry, A. Grafov, H. Kapteyn, and M. Murnane, “A beamline for ultrafast extreme ultraviolet magneto-optical spectroscopy in reflection near the shot noise limit,” Rev. Sci. Instrum. 94 , 033001 (2023). 
+
+> 38
+
+M. Schultze, K. Ramasesha, C. Pemmaraju, S. Sato, D. Whit-more, A. Gandman, J. S. Prell, L. J. Borja, D. Prendergast, K. Yabana, D. M. Neumark, and S. R. Leone, “Attosecond band-gap dynamics in silicon,” Science 346 , 1348–1352 (2014). 
+
+> 39
+
+S. Neb, D.-b. Shin, F. Burri, M. Hollm, E. W. de Vos, D. A. Kuznetsov, C. R. Müller, A. Fedorov, S. A. Sato, A. Ru-bio, L. Gallmann, and U. Keller, “Local fields reveal atomic-scale nonadiabatic carrier-phonon dynamics,” Science 391 , 75–78 (2026). 
+
+> 40
+
+M. F. Jager, C. Ott, P. M. Kraus, C. J. Kaplan, W. Pouse, R. E. Marvel, R. F. Haglund, D. M. Neumark, and S. R. Leone, “Tracking the insulator-to-metal phase transition in VO 2 with few-femtosecond extreme UV transient absorption spectroscopy,” Proceedings of the National Academy of Sciences 114 , 9558–9563 (2017). 
+
+> 41
+
+T. Heinrich, H.-T. Chang, S. Zayko, K. Rossnagel, M. Sivis, and C. Ropers, “Electronic and structural fingerprints of charge-density-wave excitations in extreme ultraviolet transient absorp-tion spectroscopy,” Phys. Rev. X 13 , 021033 (2023). 
+
+> 42
+
+A. Zong, S.-C. Lin, S. A. Sato, E. Berger, B. R. Nebgen, M. Hui, B. Q. Lv, Y. Cheng, W. Xia, Y. Guo, D. Xiang, and M. W. Zuerch, “Core-level signature of long-range density-wave order and short-range excitonic correlations probed by attosec-ond broadband spectroscopy,” arXiv 2407.00772 (2024). 
+
+> 43
+
+M. Volkov, S. A. Sato, F. Schlaepfer, L. Kasmi, N. Hartmann, M. Lucchini, L. Gallmann, A. Rubio, and U. Keller, “Attosecond screening dynamics mediated by electron localization in transi-tion metals,” Nat. Phys. 15 , 1145–1149 (2019). 
+
+> 44
+
+S. v. d. Walt, J. L. Schönberger, J. Nunez-Iglesias, F. Boulogne, J. D. Warner, N. Yager, E. Gouillart, and T. Yu, “scikit-image: image processing in Python,” PeerJ 2, e453 (2014). 
+
+> 45
+
+L. Lipsky and A. Russek, “Auto-ionizing states in helium,” Phys. Rev. 142 , 59–71 (1966). 
+
+> 46
+
+K. Schulz, M. Domke, R. Püttner, A. Gutiérrez, G. Kaindl, G. Miecznik, and C. H. Greene, “High-resolution experimental and theoretical study of singly and doubly excited resonances in ground-state photoionization of neon,” Phys. Rev. A 54 , 3095– 3112 (1996). 
+
+> 47
+
+R. P. Madden, D. L. Ederer, and K. Codling, “Resonances in the Photo-ionization Continuum of Ar I (20–150 eV),” Phys. Rev. 
+
+177 , 136–151 (1969). 
+
+> 48
+
+J. A. Bearden and A. F. Burr, “Reevaluation of x-ray atomic energy levels,” Rev. Mod. Phys. 39 , 125–142 (1967). 
+
+> 49
+
+E. S. Ryland, M.-F. Lin, M. A. Verkamp, K. Zhang, K. Benke, M. Carlson, and J. Vura-Weis, “Tabletop Femtosecond M-edge X-ray Absorption Near-Edge Structure of FeTPPCl: Metallo-porphyrin Photophysics from the Perspective of the Metal,” J. Am. Chem. Soc. 140 , 4691–4696 (2018). 
+
+> 50
+
+J. A. R. Samson and W. C. Stolte, “Precision measurements of the total photoionization cross-sections of He, Ne, Ar, Kr, and Xe,” J. Electron Spectrosc. Relat. Phenom. Determination of cross-sections and momentum profiles of atoms, molecules and condensed matter, 123 , 265–276 (2002). 
+
+> 51
+
+M. Stener, P. Decleva, and A. Lisini, “Density functional-time-dependent local density approximation calculations of autoion-ization resonances in noble gases,” J. Phys. B: At. Mol. Opt. Phys. 28 , 4973 (1995). 
+
+> 52
+
+M. Domke, K. Schulz, G. Remmers, G. Kaindl, and D. Wintgen, “High-resolution study of 1po double-excitation states in helium,” Phys. Rev. A 53 , 1424–1438 (1996). 
+
+> 53
+
+S. Hellmann, T. Rohwer, M. Kalläne, K. Hanff, C. Sohrt, et al. ,“Time-domain classification of charge-density-wave insulators,” Nat. Commun. 3, 1069 (2012). 
+
+> 54
+
+R. G. Moore, W. S. Lee, P. S. Kirchman, Y. D. Chuang, A. F. Kemper, M. Trigo, et al. , “Ultrafast resonant soft X-ray diffrac-tion dynamics of the charge density wave in TbTe 3,” Phys. Rev. B 93 , 024304 (2016). 
+
+> 55
+
+A. Zong, Emergent States in Photoinduced Charge-Density-Wave Transitions (Springer, Cham, 2021). 
+
+> 56
+
+H. Ju, Y. Lee, K.-T. Kim, I. H. Choi, C. J. Roh, S. Son, P. Park, J. H. Kim, S. Jung, J. H. Kim, K. H. Kim, J.-G. Park, and J. S. Lee, “Possible persistence of multiferroic order down to bilayer limit of van der Waals material NiI 2,” Nano Lett. 21 , 5132 (2021). 
+
+> 57
+
+Q. Song, C. A. Occhialini, E. Ergeçen, B. Ilyas, D. Amoroso, P. Barone, J. Kapeghian, K. Watanabe, T. Taniguchi, A. S. Botana, S. Picozzi, N. Gedik, and R. Comin, “Evidence for a single-layer van der Waals multiferroic,” Nature 602 , 601–605 (2022). 
+
+> 58
+
+D. Lebedev, J. T. Gish, E. S. Garvey, T. K. Stanev, J. Choi, L. Georgopoulos, T. W. Song, H. Y. Park, K. Watanabe, T. Taniguchi, N. P. Stern, V. K. Sangwan, and M. C. Her-sam, “Electrical Interrogation of Thickness-Dependent Multifer-roic Phase Transitions in the 2D Antiferromagnetic Semiconduc-tor NiI 2,” Adv. Funct. Mater. 33 , 2212568 (2023). 
+
+> 59
+
+Q. Song, S. Stavrić, P. Barone, A. Droghetti, D. S. Antonenko, J. W. F. Venderbos, C. A. Occhialini, B. Ilyas, E. Ergeçen, N. Gedik, S.-W. Cheong, R. M. Fernandes, S. Picozzi, and R. Comin, “Electrical switching of a p-wave magnet,” Nature 642 ,64–70 (2025). 
+
+> 60
+
+J. T. Gish, D. Lebedev, T. W. Song, V. K. Sangwan, and M. C. Hersam, “Van der Waals opto-spintronics,” Nat. Electron. 7, 336– 347 (2024). 
+
+> 61
+
+D. Lebedev, J. T. Gish, E. S. Garvey, T. W. Song, Q. Zhou, L. Wang, K. Watanabe, T. Taniguchi, M. K. Chan, P. Darancet, N. P. Stern, V. K. Sangwan, and M. C. Hersam, “Photocur-rent Spectroscopy of Dark Magnetic Excitons in 2D Multiferroic NiI 2,” Adv. Sci. 11 , 2407862 (2024). 
+
+> 62
+
+T. Kurumaji, S. Seki, S. Ishiwata, H. Murakawa, Y. Kaneko, and Y. Tokura, “Magnetoelectric responses induced by domain rearrangement and spin structural change in triangular-lattice helimagnets NiI 2 and CoI 2,” Phys. Rev. B 87 , 014429 (2013). 
+
+> 63
+
+K. Riedl, D. Amoroso, S. Backes, A. Razpopov, T. P. T. Nguyen, K. Yamauchi, P. Barone, S. M. Winter, S. Picozzi, and R. Va-lentí, “Microscopic origin of magnetism in monolayer 3d transi-tion metal dihalides,” Phys. Rev. B 106 , 035156 (2022). 
+
+> 64
+
+J. Kapeghian, D. Amoroso, C. A. Occhialini, L. G. P. Mar-tins, Q. Song, J. S. Smith, J. J. Sanchez, J. Kong, R. Comin, P. Barone, B. Dupé, M. J. Verstraete, and A. S. Botana, “Effects of pressure on the electronic and magnetic properties of bulk 
+
+nii 2,” Phys. Rev. B 109 , 014403 (2024). 
+
+> 65
+
+F. C. Brown, C. Gähwiller, H. Fujita, A. B. Kunz, W. Scheifley, and N. Carrera, “Extreme-ultraviolet spectra of ionic crystals,” Phys. Rev. B 2, 2126–2138 (1970). 
+
+> 66
+
+H. Wang, A. T. Young, J. Guo, S. P. Cramer, S. Friedrich, A. Braun, and W. Gu, “Soft X-ray absorption spectroscopy and resonant inelastic X-ray scattering spectroscopy below 100 eV: probing first-row transition-metal M -edges in chemical com-plexes,” J. Synchrotron Rad. 20 , 614–619 (2013). 
+
+> 67
+
+A. L. Chen, P. Y. Yu, and R. D. Taylor, “Closure of the charge-transfer energy gap and metallization of NiI 2 under pressure,” Phys. Rev. Lett. 71 , 4011–4014 (1993). 
+
+> 68
+
+R. Géneaux, H.-T. Chang, A. M. Schwartzberg, and H. J. B. Marroux, “Source noise suppression in attosecond transient ab-sorption spectroscopy by edge-pixel referencing,” Opt. Express 
+
+29 , 951–960 (2021). 
+
+> 69
+
+T. Gutberlet, H.-T. Chang, S. Zayko, M. Sivis, and C. Ropers, “High-sensitivity extreme-ultraviolet transient absorption spec-troscopy enabled by machine learning,” Opt. Express 31 , 39757– 39764 (2023). 
+
+> 70
+
+S. Son, Y. Lee, J. H. Kim, B. H. Kim, C. Kim, W. Na, H. Ju, S. Park, A. Nag, K.-J. Zhou, Y.-W. Son, H. Kim, W.-S. Noh, J.-H. Park, J. S. Lee, H. Cheong, J. H. Kim, and J.-G. Park, “Multiferroic-Enabled Magnetic-Excitons in 2D Quantum-Entangled Van der Waals Antiferromagnet NiI 2,” Adv. Mater. 
+
+34 , 2109144 (2022). 16 
+
+> 71
+
+C. A. Occhialini, Y. Tseng, H. Elnaggar, Q. Song, M. Blei, S. A. Tongay, V. Bisogni, F. M. F. de Groot, J. Pelliciari, and R. Comin, “Nature of excitons and their ligand-mediated delocal-ization in nickel dihalide charge-transfer insulators,” Phys. Rev. X 14 , 031007 (2024). 
+
+> 72
+
+H. Wu, J.-X. Zhu, L. Chen, M. W. Butcher, Z. Yue, D. Yuan, Y. He, J. S. Oh, B. Gao, J. Huang, S. Wu, C. Gong, Y. Guo, S.-K. Mo, J. Denlinger, D. Lu, M. Hashimoto, M. B. Stone, A. I. Kolesnikov, S. Chi, J. Kono, A. H. Nevidomskyy, R. J. Birgeneau, P. Dai, and M. Yi, “Two-step electronic response to magnetic ordering in a van der waals ferromagnet,” Phys. Rev. B 109 ,045416 (2024). 
+
+> 73
+
+S. A. López-Paz, Z. Guguchia, V. Y. Pomjakushin, C. Witteveen, A. Cervellino, H. Luetkens, N. Casati, A. F. Morpurgo, and F. O. von Rohr, “Dynamic magnetic crossover at the origin of the hidden-order in van der Waals antiferromagnet CrSBr,” Nat. Commun. 13 , 4745 (2022). 
+
+> 74
+
+A. Alfonsov, K. Mehlawat, A. Zeugner, A. Isaeva, B. Büch-ner, and V. Kataev, “Magnetic-field tuning of the spin dynamics in the magnetic topological insulators (MnBi 2Te 4)(Bi 2Te 3)n,” Phys. Rev. B 104 , 195139 (2021). 
+
+> 75
+
+M. Hennecke, I. Radu, R. Abrudan, T. Kachel, K. Holldack, R. Mitzner, A. Tsukamoto, and S. Eisebitt, “Angular momentum flow during ultrafast demagnetization of a ferrimagnet,” Phys. Rev. Lett. 122 , 157202 (2019). 
+
+> 76
+
+C. Dornes, Y. Acremann, M. Savoini, M. Kubli, M. J. Neuge-bauer, E. Abreu, L. Huber, G. Lantz, C. A. F. Vaz, H. Lemke, E. M. Bothschafter, M. Porer, V. Esposito, L. Rettig, M. Buzzi, A. Alberca, Y. W. Windsor, P. Beaud, U. Staub, D. Zhu, S. Song, J. M. Glownia, and S. L. Johnson, “The ultrafast Einstein–de Haas effect,” Nature 565 , 209–212 (2019). 
+
+> 77
+
+B. Ilyas, T. Luo, A. von Hoegen, E. Viñas Boström, Z. Zhang, J. Park, J. Kim, J.-G. Park, K. A. Nelson, A. Rubio, and N. Gedik, “Terahertz field-induced metastable magnetization near criticality in FePS 3,” Nature 636 , 609–614 (2024). 
+
+> 78
+
+S. Sharma, D. Gill, J. Krishna, E. Harris-Lee, J. K. Dewhurst, and S. Shallcross, “Giant magnetic moment increase by ultrafast laser light,” Nat. Commun. 17 , 5069 (2026). 
+
+> 79
+
+R. J. Koch, C. Jozwiak, A. Bostwick, B. Stripe, M. Cordier, Z. Hussain, W. Yun, and E. Rotenberg, “Nano focusing of soft X-rays by a new capillary mirror optic,” Synchrotron Radiation News 31 , 50–52 (2018). 
+
+> 80
+
+H.-T. Chang, S. Zayko, T. Schmidt, O. Kfir, M. Sivis, J. H. Mentink, M. Albrecht, and C. Ropers, “Sub-wavelength extreme ultraviolet microscopy reveals domain-wall stability during ultra-fast demagnetization,” Nat. Mater. , 1–8 (2026). 
+
+> 81
+
+T. Helk, E. Berger, S. Jamnuch, L. Hoffmann, A. Kabacinski, J. Gautier, F. Tissandier, J.-P. Goddet, H.-T. Chang, J. Oh, C. D. Pemmaraju, T. A. Pascal, S. Sebban, C. Spielmann, and M. Zuerch, “Table-top extreme ultraviolet second harmonic gen-eration,” Sci. Adv. 7, eabe2265 (2021). 
+
+> 82
+
+A. K. Yadav, C. T. Nelson, S. L. Hsu, Z. Hong, J. D. Clark-son, C. M. Schlepütz, A. R. Damodaran, P. Shafer, E. Arenholz, L. R. Dedon, D. Chen, A. Vishwanath, A. M. Minor, L. Q. Chen, J. F. Scott, L. W. Martin, and R. Ramesh, “Observation of polar vortices in oxide superlattices,” Nature 530 , 198–201 (2016). 
+
+> 83
+
+Z. Hong, A. R. Damodaran, F. Xue, S.-L. Hsu, J. Britson, A. K. Yadav, C. T. Nelson, J.-J. Wang, J. F. Scott, L. W. Martin, R. Ramesh, and L.-Q. Chen, “Stability of Polar Vortex Lattice in Ferroelectric Superlattices,” Nano Lett. 17 , 2246–2252 (2017). 
+
+> 84
+
+S. Das, Y. L. Tang, Z. Hong, M. a. P. Gonçalves, M. R. Mc-Carter, C. Klewe, K. X. Nguyen, F. Gómez-Ortiz, P. Shafer, E. Arenholz, V. A. Stoica, S.-L. Hsu, B. Wang, C. Ophus, J. F. Liu, C. T. Nelson, S. Saremi, B. Prasad, A. B. Mei, D. G. Schlom, J. Íñiguez, P. García-Fernández, D. A. Muller, L. Q. Chen, J. Junquera, L. W. Martin, and R. Ramesh, “Observa-tion of room-temperature polar skyrmions,” Nature 568 , 368–372 (2019). 
+
+> 85
+
+R. Qi, A. Y. Joe, Z. Zhang, J. Xie, Q. Feng, Z. Lu, Z. Wang, T. Taniguchi, K. Watanabe, S. Tongay, and F. Wang, “Perfect coulomb drag and exciton transport in an excitonic insulator,” Science 388 , 278–283 (2025). 
+
+> 86
+
+Z. Zhang, E. C. Regan, D. Wang, W. Zhao, S. Wang, M. Sayyad, K. Yumigeta, K. Watanabe, T. Taniguchi, S. Tongay, M. Crom-mie, A. Zettl, M. P. Zaletel, and F. Wang, “Correlated inter-layer exciton insulator in heterostructures of monolayer WSe 2
+
+and moiré WS 2/WSe 2,” Nat. Phys. 18 , 1214–1220 (2022).

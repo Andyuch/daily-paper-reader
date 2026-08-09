@@ -1,0 +1,177 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-09T20:31:13.605098+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [
+    {
+      "id": "2608.01257v1",
+      "source": "arxiv",
+      "title": "Active Passivation Tunes Hotspot Locations in GaN Transistors with In Situ Thermal Mechanical Visualization",
+      "abstract": "Efficient thermal dissipation has become critical in emerging electronic devices. However, most existing studies have primarily focused on engineering heat dissipation pathways, largely overlooking the intrinsic behavior of the heat source itself. We demonstrate an active passivation technology that proactively tunes hotspot locations in GaN transistors. By adjusting the active passivation layer length, the hotspot is shifted from the gate edge to the drain-side AP edge, establishing a clear one-to-one spatial correlation. In-situ thermal-mechanical visualization via micro-Raman thermography, combined with multi-physics electro-thermal-mechanical simulations, directly captures the spatial redistribution of both temperature and thermal stress profiles. Electrical analysis confirms that this hotspot migration is driven by the spatial shift of the peak electric field and localized Joule heating. This proactive heat-source tuning strategy provides critical design guidelines for power electronics.",
+      "authors": [
+        "Yicheng Wei",
+        "Sihang Liu",
+        "Zimu Jiang",
+        "jinquan Zhang",
+        "Zifeng Huang",
+        "Han Yang",
+        "Yang He",
+        "Jin Wei",
+        "Zhe Cheng"
+      ],
+      "primary_category": "physics.app-ph",
+      "categories": [
+        "physics.app-ph",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-08-02T14:06:53+00:00",
+      "link": "https://arxiv.org/pdf/2608.01257v1",
+      "tags": [
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "in-situ thermal-mechanical visualization of GaN transistors under operation",
+      "llm_evidence_cn": "工作条件下对GaN晶体管进行原位热-机械可视化",
+      "llm_evidence": "工作条件下对GaN晶体管进行原位热-机械可视化",
+      "canonical_evidence": "工作条件下对GaN晶体管进行原位热-机械可视化",
+      "llm_tldr_en": "This paper uses in-situ micro-Raman thermography and multi-physics simulation to visualize hotspot redistribution in GaN transistors, directly demonstrating operando characterization of working devices.",
+      "llm_tldr_cn": "针对电子器件热管理研究中忽视热源本身行为的问题，本文提出了一种主动钝化技术，通过调节钝化层长度将热点从栅极边缘移至漏极侧，并采用原位微拉曼热成像结合多物理场模拟直接捕捉工作状态下晶体管热-机械场的空间再分布。该工作展示了operando表征在半导体器件研究中的应用价值，为热源调控提供了新思路。",
+      "llm_tldr": "针对电子器件热管理研究中忽视热源本身行为的问题，本文提出了一种主动钝化技术，通过调节钝化层长度将热点从栅极边缘移至漏极侧，并采用原位微拉曼热成像结合多物理场模拟直接捕捉工作状态下晶体管热-机械场的空间再分布。该工作展示了operando表征在半导体器件研究中的应用价值，为热源调控提供了新思路。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.03955v1",
+      "source": "arxiv",
+      "title": "A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling",
+      "abstract": "We present a table-top cryogenic ultrafast broadband XUV absorption spectroscopy (c-UBXAS) beamline designed for temperature-dependent and time-resolved investigations of quantum materials. The instrument combines a broadband high-harmonic generation source spanning 22-73 eV with automated image registration and cryogenic sample control down to 20 K, enabling element-specific measurements under both equilibrium and nonequilibrium conditions. The beamline provides sub-50-meV energy resolution and a sub-10-fs instrument response function, while maintaining long-term stability suitable for extended, ultrasensitive measurements. Benchmark experiments on NiI$_2$, a van der Waals multiferroic, reveal temperature-dependent spectral evolution across its magnetic phase transitions, demonstrating the ability to identify element-specific contributions to the ground state and its transient response in the femtosecond regime. This instrument introduces the opportunity to unravel the very first response of a solid-state material during light-matter interaction, paving the way for understanding the complex phase space of nonequilibrium dynamics and emergent states in strongly correlated systems where the few-femtosecond electronic response has eluded most other types of time-resolved techniques.",
+      "authors": [
+        "Sheng-Chih Lin",
+        "Alfred Zong",
+        "Emma Berger",
+        "Bailey R. Nebgen",
+        "Marcus Hui",
+        "Shuaiwei Pan",
+        "Jackson McClellan",
+        "Michael W. Zuerch"
+      ],
+      "primary_category": "physics.ins-det",
+      "categories": [
+        "physics.ins-det",
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-08-04T17:20:42+00:00",
+      "link": "https://arxiv.org/pdf/2608.03955v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "table-top cryogenic ultrafast broadband XUV absorption spectrometer for time-resolved studies of quantum materials",
+      "llm_evidence_cn": "用于量子材料时间分辨研究的低温台式超快宽带XUV吸收光谱仪",
+      "llm_evidence": "用于量子材料时间分辨研究的低温台式超快宽带XUV吸收光谱仪",
+      "canonical_evidence": "用于量子材料时间分辨研究的低温台式超快宽带XUV吸收光谱仪",
+      "llm_tldr_en": "Presents a cryogenic table-top XUV absorption spectrometer with sub-10-fs response and 22-73 eV coverage, enabling temperature-dependent and time-resolved measurements of quantum materials; benchmarked on NiI2 multiferroic.",
+      "llm_tldr_cn": "本文针对量子材料时间分辨与变温测量的需求，搭建了一套低温台式极紫外吸收光谱装置。装置结合高次谐波光源、自动图像配准与20 K低温样品控制，可在22-73 eV波段实现亚50 meV能量分辨和亚10飞秒时间分辨。在NiI2范德华多铁材料上的基准实验显示了温度依赖的光谱特征。该工作为平衡与非平衡条件下的材料超快动力学研究提供了全新平台。",
+      "llm_tldr": "本文针对量子材料时间分辨与变温测量的需求，搭建了一套低温台式极紫外吸收光谱装置。装置结合高次谐波光源、自动图像配准与20 K低温样品控制，可在22-73 eV波段实现亚50 meV能量分辨和亚10飞秒时间分辨。在NiI2范德华多铁材料上的基准实验显示了温度依赖的光谱特征。该工作为平衡与非平衡条件下的材料超快动力学研究提供了全新平台。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.04742v1",
+      "source": "arxiv",
+      "title": "Atomic Scale Ordering of Sulfur Vacancies Enhances Charge Transport in Monolayer MoS$_2$",
+      "abstract": "Defect engineering in two-dimensional semiconductors has primarily focused on controlling the nature and concentration of atomic defects. Here, we show that the spatial arrangement of defects can be equally decisive in determining electronic transport. Using sulfur vacancies in monolayer MoS$_2$ as a model system, we investigate the impact of vacancy ordering through density functional theory, density functional tight-binding calculations, and quantum transport simulations. We demonstrate that a periodic vacancy arrangement at a concentration of 11.1% transforms isolated defect states into a narrow dispersive in-gap miniband, whereas randomly distributed vacancies generate only localized electronic states. This electronic transition fundamentally alters charge transport, enabling band-like propagation through the defect network rather than transport limited by disconnected localized states. A systematic analysis of the complete symmetry-reduced ensemble of 94 non-adjacent four-vacancy configurations shows that the ordered pattern lies within a broad low-energy manifold and is not energetically anomalous, although it is not the thermodynamic ground state. Device-level simulations of Au/MoS$_2$/Au junctions reveal efficient alignment of the metal Fermi level with vacancy-derived states, promoting charge injection into the defect miniband. As a result, ordered vacancy arrays exhibit electrical currents up to five orders of magnitude higher than statistically equivalent random distributions and can approach, or locally exceed, the transport performance of pristine MoS$_2$. These findings establish atomic-scale defect ordering as a powerful design principle for two-dimensional materials, demonstrating that the organization of defects, beyond their concentration alone, provides a route to simultaneously preserve functionality and high electrical conductivity in highly defective semiconductors.",
+      "authors": [
+        "Alessandro Pecchia",
+        "Andrea Lorenzoni",
+        "Alexander Croy",
+        "Francesco Mercuri",
+        "Massimiliano Cavallini"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-08-05T12:11:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.04742v1",
+      "tags": [
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "simulations of charge transport in monolayer MoS2, directly relevant to semiconductor carrier transport studies",
+      "llm_evidence_cn": "单层MoS2中电荷输运的模拟，与半导体载流子输运研究直接相关",
+      "llm_evidence": "单层MoS2中电荷输运的模拟，与半导体载流子输运研究直接相关",
+      "canonical_evidence": "单层MoS2中电荷输运的模拟，与半导体载流子输运研究直接相关",
+      "llm_tldr_en": "This paper shows that ordering sulfur vacancies in monolayer MoS2 turns localized states into a dispersive in-gap miniband, enhancing charge transport, via DFT and quantum transport simulations.",
+      "llm_tldr_cn": "针对二维半导体中缺陷工程主要关注缺陷种类和浓度的问题，该工作以单层MoS2的硫空位为模型，采用密度泛函理论和量子输运模拟，证明空位的空间有序排列（11.1%浓度）可将孤立缺陷态转变为窄色散的带间小能带，从而显著增强电荷输运，而随机分布只产生局域态。这一发现为理解和设计二维半导体中的载流子传输提供了新的原子尺度机制。",
+      "llm_tldr": "针对二维半导体中缺陷工程主要关注缺陷种类和浓度的问题，该工作以单层MoS2的硫空位为模型，采用密度泛函理论和量子输运模拟，证明空位的空间有序排列（11.1%浓度）可将孤立缺陷态转变为窄色散的带间小能带，从而显著增强电荷输运，而随机分布只产生局域态。这一发现为理解和设计二维半导体中的载流子传输提供了新的原子尺度机制。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.06185v1",
+      "source": "arxiv",
+      "title": "Differentiable eigendecomposition-free rigorous coupled-wave analysis for general photonic structures",
+      "abstract": "For periodic photonic structures with full permittivity and permeability tensors and arbitrarily oriented optical axes, we present, to the best of our knowledge, the first anisotropic rigorous coupled-wave analysis framework that supports automatic differentiation and efficient GPU acceleration. The method formulates intralayer propagation as a boundary-value problem and directly constructs the scattering matrix using the precise integration method, thereby avoiding eigendecomposition of large non-Hermitian matrices. At comparable accuracy, the proposed method achieves a 25-fold speedup over the eigendecomposition-based approach. Its compatibility with automatic differentiation further demonstrates strong potential for topology optimization of anisotropic photonic structures. This framework provides an efficient computational tool for both forward analysis and inverse design of complex anisotropic devices.",
+      "authors": [
+        "Enbo Yang",
+        "Qiang Song",
+        "Weiwei Cai"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-08-06T15:45:18+00:00",
+      "link": "https://arxiv.org/pdf/2608.06185v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "differentiable rigorous coupled-wave analysis for scattering simulation, directly applicable to interferometric scattering modeling",
+      "llm_evidence_cn": "可微分的严格耦合波分析用于散射模拟，可直接应用于干涉散射建模",
+      "llm_evidence": "可微分的严格耦合波分析用于散射模拟，可直接应用于干涉散射建模",
+      "canonical_evidence": "可微分的严格耦合波分析用于散射模拟，可直接应用于干涉散射建模",
+      "llm_tldr_en": "Presents the first anisotropic rigorous coupled-wave analysis framework supporting automatic differentiation and GPU acceleration, enabling efficient scattering simulation for photonic structures.",
+      "llm_tldr_cn": "该工作提出首个支持自动微分和GPU加速的各向异性严格耦合波分析(RCWA)框架，利用边界值问题和精细积分方法构造散射矩阵，避免大非厄米矩阵的特征分解，在保持精度的同时实现25倍加速。该方法可直接用于周期光子结构和微纳颗粒散射的高效模拟，为iSCAT等干涉散射技术提供快速准确的理论工具。",
+      "llm_tldr": "该工作提出首个支持自动微分和GPU加速的各向异性严格耦合波分析(RCWA)框架，利用边界值问题和精细积分方法构造散射矩阵，避免大非厄米矩阵的特征分解，在保持精度的同时实现25倍加速。该方法可直接用于周期光子结构和微纳颗粒散射的高效模拟，为iSCAT等干涉散射技术提供快速准确的理论工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "interferometric scattering microscopy",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

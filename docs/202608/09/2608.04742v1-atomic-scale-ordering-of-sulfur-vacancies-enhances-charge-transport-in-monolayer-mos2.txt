@@ -1,0 +1,934 @@
+Title: 2608.04742v1.pdf
+
+URL Source: https://arxiv.org/pdf/2608.04742v1
+
+Published Time: Thu, 06 Aug 2026 00:51:25 GMT
+
+Number of Pages: 24
+
+Markdown Content:
+Atomic -Scale Ordering of Sulfur Vacancies Enhances Charge Transport in 
+
+# Monolayer MoS₂ 
+
+Alessandro Pecchia,* 1 Andrea Lorenzoni, 2 Alexander Croy, 3 Francesco Mercuri, 2 and Massimiliano Cavallini* 2
+
+1- Istituto per lo Studio dei Materiali Nanostrutturati (ISMN) - Consiglio Nazionale delle Ricerche (CNR) Prov.le 35d n. 9, 00014 Roma, Italy. 
+
+2- Istituto per lo Studio dei Materiali Nanostrutturati (ISMN) - Consiglio Nazionale delle Ricerche (CNR) Via P. Gobetti 101, 40129 Bologna, Italy. 
+
+3- University of Je na, Room 105, Lessingstraße 4, 07743 Jena , Germany 
+
+Abstract 
+
+Defect engineering in two -dimensional semiconductors has primarily focused on controlling the nature and 
+
+concentration of atomic defects. Here, we show that the spatial arrangement of defects can be equally 
+
+decisive in determining electronic transport. Usi ng sulfur vacancies in monolayer MoS₂ as a model system, 
+
+we investigate the impact of vacancy ordering through density functional theory, density functional tight -
+
+binding calculations, and quantum transport simulations. We demonstrate that a periodic vacan cy 
+
+arrangement at a concentration of 11.1% transforms isolated defect states into a narrow dispersive in -gap 
+
+miniband, whereas randomly distributed vacancies generate only localized electronic states. This electronic 
+
+transition fundamentally alters charge  transport, enabling band -like propagation through the defect network 
+
+rather than transport limited by disconnected localized states.  A systematic analysis of the complete 
+
+symmetry -reduced ensemble of 94 non -adjacent four -vacancy configurations shows that the ordered pattern 
+
+lies within a broad low -energy manifold and is not energetically anomalous, although it is not the thermodynamic ground state.  Device -level simulations of Au/MoS₂/Au junctions reveal efficient alignment 
+
+of the metal Fermi level with vacancy -derived states, promoting charge injection into the defect miniband. 
+
+As a result, ordered vacancy arrays exhibit electrical currents up to fi ve orders of magnitude higher than 
+
+statistically equivalent random distributions and can approach, or locally exceed, the transport performance 
+
+of pristine MoS₂. These findings establish atomic -scale defect ordering as a powerful design principle for two -
+
+dimensional materials, demonstrating that the organization of defects, beyond their concentration alone, 
+
+provides a route to simultaneously preserve functionality and high electrical conductivity in highly defective 
+
+semiconductors. Introduction 
+
+Atomic defects such as heteroatoms and vacancies play a central role in determining the physical properties 
+
+of two -dimensional transition metal dichalcogenides (TMDs)  1,2 . They provide opportunities to  modify 
+
+behavior beyond that of pristine materials  1,3,4 . Incorporating such atomic -scale imperfections enables 
+
+diverse functionalities applicable to technologies ranging from optoelectronics and quantum devices to 
+
+thermoelectricity and catalysis. These functionalities  basically  stem  from defects acting as dopants, 
+
+introducing localized electronic states within the bandgap  5–8. Unlike  conventional  electronics, which require 
+
+dopant levels in the parts -per -million, many  of these  applications demand  defect  concentrations  many  orders 
+
+of magnitude higher, sometimes  exceeding  10%, as in catalysis.  At such concentrations  electrical conductivity 
+
+is unavoidably reduced . 9,10 
+
+Defect engineering is the means of optimizing defective materials for target applications  11,12 , however, 
+
+research and technology in  this field  are  focused on controlling  defect  nature and  their  statistical distribution .
+
+This control is not sufficient to exploit the  full potential  offered by defects. 
+
+Here we demonstrate that the arrangement of defects is as important as their concentration , demonstrating 
+
+that  also  for high  defect  concentration  an ordered distribution of atomic vacancies let  the preservation of 
+
+electrical properties of  pristine materials . As model material , we  choose  molybdenum disulfide (MoS₂)  as it 
+
+is one of the most extensively studied layered materials and serves as a benchmark platform for investigating 
+
+defect physics and chemistry.  We focus on atomic sulfur vacancies (V s), which  are  the most abundant and 
+
+thermodynamically stable atomic defects in MoS₂ and are intrinsically present in virtually all  manufactured 
+
+material . Their electronic character, however, is not fixed: environmental exposure and fabrication routes 
+
+can modify their doping state (e.g.,  p vs.  n behavior ), thereby affecting the optical and charge transport 
+
+properties  13,14 .
+
+Despite the  ability  of V s to introduce  or  enhance  functional ities , vacancies are  often  detrimental  for  charge 
+
+transport, as they act as scattering cente rs 15,16 . Experimental  and theoretical studies consistently report a 
+
+degradation of conductivity with increasing defect concentration, while also pointing to defect engineering, 
+
+namely, control over defect density and spatial distribution, as  the  route to mitigate these effects  9,10 . On the other hand, V s can act as hopping centres that activate new percolative channels for charge transport , whi ch ,
+
+once  optimised, can reach excellent performance  17 –19 . Although this regime leads to measurable 
+
+improvements in conductivity, increasing the vacancy density is constrained by structural stability. As a 
+
+result,  the optimization of  random defect distributions provide s only a partial solution: the number and 
+
+continuity of conductive pathways remain  limited, and transport properties are still sensitive to local  Vs
+
+density variations. 
+
+We propose  atomic -scale  ordering of atomic  vacancies  as the solution to the  problem of electrical conductivity 
+
+and  nanoscale uniformity . By imposing a periodic arrangement of  Vs with optimized spacing, it is possible to create 
+
+well -defined percolative channels for charge transport (Figure 1b), overcoming the limitations associated with 
+
+random distributions. This concept provides a pathway to enhance conductivity while  maintaining structural 
+
+stability and nanoscale uniformity  of defective MoS 2.
+
+Figure 1.  Concept of defect distribution effects in hopping and band charge transport. a) Random percolativ e transport 
+
+with hopping between localized states . b) Pathways generated by optimized atomic -scale defect ordering  with coherent 
+
+band -like propagation. 
+
+Clearly,  such an ordered  configuration cannot form spontaneously but can be obtained  using advanced 
+
+surface nanopatterning  techniques  20 .
+
+However,  a periodic pattern that produces  favorable  electronic states may nevertheless be energetically 
+
+disfavored  relative to disordered configurations at the same defect concentration. Establishing its energetic position is therefore essential to determine whether it represents a physically plausible ordered model rather than 
+
+an idealized configuration selected solely for its transport properties.  To investigate these aspects, we combine 
+
+density functional tight -binding (DFTB), targeted density functional theory (DFT) validation, and quantum 
+
+transport calculations based on Green’s function techniques. We first evaluate the energetic position of the 
+
+ordered pattern within the complete symmetry -reduced ensemble of non -adjacent vacancy configurations at the 
+
+same defect concentration. We then examine how vacancy ordering modifies the electronic structure and charge 
+
+transport relative  to random configurations. 
+
+This work highlights defect ordering as a simple yet powerful design principle for controlling charge transport in 
+
+two -dimensional semiconductors, underscoring the importance of defect distribution in determining the material 
+
+properties. Rather than increa sing computational complexity, our approach emphasizes a physically intuitive route 
+
+to overcome one of the main limitations of defective MoS₂, opening new directions for nanoscale device 
+
+engineering. 
+
+# Results and  Discussion 
+
+In defect ive  MoS 2, many  functional  properties ar is e from  the formation of  midgap states  21 –23 , which 
+
+considerab ly  modify  the electronic  structure  of the material . The  localized wavefunctions that e xtend out to 
+
+about 8 Å , uniform ly in  the  lattice  directions . This  implie s that  when  Vs-Vs distance  exceeds  16 Å  18 , the 
+
+corresponding  wavefunctions  do not overlap ; conversely , below this distance, defect states hybridi ze,
+
+allowing  electrons  to  flow through  18,22 .
+
+For the ordered distribution, we selected a 3x3 hexagonal arrangement  (Figure 2c).  In this structure, the  Vs-
+
+Vs distance is 0.95 nm, with a defect percentage of 11.1 %.  We selected this mean distance because it is 
+
+experimentally accessible and has been proven to be crucial in devices based on defective MoS 2, which 
+
+experimentally exhibit the best -reported properties in charge transport thanks to the spontaneous formation 
+
+of percolative patterns  17 –19 . Th e ordered  structure  was compared with random configurations , generated  in 
+
+6x6  hexagonal  supercells containing  four vacancies on the same sulfur surface , thereby preserving the same 
+
+vacancy concentration, excluding adjacent vacancies  Representative random configurations were used for the electronic -structure comparison in Figure 2, whereas the complete symmetry -reduced configurational 
+
+ensemble is analyzed below. 
+
+## Figure 2.  Distribution of v acancy  defects  within  a 8x3 nm²  area  (11.1% of Vs ).  a) Example of a Random structure 
+
+## and Projects DOS around the bandgap.  b)  Bandstructure for a 6x6 unit cell with localized defect states. c)  3x3 
+
+## ordered distribution  and PDOS . d) Band structure  for a 6x6 unit cell with 3x3 ordered defect pattern . In both b) 
+
+## and d) the  bands in the  background  (purple)  correspond to the  same cell with 1 defect .
+
+Random structures  were generated using  a Python  script  that  removes  isolated  sulfur atoms from the top 
+
+surface  of the ideal  lattice while enforcing  the non -adjacent constraint . All 6x6  super cells  contain  four  Vs
+
+defects  and therefore have the same  vacancy concentration as the ordered arrangement . The resulting 
+
+dataset captures the statistical variability inherent in disordered defect landscapes and provides a robust 
+
+reference for evaluating the energetic and electronic implications of vacancy ordering.  More information and 
+
+the python script used can be found in the Methods section and in the Supporting information. 
+
+Figure s 2 show  the  energy level distribution  and the local density of states ( PDOS)  for both scenarios. In the 
+
+case of random defects,  only  locali zed states are observed within the band gap , position ed  approximately 0. 9 eV below the conduction band  (Fig. 2 a-b). In  contrast , the ordered defect distribution  produc es a  narrow 
+
+band  of gap states a pproximately  130  meV  wid e in the band gap region  (Fig.2 c-d) . The PDOS shown in  Figure 
+
+2a and 2c is obtained by slicing the system in the long axis direction . Notably, whenever local order or low 
+
+concentration is recovered, the  DOS  narrows  down and closely  resembles  the ordered distribution.  For 
+
+comparison, the 4x4 hexagonal pattern leads to a much narrower bandwidth of  just  15 meV , which is 
+
+considered too small to sustain band -like transport and was not further investigated. 
+
+The formation of a dispersive in -gap band in the designed ordered vacancy pattern provides the electronic 
+
+basis for the enhanced transport discussed below. Since this pattern is intentionally designed to impose a 
+
+periodic arrangement of sulfur vacancies, r ather than assumed to be the thermodynamic ground state, we 
+
+evaluated its energetic position within the broader vacancy configurational landscape. The purpose of this 
+
+analysis is to verify that the designed ordered pattern is not an energetically anomalous  arrangement, but a 
+
+realistic member of the accessible four -vacancy configurations at the same defect concentration.  To this end, 
+
+the designed ordered vacancy pattern was compared with the complete symmetry -reduced set of four -
+
+vacancy configurations at the same vacancy concentration. The  final dataset  contains  94  inequivalent 
+
+configurations, including the designed ordered pattern itself. All configurations were relaxed using the same 
+
+DFTB setup, and their final total energies were compared using the designed ordered pattern as the 
+
+reference, as described in the Me thods section.  Figure 3  reports the  relative energy,  ΔE = E i – Eordered , as a 
+
+function of the mean vacancy -vacancy distance . The ordered structure is set to  ΔE= 0 and has  the greatest 
+
+mean vacancy -vacancy distance  (9.27 Å ), with  all  pairwise vacancy distances equivalent by periodicity, 
+
+identifying it as the most uniform four -vacancy distribution within the 6x6 cell . The other configurations are 
+
+symmetry -inequivalent non -adjacent patterns and generally contain at least one shorter vacancy -vacancy 
+
+separation. Figure  3 Energetic distribution of non -adjacent four -vacancy configurations. DFTB relative energies of the 93 alternative 
+
+configurations with respect to the ordered 3 × 3 reference are plotted against the mean vacancy –vacancy distance. Each 
+
+green circle represents  one symmetry -inequivalent alternative configuration, and the red star denotes the ordered 
+
+reference (ΔE = 0). The shaded region marks configurations within |ΔE| < 0.05 eV of the reference .
+
+The alternative vacancy configurations span the same low -energy region as the ordered model. Among the 
+
+93  configurations distinct from the ordered reference,  73  (7 8.5  %)  are quasi degenerate within |Δ E| < 0.05 
+
+eV,  14  lie more than 0.05 eV below the reference , and  6 lie more than 0.05 eV above it . The  lowest -energy 
+
+configuration lies 0.075 4 eV below the ordered structure, corresponding to  approximately 0.019  eV per 
+
+vacancy.  The negligible rank correlation in Figure 3 shows that the mean vacancy -vacancy distance alone 
+
+does not predict stability within this non -adjacent ensemble. The observed energy variations are instead 
+
+associated with more local geometric features and with t he in -plane relaxation. The ordered pattern should 
+
+therefore not be interpreted as a unique thermodynamic ground state. Rather, it belongs to a broad low -
+
+energy manifold and is an energetically reasonable periodic model for isolating the effect of vacancy 
+
+ordering.  Full energies, structures, descriptors, and symmetry checks are reported in the Supporting 
+
+Information. 
+
+A targeted  PBE  calculation  was  performed  on  eight  representative configurations  spanning the full  DFTB 
+
+energy range . The resulting relative energies show strong agreement  with DFTB (Pearson r = 0.986;  MAE  =0.027 eV) . F ixed -cell DFT relaxations  of the  lowest -energy DFTB configuration, the ordered reference, and 
+
+the highest -energy DFTB configuration  preserve  the same  energetic ordering and produce only  small changes 
+
+respect to the DFTB geometries  (RMS  atomic  displacement  of  0.025 -0.026 Å ). This targeted comparison 
+
+supports the use of DFTB for configurational trends.  Computational details and complete validation results 
+
+are reported in the Supporting Information .
+
+# Transport  across  Au  – MoS2  –Au  resistor 
+
+In order to give a more realistic insight into the transport properties of these systems, we model devices in 
+
+which the  MoS 2 monolayer is contacted by Au electrodes.  We considered crystalline Au (111) , which is the 
+
+most common orientation for thin film contact electrodes.  We assume  three  mono layers  of Au  on top of a 
+
+MoS 2 monolayer , finding a near lattice -matched configuration that result  in a small supercell. It is known that 
+
+th is  interface can give rise to Moiree patterns  24 , especially when  a supercell 11x11 of  Au is matched to  a
+
+10x10 cell of MoS 2. However, this  give s rise to a supercell which is way too large for the transport calculation. 
+
+Since the  lattice  of  MoS 2 relaxed with dftb+ is 0.319 nm  is  slightly larger than the experimental value of  0. 317 
+
+nm,  and  th e electronic properties of Au do not change significantly if compressed from 0.288 Au -Au distance 
+
+to 0.27 6 nm  (6.3%  compressive strain ), we created a model of the interface as shown in Figure 3b.  The 
+
+compressive strain in -plane is relaxed along the (111) direction .Figure  3. a) Band  alignment  of separated  Au and MoS 2. b) Model of the lattice -matched atomic interface 
+
+## between Au  4x4  and  MoS 2 5x5 R60 o. c) Projected DOS o n 3ML Au  (brown)  and  MoS 2 (green)  with 1  vacancy 
+
+## defect . Au Fermi level aligns to the Vs state .
+
+The Au -S plane distance is 0.264 nm, which agrees with DFT studies  25 . The  non -interacting  level  alignment 
+
+between the Au Fermi level and the MoS 2 band edges is shown in Figure 3a , reporting  the values as computed 
+
+by  the  DFTB  method. The  accepted  experimental  values for  the Ionization Potential (IP) and Electronic Affinity 
+
+(EA) of  MoS 2 are about 6.3 eV and 4.3 eV, respectively . These values are  0.6 eV larger than the  computed 
+
+DFTB band edges , which are found at  –3.75 eV and  –5.70 eV  for the conduction and valence band, 
+
+respectively. Here we assume a  reference vacuum level  at  0.  Th e underestimate  in the IP  is due to  the 
+
+approximate description of  the electronic density in DFTB, which is described via atomic Mulliken charges ,
+
+but it also affects DFT calculations with common PBE functionals . In order to obtain a consistent alignment 
+
+between the Au Fermi level and the MoS2 bands,  we have imposed an electrostatic potential to the Au 
+
+atoms , effectively  tuning  an effective  Au  workfunction  (WF)  to  4.5 eV . In relative terms,  taking into account 
+
+a common  shift  of  –0.6 eV , this  would  correspond to a  real  gold  WF  of  5. 10 eV  which  agrees  with  the  literature 
+
+(See  the  SI  for a technical discussion ).  The  MoS 2 layer contains the 3x3 pa ttern  of vacancy defect s discussed above,  and the  Au/ MoS 2 interface is left to interact  within a self -consistent DFT(B) calculation, resulting in a 
+
+Fermi level align ment to  the Vs states . The final alignment is  shown in Figure 3c , where  it is possible to see 
+
+the  DOS projected on Au and MoS 2 and the resonating alignment of the Fermi level with the defect state. 
+
+This  alignment  mechanism is rather robust to small variations of the metal Fermi level  as confirmed by 
+
+changing the Au atom potential  shift . Indeed , it is known that  Fermi  level pinning at metal/ MoS 2 interfaces 
+
+is  primarily  due to defect s 26,27 . Despite this, the Au/MoS 2 interface is known to have good properties for 
+
+electronic devices  28,29  and charge injection . Au atoms are known to  have a strong  interact ion  with the sulfur 
+
+vacancies  30 , likely indenting in the  S void s 31  and Vs are able to modulate the Schottky barrier  32 .
+
+Th e Fermi -level alignment at the  defect states  provides a significant benefit for electron ic  injection  in the 
+
+defect bands, providing an  efficient  pathway for charge transport.  To study this, w e created  suitable  models 
+
+of Au/MoS 2/Au with 2 -pads contacts , as shown in the lowest diagrams of Figure 4.  The models  comprise 
+
+2,558 atoms , with a contact -to -contact channel length of 10 nm, 3 .5  nm wide . We compare the transport 
+
+properties of ideal non -defected MoS 2, the ordered 3x3  pattern and 20  samples of  random distributions of 
+
+defects  in the channel between the Au  contacts . Both the ordered and  disordered systems contain  64 defects 
+
+each.  This was done in order to  compare structure s with exactly the same  defect density . An ordered 3x3 
+
+defec t pattern  is assumed beneath the Au  pads . This was done because  in the framework of NEGF 
+
+calculations , the contacts are assumed semi -infinite periodically repeated  atomistic structures, a technical 
+
+scheme that allows to  exactly  compute  the  contact self -energies.  As a consequence , random defect patterns 
+
+are in fact periodically  repeated , introducing possible artefacts. A dditionally,  the comparison  between 
+
+differ ent random  samples  becomes  more difficult  because  the variations  are  not limited to the defect 
+
+patterns but also to the contact leads and to a minor extent also t he electrostatics and band bending .Figure 4  Au/MoS 2/Au device s and PDOS  evidencing the difference between the ordered pattern and a random sample .
+
+Indeed, figure 4 shows the PDOS for the ordered and one disordered sample. It is possible to notice a  band 
+
+bending resulting from the self -consistent charge -density solution which is induced by the band alignment 
+
+at the  Au/MoS 2 interface.  The bending can be appreciated comparing with Figure 2 , showing the uncontacted 
+
+layer  and flat bands . In moving towards the middle of the channel the band alignmen t between Au and MoS 2
+
+tends to the non -interacting case, depicted in Figure 3a.  Th e resulting  long -range  electrostatic  field  is causing 
+
+convergence issues in the calculations . It is important to point out that the systems shown in Figure 4 do not 
+
+directly  converge . This is not genuinely due to charge oscillations or  the known problem of charge  sloshing ,
+
+but rather the  charge density quickly d iverges  unless a good initial guess is provided. Luckily , short channel 
+
+devices  do  converge , so the procedure adopted was to first converge a short channel (typically  3 nm) and 
+
+then progressively increasing the channel length by adding atoms and patching the previously converged 
+
+charge density for the next run.  We could not find any better strategy than this rather lengthy procedure, 
+
+although assisted by scripts. 
+
+As  shown in Figure  5, the in -gap transmission through the defect states indicates  defect -mediated transport ,
+
+with percolation through the connected defect states , both in  the  ordered and  the  random scenarios . This 
+
+contribution is not present in pristine  MoS 2. The ordered pattern  mainly  shows a  significantly  high er  valu e of 
+
+electron  transmission,  particular ly  in  the  energy  range  [-4. 4, -4. 1] eV, correspond ing  to  the  energy of  the 
+
+defect  states  or  band s (see  Figure s 2 and 4 ). All transmission s shown  in Figure 5 have been computed in 
+
+equilibrium condition. Figure  5. a)  Transmission spectra for  the  ordered  structure  20  random structure s with  11.1% of sulfur vacancies . The 
+
+Black curve corresponds to the ordered defect pattern, the thin brown curves correspond to the random distributions, gr een 
+
+line to the ideal undefected MoS 2. The vertical dashed lines repr esent the Fermi level  of  the  defected (E F) and  the  ideal 
+
+(E ’F) system s.
+
+Figure 6.  I–V curves for the ideal undefected  MoS 2 (red),  MoS 2 containing ordered defect distribution (black) and  Random 
+
+systems (blue  dashed ). The plot  has  been obtained for T=300 K .The I -V characteristics shown in Figure 6 have been obtained by imposing a small bias to the system  up to 
+
+100 meV.  The striking result is that the ordered pattern gives the best current by several order s of magnitude 
+
+compared  even to  the  best  disordered sample.  The currents  obtained for  the random configuration s span 
+
+several orders of  magnitude , showing that  the  curren t is quite  sensitive to  the  defect  arrangement . The 
+
+highest currents are obtained when a  contact -to -contact  percolation pattern  is established . The ordered 
+
+pattern almost recovers the  I-V characteristic of the ideal MoS 2. However, the latter is sensitive to the 
+
+injection barrier for electrons , as can be seen in Figure 5, where the Fermi level is found about 250 meV 
+
+below the conduction band edge, but this value can change  depending on several parameters.  The Schottky 
+
+barrier at metal/MoS 2 interfaces is a known problem and usually  Au/Ti is employed to reduce the metal 
+
+workfunction and improve metal/layer  injection , but e ven in this improved  experimental condition , a
+
+Schottky barrier is  known to be  formed at the interface, limiting  the current in MoS 2 devices. 
+
+These  results demonstrate a significant increase in transport for  MoS 2 layers with ordered defects  patters ,
+
+reaching up to  5 orders of magnitude  improvement  compared to  random  configurations (3 orders of 
+
+magnitude  for the  best configuration ). This impressive enhancement can be attributed to the delocalization 
+
+of charge carriers facilitated by mini -band formation in  the  ordered defect structures, as observed in the 
+
+band structure analysis.  Fermi level tuning that might be obtained for instance using Au/Ti  metal contacts 
+
+could further improve injection in the defect band , also  avoid ing  the band bending observed in our 
+
+calculations,  leading to  a significant  increase of current . Indeed,  considering the transmission close to 1.0 for 
+
+the ordered band, as shown in figure 5  (peak in the range  [–4.3 0, –4.15 ] eV) , one might expect a current  close 
+
+to 1  μA at 100 meV. 
+
+# Conclusions 
+
+In  this work , we  demonstrate that the arrangement of defects is as important as their concentration  in 
+
+determining the  performance  of  two -dimensional materials . In monolayer MoS₂, periodic atomic -scale ordering of sulfur vacancies can counteract the transport degradation generally associated  with high vacancy 
+
+concentrations. 
+
+By combining density functional tight -binding calculations and quantum transport simulations, we 
+
+investigated the energetic, electronic, and transport consequences of vacancy ordering.  Our findings reveal 
+
+three fundamental points in defect engineering : first,  an ordered  vacancy arrangement  promotes the 
+
+hybridization of localized defect states into a dispersive in -gap miniband, providing a connected pathway for 
+
+band -like charge transport ; second , the ordered configuration lies within a broad low -energy manifold of 
+
+non -adjacent vacancy arrangements and is therefore not energetically anomalous ; third, in the investigated 
+
+Au/MoS₂/Au devices, the ordered vacancy array produces electrical currents three to five orders of 
+
+magnitude higher than the representative random configurations. This enhancement compensates for the 
+
+reduction in transport associa ted with randomly distributed vacancies and may reduce the operating bias 
+
+required  to achieve a given current. 
+
+Although  our study focuses on  MoS 2 as a representative  system , we  emphasize  that the  underlying principle 
+
+may extend  to a  wide  range of systems beyond  MoS 2. This  highlight s the potential of atomic -scale defect 
+
+ordering and identifies defect arrangement as an emerging design objective in defect engineering. 
+
+The experimental realization of  artificial atomic -scale defect ordering in TMDs  remain s a  challenge.  However, 
+
+recent  advancements in  defect engineering , such as the precise fabrication of single atomic vacancies, 
+
+advanced defect nanopatterning techniques, and the phenomenon of spontaneous ordering,  provide 
+
+promising routes towards this objective  in the near future. 
+
+# Methods 
+
+## DFTB framework and quantum -transport calculations 
+
+The calculations presented in this work have been performed with the dftb+ code  33 , which implements the 
+
+Density Functional Tight Binding method  34 . The reason for this choice is mostly connected to the transport 
+
+calculations based on Green’s Functions for which we have generated rather large samples of 2558 atoms, 
+
+impractical for ab -initio approaches. The DFTB method is well -established in the literature and is known to provide accurate results of near DFT 
+
+quality in terms of geometries, heat of formation as well as vibrational properties, provided a good material 
+
+parameterization is available. 
+
+The DFTB method is based on Slater -type minimal basis set of orbitals computed at DFT level for atomic 
+
+centers with an empirical compressive function of the form (r/r 0)α. In the tight -binding spirit, only the two -
+
+center integrals in the Hamiltonian matrix elements between local basis functions are retained and tabulated. 
+
+The ion -ion and electronic repulsive energies are not computed directly from first principles but fitted against 
+
+DFT total energies of reference systems. For MoS 2 we have closely followed Heine’s periodic table recipes  35 .
+
+A comparison of the electronic bandstructure against Quantum Espresso calculations is discussed in the SI. 
+
+Beside  the electronic properties , we also assessed relaxed geometries, phonon bandstructure and lattice 
+
+relaxation around the defect and found a good agreement with DFT calculations. 
+
+The original DFTB method has been extended to include self -consistent charge density, spin density, LDA+U, 
+
+excited state dynamics, non -adiabatic dynamics  and, more recently, range -separated functionals  36 . The 
+
+extension to Non -equilibrium Green’s functions (NEGF) was also accomplished long time ago  37,38 . All these 
+
+developments have made DFTB one of the most successful semi -empirical approach in condensed matter 
+
+theory. 
+
+The defected structures have been created based on the starting from the unit cell relaxed using Quantum 
+
+Espresso, norm -conserving pseudopotentials available at  https://www.pseudo -dojo.org , PBE functional and 
+
+an energy cutoff of 70 Ry. Atoms have been removed either in the ordered pattern or with a randomized 
+
+scheme. We removed S atoms only from one face and intentionally prevented nearest  neighbors  vacancies 
+
+because these configurations are considered rare in the literature and can strongly bias the statistics 
+
+performed on small supercells. Geometry optimization utilized conjugate gradient algorithms until atomic 
+
+forces fell below the convergence th reshold.  Convergence criteria were set to achieve self -consistent 
+
+solutions for electronic structure calculations, with thresholds for energy and force convergence set at 10 -5
+
+Hartree and 10 -3 Hartree/Bohr, respectively. 
+
+## Configurational stability analysis of vacancy arrangements For the systematic  configurational -stability analysis,  starting from the Quantum ESPRESSO -relaxed unit cell 
+
+described above, a 6×6 MoS₂ monolayer supercell was constructed  and four sulfur atoms were removed from 
+
+the exposed sulfur layer. The four vacancies correspond to 11.1% of the 36 sites in that surface sublattice. 
+
+The ordered 3×3 vacancy pattern investigated in the electronic -structure and transport calculations was 
+
+in cluded as the reference configuration. 
+
+All  58,905  four -site subsets of the 36 exposed -surface sulfur  sublattice  were generated combinatorially. 
+
+Configurations were retained  only when every vacancy -vacancy distance exceeded 3.5 Å under periodic 
+
+boundary conditions, thereby excluding adjacent -vacancy motifs. This filtering yielded 16,659 valid 
+
+arrangements. 
+
+Symmetry -equivalent  configurations  were identified using all 36 lattice translations and the six C3v 
+
+operations  that preserve the exposed sulfur sublattice, corresponding to the D3 action on the  two -
+
+dimensional vacancy -site lattice . Operations exchanging  the upper and lower sulfur planes were not 
+
+considered.  The  symmetry  reduction produced 94 inequivalent configurations. An orbit -size  validation 
+
+confirmed  that  the degeneracies of the  representatives account exactly for all 16,659 retained arrangements. 
+
+The resulting  94 structures were  then  optimized with SCC -DFTB  using the same Mo -S Slater -Koster 
+
+parameterization described above and identical numerical settings. For this dedicated configurational 
+
+dataset, a stricter geometry -convergence criterion was adopted than that used for the initial  transport 
+
+structures. Conjugate -gradient optimization was performed for up to 4,000 steps, with the two in -plane 
+
+lattice -vector lengths allowed to relax independently. The 20 Å out -of -plane cell length and all cell angles 
+
+were kept fixed. The maximum  force -component threshold was 1.0 × 10⁻⁵ Hartree/Bohr, and the SCC 
+
+tolerance was 1.0 × 10⁻⁶, with a maximum of 100 SCC iterations. Brillouin -zone sampling employed a shifted 
+
+4×4×1 k -point grid, and electronic occupations were described using Fermi filling  at 100 K. The maximum 
+
+angular momenta were set to  d for Mo and  p for S. 
+
+Configurational energies were expressed relative to the ordered pattern  according to 
+
+ΔE = E i - Eordered 
+
+where  Ei is the final optimized DFTB total energy of configuration  i, and  Eordered  is that of the ordered 3×3 
+
+reference. Negative Δ E values therefore identify configurations below the ordered reference, whereas positive values identify configurations above it. All structures have the same composition, containing 36 Mo 
+
+and 68 S atoms, so the comparison is performed at fixed vacancy concentration. The interval |Δ E| < 0.05 eV 
+
+was used as an operational criterion to group configurations close in energy to the ordered model and should 
+
+not be interpreted as an estimate of the numerical uncertainty. 
+
+Geometric descriptors were calculated from the optimized structures. The six vacancy -pair distances were 
+
+evaluated using the minimum -image convention and used to determine the minimum, mean, maximum, and 
+
+standard deviation of the vacancy -vacancy separation . Additional  descriptors included the in -plane cell -area 
+
+strain, individual lattice -vector strains, sulfur -layer thickness, vacancy radius of gyration, vacancy -distribution 
+
+anisotropy, and atomic displacements relative to the corresponding unrelaxed defective structur es. Pearson 
+
+and Spearman coefficients were used to evaluate linear and monotonic relationships, respectively, between 
+
+these descriptors and the relative configurational energy. Complete descriptor definitions and values for all 
+
+94 structures are reported i n the Supporting Information. 
+
+## Targeted DFT validation of configurational energetics 
+
+Single -point DFT calculations were performed on DFTB -relaxed geometries. The DFT calculations were 
+
+performed with Quantum ESPRESSO using spin -polarized PBE and PAW pseudopotentials for Mo and S. 
+
+Wavefunction and charge -density cutoffs of 50 and 400 Ry were  used, respectively. Reciprocal -space 
+
+sampling employed a shifted 2×2×1 Monkhorst -Pack grid, and electronic occupations were treated using 
+
+Marzari -Vanderbilt smearing with a width of 0.005 Ry. The electronic convergence threshold was 1.0 × 10⁻⁸ 
+
+Ry, the mixing factor was 0.2, and up to 250 electronic iterations were allowed. Spin polari zation was enabled 
+
+with an initial Mo magnetization of 0.1. Symmetry and inversion operations were disabled to preserve each 
+
+vacancy arrangement. 
+
+The three ionic optimizations were performed using the BFGS algorithm while keeping the DFTB -optimized 
+
+simulation cells fixed. DFT and DFTB relative energies were independently referenced to the ordered 
+
+configuration. Complete input files, convergence info rmation, relative -energy tables, and structural -
+
+displacement analyses are provided in the Supporting Information. Conflict of Interest 
+
+The authors declare no conflict of interest. 
+
+# Author Contributions 
+
+M.C. conceived the work and wrote the manuscript. A.P. performed the calculation of ene rgy band structure 
+
+and charge transport . A.L.  and F.M., performed the calculation of system stability, A.C. performed  the DFTB 
+
+parameterizations.  All authors discussed the results , commented  and revised  on the manuscript  and  all 
+
+authors approved the final version  before submission to the journal .
+
+Data Availability Statement 
+
+The data supporting this study's findings are available from the corresponding author upon reasonable 
+
+request. 
+
+# Acknowledgements 
+
+We thank the European Union funded this research  – Next Generation EU from the Italian Ministry of 
+
+University and Research. Project PRIN 2022SRHPF2 ″Molecular assisted atom vacancies arrangement to 
+
+modulate magnetism in 2D transition metal dichalcogenides″  (MAVAM) and Italian Ministry of Environment 
+
+and Energy Security POR H2 AdP  MMES/ENEA with involvement of CNR and RSE, PNRR  – Mission 2, 
+
+Component 2, Investment 3.5 ″Ricerca e sviluppo sull'idrogeno″  under the ENEA  – UNIMIB and ENEA -CNR 
+
+agreements (Procedure 1.1.3 PNRR POR H 2).  A.P thanks the EuroHPC project “EoCoE -III” GA -101144014 .
+
+# References 
+
+(1)  Ko, K.; Jang, M.; Kwon, J.; Suh, J. Native Point Defects in 2D Transition Metal Dichalcogenides: A 
+
+Perspective Bridging Intrinsic Physical Properties and Device Applications.  J. Appl. Phys.  2024 , 135 
+
+(10).  https://doi.org/10.1063/5.0185604 .(2)  Wang, Q. H.; Kalantar -Zadeh, K.; Kis, A.; Coleman, J. N.; Strano, M. S. Electronics and Optoelectronics 
+
+of Two -Dimensional Transition Metal Dichalcogenides.  Nat. Nanotechnol.  2012 , 7 (11), 699 –712. 
+
+https://doi.org/10.1038/nnano.2012.193 .
+
+(3)  Hossen, M. F.; Shendokar, S.; Aravamudhan, S. Defects and Defect Engineering of Two -Dimensional 
+
+Transition Metal Dichalcogenide (2D TMDC) Materials.  Nanomaterials  2024 , 14  (5), 410. 
+
+https://doi.org/10.3390/nano14050410 .
+
+(4)  Liang, Q.; Zhang, Q.; Zhao, X.; Liu, M.; Wee, A. T. S. Defect Engineering of Two -Dimensional Transition -
+
+Metal Dichalcogenides: Applications, Challenges, and Opportunities.  ACS Nano  2021 , 15  (2), 2165 –
+
+2181.  https://doi.org/10.1021/acsnano.0c09666 .
+
+(5)  Park, Y.; Li, N.; Jung, D.; Singh, L. T.; Baik, J.; Lee, E.; Oh, D.; Kim, Y. D.; Lee, J. Y.; Woo, J.; Park, S.; Kim, 
+
+H.; Lee, G.; Lee, G.; Hwang, C. -C. Unveiling the Origin of N -Type Doping of Natural MoS2: Carbon.  NPJ 
+
+2D Mater. Appl.  2023 , 7 (1), 60.  https://doi.org/10.1038/s41699 -023 -00424 -x.
+
+(6)  Singh, A.; Singh, A. K. Origin of <math> <mi>n</Mi> </Math>  -Type Conductivity of Monolayer <math> 
+
+<msub> <mi>MoS</Mi> <mn>2</Mn> </Msub> </Math>.  Phys. Rev. B  2019 , 99  (12), 121201. 
+
+https://doi.org/10.1103/PhysRevB.99.121201 .
+
+(7)  Sousa, F. B.; Fujisawa, K.; Menescal, F.; Matos, M. J. S.; Pimenta, M. A.; Chacham, H.; Terrones, M.; 
+
+Malard, L. M.; Carvalho, B. R. Optical Spectroscopy of Defects in Atomically Thin Transition Metal 
+
+Dichalcogenides.  Appl. Phys. Rev.  2025 , 12  (2).  https://doi.org/10.1063/5.0251288 .
+
+(8)  Zhao, Y.; Tripathi, M.; Čerņevičs, K.; Avsar, A.; Ji, H. G.; Gonzalez Marin, J. F.; Cheon, C. -Y.; Wang, Z.; 
+
+Yazyev, O. V.; Kis, A. Electrical Spectroscopy of Defect States and Their Hybridization in Monolayer 
+
+MoS2.  Nat. Commun.  2023 , 14  (1), 44.  https://doi.org/10.1038/s41467 -022 -35651 -1.
+
+(9)  Ye, Z.; Tan, C.; Huang, X.; Ouyang, Y.; Yang, L.; Wang, Z.; Dong, M. Emerging MoS2 Wafer -Scale 
+
+Technique for Integrated Circuits.  Nanomicro Lett.  2023 , 15  (1), 38.  https://doi.org/10.1007/s40820 -
+
+022 -01010 -4.
+
+(10)  Hossen, M. F.; Shendokar, S.; Aravamudhan, S. Defects and Defect Engineering of Two -Dimensional 
+
+Transition Metal Dichalcogenide (2D TMDC) Materials.  Nanomaterials  2024 , 14  (5), 410. 
+
+https://doi.org/10.3390/nano14050410 .(11)  Wang, Q. H.; Kalantar -Zadeh, K.; Kis, A.; Coleman, J. N.; Strano, M. S. Electronics and Optoelectronics 
+
+of Two -Dimensional Transition Metal Dichalcogenides.  Nat. Nanotechnol.  2012 , 7 (11), 699 –712. 
+
+https://doi.org/10.1038/nnano.2012.193 .
+
+(12)  Ko, K.; Jang, M.; Kwon, J.; Suh, J. Native Point Defects in 2D Transition Metal Dichalcogenides: A 
+
+Perspective Bridging Intrinsic Physical Properties and Device Applications.  J. Appl. Phys.  2024 , 135 
+
+(10).  https://doi.org/10.1063/5.0185604 .
+
+(13)  Cavallini, M.; Gentili, D. Atomic Vacancies in Transition Metal Dichalcogenides: Properties, 
+
+Fabrication, and Limits.  Chempluschem  2022 , 87  (3).  https://doi.org/10.1002/cplu.202100562 .
+
+(14)  Gentili, D.; Calabrese, G.; Lunedei, E.; Borgatti, F.; Mirshokraee, S. A.; Benekou, V.; Tseberlidis, G.; 
+
+Mezzi, A.; Liscio, F.; Candini, A.; Ruani, G.; Palermo, V.; Maccherozzi, F.; Acciarri, M.; Berretti, E.; 
+
+Santoro, C.; Lavacchi, A.; Cavallini, M. Tunin g Electronic and Functional Properties in Defected MoS  2
+
+Films by Surface Patterning of Sulphur Atomic Vacancies.  Small Methods  2025 , 9 (4). 
+
+https://doi.org/10.1002/smtd.202401486 .
+
+(15)  Gali, S. M.; Pershin, A.; Lherbier, A.; Charlier, J. -C.; Beljonne, D. Electronic and Transport Properties in 
+
+Defective MoS  2 : Impact of Sulfur Vacancies.  The Journal of Physical Chemistry C  2020 , 124  (28), 
+
+15076 –15084.  https://doi.org/10.1021/acs.jpcc.0c04203 .
+
+(16)  Kaasbjerg, K.; Low, T.; Jauho, A. -P. Electron and Hole Transport in Disordered Monolayer <math> 
+
+<msub> <mi>MoS</Mi> <mn>2</Mn> </Msub> </Math>  : Atomic Vacancy Induced Short -Range and 
+
+Coulomb Disorder Scattering.  Phys. Rev. B 2019 , 100  (11), 115409. 
+
+https://doi.org/10.1103/PhysRevB.100.115409 .
+
+(17)  Zhang, X.; Liao, Q.; Kang, Z.; Liu, B.; Liu, X.; Ou, Y.; Xiao, J.; Du, J.; Liu, Y.; Gao, L.; Gu, L.; Hong, M.; Yu, 
+
+H.; Zhang, Z.; Duan, X.; Zhang, Y. Hidden Vacancy Benefit in Monolayer 2D Semiconductors.  Advanced 
+
+Materials  2021 , 33  (7).  https://doi.org/10.1002/adma.202007051 .
+
+(18)  Gu, M.; Han, M.; Kim, S. Electron Transport through the Multiple Sulfur Vacancies in MoS2.  Current 
+
+Applied Physics  2024 , 57 , 20 –25.  https://doi.org/10.1016/j.cap.2023.10.008 .(19)  Qiu, H.; Xu, T.; Wang, Z.; Ren, W.; Nan, H.; Ni, Z.; Chen, Q.; Yuan, S.; Miao, F.; Song, F.; Long, G.; Shi, 
+
+Y.; Sun, L.; Wang, J.; Wang, X. Hopping Transport through Defect -Induced Localized States in 
+
+Molybdenum Disulphide.  Nat. Commun.  2013 , 4 (1), 2642.  https://doi.org/10.1038/ncomms3642 .
+
+(20)  Gentili, D.; Chini, E.; Cavallini, M. Generation and Tuning of Semiconductor Electronic and Functional 
+
+Properties through Electrochemical Patterning.  Acc. Mater. Res.  2025 , 6 (9), 1094 –1104. 
+
+https://doi.org/10.1021/accountsmr.5c00104 .
+
+(21)  Vancsó, P.; Magda, G. Z.; Pető, J.; Noh, J. -Y.; Kim, Y. -S.; Hwang, C.; Biró, L. P.; Tapasztó, L. The Intrinsic 
+
+Defect Structure of Exfoliated MoS2 Single Layers Revealed by Scanning Tunneling Microscopy.  Sci. 
+
+Rep.  2016 , 6 (1), 29726.  https://doi.org/10.1038/srep29726 .
+
+(22)  Zhao, Y.; Tripathi, M.; Čerņevičs, K.; Avsar, A.; Ji, H. G.; Gonzalez Marin, J. F.; Cheon, C. -Y.; Wang, Z.; 
+
+Yazyev, O. V.; Kis, A. Electrical Spectroscopy of Defect States and Their Hybridization in Monolayer 
+
+MoS2.  Nat. Commun.  2023 , 14  (1), 44.  https://doi.org/10.1038/s41467 -022 -35651 -1.
+
+(23)  Sousa, F. B.; Fujisawa, K.; Menescal, F.; Matos, M. J. S.; Pimenta, M. A.; Chacham, H.; Terrones, M.; 
+
+Malard, L. M.; Carvalho, B. R. Optical Spectroscopy of Defects in Atomically Thin Transition Metal 
+
+Dichalcogenides.  Appl. Phys. Rev.  2025 , 12  (2).  https://doi.org/10.1063/5.0251288 .
+
+(24)  Krane, N.; Lotze, C.; Franke, K. J. Moiré Structure of MoS2 on Au(111): Local Structural and Electronic 
+
+Properties.  Surf. Sci.  2018 , 678 , 136 –142.  https://doi.org/10.1016/j.susc.2018.03.015 .
+
+(25)  Tumino, F.; Casari, C. S.; Li Bassi, A.; Tosoni, S. Nature of Point Defects in Single -Layer MoS  2 Supported 
+
+on Au(111).  The Journal of Physical Chemistry C 2020 , 124  (23), 12424 –12431. 
+
+https://doi.org/10.1021/acs.jpcc.0c01477 .
+
+(26)  Gong, C.; Colombo, L.; Wallace, R. M.; Cho, K. The Unusual Mechanism of Partial Fermi Level Pinning 
+
+at Metal –MoS  2 Interfaces.  Nano Lett.  2014 , 14  (4), 1714 –1720.  https://doi.org/10.1021/nl403465v .
+
+(27)  Bampoulis, P.; van Bremen, R.; Yao, Q.; Poelsema, B.; Zandvliet, H. J. W.; Sotthewes, K. Defect 
+
+Dominated Charge Transport and Fermi Level Pinning in MoS  2 /Metal Contacts.  ACS Appl. Mater. 
+
+Interfaces  2017 , 9 (22), 19278 –19286.  https://doi.org/10.1021/acsami.7b02739 .(28)  Hong, C.; Kim, H.; Tao, Y.; Lim, J. H.; Lee, J. Y.; Kim, J. -H. Ultrafast Hot Carrier Extraction and Diffusion 
+
+at the MoS  2 /Au van Der Waals Electrode Interface.  Sci. Adv.  2025 , 11  (1). 
+
+https://doi.org/10.1126/sciadv.adr1534 .
+
+(29)  Popov, I.; Seifert, G.; Tománek, D. Designing Electrical Contacts to <math Display="inline"> <msub> 
+
+<mi>MoS</Mi> <mn>2</Mn> </Msub> </Math> Monolayers: A Computational Study.  Phys. Rev. Lett. 
+
+2012 , 108  (15), 156802.  https://doi.org/10.1103/PhysRevLett.108.156802 .
+
+(30)  Su, J.; Li, N.; Zhang, Y.; Feng, L.; Liu, Z. Role of Vacancies in Tuning the Electronic Properties of Au -
+
+MoS2 Contact.  AIP Adv.  2015 , 5 (7).  https://doi.org/10.1063/1.4927853 .
+
+(31)  Qiu, X.; Wang, Y.; Jiang, Y. First -Principles Study of Vacancy Defects at Interfaces between Monolayer 
+
+MoS  2 and Au.  RSC Adv.  2020 , 10  (48), 28725 –28730.  https://doi.org/10.1039/D0RA04833J .
+
+(32)  Xie, D.; Yang, F.; Qiu, X.; Hu, Y.; Sun, Y.; He, S.; Wang, X. The Impact of S Vacancies on the Modulation 
+
+of the Work Function and Schottky Barrier at the Au/MoS2 Interface.  J. Appl. Phys.  2024 , 135  (23). 
+
+https://doi.org/10.1063/5.0206006 .
+
+(33)  Hourahine, B.; Aradi, B.; Blum, V.; Bonafé, F.; Buccheri, A.; Camacho, C.; Cevallos, C.; Deshaye, M. Y.; 
+
+Dumitrică, T.; Dominguez, A.; Ehlert, S.; Elstner, M.; van der Heide, T.; Hermann, J.; Irle, S.; Kranz, J. J.; 
+
+Köhler, C.; Kowalczyk, T.; Kubař, T.; Le e, I. S.; Lutsker, V.; Maurer, R. J.; Min, S. K.; Mitchell, I.; Negre, 
+
+C.; Niehaus, T. A.; Niklasson, A. M. N.; Page, A. J.; Pecchia, A.; Penazzi, G.; Persson, M. P.; Řezáč, J.; 
+
+Sánchez, C. G.; Sternberg, M.; Stöhr, M.; Stuckenberg, F.; Tkatchenko, A.; Yu,  V. W.  -z.; Frauenheim, 
+
+T. DFTB+, a Software Package for Efficient Approximate Density Functional Theory Based Atomistic 
+
+Simulations.  J. Chem. Phys.  2020 , 152  (12).  https://doi.org/10.1063/1.5143190 .
+
+(34)  Elstner, M.; Seifert, G. Density Functional Tight Binding.  Philosophical Transactions of the Royal Society 
+
+A: Mathematical, Physical and Engineering Sciences  2014 , 372  (2011), 20120483. 
+
+https://doi.org/10.1098/rsta.2012.0483 .
+
+(35)  Jha, G.; Heine, T. DFTB Parameters for the Periodic Table: Part III, Spin -Orbit Coupling.  J. Chem. Theory 
+
+Comput.  2022 , 18  (7), 4472 –4481.  https://doi.org/10.1021/acs.jctc.2c00376 .
+
+(36)  Hourahine, B.; Berdakin, M.; Bich, J. A.; Bonafé, F. P.; Camacho, C.; Cui, Q.; Deshaye, M. Y.; Díaz Mirón, 
+
+G.; Ehlert, S.; Elstner, M.; Frauenheim, T.; Goldman, N.; González León, R. A.; van der Heide, T.; Irle, S.; Kowalczyk, T.; Kubař, T.; Lee, I. S.; Lien -Medrano, C. R.; Maryewski, A.; Melson, T.; Min, S. K.; 
+
+Niehaus, T.; Niklasson, A. M. N.; Pecchia, A.; Reuter, K.; Sánchez, C. G.; Scheurer, C.; Sentef, M. A.; 
+
+Stishenko, P. V.; Vuong, V. Q.; Aradi, B. Recent D evelopments in DFTB+, a Software Package for 
+
+Efficient Atomistic Quantum Mechanical Simulations.  J. Phys. Chem. A  2025 , 129  (24), 5373 –5390. 
+
+https://doi.org/10.1021/acs.jpca.5c01146 .
+
+(37)  Pecchia, A.; Latessa, L.; Gagliardi, A.; Frauenheim, Th.; Carlo, A. Di. Chapter 8 The GDFTB Tool for 
+
+Molecular Electronics; 2007; pp 205 –232.  https://doi.org/10.1016/S1380 -7323(07)80026 -4.
+
+(38)  Pecchia, A.; Penazzi, G.; Salvucci, L.; Di Carlo, A. Non -Equilibrium Green’s Functions in Density 
+
+Functional Tight Binding: Method and Applications.  New J. Phys.  2008 , 10  (6), 065022. 
+
+https://doi.org/10.1088/1367 -2630/10/6/065022 .

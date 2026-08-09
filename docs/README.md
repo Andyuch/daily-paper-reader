@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-08</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-09</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 4 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>3</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-08 20:08:25 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-09 20:35:23 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日速读3篇论文，均获6.0分，聚焦计算成像、电镜漂移校正与材料电磁模式设计。最值得关注的是突破光电子信噪比极限的物理一致计算衍射成像，以及实现原子级分辨的实时漂移校正技术。建议优先精读前两篇，掌握高精度成像与稳定控制的实用方法。</p>
+<p>今日精读1篇GaN晶体管研究，另速读3篇覆盖超快光谱、MoS₂硫空位及光子结构模拟。</p>
+<p>最值得关注的是《Active Passivation Tunes Hotspot Locations in GaN Transistors》，揭示主动钝化可调控热点位置，对器件热管理有直接启示。</p>
+<p>普通读者建议优先浏览该精读论文，其余3篇可作领域拓展速览。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -71,12 +73,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">0 篇</strong>
+    <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p class="dpr-home-dashboard-empty">今日暂无推荐。</p>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Active Passivation Tunes Hotspot Locations in GaN Transistors with In Situ Thermal Mechanical Visualization">Active Passivation Tunes Hotspot Locations in GaN Transistors with In Situ Thermal Mechanical Visualization</span></li></ul>
   </div>
-
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>1</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -87,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">3 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Breaking optoelectronic SNR limitations via physics-consistent computational diffractive imaging">Breaking optoelectronic SNR limitations via physics-consistent computational diffractive imaging</span></li><li><span class="dpr-home-dashboard-paper-title" title="Picometre-scale real-time drift correction in TEM and STEM by dynamic control of the specimen stage for atomic-resolution imaging">Picometre-scale real-time drift correction in TEM and STEM by dynamic control of the specimen stage for atomic-resolution imaging</span></li><li><span class="dpr-home-dashboard-paper-title" title="AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials">AFLOW-EMERALD: ElectroMagnetic modes EngineeRing in Advanced LayereD materials</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling">A table-top few-femtosecond broadband extreme-ultraviolet absorption spectrometer with cryogenic cooling</span></li><li><span class="dpr-home-dashboard-paper-title" title="Atomic Scale Ordering of Sulfur Vacancies Enhances Charge Transport in Monolayer MoS$_2$">Atomic Scale Ordering of Sulfur Vacancies Enhances Charge Transport in Monolayer MoS$_2$</span></li><li><span class="dpr-home-dashboard-paper-title" title="Differentiable eigendecomposition-free rigorous coupled-wave analysis for general photonic structures">Differentiable eigendecomposition-free rigorous coupled-wave analysis for general photonic structures</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>3</strong></span></div>
 </section>
