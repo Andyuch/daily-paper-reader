@@ -1,0 +1,70 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-10T20:39:56.093831+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.06456v1",
+      "source": "arxiv",
+      "title": "Sublattice-resolved coherent phonon dynamics in charge density waves",
+      "abstract": "Phonons govern fundamental material properties and play a central role in various electronic phase transitions. Coherent driving of specific phonon modes enables on-demand phase control, motivating sublattice-resolved identification of real-space phonon motions. Yet experimentally resolving these motions remains challenging, limiting precise phonon-based control. Here, we introduce a dynamical protocol to track element-resolved phonon dynamics in the charge density wave material EuTe4, in which the dominant Te-sublattice charge order is accompanied by a previously unreported Eu-sublattice component. We leverage the elemental selectivity of time-resolved resonant X-ray scattering to reveal three coherent phonon modes with distinct sublattice character, thereby disentangling Eu- and Te-dominated lattice dynamics, in good agreement with theoretical calculations of the phonon eigenvectors. This time-domain approach, which surpasses the energy-resolution limits of conventional frequency-domain inelastic scattering, provides a broadly applicable framework for decomposing coherent phonons in multi-element materials, which is crucial for the targeted control of phases of matter.",
+      "authors": [
+        "Kyoung Hun Oh",
+        "Honglie Ning",
+        "Zongqi Shen",
+        "Yifan Su",
+        "Jack Maier",
+        "Gyeongbo Kang",
+        "Hyeongi Choi",
+        "Dong Wu",
+        "Qiaomei Liu",
+        "Hyun-Woo J. Kim",
+        "Seunghyeok Ha",
+        "Jaehwon Kim",
+        "Byungjune Lee",
+        "B. J. Kim",
+        "N. L. Wang",
+        "Yao Wang",
+        "Hoyoung Jang",
+        "Nuh Gedik"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el"
+      ],
+      "published": "2026-08-06T18:00:01+00:00",
+      "link": "https://arxiv.org/pdf/2608.06456v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "time-resolved resonant X-ray scattering reveals sublattice-resolved coherent phonon dynamics",
+      "llm_evidence_cn": "时间分辨共振X射线散射揭示亚晶格分辨相干声子动力学",
+      "llm_evidence": "时间分辨共振X射线散射揭示亚晶格分辨相干声子动力学",
+      "canonical_evidence": "时间分辨共振X射线散射揭示亚晶格分辨相干声子动力学",
+      "llm_tldr_en": "This paper introduces a dynamic protocol using time-resolved resonant X-ray scattering to track sublattice-resolved coherent phonons in EuTe4, revealing three distinct phonon modes and an unexpected Eu-sublattice component, advancing element-specific phonon control in materials.",
+      "llm_tldr_cn": "相干声子调控是控制材料相变的重要途径，但实空间亚晶格分辨的声子运动一直难以直接测量。本文提出一种动力学方案，利用时间分辨共振X射线散射对电荷密度波材料EuTe4进行元素选择性探测，从而区分不同Te和Eu亚晶格的贡献。实验揭示了三个具有不同亚晶格特征的相干声子模式，并发现了此前未知的Eu亚晶格分量。该工作为研究复杂材料中声子耦合与相变机制提供了新的实验途径。",
+      "llm_tldr": "相干声子调控是控制材料相变的重要途径，但实空间亚晶格分辨的声子运动一直难以直接测量。本文提出一种动力学方案，利用时间分辨共振X射线散射对电荷密度波材料EuTe4进行元素选择性探测，从而区分不同Te和Eu亚晶格的贡献。实验揭示了三个具有不同亚晶格特征的相干声子模式，并发现了此前未知的Eu亚晶格分量。该工作为研究复杂材料中声子耦合与相变机制提供了新的实验途径。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

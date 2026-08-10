@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-10 <!--dpr-date:20260810-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/10/2608.06456v1-sublattice-resolved-coherent-phonon-dynamics-in-charge-density-waves" data-sidebar-item="{&quot;title&quot;: &quot;Sublattice-resolved coherent phonon dynamics in charge density waves&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.06456v1-sublattice-resolved-coherent-phonon-dynamics-in-charge-density-waves&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;时间分辨共振X射线散射揭示亚晶格分辨相干声子动力学&quot;}">Sublattice-resolved coherent phonon dynamics in charge density waves</a>
   * 2026-08-09 <!--dpr-date:20260809-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/09/2608.01257v1-active-passivation-tunes-hotspot-locations-in-gan-transistors-with-in-situ-thermal-mechanical-visualization" data-sidebar-item="{&quot;title&quot;: &quot;Active Passivation Tunes Hotspot Locations in GaN Transistors with In Situ Thermal Mechanical Visualization&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.01257v1-active-passivation-tunes-hotspot-locations-in-gan-transistors-with-in-situ-thermal-mechanical-visualization&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;工作条件下对GaN晶体管进行原位热-机械可视化&quot;}">Active Passivation Tunes Hotspot Locations in GaN Transistors with In Situ Thermal Mechanical Visualization</a>
