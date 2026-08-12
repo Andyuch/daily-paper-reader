@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-12",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T21:09:22",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/12/2608.10721v1-revealing-time-characteristics-of-optical-excitations-in-dielectric-and-plasmonic-structures-through-cathodoluminescence-interferometry",
+      "section": "quick",
+      "title_en": "Revealing time characteristics of optical excitations in dielectric and plasmonic structures through cathodoluminescence interferometry",
+      "authors": "Evelijn Akerboom, Hirohsi Sugimoto, Minoru Fujii, Nicolas Pazos-Perez, Ramon A. Álvarez Puebla, A. Femius Koenderink, F. Javier García de Abajo, Albert Polman",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10721v1",
+      "score": "7.0",
+      "evidence": "通过干涉测量实现对纳米尺度光学激发的时间分辨表征",
+      "tldr": "传统阴极发光光谱虽具备纳米级空间分辨率，但直接时间分辨光学共振存在挑战。本文提出阴极发光干涉测量技术，无需超快泵浦-探测，即可通过分析角度-频率分辨干涉图，利用傅里叶变换提取共振衰减时间、相位和模态谱结构。在金纳米颗粒、宽带等离子体发射器、金纳米星及硅纳米球等体系上验证了该方法，测得1-10飞秒的衰减时间，并观察到多模拍频特征。这一方法将CL显微技术拓展至飞秒时间维度，实现单一测量中对光谱、空间和相位信息的联合表征。",
+      "tags": "query:iscat",
+      "abstract_en": "Cathodoluminescence (CL) spectroscopy provides access to optical excitations with nanometer spatial resolution, but direct time-resolved measurements of optical resonances remain challenging. Here, we demonstrate that CL interferometry provides access to the temporal response, phase behavior, and modal spectral structure of resonant nanoscale scatterers without requiring ultrafast pump-probe schemes. We develop an analytical framework in which Fourier transformation angle- and frequency-resolved CL interferograms yields the decay time of optical resonances governed by the linear optical response. Multimode resonators exhibit characteristic temporal CL beating signatures associated with spectral mode splitting. By exploiting transition radiation emitted from a nearby metallic surface as a broadband reference, we further demonstrate phase retrieval and cross-correlation measurements between instantaneous and resonant emission processes. Experimental measurements on Au nanoparticles, broadband plasmonic emitters, Au nanostars, and Si nanospheres supporting multipolar Mie resonances confirm the theoretical predictions, and decay times in the range 1-10 fs are derived for each system. Our results establish CL interferometry as a powerful approach for accessing spectral, spatial, and phase information within a single nanoscale measurement with fs resolution.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/12/2608.08104v1-momentum-selective-electron-and-spin-dynamics-under-ultrafast-photoexcitation",
+      "section": "quick",
+      "title_en": "Momentum-Selective Electron and Spin Dynamics under Ultrafast Photoexcitation",
+      "authors": "Gusein Bedirkhanov, Nagamalleswararao Dasari, Alexander I. Lichtenstein, Evgeny A. Stepanov",
+      "date": "2026-08-08",
+      "pdf": "https://arxiv.org/pdf/2608.08104v1",
+      "score": "6.0",
+      "evidence": "关联材料中超快时间分辨的动量选择电子与自旋动力学",
+      "tldr": "时间分辨光谱观测到相关材料中强动量依赖的电子和自旋动力学，但缺乏能同时处理局域关联与非局域涨落的实时理论。本文采用新发展的实时空多体框架模拟光激发过程，预测了节点-反节点各向异性电子加热、瞬态带内态以及反铁磁涨落的类淬灭激发等动量选择性现象。进一步揭示磁振子级联弛豫和局域磁矩熔化的动力学特征，为解读动量分辨泵浦-探测实验提供了统一理论框架。",
+      "tags": "query:iscat",
+      "abstract_en": "Recent advances in time-resolved spectroscopies have enabled direct access to the momentum-selective nonequilibrium dynamics of correlated quantum materials, revealing a strongly momentum-dependent response of electrons and collective excitations. Interpreting these observations requires a real-time theoretical framework that consistently captures the interplay between strong local electronic correlations and nonlocal collective fluctuations, a capability that remains beyond state-of-the-art nonequilibrium approaches. Using a recently developed real-time many-body framework, we resolve the momentum-selective ultrafast dynamics of a photoexcited correlated electron system. We predict a transient nodal-antinodal anisotropy in electronic heating, providing a microscopic explanation for the momentum-dependent response debated in time-resolved photoemission and Raman experiments, and identify the nonthermal spectral-weight transfer responsible for the transient antinodal in-gap states observed in ultrafast photoemission. We further uncover a momentum-selective magnetic response, in which antiferromagnetic fluctuations undergo a strongly nonthermal, quench-like excitation far above the electronic temperature while preserving their correlation length, before relaxing through a momentum-space magnon cascade toward lower-momentum modes. Finally, by tracking the real-time local spin susceptibility, we identify a dynamical, experimentally accessible signature of local-moment formation and its photoinduced melting. Our results establish a unified microscopic picture of ultrafast electronic and magnetic dynamics, providing a framework for interpreting momentum-resolved pump-probe experiments.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/12/2608.10486v1-dynamics-of-amorphous-membranes-in-the-two-dimensional-limit",
+      "section": "quick",
+      "title_en": "Dynamics of amorphous membranes in the two-dimensional limit",
+      "authors": "Liga Jasulaneca, Alberto Martín-Pérez, Hongji Zhang, Prertahn Munireternam, Natalia A. Mamchik, Chee-Tat Toh, Artem K. Grebenko, Barbaros Özyilmaz, Makars Šiškins, Farbod Alijani",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10486v1",
+      "score": "6.0",
+      "evidence": "对非晶碳膜的机械振动进行灵敏干涉式读出，与干涉散射显微镜的探测原理相通",
+      "tldr": "原子级薄机械谐振器通常依赖晶体二维材料，非晶二维极限的力学行为探索较少。本文展示了单层非晶碳（MAC）悬浮膜可实现光热驱动与干涉测量，其基频对应的预张力极低，在较低驱动功率下即出现几何非线性、应力不均和模态耦合。实验观察到硬化、软化及混合Duffing响应、非线性阻尼、参数激发等丰富非线性现象，确立了MAC作为无序控制二维纳米力学平台的价值。",
+      "tags": "query:iscat",
+      "abstract_en": "Atomically thin mechanical resonators have been realized predominantly in crystalline two-dimensional (2D) materials, such as graphene, where long-range crystalline order sets their elastic properties and defines their nonlinear resonant behavior. Extending these concepts to the amorphous 2D limit has remained largely unexplored. Here, we demonstrate that monolayer amorphous carbon (MAC) forms suspended membranes that support optothermal actuation and sensitive interferometric readout across both linear and nonlinear regimes of its resonant motion. We resolve thermomechanical motion, driven resonances, and multimode spectra in MAC nanodrums. The frequencies of fundamental vibration modes correspond to unusually low pretensions, placing monolayer MAC nanodrums in a regime where geometric nonlinearities, stress heterogeneity, and mode coupling emerge at comparatively low drive powers. Consistently, we observe pronounced nonlinear dynamics, including hardening, softening, and mixed Duffing responses, nonlinear damping, parametrically excited modes, and signatures of intermodal coupling. These results establish MAC as a robust nanoelectromechanical platform and open an experimental route to disorder-governed nanomechanics in the 2D amorphous limit.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

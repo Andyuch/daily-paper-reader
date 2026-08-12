@@ -1,0 +1,201 @@
+Title: Dynamics of amorphous membranes in the two-dimensional limit
+
+URL Source: https://arxiv.org/pdf/2608.10486v1
+
+Published Time: Wed, 12 Aug 2026 00:44:49 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+## Dynamics of amorphous membranes in the two-dimensional limit 
+
+Liga Jasulaneca, 1, ∗ Alberto Mart´ ın-P´ erez, 2 Hongji Zhang, 3, 4 Prertahn Munireternam, 3 Natalia A. Mamchik, 3
+
+Chee-Tat Toh, 3, 4, 5 Artem K. Grebenko, 3, 4 Barbaros ¨Ozyilmaz, 3, 4, 5, 6 Makars ˇSiˇ skins, 7, ∗ and Farbod Alijani 2
+
+> 1
+
+Institute of Solid State Physics, University of Latvia, Kengaraga Street 8, LV-1063, Latvia 
+
+> 2
+
+Delft University of Technology, Mekelweg 2, Delft, 2628 CD, the Netherlands 
+
+> 3
+
+Department of Materials Science and Engineering, National University of Singapore, Singapore 
+
+> 4
+
+Department of Physics, National University of Singapore, Singapore 
+
+> 5
+
+Centre for Advanced 2D Materials Singapore, National University of Singapore, Singapore 
+
+> 6
+
+Institute for Functional Intelligent Materials, National University of Singapore, Singapore 
+
+> 7
+
+School of Physics and Astronomy, University of Southampton, Southampton, SO17 1BJ, United Kingdom 
+
+Atomically thin mechanical resonators have been realized predominantly in crystalline two-dimensional (2D) materials, such as graphene, where long-range crystalline order sets their elastic properties and defines their nonlinear resonant behavior. Extending these concepts to the amor-phous 2D limit has remained largely unexplored. Here, we demonstrate that monolayer amorphous carbon (MAC) forms suspended membranes that support optothermal actuation and sensitive in-terferometric readout across both linear and nonlinear regimes of its resonant motion. We resolve thermomechanical motion, driven resonances, and multimode spectra in MAC nanodrums. The frequencies of fundamental vibration modes correspond to unusually low pretensions, placing mono-layer MAC nanodrums in a regime where geometric nonlinearities, stress heterogeneity, and mode coupling emerge at comparatively low drive powers. Consistently, we observe pronounced nonlin-ear dynamics, including hardening, softening, and mixed Duffing responses, nonlinear damping, parametrically excited modes, and signatures of intermodal coupling. These results establish MAC as a robust nanoelectromechanical platform and open an experimental route to disorder-governed nanomechanics in the 2D amorphous limit. 
+
+INTRODUCTION 
+
+Atomically thin suspended membranes of two-dimensional (2D) materials combine low mass, strong in-plane covalent bonding, and extreme out-of-plane flex-ibility, providing access to resonant mechanical motion across a wide dynamic range [1, 2]. In these materials, thermally driven Brownian motion gives access to intrin-sic properties such as effective mass, tension and dissi-pation, while externally driven motion reveals nonlin-ear phenomena including amplitude-dependent frequency shifts, nonlinear damping and mode interactions [3–5]. These capabilities have established 2D resonators as ver-satile systems for nanoscale materials characterization [3, 6], tunable sensing [7, 8] and studies of coupling be-tween mechanical motion and electronic, optical, mag-netic and thermal degrees of freedom [4, 5, 9–11]. A range of crystalline 2D materials are utilized as suspended res-onators [4, 5, 9–11], including graphene [4], MoS 2 [5], hBN [9], and FePS 3 [10]. So far, such studies have largely focused on crystalline membranes, whose elastic behav-ior is closely linked to lattice symmetry and long-range order. Amorphous 2D resonators, in contrast, remain much less explored. Thicker amorphous nanomechanical res-onators such as silicon nitride [12] and silicon carbide [13] exhibit high mechanical stability and quality fac-tors despite the absence of crystalline order, demon-     
+
+> ∗Correspondence to: Makars ˇSiˇ skins (m.siskins@soton.ac.uk), Liga Jasulaneca (liga.jasulaneca@cfi.lu.lv)
+
+strating that long-range periodicity is not required for high-performance nanoelectromechanical systems. How-ever, realizing freestanding membrane resonators made of amorphous materials in the 2D limit remains chal-lenging, because the membrane must remain continu-ous, survive transfer, and form stable suspended struc-tures over micron-scale cavities. Approaches for creat-ing 2D amorphous resonators include laser oxidation of crystalline 2D materials [14] and electron-induced cross-linking of aromatic self-assembled monolayers to form carbon nanomembranes (CNMs) [15]. CNMs represent an important example of ultrathin amorphous resonators, with vibrational modes described within a linear mem-brane model [15]. However, their formation through cross-linking of molecular precursors imposes limitations on synthesis and subsequent single-layer manipulation and transfer onto substrates. Monolayer amorphous car-bon (MAC) provides a distinct route to the atomically thin amorphous limit, combining large-area continuity and mechanical robustness in a single freestanding mem-brane. It is synthesized as a free-standing monolayer comprising an sp 2-bonded carbon network that is amor-phous at the atomic scale [16]. Its lack of in-plane long-range order makes it a model system for studying how structural heterogeneity shapes electrical and mechan-ical properties in a 2D membrane [17]. Additionally, in contrast to graphene, MAC can be reliably grown wide-bandgap and electrically insulating [16], suppress-ing charge transport and enabling mechanical dynamics to be probed in relative isolation from damping effects of electronic origin [18]. These properties make MAC a particularly attractive candidate for studying nanome-arXiv:2608.10486v1 [cond-mat.mes-hall] 11 Aug 2026 2PBS NDF DM Obj vacuum 633 nm SA polarization of incident and reflected beams QWP BPF 488 nm PD     
+
+> VNA
+> adbcefg
+> 5 μm
+> fully covered partly covered
+> 1 μm
+> z, nm 020 40 60
+> 2 μm
+> MAC 1.0 nm SiO2 1340 cm -1 Intensity (arb. unit)  1588 cm -1
+> a
+> D
+> Si mirror SiNx MAC
+> (n, k) b
+> DG
+> D
+
+FIG. 1. Optothermal actuation and interferometric readout of vibrating monolayer amorphous carbon (MAC) membranes. (a) Schematic illustration of MAC, highlighting its structural characteristics: five-, six-, seven-, and eight-member rings, varying bond angles and lengths, and locally hexagonal patches. (b) Raman spectrum acquired on suspended monolayer MAC, showing the disorder-activated D band near 1340 cm −1 and the G band near 1588 cm −1, consistent with disordered sp 2 carbon. (c) SEM image of MAC suspended over a Si-supported holey SiN x array, showing continuous suspended regions across the circular openings. (d) AFM characterization of transferred MAC. Left: AFM topography and height profile of MAC on SiO 2, showing an approximately 1 nm step height consistent with an atomically thin transferred film. Right: AFM image of an intact suspended MAC nanodrum. (e) Schematic of the actuation and readout setup. Blue and red beams were focused onto the membrane through a 50 × objective (NA = 0.42). NDF, neutral density filter; PBS, polarizing beam splitter; QWP, quarter-wave plate; DM, dichroic mirror; BPF, bandpass filter; PD, photodetector; VNA, vector network analyzer; SA, spectrum analyzer. (f) Schematic of the Fabry–P´ erot-type configuration formed by the suspended MAC membrane and the underlying Si substrate. (g) Calculated power-normalized interferometric responsivity |∂R/∂D | as a function of membrane–substrate gap for monolayer MAC, 5 nm MAC, and monolayer graphene. 
+
+chanics in an amorphous monolayer. Here, we realize above-bandgap optothermal actuation and below-bandgap interferometric readout to character-ize the electrically insulating membranes of atomically thin layers of MAC. We combine micron-scale mechani-cally intact suspended MAC nanodrums with the optical actuation and readout scheme to characterize both its lin-ear and amplitude-dependent vibrational response. The measured dynamics is interpreted using the tensioned membrane description consistent with that applied to 2D nanodrums. Within this framework, monolayer MAC ex-hibits low effective pretension, suggesting a regime where the effects of membrane heterogeneity are expected to be particularly pronounced in multimode and nonlinear dy-namics. 
+
+RESULTS AND DISCUSSION 
+
+We synthesized atomically thin MAC by a laser-assisted chemical vapor deposition method [16]. Fig. 1(a) schematically illustrates its disordered sp 2-bonded net-work, including non-hexagonal rings, variations in bond lengths and angles, and locally hexagonal regions. Ra-man spectra acquired on suspended membranes show the characteristic disorder-activated D and G bands of sp 2
+
+carbon (Fig. 1(b)), consistent with the Raman fingerprint of MAC [16]. Tapping-mode atomic force microscopy (AFM) of MAC transferred onto SiO 2 yielded an step height of approximately 1 nm, consistent with an atomi-cally thin transferred film [19], taking into account scan-ning probe and interface-related offsets [20] (Fig. 1(d)). Resonators were fabricated by transferring monolayer and few-layer ( ∼5 nm) MAC onto SiN x/Si (0.1/200 μm) transmission electron microscopy grids containing circu-lar through-holes with radii 1.25 μm and 2.5 μm us-ing PMMA-assisted wet transfer [16] (Fig. 1(c)). The through-hole geometry provided a reliable suspension yield, and, together with the underlying silicon surface, defined a Fabry–P´ erot (FP)-type optical cavity. AFM measurements showed relatively flat suspended mem-branes recessed approximately 40–100 nm below the top SiN x surface, likely because of adhesion to the hole side-walls (Fig. 1(d)). The dynamical characterization of these membranes was carried out in a vacuum chamber at a base pres-sure of 10 −6 mbar. Membrane motion was actuated op-tothermally using a power-modulated 488 nm diode laser (Fig. 1(e)). The motion was read out interferometrically with a 633 nm He–Ne laser, following established ap-proaches for 2D resonators [21]. The time-averaged op-tical power at the membrane was 0 .2–2 .0 mW for the modulated 488 nm excitation beam, while the 633 nm readout power was 400 μW. The displacement-to-optical-signal conversion was de-scribed using an FP-type interference model. In this ge-ometry, the semi-transparent membrane, of thickness h,and the reflective silicon surface at the bottom of the through-hole are separated by a cavity depth D of ap-proximately 200 μm (Fig. 1(f)). The reflected intensity 3Thermal Driven ac db                      
+
+> FIG. 2. Linear dynamic response of monolayer MAC nan-odrums. (a) Power spectrum showing a Lorentzian-shaped resonance from which a fundamental frequency of 13.9 MHz and Qth = 843 ±24 were obtained. (b) Driven fundamental mode of the same nanodrum, with f0,driven ≈13 .6 MHz and
+> Qdriven = 302 ±27. (c) Qdistribution for MAC nanodrums with radius R= 1 .25 μm and 2 .50 μm. (d) Pretension dis-tributions for the same radius values. Horizontal and vertical black bars indicate the median values and interquartile ranges of n0and Q. Data points are slightly scattered in radius value for clarity.
+
+is modulated by interference between light reflected from the membrane and the silicon substrate. At normal in-cidence, the Fresnel reflection coefficient of a single air– membrane interface is 
+
+rm = 1 − ˜n
+
+1 + ˜ n , (1) where ˜ n = n − ik is the complex refractive index, with real part n and extinction coefficient k. For the device ge-ometry, reflections at all interfaces and phase accumula-tion within the membrane and vacuum gap were included using a transfer-matrix model [22]. The resulting com-plex reflection amplitude of the complete air–membrane– vacuum-gap–silicon stack is denoted by rtot (D), where D
+
+is the membrane–substrate separation. The correspond-ing reflectance is 
+
+R(D) = |rtot (D)|2 . (2) The reflectance varies approximately sinusoidally with 
+
+D [23]. The power-normalized displacement responsiv-ity is |∂R/∂D | and quantifies the change in reflected in-tensity per unit membrane displacement and per unit incident intensity. Monolayer MAC exhibits an optical bandgap around 2.1 eV ( ∼590 nm), with an enhanced real part ε1 and a reduced imaginary part ε2 of the dielectric function near the absorption onset [16]. At the 633 nm transduc-tion wavelength, which lies below the bandgap, ε1 ≈ 8.4and ε2 ≈ 0.15, estimated from ellipsometric data of as-synthesized MAC monolayer [16]. Since the com-plex dielectric function and refractive index are related by ε = ˜ n2, these values correspond to a high-n, low-k
+
+regime. This provides predominantly dispersive trans-duction, while the much smaller extinction coefficient compared with monolayer graphene [24] implies reduced optical absorption. In contrast, the actuation wavelength of 488 nm lies above the bandgap of MAC, where in-creased absorption enables efficient optothermal driving. The calculated power-normalized displacement respon-sivities |∂R/∂D | for monolayer and 5-nm-thick MAC in vacuum, together with monolayer graphene as a reference (Fig. 1(g)), show that monolayer MAC provides a respon-sivity of the same order of magnitude as graphene in this transduction geometry. For 5-nm-thick MAC, the calcu-lated responsivity exceeds that of monolayer graphene, indicating that modestly thicker MAC membranes can provide enhanced interferometric transduction while re-taining low optical absorption at the readout wavelength. To estimate the membrane displacement, we measured the power spectral density of a fundamental mode of a representative 2.5 μm-radius monolayer nanodrum using a spectrum analyzer, as shown in Fig. 2(a). The reso-nance exhibits a Lorentzian lineshape characteristic of a damped harmonic oscillator. A Lorentzian fit with a constant background yielded a resonance frequency 
+
+f0,th ≈ 13 .9 MHz and a quality factor Qth = 843 ± 24. By subtracting a frequency-independent background 
+
+Sv, bg (f ) from the measured voltage noise spectral density 
+
+Sv (f ), and integrating the mechanical contribution over a frequency window around the resonance, the mean-square voltage fluctuations associated with Brownian mo-tion were obtained as 
+
+⟨v2⟩ =
+
+Z
+
+[Sv (f ) − Sv, bg (f )] df. (3) The resonance frequency f0 and linewidth γ were ex-tracted from Lorentzian fits with a fixed background level. The mean-square displacement was obtained from the equipartition theorem as 
+
+⟨x2⟩ = kBTmeff (2 πf 0)2 , (4) where T is the temperature and meff is the effective modal mass. T was assumed to be equal to the room temperature of 293 K and the modal mass was estimated from the membrane geometry assuming a circular nan-odrum with uniform areal mass density ρ2D ,
+
+meff = αρ 2D πR 2, (5) where α = 0 .269 corresponds to the fundamental mode of a tension-dominated circular membrane. Since the areal mass density of suspended monolayer MAC has not been directly measured, we approximate it as ρ2D = ρh , us-ing an effective density ρ = 1300 kg m −3 and nominal 4monolayer thickness h = 0 .6 nm, appropriate for a pre-dominantly threefold-coordinated carbon network [16]. Comparing the measured voltage variance ⟨v2⟩ with the thermal displacement variance ⟨x2⟩ yields an estimate of the optical transduction factor in units of nm/V. The thermomechanical spectrum of the same 2.5 μm-radius monolayer MAC nanodrum was calibrated using the equipartition theorem, giving xrms ≈ 0.4 nm and an opti-cal transduction factor of (4 .88 ± 0.05) × 10 3 nm/V. The calibrated displacement noise floor corresponds to a dis-placement sensitivity of ∼ 2.1 pm /√Hz, or equivalently a displacement power spectral density of ∼ 4.4 pm 2/Hz. The Brownian resonance peak rises by approximately 1 pm 2/Hz above this background. This sensitivity is comparable to the 0 .6 pm /√Hz reported for graphene op-tomechanical resonators [25], despite the non-optimized interferometric geometry used here, with a mirror sep-aration of approximately 200 μm. The calibration is limited mainly by uncertainty in modal mass, possible laser-induced temperature offsets, and deviations from an ideal tension-dominated mode shape. Across three de-vices with sufficient Brownian signal, the extracted trans-duction factors varied within a factor of 3. The resonance frequency showed only weak dependence on the readout laser power, in contrast to the linewidth. The same device was subsequently actuated using amplitude-modulated 488 nm optothermal excitation. The driven response (Fig. 2(b)) yielded f0,driven ≈
+
+13 .6 MHz and Qdriven = 302 ± 27. Consequently, the difference in resonance frequency and quality factor be-tween thermomechanical and driven measurements is at-tributed to optothermal heating introduced by the blue laser and to operation at higher amplitudes in the driven regime. Across the measured MAC monolayers, the experi-mentally determined fundamental frequencies range from 2.4 to 19 MHz, with quality factors from 235 to 1750 (Fig. 2(c)). Nanodrums with R = 2 .5 μm showed an ap-proximately twofold higher median Q than those with 
+
+R = 1.25 μm. A similar diameter dependence has been reported for graphene membranes and attributed to geometry-dependent dissipation [26]. We use the obtained resonance frequencies to estimate an equiva-lent two-dimensional pretension n0 within the standard tension-dominated circular membrane model commonly used for suspended 2D material nanodrums [2, 3]. In this model, the axisymmetric fundamental frequency is 
+
+f0 = α01 
+
+2πR 
+
+r n0
+
+ρ2D 
+
+, (6) where α01 = 2 .4048 is the first zero of the zeroth-order Bessel function of the first kind, J0, R is the membrane radius, n0 is the two-dimensional pretension, and ρ2D is the areal mass density defined above [27]. Using this ex-pression, the measured fundamental frequencies yield n0
+
+in the range 10 −4 − 10 −3 N m −1 (Fig. 2(d)). These val-ues should be regarded as order-of-magnitude estimates of the effective pretension. Nevertheless, they are one to two orders of magnitude lower than the pretensions com-monly reported for suspended crystalline graphene mem-branes [28], placing monolayer MAC in a low-effective-pretension regime. This low-pretension regime is relevant not only for the linear resonance frequencies, but also for the expected onset of amplitude-dependent dynamics. Following the linear dynamics characterization, we fur-ther consider the large-amplitude response of MAC res-onators at higher optothermal drive power. To describe this high-amplitude behavior, we model the fundamen-tal flexural mode as a driven Duffing resonator with amplitude-dependent damping, 
+
+meff ¨x+meff (γ1 +γ3x2) ˙ x+( k1 +k3x2)x = F cos( ωt ), (7) where meff is the effective modal mass, F and ω are the drive amplitude and angular frequency, and k1 = meff ω20 .The coefficient k3 describes the cubic Duffing stiffness, while γ1 = ω0/Q and γ3 describe the linear and nonlin-ear damping, respectively. The onset of non-negligible nonlinear response may be estimated by taking the cubic stretching force to reach 10% of the linear restoring force, giving an onset displacement that scales as [2] 
+
+xnl ∝ R
+
+r n0
+
+Eh , (8) where R is the drum radius, n0 is the two-dimensional pretension, E is Young’s modulus, and h is the mem-brane thickness. This scaling indicates that, for devices of comparable radius and comparable two-dimensional stiffness Eh , the one- to two-order-of-magnitude reduc-tion in pretension inferred above would lower the ex-pected nonlinear-onset displacement by approximately a factor of 3–10. Fig. 3 shows representative examples of amplitude-dependent responses observed in different MAC nan-odrums. As the optothermal drive power was in-creased, a characteristic bending of the resonance curve toward higher frequencies was observed near resonance (Fig. 3(a)). This behavior is the signature of Duffing hardening nonlinearity, corresponding to a positive cu-bic stiffness coefficient k3 > 0. A number of other res-onators exhibited a decrease of the resonance frequency with increasing drive power (Fig. 3(c)), attributed to a softening nonlinearity corresponding to k3 < 0. In atomically thin nanodrum resonators, such softening can arise from geometric asymmetries, uneven tension, mem-brane bulging, or motion-dependent optothermal effects [5]. Additionally, nonlinear damping becomes apparent when the required drive amplitude is compared with the peak response amplitude. For both hardening and soft-ening cases, Vin ,pk exhibits an approximately quadratic dependence on max [ Vout ,pk (f )] (Fig. 3(b,d)). This be-havior is consistent with amplitude-dependent nonlinear damping described by the meff γ3x2 ˙x term in the equation of motion, as reported previously for 2D nanomechanical resonators at large vibration amplitudes [8, 29]. Notably, the nonlinear stiffness is not fixed in sign for all devices. In some nanodrums, an initial harden-5Hardening Mixed Softening     
+
+> f(MHz) f(MHz) f(MHz)
+> Vout, pk (V)
+> Vout, pk (V)
+> Vout, pk (mV)
+> abcdef
+
+FIG. 3. Amplitude-dependent nonlinear dynamics of MAC resonators. Near-resonant driven responses showing hardening (a) and softening (c) Duffing-type nonlinearities with increasing blue laser drive power. (b, d) Nonlinear damping, indicated by the quadratic relationship between the drive and maximum response amplitudes. Dashed and solid lines show linear and quadratic fits, respectively. (e) Transition from hardening (H) to mixed (M) to softening (S) in a representative MAC nanodrum and (f) statistics of nanodrums showing different nonlinear response types. Direct,        
+
+> f0
+> Parametric,
+> 2f0
+> 14.0 14.2 14.4
+> f(MHz) f(MHz) 0.0 0.5 1.0 1.5 2.0 2.5 V (mV) out pk ,
+> -13 dBm -7 dBm 11 dBm 10 dBm
+> abc
+> f(MHz)
+
+FIG. 4. Signatures of modal interactions in a MAC nan-odrum. (a) Frequency response at increasing drive, showing the development of a dip in the resonance peak amplitude, consistent with the onset of internal resonance. (b) The same response plotted in normalized units, Vout /V in , highlights the strong reduction in the apparent quality factor Q. (c) Mode spectrum of a similar MAC nanodrum, showing secondary mode near 2 f0, suggesting a 2:1 internal resonance. 
+
+ing response transitions into a mixed regime and then into softening behavior (Fig. 3(e)). Such coexistence of hardening and softening suggests competing nonlinear contributions. Similar sign changes of the effective non-linear stiffness have been reported when multiple non-linear mechanisms coexist, including static curvature, symmetry breaking, higher-order nonlinearities, strain inhomogeneity, and motion-dependent laser-heating ef-fects [5, 30–32]. Across the full monolayer dataset, these responses fall mainly into two categories: purely soft-ening behavior and mixed hardening–softening behavior (Fig. 3(f)). The occurrence of pure softening correlates with lower fundamental resonance frequencies, consistent with a stronger influence of low pretension, static de-formation, or spatially nonuniform stress in the lowest-frequency devices. Furthermore, a set of membrane devices shows sig-natures of dynamics beyond a single-mode Duffing re-sponse (Fig. 4). In the frequency-response curves, the resonance peak develops a pronounced dip that remains visible over several drive levels (Fig. 4(a)). When plot-ted in drive-normalized units, Vout /V in (Fig. 4(b)), the response shows a threshold-like reduction in the apparent quality factor, with an abrupt drop occurring at nearly the same frequency for successive drive amplitudes [4, 33] (Fig. 4(b)). This behavior points to dynamics beyond a single-mode hardening Duffing response, for which the resonance maximum would generally be expected to con-tinue shifting upward with increasing drive. Instead, the dip and associated reduction in apparent Q suggest an additional amplitude-dependent dissipation channel. Aplausible mechanism is intermodal energy transfer me-diated by internal resonance, where nonlinear frequency 6f (MHz) f (MHz)      
+
+> Direct, 1st mode
+> f/f0 for ideal tensioned membrane
+> Parametric, 1st mode Parametric, 2nd mode Direct, 2nd mode Direct, 1st mode 5 nm MAC, R=2.5 μm monolayer MAC R=2.5 μm
+> ab
+> FIG. 5. Mode spectra of monolayer and multilayer MAC nanodrums. Representative spectra of (a) monolayer and (b) multilayer MAC nanodrums show multiple vibrational modes and nonlinear response features. Thin vertical lines are guides to the eye marking the mode-frequency ratios expected for an ideal tension-dominated circular membrane.
+
+tuning brings two modes into a near-commensurate re-lation and enables efficient energy exchange. Similar be-havior has been reported in graphene nanodrums, where parametric–direct 2:1 internal resonance enhances effec-tive nonlinear damping, and in MoS 2 nanodrum res-onators, where enhanced nonlinear damping appears in the parameter space favoring internal resonance [4, 34]. Consistent with this interpretation, spectra acquired at the same drive level show a secondary mode near 2 f0
+
+(Fig. 4(c)), suggesting a 2:1 modal relation. These ob-servations suggest that the drive-dependent reduction in apparent Q may arise from coupling-mediated energy transfer rather than purely single-mode Duffing nonlin-earity. Although the drive-dependent measurements are not displacement-calibrated, the observation of such non-linear features at the lowest applied drive levels is con-sistent with the low-pretension scaling. Since internal resonance requires the participation of at least two modes, we next examine the broader mode structure of MAC nanodrums. Representative spectra of monolayer and multilayer nanodrums are shown in Fig. 5. The spectra contain multiple vibrational modes, and the thin vertical lines mark the mode ratios expected for an ideal tension-dominated circular membrane as reference guides [27]. For monolayer MAC (Fig. 5(a)), the mea-sured mode positions deviate substantially from these ideal ratios. These deviations may arise from nonuni-form residual tension, membrane morphology, local mass loading, elastic heterogeneity, residual bending rigidity, or static out-of-plane deformation [3, 5, 35]. In mono-layer MAC, these perturbations are expected to be am-plified by the combination of low pretension and intrin-sic structural heterogeneity of the amorphous network. This low-pretension regime may enhance the sensitivity of the dynamics to geometric nonlinearities, static sag-ging, and spatially nonuniform stress. In comparison, the 5-nm-thick nanodrums show more regular membrane-like spectra (Fig. 5(b)), with fundamental resonance fre-quencies in the range 19–26 MHz and an estimated pre-tension of approximately 0 .1 N m −1, comparable to val-ues reported for graphene membranes [3, 36]. This sug-gests that increasing the membrane thickness can average out local structural variations, thereby restoring more conventional membrane behavior. However, the present experiment alone does not allow isolating the influence of thickness from the substantially higher pretension of these samples, nor from potential differences in morphol-ogy or mass distribution. 
+
+> CONCLUSIONS
+
+In conclusion, we have demonstrated that suspended monolayer amorphous carbon can operate as an atomi-cally thin nanomechanical resonator. Using optothermal actuation and interferometric readout, we resolved Brow-nian motion, driven linear response, nonlinear dynamics, and multimode spectra in MAC nanodrums. The mea-sured resonance frequencies indicate low effective preten-sion in monolayer devices, placing them in a regime where geometric nonlinearities, stress heterogeneity, and mode coupling can become important at comparatively low drive powers. Consistently, the monolayer mode spec-tra deviate from the ratios expected for an ideal tension-dominated circular membrane. At larger drive ampli-tudes, the resonators enter a rich nonlinear regime in which amplitude-dependent stiffness, nonlinear damping, parametric excitation, and intermodal coupling all con-tribute to the observed response. These results estab-lish MAC as a mechanically robust system for studying how amorphous structure and low effective tension influ-ence membrane dynamics in the two-dimensional limit. Future work correlating mechanical response with local morphology, thickness, mass loading, and stress fields should clarify the role of structural disorder in shaping dissipation and nonlinear mode coupling in atomically thin amorphous membranes [3, 5, 35]. 
+
+> Author Contributions
+
+L.J., F.A., and M. ˇS conceptualised the project. L.J., A.M.P., F.A., and M. ˇS developed the methodology. L.J., A.M.P., H.Z., P.M., N.A.M., and A.K.G. performed ex-perimental investigations. L.J. and A.M.P. performed the formal data analysis. H.Z., P.M., and N.A.M. fab-ricated samples. L.J., A.K.G., P.M., and H.Z. charac-7terised the material. A.K.G., C.T.T., B. ¨O., F.A., and M. ˇS supervised the project. L.J., B. ¨O., and F.A. ac-quired the funding. The paper was jointly written by L.J., M. ˇS., A.M.P. and F.A., with a main contribution from L.J. All authors discussed the results and com-mented on the paper. 
+
+Acknowledgments 
+
+L.J. acknowledges support from the ERDF Postdoc-toral Research Project No. 1.1.1.9/LZP/1/24/138. F.A. acknowledges funding from the European Union through the ERC Consolidator Grant NCANTO, Grant Agree-ment No. 101125458. Views and opinions expressed are, however, those of the authors only and do not neces-sarily reflect those of the European Union or the Eu-ropean Research Council. Neither the European Union nor the granting authority can be held responsible for them. B. ¨O. acknowledges support from the National Re-search Foundation, Prime Minister’s Office, Singapore, under its Competitive Research Programme, CRP Award No. NRF-CRP22-2019-008, and from the Ministry of Ed-ucation, Singapore, under its Research Centre of Excel-lence award to the Institute for Functional Intelligent Ma-terials (I-FIM), Project No. EDUNC-33-18-279-V12. 
+
+Conflicts of Interest 
+
+The authors declare no conflicts of interest. 
+
+Data Availability Statement 
+
+The data that support the findings of this study are available from the corresponding author upon reasonable request. 
+
+[1] Lemme, M. C. et al. Nanoelectromechanical sensors based on suspended 2D materials. Research 2020 ,8748602 (2020). [2] Steeneken, P. G., Dolleman, R. J., Davidovikj, D., Ali-jani, F. & van der Zant, H. S. J. Dynamics of 2D material membranes. 2D Mater. 8, 042001 (2021). [3] Davidovikj, D. et al. Nonlinear dynamic characterization of two-dimensional materials. Nat. Commun. 8, 1253 (2017). [4] Ke¸ skekler, A. et al. Tuning nonlinear damping in graphene nanoresonators by parametric–direct internal resonance. Nat. Commun. 12 , 1099 (2021). [5] Kaisar, T., Lee, J., Li, D., Shaw, S. W. & Feng, P. X.-L. Nonlinear stiffness and nonlinear damping in atomically thin MoS 2 nanomechanical resonators. Nano Lett. 22 ,9831–9838 (2022). [6] Arjmandi-Tash, H. et al. Mechanical reinforcement of graphene via wrinkling. npj 2D Mater. Appl. 10 , 65 (2026). [7] Liu, H. et al. Enhanced sensitivity and tunability of ther-momechanical resonance near the buckling bifurcation. 
+
+2D Mater. 11 , 025028 (2024). [8] Kartal, E. et al. Frequency stability of graphene non-linear parametric oscillator. Nano Lett. 26 , 7501–7508 (2026). [9] Zheng, X.-Q., Lee, J. & Feng, P. X.-L. Hexagonal boron nitride nanomechanical resonators with spatially visual-ized motion. Microsyst. Nanoeng. 3, 1–8 (2017). [10] ˇSiˇ skins, M. et al. Magnetic and electronic phase transi-tions probed by nanomechanical resonators. Nat. Com-mun. 11 , 2698 (2020). [11] Liu, H. et al. Tuning heat transport in graphene by ten-sion. Phys. Rev. B 108 , L081401 (2023). [12] Tsaturyan, Y., Barg, A., Polzik, E. S. & Schliesser, A. Ul-tracoherent nanomechanical resonators via soft clamping and dissipation dilution. Nat. Nanotechnol. 12 , 776–783 (2017). [13] Xu, M. et al. High-strength amorphous silicon carbide for nanomechanics. Adv. Mater. 36 , 2306513 (2024). [14] Cartamil-Bueno, S. J. et al. High-quality-factor tanta-lum oxide nanomechanical resonators by laser oxidation of TaSe 2. Nano Res. 8, 2842–2849 (2015). [15] Zhang, X. et al. Vibrational modes of ultrathin carbon nanomembrane mechanical resonators. Appl. Phys. Lett. 
+
+106 , 063107 (2015). [16] Toh, C.-T. et al. Synthesis and properties of free-standing monolayer amorphous carbon. Nature 577 , 199–203 (2020). [17] Tian, H. et al. Disorder-tuned conductivity in amorphous monolayer carbon. Nature 615 , 56–61 (2023). [18] Will, M. et al. High quality factor graphene-based two-dimensional heterostructure mechanical resonator. Nano Lett. 17 , 5950–5955 (2017). [19] Zhang, H. et al. Breaking the 2-nm barrier in hard disk drives using monolayer amorphous carbon overcoats. 
+
+Adv. Mater. 38 , e19149 (2026). [20] Shearer, C. J., Slattery, A. D., Stapleton, A. J., Shapter, J. G. & Gibson, C. T. Accurate thickness measurement of graphene. Nanotechnology 27 , 125704 (2016). [21] Davidovikj, D. et al. Visualizing the motion of graphene nanodrums. Nano Lett. 16 , 2768–2773 (2016). [22] Blake, P. et al. Making graphene visible. Appl. Phys. Lett. 91 , 063124 (2007). [23] Dolleman, R. J., Davidovikj, D., van der Zant, H. S. J. & Steeneken, P. G. Amplitude calibration of 2D mechanical resonators by nonlinear optical transduction. Appl. Phys. Lett. 111 , 253104 (2017). [24] Wang, X., Chen, Y. P. & Nolte, D. D. Strong anomalous optical dispersion of graphene: complex refractive index measured by picometrology. Opt. Express 16 , 22105– 22112 (2008). [25] Barton, R. A. et al. Photothermal self-oscillation and laser cooling of graphene optomechanical systems. Nano Lett. 12 , 4681–4686 (2012). 8
+
+[26] Barton, R. A. et al. High, size-dependent quality factor in an array of graphene mechanical resonators. Nano Lett. 
+
+11 , 1232–1236 (2011). [27] Leissa, A. W. & Qatu, M. S. Vibration of Continuous Systems (McGraw-Hill, 2011), 1 edn. [28] Bunch, J. S. et al. Impermeable atomic membranes from graphene sheets. Nano Lett. 8, 2458–2462 (2008). [29] Zhang, P. et al. Probing linear to nonlinear damping in 2D semiconductor nanoelectromechanical resonators toward a unified quality factor model. Nano Lett. 23 ,9375–9382 (2023). [30] Samanta, C., Arora, N. & Naik, A. K. Tuning of ge-ometric nonlinearity in ultrathin nanoelectromechanical systems. Appl. Phys. Lett. 113 , 113101 (2018). [31] Arora, N., Singh, P., Kumar, R., Pratap, R. & Naik, A. Mixed nonlinear response and transition of nonlinearity in a piezoelectric membrane. ACS Appl. Electron. Mater. 
+
+6, 155–162 (2024). [32] Li, Z. et al. Strain engineering of nonlinear nanores-onators from hardening to softening. Commun. Phys. 
+
+7, 53 (2024). [33] Houri, S., Hatanaka, D., Asano, M. & Yamaguchi, H. Demonstration of multiple internal resonances in a mi-croelectromechanical self-sustained oscillator. Phys. Rev. Appl. 13 , 014049 (2020). [34] Prasad, P., Arora, N. & Naik, A. K. Tunable nonlinear damping in MoS 2 nanoresonator. Appl. Phys. Lett. 123 ,263509 (2023). [35] Sarafraz, A. et al. Quantifying stress distribution in ultra-large graphene drums through mode shape imag-ing. npj 2D Mater. Appl. 8, 45 (2024). [36] Davidovikj, D., Scheepers, P. H., van der Zant, H. S. J. & Steeneken, P. G. Static capacitive pressure sensing using a single graphene drum. ACS Appl. Mater. Interfaces. 9,43205–43210 (2017).

@@ -1,0 +1,819 @@
+Title: Momentum-Selective Electron and Spin Dynamics under Ultrafast Photoexcitation
+
+URL Source: https://arxiv.org/pdf/2608.08104v1
+
+Published Time: Tue, 11 Aug 2026 00:39:48 GMT
+
+Number of Pages: 17
+
+Markdown Content:
+# Momentum-Selective Electron and Spin Dynamics under Ultrafast Photoexcitation 
+
+Gusein Bedirkhanov, 1, ∗ Nagamalleswararao Dasari, 2 Alexander I. Lichtenstein, 2, 3, 4 and Evgeny A. Stepanov 1, 5 
+
+> 1
+
+CPHT, CNRS, ´Ecole polytechnique, Institut Polytechnique de Paris, 91120 Palaiseau, France 
+
+> 2
+
+Institut f¨ ur Theoretische Physik, Universit¨ at Hamburg, Notkestraße 9 , 22607 Hamburg, Germany 
+
+> 3
+
+European X-Ray Free-Electron Laser Facility, Holzkoppel 4, 22869 Schenefeld, Germany 
+
+> 4
+
+The Hamburg Centre for Ultrafast Imaging, Luruper Chaussee 149, 22761 Hamburg, Germany 
+
+> 5
+
+Coll` ege de France, 11 place Marcelin Berthelot, 75005 Paris, France 
+
+Recent advances in time-resolved spectroscopies have enabled direct access to the momentum-selective nonequilibrium dynamics of correlated quantum materials, revealing a strongly momentum-dependent response of electrons and collective excitations. Interpreting these observations requires a real-time theoretical framework that consistently captures the interplay between strong local elec-tronic correlations and nonlocal collective fluctuations, a capability that remains beyond state-of-the-art nonequilibrium approaches. Using a recently developed real-time many-body framework, we resolve the momentum-selective ultrafast dynamics of a photoexcited correlated electron system. We predict a transient nodal–antinodal anisotropy in electronic heating, providing a microscopic expla-nation for the momentum-dependent response debated in time-resolved photoemission and Raman experiments, and identify the nonthermal spectral-weight transfer responsible for the transient antin-odal in-gap states observed in ultrafast photoemission. We further uncover a momentum-selective magnetic response, in which antiferromagnetic fluctuations undergo a strongly nonthermal, quench-like excitation far above the electronic temperature while preserving their correlation length, before relaxing through a momentum-space magnon cascade toward lower-momentum modes. Finally, by tracking the real-time local spin susceptibility, we identify a dynamical, experimentally accessible signature of local-moment formation and its photoinduced melting. Our results establish a uni-fied microscopic picture of ultrafast electronic and magnetic dynamics, providing a framework for interpreting momentum-resolved pump–probe experiments. 
+
+I. INTRODUCTION 
+
+Over the past decade, ultrafast time-resolved exper-iments on strongly correlated electron systems have uncovered a range of striking phenomena, including light-induced superconductivity [1], metastable hidden phases [2], the ultrafast melting of magnetic orders [3] and insulator-metal transition [4]. Beyond probing these systems, ultrafast protocols allow matter to be actively manipulated, engineering new states on demand, for in-stance through Floquet engineering [5, 6]. These ad-vances open new opportunities for controlling quantum materials and exploiting their functionalities in future ul-trafast technologies [7]. The development of advanced time-resolved spectro-scopic techniques, such as angle-resolved photoemission spectroscopy (ARPES) [8, 9], resonant inelastic X-ray scattering (RIXS) [10–13], and Raman scattering [14– 16], has enabled direct access to momentum-selective nonequilibrium dynamics of electronic and collective ex-citations. In correlated materials, where electronic de-grees of freedom are strongly coupled to collective fluc-tuations, resolving their momentum and time depen-dence is essential for understanding the microscopic ori-gin of nonequilibrium phenomena. A prominent exam-ple is the nodal–antinodal dichotomy in cuprates [17– 20], where strong antiferromagnetic (AFM) fluctuations are associated with the emergence of a pseudogap in  
+
+> ∗gusein.bedirkhanov@polytechnique.edu
+
+the antinodal (AN) regions of the Fermi surface (FS), while coherent quasiparticles survive near the nodal (N) points. Time-resolved experiments have further revealed that this momentum-dependent distribution of spectral weight around the FS leads to markedly different pho-toexcitation dynamics [8, 21, 22]. N quasiparticles re-spond similarly to electrons in a conventional metal, whereas AN excitations exhibit qualitatively different dy-namics, reminiscent of those in an insulator, accompanied by a transient transfer of spectral weight [21]. The momentum selectivity can also be found in col-lective spin excitations. Time-resolved RIXS measure-ments on photoexcited cuprates and Mott insulating systems have revealed a pronounced momentum depen-dence of the transient magnetic response, manifested as a nonequilibrium redistribution of magnetic spectral weight across the Brillouin zone (BZ) [10–13, 23]. In the electron-doped cuprate compound Nd 2−xCe xCuO 4,photoexcitation enhances the paramagnon population and redistributes its spectral weight in a momentum-dependent manner [13]. In the iridates, by contrast, the subsequent magnon relaxation is governed by the avail-able magnetic decay channels. In gapless Sr 2IrO 4, the steep magnon dispersion toward the zone-center Gold-stone mode enables an efficient cascade of magnetic ex-citations [10, 12], whereas in gapped Sr 3Ir 2O7 the large spin gap suppresses this relaxation pathway, leading to long-lived transient magnons throughout the BZ [12]. Beyond the dynamics of magnetic excitations, an equally fundamental question concerns their microscopic origin. In paramagnetic correlated systems, increasing the Coulomb interaction drives a crossover from the itin-arXiv:2608.08104v1 [cond-mat.str-el] 8 Aug 2026 2erant Slater regime [24, 25], where magnetism originates from particle–hole instabilities of itinerant electrons, to the localized Heisenberg regime [26–30], where preformed local magnetic moments (LMMs) exist prior to magnetic ordering [31]. In the intermediate-interaction regime, LMMs emerge gradually through a crossover rather than a sharp transition and possess only a finite lifetime [32– 39]. Out of equilibrium, this distinction becomes even more subtle, as the local moment itself evolves dynami-cally, raising the fundamental question of what criterion should define its existence at a given time. Understanding these phenomena represents a major theoretical challenge. Although equilibrium properties of correlated systems can be described by a wide range of advanced many-body methods, only a few theoretical frameworks are capable of treating momentum-resolved quantum many-body dynamics in real time while simul-taneously capturing the interplay between single-particle excitations and collective charge and spin fluctuations, particularly on ultrafast timescales. The recently devel-oped real-time dual GW (D-GW ) method [40] provides such a framework by treating local correlations nonper-turbatively within nonequilibrium dynamical mean-field theory (DMFT)[41, 42], while incorporating momentum-dependent correlations diagrammatically through the coupling of electrons to spatial charge and spin fluc-tuations. This method has already been applied to the thermalization dynamics of a photoexcited extended Hubbard model near the Mott crossover, revealing dis-tinct energy-transfer pathways between single-particle and collective excitations [40]. It has also been used to study electrical conductivity near a magnetic instability, demonstrating that an accurate description requires ver-tex corrections arising from strong magnetic fluctuations, which are absent in DMFT [43]. In this work, we use D-GW to address two comple-mentary aspects of the nonequilibrium dynamics of the correlated electronic systems: the momentum-selective response to photoexcitation and the evolution of LMMs. We first analyze the momentum-resolved electronic re-sponse to a resonant pump pulse by tracking the dynam-ics of N and AN quasiparticles. We find momentum-selective heating across the FS, with AN quasiparti-cles showing a retarded heating response relative to the N ones, providing theoretical evidence for the nodal– antinodal anisotropy debated in time-resolved ARPES (tr-ARPES) and ultrafast Raman studies [15, 16, 44]. By comparing the transient spectra with their equilibrium counterparts at the same effective temperature, we iden-tify a nonthermal redistribution of spectral weight during the pump, including a transient enhancement driven by strong correlations. This offers a microscopic account of the AN in-gap states observed in tr-ARPES on optimally doped cuprates [21]. We further investigate the nonequilibrium dynamics of collective spin excitations and identify distinct behavior of the AFM and long-wavelength magnon modes. The AFM mode exhibits a quench-like response with a very high effective temperature and a nearly frozen correla-tion length, in line with the nonthermal magnon behav-ior reported by time-resolved RIXS and Raman exper-iments [13, 45]. On the contrary, the long-wavelength fluctuations follow the electronic subsystem only as long as coherent quasiparticles remain available. We fur-ther show that the nonequilibrium magnetic response is accompanied by a redistribution of magnetic spectral weight from high- to low-momentum excitations through a momentum-space magnon cascade, consistent with the efficient magnon decay observed in gapless antiferromag-nets [12]. Finally, we study the photoinduced evolution of the local magnetic moment and establish a dynamical and experimentally accessible criterion for its existence based on the slow, interaction-dependent component of the real-time local spin susceptibility, inspired by the two-component picture identified in a semiclassical equilib-rium setting in Ref. [46]. Taken together, these results establish a unified the-oretical framework for the ultrafast dynamics of cor-related electron systems across all interaction strength regimes. By treating nonequilibrium dynamics together with strong local and nonlocal correlations on an equal footing, it resolves the microscopic mechanisms under-lying the electronic and collective excitation response to photoexcitation within a single, consistent picture. This brings a broad range of ultrafast observations, so far ac-cessed piecewise by complementary probes such as tr-ARPES, ultrafast Raman, and time-resolved RIXS, onto common theoretical ground, establishing a basis for in-terpreting future time-resolved spectroscopies and antic-ipating new phenomena in ultrafast correlated matter.   
+
+> II. METHODS A. Model and method
+
+We consider the half-filled single-band Hubbard model on a square lattice as the simplest prototypical correlated electron system that captures the interplay between lo-cal Coulomb interactions and the nonlocal charge and spin collective excitations they induce. The Hamiltonian reads 
+
+H = −J X
+
+> ⟨ij ⟩,σ
+
+c† 
+
+> iσ
+
+cjσ + U X
+
+> i
+
+ni↑ni↓, (1) where c(†) 
+
+> iσ
+
+annihilates (creates) an electron with spin 
+
+σ ∈ {↑ , ↓} on a lattice site i, niσ = c† 
+
+> iσ
+
+ciσ is the corre-sponding occupation number operator, J is the nearest-neighbor hopping amplitude, ⟨ij ⟩ restricts the sum to nearest-neighbor pairs, and U is the local Coulomb re-pulsion. Throughout this work, energies are measured in units of the half-bandwidth D = 4 J = 1, correspond-ing to a natural unit of time ℏ/D , where ℏ is the re-duced Planck constant. We further adopt natural units 3
+
+ℏ = e = c = a = 1, where e the elementary charge, c
+
+the speed of light, and a the lattice constant. We con-sider U ∈ [0 .5, 1.5], covering several correlation regimes of the half-filled Hubbard model, from a weakly corre-lated metal through the metallic pseudogap regime and the metal-to-Mott-insulator crossover [31, 43]. The coupling of electrons to the pump electric field is introduced through the Peierls substitution [47]. For the bare single-particle dispersion of the square lattice, 
+
+ε(k) = −2J(cos kx + cos ky ), (2) we adopt the temporal gauge, where the scalar poten-tial is set to zero and the electric field E is related to the vector potential as A(t) = − R t 
+
+> 0
+
+Ep(¯ t) d¯t. The vector potential enters as a time-dependent shift of the crystal momentum according to ε(k, t ) ≡ ε(k − A(t)). We con-sider a pump pulse linearly polarized along the diagonal of the square lattice, resulting in the time-dependent dis-persion 
+
+ε(k, t ) = −2J [cos( kx − A(t)) + cos( ky − A(t))] . (3) The pump is characterized by an electric field consist-ing of a monochromatic carrier modulated by a Gaussian envelope, 
+
+Ep(t) = E0 exp 
+
+
+
+− (t − t0)2
+
+2σ2
+
+
+
+sin [ ωp(t − t0)] , (4) where E0, ωp, σ, and t0 denote the field amplitude, carrier frequency, temporal width, and pulse center, re-spectively. Throughout this work we choose the carrier frequency resonant with the local interaction, ωp = U .However, we observed that the obtained results are qual-itatively unaffected by moderate variations of the pump parameters, provided that the pulse remains resonant with transitions between the Hubbard bands. The pump pulse used throughout this work is illustrated in Fig. 1 for the case of U = 1 .5. The pulse spans approximately eleven optical cycles within its temporal full width at half maximum (FWHM) ≈ 47 .1, and its Fourier transform exhibits a spectral FWHM ≈ 0.116, corresponding to a relative bandwidth σω /ω p ≈ 3%. Both the pulse dura-tion and spectral bandwidth are representative of pump pulses employed in tr-ARPES experiments on cuprates, which typically extend over several to a few tens of optical cycles with relative bandwidths of a few percent [21, 22]. We investigate the ultrafast dynamics of the intro-duced model (1) using the real-time D-GW method [40, 43], a nonequilibrium extension of the dual triply irre-ducible local expansion (D-TRILEX) approach [48–50]. In D-GW , as in other dual diagrammatic extensions of DMFT [51], local electronic correlations are treated non-perturbatively within an impurity-like reference prob-lem, which in real time is formulated on the L-shaped Kadanoff–Baym contour [52]. The nonlocal correlations are incorporated diagrammatically beyond DMFT, lead-ing to the GW -like correction to the impurity self-energy ˜ΣD-GW  
+
+> k
+
+(t, t ′) = i X
+
+> q,ς
+
+˜Gk+q(t, t ′) ˜W ς 
+
+> q
+
+(t, t ′), (5) 0 50 100 150 200 
+
+t     
+
+> 0.1
+> 0.0 0.1
+> Ep(t) FWHM = 47 .1
+> Tp= 2 π/ω p≈4.189
+> t0= 120
+
+(a)      
+
+> 1.0 1.2 1.4 1.6 1.8 2.0
+
+ω  
+
+> 0123
+> |Ep(ω)|
+> ωp= 1 .5
+> FWHM = 0 .116
+
+(b)            
+
+> FIG. 1. Pump pulse used for the interaction strength U= 1 .5. (a) Time-domain electric field Ep(t) with Gaussian envelope. (b) Magnitude of the Fourier spectrum, showing a narrow frequency distribution centered at the resonant carrier fre-quency ωp=U= 1 .5. The pulse has amplitude E0= 0 .095 and is centered at t0= 120, with a temporal full width at half maximum (FWHM) of 47 .1 and a corresponding spectral FWHM of 0 .116. All quantities are given in units of the half-bandwidth.
+
+where ˜G is the nonlocal electronic Green’s function and ˜W ς is the renormalized interaction in the charge ( ς = d)and spin ( ς = m ∈ { x, y, z }) channel. This allows the method to self-consistently capture the interplay between strong local correlations and spatial charge and spin fluc-tuations, which is essential for describing momentum-selective nonequilibrium phenomena. As a result, D-GW 
+
+provides direct access to momentum- and frequency-resolved single- and two-particle observables in real time.  
+
+> B. Time-dependent spectral functions and effective temperatures
+
+To characterize the nonequilibrium electronic dynam-ics, we define the lesser ( <) and greater ( >) electronic spectral functions through the Wigner transform [42] of 4the corresponding Green’s functions, 
+
+A≶ 
+
+> k
+
+(¯ t, ω ) = ± 1
+
+π Im G≶ 
+
+> k
+
+(¯ t, ω )=
+
+Z ∞
+
+> 0
+
+dτ e iωτ G≶
+
+> k
+
+ ¯t + τ 
+
+> 2
+
+, ¯t − τ
+
+> 2
+
+ , (6) with the upper (lower) sign corresponding to the greater (lesser) component. The retarded spectral function is then given by 
+
+Ak(¯ t, ω ) = A> 
+
+> k
+
+(¯ t, ω ) + A< 
+
+> k
+
+(¯ t, ω ). (7) The spectral functions associated with collective charge and spin excitations are defined analogously from the corresponding charge density ( d) and magnetic ( m)susceptibilities. In real space these read 
+
+χdij (t, t ′) = −i⟨TC ni(t) nj (t′)⟩, (8) 
+
+χmij (t, t ′) = −i⟨TC mzi (t) mzj (t′)⟩, (9) with ni = ni↑ + ni↓, mzi = ni↑ − ni↓, and TC the contour-ordering operator. The momentum-resolved susceptibil-ities χd/m  
+
+> q
+
+(t, t ′) are obtained by spatial Fourier transfor-mation. Their corresponding lesser and greater spectral functions are 
+
+Ad/m, ≶ 
+
+> q
+
+(¯ t, ω ) = − 1
+
+π χd/m, ≶ 
+
+> q
+
+(¯ t, ω )=
+
+Z ∞
+
+> 0
+
+dτ e iωτ χd/m, ≶
+
+> q
+
+ ¯t + τ 
+
+> 2
+
+, ¯t − τ
+
+> 2
+
+ , (10) and the retarded spectral functions are 
+
+Ad/m  
+
+> q
+
+(¯ t, ω ) = Ad/m,>  
+
+> q
+
+(¯ t, ω ) − Ad/m,<  
+
+> q
+
+(¯ t, ω ). (11) To track thermalization, we define the nonequilibrium distribution functions 
+
+Fk(¯ t, ω ) = ln 
+
+ A< 
+
+> k
+
+(¯ t, ω )
+
+A> 
+
+> k
+
+(¯ t, ω )
+
+
+
+, (12) 
+
+F d/m  
+
+> q
+
+(¯ t, ω ) = ln 
+
+"
+
+Ad/m,<  
+
+> q
+
+(¯ t, ω )
+
+Ad/m,>  
+
+> q
+
+(¯ t, ω )
+
+#
+
+. (13) In thermal equilibrium, both quantities satisfy the fluctuation–dissipation relation [40, 42], 
+
+F (ω) = −β (ω + μ), (14) independent of momentum and of the fermionic or bosonic quantity considered. Out-of-equilibrium, if 
+
+F (¯ t, ω ) remains approximately linear over some fre-quency range, 
+
+F (¯ t, ω ) ≃ − βeff (¯ t) ( ω + μeff (¯ t)) , (15) one can extract the effective inverse temperature βeff (¯ t)and chemical potential μeff (¯ t)) from a linear fit within that range. Throughout this work, the fit is restricted to the frequency window surrounding the quasiparticle peak at ω = 0. The corresponding effective temperature is then defined as Teff (¯ t) = 1 /β eff (¯ t) for both the elec-tronic and collective degrees of freedom [40, 53, 54].  
+
+> C. Numerical setup
+
+We solve the resulting Kadanoff–Baym equations on the L-shaped Keldysh contour using the NESSi li-brary [55]. The DMFT impurity problem is solved within the real-time non-crossing approximation (NCA) [52]. The diagrammatic part of the D-GW calculation is per-formed using the implementation presented in Ref. [40]. The pulse and initial-state parameters used for each interaction strength are collected in Table I. The pump pulse is centered at t0 = 120 with envelope width σ =20, and the equations of motion are propagated up to 
+
+tmax = 240. All calculations employ real- and imaginary-time steps of ∆ t = ∆ τ = 0 .02 and a 20 × 20 k-point mesh spanning the first Brillouin zone, which we found sufficient to converge all dynamical quantities reported in this work.                          
+
+> TABLE I. Parameters of the four calculations: interaction strength U, temperature Tof the equilibrium state preced-ing the pump, and pump field amplitude E0.The carrier frequency is resonant, ωp=U, and the envelope width is
+> σ= 20 in all cases. All quantities are given in units of the half-bandwidth.
+> UTE0
+> 0.73 0.028 0.095 0.85 0.036 0.125 1.15 0.036 0.120 1.50 0.036 0.120
+> III. RESULTS A. Nodal–antinodal dichotomy in equilibrium
+
+Before turning to the nonequilibrium dynamics, we first summarize the key features of the equilibrium elec-tronic structure that provide the reference point for in-terpreting the photoinduced response. Figure 2 (a) shows the equilibrium phase diagram in the U –T plane ob-tained within D-GW [43]. At finite temperatures, in-creasing the interaction strength U drives the system from a metallic regime toward a Mott insulating state (black line). At sufficiently low temperatures, strong AFM correlations emerge across the entire interaction range, signaling the proximity to the N´ eel transition (blue curve). The red curve marks the onset of the pseudogap regime induced by AFM fluctuations, where the spectral function develops a minimum at the Fermi level in the antinodal (AN = ( π, 0)) point of the FS, while the nodal (N = ( π/ 2, π/ 2)) point retains a quasiparticle peak. The FS in the pseudogap regime, corresponding to the correlated metallic phase at U = 1 .15 and T = 0 .04, is illustrated in Fig. 2 (b). Strong AFM fluctuations with wave vector q = ( π, π ) scatter electrons between nested 51.0 1.5 2.0 
+
+U
+
+0.000 0.025 0.050 0.075 0.100 0.125 
+
+> T
+
+(a) AN LMM AFM/N Mott 
+
+−π −π/ 2 0 π/ 2 π
+
+# kx
+
+−π
+
+−π/ 20
+
+π/ 2
+
+π
+
+> ky
+
+NAN 
+
+(b) 
+
+Γ X M Γ
+
+2
+
+1
+
+012
+
+> ω
+
+(c) 
+
+0.0 0.2 0.4 0.6 0.8 1.0                      
+
+> Ak(ω)
+> FIG. 2. Equilibrium properties of the two-dimensional Hubbard model. (a) Equilibrium phase diagram in the U–Tplane adopted from Ref. [40]. The red line denotes the antinodal pseudogap crossover (AN), the blue line the antiferromagnetic (N´ eel) transition (AFM/N), and the black line the Mott transition. Dashed segments indicate extrapolated phase boundaries. The green line (LMM) marks the onset of local magnetic moment formation, determined in this work from the dynamical criterion introduced in Sec. III D. Vertical dashed arrows show the transient heating trajectories investigated in this work at U= 0 .73, 0 .85, 1 .15, and 1 .5. Filled squares along the trajectories indicate characteristic nonequilibrium crossover points extracted from the simulations: red squares denote the transient closure of the antinodal pseudogap, green squares the melting of the local magnetic moment, and the black square the transient crossing of the Mott boundary. (b) Fermi surface in the pseudogap regime at U= 1 .15 and T= 0 .04. The nodal (N = ( π/ 2, π/ 2)) and antinodal (AN = ( π, 0)) momenta are indicated and white arrows illustrate the characteristic momentum transfer associated with antiferromagnetic spin fluctuations. (c) Momentum-resolved equilibrium spectral function A(k, ω ) along the high-symmetry path Γ – X – M – Γ for U= 1 .15 in the pseudogap regime. The dashed cyan line indicates the Fermi level. Energies and temperatures are expressed in units of the half-bandwidth.
+
+regions of the FS, leading to a strongly momentum-dependent suppression of the spectral weight. This effect is most pronounced in the AN region, where the prox-imity of the van Hove singularity enhances the effect of AFM scattering and drives the formation of a pseudogap, while the N region remains metallic. This momentum selectivity is directly reflected in the momentum-resolved equilibrium spectral function shown in Fig. 2 (c), computed for the same parameters as the FS in panel (b). The nearly flat quasiparticle dispersion in the AN regions, originating from the van Hove singu-larity, strongly enhances particle-hole scattering between these parts of the FS connected by q = ( π, π ), thereby strengthening AFM fluctuations. Consequently, coupling of electrons to these AFM fluctuations leads to a split-ting of the quasiparticle band at the Fermi level in the AN region. In contrast, in the N region, the quasipar-ticle dispersion remains steep and coherent, resulting in weaker renormalization by spin fluctuations. The coexis-tence of pseudogapped AN states and metallic N quasi-particles gives rise to the characteristic nodal–antinodal dichotomy [17–19]. Upon further lowering the tempera-ture, AFM correlations continue to strengthen until a gap also develops at the N point, driving the system toward an AFM ordered state [31].  
+
+> B. Photoinduced electron dynamics at N and AN
+
+Having established the equilibrium electronic struc-ture and the origin of the nodal–antinodal dichotomy, we now turn to its nonequilibrium evolution under pho-toexcitation. We focus on three representative interac-tion strengths: the weakly correlated metal ( U = 0 .85), the correlated metal at the center of the pseudogap regime ( U = 1 .15), and the vicinity of the Mott crossover (U = 1 .5). The corresponding photoinduced heating tra-jectories are indicated by the vertical dashed gray arrows in Fig. 2 (a). By tracking the momentum-resolved elec-tronic spectra and their effective temperatures through-out the pump pulse, we demonstrate how the equilib-rium momentum differentiation governs the momentum-selective redistribution of spectral weight and energy out of equilibrium. To characterize the photoinduced dynamics, we evalu-ate the time-dependent spectral function Ak(¯ t, ω ) at the N and AN momenta, together with the corresponding electronic effective temperature Teff (¯ t). The results are summarized in Fig. 3: the top and middle rows show the evolution of the AN and N spectral functions, re-spectively, while the bottom row compares the effective temperatures of electrons and magnons. Before discussing the nonequilibrium dynamics at in-dividual interaction strengths, we first establish how the transient trajectories are represented in the phase dia-gram. As shown in Fig. 3, the pump pulse continuously 60.00 0.60 1.20 
+
+> AAN
+
+(a) 
+
+U = 0 .85    
+
+> ¯t= 80 ¯t= 120 ¯t= 160
+
+0.50 0.25 0.00 0.25 0.50 
+
+ω
+
+0.00 0.80 1.60 
+
+> AN
+
+(d) 
+
+50 100 150 200 
+
+¯t
+
+0.025 0.050 0.075 0.100 0.125 
+
+> Teff
+
+(g) 
+
+0.00 0.40 0.80 
+
+(b) 
+
+U = 1 .15 
+
+0.50 0.25 0.00 0.25 0.50 
+
+ω
+
+0.00 0.40 0.80 (e) 
+
+50 100 150 200 
+
+¯t
+
+0.025 0.050 0.075 0.100 0.125 (h) 
+
+0.00 0.20 0.40 
+
+(c) 
+
+U = 1 .5
+
+0.50 0.25 0.00 0.25 0.50 
+
+ω
+
+0.00 0.25 0.50 (f) 
+
+50 100 150 200 
+
+¯t
+
+0.05 0.10 0.15 0.20 (i) AAN                         
+
+> AN
+> Am
+> Γ
+> Am
+> M
+> FIG. 3. Momentum-resolved spectral functions and effective temperatures during the pump excitation, one column per in-teraction strength. Top row (a)–(c): antinodal spectral function AAN (ω) at probe times ¯ t, evaluated at AN = ( π, 0). Middle row (d)–(f): nodal spectral function AN(ω), evaluated at N = ( π/ 2, π/ 2). Bottom row (g)–(i): effective temperature Teff (¯ t)extracted at the antinodal point AAN (red) and nodal point AN(blue), together with the magnon effective temperatures A(m)Γ
+> (green) and A(m)M(purple), evaluated at Γ = (0 ,0) and M = ( π, π ), respectively. For U= 0 .85 and 1 .15, the vertical dashed lines mark the gap closing at the antinodal and/or nodal points; for U= 1 .5 they mark the Mott transition. The shaded area indicates the effective pulse window. All quantities are given in units of the half-bandwidth.
+
+heats the system, such that a single nonequilibrium tra-jectory at fixed U sweeps through a sequence of effective-temperature regimes, from the low-temperature pseudo-gapped state to the high-temperature metallic regime (or, for U = 1 .5, across the Mott boundary). The time-dependent evolution can therefore be mapped onto an effective-temperature trajectory in the phase diagram, al-lowing the characteristic nonequilibrium crossover points to be identified from a single heating simulation at each interaction strength. The corresponding nonequilibrium crossover points are indicated by squares along the heat-ing trajectories in Fig. 2 (a). The red square marks the transient closure of the AN pseudogap, which oc-curs at an effective temperature significantly higher than the equilibrium pseudogap crossover (red line). Similarly, for U = 1 .5, the black square marks the transient cross-ing of the equilibrium Mott boundary during the heat-ing trajectory. These deviations from the equilibrium phase boundaries provide the first indication that the photoinduced dynamics are intrinsically nonthermal and cannot be understood as a simple heating of the equilib-rium state. We first consider the weakly correlated metallic regime at U = 0 .85, shown in the first column of Fig. 3. Before the arrival of the pump, the D-GW spectral function ex-hibits a pronounced nodal–antinodal dichotomy: while the N spectrum displays a sharp quasiparticle peak at the Fermi level (middle panel), the AN spectrum exhibits a pseudogap induced by AFM fluctuations (upper panel). As the system is driven out of equilibrium, the AN pseu-dogap is progressively suppressed, and by the latest probe time coherent quasiparticle peaks have emerged at both momenta, signaling the restoration of a metallic Fermi surface. The momentum selectivity of electronic heating, shown in Fig. 3 (g), directly reflects the equilibrium electronic structure. At the onset of the pump, the metallic N quasi-particles absorb energy considerably more efficiently than the pseudogapped AN states, leading to a rapid increase in the temperature difference between the two regions of the FS. This difference remains nearly constant until ¯t ≃ 132, when the AN pseudogap collapses. Once coher-ent quasiparticle states are restored at the antinode, the AN heating rate increases, and the temperature differ-7ence between the N and AN electrons gradually dimin-ishes. In the correlated metallic regime at U = 1 .15, shown in the second column of Fig. 3, the overall nonequilib-rium dynamics remains qualitatively similar to that of the weakly correlated metal. Before the arrival of the pump, however, both the N and AN spectral functions exhibit pseudogaps. During the pulse, the N pseudogap closes first [vertical dashed line at ¯ t ≃ 116 in Fig. 3 (h)], followed by the AN one [vertical dashed line at ¯ t ≃ 136]. By the end of the pulse, coherent quasiparticle peaks have again developed at both momenta, signaling the restora-tion of a metallic state. The momentum-selective heating nevertheless persists. Once the nodal pseudogap has col-lapsed, the N electrons heat more efficiently than their AN counterparts, establishing a temperature difference that remains nearly constant until the antinodal pseudo-gap also disappears. Compared to the weakly correlated metal, however, this transient nodal–antinodal temper-ature difference is reduced, reflecting the stronger sup-pression of low-energy spectral weight at both momenta prior to photoexcitation. A further distinctive feature is the nonmonotonic evolution of the AN effective tem-perature, which initially decreases slightly before increas-ing as the antinodal pseudogap collapses, reflecting the strongly nonthermal evolution of the AN electronic dis-tribution during the early stage of the pump. The third column of Fig. 3 shows the results obtained near the Mott crossover, at U = 1 .5. In this regime, the nonequilibrium electron dynamics changes qualitatively. In equilibrium, the vicinity of the Mott crossover is char-acterized by the formation of well-developed local mag-netic moments, which substantially reduces the fraction of itinerant electrons in the system [31]. As a conse-quence, the nodal–antinodal dichotomy becomes strongly suppressed: the AN spectrum exhibits only a weak split-ting of the quasiparticle peak (top panel), comparable to that at the N point (middle panel). During the pump, the coherent quasiparticle peaks initially present at both mo-menta are progressively suppressed and eventually dis-appear as the system is driven across the Mott crossover [vertical dashed line at ¯ t ≃ 140 in Fig. 3 (i)]. The N and AN spectra evolve in a nearly identical manner, demon-strating that the momentum-selective dynamics charac-teristic of the metallic regime are largely washed out once well-developed local magnetic moments dominate the low-energy electronic structure. Experimentally, the transient electronic temperature in cuprates has so far been extracted predominantly from the N region. Tr-ARPES measurements of the photoin-duced dynamics, such as those of Ref. [44], provide an estimate of the effective electronic temperature at the node, while extracting a reliable temperature in the AN region remains challenging due to the experimental lim-itations. This limitation has been partially overcome by ultrafast Raman thermometry (e.g., Refs. [15, 16]), which enables selective probing of the response from the N and AN regions of the FS. Combining the results of these two techniques suggests possible momentum-selective heating, since the N relaxation extracted from tr-ARPES [44] is slower than the AN relaxation inferred from Raman measurements [15]. However, such a com-parison remains inconclusive because the two probes cou-ple to different electronic and collective excitations. Asymmetry-resolved Raman measurement on optimally doped Bi 2Sr 2CaCu 2O8+ δ [16] indeed finds a higher quasi-particle temperature in the N channel than in the AN channel, but the magnitude of this difference cannot be unambiguously separated from systematic uncertainties and contributions from magnetic excitations. Whether the N and AN quasiparticle temperatures exhibit a gen-uine anisotropy therefore remains an open question. Our calculations resolve this ambiguity by providing a micro-scopic description of the coupled electronic and collec-tive dynamics, demonstrating that the nodal–antinodal temperature anisotropy is an intrinsic property of the photoexcited correlated system, with nodal quasiparti-cles reaching higher transient temperatures than antin-odal excitations. While the effective-temperature analysis captures the overall energy transfer into the electronic system, it does not distinguish a thermal redistribution from a genuinely nonthermal redistribution of spectral weight. To isolate the latter, we compare the transient spectral function 
+
+Ak(¯ t, ω ) with the equilibrium spectrum Aeq  
+
+> k
+
+(Teff (¯ t), ω )evaluated at the same effective temperature Teff ex-tracted from the local spectral function. The resulting difference ∆ Ak(¯ t, ω ) = Ak(¯ t, ω ) − Aeq  
+
+> k
+
+(Teff (¯ t), ω ) for the N and AN points at weak coupling ( U = 0 .85, left col-umn) and in the correlated metallic regime ( U = 1 .15, right column) is shown in Fig. 4. For U = 1.15, the early-time response exhibits a characteristic two-component structure at both mo-menta. A positive contribution develops around the Fermi level ( ω = 0), indicating an excess of quasipar-ticle spectral weight inside the equilibrium pseudogap, while negative side lobes emerge at the pseudogap edges (ω ≃ ± 0.08), corresponding to a depletion of spectral weight at these energies. The in-gap contribution is substantially stronger at the AN point, where the equi-librium pseudogap is deepest, demonstrating that the strength of the nonthermal response follows the momen-tum dependence of electronic correlations. As the pump proceeds and the pseudogap collapses, the negative redis-tribution near the gap edges gradually dominates, while the in-gap contribution is suppressed. By the end of the pulse, ∆ Ak becomes small over the entire energy range, indicating that the transient spectrum at the later times is well described by an equilibrium spectrum at the cor-responding effective temperature. In contrast, the weakly correlated metal ( U = 0 .85) exhibits only a single-component response: the positive in-gap contribution is absent at both the N and AN points, and ∆ Ak consists primarily of a negative re-distribution of spectral weight around the Fermi level. The absence of the in-gap component reflects the lack of 800.2 
+
+> ∆AAN
+
+(a) 
+
+U = 1 .15 
+
+> 00.4
+
+(b) 
+
+U = 0 .85   
+
+> 0.25 0.00 0.25
+
+ω
+
+> 00.2
+> ∆AN
+
+(c)   
+
+> 0.25 0.00 0.25
+
+ω
+
+> 00.4
+
+(d) 
+
+80 92 104 120 140 160                      
+
+> ¯t
+> FIG. 4. Nonthermal contribution to the transient spec-tral function, ∆ Ak(¯ t, ω ) = Ak(¯ t, ω )−Aeq
+> k(Teff (¯ t), ω ), for the weakly correlated metal ( U= 1 .15, left column) and the cor-related metal ( U= 0 .85, right column), at the antinodal mo-mentum AN = ( π, 0) (top row, ∆ AAN ) and nodal momen-tum N = ( π/ 2, π/ 2) (bottom row, ∆ AN). The comparison is made with equilibrium spectra calculated at the same Tloc eff (¯ t)extracted from the nonequilibrium local spectral function
+> Aloc (¯ t, ω ). Curves are offset vertically and colored by probe time ¯ t(color bar), covering the pulse window. Energies are in units of the half-bandwidth.
+
+well-developed Hubbard bands, leaving little incoherent Hubbard-band spectral weight available for transfer into low-energy quasiparticle states. Thus, the transient en-hancement of in-gap spectral weight emerges as a distinct signature of strong electronic correlations. By contrast, the negative redistribution around the Fermi level ap-pears for all momenta and interaction strengths consid-ered here, indicating a generic nonequilibrium response associated with photoexcitation. The momentum-dependent transient dynamics re-vealed by our calculations have a qualitative correspon-dence with time-resolved spectroscopic observations in optimally doped cuprates [8, 21, 22]. These experi-ments show that the N electronic distribution exhibits conventional metallic heating, whereas photoexcitation of the AN region induces transient in-gap quasiparticle states, a hallmark of photoinduced Mottness, namely the transient release of correlation-frozen AN spectral weight. In particular, Ref.[21] demonstrated that the antinodal response cannot be explained by simple gap filling, gap closing, or purely thermal broadening of the electronic distribution, but instead requires a genuine transient enhancement of spectral weight at the Fermi level. The nonthermal redistribution observed in Fig. 4 reproduces this experimentally observed enhancement of in-gap spectral weight and, additionally, resolves the ac-companying depletion at the pseudogap edges, revealing the microscopic spectral-weight transfer from the Hub-bard bands into low-energy quasiparticle states.  
+
+> C. Photoinduced spin dynamics
+
+At the temperatures considered, collective charge ex-citations remain negligible compared with their mag-netic counterparts, and we therefore focus exclusively on the spin channel. To characterize the nonequilib-rium magnetic response, we extract effective tempera-ture of spin excitations at two representative momenta. The long-wavelength mode at Γ = (0 , 0) corresponds to a low-energy particle–hole excitation, whereas the mode at M = ( π, π ) represents antiferromagnetic fluctuations. The resulting effective temperatures are shown in the bottom row of Fig. 3. Since the spin susceptibility decays substantially more slowly than the electronic Green’s function, extracting reliable effective temperatures re-quires a sufficiently long relative-time window, restricting the analysis to a limited interval around the pump. The corresponding data are therefore omitted at early and late times. We find that the transient magnetic response is dom-inated by the AFM mode, whose effective tempera-ture shows the largest deviations from the electronic one and exceeds it throughout the pulse, in agreement with recent ultrafast Raman thermometry of underdoped cuprates [45]. In the weakly correlated metal ( U = 0 .85), this mode heats rapidly, exceeding the electronic tem-perature and reaching a maximum near the center of the pulse. Subsequently, its temperature decreases as energy is transferred back to the electronic subsystem. Similar behavior is observed in the correlated metallic regime ( U = 1 .15), although the transient overheating of the AFM mode becomes considerably more pronounced. Near the Mott crossover ( U = 1 .5), the initial heating remains comparable to that in the metallic regimes, but the subsequent evolution changes qualitatively. As the system approaches the Mott crossover, the AFM tem-perature first converges toward the electronic tempera-ture, after which the AFM mode undergoes a second pro-nounced heating stage once the system enters the Mott insulating regime, reflecting the enhanced efficiency of energy transfer into magnetic excitations when itinerant electronic degrees of freedom become suppressed. The long-wavelength spin mode at Γ behaves markedly differently. Its effective temperature never exceeds that of the electronic subsystem, indicating substantially weaker energy absorption. In the weakly correlated metal [Fig. 3 (g)], it initially follows the rapid heating of the N electrons before gradually approaching the AN elec-tronic temperature. This behavior indicates that the spin excitations at Γ are primarily coupled to the itin-erant electrons and is consistent with the progressive clo-9sure of the pseudogap as the electronic system thermal-izes. The same qualitative behavior persists at U = 1 .15 [Fig. 3 (h)], although the effective temperature of the long-wavelength spin excitations remains lower than the electronic temperature during the second half of the pulse. Close to the Mott crossover, the heating becomes even less efficient [Fig. 3 (i)], and the spin excitations at the Γ point remain colder than the electronic subsystem throughout the accessible time window. To assess whether the transient overheating of the AFM mode corresponds to a thermal redistribution of magnetic excitations, we compare the nonequilibrium spectral function of magnetic excitations at the M point with equilibrium reference spectra evaluated at the in-stantaneous electronic temperature and at the effective temperature extracted from the AFM mode itself. We analyze two key features of the magnetic spectrum: the peak position, which is controlled by the AFM correlation length, and the peak width, which reflects the damping of the magnetic excitation. Throughout the pulse, the width of the nonequilibrium spectrum at the M point interpolates between the two equilibrium references: it initially lies between the spec-tra evaluated at the electronic temperature [Fig.5 (a)] and at the AFM-mode temperature [Fig.5 (b)], while from the middle of the pulse onward (¯ t = 120) it follows more closely the spectrum corresponding to the electronic temperature. This behavior can be understood from the microscopic damping mechanisms of spin excitations, which are governed by scattering into lower-momentum magnetic fluctuations and by energy transfer to single-particle excitations. Since both the electronic subsystem and the long-wavelength spin excitations exhibit simi-lar heating dynamics, as discussed above, these chan-nels provide the dominant contribution to the magnetic excitation lifetime. In contrast, the equilibrium spec-trum evaluated at the AFM-mode temperature is sub-stantially broader, indicating that a thermal description based solely on the effective AFM temperature overes-timates the degree of magnetic incoherence. Thus, al-though the AFM mode reaches a much higher effective temperature than the electrons, the magnetic subsystem cannot be considered internally thermalized during the early stages of the excitation. The position of the AFM peak in frequency ω, shown by the black curve in Fig. 5 (c), reveals an even stronger deviation from thermal behavior. While the peak po-sitions of both equilibrium reference spectra, evaluated at the effective electronic (blue curve) and AFM-mode (magenta curve) temperatures, shift to higher energies with increasing temperature, consistent with the equi-librium temperature dependence of magnetic excitations (see, e.g., Ref. [33]), the nonequilibrium peak position re-mains nearly unchanged until ¯ t ≈ 140, approaching the equilibrium value only at later times. Thus, although AFM excitations absorb energy almost immediately, the characteristic magnetic correlation length encoded in the AFM peak position remains essentially frozen through-0.000 0.025 0.050 
+
+ωA m
+
+> M
+> (a)
+
+Electron-Teff   
+
+> Pulse Equil.
+> 0.000 0.025 0.050
+
+ω
+
+> (b)
+
+AFM-Teff       
+
+> 80 100 120 140 160 180 200
+
+¯t         
+
+> 0.00 0.02 0.04
+> peak  ω (c)
+> Pulse
+> Teff E.
+> Teff AFM
+> 0.25 0.50 0.75
+> ∫ ∞
+> 0
+> A m dω  (d) ¯t= 80 ¯t= 120 ¯t= 160
+> ΓXMΓ
+
+k-path                                           
+
+> 123
+> Occup.  (e)
+> 80 92 104 120 140 160
+> ¯t
+> FIG. 5. Nonthermal heating and redistribution of the AFM magnon spectral weight for U= 1 .15. (a,b) Nonequilib-rium spectral function of magnetic excitations Am
+> M(ω)at M = ( π, π ) during the pulse (solid, colored by time ¯ t) com-pared with equilibrium references (dashed) evaluated at the instantaneous (a) average electronic and (b) AFM mode ef-fective temperatures. Successive times are offset vertically for clarity. (c) Evolution of the magnon peak position. The nonequilibrium result ( Pulse , black) is compared with equilibrium peak positions evaluated at the average elec-tronic ( Teff E.) and AFM magnonic ( Teff AFM) tempera-tures. (d) Momentum-resolved available magnetic spectral weight, R∞
+> 0Am
+> q(ω)dω , along the high-symmetry path Γ– X – M –Γ for selected average times ¯ t.(e) Corresponding mode occupancy, R∞
+> 0Am,<
+> q(ω)dω  R ∞
+> 0Am
+> q(ω)dω , along the same path. All quantities are in units of the half-bandwidth.
+
+out the pump. The transient dynamics therefore resem-ble a quench, in which short-wavelength AFM fluctua-tions initially become weakly coupled to the electronic subsystem and preserve their correlation length before gradually relaxing toward thermal equilibrium. This mechanism also provides a natural explanation for the 10 second heating stage observed near the Mott crossover [Fig. 3 (i)]. As the pump drives the system deeper into the Mott regime, quasiparticle states near the Fermi level become strongly suppressed, reducing the available decay channels for high-energy magnetic fluctuations. Conse-quently, the coupling between spin excitations and elec-tronic degrees of freedom is weakened again, delaying magnetic thermalization despite the continued increase in electronic temperature. This interpretation is supported by the recent time-resolved RIXS measurements on doped cuprates [13], which reveal similarly highly nonthermal dynamics of paramagnons with frozen peak position. These exper-iments additionally observe a transient suppression of electron–magnon coupling, inferred from the momentum-dependent redistribution of paramagnon spectral weight, followed by gradual equilibration of the electronic and magnetic subsystems at longer timescales. Our re-sults demonstrate that this behavior extends to the intermediate-coupling regime. Similar behavior has re-cently been observed in time-resolved Raman measure-ments of underdoped cuprates [45], where the effective temperature extracted from the magnetic response rises far above that of the photo-doped carriers, while the two-magnon peak broadens strongly and its energy remains essentially constant. Further insight into the redistribution of magnetic spectral weight is obtained from the momentum-resolved retarded and lesser spin susceptibilities shown in Fig. 5 (d, e). Panel (d) displays the integrated mag-netic spectral weight, R ∞ 
+
+> 0
+
+Am 
+
+> q
+
+(ω) dω , along the high-symmetry path in momentum space. As the pump pro-ceeds, this spectral weight decreases at all momenta, with the strongest suppression occurring at the M point, in-dicating a progressive weakening of the AFM fluctua-tions that dominate the equilibrium magnetic response. Panel (e) shows the corresponding mode occupancy, R ∞ 
+
+> 0
+
+Am,<  
+
+> q
+
+(ω) dω  R ∞ 
+
+> 0
+
+Am 
+
+> q
+
+(ω) dω , which characterizes the population of magnetic excitations at different momenta. Before the pulse (blue), the occupancy is strongly con-centrated near the M point, reflecting the proximity to AFM order. Near the middle of the pulse (green), the oc-cupancy increases almost uniformly throughout the BZ. The creation of localized doublon–holon pairs by pho-toexcitation disrupts short-range AFM correlations and generates magnetic excitations with a broad momentum distribution. A similarly momentum-independent gener-ation of paramagnons has been proposed in time-resolved RIXS measurements on photoexcited cuprates [13] and in time-resolved Raman studies of cuprates [45]. At later times (red), the occupancy of the AFM mode de-creases, while that of lower-momentum modes continues to increase, indicating that AFM excitations redistribute their population toward long-wavelength magnetic fluc-tuations. Together, panels (d) and (e) reveal a two-stage process. During the pulse, photoinduced doublon–holon pairs gen-erate magnetic excitations with an almost momentum-independent population: a doublon–holon pair acts as a local defect, and its real-space localization converts into a broad distribution of magnetic excitations across the BZ. The same mechanism has been proposed to explain the time-resolved Raman measurements on the AFM phase of underdoped cuprates discussed above [45]. The magnetic subsystem is thus heated directly by the photoexcitation process rather than through the elec-tronic one, placing our results outside the two- and three-temperature description [56, 57], where the photoexcited carriers relax by emitting magnons and the magnetic temperature is bounded from above by the electronic one at all times. After the pulse, the high-momentum AFM magnetic excitations undergo a momentum-space cascade, trans-ferring spectral weight toward lower-momentum modes. Such a cascade is consistent with the efficient decay of high-energy magnetic excitations inferred for gapless Sr 2IrO 4, where photoexcited magnons relax through the magnetic dispersion toward low-energy modes [10, 12]. In contrast, a gap in the magnetic excitation spectrum suppresses this decay channel in gapped antiferromag-nets [12]. The gapless magnetic spectrum of the present Hubbard model therefore provides favorable conditions for continuous redistribution of magnetic excitation pop-ulations toward long wavelengths. This mechanism be-comes particularly important near the Mott crossover, where the suppression of low-energy quasiparticles weak-ens the coupling between spin fluctuations and the elec-tronic subsystem, leaving scattering among magnetic ex-citations as the dominant channel for populating the long-wavelength Γ modes. Despite these distinct transient regimes, the coupled electron–magnetic system exhibits an overall tendency toward thermalization. In both metallic regimes, the temperatures of the two magnetic modes gradually con-verge toward the electronic temperature by the end of the pulse, and the electronic and magnetic subsystems subsequently relax toward a common effective temper-ature. In contrast, near the Mott crossover, relaxation occurs on a much longer timescale and leads to a sub-stantially higher final temperature, consistent with our previous nonequilibrium D-GW study [40].  
+
+> D. Evolution of the local magnetic moment
+
+Having characterized the spin excitations across the most representative interaction strengths, we now turn to the dynamics of the local magnetic moment (LMM). To this end, we monitor the local spin susceptibility, 
+
+χm
+
+> loc
+
+(¯ t, τ ), resolved as a function of both the average time ¯t and the relative time τ , which provides direct access to the intrinsic dynamics of on-site spin fluctuations. Figure 6 shows the evolution of χm
+
+> loc
+
+(¯ t, τ ) as a function of the relative time τ (shown on a logarithmic scale) for the three interaction strengths considered above, to-gether with an additional calculation at U = 0 .73 in the 11 10 0 10 1 10 2
+
+τ
+
+> 0.5
+> 0.4
+> 0.3
+> 0.2
+> 0.1
+> 0.0
+> χm
+> loc (¯ t, τ )
+
+U = 0 .73 
+
+## (a)      
+
+> ¯t= 80 ¯t= 120 ¯t= 200
+> 10 010 110 2
+
+τ
+
+> 0.5
+> 0.4
+> 0.3
+> 0.2
+> 0.1
+> 0.0
+
+U = 0 .85 
+
+## (b)   
+
+> 10 010 110 2
+
+τ
+
+> 0.4
+> 0.3
+> 0.2
+> 0.1
+> 0.0
+
+U = 1 .15 
+
+## (c)   
+
+> 10 010 110 2
+
+τ
+
+> 0.25
+> 0.20
+> 0.15
+> 0.10
+> 0.05
+> 0.00
+
+U = 1 .5
+
+## (d)               
+
+> FIG. 6. Time evolution of the local spin susceptibility χm
+> loc (¯ t, τ ) as a function of the relative time τ(logarithmic scale) during the pump, for the four interaction strengths U(half-bandwidth units). Curves correspond to increasing average (probe) times ¯t. The gray arrow marks the short-time peak ( τ∼1/J ), which is independent of U, whereas the green arrow marks the slow, interaction-dependent peak that shifts toward larger τwith increasing Uand signals local-moment formation.
+
+weakly correlated regime. The corresponding photoin-duced trajectory is indicated by the orange dashed arrow in Fig. 2 (a). For sufficiently strong interactions, the susceptibility exhibits a characteristic two-peak structure. The first peak is narrow and located at short times, τ ∼ 1/J , with a position that is essentially independent of U . A second, broader peak emerges at longer times and shifts progres-sively toward larger τ as U increases, while its spectral weight simultaneously grows. This slow component is ab-sent in the weakly correlated regime ( U = 0 .73) over the temperature range considered, indicating that it is asso-ciated with the formation of long-lived LMMs. During the pump excitation, the short-time peak remains nearly unchanged in both position and width. In contrast, the long-time peak gradually loses spectral weight and shifts toward shorter times, eventually merging with the short-time contribution, signaling the dynamical melting of the LMM. To identify the microscopic origin of these peaks, we analyze the half-filled isolated Hubbard dimer in Ap-pendix A. There, we show that the short-time peak orig-inates from bonding–antibonding single-particle excita-tions, with a characteristic timescale set by the hopping-induced energy splitting, ∼ 1/J . These processes de-scribe the dynamics of itinerant electrons and contribute to both the local spin and charge susceptibilities. In con-trast, the slow interaction-dependent peak corresponds to the lattice counterpart of the singlet-to-triplet excitation of the dimer. In the strong-coupling limit, its character-istic timescale is governed by the inverse superexchange energy, J−1ex ∼ U/ (4 J2), reflecting the emergence of long-lived LMM dynamics. Our identification of the slow peak with local-moment dynamics is consistent with Ref. [46], which studied the relaxation of a single classical spin coupled to a one-dimensional Hubbard chain in an external magnetic field. By analyzing the local spin susceptibility, the au-thors identified a two-component structure consisting of a short-time peak, largely independent of U and gov-erned by fast electronic hopping processes, and a slower interaction-dependent contribution associated with the coupling to the LMM. Our framework extends this equi-librium analysis of the relaxation of a classical spin to a nonequilibrium framework of correlated electrons, al-lowing us to resolve the full time evolution of the lo-cal spin susceptibility during photoexcitation and to di-rectly monitor the suppression of the LMM contribution in real time. We therefore identify the emergence of a well-separated slow peak in χm
+
+> loc
+
+(¯ t, τ ) as a dynamical sig-nature of the LMM crossover. The finite width of the slow peak is itself physically significant, as it reflects the finite lifetime of LMM fluc-tuations. These fluctuations are eventually screened at long times through interactions with thermal charge and magnetic fluctuations, Kondo-like screening processes, or spin-flip processes induced by intersite exchange (see, e.g., Refs. [36, 37]). The width of the slow peak therefore provides an estimate of the LMM lifetime. Characteristic LMM lifetimes in several Hund’s metals were quantified in Ref. [34], yielding values ranging from a few to several tens of femtoseconds across different material families. Using realistic hopping amplitudes for these compounds, 
+
+J ≃ 0.1–0 .5 eV [58], we find that the width of our slow peak corresponds to a lifetime of the same order, namely tens of femtoseconds, consistent with these previous es-timates. Since LMM formation is a gradual crossover rather than a sharply defined phase transition, identifying its onset is inherently nontrivial. Several complementary diagnostics have therefore been proposed. Some rely on fingerprints in the generalized charge susceptibil-ity [32, 35, 36]. While these approaches successfully identify LMM formation through its impact on charge 12 fluctuations, they are formulated in the charge channel rather than directly in terms of the spin response, and rely on Matsubara-frequency quantities that are not di-rectly accessible experimentally. The criterion proposed in Ref. [37], which extends the Landau phenomenology of spontaneous symmetry breaking to the LMM crossover, is theoretically more transparent but likewise not directly observable. Closer to the present work, Ref. [38] ex-tracted a screening timescale from the imaginary-time decay of χm(τ ) within equilibrium DMFT, although this approach remains restricted to imaginary time and cap-tures only local screening processes. Our criterion combines the advantages of these ap-proaches while extending them to nonequilibrium. For-mulated directly in the spin channel through the local spin susceptibility χm
+
+> loc
+
+(¯ t, τ ) on the Kadanoff–Baym con-tour, it provides a real-time measure of LMM dynam-ics, incorporates the effects of nonlocal magnetic fluc-tuations through the underlying many-body framework, and resolves the transient melting and recovery of LMM as a function of the average time ¯ t. Moreover, be-cause χm
+
+> loc
+
+(¯ t, τ ) represents the local real-time counter-part of the transient dynamical spin response probed by pump–probe RIXS [10, 11, 13], our approach estab-lishes a connection between the microscopic dynamics of LMM formation and experimentally accessible ultrafast spin spectroscopy. Having established the criterion for LMM formation, we next determine the corresponding boundary through-out the phase diagram. To this end, we perform equi-librium calculations and extract the LMM crossover line as a function of interaction strength and temperature, which is shown in green in Fig. 2,(a). For the nonequi-librium simulation at U = 0 .85, the melting of the LMM is indicated by the green square along the corresponding heating trajectory. As for the other transient crossover points, the melting of the LMM occurs at a higher effec-tive temperature than the equilibrium boundary, further supporting the nonthermal character of the photoinduced ultrafast electron dynamics. The resulting LMM crossover line is in good agree-ment with the equilibrium D-TRILEX study [31], where the same crossover was determined using the theoreti-cal LMM formation criterion introduced in Ref. [37]. In particular, we reproduce the characteristic suppression of LMM formation by nonlocal magnetic fluctuations, as well as the convergence of the LMM crossover line toward the AFM transition upon decreasing U . This behavior is consistent with the Slater regime of magnetism, where LMMs develop as a consequence of the magnetic insta-bility rather than being preformed in the paramagnetic state. We note, that the quantitative agreement with the equilibrium D-TRILEX results would require the inclu-sion of three-point vertex corrections and a more accurate solution of the reference DMFT impurity problem.  
+
+> IV. CONCLUSION
+
+We have investigated the ultrafast dynamics of the photoexcited half-filled Hubbard model on the square lat-tice using the real-time D-GW method, focusing on the interplay between momentum-selective electronic excita-tions, collective spin dynamics, and the evolution of local magnetic moments. We first demonstrated that the equilibrium nodal– antinodal dichotomy leaves a distinct fingerprint in the nonequilibrium electronic response. In the metallic and pseudogap regimes, the momentum differentiation of electronic correlations leads to a transient temperature anisotropy across the FS, with N quasiparticles heat-ing more efficiently than AN excitations. By compar-ing the transient spectra with equilibrium spectra evalu-ated at the same effective temperature, we further re-vealed that the photoinduced response cannot be de-scribed by simple thermal heating. Instead, it contains two distinct nonthermal contributions: a universal re-distribution of spectral weight around the Fermi level and a correlation-driven transfer of spectral weight from the Hubbard bands into the pseudogap region, produc-ing transient in-gap quasiparticle states characteristic of strong electronic correlations. The analysis of nonequilibrium spin dynamics revealed a clear separation between high- and low-momentum spin excitations. The high-momentum AFM mode ab-sorbs energy rapidly but exhibits a strongly nonther-mal response: while its spectral width follows the elec-tronic subsystem from the middle of the pulse onward, its characteristic energy scale and associated correlation length remain nearly frozen during the pump. The tran-sient dynamics of AFM fluctuations are therefore rem-iniscent of a quench, where energy is rapidly injected into the magnetic subsystem while the underlying spa-tial correlations remain frozen, followed by a slower re-laxation toward thermal equilibrium. In contrast, long-wavelength spin excitations remain more strongly cou-pled to itinerant quasiparticles and follow the evolution of the electronic subsystem. The momentum-resolved spin response further reveals a two-stage relaxation mecha-nism: photoinduced doublon–holon fluctuations initially generate magnetic excitations throughout the BZ with an almost momentum-independent population, followed by a momentum-space cascade transferring spectral weight from high-momentum AFM fluctuations toward long-wavelength modes. Near the Mott crossover, this cas-cade becomes the dominant pathway for populating low-momentum spin excitations due to the suppression of electron–magnon coupling. Finally, by analyzing the real-time local spin suscep-tibility, we identified the slow component of the local spin dynamics as a direct signature of LMM formation. This provides a dynamical criterion for tracking the emer-gence and melting of LMMs during photoexcitation, ex-tending previous equilibrium concepts to nonequilibrium conditions. The resulting criterion remains well defined 13 even when conventional spectral signatures of localiza-tion become ambiguous at elevated temperatures, high-lighting LMM dynamics as a fundamental indicator of correlation-driven localization. Our results establish real-time D-GW as a uni-fied framework capable of simultaneously describing momentum-resolved single-particle excitations, collective spin fluctuations, and LMM dynamics in strongly corre-lated systems. Extending this approach to multi-orbital models and realistic materials represents a natural step toward quantitative simulations of ultrafast correlated-electron phenomena and direct comparison with time-resolved spectroscopic experiments. 
+
+ACKNOWLEDGMENTS 
+
+The authors thank Martin Eckstein, Michael Pot-thoff, Igor Krivenko, Yann Gallais, and Laur` ene Ga-tuingt for fruitful discussions. G.B. and E.A.S. ac-knowledge support from ANR JCJC grant “ELECTRO” (ANR-25-CE30-7064). G.B. also acknowledges support from the Erasmus+ Doctoral Mobility programme of Institut Polytechnique de Paris. N.D. and A.I.L. ac-knowledge support from the European Research Coun-cil via Synergy Grant No. 854843 (the FASTCORR project). A.I.L. also acknowledges support from the Deutsche Forschungsgemeinschaft through the research unit QUAST, FOR 5249, Project ID No. 449872909. The authors acknowledge the computational resources pro-vided by TGCC-GENCI under project A0180901393 and by the PHYSnet-Rechenzentrum of Universit¨ at Ham-burg, and we thank Martin Stieben for technical support. 
+
+[1] D. Fausti, R. I. Tobey, N. Dean, S. Kaiser, A. Dienst, M. C. Hoffmann, S. Pyon, T. Takayama, H. Takagi, and A. Cavalleri, Light-Induced Superconductivity in a Stripe-Ordered Cuprate, Science 331 , 189 (2011). [2] L. Stojchevska, I. Vaskivskyi, T. Mertelj, P. Kusar, D. Svetin, S. Brazovskii, and D. Mihailovic, Ultrafast Switching to a Stable Hidden Quantum State in an Elec-tronic Crystal, Science 344 , 177 (2014). [3] D. Afanasiev, A. Gatilova, D. J. Groenendijk, B. A. Ivanov, M. Gibert, S. Gariglio, J. Mentink, J. Li, N. Dasari, M. Eckstein, T. Rasing, A. D. Caviglia, and A. V. Kimel, Ultrafast Spin Dynamics in Photodoped Spin-Orbit Mott Insulator Sr 2IrO 4, Phys. Rev. X 9,021020 (2019). [4] S. Iwai, M. Ono, A. Maeda, H. Matsuzaki, H. Kishida, H. Okamoto, and Y. Tokura, Ultrafast Optical Switching to a Metallic State by Photoinduced Mott Transition in a Halogen-Bridged Nickel-Chain Compound, Phys. Rev. Lett. 91 , 057401 (2003). [5] T. Oka and S. Kitamura, Floquet Engineering of Quan-tum Materials, Annu. Rev. Condens. Matter Phys. 10 ,387 (2019). [6] A. de la Torre, D. M. Kennes, M. Claassen, S. Gerber, J. W. McIver, and M. A. Sentef, Colloquium: Nonther-mal pathways to ultrafast control in quantum materials, Rev. Mod. Phys. 93 , 041002 (2021). [7] D. N. Basov, R. D. Averitt, and D. Hsieh, Towards prop-erties on demand in quantum materials, Nat. Mater. 16 ,1077 (2017). [8] M. Zonno, F. Boschini, and A. Damascelli, Time-resolved ARPES on cuprates: Tracking the low-energy electrody-namics in the time domain, J. Electron Spectrosc. Relat. Phenom. 251 , 147091 (2021). [9] J. A. Sobota, Y. He, and Z.-X. Shen, Angle-resolved photoemission studies of quantum materials, Rev. Mod. Phys. 93 , 025006 (2021). [10] M. P. M. Dean, Y. Cao, X. Liu, S. Wall, D. Zhu, R. Mankowsky, V. Thampy, X. M. Chen, J. G. Vale, D. Casa, J. Kim, A. H. Said, P. Juhas, R. Alonso-Mori, J. M. Glownia, A. Robert, J. Robinson, M. Sikorski, S. Song, M. Kozina, H. Lemke, L. Patthey, S. Owada, T. Katayama, M. Yabashi, Y. Tanaka, T. Togashi, J. Liu, C. Rayan Serrao, B. J. Kim, L. Huber, C.-L. Chang, D. F. McMorrow, M. F¨ orst, and J. P. Hill, Ultrafast energy-and momentum-resolved dynamics of magnetic correla-tions in the photo-doped Mott insulator Sr 2IrO 4, Nat. Mater. 15 , 601 (2016). [11] Y. Cao, D. G. Mazzone, D. Meyers, J. P. Hill, X. Liu, S. Wall, and M. P. M. Dean, Ultrafast dynamics of spin and orbital correlations in quantum materials: an energy-and momentum-resolved perspective, Philos. Trans. R. Soc. A 377 , 20170480 (2019). [12] D. G. Mazzone, D. Meyers, Y. Cao, J. G. Vale, C. D. Dashwood, Y. Shi, A. J. A. James, N. J. Robinson, J. Lin, V. Thampy, Y. Tanaka, A. S. Johnson, H. Miao, R. Wang, T. A. Assefa, J. Kim, D. Casa, R. Mankowsky, D. Zhu, R. Alonso-Mori, S. Song, H. Yavas, T. Katayama, M. Yabashi, Y. Kubota, S. Owada, J. Liu, J. Yang, R. M. Konik, I. K. Robinson, J. P. Hill, D. F. McMor-row, M. F¨ orst, S. Wall, X. Liu, and M. P. M. Dean, Laser-induced transient magnons in Sr 3Ir 2O7 through-out the Brillouin zone, Proc. Natl. Acad. Sci. U.S.A. 118 ,e2103696118 (2021). [13] D. Jost, J. Li, J. Hales, J. Sobota, G. Merzoni, L. Mar-tinelli, S. Ding, K.-J. Xu, J. Schlappa, A. Scherz, R. Car-ley, B. E. Van Kuiken, T. C. Asmara, L. P. Hoang, L. Mercadier, S. Parchenko, M. Teichmann, P. S. Kirch-mann, G. Ghiringhelli, B. Moritz, Z.-X. Shen, T. P. Dev-ereaux, Y. Wang, and W.-S. Lee, Collective magnetic ex-citations in a photoexcited electron-doped cuprate super-conductor, Phys. Rev. Lett. 10.1103/2h9x-8tjk (2026). [14] K. Katsumi, Y. Gallais, and R. Shimano, Distinct tera-hertz nonlinear and Raman responses in cuprate super-conductors Bi 2Sr 2CaCu 2O8+ x, npj Quantum Mater. 10 ,91 (2025). [15] L. Gatuingt, A. Alekhin, N. Nilforoushan, S. Houver, A. Sacuto, G. Gu, and Y. Gallais, Ultrafast Raman probe of the photoinduced superconducting to normal state transition in the cuprate Bi 2Sr 2CaCu 2O8+ δ , Phys. Rev. B 113 , 014509 (2026). 14 
+
+[16] Y. Gallais, Tracking photo-induced superconducting to normal state transition in the cuprate Bi2Sr2CaCu2O8, in Advances in Ultrafast Condensed Phase Physics V ,Vol. PC14077, edited by S. Haacke and M. Ossiander, International Society for Optics and Photonics (SPIE, 2026) p. PC1407709. [17] M. R. Norman, H. Ding, M. Randeria, J. C. Campuzano, T. Yokoya, T. Takeuchi, T. Takahashi, T. Mochiku, K. Kadowaki, P. Guptasarma, and D. G. Hinks, Destruc-tion of the Fermi surface in underdoped high-Tc super-conductors, Nature 392 , 157 (1998). [18] A. Damascelli, Z. Hussain, and Z.-X. Shen, Angle-resolved photoemission studies of the cuprate supercon-ductors, Rev. Mod. Phys. 75 , 473 (2003). [19] A. Kanigel, M. R. Norman, M. Randeria, U. Chatterjee, S. Souma, A. Kaminski, H. M. Fretwell, S. Rosenkranz, M. Shi, T. Sato, T. Takahashi, Z. Z. Li, H. Raffy, K. Kad-owaki, D. Hinks, L. Ozyuzer, and J. C. Campuzano, Evo-lution of the pseudogap from Fermi arcs to the nodal liquid, Nat. Phys. 2, 447 (2006). [20] M. Hashimoto, I. M. Vishik, R.-H. He, T. P. Dev-ereaux, and Z.-X. Shen, Energy gaps in high-transition-temperature cuprate superconductors, Nat. Phys. 10 ,483 (2014). [21] F. Cilento, G. Manzoni, A. Sterzi, S. Peli, A. Ronchi, A. Crepaldi, F. Boschini, C. Cacho, R. Chapman, E. Springate, H. Eisaki, M. Greven, M. Berciu, A. F. Kemper, A. Damascelli, M. Capone, C. Giannetti, and F. Parmigiani, Dynamics of correlation-frozen antinodal quasiparticles in superconducting cuprates, Sci. Adv. 4,eaar1998 (2018). [22] F. Cilento, S. Dal Conte, G. Coslovich, S. Peli, N. Nem-brini, S. Mor, F. Banfi, G. Ferrini, H. Eisaki, M. K. Chan, C. J. Dorow, M. J. Veit, M. Greven, D. van der Marel, R. Comin, A. Damascelli, L. Rettig, U. Boven-siepen, M. Capone, C. Giannetti, and F. Parmigiani, Photo-enhanced antinodal conductivity in the pseudogap state of high-Tc cuprates, Nat. Commun. 5, 4353 (2014). [23] M. Mitrano and Y. Wang, Probing light-driven quantum materials with ultrafast resonant inelastic X-ray scatter-ing, Commun. Phys. 3, 184 (2020). [24] J. C. Slater, Magnetic Effects and the Hartree-Fock Equation, Phys. Rev. 82 , 538 (1951). [25] G. Rohringer and A. Toschi, Impact of nonlocal corre-lations over different energy scales: A dynamical vertex approximation study, Phys. Rev. B 94 , 125144 (2016). [26] P. W. Anderson, New Approach to the Theory of Su-perexchange Interactions, Phys. Rev. 115 , 2 (1959). [27] K. A. Chao, J. Spalek, and A. M. Ole´ s, Degenerate Per-turbation Theory and Its Application to the Hubbard Model, Phys. Lett. A 64 , 163 (1977). [28] K. A. Chao, J. Spalek, and A. M. Ole´ s, Kinetic Exchange Interaction in a Narrow S-Band, J. Phys. C 10 , L271 (1977). [29] A. H. MacDonald, S. M. Girvin, and D. Yoshioka, tU
+
+expansion for the Hubbard model, Phys. Rev. B 37 , 9753 (1988). [30] J. Spalek, t–J Model Then and Now: A Personal Per-spective from the Pioneering Times, Acta Phys. Pol. A 
+
+111 , 409 (2007). [31] M. Chatzieleftheriou, S. Biermann, and E. A. Stepanov, Local and Nonlocal Electronic Correlations at the Metal-Insulator Transition in the Two-Dimensional Hubbard Model, Phys. Rev. Lett. 132 , 236504 (2024). [32] O. Gunnarsson, G. Rohringer, T. Sch¨ afer, G. Sangio-vanni, and A. Toschi, Breakdown of traditional many-body theories for correlated electrons, Phys. Rev. Lett. 
+
+119 , 056402 (2017). [33] E. A. Stepanov, L. Peters, I. S. Krivenko, A. I. Licht-enstein, M. I. Katsnelson, and A. N. Rubtsov, Quantum spin fluctuations and evolution of electronic structure in cuprates, npj Quantum Mater. 3, 54 (2018). [34] C. Watzenb¨ ock, M. Edelmann, D. Springer, G. Sangio-vanni, and A. Toschi, Characteristic Timescales of the Local Moment Dynamics in Hund’s Metals, Phys. Rev. Lett. 125 , 086402 (2020). [35] T. B. Mazitov and A. A. Katanin, Local magnetic mo-ment formation and Kondo screening in the half-filled single-band Hubbard model, Phys. Rev. B 105 , L081111 (2022). [36] P. Chalupa, T. Sch¨ afer, M. Reitner, D. Springer, S. An-dergassen, and A. Toschi, Fingerprints of the Local Mo-ment Formation and its Kondo Screening in the Gener-alized Susceptibilities of Many-Electron Problems, Phys. Rev. Lett. 126 , 056403 (2021). [37] E. A. Stepanov, S. Brener, V. Harkov, M. I. Katsnel-son, and A. I. Lichtenstein, Spin dynamics of itinerant electrons: Local magnetic moment formation and Berry phase, Phys. Rev. B 105 , 155151 (2022). [38] L. Gaspard and J. M. Tomczak, Timescale of Local Mo-ment Screening across and above the Mott Transition, SciPost Phys. 12 , 184 (2022), arXiv:2112.02881. [39] T. B. Mazitov and A. A. Katanin, Local magnetic mo-ment formation and Kondo screening in the presence of Hund exchange: Two-band Hubbard model analysis, Phys. Rev. B 110 , 075160 (2024). [40] N. Dasari, H. U. R. Strand, M. Eckstein, A. I. Licht-enstein, and E. A. Stepanov, Electron-magnon dynamics triggered by an ultrashort laser pulse: A real-time dual 
+
+GW study, Phys. Rev. B 111 , 235129 (2025). [41] P. Schmidt and H. Monien, Nonequilibrium dynamical mean-field theory of a strongly correlated system (2002), arXiv:cond-mat/0202046 [cond-mat.str-el]. [42] H. Aoki, N. Tsuji, M. Eckstein, M. Kollar, T. Oka, and P. Werner, Nonequilibrium dynamical mean-field theory and its applications, Rev. Mod. Phys. 86 , 779 (2014). [43] N. Dasari, H. U. R. Strand, M. Eckstein, A. I. Lichten-stein, and E. A. Stepanov, Nonlocal Correlation Effects in dc and Optical Conductivity of the Hubbard Model, Phys. Rev. Lett. 136 , 106905 (2026). [44] S. Parham, H. Li, T. J. Nummy, J. A. Waugh, X. Q. Zhou, J. Griffith, J. Schneeloch, R. D. Zhong, G. D. Gu, and D. S. Dessau, Ultrafast Gap Dynamics and Elec-tronic Interactions in a Photoexcited Cuprate Supercon-ductor, Phys. Rev. X 7, 041013 (2017). [45] L. Gatuingt and Y. Gallais, Private communication. [46] M. Sayad, R. Rausch, and M. Potthoff, Relaxation of a Classical Spin Coupled to a Strongly Correlated Electron System, Phys. Rev. Lett. 117 , 127201 (2016). [47] R. Peierls, On the Theory of the Diamagnetism of Con-duction Electrons, Z. Phys. 80 , 763 (1933). [48] E. A. Stepanov, V. Harkov, and A. I. Lichtenstein, Con-sistent partial bosonization of the extended Hubbard model, Phys. Rev. B 100 , 205115 (2019). [49] V. Harkov, M. Vandelli, S. Brener, A. I. Lichtenstein, and E. A. Stepanov, Impact of partially bosonized collective fluctuations on electronic degrees of freedom, Phys. Rev. B 103 , 245123 (2021). 15 
+
+[50] M. Vandelli, J. Kaufmann, M. El-Nabulsi, V. Harkov, A. Lichtenstein, and E. Stepanov, Multi-band D-TRILEX approach to materials with strong electronic correlations, SciPost Phys. 13 , 036 (2022). [51] E. A. Stepanov, Diagrammatics in the Dual Space, or There and Back Again , Habilitation thesis, ´Ecole Poly-technique (2025). [52] M. Eckstein and P. Werner, Nonequilibrium dynamical mean-field calculations based on the noncrossing approx-imation and its generalizations, Phys. Rev. B 82 , 115115 (2010). [53] N. Dasari and M. Eckstein, Photoexcited states in corre-lated band insulators, Phys. Rev. B 98 , 035113 (2018). [54] Y. Murakami, D. Goleˇ z, M. Eckstein, and P. Werner, Photoinduced nonequilibrium states in Mott insulators, Rev. Mod. Phys. 97 , 035001 (2025). [55] M. Sch¨ uler, D. Goleˇ z, Y. Murakami, N. Bittner, A. Her-rmann, H. U. R. Strand, P. Werner, and M. Eckstein, NESSi: The Non-Equilibrium Systems Simulation pack-age, Comput. Phys. Commun. 257 , 107484 (2020). [56] P. B. Allen, Theory of thermal relaxation of electrons in metals, Phys. Rev. Lett. 59 , 1460 (1987). [57] M. Pankratova, I. P. Miranda, D. Thonig, M. Pereiro, E. Sj¨ oqvist, A. Delin, O. Eriksson, and A. Bergman, Heat-conserving three-temperature model for ultrafast demagnetization in nickel, Phys. Rev. B 106 , 174407 (2022). [58] T. Miyake, K. Nakamura, R. Arita, and M. Imada, Com-parison of Ab initio Low-Energy Models for LaFePO, LaFeAsO, BaFe 2As 2, LiFeAs, FeSe, and FeTe: Electron Correlation and Covalency, J. Phys. Soc. Jpn. 79 , 044705 (2010). [59] I. Krivenko, M. Danilov, and P. Kubiczek, realevol: Real time evolution solver based on TRIQS, https://github. com/krivenko/triqs-realevol (2026), version 0.11.2. [60] O. Parcollet, M. Ferrero, T. Ayral, H. Hafermann, I. Krivenko, L. Messio, and P. Seth, TRIQS: A toolbox for research on interacting quantum systems, Comput. Phys. Commun. 196 , 398 (2015). [61] A. Avella, F. Mancini, and T. Saikawa, The 2-site Hub-bard and t-J models, Eur. Phys. J. B 36 , 445 (2003). [62] D. J. Carrascal, J. Ferrer, J. C. Smith, and K. Burke, The Hubbard dimer: a density functional case study of a many-body problem, J. Phys.: Condens. Matter 27 ,393001 (2015). 16 
+
+> Appendix A: Hubbard dimer analysis of the spin susceptibility peaks
+
+To identify the microscopic origin of the two character-istic features observed in the real-time local spin suscep-tibility χm
+
+> loc
+
+(¯ t, τ ) discussed in Sec.III D, we analyze the simplest interacting system capable of capturing all of them: an isolated symmetric Hubbard dimer at half fill-ing, illustrated in Fig.7(a). The dimer, with hopping 
+
+J and onsite interaction U , is solved in the particle– hole symmetric case (μ = U/ 2) using the real-time exact-diagonalization solver triqs-realevol [59], imple-mented within the TRIQS library[60]. Throughout this appendix we measure energies in the same units of the half-bandwidth ( J = 0 .25) and fix U = 1 .25. The result-ing eigenstates and eigenenergies, organized by particle number N , total spin S, and inversion (site-exchange) parity P , are listed in Table II following Refs. [61, 62]. The N = 2 sector contains the half-filled ground state (the bonding singlet) together with three excited mul-tiplets: the spin triplet, a nonbonding singlet, and the antibonding singlet, which forms the dimer analog of the upper Hubbard sub-band. The N = 1 and N = 3 sec-tors correspond to states with one removed or one added electron, respectively, and each consists of bonding and antibonding one-particle levels separated by 2 J, indepen-dent of U .                                                                                      
+
+> TABLE II. Eigenenergy spectrum of the half-filled Hubbard dimer in the particle-hole symmetric case ( μ=U/ 2). Listed are the many-body eigenstates, labeled by the index # used in Table III, and classified by particle number N, total spin
+> S, and inversion (site-exchange) parity P=±1, together with their grand-potential energies Ω =E−μN .Here, ∆ = p(U/ 2) 2+ 4 J2.The ground state (GS) is the bond-ing singlet. #Sector State SPΩ1N= 0 vacuum 0+1 02N= 4 fully occupied 0+1 03N= 1 bonding 1/2 +1 −U/ 2−J
+> 4N= 1 antibonding 1/2−1−U/ 2 + J
+> 5N= 3 antibonding (hole) 1/2−1−U/ 2−J
+> 6N= 3 bonding (hole) 1/2 +1 −U/ 2 + J
+> 7N= 2 bonding singlet (GS) 0+1 −U/ 2−∆8N= 2 triplet (3-fold) 1−1−U
+> 9N= 2 nonbonding singlet 0−1010 N= 2 antibonding singlet 0+1 −U/ 2 + ∆
+
+Throughout this appendix we consider the on-site sus-ceptibilities χm(t) = −iθ (t)⟨[S1 
+
+> z
+
+(t), S 1 
+
+> z
+
+(0)] ⟩ and χd(t) = 
+
+−iθ (t)⟨[n1(t), n 1(0)] ⟩, where Siz = (ni↑ − ni↓)/2 and 
+
+ni = ni↑ + ni↓ are the spin and charge densities on site i.These are the dimer analogs of the local lattice quantities 
+
+χm,d  
+
+> loc
+
+of the main text. Their different excitation spec-tra follow from the symmetry of the corresponding local operators. Decomposing them into uniform and stag-gered parts, S1 
+
+> z
+
+= ( Stot  
+
+> z
+
++ Sst  
+
+> z
+
+)/2 and n1 = ( ntot + nst )/2with Sst  
+
+> z
+
+= S1 
+
+> z
+
+− S2 
+
+> z
+
+, the uniform components commute with the Hamiltonian and, thus, are constant, so that the entire dynamical response is carried by the staggered components. These are odd under site exchange and therefore connect only states of opposite inversion par-ity, ∆ P = −1. Additionally, both operators conserve the particle number, Sst  
+
+> z
+
+allows ∆ S = 0 , ±1 but vanishes be-tween two singlets, while nst preserves S. Together, these rules completely determines the excitation spectra of the spin and charge susceptibilities. Figure 7(b) shows the spectral functions of spin and charge excitations, Am(ω) ≡ − Im χm(ω) and Ad(ω) ≡−Im χd(ω), for the dimer at T = 0. Since only the ground state is thermally populated, the spectra con-tain only transitions originating from the bonding singlet. The combined spin and spatial selection rules further re-strict these to a single allowed transition in each response channel, highlighted in bold in Table III. The spin exci-tation spectrum therefore consists of a single peak corre-sponding to the bonding-singlet →triplet transition, with excitation energy Ωtriplet − ΩGS = ∆ − U
+
+2 
+
+> U≫J
+
+−−−−→ 4J2
+
+U , (A1) where ∆ ≡
+
+s U
+
+2
+
+2
+
++ 4 J2. (A2) In contrast, the charge excitation spectrum con-tains a single peak corresponding to the bonding-singlet →nonbonding-singlet transition, with excitation energy ΩNB − ΩGS = ∆ + U
+
+2 
+
+> U≫J
+
+−−−−→ U. (A3)                                              
+
+> TABLE III. Transitions between the dimer eigenstates listed in Table II, labeled by their state indices #, together with their excitation energies ωand the response channel in which they carry spectral weight. The selection rules require ∆ P=
+> −1 in both channels. In addition, the spin susceptibility
+> χmallows transitions with ∆ S= 0 ,±1, except between two singlet states, whereas the charge susceptibility χdrequires ∆S= 0. The transitions shown in bold are the only ones allowed at T= 0. Transition Channel ω
+> 7→8spin ∆−U/ 2
+> 9→10 charge ∆−U/ 23→4spin, charge 2J
+> 5→6spin, charge 2J
+> 8→10 spin ∆ + U/ 2
+> 7→9charge ∆ + U/ 2
+
+As the temperature is raised to T = 2, excited states become thermally populated, opening additional transi-tions. All transitions between the eigenstates of Table II, 17 J      
+
+> UU
+> site isite jμ=U/ 2
+
+(a) 
+
+> 01
+> A m
+> ∆ − U/ 22J
+> ∆ +  U/ 2
+
+T = 0 (b)  
+
+> 01
+> ω
+> 01
+> A d
+> ∆ − U/ 22J
+> ∆ +  U/ 2
+> 01
+> A m
+> ∆ − U/ 22J
+> ∆ +  U/ 2
+
+T = 0 .5(c)  
+
+> 01
+> ω
+> 01
+> A d
+> ∆ − U/ 22J
+> ∆ +  U/ 2
+> 0.2
+> 0.0
+> χm
+> loc (¯ t, τ )
+
+U = 1 .15 (d)   
+
+> 10 010 110 2
+> τ
+> 0.2
+> 0.0
+> χd
+> loc (¯ t, τ )
+
+FIG. 7. (a) Dimer model with onsite interaction U = 1 .25 at half filling, used to identify the microscopic origin of the χm and 
+
+χd peaks. (b,c) Dimer spectral functions Am(ω) ≡ − Im χm(ω) (top) and Ad(ω) ≡ − Im χd(ω) (bottom), normalized to their peak value, for (b) T = 0 and (c) T = 0 .5. Dashed lines mark ∆ − U/ 2 (green), 2 J (blue), and ∆ + U/ 2 (red). (d) χm
+
+> loc
+
+(¯ t, τ )(top) and χd
+
+> loc
+
+(¯ t, τ ) (bottom) from the pulse-driven lattice dynamics at U = 1 .15, at the probe time ¯ t = 80, on a logarithmic τ
+
+axis, for comparison. All quantities in half-bandwidth ( D = 4 J) units. 
+
+together with their excitation energies and the response channel in which they carry spectral weight, are listed in Table III. The resulting spectra are shown in Fig. 7(c). The first new feature is a peak at ω = 2J, inde-pendent of U , originating from bonding-to-antibonding single-particle excitations within the thermally popu-lated N = 1 and N = 3 sectors. This excitation carries spectral weight in both the spin and charge channels. The second is a peak at ω = ∆ + U/ 2 → U in Am, arising from the thermally activated triplet →antibonding-singlet transition. These two high-energy spin excitations, at energies 2 J and ∆ + U/ 2, are the dimer counterparts of the high-energy magnetic excitations reported for the cuprate model in Ref. [48]. In the charge channel, the elevated temperature like-wise opens a transition at the superexchange energy, corresponding to the nonbonding-singlet →antibonding-singlet excitation. However, since both states lie approx-imately U above the ground state, their thermal occu-pation remains exponentially small, and the associated spectral weight is negligible. The two spectra therefore differ, in practice, only through the feature at ω = ∆ − U/ 2 → 4J2/U , which appears in Am already at T = 0 but is essentially absent from Ad. This excitation corresponds to the Heisenberg superexchange scale Jex , and its exclusive appearance in the spin channel provides the spectroscopic signature of local-moment formation. This interpretation is consis-tent with the behavior of the local spin susceptibility discussed in the main text. For U = 1 .15, χm
+
+> loc
+
+(τ ) ex-hibits a well-separated long-time peak (Fig. 7), whose characteristic timescale is set by J−1ex . We therefore as-sociate this slow component with the dynamics of in-teracting local moments. By contrast, the excitation at 
+
+ω = 2 J originates from bonding-to-antibonding hopping processes and appears in both the spin and charge chan-nels. Its higher excitation energy corresponds to a shorter characteristic timescale, consistent with the fast peak ob-served in the local susceptibilities and with the rapid re-laxation process reported in Ref. [46]. Finally, the exci-tation at ω ≃ U occurs on an even shorter timescale and therefore lies beyond the temporal resolution accessible in our nonequilibrium calculations.
