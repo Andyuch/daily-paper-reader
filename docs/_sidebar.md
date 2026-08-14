@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-14 <!--dpr-date:20260814-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/14/2608.09234v1-stroboscopic-raman-spectroscopy-of-atom-optics-in-quasi-bragg-regime" data-sidebar-item="{&quot;title&quot;: &quot;Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.09234v1-stroboscopic-raman-spectroscopy-of-atom-optics-in-quasi-bragg-regime&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;频闪拉曼光谱实现时间分辨的频闪采样，与频闪iSCAT方法相关&quot;}">Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime</a>
   * 2026-08-12 <!--dpr-date:20260812-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/12/2608.10721v1-revealing-time-characteristics-of-optical-excitations-in-dielectric-and-plasmonic-structures-through-cathodoluminescence-interferometry" data-sidebar-item="{&quot;title&quot;: &quot;Revealing time characteristics of optical excitations in dielectric and plasmonic structures through cathodoluminescence interferometry&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.10721v1-revealing-time-characteristics-of-optical-excitations-in-dielectric-and-plasmonic-structures-through-cathodoluminescence-interferometry&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;通过干涉测量实现对纳米尺度光学激发的时间分辨表征&quot;}">Revealing time characteristics of optical excitations in dielectric and plasmonic structures through cathodoluminescence interferometry</a>

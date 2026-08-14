@@ -1,0 +1,240 @@
+Title: Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime
+
+URL Source: https://arxiv.org/pdf/2608.09234v1
+
+Published Time: Tue, 11 Aug 2026 02:31:53 GMT
+
+Number of Pages: 9
+
+Markdown Content:
+# Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime 
+
+Joel Gomes Baptista, ∗ Louis Pagot, S´ ebastien Merlet, Leonid A. Sidorenkov, and Franck Pereira dos Santos †
+
+LTE, Observatoire de Paris - Universit´ e PSL, Sorbonne Universit´ e, Universit´ e de Lille, LNE, CNRS, Paris, France 
+
+(Dated: August 11, 2026) Quasi-Bragg regime is a good compromise for large-momentum-transfer atom interferometry, al-lowing for scaling up the interferometric area, while constraining the population of unwanted states. Separation of momentum states via standard time of flight methods, however, can be challenging when using laser-cooled atoms, rather than ultracold atoms with sub-recoil velocity distribution. To overcome this limit, we use Raman spectroscopy for stroboscopic sampling of the atomic state evolution in momentum space during the interrogating laser pulses. We quantitatively characterize atom optics employing two-photon (2 ℏk) and multi-photon (6 ℏk) Bragg transitions, the latter being optionally enhanced with optimal control protocol. We closely match the observed dynamics of the atomic state with simulations. Finally, we perform momentum spectroscopy of the output states in a 6 ℏk Bragg gravimeter. 
+
+I. INTRODUCTION 
+
+Bragg diffraction is a central tool in atom interferome-try, in particular for large momentum transfer (LMT) in-terferometer where increasing the separation between the arms enhances the sensitivity [1–6]. In practice, operat-ing in the quasi-Bragg regime leads to population trans-fer into parasitic momentum states, so that the quantum state dynamics can no longer be described as a two-level atomic system [7–9]. The effect of those parasitic states is especially relevant for atomic interferometers based on laser-cooled atoms, since finite velocity spread and cou-pling inhomogeneities induced by ballistic expansion re-duce the fidelity of high-order Bragg pulses. A major experimental drawback of using laser cooled, rather than evaporatively cooled ultracold atom sources, lies in the difficulty of reaching sufficient spatial sep-aration via time of flight (TOF) to resolve adjacent Bragg states, which prevents a direct characterization of the Bragg dynamics during the diffraction process or throughout the interferometric sequence. To mitigate this effect, one can increase the separation between mo-mentum states using a Bloch elevator lattice [10, 11]. However, the method suffers from imperfect transport efficiency, and is better suited for quasi-ideal two-states systems. To address these limitations, we implement a detection scheme based on velocity-selective Raman spec-troscopy, similar to the one reported in Refs. [12, 13] which enables to monitor the atomic momentum dis-tribution at any given moment during the pulse. This approach allows us to reconstruct the evolution of the atomic state, compare the measured dynamics with nu-merical simulations, and quantify the impact of the cou-pling dispersion both during individual diffraction pulses and at the output of a complete interferometer.   
+
+> ∗Presently at Leibniz Universit¨ at Hannover, Institut f¨ ur Quan-tenoptik, Welfengarten 1, 30167 Hannover, Germany
+> †Contact author: franck.pereira@obspm.fr
+
+In this work, we apply stroboscopic Raman spec-troscopy for characterizing first order (2 ℏk) and third or-der (6 ℏk) Bragg transitions in a cold-atom gradiometer. We show that Raman spectroscopy detection provides an efficient probe of the complex Bragg dynamics when op-timal control transfer (OCT) techniques [14–16] are used to optimize the laser phase temporal evolution during the diffraction process. Finally, we extend the analy-sis to a complete Mach-Zehnder interferometer sequence, where state-resolved detection reveals interference fringes for each Bragg state and allows for quantifying the con-tribution of parasitic states to the degradation of inter-ferometer performance as the diffraction order increases. 
+
+II. EXPERIMENTAL SETUP 
+
+Our apparatus, previously described in detail in [17], is a dual gravity sensor measuring both the gravity ac-celeration and its gradient. The sensor head comprises a drop chamber with two (top and bottom) vacuum cham-bers for the production of the atomic sources, which are connected to a common vertical tube and separated by a distance of 1 m. Each source chamber hosts an in-vacuum mirror for the simultaneous realization of two surface 3D-MOTs. A collimated laser beam of a waist 
+
+w = 4 mm enters at the bottom of the drop chamber and propagates upward, thus crossing both source chambers. It is then retroreflected onto a mirror located outside the vacuum chamber, forming an optical lattice. Such configuration enables simultaneous interrogation of both atomic clouds with common light pulses. The interrogat-ing light is brought to the chamber via an optical fiber from the output of a laser system, described in detail in [18]. This versatile laser system allows for realizing different atom-optics operations during the measurement cycle, including: velocity selection and spectroscopy with Raman pulses, optional atom launching and wavepacket separation with Bloch elevators and interferometry with Bragg pulses. The experimental sequence starts with the loading of arXiv:2608.09234v1 [physics.atom-ph] 10 Aug 2026 2the 3D-MOTs from the intense flux of two independent 2D-MOTs for a duration of 670 ms. About 10 8 atoms of 
+
+> 87
+
+Rb are then laser-cooled to approximately 2 μK via far detuned optical molasses and prepared in the F = 2 hy-perfine ground state before being released in free fall. Af-ter a few ms of TOF, we apply a square 70 μs long Raman pulse, out-coupling the atoms having low vertical velocity spread into |F = 1 , m F = 0 ⟩ hyperfine ground state that will further enter interferometric sequence. This process reduces the vertical rms velocity spread from σv = 2 vr
+
+to about σv = 0 .3 vr , vr being atom recoil velocity, while the transverse velocity distribution remains unchanged. To simultaneously probe gravitational accelerations affecting both atom clouds, we use a symmetric Mach-Zehnder sequence of three (beamsplitter-mirror-beamsplitter) Bragg pulses separated by a time interval 
+
+T . We use Gaussian pulses of rms durations σt = 7 μsand 14 μs for the beamsplitter and mirror pulses, respec-tively. We resonantly drive either 2 ℏk or 6 ℏk Bragg tran-sitions by adjusting the two-photon detuning, and maxi-mize the efficiency of the pulses using optimal Rabi cou-plings of Ω R/2π=14.25 kHz, for 2 ℏk (diffraction order 
+
+n = 1) and 57 kHz, for 6 ℏk (n = 3). This places our experiment in the quasi-Bragg regime, where excitation of parasitic states is negligible in the case of resonant adiabatic pulses. However, inhomogeneities in the detuning, due to the Doppler effect, and in the coupling amplitude, due to the finite sizes of the laser beam and of the atomic clouds, re-duce the fidelity of atom-optics and increase the popula-tion fraction of parasitic momentum states participating in the interferometric process. To minimize the impact of transverse time-of-flight expansion of atomic clouds, we restrict in this study the interferometric cycle constant to 
+
+T = 1 ms. Experimentally, we find maximum efficiencies for the mirror pulses of 60 % ( n = 1) and 40 % ( n = 3). The respective interferometric contrast is preserved at the levels of ≈ 40 % and ≈ 20 %. The atoms are finally detected at the very bottom of the drop chamber, where the populations in the two hy-perfine ground levels are measured via resonant fluores-cence using three successive retroreflected light sheets. The detection sheets are shaped by rectangular slits with a common width of 15 mm, and heights of 5 mm for the first and the third, and 1 mm for the second. The first light sheet detects the atoms in |5S1/2, F = 2 ⟩
+
+ground state as they are driven on the cycling transition 
+
+|5S1/2, F = 2 ⟩ → | 5P3/2, F ′ = 3 ⟩. At the bottom of this light sheet, the retroreflected beam is shadowed, in order to push the detected atoms away by radiation pressure. Atoms in the state |5S1/2, F = 1 ⟩ keep falling and get transferred to the |5S1/2, F = 2 ⟩ state in the second re-pumping light sheet. Finally, they are detected by the last light sheet resonant with the cooling transition.              
+
+> III. MOMENTUM-RESOLVED DETECTION (a) (b) (c) MOT 2T Raman v-selection Raman spectroscopy Detection Bragg pulse / sequence ≈ 23 cm
+> FIG. 1. (a) Scheme of the experimental sequence used in this work and simulated signals for the detection using 5 mm light sheet of balanced-population in 0 and 2 ℏkstates us-ing (b) time-of-flight and (c) Raman spectroscopy with total 0.2vr-resolution (columns, see text). The orange (blue) color encodes atomic population in |F= 2 ⟩(|F= 1 ⟩) state. The 2nd and the 3rd Bragg pulses (light blue-filled with dashed envelope) are optionally used to study a complete closed in-terferometer.
+
+In this work, we explore the methods for momentum-resolved detection of Bragg states, pertinent to a compact gravimeter configuration (see Figure 1a), by employing only the bottom atomic source with a free-fall distance of about 23 cm, given by the location of its 3D-MOT above the detection region. At a corresponding TOF limited to 200 ms, the spatial separation of adjacent momentum states differing by a velocity of 2 vr ≈ 12 mm/s is approx-imately 2 .4 mm. Given a typical rms-width of 0 .6 mm of the detected atomic cloud, dominated by its initial size upon release from the optical molasses [19], one could in principle resolve these states using sub-millimeter light sheets, at the price of drastic reduction of the fluores-cence signal. Conversely, an order of magnitude longer free-fall distance would be required to spatially resolve the adjacent momentum states in our present 5 mm light sheet detection system. To sufficiently separate two momentum states, we have previously used a Bloch separator method [11], acceler-ating one of the components with a resonant optical lat-tice before detection. The finite efficiency of the separa-tor, however, leads to a residual mixing between the two populations, which complicates the analysis of the Bragg dynamics and reduces the contrast of the interferome-ter. This method is therefore hardly applicable for LMT Bragg interferometry as it involves complex dynamics of 
+
+multiple momentum states {nℏk}.An alternative method introduced in [12] and adapted here consists in using an additional Raman pulse trans-3ferring the population of a given momentum state nℏk
+
+(or a narrow velocity sub-group in its vicinity) to another hyperfine state and its subsequent detection with the res-onant light sheet. In this case, one benefits from the full-amplitude fluorescence signal, while the controlled duration and frequency detuning of the Raman pulse de-fine the momentum resolution independently of the size of the detection light sheet and total time of flight. As an illustration, we show in Figure 1 a simulated de-tection of balanced-superposition state of 0 and 2 ℏk with conventional time-of-flight (panel b) and corresponding velocity spectrum sampled with Raman pulse selecting rms of 0 .1 vr (panel c), three times longer than the one used in preparation phase - modeled here for simplicity with a flat window of 0 .2 vr -width. The insufficient sep-aration between two momentum states in TOF distorts the detected signal prevents a correct estimation of cor-responding populations. On the contrary, the spectrum recorded using an additional Raman pulse allows to even visualize details of the momentum distributions for both states.   
+
+> IV. IN-PULSE EVOLUTION OF BRAGG STATES A. Stroboscopic Raman spectroscopy
+
+Using the additional Raman pulse, we can scan the ve-locity distribution across the Bragg states of momenta 
+
+|p0 + 2 nℏk⟩. To follow the in-pulse dynamics of the atomic state, we abruptly terminate the Bragg pulse by switching off the RF signal driving the AOM that con-trols the coupling amplitude. The effective truncation time is limited by the AOM fall time of a few 100 ns, much shorter than the characteristic evolution time of the sys-tem ( τc = 1 /ΩR ≈ 10 μs). After cutting the Bragg pulse, we shine a Raman pulse, that is three times longer than the velocity-selection pulse, transferring a selected reso-nant ≈ 2 × 0.1 vr -wide velocity class to the |F = 2 ⟩ state, subsequently detected by the first light sheet. We then repeat the experiment while changing the Raman detun-ing and reconstruct the full spectrum of the ”frozen” evo-lution at a given cutting moment. Figure 2 displays typical Raman spectra obtained at the start (panel a) and in the middle (panel b) of the 6ℏk Bragg mirror pulse. The peaks in the spectra are labeled according to their mean momentum difference with respect to the initial state |p0⟩ (0 ℏk). Panel (a) shows the measured velocity distribution of the initial state which reveals significant characteristic Lorentzian-like wings. Here we expect observing a sinc-function spectrum originating from the square velocity-selectivity pulse. However, its spectral lobes appear smoothened, due to the convolution with the three-times thinner sinc-function of the spectroscopy pulse. For this reason, we use an empiric q-Gaussian (also called Lorentz-B, for in-stance in [20]) function for fitting the peaks of initial and         
+
+> FIG. 2. Raman spectra of the momentum states (a) just before ( t= 0 μs) and (b) in the middle (40 μs) of 6 ℏkBragg mirror interrogation pulse. The offsets due to spontaneous emission and experimental imperfections have been fitted and removed from the shown spectra, for clarity. (c) Complete evolution of the populations in significant Bragg states during 6ℏkBragg mirror pulse. Symbols: the populations computed as the normalized fitted areas of the peaks in the measured spectra exampled in panels a and b. Dashed lines: numerical simulation (see text). Gray shaded area marks the Gaussian envelope of the coupling amplitude.
+
+target (6 ℏk) states, while the other peaks are fitted with Gaussian functions (see panel b). By integrating the fit-ted area under each peak, we extract the corresponding populations thus evaluating partial contributions to the diffraction process. We then perform such scans of the velocity distribution every 4 μs and reconstruct in detail the evolution of the Bragg states during the mirror pulse, which is presented in the panel (c) of Figure 2. We observe significant pop-4ulation in all momentum states, varying rather smoothly during the Bragg diffraction pulse. At the end of the pulse, all but initial and target states almost vanish, thus underlining the benefits of quasi-Bragg regime. However, we may note a stagnation of the main states’ populations at the values around 50% without crossing each other, i. e. without an inversion expected for a π-pulse (mirror). We attribute this feature to the strong impact of cou-pling inhomogeneities in diffraction process, which moti-vates us to confront the measurements with correspond-ing numerical simulations, before proposing mitigation protocols.  
+
+> B. Numerical model
+
+The numerical simulation of the Bragg dynamics is based on the resolution of the Schr¨ odinger equation of an atom in a Bragg optical lattice under gravity [9] (see Appendix B). To realistically reproduce the experimen-tal conditions, the simulation averages over two sources of inhomogeneity: the initial velocity distribution, given by the spectral width of the Raman velocity selection pulse, and the spatial distribution of the two-photon Rabi fre-quency Ω R.To account for the latter contribution, we consider an atomic cloud with initial (at the moment of first Bragg pulse) Gaussian distribution of standard deviation σr , il-luminated by a Gaussian beam of waist (1 /e 2-radius) w.The two-photon Rabi frequency then follows the spatial intensity profile of the beam Ω R(ρ) = Ω 0 
+
+> R
+
+exp  −2ρ2/w 2,where ρ is the transverse distance to the beam axis and Ω0 
+
+> R
+
+denotes the peak Rabi frequency. Averaging this quantity over the spatial distribution of the atomic cloud leads to a coupling distribution characterized by a mean value ⟨ΩR⟩ and a rms width σΩR . We define the effective relative coupling inhomogeneity as 
+
+χ = σΩR
+
+⟨ΩR⟩ =
+
+s
+
+⟨Ω2
+
+> R
+
+⟩⟨ΩR⟩2 − 1 = r2
+
+> C
+
+p1 + 2 r2
+
+> C
+
+(1) where rC = 2 σr /w is the ratio between the transverse rms diameter of the atomic cloud and the beam waist. For a cloud of rms size σr = 0 .5 mm, rC = 0 .25, which corresponds to an effective relative coupling inhomogene-ity χ = 5 .9 %. To match the experimental Raman spectroscopy mea-surements, the simulation parameters Ω 0 
+
+> R
+
+and σr are treated as fitting parameters. The details of the fitting procedure can be found in Appendix B. Results of the simulation with adjusted parameters are displayed in Fig-ure 2c as dashed lines. A good agreement with experi-mental data in Figure 2 is found for the following fit pa-rameters Ω 0
+
+> R
+
+/2π = 66 ± 2 kHz and σr = 1 .23 ± 0.06 mm. This corresponds to a strong effective relative coupling inhomogeneity of χ = 29 ± 2 %, that may be explained by several factors. First, the actual shape of the cloud upon release from optical molasses could be an ellipsoid stretched along the weaker-gradient axis of the MOT at 45 ◦ with respect to vertical, thus giving a larger initial horizontal spread in one of the axes. Second, the simu-lation doesn’t account for diffraction of the interrogating beam on the edges of surface-trap mirrors that would cre-ate a stronger transverse variation than a simple Gaus-sian profile. The corresponding excessive inhomogene-ity could thus be absorbed by effectively increased fitted cloud size. The results of stroboscopic spectroscopy, matched to the simulation of atomic state evolution, allow for an accurate characterization of atomic source dispersion re-sponsible for coupling inhomogeneity that strongly limits the efficiency of LMT atom-optics. We demonstrate be-low effective measures to circumvent this limitations be-ing explored with the present spectroscopy and the sim-ulation toolbox.  
+
+> C. Quantum control of optimized mirror pulse
+
+To improve the efficiency of the Bragg process, we use optimal control theory to design atom-optics resilient to velocity and coupling inhomogeneities. We preserve the peak amplitude and the smooth temporal Gaussian enve-lope of the Rabi coupling pulse, but typically extend its duration three to fivefold. The only optimally-controlled parameter is the differential phase between the two laser beams forming the Bragg optical lattice. In the case of a two-level system, this phase would correspond to an equatorial angle of the torque field vector in the Bloch sphere picture. The black symbols in Figure 3 display the evolution of the six most populated momentum states for such an optimized Bragg mirror pulse. Here, we resolve fine local variations in states’ populations, which demonstrate an overall more complex dynamic than in the case of the conventional 6 ℏk pulse shown in Figure 2c. The OCT al-lows to significantly lower the population in initial (0 ℏk)state and increase that of the target one (6 ℏk), manifest-ing the inversion at the end of the pulse. However, about 20% of the population remains in unwanted momentum states. We account for an OCT phase pattern in the previously described simulation approach and obtain numerical re-sults corresponding to the reference case of an atomic cloud with an rms size σr = 0 .5 mm and Ω 0
+
+> R
+
+/2π = 57 kHz (dashed green lines) and to the case of fitted values of σr
+
+and Ω 0 
+
+> R
+
+(solid red lines). Adjusting the parameters allows to accurately reproduce the in-pulse dynamics associated to the quantum control protocols, which furthermore en-hances our confidence in the simulation.  
+
+> D. Discussion
+
+Using identical preparation, detection, analysis and numerical simulation routine, we have studied various 50.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 Population                    
+
+> 0ℏk6ℏk
+> 0.0 0.1 0.2 0.3 Population
+> 2ℏk4ℏk
+> 050 100 150 200 250 300 350 t ( μs) 0.0 0.1 Population
+> -2 ℏk
+> 050 100 150 200 250 300 350 t ( μs)
+> 8ℏk
+> Ref Fit Exp
+> FIG. 3. Evolution of the momentum states in the 6 ℏkBragg mirror pulse optimized with OCT, recorded using strobo-scopic Raman spectroscopy (symbols). The data is confronted with simulation for reference (dashed green line) and fitted (solid red line) parameter configurations, see text.
+
+Bragg diffraction pulses including n = 3 mirror (con-ventional and with OCT), as well as n = 3 beamsplitter with OCT and n = 1 conventional mirror pulse. The latter two data sets are presented in Figures 5 and 6 of Appendix. The relative inhomogeneities obtained from adjusting the values of Ω R and σr to best match each experimental data are reported in Table I. For both first and third order Bragg transitions, the agreement between simulated and measured population dynamics requires increasing the effective cloud size and the peak Rabi frequency with respect to their nominal values, which leads to a significant increase of the rela-tive coupling inhomogeneity (mean value calculated from the Table I: χ = 33 %) compared to the value expected for the nominal parameters. This larger dispersion in-dicates that the atoms experience larger intensity inho-mogeneities than expected from a pure Gaussian beam.                    
+
+> TABLE I. Fitted parameters and corresponding relative in-homogeneities obtained from the adjustment of the atomic population dynamics for various Bragg pulses (M = Mirror, Bs = Beamsplitter). Diffraction pulse type
+> n= 1 n= 3 MMM, OCT Bs, OCT Ω0
+> R/2π, kHz 21 .9(7) 66(2) 66(1) 74 .2(3)
+> σr,mm 1.56(5) 1 .23(6) 1.25(2) 1.37(1)
+> χ, %40(2) 29(2) 29.3(7) 33.7(4)
+
+The good agreement between the experimental data and the optimized simulation confirms the validity of the method, which allows us to accurately capture the multimode dynamics of the quasi-Bragg regime for high diffraction orders. However, the match is not perfect and could be improved by different means. First, the Raman spectroscopy pulse is a square pulse only three times longer and weaker than the velocity se-lection pulse. A better momentum resolution could be achieved by increasing the duration of this pulse. In addi-tion, using an adapted temporal shape (Gaussian, Gsinc or Blackman) [21] could suppress the spectral wings in-herent to the sinc profile, providing a more clear spectro-scopic signal. Second, the Bragg populations are deduced from fits to the measured spectrum. The choice of the fitting func-tions may be optimized. In particular, the use of the q-Gaussian profiles may fail to capture the dynamics of the spectral wings and lead to deviations from the real distribution. Last, the signal-to-noise ratio was limited in presented experiments, forcing to choose a relatively broad spectral probe that prevented the observation of the finest details of the momentum distribution. Improving the number of trapped and thus detected atoms, which was constrained by an aging tapered amplifier of our laser-cooling system, would increase the signal and allow for more selective spectroscopy pulses [13]. We can furthermore envision applying the tested Ra-man detection protocol for a single-shot detection of the momentum states of interest in LMT Bragg diffraction, as opposed to acquiring the full spectrum, similarly to the demonstration in [12] for n = 1 and n = 2 diffrac-tion orders. For example, using two consecutive Raman pulses resonant with σv = 0 .3 vr velocity classes centered on 0 ℏk and 6 ℏk and spectrally separated by sharply 6 νr
+
+(νr being recoil frequency of an atom), one can detect the populations of only main states using light-sheet flu-orescence sufficiently separated in time-of-flight as all in-termediate states remain transparent. The restrictions on the size of detection light sheet, the initial width of atomic cloud and the total time-of-flight become further relaxed in this case, as diffraction order of interest in-creases. In this work, we have applied Raman spectroscopy for detecting the evolution of the complex momentum states optimized with OCT methods that control a single pa-6rameter, the laser phase. Being well matched to the simulation, this approach could be used to explore more complete OCT protocols that involve optimized varia-tion of several parameters (such as phase, amplitude and frequency detuning of the driving field) - to study ro-bustness [22–24] and accuracy [25] of the LMT atom interferometers in quasi-Bragg regime.  
+
+> E. Raman spectroscopy of a Bragg interferometer
+
+The Raman spectroscopy method can also be used to probe the output state of an atom interferometer se-quence. We scan the output phase of the Mach-Zehnder gravimeter by varying the chirp α = dν/dt applied to the frequency difference of the Bragg lasers around a mean value that compensates the Doppler detuning during free fall α0 = kg/π ≈ − 25 .14 MHz/s. For each chirp value, a Raman spectroscopy measurement is performed on the output ports of the interferometer, allowing us to resolve the population associated with each momentum state. In Figure 4, we show the interference fringes obtained for each individual momentum state in first ( n = 1) and third ( n = 3) order Bragg interferometers of T = 1 ms (symbols) without OCT. The n = 1 case (panel a) mani-fests a clean sinusoidal pattern of two-state interference, dominated with more than 90% amplitude by the prin-cipal frequency given by the target states 0 ℏk and 2 ℏk.On the contrary, the observed interferometric fringes of target states 0 ℏk and 6 ℏk in case of n = 3 interferom-eter (panel b) contain multiple harmonics. Only about 60% resides in the principal frequency while the signal is strongly contaminated by the n = 1 ( ≈ 25%) and n = 2 (≈ 10%) parasitic interferometric loops. Here, the ex-cellent momentum-state selectivity of the detection with Raman spectroscopy method underlines the breakdown of two-wave interference concept, which would compli-cate the single-shot extraction of interferometric phase from the observed probability. The data is supported with simulation (solid lines) obtained by averaging the interferometer response over a Gaussian vertical velocity distribution of width σv =0.3 vr and coupling inhomogeneities determined from the single pulse measurements (Table I). For the first order Bragg interferometer, the Gaussian pulses are at reso-nance, with a peak Rabi frequency of 21 .9 kHz (Table I). For the third order Bragg interferometer, the pulses had to be detuned by −4.5 kHz to reproduce the final popula-tion difference between the external states −2ℏk and 8 ℏk.The peak Rabi frequency is 72 .6 kHz, which is consistent with the values obtained from the single pulse measure-ments (Table I). In both cases shown in Figure 4, the simulated fringes are ”scanned” using a phase increment imprinted during the final beamsplitter pulse. The em-piric conversion to a frequency ramp is achieved by linear fit of the phase shift to the frequency ramp to account for the corrections due to the finite pulse duration and its Gaussian shape. This contribution modifies the oscilla- 
+
+> FIG. 4. Fringe patterns for the interferometers employing (a) first and (b) third order Bragg atom-optics without OCT. Symbols are the populations of significant states (see legend) measured via Raman spectroscopy. The matching solid lines result from the corresponding numerical simulation (see text).
+
+tion frequencies within a few percent, giving a fine match of horizontal scaling. Our method, in principle, can be applied to analyze any multi-port atom interferometer, provided a sufficient spectroscopic resolution.  
+
+> V. CONCLUSION
+
+In this work, we have presented a method for analyzing atom optics dynamics in the quasi-Bragg regime using Raman spectroscopy. This technique addresses a typi-cal resolution limit for standard time-of-flight detection scheme, where the spatial separation of adjacent Bragg states remains insufficient with respect to atomic cloud dispersion. By using velocity-selective Raman pulses, we successfully reconstructed the time evolution of atomic populations in momentum space during the interrogation pulses. For comparison with experimental data, we per-formed numerical simulation based on resolving the Schr¨ odinger equation for atom-light interaction in quasi-Bragg regime. Our analysis demonstrated the impor-tance of coupling inhomogeneities coming from the con-7volution of the intensity variation across the laser beam profile with the spatial distribution of the atomic cloud. This tool offers a robust diagnostic of the Bragg dy-namics, and allows us to track the complex evolution of the quantum state driven on multi-photon transitions, enhanced with optimal quantum control protocols in the presence of inhomogeneities. To achieve good agreement between theory and experiment, it was necessary to ad-just the peak Rabi frequency and effective cloud size as fitting parameters, revealing that the atomic cloud ex-periences a broader than expected distribution of Rabi coupling. In addition, we extended this characterization to a full Mach-Zehnder interferometer sequence. The spectral res-olution of our method allowed for observing interference fringes specific to each Bragg state and quantifying the contribution of unwanted momentum states into reduced contrast of the main interferometric loop. 
+
+> ACKNOWLEDGMENTS
+
+We thank V. Cambier and F. Correia for their con-tribution at the earlier stage of this work, J. Pinto, L. Volodimer and M. Lours for general support in electron-ics, and, in particular, for design and implementation of the high-voltage amplifiers that play a key role in OCT measurements, and Q. Beaufils for careful reading of the manuscript. All authors acknowledge support from the Agence Nationale de la Recherche under Contract No. ANR-19-CE47-0003 GRADUS, and from a government grant managed by the Agence Nationale de la Recherche under the Plan France 2030 with the reference “ANR-22-PETQ-0005” (project QAFCA). 
+
+> Appendix A: Evolution of the Bragg states for various Bragg pulses
+
+For a more complete demonstration of stroboscopic Raman spectroscopy method, we provide here further data, corresponding to the cases not shown in the main text for brevity, while being listed in Table I. Figure 5 demonstrates the evolution of atomic state during 6 ℏk
+
+Bragg beamsplitter pulse enhanced with OCT protocol, supporting all conclusions outlined for the case of an op-timized Bragg mirror pulse. In addition, we have applied the developed detec-tion and simulation methods to conventional 2 ℏk Bragg pulses. Figure 6 shows corresponding recorded in-pulse evolution. Here, the coupling of unwanted states typi-cally remains below 5% - level that is nonetheless well resolved experimentally and matched with simulation. 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 Population              
+
+> 0ℏk6ℏk
+> 0.0 0.1 0.2 0.3 Population
+> 2ℏk4ℏk
+> 050 100 150 200 t ( μs) 0.0 0.1 Population
+> -2 ℏk
+> 050 100 150 200 t ( μs)
+> 8ℏk
+> Ref Fit Exp
+> FIG. 5. Evolution of the momentum states in the 6 ℏkBragg beamsplitter pulse optimized with OCT, recorded using stro-boscopic Raman spectroscopy (symbols). Dashed green (solid red) line is numerical simulation for the reference (fitted) pa-rameter set, see main text.
+> Appendix B: Details on numerical simulation of the quasi-Bragg regime
+
+The Hamiltonian of an atom with a mass M subject to the gravitational acceleration and a periodic potential created by counter-propagating laser beams of frequen-cies ω1, ω 2 and wavevectors k1 ≈ − k2 ≈ k along the 
+
+z-direction can be written (in the free falling frame) as: ˜H = ˆp2
+
+2M − ˜v(t)ˆ p − ℏΩ( t)  e2ik ˆz + e−2ik ˆz  (B1) where ˜ v(t) is the velocity of the lattice with respect to the free-falling atom: ˜v(t) = 
+
+ 12kdϕ (t)
+
+dt + gt 
+
+
+
+(B2) The periodicity of the lattice potential allows us to ex-pand the wave function in the quasi-momentum basis: 80.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 Population            
+
+> 0ℏk2ℏk
+> 020 40 60 80 t ( μs) -0.01 0.00 0.01 0.02 0.03 0.04 0.05 0.06 0.07 Population
+> -2 ℏk
+> 020 40 60 80 t ( μs)
+> 4ℏk
+> Ref Fit Exp
+
+FIG. 6. Evolution of momentum states in a conventional 
+
+n = 1 Bragg mirror pulse, recorded using stroboscopic Ra-man spectroscopy (symbols). Dashed green (solid red) line is numerical simulation for the reference (fitted) parameter set, see main text. 
+
+{| p0 + 2 nℏk⟩} ≡ {| 2lℏk⟩} :
+
+|Ψ( t)⟩ = X
+
+> n
+
+cl(t) |2lℏk⟩ (B3) where l ∈ Z, −2 ≤ l ≤ 5 is the Bragg state index that would formally coincide with diffraction order n used in the main text as initial state is l = 0. 
+
+Simulation routine 
+
+The simulation integrates an 8-state system for each discrete class of velocity and (x,y) position using an in-ternal RK4 solver (Numba JIT). For each point ( vz , x, y )the time evolution over the pulse window t0 ± 3σt
+
+pulse is computed, resulting in complex amplitudes cl(t)for the eight momentum states. The ( vz , x, y ) points are then weighted by Gaussian velocity and spatial distributions and averaged to compute time-dependent state probabilities and phases. Numba routine performs the linear interpolation of an external phase profile, the evaluation of a time-dependent reduced complex cou-pling including the Gaussian envelope and OCT phase 
+
+γ(t) ≡ ΩR(t)Ω0 exp ( iφ OCT (t)) with Ω 0/2π = 14 .25 kHz, and RK4 integration with adjustable internal sub-steps. 
+
+Discretization grids, weights and constraints 
+
+We derive 21 velocity classes vi from the range [−1.5 vr ;1 .5 vr ] with step size of 0 .15 vr and 23-per-axis discrete (xi, y i) classes from the range [−2 σr ;2 σr ]with step size of 2 σr /11. Velocity weighting takes into account the velocity selection induced by a Raman square pulse of duration τ = 70 μs; spatial weights are Gaussian functions of RMS width σr . The interrogating Gaussian beam of waist w0 = 4 mm is considered to be centered on the atomic cloud. The routine computes weighted averages of |ψ|2 and phases over all points to produce the simulated dynamic. 
+
+Fitting procedure 
+
+The fitted parameters are initial RMS cloud size σr
+
+and adimensional coupling amplitude γ0. The pipeline consists of: warm-up JIT run → global optimiza-tion with differential evolution on a coarse simulation grid → local refinement with least-squares on a finer grid. At each iteration, the residuals psim − pexp are concatenated across all orders, while the orders with negligible signal ( −4ℏk and 10 ℏk) are eventually ignored setting the cutting threshold. The fit residuals are not normalized by the uncertainties, in order to ensure equivalent treatment of all Bragg states and an absence of bias related to the possible accidental fluctuation in the error bars generated during the fits of spectral features (as those in Figure2 a and b). We have observed that various pairs (Ω R, σ r ) can lead to the similar optimization result, suggesting a coupling between the two parameters. As these nearly-optimal pairs of parameters exceed the typical error bars from a single fit, we apply another common method for more robust error-bars estimation. Using the recorded exper-imental data, we generate for all states an array of 300 simulated curves that include randomly sampled points from the normal distributions given by the mean value and error bar of each data point. We then fit the same model (as for single-fit protocol) with identical initial-ization conditions to this simulated data and obtain 300 pairs of (Ω R, σ r ), from which we extract estimated mean and standard deviation for the two parameters. A possibility to constrain the coupling between Ω R and 
+
+σr is to further increase the number of necessary parame-ters by including, for example, the RMS of vertical veloc-ity distribution. Such extension may, however, demand significantly longer simulation times, which goes beyond the scope of present study. 9
+
+[1] S.-w. Chiow, T. Kovachy, H.-C. Chien, and M. A. Kase-vich, 102 ℏk large area atom interferometers, Phys. Rev. Lett. 107 , 130403 (2011). [2] T. Kovachy, P. Asenbaum, C. Overstreet, C. A. Donnelly, S. M. Dickerson, A. Sugarbaker, J. M. Hogan, and M. A. Kasevich, Quantum superposition at the half-metre scale, Nature 528 , 530 (2015). [3] T. Mazzoni, X. Zhang, R. Del Aguila, L. Salvi, N. Poli, and G. M. Tino, Large-momentum-transfer bragg inter-ferometer with strontium atoms, Phys. Rev. A 92 , 053619 (2015). [4] G. D’Amico, F. Borselli, L. Cacciapuoti, M. Prevedelli, G. Rosi, F. Sorrentino, and G. M. Tino, Bragg interfer-ometer for gravity gradient measurements, Phys. Rev. A 
+
+93 , 063628 (2016). [5] R. Geiger, A. Landragin, S. Merlet, and F. Pereira Dos Santos, High-accuracy inertial measurements with cold-atom sensors, AVS Quantum Science 2, 024702 (2020). [6] T. Zhang, L.-L. Chen, Y.-B. Shu, W.-J. Xu, Y. Cheng, Q. Luo, Z.-K. Hu, and M.-K. Zhou, Ultrahigh-Sensitivity Bragg Atom Gravimeter and its Application in Testing Lorentz Violation, Physical Review Applied 20 , 014067 (2023). [7] M. B¨ uchner, R. Delhuille, A. Miffre, C. Robilliard, J. Vigu´ e, and C. Champenois, Diffraction phases in atom interferometers, Phys. Rev. A 68 , 013607 (2003). [8] H. M¨ uller, S.-w. Chiow, and S. Chu, Atom-wave diffrac-tion between the raman-nath and the bragg regime: Ef-fective rabi frequency, losses, and phase shifts, Phys. Rev. A 77 , 023609 (2008). [9] A. B´ eguin, T. Rodzinka, J. Vigu´ e, B. Allard, and A. Gau-guet, Characterization of an atom interferometer in the quasi-bragg regime, Phys. Rev. A 105 , 033302 (2022). [10] P. A. Altin, M. T. Johnsson, V. Negnevitsky, G. R. Den-nis, R. P. Anderson, J. E. Debs, S. S. Szigeti, K. S. Hardman, S. Bennetts, G. D. McDonald, L. D. Turner, J. D. Close, and N. P. Robins, Precision atomic gravime-ter based on Bragg diffraction, New Journal of Physics 
+
+15 , 023009 (2013). [11] R. Piccon, S. Sarkar, J. Gomes Baptista, S. Merlet, and F. Pereira Dos Santos, Separating the output ports of a bragg interferometer via velocity selective transport, Phys. Rev. A 106 , 013303 (2022). [12] Y. Cheng, K. Zhang, L.-L. Chen, T. Zhang, W.-J. Xu, X.-C. Duan, M.-K. Zhou, and Z.-K. Hu, Momentum-resolved detection for high-precision bragg atom inter-ferometry, Phys. Rev. A 98 , 043611 (2018). [13] Q. Beaufils, L. A. Sidorenkov, P. Lebegue, B. Venon, D. Holleville, L. Volodimer, M. Lours, J. Junca, X. Zou, A. Bertoldi, M. Prevedelli, D. O. Sabulsky, P. Bouyer, A. Landragin, B. Canuel, and R. Geiger, Cold-atom sources for the matter-wave laser interferometric grav-itation antenna (MIGA), Scientific Reports 12 , 19000 (2022). [14] N. Khaneja, T. Reiss, C. Kehlet, T. Schulte-Herbr¨ uggen, and S. J. Glaser, Optimal control of coupled spin dy-namics: Design of NMR pulse sequences by gradient as-cent algorithms, Journal of Magnetic Resonance 172 , 296 (2005). [15] U. Boscain, M. Sigalotti, and D. Sugny, Introduction to the pontryagin maximum principle for quantum optimal control, PRX Quantum 2, 030203 (2021). [16] J. Saywell, M. Carey, M. Belal, I. Kuprov, and T. Free-garde, Optimal control of Raman pulse sequences for atom interferometry, Journal of Physics B: Atomic, Molecular and Optical Physics 53 , 085006 (2020). [17] R. Caldani, K. X. Weng, S. Merlet, and F. Pereira Dos Santos, Simultaneous accurate determination of both gravity and its vertical gradient, Phys. Rev. A 99 , 033601 (2019). [18] S. Sarkar, R. Piccon, S. Merlet, and F. Pereira dos Santos, Simple and robust architecture of a laser system for atom interferometry, Opt. Express 30 , 3358 (2022). [19] L. A. Sidorenkov, R. Gautier, M. Altorio, R. Geiger, and A. Landragin, Tailoring multiloop atom interferometers with adjustable momentum transfer, Phys. Rev. Lett. 
+
+125 , 213201 (2020). [20] M. Altorio, L. A. Sidorenkov, R. Gautier, D. Savoie, A. Landragin, and R. Geiger, Accurate trajectory align-ment in cold-atom interferometers with separated laser beams, Phys. Rev. A 101 , 033606 (2020). [21] B. Fang, N. Mielec, D. Savoie, M. Altorio, A. Landragin, and R. Geiger, Improving the phase response of an atom interferometer by means of temporal pulse shaping, New Journal of Physics 20 , 023020 (2018). [22] J. C. Saywell, M. S. Carey, P. S. Light, S. S. Szigeti, A. R. Milne, K. S. Gill, M. L. Goh, V. S. Perunicic, N. M. Wilson, C. D. Macrae, A. Rischka, P. J. Everitt, N. P. Robins, R. P. Anderson, M. R. Hush, and M. J. Biercuk, Enhancing the sensitivity of atom-interferometric inertial sensors using robust control, Nature Communications 14 ,7626 (2023). [23] G. Louie, Z. Chen, T. Deshpande, and T. Kovachy, Ro-bust atom optics for bragg atom interferometry, New Journal of Physics 25 , 083017 (2023). [24] L. S. Baker, A. L. P. de Lima, A. Harter, C. Uzun, L. P. Keeley, J.-S. Li, A. Zlotnik, M. J. Martin, and M. G. Boshier, Robust quantum control for bragg pulse design in atom interferometry, Phys. Rev. A 113 , 063305 (2026). [25] V. J. Mart´ ınez-Lahuerta, J.-N. Kirsten-Siemß, K. Ham-merer, and N. Gaaloul, Diffraction-phase-free bragg atom interferometry, AVS Quantum Science 8, 014404 (2026).

@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-14",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T21:13:38",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/14/2608.09234v1-stroboscopic-raman-spectroscopy-of-atom-optics-in-quasi-bragg-regime",
+      "section": "quick",
+      "title_en": "Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime",
+      "authors": "Joel Gomes Baptista, Louis Pagot, Sébastien Merlet, Leonid Sidorenkov, Franck Pereira Dos Santos",
+      "date": "2026-08-10",
+      "pdf": "https://arxiv.org/pdf/2608.09234v1",
+      "score": "6.0",
+      "evidence": "频闪拉曼光谱实现时间分辨的频闪采样，与频闪iSCAT方法相关",
+      "tldr": "准布拉格 regime 在大动量转移原子干涉中兼顾了干涉面积扩展与杂态抑制，但激光冷却原子宽速度分布使飞行时间分离困难。本文采用拉曼光谱对激光脉冲期间的动量态进行随机采样，定量表征了2ħk和6ħk布拉格跃迁，并施加最优控制优化，模拟与实验吻合，最终实现了6ħk布拉格重力仪的动量光谱输出。",
+      "tags": "query:iscat",
+      "abstract_en": "Quasi-Bragg regime is a good compromise for large-momentum-transfer atom interferometry, allowing for scaling up the interferometric area, while constraining the population of unwanted states. Separation of momentum states via standard time of flight methods, however, can be challenging when using laser-cooled atoms, rather than ultracold atoms with sub-recoil velocity distribution. To overcome this limit, we use Raman spectroscopy for stroboscopic sampling of the atomic state evolution in momentum space during the interrogating laser pulses. We quantitatively characterize atom optics employing two-photon (2___k) and multi-photon (6___k) Bragg transitions, the latter being optionally enhanced with optimal control protocol. We closely match the observed dynamics of the atomic state with simulations. Finally, we perform momentum spectroscopy of the output states in a 6___k Bragg gravimeter.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

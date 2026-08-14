@@ -1,0 +1,56 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-14T21:12:55.226645+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.09234v1",
+      "source": "arxiv",
+      "title": "Stroboscopic Raman Spectroscopy of Atom Optics in Quasi-Bragg Regime",
+      "abstract": "Quasi-Bragg regime is a good compromise for large-momentum-transfer atom interferometry, allowing for scaling up the interferometric area, while constraining the population of unwanted states. Separation of momentum states via standard time of flight methods, however, can be challenging when using laser-cooled atoms, rather than ultracold atoms with sub-recoil velocity distribution. To overcome this limit, we use Raman spectroscopy for stroboscopic sampling of the atomic state evolution in momentum space during the interrogating laser pulses. We quantitatively characterize atom optics employing two-photon (2___k) and multi-photon (6___k) Bragg transitions, the latter being optionally enhanced with optimal control protocol. We closely match the observed dynamics of the atomic state with simulations. Finally, we perform momentum spectroscopy of the output states in a 6___k Bragg gravimeter.",
+      "authors": [
+        "Joel Gomes Baptista",
+        "Louis Pagot",
+        "Sébastien Merlet",
+        "Leonid Sidorenkov",
+        "Franck Pereira Dos Santos"
+      ],
+      "primary_category": "physics.atom-ph",
+      "categories": [
+        "physics.atom-ph"
+      ],
+      "published": "2026-08-10T07:58:34+00:00",
+      "link": "https://arxiv.org/pdf/2608.09234v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "stroboscopic Raman spectroscopy provides time-resolved stroboscopic sampling, methodologically related to stroboscopic iSCAT",
+      "llm_evidence_cn": "频闪拉曼光谱实现时间分辨的频闪采样，与频闪iSCAT方法相关",
+      "llm_evidence": "频闪拉曼光谱实现时间分辨的频闪采样，与频闪iSCAT方法相关",
+      "canonical_evidence": "频闪拉曼光谱实现时间分辨的频闪采样，与频闪iSCAT方法相关",
+      "llm_tldr_en": "Implements stroboscopic Raman spectroscopy to sample momentum-state evolution during Bragg pulses, quantitatively characterizing two-photon and multi-photon atom optics in the quasi-Bragg regime.",
+      "llm_tldr_cn": "准布拉格区是放大动量转移原子干涉仪的有效方案，但用飞行时间法分离动量态在激光冷却原子中困难。本文采用拉曼光谱对激光脉冲期间的原子动量态演化进行频闪采样，定量表征双光子与多光子Bragg跃迁，并结合最优控制增强6-k过程。实验结果与理论预期吻合，验证了频闪时间分辨原子光学表征的可行性。该方法为频闪测量技术在超快动力学研究中的推广提供了参考。",
+      "llm_tldr": "准布拉格区是放大动量转移原子干涉仪的有效方案，但用飞行时间法分离动量态在激光冷却原子中困难。本文采用拉曼光谱对激光脉冲期间的原子动量态演化进行频闪采样，定量表征双光子与多光子Bragg跃迁，并结合最优控制增强6-k过程。实验结果与理论预期吻合，验证了频闪时间分辨原子光学表征的可行性。该方法为频闪测量技术在超快动力学研究中的推广提供了参考。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboscopic interferometric scattering microscopy",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
