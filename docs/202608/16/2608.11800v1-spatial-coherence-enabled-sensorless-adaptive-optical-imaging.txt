@@ -1,0 +1,485 @@
+Title: Spatial coherence enabled sensorless adaptive optical imaging
+
+URL Source: https://arxiv.org/pdf/2608.11800v1
+
+Published Time: Thu, 13 Aug 2026 00:39:56 GMT
+
+Number of Pages: 11
+
+Markdown Content:
+## Spatial coherence enabled sensorless adaptive optical imaging 
+
+Pranay Mohta, 1 Shaurya Aarav, 2 Hugo Defienne, 2 and Anand K. Jha 1
+
+> 1
+
+Department of Physics, Indian Institute of Technology Kanpur, Kanpur, UP 208016, India 
+
+> 2
+
+Sorbonne Universit´ e, CNRS, Institut des NanoSciences de Paris, INSP, F-75005 Paris, France 
+
+Optical aberrations degrade imaging performance in label-free microscopy, where the absence of a guide star often necessitates sensorless adaptive optics (AO). Conventional sensorless AO ap-proaches rely on image-quality metrics whose optimal choice depends on both the specimen and the imaging modality. Here, we present a guide-star-free AO framework based on the spatial co-herence properties of spatially incoherent light. The proposed method exploits aberration-induced broadening of the measured spatial correlation distribution as the feedback signal for aberration correction. Experiments in a conventional bright-field imaging system using standard LED illumi-nation demonstrate successful correction of phase aberrations. Furthermore, the approach remains effective even in the presence of spatially structured background noise. These results establish spa-tial coherence measurements as an effective feedback mechanism for sensorless AO and indicate that the correlation-based feedback principle employed in quantum-assisted AO can likewise be realized using the spatial correlations of incoherent light. 
+
+I. INTRODUCTION 
+
+Optical microscopy uses light to resolve structures too small to be seen with the naked eye. Due to its non-invasive nature and high spatial resolution, it has become a cornerstone technique in biomedical research. Over the past few decades, the field has seen rapid advancements, leading to significant improvements in imaging capabilities. Nevertheless, key performance parameters—such as resolution, signal-to-ratio (SNR) and imaging depth—remain fundamentally limited by optical aberrations [1, 2]. These aberrations arise from imperfections in optical components and system alignment, as well as from refractive index variations within heterogeneous samples. To mitigate these distortions, adaptive optics (AO)—originally developed for ground-based astronomy [1, 3–5]—has been incorporated into modern microscopy to quantify and correct optical aberrations [2, 6, 7]. An AO system typically involves two key steps: aberration estimation and its subsequent correction. In conventional direct-sensing approaches, a localized point-like light source within the sample, referred to as a guide star, serves as a reference. As light from the guide star propagates through the sample and imaging system, its wavefront accumulates distortions, which are measured using a Shack–Hartmann wavefront sensor. The estimated aberration is then compensated by applying an appropriate phase correction, typically using a deformable mirror or a spatial light modulator (SLM). A number of other techniques for wavefront sensing have also been used like interferometric focus sensing [8], machine learning [9] and digital holography [10–12]. In scenarios where a physical guide star cannot be inserted or identified—a frequent challenge in label-free mi-croscopy—direct wavefront sensing becomes impractical. To address this, various sensorless adaptive optics strategies have been developed [6, 13–15]. Rather than measuring the wavefront directly, a conventional class of these techniques utilizes an iterative optimization framework centered on an image-quality based metric. By modulating a wavefront-shaping element, the system seeks to maximize a specific quality metric, such as spatial frequency distribution [16], image sharpness [17, 18], contrast [19] or integrated signal intensity [20]. In recent years, several label-free microscopy techniques have incorporated AO for aberration correction [16, 21–23]. However, the choice of metric is closely tied to both the imaging mechanism and the properties of the sample. Beyond image-based metrics, other sensorless AO frameworks have emerged. One such approach is quantum-assisted AO (QAO) [24], which leverages the spatial correlations of entangled photons. While QAO operates independently of the sample and imaging modality without requiring a guide star, its practical utility is hampered by the low generation efficiency of entangled photons and the inherent complexity of time-consuming coincidence detection. More recently, an alternative based on intensity-intensity correlations using even-symmetrical thermal light was proposed [25]. However, this technique requires highly specialized illumination, rendering it incompatible with standard, widely used incoherent light sources. In this paper, we present a spatial-coherence-based sensorless AO framework that retrieves aberration information in the absence of a guide star while operating under standard spatially incoherent illumination. Under ideal condi-tions, light from a spatially incoherent source is uncorrelated across different spatial locations. Optical aberrations modify this correlation state, causing the measured spatial correlation distribution to broaden. By quantifying this aberration-induced broadening, the proposed method provides a coherence-based feedback signal for iterative aber-ration correction without relying explicitly on object intensity features. We experimentally validate the approach by imaging different samples through a standard incoherent imaging system in the presence of aberrations. We further arXiv:2608.11800v1 [physics.optics] 12 Aug 2026 2demonstrate robust aberration correction in the presence of both spatially uniform and structured background noise. Our results demonstrate that spatial coherence measurements can provide an effective feedback observable for sen-sorless AO and show that the correlation-based feedback principle employed in QAO can also be realized using the spatial correlations of incoherent light. 
+
+II. CONCEPT 
+
+Spatial coherence of an optical field describes the correlation of the electric field at two spatial locations. It is quantified by the cross-spectral density function (CSD). The electric field vibrations are perfectly correlated across all spatial points for a spatially coherent source, whereas for a spatially incoherent source, they are completely uncorrelated. We consider imaging with incoherent light. For an ideal, quasi-monochromatic incoherent source the CSD is of the form, 
+
+W (r1, r2) = I(r1)δ(r1 − r2) (1) where I(r) is the spectral density of the source and δ denotes the Dirac delta function. To experimentally access this correlation information, we employ a wavefront-inversion interferometer [26–30]. This device interferes the optical field with a spatially inverted version of itself, effectively probing the CSD at coordinate pairs, r1 = r and r2 = −r,as described in Methods B. The measured CSD is given by, 
+
+Wimg (r, −r) = 
+
+Z
+
+I0(ρ)h(r − ρ)h∗(−r − ρ) dρ. (2) where h(r) denotes the coherent point spread function (PSF) of the imaging system. In the absence of aberration, the measured CSD W (r, −r) is narrowly localized around the optical axis ( r = 0), manifesting as a singular, sharp correlation peak. The presence of optical aberrations reduces the spatial localization of the measured CSD. Inspired Sample Plane Correction SLM CCD LED BS 1    
+
+> Translation Stage BS 2
+> QWP 2
+> HWP QWP 1
+> DP 2
+> DP 1
+> M7
+> M6
+> M5
+> M4
+> M2
+> M3
+> Source Camera M1
+> f1f2f3f4
+> f5
+> f6
+> A1A2
+> 633nm P
+
+FIG. 1. Experimental setup of the spatial coherence-based adaptive optics system. An LED source provides spatially incoherent illumination, which is relayed to the sample plane through the f1-f2 4f imaging system. The sample is subsequently imaged onto the camera using two successive 4f systems, f3-f4 and f5-f6. Aberrations can be introduced at planes A1 and A2 to emulate specimen- and system-induced distortions, respectively. A spatial light modulator (SLM) positioned at the Fourier plane applies aberration correction. A wavefront-inversion interferometer placed before the camera measures the cross-spectral density (CSD) at the image plane. Image acquisition is performed by blocking one interferometer arm and recording the resulting intensity distribution. L: thin lenses, BS: beam splitter, DP: dove prism, P: polariser, QWP: quarter-wave plate, HWP: half-wave plate and TS: linear translation stage. 3AD E F                             
+
+> x(¹m )
+> 800 640 480 0160 320 960
+> y (μm)
+> 0160 320 480 640 800 020 40 60 80 100 120 140 C
+> x(¹m )
+> 800 640 480 0160 320 960
+> B
+> x(¹m )
+> 800 640 480 0160 320 960 020 40 60 80 100
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 010 20 30 40 50 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> 0
+> 10 20 30 40 515 25 35 010 20 30 40 50 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> y (μm)
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5
+> G
+> 02¼Phase(rad)
+> H
+> Zernike coefficient -10 20 010 -20 2.5 2.0 1.5 1.0 0.5
+> x10 5
+> ®-13 corr
+> ®-22 corr
+> M
+> 0
+> 2¼Phase(rad)
+> I
+> 020 40 60 80 100 120 140
+> Original Aberrated Corrected
+
+FIG. 2. Correction of SLM-induced random phase aberrations. (A) Aberration-free image of the resolution target. (B) Aberrated image obtained after applying a low-spatial-frequency random phase mask at plane A2. (C) Corrected image after optimization. (D)-(F) Corresponding measured CSD distributions for the aberration-free, aberrated, and corrected cases, respectively. (G) Phase profile of the induced aberration. (H) Optimized correction phase applied to the correction SLM. (I) Variation of the coherence-sharpness metric M with bias amplitude αmn for the Zernike modes Z−13 and Z−22 . Gaussian fitting is used to determine the optimal correction coefficients αcorr  
+
+> −1,3
+
+= 6 .14 and αcorr  
+
+> −2,2
+
+= −4.42. The SSIM improves from 0 .69 in the aberrated case to 0 .90 after correction. 
+
+by the conventional image-sharpness metric, we define a coherence-sharpness metric to characterize the localization of the measured CSD distribution, 
+
+M =
+
+Z Z 
+
+|W (r, −r)|2 dr, (3) It serves as a measure of the correlation localization and reaches its maximum when no aberration is present. We employ this optimal value as a feedback signal within a modal-based adaptive optics algorithm to iteratively correct aberrations. Theoretical analysis and numerical simulations supporting the proposed metric are presented in Methods A. 
+
+III. RESULTS 
+
+Figure 1 illustrates the experimental setup used in this work. A spatially incoherent LED source [31–34] illuminates the sample, while aberrations can be introduced either by the specimen or within the imaging system. A spatial light modulator (SLM) positioned at the Fourier plane is used to compensate these aberrations. The corrected optical field is then analyzed using a wavefront-inversion interferometer, which measures the CSD at the image plane [30]. For intensity imaging, one interferometer arm is blocked and the image is recorded directly. To demonstrate the proposed approach, a resolution test target was positioned at the sample plane, while optical aberrations were introduced using either a spatial light modulator (SLM) or a polydimethylsiloxane (PDMS) sheet. For aberration correction, we implemented a modal-based AO framework using coherence sharpness M as the metric for iterative optimization. This process involves the sequential application of Zernike polynomial modes Zmn to the correction SLM, covering all radial orders n ≤ 4 and azimuthal indices |m| ≤ n, while omitting the piston, tip, and tilt. For each specific mode, we recorded a series of CSD measurements under varying bias amplitudes αmn . The phase profile of the SLM was modulated according to: ϕnm = ϕcorr  
+
+> nm −1
+
++ αmn Zmn . where ϕcorr  
+
+> nm −1
+
+represents the optimized phase derived from the preceding Zernike mode. By plotting the coherence-sharpness metric M as a function of the applied bias amplitude, we obtained an optimization curve. A Gaussian fit was then performed to determine the location of the peak response, from which the optimal correction coefficient was extracted and used to update the cumulative phase pattern ϕcorr  
+
+> nm
+
+. Through successive optimization cycles across the defined modal basis, low-order aberrations were systematically minimized. This restoration led to a significant sharpening of the CSD peak and the subsequent retrieval of a high-fidelity image of the specimen. Such iterative mode-wise phase modulation is standard in classical modal AO [15]. 4A                       
+
+> 250 200 150 050 100 300
+> y (μm)
+> 050 100 150 200 250 60 10 20 30 40 50 70
+> 250 200 150 050 100 300
+> 60 10 20 30 40 50 70 60 10 20 30 40 50 250 200 150 050 100 300
+> BC
+> 010 20 30 40 50 60
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> y (μm)
+> D
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5 010 20 30 40 50 60
+> F
+> 010 20 30 40
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> E
+> 0
+> G2¼Phase(rad)
+> H
+> Original Aberrated Corrected
+
+FIG. 3. Compensation of aberrations introduced by a physical translucent medium. A 1-cm-thick PDMS layer positioned at plane A1 introduces refractive-index-induced phase distortions. (A) Aberration-free image. (B) Image degraded by the PDMS layer. (C) Corrected image after optimization. (D)-(F) Corresponding measured CSD distributions for the aberration-free, aberrated, and corrected conditions, respectively. (G) Optimized correction phase used to compensate the PDMS-induced aberration. (H) Photograph of the 1-cm-thick PDMS layer used. 
+
+To validate the performance of the proposed coherence-based adaptive optics framework, we conducted a series of experiments. We first examined the system’s response to phase distortions introduced via the SLM at the Fourier plane (plane A2). Figure 2 summarizes the results of an experiment where a low-frequency random phase mask—constructed from a weighted combination of Zernike polynomials—was applied to the system. In the aberration-free state (Fig. 2A), the sample image is well-resolved and corresponds to a sharp, highly localized CSD profile (Fig. 2D). Upon introduction of aberration, the imaging fidelity is severely compromised, resulting in a blurred sample image (Fig. 2B) and a spatially distorted CSD (Fig. 2E). The iterative AO correction successfully restores the field’s coherence, returning the CSD to its sharp state (Fig. 2F). This is evident in the corrected image (Fig. 2C), which shows a stark improvement in clarity compared to the aberrated case. To quantitatively evaluate this enhancement, we utilized the Structural Similarity Index Measure (SSIM), with the aberration-free image (Fig. 2A) serving as the ground truth. SSIM improved from a baseline of 0.69 for the uncorrected state to 0.90 after optimization of the AO. The phase profiles corresponding to the induced distortion and the applied correction are shown in Figs. 2G and 2H, respectively. Furthermore, the optimization profile for two representative modes ( Z−13 and Z−22 ) is plotted in Fig. 2I. This figure illustrates the plot of the metric M with the bias amplitude αmn , where the peak locations αcorr  
+
+> −1,3
+
+and αcorr 
+
+> −2,2
+
+—extracted from Gaussian fitting—identify the optimal correction coefficients for the respective modes. We also test our scheme with a physical aberrating medium. A 1-cm-thick PDMS layer was used as a physical aber-rating medium and positioned at plane A1, approximately 2 cm from the sample. Refractive index inhomogeneities within the PDMS introduced substantial phase distortions, resulting in image degradation (Fig. 3B) and broaden-ing of the measured CSD distribution. Application of the proposed AO scheme compensated for these aberrations and restored image quality, as shown in Fig. 3C. Correspondingly, the CSD recovered its localized profile following correction (Fig. 3F). The optimized phase pattern used to compensate the PDMS-induced aberration is presented in Fig. 3G. Quantitatively, the SSIM improved from 0.75 for the aberrated image to 0.89 after correction. As previously reported in QAO [24], intensity-based metrics—such as power-in-the-bucket (PIB), contrast, and low-frequency spectral power—can introduce systematic errors when correcting for defocus aberration in 3D specimens. Specifically, these metrics may optimize for the wrong focal plane within a thick sample. We next examine the performance of the proposed coherence-based optimization for an axially extended object consisting of three human hairs separated by approximately 4 mm. In the initial unaberrated state, the top hair strand is in focus (Fig. 4A). We then induced a defocus aberration ( αabrr 0,2 = 2) via a second SLM at plane A2, which shifted the focal plane to the middle hair strand (Fig. 4B) and consequently reduced the CSD sharpness metric (Fig. 4E). Our optimization scheme successfully restored the CSD localization (Fig. 4F), returning the focus to the original top hair strand (Fig. 4D). The algorithm converged to a correction coefficient of αcorr 0,2 = −2.31. Quantitative evaluation shows an increase in SSIM from 0.76 to 0.92. We next investigate the robustness of the proposed framework in the presence of background noise. Since con-5800 640 480 0 160 320 960                            
+
+> y (μm)
+> 0160 320 480 640 800 020 40 60 80 100 120
+> 020 40 60 80 100 800 640 480 0160 320 960 800 640 480 0160 320 960 10 30 50 70 90 110 ABC
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> y (μm)
+> 010 20 30 40 50 60 70 80 90
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5 010 20 30 40 50 60 70
+> 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 010 20 30 40 50 60 70 80 90 DEF
+> 6.8 6.4 6.6 6.2
+> M
+> x10 5
+> Defocus coefficient
+> -4 604-6 2-2
+> G
+> Original Aberrated Corrected
+
+FIG. 4. Defocus correction in an axially extended object. The object consists of three human hair strands separated axially by approximately 4 mm. (A) Diffraction-limited image with the top strand in focus. (B) Image after introducing defocus aberration ( αabrr 0,2 = 2), causing the focal plane to shift to the middle strand. (C) Corrected image after optimization, restoring focus to the original top strand. (D)-(F) Corresponding measured CSD distributions for the diffraction-limited, aberrated, and corrected conditions, respectively. (G) Variation of the coherence-sharpness metric M as a function of the defocus bias amplitude. Gaussian fitting yields the optimal correction coefficient αcorr 0,2 = −2.31. The SSIM improves from 0 .76 in the aberrated state to 0 .92 after correction. 
+
+ventional image-based AO derives its feedback directly from the recorded image intensity, background signals can lead to unreliable optimization, particularly when the background is spatially structured or comparable in strength to the object signal. In contrast, the proposed framework remains resilient to both uniform and spatially struc-tured background noise. This robustness originates at the measurement stage rather than the optimization stage. As demonstrated in [35], when the object illumination possesses a longer temporal coherence length than the background, the background contribution to the CSD can be significantly suppressed through temporal coherence filtering. By choosing the interferometer path-length difference to exceed the temporal coherence length of the background while remaining shorter than that of the object, interference from the background is strongly suppressed. Consequently, the measured CSD is dominated by the object field, whereas the background contributes negligibly to the correlation measurement. This enables effective signal-to-noise enhancement even when the object and background fields have substantial spectral overlap, where conventional spectral filtering becomes ineffective. Experimentally, background noise was introduced at the first beam splitter of the interferometer, allowing it to propagate with the object field throughout the interferometer. To demonstrate this capability, the sample was obscured by a spatially structured background consisting of a Siemens star pattern, as shown in Fig. 5A. Although the recorded intensity image contains contributions from both the object and the background, the corresponding CSD (Fig. 5D) primarily represents the object due to temporal coherence filtering. Introducing a defocus aberration ( αabrr 0,2 = −20) caused the object to become completely obscured in the recorded image (Fig. 5B), while simultaneously broadening the measured CSD (Fig. 5E). Despite the background noise, the proposed AO framework successfully restored the localized CSD (Fig. 5F) and the corresponding corrected image (Fig. 5C). Figure 5G shows the optimization curve, yielding an optimal correction coefficient of αcorr 0,2 = 19 .39. 
+
+IV. CONCLUSION 
+
+In this work, we have proposed and experimentally demonstrated a sensorless AO framework based on the spatial coherence properties of light. By optimizing the localization of the measured spatial coherence distribution, the proposed framework restores the imaging system’s PSF and compensates for optical aberrations. This eliminates the need for a physical guide star while remaining compatible with conventional incoherent illumination. The proposed approach was validated under a range of experimentally relevant imaging conditions. Artificial phase elements were used to emulate system-induced and weak specimen-induced aberrations representative of practical microscopy systems. We further demonstrated robust aberration correction even in the presence of spatially struc-tured background noise. In this work, while Zernike polynomials were used to represent aberrations, the proposed 640 60 80 100 120                              
+
+> A
+> x(¹m )
+> 250 200 150 050 100 300
+> y (μm)
+> 050 100 150 200 250 140
+> 60 80 100 120
+> x(¹m )
+> 250 200 150 050 100 300 40 60 80 100 120 140
+> x(¹m )
+> 250 200 150 050 100 300
+> CB
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5
+> D
+> 02.5 5.0 7.5 -2.5 -5.0 -7.5
+> y (μm)
+> 010 20 30 15 25
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5 010 212 468
+> E
+> 5
+> 010 20 30 15 25 5
+> F
+> x(¹m )
+> -5.0 -2.5 7.5 02.5 5.0 -7.5 02.5 5.0 7.5 -2.5 -5.0 -7.5 7564M
+> 89
+> x10 4
+> Defocus coefficient
+> 25 15 010 30 520 35
+> G
+> Original Aberrated Corrected
+
+FIG. 5. Noise-resilient aberration correction. The sample is obscured by a structured background (Siemens star pattern) with a signal-to-noise ratio of 1 : 5 based on total power. Temporal coherence filtering suppresses the background contribution in the measured CSD. (A) Sample image in the presence of structured background noise. (B) Image after introducing severe defocus aberration ( αabrr 0,2 = −20). (C) Corrected image after optimization. (D)-(F) Corresponding measured CSD distributions for the initial, aberrated, and corrected conditions, respectively. Despite the high-noise environment, the optimization restores both the localized CSD peak and the resolved sample image. (G) Optimization curve of the coherence-sharpness metric M as a function of defocus bias amplitude. The optimal correction coefficient obtained is αcorr 0,2 = 19 .39. 
+
+framework is equally compatible with other wavefront-shaping bases, such as Hadamard or random modes, which may be advantageous for more complex aberrations [36–38]. Unlike the recently proposed intensity-intensity correlation approach [25], which requires specially engineered even-symmetrical thermal light, our framework operates with a standard LED source. Furthermore, our results show that the use of spatial correlations as the feedback metric for adaptive optics is not exclusive to entangled-photon illumination [24], but can also be realized using the classical spatial correlations of incoherent light. This avoids the low photon-pair generation efficiency of entangled-photon sources and the complex, time-consuming, and ineffi-cient coincidence measurements required for their detection. By using bright LED illumination and direct intensity measurements, our approach provides higher measurement photon flux and SNR and can be readily integrated into standard imaging systems. A current limitation of the proposed method is the requirement for a wavefront-inversion interferometer, which demands accurate alignment and mechanical stability during CSD measurements. The proposed framework relies only on the spatial incoherence of the illumination field and is therefore not restricted to the bright-field configuration demonstrated here. Since fluorescence emission is inherently spatially incoherent, the present approach is, in principle, compatible with fluorescence microscopy, potentially extending correlation-based AO to imaging modalities beyond those currently accessible with quantum implementations. The present results demonstrate that spatial coherence measurements can serve as an effective feedback mechanism for sensorless AO. We anticipate that this framework will motivate further exploration of coherence-domain feedback strategies for different imaging systems. 
+
+V. METHODS A. Theoretical Framework and System Definition 
+
+We consider a standard 4 f imaging configuration operating under spatially incoherent illumination. The cross-spectral density (CSD) of such an idealized incoherent source at the sample plane is, 
+
+Wobj (ρ1, ρ2) = I0(ρ1)δ(ρ1 − ρ2), (4) where I0(ρ) represents the spatial intensity distribution of the sample. 7The CSD at the image plane Wimg is found by propagating the source through the system impulse response h(r), also referred to as the point spread function (PSF). For ease of calculation, assuming PSF to be shift-invariant, we get, 
+
+Wimg (r1, r2) = 
+
+Z Z 
+
+Wobj (ρ1, ρ2)h(r1 − ρ1)h∗(r2 − ρ2) dρ1dρ2
+
+=
+
+Z
+
+I0(ρ)h(r1 − ρ)h∗(r2 − ρ) dρ
+
+(5) The coherent PSF, h(r), is related via a Fourier transform to the complex pupil function P (k) = A(k)eiϕ (k), where 
+
+A(k) defines the physical pupil aperture and ϕ(k) represents the wavefront aberration phase profile. To access the spatial coherence of the field, we employ a wavefront-inversion interferometer positioned at the exit plane. The inversion interferometer inherently measures the two-point correlation between r and −r. Consequently, the measured inversion CSD simplifies to, 
+
+Winv (r) = Wimg (r, −r) = 
+
+Z
+
+I0(ρ)h(r − ρ)h∗(−r − ρ) dρ. (6) To guide our AO optimization loop, we define a coherence sharpness metric, M , corresponding to the L2 norm of the inversion CSD. From Parseval’s theorem, this optimization metric can be computed equivalently in either the spatial or spatial-frequency domain, 
+
+M =
+
+Z
+
+|Winv (r)|2 dr =
+
+Z
+
+| ˜Winv (u)|2 du, (7) where ˜Winv (u) is the spatial Fourier transform of Winv (r). By substituting the structural relationship between the PSF and the pupil function P (k) into the integral, the spectral representation of the inversion CSD yields, ˜Winv (u) = 14
+
+Z
+
+˜I0(v)K(u, v)ei∆ϕ(u,v) dv, (8) where ˜I0(v) denotes the Fourier transform of the sample intensity distribution, K(u, v) = A   u+v
+
+> 2
+
+ A   u−v
+
+> 2
+
+ represents the overlapping pupil aperture support kernel, and ∆ ϕ(u, v) = ϕ   u+v
+
+> 2
+
+ − ϕ   u−v
+
+> 2
+
+ defines the phase difference profile.  
+
+> 1. Metric response for Defocus aberration
+
+We analyse a system experiencing defocus aberration under an unbounded clear aperture assumption ( A(k) = 1). The wavefront error is parameterized by the defocus phase coefficient α:
+
+P (k) = exp( iα |k|2). (9) Evaluating the symmetric pupil function product at the split coordinate locations yields,                
+
+> P
+> u+v
+> 2
+> 
+> P∗
+> u−v
+> 2
+> 
+> = exp
+> h
+> i α
+> 4|u+v|2i
+> exp
+> h
+> −i α
+> 4|u−v|2i
+> = exp [ iα (u·v)]
+
+(10) Substituting this exact relation back into the inversion CSD spectral definition gives, ˜Winv (u) = 14
+
+Z
+
+˜I0(v) exp( iα u · v) dv. (11) This corresponds structurally to an inverse Fourier transform of the sample intensity spectrum evaluated at scaled spatial coordinates. Thus, it can be mapped directly back to the spatial domain distribution: ˜Winv (u) = 14 I0
+
+ αu
+
+2π
+
+
+
+. (12) Calculating the total metric value M (α) through integration across the frequency space: 
+
+M (α) = 
+
+Z
+
+| ˜Winv (u)|2 du = 116 
+
+Z
+
+I0
+
+ αu
+
+2π
+
+ 2
+
+du. (13) 8Bias amplitude Bias amplitude                                                               
+
+> -4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024-4 -2 024
+> Bias amplitude Bias amplitude
+> 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.2 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.2 0.4 0.6 0.8 1.0 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.4 0.6 0.8 1.0 0.2
+> MMM
+> GEHMLJIDKFBC20222 240424 24 444
+> A
+> -20-10 0 10 20 -30 30 0-10 -20 -30 10 20 30
+> x(¹m )
+> y (¹m )
+
+FIG. 6. Metric stability for a spatially asymmetric object. (A) The asymmetric object (”F”) used for simulation. (B–M) Response curves of the coherence metric M versus bias amplitude for individual Zernike modes (2 ≤ n ≤ 4, labeled on each plot). The monotonic decrease away from the origin confirms the metric’s stability. 
+
+By applying a coordinate change of variables u′ = αu 
+
+> 2π
+
+, the metric evaluates to, 
+
+M (α) = π2
+
+4α2
+
+Z
+
+|I0(u′)|2 du′. (14) The above equation demonstrates that the magnitude of the coherence metric M (α) scales inversely with the square of the defocus coefficient ( M ∝ α−2). Consequently, the metric monotonically decreases as the system drifts away from ideal focus, ensuring a global maximum at the perfectly corrected position ( α = 0). 
+
+2. Arbitrary weak aberrations with symmetric object 
+
+To confirm that the diffraction-limited state constitutes the maximum for optimization, we examine the behaviour of metric M under a weak pupil phase aberration approximation ( ϕ(k) ≪ 1) across a circular aperture A(k). First, consider the mathematical parity of the object spectrum. For any physical spatial intensity distribution which is real-valued and non-negative, I0(r) ∈ R, its Fourier transform ˜I0(u) naturally exhibits Hermitian symmetry: ˜I0(u) = 
+
+Z ∞−∞ 
+
+I0(r)e−i2πu·r dr =⇒ ˜I0(u) = ˜I∗ 
+
+> 0
+
+(−u). (15) Decomposing ˜I0(u) into its constituent real part R(u) and imaginary part X(u) yields 
+
+R(u) + iX (u) = [ R(−u) + iX (−u)] ∗ = R(−u) − iX (−u), (16) which establishes that the real spectral component is strictly even, R(u) = R(−u), while the imaginary component is strictly odd, X(u) = −X(−u). Next, we evaluate the parity properties of the pupil-plane operations. The phase difference function ∆ ϕ(u, v) is inherently odd with respect to the integration variable v, regardless of the underlying aberration profile: ∆ϕ(u, −v) = ϕ
+
+ u − v
+
+2
+
+
+
+− ϕ
+
+ u + v
+
+2
+
+
+
+= −∆ϕ(u, v). (17) Concurrently, the circular symmetry of the physical pupil aperture ensures that the overlapping support kernel remains strictly even with respect to v, such that K(u, v) = K(u, −v). Considering the weak aberration assumption, we expand the complex phase exponential via a Taylor series up to the second order, ei∆ϕ ≈ 1 + i∆ϕ − 12 ∆ϕ2. The spectral representation can be written as ˜Winv (u) ≈ 14
+
+Z
+
+[R(v) + iX (v)] K(u, v)
+
+
+
+1 + i∆ϕ − 12 ∆ϕ2
+
+
+
+dv (18) 9Evaluating the integrands over symmetric limits based on their parity with respect to v gives, ˜Winv (u) ≈ 14
+
+
+
+SK (u) −
+
+Z
+
+XK ∆ϕ d v − 12
+
+Z
+
+RK ∆ϕ2 dv
+
+
+
+. (19) By defining the simplified integral terms X = R XK ∆ϕ d v and R = R RK ∆ϕ2 dv, we evaluate the squared magnitude of the spectrum, discarding terms higher than O(ϕ2): 
+
+| ˜Winv |2 = 116 [SK − X − 12 R]2
+
+≈ 116 [S2 
+
+> K
+
+− 2SK X + X 2 − SK R](20) For a spatially symmetric sample distribution, I0(r) = I0(−r), the imaginary spectral component vanishes entirely (X(u) = 0) and this equation reduces directly to 
+
+| ˜Winv |2 ≈ 116 
+
+S2 
+
+> K
+
+− SK R . (21) Integrating over the spatial frequency coordinates u, the net change in the optimization metric ∆ M resulting from the introduction of phase distortions is given by ∆M ≈ − 116 
+
+Z
+
+> u
+
+Z 
+
+RK d v
+
+ Z 
+
+RK ∆ϕ2 dv
+
+
+
+du. (22) For weak aberration, ∆ M is negative. So, the metric decreases when aberration is introduced.  
+
+> 3. Numerical validation for spatially asymmetric object
+
+While the analytical formulation derived above formally confirms metric stability for centrosymmetric object distri-butions, real-world label-free microscopy samples rarely exhibit perfect spatial symmetry. To evaluate the resilience of the coherence sharpness metric M under general, asymmetric conditions, we perform numerical simulations using a highly asymmetric target profile. We choose the capital letter “F” as our test sample [see Fig. 6(A)], since its geometry lacks any standard orthogonal or radial reflection symmetry, meaning its imaginary spectral component X(u) remains non-zero. To model realistic physical aberrations, the imaging system’s pupil plane is perturbed with various low-order Zernike modal distortions spanning radial orders 2 ≤ n ≤ 4. The response of the coherence metric M is then systematically tracked as a function of the applied aberration bias amplitude. The results of these numerical investigations are presented in Figs. 6(B–M). Crucially, across all tested Zernike modes, the measured metric decreases as the aberration magnitude increases from its optimal value. These findings demonstrate that for a general object subjected to weak, slowly varying wavefront errors, the maximum of the coherence sharpness metric remains at the aberration-free state ( ϕ = 0). This numerical validation confirms that the spatial-coherence feedback mechanism provides a stable optimization metric for arbitrary sample structures.  
+
+> B. Cross-spectral denisty measurement
+
+To experimentally measure the cross-spectral density function, we implement a phase-shifting wavefront-inversion interferometric system. It works by interfering the optical field with a spatially inverted replica of itself with controlled phase shifts between the two interferometer arms. Recording interferograms at four distinct phase offsets enables the retrieval of both the real and imaginary components of the CSD. As shown in Fig. 1, the measurement system is based on a Mach-Zehnder interferometer geometry. Wavefront inversion in the two arms is implemented using Dove prisms. Since Dove prisms may introduce corner blockage and unwanted front-surface reflections, K-mirror assemblies can alternatively be employed, as discussed in Ref. [39]. Phase modulation between the interferometer arms is achieved using a geometric-phase unit composed of two quarter-wave plates oriented at 45 ◦ with respect to the input polarizer and a half-wave plate (HWP) inserted between them in one interferometer arm. Rotating the HWP by an angle θ introduces a geometric phase delay of 2 θ between the interfering fields [40]. 10 The intensity distribution recorded at the camera plane can be expressed as, 
+
+Iout (r; δ) = k21 I1(−r) + k22 I2(r) + 2 k1k2Re [ Wimg (−r, r)] cos δ − 2k1k2Im [ Wimg (−r, r)] sin δ, 
+
+where δ = β2 − β1 denotes the phase difference between the two interferometer arms, I1(−r) and I2(r) represent the individual arm intensities, and Wimg (−r, r) is the cross-spectral density function evaluated at the inverted coordinate pair. The symbols Re[ · · · ] and Im[ · · · ] denote the real and imaginary parts of the CSD, respectively. To extract the CSD, the output intensity is recorded for multiple values of the phase difference δ. Considering two phase settings, δc and δd, the corresponding difference intensity is given by, ∆I(δc,δ d)out (r) = 2 k1k2
+
+n
+
+Re [ Wimg (−r, r)] (cos δc − cos δd) − Im [ Wimg (−r, r)] (sin δc − sin δd)
+
+o
+
+. (23) Choosing δc = 0 and δd = π isolates the real component of the CSD, Re [ Wimg (−r, r)] = ∆I(0 ,π )out (r)4k1k2
+
+. (24) Similarly, setting δc = 3 π/ 2 and δd = π/ 2 yields the imaginary component: Im [ Wimg (−r, r)] = ∆I(3 π/ 2,π/ 2) out (r)4k1k2
+
+. (25) Thus, by measuring the interferometric intensity differences at these phase settings, both the real and imaginary parts of the cross-spectral density function can be reconstructed up to a common multiplicative factor of 4 k1k2. This approach avoids the need for independent calibration of the parameters k1, k2, I1, and I2.
+
+VI. ACKNOWLEDGEMENT 
+
+We acknowledge financial support from the Science and Engineering Research Board through grants STR/2021/000035 and CRG/2022/003070, from the Department of Science and Technology, Government of India, through grant DST/ICPS/QuST/Theme-1/2019 and through the National Quantum Mission (NQM) technical group (TG) project on quantum imaging. H.D. acknowledges funding from ERC starting grant SQIMIC-101039375. P.M. thanks the Prime Minister Research Fellowship (PMRF), Government of India, for financial support. 
+
+[1] K. M. Hampson, R. Turcotte, D. T. Miller, K. Kurokawa, J. R. Males, N. Ji, and M. J. Booth, Adaptive optics for high-resolution imaging, Nature Reviews Methods Primers 1, 10.1038/s43586-021-00066-7 (2021). [2] M. Booth, D. Andrade, D. Burke, B. Patton, and M. Zurauskas, Aberrations and adaptive optics in super-resolution microscopy, Microscopy 64 , 251 (2015). [3] J. M. Beckers, Adaptive optics for astronomy: Principles, performance, and applications, Annual Review of Astronomy and Astrophysics 31 , 13 (1993). [4] L. A. Bolbasova and V. P. Lukin, Atmospheric research for adaptive optics, Atmospheric and Oceanic Optics 35 , 288 (2022). [5] R. K. Tyson and B. W. Frazier, Principles of adaptive optics (CRC press, 2022). [6] Q. Zhang, Q. Hu, C. Berlage, P. Kner, B. Judkewitz, M. Booth, and N. Ji, Adaptive optics for optical microscopy [invited], Biomedical Optics Express 14 , 1732 (2023). [7] N. Ji, Adaptive optical fluorescence microscopy, Nature Methods 14 , 374 (2017). [8] I. N. Papadopoulos, J.-S. Jouhanneau, J. F. A. Poulet, and B. Judkewitz, Scattering compensation by focus scanning holographic aberration probing (f-sharp), Nature Photonics 11 , 116 (2016). [9] Y. Guo, L. Zhong, L. Min, J. Wang, Y. Wu, K. Chen, K. Wei, and C. Rao, Adaptive optics based on machine learning: a review, Opto-Electronic Advances 5, 200082 (2022). [10] J. Upatnieks, A. V. Lugt, and E. Leith, Correction of lens aberrations by means of holograms, Applied Optics 5, 589 (1966). [11] M. K. Kim, Adaptive optics by incoherent digital holography, Optics Letters 37 , 2694 (2012). [12] C. Liu, X. Yu, and M. K. Kim, Phase aberration correction by correlation in digital holographic adaptive optics, Applied Optics 52 , 2940 (2013). [13] R. A. Muller and A. Buffington, Real-time correction of atmospherically degraded telescope images through image sharp-ening, Journal of the Optical Society of America 64 , 1200 (1974). 11 
+
+[14] K. M. Hampson, J. Antonello, R. Lane, and M. Booth, Sensorless adaptive optics (2020). [15] M. Booth, Wave front sensor-less adaptive optics: a model-based approach using sphere packings, Optics Express 14 , 1339 (2006). [16] D. Debarre, M. J. Booth, and T. Wilson, Image based adaptive optics through optimisation of low spatial frequencies, Optics Express 15 , 8176 (2007). [17] J. R. Fienup and J. J. Miller, Aberration correction by maximizing generalized sharpness metrics, Journal of the Optical Society of America A 20 , 609 (2003). [18] L. P. Murray, J. C. Dainty, and E. Daly, Wavefront correction through image sharpness maximisation, in Opto-Ireland 2005: Imaging and Vision , Vol. 5823, edited by F. D. Murtagh (SPIE, 2005) p. 40. [19] X. Zhou, P. Bedggood, B. Bui, C. T. Nguyen, Z. He, and A. Metha, Contrast-based sensorless adaptive optics for retinal imaging, Biomedical Optics Express 6, 3577 (2015). [20] D. D´ ebarre, E. J. Botcherby, T. Watanabe, S. Srinivas, M. J. Booth, and T. Wilson, Image-based adaptive optics for two-photon microscopy, Optics Letters 34 , 2495 (2009). [21] Y. Shu, J. Sun, J. Lyu, Y. Fan, N. Zhou, R. Ye, G. Zheng, Q. Chen, and C. Zuo, Adaptive optical quantitative phase imaging based on annular illumination fourier ptychographic microscopy, PhotoniX 3, 10.1186/s43074-022-00071-3 (2022). [22] Z. Kam, B. Hanser, M. G. L. Gustafsson, D. A. Agard, and J. W. Sedat, Computational adaptive optics for live three-dimensional biological imaging, Proceedings of the National Academy of Sciences 98 , 3790 (2001). [23] Y. Jian, J. Xu, M. A. Gradowski, S. Bonora, R. J. Zawadzki, and M. V. Sarunic, Wavefront sensorless adaptive optics optical coherence tomography for in vivo retinal imaging in mice, Biomedical Optics Express 5, 547 (2014). [24] P. Cameron, B. Courme, C. Verni` ere, R. Pandya, D. Faccio, and H. Defienne, Adaptive optical imaging with entangled photons, Science 383 , 1142 (2024). [25] R.-J. He, Z. Ye, H.-C. Liu, H.-B. Wang, and J. Xiong, Label-free correlation adaptive optics using even-symmetrical thermal light, APL Photonics 10 , 10.1063/5.0283659 (2025). [26] M. V. R. K. Murty, Interference between wavefronts rotated or reversed with respect to each other and its relation to spatial coherence*, †, Journal of the Optical Society of America 54 , 1187 (1964). [27] H. W. Wessely and J. O. Bolstad, Interferometric technique for measuring the spatial-correlation function of optical radiation fields*, Journal of the Optical Society of America 60 , 678 (1970). [28] J. B. Breckinridge, Coherence interferometer and astronomical applications, Applied Optics 11 , 2996 (1972). [29] A. Bhattacharjee, S. Aarav, and A. K. Jha, Two-shot measurement of spatial coherence, Applied Physics Letters 113 ,051102 (2018). [30] P. Mohta, A. Bhattacharjee, and A. K. Jha, Complex spatial coherence measurement using phase-shifting wavefront-inversion interferometry, Journal of Optics 27 , 075606 (2025). [31] M. Tziraki, R. Jones, P. French, M. Melloch, and D. Nolte, Photorefractive holography for imaging through turbid media using low coherence light, Applied Physics B: Lasers and Optics 70 , 151 (2000). [32] H. Di Lorenzo Pires, J. Woudenberg, and M. P. van Exter, Measurement of the orbital angular momentum spectrum of partially coherent beams, Optics Letters 35 , 889 (2010). [33] F. Torcal-Milla, J. Lobera, A. Lopez, V. Palero, N. Andres, and M. Arroyo, Mach-zehnder-based measurement of light emitting diodes temporal coherence, Optik 267 , 169722 (2022). [34] Y. Deng and D. Chu, Coherence properties of different light sources and their effect on the image sharpness and speckle of holographic displays, Scientific Reports 7, 10.1038/s41598-017-06215-x (2017). [35] P. Mohta, K. Moliya, A. Nag, S. Aarav, and A. K. Jha, Noise-resilient imaging through coherence filtering, Physical Review Applied 25 , 10.1103/3h5s-8xgj (2026). [36] Q. Hu, J. Wang, J. Antonello, M. Hailstone, M. Wincott, R. Turcotte, D. Gala, and M. J. Booth, A universal framework for microscope sensorless adaptive optics: Generalized aberration representations, APL Photonics 5, 10.1063/5.0022523 (2020). [37] T. Yeminy and O. Katz, Guidestar-free image-guided wavefront shaping, Science Advances 7, 10.1126/sciadv.abf5364 (2021). [38] I. M. Vellekoop and A. P. Mosk, Focusing coherent light through opaque strongly scattering media, Optics Letters 32 ,2309 (2007). [39] S. Karan, Ruchi, P. Mohta, and A. K. Jha, Quantifying polarization changes induced by rotating dove prisms and k-mirrors, Applied Optics 61 , 8302 (2022). [40] A. K. Jha, M. Malik, and R. W. Boyd, Exploring energy-time entanglement using geometric phase, Phys. Rev. Lett. 101 ,180405 (2008).

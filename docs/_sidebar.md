@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-16 <!--dpr-date:20260816-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/16/2608.11800v1-spatial-coherence-enabled-sensorless-adaptive-optical-imaging" data-sidebar-item="{&quot;title&quot;: &quot;Spatial coherence enabled sensorless adaptive optical imaging&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.11800v1-spatial-coherence-enabled-sensorless-adaptive-optical-imaging&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;为无标记显微镜（包括iSCAT）的像差校正提供无导星自适应光学方法&quot;}">Spatial coherence enabled sensorless adaptive optical imaging</a>
   * 2026-08-15 <!--dpr-date:20260815-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/15/2608.10632v1-nanoscale-graphitization-and-defect-evolution-in-silicon-vacancy-center-containing-nanodiamonds-under-high-pressure-high-temperature-annealing" data-sidebar-item="{&quot;title&quot;: &quot;Nanoscale graphitization and defect evolution in silicon-vacancy center-containing nanodiamonds under high-pressure high-temperature annealing&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.10632v1-nanoscale-graphitization-and-defect-evolution-in-silicon-vacancy-center-containing-nanodiamonds-under-high-pressure-high-temperature-annealing&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;利用同步辐射原位研究高压高温退火下纳米金刚石的结构演化&quot;}">Nanoscale graphitization and defect evolution in silicon-vacancy center-containing nanodiamonds under high-pressure high-temperature annealing</a>
