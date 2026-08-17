@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-17 <!--dpr-date:20260817-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/17/2608.14368v1-unraveling-the-roles-of-shallow-deep-and-auger-trapping-in-charge-carrier-recombination-in-triple-cation-perovskites" data-sidebar-item="{&quot;title&quot;: &quot;Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.14368v1-unraveling-the-roles-of-shallow-deep-and-auger-trapping-in-charge-carrier-recombination-in-triple-cation-perovskites&quot;, &quot;score&quot;: &quot;7.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;时间分辨光致发光结合激发依赖量子产率揭示了钙钛矿中载流子复合与俘获动力学&quot;}">Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites</a>
   * 2026-08-16 <!--dpr-date:20260816-->
     * 速读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/16/2608.11800v1-spatial-coherence-enabled-sensorless-adaptive-optical-imaging" data-sidebar-item="{&quot;title&quot;: &quot;Spatial coherence enabled sensorless adaptive optical imaging&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.11800v1-spatial-coherence-enabled-sensorless-adaptive-optical-imaging&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;为无标记显微镜（包括iSCAT）的像差校正提供无导星自适应光学方法&quot;}">Spatial coherence enabled sensorless adaptive optical imaging</a>

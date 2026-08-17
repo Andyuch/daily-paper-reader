@@ -41,7 +41,7 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-16</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-17</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
     <strong class="dpr-home-dashboard-count">共 1 篇</strong>
@@ -51,7 +51,7 @@
     <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>0</dd></div>
     <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>1</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-16 20:34:34 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-17 20:41:59 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,7 +62,9 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日仅速读1篇论文，聚焦空间相干性实现的无传感器自适应光学成像。值得关注的是该技术无需额外传感器即可提升成像质量，方向适合光学显微与天文观测。建议后续精读该文，并补查其与传统方法的对比实验细节。</p>
+<p>今日速读 1 篇论文，聚焦三重阳离子钙钛矿载流子复合机制。</p>
+<p>最值得关注：浅层、深层与俄歇捕获在载流子复合中的不同角色（7.0/10）。</p>
+<p>若感兴趣，下一步可精读全文，深挖其动力学与器件优化启示。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -87,7 +89,7 @@
     <strong class="dpr-home-dashboard-count">1 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Spatial coherence enabled sensorless adaptive optical imaging">Spatial coherence enabled sensorless adaptive optical imaging</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites">Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites</span></li></ul>
   </div>
   <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>1</strong></span></div>
 </section>

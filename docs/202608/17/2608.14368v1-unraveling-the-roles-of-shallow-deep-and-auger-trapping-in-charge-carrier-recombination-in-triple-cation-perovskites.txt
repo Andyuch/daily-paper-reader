@@ -1,0 +1,1875 @@
+Title: 2608.14368v1.pdf
+
+URL Source: https://arxiv.org/pdf/2608.14368v1
+
+Published Time: Mon, 17 Aug 2026 00:55:26 GMT
+
+Number of Pages: 49
+
+Markdown Content:
+1
+
+# Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites 
+
+Jitendra Kumar 1, Thomas Kirchartz 5,6 , Alexandr Marunchenko 1, Alexander Kiligaridis 1, Shraddha M. Rao 1,Shivam Singh 2,3 , Ankur Yadav 4, Monojit Bag 4, Yana Vaynzof 2,3 , Ivan G. Scheblykin 1* 
+
+*Corresponding author(s). E-mail(s):  ivan.scheblykin@chemphys.lu.se  
+
+> 1
+
+Chemical Physics and NanoLund, Lund University, P.O. Box 124, 22100 Lund, Sweden  
+
+> 2
+
+Leibniz Institute for Solid State and Materials Research Dresden, Helmholtzstraße 20, 01069 Dresden, 
+
+Germany 
+
+> 3
+
+Chair for Emerging Electronic Technologies, Technical University of Dresden, Nöthnitzer Str. 61, 01187 Dresden, Germany  
+
+> 4
+
+Advanced Research in Electrochemical Impedance Spectroscopy Laboratory, Indian Institute of Technology Roorkee, Roorkee, 247667, India  
+
+> 5
+
+IMD -3 Photovoltaics , Forschungszentrum Jülich, Jülich, Germany  
+
+> 6
+
+Faculty of Engineering and CENIDE, University of Duisburg-Essen, Duisburg, Germany 
+
+Abstract 
+
+Understanding charge-carrier recombination in metal halide perovskites is essential for accurately identifying the factors limiting solar cell efficiency, yet it remains challenging due to the interplay of multiple competing processes. Here, we combine time-resolved photoluminescence and excitation-dependent photoluminescence quantum yield measurements over a wide range of fluences and repetition rates to investigate recombination dynamics in triple-cation perovskite thin films. By jointly analyzing these multidimensional datasets, we develop a unified model that quantitatively reproduces both photoluminescence decays and absolute quantum yields across all excitation conditions. Our results reveal the coexistence of deep and shallow traps, as well as a second-order nonradiative recombination pathway attributed to Auger-assisted trapping. Importantly, this mechanism dominates under one-sun illumination, making it a critical limiting factor for photovoltaic performance. These findings provide a comprehensive framework for understanding recombination in perovskites and highlight the importance of higher-order defect-mediated processes in determining their efficiency. 2
+
+1. Introduction 
+
+Defects in semiconductors are local deviations from an ideal periodic crystal structure. These 
+
+imperfections can trap charge carriers, facilitate non-radiative recombination, reduce carrier mobility, or dope a semiconductor, making it p-type or n-type. The role and necessity of defects in modulating the conductivity and electrostatic landscape of semiconductors have been central to most modern (opto-) electronic applications. 1 The elimination of such defect states that primarily lead to trapping and recombination of charge carriers has been crucial for high-performance optoelectronic applications —
+
+such as solar cells, light-emitting diodes (LEDs), and photodetectors. However, some electronic devices currently under investigation, such as memory cells, memristors, and photonic neuromorphic devices, benefit from the controlled presence of defects because of their functional roles in data storage and signal processing. 2–5.
+
+The presence of traps can be probed using various optoelectronic techniques. 6–11 Among these, bandgap 
+
+photoluminescence (PL) stands out as the most straightforward and most accessible method for assessing charge trapping and recombination. PL intensity is directly affected by the concentration of free charge carriers, which is altered by trap-mediated processes. Thus, by measuring the PL under identical conditions across different materials and comparing the total photon emission, one can qualitatively assess non-radiative recombination and infer defect-related properties. When supplemented with time-resolved PL (TRPL) decay kinetics, the technique enables the extraction of specific trap parameters. 4,12 –17 
+
+To rationalize and explain charge-carrier dynamics in the presence of traps, one must combine detailed experimental data with a physical model that accounts for all relevant processes. The simplest model for recombination via singly-charged (acceptor-like or donor-like) defects is the Shockley-Read-Hall (SRH) model. 18 It considers a single type of trap characterized by four parameters: trap density Nt, trap depth 
+
+Et, electron capture coefficient kt, and hole capture coefficient kn.18 Notably, the model does not have detrapping (or emission) coefficients as independent parameters, as they follow from the capture coefficients, the trap depth, and the effective densities of states via a detailed balance argument. This assumes that the capture coefficients do not depend on carrier density and are therefore the same in thermodynamic equilibrium and in non-equilibrium situations. 
+
+For deep traps, the detrapping rates are sufficiently small to be neglected, simplifying the equations. In contrast, shallow traps are defined by significant detrapping rates to one of the bands. In such cases, detrapping must be explicitly included, as neglecting it would alter the mathematical description and violate detailed balance, and hence thermodynamic consistency. 21,22 
+
+In more realistic scenarios involving both shallow and deep traps, along with radiative and Auger recombination, the total number of parameters can quickly exceed 9. Clearly, extracting so many parameters from limited data, such as PL lifetimes or PL quantum yields (PLQY) alone, leads to significant ambiguity. 17 This ambiguity is a likely reason for the wide variability in reported trap densities and capture coefficients for even nominally identical perovskite materials. 6,10,19,20 
+
+The inherent complexity and nonlinearity of recombination processes therefore require rich, multidimensional experimental datasets to constrain and validate physical models meaningfully. A common strategy is to record TRPL decay curves across a broad range of excitation pulse fluences and fit all data simultaneously. 4,5,17,21 However, such decay curves are often normalized, 12,14,16 discarding information about the absolute PLQY. This loss of information severely limits the ability to identify and quantify key recombination pathways. It may lead to over- or underestimation of critical parameters, or even omission of essential recombination processes when oversimplified models are used. 3
+
+Another common challenge in PL experiments is choosing the appropriate excitation laser repetition rate. This happens because perovskites exhibit slow trap-mediated recombination, and its timescale can overlap with the laser excitation period. For example, a commonly used repetition rate of 100 kHz corresponds to a period of 10 μs, which is shorter than some of the reported trap-mediated timescales in perovskites. 22 This leads to a situation in which the accumulated effect of multiple excitation pulses might govern the system response. Such conditions should be properly modeled to extract meaningful physical parameters. 4,5,17,23 –25 
+
+To overcome these limitations, a self-consistent experimental strategy has recently been proposed. 17 As illustrated in Figure 1, it combines multiple TRPL decays measured at varying pulse fluences ( F) (Figure 1c) with a two-dimensional PLQY map (PLQY( R, F), Figure 1 a), where PLQY is recorded as a function of both fluence ( F) and repetition rate of the laser pulses ( R). By spanning a broad range of excitation conditions, this method generates a highly informative dataset with many features illustrated by numbers in Figure 
+
+Figure 1. Illustration of the complete set of measurements combining PLQY and time-resolved PL data. (a) PLQY( R, F ) map calculated according to the SRH model previously used for MAPbI 3 film. 17 Each color corresponds to a pulse fluence ( F) according to the color legend, data points connected by a line are measured for different laser pulse repetition rates ( R, some values are indicated) but the same pulse fluence according to the color legend. X-axis is the time-averaged excitation power density that is proportional to the product R∙F. The blue shaded region – single pulse excitation regime where PLQY 
+
+does not depend on R, yellow shaded region shows the quasi-CW excitation regime where PLQY 
+
+depends only on the average power density ( W ~ R∙F). (b) Illustration of the critical features 1-5 of the PLQY( R, F ) map which must be reproduced by theoretical models. c) A sketch of PL decays at different excitation fluences ( F) which are typically non-exponential. Their shapes (feature 6) must be fitted together with the PLQY map. d) Description of the features of the PLQY( R, F) map and TRPL( F). 4
+
+1b and explained in Figure 1d. These features tightly constrain the parameters of any charge-recombination model that aims to describe the experiment. 17 
+
+It is easier to interpret the two-dimensional PLQY ( R, F ) function when the PLQY ( R, F ) is plotted as a function of average excitation power density (proportional to the product of R and F), with data points corresponding to the same pulse fluence F joined by a single curve as shown in Figure 1a. Each line (colored differently) corresponds to a fixed pulse fluence, while each data point represents a different laser pulse repetition rate. This PLQY map (or family of curves) enables the identification of the single-pulse excitation regime, where PLQY does not depend on the repetition rate (Figure 1a, blue shaded area). In the single pulse excitation regime, by the time the next excitation pulse arrives, all memory of the previous excitation pulse ( e.g., population of trapped charges) decays completely. 4,17 The other extreme is the quasi-CW excitation regime (Figure 1a, yellow shaded regime). In this excitation regime, the PLQY is the same as one would get under a continuous wave (CW) excitation of the same average power density. It occurs when the repetition rate is so high that the population of long-living species (e.g., trapped charges) is close to steady state. Visually, all curves for each specific F merge at sufficiently high 
+
+R into a single curve, which corresponds to the quasi-CW regime. In this regime, PLQY depends only on the time-averaged power density. 17 Figure 1a shows an example of how PLQY( R, F ) might look; it was calculated using the SRH+ model and the previously used parameters for MAPbI 3 perovskite. 17 Depending on the nature of the recombination pathways in a semiconductor, the shape of the PLQY map as well as the shape of the TRPL curves can be very different, serving as fingerprints of the charge carrier dynamic pathways in the particular material. 4,17,21 
+
+In this work, we apply this advanced experimental and modelling approach to thin films of the triple-cation perovskite Cs 0.05 (FA 5/6 MA 1/6 )0.95 Pb(I 0.9 Br 0.1 )3, (hereafter referred to as TC).  We demonstrate that the PL dynamics in TC cannot be adequately described within the conventional SRH framework assuming a single trap type, nor by models incorporating only shallow and deep traps. A consistent description of both the PLQY( R, F ) map over an exceptionally broad range of average excitation power densities (0.0002 –
+
+1600 Suns) and the TRPL kinetics measured across three orders of magnitude in pulse fluence is achieved only when a bi-molecular non-radiative process —specifically, Auger trapping —is also included in the model. 
+
+The role of each recombination pathway is analyzed in detail using an in silico passivation approach over a wide range of charge-carrier concentrations. We show that the bi-molecular non-radiative processes, such as Auger trapping, are likely to represent a fundamental limiting factor for the solar cell efficiency of TC-based devices. 
+
+2. Experiments and simulations 
+
+We used thin TC perovskite films with a thickness of only 50 nm (see supporting information (SI) section 1.1 for the preparation procedure), which is 4-6 times smaller than typically used for solar cells. Such a small thickness implies that the sample had a low optical density (Figure S2b), thereby minimizing contributions from charge diffusion to the PL dynamics, as explained in detail below. In contrast, for typical perovskite photovoltaic films used for making solar cells (≈ 400 – 600 nm), diffusion cannot be neglected, 26,27 and should generally be considered in the interpretation of the full TRPL and PLQY( R, F )data set. This additional factor makes theoretical modelling complex and highly ambiguous because charge trapping and diffusion can produce similar experimental signatures. Choosing such thin films allowed us to avoid this uncertainty. 
+
+To perform PLQY ( R, F) mapping and acquire excitation fluence-dependent PL decay kinetics, a custom-built setup based on an inverted wide-field PL microscope was used (SI section 2). 17 The sample was excited by a 482 nm diode laser with a 200 ps pulse width through a 40× (NA = 0.6) objective lens. The PL signal was collected using the same objective lens and cleaned of excitation light by a set of interference filters. PL was detected either with an EM-CCD to measure PLQY( R, F ) maps (see SI section 3) or with a hybrid photomultiplier detector. The latter detector, connected to a time-correlated single-photon counting (TCSPC) module, enabled the measurement of TRPL decay kinetics. The instrumental response 5
+
+function of this setup was approximately 200 ps. The setup was calibrated to measure the absolute PLQY as described in detail in Section 4 of the SI. 
+
+Using this setup, the PLQY( R, F ) map was measured using pulse fluences  𝐹 1 = 3.4 × 10 8, 𝐹 2 = 4.0 × 10 9,
+
+𝐹 3 = 4.3 × 10 10 , 𝐹 4 = 5.4 × 10 11 , and  𝐹 5 = 4.9 × 10 12  photons/cm ² while the laser pulse repetition rate 
+
+R was scanned from 1 kHz to 80 MHz. TRPL decays were measured for four laser pulse fluences ( 𝐹 2, 𝐹 3,
+
+𝐹 4, and  𝐹 5) at a 10 kHz pulse repetition rate (Figure 2). See SI section 3 for all experimental parameters. The charge-carrier concentrations generated by pulses of different fluences are listed in Table S1. The experimental data were modeled using various charge-recombination models implemented in a home-written MATLAB program. The program calculates the fluence-dependent decays and PLQY( R, F ) maps by solving a set of coupled differential equations by a fourth-order Runge –Kutta method. The solid lines in Figure 2 represent the best-fit of the experimental data by a model described in detail below. 
+
+3. Results and discussion 
+
+3.1 The full model explaining TRPL decays and PLQY( R, F ) of the TC film at the same time 
+
+It was found that, to explain both PL decays and PLQY( R, F ) maps within a single model using the same parameters, all the processes illustrated in Figure 3 should be considered. Below, we describe the model, referred to hereafter as the full model, and motivate the necessity of each included process. The model (see SI section 9) contains three types of acceptor-like charge trapping defects ( 𝑇 𝐷 , 𝑇 𝑆ℎ  and  𝑇 𝐴 ), all traps are electron traps in this model.  𝑇 𝐷  is a deep trap with strong asymmetric capture coefficients (electron capture is much faster than hole capture). The coefficients are such that the defects  𝑇 𝐷  can saturate and become filled with electrons within the range of excitation fluences used experimentally.  𝑇 𝑆ℎ  is an acceptor-like shallow trap located close to the conduction band, which (in contrast to deep traps) allows the de-trapping of electrons back into the conduction band. Both  𝑇 𝐷  and  𝑇 𝑆ℎ  cause p-photodoping. 13  𝑇 𝐴 
+
+is a so-called Auger trap, which can trap an electron ( n) only in the presence of a hole ( p) nearby. This makes the trapping process (called Auger trapping) second-order in concentration. 17,28 –30 In addition to 
+
+Figure 2. Experimental and modelled data for 50 nm TC perovskite film. a) The experimental TRPL decay (blue) along with the fits (red), labels  𝐹 2, 𝐹 3, 𝐹 4 and  𝐹 5 show the pulse fluence used for each TRPL measurement at 10 kHz repetition rate. b) PLQY( R, F ), where PL quantum yield Φ is plotted against average power density W for different values of R and F, circles - experimental data with the color designating the pulse fluence ( 𝐹 1– 𝐹 5, see the labels), solid lines - calculated Φ (the same color code of the pulse fluence). The stars of each color show the measurement conditions and Φ
+
+corresponding the TRPL decays plotted in (a). The labels in the low right corner of (b) show the active processes besides radiative recombination considered in the model (see the text for details), the solid line labeled with m = 0.5 is the reference line showing the power law  𝑊 0.5 .6
+
+these three types of trapping, the model also considers second-order radiative recombination, third-order Auger recombination ( n + p + p ), and p-type doping ( n < p). Although the model uses 13 parameters (see SI Table S3), we will explain below why this complexity is necessary to explain all features of the dataset (Figure 2). 
+
+3.2 Shallow trapping as the origin of the initial  drop  in  TRPL decay 
+
+TC films exhibit two distinct components in their TRPL decays measured at low pulse fluences ( 𝐹 2): i) the fast component that lasts up to a few tens of nanoseconds appearing as the initial drop of PL intensity from level u to level v with relative amplitude  𝜉 = (𝑢 − 𝑣)/𝑢  , see Figure 2a, and ii) a much slower decay at a time scale of a microsecond that follows the initial intensity drop. This behavior is the principal difference from MAPI 3 film, where monoexponential PL decays are often observed at low fluences. 17,31 –33 
+
+The presence of two components in the PL decay of TC does not allow for explaining the results with the same model (deep trap, Auger recombination, and Auger trapping) that was used to describe the same experiments for MAPbI 3 previously 17 , as illustrated in SI Section 10.1. 
+
+In the literature, one can find three common explanations of a fast initial PL decay component that is followed by slower decay components at later times: 23,34 –37 i) fast initial trapping by deep traps which get saturated, i.e. only slowly capture the second carrier thereby leading to a slow longer time component, ii) charge carrier diffusion and homogenization of their distribution over the film thickness, and iii) fast charge carrier trapping by shallow traps, where again the capture of the second carrier is slow. Below, we will consider all three cases in the context of our experiments. 
+
+An easily saturable deep trap can, in principle, produce a highly non-exponential PL decay at low fluence in the single pulse excitation regime. This happens because the trapping rate is proportional to the density 
+
+Figure 3 . The full model required to fit experimental data for the TC film. Besides radiative recombination it considers an easily saturable deep trap ( 𝑇 𝐷 ), a shallow trap ( 𝑇 𝑆ℎ ), a deep trap which 
+
+captures a free electron by Auger trapping ( 𝑇 𝐴 ), radiative recombination, Auger recombination (A), and 
+
+chemical p-doping ( Nd). These processes are shown as pictograms in the bottom of the figure and these pictograms will be used in the other figures in the paper. The designations of the model parameters can be found in SI. 7
+
+of empty traps and therefore it decreases as the traps become filled. Once saturation is reached, electron trapping slows down, resulting in a long-lived PL component at later times. 
+
+It is possible to fully reproduce the TRPL decay at fluence F2 including the initial drop with ξ≈ 0.9 using the saturable deep-trap model, setting very large ( >10 5 times ) difference between the electron (k t) and hole (k n) capture coefficient. Then, the initial PL intensity drop reflects the fraction of electrons captured needed to saturate the traps. In this case, increasing the fluence by 10 times (from F2 to F3 ) should reduce the initial drop by approximately the same factor of 10 leading to ξ≈0.09 (Figure S11b).However, at F3 
+
+experimentally the PL intensity initially drops to the level of 0.55 (ξ≈0.45) , which means about 5 times larger drop as predicted. 
+
+If instead the TRPL decay at F3 is fitted (Figure S11d), reducing the fluence by a factor of 10 (from F3 to F2 ) should move the system out of the saturation regime, and the slow decay component should no longer be present. This is inconsistent with the experimental observation that the slow component persists at fluence F2 (Figure S11c). These inconsistencies indicate that the initial PL drop observed at F2 and F3 
+
+cannot be solely explained by saturation of deep traps. 
+
+The initial fast component could, in principle, also arise from diffusion-induced homogenization of charge carriers across the film thickness shortly after photogeneration (SI section 5). Owing to the high absorption coefficient of metal halide perovskites (absorption length <50 nm for blue light), 38,39  excitation at 482 nm produces a strongly inhomogeneous carrier distribution in thick films (300 nm) typically studied in the literature. If diffusion through the film is slower than the TRPL experiment's time resolution, a drop in PL intensity should occur on the diffusion timescale, as PL intensity depends directly on carrier concentration. 
+
+To minimize this effect, we used TC films only 50 nm thick, with an optical density of ~0.35 at our excitation wavelength. In this case, the initial carrier concentration varies by only about a factor of two across the film thickness, and diffusion alone can account for at most ~10% reduction in PL intensity (Figure S10, SI section 5). Experimentally, however, we observe an initial drop to the level of 0.1 corresponding to  ξ≈0.09  (Figure 2a), indicating that diffusion cannot account for this rapid initial PL decay. 
+
+We are then left with the shallow-trapping mechanism. Indeed, in the presence of only shallow traps (𝑇 𝑆ℎ ), two distinct components should be observed in the PL decay of any semiconductor. 37 The fast component arises from fast trapping of the charge carriers (electrons, as assumed here). The fast decay ends when an equilibrium is established between the trapping and de-trapping processes. After that, the equilibrated population of electrons and trapped electrons decay slowly via non-radiative recombination of trapped electrons with free holes and radiative recombination of the free electrons and holes. Both processes are very slow at low excitation conditions, resulting in a slowly decaying tail in TRPL, that quantitatively agrees with our data. Therefore, for our samples, shallow trapping is likely the primary reason for the peculiar shape of the TRPL decay at low excitation fluence. 23,24 
+
+3.3 Shallow traps alone cannot explain TRPL together with PLQY 
+
+The presence of shallow traps ( 𝑇 𝑆ℎ ) can explain the initial rapid drop in PL intensity and the general presence of both fast and slow components in PL decay under low fluence. Moreover, if we ignore PLQY, we can nicely reproduce the complete PL decay at low fluence ( 𝐹 2). However, such a simple model (model SRH-2, SI section 10.2) fails to account for the PL decay shapes at higher fluences and the PLQY( R, F ) map, as illustrated in Figure S15. In this model, the slow component of the PL decay at low fluence is primarily defined by the nonradiative recombination rate of trapped electrons at the trap level and free holes in the valence band. To reproduce the experimental decay rate of the slow component, we needed to set a relatively high kn from the shallow trap level, resulting in PLQY much lower than experimentally observed at all excitation conditions (Figure S15). Apart from this, with increasing pulse fluence, the PL decay 8
+
+became too fast (owing to their non-linear recombination kinetics) and incompatible with the experiment (see details in SI section 10.2). Thus, the charge recombination in our TC samples cannot be attributed solely to shallow traps. 
+
+3.4 The need for deep traps 
+
+To overcome these difficulties in fitting the experimental data, additional processes should be incorporated into the model. The obvious thing to try is to include a deep trap that introduces first-order non-radiative recombination. Presence of deep traps is widely discussed in literature on MHP, and an SRH model with only deep traps has been rather successfully used to explain the same experiment as discussed here (TRPL and PLQY( R, F )) for a simpler MHP system – a film of MAPbI 3.17 
+
+Our data also provides direct evidence for deep traps. At low fluence ( 𝐹 2), the PL decay shows an exponential tail, as seen in the constant differential decay time between 1 –8 μs (Figure S12). Such behavior cannot arise from shallow traps alone, which would produce a power-law tail, 23,24 indicating the presence of at least one first-order process. A natural explanation is recombination via deep traps, where detrapping is negligible due to the large energy gap ( ∆𝐸 ≫ 𝑘𝑇 ) between the nearest band edge (conduction or valence band) and the trap level. PL lifetime together with the observed PLQY also suggests that the capture rate of the deep traps, as expected, is slower than the capture rate of the shallow ones, 29 
+
+making it consistent with the hundreds-of-nanoseconds timescale of the slow PL component at low fluence. 17 
+
+3.5 Signature of Auger recombination processes at high excitation powers 
+
+The observed decrease of PLQY with increasing excitation power at high excitation densities (feature 2 in Figure 1) requires the presence of third- or higher-order non-radiative recombination processes. Such processes compete with radiative recombination (which is second order in carrier concentration) and become increasingly dominant at elevated excitation levels. 
+
+The standard approach in literature is to invoke Auger recombination, a third-order process .17,28,30  In our case, a suitable Auger process involves the recombination of a free electron with a free hole in the presence of a second hole. The latter receives the excess energy released during the recombination (Figure 3). However, including the conventional Auger recombination alone helps quantitatively reproduce the experimental data. As shown in SI section 10.3, this model fails to simultaneously explain the PLQY( F,R) map and the fluence-dependent TRPL kinetics. Increasing the Auger contribution to reduce the maximum PLQY ( 𝛷 max , feature 1 in Figure 1) to the experimentally observed level leads to an excessive reduction of PLQY at high excitation powers (incompatible with feature 2) and produces TRPL decays at the highest fluence ( F₅ ) that are significantly faster than observed. Thus, even with conventional Auger recombination, we still cannot explain the experimental data. 
+
+We therefore considered inclusion of a second-order non-radiative recombination pathway 40 –44 . Such a process can directly compete with radiative recombination, as both are second order in carrier concentration, and consequently reduce the maximum achievable PLQY. The necessity of introducing this additional second-order recombination pathway depends critically on the reliability of the absolute PLQY values. Accurate determination of absolute PLQY is inherently challenging due to multiple systematic and random errors, which we quantify in SI section 4. We estimate an uncertainty of ±30% in absolute PLQY, meaning that the entire PLQY map may shift vertically by ±30%. In contrast, the relative accuracy —i.e., the shape of the PLQY map —is significantly higher (±10%) and is mainly limited by sample instability.  21 
+
+Even within this uncertainty, the maximum PLQY for our TC sample ( 𝛷 𝑚𝑎𝑥 , feature 1 in Figure 1) lies in the range 0.35 –0.65, well below unity, thereby justifying inclusion of an additional bimolecular non-radiative process. 9
+
+A suitable mechanism of bimolecular non-radiative recombination is Auger trapping – a process recognized in many semiconductors and semiconductor devices since the 1950s.  17,28,30,42 –45  In this process, charge trapping is assisted by the presence of another free carrier.  While historically such “non -linear” 
+
+trapping has been considered secondary to the usual “linear” trapping by multiphonon emission in narrow-gap materials like Ge and Si, 44 recent first-principles modeling and experimental signatures in 
+
+GaN, InN, and ϐ -Ga 2O3 demonstrate that Auger trapping can dominate losses in these wide-bandgap systems. 41 –43,46 Several experimental studies on metal halide perovskites have also reported signatures of second-order non-radiative recombination, and this topic has been receiving increasing attention in recent years. 47 –49 
+
+In our model, a feasible mechanism is when a free electron interacts with a free hole in the presence of an empty electron trap, resulting in electron trapping while the hole gains excess energy. Below the trap-saturation regime, the concentration of empty traps remains approximately constant, rendering this mechanism effectively second-order with respect to free-carrier concentrations. As a result, Auger trapping scales with excitation power in the same way as radiative recombination and competes directly with it, thereby limiting  𝛷 max  to the experimentally observed level. Importantly, Auger trapping does not significantly affect TRPL decay at the highest fluences because it is slower than the conventional Auger recombination and requires empty traps, which become progressively saturated at high carrier densities. 
+
+Including Auger trapping in the model substantially improved overall agreement with the experimental data (SI Section 10.4); however, several important discrepancies remained. 
+
+3.6 Signature of chemical doping in the sample leading to increased PLQY at low pulse fluence. 
+
+Another factor affecting PL dynamics that is commonly discussed but has not been considered yet in our model is chemical doping. It is generally accepted that unintentional doping levels in MHPs are relatively low; 50,51 however, at low excitation power regimes, doping at the level of 10 15 cm -3 can make a significant difference. 
+
+In the presence of chemical doping, the PL intensity in the single pulse excitation regime  𝐼 𝑃𝐿 ∝∆𝑛 0(∆𝑛 0 + 𝑁 𝑑 ), where  ∆n0 is the initial concentration of free charge carriers (electrons or holes) created by the laser pulse, (section S7) and Nd is the concentration of holes always present in the system (we consider p-doping here). We refer to the latter as chemical doping to distinguish it from photodoping, which arises from asymmetrical trapping of charge carriers. According to this equation, an increase in Nd
+
+should increase the radiative decay rate and, potentially, the PLQY. On the other hand, Nd also increases the non-radiative recombination rate of trapped electrons with free holes, which, in the case of shallow traps, can decrease PLQY and cause the long tail (later part of the decay) of TRPL decay faster at low fluences ( 𝐹 2, 𝐹 3). Therefore, the influence of doping is expected to be complex and dependent on the excitation regime, which may help to explain our data. We also obtained experimental evidence of chemical doping from a multi-pulse TRPL experiment (see SI section 7, Figure S13). 4,22 By adding chemical doping, we completed the full model (Figure 3) and were able to fit the whole data set consistently (Figure 2). 
+
+4.1 In silico passivation of different recombination processes. 
+
+To further rationalize and illustrate the impact of different processes on the TRPL and PLQY, an ideal approach would be to remove a selected process and observe its effect on the experimental data. However, eliminating individual charge-recombination mechanisms from a film in a controlled manner is practically impossible. Here, simulations are beneficial as they allow us to remove any desired mechanism from the complete model that explains the data. This procedure can be seen as in silico passivation; the results are presented in Figure 4. 
+
+Figure 4(a,b) shows the effect of removing the easily saturable deep traps ( 𝑇 𝐷 ) from the model. One can see that these traps affect the TRPL only at low fluences ( 𝐹 3, 𝐹 2, and lower), making the slow component 10 
+
+of the PL decay faster and decreasing PLQY in the low average excitation power density regime when they are not yet saturated (power density < 10 -2 W/cm 2 = 0.1 Sun). The ease of their saturation makes these deep traps benign for solar cells, since they do not influence charge recombination at average excitation powers of 0.1 - 1 Sun. 
+
+Figure 4 (c,d) shows the effect of passivating the shallow traps ( 𝑇 𝑆ℎ ). One can see that shallow traps make the PL decay drastically non-exponential by inducing a rapid decay component (the initial PL intensity drop) in the TRPL at low fluences ( 𝐹 2, 𝐹 3) and, at the same time, creating a very slow decaying tail (at the microsecond time scale). Thus, the very long lifetime components often observed in perovskites are most likely due to the presence of shallow traps, rather than their absence (because removing shallow traps makes the TRPL decay faster). Shallow trapping also decreases PLQY, but only at power densities below 10 -2 W/cm 2=0.1 Sun. Thus, in terms of reducing PLQY, shallow trapping is expected to have a minor effect on the solar cell performance. Note, however, that shallow trapping increases the overall charge-carrier lifetime. 
+
+Upon removing the p-doping from the full model (Figures 4e,f), we observe that p-doping makes the tail of TRPL at low fluences ( 𝐹 2, 𝐹 3) decay faster. As for PLQY, chemical doping at this level ( Nd ≈ 3 ×10 15 cm 3)is essential only for the lowest fluences ( 𝐹 1, 𝐹 2 and  𝐹 3) and relatively low pulse repetition rates because only in these conditions Nd is larger or comparable to the concentration of the photogenerated carriers (see Table S1). It is interesting to note that, within the framework of our model, p-type doping decreases PLQY. This happens because doping increases both radiative and non-radiative rates, and its effect on PLQY depends on which effect is stronger. As for the impact on photovoltaic applications, PL quenching from chemical doping at this level is negligible, as it has little effect on PLQY under solar cell operating conditions. 
+
+Figure 4(g,h) shows the effect of passivation of the Auger recombination (A). Auger recombination 
+
+reduces the PLQY for all fluences (F₁–F₅) once the average power density exceeds 0.1 W/cm² (>1 Sun). At higher fluences (F₄ and F₅), however, it leads to a reduction in PLQY under all conditions (all repetition rates). TRPL is noticeably affected at the highest fluence  𝐹 5 only. Therefore, this process alone is not particularly significant under solar cell operation conditions. 
+
+In contrast to regular Auger recombination, Auger trapping is very important for PLQY over a broad range of regimes. Figure 4(i,j) shows the effect of passivation of the Auger trap (trap  𝑇 𝐴 ). One can see that the effect of Auger trapping on the PLQY( R, F ) map is substantial over a wide range of powers from 10 -4 to 1 W/cm 2 (from 0.001 to 10 Suns) which makes this process highly relevant for photovoltaics. In terms of pulse fluence, it is remarkable that Auger trapping is important even for the lowest fluence  𝐹 1 as soon as the repetition rate exceeds 1 MHz. Note also that Auger trapping affects TRPL at all measured pulse fluences. However, at very high fluences and high average charge-carrier concentrations, the usual Auger process (third order) dominates over Auger trapping (second order, and even less due to trap saturation). Consequently, PLQY at the highest fluence ( 𝐹 5), as well as at  𝐹 4 (as soon as the repetition rate exceeds 10 MHz) is unaffected by Auger trapping. 
+
+Now that we understand the importance of the Auger processes, let’s remove everything from the model except for radiative recombination, Auger recombination, and Auger trapping (Figure 4 (k,l)). It appears that even this truncated model can explain all experimental data obtained for the average power densities above 0.5 Sun (marked by green boxes in the same Figure). This means that at full solar illumination, only non-linear recombination processes are important, because all the usually considered defect-related processes are either saturated or cannot compete with higher-order processes. However, since the crucial process here is Auger trapping, the presence of defect states remains critical, although the trapping mechanism differs. Thus, our results show that second-order non-radiative recombination (e.g., Auger trapping) is an important factor limiting the efficiency of triple-cation perovskite solar cells. 11 
+
+Note that the only difference between the TC films used for solar cells 52 –54 and the film studied here is the lower thickness of the latter (50 nm), which was chosen to exclude the contribution of charge diffusion to PLQY and TRPL kinetics and make the presented analysis possible. Although these results may not quantitatively represent all triple cation samples processed under different conditions, we believe they clearly demonstrate the need to consider second-order non-radiative processes, such as Auger trapping, seriously in the context of solar cell performance and the theoretical description of charge dynamics in MHP in general. As for the effect of the thickness alone, in typical 300 nm thick perovskite films used in solar cells short absorption length and diffusion will lead to several times lower equilibrated concentrations of charge carriers than in our experiments under the same illumination conditions. However, this rather minor difference will not change our conclusion on the importance of Auger trapping processes. 
+
+At the moment, it is not possible to determine the chemical nature of the defects that assist in Auger trapping in TC perovskite. By looking at the concentration of these types of traps obtained from the modelling, we, however, can conclude that these traps must be common in the material since their concentrations are of the order of 10 16 cm 3, being even higher than the concentrations of shallow traps 
+
+(≈10 15 cm 3) and deep traps (≈10 14 cm 3) derived from the simulations, see Table S3. 12 
+
+Figure 4. The experimental TRPL decays (left) and the PLQY ( R, F ) map (right) plotted together with the corresponding calculations using the full model (which fits the whole data set, see Figure 2), where certain processes were removed ( in silico passivation): a) and b) - deep traps 
+
+(𝑇 𝐷 ) are removed, c) and d) the shallow traps ( 𝑇 𝑆ℎ ) are removed, e) and f) chemical doping is 
+
+removed g) and h) Auger recombination is removed, i) and j) – Auger trapping is removed, k) and l) - deep traps, shallow traps and chemical doping are removed leaving only radiative recombination, and Auger recombination and Auger trapping in the model. 13 
+
+Conclusions 
+
+In this work, we conducted a comprehensive experimental and theoretical investigation of charge-carrier recombination in thin films of triple-cation perovskites using time-resolved photoluminescence (TRPL) and fluence- and repetition-rate-dependent photoluminescence quantum yield (PLQY) measurements. By combining these extensive datasets with a robust modelling framework, we developed, for the first time, a unified model that accurately captures both the PL decay dynamics and the absolute PLQY across a broad range of excitation fluences and laser repetition rates. This model not only achieves excellent quantitative agreement with experimental observations but also provides new mechanistic insights into the recombination processes governing these complex materials. 
+
+Our analysis reveals the coexistence of three distinct types of traps: i) Deep traps, which are easily saturated and dominate recombination at very low excitation fluences; ii) Shallow traps, which strongly influence TRPL decays at low fluence by introducing both fast and slow components; and iii) Auger traps, which give rise to a second-order non-radiative recombination pathway and become the primary loss channel under solar-relevant excitation conditions. 
+
+Auger trapping is identified as the dominant mechanism limiting the PLQY under solar illumination, thus constraining the performance of triple-cation perovskite solar cells. While conventional interpretations often downplay the role of defects under operating conditions —since usual trapping mechanisms are largely saturated at typical solar fluences (as we also showed in our study) —considering bimolecular non-radiative recombination mediated by defects through Auger trapping fundamentally changes this perspective. This mechanism brings defects back to the forefront as a critical factor limiting solar cell efficiency. 
+
+Equally important, this work highlights the value of advanced experimental methodologies that generate multidimensional datasets, enabling unambiguous theoretical interpretation of charge-carrier dynamics and guiding future strategies for material and device optimization. 
+
+Author contributions: 
+
+JK carried out all experiments, wrote the code for modeling, analyzed the data, calibrated the setup, and drafted the manuscript. AM contributed to data interpretation and PLQY calibration of the setup. IS conceived the idea, interpreted the data together with JK, assisted JK in theoretical modeling, developed the PLQY calibration procedure, adjusted the setup, and wrote the paper in conjunction with JK. AK developed the automation for the PLQY mapping setup. SR contributed to the PLQY mapping protocols and initial measurements. SS prepared the TC samples. YV contributed to the idea of the paper, data interpretation, supervision, and writing of the paper. TK contributed to data interpretation, modelling, and writing. MB and AY contributed to data interpretation and initial experiments with other perovskites, which helped us to understand the TC sample. IS supervised the whole project. All authors edited the manuscript. 
+
+Acknowledgement 
+
+The work was supported by the Swedish Research Council (project 2020-03530), via a joint Indo-Swedish project (Swedish Research Council 2018-0764, DST/INT/SWD/VR/P-13/2019), Crafoord Foundation (project 20230552), and NanoLund (project 12-2023). JK thanks the Wenner-Gren Foundation for the postdoctoral scholarship (UPD2022-0132). AM acknowledges Light and Materials profile area at Lund University (Young Investigator Synergy Award, 2024). 14 
+
+Supporting Information Available :
+
+Details of the sample preparation, optical setup, and its calibration, PLQY ( R, F ) measurements, the full model, and some simpler models. 
+
+References 
+
+(1) Queisser, H. J.; Haller, E. E. Defects in Semiconductors: Some Fatal, Some Vital. Science (1979). 
+
+1998 , 281 (5379), 945 –950. https://doi.org/10.1126/science.281.5379.945. 
+
+(2) Vats, G.; Hodges, B.; Ferguson, A. J.; Wheeler, L. M.; Blackburn, J. L. Optical Memory, Switching, and Neuromorphic Functionality in Metal Halide Perovskite Materials and Devices. Advanced Materials 2023 , 35 (37), 2205459. https://doi.org/10.1002/adma.202205459. 
+
+(3) Das, U.; Sarkar, P.; Paul, B.; Roy, A. Halide Perovskite Two-Terminal Analog Memristor Capable of Photo-Activated Synaptic Weight Modulation for Neuromorphic Computing. Appl. Phys. Lett. 
+
+2021 , 118 (18), 182103. https://doi.org/10.1063/5.0049161. 
+
+(4) Marunchenko, A.; Kumar, J.; Kiligaridis, A.; Rao, S. M.; Tatarinov, D.; Matchenya, I.; Sapozhnikova, E.; Ji, R.; Telschow, O.; Brunner, J.; Yulin, A.; Pushkarev, A.; Vaynzof, Y.; Scheblykin, I. G. Charge Trapping and Defect Dynamics as Origin of Memory Effects in Metal Halide Perovskite Memlumors. J. Phys. Chem. Lett. 2024 , 15 (24), 6256 –6265. https://doi.org/10.1021/acs.jpclett.4c00985. 
+
+(5) Marunchenko, A.; Kumar, J.; Kiligaridis, A.; Tatarinov, D.; Pushkarev, A.; Vaynzof, Y.; Scheblykin, I. G. Memlumor: A Luminescent Memory Device for Energy-Efficient Photonic Neuromorphic Computing. ACS Energy Lett. 2024 , 9 (5), 2075 –2082. https://doi.org/10.1021/acsenergylett.4c00691. 
+
+(6) Le Corre, V. M.; Duijnstee, E. A.; El Tambouli, O.; Ball, J. M.; Snaith, H. J.; Lim, J.; Koster, L. J. A. Revealing Charge Carrier Mobility and Defect Densities in Metal Halide Perovskites via Space-Charge-Limited Current Measurements. ACS Energy Lett. 2021 , 6 (3), 1087 –1094. https://doi.org/10.1021/acsenergylett.0c02599. 
+
+(7) Kobbekaduwa, K.; Shrestha, S.; Adhikari, P.; Liu, E.; Coleman, L.; Zhang, J.; Shi, Y.; Zhou, Y.; Bekenstein, Y.; Yan, F.; Rao, A. M.; Tsai, H.; Beard, M. C.; Nie, W.; Gao, J. In-Situ Observation of Trapped Carriers in Organic Metal Halide Perovskite Films with Ultra-Fast Temporal and Ultra-High Energetic Resolutions. Nat. Commun. 2021 , 12 (1), 1636. https://doi.org/10.1038/s41467-021-21946-2. 
+
+(8) Zhan, H.; Ahmad, V.; Mayon, A.; Dansoa Tabi, G.; Bui, A. D.; Li, Z.; Walter, D.; Nguyen, H.; Weber, K.; White, T.; Catchpole, K. Physics-Based Extraction of Material Parameters from Perovskite Experiments via Bayesian Optimization. Energy Environ. Sci. 2024 , 17 (13), 4735 –4745. https://doi.org/10.1039/d4ee00911h. 
+
+(9) Siekmann, J.; Ravishankar, S.; Kirchartz, T. Apparent Defect Densities in Halide Perovskite Thin Films and Single Crystals. ACS Energy Lett. 2021 , 6 (9), 3244 –3251. https://doi.org/10.1021/acsenergylett.1c01449. 
+
+(10) Li, B. H.; Li, H.; Di, H.; Xuan, Z.; Zeng, W.; Wang, J. C.; Cheng, D. B.; Zhou, C.; Wang, X.; Zhao, Y.; Zhang, J.; Ren, Z.; Yang, X. Probing the Genuine Carrier Dynamics of Semiconducting Perovskites under Sunlight. JACS Au 2023 , 3 (2), 441 –448. https://doi.org/10.1021/jacsau.2c00581. 
+
+(11) El-Zohry, A. M.; Turedi, B.; Alsalloum, A.; Maity, P.; Bakr, O. M.; Ooi, B. S.; Mohammed, O. F. Ultrafast Transient Infrared Spectroscopy for Probing Trapping States in Hybrid Perovskite Films. 
+
+Commun. Chem. 2022 , 5 (1), 67. https://doi.org/10.1038/s42004-022-00683-7. 
+
+(12) Trimpl, M. J.; Wright, A. D.; Schutt, K.; Buizza, L. R. V.; Wang, Z.; Johnston, M. B.; Snaith, H. J.; Müller-Buschbaum, P.; Herz, L. M. Charge-Carrier Trapping and Radiative Recombination in Metal Halide Perovskite Semiconductors. Adv. Funct. Mater. 2020 , 30 (42), 2004312. https://doi.org/10.1002/adfm.202004312. 15 
+
+(13) Stranks, S. D.; Burlakov, V. M.; Leijtens, T.; Ball, J. M.; Goriely, A.; Snaith, H. J. Recombination Kinetics in Organic-Inorganic Perovskites: Excitons, Free Charge, and Subgap States. Phys. Rev. Appl. 2014 , 2 (3), 034007. https://doi.org/10.1103/PhysRevApplied.2.034007. 
+
+(14) Dequilettes, D. W.; Frohna, K.; Emin, D.; Kirchartz, T.; Bulovic, V.; Ginger, D. S.; Stranks, S. D. Charge-Carrier Recombination in Halide Perovskites. Chem. Rev. 2019 , 119 (20), 11007 –11019. https://doi.org/10.1021/acs.chemrev.9b00169. 
+
+(15) DeQuilettes, D. W.; Vorpahl, S. M.; Stranks, S. D.; Nagaoka, H.; Eperon, G. E.; Ziffer, M. E.; Snaith, H. J.; Ginger, D. S. Impact of Microstructure on Local Carrier Lifetime in Perovskite Solar Cells. 
+
+Science (1979). 2015 , 348 (6235), 683 –686. https://doi.org/10.1126/science.aaa5333. 
+
+(16) Feldmann, S.; Macpherson, S.; Senanayak, S. P.; Abdi-Jalebi, M.; Rivett, J. P. H.; Nan, G.; Tainter, G. D.; Doherty, T. A. S.; Frohna, K.; Ringe, E.; Friend, R. H.; Sirringhaus, H.; Saliba, M.; Beljonne, D.; Stranks, S. D.; Deschler, F. Photodoping through Local Charge Carrier Accumulation in Alloyed Hybrid Perovskites for Highly Efficient Luminescence. Nat. Photonics 2020 , 14 (2), 123 –128. https://doi.org/10.1038/s41566-019-0546-8. 
+
+(17) Kiligaridis, A.; Frantsuzov, P. A.; Yangui, A.; Seth, S.; Li, J.; An, Q.; Vaynzof, Y.; Scheblykin, I. G. Are Shockley-Read-Hall and ABC Models Valid for Lead Halide Perovskites? Nat. Commun. 2021 , 12 
+
+(1), 3329. https://doi.org/10.1038/s41467-021-23275-w. 
+
+(18) Shockley, W.; Read, W. T. Statistics of the Recombinations of Holes and Electrons. Physical Review 1952 , 87 (5), 835 –842. https://doi.org/10.1103/PhysRev.87.835. 
+
+(19) Ni, Z.; Bao, C.; Liu, Y.; Jiang, Q.; Wu, W. Q.; Chen, S.; Dai, X.; Chen, B.; Hartweg, B.; Yu, Z.; Holman, Z.; Huang, J. Resolving Spatial and Energetic Distributions of Trap States in Metal Halide Perovskite Solar Cells. Science (1979). 2020 , 367 (6484), 1352 –1358. https://doi.org/10.1126/science.aba0893. 
+
+(20) Wenger, B.; Nayak, P. K.; Wen, X.; Kesava, S. V.; Noel, N. K.; Snaith, H. J. Consolidation of the Optoelectronic Properties of CH3NH3PbBr3 Perovskite Single Crystals. Nat. Commun. 2017 , 8 (1), 590. https://doi.org/10.1038/s41467-017-00567-8. 
+
+(21) Rao, S. M.; Kiligaridis, A.; Yangui, A.; An, Q.; Vaynzof, Y.; Scheblykin, I. G. Photoluminescence Mapping over Laser Pulse Fluence and Repetition Rate as a Fingerprint of Charge and Defect Dynamics in Perovskites. Adv. Opt. Mater. 2024 , 12 (8), 2300996. https://doi.org/10.1002/adom.202300996. 
+
+(22) Marunchenko, A.; Kumar, J.; Tatarinov, D.; Pushkarev, A. P.; Vaynzof, Y.; Scheblykin, I. G. Hidden Photoexcitations Probed by Multipulse Photoluminescence. ACS Energy Lett. 2024 , 9 (12), 5898 –
+
+5906. https://doi.org/10.1021/acsenergylett.4c02404. 
+
+(23) Yuan, Y.; Yan, G.; Dreessen, C.; Rudolph, T.; Hülsbeck, M.; Klingebiel, B.; Ye, J.; Rau, U.; Kirchartz, 
+
+T. Shallow Defects and Variable Photoluminescence Decay Times up to 280 Μs in Triple-Cation Perovskites. Nat. Mater. 2024 , 23 (3), 391 –397. https://doi.org/10.1038/s41563-023-01771-2. 
+
+(24) Yuan, Y.; Yan, G.; Dreessen, C.; Kirchartz, T. Understanding Power-Law Photoluminescence Decays and Bimolecular Recombination in Lead-Halide Perovskites. Adv. Energy Mater. 2024 , 15 
+
+(6), 2403279. https://doi.org/10.1002/aenm.202403279. 
+
+(25) Kirchartz, T.; Márquez, J. A.; Stolterfoht, M.; Unold, T. Photoluminescence-Based Characterization of Halide Perovskites for Photovoltaics. Adv. Energy Mater. 2020 , 10 (26), 1904134. https://doi.org/10.1002/aenm.201904134. 
+
+(26) Cho, C.; Feldmann, S.; Yeom, K. M.; Jang, Y. W.; Kahmann, S.; Huang, J. Y.; Yang, T. C.; Khayyat, M. N. T.; Wu, Y. R.; Choi, M.; Noh, J. H.; Stranks, S. D.; Greenham, N. C. Efficient Vertical Charge Transport in Polycrystalline Halide Perovskites Revealed by Four-Dimensional Tracking of Charge Carriers. Nat. Mater. 2022 , 21 (12), 1388 –1395. https://doi.org/10.1038/s41563-022-01395-y. 
+
+(27) Yuan, Y.; Yan, G.; Akel, S.; Rau, U.; Kirchartz, T. Deriving Mobility-Lifetime Products in Halide Perovskite Films from Spectrally and Time-Resolved Photoluminescence. Sci. Adv 2025 , 11 (16), 1171. https://doi.org/10.1126/sciadv.adt1171. 16 
+
+(28) Landsberg, P. T.; Rhys-roberts, C.; Lal, P. Auger Recombination and Impact Ionization Traps in Semiconductors. Proceedings of the Physical Society 1964 , 84 (6), 915 –931. https://doi.org/10.1088/0370-1328/84/6/311. 
+
+(29) Abakumov V.N.; Perl V.I.; Yassievich I.N. Nonradiative Recombination In Semiconductors , 1st ed.; Agranovich V.M., Maradudin A. A., Eds.; Elsevier, 1991; Vol. 33. 
+
+(30) Staub, F.; Rau, U.; Kirchartz, T. Statistics of the Auger Recombination of Electrons and Holes via Defect Levels in the Band Gap —Application to Lead-Halide Perovskites. ACS Omega 2018 , 3 (7), 8009 –8016. https://doi.org/10.1021/acsomega.8b00962. 
+
+(31) Zuo, L.; Guo, H.; Dequilettes, D. W.; Jariwala, S.; De Marco, N.; Dong, S.; Deblock, R.; Ginger, D. S.; Dunn, B.; Wang, M.; Yang, Y. Polymer-Modified Halide Perovskite Films for Efficient and Stable Planar Heterojunction Solar Cells. 2017 , 3 (8), e1700106. https://doi.org/10.1126/sciadv.1700106. 
+
+(32) Handa, T.; Tex, D. M.; Shimazaki, A.; Wakamiya, A.; Kanemitsu, Y. Charge Injection Mechanism at Heterointerfaces in CH3NH3PbI3 Perovskite Solar Cells Revealed by Simultaneous Time-Resolved Photoluminescence and Photocurrent Measurements. Journal of Physical Chemistry Letters 
+
+2017 , 8 (5), 954 –960. https://doi.org/10.1021/acs.jpclett.6b02847. 
+
+(33) Kanemitsu, Y.; Yamada, Y. Band-Edge Luminescence from Oxide and Halide Perovskite Semiconductors. Chem. Asian J. 2020 , 15 (6), 709 –717. https://doi.org/10.1002/asia.201901639. 
+
+(34) Xing Guichuan; Mathews Nripan; Sun Shuangyong; Lim Swee Sien; Lam Yeng Ming; Grätzel Michael; Mhaisalkar Subodh; Sum Tze Chien. Long-Range Balanced Electron- and Hole-Transport Lengths in Organic-Inorganic CH3NH3PbI3. Science (1979). 2013 , 342 (6156), 344 –347. https://doi.org/10.1126/science.1243167. 
+
+(35) Shi, D.; Adinolfi, V.; Comin, R.; Yuan, M.; Alarousu, E.; Buin, A.; Chen, Y.; Hoogland, S.; Rothenberger, A.; Katsiev, K.; Losovyj, Y.; Zhang, X.; Dowben, P. A.; Mohammed, O. F.; Sargent, E. H.; Bakr, O. M. Low Trap-State Density and Long Diffusion in Organolead Perovskite Single Crystals. Science (1979). 2015 , 347 (6221), 519 –522. https://doi.org/10.1126/science.1243167. 
+
+(36) Wang, Y.; Zhi, M.; Chan, Y. Delayed Exciton Formation Involving Energetically Shallow Trap States in Colloidal CsPbBr3 Quantum Dots. Journal of Physical Chemistry C 2017 , 121 (51), 28498 –
+
+28505. https://doi.org/10.1021/acs.jpcc.7b09040. 
+
+(37) Socie, E.; Vale, B. R. C.; Burgos-Caminal, A.; Moser, J. E. Direct Observation of Shallow Trap States in Thermal Equilibrium with Band-Edge Excitons in Strongly Confined CsPbBr3 Perovskite Nanoplatelets. Adv. Opt. Mater. 2021 , 9 (1), 2001308. https://doi.org/10.1002/adom.202001308. 
+
+(38) De Wolf, S.; Holovsky, J.; Moon, S. J.; Löper, P.; Niesen, B.; Ledinsky, M.; Haug, F. J.; Yum, J. H.; Ballif, C. Organometallic Halide Perovskites: Sharp Optical Absorption Edge and Its Relation to Photovoltaic Performance. Journal of Physical Chemistry Letters 2014 , 5 (6), 1035 –1039. https://doi.org/10.1021/jz500279b. 
+
+(39) Green, M. A.; Jiang, Y.; Soufiani, A. M.; Ho-Baillie, A. Optical Properties of Photovoltaic Organic-Inorganic Lead Halide Perovskites. Journal of Physical Chemistry Letters . American Chemical Society December 3, 2015, pp 4774 –4785. https://doi.org/10.1021/acs.jpclett.5b01865. 
+
+(40) Lanlxrerg, P. T.; Robbins, D. J. The First 70 Semiconductor Auger Processes. Solid. State. Electron. 
+
+1978 , 21 (11), 1289 –1294. https://doi.org/10.1016/0038-1101(78)90195-8. 
+
+(41) Tak, T.; Ho, W. Y.; Celupica-Liu, I.; Chow, Y. C.; Peretti, J.; Weisbuch, C.; Speck, J. S. Trap-Assisted Auger-Meitner Recombination in GaN p-i-n Diodes. Phys. Rev. B 2025 , 111 (15), 155308. https://doi.org/10.1103/PhysRevB.111.155308. 
+
+(42) Espenlaub, A. C.; Myers, D. J.; Young, E. C.; Marcinkevičius, S.; Weisbuch, C.; Speck, J. S. Evidence 
+
+of Trap-Assisted Auger Recombination in Low Radiative Efficiency MBE-Grown III-Nitride LEDs. J. Appl. Phys. 2019 , 126 (18), 184502. https://doi.org/10.1063/1.5096773. 
+
+(43) Zhao, F.; Turiansky, M. E.; Alkauskas, A.; Van De Walle, C. G. Trap-Assisted Auger-Meitner Recombination from First Principles. Phys. Rev. Lett. 2023 , 131 (5), 056402. https://doi.org/10.1103/PhysRevLett.131.056402. 17 
+
+(44) Bess, L. Possible Mechanism for Radiationless Recombination in Semiconductors. Phys. Rev. 
+
+1957 , 105 (5), 1469 –1475. https://doi.org/10.1103/PhysRev.105.1469. 
+
+(45) Hornbeck, J. A.; Haynes, J. R. Trapping of Minority Carriers in Silicon. I. P-Type Silicon. Phys. Rev. 
+
+1954 , 97 (2), 311 –321. https://doi.org/10.1103/PhysRev.97.311. 
+
+(46) Grivickas, V.; Ščajev, P.; Miasojedovas, S.; Voss, L.; Grivickas, P. Self -Trapped-Exciton Radiative 
+
+Recombination in β -Ga2O3: Impact of Two Concurrent Nonradiative Auger Processes. ACS Appl. Electron. Mater. 2025 , 7 (5), 1829 –1841. https://doi.org/10.1021/acsaelm.4c02099. 
+
+(47) Bowman, A. R.; Macpherson, S.; Abfalterer, A.; Frohna, K.; Nagane, S.; Stranks, S. D. Extracting Decay-Rate Ratios from Photoluminescence Quantum Efficiency Measurements in Optoelectronic Semiconductors. Phys. Rev. Appl. 2022 , 17 (4), 044026. https://doi.org/10.1103/PhysRevApplied.17.044026. 
+
+(48) Staub, F.; Kirchartz, T.; Bittkau, K.; Rau, U. Manipulating the Net Radiative Recombination Rate in Lead Halide Perovskite Films by Modification of Light Outcoupling. Journal of Physical Chemistry Letters 2017 , 8 (20), 5084 –5090. https://doi.org/10.1021/acs.jpclett.7b02224. 
+
+(49) Richter, J. M.; Abdi-Jalebi, M.; Sadhanala, A.; Tabachnyk, M.; Rivett, J. P. H.; Pazos-Outón, L. M.; Gödel, K. C.; Price, M.; Deschler, F.; Friend, R. H. Enhancing Photoluminescence Yields in Lead Halide Perovskites by Photon Recycling and Light Out-Coupling. Nat. Commun. 2016 , 7, 13941. https://doi.org/10.1038/ncomms13941. 
+
+(50) Cahen, D.; Hodes, G. Fables and Facts about Halide Perovskites, “Miracle” Energy Materials. ACS Energy Lett. 2025 , 10 (12), 6365 –6371. https://doi.org/10.1021/acsenergylett.5c03033. 
+
+(51) Cahen, D.; Rakita, Y.; Egger, D. A.; Kahn, A. Surface Defects Control Bulk Carrier Densities in Polycrystalline Pb-Halide Perovskites. Advanced Materials 2024 , 36 (50), 2407098. https://doi.org/10.1002/adma.202407098. 
+
+(52) Singh, S.; Siliavka, E.; Löffler, M.; Vaynzof, Y. Impact of Buried Interface Texture on Compositional Stratification and Ion Migration in Perovskite Solar Cells. Adv. Funct. Mater. 2024 , 34 (42), 2402655. https://doi.org/10.1002/adfm.202402655. 
+
+(53) Degani, M.; An, Q.; Albaladejo-Siguan, M.; Hofstetter, Y. J.; Cho, C.; Paulus, F.; Grancini, G.; Vaynzof, Y. 23.7% Efficient Inverted Perovskite Solar Cells by Dual Interfacial Modification. Sci. Adv 2021 , 7 (49), eabj7930. https://doi.org/10.1126/sciadv.abj7930. 
+
+(54) Telschow, O.; Albaladejo-Siguan, M.; Merten, L.; Taylor, A. D.; Goetz, K. P.; Schramm, T.; Konovalov, O. V.; Jankowski, M.; Hinderhofer, A.; Paulus, F.; Schreiber, F.; Vaynzof, Y. Preserving the Stoichiometry of Triple-Cation Perovskites by Carrier-Gas-Free Antisolvent Spraying. J. Mater. Chem. A Mater. 2022 , 10 (37), 19743 –19749. https://doi.org/10.1039/d1ta10566c. 18 
+
+# Supporting information to 
+
+# Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites 
+
+Jitendra Kumar 1, Thomas Kirchartz 5,6 , Alexandr Marunchenko 1, Alexander Kiligaridis 1, Shraddha M. Rao 1, Shivam Singh 2,3 , Ankur Yadav 4, Monojit Bag 4, Yana Vaynzof 2,3 , Ivan G. Scheblykin 1* 
+
+*Corresponding author(s). E-mail(s):  ivan.scheblykin@chemphys.lu.se  
+
+> 1
+
+Chemical Physics and NanoLund, Lund University, P.O. Box 124, 22100 Lund, Sweden  
+
+> 2
+
+Leibniz Institute for Solid State and Materials Research Dresden, Helmholtzstraße 20, 01069 Dresden, 
+
+Germany 
+
+> 3
+
+Chair for Emerging Electronic Technologies, Technical University of Dresden, Nöthnitzer Str. 61, 01187 Dresden, Germany  
+
+> 4
+
+Advanced Research in Electrochemical Impedance Spectroscopy Laboratory, Indian Institute of Technology Roorkee, Roorkee, 247667, India  
+
+> 5
+
+IMD -3 Photovoltaics, Forschungszentrum Jülich, Jülich, Germany  
+
+> 6
+
+Faculty of Engineering and CENIDE, University of Duisburg-Essen, Duisburg, Germany 19 
+
+Table of Contents 
+
+1. Sample preparation 
+
+1.1 Preparation of triple cation perovskite films 
+
+1.2 Preparation of the reference dye films for PLQY calibration 
+
+2. Experimental setup 
+
+3. Measurement of PLQY( R, F ) maps and TRPL decays 
+
+3.1 Estimation of the absorbance and the concentration of photogenerated charge carriers 
+
+3.2 Automated measurement of PLQY( R, F ) maps 
+
+4. Calibration of the setup for absolute PLQY measurements 
+
+4.1. Measurements of PLQY of the reference films using integrating sphere. 
+
+4.2. Why can’t we measure PLQY of the perovskite sample using the integrating sphere and use this 
+
+value for calibration of the microscope? 
+
+4.3. The general principle of PLQY calibration 
+
+4.4. Measuring the spectral sensitivity of the setup 
+
+4.5. Influence of different factors on the accuracy of the PLQY calibration ( B coefficient) 
+
+4.5.1 Influence of inhomogeneous local absorption of the reference film 
+
+4.5.2 Influence of misfocusing of the microscope on the PL counts 
+
+4.5.3 Influence of the instability of the reference film 
+
+4.5.4 Influence of the instability of the perovskite reference film 
+
+5. The initial TRPL intensity drop 
+
+5.1. Effect of charge carrier diffusion 
+
+5.2. Effect of trap saturation 
+
+6. Exponential tail of TRPL decay at long time scale at low excitation fluence: indication of first order processes at long timescale 
+
+7. Indication of the presence of doping from a multi-pulse TRPL experiment 
+
+8. Shockley –Read –Hall (SRH) model under low excitation power density 
+
+9. Full SRH model ( 𝑇 1, 𝑇 2, 𝑇 3, 𝐴 , 𝑁 𝑑 ) able to explain PLQY( R, F ) map and TRPL decays together 
+
+10 Overview of simpler theoretical models explaining incomplete data sets 
+
+10.1 Model SRH-1: Deep trap with normal trapping, Auger trapping, and Auger recombination. Fitting only PLQY( R, F ) map while ignoring low fluence PL decays. 
+
+10.2 Model SRH-2: Shallow trap only. Fitting low fluence TRPL decays with fast and slow components 
+
+10.3 Model SRH-3: Shallow trap, deep trap, Auger recombination. Fitting normalized TRPL decays while ignoring PLQY. 
+
+10.4 Model SRH-4: Shallow trap, deep trap with normal trapping and Auger trapping, Auger recombination. Attempts to fit PLQY( R, F ) and PL decays together 
+
+11. List of model parameters 
+
+References 20 
+
+1.Sample preparation 
+
+1.1 Preparation of triple cation perovskite films 
+
+Materials 
+
+Formamidinium iodide (FAI, HC(NH 2)2), and methylammonium iodide (MAI, CH 3NH 3I) were purchased from GreatCell Solar Materials. Cesium iodide (CsI), lead iodide (PbI 2) and lead bromide (PbBr 2) were purchased from Tokyo Chemical Industry Co., Ltd. (TCI). Anhydrous solvents such as Dimethylformamide (DMF) and Dimethyl Sulfoxide (DMSO) were purchased from Acros Organics. 
+
+Solution Preparation 
+
+To prepare the triple cation films, the precursor solution was prepared by dissolving PbI 2 and PbBr 2 in a solvent mixture (DMF/DMSO = 4/1) and CsI in DMSO. The PbI 2, PbBr 2 and CsI solution was heated at 150 °C for 10 minutes. After cooling down, CsI solution, PbI 2 and PbBr 2 solutions were mixed in a volume ratio of 0.05:0.85:0.15, to obtain an inorganic stock solution. FAI and MAI powders were added and weighed in two separate vials, into which the appropriate amount (0.95:1 molar ratio) of inorganic stock was added. This creates two new solutions, of the formula Cs 0.05 (FA or MA) 0.95 Pb(I 0.9 Br 0.1 )3. Finally, these two solutions were mixed in a 5:1 v/v ratio, in order to achieve the final molecular formula Cs 0.05 (FA 0.83 MA 0.17 )0.95 Pb(I 0.9 Br 0.1 )3. To fabricate a 50 nm thin perovskite film, the prepared precursor was diluted with a mixed DMF:DMSO (4:1) solvent in a volumetric ratio of 1:3. 
+
+Film Fabrication 
+
+The glass substrates were cleaned with deionized water, acetone, and isopropanol by ultrasonication for 10 min in each solvent. The substrates were then dried with N 2 and treated with oxygen plasma at 100 mW for 10 min. The substrates were immediately transferred to drybox (relative humidity < 1%) for perovskite deposition. The perovskite layer was deposited via a two-step spin-coating procedure with 1000 rpm for 10 s and 6000 rpm for 30 s. Anhydrous chlorobenzene (150 μL) was dripped on the spinning substrate during the last 5 s of the second spin-coating step. Subsequently, the spin-coated samples were annealed at 100 °C for 30 min. 
+
+1.2 Preparation of the reference dye films for PLQY calibration. 
+
+For the preparation of the dye-doped film we partially followed the procedures described in the literature. 1 Pyridine-2 dye was dissolved in DMSO at high concentration, the solution was kept at 100°C 400 500 600 700 800 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 
+
+> OD Wavelength (nm)
+> 0500 1000 1500 2000 2500
+> PL intensity (a.u.)
+
+Pyridine-2 dye in PMMA (ref. film) 
+
+Figure S1. Absorption and PL spectra of reference dye film (pyridine-2 in PMMA matrix) 21 
+
+for 15 min to ensure complete dissolution. PMMA was separately dissolved in DMSO at a concentration close to saturation by heating the mixture at 100°C for 15 min. The two solutions were then combined in a 1:3 or 1:1 volumetric ratio, mixed thoroughly, and drop-cast onto plasma-treated hydrophilic glass substrates. The subsequent drying on a hot plate at 100 °C for 10 min was done to remove residual solvent before cooling to ambient conditions. As a result, smooth films of Pyridine-2 dispersed in PMMA with OD of the order of 0.1 were obtained for subsequent usage as reference samples (see absorption and PL spectra of the reference film in Figure S1). 
+
+2. Experimental setup 
+
+We used the same experimental setup as described in our previous publications. 2–5 In short, it is a home-built wide-field photoluminescence microscope system based on Olympus IX71 microscope. The sample can be excited by a 482 nm diode laser (PicoQuant, with a 200 ps pulse width) through a dry 40X objective lens (NA=0.6). The PL signal is then detected either by EM CCD (Princeton Instruments ProEM 512B) for measuring PLQY( R, F ) map, or by a hybrid photomultiplier detector (PMA Hybrid- 42 PicoQuant) to measure TRPL decay kinetics. The hybrid detector is connected to a time-correlated single photon counting (TCSPC) module (PicoHarp 300 PicoQuant) for recording the arrival time of photons. The instrumental response function of our TCSPC setup is approximately 200 ps. 
+
+PLQY of reference samples was measured using the integrating sphere from Horiba scientific (Quanta ɸ) 
+
+and the same laser for excitation. Measurements of the absorption spectra (including measurements in integrating sphere) were carried out using an UV-VIS-NIR spectrometer (Lambda 1050) from Perkin Elemer. 
+
+3. Measurement of PLQY( R, F ) maps and TRPL decays 
+
+3.1 Estimation of the absorbance and the concentration of photogenerated charge carriers 
+
+For measuring PLQY( R, F ) map, we used 68 combinations of the pulse fluence and repetition rate of the laser. For this we used 5 different pulse fluences, namely  𝐹 1 = 3.4x10 8, 𝐹 2 = 4x10 9, 𝐹 3 = 4.3x10 10 , 𝐹 4 =5.4x10 11 , 𝐹 5 = 4.9x10 12 photons/cm 2 and several repetition rates ranging from 1 kHz to 80 MHz with a step of approximately 2-3 times (see Table S1 and S2). The value of the initial carrier concentration was estimated by assuming that each absorbed photon creates one electron – hole pair. Therefore, the initial carrier concentration (  ∆𝑛 0 = ∆𝑝 0) can be estimated in from the pulse fluence and absorptance of the sample using the following expressions: 
+
+∆𝑛 0 = 𝐹 𝑖 ∙ 𝐴 𝑑  (S3.1) 
+
+𝐴 = (𝐼 0−𝐼 𝑇 −𝐼 𝑅 )𝐼 0
+
+= (1 − 𝑇 − 𝑅 ∗) (S3.2) 
+
+Here,  𝐹 𝑖  is the laser fluence, A is absorptance, and d is the sample thickness.  𝐼 0 is the intensity of the incident light,  𝐼 𝑇  is the intensity of the transmitted light, and  𝐼 𝑅  is the intensity of the reflected light. T is the transmission coefficient,  𝑅 ∗ is the reflection coefficient (reflection coefficient in this equation is represented by  𝑅 ∗ to differentiate it from the repetition rate  𝑅 ). The first equation assumes a uniform distribution of charge carriers over the sample thickness, and the second equation assumes negligible scattering (this is confirmed by measurements of the TC film absorption, scattering and reflections using integrating sphere). 
+
+The values of different pulse fluences and their corresponding initial carrier concentrations calculated using equation S3.1 for the sample studied here are listed in Table S1. 22 
+
+Figure S2a illustrates the measurement of absorptance and reflectance using the excitation laser beam and a power meter. Results of multiple measurements on our 50 nm thin triple cation sample gave average transmittance 0.25 and average reflectance at the laser excitation wavelength 0.17. Which results in the average absorptance 0.58. 
+
+Figure S2b shows spectrum of the optical density of a triple cation sample of 50 nm film thickness measured in the integrating sphere. From the optical density at 482 nm ( OD = 0.35), we can find the value of the absorptance ( A= 1-10 -OD ) to be 0.55, which matches very well with measured absorptance using the power meter (Figure S2a). It means that the scattering of the excitation light in the sample is quite small and can be ignored. 
+
+During the real PL measurements on the TC sample at the microscope, the sample was excited locally by a small beam (30 micrometers in diameter). The local absorptance could be slightly different due to inhomogeneity of the sample. However, in this experimental configuration we could measure incident I0
+
+and transmitted IT light but not reflected light IR. However, the reflection coefficient is not very sensitive to the optical density of the sample, that is why it can be taken from the measurements with a broad beam like shown in Figure S2a. This allowed us to rather accurately estimate the amount of excitation light absorbed by different films for spectroscopy measurements as well as for the absolute PLQY calibration of the microscope (see SI section 4) using fixed reflection coefficient and still taking into account variable local optical density. 
+
+From the absorbance measurements we can estimate the absorption coefficient ( 𝛼 ) using the following relationship between absorptance and the absorption coefficient. 
+
+𝐴 = 𝐼 𝑎𝑏𝑠𝑜𝑟𝑏𝑒𝑑 
+
+> 𝐼 0
+
+= (1 − 𝑆) ∙ (1 − 𝑅 ∗) ∙ (1 − 𝑒 −𝛼𝑑 ) (S3.3) 
+
+Using the values of the absorptance (0.58), scattering coefficient ( S = 0), the reflection coefficient ( R* =0.17), and film thickness (50 nm), we estimated the value of the absorption coefficient of the TC film at 482 nm to be  𝛼 = 2.40 × 10 5 cm -1 .400 500 600 700 800 0.0 0.1 0.2 0.3 0.4 0.5 OD Wavelength (nm) OD 482 = 0.35 𝐼 𝑅 𝐼 0
+
+𝐼 𝑇 
+
+Sample Glass Substrate 
+
+a) b) 
+
+Figure S2. a) Schematic ray diagram for estimating the absorbance of the laser excitation light by the sample. The intensity of the incoming ( I0), reflected ( IR) and transmitted ( IT) light is measured with a power meter. b) absorption spectrum of the TC perovskite sample measured using integrating sphere. 23 
+
+Supplementary Table S1 : Pulse fluences used in the study and the corresponding initial concentration of photogenerated charge carriers 
+
+Label  Pulse fluence ‘ F’ 
+
+(photons/cm 2)
+
+Pulse fluence ‘ F’ (nJ/cm 2) Photogenerated charge carrier density  ∆𝑛 0 (cm -3 )
+
+𝐹 1 3.4 × 10 8 0.14  3.94 × 10 13 
+
+𝐹 2 4.0 × 10 9 1.64  4.64 × 10 14 
+
+𝐹 3 4.3 × 10 10  17.7  4.99 × 10 15 
+
+𝐹 4 5.4 × 10 11  220  6.26 × 10 16 
+
+𝐹 5 4.9 × 10 12  2000  5.68 × 10 17 
+
+3.2 Automated measurement of PLQY( R, F ) maps 
+
+To measure the full PLQY( R, F) map, a home-developed LabVIEW program was used to control all parts of the setup. 6 This software was controlling the repetition rate of the laser, neutral density filters for controlling the excitation pulse fluence, neutral density filters in front of the charge coupled device (CCD) for controlling the amount of light that CCD receives. It also controlled the CCD camera (changing the integration time for taking a PL images and saving the captured images). All the required experimental conditions were uploaded to the software in the form of a table. Each row of the table sets the condition for one measurement. 
+
+For recording PL kinetics, the repetition rate of the laser was fixed at 10 kHz (close to the single pulse excitation regime for all  𝐹 𝑖  while pulse fluences from  𝐹 2 to  𝐹 5 were used to excite the sample. 
+
+An example of the table, which was used to measure PLQY( R, F ) map for the triple cation sample is shown in Table S2. Rows highlighted with light green color are data points for mapping PLQY, while the rows highlighted in light red color are the reference points for tracking the stability of the sample (always measured at the same condition). The evolution of the reference point is shown in Figure S4. 24 
+
+Supplementary Table S2 : List of parameters used in the LabVIEW program to execute PLQY( R, F ) mapping: M.N.- measurement number, Ex. OD – label of the excitation filter (≈optical density), Em. OD - label of the 
+
+emission filter (≈optical density), Exp. time - exposure time of the CCD, Rep. rate - laser pulse repetition rate. 
+
+M.N. 
+
+Ex. OD 
+
+Em. OD 
+
+Exp. Time (ms) 
+
+Rep. rate 
+
+R (Hz)  M. N. 
+
+Ex. OD 
+
+Em. OD 
+
+Exp. Time (ms) 
+
+Rep. rate 
+
+R (Hz)  M. N. 
+
+Ex. OD 
+
+Em. OD 
+
+Exp. Time (ms) 
+
+Rep. rate 
+
+R (Hz) 
+
+1 3 0 100  20000000  51  3 0 100  20000000  101  3 0 100  20000000 
+
+2 4 0 400000  200000  52  2 0 10000  20000  102  1 3 200  20000000 
+
+3 3 0 100  20000000  53  3 0 100  20000000  103  3 0 100  20000000 
+
+4 4 0 150000  500000  54  2 0 4000  50000  104  1 3 100  40000000 
+
+5 3 0 100  20000000  55  3 0 100  20000000  105  3 0 100  20000000 
+
+6 4 0 54000  1000000  56  2 0 1500  100000  106  1 3 100  80000000 
+
+7 3 0 100  20000000  57  3 0 100  20000000  107  3 0 100  20000000 
+
+8 4 0 18000  2000000  58  2 0 500  200000  108  0 0 1500  1000 
+
+9 3 0 100  20000000  59  3 0 100  20000000  109  3 0 100  20000000 
+
+10  4 0 6000  5000000  60  2 0 200  500000  110  0 0 500  2000 
+
+11  3 0 100  20000000  61  3 0 100  20000000  111  3 0 100  20000000 
+
+12  4 0 2000  10000000  62  2 0 100  1000000  112  0 0 200  5000 
+
+13  3 0 100  20000000  63  3 0 100  20000000  113  3 0 100  20000000 
+
+14  4 0 600  20000000  64  2 1 500  2000000  114  0 0 100  10000 
+
+15  3 0 100  20000000  65  3 0 100  20000000  115  3 0 100  20000000 
+
+16  4 0 200  40000000  66  2 1 200  5000000  116  0 1 500  20000 
+
+17  3 0 100  20000000  67  3 0 100  20000000  117  3 0 100  20000000 
+
+18  4 0 100  80000000  68  2 1 100  10000000  118  0 1 200  50000 
+
+19  3 0 100  20000000  69  3 0 100  20000000  119  3 0 100  20000000 
+
+20  3 0 300000  10000  70  2 2 500  20000000  120  0 1 100  100000 
+
+21  3 0 100  20000000  71  3 0 100  20000000  121  3 0 100  20000000 
+
+22  3 0 150000  20000  72  2 2 200  40000000  122  0 2 500  200000 
+
+23  3 0 100  20000000  73  3 0 100  20000000  123  3 0 100  20000000 
+
+24  3 0 60000  50000  74  2 2 100  80000000  124  0 2 200  500000 
+
+25  3 0 100  20000000  75  3 0 100  20000000  125  3 0 100  20000000 
+
+26  3 0 25000  100000  76  1 0 12000  1000  126  0 2 100  1000000 
+
+27  3 0 100  20000000  77  3 0 100  20000000  127  3 0 100  20000000 
+
+28  3 0 10000  200000  78  1 0 4500  2000  128  0 3 500  2000000 
+
+29  3 0 100  20000000  79  3 0 100  20000000  129  3 0 100  20000000 
+
+30  3 0 6000  500000  80  1 0 1500  5000  130  0 3 200  5000000 
+
+31  3 0 100  20000000  81  3 0 100  20000000  131  3 0 100  20000000 
+
+32  3 0 3000  1000000  82  1 0 500  10000  132  0 3 100  10000000 
+
+33  3 0 100  20000000  83  3 0 100  20000000  133  3 0 100  20000000 
+
+34  3 0 1000  2000000  84  1 0 200  20000  134  0 4 500  20000000 
+
+35  3 0 100  20000000  85  3 0 100  20000000  135  3 0 100  20000000 
+
+36  3 0 500  5000000  86  1 0 100  50000  136  0 4 200  40000000 
+
+37  3 0 100  20000000  87  3 0 100  20000000  137  3 0 100  20000000 
+
+38  3 0 200  10000000  88  1 1 500  100000  138  0 4 100  80000000 
+
+39  3 0 100  20000000  89  3 0 100  20000000  139  3 0 100  20000000 
+
+40  3 0 100  20000000  90  1 1 200  200000 
+
+41  3 0 100  20000000  91  3 0 100  20000000 
+
+42  3 0 100  40000000  92  1 1 100  500000 
+
+43  3 0 100  20000000  93  3 0 100  20000000 
+
+44  3 0 100  80000000  94  1 2 500  1000000 
+
+45  3 0 100  20000000  95  3 0 100  20000000 
+
+46  2 0 200000  2000  96  1 2 200  2000000 
+
+47  3 0 100  20000000  97  3 0 100  20000000 
+
+48  2 0 80000  5000  98  1 2 100  5000000 
+
+49  3 0 100  20000000  99  3 0 100  20000000 
+
+50  2 0 30000  10000  100  1 3 400  10000000 25 0 10 20 30 40 50 60 70 0.1 0.2 0.3 0.4 0.5 PLQY Reference point F2, 20Mhz 
+
+Figure S4. Time evolution of the PLQY of TC film at the reference point (PLQY @  𝐹 2 20MHz) over the whole PLQY( R, F ) map measurement. 
+
+Figure S3. Schematic diagram of the wide-field fluorescence microscope used for the PLQY( R, F )mapping and TRPL decay measurements. The slit has an adjustable width, and it is fully opened for PLQY( R, F ) measurements. The diffraction grating is placed in only for spectral measurements, the beam splitter is placed only for the TRPL measurements. PLQY( R, F ) is acquired automatically according to the instruction list loaded to the controlling software. Diode Laser TCSPC setup 
+
+> Sample Excitation filter Wheel
+> Diffraction Grating Beam Splitter CCD camera Dichroic Mirror
+> Slit
+> Emission filter Wheel
+> 1-order
+> 0-order
+
+26 
+
+4. Calibration of the setup for absolute PLQY measurements 
+
+4.1. Measurements of PLQY of reference films using integrating sphere. 
+
+We used the integrating sphere and a fiber spectrometer (Avantes) to measure PLQY of the reference dye-doped PMMA films (see SI section 1.2) deposited to the same glass substrate that is used for the perovskite films. For excitation we used the same laser as for excitation of PL in the microscope. The size of the excitation spot was around 3 mm on the sample. The sample was placed against the bottom wall of the sphere. The absorption coefficient at 482 nm of the samples in this geometry in the sphere were in the range 0.15 – 0.2. The values of the measured PLQY were in the range of 0.3 – 0.4 depending on the sample. 
+
+4.2. Why can’t we measure PLQY of the perovskite sample using the integrating sphere and 
+
+use this value for calibration of the microscope? 
+
+In principle, we could just measure PLQY of the perovskite film using the integrating sphere in the same way as we did it for the reference dye film. The advantage would be that this reference sample is exactly the same in terms of its thickness and refractive index as the sample we investigated using the PL microscope setup. However, there are two problems causing rejection of this method: 
+
+1) PLQY of perovskites depends on the excitation power density. Therefore, to use this value to calibrate PLQY( R, F ) maps we would need to know the excitation power density. We need to calibrate excitation density in the microscope and in the relative accuracy <10%, which is technically rather difficult. Moreover, the excitation spot has a distribution of the power density, which is practically not possible to take into account in the sphere. So, the measured PLQY is then averaged over a range of excitation conditions. Note that when measuring PLQY( R, F ) map using the PL microscope we take the signal from the central part of the excitation spot only, where the excitation power is rather constant; 
+
+2) Perovskite samples are not sufficiently stable to use them for calibration. PL intensity can easily change by tens of % depending on light irradiation conditions; 
+
+3) Perovskite samples are not sufficiently homogeneous at the scale of the laser spot in the integrating sphere (in the microscope our excitation spot is 30 μm only). 
+
+Because we are aiming to have accuracy of the overall calibration <30%, the listed problems make this approach inappropriate. 
+
+4.3. The general principle of PLQY calibration 
+
+The main idea of the PLQY measurements of the perovskite films using the PL microscope is the following: 
+
+1) We have a reference sample (the thin polymer film doped with a fluorescent dye on a glass substrate). This sample we can image via PL microscope and also measure its PLQY using integrating sphere. The sample should be stable. PLQY of the reference sample should not depend on the excitation power density, which is generally true to diluted dye solutions as well as for dye molecules well dispersed in polymer matrices. 
+
+2) If the geometry of the reference sample (film thickness, substrate, refractive index etc. ) and the actual sample of interest (the perovskite films in our case) are the same (or at least very close), then the ratio of PL intensities detected by the CCD from the sample and reference sample should be equal to the ratio of their PLQYs if all other conditions (laser excitation power, acquisition time, local absorption coefficient, setup sensitivity) are the same. 
+
+If the mentioned conditions are not the same, the differences should be taken into account. The most difficult issue to take into account is the wavelength-dependent sensitivity of the setup. Below it will be described how it was measured in our case. 27 
+
+PL intensity of the reference sample excited by laser power P (mW) is acquired over the exposure time τ
+
+(s) under specific settings of the CCD (gain, readout rate etc.), specific objective lens and all other optical components between the sample and the CCD detector. 
+
+Number of counts Cref obtained by integration of the CCD camera image (after subtraction of the background) can be expressed as: 
+
+𝐶 𝑟𝑒𝑓 = 𝛽 𝑟𝑒𝑓 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+(S4.1) 
+
+Where  𝛽 𝑟𝑒𝑓  – is the detection efficiency of the microscope for the PL of the reference sample,  𝐴 𝑟𝑒𝑓  is the local absorptance of the reference sample. The index ref hereafter designates specific laser power, exposure time and other parameters used for the reference sample. 
+
+The same equation is valid for the sample of interest, (index s hereafter is for the sample of interest): 
+
+𝐶 𝑠 = 𝛽 𝑠 𝑃 𝑠 𝜏 𝑠 𝛷 𝑠 A𝑠  (S4.2) 
+
+By division these two expressions on each other, we obtain: 
+
+> 𝐶 𝑠
+> 𝐶 𝑟𝑒𝑓
+
+= 𝛽 𝑠 𝑃 𝑠 𝜏 𝑠 Φ𝑠 𝐴 𝑠    
+
+> 𝛽 𝑟𝑒𝑓 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓
+
+= ( 𝛽 𝑠 
+
+> 𝛽 𝑟𝑒𝑓
+
+) ∙ 𝑃 𝑠 𝜏 𝑠 Φ𝑠 𝐴 𝑠   
+
+> 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓
+
+(S4.3) 
+
+And for the sample PLQY we get: 
+
+𝛷 𝑠 =∙ 𝛷 𝑟𝑒𝑓 ∙ 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+> 𝐶 𝑟𝑒𝑓
+
+∙ ( 𝛽 𝑟𝑒𝑓 
+
+> 𝛽 𝑠
+
+) 𝐶 𝑠  
+
+> 𝑃 𝑠 𝜏 𝑠 𝐴 𝑠
+
+= 𝐵 ∙ 𝐶 𝑠  
+
+> 𝑃 𝑠 𝜏 𝑠 𝐴 𝑠
+
+(S4.4) 
+
+where, 
+
+𝐵 = 𝛷 𝑟𝑒𝑓 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+> 𝐶 𝑟𝑒𝑓
+
+∙ ( 𝛽 𝑟𝑒𝑓 
+
+> 𝛽 𝑠
+
+) (S4.5) 
+
+Then, if the sensitivities of the setup for the reference sample and the sample of interest are the same 
+
+𝛽 𝑠 = 𝛽 𝑟𝑒𝑓  (this is the case when: i) the reference and the sample have identical emission spectrum, or ii) when the sensitivity of the setup does not depend on wavelength) we can use this equation directly to obtain the coefficient B because all parameters there can be easily measured experimentally. In reality, 
+
+𝛽 𝑠 ≠ 𝛽 𝑟𝑒𝑓 , thus we need to measure somehow the spectral sensitivity of the imaging mode of the microscope. 
+
+4.4. Measuring the spectral sensitivity of the setup 
+
+Here our task is to measure  𝛽 𝑠 
+
+> 𝛽 𝑟𝑒𝑓
+
+and apply this coefficient to Eq. S4.5.Our microscope can be converted to a spectrometer by introducing a slit and a diffraction grating, as shown in Figure S3. The spectrum is then detected by the same CCD camera as for imaging. 
+
+By measuring the spectrum  𝑀 𝐿𝑎𝑚𝑝 (𝜆)  of the calibration lamp (Avantes, AvaLight-HAL-CAL-Mini), for which actual spectrum is known from the producer ( 𝐾 𝐿𝑎𝑚𝑝 (𝜆) , in energy/nm) we can obtain the sensitivity coefficient of the microscope in the spectral mode: 
+
+𝑐 𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦 (𝜆) = 𝜆∙𝐾 𝐿𝑎𝑚𝑝 (𝜆) 𝑀 𝐿𝑎𝑚𝑝 (𝜆)  (S4.6) 
+
+Here multiplication by λ is needed to convert the units of energy/nm of the tabulated lamp spectrum to 
+
+photons/nm. Finally, the units of the  𝑐 𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦  (λ) function are: [(Photons/nm)/(CCD counts)] 28 
+
+Whether the CCD counts are proportional to the incident energy or the number of photons does not really matter here, because the actual units will be canceled when multiplied by the real spectrum M(λ) of sample of interest to obtain its corrected spectrum in [Photons/nm], see Figure (S5) ’
+
+𝑆(𝜆) = 𝑀(𝜆) ∙ 𝑐 𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦 (𝜆)  (S4.7) 
+
+It is important to realize, however, that this sensitivity curve is for the spectral mode only and cannot be yet directly applied to the imaging mode. This is because in the spectral mode the diffraction grating is present in the optical path adding its own wavelength-dependent spectral efficiency (the grating is absent in the imaging mode). 
+
+Now let’s calibrate the imaging mode having the spectral model calibrated. 
+
+We use two samples for this calibration: 
+
+i) reference film of known PLQY (called ref. hereafter), which was measured in the integrating sphere. 
+
+ii) reference perovskite film (called PF here after), which we use here to have a source of PL with the 
+
+same spectrum as the actual perovskite sample PLQY( R, F ) map is measured. 
+
+We measure under the same excitation power P and the same slit (in terms of its width and the position over the laser excitation spot) the following CCD images (see Figure S6): 
+
+1)  an image of the ref. film, 
+
+2)  an image of the ref. film with the slit, 
+
+(these two images will allow to measure the laser excitation power within the slit) 
+
+3)  an image of the ref. film with the slit and with the grating, 
+
+(this measurement is needed to obtain the calibrated spectrum of the reference sample) 
+
+4)  image of the PF sample with the slit, 
+
+5)  image of the PF sample with the slit and with the grating, 
+
+(this measurement is needed to obtain the calibrated spectrum of the PF film).Notes about the ref 
+
+sample: the sample should not be moved between measurement #1, #2 and #3, PL of the ref. sample 
+
+Figure S5. Dashed lines - spectra of the reference sample (pyridine2) and the TC perovskite film (PF) measured using spectral mode of the microscope (M). Solid lines - corrected spectra (S) using the sensitivity coefficient  𝑐 𝑠𝑒𝑛𝑠𝑖𝑡𝑖𝑣𝑖𝑡𝑦 (λ) (black solid line). 500 600 700 800 900 01000 2000 3000 
+
+> PL intensity, constant*photons/nm Wavelength (nm) Spectr Ref Spectra Ref*Senc Spectra RPF Spectra RPF*Senc
+> 01000 2000 3000
+> Senc C (λ)
+
+Sref (λ) = Mref (λ) * c (λ)
+
+Mref (λ)
+
+SPF (λ)
+
+MPF (λ)
+
+> Pyridine2 reference sample (ref.) Measured spectrum Corrected
+> spectrum
+> perovskite film (PF)
+
+29 
+
+should be stable over these measurements, PLQY should not depend on the excitation power density, the local absorption coefficient A should be measurable. Note about the PF sample: the PL intensity of this sample needs to be stable only during measurements 
+
+#4 and #5, which can be ensured even for perovskites; 30 PL image of the reference film, no slit, no grating: PL image of the Reference Perovskite Film with the slit: 0th -order 1st -order Reference film with slit: Integrated counts = Cref 
+
+Integrated counts = Cref_slit 
+
+The Reference Perovskite Film with slit and grating: Integrated counts = CPF_slit 
+
+Reference film with slit and grating: Integration over the pixel columns and converting pixels to wavelength gives measured spectrum Mref (λ), which is then converted to the calibrated spectrum 
+
+Sref (λ) = Mref (λ) c (λ)0 x(λ)
+
+Mref (x(λ)) 
+
+0 x(λ)
+
+MPF (x(λ)) Integration over the pixel columns and converting pixels to wavelength gives measured spectrum M PF (λ), which is then converted to calibrated spectrum S PF (λ)
+
+Laser fluence is ‘ F’ for all measurements The slit width and its position relative to the excited area 
+
+is the same for all further 
+
+measurements 0th -order 1st -order 
+
+Figure S6. Illustration of the measurements required for spectral sensitivity calibration of the 
+
+imaging mode of the PL microscope. The pictures illustrate CCD images. 31 
+
+The parameters used below in the equations are also explained in Figures S5 and S6. The laser power hitting the excited area of the sample observed through the slit can be calculated as: 
+
+𝐹 𝑠𝑙𝑖𝑡 = 𝐹 ∙ 𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+𝐶 𝑟𝑒𝑓 
+
+(S4.8) 
+
+Where P is the total power of the laser hitting the sample, Cref_slit and Cref are the total counts on of the CCD sensor (sum of all counts minus background). 
+
+The PL intensity of the reference sample (ref) detected through the slit is: 
+
+𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 = Φ 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 𝑃 𝑠𝑙𝑖𝑡 𝛽 𝑟𝑒𝑓  (S4.9) 
+
+The PL intensity of the perovskite reference film (PF) detected through the slit is: 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 = Φ 𝑃𝐹 𝐴 𝑃𝐹 𝑃 𝑠𝑙𝑖𝑡 𝛽 𝑃𝐹  (S4.10) 
+
+Here the excitation conditions are the same in both cases. 
+
+The ratio of these signals is: 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 
+
+𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+= Φ𝑃𝐹 𝐴 𝑃𝐹 
+
+Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+∙ ( 𝛽 𝑃𝐹 
+
+𝛽 𝑟𝑒𝑓 
+
+) (S4.11) 
+
+Now let us use the calibrated spectra of the ref. and PF samples obtained at the same excitation and detection conditions. Their ratio is equal to the ratio of the number of photons emitted by the ref. and PF samples: 
+
+∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 = Φ𝑃𝐹 𝐴 𝑃𝐹 𝑃 𝑠𝑙𝑖𝑡 
+
+Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 𝑃 𝑠𝑙𝑖𝑡 
+
+= Φ𝑃𝐹 𝐴 𝑃𝐹 
+
+Φ𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+(S4.12) 
+
+Combining the last two equations (S4.11 and S4.12) we obtain: 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 
+
+𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+= ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙ ( 𝛽 𝑃𝐹 
+
+𝛽 𝑟𝑒𝑓 
+
+) (S4.13) 
+
+Or  𝛽 𝑟𝑒𝑓 
+
+𝛽 𝑃𝐹 
+
+= ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙ 𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 
+
+(S4.14) 
+
+Thus, we obtained the needed ratio of the sensitivities. Now we substitute it to Eq. S4.5 and assume that the sample has the same spectrum as the PF sample: 
+
+𝐵 = Φ 𝑟𝑒𝑓 𝑃 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+𝐶 𝑟𝑒𝑓 
+
+∙ ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙ 𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 
+
+(S4.15) 
+
+Because PL of the ref. sample is proportional to the excitation power we can write 
+
+𝐶 𝑟𝑒𝑓 = 𝐶 𝑟𝑒𝑓_𝑠𝑙𝑖𝑡 
+
+𝑃 𝑟𝑒𝑓 
+
+𝑃 𝑠𝑙𝑖𝑡 
+
+This simplifies the equation to: 
+
+𝐵 = Φ 𝑟𝑒𝑓 
+
+𝐹 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 
+
+𝐶 𝑟𝑒𝑓 𝑠𝑙𝑖𝑡 
+
+𝐹 𝑟𝑒𝑓 
+
+𝐹 𝑠𝑙𝑖𝑡 
+
+∙ ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙ 𝐶 𝑟𝑒𝑓 𝑠𝑙𝑖𝑡 
+
+𝐶 𝑃𝐹 𝑠𝑙𝑖𝑡 
+
+= Φ 𝑟𝑒𝑓 
+
+𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 𝐹 𝑠𝑙𝑖𝑡 
+
+𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡 
+
+∙ ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙32 
+
+So, 
+
+𝐵 = Φ 𝑟𝑒𝑓 𝜏 𝑟𝑒𝑓 𝐴 𝑟𝑒𝑓 𝑃 𝑠𝑙𝑖𝑡 
+
+> 𝐶 𝑃𝐹_𝑠𝑙𝑖𝑡
+
+∙ ∫ 𝑆 𝑃𝐹 (𝜆)𝑑𝜆 ∫ 𝑆 𝑟𝑒𝑓 (𝜆)𝑑𝜆 ∙ (S4.16) 
+
+The units of the conversion factor B are [𝑚𝑊∙𝑚𝑠 𝑐𝑜𝑢𝑛𝑡𝑠 ].
+
+Note that for determination of the conversion factor B we do not need to know the absorption coefficient of the reference perovskite film ( PF ). 
+
+For realization of this calibration procedure, we used two reference samples (ref.) of Pyridine-2 dispersed in PMMA matrix deposited on glass. The samples are labelled S1 and S2 with PLQY equal to 0.45 and 0.38 and averaged local absorption coefficient 0.067 and 0.075 (measured at the microscope). TC perovskite sample (the same as used for the actual measurements) was used as the PF sample. It had absorption coefficient 0.58. The excitation light intensity for calibration had fluence  𝐹 1 and repetition rate 80 MHz. At this conditions PLQY of the TC sample was 0.22. 
+
+The statistics of B measured several times with two different reference samples S1 and S2 is shown in Figure S7 below. 
+
+4.5. Influence of different factors on the accuracy of the PLQY calibration ( B coefficient) 
+
+4.5.1 Influence of inhomogeneous local absorption of the reference film 
+
+For accurate calibration we need to make sure that the PLQY of the dye reference sample does not depend on its local absorption. This is important because the PLQY measured inside the integrating sphere corresponds to the average absorbance over a large excitation spot (several mm). Whereas the PL signal measured on the microscope comes from a much smaller excitation spot (30 micrometers) where possible inhomogeneity of the sample cannot be ignored in general. The inhomogeneity of the sample however does not matter for use if the PLQY of the sample is independent of the number of absorbed photons (constant PLQY) – in this case variation of the PL signal is due to variation of the absorption coefficient only, which we always measure locally. To verify this, we measured the PL counts as a function of local absorbance and found that the PL counts are linearly proportional to it (Figure S8). This indicates that any change in local absorbance does not change the local PLQY and, therefore, any random local region is a 
+
+Figure S7. Statistics of the B values obtained from 50 measurements with two different reference dye samples of Pyridine-2 (S1, S2), the same TC perovskite sample was used for the spectral calibration. <B> =2.6 ± 0.27 ·10 -11 mW·ms/ CCD_counts 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 0246810 12 14 16 
+
+> Occurance
+
+B (10 -11 mW∙ms / CCD counts)            
+
+> N total Mean Standar Sum Minimu Median Maximu C50 2.6146 0.2684 130.73 2.0058 2.6251 3.1956
+
+𝐵 33 
+
+representative of the PLQY of the whole sample. Note that this is what one would expect from dye molecules well-dispersed in a polymer matrix .
+
+4.5.2 Influence of misfocusing of the microscope on the PL counts 
+
+The counts on the CCD are dependent on the focus of the microscope on the sample. In principle the focus position of the microscope used for its calibration and for the actual measurement should be exactly same. In practice it is not so easy to match the focus condition with accuracy better than 5 micrometers because samples are rather uniform and do not usually have clear features to focus on. To estimate Best focus Focus 5 micrometer above best focus Focus 5 micrometer below best focus 
+
+Figure S9. Dependence of the integrated counts at CCD (the whole excited spot is integrated; a reference dye film was used as a sample) on the shift of the focus (40X objective lens, NA = 0.6). Vertical dashed lines indicate a ±5 μm deviation in the reading of the microscope's focusing knob relative to the optimal focus condition. The hysteresis visible in the data shows the magnitude of PL bleaching of the reference film (see section 4.5.3). 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.0 5.0×10 7
+
+> 1.0×10 8
+> 1.5×10 8
+> 2.0×10 8
+> 2.5×10 8
+> 3.0×10 8
+> 3.5×10 8
+> 4.0×10 8
+> 4.5×10 8
+> Counts
+> Alocal
+
+Figure S8. CCD counts (PL intensity) as a function of the local absorbance of the Pyridine-2 sample. 
+
+The counts are linear to absorptance; however, some discrepancy is visible showing the level errors. 34 
+
+the effect of mis-focusing on the integrated intensity detected by the CCD we intentionally move the microscope objective up and down in steps of 2 μm. 
+
+We observed that the total counts on the CCD do not change more than 1 – 3 % if we are within 5 -10 μm range from the ideal focus condition (Figure S9). We also noticed that deviating 5 -10 μm from the best focus condition changes the contrast of the image substantially (easily visible), therefore it is always possible to match the focus for the calibration and the actual measurement within this range. 
+
+4.5.3 Influence of the instability of the reference film 
+
+As it has been mentioned, the reference dye film should be as stable as possible for accurate calibration. To our experience, any sample shows some bleaching if one excites strong enough and for long enough time. In our case the total exposure of the ref. sample to light was no more than a few seconds to accomplish all measurements described in Figure S6. The effect of a much longer series of measurements can be seen in Figure S9 where the same place of the reference sample was measured 33 times. The hysteresis visible at the graph shows bleaching, it was around 2% only. So, the reference films used in this study were stable enough for calibration. 
+
+4.5.4 Influence of the instability of the perovskite reference film 
+
+We do not use the perovskite film as a real reference for absolute PL intensity due to an unpredictable behavior of its PLQY under light irradiation and other issues (see section 4.4). We use it for spectral calibration only where it has to be stable between just two measurements, each of them can last < 1s. One can even pre-bleach the sample in order to make its PL more stable. We do not see any problem using perovskites sample for the purposes described in section 4.4 despite their light sensitivity. 
+
+# 5.  The initial TRPL intensity drop 
+
+# 5.1. Effect of charge carrier diffusion 
+
+According to the Beer-Lambert law (Figure S10a) the initial distribution of the photogenerated charge carrier concentration created by a laser pulse arriving at time t = 0 is given by: 
+
+𝑛(𝑥, 𝑡 = 0) = 𝑝(𝑥, 𝑡 = 0) = 𝛾 ∙ 𝑒 −𝛼𝑥  (S5.1) 
+
+Where x is the distance from the front surface of the film and  𝛾  is a constant dependent on absorption coefficient  𝛼  and excitation fluence. 
+
+Then due to charge carrier diffusion over the film thickness d the distribution becomes homogenous with an average concentration  𝑛̅  (Figure S10a). This average concentration can be connected to  𝛾  by assuming that the total number of charge carriers do not change during the homogenization (the homogenization is much faster than recombination), using Eq. S5.1 we get: 
+
+∫ 𝑛(𝑥)𝑑𝑥 
+
+> 𝑑 0
+
+= 𝛾 ∫ 𝑒 −𝛼𝑥 𝑑𝑥 
+
+> 𝑑 0
+
+= 𝑛̅𝑑 
+
+𝛾 𝛼 (1 − 𝑒 −𝛼𝑑 ) = 𝑛̅𝑑 
+
+𝑛̅ = 𝛾 𝛼𝑑 (1 − 𝑒 −𝛼𝑑 ) (S5.2) 
+
+Let’s compare the initial PL intensity and the PL intensity after homogenization. Assuming the 
+
+semiconductor is intrinsic, the initial PL intensity (per cm 2) is given by: 
+
+𝐼 𝑃𝐿 (0) = 𝑘 𝑟 ∙ ∫ 𝑛(𝑥, 𝑡 = 0)𝑝(𝑥, 𝑡 = 0)𝑑𝑥 
+
+> 𝑑 0
+
+= 𝑘 𝑟 ∙ 𝛾 2 ∫ exp(−2𝛼𝑥) 𝑑𝑥 
+
+> 𝑑 0
+
+=35 
+
+= 𝑘 𝑟 ∙𝛾 2
+
+2𝛼 (1 − 𝑒 −2𝛼𝑑 ) (S5.1) 
+
+After homogenization at time t´ the intensity is: 
+
+𝐼 𝑃𝐿 (𝑡´) = 𝑘 𝑟 ∫ 𝑛̅ 2𝑑𝑥 = 
+
+𝑑 0 𝑘 𝑟 𝑛̅ 2𝑑 = 𝑘 𝑟 𝑑 [ 𝛾 𝛼𝑑 (1 − 𝑒 −𝛼𝑑 )] 2
+
+= 𝑘 𝑟 𝛾 2
+
+𝑑𝛼 2 (1 − 𝑒 −𝛼𝑑 )2 (S5.2) 
+
+Thus, their ratio: 
+
+𝐼 𝑃𝐿 (𝑡´) 𝐼 𝑃𝐿 (0) = 𝑘 𝑟 𝛾 2𝑑𝛼 2(1− 𝑒 −𝛼𝑑 )2𝑘𝑟∙𝛾 22𝛼 (1− 𝑒 −2𝛼𝑑 )
+
+= 2𝛼𝑑 (1− 𝑒 −𝛼𝑑 )2
+
+(1− 𝑒 −2𝛼𝑑 ) (S5.3) 
+
+Then the initial  relative  PL intensity drop  𝜉  defined in Figure S10b and used in the main text for describing PL decays is given by: 
+
+𝜉 = 1 − 𝐼 𝑃𝐿 (𝑡´) 𝐼 𝑃𝐿 (0) = 1 − 2𝛼𝑑 (1− 𝑒 −𝛼𝑑 )2
+
+(1− 𝑒 −2𝛼𝑑 ) (S5.4) 
+
+The initial PL drop for 50 nm thick film is plotted in Figure S10c as a function of the absorption coefficient of the material. For our case ( 𝛼 =2.4x10 5 cm -1 ) we get ξ≈ 0.1 only, while in the experiment get ξ≈ 0.9 (Figure S10d). Thus, it is not possible that the experimentally observed PL drop was caused by 
+
+diffusion. 
+
+Figure S10 . (a) Initial distribution of photogenerated charge carrier concentration over the film thickness according to Beer-Lambert law (black line) and the homogeneous distribution after charge 
+
+carrier diffusion (green line) calculated for 50 nm thin TC film.  (b) Experimentally measured PL decay 
+
+of the  TC film excited by  𝐹 2 pulse fluence, the initial relative intensity drop ξ  is defined in the figure. (c) Relative  PL intensity drop due to homogenization calculated by Eq. S5.4 for 50 nm thick film as a function of the absorption coefficient of the material.  Absorption coefficient for TC is around 2.4x10 5
+
+cm -1 resulting in ξ =0.1. (d) comparison of the experimental relative PL intensity drop and the expected one from the effect of diffusion only. 0,0 0,2 0,4 0,6 0,8 1,0 0,01 0,1 1PL intensity (a.u.) Time (ns) uv
+
+> Initial relative drop of PL intensity:
+
+b) 0 20 40 60 0,0 0,2 0,4 0,6 0,8 1,0 PL intensity (a.u.) Time (ns) 
+
+> Expected level from the effect of diffusion Initial relative drop = 0.1 Experimental level initial relative drop = 0.9
+> ξ= 0.9
+> ξ=0.1
+
+d) 0 1×10 5 2×10 5 3×10 5  
+
+> 0,00 0,02 0,04 0,06 0,08 0,10 0,12 0,14 0,16
+> Absorption coefficient
+> a
+> (cm -1 )TC film
+> l=485 nm
+> a= 2.4 x10 5cm -1
+> Film thickness - 50 nm
+
+c) 0 10 20 30 40 50 0,2 0,4 0,6 0,8 1,0 Carrier density Depth in the film x (nm)  
+
+> Front surface Back surface Light in
+> Light out
+> Initial distribution after diffusion
+
+a) 36 
+
+5.2. Effect of trap saturation 
+
+Figure S11a shows the TRPL decay at low fluence ( F2 ) fitted using a model with a saturable deep trap 
+
+(parameters k t1 , N t1 , k n1 and k r) hereafter referred to as SRH-0. However, this model with the same parameters does not reproduce the observed TRPL decay at an order of magnitude higher fluence ( F3 ), leading to a very large mismatch (factor of 5) in the initial PL intensity drop and in the overall decay shape (Figure S11b). When calculation predicts the initial PL intensity drop to the level of 0.9, PL intensity drops to the level of 0.5 in experiment (5 times difference in the relative amplitude). 
+
+Using SRH-0 model with different parameters we also can fit the TRPL measured at F3 (Figure S11d). However, when the excitation fluence decreases to F2, the calculated TRPL decay becomes very fast without any slow component at all (because there is no trap saturation at this fluence). This behavior totally contradicts the experimentally observed kinetic which still ha s a very fast and very slow sections. These inconsistencies suggest that, under our experimental excitation conditions, the initial PL drop and the kinetics in general cannot be solely explained by saturation of deep traps. 
+
+Figure S11. Attempts to explain the TRPL including the initial fast component using a saturable deep trap for fluence F2 (a) and calculate for fluence F3 (b) and to fit TRPL for F3 (d) and calculate it for F2 (c). a) b) c) d) 
+
+> Calculation Experiment
+> Fit
+> Experiment Fit Experiment Calculation Experiment
+> Pulse fluence
+
+37 
+
+6. Exponential tail of TRPL decay at long time scale at low excitation fluence: indication of first order processes at long timescale 
+
+In the presence of only shallow traps TRPL decay starts to follow the power law at long times. However, experimentally we observed that PL decay excited at  𝐹 2 fluence displays exponential decay at long timescale (Figure S12a). This is better visualized by plotting differential lifetime (𝜏 𝑑𝑖𝑓𝑓 = −2 ∙ ( 𝑑 𝑙𝑛(𝐼 𝑃𝐿 )𝑑𝑡 )−1 ) as a function of time (Figure S12b). 7,8 This means that first order recombination processes become dominant at long time scales and should be considered. To account for this, we include the deep trap T D in the full model. 
+
+7. Indication of the presence of doping from a multi-pulse TRPL experiment 
+
+Here we consider PL response of a semiconductor to a burst of several short laser pulses. 5 The neighboring pulses are separated by equal time intervals (12.5 ns in our experiments), the bursts are repeated with very long repetition period ( e.g. 1 ms). 
+
+In case of no permanent doping in the sample, and a very long repetition period of excitation bursts, the ratio between the initial PL intensity created by the first ( 𝐼 𝑃𝐿1 ) and second ( 𝐼 𝑃𝐿2 ) pulse can be easily estimated from the concentration n0 of electrons and holes initially generated by one laser pulse: 
+
+𝐼 𝑃𝐿1 = 𝑘 𝑟 𝑛𝑝 = 𝑘 𝑟 ∆𝑛 02 ...S7.1 
+
+And for the second pulse 
+
+𝐼 𝑃𝐿2 = 𝑘 𝑟 (∆𝑛 0 + 𝑛 ′) ∙ (∆𝑛 0 + 𝑝 ′) (S7.2) 
+
+Where n’ and p’ are the concentration of the remaining electrons and holes created by the first pulse at moment of the second pulse arrival. 
+
+We know that we have a strong photodoping effect in TC films and in perovskites in general that lasts at least hundreds of nanoseconds. 2–5 This is much longer than the distance between the pulses (12.5 ns in our case). That is why we can safely assume that the concentration of holes does not really change up to the moment of the second pulse arrival. At the same time, we can assume that all electrons have been trapped during the time until the arrival of the next laser pulse (it is the fast trapping of electrons that decreases the PL inten sity by a factor of ≈ 6 times over 12.5 ns). 
+
+Figure S12. (a) Decay measured at low pulse fluence ( 𝐹 2) shows exponential decay at long timescale, this is an indication of decay being dominated by first order processes there (yellow-marked time region), red line in this curve is piecewise fitted curve to a power law. (b) Differential lifetime as a function of time, it is almost constant in the yellow-marked time region. 10 −4 10 −3 10 −2 10 −1 10 0 10 1     
+
+> 0.001 0.01 0.1 110 Differential lifetime ( ms) Time ( ms) 10 −4 10 −3 10 −2 10 −1 10 010 1
+> 10 −3
+> 10 −2
+> 10 −1
+> 10 0
+> PL intensity(a.u.) Time ( ms)
+
+a) b) 38 
+
+In this case the initial PL intensity generated by the second pulse should be: 
+
+𝐼 𝑃𝐿2 = 𝑘 𝑟 ∆𝑛 0(∆𝑛 0 + ∆𝑛 0) = 2𝐼 𝑃𝐿1  S7.3 
+
+So, with the absence of chemical doping we expect the second PL response to be approximately 2 times larger than the first one. However, only 1.14 times increase was observed experimentally (Figure S13). 
+
+This small increase can be readily explained assuming that there is always some concentration of holes present ( 𝑁 𝑑 ), in that case: 
+
+𝐼 𝑃𝐿1 = ∆𝑛 0(∆𝑛 0 + 𝑁 𝑑 )
+
+𝐼 𝑃𝐿2 = ∆𝑛 0(2∆𝑛 0 + 𝑁 𝑑 )
+
+By tuning  𝑁 𝑑  any ratio  𝐼 𝑃𝐿2 𝐼 𝑃𝐿1 ⁄ in the range from 1 and 2 can be obtained. 
+
+8. Shockley –Read –Hall (SRH) model under low excitation power density 
+
+Expected exponential TRPL decay under low excitation and single deep trap model 
+
+Under the condition of low excitation pulse fluence, equations of the SRH model can be written as: 3 
+
+> 𝑑 𝑑𝑡
+
+𝑛(𝑡) = − 𝑘 𝑡 𝑁 𝑡 𝑛  (S8.1)  
+
+> 𝑑 𝑑𝑡
+
+𝑛 𝑡1 (𝑡) = 𝑘 𝑡 𝑁 𝑡 𝑛 − 𝑘 𝑛 𝑛 𝑡 𝑝  (S8.2)  
+
+> 𝑑 𝑑𝑡
+
+𝑝(𝑡) = −𝑘 𝑛 𝑛 𝑡 𝑝  (S8.3) 
+
+With the initial conditions at the moment of the excitation laser pulse arrival: 
+
+𝑛(0) = 𝑝(0) = ∆𝑛 0
+
+𝑛 𝑡 (0) = 0 
+
+Figure S13 . (a) TRPL decay under a muti-pulse excitation (pulse burst: 10 pulses with  𝐹 2 fluence at 80 MHz (12.5 ns between pulses), repetition period of the burst - 100 μs). (b) Zoom into the PL response to the first four pulses, the growth of the second PL response relative to the first one is shown. 10 20 30 40 50 60 050 100 150 200 250 PL intensity (a.u.) Time (ns) 0 50 100 150 200 250 300 10 1
+
+10 2
+
+10 3
+
+> PL intensity (a.u.)
+
+Time (ns) Laser pulses 
+
+1.14 x 
+
+𝐼 𝑃𝐿1 
+
+𝐼 𝑃𝐿2 = 𝐼 𝑃𝐿1 
+
+a) b) 39 
+
+Here, n and p, are the free electron and free hole densities in the conduction and valence bands, respectively.  𝑛 0 is the initial excitation density and  𝑛 𝑡  is the electron density at the trap level.  𝑘 𝑡 , 𝑁 𝑡 ,and  𝑘 𝑛  are electron capture coefficient, trap density of electron traps, and hole capture coefficient (non-radiative recombination rate) respectively. 
+
+By solving equations S8.1, S8.2 and S8.3 we can find the electron and hole density in the conduction and valence band as a function of time, thereafter the PL intensity can be written in terms of  𝑛,  and  𝑝  as, 
+
+𝐼 𝑃𝐿 (𝑡) = 𝑘 𝑟 ∙ 𝑛(𝑡) ∙ 𝑝(𝑡)  (S8.4) 
+
+The solution of equation S8.1 can be written as 
+
+𝑛(𝑡) = ∆𝑛 0 ∙ exp(−𝑘 𝑡 𝑁 𝑡 𝑡)  (S8.5) 
+
+At low fluences the rate of trapping of electrons is much higher than the recombination rate of holes (because our trap is an electron trap with energy level shifted towards the conduction band, this makes capturing of an electron more probable than capturing a hole), therefore the whole decay that we see is due to disappearance of electrons, while the concentration of holes does not change. In this case the hole density can be written as, 
+
+𝑝(𝑡) = ∆𝑛 0 (S8.6) 
+
+From Eq. S8.4, S8.5 and S8.6, we can find the expression of the PL intensity: 
+
+𝐼 𝑃𝐿 (𝑡) = 𝑘 𝑟 𝑛𝑝 = 𝑘 𝑟 ∆𝑛 02 ∙ exp(−𝑘 𝑡 𝑁 𝑡 𝑡)  (S8.7) 
+
+Equation S8.7, shows that PL intensity decays according to mono-exponential law under low pulse fluence excitation. 
+
+Exponential TRPL decay under low excitation in case of multiple deep traps 
+
+In the presence of many deep trap levels (index 1,2,3,…) the equations of the SRH model under low excitation condition can be written as  
+
+> 𝑑 𝑑𝑡
+
+𝑛(𝑡) = − 𝑘 𝑡1 𝑁 𝑡1 𝑛 − 𝑘 𝑡2 𝑁 𝑡2 𝑛 − 𝑘 𝑡3 𝑁 𝑡3 𝑛 …  (S8.8)  
+
+> 𝑑 𝑑𝑡
+
+𝑛 𝑡1 (𝑡) = −𝑘 𝑡1 𝑁 𝑡1 𝑛 − 𝑘 𝑛1 𝑛 𝑡1 𝑝  (S8.9)  
+
+> 𝑑 𝑑𝑡
+
+𝑛 𝑡2 (𝑡) = −𝑘 𝑡2 𝑁 𝑡2 𝑛 − 𝑘 𝑛2 𝑛 𝑡2 𝑝  (S8.10)  
+
+> 𝑑 𝑑𝑡
+
+𝑛 𝑡3 (𝑡) = 𝑘 𝑡2 𝑁 𝑡3 𝑛 − 𝑘 𝑛3 𝑛 𝑡3 𝑝  (S8.11) 
+
+⋮ 
+
+> 𝑑 𝑑𝑡
+
+𝑝(𝑡) = −𝑘 𝑛1 𝑛 𝑡1 𝑝 − 𝑘 𝑛2 𝑛 𝑡1 𝑝 − 𝑘 𝑛3 𝑛 𝑡1 𝑝  (S8.12)  
+
+> 𝑑 𝑑𝑡
+
+𝑛(𝑡) = − (𝑘 𝑡1 𝑁 𝑡1 + 𝑘 𝑡2 𝑁 𝑡2 + 𝑘 𝑡3 𝑁 𝑡3 + ⋯ ) 𝑛 = − ∑ 𝑘 𝑡𝑖 𝑁 𝑡𝑖 𝑖 𝑛  (S8.13)  
+
+> 𝑑 𝑑𝑡
+
+𝑝(𝑡) = −(𝑘 𝑛1 𝑛 𝑡1 𝑝 + 𝑘 𝑛2 𝑛 𝑡1 𝑝 + 𝑘 𝑛3 𝑛 𝑡1 𝑝 + ⋯ )𝑝 = − ∑ 𝑘 𝑛𝑖 𝑛 𝑡𝑖 𝑖 𝑝  (S8.14) 40 
+
+the solution of Eq. S8.8 is: 
+
+𝑛(𝑡) = ∆𝑛 0 ∙ exp(− ∑ (𝑘 𝑡𝑖 𝑁 𝑡𝑖 ) ∙ 𝑡 𝑖 ) (S8.15) 
+
+Following the same reasoning as in the previous section, we can assume that at low pulse fluence  𝑝(𝑡) 
+
+is a constant  𝑝(𝑡) = ∆𝑛 0
+
+and the PL intensity can be written as 
+
+𝐼 𝑃𝐿 (𝑡) = ∆𝑛 02 ∙ exp(− ∑ (𝑘 𝑡𝑖 𝑁 𝑡𝑖 ) ∙ 𝑡 𝑖 ) (S8.17) 
+
+Equation S8.16 shows that in the presence of many deep trap levels the PL intensity will decay with the characteristic time 1/ ∑ (𝑘 𝑡𝑖 𝑁 𝑡𝑖 )𝑖  , however the PL intensity decay is still mono-exponential. 
+
+9. Full SRH model (T D,T Sh ,T A,A, Nd) able to explain PLQY( R, F ) map and TRPL decays together 
+
+To avoid complicated notations in the equation below, all the parameters related to the deep trap (T D), shallow trap (T Sh ) and Auger trap (T A) will be denoted with subscripts 1, 2 and 3 respectively. The differential equations of the full model can be written as follows:  
+
+> 𝑑𝑛(𝑡) 𝑑𝑡
+
+= − 𝑘 𝑡1 (𝑁 𝑡1 − 𝑛 𝑡1 )𝑛 − 𝑘 𝑡2 (𝑁 𝑡2 − 𝑛 𝑡2 )𝑛 − 𝑘 𝑒3 (𝑁 𝑡3 − 𝑛 𝑡3 )𝑛𝑝 + 𝑘 𝑑𝑡2 𝑛 𝑡2 − 𝑘 𝑟 𝑛𝑝 − 𝑘 𝑎 𝑛𝑝 2
+
+(S9.1)  
+
+> 𝑑𝑛 𝑡1 (𝑡) 𝑑𝑡
+
+= 𝑘 𝑡1 (𝑁 𝑡1 − 𝑛 𝑡1 )𝑛 − 𝑘 𝑛1 𝑛 𝑡1 𝑝  (S9.2)  
+
+> 𝑑𝑛 𝑡2 (𝑡) 𝑑𝑡
+
+= 𝑘 𝑡2 (𝑁 𝑡2 − 𝑛 𝑡2 )𝑛 − 𝑘 𝑛2 𝑛 𝑡2 𝑝 − 𝑘 𝑑𝑡2 𝑛 𝑡2  (S9.3)  
+
+> 𝑑𝑛 𝑡3 (𝑡) 𝑑𝑡
+
+= 𝑘 𝑒3 (𝑁 𝑡3 − 𝑛 𝑡3 )𝑛𝑝 − 𝑘 𝑛3 𝑛 𝑡3 𝑝  (S9.4)  
+
+> 𝑑 𝑑𝑡
+
+𝑝(𝑡) = − 𝑘 𝑟 𝑛𝑝 − 𝑘 𝑛1 𝑛 𝑡1 𝑝 − 𝑘 𝑛2 𝑛 𝑡2 𝑝 − 𝑘 𝑛3 𝑛 𝑡3 𝑝 − 𝑘 𝑎 𝑛𝑝 2 (S9.5) 
+
+along with the condition of charge neutrality, 
+
+𝑛(𝑡) + 𝑛 𝑡1 (𝑡) + 𝑛 𝑡2 (𝑡) + 𝑛 𝑡3 (𝑡) = 𝑝(𝑡) 
+
+This system of differential equations can be solved numerically under the following initial conditions at the arrival moment (t=0) of the first laser excitation pulse: 
+
+𝑛(0) = 𝑝(0) = ∆𝑛 0
+
+𝑛 𝑡1 (0) = 𝑛 𝑡2 (0) = 𝑛 𝑡2 (0) = 0 
+
+Where  𝑁 𝑡1 , 𝑁 𝑡1 , and  𝑁 𝑡3  are the concentrations of the easily saturable deep traps (T D), shallow traps (T Sh )and Auger traps (T A) respectively, all these traps are electron traps.  𝑛 𝑡1  𝑛 𝑡2 , and  𝑛 𝑡3  are the densities of trapped electrons at T 1, T 2, and T 3 respectively.  𝑘 𝑡1 , 𝑘 𝑡2  are the electron capture coefficients for T D and TSh , respectively.  𝑘 𝑑𝑡2  is de-trapping rate constant for electrons trapped at shallow traps , 𝑘 𝑑𝑡2  also can be expressed in terms of electron capture coefficient of the the shallow traps, effective density of state of the conduction band ( 𝑁 𝑐 ), energy level of the conduction band edge ( 𝐸 𝑐 ) and the trap energy level ( 𝐸 𝑡 ) as 
+
+𝑘 𝑑𝑡2 = 𝑘 𝑡2 𝑁 𝑐 𝑒𝑥𝑝 (− 𝐸 𝑐 −𝐸 𝑡 
+
+> 𝑘 𝑡
+
+). 𝑘 𝑒3  is the Auger trapping rate constant of T A (process: n,p,empty trap),  𝑘 𝑟  is radiative rate constant,  𝑘 𝑎  is the Auger recombination rate constant (process: n,p,p ).  𝑘 𝑛1 , 𝑘 𝑛2 , and  𝑘 𝑛3 41 
+
+are hole capture coefficients (non-radiative recombination rate constants) of trapped electron with free hole for traps T D, T Sh and T A respectively. 
+
+In the presence of chemical doping the condition of charge neutrality is modified to 
+
+𝑛(𝑡) + 𝑛 𝑡1 (𝑡) + 𝑛 𝑡2 (𝑡) + 𝑛 𝑡3 (𝑡) + 𝑁 𝑑 = 𝑝(𝑡) 
+
+here  𝑁 𝑑  is the doping density,  𝑁 𝑑  is negative in case of electron doping and positive in case of hole doping. In this case the initial conditions for solving the differential equations become 
+
+𝑛(0) = ∆𝑛 0
+
+𝑝(0) = ∆𝑛 0+𝑁 𝑑 
+
+𝑛 𝑡1 (0) = 𝑛 𝑡2 (0) = 𝑛 𝑡3 (0) = 0 
+
+The PL intensity can be calculated by: 
+
+𝐼 𝑃𝐿 (𝑡) = 𝑘 𝑟 𝑛(𝑡)𝑝(𝑡)  (S9.6) 
+
+Where  𝑛(𝑡), 𝑝(𝑡)  are obtained by solving equations from S9.1 – S9.5 
+
+To calculate PL response in the single pulse excitation regime we need to solve these equations only ones. This is because the response to the second pulse will be the same (no memory). However, this is only true for very low repetition rates. 
+
+If the system does not relax completely until the arrival of the second pulse, we need to solve this system of equations under modified initial conditions many times until a quasi-steady-state response is obtained (an equilibrium is reached). From this equilibrated level PLQY is then calculated. See more details elsewhere. 2–4
+
+The list of model parameters of the full model able to fit the full set of experimental data is given in Table S3. 
+
+10. Overview of simpler theoretical models explaining incomplete data sets 
+
+In this section we apply several simpler models (with lesser model parameters compared to the full model) to explain a part of the full PL data. The goal here is to find models which can explain a part of the PL data, while missing important physical processes and, thus, not able to explain the full data set. In practice, we have been considering all these models (and many other variants) until we came to the full model that fitted the data. 
+
+10.1 Model SRH-1: deep trap with normal trapping and Auger trapping, along with Auger recombination. Fitting only PLQY( R, F ) map while ignoring low fluence PL decays 
+
+Steady state PL intensity and PLQY measurements only represent the result of time averaged charge 
+
+carrier dynamics. That’s why PLQY( R, F ) can be explained even by ignoring some of the important processes responsible for peculiarities of the time-resolved PL data. 42 
+
+For example, we can explain the full PLQY( R, F ) map in the framework of a SRH model considering only one deep trap that can also trap electrons by the mechanism of Auger trapping, along with radiative and Auger recombination (total number of parameters is 6, see Table S6). This model has been successfully used previously to explain the same complex experimental data for MAPbI 3.3 Note that the deep trap in this case is different than the deep trap and the Auger trap used in the full model, and we consider this case here for demonstration purposes only. Even though this model fits PLQY( R, F ), it fails to display the initial fast component of the decay (as shown in Figure S14a). Note that this model can still explain the decay at high ( 𝐹 5) and medium ( 𝐹 4) fluences but starts to fail upon decreasing the fluence further as soon as the PL decay starts to show two (fast and slow) distinct components. 
+
+10.2 Model SRH-2: shallow trap only. Fitting low fluence TRPL decays with fast and slow components 
+
+The presence of slow and fast components in the TRPL decays can be explained by several physical processes, such as charge carrier diffusion, inhomogeneity of the sample, presence of shallow traps or saturation of the deep traps. As discussed in the main text, the presence of shallow traps is the most relevant to account for the slow and fast components in the TRPL decays of the TC perovskite films measured at low fluence ( 𝐹 2). 1 1 4 1 2 1 1 2     
+
+> ons t W/cm 2)13
+> 12
+> 11
+> 1
+
+a) b) 
+
+𝐹 2 𝐹 3
+
+𝐹 4 𝐹 5
+
+Figure S14. The figure shows the ability of the SRH model with only deep trap (model SRH-1) to nicely fit PLQY( R, F ) map, and, at the same time, its failure to fit TRPL at low-middle fluences. This model was used to satisfactory fit the same type of data for MAPbI 3 films. 343 
+
+As shown in Figure S15a, the PL decay at low fluence  𝐹 2 can be fitted with just one shallow trap, however, this model (see Table S7 for the parameters) totally fails to predict all other features of the data. 
+
+The examples shown in Figure S14 and S15 highlight the importance of measuring and analyzing the PL decays over a broad range of excitation power density. The range of excitation power density must be broad enough so that the shape of the decays changes significantly in going from one extreme to another. 
+
+10.3 Model SRH-3: shallow trap, deep trap, Auger recombination. Fitting normalized TRPL decays while ignoring PLQY 
+
+In the sections 10.1 and 10.2 we highlighted the importance of measuring decays over a broad range of excitation fluence. However, even measuring TRPL decays over a very broad range of excitation fluence is not enough to retrieve the correct model if the PL decays are normalized (PLQY information is lost). Figure S16 shows that the PL decays over the whole fluence range can be approximately fitted by a SRH model considering one shallow and one deep trap and Auger recombination (see Table S8 for the parameters). However, this model does not fit the PLQY( R, F ) map when forced to fit PL decays. 
+
+Figure S15. Fitting the PL decay at  𝐹 2 excitation fluence by the SRH-2 model, which assumes only one shallow trap (see Table S7 for the parameters). Note that all other data cannot be explained. a) b)    
+
+> TSh TAA𝑁 𝑑 TD
+
+𝐹 2 𝐹 3
+
+𝐹 4 𝐹 5a) b)       
+
+> TDTSh TAA𝑁 𝑑
+> 𝐹 2𝐹 3
+> 𝐹 4𝐹 5
+
+Figure S16. a) Experimental PL decays fitted by the SRH-3 model (one shallow, one deep trap and Auger recombination). b) The model with the same parameters fails, however, to predict the experimental PLQY( R, F ) map. For the parameters see Table S8. 44 
+
+10.4 Model SRH-4: shallow trap, deep trap with normal trapping and Auger trapping, Auger recombination. Attempts to fit PLQY ( R, F) and PL decays together 
+
+Here we use SRH-1 model with added shallow trapping. So, the model has one shallow and one deep trap, which can capture electrons directly and by Auger trapping mechanism. (Note that this deep trap combines normal and Auger trapping, which is different to the full model, where we considered 2 deep traps: first with only normal trapping the second with only Auger trapping). This model is complex enough to capture all features of the full data set (Figure 1, main text). Figure S17 shows a compromised fit of the TRPL decays and the PLQY map using the parameters given in Table S9. It qualitatively predicts all features of the data, fits the entire PLQY map and the PL decays at  𝐹 5 and  𝐹 4 fluences. As for the low fluence ( 𝐹 2), it predicts the presence of an initial fast component which is later followed by a slow component. It also fits well the decay rate of the latter. However, it does not provide quantitative agreement with the amplitude of the initial drop of the PL intensity at  𝐹 2 fluence. 
+
+We also found other set of parameters of the same model (Table S10), which allows fitting the amplitude of the initial drop. However, in this case we obtained instead the discrepancy in the decay rate of the slow component ( 𝐹 2 and  𝐹 3 excitation fluences), see Figure S18. a) b)   
+
+> 𝐹 2𝐹 3
+> 𝐹 4𝐹 5
+
+Figure S17. Fitting decays and PLQY( R, F ) map together using a SRH model with one shallow, and one deep trap (model SRH-4) which traps electrons directly and by Auger trapping mechanism. The model successfully predicts all the features of the data, failing, however, to predict the amplitude to the initial PL drop in the TRPL decay at pulse fluence  𝐹 2 and  𝐹 3.45 
+
+The only principal effect which is still missing in this model is chemical doping. Adding chemical doping brings us to the full model (section 9) able to fit the whole set of data. 
+
+Figure S18. Fitting decays and PLQY( R, F ) map together using the SRH-4 model, but with a different parameter set (Table S10) than in Figure S17. In this case it only fails to predict the decay rate of the long tail of TRPL measured at  𝐹 2.a) b) 
+
+𝐹 2 𝐹 3
+
+𝐹 4 𝐹 546 
+
+11 List of model parameters 
+
+Supplementary Table S3: Table of model parameters of the full model used to explain decays and PLQY( R, F ) altogether, (Figure 2 main text). 
+
+Parameter  Value  Description 
+
+Easily saturable deep trap (T D)
+
+𝑘 𝑡1 𝑁 𝑡1 
+
+(1/𝑘 𝑡1 𝑁 𝑡1 )
+
+1.00 x10 7 s-1 
+
+(100 ns) 
+
+Electron capture rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡1  2.50x10 14 cm -3  Concentration 
+
+𝑘 𝑛1  2.00x10 -11 cm 3s-1  Hole capture coefficient for deep traps 
+
+Shallow trap (T Sh )
+
+𝑘 𝑡2 𝑁 𝑡2 
+
+(1/𝑘 𝑡2 𝑁 𝑡2 )
+
+4.80x10 8 s-1 
+
+(2.08 ns) 
+
+Electron capture rate constant of shallow trap (T Sh )
+
+(SRH lifetime) 
+
+𝑁 𝑡2  2.00x10 15 cm -3  Concentration 
+
+𝑘 𝑛2  1.60x10 -11 cm 3s-1  Hole capture coefficient for shallow traps 
+
+𝑘 𝑑𝑡2  4.00x10 7 s-1  Electron de-trapping rate constant 
+
+Auger trap (T A), possesses Auger trapping only 
+
+𝑁 𝑡3  8.00x10 15 cm -3  Concentration 
+
+𝑘 𝑒3  3.00x10 -26 cm 6s-1  Auger trapping rate constant 
+
+𝑘 𝑛3  1.60x10 -10 cm 3s-1  Hole capture coefficient for Auger traps 
+
+𝑘 𝑟  8.00x10 -11 cm 3s-1  Radiative recombination rate constant 
+
+𝑘 𝑎  8.00x10 -28 cm 6s-1  Auger recombination rate constant ( n,p,p process) 
+
+𝑁 𝑑  3.27x10 15 cm -3  p-doping 
+
+Supplementary Table S4: Table of model parameters for model SRH-0 (Figure S11a,b). 
+
+Parameter  Value  Description 
+
+Saturable deep trap 
+
+𝑘 𝑡1 𝑁 𝑡1 
+
+(1/𝑘 𝑡1 𝑁 𝑡1 )
+
+3.14x10 8 s-1 
+
+(3.19 ns) 
+
+Electron capture rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡1  3.20e+14  Concentration 
+
+𝑘 𝑛1  3.27e-12  Hole capture coefficient for deep traps 
+
+𝑘 𝑟  1.50e-09  Radiative recombination rate constant 
+
+Supplementary Table S5: Table of model parameters for model SRH-0 (Figure S11c,d). 
+
+Parameter  Value  Description 
+
+Saturable deep trap 
+
+𝑘 𝑡1 𝑁 𝑡1 
+
+(1/𝑘 𝑡1 𝑁 𝑡1 )
+
+1.57x10 8 s-1 
+
+(6.37 ns) 
+
+Electron capture rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡1  1.80e+15  Concentration 
+
+𝑘 𝑛1  9.69e-13  Hole capture coefficient for deep traps 
+
+𝑘 𝑟  3.80e-10  Radiative recombination rate constant 
+
+Supplementary Table S6: Table of model parameters for model SRH-1 (Figure S14). 
+
+Parameter  Value  Description 
+
+Deep trap possessing both direct trapping and Auger trapping 
+
+𝑘 𝑡3 𝑁 𝑡3 
+
+1/𝑘 𝑡3 𝑁 𝑡3 
+
+4.00 x10 5 s-1 
+
+2.5 μs 
+
+Electron capture rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡3  8.00x10 15 cm -3  Concentration 
+
+𝑘 𝑒3  3.00x10 -26 cm 6s-1  Auger trapping rate constant of deep traps 47 
+
+𝑘 𝑛3  1.60x10 -10 cm 3s-1  Hole capture coefficient 
+
+𝑘 𝑟  8.00x10 -11 cm 3s-1  Radiative recombination constant 
+
+𝑘 𝑎  8.00x10 -28 cm 6s-1  Auger recombination rate constant ( n+p+p process) 
+
+Supplementary Table S7: Table of parameters for model SRH-2 (Figure S15). 
+
+Parameter  Value  Description 
+
+Shallow trap 
+
+𝑘 𝑡2 𝑁 𝑡2 
+
+(1/𝑘 𝑡2 𝑁 𝑡2 )
+
+3.60x10 8 s-1 
+
+(2.78 ns) 
+
+Electron capture rate constant of shallow trap 
+
+(SRH lifetime) 
+
+𝑁 𝑡2  4.00x10 15 cm -3  Concentration 
+
+𝑘 𝑛2  1.60x10 -9 cm 3s-1  Hole capture coefficient of shallow trap 
+
+𝑘 𝑑𝑡2  2.50x10 7 s-1  Detrapping rate constant 
+
+𝑘 𝑟  1.00x10 -11 cm 3s-1  Radiative recombination rate constant 
+
+Supplementary Table S8: Table of parameters for model SRH-3 (Figure S16). 
+
+Parameter  Value  Description 
+
+Deep trap 
+
+𝑘 𝑡1 𝑁 𝑡1 
+
+(1/𝑘 𝑡1 𝑁 𝑡1 )
+
+1.11x10 7 s-1 
+
+(90.1 ns) 
+
+Electron capture rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡1  3.50x10 14 cm -3  Concentration 
+
+𝑘 𝑛1  7.80x10 -10 cm 3s-1  Hole capture coefficient of deep traps 
+
+Shallow trap 
+
+𝑘 𝑡2 𝑁 𝑡2 
+
+(1/𝑘 𝑡2 𝑁 𝑡2 )
+
+6.00 x10 8 s-1 
+
+(1.67 ns) 
+
+Electron capture rate constant of shallow trap 
+
+(SRH lifetime) 
+
+𝑁 𝑡2  1.50x10 15 cm -3  Concentration 
+
+𝑘 𝑛2  1.00x10 -13 cm 3s-1  Hole capture coefficient of shallow traps 
+
+𝑘 𝑑𝑡2  3.40x10 7 s-1  Detrapping rate 
+
+𝑘 𝑟  1.40x10 -10 cm 3s-1  Radiative recombination rate constant 
+
+𝑘 𝑎  4.00x10 -28 cm 6s-1  Auger recombination rate constant 48 
+
+Supplementary Table S9: Model SRH-4, table of parameters used in Figure S17. 
+
+Parameter  Value  Description 
+
+Shallow trap 
+
+𝑘 𝑡2 𝑁 𝑡2 
+
+(1/𝑘 𝑡2 𝑁 𝑡2 )
+
+9.60 x10 7 s-1 
+
+(10.4 ns) 
+
+Electron trapping rate constant of shallow trap 
+
+(SRH lifetime) 
+
+𝑁 𝑡2  4.00x10 14 cm -3  Concentration 
+
+𝑘 𝑛2  9.60x10 -11 cm 3s-1  Hole capture coefficient of shallow traps 
+
+𝑘 𝑑𝑡  4.00x10 7 s-1  Detrapping rate 
+
+Deep trap possessing both direct trapping and Auger trapping 
+
+𝑘 𝑡3 𝑁 3
+
+(1/𝑘 𝑡3 𝑁 𝑡3 )
+
+4.00x10 5 s-1 
+
+2.5 μs 
+
+Electron trapping rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡3  8.00x10 15 cm -3  Concentration 
+
+𝑘 𝑒3  2.00x10 -26 cm 6s-1  Auger trapping rate constant 
+
+𝑘 𝑛3  2.40x10 -10 cm 3s-1  Hole capture coefficient of deep traps 
+
+𝑘 𝑟  8.00x10 -11 cm 3s-1  Radiative recombination rate constant 
+
+𝑘 𝑎  8.00x10 -28 cm 6s-1  Auger recombination rate constant 
+
+Supplementary Table S10: Model SRH-4, table of parameters used in Figure S18. 
+
+Parameter  Value  Description 
+
+Shallow trap 
+
+𝑘 𝑡2 𝑁 𝑡2 
+
+1/𝑘 𝑡2 𝑁 𝑡2 
+
+4.80 x10 8 s-1 
+
+(2.08 ns) 
+
+Electron trapping rate constant of shallow trap 
+
+(SRH lifetime) 
+
+𝑁 𝑡2  2.00x10 15 cm -3  Concentration 
+
+𝑘 𝑛2  1.60x10 -11 cm 3s-1  Hole capture coefficient of shallow traps 
+
+𝑘 𝑑𝑡  4.00x10 7 s-1  Detrapping rate 
+
+Deep trap possessing both direct trapping and Auger trapping 
+
+𝑘 𝑡3 𝑁 𝑡3 
+
+1/𝑘 𝑡3 𝑁 𝑡3 
+
+4.00x10 5 s-1 
+
+(2.5 μs) 
+
+Electron trapping rate constant of deep traps 
+
+(SRH lifetime) 
+
+𝑁 𝑡3  8.00x10 15 cm -3  Concentration 
+
+𝑘 𝑒  2.00x10 -26 cm 6s-1  Auger trapping rate constant 
+
+𝑘 𝑛3  2.40x10 -10 cm 3s-1  Hole capture coefficient of deep traps 
+
+𝑘 𝑟  8.00x10 -11 cm 3s-1  Radiative recombination rate constant 
+
+𝑘 𝑎  8.00x10 -28 cm 6s-1  Auger recombination rate constant 49 
+
+References 
+
+(1) Green, A. P.; Buckley, A. R. Solid State Concentration Quenching of Organic Fluorophores in PMMA. Physical Chemistry Chemical Physics 2015 , 17 (2), 1435 –1440. https://doi.org/10.1039/c4cp05244g. 
+
+(2) Marunchenko, A.; Kumar, J.; Kiligaridis, A.; Rao, S. M.; Tatarinov, D.; Matchenya, I.; Sapozhnikova, E.; Ji, R.; Telschow, O.; Brunner, J.; Yulin, A.; Pushkarev, A.; Vaynzof, Y.; Scheblykin, I. G. Charge Trapping and Defect Dynamics as Origin of Memory Effects in Metal Halide Perovskite Memlumors. J. Phys. Chem. Lett. 2024 , 15 (24), 6256 –6265. https://doi.org/10.1021/acs.jpclett.4c00985. 
+
+(3) Kiligaridis, A.; Frantsuzov, P. A.; Yangui, A.; Seth, S.; Li, J.; An, Q.; Vaynzof, Y.; Scheblykin, I. G. Are Shockley-Read-Hall and ABC Models Valid for Lead Halide Perovskites? Nat. Commun. 2021 ,
+
+12 (1), 3329. https://doi.org/10.1038/s41467-021-23275-w. 
+
+(4) Marunchenko, A.; Kumar, J.; Kiligaridis, A.; Tatarinov, D.; Pushkarev, A.; Vaynzof, Y.; Scheblykin, I. G. Memlumor: A Luminescent Memory Device for Energy-Efficient Photonic Neuromorphic Computing. ACS Energy Lett. 2024 , 9 (5), 2075 –2082. https://doi.org/10.1021/acsenergylett.4c00691. 
+
+(5) Marunchenko, A.; Kumar, J.; Tatarinov, D.; Pushkarev, A. P.; Vaynzof, Y.; Scheblykin, I. G. Hidden Photoexcitations Probed by Multipulse Photoluminescence. ACS Energy Lett. 2024 , 9
+
+(12), 5898 –5906. https://doi.org/10.1021/acsenergylett.4c02404. 
+
+(6) Kiligaridis, A. Automated Photoluminescence Experimentation for Understanding Dynamic MetalHalide Perovskite Semiconductors. November 20, 2023. 
+
+(7) Yuan, Y.; Yan, G.; Dreessen, C.; Rudolph, T.; Hülsbeck, M.; Klingebiel, B.; Ye, J.; Rau, U.; 
+
+Kirchartz, T. Shallow Defects and Variable Photoluminescence Decay Times up to 280 Μs in 
+
+Triple-Cation Perovskites. Nat. Mater. 2024 , 23 (3), 391 –397. https://doi.org/10.1038/s41563-023-01771-2. 
+
+(8) Yuan, Y.; Yan, G.; Dreessen, C.; Kirchartz, T. Understanding Power-Law Photoluminescence Decays and Bimolecular Recombination in Lead-Halide Perovskites. Adv. Energy Mater. 2024 ,
+
+15 (6), 2403279. https://doi.org/10.1002/aenm.202403279.

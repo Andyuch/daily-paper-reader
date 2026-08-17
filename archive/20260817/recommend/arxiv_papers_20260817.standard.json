@@ -1,0 +1,62 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-17T20:40:10.751117+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2608.14368v1",
+      "source": "arxiv",
+      "title": "Unraveling the Roles of Shallow, Deep and Auger Trapping in Charge Carrier Recombination in Triple-Cation Perovskites",
+      "abstract": "Understanding charge-carrier recombination in metal halide perovskites is essential for accurately identifying the factors limiting solar cell efficiency, yet it remains challenging due to the interplay of multiple competing processes. Here, we combine time-resolved photoluminescence and excitation dependent photoluminescence quantum yield measurements over a wide range of fluences and repetition rates to investigate recombination dynamics in triple-cation perovskite thin films. By jointly analyzing these multidimensional datasets, we develop a unified model that quantitatively reproduces both photoluminescence decays and absolute quantum yields across all excitation conditions. Our results reveal the coexistence of deep and shallow traps, as well as a second-order nonradiative recombination pathway attributed to Auger-assisted trapping. Importantly, this mechanism dominates under one-sun illumination, making it a critical limiting factor for photovoltaic performance. These findings provide a comprehensive framework for understanding recombination in perovskites and highlight the importance of higher-order defect-mediated processes in determining their efficiency.",
+      "authors": [
+        "Jitendra Kumar",
+        "Thomas Kirchartz",
+        "Alexandr Marunchenko",
+        "Alexander Kiligaridis",
+        "Shraddha M. Rao",
+        "Shivam Singh",
+        "Ankur Yadav",
+        "Monojit Bag",
+        "Yana Vaynzof",
+        "Ivan G. Scheblykin"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.optics"
+      ],
+      "published": "2026-08-14T15:10:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.14368v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved photoluminescence and excitation-dependent PLQY reveal charge-carrier recombination/trapping dynamics in perovskites",
+      "llm_evidence_cn": "时间分辨光致发光结合激发依赖量子产率揭示了钙钛矿中载流子复合与俘获动力学",
+      "llm_evidence": "时间分辨光致发光结合激发依赖量子产率揭示了钙钛矿中载流子复合与俘获动力学",
+      "canonical_evidence": "时间分辨光致发光结合激发依赖量子产率揭示了钙钛矿中载流子复合与俘获动力学",
+      "llm_tldr_en": "Combining time-resolved PL and excitation-dependent PLQY, this work builds a unified model for carrier recombination in triple-cation perovskites, quantitatively reproducing decays and yields and isolating shallow, deep and Auger trapping contributions.",
+      "llm_tldr_cn": "金属卤化物钙钛矿中电荷载流子复合过程复杂，限制了太阳能电池效率的准确诊断。本文结合时间分辨光致发光与激发依赖的光致发光量子产率测量，在宽激发通量和重复频率范围内获取多维数据，并建立统一模型同时定量重现发光衰减和绝对量子产率。结果揭示了浅能级俘获、深能级俘获与俄歇复合的共存作用及其相对贡献，为理解钙钛矿载流子损耗机制提供了定量框架。",
+      "llm_tldr": "金属卤化物钙钛矿中电荷载流子复合过程复杂，限制了太阳能电池效率的准确诊断。本文结合时间分辨光致发光与激发依赖的光致发光量子产率测量，在宽激发通量和重复频率范围内获取多维数据，并建立统一模型同时定量重现发光衰减和绝对量子产率。结果揭示了浅能级俘获、深能级俘获与俄歇复合的共存作用及其相对贡献，为理解钙钛矿载流子损耗机制提供了定量框架。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    }
+  ]
+}
