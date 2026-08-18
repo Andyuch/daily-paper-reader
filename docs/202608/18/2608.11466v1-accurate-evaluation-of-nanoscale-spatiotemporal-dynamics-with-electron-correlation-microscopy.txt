@@ -1,0 +1,640 @@
+Title: Accurate Evaluation of Nanoscale Spatiotemporal Dynamics with Electron Correlation Microscopy
+
+URL Source: https://arxiv.org/pdf/2608.11466v1
+
+Published Time: Thu, 13 Aug 2026 00:21:58 GMT
+
+Number of Pages: 33
+
+Markdown Content:
+# Accurate Evaluation of Nanoscale Spatiotemporal Dynamics with Electron Correlation Microscopy 
+
+Po-Cheng Kung a, Ajay Annamareddy a, Mark D.Ediger b, Dane Morgan a, and Paul M. Voyles aaDepartment of Materials Science and Engineering, University of Wisconsin-Madison, Madison, Wisconsin, 53706, USA 
+
+> bDepartment of Chemistry, University of Wisconsin-Madison, Madison, Wisconsin, 53706, USA
+
+Synopsis 
+
+A new physics-inspired analysis framework for nanobeam electron correlation microscopy eliminates systematic artifacts introduced by uncritically adopting photon correlation spectroscopy analysis methods. The proposed approach enables the accurate measure-ment of nanoscale spatiotemporal dynamics and correctly isolates stable crystalline phases from relaxing fluid domains in supercooled liquids. 
+
+Abstract 
+
+Electron correlation microscopy (ECM) can measure materials dynamics with nanoscale spatial resolution from intensity correlation functions. However, adopting X-ray photon correlation spectroscopy (XPCS) normalization frameworks unchanged when calculating intensity correlations can introduce errors. Due to the constrained sampling volumes and larger speckle sizes in nanobeam electron diffraction, XPCS-style time-averaging and scattering-vector averaging introduce systematic artifacts, such as artificial anti-correlations or elevated baselines that lead to systematic errors in structural relaxation times and stretching exponents. This work presents physics-inspired, ECM-specific intensity normalizations over time- and azimuthal-averaged intensities of the first diffraction ring that limit those errors. The framework is validated using molecular dynamics simulations of a CuZr supercooled liquid to benchmark against the self-intermediate scattering function, successfully reproducing relaxation times. When applied to experimental time-resolved 4D STEM datasets of a Pt57.5Cu14.7Ni5.3P22.5 nanowire, the method correctly identifies highly stable, unchanging nanoscale crystalline phases that were erroneously misclassified as relaxing domains by previous frameworks. Other previous ECM research is reevaluated in light of these observation. This robust approach establishes an artifact-free pathway for evaluating localized spatiotemporal relaxation behaviors. 1arXiv:2608.11466v1 [cond-mat.mtrl-sci] 11 Aug 2026 Keywords: Electron correlation microscopy; four-dimensional scanning transmission electron microscopy; heterogeneous dynamics; momentary dynamics; supercooled liquid 
+
+# 1 Introduction 
+
+As the temperature approaches the glass transition temperature ( Tg), many supercooled liquids (SCLs) undergo qualitative changes in their dynamic behavior. With a drastic increase in the structural relaxation time, the dynamics become highly heterogeneous, with local dynamics that can vary by orders of magnitude across a few nanometers (Ediger, 2000; Tanaka, 2025; Berthier, 2011). This behavior has been studied by dynamic hole burning experiments (Cicerone & Ediger, 1995; Schmidt-Rohr & Spiess, 1991; Schiener et al. , 1997), and inferred from the ensemble-averaged relaxation behaviors measured via mechanical spectroscopy (Hachenberg & Samwer, 2006; Richert, 2010), dielectric spectroscopy (Sch¨ onhals & Kremer, 2003), solid-state nuclear magnetic resonance spectroscopy (Reinsberg et al. , 2001; Nunes et al. , 2014), and X-ray photon correlation spectroscopy (XPCS) (Ruta et al. , 2012; Madsen et al. , 2020; Das et al. , 2019; Bikondoa, 2017; Jain et al. , 2020; Conrad et al. , 2015). However, because these methods involve volume averaging, they lack the spatial resolution necessary for the direct observation of spatially heterogeneous dynamics in real space. To achieve higher spatial resolution, researchers have utilized electron correlation microscopy (ECM) (Zhang et al. , 2018; Zhang et al. , 2017; Chatterjee et al. , 2021; Nakazawa & Mitsuishi, 2025; Nakazawa et al. , 2023; Nakazawa & Mitsuishi, 2023; Huang & Voyles, 2024; Vaerst et al. , 2023; Spangenberg et al. , 2021). ECM uses intensity autocorrelation functions analogous to XPCS, but it achieves nanometer to sub-nanometer resolution through the use of electron optics. Early ECM was performed by tracking the intensity changes of a single scattering vector ( k) along the first diffraction ring via a time series of tilted dark-field (DF) transmission electron microscopy (TEM) images (Zhang 
+
+et al. , 2017; Zhang et al. , 2018; Vaerst et al. , 2023; Spangenberg et al. , 2021; Chatterjee et al. , 2021). By estimating the structural relaxation time from the intensity autocorrelation function of each TEM image pixel, this technique observes spatially heterogeneous dynamics. However, because this method probes only a single scattering vector, it fails to capture the relaxation events of groups of atoms that scatter in different directions. Recently, very high speed electron detection has made ECM based on time-resolved four-dimensional transmission electron microscopy (4D STEM) possible (Nakazawa & Mitsuishi, 2023; Nakazawa 
+
+et al. , 2023; Huang & Voyles, 2024; Nakazawa & Mitsuishi, 2025). In time-resolved 4D STEM, two-dimensional nanobeam electron diffraction (NBED) patterns are collected at each spatial position repeatedly as a function of time. Therefore, the intensity autocorrelation functions can be calculated using the full range of scattering vectors to capture more dynamic events. Furthermore, by sampling over multiple scattering vectors, NBED-ECM allows for the measurement of the k
+
+ensemble-averaged momentary dynamics at each position. The momentary relaxation time describes 2the additional elapsed time required for a local structure to relax starting from any point in the time series of the measurement (Das et al. , 2019). NBED-ECM also enables the simultaneous observation of spatially and temporally heterogeneous dynamics. ECM is largely based on XPCS, adopting many of its analysis tools and methodologies (Zhang 
+
+et al. , 2018; Zhang et al. , 2017; Nakazawa & Mitsuishi, 2023; Nakazawa et al. , 2023; Nakazawa & Mitsuishi, 2025; Vaerst et al. , 2023; Huang & Voyles, 2024; Chatterjee et al. , 2021; He et al. , 2015). However, despite both using a (partially) coherent source, photon and electron diffraction exhibit important differences, especially in the case of NBED. XPCS samples a large number of atoms using a broad beam, resulting in speckles that cover a very small range of diffraction space. NBED-ECM from one probe position samples the dynamics from a much smaller volume in real space than XPCS, and the speckles in reciprocal space are correspondingly larger. Thus, XPCS methods cannot be directly adopted, and methodologies for calculating the correlation functions specifically for NBED-ECM data are needed. Here, we propose a physics-based method for calculating correlation functions tailored to the NBED data. The proposed method is validated by comparing the structural dynamics estimated from simulated NBED-ECM data of a molecular dynamics (MD) trajectory of a CuZr metallic SCL to the trajectory’s self-intermediate scattering function (ISF). The improved NBED-ECM method is also applied to experimental time-resolved 4D STEM datasets of a Pt 57.5 Cu 14.7 Ni 5.3 P22.5 SCL nanowire, demonstrating the method’s capability to study spatially and temporally heterogeneous dynamics in complex metallic SCL systems containing nanoscale crystal phases. Previous ECM results are reconsidered in light of the identified artifacts and revised correlation functions. 
+
+# 2 Materials and Methods 
+
+2.1 Molecular Dynamics Simulation of CuZr Supercooled Liquids 
+
+The model glass investigated in this study is an equiatomic Cu 50 Zr 50 metallic glass, a well-established binary glass-forming alloy. Atomic interactions were described using the embedded atom method (EAM) potential developed by Mendelev et al. (Mendelev et al. , 2009). The system was initially equilibrated in the liquid state at 2000 K for 2 ns and subsequently cooled, all under NPT conditions. Cooling from 2000 K to 1000 K was performed in 50 K increments at an effective rate of 100 K per 6 ns, followed by further cooling in 20 K increments at an effective rate of 100 K per 60 ns. The glass transition temperature ( Tg) was determined to be approximately 700 K from the temperature dependence of the system volume. The present work focuses on the dynamics of the supercooled liquid (SCL) state at 760 K. The configuration obtained at this temperature during the cooling protocol was used as the initial state for subsequent production simulations performed in the NVT ensemble. No measurable drift in the potential energy was observed during these runs, confirming that the system remained in equilibrium within the SCL regime. All molecular dynamics simulations were carried out using 3the LAMMPS package (Plimpton, 1995). Structural and dynamical analyses were performed using inherent structures obtained by minimizing instantaneous configurations with the conjugate-gradient algorithm implemented in LAMMPS. The simulation cell contained 16,384 atoms, periodic boundary conditions were applied in all three spatial directions, and a time step of 1 fs was employed throughout. The MD trajectory of the CuZr SCL was sampled every 20 ps to obtain 501 snapshots. 4D STEM data was simulated for each snapshot using a multislice algorithm through the abTEM Python package (Madsen & Susi, 2021). Thermal vibration averaging was omitted from the multislice simulation, as the inherent randomness of atomic positions in amorphous materials is larger than such fluctuations. The multislice simulation was set up using a 200 kV probe with a convergence semi-angle of 1.5 mrad and a full width at half maximum of 0.85 ˚ A. The probe was scanned across the entire simulation box over a 13 × 13 grid with a step size of 0.51 nm. Each snapshot was sampled using a 2048 × 2048 grid over the simulation box with a slice thickness of 1 ˚ A. Partial coherence due to finite source size and beam energy spread were not included. The resulting time-resolved 4D STEM data has five dimensions: I(r, k, t w) = I(x, y, k x, k y, t w), where r = ( x, y ) represents the real space probe position, k = ( kx, k y) is the reciprocal space scattering vector, and tw is the wait time, defined as the time elapsed since the experiment started. Each NBED pattern was polar transformed over the first diffraction ring. The resulting data has the form I(x, y, k r, k ϕ, t w), where kr represents the radius coordinates that range from 3 nm −1
+
+to 5 .5 nm −1 over 17 pixels, and kϕ is the azimuthal angle covering the entire 2 π radians of the diffraction ring spread across 180 pixels. 
+
+2.2 Pt 57.5 Cu 14.7 Ni 5.3 P22.5 Nanowire 
+
+The Pt 57.5 Cu 14.7 Ni 5.3 P22.5 SCL nanowire data were collected by Huang and Voyles for previous research (Huang & Voyles, 2024; Huang & Voyles, 2023). The ECM experiment was performed using a 1.53 mrad convergence semi-angle probe with a corresponding probe size of 1 nm and a probe current of 25 pA. The probe scanned over a 160 × 160 grid with a step size of 0.28 nm, and an NBED pattern was collected at each scan position with a frame rate of 4000 fps. The scan was continuously repeated to obtain time-resolved 4D STEM data with 250 time steps separated by 6.4 seconds. The time-resolved 4D STEM data was already preprocessed and polar transformed, having the same form of I(x, y, k r, k ϕ, t w) as the MD-simulated data. The original data had a kr range of 3 nm −1 to 6 nm −1, which included some pixels with very low intensity throughout the experiment. Thus, the data was cropped to a final kr range from 3 .56 nm −1 to 5 .44 nm −1 over 10 pixels. 42.3 Structural Dynamics Measurements 
+
+2.3.1 Self-Intermediate Scattering Function 
+
+In glasses and SCLs, structural dynamics are linked to individual atomic movements via the self-intermediate scattering function (self-ISF), which tracks how atoms on average move away from their initial positions at a given experimental wait time (Janssen, 2018). While the self-ISF is not directly measurable in electron scattering experiments, it can be calculated from MD trajectories, where the instantaneous positions of atoms are tracked. The self-ISF, or fs, at a 4D STEM probe position r can be calculated as (Scalliet et al. , 2022): 
+
+fs(r, t w, ∆t) = ⟨⟨ cos[2 πkm · ∆rn(tw, ∆t)] ⟩n⟩m, (1) ∆rn(tw, ∆t) = rn(tw + ∆ t) − rn(tw),
+
+where ∆ t is the delay time, rn is the location of the n-th atom in the sampling volume at tw, km is a set of reciprocal vectors, and ⟨. . . ⟩i indicates an ensemble average over i. To match the real space and reciprocal space sampling of the time-resolved 4D-STEM data under the column approximation, the sampling volume is defined as a cylinder centered at r with a diameter of 1 nm, and the set of km
+
+matches the grid points of the polar-transformed pattern of the first diffraction ring. Conventionally, 
+
+fs is defined using a complex exponential form (Gr¨ ubel & Zontone, 2004), but for symmetrical k
+
+sampling, the sum over ±k reduces the complex exponential function to the real cosine form shown in Equation 1. For any given wait time, as the delay time increases, the atoms gradually move away from their initial positions, and the atomic structure decorrelates, causing the self-ISF to decrease. The rate at which the self-ISF decays with respect to the delay time represents the local structural dynamics at the moment defined by tw.
+
+2.3.2 One-Time Autocorrelation 
+
+While the self-ISF cannot be directly measured by ECM, it is linked to the one-time intensity autocorrelation function g2 via the Siegert relation (Zhang et al. , 2018; Ragulskaya et al. , 2024; Gr¨ ubel & Zontone, 2004), g2 = Af 2 
+
+> s
+
+, where A is a constant based on the contrast of the speckles. g2 measures the time-averaged rate of intensity changes of individual speckles throughout the wait time. Since the materials in this research are isotropic, the local g2 function can be obtained by averaging the measurements over all speckles in the first diffraction ring. For each 4D STEM probe position 
+
+r, the g2 function is (Fluerasu et al. , 2005; Berne & Pecora, 2000; Livet et al. , 2001; Lumma 
+
+et al. , 2000) 
+
+g2(r, ∆t) = ⟨{ δI (r, k, t w)δI (r, k, t w + ∆ t)}tw ⟩k, (2) 
+
+δI (r, k, t w) = I(r, k, t w) − II ,
+
+5where ⟨. . . ⟩k is the ensemble average over k, and {. . . }tw represents the average over the experimental duration. δI is the normalized intensity, and I is the expected average electron scattering intensity at scattering vector k and probe position r, serving as the mean reference about which the intensity fluctuates. For most cases, I is unknown and must be estimated. Different methods for estimating 
+
+I are discussed and tested in Section 2.3.5. 
+
+2.3.3 Two-Time Autocorrelation 
+
+Another common way to measure the structural decorrelation in XPCS and ECM is through the intensity two-time autocorrelation function c2. Unlike the one-time correlation function g2, c2
+
+measures the ensemble-averaged rate of intensity changes of all speckles starting from a certain wait time. Since no averaging over tw is required, c2 can capture the time-resolved or ”momentary” dynamics of the system (Cipelletti et al. , 2002; Fluerasu et al. , 2005; Bikondoa, 2017; Ragulskaya 
+
+et al. , 2024; Das et al. , 2020; Das et al. , 2019; Jain et al. , 2020; Conrad et al. , 2015; Riechers 
+
+et al. , 2024). At each 4D STEM probe position r, c2 is 
+
+c2(r, t w, ∆t) = ⟨δI (r, t w, k)δI (r, t w + ∆ t, k)⟩k . (3) In XPCS, c2 is commonly represented as a symmetrical two-time correlation function, T T CF (r, t 1, t 2) = 
+
+c2(r, t w = t1, ∆t = t2 − t1), to visualize the time-resolved dynamics. The positions along the diagonal of T T CF correspond to different wait times during the experiment, and the width of the diagonal represents the momentary dynamics. c2 can also be used to measure time-averaged dynamics by averaging over the wait time, where {c2}tw = g2. In most previous XPCS and ECM studies, g2 and 
+
+c2 were defined using different formulas than the ones defined in this section, depending on whether the intensity normalization is explicitly defined in g2 and c2, but the formulas are interchangeable. The relation between the two sets of formulas is discussed in Appendix A. 
+
+2.3.4 Structural Relaxation Time Fitting 
+
+g2 and c2 decay with respect to the delay time ∆ t at the same rate as the square of the self-ISF. The decay of these functions typically follows the Kohlrausch-Williams-Watts (KWW) stretched exponential formula, C exp 
+
+> [
+
+−2  
+
+> (∆tτ
+> )β]
+
+, where τ is the structural relaxation time, β is the stretching exponent, and C is a scaling factor to account for experimental partial coherence and initial decorrelation caused by fast relaxation events that are not captured by the time sampling (Giordano & Ruta, 2016). Three types of structural relaxation parameters are calculated by fitting scale-dependent variants of the self-ISF, g2, and c2 to the KWW form. Global parameters ( ⟨τ ⟩, ⟨β⟩)are determined from fully averaged variants ( ⟨{ fs}tw ⟩r, ⟨g2⟩r, ⟨{ c2}tw ⟩r); local time-averaged parameters ( τ (r), β(r)) are obtained by omitting spatial averaging ( {fs}tw , g2(r, ∆t), {c2}tw ); and local momentary parameters ( τm(r, t w), βm(r, t w)) are extracted from time-resolved forms (fs(r, t w, ∆t), c2(r, t w, ∆t)) without temporal averaging. The uncertainties of the relaxation times 6and stretching exponents were estimated by the standard error of the non-linear least-squares fit. Before fitting the self-ISF and intensity autocorrelation functions using the KWW form, the functions are first logarithmically resampled along the ∆ t axis to balance the weight of the least-squares fit across the relaxing region and the decorrelated tail. The first data point (∆ t = 0) is excluded from the fitting to avoid interference from fast β-relaxation and experimental noise decorrelation, and the final ten data points are omitted, as they are usually noisy. The fitting is performed using Levenberg-Marquardt algorithm (Gavin, 2019) via scipy.optimize.curve fit 
+
+function (Virtanen et al. , 2020) with maximum iteration of 1000000. The initial guess of the fitting parameter C in the KWW formula is the value of the first data point (∆ t = 0) of the resampled correlation function, and the initial guess of β is 1. The initial guess of τ is set to the value or the estimated global relaxation time of the system. During the fitting process, the fitting parameters are bound to 0 .5C0 ≤ C ≤ 2C0, 0 .1 ≤ β ≤ 2, and 0 < τ , where C0 is the initial guess of C.When calculating local relaxation times from the experimental g2 and c2, small averages in real space or the wait time are necessary to reduce noise. For consistency, the following two procedures were applied to both the experimental and simulated datasets. For local τ and τm calculations, a real space Gaussian weighted averaging of the underlying autocorrelation functions ( g2, c2, or the self-ISF) was applied. The 3 × 3 pixel Gaussian kernel has a standard deviation matching the scanning step size. For momentary τm and βm calculations, we applied a moving window average to 
+
+c2 and the self-ISF along the tw axis based on the global structural relaxation time ⟨τ ⟩ estimated from the self-ISF or g2,
+
+c2(tw, ∆t) = 1
+
+nτtw +nτ /2  
+
+> ∑
+> tn=tw−nτ/2
+
+cori 2 (tn, ∆t),
+
+where nτ is the number of time steps corresponding to one global structural relaxation time. 
+
+2.3.5 Expected Scattering Intensity Estimation 
+
+For an amorphous material, the statistical expected intensity I = ∫ [P (I) × I]dI , where P (I) is the intensity probability distribution function, is directly linked to the static structure factor S(k). However, because of dynamical scattering, inelastic scattering, and thermal diffuse scattering, it is impractical to compute I in an electron scattering experiment even with a known S(k), and I must be evaluated from the time series of scattering intensities. There are two common ways of estimating the expected scattering intensity I—one for g2 and one for 
+
+c2—adopted from XPCS. The most straightforward way to estimate I is by averaging the scattering intensity at k over the experiment duration, i.e., I(k) ≈ { I(k, t w)}tw (the r-dependence is omitted hereafter for brevity). Substituting I in Equation 2 with {I(k, t w)}tw , we obtain the time-averaged intensity normalized one-time correlation function, which we denote ˜ g2. This approach has been used in probe-based (Huang & Voyles, 2024) and DF image-based ECM (Zhang et al. , 2018; Chatterjee 
+
+et al. , 2021; Vaerst et al. , 2023) to study time-averaged dynamics in metallic SCLs and glasses. 7Another method for estimating I is by averaging the intensity over a set of scattering vectors k at a range of magnitudes and directions, i.e., I(tw) ≈ ⟨ I(k, t w)⟩k, assuming every scattering vector shares the same I at that specific wait time. Substituting I in Equation 3 with ⟨I(k, t w)⟩k results in the 
+
+k-averaged intensity normalized two-time correlation function, referred to as ˜ c2. This approach has been used in NBED-based ECM to probe time-resolved dynamics (Huang & Voyles, 2024) as well as time-averaged dynamics via {˜c2}tw (Nakazawa & Mitsuishi, 2025; Nakazawa et al. , 2023). We propose an alternate, physically-motivated method for estimating I in SCLs. Since most SCLs are isotropic, and assuming no major structural changes happen during the experiment, the expected value of the scattering intensity should only be a function of kr. Therefore, the expected scattering intensity can be estimated by the time- and azimuthal averaged intensity 
+
+I(kr) ≈ ⟨{ I(kr, k ϕ, t w)}tw ⟩kϕ . Applying this approximation to Equation 2 and Equation 3 allows the calculation of the time- and azimuthal averaged intensity normalized one-time and two-time correlation functions, which we will refer to as g2 and c2 hereafter. In experimental data, we noticed that the azimuthal average can sometimes be problematic when estimating I using ⟨{ I(kr, k ϕ, t w)}tw ⟩kϕ . Because of the diffuse and random nature of the NBED patterns, the residual ellipticity of the first diffraction rings can be difficult to measure and correct perfectly. Small elliptical distortions will cause the pixels corresponding to a kr coordinate in polar-transformed patterns to contain signals from different radii. To mitigate this effect, instead of an azimuthal average over the entire ring, we employ a moving window average along the kϕ axis to estimate I, where I(kr, k ϕ) = ⟨{ I(kr, k ϕ, t w)}tw ⟩kϕ±∆ϕ . By limiting the azimuthal average to a section of the ring, the variation of kr within the averaged azimuthal angle range can be minimized. We found that ∆ ϕ = 30 ◦ (i.e., a 60 ◦ moving window) works well for the experimental data. Because a beam stop was used in the experiment, δI calculated from the ±35 ◦ region from the center of the beam stop is inaccurate, and the data from this region were discarded when calculating g2 and 
+
+c2.All of the data processing in this work was parallelized on a high-performance computing cluster using the HyperSpy (de la Pe˜ na et al. , 2025) and pyXem (Johnstone et al. , 2025) Python modules. The simulated time-resolved 4D STEM of the CuZr MD model and all of the code and parameters used to calculate and analyze the correlation functions are hosted at the Figshare repository with DOI: 10.6084/m9.figshare.33198822. 
+
+# 3 Results 
+
+3.1 MD-Simulated CuZr SCL 
+
+3.1.1 Global Structural Relaxation 
+
+Figure 1 shows the time- and spatially averaged squared self-ISF and the corresponding KWW fit for the CuZr MD trajectory. The self-ISF decay closely follows the KWW form, and the 8measured global structural relaxation time and stretching exponent are ⟨τ ⟩ = 349 .4 ± 0.5 ps and 
+
+⟨β⟩ = 0 .670 ±0.001, respectively. Using the global structural relaxation time and stretching exponent obtained from the self-ISF as benchmarks, we can compare the accuracies of the structural relaxation time measurements using different intensity autocorrelation functions. 
+
+Figure 1: Time- and spatially averaged squared self-ISF for the CuZr MD trajectory at 760 K, 
+
+Tg + 60 K. The curve was fitted using the KWW function to obtain the global structural relaxation time ⟨τ ⟩ and ⟨β⟩.Figure 2 (a) shows the time- and spatially averaged intensity autocorrelation function normalized by the time-averaged intensity, ⟨˜g2⟩r, the k-averaged intensity, ⟨{ ˜c2}tw ⟩r, and the time- and azimuthal averaged intensity, ⟨g2⟩r. At a first glance, ⟨˜g2⟩r appears to decay similarly to the self-ISF. However, in the high delay time regime shown in the figure inset, ⟨˜g2⟩r exhibits a negative autocorrelation which is not present in the self-ISF. Since the KWW function cannot drop below 0 by definition, fitting 
+
+⟨˜g2⟩r to the KWW form returns incorrect ⟨τ ⟩ and ⟨β⟩ of ⟨τ ⟩ = 318 ±5 ps and ⟨β⟩ = 0 .77 ±0.02. 
+
+⟨{ ˜c2}tw ⟩r remains high even at long delay times where the self-ISF has already decayed. This high autocorrelation deviates from the KWW form, resulting in an artificially high relaxation time of 
+
+⟨τ ⟩ = 2700 ± 900 ps. Since the shift behaves as a constant background in the autocorrelation function, one way to mitigate this problem is by adding a constant D to the KWW formula as a fitting parameter (Zhang et al. , 2023): {˜c2(tw, ∆t)}tw = C exp 
+
+> [
+
+−2  
+
+> (∆t
+> ⟨τ⟩
+> )⟨β⟩]
+
++ D. Here, the initial guess of D is 0. Fitting ⟨{ ˜c2}tw ⟩r to this shifted KWW function gives ⟨τ ⟩ = 434 ± 3 ps and 
+
+⟨β⟩ = 0 .584 ± 0.005, which are closer to the values extracted from the self-ISF but still inaccurate. However, this method introduces an additional fitting parameter, which can increase the uncertainty of the fit and can erroneously remove actual correlation at the tail region from extremely stable structures. The time- and azimuthal averaged intensity normalized ⟨g2⟩r most closely matches the self-ISF. It shows no anti-correlation nor abnormally elevated autocorrelation at high delay times. Thus, g2 fit 9by the KWW functionobtains ⟨τ ⟩ = 395 .0 ± 0.9 ps and ⟨β⟩ = 0 .653 ± 0.002, which closely match the values from the self-ISF. Figure 2 (b) shows the dependence of ⟨τ ⟩ and ⟨β⟩ on the total duration of the time series for the various correlation functions. For all time series lengths studied, both ⟨τ ⟩ and ⟨β⟩ estimated from 
+
+g2 closely match the values extracted from the self-ISF, with only a slight overestimation of ⟨τ ⟩.
+
+{˜c2}tw is also relatively stable across different time series lengths, with a consistently lower ⟨β⟩. On the other hand, ˜ g2 is much more sensitive to the time series length, returning a much shorter ⟨τ ⟩
+
+and a larger ⟨β⟩ compared with the self-ISF values at short time series lengths. Although the ⟨τ ⟩
+
+value gets closer to the self-ISF at long time series lengths, the ⟨β⟩ value is still higher. Overall, g2
+
+performs the best across different time series lengths for both ⟨τ ⟩ and ⟨β⟩.10 Figure 2: (a) Time- and spatially averaged intensity autocorrelation functions calculated based on the three I estimation methods: time averaging (˜ g2), k averaging ( {˜c2}tw ), and time- and azimuthal (kϕ) averaging ( g2). All three autocorrelation functions were fitted with the KWW function, and 
+
+{˜c2}tw was additionally fitted with the shifted KWW function. (b) Fitted values (error bars derived from the standard error of the non-linear least-squares fit) of ⟨τ ⟩ and ⟨β⟩ for ˜ g2, {˜c2}tw , g2, and the self-ISF. The simulated time-resolved 4D STEM was symmetrically truncated around the temporal midpoint to create subsets with a varying number of time steps. The I values, intensity autocorrelation functions, and the self-ISF were calculated from each subset separately to investigate how the temporal duration of the datasets affected the estimated structural dynamics. Among the three autocorrelation functions, the proposed time- and azimuthal averaged intensity normalized g2 performs demonstrably better than the other two functions. The g2 curve matches the self-ISF the closest, does not require additional fitting parameters, and consistently estimates 
+
+⟨τ ⟩ and ⟨β⟩ close to the self-ISF measured values regardless of the simulation time series length. Therefore, from this point forward, we will use g2 and the corresponding c2 to estimate the structural 11 dynamics of SCLs. 
+
+3.2 Spatially Resolved, Time-Averaged Dynamics 
+
+While the global dynamics can be measured via the spatially averaged g2 with proper estimation of 
+
+I, the primary advantage of NBED-ECM lies in its ability to resolve dynamic heterogeneity at the nanometer scale. Here we examine how the local g2 can capture the spatially resolved dynamics of our model SCL. Figure 3 (a) and (b) respectively show the distribution of the local structural relaxation time calculated from the self-ISF and g2 at each probe position across the simulation box, illustrating the time-averaged spatially heterogeneous dynamics of the SCL. The local τ and β
+
+estimated from g2 and from the self-ISF at each probe position are shown in Figure 3 (c) and (d), respectively. The structural relaxation times extracted from the two functions are highly correlated, with a slight overestimation for most probe positions from g2, which is consistent with the trend observed in the spatially and time-averaged dynamics. Although the stretching exponents are not strongly correlated, the β values vary by less than 0.2, indicating minimal spatial variation across the simulation box. Overall, the local g2 provides a good estimate of the local time-averaged dynamics. 12 Figure 3: (a,b) Time-averaged structural relaxation time τ map calculated from the self-ISF and 
+
+g2, respectively; (c) τ and (d) β from g2 vs. from the self-ISF at each probe position. The red line indicates the regression line of the two sets of τ and β and the black line is equality of the two. The two sets of time-averaged τ are highly correlated, with the g2 function returning roughly 10 % longer relaxation times across most probe positions. The correlation between the two sets of β
+
+is weaker, but the absolute values from both functions are with 0.55 and 0.75, suggesting little β
+
+variation across the simulation box. 
+
+3.3 Spatially and Time-Resolved Dynamics 
+
+Figure 4 (a) shows the single probe position TTCF from the center of the model SCL, where small high correlation patches (slow dynamics) are distributed along the diagonal, suggesting time variation in the dynamics. To quantify the momentary dynamics, the red parallelogram region of the TTCF was extracted as a rectangular matrix of c2(tw, ∆t), as shown in Figure 4 (b). Each row of the matrix represents c2 with a certain wait time tw, which captures the rate the diffraction pattern decorrelates from the initial pattern at tw as the delay time increases. Figure 4 (c) shows 13 the c2 at tw = 2500 ps, corresponding to the black dashed line in Figure 4 (b). For each tw, c2
+
+can be fitted to the KWW form to estimate the momentary structural relaxation time τm and the momentary stretching exponent βm (Das et al. , 2019; Das et al. , 2020; Riechers et al. , 2024). 
+
+Figure 4: (a) Single probe position TTCF from the center of the MD simulation box; (b) c2 from the red parallelogram marked in (a), where tw = t1 and ∆ t = t2 − t1. The c2 function is logarithmically resampled along ∆ t. The red line marks the momentary relaxation time τm at any given tw; (c) 
+
+c2 for tw = 2500 ps along the black dashed line in (b). c2 at each tw can be fitted to the KWW function to estimate the momentary structural relaxation time τm and βm.Figure 5 (a) and (b) show the τm maps calculated at tw = 2500 ps from the self-ISF and TTCF, respectively. The two maps demonstrate the same pattern of τm at different positions, but the quantitative agreement is noticeably worse compared to the time-averaged τ maps shown in Figure 3 (a) and (b). Figure 5 (c) and (d) compares τm and βm from c2 and the self-ISF at all probe positions and wait times, respectively. While the results from both functions correlate positively, they show greater dispersion than the time-averaged τ and β metrics owing to extreme local values of τm and 
+
+βm. Nevertheless, kernel density estimation of the distribution of the calculated τm and βm values shows that the majority of the data points are concentrated near the equality line, indicating a strong correlation between both functions, as demonstrated by the density iso-proportion contour lines in Figure 5 (c) and (d). 14 Figure 5: (a,b) Momentary structural relaxation time τm map calculated from the self-ISF and 
+
+c2, respectively, at tw = 2500 ps; (c,d) τm and βm from c2 vs. from the self-ISF at each probe position and wait times, respectively. The red line indicates the regression line and the black line is equality. The contour lines represent density iso-proportions at 20%, 50%, and 80% via kernel density estimation, bounding regions of increasing data concentration toward the distribution center. The two sets of τm and βm are largely correlated, but the τm correlation is weaker compared with the time-averaged dynamics shown in Figure 3 (c). 
+
+3.4 Structural Dynamics of a Pt 57.5 Cu 14.7 Ni 5.3 P22.5 SCL Nanowire 
+
+The new NBED-ECM analysis was applied to a time-resolved 4D STEM dataset for a Pt 57.5 Cu 14.7 Ni 5.3 P22.5 
+
+SCL nanowire collected in a previous study at Tg + 4 K (Huang & Voyles, 2024). Regions of the wire were crystallized during the ECM experiment and no longer change with time, so they interfere with the calculation of the averaged liquid relaxation time from simply averaging g2 over the entire nanowire. To handle the crystals, the spatially resolved τ map was first calculated for each probe position using the local g2. Figure 6 (a) shows the distribution of the time-averaged τ within the 15 nanowire. Multiple regions in the nanowire have an estimated relaxation time larger than 1600 seconds, which is the entire duration of the experiment, showing that the structure of these domains never decorrelated during the experiment. These domains are deemed to be crystal-like domains, and are marked in black in Figure 6 (a). Once the crystal-like regions are identified, the averaged dynamics of the liquid can be measured, as shown in Figure 6 (b) and (c). The spatially averaged TTCF shows that within the experiment duration, the liquid region was in equilibrium, and the averaged g2 estimates a global structural relaxation time of ⟨τ ⟩ = 97 ± 3 seconds with a stretching exponent of ⟨β⟩ = 0 .384 ± 0.007. The TTCF and g2 of the crystal-like regions are shown in Figure 6 (d) and (e), where the intensity autocorrelation functions remain high throughout the delay time, confirming the structural stabilities of these domains. 
+
+Figure 6: (a) Time-averaged τ map of the Pt 57.5 Cu 14.7 Ni 5.3 P22.5 nanowire overlaid on the virtual dark-field image of the nanowire. Regions with relaxation times larger than 1600 seconds are deemed as crystal-like domains and are marked in black; (b,c) spatially averaged TTCF and g2 of the non-crystal regions; (d,e) spatially averaged TTCF and g2 of the crystal-like regions. Figure 7 shows the local TTCF, c2, and the τm and βm from a liquid region in the center of the nanowire. Similar to the MD modeled CuZr SCL, high correlation patches can be found along the diagonal of the TTCF and the momentary relaxation time fluctuates throughout the experiment 16 duration, with the longest τm roughly four times larger than the shortest. These results indicate that although the liquid region of the nanowire was in equilibrium, it still exhibited intermittent, temporally heterogeneous dynamics at a single spatial position. 
+
+.png Figure 7: (a,b) Local TTCF from the center of the nanowire and the corresponding c2, respectively; (c,d) τm and βm calculated from the c2 in (b). The red line in (b) marks the τm at each tw, and the red dashed line in (c,d) indicates the time-averaged τ and β calculated from the local g2.The momentary relaxation time τm maps of the nanowire at three different wait times are shown in Figure 8. The domains with τm larger than 1600 seconds are deemed as crystal-like and marked as black. Most of the crystal-like domains identified in the time-averaged τ map also appear as crystal-like regions in the time-resolved τm maps. One such domain is marked and labeled as crystal 1 in all three τm maps. However, there are some domains that only appear in the τm maps at later wait times, suggesting that new crystal-like domains formed during the experiment. For example, domain 2 only appears as a crystal in the maps at wait times of 640 seconds and 960 seconds, and domain 3 only at 960 seconds. 17 Figure 8: Real space map of the momentary relaxation time τm of the nanowire at three different wait times. The crystal-like regions with τm > 1600 seconds are marked as black. Three domains that became crystal-like at different moments of the experiment are marked by the white circles. The local TTCFs from the crystal 1, 2, and 3 positions are shown in Figure 9 (a-c), where the moment of crystallization can be identified. For crystal 1, the crystallization happened before the experiment, and the structure never decorrelated throughout the wait time. For crystal 2 and 3, the liquid structure decorrelated rapidly at the beginning, and then stabilized upon crystallization happened. The diffraction patterns from the three domains at five wait times are displayed in Figure 9 (d-f). The five wait times are marked along the diagonal of the TTCFs, where tw, 1 and 
+
+tw, 5 are near the beginning and end of the experiment, and tw, 2 to tw, 4 correspond to the three wait times used to construct the τm maps shown in Figure 8. Crystal 1 shows strong crystal diffraction spots from the beginning till the end of the experiment. For crystal 2 and 3, the diffraction patterns show typical liquid speckles at the beginning, and crystal peaks appear during the experiment. The wait times that crystal peaks appeared match the wait times when high correlation values are measured in TTCFs, demonstrating the ability of the TTCF to detect these crystallization events. The local g2 from the three crystal positions are shown in Figure 9 (g-i). All three positions show higher autocorrelation than the averaged liquid g2 and extended delay time due to the crystal formation. However, because g2 also captures the liquid behaviors before the crystal formation, the time-averaged relaxation times for crystal 2 and 3 are shorter than 1600 seconds, and they are not marked as crystal in the time-averaged τ map. 18 ax 
+
+Figure 9: (a-c) Local TTCFs of the domains marked by the white circles labeled 1 to 3 in Figure 8. Five moments during the experiment were marked on the TTCFs, where tw, 1 and tw, 5 are near the beginning and end of the experiment, respectively, and tw, 2 to tw, 4 correspond to the three wait times used to calculate the τm maps shown in Figure 8; (d-f) polar-transformed first diffraction ring patterns from the three domains at the five wait times marked in (a-c); (g-i) local g2 of the three domains and the corresponding KWW fit. 19 4 Discussion 
+
+4.1 Effect of Spatial and Temporal Averaging in self-ISF vs ECM Relaxation Time Measurements 
+
+Overall, simulated ECM captures local dynamics consistent with the self-ISF when using g2 and 
+
+c2. With less averaging, intermittent, temporally heterogeneous dynamics are observed. Spatial heterogeneity is similar in domain patterns in ECM and the self-ISF, as shown in Figure 3. However, we observed an increase of disagreement between the structural dynamics calculated from the self-ISF and intensity autocorrelation functions ( g2 and c2) as the degree of spatial and temporal averaging decreases, as shown in Figure 5. We believe this disagreement is intrinsic to the ECM autocorrelation functions. Unlike the self-ISF, which tracks all atomic movements, ECM tracks the changes only of atoms that contribute to strong electron diffraction. These atoms are a subset of atoms within the interaction volume, because diffraction is sensitive to the orientations of the atomic structures with respect to the electron beam direction (Hirata & Chen, 2014). Consequently, some atomic motions that contribute to the self-ISF may be invisible to ECM. However, which atoms contribute to the ECM signal is random. Thus, by sampling over a large number of atoms, the fluctuations inherent to the random subsets are reduced and the ECM vs. self-ISF agreement improves. Although the subsets of atoms ECM samples differ from the self-ISF, any change in electron scattering signals is still linked to atomic movements, and thus the time-resolved dynamics estimated from c2 still reflect a subset of the actual dynamics, with R2 = 0 .70 for the linear regression of 
+
+τm from c2 vs from the self-ISF. The link between local c2 and local self-ISF is demonstrated by Figure 10, which shows the momentary relaxation time and momentary stretching exponent for each wait time calculated from the c2 shown in Figure 4 (b) and from the local self-ISF at the same probe position. While the values are not perfectly matched, the τm and βm from c2 do largely follow the fluctuations observed in the τm and βm from the self-ISF. 20 Figure 10: τm and βm at each tw from the center of the MD simulation box, calculated from c2
+
+and the self-ISF. While the values of τm and βm from c2 do not perfectly match the ones from the self-ISF, they are strongly correlated for most tw. However, there are still moments (e.g., tw ≤ 2000 ps) where the momentary dynamics estimated by c2 do not reflect the fluctuations shown in the self-ISF curves. 
+
+4.2 Systematic Errors in Intensity Correlation Functions 
+
+Figure 2(a) illustrates the systematic errors arising from improper intensity normalization. Specifi-cally, the time-averaged, intensity-normalized ˜ g2 function introduces a negative correlation, whereas the k-averaged, intensity-normalized ˜ c2 function introduces an elevated baseline correlation at long delay times. For ˜ g2, the issue stems from trying to estimate the expected value of a temporally varying signal using its own time average. This estimation reduces the degrees of freedom of the signal and forces an additional constraint, {δI }tw = 0. Mathematically, it can be shown that auto-correlation functions defined this way will always become negative at high delay times, appearing as an artificial anti-correlation (Percival, 1993; Nakazawa & Mitsuishi, 2025), as shown in Figure 2 (a). Let the intensity time series consist of N discrete frames recorded at times tn = nδt , where n is the frame index and δt is the experimental sampling interval (frame time). The physical delay time is expressed as ∆ t = mδt , where m is the dimensionless integer frame delay. There are two common ways to calculate the time-averaged intensity, a uniform average: 
+
+{I(tw)}tw = {I(tw + ∆ t)}tw = 1
+
+N
+
+> N∑
+> n=1
+
+I(tn),
+
+21 or a split average (Zhang et al. , 2017; He et al. , 2015; Vaerst et al. , 2023; Chatterjee et al. , 2021; Huang & Voyles, 2024): 
+
+{I(tw)}tw = 1
+
+N − m 
+
+> N−m∑
+> n=1
+
+I(tn) and {I(tw + ∆ t)}tw = 1
+
+N − m
+
+> N∑
+> n=m
+
+I(tn).
+
+The averaged ˜ g2 curve shown in Figure 2 (a) was calculated using the uniform averaging, which produces averaged ˜ g2 curves that are negative throughout the tail region. When split averaging is used, ˜ g2 will still become negative before being forced to converge to 0 at the very end of the curve. Especially on a log-∆ t scale, the negative autocorrelation region often appears as a small dip right before the curve reaches 0. Examples of such behavior can be seen in the ˜ g2 curves shown in some previous studies (Vaerst et al. , 2023; Nakazawa & Mitsuishi, 2025; Lumma et al. , 2000). At a glance, the ˜ g2 curves calculated from split averaging might appear to behave more properly, as they eventually converge to 0. However, the deviation from the KWW form starts when the curves first become negative, and the estimation of τ and β is still affected. Both time averaging methods produce almost identical τ and β estimations in our MD simulated CuZr SCL. The k-averaged intensity normalized ˜ c2 remains too high instead of converging to 0 at long delay times. This additional correlation is due to the failure of the assumption that I is the same for all sampled k vectors. In NBED patterns, because of the convergent beam, the speckles in the first diffraction ring have a finite size that spans across a range of kr, in which the expected intensities vary non-trivially due to the change of the structure factor. On average, the center of the diffraction ring has higher intensity than the inner and outer edges. Thus, δ ˜I(k, t w) calculated using ⟨I⟩k
+
+over the whole ring in kr is almost always positive for k near the center of the ring, and always negative for those near the edges, artificially creating an extra correlation throughout the whole ∆ t
+
+range. This extra correlation can be considered as a constant shift of the autocorrelation function by approximately the normalized variance of the time-averaged diffraction pattern (see Appendix B). This constant shift disagrees with the KWW form of the correlation function, and a regular KWW fit will return completely wrong τ and β.
+
+4.3 Impact of Observation Time and the Pitfalls of Short-Duration Extrapola-tion 
+
+While conventional normalization frameworks introduce systematic artifacts, the practical severity of these errors heavily depends on the duration of the experiment relative to the system’s relaxation time. Because the anti-correlation in ˜ g2 (i.e., I = {I}tw ) is a consequence of reduced degrees of freedom in the temporal signal, the effect of this error can be mitigated by increasing the length of the data time series. The longer the time series, the smaller the impact of reducing one degree of freedom due to the mean estimation. This effect is method-agnostic and will affect the ˜ g2 from both tilted-DF and NBED ECM, as well as XPCS, as long as the expected intensity is estimated only with time averaging. Previously, Zhang et al. (Zhang et al. , 2017) measured that the required 22 experiment duration for the estimated ⟨τ ⟩ from ˜ g2 to converge is 40 ⟨τ ⟩ in two metallic SCLs (Pt 57.5 Cu 14.7 Ni 5.3 P22.5 and Pd 40 Ni 40 P20 ) using tilted-DF ECM. Achieving the 40 ⟨τ ⟩ limit often requires prolonged experimental durations. Consequently, measuring dynamics accurately using ˜g2 is less practical than using a properly normalized g2, which demands only 20 ⟨τ ⟩, as shown in Figure 2. Thus, we can expect that studies that utilized ˜ g2 to capture the structural dynamics with a total experiment duration shorter than 40 ⟨τ ⟩ will underestimate τ and overestimate β.For instance, in Zhang et al. (Zhang et al. , 2018), Chatterjee et al. (Chatterjee et al. , 2021), and Huang and Voyles (Huang & Voyles, 2024), the experiment duration spanned roughly 20 to 40 times the average relaxation time. Within this regime, while relaxation time and stretching exponent measurements may suffer from quantitative inaccuracy, the overarching insights remain qualitatively valid; that is, regions characterized by faster dynamics (such as free surfaces) consistently yield smaller estimated τ values compared to more sluggish domains. In contrast, the relative experimental durations utilized by Vaerst et al. (Vaerst et al. , 2023) and Spangenberg et al. (Spangenberg 
+
+et al. , 2021) reached only 4 to 6 times the reported slow relaxation times. Such constrained observation windows introduce two critical complications. First, the true relaxation times are likely to be significantly greater than the published values, potentially compromising even qualitative trends. As demonstrated in Figure 2(b), the τ values extracted via ˜ g2 depend heavily on the relative duration of data collection within this window. Under a fixed experimental runtime, domains with shorter actual relaxation times correspond to a longer relative experiment duration, thereby suffering less severe underestimation. It is unclear whether this rapid, non-linear variation in underestimation severity can ultimately invert the perceived order of local dynamics. Second, the stretching exponent β are drastically overestimated. Both Vaerst et al. and Spangenberg et al. documented β values larger than 1 for multiple measurements. Physically, a compressed exponential regime ( β > 1) implies a fundamentally distinct state compared to standard stretching exponential state ( β ≤ 1) (Ruta et al. , 2012; Fluerasu et al. , 2007). However, Figure 2(b) shows that at this range of relative experiment durations, β parameters can be artificially driven above 1 even when the system is undergoing a true β < 1 stretched exponential decay. Consequently, detecting compressed-like dynamics ( β > 1) within a ˜ g2 framework may warrant more careful examination. While ˜ g2 might be serviceable when the experiment duration is relatively long compared to the global relaxation time, it can still fail catastrophically when local domains with extremely slow dynamics compared to the rest of the sample occur, be it crystals in SCLs or stable clusters in glasses. Because ˜ g2 is constrained to drop to 0 even if the structure never changes, it does not detect such unchanging structures. Figure 11 (a) and (b) show the TTCF from crystal 1 (shown in Figure 9) calculated using the intensity normalization δI = ( I − { I}tw )/{I}tw , which is the same normalization as ˜ g2, and ˜ g2. Even though the crystal never relaxed, ˜ g2 still produced an estimated structural relaxation time of 60 seconds. Because of this issue, when Huang and Voyles first analyzed this dataset (Huang & Voyles, 2024), the crystallization events were not detected and 23 erroneous dynamical information from the crystals was mixed into the liquid dynamics analysis. We suspect that some crystals were also present in Chatterjee et al.’s work on the same material using tilted-DF ECM, since regions that resemble crystals are observed in the tilted-DF image. Due to the large number of time series collected in an ECM experiment at different r and k, these routines are typically automatically applied to the entire dataset without manual examination, potentially leading to extremely long lived domains being erroneously assigned short relaxation times without being noticed. 
+
+Figure 11: (a,b) Local TTCF and ˜ g2 of crystal 1 marked in Figure 8, where the TTCF is calculated by approximating I = {I}tw ; (c,d) local TTCF and {˜c2}tw from the same domain, using I = ⟨I⟩k.The {˜c2}tw in (d) is fitted using Equation 4 with three different initial guesses (0, 0.5, and 0.8) of 
+
+D. The inset shows the original and fitted functions in linear ∆ t. The three initial guesses result in almost identical fitting curves within the experiment ∆ t range, while the slowest and fastest estimated relaxation times vary by a factor of 50. Some researchers have suggested that the k-averaged intensity normalized two-time correlation function ˜ c2 requires a shorter experiment duration compared to the one-time correlation function 24 ˜g2 (Nakazawa et al. , 2023; Nakazawa & Mitsuishi, 2025). Nakazawa and Mitsuishi (Nakazawa & Mitsuishi, 2025) claimed that they were able to accurately estimate structural relaxation times longer than the entire experiment duration using ˜ c2 calculated from NBED-ECM dataset in metallic glasses by applying a specific version of the shifted KWW fit, 
+
+{˜c2}tw = C(1 − D) exp 
+
+> [
+
+−2 
+
+> (
+
+∆tτ 
+
+> )β]
+
++ CD, (4) where C and D are fitting parameters. Although they showed the efficacy of this shifted KWW fit on retrieving the structural dynamic parameters from a series of synthetic {˜c2}tw curves, we believe that applying this approach to actual NBED-ECM data with short relative experiment durations can be problematic. First, because systematic intensity variations across kr shift every ˜ c2 upward, genuine structural stability cannot be disentangled from baseline correlation artifacts. Consequently, estimating τ depends heavily on the initial guess for the background shift parameter D. For example, Figures 11(c) and (d) present the ˜ c2 TTCF from crystal 1 alongside the corresponding {˜c2}tw . Fitting via Equation 4 yields relaxation times of (2 ±20) ×10 4, (1 ±6) ×10 4, and (50 ±1000) ×10 4 seconds for initial guesses of D = 0, 0.5, and 0.8, respectively. The additional free parameter allows drastically different relaxation times to yield nearly identical fits within the experimental ∆ t window. Moreover, because fitting uncertainties exceed the estimated relaxation times themselves, applying a shifted KWW fit to extremely slow domains in NBED-ECM data is fundamentally unreliable. Second, even if the actual structural correlation can be properly separated from the constant background of {˜c2}tw , there is no reason to assume that any single relaxation event should obey the chosen shifted KWW form. It is crucial not to over-extrapolate the autocorrelation function from a short experiment to estimate relaxation times for extremely slow or immobile domains, especially in NBED-ECM. In XPCS, the simultaneous sampling of multiple domains allows the relaxation process to be captured through ensemble averaging, even if individual domains do not complete a relaxation cycle during the observation time. In contrast, the nanometer-scale probe used in NBED-ECM often probes a single domain. If a domain does not relax during the observation time, estimating its relaxation time is highly speculative. In this sense, both the 1 .8 × 10 7 seconds relaxation time estimated from g2 for the Pt 57.5 Cu 14.7 Ni 5.3 P22.5 nanowire, and the 10000 seconds relaxation time estimated by the {˜c2}tw with background fitting are equally inaccurate. However, the extremely high relaxation time estimated from g2 remains physically meaningful as it signifies that the observed domain is nearly immobile on the experimental time scale. In general, we propose that the properly normalized g2 should always be used for analyzing NBED-ECM data, since it is capable of detecting unchanging structures within a system and does not require any background fitting. As shown in Figure 2 (b), g2 only requires a relative experiment time of 20 τ to produce consistent relaxation times. For samples with long relaxation times or unstable samples, where long experiments are impractical, relative experiment durations between 5 to 20 τ remain viable. Within this intermediate range, the relaxation time estimations only show 25 a slight dependence on experiment duration, while the evaluation of the stretching exponent β
+
+remains highly reliable and accurate throughout. Experiments shorter than 5 ⟨τ ⟩ are likely to be unreliable. 
+
+4.4 Comparing XPCS and ECM TTCF 
+
+Because the constant shift in {˜c2}tw is caused by the variation of time-averaged intensity within the sampled k range, it is sensitive to the experimental kr range. If a method only samples a very small range of kr, which is the case in many XPCS experiments (Malik et al. , 1998; Livet 
+
+et al. , 2001; Sutton et al. , 2003; Das et al. , 2019; Das et al. , 2020; Ruta et al. , 2012; Giordano & Ruta, 2016; Evenson et al. , 2015; Riechers et al. , 2024), the shift in ˜ c2 can be negligible. Figure 12 shows the simulated X-ray (7.32 keV) and electron scattering intensity profiles of the 760 K CuZr SCL MD trajectory. The X-ray speckle patterns were calculated by the magnitude of the direct sum of the structure factor, F (k) = ∑ 
+
+> n
+
+f nx (k) exp[2 πi (k · rn)] and I(k) = |F (k)|2, where rn is the position of the n-th atom, and f nx is the X-ray atomic scattering factor obtained from Waasmaier and Kirfel(Waasmaier & Kirfel, 1995). To reduce artifacts from the shape factor of the cubic simulation box, only a central sphere with a diameter of 6.6 nm in the MD trajectory was included in the summation. These speckle patterns were simulated and averaged over every snapshot of the trajectory, and then summed over the azimuthal angle. The common ranges of kr used to calculate 
+
+{˜c2}tw and the TTCF in metallic glass XPCS experiments (Das et al. , 2020; Das et al. , 2019; Riechers 
+
+et al. , 2024; Ruta et al. , 2012; Giordano & Ruta, 2016; Evenson et al. , 2015) are marked in the figure. Compared to the width of the first diffraction ring (∆ kr ≈ 2.5 nm −1), the experimental XPCS range is much smaller (∆ kr ≈ 0.1 nm −1). At this narrow range, there is almost no intensity change across kr. However, some XPCS experiments still report elevated backgrounds that required shifted KWW fitting (Das et al. , 2020; Das et al. , 2019; Riechers et al. , 2024; Zhang et al. , 2023). It remains unclear whether this background is caused by actual intensity variations across kr or by other sources like detector defects and non-uniformity. 26 Figure 12: Simulated X-ray and electron scattering normalized intensity profiles of the 760 K CuZr MD trajectory snapshot across the same kr range used in simulating the NBED-ECM data. The X-Ray Exp-APS and Exp-ESRF indicate the common metallic glasses XPCS experiment kr
+
+range used in the Advanced Photon Source (APS) (Das et al. , 2020; Das et al. , 2019; Riechers 
+
+et al. , 2024) and the European Synchrotron Radiation Facility (ESRF) (Ruta et al. , 2012; Giordano & Ruta, 2016; Evenson et al. , 2015), respectively. All X-ray ranges were shifted to center the CuZr X-ray intensity profile peak and transformed from units of q = 2 πk (˚ A−1) to k (nm −1). The segment labeled Electron Speckle indicates the diameter of the diffraction disc of a 1.5 mrad convergent electron probe. While some previous NBED-ECM studies also sample only a very thin slice of the diffraction ring (Nakazawa et al. , 2023; Nakazawa & Mitsuishi, 2025), where {˜c2}tw appeared without a large background, we argue that ˜ c2 is not ideal for NBED-ECM data for several reasons. First, because of the convergent beam, the electron speckle size in NBED patterns is much larger than in X-ray diffraction. A small kr range will therefore fail to probe the time evolution of any single speckle in its entirety. Second, ˜ c2 is normalized using only the k-averaged intensity. In XPCS, approximating the expected intensity as I(kr, t w) = ⟨I(kr, k ϕ, t w)⟩kϕ can be acceptable; a large illumination area (typically 10 μm × 10 μm) samples most possible structural motifs within a single pattern. While time averaging still provides the most accurate baseline (Sutton et al. , 2003), it is often omitted in XPCS to simplify data processing. In contrast, NBED patterns capture only a few motifs at a time, meaning an average over kϕ no longer reflects the true overall structure factor at each kr. To achieve a proper estimation of I, some time averaging is necessary. Therefore, unless the overall structure factor itself evolves due to global temperature shifts or crystallization, NBED-ECM data should always be normalized by the time- and azimuthal averaged intensity. This means evaluating the 
+
+g2 and c2 using δI (kr, k ϕ, t w) = ( I(kr, k ϕ, t w) − ⟨{ I(kr, k ϕ, t w)}tw ⟩kϕ±∆ϕ )/⟨{ I(kr, k ϕ, t w)}tw ⟩kϕ±∆ϕ .Furthermore, because it probes only a few structural motifs at once, NBED-ECM is sensitive to individual short-range and medium-range ordering clusters in SCLs and glasses. Variations in the 27 structure, chemical composition, and orientation of these clusters cause their diffraction signals to shift to different kr and kϕ all within the first diffraction ring. Sampling only the very center of the ring can result in a significant loss of structural information. As an extreme example, crystal 2 in the Pt 57.5 Cu 14.7 Ni 5.3 P22.5 nanowire exhibits a strong diffraction peak near the outer edge of the ring, as shown in Figure 9 (e). If the TTCF and g2 were calculated using only the ring center, this crystallization event might have gone undetected. Because the primary goal of ECM is to track the temporal behavior of these local configurations, the experiment should, as a rule of thumb, sample the same kr range used to study the static structure of disordered materials, including ring intensity variance (Nakazawa et al. , 2023) and the symmetry coefficient (Huang et al. , 2022). The sampled kr ranges in tilted-DF ECM typically fall between those of XPCS and NBED-ECM. However, because all scattering intensities within the objective aperture integrate to form the real space images, the artifacts driven by intensity variations across kr do not apply to tilted-DF ECM. Nevertheless, the insights gained from NBED-ECM remain highly relevant. In tilted-DF ECM, ˜ c2 is normalized by the r-averaged intensity: ˜ c2(tw, ∆t) = ⟨δ ˜I(tw)δ ˜I(tw +∆ t)⟩r, where δ ˜I = ( I −⟨ I⟩r)/⟨I⟩r.If systematic variations (such as sample thickness variations or the presence of nanocrystals) exist within the tilted-DF image field of view, {˜c2}tw will display an elevated background at high delay times. This baseline elevation causes the same fitting issues when extracting τ and β via the KWW model as seen in NBED-ECM. Consequently, extra precautions must be taken during tilted-DF ECM experiments to minimize these structural variations, or custom intensity normalization methods must be applied. 
+
+# 5 Conclusion 
+
+In this work, we addressed a critical methodological issue in NBED-ECM. We demonstrated that conventional XPCS normalization techniques—namely time averaging (˜ g2) and k-averaging (˜ c2)—suffer from systematic errors when applied to the nanometer sampling volumes of NBED-ECM, leading to inaccurate relaxation times ( τ ) and stretching exponents ( β). Our proposed time- and azimuthal-averaged normalization scheme resolves these challenges. Valida-tion against MD-simulated CuZr SCL confirms the accuracy of our g2 and c2 frameworks across various observation window lengths. Furthermore, when applied to experimental 4D STEM datasets of a metallic glass nanowire, our methodology successfully isolated ultra-stable nanoscale crystal phases. While previous normalization techniques miscategorized these rigid domains as having short-lived fluid relaxations, our approach correctly preserves their immobile character on the experimental timescale. This ability to capture individual relaxation events highlights the unique capability of time-resolved 4D STEM-based ECM. With a proper experimental setup and the correct analysis, this technique allows the direct observation of mobile domains’ size, distribution, lifetime, structure, and interaction with their surroundings, leading to a better understanding of structural relaxation and dynamic heterogeneity in SCLs. Ultimately, avoiding arbitrary background corrections by using these proper spatial and temporal references provides a reliable, artifact-free 28 methodology for automated time-resolved 4D STEM data pipelines to accurately evaluate local spatiotemporal dynamics. 
+
+# A Conventional Definition of One-Time and Two-Time Correlation Functions 
+
+Conventionally, the one-time correlation function and the KWW fit are expressed as: 
+
+G2(k, ∆t) = {I(k, t w)I(k, t w + ∆ t)}tw
+
+I2 = 1 + A exp 
+
+[
+
+−2
+
+( ∆tτ
+
+)β ]
+
+Thus, the decaying part of G2 is: 
+
+g2(k, ∆t) = G2(k, ∆t) − 1 = {I(k, t w)I(k, t w + ∆ t)}tw − I2
+
+I2 ,
+
+= {[I(k, t w) − I][ I(k, t w + ∆ t) − I]}tw
+
+I2 ,
+
+=
+
+{[ I(k, t w) − II
+
+] [ I(k, t w + ∆ t) − II
+
+]} 
+
+> tw
+
+,
+
+which has the same form as Equation 2. The two-time correlation function is conventionally expressed as: 
+
+C2(tw, ∆t) = ⟨I(k, t w)I(k, t w + ∆ t)⟩k
+
+I(tw)I(tw + ∆ t) = 1 + A exp 
+
+[
+
+−2
+
+( ∆tτm
+
+)βm
+
+]
+
+Thus, the decaying part of C2 is: 
+
+c2(tw, ∆t) = C2(tw, ∆t) − 1 = ⟨I(k, t w)I(k, t w + ∆ t)⟩k − I(tw)I(tw + ∆ t)
+
+I(tw)I(tw + ∆ t) .
+
+Assuming ⟨I(k, t w)⟩k ≈ ⟨ I(k, t w + ∆ t)⟩k for a stable system, then: 
+
+c2(tw, ∆t) = ⟨[I(k, t w) − I][ I(k, t w + ∆ t) − I]⟩k
+
+I(tw)I(tw + ∆ t) ,
+
+=
+
+〈[ I(k, t w) − I(tw)
+
+I(tw)
+
+] [ I(k, t w + ∆ t) − I(tw + ∆ t)
+
+I(tw + ∆ t)
+
+]〉 
+
+> k
+
+,
+
+= ⟨δI (k, t w)δI (k, t w + ∆ t)⟩k
+
+which has the same form as Equation 3, where δI (k, t w) = ( I(k, t w) − I)/I .29 B Origin of the High {˜c2}tw in NBED-ECM 
+
+Assuming that the system is in equilibrium, then we can approximate ⟨I(tw)⟩k ≈ ⟨ I(tw + ∆ t)⟩k ≈{⟨ I⟩k}tw ≈ C, where C is a constant. If we define δ ˜I = ( I − { I}tw )/{I}tw and I = δ ˜I{I}tw + {I}tw ,then ˜ c2 becomes: ˜c2 =
+
+〈 I(tw) − ⟨ I(tw)⟩k
+
+⟨I(tw)⟩k
+
+I(tw + ∆ t) − ⟨ I(tw + ∆ t)⟩k
+
+⟨I(tw + ∆ t)⟩k
+
+〉
+
+> k
+
+,
+
+=
+
+〈( δ ˜I(tw){I}tw + {I}tw − CC
+
+) ( δ ˜I(tw + ∆ t){I}tw + {I}tw − CC
+
+)〉 
+
+> k
+
+,
+
+= 1
+
+C2
+
+〈
+
+(δ ˜I(tw){I}tw + {I}tw − C)( δ ˜I(tw + ∆ t){I}tw + {I}tw − C)
+
+〉 
+
+> k
+
+,
+
+where the k dependence in δ ˜I(k, t w) and {I(k)}tw are omitted for simplicity. Since {δ ˜I}tw = 0, then: 
+
+{˜c2}tw = 1
+
+C2
+
+{〈 
+
+(δ ˜I(tw){I}tw + {I}tw − C)( δ ˜I(tw + ∆ t){I}tw + {I}tw − C)
+
+〉
+
+> k
+
+}
+
+> tw
+
+,
+
+= 1
+
+C2
+
+〈{
+
+(δ ˜I(tw){I}tw + {I}tw − C)( δ ˜I(tw + ∆ t){I}tw + {I}tw − C)
+
+}
+
+> tw
+
+〉
+
+> k
+
+,
+
+= 1
+
+C2
+
+〈{
+
+δ ˜I(tw)δ ˜I(tw + ∆ t){I}2 
+
+> tw
+
++ {I}2 
+
+> tw
+
+− 2C{I}tw + C2}
+
+> tw
+
+〉
+
+> k
+
+,
+
+=
+
+〈
+
+{δ ˜I(tw)δ ˜I(tw + ∆ t)}tw
+
+{I}2
+
+> tw
+
+C2
+
+〉
+
+> k
+
++
+
+〈 ({I}tw − C)2
+
+C2
+
+〉
+
+> k
+
+.
+
+If we include the k dependence back in the equation and examine the first term, we can find: 
+
+〈
+
+{δ ˜I(k, t w)δ ˜I(k, t w + ∆ t)}tw
+
+{I(k)}2
+
+> tw
+
+C2
+
+〉
+
+> k
+
+=
+
+〈
+
+˜g2(k) {I(k)}2
+
+> tw
+
+⟨{ I}tw ⟩2
+
+> k
+
+〉
+
+> k
+
+,
+
+which is a weighted k-averaged ˜ g2 function. And the second term becomes: 
+
+〈 ({I}tw − C)2
+
+C2
+
+〉
+
+> k
+
+= ⟨{ I(k)}tw − ⟨{ I}tw ⟩k⟩k
+
+⟨{ I}tw ⟩2
+
+> k
+
+,
+
+= Var k[{I}tw ]
+
+⟨{ I}tw ⟩2
+
+> k
+
+,
+
+where Var k[{I}tw ] is the intensity variance of time-averaged diffraction pattern. Therefore, the {˜c2}tw function can be approximated as the weighted k-averaged ˜ g2 function plus the normalized variance of every pixel in the time-averaged diffraction pattern. If the diffraction ring pattern include a large kr range, than the normalized ring variance of {I}tw will be large due the the variation in structure factor across the ring. The weighted k-averaged ˜ g2 function might have a slightly different shape than regular ⟨˜g2⟩k
+
+30 function, but they share the same properties. Thus we can analyze the limiting behaviors of {˜c2}tw
+
+at long and short experiment duration. When the experiment duration is extremely long compared to the structural relaxation time, the ˜ g2 function will approach 0 at high delay time, thus the autocorrelation function will reach the normalized time-averaged ring variance, which is the origin of the artificially high autocorrelation in {˜c2}tw . On the other extreme, if the experiment duration is very short, the ˜ g2 function will become very negative, canceling out the normalized time-averaged ring variance, lowering the estimated relaxation time. This is the reason why at short time-series length, we can observe the estimated τ from {˜c2}tw function to decrease in Figure 2 (b). 
+
+# Acknowledgements 
+
+The authors thank Shuoyuan Huang for making metallic glass nanowire ECM data available. During the preparation of this work, large language model (Google Gemini 3.5) was used strictly for language polishing, grammar correction, and improving readability. The output of the model was reviewed and edited by the authors as needed. 
+
+# Funding 
+
+This work is supported by the Wisconsin Materials Research Science and Engineering Center (MRSEC) DMR-2309000. The use of Wisconsin Centers for Nanoscale Technology facilities and instrumentation is also supported by MRSEC DMR-2309000.   
+
+> Conflicts of interest: The authors declares no conflicts of interest.
+> Data availability: The data and scripts supporting this study are deposited in the Figshare repository with DOI: 10.6084/m9.figshare.33198822 and are available from the corresponding authors upon reasonable request.
+
+# References 
+
+Berne, B. & Pecora, R. (2000). Dynamic Light Scattering: With Applications to Chemistry, Biology, and Physics . Dover Books on Physics Series. Dover Publications. Berthier, L. (2011). Physics , 4.Bikondoa, O. (2017). Journal of Applied Crystallography , 50 , 357–368. Chatterjee, D., Annamareddy, A., Ketkaew, J., Schroers, J., Morgan, D. & Voyles, P. M. (2021). 
+
+ACS Nano , 15 , 11309–11316. Cicerone, M. T. & Ediger, M. D. (1995). The Journal of Chemical Physics , 103 , 5684–5692. Cipelletti, L., Bissig, H., Trappe, V., Ballesta, P. & Mazoyer, S. (2002). Journal of Physics: Condensed Matter , 15 , S257. Conrad, H., Lehmk¨ uhler, F., Fischer, B., Westermeier, F., Schroer, M. A., Chushkin, Y., Gutt, C., Sprung, M. & Gr¨ ubel, G. (2015). Physical Review E - Statistical, Nonlinear, and Soft Matter Physics , 91 .Das, A., Derlet, P. M., Liu, C., Dufresne, E. M. & Maaß, R. (2019). Nature Communications 2019 10:1 , 10 , 1–9. Das, A., Dufresne, E. M. & Maaß, R. (2020). Acta Materialia , 196 , 723–732. Ediger, M. D. (2000). Annual Review of Physical Chemistry , 51 , 99–128. Evenson, Z., Ruta, B., Hechler, S., Stolpe, M., Pineda, E., Gallino, I. & Busch, R. (2015). Physical Review Letters , 115 , 175701. 31 Fluerasu, A., Moussa¨ ıd, A., Madsen, A. & Schofield, A. (2007). Physical Review E - Statistical, Nonlinear, and Soft Matter Physics , 76 , 010401. Fluerasu, A., Sutton, M. & Dufresne, E. M. (2005). Physical Review Letters , 94 .Gavin, H. P. (2019). Department of Civil and Environmental Engineering Duke University August ,
+
+3(1-23), 4. Giordano, V. M. & Ruta, B. (2016). Nature Communications 2016 7:1 , 7, 1–8. Gr¨ ubel, G. & Zontone, F. (2004). Journal of Alloys and Compounds , 362 , 3–11. Hachenberg, J. & Samwer, K. (2006). Journal of Non-Crystalline Solids , 352 , 5110–5113. He, L., Zhang, P., Besser, M. F., Kramer, M. J. & Voyles, P. M. (2015). Microscopy and Microanalysis ,
+
+21 , 1026–1033. Hirata, A. & Chen, M. (2014). Journal of Non-Crystalline Solids , 383 , 52–58. Huang, S., Francis, C., Ketkaew, J., Schroers, J. & Voyles, P. M. (2022). Ultramicroscopy , 232 .Huang, S. & Voyles, P. M. (2023). Data for momentum transfer resolved electron correlation microscopy. https://doi.org/10.18126/y2vi-ntsk Huang, S. & Voyles, P. M. (2024). Ultramicroscopy , 256 , 113886. Jain, A., Schulz, F., Lokteva, I., Frenzel, L., Gr¨ ubel, G. & Lehmk¨ uhler, F. (2020). Soft Matter , 16 ,2864–2872. Janssen, L. M. C. (2018). Frontiers in Physics , 6.Johnstone, D., Crout, P., Francis, C., Nord, M., Laulainen, J., Høg˚ as, S., Opheim, E., Prestat, E., Martineau, B., Bergh, T., Femoen, V. J., Cautaerts, N., ˚ Anes, H. W., Smeets, S., Ross, A., Broussard, J., Dagenborg, S., Huang, S., Collins, S., Furnival, T., Jannis, D., Hjorth, I., Jacobsen, E., Danaie, M., Herzing, A., Poon, T., Bjørge, R., Iqbal, A., Morzy, J., Doherty, T., Ostasevicius, T., Thorsen, T. I., von Lany, M., Tovey, R. & Vacek, P. (2025). pyxem/pyxem: v0.21.0. https://doi.org/10.5281/zenodo.15594715 Livet, F., Bley, F., Caudron, R., Geissler, E., Abernathy, D., Detlefs, C., Gr¨ ubel, G. & Sutton, M. (2001). Physical Review E , 63 , 036108. Lumma, D., Lurio, L. B., Mochrie, S. G. & Sutton, M. (2000). Review of Scientific Instruments ,
+
+71 , 3274–3289. Madsen, A., Fluerasu, A. & Ruta, B. (2020). Synchrotron Light Sources and Free-Electron Lasers: Accelerator Physics, Instrumentation and Science Applications , pp. 1989–2018. Madsen, J. & Susi, T. (2021). Open Research Europe , 1(24), 13015. Malik, A., Sandy, A. R., Lurio, L. B., Stephenson, G. B., Mochrie, S. G., Nulty, I. M. & Sutton, M. (1998). Physical Review Letters , 81 , 5832. Mendelev, M., Kramer, M., Ott, R., Sordelet, D., Yagodin, D. & Popel, P. (2009). Philosophical Magazine , 89 , 967–987. Nakazawa, K. & Mitsuishi, K. (2023). Microscopy , 72 , 446–449. Nakazawa, K. & Mitsuishi, K. (2025). Microscopy .Nakazawa, K., Mitsuishi, K., Konstantin, I., Kohara, S. & Tsuchiya, K. (2023). NPG Asia Materials ,
+
+16 .Nunes, T. G., Viciosa, M. T., Correia, N. T., Dan` ede, F., Nunes, R. G. & Diogo, H. P. (2014). 
+
+Molecular Pharmaceutics , 11 , 727–737. Percival, D. B. (1993). American Statistician , 47 , 274–276. de la Pe˜ na, F., Prestat, E., L¨ ahnemann, J., Fauske, V. T., Burdet, P., Jokubauskas, P., Furnival, T., Francis, C., Nord, M., Ostasevicius, T., MacArthur, K. E., Johnstone, D. N., Sarahan, M., Taillon, J., Aarholt, T., pquinn dls, Migunov, V., Eljarrat, A., Caron, J., Nemoto, T., Poon, T., Mazzucco, S., sivborg, actions user, Tappy, N., Cautaerts, N., Somnath, S., Slater, T., Walls, M. & pietsjoh (2025). hyperspy/hyperspy: v2.3.0. https://doi.org/10.5281/zenodo.14956374 Plimpton, S. (1995). Journal of Computational Physics , 117 , 1–19. Ragulskaya, A., Starostin, V., Zhang, F., Gutt, C. & Schreiber, F. (2024). Journal of Applied Crystallography , 57 , 1098–1106. Reinsberg, S. A., Qiu, X. H., Wilhelm, M., Spiess, H. W. & Ediger, M. D. (2001). Journal of Chemical Physics , 114 , 7299–7302. Richert, R. (2010). Physical Review Letters , 104 .Riechers, B., Das, A., Dufresne, E., Derlet, P. M. & Maaß, R. (2024). Nature Communications , 15 .32 Ruta, B., Chushkin, Y., Monaco, G., Cipelletti, L., Pineda, E., Bruna, P., Giordano, V. M. & Gonzalez-Silveira, M. (2012). Physical Review Letters , 109 .Scalliet, C., Guiselin, B. & Berthier, L. (2022). Physical Review X , 12 .Schiener, B., Chamberlin, R. V., Diezemann, G. & B¨ ohmer, R. (1997). Journal of Chemical Physics ,
+
+107 , 7746–7761. Schmidt-Rohr, K. & Spiess, H. W. (1991). Nature of Nonexponential Loss of Correlation above the Glass Transition Investigated by Multidimensional NMR . Tech. rep. . Sch¨ onhals, A. & Kremer, F. (2003). Theory of Dielectric Relaxation , pp. 1–33. Berlin, Heidelberg: Springer Berlin Heidelberg. Spangenberg, K., Hilke, S., Wilde, G. & Peterlechner, M. (2021). Advanced Functional Materials ,
+
+31 .Sutton, M., Laaziri, K., Livet, F. & Bley, F. (2003). Optics Express , 11 , 2268. Tanaka, H. (2025). Structural origin of dynamic heterogeneity in supercooled liquids. Vaerst, O., Wilde, G. & Peterlechner, M. (2023). Microscopy and Microanalysis , 29 , 1870–1878. Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson, A. R. J., Jones, E., Kern, R., Larson, E., Carey, C. J., Polat, ˙I., Feng, Y., Moore, E. W., VanderPlas, J., Laxalde, D., Perktold, J., Cimrman, R., Henriksen, I., Quintero, E. A., Harris, C. R., Archibald, A. M., Ribeiro, A. H., Pedregosa, F., van Mulbregt, P. & SciPy 1.0 Contributors (2020). Nature Methods , 17 , 261–272. Waasmaier, D. & Kirfel, A. (1995). Acta Crystallographica Section A , 51 , 416–431. Zhang, P., He, L., Besser, M. F., Liu, Z., Schroers, J., Kramer, M. J. & Voyles, P. M. (2017). 
+
+Ultramicroscopy , 178 , 125–130. Zhang, P., Maldonis, J. J., Liu, Z., Schroers, J. & Voyles, P. M. (2018). Nature Communications , 9.Zhang, X., Lou, H., Ruta, B., Chushkin, Y., Zontone, F., Li, S., Xu, D., Liang, T., Zeng, Z., Mao, H. K. & Zeng, Q. (2023). Proceedings of the National Academy of Sciences of the United States of America , 120 , e2302281120. 33
