@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-19",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T20:40:05",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/19/2608.17577v1-operando-multidimensional-spectroscopy-reveals-a-site-dependent-carrier-cooling-in-perovskite-solar-cells",
+      "section": "deep",
+      "title_en": "Operando multidimensional spectroscopy reveals A-site-dependent carrier cooling in perovskite solar cells",
+      "authors": "Edoardo Amarotti, Luca Bolzonello, Qi Shi, Sun-Ho Lee, Torbjörn Pascher, Donatas Zigmantas, Niek van Hulst, Nam-Gyu Park, Tönu Pullerits",
+      "date": "2026-08-18",
+      "pdf": "https://arxiv.org/pdf/2608.17577v1",
+      "score": "9.0",
+      "evidence": "在运行中的钙钛矿太阳能电池上进行操作态光谱测量",
+      "tldr": "工作状态下钙钛矿太阳能电池中光生载流子的多余能量耗散机制尚不清晰。本文采用光电流探测二维电子光谱术，对MAPbI3、混合FAMA及FAPbI3三种吸收层器件进行原位测量，直接跟踪高能态向带边的级联冷却过程。发现载流子冷却速率强烈依赖A位阳离子：MA基最慢、混合居中、FA基最快。该工作确立了作用探测多维光谱作为器件级超快探针，表明组成微调能显著改变电荷提取前的弛豫路径。",
+      "tags": "query:iscat",
+      "abstract_en": "Understanding how photogenerated carriers dissipate excess energy in operating perovskite solar cells is essential for connecting ultrafast photophysics with photovoltaic function and provides design principles for engineering next-generation cell architectures. Here we use photocurrent-detected two-dimensional electronic spectroscopy (PC-2DES) to resolve energy-dependent carrier relaxation in fully encapsulated, functioning metal halide perovskite solar cells. By comparing devices with identical architecture but different absorber compositions - MAPbI3, mixed FAMA, and FAPbI3 - we directly follow the redistribution of photoexcited carriers from initially populated high-energy states toward lower-energy band-edge states. The multidimensional photocurrent response reveals a cascade-like intraband cooling process whose rate depends strongly on absorber composition, with the slowest relaxation in MA-based devices, intermediate behaviour in mixed-cation devices, and fastest relaxation in FA-based devices. A reduced kinetic model incorporating phonon-mediated intraband scattering, supplemented by a phenomenological many-body contribution, captures the main energy-dependent trends. These results establish action-detected multidimensional spectroscopy as a device-level probe of ultrafast energy dissipation and show that subtle changes in perovskite composition can substantially reshape the carrier relaxation pathways that precede charge extraction.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/19/2608.10820v2-optical-memory-transport-imaging-a-transport-history-framework-for-finite-memory-tracers",
+      "section": "quick",
+      "title_en": "Optical-Memory Transport Imaging: A Transport-History Framework for Finite-Memory Tracers",
+      "authors": "Haichun Liu, Jerker Widengren",
+      "date": "2026-08-11",
+      "pdf": "https://arxiv.org/pdf/2608.10820v2",
+      "score": "6.0",
+      "evidence": "适用于iSCAT示踪研究的光学传输成像框架",
+      "tldr": "有限记忆光学示踪剂编码上游输运历史而非瞬时流速，传统速度反演不再适用。本文提出光学记忆输运成像框架，利用记忆核将内部状态弛豫与输运耦合，在结构化照明下测得的复数空间频率响应蕴含完整历史信息。其局部传递函数极限可简化为恒速反演，而Fisher信息分析进一步揭示了信息极限取决于记忆核形式。该工作为有限记忆输运成像提供了系统的设计原理与信息论指导。",
+      "tags": "query:iscat",
+      "abstract_en": "Finite-memory optical tracers encode upstream transport histories rather than instantaneous local flow velocities. We introduce optical-memory transport (OMT) imaging, a framework in which finite memory couples internal-state relaxation to transport through memory kernels. Under structured illumination, these histories are converted into measurable complex spatial-frequency response, whose local transfer-function limit yields constant-velocity inversion. Fisher-information analysis establishes kernel-dependent information limits and design principles for finite-memory transport imaging.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

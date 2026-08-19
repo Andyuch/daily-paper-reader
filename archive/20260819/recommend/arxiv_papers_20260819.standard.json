@@ -1,0 +1,98 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-19T20:37:44.813974+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [
+    {
+      "id": "2608.17577v1",
+      "source": "arxiv",
+      "title": "Operando multidimensional spectroscopy reveals A-site-dependent carrier cooling in perovskite solar cells",
+      "abstract": "Understanding how photogenerated carriers dissipate excess energy in operating perovskite solar cells is essential for connecting ultrafast photophysics with photovoltaic function and provides design principles for engineering next-generation cell architectures. Here we use photocurrent-detected two-dimensional electronic spectroscopy (PC-2DES) to resolve energy-dependent carrier relaxation in fully encapsulated, functioning metal halide perovskite solar cells. By comparing devices with identical architecture but different absorber compositions - MAPbI3, mixed FAMA, and FAPbI3 - we directly follow the redistribution of photoexcited carriers from initially populated high-energy states toward lower-energy band-edge states. The multidimensional photocurrent response reveals a cascade-like intraband cooling process whose rate depends strongly on absorber composition, with the slowest relaxation in MA-based devices, intermediate behaviour in mixed-cation devices, and fastest relaxation in FA-based devices. A reduced kinetic model incorporating phonon-mediated intraband scattering, supplemented by a phenomenological many-body contribution, captures the main energy-dependent trends. These results establish action-detected multidimensional spectroscopy as a device-level probe of ultrafast energy dissipation and show that subtle changes in perovskite composition can substantially reshape the carrier relaxation pathways that precede charge extraction.",
+      "authors": [
+        "Edoardo Amarotti",
+        "Luca Bolzonello",
+        "Qi Shi",
+        "Sun-Ho Lee",
+        "Torbjörn Pascher",
+        "Donatas Zigmantas",
+        "Niek van Hulst",
+        "Nam-Gyu Park",
+        "Tönu Pullerits"
+      ],
+      "primary_category": "physics.chem-ph",
+      "categories": [
+        "physics.chem-ph"
+      ],
+      "published": "2026-08-18T09:40:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.17577v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "Uses operando spectroscopy on functioning perovskite solar cells",
+      "llm_evidence_cn": "在运行中的钙钛矿太阳能电池上进行操作态光谱测量",
+      "llm_evidence": "在运行中的钙钛矿太阳能电池上进行操作态光谱测量",
+      "canonical_evidence": "在运行中的钙钛矿太阳能电池上进行操作态光谱测量",
+      "llm_tldr_en": "Operando multidimensional spectroscopy reveals A-site-dependent carrier cooling in fully encapsulated perovskite solar cells, linking ultrafast photophysics to photovoltaic function.",
+      "llm_tldr_cn": "针对运行状态下钙钛矿太阳能电池中光生载流子多余能量耗散机制不明的瓶颈，本文采用光电流探测的二维电子光谱，在全封装且工作的器件上直接追踪高能态向带边态的载流子重分布。通过对比不同A位组成的器件，揭示了A位依赖的载流子冷却行为，将超快光物理与光伏功能联系起来，为下一代电池结构设计提供原理性指导。",
+      "llm_tldr": "针对运行状态下钙钛矿太阳能电池中光生载流子多余能量耗散机制不明的瓶颈，本文采用光电流探测的二维电子光谱，在全封装且工作的器件上直接追踪高能态向带边态的载流子重分布。通过对比不同A位组成的器件，揭示了A位依赖的载流子冷却行为，将超快光物理与光伏功能联系起来，为下一代电池结构设计提供原理性指导。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "operando",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.10820v2",
+      "source": "arxiv",
+      "title": "Optical-Memory Transport Imaging: A Transport-History Framework for Finite-Memory Tracers",
+      "abstract": "Finite-memory optical tracers encode upstream transport histories rather than instantaneous local flow velocities. We introduce optical-memory transport (OMT) imaging, a framework in which finite memory couples internal-state relaxation to transport through memory kernels. Under structured illumination, these histories are converted into measurable complex spatial-frequency response, whose local transfer-function limit yields constant-velocity inversion. Fisher-information analysis establishes kernel-dependent information limits and design principles for finite-memory transport imaging.",
+      "authors": [
+        "Haichun Liu",
+        "Jerker Widengren"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics",
+        "cond-mat.soft",
+        "physics.bio-ph"
+      ],
+      "published": "2026-08-11T11:46:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.10820v2",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Optical transport imaging framework applicable to iSCAT tracer studies",
+      "llm_evidence_cn": "适用于iSCAT示踪研究的光学传输成像框架",
+      "llm_evidence": "适用于iSCAT示踪研究的光学传输成像框架",
+      "canonical_evidence": "适用于iSCAT示踪研究的光学传输成像框架",
+      "llm_tldr_en": "A transport-history imaging framework converts finite-memory optical tracer histories into complex spatial-frequency responses, enabling velocity inversion and information-limit analysis for transport imaging.",
+      "llm_tldr_cn": "针对有限记忆光学示踪物仅编码上游传输历史而非瞬时流速的问题，本文提出光学记忆传输成像框架，突破了传统成像对瞬时速度的依赖。该框架将内部态弛豫与传输通过记忆核耦合，在结构照明下把传输历史转换为可测量的复杂空间频率响应，并在局部传递函数极限下实现恒定速度反演。Fisher信息分析进一步建立了与记忆核相关的信息极限，为传输成像系统设计提供了理论准则。该方法有望指导基于光学示踪剂的材料传输过程研究。",
+      "llm_tldr": "针对有限记忆光学示踪物仅编码上游传输历史而非瞬时流速的问题，本文提出光学记忆传输成像框架，突破了传统成像对瞬时速度的依赖。该框架将内部态弛豫与传输通过记忆核耦合，在结构照明下把传输历史转换为可测量的复杂空间频率响应，并在局部传递函数极限下实现恒定速度反演。Fisher信息分析进一步建立了与记忆核相关的信息极限，为传输成像系统设计提供了理论准则。该方法有望指导基于光学示踪剂的材料传输过程研究。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}

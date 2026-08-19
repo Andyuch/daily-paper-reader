@@ -1,0 +1,298 @@
+Title: Optical-Memory Transport Imaging: A Transport-History Framework for Finite-Memory Tracers
+
+URL Source: https://arxiv.org/pdf/2608.10820v2
+
+Published Time: Fri, 14 Aug 2026 00:51:35 GMT
+
+Number of Pages: 8
+
+Markdown Content:
+## Optical-Memory Transport Imaging: A Transport-History Framework for Finite-Memory Tracers 
+
+Haichun Liu 1, ∗ and Jerker Widengren 1
+
+> 1
+
+Experimental Biomolecular Physics, Department of Applied Physics, KTH Royal Institute of Technology, S-106 91, Stockholm, Sweden 
+
+Finite-memory optical tracers encode upstream transport histories rather than instantaneous local flow velocities. We introduce optical-memory transport (OMT) imaging, a framework in which finite memory couples internal-state relaxation to transport through memory kernels. Under structured illumination, these histories are converted into a measurable complex spatial-frequency response, whose local transfer-function limit yields constant-velocity inversion. Fisher-information analysis establishes kernel-dependent information limits and design principles for finite-memory transport imaging. 
+
+Introduction — Flow imaging based on optical tracers is widely used in fluid dynamics, soft matter physics, and biological transport [1]. In many tracer-based imag-ing approaches, measured optical signals are implicitly treated as observables of the local instantaneous flow state, allowing local velocity fields to be reconstructed. Finite optical memory is ubiquitous in tracer systems [2]. Long-lived phosphorescence, delayed fluorescence, metastable excited states, and multistate photophysical processes all introduce finite temporal relaxation follow-ing optical excitation. For moving tracers with finite op-tical memory, the measured optical response depends on the excitation history accumulated along the upstream transport trajectory prior to detection. However, the role of finite tracer memory in determining the mea-sured transport response has remained comparatively un-explored. Our previous numerical investigations of pho-tophysical structured-illumination velocimetry (PP-SIV) incorporating memory effects showed that finite tracer memory can be converted into measurable spatial phase shifts under structured illumination [3], but a systematic transport theory for this encoding has been lacking. Here we introduce optical-memory transport (OMT) imaging, a general framework in which the measured op-tical response is fundamentally no longer an observable of the instantaneous local velocity field but instead re-flects the upstream transport history sampled during the tracer memory time. Periodically structured illumina-tion [4] provides a particularly direct implementation be-cause it converts transport-history responses into mea-surable complex spatial-frequency components. In this work we report three principal advances. (i) Starting from nonlinear photophysical rate equations, we derive an effective memory kernel that couples internal-state relaxation to advection and establish the correspond-ing trajectory-dependent complex OMT response, from which the local transfer-function description emerges as a controlled asymptotic limit. (ii) We formulate veloc-ity reconstruction as inversion of the complex OMT re-sponse and establish the corresponding information lim-its for the local transfer-function approximation through Fisher-information analysis, yielding a kernel-dependent figure of merit (FOM) for optimizing OMT imaging ex-periments. (iii) We show that the validity of the local transfer-function approximation is governed by a univer-sal dimensionless parameter, providing a quantitative va-lidity criterion for determining when the full trajectory-dependent OMT forward model must be retained for quantitative flow imaging. 
+
+Optical-memory transport (OMT) response theory —We consider a general tracer system, the internal pho-tophysical state of which is described by a vector of state populations n(t) under optical excitation I(t). The dy-namics may in general be nonlinear and are written as ˙n(t) = F [n(t), I (t)] , (1) where F includes arbitrary photophysical processes such as excitation, radiative decay, nonradiative relaxation, and multistate coupling. The measured optical signal is correspondingly given by S(t) = G[n(t)]. We first consider a stationary operating point un-der constant-intensity excitation I0, for which the sys-tem reaches a steady state n0 satisfying F (n0, I 0) = 0. A weak optical modulation is then introduced, I(t) = 
+
+I0 + δI (t), which induces a perturbation of the internal state, n(t) = n0 + δn(t). Linearizing the nonlinear rate equations around the operating point (detailed in Sup-plemental Material sec. S1) yields 
+
+δ ˙n(t) = A δn(t) + B δI (t), δS (t) = C δn(t), (2) where A = ∂F /∂ n and B = ∂F /∂I are the Jacobian matrices evaluated at ( n0, I0), and C = ∂G/∂ n |n0 .The resulting system is linear and time invariant (LTI) for sufficiently small perturbations, so that standard LTI system theory applies [5]. The optical response therefore admits a causal convolution form, 
+
+δS (t) = 
+
+Z ∞
+
+> 0
+
+h(τ ) δI (t − τ ) dτ , (3) where h(τ ) is the effective impulse-response kernel associ-ated with the operating point I0. Eq. (3) constitutes the arXiv:2608.10820v2 [physics.optics] 13 Aug 2026 2central reduction of the full nonlinear photophysical dy-namics: all microscopic nonlinearities are absorbed into the effective response kernel, while the measured modu-lation response remains linear in the small-signal limit. The explicit form of the memory kernel follows directly from the solution of the linear system, Eq. (2): 
+
+h(τ ) = 
+
+(
+
+CeAτ B, τ ≥ 0,
+
+0, τ < 0, (4) where eAτ denotes the matrix exponential of the Jaco-bian A, and the lower branch follows from causality. Sta-bility of the photophysical dynamics requires all eigenval-ues of A to have negative real parts. We now consider moving tracers advected through a spatially varying optical field I(r). For a tracer detected at position r and time t, the optical excitation experi-enced at an earlier time t − τ is determined by the up-stream trajectory of the tracer, r−τ ≡ r(t−τ ). The tem-poral response described by Eq. (3) therefore becomes a trajectory-dependent transport response, 
+
+δS (r, t ) = 
+
+Z ∞
+
+> 0
+
+h(τ ) δI (r−τ ) dτ , (5) so that the optical response at position r is determined by the excitation history sampled along the upstream trajectory r−τ , rather than by the instantaneous local flow state. For deterministic flow fields, the upstream trajectory is uniquely determined by the velocity field through 
+
+dr−τ
+
+dτ = −v(r−τ ), r0 = r. (6) The measured response therefore depends on the finite upstream history sampled during the memory time rather than solely on the instantaneous local flow velocity. The details of the complete derivation of the OMT framework are given in the Supplemental Material sec. S1. 
+
+Complex OMT response under structured illumina-tion — Periodically structured illumination provides a di-rect spatial frequency-domain implementation of OMT imaging. Without loss of generality, we consider a one-dimensional excitation grating I(x) = I0 + I1 cos( qx ), where q is the spatial modulation wavevector and I1 ≪ I0
+
+ensures that the small-signal response derived above re-mains valid. Substituting this excitation into the trajectory-dependent OMT response, Eq. (5), and using the fact that a single spatial Fourier component with wavevector 
+
+q produces a measured response that remains sinusoidal at the same spatial frequency, the response may be writ-ten in complex form as 
+
+δS (x) = I1 Re eiqx Heff (x) , (7) where 
+
+Heff (x) = 
+
+Z ∞
+
+> 0
+
+h(τ ) exp {iq [x−τ (x) − x]} dτ . (8) Eq. (7) is the fundamental readout equation of structured-illumination OMT imaging: it shows that while the emission remains spatially localized at the de-tection position x, its complex modulation coefficient is determined by the upstream transport history sampled along x−τ (x) and encoded through the optical-memory kernel. Eq. (8) therefore defines the trajectory-dependent complex OMT response, which serves as the central for-ward quantity throughout the OMT imaging framework. Since the trajectory-dependent OMT response Heff (x)is complex, Eq. (7) admits the equivalent polar represen-tation, 
+
+δS (x) = I1Aeff (x) cos[ qx − ϕeff (x)] ,Aeff = |Heff |, ϕeff = − arg Heff . (9) The complete derivation of the complex OMT response under structured illumination is detailed in Supplemental Material sec. S2. Under structured illumination, transport-history re-sponses are converted into experimentally measurable complex response coefficients. Their modulation ampli-tude determines the emission fringe contrast, whereas the phase specifies the spatial shift relative to the excitation grating, illustrated in Fig. 1a. 
+
+Local transfer functions of OMT imaging — The trajectory-dependent complex OMT response derived above applies to arbitrary deterministic transport. Aparticularly important limit is locally uniform transport, in which the tracer experiences an approximately con-stant velocity over the optical-memory time, so that the upstream trajectory is locally approximated by x−τ (x) = 
+
+x − vτ . Substituting this into the trajectory-dependent complex OMT response, Eq. (8), gives 
+
+Heff (x) = 
+
+Z ∞
+
+> 0
+
+h(τ )e−iqvτ dτ ≡ H(qv ),H(ω) ≡
+
+Z ∞
+
+> 0
+
+h(τ )e−iωτ dτ, 
+
+(10) where H(ω) is the ordinary one-sided transfer function of the optical-memory kernel, following the standard defini-tion for continuous-time LTI systems [5] (Supplemental Material, sec. S3). Locally uniform transport therefore converts the trajectory-dependent OMT response into the ordinary transfer function of the optical-memory ker-nel, evaluated at the transport frequency ω = qv to which tracer motion is mapped under structured illumination. For a single-exponential kernel h(τ ) = τ −1m e−τ /τ m ,where τm is the memory time (for emitters exhibiting single-exponential relaxation, the memory time corre-sponds to the conventional fluorescence or luminescence lifetime), the transfer function and its polar components are 
+
+H(ω) = 11 + iωτ m
+
+, A(Ω) = 1
+
+√1 + Ω 2 ,ϕ(Ω) = tan −1 Ω, Ω ≡ qvτ m,
+
+(11) 3transport-history observables: ,
+
+FIG. 1. OMT framework and complex response of optical-memory tracers under structured illumination. (a) Concept of the OMT framework. (b) Phase lag ϕ(Ω) and modulation amplitude A(Ω) as functions of the dimension-less transport-memory parameter Ω = qvτ eff , for three representative optical-memory kernels: single-exponential (single-exp) (black), bi-exponential (bi-exp) (red, with w1 = w2 = 0 .5, τ2/τ 1 = 4, Supplemental Material sec. S4), and UCNP ETU (green, with the dimensionless operating-point parameter r =1, Supplemental Material sec. S5) kernels, where q is the illumination wavevector, v the tracer velocity, and τeff the effective memory time of the optical-memory kernel. The UCNP ETU kernel is not restricted to the 0-90 ° phase range of positive exponential kernels and may exhibit phase excursions exceeding 180 °, owing to the negative contribution in its transfer function decomposition. (c) Amplitude–phase loci in the A − ϕ plane for the three representative kernels, where the single-exponential kernel satisfies A = cos( ϕ). (d) Representative raw OMT phasor trajecto-ries for the three representative kernels, where the single-exponential kernels trace the universal semicircle ( g − 12 )2 + s2 = 14 .
+
+with Ω the dimensionless transport-memory parame-ter. As Ω increases, the modulation amplitude decreases monotonically from unity to zero, whereas the phase in-creases monotonically from 0 to 90 ° (Fig. 1b). The single-exponential kernel provides the fundamen-tal reference case. More generally, finite-memory optical tracers may exhibit multiple relaxation processes, lead-ing to more complex optical-memory kernels. For an ar-bitrary normalized kernel, it is useful to introduce the effective memory time and the corresponding transport-memory parameter (Supplemental Material, sec. S4), 
+
+τeff =
+
+Z ∞
+
+> 0
+
+τ h (τ ) dτ, Ω ≡ qvτ eff , (12) which provide a common dimensionless transport scale for comparing different kernel families. For kernels lack-ing a single characteristic relaxation time, the transfer function is evaluated as a function of the transport fre-quency ω = qv , while the results are presented versus the transport-memory parameter Ω. We then compare the local transfer functions for three representative optical-memory kernels: a single-exponential kernel, a bi-exponential kernel, and a two-photon energy-transfer upconversion (ETU) kernel repre-sentative of lanthanide upconversion nanoparticles (UC-NPs) [6]. For the bi-exponential kernel (Supplemen-tal Material sec. S4), the modulation amplitude re-mains bounded between 0 and 1, while the phase re-mains within the range 0–90 ° (Fig. 1b), similar to the single-exponential case. Different relative amplitudes of the two exponential components nevertheless generate distinct transfer-function curves. By contrast, the ETU 4kernel (Fig. S1, Supplemental Material, sec. S5) exhibits qualitatively different behavior, where both the modula-tion amplitude and the phase are no longer constrained by the limits of positive exponential kernels (Fig. 1b), owing to its nonlinear energy-transfer dynamics. The polar representation ( A, ϕ ) provides an interesting complementary description of the same complex trans-fer function. For the single-exponential kernel, eliminat-ing the transport-memory parameter Ω yields the uni-versal trajectory A = cos ϕ in the amplitude-phase plane (Fig. 1c). For the bi-exponential kernel, different com-binations of the involved two relaxation times and their weights generate distinct trajectories in the amplitude-phase plane, but all lying inside the corresponding single-exponential envelope (Fig. 1c). In contrast, the ETU amplitude-phase trajectory extends beyond the ampli-tude and phase manifold accessible to positive exponen-tial kernels (Fig. 1c), owing to the non-convex structure of the ETU transfer function (Supplemental Material sec. S5). The same responses may equivalently be visualized in the phasor plane ( g = Re( H), s = −Im( H)), analogous to fluorescence lifetime phasor analysis [7], but with the position determined by the transport-memory parameter rather than fluorescence lifetime. Representative pha-sor trajectories for different kernel families are shown in Fig. 1d. The single-exponential response traces the universal semicircle ( g − 12 )2 + s2 = 14 and positive bi-exponential kernels remain inside it, whereas the non-convex ETU response can extend outside this region. Their geometric interpretation is discussed in more de-tail in Supplemental Material sec. S6. 
+
+Velocity inversion in OMT imaging — The preced-ing sections establish the forward model of OMT imag-ing. Under structured illumination, tracer transport his-tories are encoded into the trajectory-dependent com-plex OMT response. In the locally uniform transport limit, this response reduces to the local transfer func-tion of the optical-memory kernel. Velocity imaging therefore becomes an inverse problem in which the ex-perimentally measured complex OMT response, denoted by Hobs , is compared with the corresponding theoretical forward model. Experimentally, the complex response can be recovered from the excitation and emission pat-terns using several equivalent procedures, such as peak-displacement method, spatial phase fitting, quadrature fitting, or Fourier demodulation (Supplemental Material sec. S7). For the single-exponential optical-memory kernel, the local transfer function is analytically invertible, using ei-ther the phase or the modulation amplitude (Eq. (11)): 
+
+v = tan ϕqτ m
+
+= 1
+
+qτ m
+
+r 1
+
+A2 − 1. (13) As both observables originate from the same complex transfer function, they provide equivalent velocity esti-mates. For general optical-memory kernels, analytical inver-sion is generally unavailable because the velocity cannot be expressed explicitly in terms of analytical phase or amplitude relations. Nevertheless, as the forward model remains completely specified through the complex trans-fer function, velocity reconstruction can therefore be im-plemented via numerical inversion. For a prescribed ker-nel model, the measured complex response Hobs can be fitted to the corresponding theoretical transfer function, simultaneously utilizing both modulation amplitude and phase (Supplemental Material sec. S7). The local transfer-function inversion developed above applies only under locally uniform transport. For spa-tially varying flows, velocity reconstruction is performed by fitting the experimentally measured complex response directly to the trajectory-dependent OMT response de-scribed in Eq. (8) (Supplemental Material sec. S7). 
+
+Information limits and optimal operating conditions —The existence of an analytical or numerical velocity in-version does not imply uniform reconstruction accuracy. Even when the velocity is uniquely recoverable, the avail-able information depends strongly on the operating con-dition and on the sensitivity of the memory-kernel trans-fer function to velocity. We quantify this sensitivity using the Fisher information and the corresponding Cram´ er– Rao bound [8]. We model the demodulated complex response as 
+
+Hobs = H(v)+ n, where n is zero-mean complex Gaussian noise with equal quadrature variance σ2 (Supplemental Material sec. S8). Writing H = Ae −iϕ , the Fisher infor-mation for the scalar local velocity is 
+
+F (v) = 1
+
+σ2
+
+∂H ∂v 
+
+> 2
+
+= 1
+
+σ2
+
+" ∂A ∂v 
+
+2
+
++ A2
+
+ ∂ϕ ∂v 
+
+2#
+
+≡ FA(v) + Fϕ(v).
+
+(14) Eq. (14) retains both amplitude and phase information and constitutes the general Fisher-information expression for the local complex-response model considered here. For the representative kernels near their information-optimal operating ranges, the phase contribution is com-parable to or larger than the amplitude contribution and is generally more robust to intensity normalization (Sup-plemental Material sec. S8). We therefore use the phase-dominated approximation 
+
+F (v) ≃ Fϕ(v) = A2
+
+σ2
+
+ ∂ϕ ∂v 
+
+2
+
+, (15) while Eq. (14) remains the general result. With the photon-shot-noise normalization adopted (Supplemental 5Material sec. S8), 
+
+σ2 = 1
+
+N , F (v) ≃ N A 2
+
+ ∂ϕ ∂v 
+
+2
+
+, (16) where N is the detected photon number contributing to the demodulated local response. From the Cram´ er–Rao inequality Var(ˆ v) ≥ 1  
+
+> F(v)
+
+, where ˆ v denotes the velocity estimator, we obtain that 
+
+σv
+
+v ≥ 1
+
+A(Ω) |v ∂ϕ/∂v | √N , (17) where σv ≡ pVar(ˆ v), giving the photon-limited relative-precision bound for velocity estimation. Using Ω = qvτ eff 
+
+(with q and τeff fixed, so that v ∂ϕ/∂v = Ω dϕ/d Ω), Eq. (17) becomes 
+
+σv
+
+v ≥ 1
+
+A(Ω) |Ω dϕ/d Ω| √N . (18) For general kernels, the phase derivative is evaluated nu-merically with respect to the transport frequency ω = qv 
+
+(Supplemental Material sec. S8). Eq. (18) naturally identifies the dimensionless velocity-sensing FOM and the corresponding photon-shot-noise-limited relative precision (Supplemental Material sec. S8), FOM(Ω) = A(Ω) Ω dϕ dΩ , σv
+
+v ≥ 1FOM(Ω) √N .
+
+(19) For the single-exponential kernel, FOM SE (Ω) = Ω /(1 + Ω2)3/2, which vanishes at both small and large Ω: at small Ω, the phase is weakly sensitive to velocity, whereas at large Ω, the modulation amplitude is strongly attenu-ated. Their balance produces the optimum ΩSE opt = 1
+
+√2 , FOM SE max = 23√3 ≃ 0.385 ,σv
+
+v
+
+> SE min
+
+≃ 2.60 
+
+√N ,
+
+(20) (Fig. 2a and Supplemental Material sec. S8). Different kernel families generate distinct FOM land-scapes (Fig. 2a). For kernels without closed-form ex-pressions, the FOM is obtained numerically from the corresponding transfer functions (Supplemental Mate-rial, sec. S8) and presented using the normalized trans-port frequency Ω (Eq. (12)). For the representative bi-exponential kernel, the second relaxation process broad-ens and shifts the response but lowers the maximum FOM relative to the single-exponential reference. By contrast, numerical optimization of the UCNP ETU ker-nel gives FOM ETU max ≃ 0.725 when the sensitizer and emitter decay rates are approximately matched and in the weak-upconversion limit (Supplemental Material sec. S8). Varying the operating point r, related to excitation intensity, changes the FOM only weakly, from FOM max ≃
+
+0.556 at r = 0 .01 (near the strong-upconversion limit) to 
+
+≃ 0.575 at r = 0 .99 (near the weak-upconversion limit) (Supplemental Material sec. S8). The principal improve-ment therefore arises from the rate-ratio-dependent ETU kernel shape rather than from the operating-point pa-rameter r alone. The kernel-dependent FOMs translate directly into different velocity-precision floors (Fig. 2b): at its op-timal operating point, the optimized ETU kernel gives 
+
+σv /v |ETU min ≃ 1.38 /√N , corresponding to a 1.88-fold im-provement over the single-exponential floor of Eq. (20) at fixed detected-photon budget. This result provides a con-crete kernel-engineering target: matching the sensitizer and emitter decay rates enhances velocity information without increasing the photon budget. The kernel-dependent optimum also provides a direct structured-illumination design rule. For a target velocity 
+
+v and effective memory time τeff ,Λopt = 2πvτ eff 
+
+Ωopt 
+
+, (21) which reduces to ΛSE opt = 2π√2 vτ m for the single-exponential kernel. 
+
+Validity of the local transfer-function approximation —The preceding analysis established both the forward transfer function and the corresponding information lim-its under the assumption of locally uniform transport. We now determine the conditions under which this lo-cal transfer-function approximation remains valid and when the full trajectory-dependent OMT response must instead be retained. Eq. (8) shows that the optical response detected at po-sition x is determined by the excitation sampled along the upstream trajectory x−τ (x). Because the response kernel 
+
+h(τ ) has finite temporal support, only a finite segment of this trajectory contributes appreciably to the measured signal. This sampled trajectory segment constitutes the spatial manifestation of tracer optical memory. Using the effective memory time introduced in Eq. (12), we therefore define the characteristic memory length as the distance travelled by the tracer over the effective support of the response kernel, lm ∼ | v(x)| τeff ,and compare it with the distance over which the veloc-ity field varies appreciably along the upstream trajec-tory, quantified by the local streamline-variation scale 
+
+Lv (x) = |v(x)|/|dv/dx |x. The analysis in Supplemental Material sec. S9 predicts that the validity of the local transfer-function approximation is governed by the di-mensionless ratio 
+
+ε = lm
+
+Lv
+
+∼ τeff 
+
+dv dx . (22) Specifically, for ε ≪ 1 the tracer experiences approx-imately uniform transport conditions over the optical-610 2 10 1 10 0 10 1             
+
+> =qv eff
+> 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 FOM ( ) =  A (d /d )
+> opt = 1/ 2
+> (a)
+> 10 210 110 010 1
+> =qv eff
+> 10 0
+> 10 1
+> 10 2
+> ( v/v) N = 1/FOM
+> 2.60
+> 1.38
+> (b)
+> Single-exp Bi-exp UCNP ETU
+
+FIG. 2. Fisher-information analysis of OMT velocity estimation under the local transfer-function approximation. (a) Dimensionless velocity-sensing figure of merit, FOM(Ω) = A(Ω)Ω | dϕ/d Ω |, obtained from the optical-memory transfer function and plotted as a function of the transport-memory parameter Ω = qvτ eff , for three representative optical-memory kernels (single-exponential, bi-exponential, and optimized UCNP ETU). The vertical line indicates the single-exponential optimum Ω SE opt = 1 /√2. (b) Relative velocity precision floor (Cram´ er–Rao bound, CRB), √N σ v /v = 1 /FOM(Ω), as a function of Ω. The plotted minima are approximately 2.60 for the single-exponential kernel and 1.38 for the optimized UCNP ETU kernel in the weak-upconversion limit. The CRB is calculated from the corresponding transfer-function analysis and presented versus the transport-memory parameter. 
+
+memory time, and the trajectory-dependent OMT re-sponse asymptotically reduces to the local transfer func-tion; in contrast, for ε ≳ 1 the tracer samples substan-tially different velocities over the optical-memory time, and the measured response can no longer be represented by a single local transfer function because different por-tions of the upstream trajectory contribute differently to the accumulated optical-memory signal. To test this prediction, numerical simulations were performed to compare the velocity reconstructed using the local transfer-function approximation with that ob-tained by full trajectory-dependent OMT inversion (Sup-plemental Material sec. S9), quantified by the rela-tive velocity error ∆ v = |vapp − v|/v , where vapp de-notes the apparent velocity reconstructed using the lo-cal transfer-function inversion and v is the true local ve-locity. Fig. 3a shows that the full trajectory-dependent OMT inversion accurately recovers the prescribed veloc-ity field, whereas the local inversion becomes increas-ingly biased in regions where ε is large. Figs. 3b and 3c further show that the inversion errors obtained from different flow types, structured-illumination wavevec-tors, and representative optical-memory kernels all fol-low the same dominant ε scaling. This collapse demon-strates that the leading-order breakdown of the local transfer-function approximation is governed universally by ε, whereas kernel-specific differences enter through a kernel-dependent proportionality coefficient determined by frequency-weighted kernel moments (Supplemental Material sec. S9). The analytical origin of this univer-sal first-order scaling is derived in Supplemental Material sec. S9. The trajectory-dependent OMT response therefore provides the general forward model for finite-memory transport, whereas the local transfer function represents its controlled asymptotic approximation with a quanti-tatively defined validity range. 
+
+Discussion — The present theory establishes OMT imaging as a measurement framework in which the fun-damental observable is the transport history rather than the instantaneous local flow state. Unlike conventional motion blur or trailing effects, whose nonlocality origi-nates from the acquisition process itself, the transport-history dependence derived here arises from the physi-cal memory of the tracer. The measured optical signal therefore remains spatially localized at the detection co-ordinate while being determined by the upstream trans-port history sampled during the optical-memory time. OMT imaging therefore measures a complex transport-history response jointly determined by the flow field and the optical-memory kernel, rather than the instantaneous local velocity itself. Under locally uniform transport, the trajectory-dependent OMT response reduces systematically to the local transfer-function description, enabling quantita-tive velocity inversion and information-theoretic analy-sis. The dimensionless parameter ε = τeff |dv/dx |, com-paring the transport distance sampled during the optical-memory time with the characteristic streamline-variation length, separates two distinct operating regimes. For 
+
+ε ≪ 1, the local transfer-function approximation accu-rately describes the measured response, permitting ef-75 10 15                      
+
+> Position x[]
+> 1.00 1.25 1.50 1.75 2.00 2.25 2.50
+> Velocity  v [ / eff ]
+> UCNP ETU, conv-div flow (a)
+> vtrue (x)
+> Local transfer-function inversion Full trajectory-dependent OMT
+> 10 210 110 0
+> =eff |d v/d x|
+> 10 3
+> 10 2
+> 10 1
+> 10 0
+> Relative error  v
+> UCNP ETU kernel, three flow types (b)
+> Linear Conv-div Gaussian error
+> Median 75th pct.
+> 10 210 110 0
+> =eff |d v/d x|
+> 10 3
+> 10 2
+> 10 1
+> 10 0
+> Relative error  v
+> Conv-div flow, three kernels (c)
+> Single-exp Bi-exp UCNP ETU error
+> Median 75th pct.
+> 0.00 0.05 0.10 0.15 0.20 0.25
+> (x)
+
+FIG. 3. Validation of the local transfer-function approximation in OMT imaging. (a) Comparison between local transfer-function inversion and full trajectory-dependent inversion for a converging–diverging (conv-div) flow using the UCNP ETU kernel: true velocity v(x) (black), local transfer-function inversion (blue dashed), and full trajectory-dependent OMT inversion (red). Grey shading indicates ε(x) = τeff |dv/dx |. The local inversion becomes increasingly biased in regions of large ε,whereas the full trajectory-dependent inversion accurately recovers the prescribed velocity field. (b) Universal ε-scaling of the relative velocity error ∆ v for three representative flow types (linear, conv-div, and Gaussian) for the UCNP ETU kernel. (c) 
+
+Universal ε scaling for three representative optical-memory kernels (single-exponential, bi-exponential, and UCNP ETU) using the conv–div flow. The dashed line, ∆ v = cε , illustrates the universal O( ε) leading-order scaling; kernel-specific differences enter through a kernel-dependent proportionality coefficient (Supplemental Material sec. S9). 
+
+ficient local velocity inversion. When ε ≳ 1, how-ever, the accumulated upstream transport history can no longer be represented by a single local transfer function. Quantitative flow mapping nevertheless remains feasible through direct inversion of the trajectory-dependent for-ward model using a calibrated optical-memory kernel to-gether with an appropriate parametric flow description. The linear response formulation applies to both indi-vidual tracers and spatially uniform tracer ensembles. For ensemble measurements, the present analysis as-sumes that the tracer concentration is sufficiently uni-form that the measured spatial response is governed pri-marily by transport through the optical-memory kernel. More generally, spatial concentration heterogeneity can be incorporated into the forward model through an ap-propriate description of the concentration field, enabling quantitative transport analysis beyond the uniform-concentration approximation. For complex nonlinear tracers such as UCNPs, quan-titative OMT imaging does not require explicit identifi-cation of all microscopic rate constants. In practice, the operating-point-dependent complex transfer function can be calibrated directly as Hcal (qv ; I0) under known uni-form flow and subsequently used for velocity inversion at the same excitation operating point. The microscopic ETU model provides physical interpretation and guides kernel engineering, whereas the calibrated transfer func-tion serves as the practical forward model for imaging. In practical probe design, increasing the effective memory time may also alter the photon yield (slower excitation-emission cycling). Optimal performance may therefore require a joint optimization of transport infor-mation and photon statistics, rather than maximization of τeff alone. The present framework also places our previously pro-posed PP-SIV [3] on a rigorous theoretical foundation. PP-SIV implicitly operated in the local constant-velocity limit of the present trajectory-dependent formulation, corresponding to the asymptotic regime ε ≪ 1. Within the OMT framework, the previously proposed look-up inversion and full parametric fitting emerge naturally as the local transfer-function approximation and the full trajectory-dependent inversion, respectively. Finite optical memory has long been exploited, explic-itly or implicitly, in fluorescence spectroscopy and imag-ing utilizing the memory of the excited-state ( ∼ns) [2] or the memory of the long-lived dark-states (monitored via fluorescence blinking) [9–11]. The present work es-tablishes a unified transport-response framework that ex-tends these finite-memory concepts to quantitative trans-port imaging. Although the present derivation is motivated by non-linear photophysical rate equations, the resulting frame-work extends well beyond luminescent tracers. The resulting transport framework applies generally to any finite-memory observable advected through a spatially structured excitation field, irrespective of whether the memory originates from photophysical relaxation, chem-ical kinetics, or other finite-memory processes. The trajectory-integral formulation is not restricted to deterministic advection. Replacing deterministic trajec-tories by the corresponding stochastic propagators nat-8urally extends the theory to diffusive, dispersive, and more general stochastic transport processes. In this case, the OMT response would encode not only deterministic transport histories but also transport statistics, opening the possibility of imaging diffusion, anomalous transport, and other finite-memory transport phenomena within the same theoretical framework. The present work therefore establishes OMT as a gen-eral theoretical framework for finite-memory transport imaging, in which transport-history encoding, quanti-tative inversion, information-optimal measurement, and kernel engineering are unified within the same transport-response formalism. Structured illumination provides one particularly convenient implementation, but the un-derlying theory is independent of the specific excitation geometry. More broadly, the OMT framework provides a general strategy for designing finite-memory probes and imaging modalities that quantify transport through the controlled interplay between tracer memory and struc-tured excitation. OMT therefore establishes a general measurement framework in which finite tracer memory becomes a quantitative observable for transport imaging. 
+
+Acknowledgments — The authors used OpenAI Chat-GPT (GPT-5.6 Sol) and Anthropic Claude (Claude Son-net 5, accessed through Claude Code) during manuscript preparation as auxiliary tools for consistency checking, verification of mathematical derivations and numerical results, and refinement of scientific exposition. AI-assisted suggestions were critically evaluated and, where relevant, independently checked against the analytical derivations, numerical calculations, and source code by the authors. The authors take full responsibility for all scientific content and conclusions. H.L. and J.W. ac-knowledge financial support from the ˚ AForsk Foundation (23-322), the Carl Trygger Foundation (23-2635), and the Swedish Research Council (VR 2021-04556, 2025-05609). 
+
+Data availability — There are no publicly available re-search data or software supporting this manuscript. Re-quests for further information or data should be sent to the authors.
