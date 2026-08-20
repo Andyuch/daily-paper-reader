@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-20 <!--dpr-date:20260820-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/20/2608.18750v1-seeded-su11-interferometry-for-fourier-domain-optical-coherence-tomography" data-sidebar-item="{&quot;title&quot;: &quot;Seeded SU(1,1) interferometry for Fourier-domain optical coherence tomography&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.18750v1-seeded-su11-interferometry-for-fourier-domain-optical-coherence-tomography&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;种子SU(1,1)干涉仪用于傅里叶域OCT；干涉成像与灵敏度增强对iSCAT有借鉴意义&quot;}">Seeded SU(1,1) interferometry for Fourier-domain optical coherence tomography</a>
   * 2026-08-19 <!--dpr-date:20260819-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/19/2608.17577v1-operando-multidimensional-spectroscopy-reveals-a-site-dependent-carrier-cooling-in-perovskite-solar-cells" data-sidebar-item="{&quot;title&quot;: &quot;Operando multidimensional spectroscopy reveals A-site-dependent carrier cooling in perovskite solar cells&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.17577v1-operando-multidimensional-spectroscopy-reveals-a-site-dependent-carrier-cooling-in-perovskite-solar-cells&quot;, &quot;score&quot;: &quot;9.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;在运行中的钙钛矿太阳能电池上进行操作态光谱测量&quot;}">Operando multidimensional spectroscopy reveals A-site-dependent carrier cooling in perovskite solar cells</a>

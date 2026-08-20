@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-20",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T21:03:21",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/20/2608.18750v1-seeded-su11-interferometry-for-fourier-domain-optical-coherence-tomography",
+      "section": "quick",
+      "title_en": "Seeded SU(1,1) interferometry for Fourier-domain optical coherence tomography",
+      "authors": "Alejandra A. Padilla, Valentina Gacha, Daniel F. Urrego, Juan P. Torres",
+      "date": "2026-08-19",
+      "pdf": "https://arxiv.org/pdf/2608.18750v1",
+      "score": "6.0",
+      "evidence": "种子SU(1,1)干涉仪用于傅里叶域OCT；干涉成像与灵敏度增强对iSCAT有借鉴意义",
+      "tldr": "傅里叶域光学相干断层扫描（FD-OCT）在低增益下灵敏度不足，传统方案依赖单光子探测器。本文演示基于种子注入SU(1,1)干涉仪的FD-OCT，以1550nm宽带光探测多层样品，并从810nm光子通量重建深度分辨三维图像。在低参数增益区，种子注入有效增加光子通量，使普通光谱仪即可实现体积成像。分析表明，种子注入比增大参数增益更能提升灵敏度，为高灵敏低成本OCT提供新途径。",
+      "tags": "query:iscat",
+      "abstract_en": "We demonstrate Fourier-domain optical coherence tomography (FD-OCT) based on a seeded SU(1,1) interferometer. Multilayer objects are probed with broadband light centered at 1550nm, while depth-resolved 3D images are reconstructed from photon flux measurements centered at 810nm. We show that, in the low parametric-gain regime, seeding increases the photon flux, enabling volumetric imaging with a spectrometer rather than single-photon detectors. Our analysis further shows that, under the conditions considered, seeding provides a more effective route to sensitivity enhancement than increasing the parametric gain.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

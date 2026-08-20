@@ -1,0 +1,741 @@
+Title: Seeded SU(1,1) interferometry for Fourier-domain optical coherence tomography
+
+URL Source: https://arxiv.org/pdf/2608.18750v1
+
+Published Time: Thu, 20 Aug 2026 00:47:55 GMT
+
+Number of Pages: 15
+
+Markdown Content:
+# Seeded SU(1,1) interferometry for Fourier-domain optical coherence tomography 
+
+Alejandra A. Padilla, 1, ∗ Valentina Gacha, 1 Daniel F. Urrego, 1 and Juan P. Torres 1, 2 
+
+> 1
+
+ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels, Barcelona, Spain 
+
+> 2
+
+Department of Signal Theory and Communications, Universitat Politecnica de Catalunya, 08034 Barcelona, Spain 
+
+(Dated: August 20, 2026) We demonstrate Fourier-domain optical coherence tomography (FD-OCT) based on a seeded SU(1,1) interferometer. Multilayer objects are probed with broadband light centered at 1550 nm, while depth-resolved 3D images are reconstructed from photon flux measurements centered at 810 nm. We show that, in the low parametric-gain regime, seeding increases the photon flux, enabling volumetric imaging with a spectrometer rather than single-photon detectors. Our analy-sis further shows that, under the conditions considered, seeding provides a more effective route to sensitivity enhancement than increasing the parametric gain. 
+
+I. INTRODUCTION 
+
+Optical coherence tomography (OCT) is a three-dimensional imaging technique that provides high resolu-tion images of transparent and semi-transparent samples by exploiting optical coherence in an interferometer [1, 2]. The axial and transverse resolutions of OCT are indepen-dent. To obtain information in the transverse direction (plane perpendicular to the optical beam propagation), OCT focuses light to a small spot that is scanned across the sample. To obtain information in the axial direction (along the optical beam propagation), OCT light with a short coherence length that enables optical sectioning of the sample by measuring the interference patterns. Since its introduction in the early 1990s, OCT has evolved into a mature and widely used technology [3–5], with strong impact in biomedical imaging, most notably in ophthalmology for retinal diagnostics [6]. OCT has also been applied in many other fields, from material in-spection to art conservation [7]. Most modern OCT im-plementations rely on Fourier-domain optical coherence tomography (FD-OCT), where depth-resolved images are obtained by taking the Fourier transform of the spec-trum of the interference signal [8]. On the one hand, this approach avoids scanning the reference arm mirror, en-abling faster data acquisition compared to time-domain optical coherence tomography (TD-OCT) [9]. On the other hand, FD-OCT can provide a sensitivity enhance-ment compared to TD-OCT [10]. In parallel to new technological breakthroughs and new commercial applications, there is interest in exploring al-ternative approaches to OCT that can provide potential advantages in specific scenarios. The nonlinear process of spontaneous parametric down-conversion (SPDC) can be used to generate broadband light (hundreds of nm) with tunable central frequency [11], allowing OCT with axial resolutions of ∼ 1 μm. An active area of research is the development of OCT systems that are sensitive to  
+
+> ∗alejandra.padilla@icfo.eu
+
+the presence of specific molecules. One route towards this goal is the use of nonlinear processes such as second-harmonic generation [12] or coherent anti-Stokes Raman scattering (CARS) [13]. In recent years, there have been several experimental demonstrations of OCT based on two types of interfer-ometers: a Mandel-type induced coherence interferome-ter [14] and a Yurke-type SU(1,1) interferometer [15–17]. These two types of interferometers make use of optical parametric amplifiers at the input and output ports of the interferometer [18–20], instead of beam splitters, as in conventional interferometers. These interferometers are sometimes referred to as nonlinear interferometers [21]. There are two key motivations for exploring OCT based on SU(1,1) interferometers. First, the sample is probed with light at one wavelength, whereas the de-tected photons have a different wavelength, i.e., the photons that interact with the sample through reflec-tion/transmission are never detected. This principle has motivated the term ”imaging with undetected pho-tons ” [22] for referring to these imaging schemes. This enables the probing wavelength to be selected accord-ing to the optical properties of the sample, even when efficient detectors are unavailable in that specific spec-tral region. The detection wavelength can instead be chosen where efficient and easily accessible optical de-tectors exist. Nonlinear interferometers have been used for methane detection [23] by exploiting the strong ab-sorption peak at 3 .22 μm, while detection is performed at 848 nm. They have been used for Terahertz sensing [24], where the sample is probed at 1 .26 THz and 0 .47 THz, while detection is performed at 661 nm. The second motivation is that SU(1,1) interferome-ters can show quantum-enhanced sensitivity below the shot-noise limit, where the precision of estimation scales as ∼ 1/√n, where n is the number of photons prob-ing the sample, potentially reaching Heisenberg-limited precision in parameter estimation [25–28] where the sen-sitivity scales instead as ∼ 1/n . However, the actual realization of this potential advantage in experimental setups should take into account the detrimental effect of losses, restricting the sensitivity enhancement to selected arXiv:2608.18750v1 [physics.optics] 19 Aug 2026 2regions of parameter space [27]. Optical parametric amplifiers (OPAs), the defining el-ements of an SU(1,1) interferometer, are characterized by the parametric gain G, which depends on the charac-teristics of the pump beam and the nonlinear suscepti-bility χ(2) of the second-order nonlinear crystal. For CW pump powers of tens of milliwatts, the case of most ex-perimental implementations, it has been shown [29] that the parametric gain is typically very small, i.e. G ≪ 1. This regime is known as the low parametric gain regime. In this case, single-photon detectors are required, and the low photon flux leads to long acquisition times when high precision imaging is required. In order to increase the photon flux and reduce the acquisition time, two main approaches can be pursued. The first is to operate the OPAs in the high parametric gain regime ( G ≥ 1). However, this requires the use of a pulsed pump laser with high peak power, adding experi-mental complexity, cost, and technical challenges. OCT in the high parametric gain regime was demonstrated in 2020 [16], providing high photon flux rates and allow-ing the use of standard spectrometers for detection, in-stead of single-photon detectors or highly sensitive CCD cameras. The second alternative is to seed the SU(1,1) interferometer with an external laser to enhance pho-ton flux rates and parameter estimation sensitivity, with-out relying on high parametric gain. Imaging and spec-troscopy based on seeded SU(1,1) interferometers have been demonstrated [23, 30]. More recently, it has been shown that, for phase estimation, seeding can provide a metrological advantage in parameter estimation [31]. Here we demonstrate Fourier-domain Optical Coher-ence Tomography (FD-OCT) based on a seeded SU(1,1) interferometer in the low parametric gain regime. We ex-perimentally demonstrate the feasibility of this approach through axial and volumetric imaging of multilayer sam-ples, enabled by the increased photon flux provided by seeding. Beyond this practical advantage, we show that, under the conditions considered, seeding can provide a more effective route to sensitivity enhancement than in-creasing the parametric gain. In Section II, we describe the experimental implementation. Section III presents the results of the axial and volumetric images, while Sec-tion IV analyzes the sensitivity advantage of seeding. Section V summarizes the main conclusions of our work.  
+
+> II. EXPERIMENTAL SETUP
+
+The experimental implementation of the seeded SU(1,1) interferometer used for FD-OCT is shown in Fig. 1. The CW pump beam at λp = 532 nm, with a linewidth of 5 MHz, is focused using a lens (L 0) to a beam waist of w p = 75 μm. The beam waist is located at the center of a periodically poled lithium niobate (PPLN) crystal with length L = 1 mm. The polarization of the pump beam is controlled using a polarizing beam split-ter (PBS) and a half-wave plate (HWP). Signal s1 and idler i1 photons are generated via non-degenerate type-0 parametric down-conversion, with central wavelengths of 
+
+λs = 810 nm and λi = 1550 nm, respectively. Since the operation of the interferometer depends on the parametric gain of the nonlinear interaction, we esti-mate the gain under our experimental conditions. For a narrowband CW pump beam, the parametric gain of the nonlinear process can be estimated as [29, 32] 
+
+GCW =
+
+" ωsωi
+
+χ(2) 2 Pm
+
+8ϵ0c3npnsniAef f 
+
+#1/2
+
+L (1) where Pm is the mean power of the CW pump, Aef f =2πw2 
+
+> p
+
+is the effective area, χ(2) is the second-order sus-ceptibility of the nonlinear crystal, ωp,s,i are the central angular frequencies of all waves involved, and np,s,i are the corresponding refractive indices obtained from the Sellmeier equations in Ref. [33]. Using the experimental parameters of our setup [pump beam power: 3.5 mW, nonlinear crystal temperature: 125 ◦C, and χ(2) = 14 pm/V], Eq.(1) yields GCW ∼ 7 × 10 −5. The system therefore operates in the low parametric gain regime. After the first pass through the nonlinear crystal, the pump, signal, and idler photons are separated using dichroic mirrors DM 1 and DM 2. The pump and signal photons are reflected back into the nonlinear crystal by mirrors M p,s mounted on translation stages (TS), allow-ing the control of their phases before reentering the crys-tal. Meanwhile, the idler photons illuminate the sample, which is also mounted on a translation stage for axial and transverse scanning. The lenses L 1 = 400 mm and L2 = 100 mm ensure mode matching of the returning photons in each of the arms of the interferometer and provide a focused spot size of ≈ 18 .5 μm in the sample plane. The reflected pump, signal, and idler photons are re-combined in the nonlinear crystal, where the process of parametric amplification generates new signal-idler pairs (s2, i2). The output signal photons s2 are separated from the pump by DM 3 and DM 4, coupled into a single-mode fiber, and spectrally filtered by filter F 2 to suppress resid-ual pump power and background light. The setup can be switched between seeded and un-seeded configurations by turning on or off a superlumi-nescent diode (SLD) centered at 1550 nm, with a spectral width of 40 nm, determined by the bandwidth of fre-quency filter F1. Supplement 1 compares the spectra of the SPDC photons in the unseeded configuration and the spectrum of the SLD. Although their central wavelengths differ slightly, they exhibit a strong spectral overlap, re-sulting in a smooth Gaussian-like spectrum. This can be explained by the Gaussian product theorem [34], that states that the overlap of two Gaussian functions with different widths and centers is still a Gaussian function. In the unseeded configuration, detection of the ex-tremely low photon flux-rate of signal photons requires the use of a monochromator and a single-photon count-ing module (SPCM), with data acquisition performed 3Pump Seed PBS HWP L DM PPLN DM DM L LMLLLLMSample TS DM LLFLLFCollimator PC SLD FPGA SPCM Monochromator SMF Spectrometer p: 532nm s: 810nm i: 1550nm 0 3 1 2 1 22112412ps221Isolator and Att . 1Detection for the unseeded configuration     
+
+> FIG. 1. Experimental setup to demonstrate Fourier-domain optical coherence tomography using a seeded SU(1,1) interfer-ometer. Signal ( s1) and idler ( i1) photons are generated via non-degenerate parametric down-conversion. The idler photons probe the sample. Photons reflected from the sample, together with the reflected pump ( p) and signal photons, are re-injected into the nonlinear crystal. The interferometer can operate in two configurations: (a) unseeded, where detection is performed using single-photon detectors, and (b) seeded, where a broadband superluminescent diode (SLD) increases the photon flux rate, enabling detection with a spectrometer. PBS: polarizing beam splitter; HWP: half-wave plate; DM: dichroic mirror; L: lens; F: frequency filter; M: mirror; TS: translation stage; SPCM: single-photon counting module; PC: polarization controller; and SMF: single mode fiber.
+
+using a field-programmable gate array (FPGA). In the seeded configuration, light from the SLD is injected into the interferometer. Back-reflections are suppressed us-ing a fiber isolator, while a polarization controller (PC) and variable attenuators (Att.) adjust the polarization and power. Lenses L 1 and L 2 in the seed path provide the required mode matching between seeding light and the pump beam at the nonlinear crystal. The increased signal photon flux provided by seeding enables detection with a spectrometer and real-time acquisition of spectral interferograms for Fourier-domain reconstruction of the depth-resolved OCT signal. In FD-OCT based on an SU(1,1) interferometer, the spectrum of the output signal photons s2 is measured. In Supplement 2 we derive in detail the theoretical ex-pression of the spectrum of the output signal photons as a function of the experimental parameters and the sought-after frequency-dependent reflectivity ri(Ω) of the sam-ple. Accurate reconstruction of the depth profile from this spectrum requires the optical path-length difference between the interferometer arms to lie within a specific range, determined by the source bandwidth and the spec-tral resolution of the detector. It is shown in [16], and derived in detail in Supplement 3, that the correct oper-ation of FD-OCT requires 
+
+λ2
+
+> s
+
+∆λs
+
+≪ ∆L + Ng L ≪ λ2
+
+> s
+
+δλ s
+
+(2) Here λs is the central wavelength of signal photons, ∆ λs
+
+is their bandwidth, δλ s is the spectrometer resolution, L
+
+is the nonlinear crystal length, ∆ L is the optical path-length difference between the signal and idler arms of the interferometer, and Ng = ng,s − ng,i is the difference between the group indices of the signal and idler pho-tons in the nonlinear crystal. Since the pump beam is a narrowband CW source, we have λ2
+
+> s
+
+/∆λs = λ2 
+
+> i
+
+/∆λi.In our experiments, λs = 810 nm, ∆ λs = 17 .4 nm, and the spectrometer resolution is δλ s = 0 .36 nm. Using the Sellmeier equations, ns,i , we obtain that Ng L = 77 .6 μm. Therefore, the optical path-length difference, ∆ L, con-trolled by a translation stage, must satisfy 40 μm ≪
+
+∆L + Ng L ≪ 1.72 mm. The left inequality ensures that the spectral fringes are sufficiently dense to encode depth information. In our implementation, the group-delay off-set Ng L already exceeds the lower bound, so this con-dition is automatically fulfilled. Consequently, the ex-perimental alignment consists of adjusting ∆ L to keep the total delay below the upper bound, ensuring that the fringe spacing remains resolvable by the spectrometer.   
+
+> III. EXPERIMENTAL RESULTS A. Axial scan of multilayer samples using seeding
+
+To validate the performance of the seeded SU(1,1) in-terferometer for OCT, we first measured uncoated glass samples with different thicknesses. At the idler wave-length (1550 nm), uncoated glass reflects approximately 4% of the incident light per interface, so the visibility 42n d 21 2n dair                            
+
+> (c) (b)
+> Axial distance (mm) Fourier transform  ( )
+> (a)
+> d =172 μmd =146 μmd =109 μm
+> d =173 μmd =103 μm231g2n d 3g2n d g2n d g0.00 0.0 0.5 1.0 1.5 0.0 0.5 1.0 1.5 0.0 0.5 1.0 1.5 0.25 0.50 0.75 1.00 1.25 1.50 1.75
+> FIG. 2. Fourier transform I(z) of the spectrum signal photons for single-layer and multilayer glass samples using a seeded SU(1,1) interferometer. Peaks correspond to reflections from refractive-index discontinuities within the samples. The reported thicknesses dare extracted from the peak separations using ∆ z= 2 ngd, with n g= 1 .5. Manufacturer-specified thicknesses are: (a) 170 μm, (b) 130 −160 μm, and (c) multilayer structure of 85 −115 μm glass, 130 −160 μm air gap, and 85 −115 μm glass. Insets show schematic representations of the samples.
+
+of the interference pattern is highly reduced. In the low parametric gain regime, with no seeding, the low pho-ton flux rates typically require the use of single-photon sensitive detection schemes. Seeding the interferometer increases the detected photon flux, enabling spectral ac-quisition with a spectrometer instead of single-photon de-tection. For the measurements described here, the pump power is 3 .5 mW, the seed power is 20 mW and the ac-quisition time is 100 μs. Figure 2 shows the reconstructed axial scans (A-scans). At each measurement point, two spectra, S(λs), were recorded with a relative phase shift of π. Their subtrac-tion suppresses the DC contribution and the autocorre-lation terms, leaving only the interference signal associ-ated with the reflections from the sample. The resulting spectrum is rewritten as a function of the wavenumber 
+
+k = 2 π/λ . Considering the Jacobian of the transfor-mation, we obtain S(k) = (2 π/k 2) S (λ). The spectrum is then resampled to obtain a function S(k) with equally spaced k-values. Finally, we obtain the Fourier transform of I(z) = F [S(k)] = R dk S (k) exp ( ikz ). In FD-OCT, the detected signal amplitude decreases with increasing optical path difference due to the finite spectral resolution of the detection system. This effect, known as sensitivity decay , leads to a systematic attenu-ation of deeper features in the reconstructed depth pro-file [10]. In Supplement 4 we describe the method to correct for the sensitivity decay . We will apply the cor-rection to all OCT scans presented here. The function I(z), plotted as a function of the axial distance z, is shown in Fig. 2. Each peak corresponds to an optical interface arising from refractive-index disconti-nuities within the sample. The distance ∆ z between the positions of each peak encodes the optical path length dif-ference ∆ z = 2 ng d, where d is the thickness of the layer and ng is the group index of the material that makes the layer. Since ng ≈ 1.5, the shape of I(z) enables recon-struction of the internal layer composition of the sample. Fig. 2(a) and (b) correspond to two single-layer glass samples with different thickness, with nominal values of 172 μm and 146 μm. I(z) exhibits two dominant peaks corresponding to the front and back surfaces of the single-layer sample. In Fig. 2(c) we consider two glass samples separated by a distance of 173 μm, which corresponds to a multilayer sample with three layers. We observe four peaks that correspond to reflections from the front and back surfaces of each glass layer, separated by an air gap. Our results are in good agreement with manufacturer specifications. These experimental results validate the ability of the seeded SU(1,1) interferometer to resolve axial structures in weakly reflecting transparent media. 5z =126 μm z =144 μm z =162 μm z =180 μm                
+
+> 1mm z =-18 μmz =0 μmz =18 μmz =36 μm10.8 z =54 μmz =72 μmz =90 μmz =108 μm0.6 0.4 0.2 00Normalized intensity (a.u.)
+> (a) (b) (c)
+> z-axis ( μm) 50 0100 150 200 250 y-axis (mm) 753x-axis (mm) 75311
+> FIG. 3. Volumetric reconstruction of a 170 μm thick glass sample with a 300 nm aluminum pattern deposited on the top surface, measured with a seeded SU(1,1) interferometer. (a) Cross-sectional view of the reconstructed volume, showing the strong reflections from the aluminum and weaker reflections from the glass surface. (b) Photograph of the sample. (c) Three-dimensional reconstruction obtained by stacking the A-scans I(z).
+> B. Volumetric OCT imaging with a seeded SU(1,1) interferometer
+
+We now demonstrate volumetric FD-OCT imaging us-ing the seeded SU(1,1) interferometer. The sample con-sists of a 170 μm thick glass layer with a 300 nm alu-minum pattern deposited on the top surface (see Supple-ment 5 for fabrication details). The pump and seed pow-ers are 3 .5 mW and 20 mW, respectively. The beam is focused onto the sample and raster-scanned with 0 .2 mm steps in both transverse directions. At each position, the signal spectrum is recorded and Fourier transformed to obtain an A-scan I(z). Stacking all A-scans produces a three-dimensional reconstruction of the sample. Figure 3(a) shows a cross-sectional view of the recon-structed volume. The plane z=0 is chosen to coincide with the maximum of the first peak of the A-scan, cor-responding to the front surface of the sample, where the aluminum pattern produces a strong reflection re-vealing the letters QEL. At 1550 nm, aluminum reflects approximately 97% of the light, compared to 4% of un-coated glass, resulting in high-contrast reflection between coated and uncoated regions. A second peak appears at 
+
+z ≈ 180 μm , corresponding to the back surface of the glass sample. Since no aluminum is present at this interface, the letters appear as regions of reduced intensity. Figure 3(c) shows the three-dimensional reconstruction obtained by stacking the reconstructed A-scans. A cus-tom color map was designed to highlight the weak reflec-tions from the glass and the strong reflections given by the aluminum pattern. The gradual fading of the QEL pattern along the z axis reflects the Gaussian-shaped axial response of I(z). The displayed axial range ex-tends beyond the physical sample to show the full recon-structed response. A photograph of the sample is shown in Fig. 3(b) for reference.These results demonstrate that the seeded SU(1,1) interferometer enables true volumet-ric OCT imaging while preserving sufficient contrast to distinguish highly reflective metallic features from weakly reflective transparent interfaces.  
+
+> C. The effect of seeding on photon flux rates and image acquisition time
+
+To quantify the effect of seeding on the photon flux rates and image acquisition time, we perform FD-OCT using a silver mirror as a single-layer sample. We com-pare the signal spectrum obtained with and without seed-ing under otherwise identical experimental conditions. The signal spectrum at 810 nm was recorded using a monochromator and detected with a SPCM. The pump power was fixed to 9 .2 mW for all measurements. For the seeded configuration, the seed power is set at 12 μW. Measurements are performed for different acquisition times, Td= 100 ms, 250 ms, 500 ms, 1s. For each acquisi-tion time, the spectra are recorded sequentially with the seed on and off, ensuring identical experimental condi-tions. Fig. 4(a) shows the measured signal spectra for both configurations. The top row compares the seeded and unseeded measurements, while the bottom row shows a magnified view of the unseeded spectra. 6Axial distance ( μm) Axial distance ( μm) Axial distance ( μm) Axial distance ( μm) Wavelength (nm) Singles (kHz) Wavelength (nm) Wavelength (nm) Wavelength (nm) seed seed no seed 
+
+T = 100ms T = 250ms d T = 500ms d T = 1s dd(a) (b) 
+
+no seed   
+
+> Fourier transform  ( )
+> FIG. 4. Comparison of signal spectra and A-scans when a silver mirror is used as sample. We consider a seeded (orange) and unseeded (purple) SU(1,1) interferometer for different acquisition times Td. (a) Raw signal spectra at 810 nm. The top row shows a comparison between the two configurations, and the bottom row shows a magnified view of the unseeded signal. (b) Corresponding A-scans (Fourier transforms) of the spectra shown in (a). The position of the single peak corresponds to the optical path difference between the signal/idler interferometer arms, mapping the mirror position in FD-OCT.
+
+A clear increase in the detected photon flux rate is ob-served when the interferometer is seeded. For all acquisi-tion times considered, the seeded configuration yields an increase of approximately one order of magnitude com-pared to the unseeded case. In the absence of seeding, increasing Td leads to a proportional increase of both the signal, while the seeded configuration provides a signifi-cantly higher signal level even for short acquisition times. The corresponding A-scans obtained from the Fourier transform of the spectra are shown in Fig. 4(b). As ex-pected, for a mirror sample, a single peak is observed, and its position corresponds to two times the optical path difference between the signal/idler interferometer arms. In the seeded configuration, the mirror position can be already retrieved for the shortest acquisition time, 
+
+Td = 100 ms. In contrast, under the same experimental conditions, the unseeded configuration requires longer ac-quisition times to achieve a comparable visibility. These results demonstrate that even a low power seed substan-tially increases the detected photon flux rates, enabling faster detection.  
+
+> IV. COMPARISON OF ROUTES FOR SENSITIVITY ENHANCEMENT IN SU(1,1) CONFIGURATIONS
+
+In Supplement 6, we show in detail how to calculate the precision with which the reflectivity Ri of s single layer sample can be estimated when we measure the flux rate of signal photons s2. For the sake of simplicity, we make use of the single-mode approximation. For a CW pump, the number of signal photons s2 detected during an ac-quisition time Td can be written as SCW = ⟨Ns2 ⟩ ∆f T d,where ⟨Ns2 ⟩ is the spectra flux density (photons/s/Hz) obtained in the single-mode approximation and ∆ f is the effective detection frequency bandwidth [35]. The precision of parameter estimation can be obtained as σCW = σ/ √∆f T d, where 
+
+σ =
+
+pVar ( Ns2 )
+
+∂⟨Ns2 ⟩/∂R i
+
+(3) is the precision obtained in the single mode approxi-mation (see Supplement 6). For the case of a pulsed 7Mean pump power P (mW) 
+
+0
+
+# 10 10 10 10 
+
+246
+
+> Idler photon flux rate (photons/s)
+
+mcw 
+
+# 32.5 21.5 10.5 00 20 40 60 80 100 Parametric gain  G 
+
+> FIG. 5. Parametric gain (left axis) and generated photon flux rate of idler photons (right axis) as function of mean pump power.
+
+pump beam, one can obtain Sp = ⟨Ns2 ⟩ D ∆f T d and 
+
+σp = σ/ √D ∆f T d where D is the duty cycle of the pulsed laser [35]. The simplest configuration for OCT based on a non-linear interferometer uses a CW pump without seeding of signal/idler photons. According to Eq.(1), for pump powers of up to tens of mW, this implies that this config-uration works in the low parametric gain regime. OCT in this regime has been demonstrated using a Mandel-type induced coherence configuration [14], as well as a Yurke-type SU(1,1) interferometer in both the time domain [15] and Fourier-domain [17]. To improve the sensitivity and reduce the acquisition time, the flux rate of idler photons that probe the sample must be increased. One option is to increase the pump beam power to values of many hundreds of milliwatts while remaining in the low parametric gain regime. For example, one can achieve signal/idler flux rates of up to 1.5 μW in a bandwidth of ∼ 30 nm [36]. However, this approach requires a high power pump laser and might not be suitable for nonlinear crystals with a lower damage threshold. Another option is to work in the high parametric gain regime. However, reaching this regime with the same mean pump power requires a pulsed laser instead of a CW pump. When using a pulsed pump laser, the parametric gain Gp is related to the CW gain GCW by 
+
+Gp = GCW /√D, where GCW is given by Eq.(1) and 
+
+D = fr Tp is the duty cycle of the pulsed laser. In [16], they demonstrated Fourier-domain OCT in an SU(1,1) interferometer in the high parametric gain regime, with a gain of Gp = 1 .7, generating 1 .6 pW of idler photons. The PPLN crystal was pumped with a Nd:YAG laser generating pulses of duration Tp = 18 ps and beam waist of 40 μm, with a repetition rate of fr = 1 kHz. For these experimental values, and for the same values of Pm, there is an enhancement of the parametric gain in the pulsed case over the CW case of 1 /√D ∼ 7400. The parametric gain can also be increased by using a longer nonlinear crystal. However, high resolution OCT requires the use of large bandwidths, and it is well known that the bandwidth is reduced when increasing the non-linear crystal length. Fig. 5 shows the parametric gain and the flux rate of idler photons probing the sample achievable for pump mean powers of up to 100 mW. No-tice that under these conditions, one can achieve para-metric gains of up to GCW = 2 .5, and generate idler photon flux rates of up to 10 6 photons/s. These considerations motivate an alternative route. OCT in a seeded SU(1,1) interferometer working in the low parametric gain regime allows to increase the flux rate of idler photons probing the sample, and therefore the sensitivity of parameter estimation, while at the same time using easily accessible CW lasers for pumping and 80 10 20 30 40 50 60 70 80 90 100 
+
+Mean idler power (mW) 
+
+10 -6 10 -5 10 -4 10 -3 10 -2 
+
+> Precision of estimation  cw
+
+0 2 4 6 8 10 
+
+Mean idler power (f 
+
+10 -4 10 -2 10 010 2
+
+> Precision of est.  p
+
+Unseeded case 
+
+W)                     
+
+> FIG. 6. Comparison of the precision in the estimation of the reflectivity Rifor two SU(1,1) configurations. The red curve shows the precision of estimation σcw corresponding to a seeded configuration in the low parametric gain, where we change the CW seed power and keep constant the CW pump power. The parametric gain is G= 10 −4.The blue curve shows the precision of estimation σpcorresponding to an unseeded configuration, where we change the mean pump power of the pulsed laser source. In both cases, we plot the sensitivity as function of the flux rate of idler photons probing the sample. Main panel: estimation precision, σ, as a function of the idler optical power probing the sample. The dashed line in the inset shows the threshold minimum precision than can be reached in the high parametric gain regime. Parameters: Ri= 0 .1, Rs= 0 .8, and
+> Ts= 0 .8. We consider a detection bandwidth of ∆ λs= 10 nm.
+
+seeding with up to a few mW of power. A question that naturally arise is if the use of seeded SU(1,1) interfer-ometer offers, apart from a practical advantage for its 
+
+easiness of experimental implementation, a fundamental advantage, even in principle, when compared with going to the high parametric regime. Figure 6 compares the best precision, i.e., the min-imum value of σcw and σp, that could be achieved in the estimation of the reflectivity Ri using one of two strategies: i) increasing the mean power of the seed in an SU(1,1) interferometer working in the low paramet-ric regime (red curve) and ii) increasing the mean pump power of a pulsed laser source in an unseeded SU(1,1) in-terferometer for reaching the high parametric gain regime (blue curve in the inset). The red curve considers a con-stant parametric gain of Gcw = 10 −4 and it starts at 
+
+|α|2 = 0 (green dot), corresponding to the seeded config-uration, while the blue curve corresponds to the unseeded configuration, and begins at Gp = 10 −4 (green dot in the inset). The comparison shows that seeding, even at the most fundamental level, provides better precision in the esti-mation of the reflectivity Ri. Increasing the seed gen-erates higher flux rates of the idler photons probing the sample and always provides a sensitivity advantage. Us-ing Eq. (29) of Supplementary 6, we see that the sensi-tivity scales as σCW ∼ 1/p|α|2∆f T d, where |α|2∆f is the flux rate of seed photons probing the sample with an effective bandwidth ∆ f . In contrast, increasing the parametric gain alone (no seeding) leads to saturation of the achievable sensitivity (orange dashed curve in the in-set of Fig. 6). The sensitivity for large gains saturates to the constant value σp = σmin /√D∆f T d, where σmin is given by Eq. (S30) in Supplementary 6 and D is the duty cycle of the pulsed pump laser. Therefore, while both strategies increase the photon flux probing the sample, only seeding provides a continuously improving sensitiv-ity under the conditions considered.  
+
+> V. CONCLUSIONS
+
+We have demonstrated experimentally a Fourier-domain OCT imaging system based on a seeded Yurke-type SU(1,1) interferometer. The main advantage of this OCT configuration is that it allows to use optimum fre-9quency ranges for probing the sample and for the de-tection stage. This opens many possibilities, especially when there are no efficient or easy-to-use detectors at the frequency range used for probing the sample. This is a severe limiting factor in standard OCT configurations. Our experiments join the group of experiments that demonstrate OCT based on nonlinear interferometers with different configurations: time-domain OCT in a Mandel-type induced coherence interferometer [14], time-domain [15] and Fourier-domain [17] OCT in a Yurke-type SU(1,1) interferometer, and Fourier-domain OCT in a Yurke-type SU(1,1) interferometer in the high para-metric gain regime [16]. One question that naturally arise is what is it the op-timum configuration to do high-resolution OCT, in both the transverse and longitudinal directions, with short de-tection times. For this, one needs to do Fourier-domain OCT [9, 10] and to enhance the flux rate of idler pho-tons probing the sample under consideration. The flux rate of idler photons can be increased going to the high-parametric regime. From a fundamental perspective, this regime can potentially allow going beyond the Shot-noise limit of sensitivity, although losses, most of the times un-known with precision in real experimental setups, should be considered to determine under what conditions this potential advantage can be actually realized in experi-ments [27]. From a practical point of view, one might be more in-terested in enhancing the sensitivity of OCT, and do-ing it using an easily accessible experimental setup. We have demonstrated that the use of a seeded SU(1,1) in-terferometer fulfills both conditions. On the one hand, a seeded interferometer show better precision in the estima-tion of the value of the reflectivity of an object. Indeed, we have shown that increasing the value of the parametric gain in an unseeded configuration does not provide any sensitivity enhancement beyond a certain value. This is not the case with a seeded configuration, where in-creasing the power of the seed laser always provides a sensitivity advantage. On the other hand, we have shown that a seeded con-figuration can provides sensitivity enhancements using easily available CW lasers delivering average powers of up to a few tens of mW. On the contrary, reaching simi-lar values of the average flux rate in the high parametric regime, it requires the use of a cumbersome and expen-sive pulsed laser source. We have shown that OCT with an unseeded configu-ration generates low photon flux rates, which needs to be detected using single photon counting modules. As a consequence, long detection times are needed to obtain high resolution and high quality images. In contrast, seeding with a broadband laser increases the stimulated photon flux rate, while keeping the axial resolution of the OCT system. The higher photonic flux rates enables spectrometer-based detection and substantially reduces the acquisition time required to retrieve depth-resolved information from weakly reflective samples.  
+
+> VI. ACKNOWLEDGMENTS
+
+We acknowledge support from the project NOVIS-LIGHT (PID2023-149780NB-I00) funded by Ministerio de Ciencia, Innovaci´ on y Universidades (Proyectos de generaci´ on de conocimiento 2023). This work is part of the R&D project CEX2024-001490-S, funded by MCIN/ AEI/10.13039/501100011033/. We acknowledge support from Fundaci´ o Cellex, Fundaci´ o Mir-Puig, and from Gen-eralitat de Catalunya through the CERCA program. This document has not been peer reviewed.  
+
+> VII. SUPPLEMENTARY MATERIAL SUPPLEMENT 1: SPECTRUM OF PARAMETRIC DOWN-CONVERSION AND THE SUPERLUMINESCENT DIODE
+
+To characterize the spectral properties of the paramet-ric down-conversion (PDC) process, and to compare it with the spectrum of the injected seed, we measured the signal spectrum around 810 nm using a monochromator. In the unseeded configuration, the signal photons were spectrally resolved by scanning a monochromator and recording the photon flux as a function of wavelength, providing direct access to the PDC spectrum generated in the nonlinear crystal. The corresponding idler spectrum at 1550 nm was ob-tained indirectly by applying energy conservation, 
+
+ωp = ωs + ωi (S1) using the measured signal spectrum and the known pump frequency. This approach allows reconstruction of the idler spectrum without direct photon-counting detection at telecommunication wavelengths, where losses and de-tector inefficiencies are more pronounced. The spectrum of the broadband superluminescent diode (SLD) used for seeding was measured indepen-dently using an optical spectrum analyzer (OSA). This measurement enables a direct comparison between the re-constructed idler SPDC spectrum and the spectral band-width of the injected seed. Figure S1 summarizes these measurements. The left panel shows the measured PDC signal spectrum at 810 nm together with the theoretical prediction derived from the phase-matching conditions of the PPLN crystal. The right panel shows the corresponding idler spectrum translated to 1550 nm via energy conservation, overlaid with the independently measured SLD spectrum. The strong spectral overlap confirms that the seed efficiently addresses the PDC bandwidth relevant for the operation of the SU(1,1) interferometer. 10 Signal wavelength (nm) 790 800 810 820 830 Spectral power density (a.u.) 00.2 0.4 0.6 0.8 1Idler wavelength (nm) 1482 1515 1550 1588 1629 Idler wavelength (nm) 1500 1550 1600 
+
+FIG. S1. Comparison between the measured SPDC spectrum and the injected seed spectrum. Left: SPDC signal spectrum centered at 810 nm measured with a monochromator (blue dots), compared with Eq. (S4) evaluated for our experimental parameters (solid line). The upper horizontal axis shows the corresponding idler wavelength obtained from energy conservation equation. Right: Spectrum of the superluminescent diode (SLD) measured with an optical spectrum analyzer (purple dots). The yellow shaded curve corresponds to the product of the measured SLD spectrum and the reconstructed SPDC idler spectrum, illustrating the spectral overlap between the seed and the SPDC bandwidth. 
+
+SUPPLEMENT 2: DERIVATION OF THE SPECTRUM OF THE OUTPUT SIGNAL PHOTONS MEASURED WITH THE SPECTROMETER 
+
+The SU(1,1) interferometer that we consider here makes use of two parametric down-conversion processes (parametric amplification), pumped by a CW pump with frequency ωp. The two parametric down-conversion pro-cesses take place in the same second-order nonlinear crys-tal, in the forward and backward directions. In the first pass through the nonlinear crystal, the interaction of the pump beam with the molecules of the nonlinear crystal mediates the generation of pairs of signal ( s1) and idler 
+
+i1 photons, with frequencies ωs + Ω and ωi − Ω. ωs,i are the central frequencies and Ω is the frequency deviation from the corresponding central frequency. The efficiency of the process is so low that we can as-sume that the pump beam is un-depleted and can be treated as a classical beam. In the low parametric gain regime of parametric amplification, that is the case in our experiments, the relationship between input ( bs and 
+
+bi) and output ( as1 and ai1 ) quantum operators in para-metric down-conversion is described by the Bogoliubov transformations 
+
+as1 = Us1 bs(Ω) + Vs1 b† 
+
+> i
+
+(−Ω) 
+
+ai1 = Ui1 bi(Ω) + Vi1 b†
+
+> s
+
+(−Ω) (S2) where for j ≡ s, i Uj1 = exp [ ik j (Ω) L] (S3) 
+
+Vj1 = −iG sinc 
+
+ ∆k(Ω) L
+
+2
+
+
+
+exp [ ik j (Ω) L + iφ p1 ]
+
+φp1 is the phase of the pump beam in the first para-metric interaction, ∆ k(Ω) = kp − ks(Ω) − ki(−Ω) is the phase matching function that determines the bandwidth of the parametric interaction, kp = ωpnp/c is the pump wavenumber, kj (Ω) = ( ωj + Ω) nj /c are the wavenum-bers associated to signal/idler photons, np,s,i are refrac-tive index, L is the length of the nonlinear crystal, G is the parametric gain of the nonlinear process. Idler photons traverse one arm of the interferometer with length Li, probe a sample with reflectivity ri and are reflected back towards the nonlinear crystal where the second parametric interaction takes place. The quantum description of the interaction with the sample can be de-scribed as 
+
+ai1 (Ω) = ⇒ ri(Ω) ai1 (Ω) + fi(Ω) (S4) where the quantum operator fi fulfills the commutation relationship 
+
+h
+
+fi(Ω 1), f † 
+
+> i
+
+(Ω 2)
+
+i
+
+=
+
+1 − | ri(Ω 1)|2 δ (Ω 1 − Ω2). Signal photons traverse another arm of the interferometer (length Ls) before being reflected back towards the nonlinear crystal. Any 11 losses in the signal path can be taken into account considering 
+
+as1 (Ω) = ⇒ rsas1 (Ω) + fs(Ω) (S5) where the quantum operator fs fulfills the commutation relationship fs(Ω 1), f † 
+
+> s
+
+(Ω 2) = 1 − | rs|2 δ (Ω 1 − Ω2). We assume that signal photons experience a reflectivity 
+
+rs that shows no frequency dependence in the frequency range of interest here. After traversing the two arms of the interferometers, signal and idler photons are injected back in the nonlinear crystal where the second parametric amplification takes place, mediating the generation of signal s2 and idler i2
+
+photons. The output signal as2 and idler ai2 quantum operators can be written as 
+
+as2 (Ω) = Us2 as1 (Ω) + Vs2 a† 
+
+> i1
+
+(−Ω) 
+
+ai2 = Ui2 ai1 (Ω) + Vi2 a† 
+
+> i1
+
+(−Ω) (S6) We can also take into account detection losses by mak-ing the transformation as2 (Ω) = ⇒ √Ts as2 (Ω) + gs(Ω) where the quantum operator gs fulfills the commutation relationship gs(Ω 1), g † 
+
+> s
+
+(Ω 2) = [1 − Ts] δ (Ω 1 − Ω2). Making use of Eqs. (S2), (S4), (S5), and (S6), we ob-tain that the operator as2 (Ω) reads 
+
+as2 (Ω) = Asbs(Ω) + Bsfs(Ω) + Csb† 
+
+> i
+
+(−Ω) + Dsf † 
+
+> i
+
+(−Ω) + gs(Ω) . (S7) where 
+
+As = pTs
+
+n
+
+rs(Ω) Us1 (Ω) Us2 (Ω) exp[ iφ s(Ω)] + r∗ 
+
+> i
+
+(−Ω) Vs2 (Ω) V ∗ 
+
+> i1
+
+(−Ω) exp[ −iφ i(−Ω)] 
+
+o
+
+,Bs = pTs Us2 (Ω) , (S8) 
+
+Cs = pTs
+
+n
+
+rs(Ω) Us2 (Ω) Vs1 (Ω) exp[ iφ s(Ω)] + r∗ 
+
+> i
+
+(−Ω) Vs2 (Ω) U ∗ 
+
+> i1
+
+(−Ω) exp[ −iφ i(−Ω)] 
+
+o
+
+,Ds = pTs Vs2 (Ω) .φs(Ω) = ( ωs + Ω) Ls/c , φi(Ω) = ( ωi + Ω) Li/c and Ls,i 
+
+are the lengths of the arms of the interferometer traversed by signal and idler photons, respectively. We use a laser at the idler wavelength to seed the first parametric amplification process, while the input quan-tum state of signal photons is the vacuum. If we model the quantum state of the laser light as a multimode coher-ent state with amplitude α(δω + Ω), the input quantum state is |Ψin ⟩ = |0⟩s |α(Ω) ⟩i. In our experiments we ob-serve a small central frequency mismatch δω = ωi − ωL,where ωL is the central frequency of the laser light ( ωL). The frequency spectrum S(Ω) = ⟨Ns2 (Ω) ⟩ of output signal photons s2 is 
+
+S(Ω) = a† 
+
+> s2
+
+(Ω) as2 (Ω) 
+
+= S0(Ω) 
+
+h
+
+1 − | ri(−Ω) |2i
+
++ S0(Ω) 
+
+h
+
+1 + |α(δω + Ω) |2i h 
+
+|rs|2 + |ri(−Ω) |2
+
++ rsri(−Ω) eiΦ + rsr∗ 
+
+> i
+
+(−Ω) e−iΦi
+
+.
+
+(S9) where 
+
+S0(Ω) = Ts G2 sinc 2
+
+ ∆k(Ω) L
+
+2
+
+
+
+(S10) and Φ = ωs
+
+c (L + Ls) + ωi
+
+c (Li + L) + ∆ φp + Ω
+
+c [∆ L + Ng L](S11) 
+
+φp = φp1 − φp2 is the phase difference between the pump beams that pump the two parametric amplification pro-cesses, ∆ L = Ls − Li is the path imbalance between the signal and idler arms of the SU(1,1) interferometer, 
+
+Ng = Ns −Ni is the group index mismatch between signal and idler photons inside the nonlinear crystal. In our experiments, we consider objects composed of several layers. We model these objects as M layers ( M +1 boundaries between layers), where each layer has thick-ness di, refractive index ni and group index ng,i . There are M + 1 reflections, and we designate the reflection co-efficient from the first layer as R0 = ( n1 − 1) /(n1 + 1). The reflectivity that we need to consider in Eq. (S9) can be written as 
+
+ri(Ω) = R0 +
+
+> M
+
+X
+
+> k=1
+
+Rk exp 
+
+2i
+
+> k
+
+X
+
+> j=1
+
+ ωi
+
+c nj + Ω
+
+c ng,j 
+
+
+
+dj
+
+
+
+(S12) where Rk = ( nk+1 − nk) / (nk+1 + nk)) 
+
+SUPPLEMENT 3: CONDITIONS ON THE PATH LENGTH DIFFERENCE ∆LO PERFORM HIGH SENSITIVITY FOURIER-DOMAIN OCT 
+
+For the sake of simplicity, let us assume that there is no object in the idler path, |ri(−Ω) | = 1, and that |rs|2 = 1. From Eq. (S9), we can derive that the spectrum of the output signal photons s2 is 
+
+S(Ω) = 2 S0(Ω) 
+
+(
+
+1 + cos 
+
+"
+
+ωs
+
+c (Ls + L) + ωi
+
+c (Li + L)+ ∆ φp + Ω
+
+c [∆ L + Ng L]
+
+#) 
+
+.
+
+(S13) 12 There are fringes in the spectrum with a period ∆Ω = 2πc/ (∆ L + Ng L). On the one hand, in order to perform FD-OCT, we need to be able to measure changes of the fringes, since they will be modified due to the presence of an object in the idler path. Therefore, we need that the bandwidth ∆λs of S0 is larger than the period of the fringes, so ∆L + Ng L ≫ λ2
+
+> s
+
+/∆λs.On the other hand, to resolve with good accuracy the shape of the fringes, we need that the spectral resolution 
+
+δλ s of the spectrometer is smaller than the period of the fringes, therefore ∆ L + Ng L ≪ λ2
+
+> s
+
+/δλ s. Combining both conditions, we obtain Eq. (2) in the main text. 
+
+> SUPPLEMENT 4: SENSITIVITY DECAY CORRECTION
+
+In Fourier-domain OCT, the detected signal ampli-tude decreases with increasing optical path difference due to the finite spectral resolution of the detection system. This effect, commonly referred to as sensitivity decay or roll-off, arises from the wavelength-dependent resolution of the spectrometer and leads to a systematic attenuation of deeper features in the reconstructed depth profile. To enable accurate comparison of signal amplitudes across different depths, a sensitivity decay correction was ap-plied to selected measurements. The correction function was experimentally deter-mined by placing a mirror in the sample arm and record-ing the idler spectrum for different positions of the mirror along the axial direction. For each position, the recorded spectrum was Fourier transformed, and the amplitude of the resulting FFT peak was extracted. Figure S2(a) shows a representative FFT of the measured spectrum, where the single peak corresponds to the optical path difference introduced by the mirror displacement. The peak amplitudes obtained from multiple mirror positions were then plotted as a function of depth, as shown in Fig. S2(b). The observed decay was fitted using an empirical roll-off function that captures the response of the spectrometer. The inverse of this fitted function was subsequently used to correct the FFT amplitudes obtained in OCT measurements. Figure S2(c) shows the FFT peaks after applying the sensitivity decay correction, demonstrating uniform peak amplitudes across the accessible depth range. Finally, Fig. S2(d) compares the recovered axial positions ob-tained from the corrected FFTs with the actual mirror positions, confirming a linear relationship and validating the accuracy of the correction procedure. 
+
+> SUPPLEMENT 5: SAMPLE QEL FABRICATION
+
+The structures were fabricated by optical lithography using a Heidelberg Maskless Aligner equipped with a 532 nm laser. Prior to photoresist coating, the sam-ples were cleaned, treated with oxygen plasma, and de-hydrated to improve photoresist adhesion. AZ ECI3007 positive photoresist was then spin-coated and patterned by laser exposure. The samples were developed for 1 min, and the cavity profiles were inspected to verify their suc-cessful definition. Silver was subsequently deposited by magnetron sputtering under a constant argon flow. Fi-nally, the lift-off process was performed by immersing the samples in acetone and sonicating them for 3 min to remove the remaining photoresist and any residual ma-terial. 
+
+> SUPPLEMENT 6: COMPARISON OF THE SENSITIVITIES IN THE ESTIMATION OF REFLECTIVITY BETWEEN UNSEEDED OCT IN THE HIGH PARAMETRIC GAIN REGIME AND SEEDED OCT IN THE LOW PARAMETRIC GAIN REGIME
+
+For the sake of simplicity, let us consider the single mode approximation, equivalent to considering Ω = 0 in Eqs. (S7) and (S8).     
+
+> Derivative with respect to the reflectivity Riof the mean number of signal photons ⟨Ns2⟩
+
+We can write that the mean number of signal photons 
+
+s2 is 
+
+⟨Ns2 ⟩ = a + b 1 + |α|2 + d 1 + |α|2 cos Φ (S14) where 
+
+a = Ts [1 − Ri] |V |2
+
+b = Ts [Rs + Ri] |U |2|V |2
+
+d = 2 Ts
+
+pRsRi |U |2|V |2. (S15) The derivative of ⟨Ns2 ⟩ with respect the reflectivity Ri1
+
+that we want to estimate, reads as 
+
+d⟨Ns2 ⟩
+
+dR i1
+
+= p + q cos Φ (S16) where 
+
+p = −Ts |V |2 + Ts |U |2|V |2 1 + |α|2
+
+q = Ts
+
+r Rs
+
+Ri
+
+|U |2|V |2 1 + |α|2 (S17) 
+
+> Calculation of the variance of the quantum operator
+> Ns2
+
+The variance is Var ( Ns2 ) = ⟨N 2 
+
+> s2
+
+⟩ − ⟨ Ns2 ⟩2 (S18) 13 (a) (b) (c)              
+
+> 0123FFT Amplitude (a.u.) 0123Data Fit Path difference (mm) 00.2 0.4 0.6 0.8 11.2 00.5 1Micrometer position (mm) m=1.95 00.2 0.4 0.6 0.8 11.2 FFT-peak (mm) 00.2 0.4 0.6 0.8 11.2 Data Fit
+> (d)
+
+FIG. S2. (a) FFT of the measured spectrum. (b) Position of the maximum of each FFT and a fit using the equation 
+
+Yf it (x) = A exp( −Bx 2) sinc 2(Cx ). (c) Peaks after applying the correction, and (d) relationship between the recovered position from the FFT and the position of the signal mirror. 
+
+The value of ⟨N 2 
+
+> s2
+
+⟩ is 
+
+⟨N 2 
+
+> s2
+
+⟩ = a† 
+
+> s2
+
+as2 a† 
+
+> s2
+
+as2
+
+=
+
+D  A∗ 
+
+> s
+
+b† 
+
+> s
+
++ B∗ 
+
+> s
+
+f † 
+
+> s
+
++ C∗ 
+
+> s
+
+bi + D∗ 
+
+> s
+
+fi + g†
+
+> s
+
+
+
+×
+
+
+
+Asbs + Bsfs + Csb† 
+
+> i
+
++ Dsf † 
+
+> i
+
++ gs
+
+
+
+×  A∗ 
+
+> s
+
+b† 
+
+> s
+
++ B∗ 
+
+> s
+
+f † 
+
+> s
+
++ C∗ 
+
+> s
+
+bi + D∗ 
+
+> s
+
+fi + g†
+
+> s
+
+
+
+×
+
+
+
+Asbs + Bsfs + Csb† 
+
+> i
+
++ Dsf † 
+
+> i
+
++ gs
+
+ E 
+
+= |As|2|Cs|2(1 + |α|2) + |Bs|2|Cs|2(1 + |α|2)(1 − Rs)+ |Cs|4(1 + 3 |α|2 + |α|4) + |Cs|2(1 + |α|2)(1 − Ts)+ |As|2|Ds|2(1 − Ri) + |Bs|2|Ds|2(1 − Rs1 )(1 − Ri)+ |Cs|2|Ds|2|α|2(1 − Ri) + |Ds|4(1 − Ri)2
+
++ |Ds|2(1 − Ri)(1 − Ts)+ 2 |Cs|2|Ds|2(1 + |α|2)(1 − Ri).
+
+(S19) By means of a straightforward but somehow cumber-some calculation, we obtain that Var ( Ns2 ) = |Cs|2 1 + |α|2 {| As|2 + |Bs|2 [1 − Rs] + [1 − Ts]}
+
++ |Ds|2 [1 − Ri] {| As|2 + |Bs|2 [1 − Rs] + [1 − Ts]}|α|2|Cs|4 + |Cs|2|Ds|2 [1 − Ri] |α|2 (S20) If we make use of the commutation relationship [as2 , a † 
+
+> s2
+
+] = |As|2 + |Bs|2 (1 − Rs)+ (1 − Ts) − | Cs|2 − | Ds|2 (1 − Ri) = 1 , (S21) so we can write 
+
+|As|2 +|Bs|2(1 −Rs)+(1 −Ts) = 1+ |Cs|2 +|Ds|2(1 −Ri),
+
+(S22) the variance given by Eq. (S20) can be simplified to Var ( Ns2 ) = 
+
+n
+
+|Cs|2 + |Ds|2| [1 − Ri]
+
+o
+
+×
+
+n
+
+1 + |Cs|2 + |Ds|2| [1 − Ri]
+
+o
+
++ |α|2|Cs|2n
+
+1 + 2 |Cs|2 + 2 |Ds|2 [1 − Ri]
+
+o
+
+(S23) Making use of Eqs. (S8) and (S15), we can write 
+
+|Cs|2 = b + d cos Φ and |Ds|2 [1 − Ri] = a, so Var ( Ns2 ) = A + B cos Φ + D cos 2 Φ (S24) where 
+
+A = ( a + b)(1 + a + b) + |α|2b(1 + 2 a + 2 b),B = d(1 + 2 a + 2 b) + |α|2d(1 + 2 a + 4 b), (S25) 
+
+D = d2(1 + 2 |α|2),14 
+
+The precision in the estimation of Ri
+
+The precision σ2 of the estimation of Ri by measuring 
+
+⟨Ns2 ⟩ is given by the propagation of errors equation as 
+
+σ2 = Var ( Ns2 )
+
+h
+
+∂⟨Ns2 ⟩/∂R i
+
+i2 (S26) Making use of Eqs. (S16) and (S24), we obtain that 
+
+σ2 = A + B cos Φ + D cos 2 Φ
+
+p2 + 2 pq cos Φ + q2 cos 2 Φ (S27) Minimization of the variance shows that the optimal op-erating phase is Φ = π. Therefore, the minimum variance is 
+
+σ2 = A − B + D
+
+(p − q)2 (S28) Let us first consider the case of a constant value of the gain (low-parametric gain regime), and increasingly larger values of the seed ( |α|2 ≫ 1). In this case, the minimum sensitivity tends to 
+
+σ2 
+
+> min
+
+= 1
+
+|α|2
+
+Rs + Ri − 2√RsRi
+
+Ts|U |2|V |2
+
+
+
+1 − pRs/R i
+
+2
+
+× 1 + 2 Ts(1 − Ri)|V |2
+
++2 Ts
+
+h
+
+Rs + Ri − 2pRsRi
+
+i
+
+|U |2|V |2o
+
+.
+
+(S29) In the second scenario, we consider increasingly larger values of the gain gain ( G ≫ 1) and no seed ( |α|2 = 0). In this case, the minimum variance given by Eq. (S28) stays constant for increasingly larger values of the gain with a value of 
+
+σ2 
+
+> min
+
+= (Rs + Ri)2 − 4 ( Rs + Ri) √Rs Ri + 4 Rs Ri
+
+h
+
+1 − pRs/R i
+
+i2
+
+(S30) 
+
+[1] D. Huang, E. A. Swanson, C. P. Lin, J. S. Schuman, W. G. Stinson, W. Chang, M. R. Hee, T. Flotte, K. Gre-gory, C. A. Puliafito, and J. G. Fujimoto, Optical coher-ence tomography, Science 254 , 1178 (1991). [2] T. Dresel, G. Hausler, and H. Venzke, Three-dimensional sensing of rough surfaces by coherence radar, Applied Optics 31 , 919 (1992). [3] J. Fujimoto and E. Swanson, The development, commer-cialization, and impact of optical coherence tomography, Investigative Ophthalmology & Visual Science 57 , OCT1 (2016). [4] E. A. Swanson and J. G. Fujimoto, The ecosystem that powered the translation of OCT from fundamental re-search to clinical and commercial impact, Biomedical Op-tics Express 8, 1638 (2017). [5] C. K. Hitzenberger, Optical coherence tomography in op-tics express, Optics Express 26 , 24240 (2018). [6] C. S. Langlo, A. Amin, and S. S. Park, Optical coherence tomography retinal imaging: narrative review of techno-logical advancements and clinical applications, Annals of Translational Medicine 13 , 17 (2025). [7] P. Targowski and M. Iwanicka, Optical coherence tomog-raphy: its role in the non-invasive structural examination and conservation of cultural heritage objects—a review, Applied Physics A 106 , 265 (2012). [8] A. F. Fercher, W. Drexler, C. K. Hitzenberger, and T. Lasser, Optical coherence tomography-principles and applications, Reports on Progress in Physics 66 , 239 (2003). [9] D. F. Urrego, G. J. Machado, and J. P. Torres, Non-mechanical steering of the optical beam in spectral-domain optical coherence tomography, Scientific Reports 
+
+14 , 14860 (2024). [10] R. Leitgeb, C. Hitzenberger, and A. F. Fercher, Perfor-mance of fourier domain vs. time domain optical coher-ence tomography, Optics Express 11 , 889 (2003). [11] S. Carrasco, M. B. Nasr, A. V. Sergienko, B. E. Saleh, M. C. Teich, J. P. Torres, and L. Torner, Broadband light generation by noncollinear parametric downconversion, Optics Letters 31 , 253 (2006). [12] Y. Jiang, I. Tomov, Y. Wang, and Z. Chen, Second-harmonic optical coherence tomography, Optics Letters 
+
+29 , 1090 (2004). [13] J. S. Bredfeldt, C. Vinegoni, D. L. Marks, and S. A. Bop-part, Molecularly sensitive optical coherence tomography, Optics Letters 30 , 495 (2005). [14] A. Vall´ es, G. Jim´ enez, L. J. Salazar-Serrano, and J. P. Torres, Optical sectioning in induced coherence tomogra-phy with frequency-entangled photons, Physical Review A 97 , 023824 (2018). [15] A. V. Paterova, H. Yang, C. An, D. A. Kalashnikov, and L. A. Krivitsky, Tunable optical coherence tomography in the infrared range using visible photons, Quantum Sci-ence and Technology 3, 025008 (2018). [16] G. J. Machado, G. Frascella, J. P. Torres, and M. V. Chekhova, Optical coherence tomography with a nonlin-ear interferometer in the high parametric gain regime, Applied Physics Letters 117 , 094002 (2020). [17] A. Vanselow, P. Kaufmann, I. Zorin, B. Heise, H. M. Chrzanowski, and S. Ramelow, Frequency-domain opti-cal coherence tomography with undetected mid-infrared photons, Optica 7, 1729 (2020). [18] B. Yurke, S. L. McCall, and J. R. Klauder, SU(2) and SU(1, 1) interferometers, Physical Review A 33 , 4033 (1986). [19] X.-Y. Zou, L. J. Wang, and L. Mandel, Induced coherence and indistinguishability in optical interference, Physical Review Letters 67 , 318 (1991). [20] X. Zou, T. Grayson, and L. Mandel, Observation of quan-tum interference effects in the frequency domain, Physi-15 
+
+cal Review Letters 69 , 3041 (1992). [21] M. V. Chekhova and Z. Ou, Nonlinear interferometers in quantum optics, Advances in Optics and Photonics 8,104 (2016). [22] G. B. Lemos, V. Borish, G. D. Cole, S. Ramelow, R. Lap-kiewicz, and A. Zeilinger, Quantum imaging with unde-tected photons, Nature 512 , 409 (2014). [23] J. Fl´ orez, E. Pearce, N. R. Gemmell, Y. Ma, G. Bres-sanini, C. C. Phillips, R. F. Oulton, and A. S. Clark, Enhanced nonlinear interferometry via seeding, arXiv preprint arXiv:2209.06749 (2022). [24] M. Kutas, B. Haase, P. Bickert, F. Riexinger, D. Molter, and G. von Freymann, Terahertz quantum sensing, Sci-ence Advances 6, eaaz8065 (2020). [25] A. M. Marino, N. V. Corzo Trejo, and P. D. Lett, Effect of losses on the performance of an SU(1,1) interferometer, Physical Review A 86 , 023844 (2012). [26] E. Giese, S. Lemieux, M. Manceau, R. Fickler, and R. W. Boyd, Phase sensitivity of gain-unbalanced nonlinear in-terferometers, Physical Review A 96 , 053863 (2017). [27] C. Oglialoro, G. J. Machado, F. Farsch, D. F. Urrego, A. A. Padilla, R. B. Patel, I. A. Walmsley, M. Gr¨ afe, J. P. Torres, and E. Giese, Below-shot-noise capacity in phase estimation using nonlinear interferometers, arXiv preprint arXiv:2601.04139 (2026). [28] G. J. Machado, Y. K. Alwehaibi, G. Thekkadath, Z. Li, A. Zhang, S. Yu, A. E. Lita, R. P. Mirin, M. J. Stevens, J. P. Torres, et al. , Improving the loss threshold for quan-tum advantage in photonic sensors by complete photon counting, arXiv preprint arXiv:2606.30761 (2026). [29] J. P. Torres, K. Banaszek, and I. Walmsley, Engineer-ing nonlinear optic sources of photonic entanglement, in 
+
+Progress in Optics , Vol. 56 (Elsevier, 2011) pp. 227–331. [30] A. C. Cardoso, L. P. Berruezo, D. F. Avila, G. B. Lemos, W. M., C. H. Monken, P. L. Saldanha, and S. Padua, Classical imaging with undetected light, Physical Review A 97 , 033827 (2018). [31] J. Kranias, G. Thekkadath, K. Heshami, and A. Z. Gold-berg, Metrological advantages in seeded and lossy non-linear interferometers, Quantum 9, 1619 (2025). [32] B. Dayan, Theory of two-photon interactions with broad-band down-converted light and entangled photons, Phys-ical Review A 76 , 043813 (2007). [33] Covesion, Material properties of lithium niobate (2025). [34] L. Mandel and E. Wolf, Optical Coherence and Quantum Optics (Cambridge University Press, 1995). [35] J. M. Gen´ e, M. H. M. Passos, D. F. Urrego, and J. P. Torres, Sensitivity of phase estimation with an SU(1,1) interferometer beyond the single-mode approximation, In preparation (2026). [36] B. Dayan, A. Pe’er, A. A. Friesem, and Y. Silberberg, Nonlinear interactions with an ultrahigh flux of broad-band entangled photons, Physical Review Letters 94 ,043602 (2005).
