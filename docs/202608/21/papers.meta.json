@@ -1,0 +1,54 @@
+{
+  "label": "2026-08-21",
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T20:53:44",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202608/21/2608.18925v1-ultrafast-order-selective-electron-imaging-and-spectroscopy",
+      "section": "deep",
+      "title_en": "Ultrafast order-selective electron imaging and spectroscopy",
+      "authors": "Jan Philipp Bange, Till Domröse, Claus Ropers, Stefan Mathias, Marcel Reutzel, .",
+      "date": "2026-08-19",
+      "pdf": "https://arxiv.org/pdf/2608.18925v1",
+      "score": "8.0",
+      "evidence": "用于材料的超快时间分辨成像与光谱",
+      "tldr": "超快泵浦-探测光谱技术可揭示量子材料中的非平衡动力学，但常缺乏纳米级空间分辨率。本文综述了暗场电子与光电子显微术的进展，重点介绍飞秒光电子动量显微术和超快透射电子显微镜。二者互补，能同时探测电子、晶格和自旋子系统的超快动力学，为纳米器件研究提供新途径。",
+      "tags": "query:iscat",
+      "abstract_en": "Ultrafast pump-probe spectroscopies in energy and momentum have become indispensable for probing non-equilibrium dynamics in quantum materials, revealing pathways in ultrafast energy conversion and light-induced phase transitions. Different modalities uniquely access the coupled lattice, charge, and spin degrees of freedom that underpin the functionality of these materials. However, investigating technologically relevant nanoscale devices also requires high spatial resolution. Although electron microscopy provides nanometer-scale imaging, it frequently lacks the simultaneous ultrafast temporal resolution and spectroscopic specificity needed for such studies. In this perspective, we review recent advances in dark-field electron and photoelectron microscopy, focusing on two complementary techniques: femtosecond photoelectron momentum microscopy and ultrafast transmission electron microscopy. Their application enables comprehensive insights into the ultrafast dynamics of the electron, lattice, and spin subsystems. These order-selective electron imaging and spectroscopy techniques open broad scientific opportunities for a microscopic understanding of non-equilibrium phenomena in quantum materials, nanostructures and devices.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/21/2608.15098v1-dino4dstem-a-self-supervised-framework-for-structural-discovery-in-4d-stem",
+      "section": "quick",
+      "title_en": "DINO4DSTEM: A self-supervised framework for structural discovery in 4D-STEM",
+      "authors": "Daniel Khaykelson, Lothar Houben, Boris Rybtchinski",
+      "date": "2026-08-15",
+      "pdf": "https://arxiv.org/pdf/2608.15098v1",
+      "score": "6.0",
+      "evidence": "面向高维纳米显微数据的自监督结构发现方法，可迁移到iSCAT数据分析",
+      "tldr": "4D-STEM纳米衍射数据解析常依赖结构模型与人工标注，难以应对复杂材料。本文提出DINO4DSTEM自监督框架，无需先验知识即可从原始衍射中学习表征，自动按结构相似性组织数据。在吲哚美辛结晶实验中，成功发现结晶从部分有序前驱体演化，呈现连续结构有序谱。该方法实现无监督分割与定量结构图谱，为复杂材料提供了通用方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Nanodiffraction using 4D-STEM has become a key technique for quantitative nanoscale structural mapping in materials research, yet interpreting its high-dimensional datasets in structurally complex materials remains a major bottleneck. Existing analysis workflows typically rely on structural models, manual annotation, predefined classes, or sample-specific heuristics, limiting their ability to characterize heterogeneous complex materials. Here, we introduce DINO4DSTEM, a self-supervised machine learning framework that automatically discovers structurally meaningful states directly from raw diffraction data. Without structural models, manual labels, a predefined number of classes, or system-specific parameter tuning, the framework learns representations that organize diffraction patterns by their intrinsic structural similarities, transforming large collections of low-dose measurements into quantitative nanoscale structure maps. Across diverse datasets, DINO4DSTEM consistently identifies the dominant structural degrees of freedom, providing segmentation without human supervision. We applied the framework to the crystallization of indomethacin, a beam-sensitive, multidomain pharmaceutical system, revealing that crystallinity emerges from a partially ordered precursor and spans a continuous spectrum of structural order. The discovered nanoscale structural states are mapped to reveal the evolution of order across the specimen quantitatively. By replacing task-specific analysis with general self-supervised representation learning, DINO4DSTEM provides a broadly applicable framework for quantitative nanoscale structural mapping in complex materials, enabling the discovery of emergent structural organization in heterogeneous, beam-sensitive systems.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/21/2608.19503v1-electronic-and-chemical-phase-identification-in-photoemission-experiments-using-unsupervised-machine-learning",
+      "section": "quick",
+      "title_en": "Electronic and chemical phase identification in photoemission experiments using unsupervised machine learning",
+      "authors": "Matthew Staab, Joseph Pandur, Eli Rotenberg, Chris Jozwiak, Aaron Bostwick, Inna Vishik",
+      "date": "2026-08-19",
+      "pdf": "https://arxiv.org/pdf/2608.19503v1",
+      "score": "6.0",
+      "evidence": "可泛化的机器学习样本探索框架可用于支持iSCAT材料表征",
+      "tldr": "真空紫外光电子谱实验信息丰富，但表面敏感且初始表面未知，传统网格扫描定位测量区域耗时。为此提出AARDVARK框架，利用UMAP降维并以其为高斯过程回归目标，动态引导采样，高效识别不同光谱区域边界。该方法能适应样品特性变化，实现实时测量决策，优化数据采集效率。该框架为未来光电子实验的自主探索提供了鲁棒的通用方案。",
+      "tags": "query:iscat",
+      "abstract_en": "Vacuum ultraviolet photoemission spectroscopies are very information-rich experiments, but due to their surface sensitivity, data are often collected on an initially uncharacterized surface. Traditional raster-grid approaches for locating optimal measurement regions can be time-consuming. In this work, we introduce AARDVARK, a generalizable framework for sample exploration that leverages dimensionality reduction and Gaussian process regression to guide initial sample searches in spatially-resolved photoemission experiments. By utilizing UMAP as a target for a Gaussian process, the algorithm efficiently identifies boundaries of spectroscopically distinct regions, dynamically adapting to variations in sample characteristics. The algorithm enables real-time decision making in measurement selection, optimizes data acquisition, and presents a robust framework for future autonomous sample exploration in photoemission experiments.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,136 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-21T20:51:21.024812+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 1,
+    "deep_cap": 6,
+    "deep_selected": 1,
+    "quick_candidates": 2,
+    "quick_skim_target": 11,
+    "quick_selected": 2
+  },
+  "deep_dive": [
+    {
+      "id": "2608.18925v1",
+      "source": "arxiv",
+      "title": "Ultrafast order-selective electron imaging and spectroscopy",
+      "abstract": "Ultrafast pump-probe spectroscopies in energy and momentum have become indispensable for probing non-equilibrium dynamics in quantum materials, revealing pathways in ultrafast energy conversion and light-induced phase transitions. Different modalities uniquely access the coupled lattice, charge, and spin degrees of freedom that underpin the functionality of these materials. However, investigating technologically relevant nanoscale devices also requires high spatial resolution. Although electron microscopy provides nanometer-scale imaging, it frequently lacks the simultaneous ultrafast temporal resolution and spectroscopic specificity needed for such studies. In this perspective, we review recent advances in dark-field electron and photoelectron microscopy, focusing on two complementary techniques: femtosecond photoelectron momentum microscopy and ultrafast transmission electron microscopy. Their application enables comprehensive insights into the ultrafast dynamics of the electron, lattice, and spin subsystems. These order-selective electron imaging and spectroscopy techniques open broad scientific opportunities for a microscopic understanding of non-equilibrium phenomena in quantum materials, nanostructures and devices.",
+      "authors": [
+        "Jan Philipp Bange",
+        "Till Domröse",
+        "Claus Ropers",
+        "Stefan Mathias",
+        "Marcel Reutzel",
+        "."
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-08-19T13:53:58+00:00",
+      "link": "https://arxiv.org/pdf/2608.18925v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "ultrafast time-resolved imaging and spectroscopy for materials",
+      "llm_evidence_cn": "用于材料的超快时间分辨成像与光谱",
+      "llm_evidence": "用于材料的超快时间分辨成像与光谱",
+      "canonical_evidence": "用于材料的超快时间分辨成像与光谱",
+      "llm_tldr_en": "Reviews advances in dark-field electron and photoelectron microscopy that combine nanometer spatial resolution with ultrafast temporal resolution, enabling studies of non-equilibrium dynamics in quantum materials and nanoscale devices.",
+      "llm_tldr_cn": "本文针对纳米尺度器件研究中对超快时间分辨和空间分辨兼备的成像技术的需求，综述了暗场电子与光电子显微镜的最新进展。这些技术能够同时获取晶格、电荷和自旋等多自由度信息，为揭示量子材料中的非平衡动力学、超快能量转换和光致相变提供了新途径。该综述展示了此类方法在纳米尺度上探测瞬态过程的能力，有望推动超快显微技术在新材料研究中的应用。",
+      "llm_tldr": "本文针对纳米尺度器件研究中对超快时间分辨和空间分辨兼备的成像技术的需求，综述了暗场电子与光电子显微镜的最新进展。这些技术能够同时获取晶格、电荷和自旋等多自由度信息，为揭示量子材料中的非平衡动力学、超快能量转换和光致相变提供了新途径。该综述展示了此类方法在纳米尺度上探测瞬态过程的能力，有望推动超快显微技术在新材料研究中的应用。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.15098v1",
+      "source": "arxiv",
+      "title": "DINO4DSTEM: A self-supervised framework for structural discovery in 4D-STEM",
+      "abstract": "Nanodiffraction using 4D-STEM has become a key technique for quantitative nanoscale structural mapping in materials research, yet interpreting its high-dimensional datasets in structurally complex materials remains a major bottleneck. Existing analysis workflows typically rely on structural models, manual annotation, predefined classes, or sample-specific heuristics, limiting their ability to characterize heterogeneous complex materials. Here, we introduce DINO4DSTEM, a self-supervised machine learning framework that automatically discovers structurally meaningful states directly from raw diffraction data. Without structural models, manual labels, a predefined number of classes, or system-specific parameter tuning, the framework learns representations that organize diffraction patterns by their intrinsic structural similarities, transforming large collections of low-dose measurements into quantitative nanoscale structure maps. Across diverse datasets, DINO4DSTEM consistently identifies the dominant structural degrees of freedom, providing segmentation without human supervision. We applied the framework to the crystallization of indomethacin, a beam-sensitive, multidomain pharmaceutical system, revealing that crystallinity emerges from a partially ordered precursor and spans a continuous spectrum of structural order. The discovered nanoscale structural states are mapped to reveal the evolution of order across the specimen quantitatively. By replacing task-specific analysis with general self-supervised representation learning, DINO4DSTEM provides a broadly applicable framework for quantitative nanoscale structural mapping in complex materials, enabling the discovery of emergent structural organization in heterogeneous, beam-sensitive systems.",
+      "authors": [
+        "Daniel Khaykelson",
+        "Lothar Houben",
+        "Boris Rybtchinski"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "physics.app-ph"
+      ],
+      "published": "2026-08-15T07:48:04+00:00",
+      "link": "https://arxiv.org/pdf/2608.15098v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "self-supervised structural discovery for high-dimensional nanoscale microscopy data, transferable to iSCAT data analysis",
+      "llm_evidence_cn": "面向高维纳米显微数据的自监督结构发现方法，可迁移到iSCAT数据分析",
+      "llm_evidence": "面向高维纳米显微数据的自监督结构发现方法，可迁移到iSCAT数据分析",
+      "canonical_evidence": "面向高维纳米显微数据的自监督结构发现方法，可迁移到iSCAT数据分析",
+      "llm_tldr_en": "Presents DINO4DSTEM, a self-supervised framework that automatically discovers structural states from raw 4D-STEM nanodiffraction data without labels or predefined classes. This addresses the bottleneck of interpreting high-dimensional microscopy data in complex materials and is potentially transferable to iSCAT data analysis for nanomaterial characterization.",
+      "llm_tldr_cn": "针对4D-STEM高维数据在复杂材料中难以解析的问题，作者提出自监督框架DINO4DSTEM，无需结构模型、人工标注或预设类别即可从原始衍射数据中自动发现结构状态。该方法在无监督条件下学习有意义的表示，为异质材料的纳米尺度结构分析提供新工具。该思路同样可迁移用于iSCAT等高维实时显微数据的表征与发现任务，有助于纳米材料性质研究。",
+      "llm_tldr": "针对4D-STEM高维数据在复杂材料中难以解析的问题，作者提出自监督框架DINO4DSTEM，无需结构模型、人工标注或预设类别即可从原始衍射数据中自动发现结构状态。该方法在无监督条件下学习有意义的表示，为异质材料的纳米尺度结构分析提供新工具。该思路同样可迁移用于iSCAT等高维实时显微数据的表征与发现任务，有助于纳米材料性质研究。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "characterizing nanomaterial properties using iSCAT techniques",
+      "matched_requirement_id": "req-8",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.19503v1",
+      "source": "arxiv",
+      "title": "Electronic and chemical phase identification in photoemission experiments using unsupervised machine learning",
+      "abstract": "Vacuum ultraviolet photoemission spectroscopies are very information-rich experiments, but due to their surface sensitivity, data are often collected on an initially uncharacterized surface. Traditional raster-grid approaches for locating optimal measurement regions can be time-consuming. In this work, we introduce AARDVARK, a generalizable framework for sample exploration that leverages dimensionality reduction and Gaussian process regression to guide initial sample searches in spatially-resolved photoemission experiments. By utilizing UMAP as a target for a Gaussian process, the algorithm efficiently identifies boundaries of spectroscopically distinct regions, dynamically adapting to variations in sample characteristics. The algorithm enables real-time decision making in measurement selection, optimizes data acquisition, and presents a robust framework for future autonomous sample exploration in photoemission experiments.",
+      "authors": [
+        "Matthew Staab",
+        "Joseph Pandur",
+        "Eli Rotenberg",
+        "Chris Jozwiak",
+        "Aaron Bostwick",
+        "Inna Vishik"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall"
+      ],
+      "published": "2026-08-19T23:38:36+00:00",
+      "link": "https://arxiv.org/pdf/2608.19503v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Generalizable ML framework for sample exploration in spatially-resolved experiments could support iSCAT material characterization",
+      "llm_evidence_cn": "可泛化的机器学习样本探索框架可用于支持iSCAT材料表征",
+      "llm_evidence": "可泛化的机器学习样本探索框架可用于支持iSCAT材料表征",
+      "canonical_evidence": "可泛化的机器学习样本探索框架可用于支持iSCAT材料表征",
+      "llm_tldr_en": "AARDVARK uses dimensionality reduction and Gaussian process regression to guide sample searches in spatially-resolved photoemission, dynamically identifying spectroscopically distinct boundaries; the framework is generalizable to other microscopy and characterization techniques.",
+      "llm_tldr_cn": "光电子发射实验常因表面敏感而需要在未表征表面上寻找测量区域，传统栅格扫描耗时。该工作提出AARDVARK框架，结合降维与高斯过程回归，动态识别光谱边界并引导采样。该通用方法可提升空间分辨显微与表征实验的效率，有望应用于iSCAT等材料科学研究。",
+      "llm_tldr": "光电子发射实验常因表面敏感而需要在未表征表面上寻找测量区域，传统栅格扫描耗时。该工作提出AARDVARK框架，结合降维与高斯过程回归，动态识别光谱边界并引导采样。该通用方法可提升空间分辨显微与表征实验的效率，有望应用于iSCAT等材料科学研究。",
+      "llm_tags": [
+        "query:iscat:composite"
+      ],
+      "matched_query_tag": "query:iscat:composite",
+      "matched_query_text": "Papers central to 使用 iSCAT 或 stroboSCAT 研究材料科学的相关论文, especially work that connects or combines: operando; stroboscopic interferometric scattering microscopy; time resolved; u; interferometric scattering microscopy; how iSCAT works with material science; stroboSCAT imaging for semiconductor carrier transport; characterizing nanomaterial properties using iSCAT techniques; recent advances in iSCAT for solid state materials research.",
+      "matched_requirement_id": "req-composite-iscat",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
