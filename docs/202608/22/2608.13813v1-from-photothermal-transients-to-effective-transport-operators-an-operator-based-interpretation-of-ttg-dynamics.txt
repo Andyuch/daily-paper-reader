@@ -1,0 +1,459 @@
+Title: 2608.13813v1.pdf
+
+URL Source: https://arxiv.org/pdf/2608.13813v1
+
+Published Time: Mon, 17 Aug 2026 00:14:44 GMT
+
+Number of Pages: 19
+
+Markdown Content:
+From Photothermal Transients to Effective Transport Operators: An Operator-Based Interpretation of TTG Dynamics 
+
+S. Galovic 1* , S. Jacimovski 2     
+
+> 1Vica Institute of Nuclear Sciences-National Institute of the Republic of Serbia, University of Belgrade, Mike Petrovica Alasa 12-14, P.O. Box 522, 11001, Belgrade, Serbia
+> 2University of Criminal Investigation and Police Studies, Zemun –Belgrade, Serbia, Cara Dušana 196, Zemun
+> *
+
+correspondence:  bobagal@vin.bg.ac.rs 
+
+Abstract 
+
+Transient thermal grating (TTG) measurements probe thermal transport on submicrometer spatial and subnanosecond temporal scales, where departures from purely diffusive behavior have been reported in a variety of solid-state systems. Within the Mori–Zwanzig projection framework, such effects can be interpreted as manifestations of memory arising from microscopic degrees of freedom that remain unresolved at the observational scale. Motivated by this perspective, we formulate a forward model for TTG response in which heat transport is described by a linear evolution operator with memory. Microscopic transport processes are systematically coarse-grained into a non-Markovian transport operator, whose finite-memory form provides a general description of TTG dynamics, while diffusive and long-memory behaviors emerge as asymptotic limits of the same underlying framework. Within this formulation, the experimentally observed TTG transient is interpreted as the response of an effective transport operator rather than as a direct signature of a particular microscopic transport mechanism. The primary outcome of the inversion procedure is the determination of effective operator parameters, while microscopic transport mechanisms are inferred only through a subsequent, material-specific modeling step. The proposed Mori–Zwanzig inspired framework therefore establishes a systematic route from TTG measurements to effective transport operators and, subsequently, to coarse-grained descriptions of microscopic transport dynamics. 
+
+Keywords: Transient thermal grating spectroscopy, Coarse-grained dynamics, Non-Markovian transport, Mori–Zwanzig framework, Thermal relaxation, Second sound, Hyperbolic heat transport 
+
+I INTRODUCTION 
+
+Photothermal and photoacoustic techniques belong to a broad family of non destructive methods that infer material properties from experimentally reconstructed signals generated following optical energy deposition [1-5]. Since the pioneering work of Rosencwaig and Gersho [1], the success of these methods has relied on the existence of a forward model connecting the measured response with the sequence of physical processes linking optical absorption, energy conversion, thermal transport, and signal formation [6-10]. Although the experimental observables differ among individual techniques, they share a common conceptual framework: material properties are inferred through the analysis of a transfer function relating an external optical excitation to the measured response. The central element of this transfer function is the propagation of optically generated thermal energy. 
+
+Historically, this propagation has been described using Fourier’s law of heat conduction [11]. The resulting diffusive transport operator proved remarkably successful and became the foundation of modern photothermal characterization, enabling quantitative determination of thermal diffusivity, thermal conductivity, carrier transport parameters, optical properties, and a wide range of thermophysical quantities [12-16]. 
+
+Over the past five decades, advances in laser technology, detection schemes, and signal processing have extended photothermal measurements toward progressively shorter temporal scales and smaller spatial scales. As a consequence, photothermal methods are no longer used solely as characterization tools. They have also become experimental probes of thermal transport itself [17-19]. 
+
+At these scales, thermal relaxation processes [20-23], memory effects [17, 24,25], long-lived correlations, and other manifestations of non-equilibrium energy redistribution [18, 26-29] may become experimentally accessible. Understanding how such microscopic processes are encoded in experimentally observed signals has therefore emerged as an important problem at the interface of photothermal science, non-equilibrium statistical mechanics [30-32], and condensed-matter physics [33-36]. 
+
+Among modern photothermal techniques, transient thermal grating (TTG) experiments occupy a special position [37-39]. The method combines high spatial resolution, high temporal resolution, and spatially periodic optical excitation. Unlike many photothermal configurations, TTG directly probes the temporal evolution of a single spatial Fourier mode of the temperature field. This simplicity makes TTG particularly attractive from the standpoint of transport analysis. At the same time, TTG experiments have provided some of the most compelling observations of non-diffusive thermal phenomena, including reports of second-sound propagation and related wave-like thermal responses [40-43]. 
+
+Despite these advances, an important conceptual gap remains. The experiment directly measures the temporal evolution of a spatial Fourier mode, whereas the quantities of physical interest are the parameters of the transport operator governing that evolution. In most branches of photothermal science, material properties are inferred through a forward model that connects measured signals to effective transport parameters. For TTG systems, however, a general operator-based framework establishing this connection remains largely undeveloped. As a consequence, the relationship between experimentally reconstructed transients, effective transport parameters, and their microscopic interpretation has not yet been systematically formulated within a general operator-based framework [44, 45]. 
+
+The present work focuses on the forward problem rather than microscopic mechanisms. Starting from energy conservation and a constitutive relation between heat flux and temperature gradient, we formulate a closed operator-based description connecting transport dynamics, periodic optical excitation, and the measured TTG response. Within this framework, microscopic transport processes are represented through a coarse-grained transport operator with memory, whose parameters provide an effective description of unresolved microscopic dynamics. The proposed formulation further shows that the morphology of TTG signals is governed not only by the structure of the effective operator but also by the spatial and temporal scales at which it is observed. Consequently, apparent signal morphology alone does not necessarily provide a complete characterization of the underlying transport operator. 
+
+The remainder of this paper is organized as follows. Section II develops the operator-based formulation of TTG dynamics and derives the corresponding transfer function. Section III analyzes the resulting time-domain responses for representative memory kernels. Section IV examines the scaling behavior of the TTG signal and the influence of experimental observation scales. Finally, Section V discusses the results within the Mori–Zwanzig framework and Section VI summarizes the main conclusions. 
+
+II. THEORETICAL FRAMEWORK 
+
+Section II develops an operator-based formulation of TTG dynamics. Starting from energy conservation and a non-Markovian constitutive relation for the heat flux, we derive a closed evolution equation for the thermal mode. The corresponding transfer function is obtained in the Laplace domain, revealing a resolvent structure governed by the memory kernel. 
+
+II.1 Flux-driven energy balance 
+
+We consider a flux-driven photothermal system in which optical irradiation generates a localized thermal excitation. Since optical absorption and thermalization occur on time scales much shorter than the subsequent thermal transport, the excitation may be treated as instantaneous [17,46]. 
+
+In transient thermal grating (TTG) experiments, the absorbed energy is spatially periodic and excites a thermal mode characterized by the grating wavevector q. The deposited energy is therefore represented as 
+
+𝑄(𝑥, 𝑡) = 𝐼𝛿(𝑡)exp(𝑖𝑞𝑥)  (1) 
+
+corresponding to an impulsive optical excitation in the TTG configuration. 
+
+The temperature field obeys local energy conservation [17,18, 22, 24, 25], 
+
+𝐶𝑇̇(𝑟⃗, 𝑡) + ∇ ∙ 𝐽⃗(𝑟⃗, 𝑡) = 𝑄(𝑥, 𝑡)  (2) 
+
+where C is the volumetric heat capacity and 𝐽⃗ denotes the heat flux. 
+
+To describe transport beyond the Fourier approximation, we introduce a general linear constitutive relation with memory [18, 22, 24, 25] 𝐽⃗(𝑟⃗, 𝑡) = − ∫ 𝐾(𝑡 − 𝑡 ′) ∙ 
+
+> 𝑡 0
+
+∇𝑇(𝑟⃗, 𝑡 ′)𝑑𝑡 ′ (3) 
+
+The memory kernel 𝐾(𝑡 − 𝑡 ′) characterizes the temporal persistence of transport correlations. Rather than assuming an instantaneous relation between heat flux and temperature gradient, the flux depends on the thermal history of the system. The kernel therefore provides a coarse-grained representation of microscopic transport dynamics that remain unresolved at the macroscopic level. 
+
+Substituting the constitutive relation into the conservation law yields 
+
+𝐶𝑇̇(𝑟⃗, 𝑡) − ∇ [∫ 𝐾(𝑡 − 𝑡 ′) ∙ 
+
+> 𝑡 0
+
+∇𝑇(𝑟⃗, 𝑡 ′)𝑑𝑡 ′] = 𝑄(𝑥, 𝑡)  (4) 
+
+The resulting equation is linear and time-invariant under the assumptions of small temperature excursions, constant material properties, and a memory kernel that depends only on the time difference 𝑡 − 𝑡 ′.
+
+Because the TTG excitation is spatially periodic, the temperature field may be written as 
+
+𝑇(𝑟⃗, 𝑡) = 𝑇 𝑞 (𝑡)exp(𝑖𝑞𝑥)  (5) 
+
+Insertion into the governing equation reduces the problem to a single Fourier mode, 
+
+𝐶𝑇 𝑞 ̇ (𝑡) + 𝑞 2 [∫ 𝐾(𝑡 − 𝑡 ′) ∙ 
+
+> 𝑡 0
+
+𝑇 𝑞 (𝑡 ′)𝑑𝑡 ′] = 𝐼 𝑞 𝛿(𝑡)  (6) 
+
+II. 2. Transfer function formulation 
+
+The linear structure of Eq. (6) allows a direct representation in the Laplace domain [47, 48]. 
+
+Introducing 
+
+𝑓̃(𝑠) = ∫ 𝑒 −𝑠𝑡 𝑓(𝑡)𝑑𝑡 
+
+> ∞0
+
+(7) 
+
+and assuming 𝑇 𝑞 (0) = 0 , Eq. (6) becomes 
+
+𝐶𝑠𝑇 𝑞 (𝑠) + 𝑞 2𝐾̃(𝑠)𝑇 𝑞 (𝑠) = 𝐼 𝑞  (8) 
+
+The temperature response can therefore be written as 𝑇 𝑞 (𝑠) = 𝐻(𝑞, 𝑠)𝐼 𝑞  (9) 
+
+Where 
+
+𝐻(𝑞, 𝑠) = 1𝐶𝑠 − 𝑞 2𝐾̃(𝑠) 
+
+(10) 
+
+is the transfer function (resolvent) of the thermal transport operator. 
+
+The transfer function 𝐻(𝑞, 𝑠) therefore represents the resolvent of the coarse-grained transport operator governing the observable TTG mode. 
+
+The analytical structure of the thermal response is entirely determined by the Laplace-domain memory kernel 𝐾̃(𝑠) . Different memory kernels correspond to different asymptotic realizations of the same resolvent structure rather than to different governing equations [18]. 
+
+For example, 
+
+Diffusive limit: 
+
+𝐾̃(𝑠) ≈ 𝑘  (11) 
+
+Finite-memory (Cattaneo) limit: 
+
+𝐾̃(𝑠) ≈ 𝑘 1 + 𝑠𝜏 
+
+(12) 
+
+Long-memory limit: 
+
+𝐾̃(𝑠) ≈ 𝜅 𝑠 
+
+(13) 
+
+Thus diffusive, relaxational, and wave-like transport emerge as different spectral realizations of the same operator structure. 
+
+This formulation defines a forward model for TTG dynamics, in which the measured signal is obtained as the response of a non-Markovian transport operator characterized by its memory kernel. 
+
+The experimentally observed TTG transient is therefore fully determined by the analytic structure of the resolvent 𝐻(𝑞, 𝑠) , which in turn is governed by the memory kernel. Different memory kernels generate different zero-pole structures and consequently different classes of modal dynamics in the time domain. III. TIME-DOMAIN RESPONSE 
+
+The TTG transient is obtained from the inverse Laplace transform of the transfer function. The zero-pole structure of 𝐻(𝑞, 𝑠) therefore determines the temporal morphology of the measured signal. 
+
+𝑇 𝑞 (𝑡) = 𝐼 𝑞 ℒ−1 {𝐻(𝑞, 𝑠)}(𝑡)  (14) 
+
+The structure of the time-domain response is therefore entirely encoded in the analytic form of the memory kernel through the resolvent given by Eq (10). 
+
+In what follows, we compute the inverse Laplace transform [48] for representative classes of memory kernels. These cases correspond to distinct analytic forms of the resolvent and lead to qualitatively different time-domain expressions. 
+
+Short memory kernel 
+
+For a memoryless (Markovian) transport process, the kernel reduces to a constant (Eq.11). The transfer function becomes 
+
+𝐻(𝑞, 𝑠) = 1𝑘 11 + 𝛼𝑞 2
+
+(15) 
+
+The inverse Laplace transform yields a single exponential relaxation: 
+
+𝑇 𝑞 (0) (𝑡) = 𝐼 𝑘 exp(−𝛼𝑞 2𝑡)  (16) 
+
+Finite (fading)-memory (Cattaneo) kernel 
+
+For a finite relaxation time, the memory kernel takes the form given by Eq (12). The corresponding transfer function is 
+
+𝐻(𝑞, 𝑠) = 1𝑘 (𝑠 + 1𝜏 )𝑠 2 + ( 1𝜏 ) 𝑠 + ( 1𝜏 ) 𝛼𝑞 2
+
+(17) 
+
+The response is determined by a combined pole–zero structure, where the zero is located at 𝑠 = −1/𝜏 and the poles are given by the roots of the characteristic equation 
+
+𝑠 2 + ( 1𝜏 ) 𝑠 + ( 1𝜏 ) 𝛼𝑞 2 = 0  (18) The discriminant 
+
+Δ = 1 − 4𝛼𝑞 2𝜏  (19) 
+
+defines a critical wavevector 
+
+𝑞 𝑐 = 12√𝛼𝜏 
+
+(20) 
+
+For 𝑞 < 𝑞 𝑐 the inverse Laplace transform yields a sum of exponential terms: 
+
+𝑇 𝑞 (𝜏) (𝑡) = 𝐼 𝑘 [𝐴 1(𝑞, 𝜏)𝑒𝑥𝑝(𝜆 1𝑡) + 𝐴 2(𝑞, 𝜏)𝑒𝑥𝑝( 𝜆 2𝑡)]  (21) 
+
+Where 
+
+𝜆 1/2 = − 12𝜏 ± 12𝜏 √1 − 4𝛼𝑞 2𝜏  (22) 
+
+𝐴 1(𝑞, 𝜏) = (1𝜏 + 𝜆 1)𝜆 1 − 𝜆 2
+
+(23) 
+
+𝐴 2(𝑞, 𝜏) = − (1𝜏 + 𝜆 2)𝜆 1 − 𝜆 2
+
+(24) 
+
+For 𝑞 = 𝑞 𝑐 .the inverse Laplace transform yields 
+
+𝑇 𝑞 (𝜏) (𝑡) = 1𝑘 𝑒𝑥𝑝 (− 𝑡 2𝜏 ) [1 + 𝑡 2𝜏 ] (25) 
+
+With 
+
+𝜆 1 = 𝜆 2 = − 12𝜏 
+
+(26) 
+
+Finally, for 𝑞 > 𝑞 𝑐 , .the inverse Laplace transform yields damped osciallatory solutions 
+
+𝑇 𝑞 (𝜏) (𝑡) = 𝐼 𝑘 A(q, τ)𝑒𝑥𝑝 (− 𝑡 2𝜏 ) 𝑠𝑖𝑛(𝑏𝑡 + 𝜙(𝑞, 𝜏))  (27) 
+
+Where 
+
+𝑏 = √4𝛼𝑞 2𝜏 − 1 2𝜏 
+
+(28) A(q, τ) = √ 14𝜏 2 + 𝑏 2
+
+𝑏 
+
+(29) 
+
+𝜙 = 𝑎𝑟𝑐𝑡𝑔(2𝑏𝜏)  (30) 
+
+Long-memory kernel 
+
+For algebraically decaying correlations, the kernel behaves as one given by Eq (13). The transfer function becomes 
+
+𝐻(𝑞, 𝑠) = 𝑠 𝑠 2 + 𝑐 𝑒𝑓𝑓 2 𝑞 2
+
+(31) 
+
+The inverse Laplace transform yields an oscillatory response: 
+
+𝑇 𝑞 (∞) (𝑡) = 𝐼𝑐𝑜𝑠(𝑐 𝑒𝑓𝑓 𝑞𝑡)  (32) 
+
+The time-domain expressions derived above are fully determined by the zero-pole structure of the resolvent 𝐻(𝑞, 𝑠) , which is controlled solely by the analytic form of the memory kernel 𝐾̃(𝑠). No additional assumptions are introduced at this stage beyond linearity and time-translational invariance 
+
+IV. SCALING STRUCTURE OF TTG DYNAMICS 
+
+The solutions derived in Section III describe the temporal evolution of individual TTG modes determined by the resolvent structure of the transport operator. However, experimentally observed signals depend not only on the operator parameters, but also on how these parameters are probed relative to the spatial and temporal scales of observation. In this section we analyze this scaling structure and its consequences for the interpretation of TTG measurements. 
+
+IV.1 Asymptotic memory limits 
+
+The short-memory and long-memory kernels define two limiting projections of the modal response. For the short-memory kernel (Eq. 15), the response reduces to a single exponential relaxation, where the temporal evolution is governed by the diffusive scale αq ². In contrast, the long-memory kernel (Eq. 31) produces an oscillatory response, whose periodicity is set by the spatial mode q and the effective propagation constant 𝑐 𝑒𝑓𝑓 .
+
+These limiting cases provide reference responses for the finite-memory dynamics discussed below. Figure 1. Asymptotic modal responses. (a) Short-memory limit (Eq. 15), showing exponential relaxation of the selected TTG mode. Increasing 𝛼𝑞 2 accelerates the decay. (b) Long-memory limit (Eq. 31), showing oscillatory modal evolution. The oscillation period is controlled by the spatial mode q and propagation constant 𝑐 𝑒𝑓𝑓 . These responses define the asymptotic bounds of the finite-memory dynamics. 
+
+IV.2 Finite-memory response 
+
+For the finite-memory kernel, the temporal evolution depends simultaneously on the relaxation time τ, the thermal diffusivity α, and the selected spatial mode q. The resulting response is organized by the critical wavevector (Eq. 19), which separates monotonic and oscillatory modal responses. 
+
+To analyze the experimentally observed signals, we introduce the dimensionless parameters defined relative to the observation time window: 𝛾 = 𝜏/𝜏 𝑜𝑏𝑠 , 1/𝛽 = 𝛼𝑞 2𝜏 𝑜𝑏𝑠 .
+
+Critical mode 𝒒 = 𝒒 𝒄 
+
+At the critical wavevector, the two poles of the transfer function coalesce and the response is described by Eq. (24). In this case, the resolvent exhibits a degenerate pole structure, and the resulting response remains monotonic, with no oscillatory contributions supported by the spectrum. Figure 2 shows the dependence of the response on the relative parameter γ. For small values of γ, the response exhibits a rapid convex decay. As γ increases, the relaxation progressively slows and the response develops a broader temporal profile. For sufficiently large γ, the response becomes markedly non-exponential while remaining monotonic. 
+
+The critical mode therefore provides the simplest manifestation of finite-memory transport, isolating memory effects from both multi-exponential relaxation and oscillatory dynamics.       
+
+> Figure 2. Finite-memory response at the critical wavevector 𝑞 = 𝑞 𝑐 .Temporal evolution of the TTG mode for several values of 𝛾 . Increasing 𝛾 progressively slows the decay and modifies the signal shape while preserving monotonic relaxation. The critical mode provides a direct visualization of memory-induced temporal deformation.
+
+Subcritical mode 𝒒 < 𝒒 𝒄 
+
+For wavevectors below the critical value, the response consists of two real relaxation modes (Eq. 20), corresponding to a decomposition of the resolvent into two spectral contributions. The resulting signal combines these contributions, whose relative weights depend on both τ and q.
+
+Figure 3 illustrates the dependence on γ at fixed β. For small γ, the exact response remains close to both the diffusive reference and the slowest relaxation contribution over the entire observation window. As γ increases, a pronounced short-time transient develops and the response departs from both limiting descriptions. This transient is associated with the increasing influence of the fast relaxation contribution. At longer times, the influence of the fast relaxation contribution progressively diminishes, and the response approaches the asymptotic behavior governed by the slowest pole.      
+
+> Figure 3. Subcritical finite-memory dynamics ( 𝑞 < 𝑞 𝑐 ). Temporal evolution of the TTG mode for several values of 𝛾
+> at fixed β. The solid curves show the exact finite-memory response. For each value of 𝛾 , the blue dashed curve represents the contribution of the slowest relaxation mode, while the red dash-dot curve denotes the diffusive (short-memory) reference response. Increasing 𝛾 progressively reveals the short-time transient associated with the fast relaxation mode, while the long-time response becomes increasingly influenced by the slowest relaxation contribution.
+
+Supercritical mode 𝒒 > 𝒒 𝒄 .
+
+For wavevectors above the critical value, the poles become complex conjugates and the response assumes the form of a damped oscillation (Eq. 26). 
+
+Figure 4 shows the dependence on γ. For small γ, oscillatory components are strongly attenuated and only a limited portion of the oscillatory structure is resolved in the time-domain representation. As γ increases, the oscillatory structure becomes progressively more pronounced and approaches the asymptotic long-memory response. Nevertheless, the response remains bounded by an exponentially decaying envelope determined by both α and τ. The finite-memory case therefore exhibits a coexistence of oscillatory and dissipative contributions arising from the complex zero-pole structure of the resolvent. Figure 4. Supercritical finite-memory dynamics ( 𝑞 > 𝑞 𝑐 .). Temporal evolution of the TTG mode for several values of γ at fixed β. The solid curves show the exact finite-memory response. For each value of γ, the red dash-dot curve represents the oscillatory long-memory reference, while the blue dashed curve denotes the corresponding exponential envelope. Increasing γ enhances the visibility of oscillatory features and progressively brings the response closer to the long-memory limit. The oscillatory component remains bounded by an exponentially decaying envelope determined by the finite relaxation time. 
+
+In the asymptotic limits, variations of q merely rescale the temporal response. For the finite-memory operator, however, variations of q may change the qualitative nature of the dynamics itself, producing transitions between relaxational, critical, and oscillatory behavior. 
+
+To separate intrinsic changes of the spectral regime from observational effects, we now fix γ and examine how variations of β and temporal sampling modify the experimental visibility of these responses. 
+
+IV.3 Projection of Finite-Memory Dynamics onto Experimental Windows 
+
+For fixed intrinsic memory parameter γ, the observed dynamics depend on the parameter β and the finite temporal resolution of the measurement. The role of β is not uniform across regimes and depends on the spectral structure of the response. Subcritical modes ( 𝒒 < 𝒒 𝒄 .)
+
+For fixed γ, variations of β redistribute the relative durations of the transient and asymptotic stages without altering the underlying memory mechanism. As shown in Fig. 5, increasing βprogressively compresses both the transient regime and the subsequent interval over which the finite-memory response remains visibly separated from the diffusive reference. Consequently, the experimentally accessible signatures of memory become confined to increasingly shorter time intervals.  
+
+> Figure 5. Observability of finite-memory signatures in the subcritical regime ( 𝑞 < 𝑞 𝑐 ) for fixed γ and different values of β. Left panels show the exact finite-memory response (black solid curve) together with its decomposition into the slow relaxation mode (blue dashed curve) and the fast transient contribution (cyan dashed curve), compared with the diffusive reference (red dash-dot curve). Dense and sparse temporal sampling are represented by magenta and green markers, respectively. Right panels show the corresponding sampled responses (dense and sparse sampling) together with the slow relaxation mode and the diffusive reference. Even when the transient-to-asymptotic crossover becomes experimentally unresolved, the finite-memory response remains distinguishable from the diffusive prediction.
+
+The exact response can be decomposed into a fast transient contribution and a slow relaxation mode. Their crossover produces a characteristic concave-to-convex curvature transition in the signal. For smaller β, this transition occupies a larger fraction of the observation interval and is readily observable. As β increases, the transient contribution becomes restricted to earlier times and the curvature transition is progressively compressed. Finite temporal sampling further reduces the direct observability of this crossover. Sparse sampling may undersample the transient region and thereby obscure the curvature transition associated with the fast relaxation mode. However, the distinction between finite-memory and diffusive dynamics is not limited to this local feature. After the transient contribution has decayed, the exact response becomes increasingly well described by the slow relaxation mode. Although the resulting signal may appear nearly exponential, it remains distinguishable from the diffusive reference over a substantial portion of the observation interval through its different effective relaxation dynamics. 
+
+Therefore, the disappearance of the curvature transition from the sampled signal does not imply the disappearance of memory signatures nor convergence toward diffusive behavior. Rather, it indicates that one particular signature of memory—the direct observation of the transient-to-asymptotic crossover—has become experimentally inaccessible. Information about finite relaxation remains encoded in the subsequent decay dynamics through the persistent difference between the finite-memory response and the diffusive reference. Only at sufficiently long times do the exact response, the slow relaxation mode, and the diffusive reference become practically indistinguishable. 
+
+Supercritical modes ( 𝑞 > 𝑞 𝑐 .) 
+
+In the supercritical regime, finite-memory dynamics are manifested through damped oscillatory behavior. However, the observability of these oscillations depends not only on the intrinsic system parameters but also on the temporal resolution of the measurement. 
+
+As shown in Fig. 6, variations of β modify the oscillatory structure of the response while leaving the damping envelope unchanged. Increasing β reduces the number of oscillation cycles resolved within a given observation interval. Consequently, the response may appear progressively more monotonic, even though the underlying dynamics remain governed by complex poles and retain their oscillatory character. 
+
+Finite temporal sampling further reduces the direct observability of oscillations. Sparse sampling may fail to capture successive extrema and thereby suppress visible oscillatory features in the measured signal. However, the absence of experimentally resolved oscillations does not imply the absence of memory signatures. Rather, it indicates that one particular manifestation of finite-memory dynamics has become inaccessible at the available temporal resolution. 
+
+As illustrated in Fig. 6, both the sampled response and its damping envelope remain clearly separated from the diffusive reference even when individual oscillation extrema are no longer resolved. Thus, information about finite relaxation remains encoded not only in the oscillatory component itself but also in the envelope dynamics and the associated relaxation rate. The disappearance of visible oscillations therefore does not imply convergence toward diffusive behavior; it merely reflects a reduced ability to directly observe the oscillatory manifestation of the underlying memory process. Figure 6. Observability of finite-memory signatures in the supercritical regime ( 𝑞 > 𝑞 𝑐 ) for fixed γ and different values of β. The black solid curve denotes the exact finite-memory response, the blue dashed curve the corresponding damping envelope, and the black dash-dot curve the undamped oscillatory reference. Magenta and green markers represent dense and sparse temporal sampling, respectively. Right panels compare the sampled responses and the corresponding envelope with the diffusive reference (red dash-dot curve). Even when oscillatory extrema become experimentally unresolved, the envelope dynamics remain clearly distinguishable from the diffusive prediction. 
+
+Taken together, Figs. 5 and 6 demonstrate that finite temporal resolution does not eliminate memory effects but progressively limits access to particular dynamical signatures through which they are observed. In the subcritical regime, the transient-to-asymptotic crossover becomes increasingly difficult to resolve, whereas in the supercritical regime oscillatory extrema may become experimentally inaccessible. In both cases, the most prominent local signatures disappear first, while information about the underlying finite-memory dynamics remains encoded in the subsequent decay behavior. Consequently, the practical detectability of memory depends not only on the existence of finite relaxation but also on which signatures remain observable within the temporal resolution and observation interval of the experiment. 
+
+V. DISCUSSION 
+
+Within the Mori–Zwanzig projection framework, memory operators arise naturally when microscopic degrees of freedom that are unresolved at the chosen observational scale are eliminated from the reduced dynamics. This procedure yields a closed evolution equation for the experimentally accessible TTG mode, in which the unresolved microscopic dynamics are represented through a non-Markovian memory operator. In this representation, TTG measurements do not directly probe microscopic transport mechanisms. Rather, they constrain the resolvent structure of the effective operator governing the coarse-grained dynamics. The experimentally observed transient is therefore determined by operator-level properties, not by a one-to-one manifestation of a specific microscopic process. 
+
+A key consequence of this formulation is that observed signal morphology does not provide a unique characterization of the underlying operator dynamics under realistic experimental constraints. Distinct combinations of memory and relaxation parameters may produce nearly indistinguishable transient responses when sampled over finite spatial and temporal windows. Conversely, identical operator parameters may yield different apparent signal shapes depending on the accessible range of wavevectors and observation times. 
+
+Importantly, this ambiguity does not imply a loss of physical information. Rather, the information associated with memory effects and inertial (second-sound-like) contributions remains fully encoded in the transient response, but is redistributed across different observable channels. When temporal or spatial resolution is insufficient to resolve oscillatory or multi-exponential structure, these features are not eliminated but manifest instead as systematic deviations of the decay envelope from purely diffusive behavior. The unresolved dynamics are therefore embedded in the structure of the inverse problem rather than erased by projection or coarse graining. 
+
+In principle, reconstruction of the effective transport operator requires the full transient response across multiple wavevectors and observation times rather than classification of individual signal shapes. The operator parameters are inferred from the global structure of the resolvent 𝐻(𝑞, 𝑠) ,whose response must remain consistent across the experimentally accessible range of scales. Apparent diffusive, relaxational, or oscillatory behavior therefore reflects the interplay between operator structure and observational scale rather than uniquely identifying an underlying microscopic mechanism. Robust inference of transport behavior consequently requires reconstruction of the effective transport operator rather than interpretation of signal shape alone. 
+
+VI. CONCLUSION 
+
+This work establishes a consistent forward model for TTG based on the Mori–Zwanzig formalism, explicitly linking energy conservation, non-Markovian constitutive relations, and the Laplace-domain resolvent of the effective transport operator. In this sense, the proposed formulation extends the conventional diffusive TTG framework to a broader class of finite-memory transport operators while preserving a direct connection between model parameters and experimentally measured transients. 
+
+Within this framework, TTG experiments are naturally formulated as an inverse problem: the reconstruction of operator parameters from the full transient response across wavevector and time scales. This distinction is essential because the experimentally observed signal morphology reflects the projection of operator dynamics onto finite observational scales and therefore does not, by itself, uniquely define the underlying transport operator. This leads to a hierarchical inference structure. At the first level, TTG data constrain the effective transport operator through inverse reconstruction of its parameters from measured transients. At the second level, the inferred operator provides a coarse-grained representation that can be mapped onto classes of microscopic dynamics specific to the material under study. Crucially, TTG measurements constrain only the effective operator; any inference about microscopic mechanisms must proceed through this intermediate operator reconstruction step. 
+
+Data availability statement: The data that supports the findings of this study are available from the corresponding author upon reasonable request. 
+
+Competing interests: The author declares no competing interests. 
+
+Acknowledgment This research was funded by the Ministry of Science, Technological Development and Innovations of the Republic of Serbia (Contract No. 451-03-33/2026-03/ 200017). 
+
+REFERENCES 
+
+1. Rosencwaig, A.; Gerscho, A. Theory of the photoacoustic effect with solids. J. Appl. Phys ., 47(1); 64–69, 1976 ,
+
+https://doi.org/10.1063/1.322296 .
+
+2. Vargas, H.; Miranda, L.C.M. Photoacoustic and related photothermal techniques, Phys. Rep . 1988 ; 161(2)43– 101, https://doi.org/10.1016/0370-1573(88)90100. 
+
+3. Skvortsov, L.A. Laser photothermal spectroscopy of light-induced absorption, Quantum Electron, 2013 , 43 (1), 1–13, https://doi.org/10.1070/ qe2013v043n01abeh014912. 
+
+4. Bialkowski, S.E.; Astrath, N.G.C.; Proskurnin, M.A. Photothermal Spectroscopy Methods , John Wiley & Sons, 
+
+2019 . ISBN: 978-1-119-27907-5. 
+
+5. Bertolotti, M.; Li Voti, R. A note on the history of photoacoustic, thermal lensing, and photothermal deflection techniques, J. Appl. Phys ., 2020 , 128(23),  https://doi.org/10.1063/5.0023836 .
+
+6. Pawlak, M.; Pal, S.; Ludwig, A.; Wieck, A.D. On the infrared absorption coefficient measurement of thick heavily Zn doped GaAs using spectrally resolved modulated photothermal infrared radiometry. J. Appl. Phys. 
+
+2017 , 122, 135109.. 
+
+7. Malacarne, L.C.; Astrath, N.G.C.; Lukasievich, G.V.B.; Lenci, E.K.; Baesso, M.L.; Bialkowski, S.E. Time-Resolved Thermal Lens and Thermal Mirror Spectroscopy with Sample–Fluid Heat Coupling: A Complete Model for Material Characterization; Applied Spectroscopy , 2011 , 65, Number 1, doi: 0003-7028/11/6501-0099$2.00/0. 
+
+8. Isaiev, M.; Tutashkonko, S.; Jean, V.; Termentzidis, K.; Nychyporuk, T.; Andrusenko, D.; Marty, O.; Burbelo, R.M.; Lacroix, D.; Lysenko, V. Thermal conductivity of meso-porous germanium. Appl. Phys. Lett . 2014, 105 ,031912. doi: 10.1063/1.4891196. 
+
+9. Zakrzewski, J.; Maliński, M.; Bachiri, A.; Strzałkowski, K. Photothermal determination of the optical and thermal parameters of CdxZn1-xSe mixed crystals. J. Mater. Sci. Eng ., B, 2021 , 271, 115305, 
+
+https://doi.org/10.1016/j.mseb.2021.115305 .10. Khabibullin, V.R.; Franko,M.; Proskurnin, M.A. Accuracy of Measurements of ThermophysicalParameters by Dual-BeamThermal-Lens Spectrometry, Nanomaterials 2023 , 13, 430, https://doi.org/10.3390/nano13030430. 
+
+11. Mandelis, A. Diffusion-Wave Fields: Mathematical Methods and Green Functions, Springer, New York, 2001 .
+
+12. Telenkov, S.; Mandelis, A. Signal-to-noise analysis of biomedical photoacoustic measurements in time and frequency domains, Review of Scientific Instruments , 81(12), 124901, 2010 , https://doi.org/10.1063/1.3505113. 
+
+13. Rojas-Trigos, J.B.; Calderón, A.; Marín, E.A. Practical model for the determination of transport parameters in semiconductors, J. Mater. Sci . 2011 , 46, 7799-7805  https://doi.org/10.1007/s10853-011-5760-9 .
+
+14. Mandelis, A. Laser infrared photothermal radiometry of semiconductors: principles and applications to solid state elec-tronics, Solid State Electron 1998 , 42, 1-15,  https://doi.org/https://doi.org/10.1016/S0038-1101(97)00238-4 .
+
+15. Galovic, S.P.; Markushev, D.K.; Markushev, D.D.; Djordjevic, K.Lj.; Popovic, M.N.; Suljovrujic, E.; Todorovic, D.M. Time-Resolved Photoacoustic Response of Thin Semiconductors Measured with Minimal Volume Cell : Influence of Photoinduced Charge Carriers; Appl. Sci ., 15, 2025 , no. 13, pp. 7290(1–23), https://doi.org/10.3390/app15137290 . 
+
+16. Song, P.; Melnikov, A.; Sun, Q.; Pagliaro, R.H.; Sun, X.; Liu, J.; Mandelis, A. Surface recombination velocity on wet-cleaned silicon wafers using heterodyne lock-in carrierography imaging: Measurement uniqueness investigation. Semicond. Sci. Technol. 2020 , 35 , 055013, doi: 10.1088/1361-6641/ab7844 . 
+
+17. Galović, S.; Kostoski, D. Photothermal wave propagation in media with thermal memory. J. Appl. Phys . 93, 3063–3070, 2003, https://doi.org/10.1063/1.1541613. 
+
+18. Galovic,S.; Popovic, M.; Chevizovich,D. Electrical Analogy Approach to Fractional Heat Conduction Models, 
+
+Fractal Fract . 9, 2025. 
+
+19. Somer, A.; Novatski, A.; Serbena, F.C.; Lenzi, E.K. Interplay between super and subdiffusive behaviors in photothermal phenomena. Int. J. Therm. Sci. 2021 , 159, 106539. 
+
+20. Cattaneo, C. Sulla conduzione del calore, Atti Semin. Mat. Fis. Univ. Modena 3, 83–101, 1948 .
+
+21. Vernotte, P. Les paradoxes de la théorie continue de l'équation de la chaleur, Comptes Rendus Acad. Sci . 246, 3154–3155 , 1958 .
+
+22. Joseph, D. D.; Preziosi, L. Heat waves, Rev. Mod. Phys . 61, 41–73, 1989. 
+
+23. Tzou, D.Y. Maacro to Microscale Heat Transfer: The Lagging Behavior , Taylor and Francis: Washington, DC, USA, 1996 , pp. 323–332. 
+
+24. Zwanzig, R. Memory Effects in Irreversible Thermodynamics, Phys. Rev . 124, 983–992, 1961 ,
+
+https://doi.org/10.1103/PhysRev.124.983 .
+
+25.  Novikov, I.A. Harmonic thermal waves in materials with thermal memory.  J. Appl. Phys.  1997 , 81 , 1067 –1072. 
+
+26. Mori H., Transport, Collective Motion, and Brownian Motion, Prog. Theor. Phys. 33, 423–455, 1965 ,
+
+https://doi.org/10.1143/PTP.33.423 
+
+27. Zwanzig, R. Nonequilibrium Statistical Mechanics, Oxford University Press, New York, 2001 ,https://doi.org/10.1093/oso/9780195140187.001.0001. 
+
+28. Vrugt, te M.; Wittkowski, R. Projection operators in statistical mechanics: a pedagogical approach,, J. Phys.: Condens. Matter 32, 423001, 2020 , doi:10.1088/1361-648X/ab8b51. 
+
+29. Sobolev, S.L.; Dai,W. Heat Transport on Ultrashort Time and Space Scales in Nanosized Systems: Diffusive orWave-like? Materials 2022 , 15, 4287. 
+
+30. Jung , B.; Jung G. Dynamic coarse-graining of linear and non-linear systems: Mori–Zwanzig formalism and beyond, J. Chem. Phys. 159, 084110, 2023 , https://doi.org/10.1063/5.0165541 .
+
+31. Brini, E.; Algaer, E. A.; Ganguly, P., Li, C.; Rodríguez-Ropero, F.; van der Vegt, N. F. A. Systematic coarse-graining methods for soft matter simulations, A review. Soft Matter 9, 2108–2119, 2013, 
+
+https://doi.org/10.1039/C2SM27201F 
+
+32.  D. N. Zubarev, Non -Equilibrium Statistical Thermody namics (Nauka, Moscow, 1971; Springer, Berlin, 1974). 
+
+33.  Tošić B.S., Šetraj ćić J.P, Jaćimovski S.K, (2018), The Method of Theoretical Physics I, KPU, Belgrade,  in 
+
+Serbian 
+
+34.  Kuzemsky A.L. (2017), Statistical Mechanics and the Physics of Many -Particle Model Systems, World 
+
+Scientific, New Yersey 
+
+35.  Kang J., Wang L.W. (2017), First -princi ples Green -Kubo method for thermal conductivity calculations, Physical 
+
+Review B  96, 020302 
+
+36. Fiorentino, A.; Baroni S. From Green-Kubo to the full Boltzmann kinetic approach to heat transport in crystals and glasses, PhysRevB 107.054311, 2023 , doi 10.1103/PhysRevB.107.054311. 37. Zhang ,X.;  Dai , J.;  Li ,C.;  Ma ,H. Characterizing thermal energy materials using transient grating spectroscopy: A comprehensive review of principles, techniques, and applications, J. Laser Appl. 37, 021202, 
+
+2025,  https://doi.org/10.2351/7.0001748 .
+
+38. Maznev, A. A.; Nelson, K. A.; Rogers, J. A. Optical heterodyne detection of laser-induced gratings. Opt. Lett. 
+
+23 , 1319–1321, 1998 .
+
+39. Choudhry, U. et al. Characterizing microscale energy transport in materials with transient grating spectroscopy. 
+
+J. Appl. Phys. 130 , 231101, 2021. 
+
+40. Huberman, S. et al. Observation of second sound in graphite at temperatures above 100 K, Science 364, 375– 379, 2019. 
+
+41. Ding, Z. et al. Observation of second sound in graphite over 200 K. Nat. Commun. 13, 285, 2022. 
+
+42.  Xie  Z. , Zhang, Y., Huang, X.  et al.  Room -temperature second sound in isotopically pure graphite.  Nat 
+
+Commun ., 2026 , https://doi.org/10.1038/s41467-026-70807-3 .
+
+43. Beardo, A. et al. Observation of second sound in a rapidly varying temperature field in Ge. Sci. Adv. 7, eabg4677, 
+
+2021. 
+
+44.  Engel, K.J.; Nagel, R.  One -Parameter Semigroups for Linear Evolution Eq uations , Edition: Graduate Texts in 
+
+Mathematics 194,Publisher: Springer -Verlag,  2000 , ISBN: 0 -387 -98463 -1. 
+
+45. Zhukovsky, K. Operational Approach and Solutions of Hyperbolic Heat Conduction Equations. Axioms 2016 ,5, 28. 
+
+46. Sablikov, V.A.; Sandomirskii, V.A. The Photoacoustic Effect in Semiconductors. Phys. Status Solidi (b) 1983 ,120, 471–480. 
+
+47. Maillet, D.; Andre, C.; Batsale, J.-C.; Degiovanni, A.; Moyne, C. Thermal Quadrupoles, Solving the Heat Equation Through Integral Transforms; John Wiley and Sons: Hoboken, NJ, USA, 2000; ISBN 0 471 98320 9. 
+
+48. Debnath, L.; Bhatta, D., Integral Transforms and Their Applications , 3rd ed., Chapman & Hall/CRC, Boca Raton, 2015.

@@ -41,17 +41,17 @@
 <section class="dpr-home-dashboard-card dpr-home-report-card">
   <div class="dpr-home-dashboard-header">
     <div>
-      <span class="dpr-home-dashboard-kicker">2026-08-21</span>
+      <span class="dpr-home-dashboard-kicker">2026-08-22</span>
       <h3 class="dpr-home-dashboard-title">今日汇总</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">共 3 篇</strong>
+    <strong class="dpr-home-dashboard-count">共 6 篇</strong>
   </div>
   <dl class="dpr-home-dashboard-stats">
     <div class="dpr-home-dashboard-stat"><dt>累计更新</dt><dd>1 次</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>1</dd></div>
-    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>精读</dt><dd>2</dd></div>
+    <div class="dpr-home-dashboard-stat"><dt>速读</dt><dd>4</dd></div>
   </dl>
-  <p class="dpr-home-dashboard-body">最近更新：2026-08-21 20:53:41 UTC<br>状态：成功</p>
+  <p class="dpr-home-dashboard-body">最近更新：2026-08-22 20:41:20 UTC<br>状态：成功</p>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-brief-card">
   <div class="dpr-home-dashboard-header">
@@ -62,9 +62,7 @@
     <strong class="dpr-home-dashboard-count">AI</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<p>今日围绕电子显微与光谱分析推进3篇文献，精读1篇超快电子成像方法，速读2篇AI辅助结构识别。</p>
-<p>最值得关注的是8分精读《Ultrafast order-selective electron imaging and spectroscopy》，聚焦超快电子成像中的选择性对比机制。</p>
-<p>建议下一步优先掌握该超快技术核心思路，再延伸了解自监督与无监督学习在4D-STEM及光电子谱中的应用。</p>
+<p>今日精读2篇、速读4篇，聚焦同步辐射原位操控、界面光电子动力学及超快光学前沿。最值得看的两篇8分工作：多工具机器人实现同步辐射时间分辨原位样品操控，以及单层h-BN/金属界面波纹调控光激发电子动力学。建议优先精读机器人原位操控论文，其方法论对实验自动化有直接启发。</p>
   </div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-deep-card">
@@ -73,12 +71,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">精读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">1 篇</strong>
+    <strong class="dpr-home-dashboard-count">2 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Ultrafast order-selective electron imaging and spectroscopy">Ultrafast order-selective electron imaging and spectroscopy</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="Multi-Tool Robotics Enables In-Situ Sample Manipulation for Time-Resolved Synchrotron Measurements">Multi-Tool Robotics Enables In-Situ Sample Manipulation for Time-Resolved Synchrotron Measurements</span></li><li><span class="dpr-home-dashboard-paper-title" title="Tuning of Photoexcited Electron Dynamics at Monolayer h-BN/Metal Interfaces by Corrugation">Tuning of Photoexcited Electron Dynamics at Monolayer h-BN/Metal Interfaces by Corrugation</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>1</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>2</strong></span></div>
 </section>
 <section class="dpr-home-dashboard-card dpr-home-skim-card">
   <div class="dpr-home-dashboard-header">
@@ -86,12 +84,12 @@
       <span class="dpr-home-dashboard-kicker">今日累计</span>
       <h3 class="dpr-home-dashboard-title">速读推荐</h3>
     </div>
-    <strong class="dpr-home-dashboard-count">2 篇</strong>
+    <strong class="dpr-home-dashboard-count">4 篇</strong>
   </div>
   <div class="dpr-home-dashboard-body">
-<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="DINO4DSTEM: A self-supervised framework for structural discovery in 4D-STEM">DINO4DSTEM: A self-supervised framework for structural discovery in 4D-STEM</span></li><li><span class="dpr-home-dashboard-paper-title" title="Electronic and chemical phase identification in photoemission experiments using unsupervised machine learning">Electronic and chemical phase identification in photoemission experiments using unsupervised machine learning</span></li></ul>
+<ul class="dpr-home-dashboard-paper-list"><li><span class="dpr-home-dashboard-paper-title" title="From Photothermal Transients to Effective Transport Operators: An Operator-Based Interpretation of TTG Dynamics">From Photothermal Transients to Effective Transport Operators: An Operator-Based Interpretation of TTG Dynamics</span></li><li><span class="dpr-home-dashboard-paper-title" title="Burst-Driven Collective Ultrafast Interactions for Confined Optical Absorption">Burst-Driven Collective Ultrafast Interactions for Confined Optical Absorption</span></li><li><span class="dpr-home-dashboard-paper-title" title="Tracking Chirality during Molecular Motor Photoisomerization via Simulated Time-Resolved Circular Dichroism">Tracking Chirality during Molecular Motor Photoisomerization via Simulated Time-Resolved Circular Dichroism</span></li></ul>
   </div>
-  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>2</strong></span></div>
+  <div class="dpr-home-dashboard-tags"><span class="dpr-home-dashboard-tag">iscat <strong>4</strong></span></div>
 </section>
 </div>
 

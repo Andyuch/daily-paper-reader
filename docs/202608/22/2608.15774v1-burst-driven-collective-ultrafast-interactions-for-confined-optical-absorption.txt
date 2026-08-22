@@ -1,0 +1,595 @@
+Title: Burst-Driven Collective Ultrafast Interactions for Confined Optical Absorption
+
+URL Source: https://arxiv.org/pdf/2608.15774v1
+
+Published Time: Tue, 18 Aug 2026 01:12:54 GMT
+
+Number of Pages: 13
+
+Markdown Content:
+## Burst-Driven Collective Ultrafast Interactions for Confined Optical Absorption 
+
+Burak Arayıt, 1, 2 Seydi Yava¸ s, 2, 3, 4, 5 Mehmet Bur¸ cin ¨Unl¨ u, 2, 3, 6 and Fatih ¨Omer Ilday 7, 8, 9, ∗
+
+> 1
+
+Electrical and Electronics Engineering, Faculty of Engineering, ¨Ozye˘ gin University, Istanbul 34794, T¨ urkiye  
+
+> 2
+
+¨OzU HealthTech Research Center, ¨Ozye˘ gin University, C ¸ ekmek¨ oy, Istanbul, 34794, T¨ urkiye 
+
+> 3
+
+Faculty of Engineering, ¨Ozye˘ gin University, Istanbul 34794, T¨ urkiye 
+
+> 4
+
+Department of Physics, Bo˘ gazi¸ ci University, 34342, Istanbul, T¨ urkiye 
+
+> 5
+
+Lumos Laser A.S ¸., 34340, Istanbul, T¨ urkiye 
+
+> 6
+
+Faculty of Aviation and Aeronautical Sciences, ¨Ozye˘ gin University, Istanbul 34794, T¨ urkiye 
+
+> 7
+
+Faculty of Electrical Engineering and Information Technology, Ruhr-Universit¨ at Bochum, 44801, Germany 
+
+> 8
+
+Faculty of Physics and Astronomy, Ruhr-Universit¨ at Bochum, 44801, Germany 
+
+> 9
+
+Center for Complex Interactions, Ruhr-Universit¨ at Bochum, 44801, Germany 
+
+Ultrafast bursts, groups of closely spaced femtosecond pulses, can drive light–matter interactions that are not possible with single-pulse excitations. This occurs when earlier pulses create a transient effect that nonlinearly alters the interaction of later pulses, provided that the inter-pulse spacing is shorter than the relaxation time of the transient. A long-standing trade-off in optical excitation is between multiphoton absorption, which provides strong spatial confinement but low energy-transfer efficiency, and linear absorption, which is efficient but offers limited spatial localization. Here, we show that a burst of ultrafast pulses can collectively build up a population of free carriers in semiconductor nanoparticles via multiphoton absorption. The free carriers absorb linearly and strongly, and dissipate rapidly once the burst ends. The result is a more efficient absorption process that is strongly gated spatially and temporally by multiphoton absorption and burst duration, respectively. We develop an analytical model that couples carrier generation with Auger and surface recombination, yielding a piecewise-exact description of the carrier dynamics and an intuitive scaling relation for the collective energy-deposition enhancement. A signature consequence of collective absorption is its dependence on one extra power of the light intensity, effectively raising the order of an m-photon process to m + 1 without requiring higher intensities for the individual pulses. While we focus on nonlinear photoacoustic imaging as a potential application, we anticipate diverse applications, including nonlinear fluorescence microscopy. 
+
+I. INTRODUCTION 
+
+Nonlinear optical absorption confines the interaction volume to the focal region, providing optical sectioning and selectivity that affords multiphoton microscopy and related imaging techniques a decisive advantage [1, 2]. However, this spatial confinement comes at the cost of low energy-transfer efficiency, as the nonlinear excitation cross-sections are much smaller than their linear counter-parts, thereby requiring ultrashort pulses with high peak intensities [3]. These intensities, and thus the achiev-able efficiencies, cannot be increased indefinitely without exceeding damage thresholds [4, 5]. In contrast, linear absorption enables efficient energy deposition but lacks spatial selectivity, leading to signal generation outside the focal volume, especially axially [6, 7]. This trade-off between localization and efficiency is regarded as a fundamental limitation of optical excitation schemes. Ultrafast burst-mode excitation provides a route to overcome this limitation by distributing the energy over a large number of pulses of moderate energy within an excitation time window. However, there is a further possibility, namely, to exploit what we call collective pulse–matter interactions, accessed via ultrafast bursts [8]. If the inter-pulse spacing is much shorter than the  
+
+> ∗oemer.ilday@ruhr-uni-bochum.de
+
+characteristic relaxation time [9, 10], transient material responses to early pulses persist and accumulate toward a nonequilibrium state. Burst-driven collective behav-ior has been demonstrated in ablation-cooled material removal [8], enabling more efficient ablation [11]. Here, we introduce a collective nonlinear absorption mechanism, enabled by ultrafast bursts, where nonlinear absorption can act as a spatially confined trigger that opens a finite-time window of effectively linear and effi-cient absorption. We focus on multiphoton carrier injec-tion in semiconductor nanoparticles. At low-picosecond inter-pulse separations, pulses arrive much faster than carrier recombination [12, 13]. Each pulse generates car-riers through nonlinear absorption; subsequent pulses in-teract with the remaining carriers, experience enhanced linear absorption, and generate still more carriers, clos-ing the feedback loop. After sufficient buildup, the in-teraction transitions from being merely seeded by non-linear excitation to being dominated by carrier-assisted linear absorption. Crucially, this efficient absorption oc-curs only within the spatial region where the carriers have been generated via multiphoton absorption, thereby re-taining the spatial confinement of the nonlinear excita-tion. Our key finding can be summarized as a transfor-mation from single-pulse nonlinear excitation to collec-tive nonlinear excitation [Fig. 1]: 
+
+U ∝ Im(t) → I(t)
+
+Z t
+
+> −∞
+
+Im(t′) dt ′. (1) arXiv:2608.15774v1 [physics.optics] 16 Aug 2026 2a Excitation  
+
+> tissue GHz-rate burst of ultrashort laser pulses
+> Silicon nanoparticles
+> time
+> τr
+> τb= N τ r
+> intra-burst structure
+
+b Mechanism  
+
+> ħω ħω
+> Ek
+> conduction band valence band
+> Eg
+> two-photon absorption free-carrier absorption electrons holes
+> nc(t)
+> time
+> nss
+
+c Outcome         
+
+> Linear
+> efficient, delocalized
+> U∝I(t)
+> Multiphoton
+> confined, inefficient
+> U∝Im(t)
+> Collective
+> confined & efficient
+> U∝I(t) ∫ t−∞ Im(t') dt'
+
+FIG. 1. Schematic of burst-driven collective absorption. (a) A GHz-rate burst of ultrashort pulses is focused into a cluster of silicon nanoparticles. The inset shows the intra-burst pulse train, with inter-pulse period τr and burst duration τb = N τ r.(b) Per-pulse mechanism. Two-photon absorption (TPA) generates free carriers that subsequently absorb through free-carrier absorption (FCA), so the carrier density nc(t) builds up from pulse to pulse toward a steady state nss . Each jump in nc(t) marks one pulse of the burst. (c) Resulting excitation regimes, with the corresponding absorbed-energy scaling (common absorption coefficients omitted). The linear regime [ U ∝ I(t)] is efficient but delocalized, the multiphoton regime [ U ∝ Im(t)] is confined but inefficient, and the collective regime [ U ∝ I(t) R t 
+
+> −∞
+
+Im(t′) dt ′] is confined and efficient. 
+
+This transformation circumvents the limitation that the term, Im(t), is strongly capped to avoid photodis-ruption: its integral over many pulses can be larger by at least the number of pulses per burst, and potentially even larger through cooperative effects, as we demon-strate below. Equally important, the right-hand side contains m+1 factors of the intensity. Collectivity there-fore converts an m-photon excitation into an effectively (m + 1)-photon one, raising the order of the nonlinear-ity by one without the vanishingly small cross-section of a true ( m + 1)-photon transition, and sharpening the spatial confinement accordingly. This way, we combine efficient energy deposition without sacrificing spatial con-finement, effectively combining the advantages of nonlin-ear and linear excitation [Fig. 1]. Once the burst ends, the accumulated carriers quickly recombine and this win-dow closes on the recombination timescale, rendering the enhancement intrinsically time-gated. As one prominent application, we focus on address-ing a long-standing problem in photoacoustic signal gen-eration, which directly depends on localized energy de-position [14]. Multiphoton photoacoustics offers greater contrast but suffers from weak nonlinear absorption and poor signal-to-noise ratio, which has limited its practi-cal applicability [15–17]. In contrast, linear excitation offers poor spatial confinement, and out-of-focus back-ground absorption progressively degrades image contrast with increasing imaging depth [6]. Ultrafast burst-driven collective absorption could address this limitation by en-hancing the nonlinear photoacoustic signal by two to three orders of magnitude over single-pulse excitation while preserving the focal confinement of multiphoton excitation within a sufficiently short time window, set by the burst duration, that satisfies stress confinement conditions. Semiconductor nanoparticles, widely used in biomedical applications [18, 19], provide a particularly suitable platform for this mechanism owing to their well-characterized multiphoton absorption and free-carrier re-sponse [20]. When a semiconductor is targeted, multi-photon absorption can generate free charge carriers [12], thereby introducing an additional linear absorption chan-nel for subsequent pulses. By using temporally closely spaced pulses, carrier recombination can be minimized while cumulative energy delivery is increased [13]. We first develop an analytical model describing burst-driven collective absorption mediated by free-carrier dy-namics in semiconductors. By coupling multiphoton car-rier generation with Auger and surface recombination, we obtain a pulse-resolved description of carrier buildup and derive closed-form expressions for the resulting en-hancement in energy deposition. The model predicts a transition from nonlinear excitation to carrier-assisted absorption and provides a framework for understanding confined and efficient energy deposition under ultrafast collective excitation. We show that confinement is pre-served in the presence of scattering. We then focus on photoacoustic imaging. 3  
+
+> II. THEORY A. Absorption and energy coupling
+
+Let U (t, x, y, z ) be the absorbed energy density and 
+
+∂U/∂t its local rate of change. Including intrinsic lin-ear absorption, μint a , multi-photon absorption of order m,with coefficient βm, and linear absorption by free carriers, we write 
+
+∂U ∂t =  μint a + σ n c(t) I(t) + βm Im(t), (2) where nc(t) is the free-carrier density, governed by Eq. (4) below, and σ is the free-carrier absorption cross sec-tion [12, 21]. The free-carrier population density, nc,is typically extremely low at room temperature under equilibrium conditions for most materials. Consequently, there are two conventional cases, plus the collective in-teraction introduced here: (i) At wavelengths where the photon energy is above the band gap, linear absorption is typically the dominant mechanism. Energy coupling ex-tends along the entire beam path [top panel of Fig. 1(c)], and spatial localization is weak, particularly along the beam axis. Any free-carrier generation due to linear ab-sorption effectively increases the strength of absorption but does not change this picture qualitatively. (ii) At wavelengths below the band gap, linear absorption van-ishes, and multiphoton absorption becomes the primary mechanism of coupling of ultrafast pulses. Its nonlin-ear dependence on intensity confines the interaction to the focal volume [middle panel of Fig. 1(c)], at the cost of low efficiency. These two limits define the standard localization–efficiency trade-off. As we demonstrate be-low, this trade-off can be overcome by building a non-equilibrium free carrier population throughout a burst of ultrafast pulses [Fig. 1(a), (b), and bottom panel of (c)]. (iii) Under burst excitation, each pulse is shorter than all other timescales of the interaction and therefore samples the carrier density at its pre-pulse value nc,k , so Eq. (2) reduces to the per-pulse expression 
+
+∂U k
+
+∂t = ( μint a + σn c,k ) I(t) + βm Im(t), (3) the discrete expression of the history-dependent absorp-tion depicted in Fig. 1(b). The σn c,k contribution is a linear absorption channel that did not exist before the burst began, created collectively by the preceding pulses through carrier accumulation. Because the carrier pop-ulation that enables this channel was seeded by multi-photon absorption, it is spatially confined to the focal volume. The system therefore achieves efficient energy deposition without sacrificing spatial selectivity, circum-venting the fundamental trade-off identified in the intro-duction. The energy absorbed through Eq. (3) ultimately be-comes heat, along two routes. A multiphoton absorption event delivers the combined photon energy mℏω. The ex-cess mℏω −Eg, where Eg is the band-gap energy, appears as kinetic energy of the generated electron–hole pair and is transferred to the lattice through carrier–phonon cou-pling within a few picoseconds, while the remaining Eg
+
+is stored in the pair and is released through the same channel upon nonradiative recombination [12, 13]. Free-carrier absorption instead transfers ℏω directly to the ki-netic energy of an existing carrier without creating a pair, and thus thermalizes promptly [12, 21]. Since radiative recombination is negligible for the indirect-gap materials considered here, essentially all of the deposited energy converts to lattice heat. Carrier generation stores part of the absorbed energy, and recombination subsequently releases it. We now model the evolution of nc under burst excita-tion.  
+
+> B. Carrier dynamics under burst excitation
+
+The temporal separation of the pulses within the burst is defined by τr, and the duration of the burst is τb, cor-responding to N = τb/τ r pulses within the burst. A photon of sufficient energy can promote an electron from the valence band to the conduction band. High-intensity subpicosecond pulses at longer wavelengths drive this process via multiphoton absorption, where 
+
+mℏω > E g and m is the dominant order of multipho-ton absorption. The carrier generation rate is governed by 
+
+dn c
+
+dt = μint a
+
+ℏω I(t) + βm
+
+mℏω Im(t) − γ n 3c − nc
+
+τeff 
+
+, (4) where nc is the free-carrier density, μint a is the intrin-sic linear absorption coefficient, βm is the m-photon ab-sorption coefficient, γ is the Auger recombination con-stant [12, 13], and τeff is a generalized effective linear carrier loss time. The first two terms describe carrier generation via linear and multiphoton absorption, respec-tively. However, our focus is on material and wavelength combinations with negligible linear absorption, as in the sub-gap excitation of crystalline silicon developed below. Therefore, μint a ≈ 0, and carrier injection is seeded al-most entirely by multiphoton absorption. This distinc-tion is important physically: intrinsic linear absorption would generate carriers wherever the beam deposits en-ergy, whereas the collective absorption considered here is initiated by nonlinear absorption and is therefore con-fined to the focal region. The third term accounts for Auger recombination, in which an electron-hole pair re-combines, transferring its energy to a third carrier. This process depletes the carrier population with a third-order dependence on nc. Other carrier loss channels, such as ambipolar and surface diffusion together with Shockley– Read–Hall recombination, are represented by a lumped first-order loss term with an effective decay time, τeff .While radiative recombination is also relevant for direct-gap semiconductors, Auger remains the dominant recom-bination channel for silicon [13]. 4To solve Eq. 4, we separate the dynamics into two phases. During the ultrashort pulse, only generation oc-curs, and recombination is negligible because of the sepa-ration of timescales, τp ≪ τr < τ eff , where τp is the pulse width, and τr is the time between the pulses. Between pulses, recombination reduces the carrier density via the mechanisms described above. This separation yields a pair of coupled difference equations, where n+c,k denotes the carrier density immediately after pulse k and nc,k +1 
+
+is the carrier density just before the next pulse, 
+
+n+c,k = nc,k + βm Im 
+
+> p
+
+τp
+
+mℏω , (5a) 
+
+nc,k +1 = n+c,k e−τr/τ eff 
+
+q
+
+1 + γτ eff (n+c,k )2 1 − e−2τr/τ eff 
+
+ , (5b) with nc,0 ≈ 0 and Ip the peak pulse intensity. Eq. 5a represents the injection of carriers through nonlinear ab-sorption. Eq. 5b describes the nonlinear recombination that reduces the carrier density over the inter-pulse pe-riod τr. When τr is sufficiently short, recombination can-not deplete all the carriers produced and the material remains in its transient state when the next pulse ar-rives. The system is therefore driven repeatedly away from equilibrium, with the carrier density building up pulse by pulse until it approaches a steady state nss , de-fined by nc,k +1 = nc,k ≡ nss , where per-pulse injection is exactly balanced by inter-pulse recombination. This results in a sawtooth-like fast pattern with an initially rising, then plateauing baseline [Fig. 2(a)]. The carrier density evolves exactly as the surface temperature does in ablation-cooled material removal, where each pulse of a GHz burst deposits heat faster than it can dissipate between pulses [8]. In both cases, each pulse drives the relevant state variable away from equilibrium, free car-riers here and residual heat in ablation cooling, thereby strengthening the action of later pulses until a competing loss mechanism, Auger recombination here and ablation itself in the latter, limits the growth. The sustained transient non-equilibrium state persists throughout the burst duration, during which the ma-terial’s optical and thermal characteristics also become transient. Carriers are promoted to the conduction band very rapidly, and their kinetic energy simultaneously rises under the intense field of the incoming pulse, driving the electron temperature Te [12, 13]. With the elevated carrier temperature, the impact ion-ization rate also increases, as energetic carriers gener-ate additional electron–hole pairs and reinforce the pos-itive feedback beyond multiphoton-induced carrier gen-eration [12]. Moreover, the excess carrier concentration reduces the bandgap, causing bandgap renormalization (BGR), with ∆ Eg(nc) ∝ n1/3c [12, 21], further accelerat-ing carrier generation. These effects constitute additional positive feedback channels that would lower the transi-tion threshold and elevate the steady-state carrier density beyond the values predicted here. As the carrier den-sity gets close to the critical carrier density for dielectric breakdown, nc ≥ ncr ∼ 10 21 cm −3, BGR and impact ion-ization effects are non-negligible; they can cause runaway effects and might lead to avalanche breakdown [22]. How-ever, we assume nc ≤ ncr , and the present model omits both, retaining only multiphoton generation and Auger recombination as the essential competing processes.  
+
+> C. Collective energy deposition
+
+With nc,k given by the recurrence relations (5), we evaluate the total energy deposited during the burst. This outcome is driven by a nonlinear feedback loop in which each pulse generates carriers via multiphoton absorption, thereby enhancing the linear absorption of subsequent pulses, which in turn deposit energy more efficiently into the existing carrier population. More generally, collective light–matter interactions can arise through nonlinear feedback whenever a material state created by earlier excitation persists long enough to mod-ify subsequent interactions [23, 24]. Ultrafast bursts ex-tend this concept to highly transient material states by delivering subsequent pulses before that state relaxes. The early pulses in the burst serve as sacrificial exci-tation [8], investing energy inefficiently to build the car-rier population and enabling later pulses to benefit from the collectively established absorption channel. Auger recombination provides a competing negative feedback that grows with carrier density and ultimately clamps the buildup at the steady state nss .Integrating Eq. (3) over each pulse and summing over all N pulses yields the total deposited energy density 
+
+Uburst = N  μint a + βm Im−1p
+
+ Ipτp + σ I pτp
+
+> N
+
+X
+
+> k=1
+
+nc,k , (6) where Ip is the peak pulse intensity and τp is the pulse duration, assuming a square temporal profile. The sum-mation P nc,k represents the cumulative contribution of free-carrier absorption across all pulses, the collective energy-deposition term that has no counterpart in single-pulse excitation. We next derive the scaling relation for the collective deposition regime shown schematically in Fig. 1(c). We first write the carrier density before the k-th pulse as the accumulated response to all preceding pulses. Let 
+
+Ij denote the peak intensity of the j-th pulse with the carrier density injected by that pulse in the absence of recombination during the pulse given by ∆nj = βmImj τp
+
+mℏω . (7) We can account for the inter-pulse carrier recombination through a memory kernel Kk−j , with K0 = 1. Then, the pre-pulse carrier density can be written to leading order 50.0 2.5 5.0 
+
+a Fp/Fth = 0.02 0.05 0.10           
+
+> r= 50 ps
+> nc,kn+
+> c,k
+> r= 50 ps
+> nc,kn+
+> c,k
+
+0510           
+
+> nc (10 19  cm  3)
+> r= 20 ps
+> nc,kn+
+> c,k
+> r= 20 ps
+> nc,kn+
+> c,k
+
+0 200 400 600 800 1000 1200 1400 
+
+Time (ps) 
+
+0612 r = 10 ps         
+
+> nc,kn+
+> c,k
+> r= 10 ps
+> nc,kn+
+> c,k
+
+10 100 1000 
+
+frep (GHz) 
+
+1 10 100  
+
+> r
+
+(ps) 
+
+0.01 0.1 1
+
+> Fp / Fth
+
+b
+
+> = 0.02
+> = 0.05
+> = 0.1  = 0.2
+> = 0.5
+> = 2
+> = 5
+> = 10
+> = 1
+
+10 100 1000 
+
+frep (GHz) 
+
+1 10 100  
+
+> r
+
+(ps) 
+
+0.1 110 
+
+c   
+
+> Fp/Fth = 0.02
+> Fp/Fth = 0.05
+> Fp/Fth = 0.10
+
+0.01 0.1 1
+
+Fp / Fth 
+
+0.1 110 
+
+d      
+
+> r= 10 ps
+> r= 20 ps
+> r= 50 ps
+
+0.1 110 
+
+FIG. 2. Carrier dynamics and the collective regime for c-Si nanoparticles. (a) Free-carrier density evolution exhibiting the sawtooth characteristic during the burst at inter-pulse periods τr = 10, 20, and 50 ps, each at per-pulse fluences Fp = 0 .02, 0.05, and 0 .1 Fth . Open and filled markers denote the pre- and post-pulse densities nc,k and n+c,k , with a distinct marker shape per inter-pulse period (circle, square, diamond). (b) Collective parameter ξ ≡ σn ss /(βmIm−1p ), the ratio of the free-carrier absorption channel to the direct multiphoton absorption channel, across the ( τr, Fp/F th ) parameter space. The top axis gives the corresponding intra-burst repetition rate frep = 1 /τ r. Thin contours mark ξ at the standard 1–2–5 levels per decade with each level labeled, and the solid ξ = 1 contour marks where the two heating channels contribute equally. Dashed horizontal and dash-dotted vertical lines mark the fluence and inter-pulse-period cuts profiled in (c) and (d), with markers at their crossings keyed to the nine scenarios of (a). (c) ξ as a function of τr at the three fluences of (a). The dashed line style matches the horizontal cuts in (b). (d) ξ as a function of Fp/F th at the three inter-pulse periods of (a). The dash-dotted line style matches the vertical cuts in (b). 
+
+as 
+
+nc,k ≃ X
+
+> j<k
+
+Kk−j ∆nj = βmτp
+
+mℏω
+
+X
+
+> j<k
+
+Kk−j Imj , (8) where Kk−j = exp[ −(k − j)τr/τ eff ]. We focus on the limit of large number of pulses per burst, N ≫ 1, and we introduce a continuous pulse coordinate ν ≡ (k−1) /(N −
+
+1) that ranges from 0 to 1. Replacing the sequence of peak intensity of the individual pulses, Ij , by I(ν) with 
+
+t = ν τ b, where the burst duration is τb = N τ r, Eq. (8) 6becomes 
+
+nc(ν) ≃ βmτp
+
+mℏω∆ν
+
+Z ν
+
+> 0
+
+K(( ν − υ)τb) Im(υ) dυ, (9) where ∆ ν ≃ τr/τ b. Changing variable to physical time, we get 
+
+nc(t) ≃ βmτp
+
+m ℏω τ r
+
+Z t
+
+> −∞
+
+K(t − t′) Im(t′) dt ′. (10) Substituting Eq. (10) into the free-carrier absorption term of Eq. (3) gives the collective contribution to the energy deposition, ˙U =
+
+
+
+μint a + σβ mτp
+
+mℏω τ r
+
+Z t
+
+> −∞
+
+K(t − t′) Im(t′) dt ′
+
+
+
+I(t)+ βm Im(t). (11) The regime of interest here is when the collectively in-duced free-carrier absorption dominates over both the intrinsic linear absorption and the instantaneous multi-photon absorption of the current pulse. At sufficiently high intra-burst repetition rates, carrier losses between successive pulses become small and K(t − t′) ≃ 1. The collective energy-deposition term then reduces to ˙U ∝ I(t)
+
+Z t
+
+> −∞
+
+Im(t′) dt ′. (12) As anticipated in Eq. (1), the collective term carries m+1 powers of the intensity, so the deposition inherits the spatial profile of an ( m + 1)-photon process. This is why the collective deposition in Fig. 3 is more tightly confined than the multiphoton deposition that seeds it, with axial widths of 11 and 13 μm, respectively.  
+
+> D. Energy-deposition enhancement
+
+The collective buildup determines how efficiently the burst deposits energy. With the steady state established within the first pulses of the burst, nc,k ≈ nss , and for negligible intrinsic absorption ( μint a ≈ 0) the deposited energy density of Eq. 6 becomes 
+
+Uburst ≈ N  βmIm−1p + σn ss 
+
+ Ipτp. (13) Normalizing by the incident burst fluence, Fburst =
+
+N I pτp = N F p, defines the energy-deposition coefficient of the burst, 
+
+η ≡ Uburst 
+
+Fburst 
+
+≈ βmIm−1p + σn ss , (14) the sum of the multiphoton and free-carrier absorption coefficients. For pure m-photon excitation the same quantity is ηMPA = βmIm−1p , so 
+
+ηηMPA 
+
+≈ 1 + ξ, ξ ≡ σ n ss 
+
+βm Im−1p
+
+, (15) where ξ is the ratio of FCA to MPA energy deposition at steady state. For ξ ≪ 1 each pulse acts independently under multiphoton absorption. For ξ > 1, the collectively sustained carrier population becomes the dominant ab-sorption channel.  
+
+> E. Realization in silicon nanoparticles
+
+To evaluate the predictions of the model, we apply it to crystalline silicon nanoparticles as a representative nonlinear absorber. For finite absorbers such as these nanoparticles, car-rier transport must be interpreted differently from bulk diffusion. In a bulk material, diffusion can redistribute carriers over distances that match or exceed the focal spot size, ω0, and thereby modify the spatial profile of absorp-tion. In a nanoparticle with diameter d ≪ ω0, however, carriers remain confined to the particle volume, and dif-fusion within the nanoparticle cannot transport carriers out of the focal volume, nor does it appreciably change the local optical intensity sampled by the carrier popula-tion. Its primary consequence is instead to bring carriers to the nanoparticle surface, where surface recombination provides an additional loss channel. We account for this finite-size effect through an effec-tive first-order carrier lifetime. Surface recombination removes carriers at a rate set by the surface recombi-nation velocity S acting over the particle’s surface-to-volume ratio A/V . For a sphere of diameter d this ratio is A/V = 6 /d , so the surface-recombination-limited life-time is 1
+
+τs
+
+= S AV = 6Sd , τs ≃ d
+
+6S . (16) For a silicon nanosphere with d = 100 nm and S = 10 4
+
+cm/s [25], this gives τs ≈ 170 ps. This timescale is com-parable to the upper limit of the inter-pulse periods con-sidered here and can reduce the carrier density between pulses. In our model, we include this contribution by taking τeff to represent the relevant first-order carrier-loss time, dominated by surface recombination for the nanoparticle parameters used below. As long as the particle diameter satisfies d ≫ aB, where 
+
+aB is the Bohr exciton radius, quantum-confinement ef-fects are negligible and the bulk values of βm, γ, and σ
+
+can be used as a first approximation [26, 27]. We spe-cialize to two-photon absorption ( m = 2) and select an excitation wavelength of λ = 1700 nm, offering high pen-etration depth in biological tissue [28, 29]. At this wave-length, silicon has negligible linear absorption ( μint a ≈ 0), so the TPA and FCA channels dominate. We take βm
+
+from Bristow et al. [30] and σ from Boggess et al. [20] scaled by λ2 to account for the free-carrier Drude re-sponse. The excitation parameters and material prop-erties are presented in Table I. The damage (ablation) threshold fluence for silicon is Fth = 0 .2 J /cm 2 for ultra-short pulses [31]. 7Figure 2(a) shows how nc evolves over the burst dura-tion, pulse by pulse, displaying a characteristic sawtooth pattern resulting from Eqs. 5. Each pulse produces a sharp carrier increment, followed by nonlinear decay be-tween pulses. This interplay continues until the carrier density reaches a steady state, nss = nc,k = nc,k +1 , at which per-pulse generation is exactly balanced by inter-pulse recombination. The time to reach steady state de-creases with increasing fluence, as stronger TPA genera-tion drives the system toward equilibrium faster. Shorter 
+
+τr allows less inter-pulse decay, leading to both higher nss 
+
+and faster convergence. Although the fluence values are chosen below the reported damage threshold of silicon, the critical carrier density ncr remains an important con-sideration. Figure 2(b) maps ξ (Eq. 15) across the ( τr, Fp/F th )parameter space, delineating the boundary between the TPA-dominated ( ξ < 1) and collective ( ξ > 1) regimes. Panel (c) shows the τr dependence at the three per-pulse fluences of panel (a). ξ rises steeply as τr decreases below the surface recombination time τs ≈ 170 ps, because in-complete inter-pulse recovery allows nss to accumulate to levels where FCA dominates over TPA. Panel (d) shows the fluence dependence at the three inter-pulse periods of panel (a). ξ grows with Fp at sub-threshold fluences as stronger TPA generation raises nss . At higher fluences, Auger recombination (third order in nc) clamps nss and slows the growth of ξ. Together, the two panels show that GHz intra-burst repetition rates and sub-threshold per-pulse fluences are the key conditions for accessing the collective regime. Figure 3 shows the focal energy deposition across the excitation regimes under Monte Carlo light transport us-ing parameters representative of brain tissue. The ab-sorbed energy density U (r) follows from Eq. (3), and the fluence maps Φ( x, z ) are obtained from Monte Carlo light transport [32] with a hyperboloid-focusing launch that reproduces the diffraction-limited focal waist [6] for a focused Gaussian beam in brain at 1700 nm (Ta-ble I) [29, 33]. The TPA and collectively gated FCA con-tributions are driven only by the ballistic, unscattered fluence, which retains the femtosecond Gaussian pulse profile; multiply scattered light is temporally dispersed and feeds the linear channel alone, its contribution to the focal nonlinear signal being negligible [7]. Linear ab-sorption produces a broad, delocalized background along the beam path, a single fs pulse (MPA) confines deposi-tion to the focal volume but at much weaker amplitude, and the collective burst combines focal confinement with the strongest deposition. The collective deposition is the most confined, with axial FWHM of 11, 13, and 27 μmfor the collective, MPA, and linear regimes, respectively. 
+
+TABLE I. Material constants (top) and excitation parameters (bottom) used for c-Si nanoparticles at λ = 1700 nm. Parameter Symbol Value Unit                                                                                                 
+
+> Material (c-Si)
+> TPA coeff. aβm1.0 cm/GW FCA cross section bσ1.28 10 −17 cm 2
+> Auger coeff. cγ3.8 10 −31 cm 6/s Critical carrier density dncr 10 21 cm −3
+> Damage threshold eFth 0.2 J/cm 2
+> Excitation
+> Wavelength fλ1700 nm Pulse duration τp100 fs Burst duration τb0.1–5 ns Inter-pulse period τr10–50 ps Per-pulse fluence Fp0.02–0 .1Fth J/cm 2
+> Nanoparticle geometry
+> Diameter d100 nm Surface recombination time gτs170 ps
+> Thermal and acoustic
+> Si volumetric heat capacity hCSi 1.66 ×10 6J/(m 3K) Water thermal conductivity iκw0.6 W/(m K) Water thermal diffusivity iaw0.143 mm 2/s Kapitza conductance jG150 MW/(m 2K) Thermal relaxation time τth 2.5 ns Gr¨ uneisen parameter (water) iΓw0.12 –Speed of sound (water) ivs1500 m/s Observation distance r100 μm
+> Tissue and imaging (Monte Carlo)
+> Brain absorption kμa0.4 mm −1
+> Brain scattering kμs2.3 mm −1
+> Scattering anisotropy kg0.87 –Tissue refractive index ntis 1.37 –Focal waist ω02μmFocal depth zf500 μmFocal volume fraction fV10 −4–
+> aRef. [30]. bRef. [20]. cRefs. [12, 13]. dRef. [22]. eRef. [31].
+> fRef. [28]. gRef. [25]. hRef. [34]. iRef. [35]. jRefs. [36, 37].
+> kRefs. [29, 33].
+
+III. APPLICATION TO PHOTOACOUSTIC IMAGING 
+
+Finally, we consider the application of the collective energy deposition to photoacoustic imaging. Photoa-coustic generation proceeds through an energy coupling chain in which the absorbed optical energy is converted to heat, the heat drives a thermoelastic expansion of the surrounding aqueous medium, and this transient expan-sion radiates an acoustic pressure wave [14]. We analyze the thermoelastic response from two perspectives, first the microscopic response of a single nanoparticle as the elementary source, then the macroscopic response of the nanoparticle ensemble within the focal volume. The ab-sorbed energy density, U , deposited through collective absorption (Sec. II C) converts to lattice heat rapidly. The carriers’ kinetic energy is transferred within picosec-onds via carrier–phonon coupling, the stored band-gap energy follows upon nonradiative recombination within 85 0 5  
+
+> x(m)
+> 480 490 500 510 520
+> z ( m)
+> a
+
+Multi-photon excitation     
+
+> 505
+> x(m)
+
+Collective excitation 10.3 0.1 0.03 0.01 60 40 20 0 20 40 60    
+
+> z500 (m)
+> 0.001 0.01 0.1 1
+> U/Upeak
+> b
+
+Axial cross-section ( x = 0 )        
+
+> Linear Multi-photon Collective 15 10 50510 15
+> x(m)
+> 0.001 0.01 0.1 1
+> U/Upeak
+
+Lateral cross-section ( z = 500 m) 
+
+> Linear Multi-photon Collective
+> Normalized  U (a.u.)
+
+FIG. 3. Confined energy deposition in brain tissue at 1700 nm under Monte Carlo light transport. (a) Cross-sectional absorbed energy density U for multiphoton excitation and collective excitation, on a shared normalized scale (both divided by the same global peak, so the collective-over-multiphoton magnitude difference is preserved). The collective burst makes the focal nonlinear (TPA + FCA) signal both stronger and more tightly confined, with the focal volume showing its characteristic elongation along the optical axis. Dash-dotted and dashed guide lines mark the on-axis (axial) and focal-plane (lateral) cuts profiled in (b). (b) Axial and lateral profiles, each normalized to its own peak, with color denoting the regime and line style the cut direction (axial dash-dotted, lateral dashed) to match the guides in (a). The linear absorption background is drawn as a solid gray reference in both profiles. The collective deposition is the most confined, with axial FWHMs of 11, 13, and 27 μm and lateral FWHMs of 1 .5, 1 .7, and 2 .4 μm for the collective, multiphoton, and linear regimes, respectively. τr = 10 ps, N = 100, 
+
+Fp = 0 .05 Fth .
+
+τeff , and both are fast compared with the thermal re-laxation time τth defined below [12, 13, 38]. A single nanoparticle thus acts as a nanoscale heat source driven by the burst, with H ≈ U . Its temperature is spatially uniform ( κw/κ Si ≈ 0.004), and Newton’s law of cooling governs heat exchange with water [35, 38] 
+
+dT NP 
+
+dt = 1
+
+CSi 
+
+dH dt − TNP 
+
+τth 
+
+, (17) where TNP is the nanoparticle temperature rise above ambient, dH/dt is the local heat power density inside the nanoparticle, equal to the absorbed power dU/dt 
+
+of Eq. (2), written with total derivatives because the spatially uniform particle renders U and H functions of time alone, CSi = ρSi cSi is the volumetric heat ca-pacity of silicon, with ρSi the mass density and cSi the specific heat of silicon, and τth is the NP thermal re-laxation time combining water-side diffusion [39] with the Si–water Kapitza resistance for interface conductance 
+
+G ≈ 150 MW /(m 2 K) [36, 37], 
+
+τth = CSi d
+
+6
+
+ d
+
+2κw
+
++ 1
+
+G
+
+
+
+≈ 2.5 ns . (18) 
+
+TNP is obtained by integrating Eq. (17) numerically over the burst, with dU/dt from Eq. (3) active dur-ing each pulse and nc,k evolving via Eqs. (5). Unlike 
+
+nss , which saturates through Auger-mediated negative feedback, TNP rises monotonically as successive pulses deposit energy faster than it can diffuse away on the timescale τth .The heat flowing out of the nanoparticle penetrates only a short distance into the surrounding water. Over the burst duration, thermal diffusion carries it a distance 
+
+δ ≈ √aw τb ≈ 12 nm (where aw is the thermal diffusiv-ity of water), and even over the longer cooling tail τth 
+
+this depth stays well below the particle size. The de-posited heat is therefore confined to a nanometric shell of water around the particle, defined as the generating layer [35]. As this layer heats up, it expands thermoelas-tically, and this expansion is what launches the pressure wave. The emission is dominated by the expansion of the water shell rather than of the nanoparticle itself [35, 40], as confirmed experimentally by the near-vanishing of the photoacoustic signal at 4 ◦C, where the thermal expan-sion coefficient of water vanishes [41, 42]. The nanopar-ticle’s own mechanical resonance, f ∼ vSi /πd ≈ 27 GHz 9(with vSi the longitudinal sound speed in silicon), lies far above the bandwidth of the thermally generated sig-nal (set by the nanosecond burst) and of any photoa-coustic detection band, and such high-frequency vibra-tions are strongly damped in water. The particle’s di-rect emission therefore does not contribute to the de-tected far-field signal [35]. With δ ≪ d ≪ λac (where 
+
+λac ≈ τb vs), the heated shell radiates as an acoustic point absorber [35, 43]. The nanoparticle discharges its stored heat into the water at the rate CSi VNP TNP /τ th ,the loss term of Eq. (17) scaled by the nanoparticle volume VNP = πd 3/6, and the far-field photoacoustic pressure of a single nanoparticle, pNP , follows from the Calasso solution [43], 
+
+pNP (r, t ) = Γw CSi VNP 
+
+4πv 2s r τ th 
+
+dT NP 
+
+dt , (19) where Γ w = αth v2s /c p, w is the Gr¨ uneisen parameter of water at ambient temperature, αth is the isobaric ther-mal expansion coefficient of water and cp, w is the spe-cific heat capacity of water, and the right-hand side is evaluated at the retarded time t − r/v s [43]. In this description, the nanoparticle acts as a heat reservoir that bridges two widely separated timescales, decoupling the femtosecond excitation from the nanosecond acous-tic emission. The femtosecond pulses charge the reser-voir almost instantaneously, whereas it discharges into the water only on the nanosecond scale set by the burst duration and the thermal relaxation time τth . The wa-ter therefore responds not to the individual femtosec-ond pulses but to the slowly varying discharge of the stored heat, which follows TNP (t) and places the emission safely in the slow-heating limit of the point-source solu-tion, valid when the heating time exceeds the thermal-acoustic time of water, aw/v 2s ≈ 60 fs [43]. The resid-ual per-pulse structure of TNP contributes only compo-nents above 1 /τ r ≳ 20 GHz, which lie far outside any photoacoustic detection band and are strongly absorbed in water within micrometers, like the particle resonance discussed above. Equations (17)–(19) thus amount to a deliberately simple approximation that combines the de-tailed treatments of Refs. [43] and [35], with the former providing the point-source acoustics and the latter the nanoparticle-to-water thermal coupling. The chain from deposition to emission can now be closed in a single expression. Integrating Eq. (17) gives 
+
+TNP (t) = C−1Si 
+
+R t 
+
+> −∞
+
+e−(t−t′)/τ th ˙U (t′) dt ′, and substituting into Eq. (19) yields 
+
+pNP (r, t ) = Γw VNP 
+
+4πv 2s r τ th 
+
+
+
+˙U (t)
+
+− 1
+
+τth 
+
+Z t
+
+> −∞
+
+e−(t−t′)/τ th ˙U (t′) dt ′
+
+
+
+, (20) again evaluated at the retarded time. After every inter-mediate quantity has dropped out, the far-field pressure is a direct image of the deposition rate. Thus the sim-ple collective form of Eqs. (1) and (12) is what the pho-toacoustic signal ultimately reports. The pressure wave-form of Fig. 4 follows ˙U while the burst runs and swings negative when the deposition stops at burst termination. Since the burst heats the nanoparticle cumulatively, the peak temperature limits the usable fluence, which must stay below the melting point of silicon. The ensemble of fluence values adopted throughout (Figs. 2–4) remains below this bound. In modeling the emission, we hold Γw at its ambient value and neglect its temperature de-pendence for simplicity. However, as the temperature of the generating layer increases, the thermal expansion co-efficient of water increases, raising Γ w and causing the emission to grow superlinearly with fluence [35]. Driven hotter still, the generating layer can even nucleate tran-sient vapor nanobubbles, whose expansion can further amplify the acoustic output well beyond thermal expan-sion alone [44]. Having obtained the single-particle response, the macroscopic photoacoustic response of the nanoparti-cle suspension follows the standard treatment of laser-irradiated colloidal suspensions, in which the focal vol-ume containing many nanoparticles is described as an effective bulk photoacoustic medium under stress con-finement at the focal scale, τb ≲ ω0/v s [40–42]. This condition holds for ω0 = 2 μm and τb = 1 ns. We charac-terize the nanoparticle loading by the focal volume frac-tion fV, the fraction of the focal region occupied by sil-icon nanoparticles. The nonlinear (TPA and FCA) con-tributions to the deposited heat scale linearly with fV,whereas the linear tissue absorption is independent of it. Within the focal volume under stress confinement, the local thermoelastic pressure rise follows the classical pho-toacoustic relation [14, 40] 
+
+p0(r) = Γ w H(r), (21) with H(r) = U (r) the absorbed energy density of Fig. 3. This energy comprises a delocalized linear tissue back-ground and a confined nonlinear (TPA and FCA) con-tribution Hnl . The corresponding nonlinear focal sig-nal p0 = Γ w Hnl is the quantity plotted in Fig. 4(b). The acoustic detection and image reconstruction that follow form the second stage of the photoacoustic for-ward problem and are treated separately in the standard framework [45]. Separating Hnl , a confined, time-gated, intensity-nonlinear signal, from the delocalized linear tis-sue background is an experimental consideration rather than part of the enhancement mechanism studied here. It can be accomplished with established techniques [16, 46– 48], on which we rely rather than developing new ones. Figure 4(b) quantifies the enhancement of the fo-cal photoacoustic signal at matched per-pulse energy. We track the enhancement up to the operating fluence 
+
+Fp = 0 .10 Fth , the largest per-pulse value kept below the melting bound, while the spatial and temporal profiles of Figs. 3 and 4(a) use an illustrative Fp = 0 .05 Fth ,whose shapes are essentially fluence-independent. Tol-erable loadings depend on the specific silicon formula-10 0 5 10 
+
+Time (ns)  
+
+> 1
+> 01
+> pNP  (norm.)
+> b
+
+= 1 ns   
+
+> 0510
+
+Time (ns)  
+
+> 1
+> 01
+> pNP  (norm.)
+> b
+
+= 5 ns     
+
+> 10 210 110 0
+
+Fp / Fth     
+
+> 10 4
+> 10 3
+> 10 2
+> 10 1
+> 10 0
+> 10 1
+> 10 2
+> 10 3
+> Focal PA signal  p0 = wHnl  (kPa)
+> photodisruption
+
+10 3
+
+burst, collective (TPA+FCA) burst, TPA only single fs pulse 
+
+# a b
+
+FIG. 4. (a) Far-field photoacoustic waveform of a single nanoparticle for burst durations τb = 1 and 5 ns at τr = 10 ps and 
+
+Fp = 0 .05 Fth , each waveform normalized to its peak. The waveform is bipolar in both cases, with the shape set by τb relative to the thermal relaxation time τth : for τb < τ th the burst terminates while the positive lobe is still rising, leaving a shallow rarefaction, whereas for τb > τ th the positive lobe decays mid-burst and a near-equal negative transient follows at termination. The normalized shape is independent of τr, which sets only the amplitude through nss [Fig. 2]. (b) Focal photoacoustic signal 
+
+p0 = Γ w Hnl versus per-pulse fluence Fp/F th at matched per-pulse energy, for a single femtosecond pulse (TPA only), an 
+
+N -pulse burst neglecting carrier accumulation (TPA only), and the collective interaction of the burst (TPA and accumulating FCA). The collective signal exceeds the single pulse by about N (1 + ξ). 
+
+tion and application [49], so we adopt a representative focal volume fraction fV = 10 −4 (∼ 0.2 mg /mL silicon). The absolute signal scales linearly with fV, and at this loading the focal volume holds only a modest number of nanoparticles, so p0 = Γ w Hnl describes the focal source coarse-grained over the particle distribution, with the dis-creteness contributing shot-to-shot variance rather than changing the mean signal. The comparison itself is en-tirely within nonlinear excitation. A single femtosecond pulse and the collective burst are built from identical pulses, the burst differing only in firing N of them at GHz spacing. Relative to a single pulse, the burst’s focal signal is larger by a factor ∼ N (1 + ξ), which factors into a trivial but crucial factor of N from the pulse count and the genuine collective gain factor of (1+ ξ) ∼ 9 at this op-erating fluence, the result of the accumulated free-carrier absorption, the difference between the GHz burst and the same pulses fired without carrier accumulation. This col-lective gain is set by the FCA-to-MPA ratio ξ mapped in Fig. 2(b). It is independent of the nanoparticle loading, and retains the focal confinement of nonlinear excitation. For the N = 100 bursts considered here, the two factors together raise the focal signal by nearly three orders of magnitude over a single pulse of the same per-pulse en-ergy. 11  
+
+> IV. DISCUSSION
+
+The collective nonlinear absorption mechanism re-ported here combines the benefits of the tighter spatial confinement of multiphoton absorption and the greater ease of energy coupling of linear absorption. Early pulses in a burst seed a feedback-driven buildup of a non-equilibrium population of free carriers via multiphoton excitation. This opens a burst-gated transient window in which the dominant channel becomes effectively lin-ear absorption by those carriers, which remain confined to the multiphoton-defined focal volume. Each pulse arriving before the carriers recombine adds to a non-equilibrium population that the burst creates and sus-tains and that dissipates and returns to equilibrium once the burst ends [9, 10, 50], making the enhancement in-trinsically transient. The carrier density approaches a steady state fixed by the balance between per-pulse in-jection and recombination, and because it is reached only where multiphoton absorption has seeded it, the efficient linear channel inherits the spatial selectivity of the non-linear one. Coupling multiphoton carrier generation with Auger and surface recombination, the analytical model yields a piecewise-exact description of the carrier dynamics and condenses the entire burst enhancement into a single compact factor, N (1+ ξ). Here N is the number of pulses and ξ measures how strongly the accumulated free-carrier absorption dominates the seeding multiphoton channel, with N ∼ 10 2–10 3 and ξ ∼ 10 under the conditions con-sidered here. Taken at matched per-pulse energy, this factor reflects the carrier dynamics alone rather than the way the deposited energy is later turned into a signal, so the same collective gain is expected whatever the tar-get modality. Reaching the collective regime requires only that the burst deliver GHz-rate pulses, so that the inter-pulse spacing falls below the carrier recombination time, while each pulse stays below the single-pulse dam-age threshold, conditions already within reach of existing burst lasers [8] and of well-characterized silicon nanopar-ticles [18, 19]. Viewed this way, collectivity converts an m-photon ex-citation into an effectively ( m + 1)-photon one, an ex-tra order of nonlinearity gained at virtually no cost in cross-section, which in the long run may be the most consequential aspect of the mechanism. More generally, the increase by one in nonlinear order arises only be-cause the nonlinear absorption gates a linear absorption process. If instead an m-photon process creates a tran-sient state that enables a subsequent n-photon interac-tion, Eq. 1 becomes In(t) R t 
+
+> −∞
+
+Im(t′)dt ′, resulting in ef-fectively a ( m + n)-photon process. Although we developed a detailed application exam-ple for photoacoustic imaging, the collective absorption mechanism is not limited to this application. In mul-tiphoton fluorescence microscopy [1, 51] it could raise excitation efficiency without sacrificing optical section-ing [52], provided the nanoparticles are paired with a thermoresponsive fluorescent reporter that converts the burst-driven heating into emission [53–56], and the same particles would let photoacoustic and fluorescence con-trast be recorded together [57, 58]. Photothermal ther-apy [59] is another natural target, where collective heat-ing could reach therapeutic temperatures at reduced peak intensity while keeping the deposited energy con-fined. Looking further, the same idea of using early pulses to open a transient channel for later ones may carry over to other nonlinear processes, from THz gener-ation [60, 61] to a self-sustained index modulation that guides successive pulses of the burst through a transiently written waveguide [62–64]. In each case the underlying conceptual change is the same, from a burst treated as a train of independent pulses to one in which the pulses act collectively, which is what allows efficiency and spa-tial confinement to be gained together rather than traded against each other. 
+
+> ACKNOWLEDGMENTS
+
+This work was supported by the Alexander von Hum-boldt Foundation through an Alexander von Humboldt Professorship awarded to F. ¨O. Ilday and the European Research Council (ERC) under the European Union’s Horizon Europe research and innovation programme (grant agreement no. 101055055, ERC Advanced Grant UNILASE).                
+
+> [1] F. Helmchen and W. Denk, Deep tissue two-photon mi-croscopy, Nature Methods 2, 932 (2005). [2] T. Wang, D. G. Ouzounov, C. Wu, N. G. Horton, B. Zhang, C.-H. Wu, Y. Zhang, M. J. Schnitzer, and C. Xu, Three-photon imaging of mouse brain structure and function through the intact skull, Nature Methods
+> 15 , 789 (2018). [3] C. Xu, W. Zipfel, J. B. Shear, R. M. Williams, and W. W. Webb, Multiphoton fluorescence excitation: New spec-tral windows for biological nonlinear microscopy, Pro-ceedings of the National Academy of Sciences of the United States of America 93 , 10763 (1996). [4] A. Hopt and E. Neher, Highly nonlinear photodamage in Two-Photon fluorescence microscopy, Biophysical Jour-nal 80 , 2029 (2001). [5] K. K¨ onig, Multiphoton microscopy in life sciences, Jour-nal of Microscopy 200 , 83 (2000). [6] Y. Liu, C. Zhang, and L. V. Wang, Effects of light scatter-ing on optical-resolution photoacoustic microscopy, Jour-nal of Biomedical Optics 17 , 126014 (2012). [7] P. Theer and W. Denk, On the fundamental imaging-depth limit in two-photon microscopy, Journal of the Op-
+
+12 
+
+tical Society of America A 23 , 3139 (2006). [8] C. Kerse, H. Kalaycıo˘ glu, P. Elahi, B. C ¸ etin, D. K. Kesim, ¨O. Ak¸ caalan, S. Yava¸ s, M. D. A¸ sık, B. ¨Oktem, H. Hoogland, R. Holzwarth, and F. ¨O. Ilday, Ablation-cooled material removal with ultrafast bursts of pulses, Nature 537 , 84 (2016). [9] I. Radu, K. Vahaplar, C. Stamm, T. Kachel, N. Pontius, H. A. D¨ urr, T. A. Ostler, J. Barker, R. F. L. Evans, R. W. Chantrell, A. Tsukamoto, A. Itoh, A. Kirilyuk, T. Ras-ing, and A. V. Kimel, Transient ferromagnetic-like state mediating ultrafast reversal of antiferromagnetically cou-pled spins, Nature 472 , 205 (2011). [10] A. Krishnamoorthy, M.-F. Lin, X. Zhang, C. Weninger, R. Ma, A. Britz, C. S. Tiwary, V. Kochat, A. Apte, J. Yang, S. Park, R. Li, X. Shen, X. Wang, R. Kalia, A. Nakano, F. Shimojo, D. Fritz, U. Bergmann, P. Ajayan, and P. Vashishta, Optical control of non-equilibrium phonon dynamics, Nano Letters 19 , 4981 (2019). [11] K. Sugioka, Will GHz burst mode create a new path to femtosecond laser processing?, International Journal of Extreme Manufacturing 3, 043001 (2021). [12] H. M. v. Driel, Kinetics of high-density plasmas gener-ated in Si by 1.06- and 0.53-μm picosecond laser pulses, Physical Review B 35 , 8166 (1987). [13] A. Othonos, Probing ultrafast carrier and phonon dy-namics in semiconductors, Journal of Applied Physics 83 ,1789 (1998). [14] L. V. Wang and H.-I. Wu, Biomedical Optics (John Wiley & Sons, 2007). [15] Y. Yamaoka, Y. Harada, M. Sakakura, T. Minamikawa, S. Nishino, S. Maehara, S. Hamano, H. Tanaka, and T. Takamatsu, Photoacoustic microscopy using ultra-short pulses with two different pulse durations, Optics Express 22 , 17063 (2014). [16] Y.-H. Lai, S.-Y. Lee, C.-F. Chang, Y.-H. Cheng, and C.-K. Sun, Nonlinear photoacoustic microscopy via a loss modulation technique: from detection to imaging, Optics Express 22 , 525 (2014). [17] G. Langer, K.-D. Bouchal, H. Gr¨ un, P. Burgholzer, and T. Berer, Two-photon absorption-induced photoacoustic imaging of Rhodamine B dyed polyethylene spheres using a femtosecond laser, Optics Express 21 , 22410 (2013). [18] N. O’Farrell, A. Houlton, and B. R. Horrocks, Silicon nanoparticles: applications in cell biology and medicine, International Journal of Nanomedicine 1, 451 (2006). [19] F. Peng, Y. Su, Y. Zhong, C. Fan, S.-T. Lee, and Y. He, Silicon nanomaterials platform for bioimaging, biosens-ing, and cancer therapy, Accounts of Chemical Research 
+
+47 , 612 (2014). [20] T. Boggess, K. Bohnert, K. Mansour, S. Moss, I. Boyd, and A. Smirl, Simultaneous measurement of the two-photon coefficient and free-carrier cross section above the bandgap of crystalline silicon, IEEE Journal of Quantum Electronics 22 , 360 (1986). [21] K. Sokolowski-Tinten and D. von der Linde, Generation of dense electron-hole plasmas in silicon, Physical Review B 61 , 2643 (2000). [22] P. P. Pronko, P. A. VanRompay, C. Horvath, F. Loesel, T. Juh´ asz, X. Liu, and G. Mourou, Avalanche ionization and dielectric breakdown in silicon with ultrafast laser pulses, Physical Review B 58 , 2387 (1998). [23] B. ¨Oktem, I. Pavlov, S. Ilday, H. Kalaycıo˘ glu, A. Ry-bak, S. Yava¸ s, M. Erdo˘ gan, and F. ¨O. Ilday, Nonlinear laser lithography for indefinitely large-area nanostructur-ing with femtosecond pulses, Nature Photonics 7, 897 (2013). [24] O. Tokel, A. Turnalı, G. Makey, P. Elahi, T. C ¸ olako˘ glu, E. Erge¸ cen, ¨O. Yavuz, R. H¨ ubner, M. Zolfaghari Borra, I. Pavlov, A. Bek, R. Turan, D. K. Kesim, S. Tozburun, S. Ilday, and F. ¨O. Ilday, In-chip microstructures and photonic devices fabricated by nonlinear laser lithogra-phy deep inside silicon, Nature Photonics 11 , 639 (2017). [25] E. M. Grumstrup, M. M. Gabriel, E. M. Cating, C. W. Pinion, J. D. Christesen, J. R. Kirschbrown, E. L. Val-lorz, J. F. Cahoon, and J. M. Papanikolas, Ultrafast car-rier dynamics in individual silicon nanowires: Character-ization of diameter-dependent carrier lifetime and surface recombination with pump–probe microscopy, The Jour-nal of Physical Chemistry C 118 , 8634 (2014). [26] L. E. Brus, Electron–electron and electron-hole interac-tions in small semiconductor crystallites: The size depen-dence of the lowest excited electronic state, The Journal of Chemical Physics 80 , 4403 (1984). [27] C. Delerue, G. Allan, and M. Lannoo, Theoretical aspects of the luminescence of porous silicon, Physical Review B 
+
+48 , 11024 (1993). [28] D. Kobat, M. E. Durst, N. Nishimura, A. W. Wong, C. B. Schaffer, and C. Xu, Deep tissue multiphoton microscopy using longer wavelength excitation, Optics Express 17 ,13354 (2009). [29] N. G. Horton, K. Wang, D. Kobat, C. G. Clark, F. W. Wise, C. B. Schaffer, and C. Xu, In vivo three-photon mi-croscopy of subcortical structures within an intact mouse brain, Nature Photonics 7, 205 (2013). [30] A. D. Bristow, N. Rotenberg, and H. M. van Driel, Two-photon absorption and Kerr coefficients of silicon for 850– 2200 nm, Applied Physics Letters 90 , 191104 (2007). [31] J. Bonse, S. Baudach, J. Kr¨ uger, W. Kautek, and M. Lenzner, Femtosecond laser ablation of silicon– modification thresholds and morphology, Applied Physics A 74 , 19 (2002). [32] L. Wang, S. L. Jacques, and L. Zheng, MCML – Monte Carlo modeling of light transport in multi-layered tis-sues, Computer Methods and Programs in Biomedicine 
+
+47 , 131 (1995). [33] S. L. Jacques, Optical properties of biological tissues: a review, Physics in Medicine & Biology 58 , R37 (2013). [34] D. R. Lide, ed., CRC Handbook of Chemistry and Physics , 88th ed. (CRC Press, Boca Raton, FL, 2007). [35] A. Prost, F. Poisson, and E. Bossy, Photoacoustic genera-tion by a gold nanosphere: From linear to nonlinear ther-moelastics in the long-pulse illumination regime, Physical Review B 92 , 115450 (2015), 1501.04871. [36] Z. Ge, D. G. Cahill, and P. V. Braun, Thermal conduc-tance of hydrophilic and hydrophobic interfaces, Physical Review Letters 96 , 186101 (2006). [37] B. Ramos-Alvarado and S. Kumar, Spectral analysis of the heat flow across crystalline and amorphous Si–Water interfaces, The Journal of Physical Chemistry C 121 ,11380 (2017). [38] M. Hu and G. V. Hartland, Heat dissipation for au par-ticles in aqueous solution: Relaxation time versus size, The Journal of Physical Chemistry B 106 , 7029 (2002). [39] G. Baffou and H. Rigneault, Femtosecond-pulsed opti-cal heating of gold nanoparticles, Physical Review B 84 ,13 
+
+035415 (2011). [40] L. V. Wang, Tutorial on Photoacoustic Microscopy and Computed Tomography, IEEE Journal of Selected Topics in Quantum Electronics 14 , 171 (2008). [41] T. Fukasawa, H. Shinto, H. Aoki, S. Ito, and M. Ohshima, Size-dependent effect of gold nanospheres on the acous-tic pressure pulses from laser-irradiated suspensions, Ad-vanced Powder Technology 25 , 733 (2014). [42] H. Shinto, T. Fukasawa, H. Aoki, S. Ito, and M. Ohshima, Acoustic pressure pulses from laser-irradiated suspen-sions containing gold nanospheres in water: Exper-imental and theoretical study, Colloids and Surfaces A: Physicochemical and Engineering Aspects 430 , 51 (2013). [43] I. G. Calasso, W. Craig, and G. J. Diebold, Photoacoustic point source, Physical Review Letters 86 , 3550 (2001). [44] V. P. Zharov, Ultrasharp nonlinear photothermal and photoacoustic resonances and holes beyond the spectral limit, Nature Photonics 5, 110 (2011). [45] L. V. Wang and J. Yao, A practical guide to photoacous-tic tomography in the life sciences, Nature Methods 13 ,627 (2016). [46] J. Yao, L. Wang, C. Li, C. Zhang, and L. V. Wang, Photoimprint photoacoustic microscopy for three-dimensional label-free subdiffraction imaging, Physical Review Letters 112 , 014302 (2014). [47] A. Danielli, K. Maslov, A. Garcia-Uribe, A. M. Winkler, C. Li, L. Wang, Y. Chen, G. W. Dorn, and L. V. Wang, Label-free photoacoustic nanoscopy, Journal of Biomed-ical Optics 19 , 086006 (2014). [48] T. Kaneko, S. Maehara, S. Hamano, Y. Yamaoka, and A. Kimoto, Signal subtraction using nanosecond optical pulses with two different pulse energies in two-photon photoacoustic microscopy (TP-PAM) with a ring-shaped acoustic transducer to evaluate precise thickness, Applied Physics Express 18 , 022002 (2025). [49] J.-H. Park, L. Gu, G. von Maltzahn, E. Ruoslahti, S. N. Bhatia, and M. J. Sailor, Biodegradable luminescent porous silicon nanoparticles for in vivo applications, Na-ture Materials 8, 331 (2009). [50] R. Fang, A. Vorobyev, and C. Guo, Direct visualization of the complete evolution of femtosecond laser-induced surface structural dynamics of metals, Light: Science & Applications 6, e16256 (2017). [51] W. Denk, J. H. Strickler, and W. W. Webb, Two-photon laser scanning fluorescence microscopy, Science 248 , 73 (1990). [52] V. E. Centonze and J. G. White, Multiphoton excita-tion provides optical sections from deeper within scatter-ing specimens than confocal imaging, Biophysical Journal 
+
+75 , 2015 (1998). [53] C. D. S. Brites, P. P. Lima, N. J. O. Silva, A. Mill´ an, V. S. Amaral, F. Palacio, and L. D. Carlos, Thermometry at the nanoscale, Nanoscale 4, 4799 (2012). [54] D. Jaque and F. Vetrone, Luminescence nanothermome-try, Nanoscale 4, 4301 (2012). [55] J. Zhou, B. del Rosal, D. Jaque, S. Uchiyama, and D. Jin, Advances and challenges for fluorescence nanothermom-etry, Nature Methods 17 , 967 (2020). [56] K. Okabe, N. Inada, C. Gota, Y. Harada, T. Funatsu, and S. Uchiyama, Intracellular temperature mapping with a fluorescent polymeric thermometer and fluorescence life-time imaging microscopy, Nature Communications 3, 705 (2012). [57] Y. Li, G. Liu, J. Ma, J. Lin, H. Lin, G. Su, D. Chen, S. Ye, X. Chen, X. Zhu, and Z. Hou, Chemotherapeutic drug– photothermal agent co-self-assembling nanoparticles for near-infrared fluorescence and photoacoustic dual-modal imaging-guided chemo-photothermal synergistic therapy, Journal of Controlled Release 258 , 95 (2017). [58] Z. Chen, I. Gezginer, et al. , Multimodal optoacoustic imaging: methods and contrast materials, Chemical So-ciety Reviews 53 , 6068 (2024). [59] X. Huang, I. H. El-Sayed, W. Qian, and M. A. El-Sayed, Cancer cell imaging and photothermal therapy in the near-infrared region by using gold nanorods, Journal of the American Chemical Society 128 , 2115 (2006). [60] E. Castro-Camus, J. Lloyd-Hughes, and M. B. Johnston, Three-dimensional carrier-dynamics simulation of tera-hertz emission from photoconductive switches, Physical Review B 71 , 195301 (2005). [61] P.-K. Lu, A. d. J. F. Olvera, D. Turan, T. S. Seifert, N. T. Yardimci, T. Kampfrath, S. Preu, and M. Jarrahi, Ultrafast carrier dynamics in terahertz photoconductors and photomixers: beyond short-carrier-lifetime semicon-ductors, Nanophotonics 11 , 2661 (2022). [62] A. Couairon and A. Mysyrowicz, Femtosecond filamen-tation in transparent media, Physics Reports 441 , 47 (2007). [63] Z. Chen, M. Segev, and D. N. Christodoulides, Optical spatial solitons: historical overview and recent advances, Reports on Progress in Physics 75 , 086401 (2012). [64] D. Majus, G. Tamoˇ sauskas, I. Graˇ zuleviˇ ci¯ ut˙ e, N. Gare-jev, A. Lotti, A. Couairon, D. Faccio, and A. Dubietis, Nature of spatiotemporal light bullets in bulk Kerr me-dia, Physical Review Letters 112 , 193901 (2014).

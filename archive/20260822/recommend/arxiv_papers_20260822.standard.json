@@ -1,0 +1,257 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-22T20:36:08.838250+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 2,
+    "deep_cap": 6,
+    "deep_selected": 2,
+    "quick_candidates": 4,
+    "quick_skim_target": 11,
+    "quick_selected": 4
+  },
+  "deep_dive": [
+    {
+      "id": "2608.19280v1",
+      "source": "arxiv",
+      "title": "Multi-Tool Robotics Enables In-Situ Sample Manipulation for Time-Resolved Synchrotron Measurements",
+      "abstract": "The high photon flux at synchrotron beamlines allows for the measurement of fast dynamical processes. However, beamline radiation-safety protocols prohibit human intervention during X-ray experiments, limiting the ability to perform versatile real-time sample manipulations during continuous data acquisition. Here we present a robotic platform at an X-ray scattering beamline to enable real-time sample handling and processing in the experimental hutch, revealing previously inaccessible transient in-situ dynamics in perovskite thin films. This modular multi-tool robotic architecture enables in-hutch sample manipulation beyond human-access constraints, establishing a foundation for automated and autonomous synchrotron experimentation.",
+      "authors": [
+        "Aditya Bondada",
+        "Elizabeth M. Wall",
+        "Eric Yuan Xiao",
+        "Quinn C. Burlingame",
+        "Yueh-Lin Loo",
+        "Esther H. R. Tsai",
+        "Ruipeng Li"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.RO"
+      ],
+      "published": "2026-08-19T02:36:02+00:00",
+      "link": "https://arxiv.org/pdf/2608.19280v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "in-situ manipulation for time-resolved synchrotron measurements",
+      "llm_evidence_cn": "为时间分辨同步辐射测量提供原位操纵",
+      "llm_evidence": "为时间分辨同步辐射测量提供原位操纵",
+      "canonical_evidence": "为时间分辨同步辐射测量提供原位操纵",
+      "llm_tldr_en": "A modular robotic platform at a synchrotron beamline enables real-time in-hutch sample manipulation during X-ray data acquisition, revealing transient in-situ perovskite thin-film dynamics.",
+      "llm_tldr_cn": "同步辐射高亮光束线能够研究快速动力学过程，但辐射安全限制人员干预，阻碍实时样品操作。论文提出模块化多工具机器人平台，在X射线散射束线内实现实验大厅中的实时样品处理，突破了人员进入限制。利用该系统在钙钛矿薄膜上观察到此前无法获取的瞬态原位动力学，为自动化、自主同步辐射实验奠定基础。",
+      "llm_tldr": "同步辐射高亮光束线能够研究快速动力学过程，但辐射安全限制人员干预，阻碍实时样品操作。论文提出模块化多工具机器人平台，在X射线散射束线内实现实验大厅中的实时样品处理，突破了人员进入限制。利用该系统在钙钛矿薄膜上观察到此前无法获取的瞬态原位动力学，为自动化、自主同步辐射实验奠定基础。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2608.19946v1",
+      "source": "arxiv",
+      "title": "Tuning of Photoexcited Electron Dynamics at Monolayer h-BN/Metal Interfaces by Corrugation",
+      "abstract": "Atomic-scale corrugation in two-dimensional materials can modify interfacial electronic coupling, yet its influence on ultrafast carrier relaxation remains poorly established. Here, we compare image potential states (IPS) at monolayer h-BN/Ir(111) and h-BN/Pt(111) interfaces using structural characterization and time-resolved two-photon photoemission spectroscopy. Consistent with literature, h-BN is strongly corrugated on Ir(111) but comparatively flat on Pt(111). The first (n = 1) and second (n = 2) IPS appears at similar energies on both substrates, whereas their relaxation dynamics differ markedly. On h-BN/Ir(111), the IPS decay is response-limited (<20 fs), while h-BN/Pt(111) exhibits lifetimes of 56 fs (n = 1) and 75 fs (n = 2). The lifetime contrast is most consistently explained by corrugation-enhanced overlap of the IPS wavefunction with the metal substrate, which accelerates electron decay. These results indicate that atomic-scale corrugation is an effective physical parameter for tuning ultrafast electron dynamics at two-dimensional material and metal interfaces.",
+      "authors": [
+        "Masahiro Shibuta",
+        "Maximilian Schaal",
+        "Marco Gruenewald",
+        "Jonas Brandhoff",
+        "Felix Otto",
+        "Roman Forker",
+        "Torsten Fritz"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "categories": [
+        "cond-mat.mtrl-sci"
+      ],
+      "published": "2026-08-20T12:11:21+00:00",
+      "link": "https://arxiv.org/pdf/2608.19946v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Uses time-resolved two-photon photoemission spectroscopy to measure ultrafast carrier relaxation at 2D material/metal interfaces",
+      "llm_evidence_cn": "利用时间分辨双光子光电子能谱测量二维材料/金属界面的超快载流子弛豫",
+      "llm_evidence": "利用时间分辨双光子光电子能谱测量二维材料/金属界面的超快载流子弛豫",
+      "canonical_evidence": "利用时间分辨双光子光电子能谱测量二维材料/金属界面的超快载流子弛豫",
+      "llm_tldr_en": "Investigates how atomic-scale corrugation at monolayer h-BN/metal interfaces tunes ultrafast carrier relaxation using time-resolved two-photon photoemission spectroscopy, with markedly different lifetimes on Ir(111) and Pt(111).",
+      "llm_tldr_cn": "研究单层六方氮化硼（h-BN）与金属衬底界面处的原子级波纹如何影响超快载流子弛豫动力学。利用时间分辨双光子光电子能谱对比了Ir(111)和Pt(111)上的镜像势态寿命，发现强波纹表面响应受限（<20飞秒），而平坦表面寿命为56和75飞秒。结果表明界面波纹是调控二维材料超快电子动力学的关键因素，为时间分辨载流子输运研究提供了范例。这些发现展示了界面工程在超快器件中的应用潜力。",
+      "llm_tldr": "研究单层六方氮化硼（h-BN）与金属衬底界面处的原子级波纹如何影响超快载流子弛豫动力学。利用时间分辨双光子光电子能谱对比了Ir(111)和Pt(111)上的镜像势态寿命，发现强波纹表面响应受限（<20飞秒），而平坦表面寿命为56和75飞秒。结果表明界面波纹是调控二维材料超快电子动力学的关键因素，为时间分辨载流子输运研究提供了范例。这些发现展示了界面工程在超快器件中的应用潜力。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2608.13813v1",
+      "source": "arxiv",
+      "title": "From Photothermal Transients to Effective Transport Operators: An Operator-Based Interpretation of TTG Dynamics",
+      "abstract": "Transient thermal grating (TTG) measurements probe thermal transport on submicrometer spatial and subnanosecond temporal scales, where departures from purely diffusive behavior have been reported in a variety of solid-state systems. Within the Mori-Zwanzig projection framework, such effects can be interpreted as manifestations of memory arising from microscopic degrees of freedom that remain unresolved at the observational scale. Motivated by this perspective, we formulate a forward model for TTG response in which heat transport is described by a linear evolution operator with memory. Microscopic transport processes are systematically coarse-grained into a non-Markovian transport operator, whose finite-memory form provides a general description of TTG dynamics, while diffusive and long-memory behaviors emerge as asymptotic limits of the same underlying framework. Within this formulation, the experimentally observed TTG transient is interpreted as the response of an effective transport operator rather than as a direct signature of a particular microscopic transport mechanism. The primary outcome of the inversion procedure is the determination of effective operator parameters, while microscopic transport mechanisms are inferred only through a subsequent, material-specific modeling step. The proposed Mori-Zwanzig inspired framework therefore establishes a systematic route from TTG measurements to effective transport operators and, subsequently, to coarse-grained descriptions of microscopic transport dynamics.",
+      "authors": [
+        "Slobodanka Galovic",
+        "Steva Jacimovski"
+      ],
+      "primary_category": "physics.app-ph",
+      "categories": [
+        "physics.app-ph"
+      ],
+      "published": "2026-08-13T22:53:12+00:00",
+      "link": "https://arxiv.org/pdf/2608.13813v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "time-resolved thermal transport in solid-state materials",
+      "llm_evidence_cn": "固态材料的时间分辨热输运",
+      "llm_evidence": "固态材料的时间分辨热输运",
+      "canonical_evidence": "固态材料的时间分辨热输运",
+      "llm_tldr_en": "Develops an operator-based forward model for transient thermal grating response with memory, enabling interpretation of sub-nanosecond time-resolved solid-state thermal transport data.",
+      "llm_tldr_cn": "瞬态热光栅（TTG）技术能在亚微米空间和亚纳秒时间尺度探测热输运，但非扩散行为需要新的理论框架。作者在Mori-Zwanzig投影框架下，将微观输运过程粗粒化为含记忆的非马尔可夫输运算符，构建TTG响应的正向模型。该模型能够统一解释有限记忆效应，为分析时间分辨TTG实验数据提供了更加系统的算子化工具，推动固态热输运的理论理解。",
+      "llm_tldr": "瞬态热光栅（TTG）技术能在亚微米空间和亚纳秒时间尺度探测热输运，但非扩散行为需要新的理论框架。作者在Mori-Zwanzig投影框架下，将微观输运过程粗粒化为含记忆的非马尔可夫输运算符，构建TTG响应的正向模型。该模型能够统一解释有限记忆效应，为分析时间分辨TTG实验数据提供了更加系统的算子化工具，推动固态热输运的理论理解。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.15330v1",
+      "source": "arxiv",
+      "title": "Tracking Chirality during Molecular Motor Photoisomerization via Simulated Time-Resolved Circular Dichroism",
+      "abstract": "Ultrafast spectroscopic techniques are widely used to investigate photoinduced processes, yet they remain largely blind to molecular chirality. Here we introduce a framework for simulating time-resolved electronic circular dichroism (TRCD) along an ensemble of nonadiabatic molecular dynamics, and apply it to the photoisomerization of a second-generation molecular motor[1]. While transient absorption captures the overall excited-state dynamics, it cannot distinguish the two photoproduct pathways. The TRCD response, by contrast, resolves the stereochemical branching: trajectories returning to the stable P isomer (right-handed helix) retain a distinct chiroptical band in the visible region, whereas those forming the M isomer (leftl-handed helix) become chiroptically dark as they twist through the conical intersection. This asymmetry constitutes a directly measurable signature of the stereochemical branching, offering a real-time probe of the formation of molecular chirality and concrete predictions for future TRCD experiments.",
+      "authors": [
+        "Leonardo Biancorosso",
+        "Ali Hassanali",
+        "Mauro Stener",
+        "Emanuele Coccia",
+        "Marta Monti",
+        "Gonzalo Díaz Mirón"
+      ],
+      "primary_category": "cond-mat.other",
+      "categories": [
+        "cond-mat.other"
+      ],
+      "published": "2026-08-15T17:24:24+00:00",
+      "link": "https://arxiv.org/pdf/2608.15330v1",
+      "tags": [
+        "keyword:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "simulated time-resolved spectroscopy",
+      "llm_evidence_cn": "模拟时间分辨光谱",
+      "llm_evidence": "模拟时间分辨光谱",
+      "canonical_evidence": "模拟时间分辨光谱",
+      "llm_tldr_en": "Introduces a simulation framework for time-resolved electronic circular dichroism along nonadiabatic dynamics, resolving stereochemical branching in molecular motor photoisomerization.",
+      "llm_tldr_cn": "超快光谱技术常无法直接探测手性，该论文提出沿非绝热分子动力学系综模拟时间分辨电子圆二色光谱（TRCD）的框架，并将其应用于第二代分子马达的光异构化。瞬态吸收只能刻画整体激发态动力学，而TRCD能区分形成稳定P异构体和M异构体的立体化学分支。该框架为超快光化学中的手性追踪提供了新的模拟工具，但研究对象为分子体系，与iSCAT材料研究距离较远。",
+      "llm_tldr": "超快光谱技术常无法直接探测手性，该论文提出沿非绝热分子动力学系综模拟时间分辨电子圆二色光谱（TRCD）的框架，并将其应用于第二代分子马达的光异构化。瞬态吸收只能刻画整体激发态动力学，而TRCD能区分形成稳定P异构体和M异构体的立体化学分支。该框架为超快光化学中的手性追踪提供了新的模拟工具，但研究对象为分子体系，与iSCAT材料研究距离较远。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2608.15774v1",
+      "source": "arxiv",
+      "title": "Burst-Driven Collective Ultrafast Interactions for Confined Optical Absorption",
+      "abstract": "Ultrafast bursts, groups of closely spaced femtosecond pulses, can drive light-matter interactions that are not possible with single-pulse excitations. This occurs when earlier pulses create a transient effect that nonlinearly alters the interaction of later pulses, provided that the inter-pulse spacing is shorter than the relaxation time of the transient. A long-standing trade-off in optical excitation is between multiphoton absorption, which provides strong spatial confinement but low energy-transfer efficiency, and linear absorption, which is efficient but offers limited spatial localization. Here, we show that a burst of ultrafast pulses can collectively build up a population of free carriers in semiconductor nanoparticles via multiphoton absorption. The free carriers absorb linearly and strongly, and dissipate rapidly once the burst ends. The result is a more efficient absorption process that is strongly gated spatially and temporally by multiphoton absorption and burst duration, respectively. We develop an analytical model that couples carrier generation with Auger and surface recombination, yielding a piecewise-exact description of the carrier dynamics and an intuitive scaling relation for the collective energy-deposition enhancement. A signature consequence of collective absorption is its dependence on one extra power of the light intensity, effectively raising the order of an m-photon process to m+1 without requiring higher intensities for the individual pulses. While we focus on nonlinear photoacoustic imaging as a potential application, we anticipate diverse applications, including nonlinear fluorescence microscopy.",
+      "authors": [
+        "Burak Arayıt",
+        "Seydi Yavaş",
+        "Mehmet Burçin Ünlü",
+        "Fatih Ömer Ilday"
+      ],
+      "primary_category": "physics.optics",
+      "categories": [
+        "physics.optics"
+      ],
+      "published": "2026-08-16T14:51:44+00:00",
+      "link": "https://arxiv.org/pdf/2608.15774v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Studies ultrafast pulse bursts collectively building free carriers in semiconductor nanoparticles, central to stroboscopic time-resolved material science",
+      "llm_evidence_cn": "研究超快脉冲串在半导体纳米粒子中集体构建自由载流子，是频闪时间分辨材料科学的核心物理",
+      "llm_evidence": "研究超快脉冲串在半导体纳米粒子中集体构建自由载流子，是频闪时间分辨材料科学的核心物理",
+      "canonical_evidence": "研究超快脉冲串在半导体纳米粒子中集体构建自由载流子，是频闪时间分辨材料科学的核心物理",
+      "llm_tldr_en": "Demonstrates that bursts of closely spaced ultrafast pulses can collectively build free-carrier populations in semiconductor nanoparticles via multiphoton absorption, enabling confined optical absorption beyond the single-pulse trade-off.",
+      "llm_tldr_cn": "超快脉冲串能够在脉冲间隔小于瞬态弛豫时间时使后续脉冲与先前脉冲产生的瞬态效应发生非线性作用，从而增强特定光吸收通道。本文证明，通过多光子吸收在半导体纳米粒子中集体积累自由载流子，可在高能量传输效率下实现强空间限域的光吸收。该机制突破了单脉冲激发中多光子吸收与线性吸收之间的长期取舍，为超快光与物质的相互作用调控提供了新途径。相关物理机制为频闪散射显微中的超快激发方案设计提供了理论指导。",
+      "llm_tldr": "超快脉冲串能够在脉冲间隔小于瞬态弛豫时间时使后续脉冲与先前脉冲产生的瞬态效应发生非线性作用，从而增强特定光吸收通道。本文证明，通过多光子吸收在半导体纳米粒子中集体积累自由载流子，可在高能量传输效率下实现强空间限域的光吸收。该机制突破了单脉冲激发中多光子吸收与线性吸收之间的长期取舍，为超快光与物质的相互作用调控提供了新途径。相关物理机制为频闪散射显微中的超快激发方案设计提供了理论指导。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2608.18382v1",
+      "source": "arxiv",
+      "title": "Optical Voltage Profiling of 2D Semiconductors via Proximal Exciton Sensing",
+      "abstract": "High contact resistances in atomically thin semiconductors often mask intrinsic electrical transport properties, particularly at low carrier densities where exotic correlated states emerge. We introduce optical voltage profiling, a noninvasive wide-field technique that replaces local voltage probes with a proximal monolayer MoSe$_2$ exciton sensor. Isolated by thin hexagonal boron nitride, this sensor converts the target's local electrostatic potential into spatially resolved modulations of exciton reflectance. Through pixel-wise in situ calibration, these signals yield quantitative two-dimensional voltage maps of an actively biased semiconductor device. Using this method, we demonstrate the carrier-density-driven metal-insulator transition in bilayer MoSe$_2$ and obtain channel resistances below 1 k$Ω$ despite M$Ω$-scale two-terminal resistances in the metallic region. The optically derived resistance exhibits a metal-insulator crossover near the resistance quantum $h/e^2$, and the voltage maps and reconstructed local conductivity reveal pronounced spatial heterogeneity in both insulating and metallic regimes. Beyond resolving channel resistance under high contact-resistance conditions, the technique provides spatially resolved access to microscopic transport heterogeneity in functional van der Waals devices.",
+      "authors": [
+        "Ha-Leem Kim",
+        "Hyungbin Lim",
+        "Yuanyi Yang",
+        "Ruishi Qi",
+        "Ruichen Xia",
+        "Can Uzundal",
+        "Takashi Taniguchi",
+        "Kenji Watanabe",
+        "Feng Wang"
+      ],
+      "primary_category": "cond-mat.mes-hall",
+      "categories": [
+        "cond-mat.mes-hall",
+        "cond-mat.str-el",
+        "physics.optics"
+      ],
+      "published": "2026-08-18T23:25:33+00:00",
+      "link": "https://arxiv.org/pdf/2608.18382v1",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "optical voltage profiling for semiconductor carrier transport",
+      "llm_evidence_cn": "用于半导体载流子输运的光学电压成像",
+      "llm_evidence": "用于半导体载流子输运的光学电压成像",
+      "canonical_evidence": "用于半导体载流子输运的光学电压成像",
+      "llm_tldr_en": "This paper introduces an optical voltage profiling technique using a proximal MoSe2 exciton sensor to map electrostatic potential in 2D semiconductors without contact probes.",
+      "llm_tldr_cn": "原子级薄的半导体中高接触电阻常常掩盖其本征电输运性质。作者提出一种非侵入式宽场光学电压成像方法，利用六方氮化硼隔离的MoSe2单层激子传感器，将局部静电势转化为空间分辨的激子反射调制，并通过逐像素原位标定得到定量二维电压图。该方法成功观测到双层体系的载流子密度驱动金属-绝缘体相变，为研究关联态和低维电输运提供了有力工具。",
+      "llm_tldr": "原子级薄的半导体中高接触电阻常常掩盖其本征电输运性质。作者提出一种非侵入式宽场光学电压成像方法，利用六方氮化硼隔离的MoSe2单层激子传感器，将局部静电势转化为空间分辨的激子反射调制，并通过逐像素原位标定得到定量二维电压图。该方法成功观测到双层体系的载流子密度驱动金属-绝缘体相变，为研究关联态和低维电输运提供了有力工具。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "stroboSCAT imaging for semiconductor carrier transport",
+      "matched_requirement_id": "req-7",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
