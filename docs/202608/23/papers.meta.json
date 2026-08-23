@@ -1,0 +1,24 @@
+{
+  "label": "2026-08-23",
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T19:16:38",
+  "count": 1,
+  "papers": [
+    {
+      "paper_id": "202608/23/2608.18741v1-a-miniature-evaporator-for-in-operando-deposition-of-isolated-atoms-in-a-low-temperature-scanning-tunneling-microscope",
+      "section": "deep",
+      "title_en": "A miniature evaporator for in-operando deposition of isolated atoms in a low-temperature scanning tunneling microscope",
+      "authors": "Jeongmin Oh, Hermann Osterhage, Vasily Cherepanov, Sven Just, Denis Krylov, F. Stefan Tautz, Taner Esat, Ruslan Temirov",
+      "date": "2026-08-19",
+      "pdf": "https://arxiv.org/pdf/2608.18741v1",
+      "score": "8.0",
+      "evidence": "低温STM中的原位（in-operando）沉积能力",
+      "tldr": "低温扫描隧道显微镜中，辐射屏蔽与受限几何常阻断原子沉积路径，尤其对毫开尔文仪器。本文利用商用微型白炽灯制成毫瓦级蒸发源，直接集成于STM头部，钨丝涂覆微米级Fe膜。在5K下成功向MgO/Ag(100)沉积孤立Fe原子，本体温升仅约2K，表面漂移小于5nm，微分电导谱在±14mV处显示对称非弹性台阶，确认为Fe。该固定蒸发器无需常温光路或可移动屏蔽，支持重复低通量沉积，显著提升低温原子尺度原位操控的实用性。",
+      "tags": "query:iscat",
+      "abstract_en": "Depositing dilute atomic ensembles onto cold samples is challenging in low-temperature scanning tunneling microscopes (STM) because radiation shields and restricted internal geometries often preclude a direct deposition path, particularly in instruments designed for millikelvin operation. We present a compact, milliwatt-range evaporation source fabricated from a commercial miniature incandescent lamp and integrated directly into a millikelvin STM head. The exposed tungsten filament is coated with a micrometre-thick Fe film and positioned about 1 cm from the sample. We deposit isolated Fe atoms onto MgO/Ag(100) while operating the microscope near 5 K. Evaporation increases the STM-body temperature by only about 2 K, and the same nanoscopic surface region can be readily scanned after deposition with a lateral displacement of less than 5 nm. Differential-conductance spectra displaying symmetric inelastic steps near $\\pm$14 mV identify the deposited atoms on MgO as Fe. From STM images, we estimate a local deposition flux of $1.5\\times10^{-5}~\\mathrm{nm^{-2}\\,s^{-1}}$, corresponding to a nominal evaporator lifetime of ~150 h. The fixed evaporator enables repeated low-flux deposition without a room-temperature line of sight, the need for movable radiation shields, or mechanical evaporator access after cooldown, while preserving access to the same atomic-scale surface region before and after deposition.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

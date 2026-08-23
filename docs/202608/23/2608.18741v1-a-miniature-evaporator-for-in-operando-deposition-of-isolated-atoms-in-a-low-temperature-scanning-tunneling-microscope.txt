@@ -1,0 +1,255 @@
+Title: A miniature evaporator for in-operando deposition of isolated atoms in a low-temperature scanning tunneling microscope
+
+URL Source: https://arxiv.org/pdf/2608.18741v1
+
+Published Time: Thu, 20 Aug 2026 00:42:14 GMT
+
+Number of Pages: 6
+
+Markdown Content:
+# A miniature evaporator for in-operando deposition of isolated atoms in a low-temperature scanning tunneling microscope 
+
+Jeongmin Oh, 1, 2, 3, a) Hermann Osterhage, 1, 2, a) Vasily Cherepanov, 1, 2, 4 Sven Just, 1, 2 Denis Krylov, 1, 2 F. Stefan Tautz, 1, 2, 3 Taner Esat, 1, 2, b) and Ruslan Temirov 1, 5, c) 
+
+> 1)
+
+Peter Grünberg Institute (PGI-3), Forschungszentrum Jülich, 52425 Jülich, Germany 
+
+> 2)
+
+Jülich Aachen Research Alliance (JARA), Fundamentals of Future Information Technology, 52425 Jülich, Germany 
+
+> 3)
+
+Experimentalphysik IV A, RWTH Aachen University, 52074 Aachen, Germany 
+
+> 4)
+
+mProbes GmbH, 52428 Jülich, Germany 
+
+> 5)
+
+University of Cologne, Faculty of Mathematics and Natural Sciences, Institute of Physics II, 50937 Cologne, Germany 
+
+(Dated: 20 August 2026) 
+
+Depositing dilute atomic ensembles onto cold samples is challenging in low-temperature scanning tunneling micro-scopes (STM) because radiation shields and restricted internal geometries often preclude a direct deposition path, par-ticularly in instruments designed for millikelvin operation. We present a compact, milliwatt-range evaporation source fabricated from a commercial miniature incandescent lamp and integrated directly into a millikelvin STM head. The exposed tungsten filament is coated with a micrometre-thick Fe film and positioned about 1 cm from the sample. We deposit isolated Fe atoms onto MgO/Ag(100) while operating the microscope near 5 K. Evaporation increases the STM-body temperature by only about 2 K, and the same nanoscopic surface region can be readily scanned after deposition with a lateral displacement of less than 5 nm. Differential-conductance spectra displaying symmetric inelastic steps near ±14 mV identify the deposited atoms on MgO as Fe. From STM images, we estimate a local deposition flux of 1.5 × 10 −5 nm −2 s−1, corresponding to a nominal evaporator lifetime of ~150 h. The fixed evaporator enables repeated low-flux deposition without a room-temperature line of sight, the need for movable radiation shields, or mechanical evaporator access after cooldown, while preserving access to the same atomic-scale surface region before and after deposition. 
+
+I. INTRODUCTION 
+
+Cryogenic scanning tunneling microscopy (STM) provides access to the structural, electronic, vibrational, and mag-netic properties of matter at the level of individual atoms and molecules. Many experiments rely on preparing dilute ad-sorbate ensembles directly on surfaces held at cryogenic tem-peratures, typically below ~10–20 K. At these temperatures, thermally activated surface diffusion is strongly suppressed, preventing weakly bound atoms and molecules from aggre-gating and thereby stabilizing isolated adsorbates for subse-quent characterization and manipulation with the STM tip. This approach has enabled, among other achievements, spin-excitation spectroscopy of individual magnetic atoms, the as-sembly of coupled atomic spin structures, and the construction of atomically defined molecular devices 1–4 .Introducing adsorbates into a cryogenic STM is neverthe-less technically demanding. In a conventional arrangement, an electron-beam evaporator, effusion cell, or molecular-beam source is mounted outside the microscope and directed to-ward the sample through apertures in the cryostat and radi-ation shields 5. Such configurations provide a comparatively large material reservoir and may allow independent flux mon-itoring, but they require an unobstructed line of sight over a relatively long distance. Opening or penetrating the ther-
+
+> a) These authors contributed equally to this work.
+> b) Corresponding author: t.esat@fz-juelich.de
+> c) Corresponding author: r.temirov@fz-juelich.de
+
+mal shields also increases the radiative heat load on the mi-croscope. These constraints become particularly severe in low-temperature STMs equipped with high-field supercon-ducting magnets, where the available space is typically lim-ited by the magnet bore to only a few centimetres 6–14 . In millikelvin instruments, the microscope is additionally sur-rounded by several thermal and radiation shields and is often located deep within a dilution-refrigerator 6–13 or adiabatic-demagnetization cryostat 14 . As a result, these systems gen-erally provide neither a direct deposition path from room tem-perature nor sufficient internal space to position a conven-tional evaporator close to the sample. Evaporation concepts developed for more accessible cryogenic microscopes there-fore cannot be transferred straightforwardly to this class of instruments. Compact evaporators have previously been developed to enable deposition close to samples in cryogenic scanning probe microscopes. Lämmle et al. introduced a transfer-able molecular evaporator based on a small resistively heated crucible 15 . The complete evaporator was transported through the UHV system and positioned near the cold sample for each deposition sequence. For atomic deposition, Rust et al. devel-oped a portable microevaporator from a commercial halogen lamp 16 . After removal of the glass bulb, the exposed tung-sten filament was loaded with the desired material and used to deposit isolated Li, Pd, and Au atoms onto samples held near 5 K. This evaporator likewise had to be moved into po-sition above the sample before deposition and retracted after-wards. Although these approaches demonstrated controlled atomic and molecular deposition onto cryogenic samples, they arXiv:2608.18741v1 [cond-mat.mes-hall] 19 Aug 2026 2a    
+
+> 1 mm
+> b
+> FIG. 1. (a) Photograph of the miniature incandescent lamp used to fabricate the evaporation source. (b) Scanning electron microscopy (SEM) image of the lamp after opening the glass bulb, exposing the tungsten filament.
+
+required repeated mechanical access to the sample region and comparatively high heating powers. Here, we present a compact, low-power evaporator for de-positing isolated atoms that is integrated directly into the STM head. Operation in the milliwatt range limits the thermal load on the microscope sufficiently to let it image the same atomic-scale surface area before and after deposition. Because the STM remains operational and registered to the same surface region throughout the deposition cycle, we refer to this ap-proach as in-operando deposition. We demonstrate the work-ing principle by integrating two independently addressable evaporators into a millikelvin STM cooled by adiabatic de-magnetization refrigeration (ADR). This instrument builds on the design described in Ref. [14]. As a second-generation sys-tem, it features a range of improvements discussed elsewhere, including a redesigned STM head that enables evaporator in-tegration. The fixed installation of the evaporators in very close proximity to the sample surface enables repeated depo-sition without direct optical access from the outside, the need for movable cryogenic shields, or an in-vacuum evaporator-transfer mechanism. In the following, we describe the fabrica-tion and integration of the evaporator, characterize its perfor-mance under cryogenic STM conditions, and identify the de-posited Fe atoms by inelastic electron tunneling spectroscopy. 30 μm                       
+
+> abdc
+> 30 μm 10 μm
+> fe
+> 10 μm 10 μm 10 μm
+> t= 0 min t= 5 min
+> t= 25 min t= 11 min
+> FIG. 2. SEM images of the evaporator filament. (a) Bare W filament after annealing and before Fe deposition. (b) Filament after coating with Fe by evaporation. (c–f) Higher-magnification images showing the initially fine-grained polycrystalline Fe film and its morpholog-ical evolution during resistive heating at 13 mA: (c) before heating, and after heating for (d) 5 min, (e) 11 min, and (f) 25 min.
+> II. EVAPORATOR PREPARATION
+
+We fabricated the evaporator from a commercial minia-ture incandescent lamp manufactured by MGG Micro-Glühlampen-Gesellschaft Menzel GmbH 17 [Fig. 1(a)]. The glass bulb has a nominal diameter of 2.30 mm and a length of no more than 4.75 mm, allowing installation within the confined volume of the STM head. The lamp has a nomi-nal electrical rating of 22.5 mW at 1.5 V and 15 mA, with a mean spherical candlepower of 0.002 MSCP. Its low-power, low-thermal-mass filament provides localized resistive heat-ing and cools rapidly after operation, thereby limiting the ther-mal load on the microscope. The wire terminals facilitate elec-trical connection and mechanical mounting, while the factory-fabricated filament and supports provide a compact and repro-ducible evaporator geometry. To expose the filament, as shown in Fig. 1(b), we removed part of the glass bulb using a rotary tool equipped with a di-amond burr; fine-grit abrasive paper can be used as an alter-native. We then cleaned the opened lamp in an aqueous de-tergent solution using a low-power ultrasonic bath to remove glass particles produced during grinding. After transfer into vacuum, we removed residual contamination from the tung-sten filament by resistive annealing at 13 mA. Figure 2(a) shows a scanning electron microscopy (SEM) image of the annealed filament. We deposited an approximately 1 μm-thick Fe film onto the 3Evaporator Sample STM tip 5 mm 
+
+> FIG. 3. Three-dimensional cutaway model of the millikelvin STM head showing the integrated evaporation sources, the sample, and the STM tip.
+
+cleaned filament in a vacuum chamber with a base pressure of 10 −6 mbar. Fe with a purity of 99 .99% (MaTecK GmbH) was evaporated from a tungsten crucible heated by direct cur-rent. The new miniature evaporator charged with Fe was then transferred through air to the SEM. As shown in Figs. 2(b) and 2(c), the as-deposited Fe coating exhibits a fine-grained polycrystalline morphology. To examine the thermal evolution of the coating, we pass current through the filament inside the SEM while contin-uously recording its morphology. The image sequence in Figs. 2(d)–2(f) reveals pronounced coarsening of the initially fine-grained Fe film. The intermediate morphologies shown in Figs. 2(d) and 2(e) indicate substantial thermally activated mass transport and are consistent with dewetting and coales-cence, potentially accompanied by local melting. Next, we demonstrate the operation of the evaporator under cryogenic STM conditions by imaging the sample before and after de-position of isolated atoms.   
+
+> III. EVAPORATOR OPERATION A. Installation and sample preparation
+
+To demonstrate the evaporator operation, we installed two identical but individually addressable Fe-loaded evaporators directly in the millikelvin STM head [Fig. 3]. The results shown here were obtained using only one evaporator. The evaporators were mounted before the microscope was placed under vacuum and remained fixed throughout cooldown and operation. The evaporators’ filaments face the sample sur-face from approximately 1 cm. The evaporator arrangement fits within the restricted volume of the STM head without obstructing tip operation or sample transfer. The assembled STM head was then mounted on a millikelvin insert that ac-commodates both the microscope and the paramagnetic re-frigerant used for ADR 14,18 .After the initial cooldown, the STM head was brought into ultrahigh vacuum and cooled to 5 K without a sample in-stalled. Both evaporators were then conditioned once by pass-ing a current of 13 mA through each filament for 5 min. The prepared sample was inserted into the STM after the initial evaporator conditioning. For the deposition experiments, the Ag(100) substrate was prepared in a separate chamber with a base pressure of 2 ×
+
+10 −10 mbar by repeated cycles of Ar + sputtering ( PAr =
+
+1.2 × 10 −7 mbar, E = 1 keV, and Iion = 3 μA) and anneal-ing to 500 ◦C. MgO islands were subsequently grown by electron-beam evaporation for 10 min at an O 2 pressure of 1 × 10 −6 mbar while the sample was held at 430 ◦C [19]. The sample was then post-annealed for 2 min under the same oxy-gen pressure and cooled at 15 ◦C min −1.After the sample reached room temperature, a submono-layer coverage of 3,4,9,10-perylenetetracarboxylic dianhy-dride (PTCDA) was deposited from a home-built Knudsen cell held at 305 ◦C. After PTCDA deposition, the sample was flashed to 100 ◦C, cooled to −100 ◦C, and transferred into the STM. PTCDA was not required for evaporator characterisa-tion, but it demonstrates the applicability of the described de-position technique to experiments on surfaces coated with a variety of complex adsorbates.  
+
+> B. Deposition test and thermal response
+
+The constant-current STM image in Fig. 4(a), acquired be-fore Fe deposition, shows an irregularly shaped MgO island on a large, atomically clean Ag(100) terrace. Small PTCDA clusters partially cover the island and accumulate along its edges. The molecular ordering within these clusters is con-sistent with previous reports 20,21 . To demonstrate a controlled deposition of isolated atoms that preserves STM access to the same atomic-scale region, we deposited Fe using one of the installed evaporators and scanned the same area for compari-son. We performed the deposition at 5 K because the 15–20 mW heat load produced by the evaporator would exceed the cool-ing power of a millikelvin cryostat. Additionally, we have demonstrated that ADR STM retains the same atomic-scale location upon cooling from 5 K to millikelvin temperatures 14 .Thus, the same atomic-scale area prepared at 5 K can be stud-ied conveniently at millikelvin temperatures. After record-ing the STM image of the test area prior to Fe deposition [Fig. 4(a)], we disabled the feedback loop and retracted the tip by approximately 300 nm. We then performed Fe deposition by passing a current of 13 .0 ± 0.1 mA through the evaporator filament for a total of 9 min, split into three consecutive evap-oration cycles. In each cycle, the filament current was ramped at 2 mA /min to 13 .0±0.1 mA and maintained at this value for 3 min. During each evaporation cycle, the STM body temperature, measured with a RuO x sensor (Entropy GmbH), rose by ap-proximately 2 K above the 1 K pot temperature, measured with a Cernox sensor (Lakeshore), as shown in Fig. 5. For the experiments reported here, we kept the 1 K pot empty and 410 nm 10 nm              
+
+> ab
+> 20 nm
+> dc20 nm Lo Hi
+> FIG. 4. (a) Constant-current STM image of the sample before Fe deposition. (b) The same surface area after Fe deposition. Five new atoms are visible on Ag(100), and one is visible on the MgO island (circle). (c,d) Representative constant-current STM images acquired after deposition, showing the Fe coverage and the cleanliness of the MgO/Ag(100) surface. Imaging parameters: U=100 mV and I=
+> 50 pA for (a,b), 20 pA for (c), and 10 pA for (d).
+
+thermally decoupled it from the 4 K LHe bath. After the fila-ment current was switched off, the STM temperature returned within approximately 10 min to the base temperature of the 1 K pot to which it was thermally anchored 14 . Because the 1 K pot was empty and decoupled from the 4 K bath, its tempera-ture rose slightly after each deposition cycle. Once the STM temperature had stabilized after the third de-position cycle, we approached the tip to the surface and ac-quired an image of the same area as before [Fig. 4(b)]. The lateral displacement relative to the image recorded before the deposition was less than 5 nm. Six new point-like adsorbates appear in Figure 4(b): five on Ag(100) and one on the MgO island. Figures 4(c) and 4(d) show representative regions of the surface after deposition and illustrate both the resulting Fe coverage and the overall cleanliness of the sample. Apart from adsorbates already present before evaporation, no additional contaminant species were detected in the investigated areas. This indicates that exposing the evaporators to air during in-stallation did not lead to appreciable contamination under the present conditions and that the initial conditioning procedure was sufficient to clean the evaporators for subsequent deposi-tion.  
+
+> C. Spectroscopic identification of Fe
+
+Finally, we identified the deposited atoms by inelastic elec-tron tunneling spectroscopy (IETS). Figure 6(a) shows an 0 50 100 150 200 Time (minutes) 567Temperature (K)    
+
+> 4K 1K STM
+> FIG. 5. Temperature of the STM body (blue), 1 K pot (red) and 4 K bath (black) during three consecutive Fe evaporation cycles, each performed at Ifil =13 mA for 3 min.
+
+MgO island with four isolated atoms deposited by the evap-orator. A representative differential-conductance ( dI /dV )spectrum of deposited atoms is shown in Fig. 6(b). It exhibits symmetric step-like features at approximately U = ±14 mV. The recorded spectrum agrees well with previous measure-ments of individual Fe adatoms on MgO 22 . The steps in 
+
+dI /dV are due to transitions from the ground-state doublet with |mS| = 2 to the first excited doublet with |mS| = 1 within the S = 2 spin manifold driven by the inelastically tunnel-ing electrons. The position of each step with respect to the bias axis corresponds to the excitation energy, determined by the zero-field splitting associated with the strong out-of-plane magnetic anisotropy of Fe on MgO.  
+
+> D. Flux and evaporator-lifetime estimate
+
+To estimate the operating lifetime of the evaporation source, we compare the local flux of Fe atoms measured on the Ag(100) surface with the estimated amount of Fe initially loaded onto the filament. The deposited-atom density is de-termined from clean Ag(100) regions as shown in Fig. 4(d). A total of N = 40 atoms is detected within an area of A =
+
+4900 nm 2 after a cumulative deposition time of t = 540 s. The local flux incident on the sample is therefore 
+
+js = NAt ≈ 1.5 × 10 −5 nm −2s−1. (1) Estimating the total emission rate and evaporator lifetime from this local flux requires assumptions about the evapo-rator geometry, angular emission distribution, and sticking probability 23,24 . We approximate the filament as a point source emitting uniformly into the hemisphere facing the sam-ple. Assuming normal incidence and a sticking coefficient of unity, the total Fe emission rate inferred from the measured sample flux is ˙Nem = 2πr2 js ≈ 9.5 × 10 9 s−1, (2) 5−30 −20 −10 0 10 20 30 Bias (mV) 5.75 6.00 6.25 6.50 6.75 
+
+> dI/dV  (nS)
+
+b2 nm 
+
+> Fe PTCDA
+
+a                         
+
+> Lo Hi
+> FIG. 6. (a) Constant-current STM image of the MgO/Ag(100) is-land shown in Fig. 4(c), displaying four isolated Fe atoms (circled). Imaging parameters: U=100 mV and I=10 pA. (b) Represen-tative differential-conductance (dI/dV) spectrum of the Fe atoms in
+> (a) .Stabilization conditions: U=30 mV and I=200 pA on an Fe atom (lock-in modulation amplitude Umod =1 mV and frequency
+> fmod =589 Hz, T=5.0 K).
+
+for a evaporator–sample distance of r = 1 cm. If reconden-sation on the filament supports and surrounding components is neglected, this emission rate corresponds to the particle-loss rate of the Fe coating. From the SEM images, we esti-mate a filament-wire diameter of d f = 5 μm, a coil diameter of dt = 40 μm, and nt = 60 turns. Assuming that an Fe layer of thickness h = 1 μm covers half of the filament surface, the initial Fe volume is 
+
+VFe = 12 π2dfdthn t ≈ 6.0 × 10 4 μm3. (3) Using the molar volume of Fe, vFe = 7.092 cm 3 mol −1 =
+
+7.092 × 10 12 μm3 mol −1, the number of Fe atoms initially loaded onto the filament is 
+
+NFe = VFe 
+
+vFe 
+
+NA ≈ 5.0 × 10 15 . (4) The corresponding nominal operating lifetime is therefore 
+
+τ = NFe 
+
+˙Nem 
+
+≈ 150 h . (5) Taking the 9-min evaporation sequence used here as a rep-resentative deposition yielding a suitable dilute Fe coverage, this operating time corresponds to approximately 1000 depo-sition sequences. This estimate assumes that the full Fe in-ventory is available for evaporation and that the emission rate remains constant throughout the evaporator lifetime; it should therefore be regarded as an order-of-magnitude value.  
+
+> IV. CONCLUSION AND OUTLOOK
+
+We have developed a compact, low-power evaporation source for depositing isolated atoms inside a cryogenic STM. The evaporator is fabricated from a commercial miniature in-candescent lamp by removing part of the glass bulb and coat-ing the exposed tungsten filament with the desired evaporant. Its small dimensions, factory-defined filament geometry, and milliwatt-range operation make it well suited to the restricted space and stringent thermal requirements of a cryogenic STM head. Because the evaporator is mounted directly on the mi-croscope before cooldown and remains fixed during operation, deposition can be performed in operando without coarse tip retraction. Using Fe as a model material, we demonstrated deposition onto a sample located approximately 1 cm from the filament. A total evaporation time of 9 min produced isolated adsor-bates on both Ag(100) and MgO/Ag(100). During each depo-sition cycle, the STM-body temperature increased by only 2 K above the base temperature of the stage to which the STM was anchored and returned to the base value within about 10 min after finishing the deposition. The same atomic-scale re-gion could be readily scanned after deposition, with a lateral displacement of less than 5 nm. No additional contaminant species beyond those already present before evaporation were detected in the investigated areas, indicating that the initial evaporator-conditioning procedure was sufficient despite air exposure during installation. Inelastic spin-excitation spectra with conductance steps near ±14 mV identified the deposited atoms on MgO as Fe. Under a simple isotropic point-source model with hemi-spherical emission and unit sticking probability, the measured coverage corresponds to an Fe emission rate of approximately 9.5 × 10 9 per second. Together with the estimated Fe inven-tory of the filament, this yields a nominal evaporator lifetime of approximately 150 h. Taking the 9-min evaporation se-quence used here as a representative deposition, this corre-sponds to roughly 1000 deposition sequences. The utility of the deposition technique proposed here can be extended further. A natural next step is developing evap-orators that can be exchanged in situ without warming the STM to room temperature or breaking UHV conditions. The same compact-evaporator concept may also be adaptable to molecular deposition. Establishing this capability will require material-specific operating protocols that provide a stable flux while avoiding thermal decomposition. With these refine-ments, arrays of independently addressable evaporators could enable sequential deposition of several atomic and molecu-lar species onto a sample that remains cryogenic throughout, 6extending atom-by-atom and molecule-by-molecule prepara-tion to low-temperature STM architectures that currently lack practical deposition access. 
+
+ACKNOWLEDGMENTS 
+
+V.C., S.J., D.K., F.S.T., T.E., and R.T. were supported by the German Federal Ministry of Education and Research through the funding programme "Quantum Technologies: From Ba-sic Research to Market" under Q-NL (grant no. 13N16032). J.O., H.O., and T.E. were supported by ERC grant (QuSINT, 101160588, DOI: 10.3030/101160588). Funded by the Eu-ropean Union. Views and opinions expressed are, however, those of the authors only and do not necessarily reflect those of the European Union or the European Research Council Ex-ecutive Agency. Neither the European Union nor the granting authority can be held responsible for them. 
+
+COMPETING INTERESTS 
+
+V.C. and R.T. are named inventors on German patent appli-cation 2022102615185700DE, filed on 26 October 2022 by Forschungszentrum Jülich GmbH, entitled "Method for de-positing individual atoms and/or molecules on a sample sur-face and apparatus for carrying out the method." This patent application relates to aspects of the technology described in this manuscript. The remaining authors declare no competing interests. 
+
+DATA AVAILABILITY 
+
+All data presented in this study are available on the Jülich Data Repository at XYZ. 
+
+REFERENCES 
+
+> 1
+
+A. J. Heinrich, J. A. Gupta, C. P. Lutz, and D. M. Eigler, “Single-atom spin-flip spectroscopy,” Science 306 , 466–469 (2004). 
+
+> 2
+
+C. F. Hirjibehedin, C. P. Lutz, and A. J. Heinrich, “Spin coupling in engi-neered atomic structures,” Science 312 , 1021–1024 (2006). 
+
+> 3
+
+J. Martínez-Blanco, C. Nacci, S. C. Erwin, K. Kanisawa, E. Locane, M. Thomas, F. von Oppen, P. W. Brouwer, and S. Fölsch, “Gating a single-molecule transistor with individual atoms,” Nature Physics 11 , 640–644 (2015). 
+
+> 4
+
+T. Esat, N. Friedrich, F. S. Tautz, and R. Temirov, “A standing molecule as a single-electron field emitter,” Nature 558 , 573–576 (2018). 
+
+> 5
+
+T. Mashoff, M. Pratzer, and M. Morgenstern, “A low-temperature high res-olution scanning tunneling microscope with a three-dimensional magnetic vector field operating in ultrahigh vacuum,” Review of Scientific Instru-ments 80 , 053702 (2009). 
+
+> 6
+
+Y. J. Song, A. F. Otte, V. Shvarts, Z. Zhao, Y. Kuk, S. R. Blankenship, A. Band, F. M. Hess, and J. A. Stroscio, “Invited review article: A 10 mK scanning probe microscopy facility,” Review of Scientific Instruments 81 ,121101 (2010). 
+
+> 7
+
+M. Assig, M. Etzkorn, A. Enders, W. Stiepany, C. R. Ast, and K. Kern, “A 10 mK scanning tunneling microscope operating in ultra high vacuum and high magnetic fields,” Review of Scientific Instruments 84 , 033903 (2013). 
+
+> 8
+
+S. Misra, B. B. Zhou, I. K. Drozdov, J. Seo, L. Urban, A. Gyenis, S. C. J. Kingsley, H. Jones, and A. Yazdani, “Design and performance of an ultra-high vacuum scanning tunneling microscope operating at dilution refriger-ator temperatures and high magnetic fields,” Review of Scientific Instru-ments 84 , 103903 (2013). 
+
+> 9
+
+A. Roychowdhury, M. A. Gubrud, R. Dana, J. R. Anderson, C. J. Lobb, F. C. Wellstood, and M. Dreyer, “A 30 mK, 13.5 T scanning tunneling mi-croscope with two independent tips,” Review of Scientific Instruments 85 ,043706 (2014). 
+
+> 10
+
+H. von Allwörden, A. Eich, E. J. Knol, J. Hermenau, A. Sonntag, J. W. Ger-ritsen, D. Wegner, and A. A. Khajetoorians, “Design and performance of an ultra-high vacuum spin-polarized scanning tunneling microscope operating at 30 mK and in a vector magnetic field,” Review of Scientific Instruments 
+
+89 , 033902 (2018). 
+
+> 11
+
+T. Machida, Y. Kohsaka, and T. Hanaguri, “A scanning tunneling micro-scope for spectroscopic imaging below 90 mK in magnetic fields up to 17.5 T,” Review of Scientific Instruments 89 , 093707 (2018). 
+
+> 12
+
+D. Wong, S. Jeon, K. P. Nuckolls, M. Oh, S. C. J. Kingsley, and A. Yazdani, “A modular ultra-high vacuum millikelvin scanning tunneling microscope,” Review of Scientific Instruments 91 , 023703 (2020). 
+
+> 13
+
+J. Schwenk, S. Kim, J. Berwanger, F. Ghahari, D. Walkup, M. R. Slot, S. T. Le, W. G. Cullen, S. R. Blankenship, S. Vranjkovic, H. J. Hug, Y. Kuk, F. J. Giessibl, and J. A. Stroscio, “Achieving μeV tunneling resolution in an in-operando scanning tunneling microscopy, atomic force microscopy, and magnetotransport system for quantum materials research,” Review of Scientific Instruments 91 , 071101 (2020). 
+
+> 14
+
+T. Esat, P. Borgens, X. Yang, P. Coenen, V. Cherepanov, A. Raccanelli, F. S. Tautz, and R. Temirov, “A millikelvin scanning tunneling microscope in ultra-high vacuum with adiabatic demagnetization refrigeration,” Review of Scientific Instruments 92 , 063701 (2021). 
+
+> 15
+
+K. Lämmle, A. Schwarz, and R. Wiesendanger, “Miniaturized transportable evaporator for molecule deposition inside cryogenic scanning probe micro-scopes,” Review of Scientific Instruments 81 , 053902 (2010). 
+
+> 16
+
+H.-P. Rust, T. König, G. H. Simon, M. Nowicki, V. Simic-Milosevic, G. Thielsch, M. Heyde, and H.-J. Freund, “A portable microevaporator for low temperature single atom studies by scanning tunneling and dynamic force microscopy,” Review of Scientific Instruments 80 , 113705 (2009). 
+
+> 17
+
+Glass-bulb type: T-3/4; specified diameter range: 2.20–2.45 mm; wire-terminal standard: type 4035-00. 
+
+> 18
+
+T. Esat, X. Yang, F. Mustafayev, H. Soltner, F. S. Tautz, and R. Temirov, “Determining the temperature of a millikelvin scanning tunnelling micro-scope junction,” Communications Physics 6, 81 (2023). 
+
+> 19
+
+T. S. Seifert, S. Kovarik, C. Nistor, L. Persichetti, S. Stepanow, and P. Gam-bardella, “Single-atom electron paramagnetic resonance in a scanning tun-neling microscope driven by a radio-frequency antenna at 4 K,” Physical Review Research 2, 013032 (2020). 
+
+> 20
+
+P. Hurdax, C. S. Kern, T. G. Boné, A. Haags, M. Hollerer, L. Eg-ger, X. Yang, H. Kirschner, A. Gottwald, M. Richter, F. C. Bocquet, S. Soubatch, G. Koller, F. S. Tautz, M. Sterrer, P. Puschnig, and M. G. Ramsey, “Large distortion of fused aromatics on dielectric interlayers quan-tified by photoemission orbital tomography,” ACS Nano 16 , 17435–17443 (2022). 
+
+> 21
+
+P. Hurdax, M. Hollerer, C. S. Kern, P. Puschnig, M. Sterrer, and M. G. Ramsey, “Integer charge transfer model—PTCDA on MgO(001)/Ag(001) probing the transition from single to double integer charge transfer,” The Journal of Physical Chemistry C 129 , 1553–1561 (2025). 
+
+> 22
+
+S. Baumann, F. Donati, S. Stepanow, S. Rusponi, W. Paul, S. Gangopad-hyay, I. G. Rau, G. E. Pacchioni, L. Gragnaniello, M. Pivetta, J. Dreiser, C. Piamonteze, C. P. Lutz, R. M. Macfarlane, B. A. Jones, P. Gambardella, A. J. Heinrich, and H. Brune, “Origin of perpendicular magnetic anisotropy and large orbital moment in Fe atoms on MgO,” Physical Review Letters 
+
+115 , 237202 (2015). 
+
+> 23
+
+L. Holland and W. Steckelmacher, “The distribution of thin films con-densed on surfaces by the vacuum evaporation method,” Vacuum 2, 346– 364 (1952). 
+
+> 24
+
+M. Ohring, Materials Science of Thin Films: Deposition and Structure, 2nd ed. (Academic Press, San Diego, 2002).
