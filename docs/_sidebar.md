@@ -1,6 +1,9 @@
 * <a class="dpr-sidebar-root-link" href="#/">首页</a>
 * <a class="dpr-sidebar-root-link dpr-sidebar-noactive-link" href="javascript:void(0)" data-dpr-hash="#/tutorial/README">使用教程</a>
 * Daily Papers
+  * 2026-08-24 <!--dpr-date:20260824-->
+    * 速读区
+      * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/24/biorxiv-10-64898-2026-06-24-734171-v2-protein-independent-light-harvesting-governed-by-structural-heterogeneity" data-sidebar-item="{&quot;title&quot;: &quot;Protein-independent light harvesting governed by structural heterogeneity&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/biorxiv-10-64898-2026-06-24-734171-v2-protein-independent-light-harvesting-governed-by-structural-heterogeneity&quot;, &quot;score&quot;: &quot;6.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;使用超快瞬态吸收光谱，一种时间分辨技术&quot;}">Protein-independent light harvesting governed by structural heterogeneity</a>
   * 2026-08-23 <!--dpr-date:20260823-->
     * 精读区
       * <a class="dpr-sidebar-item-link dpr-sidebar-item-structured" href="#/202608/23/2608.18741v1-a-miniature-evaporator-for-in-operando-deposition-of-isolated-atoms-in-a-low-temperature-scanning-tunneling-microscope" data-sidebar-item="{&quot;title&quot;: &quot;A miniature evaporator for in-operando deposition of isolated atoms in a low-temperature scanning tunneling microscope&quot;, &quot;link&quot;: &quot;https://arxiv.org/abs/2608.18741v1-a-miniature-evaporator-for-in-operando-deposition-of-isolated-atoms-in-a-low-temperature-scanning-tunneling-microscope&quot;, &quot;score&quot;: &quot;8.0&quot;, &quot;tags&quot;: [{&quot;kind&quot;: &quot;query&quot;, &quot;label&quot;: &quot;iscat&quot;}], &quot;evidence&quot;: &quot;低温STM中的原位（in-operando）沉积能力&quot;}">A miniature evaporator for in-operando deposition of isolated atoms in a low-temperature scanning tunneling microscope</a>

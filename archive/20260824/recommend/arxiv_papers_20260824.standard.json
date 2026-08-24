@@ -1,0 +1,56 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-08-24T19:37:10.956178+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 1,
+    "quick_skim_target": 11,
+    "quick_selected": 1
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "biorxiv-10-64898-2026-06-24-734171-v2",
+      "source": "biorxiv",
+      "title": "Protein-independent light harvesting governed by structural heterogeneity",
+      "abstract": "Chlorosomes are the largest known photosynthetic light-harvesting antennas, yet unlike protein-based antennas, they lack protein scaffolds that organize pigment molecules and instead contain self-assembled tubular and lamellar bacteriochlorophyll aggregates. How these antennas achieve directional and efficient energy transfer has remained unresolved. By applying ultrafast transient absorption spectroscopy to individual wild-type and mutant chlorosomes, we resolved six kinetic components obscured by ensemble averaging and assigned each to an excitation process associated with either lamellar or tubular aggregates. Lamellar aggregates tend toward exciton localization and expand light-harvesting capacity, whereas tubular aggregates retain a relatively delocalized excitonic character and serve as the primary energy donors to the baseplate. Structural heterogeneity therefore emerges as a functional feature that balances light-harvesting capacity with robust directional energy transfer. These findings reveal a division of labor among self-assembled pigment aggregates for efficient light harvesting without protein scaffolds.",
+      "authors": [
+        "Arai, S.",
+        "Inagaki, T.",
+        "Harada, J.",
+        "Azai, C.",
+        "Kondo, T."
+      ],
+      "primary_category": "biophysics",
+      "categories": [
+        "biophysics"
+      ],
+      "published": "2026-08-21T00:00:00+00:00",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.06.24.734171v2.full.pdf",
+      "tags": [
+        "keyword:iSCAT",
+        "query:iSCAT"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "uses ultrafast transient absorption spectroscopy, a time-resolved technique",
+      "llm_evidence_cn": "使用超快瞬态吸收光谱，一种时间分辨技术",
+      "llm_evidence": "使用超快瞬态吸收光谱，一种时间分辨技术",
+      "canonical_evidence": "使用超快瞬态吸收光谱，一种时间分辨技术",
+      "llm_tldr_en": "This paper applies ultrafast transient absorption spectroscopy to individual chlorosomes, resolving six kinetic components hidden by ensemble averaging and assigning them to lamellar or tubular aggregates.",
+      "llm_tldr_cn": "该论文针对氯小体缺少蛋白支架却仍能高效传能的问题，对单个野生型和突变体氯小体应用超快瞬态吸收光谱，克服了系综平均的掩盖，分辨出六个动力学组分并将其分别归属于片层或管状聚集体。结果表明片层聚集体倾向于激子局域化并扩展光捕获能力，而管状聚集体保留相对离域的激子传输。这一工作展示了时间分辨光谱在复杂生物光捕获体系中的强大解析能力。",
+      "llm_tldr": "该论文针对氯小体缺少蛋白支架却仍能高效传能的问题，对单个野生型和突变体氯小体应用超快瞬态吸收光谱，克服了系综平均的掩盖，分辨出六个动力学组分并将其分别归属于片层或管状聚集体。结果表明片层聚集体倾向于激子局域化并扩展光捕获能力，而管状聚集体保留相对离域的激子传输。这一工作展示了时间分辨光谱在复杂生物光捕获体系中的强大解析能力。",
+      "llm_tags": [
+        "query:iscat"
+      ],
+      "matched_query_tag": "query:iscat",
+      "matched_query_text": "time resolved",
+      "matched_requirement_id": "req-3",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
