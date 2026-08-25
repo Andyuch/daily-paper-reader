@@ -1,0 +1,39 @@
+{
+  "label": "2026-08-25",
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T20:55:14",
+  "count": 2,
+  "papers": [
+    {
+      "paper_id": "202608/25/2608.20277v1-point-spread-function-engineering-using-implicit-neural-representations",
+      "section": "quick",
+      "title_en": "Point Spread Function Engineering Using Implicit Neural Representations",
+      "authors": "Suet Ying Chan, Mitchell Gilmore, Qilin Deng, Guorong Hu, Joseph Greene, Ruipeng Guo, Lei Tian",
+      "date": "2026-08-20",
+      "pdf": "https://arxiv.org/pdf/2608.20277v1",
+      "score": "6.0",
+      "evidence": "显微点扩散函数工程，可迁移至iSCAT",
+      "tldr": "点扩散函数(PSF)工程通过瞳孔平面调制实现深度编码、扩展景深等显微镜成像特性，但现有设计方法依赖大量领域知识和特定基函数，难以适应不同应用。本文将PSF工程建模为相位恢复问题，提出利用隐式神经表示（神经场）直接优化瞳孔相位分布，可针对任意用户定义的3D PSF进行设计。该方法具备隐式正则化，对初始化不敏感，相比逐像素优化更鲁棒，为灵活多用途的3D PSF工程提供了新框架。",
+      "tags": "query:iscat",
+      "abstract_en": "Point spread function (PSF) engineering through pupil plane modulation is a technique used in microscopy to achieve specific imaging properties, such as depth encoding or extended depth of field. Existing PSF design methods often rely on extensive domain knowledge and task-specific basis functions, making it difficult to generalize across different applications. We treat the PSF engineering task as a phase retrieval problem and propose a neural field pupil design method that optimizes a phase profile for any arbitrary, user-defined 3D PSF distribution. This provides a flexible framework for 3D PSF engineering for various applications with implicit regularization that proves robust to initialization compared to pixel-wise optimization methods",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202608/25/2608.21528v1-high-speed-contact-resonance-tracking-using-brownian-motion",
+      "section": "quick",
+      "title_en": "High Speed Contact-Resonance Tracking using Brownian motion",
+      "authors": "J. Bemis, R. Proksch",
+      "date": "2026-08-21",
+      "pdf": "https://arxiv.org/pdf/2608.21528v1",
+      "score": "6.0",
+      "evidence": "使用干涉检测实现高速接触共振纳米级映射，与iSCAT材料科学研究相关",
+      "tldr": "接触共振原子力显微镜（CR-AFM）可绘制接触刚度等纳米尺度图，但传统压电激励会引入执行器和样品架的传递函数背景。本文提出基于布朗运动激励的干涉式双频共振跟踪（iDART），结合正交相位差分干涉与双频跟踪，将探测噪声降至非共振热位移以下，同时利用主动电激励保证成像信噪比。结果表明，电激励和光热激励均能增强振幅与相位通道对比度而不显著移动共振频率，为常规扫描速度下的无驱动共振增强纳米力学成像提供了实用途径。",
+      "tags": "query:iscat",
+      "abstract_en": "Contact-resonance atomic force microscopy (CR-AFM) provides nanoscale maps of contact stiffness, dissipation, and electromechanical response, but conventional piezoacoustic excitation can obscure the cantilever resonance with actuator and sample-holder modes. Pure Brownian excitation avoids this transfer-function background, yet its small amplitude generally requires averaging that is incompatible with routine imaging. We introduce interferometric dual-AC resonance tracking (iDART), which combines quadrature-phase differential interferometry with two-frequency resonance tracking. By positioning the interferometric spot near the displacement maximum of the first contact-resonance mode, the detector noise floor is reduced below the off-resonance thermal displacement of the cantilever. Brownian spectra identify the contact mode and define the tracking frequencies, while active electrical excitation provides the signal-to-noise ratio required for pixel-resolved imaging. Simultaneous low-frequency and resonant measurements show that both electrical and photothermal drive increases contrast in the amplitude and phase channels without appreciably shifting the contact resonance. These results establish a practical route to resonance-enhanced, drive free nanomechanical imaging at conventional AFM scan rates.",
+      "source": "arxiv",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
